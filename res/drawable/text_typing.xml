@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$text_typing__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="dotL" android:animation="@drawable/$text_typing__1" />
+    <target android:name="dotM" android:animation="@drawable/$text_typing__2" />
+    <target android:name="dotR" android:animation="@drawable/$text_typing__3" />
+</animated-vector>

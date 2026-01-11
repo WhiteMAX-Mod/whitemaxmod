@@ -1,0 +1,50 @@
+.class public final Luu7;
+.super Ljava/util/concurrent/locks/AbstractOwnableSynchronizer;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final a:Lovg;
+
+
+# direct methods
+.method public constructor <init>(Lovg;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/locks/AbstractOwnableSynchronizer;-><init>()V
+
+    iput-object p1, p0, Luu7;->a:Lovg;
+
+    return-void
+.end method
+
+.method public static a(Luu7;Ljava/lang/Thread;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/locks/AbstractOwnableSynchronizer;->setExclusiveOwnerThread(Ljava/lang/Thread;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Luu7;->a:Lovg;
+
+    invoke-virtual {v0}, Lovg;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

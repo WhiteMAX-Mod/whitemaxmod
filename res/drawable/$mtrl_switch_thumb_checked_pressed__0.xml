@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator android:interpolator="@interpolator/m3_sys_motion_easing_standard" android:duration="@integer/mtrl_switch_thumb_pressed_duration" android:valueFrom="@string/mtrl_switch_thumb_path_checked" android:valueTo="@string/mtrl_switch_thumb_path_pressed" android:valueType="pathType" android:propertyName="pathData"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" />

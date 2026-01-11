@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.ok.messages.views.widgets.SquareFrameLayout android:focusable="true" android:clickable="true" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <one.me.sdk.uikit.common.views.OneMeDraweeView android:id="@id/simple_drawee_view" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:actualImageScaleType="centerCrop" app:fadeDuration="0" app:placeholderImage="@drawable/ic_gallery_item_placeholder" />
+    <one.me.sdk.gallery.view.VideoInfoTextView android:layout_gravity="start|bottom" android:id="@id/video_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" />
+    <ViewStub android:layout_gravity="end|top" android:id="@id/check_button_view_stub" android:layout="@layout/oneme_row_gallery_media_check_button_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</ru.ok.messages.views.widgets.SquareFrameLayout>

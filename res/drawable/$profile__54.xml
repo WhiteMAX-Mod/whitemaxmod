@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$profile__55" android:duration="183" android:startOffset="0" android:valueFrom="0.15" android:valueTo="0.15" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__56" android:duration="183" android:startOffset="0" android:valueFrom="0.15" android:valueTo="0.15" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__57" android:duration="300" android:startOffset="183" android:valueFrom="0.15" android:valueTo="1.07" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__58" android:duration="300" android:startOffset="183" android:valueFrom="0.15" android:valueTo="1.07" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__59" android:duration="233" android:startOffset="483" android:valueFrom="1.07" android:valueTo="0.98" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__60" android:duration="233" android:startOffset="483" android:valueFrom="1.07" android:valueTo="0.98" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__61" android:duration="167" android:startOffset="717" android:valueFrom="0.98" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__62" android:duration="167" android:startOffset="717" android:valueFrom="0.98" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

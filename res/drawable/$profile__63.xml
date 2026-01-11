@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$profile__64" android:duration="183" android:startOffset="0" android:valueFrom="-40" android:valueTo="-40" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$profile__65" android:duration="317" android:startOffset="183" android:valueFrom="-40" android:valueTo="10" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$profile__66" android:duration="217" android:startOffset="500" android:valueFrom="10" android:valueTo="-3" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$profile__67" android:duration="167" android:startOffset="717" android:valueFrom="-3" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

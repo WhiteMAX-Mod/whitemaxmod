@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator android:interpolator="@android:anim/linear_interpolator" android:duration="1000" android:repeatCount="infinite" android:repeatMode="restart" android:propertyName="translateY"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <propertyValuesHolder android:propertyName="translateY">
+        <keyframe android:value="73" android:interpolator="@anim/interpolator_wave_pos" android:fraction="0.0" />
+        <keyframe android:value="63" android:interpolator="@anim/interpolator_wave_pos" android:fraction="0.333" />
+        <keyframe android:value="53" android:interpolator="@anim/interpolator_wave_pos" android:fraction="0.666" />
+        <keyframe android:value="73" android:interpolator="@anim/interpolator_wave_pos" android:fraction="1.0" />
+    </propertyValuesHolder>
+</objectAnimator>

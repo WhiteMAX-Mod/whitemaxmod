@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$chats__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="shape" android:animation="@drawable/$chats__1" />
+    <target android:name="_R_G_L_1_G_N_3_T_1" android:animation="@drawable/$chats__6" />
+    <target android:name="_R_G_L_1_G_N_3_T_1" android:animation="@drawable/$chats__11" />
+    <target android:name="_R_G_L_1_G_N_3_T_1" android:animation="@drawable/$chats__18" />
+    <target android:name="_R_G_L_0_G_D_0_P_0_G_0_T_1" android:animation="@drawable/$chats__23" />
+    <target android:name="_R_G_L_0_G_D_1_P_0_G_0_T_1" android:animation="@drawable/$chats__30" />
+    <target android:name="_R_G_L_0_G_D_2_P_0_G_0_T_1" android:animation="@drawable/$chats__37" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$chats__44" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$chats__49" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$chats__56" />
+    <target android:name="time_group" android:animation="@drawable/$chats__61" />
+</animated-vector>

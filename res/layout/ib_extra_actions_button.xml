@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatImageButton android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@drawable/ic_down_16" android:scaleType="center" android:contentDescription="@string/chat_extra_actions_show" style="@style/ExtraActionButton.Down"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

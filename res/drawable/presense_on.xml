@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/presense_bg">
+        <shape android:shape="oval">
+            <size android:height="10.0dip" android:width="10.0dip" />
+            <solid android:color="#ffffffff" />
+        </shape>
+    </item>
+    <item android:id="@id/presense_accent" android:left="2.0dip" android:top="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+        <shape android:shape="oval">
+            <size android:height="10.0dip" android:width="10.0dip" />
+            <solid android:color="#ff0000ff" />
+        </shape>
+    </item>
+</layer-list>

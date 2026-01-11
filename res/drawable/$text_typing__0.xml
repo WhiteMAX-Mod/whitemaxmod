@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="160.0dip" android:width="160.0dip" android:viewportWidth="160.0" android:viewportHeight="160.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="dotL" android:translateX="15.0" android:translateY="53.0">
+        <path android:name="circleL" android:fillColor="#ff0c0d0e" android:pathData="M16,0A16,16 0 1 1 16,32A16,16 0 1 1 16,0" />
+    </group>
+    <group android:name="dotM" android:translateX="64.0" android:translateY="63.0">
+        <path android:name="circleM" android:fillColor="#400c0d0e" android:pathData="M16,0A16,16 0 1 1 16,32A16,16 0 1 1 16,0" />
+    </group>
+    <group android:name="dotR" android:translateX="113.0" android:translateY="73.0">
+        <path android:name="circleR" android:fillColor="#400c0d0e" android:pathData="M16,0A16,16 0 1 1 16,32A16,16 0 1 1 16,0" />
+    </group>
+</vector>

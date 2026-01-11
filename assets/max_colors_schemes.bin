@@ -1,0 +1,358 @@
+[
+  {
+    "name": "OneMeGlobalThemeColorSpace",
+    "gradient": {
+      "angle": 225
+    },
+    "pattern": {
+      "width": 280,
+      "height": 280,
+      "image": "space_pattern.svg",
+      "is_overlay": false
+    }
+  },
+  {
+    "name": "OneMeGlobalThemeColorNature",
+    "gradient": {
+      "angle": 225
+    },
+    "pattern": {
+      "width": 280,
+      "height": 280,
+      "opacity": 1,
+      "image": "nature_pattern.svg",
+      "is_overlay": false
+    }
+  },
+  {
+    "name": "OneMeGlobalThemeColorNeon",
+    "gradient": {
+      "angle": 225
+    },
+    "radial_gradient": [
+      {
+        "x": 94.4,
+        "y": 14.38,
+        "radiusX": 60.61,
+        "radiusY": 57.57,
+        "angle": 12.0,
+        "stops": [
+          0.0,
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "x": 0,
+        "y": 80.05,
+        "radiusX": 70.38,
+        "radiusY": 140.37,
+        "angle": 123.0,
+        "stops": [
+          0.0,
+          0.5,
+          1.0
+        ]
+      }
+    ],
+    "pattern": {
+      "width": 284,
+      "height": 284,
+      "opacity": 1,
+      "image": "neon_pattern.svg",
+      "is_overlay": false
+    },
+    "pattern_radial_gradient": [
+      {
+        "x": 94.4,
+        "y": 14.38,
+        "radiusX": 60.61,
+        "radiusY": 57.57,
+        "angle": 12.0,
+        "stops": [
+          0.0,
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "x": 0,
+        "y": 80.05,
+        "radiusX": 70.38,
+        "radiusY": 140.37,
+        "angle": 123.0,
+        "stops": [
+          0.0,
+          0.5,
+          1.0
+        ]
+      }
+    ]
+  },
+    {
+      "name": "OneMeGlobalThemeColorNYGreen",
+      "gradient": {
+        "angle": 225
+      },
+      "radial_gradient": [
+        {
+          "x": 94.4,
+          "y": 14.38,
+          "radiusX": 60.61,
+          "radiusY": 57.57,
+          "angle": 12.0,
+          "stops": [
+            0.0,
+            0.5,
+            1.0
+          ]
+        },
+        {
+          "x": 0,
+          "y": 80.05,
+          "radiusX": 70.38,
+          "radiusY": 140.37,
+          "angle": 123.0,
+          "stops": [
+            0.0,
+            0.5,
+            1.0
+          ]
+        }
+      ],
+      "pattern": {
+        "width": 284,
+        "height": 284,
+        "opacity": 1,
+        "image": "new_year_pattern.svg",
+        "is_overlay": false
+      },
+      "pattern_radial_gradient": [
+        {
+          "x": 94.4,
+          "y": 14.38,
+          "radiusX": 60.61,
+          "radiusY": 57.57,
+          "angle": 12.0,
+          "stops": [
+            0.0,
+            0.5,
+            1.0
+          ]
+        },
+        {
+          "x": 0,
+          "y": 80.05,
+          "radiusX": 70.38,
+          "radiusY": 140.37,
+          "angle": 123.0,
+          "stops": [
+            0.0,
+            0.5,
+            1.0
+          ]
+        }
+      ]
+    },
+      {
+        "name": "OneMeGlobalThemeColorNYOrange",
+        "gradient": {
+          "angle": 225
+        },
+        "radial_gradient": [
+          {
+            "x": 94.4,
+            "y": 14.38,
+            "radiusX": 60.61,
+            "radiusY": 57.57,
+            "angle": 12.0,
+            "stops": [
+              0.0,
+              0.5,
+              1.0
+            ]
+          },
+          {
+            "x": 0,
+            "y": 80.05,
+            "radiusX": 70.38,
+            "radiusY": 140.37,
+            "angle": 123.0,
+            "stops": [
+              0.0,
+              0.5,
+              1.0
+            ]
+          }
+        ],
+        "pattern": {
+          "width": 284,
+          "height": 284,
+          "opacity": 1,
+          "image": "new_year_pattern.svg",
+          "is_overlay": false
+        },
+        "pattern_radial_gradient": [
+          {
+            "x": 94.4,
+            "y": 14.38,
+            "radiusX": 60.61,
+            "radiusY": 57.57,
+            "angle": 12.0,
+            "stops": [
+              0.0,
+              0.5,
+              1.0
+            ]
+          },
+          {
+            "x": 0,
+            "y": 80.05,
+            "radiusX": 70.38,
+            "radiusY": 140.37,
+            "angle": 123.0,
+            "stops": [
+              0.0,
+              0.5,
+              1.0
+            ]
+          }
+        ]
+      },
+  {
+    "name": "OneMeGlobalThemeColorMoscow",
+    "gradient": {
+      "angle": 225
+    },
+    "radial_gradient": [
+      {
+        "x": 94.4,
+        "y": 14.38,
+        "radiusX": 60.61,
+        "radiusY": 57.57,
+        "angle": 12.0,
+        "stops": [
+          0.0,
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "x": 0,
+        "y": 80.05,
+        "radiusX": 70.38,
+        "radiusY": 140.37,
+        "angle": 123.0,
+        "stops": [
+          0.0,
+          0.5,
+          1.0
+        ]
+      }
+    ],
+    "pattern": {
+      "width": 280,
+      "height": 280,
+      "opacity": 1,
+      "image": "moscow_pattern.svg",
+      "is_overlay": false
+    },
+    "pattern_radial_gradient": [
+      {
+        "x": 94.4,
+        "y": 14.38,
+        "radiusX": 60.61,
+        "radiusY": 57.57,
+        "angle": 12.0,
+        "stops": [
+          0.0,
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "x": 0,
+        "y": 80.05,
+        "radiusX": 70.38,
+        "radiusY": 140.37,
+        "angle": 123.0,
+        "stops": [
+          0.0,
+          0.5,
+          1.0
+        ]
+      }
+    ]
+
+  },
+     {
+      "name": "OneMeGlobalThemeColorLebedev",
+      "gradient": {
+        "angle": 225
+      },
+      "radial_gradient": [
+        {
+          "x": 94.4,
+          "y": 14.38,
+          "radiusX": 60.61,
+          "radiusY": 57.57,
+          "angle": 12.0,
+          "stops": [
+            0.0,
+            0.5,
+            1.0
+          ]
+        },
+        {
+          "x": 0,
+          "y": 80.05,
+          "radiusX": 70.38,
+          "radiusY": 140.37,
+          "angle": 123.0,
+          "stops": [
+            0.0,
+            0.5,
+            1.0
+          ]
+        }
+      ],
+      "pattern": {
+        "width": 280,
+        "height": 280,
+        "opacity": 1,
+        "image": "lebedev_pattern.svg",
+        "is_overlay": false
+      },
+      "pattern_radial_gradient": [
+        {
+          "x": 94.4,
+          "y": 14.38,
+          "radiusX": 60.61,
+          "radiusY": 57.57,
+          "angle": 12.0,
+          "stops": [
+            0.0,
+            0.5,
+            1.0
+          ]
+        },
+        {
+          "x": 0,
+          "y": 80.05,
+          "radiusX": 70.38,
+          "radiusY": 140.37,
+          "angle": 123.0,
+          "stops": [
+            0.0,
+            0.5,
+            1.0
+          ]
+        }
+      ]
+
+    },
+  {
+    "name": "OneMeGlobalThemeColorSimple",
+    "fill_color": true
+  }
+]

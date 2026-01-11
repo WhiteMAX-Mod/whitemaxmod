@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/mtrl_switch_thumb_pressed"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="@string/mtrl_switch_thumb_path_name" android:animation="@drawable/$mtrl_switch_thumb_pressed_unchecked__0" />
+</animated-vector>

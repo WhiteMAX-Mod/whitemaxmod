@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="?colorOnSurfaceVariant" android:alpha="@dimen/material_emphasis_disabled" />
+    <item android:state_checked="true" android:state_pressed="true" android:color="?colorOnSecondaryContainer" />
+    <item android:state_focused="true" android:state_checked="true" android:color="?colorOnSecondaryContainer" />
+    <item android:state_checked="true" android:color="?colorOnSecondaryContainer" android:state_hovered="true" />
+    <item android:state_checked="true" android:color="?colorOnSecondaryContainer" />
+    <item android:state_pressed="true" android:color="?colorOnSurface" />
+    <item android:state_focused="true" android:color="?colorOnSurface" />
+    <item android:color="?colorOnSurface" android:state_hovered="true" />
+    <item android:color="?colorOnSurfaceVariant" />
+</selector>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:topLeftRadius="@dimen/fastscroll__bubble_corner" android:topRightRadius="@dimen/fastscroll__bubble_corner" android:bottomLeftRadius="@dimen/fastscroll__bubble_corner" android:bottomRightRadius="0.0dip" />
+    <solid android:color="@android:color/white" />
+</shape>

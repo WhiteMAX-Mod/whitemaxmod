@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$sticker_typing__30" android:duration="1500" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 250,80C 250,80 250,80 250,80" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$sticker_typing__31" android:duration="500" android:startOffset="1500" android:propertyName="translateXY" android:pathData="M 250,80C 250,80 80,80 80,80" android:propertyXName="translateX" android:propertyYName="translateY" />
+</set>

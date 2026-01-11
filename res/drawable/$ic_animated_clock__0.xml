@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="360.0dip" android:width="360.0dip" android:viewportWidth="360.0" android:viewportHeight="360.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="_R_G">
+        <group android:name="_R_G_L_2_G" android:rotation="-5.666" android:translateX="180.0" android:translateY="180.0">
+            <path android:name="circle" android:pathData=" M-1.5 -144 C78.25,-144 143,-79.25 143,0.5 C143,80.25 78.25,145 -1.5,145 C-81.25,145 -146,80.25 -146,0.5 C-146,-79.25 -81.25,-144 -1.5,-144c " android:strokeColor="#ffffffff" android:strokeWidth="30.0" android:strokeLineCap="round" android:strokeLineJoin="round" />
+        </group>
+        <group android:name="_R_G_L_1_G" android:pivotX="-1.005" android:pivotY="8.966" android:scaleX="0.92198" android:rotation="-18.452" android:translateX="175.505" android:translateY="173.034">
+            <path android:name="hours" android:pathData=" M64.08 17.41 C64.08,17.41 -2.04,8.13 -2.04,8.13 " android:strokeColor="#ffffffff" android:strokeWidth="30.0" android:strokeLineCap="round" android:strokeLineJoin="round" />
+        </group>
+        <group android:name="_R_G_L_0_G" android:pivotX="-3.5" android:pivotY="-12.129" android:scaleY="1.07182" android:rotation="130320.0" android:translateX="178.0" android:translateY="193.129">
+            <path android:name="minutes" android:pathData=" M-4 -90.5 C-4,-90.5 -3.5,-13.5 -3.5,-13.5 " android:strokeColor="#ffffffff" android:strokeWidth="30.0" android:strokeLineCap="round" android:strokeLineJoin="round" />
+        </group>
+    </group>
+    <group android:name="time_group" />
+</vector>

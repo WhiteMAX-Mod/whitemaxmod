@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="call_history_item_call_count_users">
+        <item quantity="other">%1$d участников</item>
+        <item quantity="one">%1$d участник</item>
+        <item quantity="few">%1$d участника</item>
+    </plurals>
+    <plurals name="call_users_in_wait_room_count">
+        <item quantity="other">%1$d ожидающих</item>
+        <item quantity="one">%1$d ожидающий</item>
+        <item quantity="few">%1$d ожидающих</item>
+    </plurals>
+    <plurals name="call_users_info_count">
+        <item quantity="other">%1$d участников</item>
+        <item quantity="one">%1$d участник</item>
+        <item quantity="few">%1$d участника</item>
+    </plurals>
+    <plurals name="channel_screen_confirmation_delete_description">
+        <item quantity="other">Восстановить их не получится</item>
+        <item quantity="one">Восстановить его не получится</item>
+        <item quantity="two">Восстановить их не получится</item>
+        <item quantity="few">Восстановить их не получится</item>
+        <item quantity="many">Восстановить их не получится</item>
+    </plurals>
+    <plurals name="channel_screen_confirmation_delete_title">
+        <item quantity="other">Удалить посты?</item>
+        <item quantity="one">Удалить пост?</item>
+        <item quantity="two">Удалить посты?</item>
+        <item quantity="few">Удалить посты?</item>
+        <item quantity="many">Удалить посты?</item>
+    </plurals>
+    <plurals name="channel_subscribers_count">
+        <item quantity="other">подписчиков</item>
+        <item quantity="zero">подписчиков</item>
+        <item quantity="one">подписчик</item>
+        <item quantity="two">подписчика</item>
+        <item quantity="few">подписчика</item>
+        <item quantity="many">подписчиков</item>
+    </plurals>
+    <plurals name="chat_screen_action_copy_success">
+        <item quantity="other">Вы скопировали сообщения</item>
+        <item quantity="zero">Сообщений скопировано</item>
+        <item quantity="one">Вы скопировали сообщение</item>
+        <item quantity="two">Сообщения скопированы</item>
+        <item quantity="few">Вы скопировали сообщения</item>
+        <item quantity="many">Вы скопировали сообщения</item>
+    </plurals>
+    <plurals name="chat_screen_confirmation_delete_title">
+        <item quantity="other">Удалить сообщений?</item>
+        <item quantity="one">Удалить сообщение?</item>
+        <item quantity="two">Удалить сообщения?</item>
+        <item quantity="few">Удалить сообщения?</item>
+        <item quantity="many">Удалить сообщений?</item>
+    </plurals>
+    <plurals name="forward_snackbar_messages_sent">
+        <item quantity="other">Вы переслали сообщения</item>
+        <item quantity="one">Вы переслали сообщение</item>
+    </plurals>
+    <plurals name="inactive_ttl">
+        <item quantity="other">%d месяцев</item>
+        <item quantity="zero">%d месяцев</item>
+        <item quantity="one">%d месяц</item>
+        <item quantity="two">%d месяца</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
+    </plurals>
+    <plurals name="inactive_ttl_item">
+        <item quantity="other">Если я не захожу %d месяцев</item>
+        <item quantity="zero">Если я не захожу %d месяцев</item>
+        <item quantity="one">Если я не захожу %d месяц</item>
+        <item quantity="two">Если я не захожу %d месяца</item>
+        <item quantity="few">Если я не захожу %d месяца</item>
+        <item quantity="many">Если я не захожу %d месяцев</item>
+    </plurals>
+    <plurals name="max_attach_count_error">
+        <item quantity="other">Сообщение не может содержать более чем %d вложений</item>
+        <item quantity="zero">Сообщение не может содержать более чем %d вложений</item>
+        <item quantity="one">Сообщение не может содержать более чем %d вложение</item>
+        <item quantity="two">Сообщение не может содержать более чем %d вложения</item>
+        <item quantity="few">Сообщение не может содержать более чем %d вложения</item>
+        <item quantity="many">Сообщение не может содержать более чем %d вложений</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d new notifications</item>
+        <item quantity="one">%d new notification</item>
+    </plurals>
+    <plurals name="oneme_folders_picker_snackbar_add_channel_title">
+        <item quantity="other">Добавили канал в %d папки</item>
+        <item quantity="one">Добавили канал в %d папку</item>
+        <item quantity="two">Добавили канал в %d папки</item>
+        <item quantity="few">Добавили канал в %d папки</item>
+        <item quantity="many">Добавили канал в %d папок</item>
+    </plurals>
+    <plurals name="oneme_folders_picker_snackbar_add_chat_title">
+        <item quantity="other">Добавили чат в %d папки</item>
+        <item quantity="one">Добавили чат в %d папку</item>
+        <item quantity="two">Добавили чат в %d папки</item>
+        <item quantity="few">Добавили чат в %d папки</item>
+        <item quantity="many">Добавили чат в %d папок</item>
+    </plurals>
+    <plurals name="oneme_gallery_max_attach_count_error">
+        <item quantity="other">Сообщение не может содержать более чем %d вложений</item>
+        <item quantity="zero">Сообщение не может содержать более чем %d вложений</item>
+        <item quantity="one">Сообщение не может содержать более чем %d вложение</item>
+        <item quantity="two">Сообщение не может содержать более чем %d вложения</item>
+        <item quantity="few">Сообщение не может содержать более чем %d вложения</item>
+        <item quantity="many">Сообщение не может содержать более чем %d вложений</item>
+    </plurals>
+    <plurals name="oneme_in_app_review_rating_bar_accessibility">
+        <item quantity="other">%1$d из %2$d звёзд выбрано</item>
+        <item quantity="one">%1$d из %2$d звезды выбрано</item>
+        <item quantity="two">%1$d из %2$d звёзд выбрано</item>
+        <item quantity="few">%1$d из %2$d звёзд выбрано</item>
+        <item quantity="many">%1$d из %2$d звёзд выбрано</item>
+    </plurals>
+    <plurals name="oneme_in_app_review_rating_star_accessibility">
+        <item quantity="other">%1$d звёзд</item>
+        <item quantity="one">%1$d звезда</item>
+        <item quantity="two">%1$d звезды</item>
+        <item quantity="few">%1$d звезды</item>
+        <item quantity="many">%1$d звёзд</item>
+    </plurals>
+    <plurals name="oneme_settings_privacy_twofa_delete_user_days_left_notif">
+        <item quantity="other">Удаляем ваш профиль, осталось %1$d дней</item>
+        <item quantity="one">Удаляем ваш профиль, остался %1$d день</item>
+        <item quantity="few">Удаляем ваш профиль, осталось %1$d дня</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_creation_password_error_symbols_count">
+        <item quantity="other">Введите минимум %1$d символов</item>
+        <item quantity="one">Введите минимум %1$d символ</item>
+        <item quantity="few">Введите минимум %1$d символа</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_creation_password_symbols_count">
+        <item quantity="other">"От %1$d символов, заглавные и строчные буквы, цифры и специальные символы: $ #  _ @ &amp; *"</item>
+        <item quantity="one">"От %1$d символа, заглавные и строчные буквы, цифры и специальные символы: $ #  _ @ &amp; *"</item>
+        <item quantity="few">"От %1$d символов, заглавные и строчные буквы, цифры и специальные символы: $ #  _ @ &amp; *"</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_delete_user_days_left_description">
+        <item quantity="other">Все ваши чаты и контакты пропадут через %1$d дней — ещё есть время передумать</item>
+        <item quantity="one">Все ваши чаты и контакты пропадут через %1$d день — ещё есть время передумать</item>
+        <item quantity="few">Все ваши чаты и контакты пропадут через %1$d дня — ещё есть время передумать</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_delete_user_days_notif">
+        <item quantity="other">Удаляем ваш профиль, это займёт %1$d дней</item>
+        <item quantity="one">Удаляем ваш профиль, это займёт %1$d день</item>
+        <item quantity="few">Удаляем ваш профиль, это займёт %1$d дня</item>
+    </plurals>
+    <plurals name="oneme_stickers_set_count">
+        <item quantity="other">%d стикеров</item>
+        <item quantity="zero">%d стикеров</item>
+        <item quantity="one">%d стикер</item>
+        <item quantity="two">%d стикера</item>
+        <item quantity="few">%d стикера</item>
+        <item quantity="many">%d стикеров</item>
+    </plurals>
+    <plurals name="picker_chats_list_forward_messages">
+        <item quantity="other">%d пересылаемых сообщений из $s</item>
+        <item quantity="zero">%1$d пересылаемых сообщений из %2$s</item>
+        <item quantity="one">%1$d пересылаемое сообщение из %2$s</item>
+        <item quantity="two">%1$d пересылаемых сообщения из %2$s</item>
+        <item quantity="few">%1$d пересылаемых сообщения из %2$s</item>
+        <item quantity="many">%1$d пересылаемых сообщений из %2$s</item>
+    </plurals>
+    <plurals name="picker_chats_list_share_files">
+        <item quantity="other">%d файла</item>
+        <item quantity="one">Файл</item>
+        <item quantity="two">%d файла</item>
+        <item quantity="few">%d файла</item>
+        <item quantity="many">%d файлов</item>
+    </plurals>
+    <plurals name="picker_chats_list_share_images">
+        <item quantity="other">%d изображения</item>
+        <item quantity="one">Изображение</item>
+        <item quantity="two">%d изображения</item>
+        <item quantity="few">%d изображения</item>
+        <item quantity="many">%d изображений</item>
+    </plurals>
+    <plurals name="picker_chats_list_share_videos">
+        <item quantity="other">%d видео</item>
+        <item quantity="one">Видео</item>
+        <item quantity="two">%d видео</item>
+        <item quantity="few">%d видео</item>
+        <item quantity="many">%d видео</item>
+    </plurals>
+    <plurals name="pinbars_group_call_participants_count">
+        <item quantity="other">%1$d участников</item>
+        <item quantity="one">%1$d участник</item>
+        <item quantity="few">%1$d участника</item>
+    </plurals>
+    <plurals name="profile_chat_members_list_toolbar_subtitle">
+        <item quantity="other">%d участников</item>
+        <item quantity="zero">%d участников</item>
+        <item quantity="one">%d участник</item>
+        <item quantity="two">%d участника</item>
+        <item quantity="few">%d участника</item>
+        <item quantity="many">%d участников</item>
+    </plurals>
+    <plurals name="profile_delete_dates_days_left">
+        <item quantity="other">Удалим ваш профиль через %d дней</item>
+        <item quantity="zero">Удалим ваш профиль через %d дней</item>
+        <item quantity="one">Удалим ваш профиль через %d день</item>
+        <item quantity="two">Удалим ваш профиль через %d дня</item>
+        <item quantity="few">Удалим ваш профиль через %d дня</item>
+        <item quantity="many">Удалим ваш профиль через %d дней</item>
+    </plurals>
+    <plurals name="profile_edit_reactions_settings_slider_current_value">
+        <item quantity="other">%d реакций</item>
+        <item quantity="zero">%d реакций</item>
+        <item quantity="one">%d реакция</item>
+        <item quantity="two">%d реакции</item>
+        <item quantity="few">%d реакции</item>
+        <item quantity="many">%d реакций</item>
+    </plurals>
+    <plurals name="profile_members_list_delete_from_channel_snackbar">
+        <item quantity="other">Вы удалили подписчиков</item>
+        <item quantity="one">Вы удалили подписчика</item>
+    </plurals>
+    <plurals name="profile_members_list_delete_from_chat_snackbar">
+        <item quantity="other">Вы удалили участников</item>
+        <item quantity="one">Вы удалили участника</item>
+    </plurals>
+    <plurals name="profile_members_list_restore_in_channel_snackbar">
+        <item quantity="other">Вы добавили подписчиков</item>
+        <item quantity="one">Вы добавили подписчика</item>
+    </plurals>
+    <plurals name="profile_members_list_restore_in_chat_snackbar">
+        <item quantity="other">Вы добавили контакты</item>
+        <item quantity="one">Вы добавили контакт</item>
+    </plurals>
+    <plurals name="to_chats">
+        <item quantity="other">в %d чатов</item>
+        <item quantity="zero">в %d чатов</item>
+        <item quantity="one">в %d чат</item>
+        <item quantity="two">в %d чата</item>
+        <item quantity="few">в %d чата</item>
+        <item quantity="many">в %d чатов</item>
+    </plurals>
+    <plurals name="tt_chat_subtitle_count">
+        <item quantity="other">%d участников</item>
+        <item quantity="zero">%d участников</item>
+        <item quantity="one">%d участник</item>
+        <item quantity="two">%d участника</item>
+        <item quantity="few">%d участника</item>
+        <item quantity="many">%d участников</item>
+    </plurals>
+    <plurals name="tt_dates_days_past">
+        <item quantity="other">%d дней назад</item>
+        <item quantity="zero">%d дней назад</item>
+        <item quantity="one">%d день назад</item>
+        <item quantity="two">%d дня назад</item>
+        <item quantity="few">%d дня назад</item>
+        <item quantity="many">%d дней назад</item>
+    </plurals>
+    <plurals name="tt_dates_hours_past">
+        <item quantity="other">%d часов назад</item>
+        <item quantity="zero">%d часов назад</item>
+        <item quantity="one">%d час назад</item>
+        <item quantity="two">%d часа назад</item>
+        <item quantity="few">%d часа назад</item>
+        <item quantity="many">%d часов назад</item>
+    </plurals>
+    <plurals name="tt_dates_minutes_past">
+        <item quantity="other">%d минут назад</item>
+        <item quantity="zero">%d минут назад</item>
+        <item quantity="one">%d минуту назад</item>
+        <item quantity="two">%d минуты назад</item>
+        <item quantity="few">%d минуты назад</item>
+        <item quantity="many">%d минут назад</item>
+    </plurals>
+    <plurals name="tt_dates_months_past">
+        <item quantity="other">%d месяцев назад</item>
+        <item quantity="zero">%d месяцев назад</item>
+        <item quantity="one">%d месяц назад</item>
+        <item quantity="two">%d месяца назад</item>
+        <item quantity="few">%d месяца назад</item>
+        <item quantity="many">%d месяцев назад</item>
+    </plurals>
+    <plurals name="tt_dates_weeks_past">
+        <item quantity="other">%d недель назад</item>
+        <item quantity="zero">%d недель назад</item>
+        <item quantity="one">%d неделю назад</item>
+        <item quantity="two">%d недели назад</item>
+        <item quantity="few">%d недели назад</item>
+        <item quantity="many">%d недель назад</item>
+    </plurals>
+    <plurals name="tt_new_messages">
+        <item quantity="other">%d сообщений</item>
+        <item quantity="zero">%d сообщений</item>
+        <item quantity="one">%d сообщение</item>
+        <item quantity="two">%d сообщения</item>
+        <item quantity="few">%d сообщения</item>
+        <item quantity="many">%d сообщений</item>
+    </plurals>
+    <plurals name="you_sent_messages">
+        <item quantity="other">Вы отправили сообщения</item>
+        <item quantity="zero">Вы отправили сообщения</item>
+        <item quantity="one">@string/tt_you_send_message</item>
+        <item quantity="two">Вы отправили сообщения</item>
+        <item quantity="few">Вы отправили сообщения</item>
+        <item quantity="many">Вы отправили сообщения</item>
+    </plurals>
+</resources>

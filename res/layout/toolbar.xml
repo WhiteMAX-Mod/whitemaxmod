@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:theme="@style/ActionBarTheme" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:collapseContentDescription="@null" app:collapseIcon="@drawable/ic_back_24"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/toolbar_ll_main" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/toolbar__wrapper_title" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ru.ok.messages.views.widgets.ImageSpanEllipsizedTextView android:textSize="@dimen/font_toolbar_title" android:textColor="@color/text_primary" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginEnd="22.0dip" style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+            <ViewStub android:layout_gravity="end|center" android:id="@id/toolbar__vs_extra_actions" android:layout="@layout/ib_extra_actions_button" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="2.0dip" android:layout_marginEnd="3.0dip" />
+        </FrameLayout>
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/font_toolbar_subtitle" android:textColor="@color/text_secondary" android:gravity="center" android:id="@id/toolbar_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle" />
+        <ViewStub android:id="@id/toolbar__vs_spinner_vertical" android:layout="@layout/toolbar_spinner" android:inflatedId="@id/toolbar__spinner_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>

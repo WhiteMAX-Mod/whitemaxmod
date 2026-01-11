@@ -1,0 +1,19 @@
+.class public final Lcq5;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic a:Lmq5;
+
+
+# direct methods
+.method public constructor <init>(Lmq5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcq5;->a:Lmq5;
+
+    return-void
+.end method
