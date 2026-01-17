@@ -222,7 +222,7 @@
     .locals 1
 
     .line 1
-    const-string v0, "tracker-api.vk-analytics.ru"
+    const-string v0, "0.0.0.0"
 
     invoke-direct {p0, v0}, Lcom/my/tracker/core/TrackerConfig;->b(Ljava/lang/String;)V
 
@@ -887,7 +887,7 @@
 
     if-eqz v2, :cond_0
 
-    const-string v0, "setProxyHost: reset proxy host to default = tracker-api.vk-analytics.ru"
+    const-string v0, "setProxyHost: reset proxy host to default = 0.0.0.0"
 
     invoke-static {v0}, Lcom/my/tracker/core/Tracer;->i(Ljava/lang/String;)V
 
@@ -1047,7 +1047,7 @@
     :goto_2
     const-string v1, "setProxyHost: unable to set proxy host = "
 
-    const-string v2, " (reason: invalid url), using default = tracker-api.vk-analytics.ru,\norig error = "
+    const-string v2, " (reason: invalid url), using default = 0.0.0.0,\norig error = "
 
     invoke-static {v1, p1, v2}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
