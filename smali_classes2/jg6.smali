@@ -1,19 +1,25 @@
 .class public final Ljg6;
-.super Lxbg;
+.super Lj2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
+.field public final d:J
 
 
 # direct methods
 .method public constructor <init>(J)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lwob;->M2:Lwob;
 
-    iput-wide p1, p0, Ljg6;->c:J
+    invoke-direct {p0, v0}, Lj2;-><init>(Lwob;)V
+
+    iput-wide p1, p0, Ljg6;->d:J
+
+    const-string v0, "folderSync"
+
+    invoke-virtual {p0, p1, p2, v0}, Lj2;->y(JLjava/lang/String;)V
 
     return-void
 .end method
@@ -41,9 +47,9 @@
     :cond_1
     check-cast p1, Ljg6;
 
-    iget-wide v3, p0, Ljg6;->c:J
+    iget-wide v3, p0, Ljg6;->d:J
 
-    iget-wide v5, p1, Ljg6;->c:J
+    iget-wide v5, p1, Ljg6;->d:J
 
     cmp-long p1, v3, v5
 
@@ -58,27 +64,11 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Ljg6;->c:J
+    iget-wide v0, p0, Ljg6;->d:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Response(folderSync="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ljg6;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

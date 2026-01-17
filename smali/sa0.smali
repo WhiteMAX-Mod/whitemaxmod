@@ -1,5 +1,5 @@
 .class public final Lsa0;
-.super Lqe3;
+.super Lbf3;
 .source "SourceFile"
 
 
@@ -28,11 +28,11 @@
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lqe3;
+    instance-of v0, p1, Lbf3;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lqe3;
+    check-cast p1, Lbf3;
 
     move-object v0, p1
 
@@ -40,7 +40,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lpe3;->a:Lpe3;
+    sget-object v0, Laf3;->a:Laf3;
 
     invoke-virtual {v0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -74,7 +74,7 @@
 .method public final hashCode()I
     .locals 2
 
-    sget-object v0, Lpe3;->a:Lpe3;
+    sget-object v0, Laf3;->a:Laf3;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -106,7 +106,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lpe3;->a:Lpe3;
+    sget-object v1, Laf3;->a:Laf3;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

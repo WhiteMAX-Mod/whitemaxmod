@@ -13,16 +13,16 @@
         "",
         "",
         "expectedChecksum",
-        "Lk57;",
+        "Lu47;",
         "hashAlgorithm",
         "<init>",
-        "(Ljava/lang/String;Lk57;)V",
+        "(Ljava/lang/String;Lu47;)V",
         "component1",
         "()Ljava/lang/String;",
         "component2",
-        "()Lk57;",
+        "()Lu47;",
         "copy",
-        "(Ljava/lang/String;Lk57;)Lru/ok/android/externcalls/sdk/net/FileValidationConfig;",
+        "(Ljava/lang/String;Lu47;)Lru/ok/android/externcalls/sdk/net/FileValidationConfig;",
         "toString",
         "",
         "hashCode",
@@ -33,7 +33,7 @@
         "(Ljava/lang/Object;)Z",
         "Ljava/lang/String;",
         "getExpectedChecksum",
-        "Lk57;",
+        "Lu47;",
         "getHashAlgorithm",
         "calls-sdk_release"
     }
@@ -50,23 +50,23 @@
 # instance fields
 .field private final expectedChecksum:Ljava/lang/String;
 
-.field private final hashAlgorithm:Lk57;
+.field private final hashAlgorithm:Lu47;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lk57;)V
+.method public constructor <init>(Ljava/lang/String;Lu47;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->expectedChecksum:Ljava/lang/String;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lk57;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lu47;
 
     return-void
 .end method
 
-.method public static synthetic copy$default(Lru/ok/android/externcalls/sdk/net/FileValidationConfig;Ljava/lang/String;Lk57;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/net/FileValidationConfig;
+.method public static synthetic copy$default(Lru/ok/android/externcalls/sdk/net/FileValidationConfig;Ljava/lang/String;Lu47;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/net/FileValidationConfig;
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -80,10 +80,10 @@
 
     if-eqz p3, :cond_1
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lk57;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lu47;
 
     :cond_1
-    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->copy(Ljava/lang/String;Lk57;)Lru/ok/android/externcalls/sdk/net/FileValidationConfig;
+    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->copy(Ljava/lang/String;Lu47;)Lru/ok/android/externcalls/sdk/net/FileValidationConfig;
 
     move-result-object p0
 
@@ -100,20 +100,20 @@
     return-object v0
 .end method
 
-.method public final component2()Lk57;
+.method public final component2()Lu47;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lk57;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lu47;
 
     return-object v0
 .end method
 
-.method public final copy(Ljava/lang/String;Lk57;)Lru/ok/android/externcalls/sdk/net/FileValidationConfig;
+.method public final copy(Ljava/lang/String;Lu47;)Lru/ok/android/externcalls/sdk/net/FileValidationConfig;
     .locals 1
 
     new-instance v0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;
 
-    invoke-direct {v0, p1, p2}, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;-><init>(Ljava/lang/String;Lk57;)V
+    invoke-direct {v0, p1, p2}, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;-><init>(Ljava/lang/String;Lu47;)V
 
     return-object v0
 .end method
@@ -143,7 +143,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->expectedChecksum:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -152,9 +152,9 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lk57;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lu47;
 
-    iget-object p1, p1, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lk57;
+    iget-object p1, p1, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lu47;
 
     if-eq v1, p1, :cond_3
 
@@ -172,10 +172,10 @@
     return-object v0
 .end method
 
-.method public final getHashAlgorithm()Lk57;
+.method public final getHashAlgorithm()Lu47;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lk57;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lu47;
 
     return-object v0
 .end method
@@ -191,7 +191,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lk57;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lu47;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -207,7 +207,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->expectedChecksum:Ljava/lang/String;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lk57;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->hashAlgorithm:Lu47;
 
     new-instance v2, Ljava/lang/StringBuilder;
 

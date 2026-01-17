@@ -1,98 +1,48 @@
 .class public final Lcl6;
-.super Lb5g;
-.source "SourceFile"
-
-# interfaces
-.implements Lcr6;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
+.field public final synthetic X:Lr3;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
+.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lcl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    iput-object p1, p0, Lcl6;->X:Lr3;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcl6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcl6;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lcl6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lcl6;
-
-    iget-object v1, p0, Lcl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
-
-    invoke-direct {v0, p2, v1}, Lcl6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
-
-    iput-object p1, v0, Lcl6;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iput-object p1, p0, Lcl6;->d:Ljava/lang/Object;
 
-    iget-object p1, p0, Lcl6;->o:Ljava/lang/Object;
+    iget p1, p0, Lcl6;->o:I
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    or-int/2addr p1, v0
 
-    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lp38;
+    iput p1, p0, Lcl6;->o:I
 
-    iget-object p1, p0, Lcl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    iget-object p1, p0, Lcl6;->X:Lr3;
 
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->N0()Lo3d;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    invoke-virtual {p1}, Lone/me/chats/picker/AbstractPickerScreen;->J0()Lf4c;
+    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
-
-    iget-object p1, p1, Lf4c;->c:Lg6c;
-
-    check-cast p1, Lnk6;
-
-    invoke-virtual {p1}, Lnk6;->g()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lo3d;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

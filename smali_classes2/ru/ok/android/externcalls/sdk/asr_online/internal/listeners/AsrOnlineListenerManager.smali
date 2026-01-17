@@ -13,7 +13,7 @@
         "",
         "",
         "isAvailable",
-        "Lv2h;",
+        "Lb3h;",
         "onAsrAvailableChanged",
         "(Z)V",
         "Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;",

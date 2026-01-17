@@ -1,57 +1,100 @@
 .class public final Lk7g;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Landroid/view/ViewGroup;
 
-.field public final synthetic Y:Lo7g;
+.field public final synthetic b:Z
 
-.field public Z:I
+.field public final synthetic c:Landroid/view/View;
 
-.field public d:Lo7g;
+.field public final synthetic d:Landroid/view/View;
 
-.field public o:J
+.field public final synthetic e:Ll7g$a;
 
 
 # direct methods
-.method public constructor <init>(Lo7g;Ll84;)V
+.method public constructor <init>(Landroid/view/ViewGroup;ZLandroid/view/View;Landroid/view/View;Ll7g$a;)V
     .locals 0
 
-    iput-object p1, p0, Lk7g;->Y:Lo7g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lk7g;->a:Landroid/view/ViewGroup;
+
+    iput-boolean p2, p0, Lk7g;->b:Z
+
+    iput-object p3, p0, Lk7g;->c:Landroid/view/View;
+
+    iput-object p4, p0, Lk7g;->d:Landroid/view/View;
+
+    iput-object p5, p0, Lk7g;->e:Ll7g$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    iput-object p1, p0, Lk7g;->X:Ljava/lang/Object;
+    return-void
+.end method
 
-    iget p1, p0, Lk7g;->Z:I
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    const/high16 v0, -0x80000000
+    return-void
+.end method
 
-    or-int/2addr p1, v0
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    iput p1, p0, Lk7g;->Z:I
+    return-void
+.end method
 
-    const-wide/16 v1, 0x0
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 5
 
-    const-wide/16 v3, 0x0
+    iget-boolean p1, p0, Lk7g;->b:Z
 
-    iget-object v0, p0, Lk7g;->Y:Lo7g;
+    if-eqz p1, :cond_0
 
-    move-object v5, p0
+    iget-object p1, p0, Lk7g;->c:Landroid/view/View;
 
-    invoke-virtual/range {v0 .. v5}, Lo7g;->a(JJLl84;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    iget-object p1, p0, Lk7g;->d:Landroid/view/View;
 
-    return-object p1
+    :goto_0
+    iget-object v0, p0, Lk7g;->a:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+
+    move-result p1
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lk7g;->e:Ll7g$a;
+
+    iget-object v2, v2, Ll7g$a;->v0:Ljava/lang/Integer;
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    invoke-static {v1, v4, v2, v3}, Lc7j;->a(Landroid/content/Context;Ljava/lang/Integer;Ljava/lang/Integer;I)Lp6;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+
+    return-void
 .end method

@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Ltx5;
+.field public final a:Lvx5;
 
 
 # direct methods
-.method public constructor <init>(Ltx5;)V
+.method public constructor <init>(Lvx5;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/common/api/UnsupportedApiCallException;->a:Ltx5;
+    iput-object p1, p0, Lcom/google/android/gms/common/api/UnsupportedApiCallException;->a:Lvx5;
 
     return-void
 .end method
@@ -23,7 +23,7 @@
 .method public final getMessage()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/UnsupportedApiCallException;->a:Ltx5;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/UnsupportedApiCallException;->a:Lvx5;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 

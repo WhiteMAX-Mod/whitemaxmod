@@ -1,136 +1,49 @@
-.class public abstract Lasb;
-.super Ljava/lang/Object;
+.class public final Lasb;
+.super Ly48;
 .source "SourceFile"
 
+# interfaces
+.implements Ldr6;
 
-# static fields
-.field public static final a:Ljava/lang/String;
+
+# instance fields
+.field public final synthetic a:Lbsb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lbsb;)V
+    .locals 0
 
-    const-string v0, "PackageManagerHelper"
+    iput-object p1, p0, Lasb;->a:Lbsb;
 
-    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
+    const/4 p1, 0x3
 
-    move-result-object v0
-
-    sput-object v0, Lasb;->a:Ljava/lang/String;
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/Class;Z)V
-    .locals 6
 
-    const-string v0, "disabled"
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v1, "enabled"
+    check-cast p1, La94;
 
-    sget-object v2, Lasb;->a:Ljava/lang/String;
+    check-cast p2, Lf94;
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    check-cast p3, Lg94;
 
-    move-result-object v3
+    iget-object v0, p0, Lasb;->a:Lbsb;
 
-    new-instance v4, Landroid/content/ComponentName;
+    iget-object v1, v0, Lbsb;->a:Ll88;
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    move-result-object v5
-
-    invoke-direct {v4, p0, v5}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    const/4 p0, 0x1
-
-    if-eqz p2, :cond_0
-
-    move v5, p0
-
-    goto :goto_0
+    invoke-static {v0, p1, p1, p2, p3}, Lbsb;->a(Lbsb;La94;La94;Lf94;Lg94;)V
 
     :cond_0
-    const/4 v5, 0x2
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :goto_0
-    invoke-virtual {v3, v4, v5, p0}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
-
-    invoke-static {}, Lwki;->l()Lwki;
-
-    move-result-object p0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, " "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p2, :cond_1
-
-    move-object v4, v1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v4, v0
-
-    :goto_1
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p0, v2, v3}, Lwki;->f(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    invoke-static {}, Lwki;->l()Lwki;
-
-    move-result-object v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "could not be "
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p2, :cond_2
-
-    move-object v0, v1
-
-    :cond_2
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v3, v2, p1, p0}, Lwki;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
+    return-object p1
 .end method

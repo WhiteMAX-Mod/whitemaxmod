@@ -1,80 +1,88 @@
-.class public final Le16;
-.super Lb5g;
+.class public final synthetic Le16;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lf16;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lh16;
 
 
 # direct methods
-.method public constructor <init>(Lf16;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lh16;I)V
     .locals 0
 
-    iput-object p1, p0, Le16;->X:Lf16;
+    iput p2, p0, Le16;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Le16;->b:Lh16;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln00;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Le16;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Le16;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Le16;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Le16;
+    iget v0, p0, Le16;->a:I
 
-    iget-object v1, p0, Le16;->X:Lf16;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1, p2}, Le16;-><init>(Lf16;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Le16;->b:Lh16;
 
-    iput-object p1, v0, Le16;->o:Ljava/lang/Object;
+    invoke-static {v0}, Lh16;->A(Lh16;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    :pswitch_0
+    sget v0, Lv5e;->M1:I
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v1, p0, Le16;->b:Lh16;
 
-    iget-object p1, p0, Le16;->o:Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    check-cast p1, Ln00;
+    move-result-object v1
 
-    iget-object v0, p0, Le16;->X:Lf16;
+    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, p1}, Lf16;->I(Ln00;)V
+    move-result-object v0
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Lv5e;->B0:I
+
+    iget-object v1, p0, Le16;->b:Lh16;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

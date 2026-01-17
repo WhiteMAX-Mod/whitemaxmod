@@ -13,7 +13,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000J\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0007\n\u0002\u0008\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008 \n\u0002\u0010 \n\u0002\u0008\u0004\u0008\u0001\u0018\u00002\u00020\u00012\u00020\u0002B_\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0005\u0012\u0006\u0010\u0008\u001a\u00020\u0005\u0012\u0006\u0010\t\u001a\u00020\u0005\u0012\u0006\u0010\n\u001a\u00020\u0005\u0012\u0006\u0010\u000b\u001a\u00020\u0005\u0012\u0006\u0010\u000c\u001a\u00020\u0005\u0012\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u0000\u0012\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u0001\u00a2\u0006\u0004\u0008\u000f\u0010\u0010B\u001d\u0008\u0016\u0012\u0006\u0010\u0011\u001a\u00020\u0000\u0012\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u0000\u00a2\u0006\u0004\u0008\u000f\u0010\u0012J\u0018\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0013\u001a\u00020\u0000H\u0096\u0001\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J\u0018\u0010\u0018\u001a\u00020\u00142\u0006\u0010\u0013\u001a\u00020\u0017H\u0096\u0001\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0018\u0010\u001b\u001a\u00020\u00142\u0006\u0010\u0013\u001a\u00020\u001aH\u0096\u0001\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0018\u0010\u001e\u001a\u00020\u00142\u0006\u0010\u001d\u001a\u00020\u0005H\u0096\u0001\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\u0018\u0010\"\u001a\u00020\u00142\u0006\u0010!\u001a\u00020 H\u0096\u0001\u00a2\u0006\u0004\u0008\"\u0010#J\u001a\u0010$\u001a\u0004\u0018\u00010\u00172\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008$\u0010%J\u001a\u0010&\u001a\u0004\u0018\u00010\u00002\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008&\u0010\'J\u001a\u0010(\u001a\u0004\u0018\u00010\u001a2\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008(\u0010)J\r\u0010*\u001a\u00020\u0014\u00a2\u0006\u0004\u0008*\u0010+J\u0015\u0010.\u001a\u00020\u00142\u0006\u0010-\u001a\u00020,\u00a2\u0006\u0004\u0008.\u0010/J\u000f\u00100\u001a\u00020\u0003H\u0016\u00a2\u0006\u0004\u00080\u00101J\u000f\u00102\u001a\u00020\u0014H\u0002\u00a2\u0006\u0004\u00082\u0010+R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0004\u00103\u001a\u0004\u00084\u00101R$\u0010\r\u001a\u0004\u0018\u00010\u00008\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\r\u00105\u001a\u0004\u00086\u00107\"\u0004\u00088\u0010\u0016R*\u0010\u0006\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0006\u0010:\u001a\u0004\u0008;\u0010<\"\u0004\u0008=\u0010\u001fR*\u0010\u0007\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0007\u0010:\u001a\u0004\u0008>\u0010<\"\u0004\u0008?\u0010\u001fR*\u0010\u0008\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0008\u0010:\u001a\u0004\u0008@\u0010<\"\u0004\u0008A\u0010\u001fR*\u0010\t\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\t\u0010:\u001a\u0004\u0008B\u0010<\"\u0004\u0008C\u0010\u001fR*\u0010\n\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\n\u0010:\u001a\u0004\u0008D\u0010<\"\u0004\u0008E\u0010\u001fR*\u0010\u000b\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000b\u0010:\u001a\u0004\u0008F\u0010<\"\u0004\u0008G\u0010\u001fR*\u0010\u000c\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000c\u0010:\u001a\u0004\u0008H\u0010<\"\u0004\u0008I\u0010\u001fR\u0014\u0010-\u001a\u00020,8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008-\u0010JR\u0014\u0010K\u001a\u00020,8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008K\u0010JR\u0014\u0010L\u001a\u00020,8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008L\u0010JR\u0011\u0010N\u001a\u0008\u0012\u0004\u0012\u00020\u001a0M8\u0016X\u0096\u0005R\u0011\u0010O\u001a\u0008\u0012\u0004\u0012\u00020\u00000M8\u0016X\u0096\u0005R\u0011\u0010P\u001a\u0008\u0012\u0004\u0012\u00020\u00170M8\u0016X\u0096\u0005\u00a8\u0006Q"
+        "\u0000J\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0007\n\u0002\u0008\r\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008$\n\u0002\u0010 \n\u0002\u0008\u0008\u0008\u0001\u0018\u00002\u00020\u00012\u00020\u0002B_\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0005\u0012\u0006\u0010\u0008\u001a\u00020\u0005\u0012\u0006\u0010\t\u001a\u00020\u0005\u0012\u0006\u0010\n\u001a\u00020\u0005\u0012\u0006\u0010\u000b\u001a\u00020\u0005\u0012\u0006\u0010\u000c\u001a\u00020\u0005\u0012\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u0000\u0012\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u0001\u00a2\u0006\u0004\u0008\u000f\u0010\u0010B\u001d\u0008\u0016\u0012\u0006\u0010\u0011\u001a\u00020\u0000\u0012\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u0000\u00a2\u0006\u0004\u0008\u000f\u0010\u0012J\r\u0010\u0014\u001a\u00020\u0013\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0015\u0010\u0018\u001a\u00020\u00132\u0006\u0010\u0017\u001a\u00020\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u000f\u0010\u001a\u001a\u00020\u0003H\u0016\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0018\u0010\u001d\u001a\u00020\u00132\u0006\u0010\u001c\u001a\u00020\u0000H\u0096\u0001\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0018\u0010 \u001a\u00020\u00132\u0006\u0010\u001c\u001a\u00020\u001fH\u0096\u0001\u00a2\u0006\u0004\u0008 \u0010!J\u0018\u0010#\u001a\u00020\u00132\u0006\u0010\u001c\u001a\u00020\"H\u0096\u0001\u00a2\u0006\u0004\u0008#\u0010$J\u0018\u0010&\u001a\u00020\u00132\u0006\u0010%\u001a\u00020\u0005H\u0096\u0001\u00a2\u0006\u0004\u0008&\u0010\'J\u0018\u0010*\u001a\u00020\u00132\u0006\u0010)\u001a\u00020(H\u0096\u0001\u00a2\u0006\u0004\u0008*\u0010+J\u001a\u0010,\u001a\u0004\u0018\u00010\u001f2\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008,\u0010-J\u001a\u0010.\u001a\u0004\u0018\u00010\u00002\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008.\u0010/J\u001a\u00100\u001a\u0004\u0018\u00010\"2\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u00080\u00101J\u000f\u00102\u001a\u00020\u0013H\u0002\u00a2\u0006\u0004\u00082\u0010\u0015R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0004\u00103\u001a\u0004\u00084\u0010\u001bR$\u0010\r\u001a\u0004\u0018\u00010\u00008\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\r\u00105\u001a\u0004\u00086\u00107\"\u0004\u00088\u0010\u001eR*\u0010\u0006\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0006\u0010:\u001a\u0004\u0008;\u0010<\"\u0004\u0008=\u0010\'R*\u0010\u0007\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0007\u0010:\u001a\u0004\u0008>\u0010<\"\u0004\u0008?\u0010\'R*\u0010\u0008\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0008\u0010:\u001a\u0004\u0008@\u0010<\"\u0004\u0008A\u0010\'R*\u0010\t\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\t\u0010:\u001a\u0004\u0008B\u0010<\"\u0004\u0008C\u0010\'R*\u0010\n\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\n\u0010:\u001a\u0004\u0008D\u0010<\"\u0004\u0008E\u0010\'R*\u0010\u000b\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000b\u0010:\u001a\u0004\u0008F\u0010<\"\u0004\u0008G\u0010\'R*\u0010\u000c\u001a\u00020\u00052\u0006\u00109\u001a\u00020\u00058\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000c\u0010:\u001a\u0004\u0008H\u0010<\"\u0004\u0008I\u0010\'R\u0014\u0010\u0017\u001a\u00020\u00168\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0017\u0010JR\u0014\u0010K\u001a\u00020\u00168\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008K\u0010JR\u0014\u0010L\u001a\u00020\u00168\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008L\u0010JR\u001a\u0010P\u001a\u0008\u0012\u0004\u0012\u00020\u00000M8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008N\u0010OR\u001a\u0010R\u001a\u0008\u0012\u0004\u0012\u00020\u001f0M8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008Q\u0010OR\u001a\u0010T\u001a\u0008\u0012\u0004\u0012\u00020\"0M8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008S\u0010O\u00a8\u0006U"
     }
     d2 = {
         "Lone/me/sdk/richvector/internal/element/GroupElement;",
@@ -35,8 +35,16 @@
         "(Ljava/lang/String;FFFFFFFLone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/ElementHolder;)V",
         "prototype",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;)V",
+        "Lb3h;",
+        "buildTransformMatrix",
+        "()V",
+        "Landroid/graphics/Matrix;",
+        "scaleMatrix",
+        "scaleAllPaths",
+        "(Landroid/graphics/Matrix;)V",
+        "toString",
+        "()Ljava/lang/String;",
         "element",
-        "Lv2h;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",
@@ -58,14 +66,6 @@
         "(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;",
         "findClipPath",
         "(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;",
-        "buildTransformMatrix",
-        "()V",
-        "Landroid/graphics/Matrix;",
-        "scaleMatrix",
-        "scaleAllPaths",
-        "(Landroid/graphics/Matrix;)V",
-        "toString",
-        "()Ljava/lang/String;",
         "invalidateTransforms",
         "Ljava/lang/String;",
         "getName",
@@ -94,15 +94,19 @@
         "originalTransformMatrix",
         "finalTransformMatrix",
         "",
-        "clipPathElements",
+        "getGroupElements",
+        "()Ljava/util/List;",
         "groupElements",
+        "getPathElements",
         "pathElements",
+        "getClipPathElements",
+        "clipPathElements",
         "rich-vector_release"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -198,7 +202,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;FFFFFFFLone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/ElementHolder;ILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;FFFFFFFLone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/ElementHolder;ILso4;)V
     .locals 13
 
     move/from16 v0, p11
@@ -301,7 +305,7 @@
 
     const/4 v10, 0x2
 
-    invoke-direct {v9, p2, v0, v10, v0}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILro4;)V
+    invoke-direct {v9, p2, v0, v10, v0}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILso4;)V
 
     goto :goto_0
 
@@ -350,7 +354,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, La1h;->d(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p2}, Li1h;->c(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
@@ -360,7 +364,7 @@
     move-result-object v1
 
     .line 34
-    invoke-static {v1}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v1}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v2
 
@@ -372,7 +376,7 @@
 
     .line 35
     :goto_1
-    invoke-static {v4, v1}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v4, v1}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -400,7 +404,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, La1h;->d(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p2}, Li1h;->c(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
@@ -410,7 +414,7 @@
     move-result-object v1
 
     .line 39
-    invoke-static {v1}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v1}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v2
 
@@ -420,7 +424,7 @@
 
     .line 40
     :goto_2
-    invoke-static {v4, v1}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v4, v1}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -448,7 +452,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, La1h;->d(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p2}, Li1h;->c(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
@@ -458,7 +462,7 @@
     move-result-object p1
 
     .line 44
-    invoke-static {p1}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {p1}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
@@ -466,7 +470,7 @@
 
     .line 45
     :goto_3
-    invoke-static {v3, p1}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, p1}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -492,7 +496,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILro4;)V
+.method public synthetic constructor <init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILso4;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -543,7 +547,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v0}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
@@ -554,7 +558,7 @@
     move v3, v2
 
     :goto_0
-    invoke-static {v3, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -580,7 +584,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v0}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
@@ -589,7 +593,7 @@
     move v3, v2
 
     :goto_1
-    invoke-static {v3, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -615,14 +619,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v0}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
     if-ltz v1, :cond_5
 
     :goto_2
-    invoke-static {v2, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -725,7 +729,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v0}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
@@ -734,7 +738,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v2, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1124,7 +1128,7 @@
 
     const-string v15, "GroupElement(name="
 
-    invoke-static {v15, v1, v0, v2, v3}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v15, v1, v0, v2, v3}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1206,7 +1210,7 @@
 
     move-object/from16 v2, v17
 
-    invoke-static {v0, v1, v2}, Lc12;->k(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lecj;->b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

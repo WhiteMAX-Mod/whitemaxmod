@@ -1,87 +1,49 @@
-.class public final synthetic Ldkc;
-.super Ljava/lang/Object;
+.class public final Ldkc;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lvs8;
 
-.field public final synthetic b:Lpf6;
+.field public Y:I
+
+.field public d:Lvs8;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpf6;I)V
+.method public constructor <init>(Lvs8;Lo84;)V
     .locals 0
 
-    iput p2, p0, Ldkc;->a:I
+    iput-object p1, p0, Ldkc;->X:Lvs8;
 
-    iput-object p1, p0, Ldkc;->b:Lpf6;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ldkc;->a:I
+    iput-object p1, p0, Ldkc;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Ldkc;->Y:I
 
-    check-cast p1, Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Ldkc;->b:Lpf6;
+    or-int/2addr p1, v0
 
-    iget-object v0, v0, Lpf6;->X:Ljava/lang/Object;
+    iput p1, p0, Ldkc;->Y:I
 
-    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    iget-object p1, p0, Ldkc;->X:Lvs8;
 
-    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->B0()Lya2;
+    invoke-virtual {p1, p0}, Lvs8;->a(Lo84;)Ljava/lang/Object;
 
-    move-result-object v0
-
-    iget-object v0, v0, Lya2;->b:Lma2;
-
-    invoke-virtual {v0, p1}, Lma2;->k(Ljava/lang/String;)V
-
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object v0, p0, Ldkc;->b:Lpf6;
-
-    iget-object v0, v0, Lpf6;->X:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
-
-    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->B0()Lya2;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lya2;->b:Lma2;
-
-    invoke-virtual {v0, p1}, Lma2;->l(I)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -18,7 +18,7 @@
     d2 = {
         "Lru/ok/android/externcalls/analytics/internal/upload/Uploader;",
         "",
-        "Lv2h;",
+        "Lb3h;",
         "upload",
         "()V",
         "drop",

@@ -2,301 +2,334 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final E:J
-
-.field public static final F:[Ljava/lang/String;
-
-.field public static final G:J
+# interfaces
+.implements Lr5e;
 
 
 # instance fields
-.field public final A:Ltc4;
+.field public final synthetic a:I
 
-.field public B:Z
-
-.field public volatile C:Z
-
-.field public D:I
-
-.field public final a:Lcgd;
-
-.field public final b:Lhga;
-
-.field public final c:[B
-
-.field public final d:Landroid/os/HandlerThread;
-
-.field public final e:Landroid/os/Handler;
-
-.field public f:Lo0b;
-
-.field public g:Lul4;
-
-.field public final h:J
-
-.field public i:J
-
-.field public j:Ljava/lang/Integer;
-
-.field public k:Ljava/lang/Integer;
-
-.field public final l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final n:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final p:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final q:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final r:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final s:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final t:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final u:Lvkg;
-
-.field public final v:Lvkg;
-
-.field public final w:Lvkg;
-
-.field public final x:Lvkg;
-
-.field public final y:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final z:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iput p1, p0, Ldmi;->a:I
 
-    const-wide/16 v1, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0xa
-
-    div-long/2addr v1, v3
-
-    sput-wide v1, Ldmi;->E:J
-
-    const-string v1, "OMX.SEC."
-
-    const-string v2, "c2.android"
-
-    const-string v3, "OMX.google."
-
-    filled-new-array {v3, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Ldmi;->F:[Ljava/lang/String;
-
-    const-wide/16 v1, 0x3
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Ldmi;->G:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcgd;Lnkg;Lhga;)V
-    .locals 3
+    iput-object p2, p0, Ldmi;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 v0, 0x2000
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Ldmi;->c:[B
-
-    new-instance v0, Landroid/os/HandlerThread;
-
-    const-string v1, "DecoderWrapperControl"
-
-    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Ldmi;->d:Landroid/os/HandlerThread;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Ldmi;->f:Lo0b;
-
-    const-wide/16 v1, -0x1
-
-    iput-wide v1, p0, Ldmi;->h:J
-
-    const-wide/16 v1, 0x0
-
-    iput-wide v1, p0, Ldmi;->i:J
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->n:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->o:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->p:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->q:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->r:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->s:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->t:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Lvkg;
-
-    invoke-direct {v1}, Lvkg;-><init>()V
-
-    iput-object v1, p0, Ldmi;->u:Lvkg;
-
-    new-instance v1, Lvkg;
-
-    invoke-direct {v1}, Lvkg;-><init>()V
-
-    iput-object v1, p0, Ldmi;->v:Lvkg;
-
-    new-instance v1, Lvkg;
-
-    invoke-direct {v1}, Lvkg;-><init>()V
-
-    iput-object v1, p0, Ldmi;->w:Lvkg;
-
-    new-instance v1, Lvkg;
-
-    invoke-direct {v1}, Lvkg;-><init>()V
-
-    iput-object v1, p0, Ldmi;->x:Lvkg;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->y:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v1, p0, Ldmi;->z:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    iput-boolean v2, p0, Ldmi;->B:Z
-
-    iput-object p1, p0, Ldmi;->a:Lcgd;
-
-    iput-object p3, p0, Ldmi;->b:Lhga;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object p3
-
-    invoke-direct {p1, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p1, p0, Ldmi;->e:Landroid/os/Handler;
-
-    new-instance p1, Ltc4;
-
-    invoke-direct {p1, p2}, Ltc4;-><init>(Lnkg;)V
-
-    iput-object p1, p0, Ldmi;->A:Ltc4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final a(Lai4;[BI)V
+    .locals 10
 
-    iget-boolean v0, p0, Ldmi;->C:Z
+    iget v0, p0, Ldmi;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return-void
+    iget-object v0, p0, Ldmi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ltde;
+
+    iget-boolean v2, v0, Ltde;->f:Z
+
+    if-eqz v2, :cond_0
+
+    goto/16 :goto_3
 
     :cond_0
-    const/4 v0, 0x1
+    new-instance v2, Lboi;
 
-    iput-boolean v0, p0, Ldmi;->C:Z
+    invoke-direct {v2, p2}, Lboi;-><init>([B)V
 
-    iget-object v0, p0, Ldmi;->d:Landroid/os/HandlerThread;
+    iget-object v3, v0, Ltde;->c:Lakj;
 
-    iget-object v1, p0, Ldmi;->e:Landroid/os/Handler;
+    iget v4, v2, Lboi;->d:I
 
-    new-instance v2, Lufh;
+    invoke-virtual {v3, v4}, Lakj;->I(I)Lsk1;
 
-    const/16 v3, 0xd
+    move-result-object v3
 
-    invoke-direct {v2, v3, p0}, Lufh;-><init>(ILjava/lang/Object;)V
+    if-nez v3, :cond_1
 
-    const/4 v3, 0x0
+    goto :goto_3
 
-    invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    :cond_1
+    iget-boolean v4, v0, Ltde;->f:Z
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 v5, 0x1
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
+    const/4 v6, 0x0
+
+    if-eqz v4, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v4, v0, Ltde;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    if-nez v4, :cond_5
+
+    iget-object v4, v0, Ltde;->h:Ljava/util/Set;
+
+    if-nez v4, :cond_3
+
+    move v4, v5
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v4, v0, Ltde;->h:Ljava/util/Set;
+
+    invoke-interface {v4, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    :goto_0
+    if-nez v4, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    new-instance v4, Lani;
+
+    iget-object v6, v0, Ltde;->b:Lahd;
+
+    iget-object v7, v0, Ltde;->i:Lxkg;
+
+    new-instance v8, Lvz9;
+
+    const/16 v9, 0x17
+
+    invoke-direct {v8, v0, v9, v3}, Lvz9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-direct {v4, v6, v7, v8}, Lani;-><init>(Lahd;Lxkg;Lvz9;)V
+
+    iget-object v6, v0, Ltde;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v6, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_5
+    iget-object v4, v0, Ltde;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v6, v4
+
+    check-cast v6, Lani;
+
+    :goto_1
+    if-eqz v6, :cond_6
+
+    iget-object v4, v6, Lani;->e:Landroid/os/Handler;
+
+    new-instance v7, Lghh;
+
+    const/16 v8, 0x13
+
+    invoke-direct {v7, v6, v8, v2}, Lghh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v4, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_6
+    iget-byte v2, v2, Lsde;->a:B
+
+    and-int/lit8 v2, v2, 0x8
+
+    if-eqz v2, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    const/4 v5, 0x0
+
+    :goto_2
+    if-eqz v5, :cond_8
+
+    iget-object v2, v0, Ltde;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lani;
+
+    if-eqz v2, :cond_8
+
+    invoke-virtual {v2}, Lani;->a()V
+
+    iget-object v0, v0, Ltde;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_8
+    :goto_3
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ldmi;->b:Ljava/lang/Object;
+
+    move-object v6, v0
+
+    check-cast v6, Lh5e;
+
+    new-instance v0, Lsi5;
+
+    const/4 v5, 0x7
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move v4, p3
+
+    invoke-direct/range {v0 .. v5}, Lsi5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    iget-object v2, v6, Lh5e;->f:Landroid/os/Handler;
+
+    invoke-virtual {v2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ldmi;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnre;
+
+    iget-object v2, v0, Lnre;->c:Ljava/lang/Object;
+
+    check-cast v2, Lakj;
+
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->get()B
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->get()B
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->getShort()S
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->getInt()I
+
+    move-result v4
+
+    const v5, 0xfffffff
+
+    and-int/2addr v4, v5
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->getInt()I
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->getInt()I
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    sget-object v5, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v5, v3}, Ljava/nio/charset/Charset;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v4}, Lakj;->I(I)Lsk1;
+
+    new-instance v5, Lyt;
+
+    invoke-virtual {v2, v4}, Lakj;->I(I)Lsk1;
+
+    move-result-object v2
+
+    invoke-direct {v5, v2, v3}, Lyt;-><init>(Lsk1;Ljava/lang/String;)V
+
+    iget-object v0, v0, Lnre;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lm11;
+
+    iget-object v2, v2, Lm11;->a:Ls11;
+
+    iget-object v2, v2, Ls11;->R0:Lnh1;
+
+    iget-object v2, v2, Lnh1;->o:Ljava/lang/Object;
+
+    check-cast v2, Lut;
+
+    invoke-virtual {v2, v5}, Lut;->onAsrDataPackage(Lyt;)V
+
+    goto :goto_4
+
+    :cond_9
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Ldmi;->b:Ljava/lang/Object;
+
+    move-object v6, v0
+
+    check-cast v6, Ll75;
+
+    new-instance v0, Lsi5;
+
+    const/4 v5, 0x6
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move v4, p3
+
+    invoke-direct/range {v0 .. v5}, Lsi5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    iget-object v1, v6, Ll75;->X:Ljava/lang/Object;
+
+    check-cast v1, Landroid/os/Handler;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

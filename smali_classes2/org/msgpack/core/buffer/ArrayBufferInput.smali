@@ -59,7 +59,7 @@
     .line 6
     const-string v0, "input array is null"
 
-    invoke-static {p1, v0}, Lnjj;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Likj;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p2, p3}, Lorg/msgpack/core/buffer/MessageBuffer;->wrap([BII)Lorg/msgpack/core/buffer/MessageBuffer;
 
@@ -140,7 +140,7 @@
     .line 5
     const-string v0, "input array is null"
 
-    invoke-static {p1, v0}, Lnjj;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Likj;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lorg/msgpack/core/buffer/MessageBuffer;->wrap([B)Lorg/msgpack/core/buffer/MessageBuffer;
 
@@ -157,7 +157,7 @@
     .line 6
     const-string v0, "input array is null"
 
-    invoke-static {p1, v0}, Lnjj;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Likj;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p2, p3}, Lorg/msgpack/core/buffer/MessageBuffer;->wrap([BII)Lorg/msgpack/core/buffer/MessageBuffer;
 

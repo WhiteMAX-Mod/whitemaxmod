@@ -4,18 +4,18 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lwl3;
 
 .field public final b:I
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(Lwl3;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lxl3;->a:I
+    iput-object p1, p0, Lxl3;->a:Lwl3;
 
     iput p2, p0, Lxl3;->b:I
 
@@ -41,11 +41,15 @@
     :cond_1
     check-cast p1, Lxl3;
 
-    iget v0, p0, Lxl3;->a:I
+    iget-object v0, p0, Lxl3;->a:Lwl3;
 
-    iget v1, p1, Lxl3;->a:I
+    iget-object v1, p1, Lxl3;->a:Lwl3;
 
-    if-eq v0, v1, :cond_2
+    invoke-virtual {v0, v1}, Lwl3;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
 
     goto :goto_0
 
@@ -71,7 +75,9 @@
 .method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lxl3;->a:I
+    iget-object v0, p0, Lxl3;->a:Lwl3;
+
+    iget v0, v0, Lwl3;->a:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -91,19 +97,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
-    const-string v0, ", secondary="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CommonStatesBackgroundActiveColors(action="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lxl3;->a:Lwl3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", neutralFadeTertiary="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lxl3;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    const-string v2, "CommonStrokeSeparatorColors(primary="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lxl3;->a:I
-
-    iget v4, p0, Lxl3;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

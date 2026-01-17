@@ -1,162 +1,114 @@
-.class public final Ljmj;
-.super Llfj;
+.class public abstract Ljmj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:Landroid/os/IBinder;
-
-.field public final synthetic c:Llca;
-
-
 # direct methods
-.method public constructor <init>(Llca;Landroid/os/IBinder;)V
+.method public static final a(Landroid/widget/TextView;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
+
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static final b(Lrd3;Lcom/google/android/material/tabs/TabLayout;Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 0
 
-    iput-object p1, p0, Ljmj;->c:Llca;
+    :try_start_0
+    invoke-interface {p0}, Lpd3;->a()Ljava/lang/Class;
 
-    iput-object p2, p0, Ljmj;->b:Landroid/os/IBinder;
+    move-result-object p0
 
-    invoke-direct {p0}, Llfj;-><init>()V
+    invoke-virtual {p0, p2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object p0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p0, p2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    invoke-virtual {p0, p1, p3}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    return-void
+.end method
+
+.method public static final c(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
+    .locals 1
+
+    if-eqz p3, :cond_0
+
+    new-instance v0, Lhk4;
+
+    invoke-direct {v0, p1, p2, p3}, Lhk4;-><init>(JLandroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
+.method public static synthetic d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    .locals 2
 
-# virtual methods
-.method public final a()V
-    .locals 7
+    const-wide/16 v0, 0x12c
 
-    iget-object v0, p0, Ljmj;->c:Llca;
+    invoke-static {p0, v0, v1, p1}, Ljmj;->c(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
 
-    iget-object v0, v0, Llca;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Lupj;
-
-    sget v1, Lrxi;->d:I
-
-    iget-object v1, p0, Ljmj;->b:Landroid/os/IBinder;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v2, "com.google.android.play.core.appupdate.protocol.IAppUpdateService"
-
-    invoke-interface {v1, v2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object v2
-
-    instance-of v3, v2, Lazi;
-
-    if-eqz v3, :cond_1
-
-    move-object v1, v2
-
-    check-cast v1, Lazi;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v2, Ltvi;
-
-    invoke-direct {v2, v1}, Ltvi;-><init>(Landroid/os/IBinder;)V
-
-    move-object v1, v2
-
-    :goto_0
-    check-cast v1, Lazi;
-
-    iput-object v1, v0, Lupj;->m:Lazi;
-
-    iget-object v1, v0, Lupj;->b:Lswe;
-
-    const-string v2, "linkToDeath"
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v4}, Lswe;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+.method public static final e(Ljava/lang/Object;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
     :try_start_0
-    iget-object v1, v0, Lupj;->m:Lazi;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    iget-object v2, v0, Lupj;->j:Lm9j;
+    move-result-object p1
 
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
-    move-exception v1
-
-    iget-object v2, v0, Lupj;->b:Lswe;
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v5, 0x6
-
-    const-string v6, "PlayCore"
-
-    invoke-static {v6, v5}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    iget-object v2, v2, Lswe;->a:Ljava/lang/String;
-
-    const-string v5, "linkToDeath failed"
-
-    invoke-static {v2, v5, v4}, Lswe;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v6, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_2
-    :goto_1
-    iput-boolean v3, v0, Lupj;->g:Z
-
-    iget-object v1, v0, Lupj;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Runnable;
-
-    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v0, v0, Lupj;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
     return-void
 .end method

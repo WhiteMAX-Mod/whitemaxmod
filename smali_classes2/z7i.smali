@@ -1,109 +1,89 @@
 .class public final Lz7i;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lq8i;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public o:I
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz7i;->a:Ljava/lang/String;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lpsb;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lz7i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lz7i;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lz7i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lz7i;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lz7i;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lz7i;->X:Ljava/lang/Object;
-
-    check-cast v0, Lpsb;
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    return-object v0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lz7i;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast p1, Lz7i;
 
-    iget-object p1, p0, Lz7i;->X:Ljava/lang/Object;
+    iget-object v1, p0, Lz7i;->a:Ljava/lang/String;
 
-    check-cast p1, Lpsb;
+    iget-object p1, p1, Lz7i;->a:Ljava/lang/String;
 
-    instance-of v0, p1, Lnsb;
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_2
+    move-result p1
 
-    iput-object p1, p0, Lz7i;->X:Ljava/lang/Object;
+    if-nez p1, :cond_2
 
-    iput v1, p0, Lz7i;->o:I
+    return v2
 
-    const-wide/16 v0, 0x258
+    :cond_2
+    return v0
+.end method
 
-    invoke-static {v0, v1, p0}, Lzlj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lz7i;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "OpenLinkExternal(url="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lz7i;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sget-object v1, Lbc4;->a:Lbc4;
-
-    if-ne v0, v1, :cond_2
-
-    return-object v1
-
-    :cond_2
-    return-object p1
+    return-object v0
 .end method

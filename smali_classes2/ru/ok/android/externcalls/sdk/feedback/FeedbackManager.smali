@@ -17,12 +17,12 @@
         "source",
         "Lkotlin/Function1;",
         "",
-        "Lv2h;",
+        "Lb3h;",
         "onError",
         "Lkotlin/Function0;",
         "onSuccess",
         "sendFeedback",
-        "(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Loq6;Lmq6;)V",
+        "(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Lnq6;Llq6;)V",
         "",
         "millis",
         "setTimeout",
@@ -48,7 +48,7 @@
 
 
 # direct methods
-.method public static synthetic sendFeedback$default(Lru/ok/android/externcalls/sdk/feedback/FeedbackManager;Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Loq6;Lmq6;ILjava/lang/Object;)V
+.method public static synthetic sendFeedback$default(Lru/ok/android/externcalls/sdk/feedback/FeedbackManager;Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Lnq6;Llq6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p6, :cond_2
@@ -69,7 +69,7 @@
     move-object p4, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/feedback/FeedbackManager;->sendFeedback(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Loq6;Lmq6;)V
+    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/feedback/FeedbackManager;->sendFeedback(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Lnq6;Llq6;)V
 
     return-void
 
@@ -94,14 +94,14 @@
 .method public abstract removeListener(Lru/ok/android/externcalls/sdk/feedback/listener/FeedbackListener;)V
 .end method
 
-.method public abstract sendFeedback(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Loq6;Lmq6;)V
+.method public abstract sendFeedback(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Lnq6;Llq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;",
-            "Loq6;",
-            "Lmq6;",
+            "Lnq6;",
+            "Llq6;",
             ")V"
         }
     .end annotation

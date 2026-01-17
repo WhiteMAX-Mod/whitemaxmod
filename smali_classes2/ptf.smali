@@ -1,237 +1,123 @@
 .class public final Lptf;
-.super Landroid/view/ViewGroup;
+.super Lfk5;
 .source "SourceFile"
 
 # interfaces
-.implements Ljig;
+.implements Luig;
 
 
 # instance fields
-.field public final a:Lrtf;
-
-.field public final b:Landroidx/recyclerview/widget/RecyclerView;
+.field public d:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 6
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    invoke-direct {p0, p1, v0}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    sget v1, Lb7d;->sticker_typing:I
 
-    new-instance v1, Lrtf;
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
-    invoke-direct {v1, p1}, Lrtf;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, p0, Lptf;->a:Lrtf;
-
-    new-instance v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-direct {v2, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget p1, Lihb;->f:I
-
-    invoke-virtual {v2, p1}, Landroid/view/View;->setId(I)V
-
-    new-instance p1, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
-
-    invoke-virtual {v2, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setNestedScrollingEnabled(Z)V
-
-    const/4 p1, 0x2
-
-    invoke-virtual {v2, p1}, Landroid/view/View;->setOverScrollMode(I)V
-
-    const/4 p1, 0x4
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v3
-
-    invoke-static {p1}, Ln7j;->c(F)I
-
-    move-result p1
-
-    new-instance v3, La21;
-
-    const/16 v4, 0xc
-
-    int-to-float v4, v4
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v5
-
-    invoke-static {v4}, Ln7j;->c(F)I
-
-    const/16 v4, 0x9
-
-    invoke-direct {v3, p1, p1, v4}, La21;-><init>(III)V
-
-    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lfrd;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v2, p1}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
-
-    iput-object v2, p0, Lptf;->b:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setClipChildren(Z)V
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lfk5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayout(ZIIII)V
-    .locals 6
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    iget-object v0, p0, Lptf;->a:Lrtf;
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v4
-
-    add-int/2addr v4, v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v5
-
-    add-int/2addr v5, v3
-
-    move-object v1, p0
-
-    invoke-static/range {v0 .. v5}, Lemj;->d(Landroid/view/View;Landroid/view/ViewGroup;IIII)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getBottom()I
-
-    move-result v3
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v4
-
-    invoke-virtual {v0}, Landroid/view/View;->getBottom()I
-
-    move-result v0
-
-    move v2, v0
-
-    iget-object v0, p0, Lptf;->b:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v5
-
-    add-int/2addr v5, v2
-
-    const/4 v2, 0x0
-
-    invoke-static/range {v0 .. v5}, Lemj;->d(Landroid/view/View;Landroid/view/ViewGroup;IIII)V
-
-    return-void
-.end method
-
-.method public final onMeasure(II)V
-    .locals 3
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lptf;->a:Lrtf;
-
-    invoke-virtual {v1, p1, p2}, Landroid/view/View;->measure(II)V
-
-    iget-object v2, p0, Lptf;->b:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, p1, p2}, Landroid/view/View;->measure(II)V
-
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p1
-
-    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p2
-
-    add-int/2addr p2, p1
-
-    invoke-virtual {p0, v0, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Lplb;)V
+.method public final a()V
     .locals 1
 
-    iget-object v0, p0, Lptf;->a:Lrtf;
+    iget-boolean v0, p0, Lptf;->d:Z
 
-    invoke-virtual {v0, p1}, Lrtf;->onThemeChanged(Lplb;)V
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lptf;->start()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onThemeChanged(Lzlb;)V
+    .locals 2
+
+    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
+
+    move-result-object p1
+
+    iget p1, p1, Lwe7;->j:I
+
+    const-string v0, "_R_G_L_4_G_D_0_P_0"
+
+    iget-object v1, p0, Lfk5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_4_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_4_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_3_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_1_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public final setHeaderClickAction(Lmq6;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lmq6;",
-            ")V"
-        }
-    .end annotation
+.method public final start()V
+    .locals 1
 
-    iget-object v0, p0, Lptf;->a:Lrtf;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lrtf;->getHeaderButton()Lone/me/sdk/uikit/common/button/OneMeButton;
+    iput-boolean v0, p0, Lptf;->d:Z
 
-    move-result-object v0
+    invoke-super {p0}, Lfk5;->start()V
 
-    new-instance v1, Lv6;
+    return-void
+.end method
 
-    const/16 v2, 0x10
+.method public final stop()V
+    .locals 1
 
-    invoke-direct {v1, v2, p1}, Lv6;-><init>(ILmq6;)V
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    iput-boolean v0, p0, Lptf;->d:Z
+
+    invoke-super {p0}, Lfk5;->stop()V
 
     return-void
 .end method

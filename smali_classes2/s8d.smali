@@ -3,74 +3,38 @@
 
 
 # static fields
-.field public static check_button:I = 0x7f0a02a0
+.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f0a0631
 
-.field public static check_button_parent:I = 0x7f0a02a1
+.field public static oneme_contact_not_found_bottom_sheet_positive_button:I = 0x7f0a0632
 
-.field public static check_button_view_stub:I = 0x7f0a02a2
+.field public static oneme_invite_action_view_type:I = 0x7f0a0688
 
-.field public static media_bar_view__iv_constructor:I = 0x7f0a048b
+.field public static oneme_invite_by_link_action_menu_item:I = 0x7f0a0689
 
-.field public static media_bar_view__iv_contact:I = 0x7f0a048c
+.field public static oneme_invite_by_phone_action_menu_item:I = 0x7f0a068a
 
-.field public static media_bar_view__iv_drawing:I = 0x7f0a048d
+.field public static oneme_invite_by_phone_continue_button:I = 0x7f0a068b
 
-.field public static media_bar_view__iv_file:I = 0x7f0a048e
+.field public static oneme_invite_by_phone_description:I = 0x7f0a068c
 
-.field public static media_bar_view__iv_gallery:I = 0x7f0a048f
+.field public static oneme_invite_by_phone_input:I = 0x7f0a068d
 
-.field public static media_bar_view__iv_location:I = 0x7f0a0491
+.field public static oneme_invite_by_phone_title:I = 0x7f0a068e
 
-.field public static media_bar_view__iv_photo:I = 0x7f0a0492
+.field public static oneme_invite_by_phone_toolbar:I = 0x7f0a068f
 
-.field public static media_bar_view__iv_video:I = 0x7f0a0494
+.field public static oneme_invite_by_qr_action_menu_item:I = 0x7f0a0690
 
-.field public static media_bar_view__ll_constructor:I = 0x7f0a0495
+.field public static oneme_invite_by_qr_bottom_sheet_name:I = 0x7f0a0691
 
-.field public static media_bar_view__ll_contact:I = 0x7f0a0496
+.field public static oneme_invite_by_qr_bottom_sheet_qr_code:I = 0x7f0a0692
 
-.field public static media_bar_view__ll_drawing:I = 0x7f0a0497
+.field public static oneme_invite_by_qr_bottom_sheet_qr_code_share:I = 0x7f0a0693
 
-.field public static media_bar_view__ll_file:I = 0x7f0a0498
+.field public static oneme_invite_by_qr_bottom_sheet_short_name:I = 0x7f0a0694
 
-.field public static media_bar_view__ll_gallery:I = 0x7f0a0499
+.field public static oneme_invite_friends_to_max_bottom_sheet_image_stack:I = 0x7f0a0695
 
-.field public static media_bar_view__ll_layout_create:I = 0x7f0a049a
+.field public static oneme_invite_friends_to_max_bottom_sheet_invite_button:I = 0x7f0a0696
 
-.field public static media_bar_view__ll_location:I = 0x7f0a049b
-
-.field public static media_bar_view__ll_photo:I = 0x7f0a049c
-
-.field public static media_bar_view__ll_video:I = 0x7f0a049d
-
-.field public static media_bar_view__tv_constructor:I = 0x7f0a049e
-
-.field public static media_bar_view__tv_contact:I = 0x7f0a049f
-
-.field public static media_bar_view__tv_drawing:I = 0x7f0a04a0
-
-.field public static media_bar_view__tv_file:I = 0x7f0a04a1
-
-.field public static media_bar_view__tv_gallery:I = 0x7f0a04a2
-
-.field public static media_bar_view__tv_location:I = 0x7f0a04a4
-
-.field public static media_bar_view__tv_photo:I = 0x7f0a04a5
-
-.field public static media_bar_view__tv_video:I = 0x7f0a04a7
-
-.field public static media_permissions_view_button:I = 0x7f0a04b1
-
-.field public static media_permissions_view_title:I = 0x7f0a04b2
-
-.field public static quick_camera_view__cv_camera:I = 0x7f0a0a13
-
-.field public static row_media_bar_actions__icon:I = 0x7f0a0a9f
-
-.field public static row_media_bar_actions__title:I = 0x7f0a0aa0
-
-.field public static select_album_content_container:I = 0x7f0a0b46
-
-.field public static simple_drawee_view:I = 0x7f0a0bcd
-
-.field public static video_info:I = 0x7f0a0c74
+.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f0a0697

@@ -1,151 +1,108 @@
 .class public final Liu8;
-.super Lglg;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Liu8;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final e:Lz49;
+.field public a:I
 
 
 # direct methods
-.method public constructor <init>(Lz49;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhu8;
 
-    iput-object p1, p0, Liu8;->e:Lz49;
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
+
+    sput-object v0, Liu8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object v0, Lgu8;->h:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne p1, v0, :cond_0
+    const-string v1, "MaterialCheckBox.SavedState{"
 
-    const/4 p1, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return p1
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    :cond_0
-    const/4 p1, -0x1
+    move-result v1
 
-    return p1
-.end method
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-.method public final f(ILblg;Z)Lblg;
-    .locals 11
+    move-result-object v1
 
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p3, :cond_0
+    const-string v1, " CheckedState="
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget v1, p0, Liu8;->a:I
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    move-object v2, v0
+    if-eq v1, v2, :cond_1
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_0
+
+    const-string v1, "unchecked"
 
     goto :goto_0
 
     :cond_0
-    move-object v2, p1
+    const-string v1, "indeterminate"
 
-    :goto_0
-    if-eqz p3, :cond_1
-
-    sget-object p1, Lgu8;->h:Ljava/lang/Object;
+    goto :goto_0
 
     :cond_1
-    move-object v3, p1
+    const-string v1, "checked"
 
-    sget-object v9, Lt8;->f:Lt8;
+    :goto_0
+    const-string v2, "}"
 
-    const/4 v10, 0x1
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v4, 0x0
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide/16 v7, 0x0
-
-    move-object v1, p2
-
-    invoke-virtual/range {v1 .. v10}, Lblg;->i(Ljava/lang/Object;Ljava/lang/Object;IJJLt8;Z)V
-
-    return-object v1
-.end method
-
-.method public final h()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final l(I)Ljava/lang/Object;
-    .locals 0
-
-    sget-object p1, Lgu8;->h:Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(ILelg;J)Lelg;
-    .locals 21
-
-    sget-object v1, Lelg;->q:Ljava/lang/Object;
-
-    const/16 v18, 0x0
-
-    const-wide/16 v19, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Liu8;->e:Lz49;
-
-    const/4 v3, 0x0
-
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x1
-
-    const/4 v12, 0x0
-
-    const-wide/16 v13, 0x0
-
-    const-wide v15, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/16 v17, 0x0
-
-    move-object/from16 v0, p2
-
-    invoke-virtual/range {v0 .. v20}, Lelg;->b(Ljava/lang/Object;Lz49;Ljava/lang/Object;JJJZZLn49;JJIIJ)V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lelg;->k:Z
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final o()I
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    return v0
+    iget p2, p0, Liu8;->a:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
+
+    return-void
 .end method

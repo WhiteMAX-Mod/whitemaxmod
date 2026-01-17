@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq38;
+.implements La38;
 
 
 # static fields
@@ -45,7 +45,7 @@
     throw p1
 .end method
 
-.method public final b(Lll4;)Ljava/lang/Object;
+.method public final b(Lkl4;)Ljava/lang/Object;
     .locals 1
 
     new-instance p1, Lkotlinx/serialization/SerializationException;
@@ -57,7 +57,7 @@
     throw p1
 .end method
 
-.method public final d()Lvoe;
+.method public final d()Lxpe;
     .locals 1
 
     sget-object v0, Lvoa;->b:Luoa;

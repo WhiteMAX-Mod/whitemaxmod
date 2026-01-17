@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lro4;)V
+.method public synthetic constructor <init>(Lso4;)V
     .locals 0
 
     .line 1
@@ -155,7 +155,7 @@
 
     const-string v2, ":"
 
-    invoke-static {v1, p1, v2, v0}, Lx02;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v2, v0}, Lkz1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

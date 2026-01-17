@@ -119,7 +119,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lpjj;->a(Ljava/lang/String;Z)V
+    invoke-static {v2, v1}, Ljkj;->a(Ljava/lang/String;Z)V
 
     iget v1, p0, Lga0;->d:I
 
@@ -150,7 +150,7 @@
 
     const-string v2, "Invalid audio encoding: "
 
-    invoke-static {v1, v2}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -291,7 +291,7 @@
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

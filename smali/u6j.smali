@@ -1,237 +1,70 @@
-.class public abstract Lu6j;
+.class public final Lu6j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lu6j;
+
 
 # direct methods
-.method public static a(II)I
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
+    new-instance v0, Lu6j;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    mul-int/2addr v0, p1
+    sput-object v0, Lu6j;->a:Lu6j;
 
-    div-int/lit16 v0, v0, 0xff
+    new-instance v0, Lvzi;
 
-    invoke-static {p0, v0}, Laj3;->i(II)I
+    const/4 v1, 0x1
 
-    move-result p0
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    return p0
-.end method
+    const-class v1, Ln0j;
 
-.method public static b(IILandroid/content/Context;)I
-    .locals 1
-
-    invoke-static {p2, p0}, Ls6j;->c(Landroid/content/Context;I)Landroid/util/TypedValue;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    iget v0, p0, Landroid/util/TypedValue;->resourceId:I
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p2, v0}, Lo74;->a(Landroid/content/Context;I)I
-
-    move-result p0
-
-    goto :goto_0
-
-    :cond_0
-    iget p0, p0, Landroid/util/TypedValue;->data:I
-
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_1
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    return p1
-.end method
-
-.method public static c(ILandroid/content/Context;Ljava/lang/String;)I
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Ls6j;->e(ILandroid/content/Context;Ljava/lang/String;)Landroid/util/TypedValue;
-
-    move-result-object p0
-
-    iget p2, p0, Landroid/util/TypedValue;->resourceId:I
-
-    if-eqz p2, :cond_0
-
-    invoke-static {p1, p2}, Lo74;->a(Landroid/content/Context;I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    iget p0, p0, Landroid/util/TypedValue;->data:I
-
-    return p0
-.end method
-
-.method public static d(Landroid/view/View;I)I
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/4 v2, 0x2
 
-    move-result-object v1
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x3
 
-    invoke-static {p1, v1, p0}, Ls6j;->e(ILandroid/content/Context;Ljava/lang/String;)Landroid/util/TypedValue;
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget p1, p0, Landroid/util/TypedValue;->resourceId:I
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    if-eqz p1, :cond_0
+    move-result-object v0
 
-    invoke-static {v0, p1}, Lo74;->a(Landroid/content/Context;I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    iget p0, p0, Landroid/util/TypedValue;->data:I
-
-    return p0
-.end method
-
-.method public static e(I)Z
-    .locals 4
-
-    if-eqz p0, :cond_0
-
-    invoke-static {p0}, Laj3;->e(I)D
-
-    move-result-wide v0
-
-    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
-
-    cmpl-double p0, v0, v2
-
-    if-lez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static f(I)Z
-    .locals 1
-
-    const v0, 0x8000
-
-    and-int/2addr p0, v0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static g(IFI)I
-    .locals 1
-
-    invoke-static {p2}, Landroid/graphics/Color;->alpha(I)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    mul-float/2addr v0, p1
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result p1
-
-    invoke-static {p2, p1}, Laj3;->i(II)I
-
-    move-result p1
-
-    invoke-static {p1, p0}, Laj3;->g(II)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static h(Landroid/view/Window;Z)V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {p0, p1}, Lcgi;->a(Landroid/view/Window;Z)V
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
+.end method
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    move-result-object p0
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->getSystemUiVisibility()I
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz p1, :cond_1
-
-    and-int/lit16 p1, v0, -0x701
-
-    goto :goto_0
-
-    :cond_1
-    or-int/lit16 p1, v0, 0x700
-
-    :goto_0
-    invoke-virtual {p0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
-
-    return-void
+    throw p1
 .end method

@@ -1,145 +1,159 @@
-.class public final Ldg;
+.class public abstract Ldg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public b:J
+.field public static final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public c:Ljava/lang/Object;
+.field public static final c:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public d:Ljava/lang/Object;
+.field public static final d:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public e:Ljava/lang/Object;
+.field public static final e:Ln8g;
 
-.field public f:Ljava/lang/Object;
+.field public static final f:Lmc;
 
-.field public g:Ljava/lang/Object;
+.field public static final g:Lmc;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const-string v0, ""
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Ldg;->d:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    sget-object v0, Lmy0;->b:Lmy0;
+    sput-object v0, Ldg;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object v0, p0, Ldg;->e:Ljava/lang/Object;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Ldg;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Ldg;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    sput-object v0, Ldg;->d:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance v0, Lj;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lj;-><init>(I)V
+
+    new-instance v1, Ln8g;
+
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+
+    sput-object v1, Ldg;->e:Ln8g;
+
+    new-instance v0, Lmc;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2}, Lmc;-><init>(I)V
+
+    sput-object v0, Ldg;->f:Lmc;
+
+    new-instance v2, Lmc;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3}, Lmc;-><init>(I)V
+
+    sput-object v2, Ldg;->g:Lmc;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/os/Handler;
+
+    invoke-virtual {v3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Handler;
+
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
+.method public static a(Lio6;I)V
+    .locals 4
 
-# virtual methods
-.method public a()I
-    .locals 1
+    iget v0, p0, Lio6;->a:I
 
-    iget-object v0, p0, Ldg;->c:Ljava/lang/Object;
+    iget-object p0, p0, Lio6;->b:Lqfg;
 
-    check-cast v0, Lvp0;
+    int-to-float v1, v0
 
-    iget-object v0, v0, Lvp0;->c:Lxp8;
+    const/high16 v2, 0x3f000000    # 0.5f
 
-    invoke-virtual {v0}, Lxp8;->x()I
+    mul-float/2addr v1, v2
 
-    move-result v0
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    return v0
-.end method
+    cmpg-float v3, v1, v2
 
-.method public b(I)I
-    .locals 1
+    if-gez v3, :cond_0
 
-    iget-object v0, p0, Ldg;->c:Ljava/lang/Object;
+    move v1, v2
 
-    check-cast v0, Lvp0;
+    :cond_0
+    float-to-int v1, v1
 
-    iget-object v0, v0, Lvp0;->c:Lxp8;
+    iget v2, p0, Lqfg;->Y:I
 
-    iget-object v0, v0, Lxp8;->b:Ljava/lang/Object;
+    add-int/2addr v2, p1
 
-    check-cast v0, Lvv3;
+    invoke-static {v2, v1, v0}, Lamj;->d(III)I
 
-    iget-object v0, v0, Lvv3;->g:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v0, [I
+    iget v0, p0, Lqfg;->Y:I
 
-    aget p1, v0, p1
+    if-eq p1, v0, :cond_1
 
-    return p1
-.end method
-
-.method public c()I
-    .locals 1
-
-    iget-object v0, p0, Ldg;->c:Ljava/lang/Object;
-
-    check-cast v0, Lvp0;
-
-    iget-object v0, v0, Lvp0;->c:Lxp8;
-
-    invoke-virtual {v0}, Lxp8;->C()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public declared-synchronized d()V
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Ldg;->a:Z
-
-    if-nez v0, :cond_0
+    if-eq p1, v0, :cond_1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Ldg;->a:Z
+    iget v1, p0, Lqfg;->X:I
 
-    iget-object v0, p0, Ldg;->f:Ljava/lang/Object;
+    invoke-static {p1, v0, v1}, Lamj;->d(III)I
 
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+    move-result p1
 
-    iget-object v1, p0, Ldg;->g:Ljava/lang/Object;
+    iput p1, p0, Lqfg;->Y:I
 
-    check-cast v1, Lxe;
+    invoke-virtual {p0}, Lqfg;->q()Lew0;
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    move-result-object p1
 
-    const-wide/16 v3, 0x3e8
+    if-eqz p1, :cond_1
 
-    invoke-interface {v0, v1, v3, v4, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget p0, p0, Lqfg;->Y:I
 
-    goto :goto_0
+    invoke-virtual {p1, p0}, Lew0;->a(I)V
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
+    :cond_1
     return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
 .end method

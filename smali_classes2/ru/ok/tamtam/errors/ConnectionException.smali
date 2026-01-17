@@ -18,7 +18,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -29,11 +29,11 @@
 .method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lxag;
+    new-instance v0, Libg;
 
-    invoke-direct {v0}, Lxag;-><init>()V
+    invoke-direct {v0}, Libg;-><init>()V
 
-    invoke-direct {p0, v0}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lcbg;)V
+    invoke-direct {p0, v0}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lnbg;)V
 
     return-void
 .end method

@@ -1,97 +1,36 @@
 .class public final Lvye;
-.super Lcze;
+.super Ljef;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lvye;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final a:Lvye;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lvye;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lvye;->a:Lvye;
-
-    new-instance v0, Lehe;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lehe;-><init>(I)V
-
-    sput-object v0, Lvye;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
+# instance fields
+.field public F0:Lhze;
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final y(Lud8;)V
     .locals 1
 
-    const/4 v0, 0x0
+    instance-of v0, p1, Lhze;
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    return-void
 
     :cond_0
-    instance-of p1, p1, Lvye;
+    move-object v0, p1
 
-    if-nez p1, :cond_1
+    check-cast v0, Lhze;
 
-    const/4 p1, 0x0
+    iput-object v0, p0, Lvye;->F0:Lhze;
 
-    return p1
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    :cond_1
-    return v0
-.end method
+    check-cast v0, Lt0f;
 
-.method public final hashCode()I
-    .locals 1
+    check-cast p1, Lj0f;
 
-    const v0, 0x49c7fb9b
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Arrow"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0, p1}, Lt0f;->setModelItem(Lj0f;)V
 
     return-void
 .end method

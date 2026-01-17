@@ -1,91 +1,73 @@
-.class public abstract Lxeb;
-.super Ljava/lang/Object;
+.class public final enum Lxeb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Lxeb;
 
-.field public static final b:I
+.field public static final enum b:Lxeb;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+.field public static final synthetic c:[Lxeb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    sget v0, Lg8d;->pinbars_block_user_confirmation_sheet_cancel:I
+    new-instance v0, Lxeb;
 
-    sput v0, Lxeb;->a:I
+    const-string v1, "FILED"
 
-    sget v0, Lg8d;->pinbars_block_user_confirmation_sheet_confirm:I
+    const/4 v2, 0x0
 
-    sput v0, Lxeb;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lg8d;->pinbars_group_call_bar:I
+    sput-object v0, Lxeb;->a:Lxeb;
 
-    sput v0, Lxeb;->c:I
+    new-instance v1, Lxeb;
 
-    sget v0, Lg8d;->pinbars_group_call_bar_button:I
+    const-string v2, "PLAIN"
 
-    sput v0, Lxeb;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lg8d;->pinbars_group_call_bar_divider:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lxeb;->e:I
+    sput-object v1, Lxeb;->b:Lxeb;
 
-    sget v0, Lg8d;->pinbars_group_call_bar_stack:I
+    filled-new-array {v0, v1}, [Lxeb;
 
-    sput v0, Lxeb;->f:I
+    move-result-object v0
 
-    sget v0, Lg8d;->pinbars_group_call_bar_subtitle:I
-
-    sput v0, Lxeb;->g:I
-
-    sget v0, Lg8d;->pinbars_group_call_bar_title:I
-
-    sput v0, Lxeb;->h:I
-
-    sget v0, Lg8d;->pinbars_informer:I
-
-    sput v0, Lxeb;->i:I
-
-    sget v0, Lg8d;->pinbars_message:I
-
-    sput v0, Lxeb;->j:I
-
-    sget v0, Lg8d;->pinbars_miniplayer:I
-
-    sput v0, Lxeb;->k:I
-
-    sget v0, Lg8d;->pinbars_root:I
-
-    sput v0, Lxeb;->l:I
-
-    sget v0, Lg8d;->unknown_contact:I
-
-    sput v0, Lxeb;->m:I
+    sput-object v0, Lxeb;->c:[Lxeb;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lxeb;
+    .locals 1
+
+    const-class v0, Lxeb;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lxeb;
+
+    return-object p0
+.end method
+
+.method public static values()[Lxeb;
+    .locals 1
+
+    sget-object v0, Lxeb;->c:[Lxeb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lxeb;
+
+    return-object v0
 .end method

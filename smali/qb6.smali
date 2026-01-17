@@ -1,32 +1,26 @@
 .class public final Lqb6;
-.super Lrzf;
+.super Lcw4;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb6;
+.implements Lxb6;
 
 
 # instance fields
-.field public final Z:Lgpe;
+.field public final c:Z
 
-.field public final s0:Ldpe;
+.field public d:Lb1g;
 
-.field public final t0:Lnb6;
-
-.field public u0:J
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lgpe;Ldpe;Lnb6;)V
+.method public constructor <init>(Lz0g;Z)V
     .locals 0
 
-    invoke-direct {p0}, Lrzf;-><init>()V
+    invoke-direct {p0, p1}, Lcw4;-><init>(Lz0g;)V
 
-    iput-object p1, p0, Lqb6;->Z:Lgpe;
-
-    iput-object p2, p0, Lqb6;->s0:Ldpe;
-
-    iput-object p3, p0, Lqb6;->t0:Lnb6;
+    iput-boolean p2, p0, Lqb6;->c:Z
 
     return-void
 .end method
@@ -34,15 +28,53 @@
 
 # virtual methods
 .method public final b()V
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lqb6;->t0:Lnb6;
+    iget-boolean v0, p0, Lqb6;->o:Z
 
-    invoke-virtual {v0}, Lnb6;->cancel()V
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lqb6;->Z:Lgpe;
+    return-void
 
-    invoke-virtual {v0}, Lgpe;->b()V
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lqb6;->o:Z
+
+    iget-object v0, p0, Lcw4;->b:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcw4;->b:Ljava/lang/Object;
+
+    if-nez v0, :cond_1
+
+    move-object v0, v1
+
+    :cond_1
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lqb6;->c:Z
+
+    iget-object v1, p0, Lcw4;->a:Lz0g;
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    invoke-interface {v1, v0}, Lz0g;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_2
+    invoke-interface {v1}, Lz0g;->b()V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p0, v0}, Lcw4;->e(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -50,62 +82,105 @@
 .method public final cancel()V
     .locals 1
 
-    invoke-super {p0}, Lrzf;->cancel()V
+    const/4 v0, 0x4
 
-    iget-object v0, p0, Lqb6;->t0:Lnb6;
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    invoke-virtual {v0}, Lnb6;->cancel()V
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcw4;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lqb6;->d:Lb1g;
+
+    invoke-interface {v0}, Lb1g;->cancel()V
 
     return-void
 .end method
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 4
+.method public final d(Lb1g;)V
+    .locals 2
 
-    iget-wide v0, p0, Lqb6;->u0:J
+    iget-object v0, p0, Lqb6;->d:Lb1g;
 
-    const-wide/16 v2, 0x1
+    invoke-static {v0, p1}, Le1g;->g(Lb1g;Lb1g;)Z
 
-    add-long/2addr v0, v2
+    move-result v0
 
-    iput-wide v0, p0, Lqb6;->u0:J
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lqb6;->Z:Lgpe;
+    iput-object p1, p0, Lqb6;->d:Lb1g;
 
-    invoke-virtual {v0, p1}, Lgpe;->d(Ljava/lang/Object;)V
+    iget-object v0, p0, Lcw4;->a:Lz0g;
 
+    invoke-interface {v0, p0}, Lz0g;->d(Lb1g;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lb1g;->f(J)V
+
+    :cond_0
     return-void
 .end method
 
 .method public final onError(Ljava/lang/Throwable;)V
-    .locals 5
+    .locals 1
 
-    sget-object v0, Lxh5;->a:Lxh5;
+    iget-boolean v0, p0, Lqb6;->o:Z
 
-    invoke-virtual {p0, v0}, Lrzf;->h(Lqzf;)V
+    if-eqz v0, :cond_0
 
-    iget-wide v0, p0, Lqb6;->u0:J
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
 
-    const-wide/16 v2, 0x0
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    iput-wide v2, p0, Lqb6;->u0:J
-
-    invoke-virtual {p0, v0, v1}, Lrzf;->f(J)V
+    return-void
 
     :cond_0
-    iget-object v0, p0, Lqb6;->t0:Lnb6;
+    const/4 v0, 0x1
 
-    const-wide/16 v1, 0x1
+    iput-boolean v0, p0, Lqb6;->o:Z
 
-    invoke-virtual {v0, v1, v2}, Lnb6;->g(J)V
+    iget-object v0, p0, Lcw4;->a:Lz0g;
 
-    iget-object v0, p0, Lqb6;->s0:Ldpe;
+    invoke-interface {v0, p1}, Lz0g;->onError(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, p1}, Ldpe;->d(Ljava/lang/Object;)V
+    return-void
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lqb6;->o:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcw4;->b:Ljava/lang/Object;
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lqb6;->o:Z
+
+    iget-object p1, p0, Lqb6;->d:Lb1g;
+
+    invoke-interface {p1}, Lb1g;->cancel()V
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Sequence contains more than one element!"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcw4;->a:Lz0g;
+
+    invoke-interface {v0, p1}, Lz0g;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_1
+    iput-object p1, p0, Lcw4;->b:Ljava/lang/Object;
 
     return-void
 .end method

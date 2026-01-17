@@ -1,173 +1,63 @@
 .class public final Lyff;
-.super Ljava/lang/Object;
+.super Lkef;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lsef;
 
 .field public final b:J
 
-.field public final c:I
+.field public final c:Lpbe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>(IJJ)V
+.method public constructor <init>(Lsef;JLpbe;)V
     .locals 1
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    cmp-long v0, p2, p4
+    iput-object p1, p0, Lyff;->a:Lsef;
 
-    if-gez v0, :cond_0
+    iput-wide p2, p0, Lyff;->b:J
 
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lp5j;->b(Z)V
-
-    iput-wide p2, p0, Lyff;->a:J
-
-    iput-wide p4, p0, Lyff;->b:J
-
-    iput p1, p0, Lyff;->c:I
+    iput-object p4, p0, Lyff;->c:Lpbe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final m(Ldff;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Lqxa;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lyff;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lyff;
-
-    iget-wide v2, p0, Lyff;->a:J
-
-    iget-wide v4, p1, Lyff;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     iget-wide v2, p0, Lyff;->b:J
 
-    iget-wide v4, p1, Lyff;->b:J
+    invoke-direct {v0, p1, v2, v3}, Lqxa;-><init>(Ldff;J)V
 
-    cmp-long v2, v2, v4
+    invoke-interface {p1, v0}, Ldff;->c(Lo25;)V
 
-    if-nez v2, :cond_2
+    iget-object p1, v0, Lqxa;->d:Ljava/lang/Object;
 
-    iget v2, p0, Lyff;->c:I
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget p1, p1, Lyff;->c:I
+    iget-object v4, p0, Lyff;->c:Lpbe;
 
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lyff;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lyff;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v4, v0, v2, v3, v1}, Lpbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
 
     move-result-object v1
 
-    iget v2, p0, Lyff;->c:I
+    invoke-static {p1, v1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object p1, p0, Lyff;->a:Lsef;
 
-    move-result-object v2
+    invoke-virtual {p1, v0}, Lkef;->l(Ldff;)V
 
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget-object v0, Lqah;->a:Ljava/lang/String;
-
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    const-string v0, "Segment: startTimeMs="
-
-    const-string v1, ", endTimeMs="
-
-    iget-wide v2, p0, Lyff;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lyff;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", speedDivisor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lyff;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,51 +1,46 @@
-.class public final Ln6g;
-.super Ll84;
+.class public interface abstract Ln6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lp6g;
-
-.field public Y:I
-
-.field public d:Lxeh;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lp6g;Ll84;)V
-    .locals 0
-
-    iput-object p1, p0, Ln6g;->X:Lp6g;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+# virtual methods
+.method public abstract a(FJJLo84;)Ljava/lang/Object;
 .end method
 
+.method public abstract b()Ljava/lang/String;
+.end method
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public c(Lo84;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Ln6g;->o:Ljava/lang/Object;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget p1, p0, Ln6g;->Y:I
+    return-object p1
+.end method
 
-    const/high16 v0, -0x80000000
+.method public d(Lo84;)Ljava/lang/Object;
+    .locals 0
 
-    or-int/2addr p1, v0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iput p1, p0, Ln6g;->Y:I
+    return-object p1
+.end method
 
-    iget-object p1, p0, Ln6g;->X:Lp6g;
+.method public e(Lo84;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p1, v0, p0}, Lp6g;->d(Lxeh;Ll84;)Ljava/lang/Object;
+    return-object p1
+.end method
 
-    move-result-object p1
+.method public abstract f(Ljava/io/File;Lo84;)Ljava/lang/Object;
+.end method
+
+.method public g(ZZLo84;)Ljava/lang/Object;
+    .locals 0
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

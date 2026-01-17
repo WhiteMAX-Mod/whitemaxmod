@@ -4,20 +4,20 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lsog;
 
-.field public final b:I
+.field public final b:Ltog;
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(Lsog;Ltog;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lrog;->a:I
+    iput-object p1, p0, Lrog;->a:Lsog;
 
-    iput p2, p0, Lrog;->b:I
+    iput-object p2, p0, Lrog;->b:Ltog;
 
     return-void
 .end method
@@ -25,63 +25,69 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lrog;
+    instance-of v1, p1, Lrog;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lrog;
 
-    iget v0, p0, Lrog;->a:I
+    iget-object v1, p0, Lrog;->a:Lsog;
 
-    iget v1, p1, Lrog;->a:I
+    iget-object v3, p1, Lrog;->a:Lsog;
 
-    if-eq v0, v1, :cond_2
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    iget v0, p0, Lrog;->b:I
+    iget-object v1, p0, Lrog;->b:Ltog;
 
-    iget p1, p1, Lrog;->b:I
+    iget-object p1, p1, Lrog;->b:Ltog;
 
-    if-eq v0, p1, :cond_3
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_0
-    const/4 p1, 0x0
+    move-result p1
 
-    return p1
+    if-nez p1, :cond_3
+
+    return v2
 
     :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lrog;->a:I
+    iget-object v0, p0, Lrog;->a:Lsog;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Lsog;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget v1, p0, Lrog;->b:I
+    iget-object v1, p0, Lrog;->b:Ltog;
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v1}, Ltog;->hashCode()I
 
     move-result v1
 
@@ -91,19 +97,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
-    const-string v0, ", secondary="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TopbarBackgroundColors(default="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrog;->a:Lsog;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", disabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrog;->b:Ltog;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    const-string v2, "TopbarStrokeSeparatorDefaultColors(primary="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lrog;->a:I
-
-    iget v4, p0, Lrog;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

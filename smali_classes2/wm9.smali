@@ -1,134 +1,97 @@
-.class public final synthetic Lwm9;
-.super Ljava/lang/Object;
+.class public final Lwm9;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Lmq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ltm9;
 
-.field public final synthetic b:Ljja;
+.field public b:I
+
+.field public c:Lhc8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljja;I)V
+.method public constructor <init>(Ltm9;I)V
     .locals 0
 
-    .line 1
-    iput p2, p0, Lwm9;->a:I
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput-object p1, p0, Lwm9;->b:Ljja;
+    iput-object p1, p0, Lwm9;->a:Ltm9;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;Ljja;)V
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x0
-
-    iput p1, p0, Lwm9;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lwm9;->b:Ljja;
+    iput p2, p0, Lwm9;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 8
 
-    iget v0, p0, Lwm9;->a:I
+    iget-object v0, p0, Lwm9;->c:Lhc8;
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_2
 
-    sget-object v2, Lv2h;->a:Lv2h;
+    iget-object v0, v0, Lhc8;->a:Lic8;
 
-    iget-object v3, p0, Lwm9;->b:Ljja;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    packed-switch v0, :pswitch_data_0
+    move-result-wide v1
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
+    sget-object v3, Lic8;->d:Lf7;
 
-    sget-object v0, Lpw9;->c:Lpw9;
+    iget-wide v4, v3, Lf7;->a:J
 
-    check-cast v3, Lqob;
+    sub-long v4, v1, v4
 
-    iget-object v3, v3, Lqob;->d:Ljava/lang/String;
+    const-wide/16 v6, 0x12c
 
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
+    cmp-long v4, v4, v6
 
-    move-result-object v0
+    if-lez v4, :cond_2
 
-    const-string v4, ":call-join-link?link="
+    iput-wide v1, v3, Lf7;->a:J
 
-    invoke-virtual {v4, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, v0, Lic8;->a:Lfc8;
 
-    move-result-object v3
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0, v3, v1}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    instance-of v0, p1, Lfc8;
 
-    return-object v2
+    if-eqz v0, :cond_0
 
-    :pswitch_0
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
+    move-object v0, p1
 
-    sget-object v0, Lpw9;->c:Lpw9;
+    check-cast v0, Lfc8;
 
-    check-cast v3, Lcpb;
+    goto :goto_0
 
-    iget-wide v4, v3, Lcpb;->b:J
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-boolean v3, v3, Lcpb;->c:Z
+    :cond_1
+    :goto_0
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
+    iget-object p1, p0, Lwm9;->a:Ltm9;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Lfc8;->a(Ltm9;)V
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    :cond_2
+    return-void
+.end method
 
-    const-string v7, ":call-user?opponent_id="
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v0, p0, Lwm9;->b:I
 
-    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    const-string v4, "&video_enabled="
+    const/4 v0, 0x1
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3, v1}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-object v2
-
-    :pswitch_1
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->d1:[Lp38;
-
-    sget-object v0, Lpw9;->c:Lpw9;
-
-    check-cast v3, Lem4;
-
-    invoke-virtual {v0, v3}, Lf3;->s0(Lem4;)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

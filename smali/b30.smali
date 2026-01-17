@@ -1,68 +1,58 @@
 .class public final Lb30;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Landroid/media/AudioAttributes;
+.field public final a:Lxp5;
+
+.field public final b:Lb9g;
+
+.field public final synthetic c:Lnp6;
+
+
+# direct methods
+.method public constructor <init>(Lnp6;Lb9g;Lxp5;)V
+    .locals 0
+
+    iput-object p1, p0, Lb30;->c:Lnp6;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    iput-object p2, p0, Lb30;->b:Lb9g;
+
+    iput-object p3, p0, Lb30;->a:Lxp5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 0
 
-    instance-of v0, p1, Lb30;
+    const-string p1, "android.media.AUDIO_BECOMING_NOISY"
 
-    if-nez v0, :cond_0
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    const/4 p1, 0x0
+    move-result-object p2
 
-    return p1
-
-    :cond_0
-    check-cast p1, Lb30;
-
-    iget-object v0, p0, Lb30;->a:Landroid/media/AudioAttributes;
-
-    iget-object p1, p1, Lb30;->a:Landroid/media/AudioAttributes;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
-.end method
+    if-eqz p1, :cond_0
 
-.method public final hashCode()I
-    .locals 1
+    new-instance p1, Lj3;
 
-    iget-object v0, p0, Lb30;->a:Landroid/media/AudioAttributes;
+    const/16 p2, 0xc
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p1, p2, p0}, Lj3;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Landroid/media/AudioAttributes;->hashCode()I
+    iget-object p2, p0, Lb30;->b:Lb9g;
 
-    move-result v0
+    invoke-virtual {p2, p1}, Lb9g;->d(Ljava/lang/Runnable;)Z
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AudioAttributesCompat: audioattributes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lb30;->a:Landroid/media/AudioAttributes;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

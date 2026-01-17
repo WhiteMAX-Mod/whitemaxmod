@@ -1,103 +1,110 @@
-.class public abstract Lbv7;
-.super Ljava/lang/Object;
+.class public final Lbv7;
+.super Lfxf;
 .source "SourceFile"
+
+# interfaces
+.implements Luig;
+
+
+# instance fields
+.field public final d:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method public static a([B)Lcv7;
-    .locals 30
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
+    .locals 3
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;
+    invoke-direct {p0, p1}, Lfxf;-><init>(Landroid/view/View;)V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;-><init>()V
+    iput-object p1, p0, Lbv7;->d:Landroidx/appcompat/widget/AppCompatTextView;
 
-    move-object/from16 v1, p0
+    new-instance v0, Lesd;
 
-    :try_start_0
-    invoke-static {v0, v1}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
+    const/4 v1, -0x1
+
+    const/4 v2, -0x2
+
+    invoke-direct {v0, v1, v2}, Lesd;-><init>(II)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/16 v0, 0xc
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v2
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    sget-object v0, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v0, p1}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lbv7;->onThemeChanged(Lzlb;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onThemeChanged(Lzlb;)V
+    .locals 2
+
+    sget-object v0, Lr1h;->k:Lrhg;
+
+    iget-object v1, p0, Lbv7;->d:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-static {v0, v1}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    iget v0, v0, Lrfg;->i:I
 
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->fileDownload:Lru/ok/tamtam/nano/Tasks$FileDownload;
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-wide v3, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->messageId:J
+    invoke-interface {p1}, Lzlb;->b()Lxf0;
 
-    iget-object v5, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->attachId:Ljava/lang/String;
+    move-result-object p1
 
-    iget-wide v6, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->videoId:J
+    iget p1, p1, Lxf0;->l:I
 
-    iget-wide v8, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->audioId:J
+    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    iget-wide v10, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->mp4GifId:J
-
-    iget-wide v12, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->stickerId:J
-
-    iget-wide v14, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->fileId:J
-
-    iget-object v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->fileName:Ljava/lang/String;
-
-    move-wide/from16 v17, v14
-
-    iget-object v14, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->url:Ljava/lang/String;
-
-    iget-boolean v15, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->notifyProgress:Z
-
-    move-object/from16 v19, v2
-
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->checkAutoloadConnection:Z
-
-    move/from16 v16, v2
-
-    iget v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->invalidateCount:I
-
-    move/from16 v20, v2
-
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->useOriginalExtension:Z
-
-    iget-boolean v1, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->notCopyVideoToGallery:Z
-
-    new-instance v29, Lxdg;
-
-    move/from16 v22, v1
-
-    move/from16 v21, v2
-
-    move-object/from16 v2, v29
-
-    invoke-direct/range {v2 .. v22}, Lxdg;-><init>(JLjava/lang/String;JJJJLjava/lang/String;ZZJLjava/lang/String;IZZ)V
-
-    new-instance v21, Lcv7;
-
-    iget-wide v3, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->requestId:J
-
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->outputPath:Ljava/lang/String;
-
-    iget-wide v5, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->chatServerId:J
-
-    iget-wide v7, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->serverMessageId:J
-
-    move-object/from16 v24, v1
-
-    move-wide/from16 v22, v3
-
-    move-wide/from16 v25, v5
-
-    move-wide/from16 v27, v7
-
-    invoke-direct/range {v21 .. v29}, Lcv7;-><init>(JLjava/lang/String;JJLxdg;)V
-
-    return-object v21
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    return-void
 .end method

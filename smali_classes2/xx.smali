@@ -1,188 +1,221 @@
 .class public final Lxx;
-.super Lb5g;
+.super Landroid/database/ContentObserver;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lfy;
+.field public final synthetic a:I
 
-.field public final synthetic o:Ljava/util/ArrayList;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Lfy;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lk3g;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lxx;->a:I
+
+    .line 2
+    iput-object p1, p0, Lxx;->b:Ljava/lang/Object;
+
+    .line 3
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ll1c;Landroid/os/Handler;I)V
     .locals 0
 
-    iput-object p1, p0, Lxx;->o:Ljava/util/ArrayList;
+    .line 1
+    iput p3, p0, Lxx;->a:I
 
-    iput-object p2, p0, Lxx;->X:Lfy;
+    iput-object p1, p0, Lxx;->b:Ljava/lang/Object;
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method public constructor <init>(Lmm7;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lxx;->a:I
+
+    iput-object p1, p0, Lxx;->b:Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    .line 4
+    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public deliverSelfNotifications()Z
+    .locals 1
 
-    check-cast p1, Lac4;
+    iget v0, p0, Lxx;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lxx;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lxx;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lxx;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lxx;
-
-    iget-object v0, p0, Lxx;->o:Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lxx;->X:Lfy;
-
-    invoke-direct {p1, v0, v1, p2}, Lxx;-><init>(Ljava/util/ArrayList;Lfy;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxx;->o:Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    :pswitch_0
+    invoke-super {p0}, Landroid/database/ContentObserver;->deliverSelfNotifications()Z
 
     move-result v0
 
-    if-nez v0, :cond_3
+    return v0
 
-    const/16 v0, 0x12c
+    :pswitch_1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    return v0
 
-    invoke-static {v0, v1}, Lyoj;->a(II)V
+    :pswitch_2
+    const/4 v0, 0x1
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    return v0
+
+    :pswitch_3
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final onChange(Z)V
+    .locals 3
+
+    iget p1, p0, Lxx;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    const-string p1, "Phonebook"
+
+    const-string v0, "contact observer onChange"
+
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lxx;->b:Ljava/lang/Object;
+
+    check-cast p1, Lt1c;
+
+    iget-object v0, p1, Lt1c;->i:Lspf;
+
+    :cond_0
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+
+    iget-object v2, p1, Lt1c;->h:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
     move-result v2
 
-    rem-int/lit8 v3, v2, 0x1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v4, 0x0
+    move-result-object v2
 
-    if-nez v3, :cond_0
+    invoke-virtual {v0, v1, v2}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move v1, v4
+    move-result v1
 
-    :cond_0
-    add-int/2addr v1, v2
+    if-eqz v1, :cond_0
 
-    new-instance v3, Ljava/util/ArrayList;
+    return-void
 
-    invoke-direct {v3, v1}, Ljava/util/ArrayList;-><init>(I)V
+    :pswitch_0
+    sget-object p1, Lmm7;->E0:Ljava/lang/String;
 
-    new-instance v1, Le2;
+    const-string v0, "ContentObserver: on content changed"
 
-    invoke-direct {v1, p1}, Le2;-><init>(Ljava/util/List;)V
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_0
-    iget-object v5, p0, Lxx;->X:Lfy;
+    iget-object p1, p0, Lxx;->b:Ljava/lang/Object;
 
-    if-ltz v4, :cond_2
+    check-cast p1, Lmm7;
 
-    if-ge v4, v2, :cond_2
+    invoke-virtual {p1}, Lmm7;->d()V
 
-    sub-int v6, v2, v4
+    return-void
 
-    if-le v0, v6, :cond_1
+    :pswitch_1
+    iget-object p1, p0, Lxx;->b:Ljava/lang/Object;
 
-    goto :goto_1
+    check-cast p1, Lk3g;
+
+    iget-boolean v0, p1, Lbf4;->b:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Lbf4;->c:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Lbf4;->c:Landroid/database/Cursor;
+
+    invoke-interface {v0}, Landroid/database/Cursor;->requery()Z
+
+    move-result v0
+
+    iput-boolean v0, p1, Lbf4;->a:Z
 
     :cond_1
-    move v6, v0
+    return-void
 
-    :goto_1
-    add-int/2addr v6, v4
+    :pswitch_2
+    iget-object p1, p0, Lxx;->b:Ljava/lang/Object;
 
-    iget-object v7, v1, Le2;->d:Ljava/util/List;
+    check-cast p1, Lcy;
 
-    invoke-interface {v7}, Ljava/util/List;->size()I
+    iget-object v0, p1, Lcy;->c:Ljava/lang/String;
 
-    move-result v7
+    const-string v1, "contact observer onChange"
 
-    invoke-static {v4, v6, v7}, Lk2j;->b(III)V
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v4, v1, Le2;->b:I
+    iget-object p1, p1, Lcy;->g:Li7f;
 
-    sub-int/2addr v6, v4
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    iput v6, v1, Le2;->c:I
+    invoke-virtual {p1, v0}, Li7f;->h(Ljava/lang/Object;)Z
 
-    iget-object v5, v5, Lfy;->d:Ld68;
+    return-void
 
-    invoke-interface {v5}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lii4;
-
-    iget-object v5, v5, Lii4;->e:Lw1e;
-
-    iget-object v6, v5, Lw1e;->a:Ldgb;
-
-    invoke-virtual {v6}, Ldgb;->l()Le1e;
-
-    move-result-object v6
-
-    check-cast v6, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    new-instance v7, Llgc;
-
-    const/16 v8, 0x11
-
-    invoke-direct {v7, v1, v8, v5}, Llgc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v6, v7}, Le1e;->s(Ljava/lang/Runnable;)V
-
-    sget-object v5, Lv2h;->a:Lv2h;
-
-    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, v5, Lfy;->b:Ljy0;
-
-    new-instance v1, Lp1c;
-
-    invoke-direct {v1}, Lkk0;-><init>()V
-
-    invoke-virtual {v0, v1}, Ljy0;->c(Ljava/lang/Object;)V
-
-    :cond_3
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,74 +1,108 @@
-.class public final synthetic Lw1g;
-.super Ljava/lang/Object;
+.class public final Lw1g;
+.super Lu1g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Lv1g;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lb2g;
+.field public final b:Lte4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb2g;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lw1g;->a:I
+    new-instance v0, Lv1g;
 
-    iput-object p1, p0, Lw1g;->b:Lb2g;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lw1g;->CREATOR:Lv1g;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 2
+    const-class v0, Lte4;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    .line 3
+    :cond_0
+    invoke-static {p1}, Lte4;->b(Landroid/os/Bundle;)Lte4;
+
+    move-result-object p1
+
+    .line 4
+    invoke-direct {p0, p1}, Lw1g;-><init>(Lte4;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lte4;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p1, Lte4;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lu1g;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Lw1g;->b:Lte4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Lw1g;->a:I
+    const/4 v0, 0x0
 
-    check-cast p1, Landroid/view/View;
+    return v0
+.end method
 
-    check-cast p2, Lu1g;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p2, p0, Lw1g;->b:Lte4;
 
-    iget-object v0, p0, Lw1g;->b:Lb2g;
+    invoke-virtual {p2}, Lte4;->c()Landroid/os/Bundle;
 
-    iget-object v0, v0, Lb2g;->R0:Lf14;
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object p2, p2, Lte4;->d:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, p1, p2}, Lf14;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p2, :cond_0
+
+    sget-object v1, Lte4;->w:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lw1g;->b:Lb2g;
-
-    iget-object v0, v0, Lb2g;->R0:Lf14;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, p1, p2}, Lf14;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

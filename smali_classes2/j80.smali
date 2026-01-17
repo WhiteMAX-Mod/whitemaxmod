@@ -1,19 +1,19 @@
 .class public final Lj80;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lxs;
+.field public final c:Lys;
 
 
 # direct methods
-.method public constructor <init>(Lxs;)V
+.method public constructor <init>(Lys;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj80;->c:Lxs;
+    iput-object p1, p0, Lj80;->c:Lys;
 
     return-void
 .end method
@@ -37,11 +37,11 @@
     :cond_1
     check-cast p1, Lj80;
 
-    iget-object v0, p0, Lj80;->c:Lxs;
+    iget-object v0, p0, Lj80;->c:Lys;
 
-    iget-object p1, p1, Lj80;->c:Lxs;
+    iget-object p1, p1, Lj80;->c:Lys;
 
-    invoke-virtual {v0, p1}, Lwbf;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ladf;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -62,9 +62,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lj80;->c:Lxs;
+    iget-object v0, p0, Lj80;->c:Lys;
 
-    invoke-virtual {v0}, Lwbf;->hashCode()I
+    invoke-virtual {v0}, Ladf;->hashCode()I
 
     move-result v0
 
@@ -74,9 +74,9 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lj80;->c:Lxs;
+    iget-object v0, p0, Lj80;->c:Lys;
 
-    invoke-static {v0}, Ltri;->j(Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {v0}, Lzsi;->i(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
 
     const-string v2, "\')"
 
-    invoke-static {v1, v0, v2}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

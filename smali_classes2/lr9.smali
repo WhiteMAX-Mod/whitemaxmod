@@ -1,193 +1,164 @@
-.class public final synthetic Llr9;
+.class public final Llr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loq6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/Set;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final b:Ljava/lang/Long;
 
-.field public final synthetic c:J
-
-.field public final synthetic d:J
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Llr9;->a:I
+.method public constructor <init>(Ljava/util/Set;Ljava/lang/Long;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Llr9;->c:J
+    iput-object p1, p0, Llr9;->a:Ljava/util/Set;
 
-    iput-wide p3, p0, Llr9;->d:J
+    iput-object p2, p0, Llr9;->b:Ljava/lang/Long;
 
-    iput-object p5, p0, Llr9;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;JJ)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Llr9;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llr9;->b:Ljava/lang/String;
-
-    iput-wide p2, p0, Llr9;->c:J
-
-    iput-wide p4, p0, Llr9;->d:J
+    iput-boolean p3, p0, Llr9;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Llr9;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-wide v0, p0, Llr9;->c:J
+    return v0
 
-    iget-wide v2, p0, Llr9;->d:J
+    :cond_0
+    instance-of v1, p1, Llr9;
 
-    check-cast p1, Lj6e;
+    const/4 v2, 0x0
 
-    const-string v4, "UPDATE webapp_biometry SET token = ? WHERE user_id = ? AND bot_id = ?"
+    if-nez v1, :cond_1
 
-    invoke-interface {p1, v4}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
+    return v2
 
-    move-result-object v4
+    :cond_1
+    check-cast p1, Llr9;
 
-    iget-object v5, p0, Llr9;->b:Ljava/lang/String;
+    iget-object v1, p0, Llr9;->a:Ljava/util/Set;
 
-    const/4 v6, 0x1
+    iget-object v3, p1, Llr9;->a:Ljava/util/Set;
 
-    if-nez v5, :cond_0
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :try_start_0
-    invoke-interface {v4, v6}, Lo6e;->e(I)V
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Llr9;->b:Ljava/lang/Long;
+
+    iget-object v3, p1, Llr9;->b:Ljava/lang/Long;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Llr9;->c:Z
+
+    iget-boolean p1, p1, Llr9;->c:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Llr9;->a:Ljava/util/Set;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Llr9;->b:Ljava/lang/Long;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :cond_0
-    invoke-interface {v4, v6, v5}, Lo6e;->D(ILjava/lang/String;)V
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    const/4 v5, 0x2
+    add-int/2addr v0, v1
 
-    invoke-interface {v4, v5, v0, v1}, Lo6e;->b(IJ)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    const/4 v0, 0x3
+    iget-boolean v1, p0, Llr9;->c:Z
 
-    invoke-interface {v4, v0, v2, v3}, Lo6e;->b(IJ)V
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-interface {v4}, Lo6e;->r0()Z
+    move-result v1
 
-    invoke-static {p1}, Ltmj;->b(Lj6e;)I
+    add-int/2addr v1, v0
 
-    move-result p1
+    return v1
+.end method
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {v4}, Ljava/lang/AutoCloseable;->close()V
+    const-string v1, "ForwardIds(messageIds="
 
-    return-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :goto_1
-    invoke-interface {v4}, Ljava/lang/AutoCloseable;->close()V
+    iget-object v1, p0, Llr9;->a:Ljava/util/Set;
 
-    throw p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-wide v0, p0, Llr9;->c:J
+    const-string v1, ", attachId="
 
-    iget-wide v2, p0, Llr9;->d:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lj6e;
+    iget-object v1, p0, Llr9;->b:Ljava/lang/Long;
 
-    const-string v4, "DELETE FROM message_uploads WHERE message_id=? AND chat_id=? AND attach_id=?"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, v4}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
+    const-string v1, ", isForwardAttach="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x1
+    const-string v1, ")"
 
-    :try_start_1
-    invoke-interface {p1, v4, v0, v1}, Lo6e;->b(IJ)V
+    iget-boolean v2, p0, Llr9;->c:Z
 
-    const/4 v0, 0x2
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {p1, v0, v2, v3}, Lo6e;->b(IJ)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    move-result-object v0
 
-    iget-object v0, p0, Llr9;->b:Ljava/lang/String;
-
-    const/4 v1, 0x3
-
-    if-nez v0, :cond_1
-
-    :try_start_2
-    invoke-interface {p1, v1}, Lo6e;->e(I)V
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_3
-
-    :cond_1
-    invoke-interface {p1, v1, v0}, Lo6e;->D(ILjava/lang/String;)V
-
-    :goto_2
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :goto_3
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

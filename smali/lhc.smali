@@ -1,212 +1,87 @@
-.class public final Llhc;
-.super Ldjf;
+.class public final enum Llhc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum b:Llhc;
+
+.field public static final enum c:Llhc;
+
+.field public static final synthetic d:[Llhc;
+
+
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:J
-
-.field public final c:J
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(IJJ)V
-    .locals 0
-
-    iput p1, p0, Llhc;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-wide p4, p0, Llhc;->b:J
-
-    .line 3
-    iput-wide p2, p0, Llhc;->c:J
-
-    return-void
-
-    .line 4
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-wide p2, p0, Llhc;->b:J
-
-    .line 6
-    iput-wide p4, p0, Llhc;->c:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(JJLjava/util/List;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Llhc;->a:I
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    iput-wide p1, p0, Llhc;->b:J
-
-    .line 9
-    iput-wide p3, p0, Llhc;->c:J
-
-    .line 10
-    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    return-void
-.end method
-
-.method public static b(JLktb;)J
-    .locals 6
-
-    invoke-virtual {p2}, Lktb;->x()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    const-wide/16 v2, 0x80
-
-    and-long/2addr v2, v0
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v2, v2, v4
-
-    if-eqz v2, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    and-long/2addr v0, v2
-
-    const/16 v2, 0x20
-
-    shl-long/2addr v0, v2
-
-    invoke-virtual {p2}, Lktb;->z()J
-
-    move-result-wide v2
-
-    or-long/2addr v0, v2
-
-    add-long/2addr v0, p0
-
-    const-wide p0, 0x1ffffffffL
-
-    and-long/2addr p0, v0
-
-    return-wide p0
-
-    :cond_0
-    const-wide p0, -0x7fffffffffffffffL    # -4.9E-324
-
-    return-wide p0
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
+.method static constructor <clinit>()V
     .locals 4
 
-    iget v0, p0, Llhc;->a:I
+    new-instance v0, Llhc;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "PERFORMANCE"
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    const-string v1, "SCTE-35 TimeSignalCommand { ptsTime="
+    invoke-direct {v0, v1, v2, v2}, Llhc;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sput-object v0, Llhc;->b:Llhc;
 
-    iget-wide v1, p0, Llhc;->b:J
+    new-instance v1, Llhc;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v2, "COMPATIBLE"
 
-    const-string v1, ", playbackPositionUs= "
+    const/4 v3, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2, v3, v3}, Llhc;-><init>(Ljava/lang/String;II)V
 
-    iget-wide v1, p0, Llhc;->c:J
+    sput-object v1, Llhc;->c:Llhc;
 
-    const-string v3, " }"
-
-    invoke-static {v0, v1, v2, v3}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    filled-new-array {v0, v1}, [Llhc;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Llhc;->d:[Llhc;
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "SCTE-35 SpliceInsertCommand { programSplicePts="
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-wide v1, p0, Llhc;->b:J
+    iput p3, p0, Llhc;->a:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, ", programSplicePlaybackPositionUs= "
+.method public static valueOf(Ljava/lang/String;)Llhc;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v0, Llhc;
 
-    iget-wide v1, p0, Llhc;->c:J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const-string v3, " }"
+    move-result-object p0
 
-    invoke-static {v0, v1, v2, v3}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    check-cast p0, Llhc;
 
-    move-result-object v0
+    return-object p0
+.end method
 
-    return-object v0
+.method public static values()[Llhc;
+    .locals 1
 
-    :pswitch_1
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Llhc;->d:[Llhc;
 
-    const-string v1, "SCTE-35 PrivateCommand { ptsAdjustment="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Llhc;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", identifier= "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Llhc;->c:J
-
-    const-string v3, " }"
-
-    invoke-static {v0, v1, v2, v3}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, [Llhc;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, [Llhc;
+
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

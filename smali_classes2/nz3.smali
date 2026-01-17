@@ -4,132 +4,120 @@
 
 
 # instance fields
-.field public final a:Lm20;
+.field public a:J
 
-.field public final b:Ljava/lang/String;
+.field public b:Ljava/lang/String;
 
-.field public final c:Ljava/util/List;
+.field public c:Ljava/lang/String;
 
+.field public d:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Lm20;Ljava/lang/String;Ljava/util/ArrayList;)V
-    .locals 0
+.field public e:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public f:Ljava/util/List;
 
-    iput-object p1, p0, Lnz3;->a:Lm20;
+.field public g:J
 
-    iput-object p2, p0, Lnz3;->b:Ljava/lang/String;
+.field public h:J
 
-    iput-object p3, p0, Lnz3;->c:Ljava/util/List;
+.field public i:Ltz3;
 
-    return-void
-.end method
+.field public j:I
+
+.field public k:Luz3;
+
+.field public l:I
+
+.field public m:I
+
+.field public n:Ljava/util/List;
+
+.field public o:Ljava/lang/String;
+
+.field public p:Ljava/lang/String;
+
+.field public q:Ljava/lang/String;
+
+.field public r:J
+
+.field public s:J
+
+.field public t:J
+
+.field public u:Lqz3;
+
+.field public v:[I
+
+.field public w:Lsz3;
+
+.field public x:Ljava/lang/String;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Lvz3;
+    .locals 1
+
+    iget-object v0, p0, Lnz3;->k:Luz3;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Luz3;->b:Luz3;
+
+    iput-object v0, p0, Lnz3;->k:Luz3;
+
+    :cond_0
+    iget v0, p0, Lnz3;->l:I
+
+    if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lnz3;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lnz3;
-
-    iget-object v1, p1, Lnz3;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lnz3;->a:Lm20;
-
-    iget-object v3, p0, Lnz3;->b:Ljava/lang/String;
-
-    invoke-static {v3, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lnz3;->a:Lm20;
-
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lnz3;->c:Ljava/util/List;
-
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
+    iput v0, p0, Lnz3;->l:I
 
     :cond_1
-    return v2
-.end method
+    iget-object v0, p0, Lnz3;->n:Ljava/util/List;
 
-.method public final hashCode()I
-    .locals 2
+    if-nez v0, :cond_2
 
-    iget-object v0, p0, Lnz3;->b:Ljava/lang/String;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iget-object v1, p0, Lnz3;->a:Lm20;
+    iput-object v0, p0, Lnz3;->n:Ljava/util/List;
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    :cond_2
+    iget-object v0, p0, Lnz3;->f:Ljava/util/List;
 
-    move-result-object v0
+    if-eqz v0, :cond_3
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_4
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    :cond_3
+    sget-object v0, Lpz3;->e:Lpz3;
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StartMessage{media=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lnz3;->a:Lm20;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\'text=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnz3;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\'elements=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnz3;->c:Ljava/util/List;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lc12;->k(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
+
+    iput-object v0, p0, Lnz3;->f:Ljava/util/List;
+
+    :cond_4
+    iget-object v0, p0, Lnz3;->v:[I
+
+    if-nez v0, :cond_5
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Lnz3;->v:[I
+
+    :cond_5
+    new-instance v0, Lvz3;
+
+    invoke-direct {v0, p0}, Lvz3;-><init>(Lnz3;)V
 
     return-object v0
 .end method

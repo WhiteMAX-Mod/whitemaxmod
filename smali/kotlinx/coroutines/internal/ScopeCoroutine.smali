@@ -1,9 +1,9 @@
 .class public Lkotlinx/coroutines/internal/ScopeCoroutine;
-.super Lm0;
+.super Ll0;
 .source "SourceFile"
 
 # interfaces
-.implements Lcc4;
+.implements Lbc4;
 
 
 # annotations
@@ -12,40 +12,42 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lm0;",
-        "Lcc4;"
+        "Ll0;",
+        "Lbc4;"
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000B\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u000b\n\u0002\u0008\u0003\u0008\u0010\u0018\u0000*\u0006\u0008\u0000\u0010\u0001 \u00002\u0008\u0012\u0004\u0012\u00028\u00000\u00022\u00060\u0003j\u0002`\u0004B\u001d\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0007\u00a2\u0006\u0004\u0008\t\u0010\nJ\u0015\u0010\r\u001a\n\u0018\u00010\u000bj\u0004\u0018\u0001`\u000c\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u0019\u0010\u0012\u001a\u00020\u00112\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0014\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0019\u0010\u0014\u001a\u00020\u00112\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0014\u00a2\u0006\u0004\u0008\u0014\u0010\u0013R\u001a\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u00078\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0008\u0010\u0015R\u0019\u0010\u0018\u001a\n\u0018\u00010\u0003j\u0004\u0018\u0001`\u00048F\u00a2\u0006\u0006\u001a\u0004\u0008\u0016\u0010\u0017R\u0014\u0010\u001a\u001a\u00020\u00198DX\u0084\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u001a\u0010\u001b\u00a8\u0006\u001c"
+        "\u0000B\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0010\u000b\n\u0002\u0008\u0003\u0008\u0010\u0018\u0000*\u0006\u0008\u0000\u0010\u0001 \u00002\u0008\u0012\u0004\u0012\u00028\u00000\u00022\u00060\u0003j\u0002`\u0004B\u001d\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0007\u00a2\u0006\u0004\u0008\t\u0010\nJ\u0015\u0010\r\u001a\n\u0018\u00010\u000bj\u0004\u0018\u0001`\u000c\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u0019\u0010\u0012\u001a\u00020\u00112\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0014\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\u0011H\u0016\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0019\u0010\u0016\u001a\u00020\u00112\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0014\u00a2\u0006\u0004\u0008\u0016\u0010\u0013R\u001a\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u00078\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0008\u0010\u0017R\u0019\u0010\u001a\u001a\n\u0018\u00010\u0003j\u0004\u0018\u0001`\u00048F\u00a2\u0006\u0006\u001a\u0004\u0008\u0018\u0010\u0019R\u0014\u0010\u001c\u001a\u00020\u001b8DX\u0084\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u001c\u0010\u001d\u00a8\u0006\u001e"
     }
     d2 = {
         "Lkotlinx/coroutines/internal/ScopeCoroutine;",
         "T",
-        "Lm0;",
-        "Lcc4;",
+        "Ll0;",
+        "Lbc4;",
         "Lkotlinx/coroutines/internal/CoroutineStackFrame;",
-        "Lrb4;",
+        "Lqb4;",
         "context",
         "Lkotlin/coroutines/Continuation;",
         "uCont",
         "<init>",
-        "(Lrb4;Lkotlin/coroutines/Continuation;)V",
+        "(Lqb4;Lkotlin/coroutines/Continuation;)V",
         "Ljava/lang/StackTraceElement;",
         "Lkotlinx/coroutines/internal/StackTraceElement;",
         "getStackTraceElement",
         "()Ljava/lang/StackTraceElement;",
         "",
         "state",
-        "Lv2h;",
+        "Lb3h;",
         "afterCompletion",
         "(Ljava/lang/Object;)V",
+        "afterCompletionUndispatched",
+        "()V",
         "afterResume",
         "Lkotlin/coroutines/Continuation;",
         "getCallerFrame",
-        "()Lcc4;",
+        "()Lbc4;",
         "callerFrame",
         "",
         "isScopedCoroutine",
@@ -55,7 +57,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -74,12 +76,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lrb4;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lqb4;Lkotlin/coroutines/Continuation;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lrb4;",
+            "Lqb4;",
             "Lkotlin/coroutines/Continuation<",
             "-TT;>;)V"
         }
@@ -87,7 +89,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0, v0}, Lm0;-><init>(Lrb4;ZZ)V
+    invoke-direct {p0, p1, v0, v0}, Ll0;-><init>(Lqb4;ZZ)V
 
     iput-object p2, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
@@ -97,23 +99,25 @@
 
 # virtual methods
 .method public afterCompletion(Ljava/lang/Object;)V
-    .locals 3
+    .locals 1
 
     iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0}, Lv0j;->e(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object v0
 
-    invoke-static {p1}, Lnij;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lkjj;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v1, 0x0
+    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith(Lkotlin/coroutines/Continuation;Ljava/lang/Object;)V
 
-    const/4 v2, 0x2
+    return-void
+.end method
 
-    invoke-static {v0, p1, v1, v2, v1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Loq6;ILjava/lang/Object;)V
+.method public afterCompletionUndispatched()V
+    .locals 0
 
     return-void
 .end method
@@ -123,7 +127,7 @@
 
     iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
-    invoke-static {p1}, Lnij;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lkjj;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -132,16 +136,16 @@
     return-void
 .end method
 
-.method public final getCallerFrame()Lcc4;
+.method public final getCallerFrame()Lbc4;
     .locals 2
 
     iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
-    instance-of v1, v0, Lcc4;
+    instance-of v1, v0, Lbc4;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lcc4;
+    check-cast v0, Lbc4;
 
     return-object v0
 

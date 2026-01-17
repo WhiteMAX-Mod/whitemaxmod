@@ -1,233 +1,105 @@
-.class public abstract Lmaj;
-.super Ljava/lang/Object;
+.class public final Lmaj;
+.super Lg4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lmaj;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public X:Lg8j;
+
+.field public Y:Lg8j;
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public o:Ljava/lang/String;
+
+
 # direct methods
-.method public static final a(Ld1e;II)Ljava/util/List;
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 2
 
-    iget-object p0, p0, Ld1e;->a:Ljava/util/LinkedHashMap;
+    new-instance v0, Lwij;
 
-    if-ne p1, p2, :cond_0
+    const/4 v1, 0x6
 
-    sget-object p0, Lch5;->a:Lch5;
+    invoke-direct {v0, v1}, Lwij;-><init>(I)V
 
-    return-object p0
+    sput-object v0, Lmaj;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    :cond_0
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-le p2, p1, :cond_1
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v0
-
-    :goto_0
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    :cond_2
-    if-eqz v2, :cond_3
-
-    if-ge p1, p2, :cond_b
-
-    goto :goto_1
-
-    :cond_3
-    if-le p1, p2, :cond_b
-
-    :goto_1
-    const/4 v4, 0x0
-
-    if-eqz v2, :cond_5
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/TreeMap;
-
-    if-nez v5, :cond_4
-
-    :goto_2
-    move-object v7, v4
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {v5}, Ljava/util/TreeMap;->descendingKeySet()Ljava/util/NavigableSet;
-
-    move-result-object v6
-
-    new-instance v7, Lysb;
-
-    invoke-direct {v7, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_5
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/TreeMap;
-
-    if-nez v5, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {v5}, Ljava/util/TreeMap;->keySet()Ljava/util/Set;
-
-    move-result-object v6
-
-    new-instance v7, Lysb;
-
-    invoke-direct {v7, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :goto_3
-    if-nez v7, :cond_7
-
-    goto :goto_6
-
-    :cond_7
-    iget-object v5, v7, Lysb;->a:Ljava/lang/Object;
-
-    check-cast v5, Ljava/util/Map;
-
-    iget-object v6, v7, Lysb;->b:Ljava/lang/Object;
-
-    check-cast v6, Ljava/lang/Iterable;
-
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_8
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_a
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Number;
-
-    invoke-virtual {v7}, Ljava/lang/Number;->intValue()I
-
-    move-result v7
-
-    if-eqz v2, :cond_9
-
-    add-int/lit8 v8, p1, 0x1
-
-    if-gt v8, v7, :cond_8
-
-    if-gt v7, p2, :cond_8
-
-    goto :goto_4
-
-    :cond_9
-    if-gt p2, v7, :cond_8
-
-    if-ge v7, p1, :cond_8
-
-    :goto_4
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-interface {v5, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move v5, v1
-
-    move p1, v7
-
-    goto :goto_5
-
-    :cond_a
-    move v5, v0
-
-    :goto_5
-    if-nez v5, :cond_2
-
-    :goto_6
-    return-object v4
-
-    :cond_b
-    return-object v3
-.end method
-
-.method public static final b(Lcj4;II)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    if-le p1, p2, :cond_0
-
-    iget-boolean p2, p0, Lcj4;->l:Z
-
-    if-eqz p2, :cond_0
-
-    return v0
-
-    :cond_0
-    iget-object p2, p0, Lcj4;->m:Ljava/util/Set;
-
-    iget-boolean p0, p0, Lcj4;->k:Z
-
-    if-eqz p0, :cond_2
-
-    if-eqz p2, :cond_1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-interface {p2, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    return v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public c()Z
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    const/4 v0, 0x0
+    const/16 v0, 0x4f45
 
-    return v0
+    invoke-static {p1, v0}, Lsnj;->k(Landroid/os/Parcel;I)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lmaj;->a:Ljava/lang/String;
+
+    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lmaj;->b:Ljava/lang/String;
+
+    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lmaj;->c:Ljava/lang/String;
+
+    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x5
+
+    iget-object v2, p0, Lmaj;->d:Ljava/lang/String;
+
+    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x6
+
+    iget-object v2, p0, Lmaj;->o:Ljava/lang/String;
+
+    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x7
+
+    iget-object v2, p0, Lmaj;->X:Lg8j;
+
+    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    const/16 v1, 0x8
+
+    iget-object v2, p0, Lmaj;->Y:Lg8j;
+
+    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    invoke-static {p1, v0}, Lsnj;->l(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

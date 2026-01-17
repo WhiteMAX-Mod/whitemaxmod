@@ -1,20 +1,20 @@
 .class public abstract Ltk0;
-.super Lp09;
+.super Ltz8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final u0:J
-
 .field public final v0:J
 
-.field public w0:Lrb9;
+.field public final w0:J
 
-.field public x0:[I
+.field public x0:Lxz0;
+
+.field public y0:[I
 
 
 # direct methods
-.method public constructor <init>(Lsi4;Lzi4;Lrj6;ILjava/lang/Object;JJJJJ)V
+.method public constructor <init>(Lsi4;Laj4;Lpj6;ILjava/lang/Object;JJJJJ)V
     .locals 12
 
     move-object v0, p0
@@ -35,15 +35,15 @@
 
     move-wide/from16 v10, p14
 
-    invoke-direct/range {v0 .. v11}, Lp09;-><init>(Lsi4;Lzi4;Lrj6;ILjava/lang/Object;JJJ)V
+    invoke-direct/range {v0 .. v11}, Ltz8;-><init>(Lsi4;Laj4;Lpj6;ILjava/lang/Object;JJJ)V
 
     move-wide/from16 p1, p10
 
-    iput-wide p1, p0, Ltk0;->u0:J
+    iput-wide p1, p0, Ltk0;->v0:J
 
     move-wide/from16 p1, p12
 
-    iput-wide p1, p0, Ltk0;->v0:J
+    iput-wide p1, p0, Ltk0;->w0:J
 
     return-void
 .end method
@@ -53,9 +53,9 @@
 .method public final d(I)I
     .locals 1
 
-    iget-object v0, p0, Ltk0;->x0:[I
+    iget-object v0, p0, Ltk0;->y0:[I
 
-    invoke-static {v0}, Lp5j;->h(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh6j;->h(Ljava/lang/Object;)V
 
     aget p1, v0, p1
 

@@ -1,133 +1,171 @@
 .class public final Luza;
-.super Lh3;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Le0b;
+.implements Lo25;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public volatile X:Z
 
-.field public final c:J
+.field public final a:Leqe;
 
-.field public final d:Lqae;
+.field public final b:J
+
+.field public final c:Ljava/util/concurrent/TimeUnit;
+
+.field public final d:Lnbe;
+
+.field public o:Lo25;
 
 
 # direct methods
-.method public constructor <init>(Lcxa;JLqae;I)V
-    .locals 0
+.method public constructor <init>(Leqe;JLnbe;)V
+    .locals 1
 
-    iput p5, p0, Luza;->b:I
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    packed-switch p5, :pswitch_data_0
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sget-object p5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iput-object p1, p0, Luza;->a:Leqe;
 
-    invoke-direct {p0, p1}, Lh3;-><init>(Lrza;)V
+    iput-wide p2, p0, Luza;->b:J
 
-    iput-wide p2, p0, Luza;->c:J
+    iput-object v0, p0, Luza;->c:Ljava/util/concurrent/TimeUnit;
 
-    iput-object p4, p0, Luza;->d:Lqae;
-
-    return-void
-
-    :pswitch_0
-    sget-object p5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-direct {p0, p1}, Lh3;-><init>(Lrza;)V
-
-    iput-wide p2, p0, Luza;->c:J
-
-    iput-object p4, p0, Luza;->d:Lqae;
+    iput-object p4, p0, Luza;->d:Lnbe;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final n(Lc0b;)V
-    .locals 5
+.method public final b()V
+    .locals 1
 
-    iget v0, p0, Luza;->b:I
+    iget-object v0, p0, Luza;->a:Leqe;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Leqe;->b()V
 
-    new-instance v0, Lwza;
+    iget-object v0, p0, Luza;->d:Lnbe;
 
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-interface {v0}, Lo25;->dispose()V
 
-    iget-object v1, p0, Luza;->d:Lqae;
+    return-void
+.end method
 
-    invoke-virtual {v1}, Lqae;->a()Loae;
+.method public final c(Lo25;)V
+    .locals 1
 
-    move-result-object v1
+    iget-object v0, p0, Luza;->o:Lo25;
 
-    iget-wide v2, p0, Luza;->c:J
+    invoke-static {v0, p1}, Ls25;->h(Lo25;Lo25;)Z
 
-    invoke-direct {v0, p1, v2, v3, v1}, Lwza;-><init>(Lc0b;JLoae;)V
+    move-result v0
 
-    invoke-interface {p1, v0}, Lc0b;->c(Ll25;)V
+    if-eqz v0, :cond_0
 
-    new-instance p1, Lwb6;
+    iput-object p1, p0, Luza;->o:Lo25;
 
-    const-wide/16 v1, 0x0
+    iget-object p1, p0, Luza;->a:Leqe;
 
-    invoke-direct {p1, v1, v2, v0}, Lwb6;-><init>(JLxza;)V
+    invoke-virtual {p1, p0}, Leqe;->c(Lo25;)V
 
-    iget-wide v1, v0, Lwza;->b:J
+    :cond_0
+    return-void
+.end method
 
-    iget-object v3, v0, Lwza;->c:Ljava/util/concurrent/TimeUnit;
+.method public final dispose()V
+    .locals 1
 
-    iget-object v4, v0, Lwza;->d:Loae;
+    iget-object v0, p0, Luza;->o:Lo25;
 
-    invoke-virtual {v4, p1, v1, v2, v3}, Loae;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ll25;
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    iget-object v0, p0, Luza;->d:Lnbe;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    return-void
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget-object v0, p0, Luza;->d:Lnbe;
+
+    invoke-interface {v0}, Lo25;->e()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Luza;->a:Leqe;
+
+    invoke-virtual {v0, p1}, Leqe;->onError(Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Luza;->d:Lnbe;
+
+    invoke-interface {p1}, Lo25;->dispose()V
+
+    return-void
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-boolean v0, p0, Luza;->X:Z
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Luza;->X:Z
+
+    iget-object v0, p0, Luza;->a:Leqe;
+
+    invoke-virtual {v0, p1}, Leqe;->r(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v1, v0, Lwza;->o:Lr62;
+    check-cast p1, Lo25;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz p1, :cond_0
 
-    invoke-static {v1, p1}, Lp25;->d(Ljava/util/concurrent/atomic/AtomicReference;Ll25;)Z
+    invoke-interface {p1}, Lo25;->dispose()V
 
-    iget-object p1, p0, Lh3;->a:Lrza;
+    :cond_0
+    iget-object p1, p0, Luza;->d:Lnbe;
 
-    invoke-interface {p1, v0}, Lrza;->a(Lc0b;)V
+    iget-wide v0, p0, Luza;->b:J
 
-    return-void
+    iget-object v2, p0, Luza;->c:Ljava/util/concurrent/TimeUnit;
 
-    :pswitch_0
-    new-instance v0, Ltza;
-
-    new-instance v1, Lcpe;
-
-    invoke-direct {v1, p1}, Lcpe;-><init>(Lc0b;)V
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object p1, p0, Luza;->d:Lqae;
-
-    invoke-virtual {p1}, Lqae;->a()Loae;
+    invoke-virtual {p1, p0, v0, v1, v2}, Lnbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
 
     move-result-object p1
 
-    iget-wide v2, p0, Luza;->c:J
+    invoke-static {p0, p1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
 
-    invoke-direct {v0, v1, v2, v3, p1}, Ltza;-><init>(Lcpe;JLoae;)V
+    :cond_1
+    return-void
+.end method
 
-    iget-object p1, p0, Lh3;->a:Lrza;
+.method public final run()V
+    .locals 1
 
-    invoke-interface {p1, v0}, Lrza;->a(Lc0b;)V
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Luza;->X:Z
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

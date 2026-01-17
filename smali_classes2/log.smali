@@ -2,198 +2,155 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
+
 
 # instance fields
-.field public final a:Liog;
+.field public final synthetic a:Landroid/view/View;
 
-.field public final b:Lmog;
+.field public final synthetic b:Ljava/lang/String;
 
-.field public final c:Lpog;
+.field public final synthetic c:F
 
-.field public final d:Lsog;
+.field public final synthetic d:F
+
+.field public final synthetic e:Z
+
+.field public final synthetic f:F
+
+.field public final synthetic g:Llq6;
 
 
 # direct methods
-.method public constructor <init>(Liog;Lmog;Lpog;Lsog;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFZFLlq6;)V
+    .locals 1
+
+    sget v0, Lw5e;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llog;->a:Liog;
+    iput-object p1, p0, Llog;->a:Landroid/view/View;
 
-    iput-object p2, p0, Llog;->b:Lmog;
+    iput-object p2, p0, Llog;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Llog;->c:Lpog;
+    iput p3, p0, Llog;->c:F
 
-    iput-object p4, p0, Llog;->d:Lsog;
+    iput p4, p0, Llog;->d:F
+
+    iput-boolean p5, p0, Llog;->e:Z
+
+    iput p6, p0, Llog;->f:F
+
+    iput-object p7, p0, Llog;->g:Llq6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-boolean p1, p0, Llog;->e:Z
 
-    if-ne p0, p1, :cond_0
+    if-eqz p1, :cond_0
 
-    return v0
+    const/4 p1, 0x0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Llog;
+    const/16 p1, 0x8
 
-    const/4 v2, 0x0
+    :goto_0
+    iget-object v0, p0, Llog;->a:Landroid/view/View;
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    return v2
+    iget-object p1, p0, Llog;->g:Llq6;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
     :cond_1
-    check-cast p1, Llog;
+    sget p1, Lw5e;->W0:I
 
-    iget-object v1, p0, Llog;->a:Liog;
+    const/4 v1, 0x0
 
-    iget-object v3, p1, Llog;->a:Liog;
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Llog;->b:Lmog;
-
-    iget-object v3, p1, Llog;->b:Lmog;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Llog;->c:Lpog;
-
-    iget-object v3, p1, Llog;->c:Lpog;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Llog;->d:Lsog;
-
-    iget-object p1, p1, Llog;->d:Lsog;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    iget-object v0, p0, Llog;->a:Liog;
+    iget p1, p0, Llog;->d:F
 
-    invoke-virtual {v0}, Liog;->hashCode()I
+    iget-object v0, p0, Llog;->a:Landroid/view/View;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-boolean p1, p0, Llog;->e:Z
 
-    iget-object v1, p0, Llog;->b:Lmog;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v1}, Lmog;->hashCode()I
+    const/4 p1, 0x0
 
-    move-result v1
+    goto :goto_0
 
-    add-int/2addr v1, v0
+    :cond_0
+    const/16 p1, 0x8
 
-    mul-int/lit8 v1, v1, 0x1f
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Llog;->c:Lpog;
+    iget p1, p0, Llog;->f:F
 
-    invoke-virtual {v0}, Lpog;->hashCode()I
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    move-result v0
+    iget-object p1, p0, Llog;->g:Llq6;
 
-    add-int/2addr v0, v1
+    if-eqz p1, :cond_1
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
-    iget-object v1, p0, Llog;->d:Lsog;
+    :cond_1
+    sget p1, Lw5e;->W0:I
 
-    invoke-virtual {v1}, Lsog;->hashCode()I
+    const/4 v1, 0x0
 
-    move-result v1
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget p1, Lw5e;->W0:I
 
-    const-string v1, "TopbarColors(background="
+    iget-object v0, p0, Llog;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Llog;->a:Landroid/view/View;
 
-    iget-object v1, p0, Llog;->a:Liog;
+    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget p1, p0, Llog;->c:F
 
-    const-string v1, ", icon="
+    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x0
 
-    iget-object v1, p0, Llog;->b:Lmog;
+    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stroke="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Llog;->c:Lpog;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", text="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Llog;->d:Lsog;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

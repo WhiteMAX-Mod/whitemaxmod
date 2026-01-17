@@ -1,61 +1,81 @@
 .class public final Lrwi;
-.super Lkvi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxzi;
+.implements Landroid/os/IInterface;
 
 
 # instance fields
-.field public final synthetic c:Ltwi;
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method public constructor <init>(Ltwi;)V
+.method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    iput-object p1, p0, Lrwi;->c:Ltwi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    iput-object p1, p0, Lrwi;->c:Landroid/os/IBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic get(I)Ljava/lang/Object;
-    .locals 2
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
 
-    iget-object v0, p0, Lrwi;->c:Ltwi;
-
-    iget v1, v0, Ltwi;->o:I
-
-    invoke-static {p1, v1}, Le9j;->c(II)V
-
-    iget-object v0, v0, Ltwi;->d:[Ljava/lang/Object;
-
-    add-int/2addr p1, p1
-
-    aget-object v1, v0, p1
-
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 p1, p1, 0x1
-
-    aget-object p1, v0, p1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/AbstractMap$SimpleImmutableEntry;
-
-    invoke-direct {v0, v1, p1}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v0, p0, Lrwi;->c:Landroid/os/IBinder;
 
     return-object v0
 .end method
 
-.method public final size()I
-    .locals 1
+.method public final l(Ljava/lang/String;Landroid/os/Bundle;Lzjj;)V
+    .locals 2
 
-    iget-object v0, p0, Lrwi;->c:Ltwi;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    iget v0, v0, Ltwi;->o:I
+    move-result-object v0
 
-    return v0
+    const-string v1, "com.google.android.play.core.appupdate.protocol.IAppUpdateService"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    sget p1, Lzui;->a:I
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    :try_start_0
+    iget-object p2, p0, Lrwi;->c:Landroid/os/IBinder;
+
+    const/4 p3, 0x0
+
+    const/4 v1, 0x2
+
+    invoke-interface {p2, v1, v0, p3, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
 .end method

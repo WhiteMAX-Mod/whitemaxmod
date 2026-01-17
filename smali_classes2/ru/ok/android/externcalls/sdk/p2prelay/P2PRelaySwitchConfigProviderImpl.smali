@@ -33,10 +33,10 @@
         "Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProvider;",
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
         "settings",
-        "Lcgd;",
+        "Lahd;",
         "log",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lcgd;)V",
+        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lahd;)V",
         "",
         "config",
         "parseConfig",
@@ -74,14 +74,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProviderImpl$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProviderImpl$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProviderImpl;->Companion:Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProviderImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lcgd;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lahd;)V
     .locals 6
 
     new-instance v4, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;
@@ -92,7 +92,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v4, v2, v0, v1, v2}, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;-><init>(Ljava/lang/Long;IILro4;)V
+    invoke-direct {v4, v2, v0, v1, v2}, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;-><init>(Ljava/lang/Long;IILso4;)V
 
     const-string v5, "P2PRelaySwitchConfigProviderImpl"
 
@@ -104,7 +104,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lcgd;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lahd;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method

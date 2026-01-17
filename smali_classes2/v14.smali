@@ -1,49 +1,27 @@
-.class public final Lv14;
-.super Ll84;
+.class public interface abstract Lv14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lz14;
-
-.field public Y:I
-
-.field public d:Lz14;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lu14;
 
 
 # direct methods
-.method public constructor <init>(Lz14;Ll84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lv14;->X:Lz14;
+    sget-object v0, Lu14;->a:Lu14;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sput-object v0, Lv14;->a:Lu14;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a()V
+.end method
 
-    iput-object p1, p0, Lv14;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lv14;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lv14;->Y:I
-
-    iget-object p1, p0, Lv14;->X:Lz14;
-
-    invoke-static {p1, p0}, Lz14;->c(Lz14;Ll84;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract b()Llpf;
 .end method

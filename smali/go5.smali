@@ -3,1183 +3,849 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:[Lso5;
+
+.field public static final d:[[Lso5;
+
+.field public static final e:Ljava/util/HashSet;
+
+
 # instance fields
-.field public final a:I
+.field public final a:Ljava/util/ArrayList;
 
-.field public final b:I
-
-.field public final c:J
-
-.field public final d:[B
+.field public final b:Ljava/nio/ByteOrder;
 
 
 # direct methods
-.method public constructor <init>(I[BI)V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 58
 
-    const-wide/16 v1, -0x1
+    new-instance v0, Lso5;
 
-    move-object v0, p0
+    const/16 v1, 0x100
 
-    move v4, p1
+    const-string v2, "ImageWidth"
 
-    move-object v3, p2
+    const/4 v14, 0x3
 
-    move v5, p3
+    const/4 v15, 0x4
 
-    .line 1
-    invoke-direct/range {v0 .. v5}, Lgo5;-><init>(J[BII)V
+    invoke-direct {v0, v1, v2, v14, v15}, Lso5;-><init>(ILjava/lang/String;II)V
 
-    return-void
-.end method
+    new-instance v1, Lso5;
 
-.method public constructor <init>(J[BII)V
-    .locals 0
+    const-string v2, "ImageLength"
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v3, 0x101
 
-    .line 3
-    iput p4, p0, Lgo5;->a:I
+    invoke-direct {v1, v3, v2, v14, v15}, Lso5;-><init>(ILjava/lang/String;II)V
 
-    .line 4
-    iput p5, p0, Lgo5;->b:I
+    new-instance v2, Lso5;
 
-    .line 5
-    iput-wide p1, p0, Lgo5;->c:J
+    const-string v3, "Make"
 
-    .line 6
-    iput-object p3, p0, Lgo5;->d:[B
+    const/16 v4, 0x10f
 
-    return-void
-.end method
+    const/4 v5, 0x2
 
-.method public static a(Ljava/lang/String;)Lgo5;
-    .locals 3
+    invoke-direct {v2, v3, v4, v5}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    const-string v0, "\u0000"
+    new-instance v3, Lso5;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v4, "Model"
 
-    move-result-object p0
+    const/16 v6, 0x110
 
-    sget-object v0, Lko5;->Z:Ljava/nio/charset/Charset;
+    invoke-direct {v3, v4, v6, v5}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    new-instance v4, Lso5;
 
-    move-result-object p0
+    const-string v6, "Orientation"
 
-    new-instance v0, Lgo5;
+    const/16 v7, 0x112
 
-    const/4 v1, 0x2
+    invoke-direct {v4, v6, v7, v14}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    array-length v2, p0
+    new-instance v6, Lso5;
 
-    invoke-direct {v0, v1, p0, v2}, Lgo5;-><init>(I[BI)V
+    const-string v7, "XResolution"
 
-    return-object v0
-.end method
+    const/16 v8, 0x11a
 
-.method public static b(JLjava/nio/ByteOrder;)Lgo5;
-    .locals 2
+    const/4 v9, 0x5
 
-    const/4 v0, 0x1
+    invoke-direct {v6, v7, v8, v9}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    new-array v0, v0, [J
+    move-object v7, v6
 
-    const/4 v1, 0x0
+    new-instance v6, Lso5;
 
-    aput-wide p0, v0, v1
+    const-string v8, "YResolution"
 
-    invoke-static {v0, p2}, Lgo5;->c([JLjava/nio/ByteOrder;)Lgo5;
+    const/16 v10, 0x11b
 
-    move-result-object p0
+    invoke-direct {v6, v8, v10, v9}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    return-object p0
-.end method
+    move-object v8, v7
 
-.method public static c([JLjava/nio/ByteOrder;)Lgo5;
-    .locals 5
+    new-instance v7, Lso5;
 
-    sget-object v0, Lko5;->Q:[I
+    const-string v10, "ResolutionUnit"
 
-    const/4 v1, 0x4
+    const/16 v11, 0x128
 
-    aget v0, v0, v1
+    invoke-direct {v7, v10, v11, v14}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    array-length v2, p0
+    move-object v10, v8
 
-    mul-int/2addr v0, v2
+    new-instance v8, Lso5;
 
-    new-array v0, v0, [B
+    const-string v11, "Software"
 
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    const/16 v12, 0x131
+
+    invoke-direct {v8, v11, v12, v5}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    move v11, v9
+
+    new-instance v9, Lso5;
+
+    const-string v12, "DateTime"
+
+    const/16 v13, 0x132
+
+    invoke-direct {v9, v12, v13, v5}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    move v12, v5
+
+    move-object v5, v10
+
+    new-instance v10, Lso5;
+
+    const-string v13, "YCbCrPositioning"
+
+    const/16 v11, 0x213
+
+    invoke-direct {v10, v13, v11, v14}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v11, Lso5;
+
+    const-string v13, "SubIFDPointer"
+
+    const/16 v14, 0x14a
+
+    invoke-direct {v11, v13, v14, v15}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    move/from16 v16, v12
+
+    new-instance v12, Lso5;
+
+    const-string v14, "ExifIFDPointer"
+
+    move-object/from16 v17, v0
+
+    const v0, 0x8769
+
+    invoke-direct {v12, v14, v0, v15}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    move-object/from16 v18, v13
+
+    new-instance v13, Lso5;
+
+    move-object/from16 v19, v14
+
+    const-string v14, "GPSInfoIFDPointer"
+
+    const v0, 0x8825
+
+    invoke-direct {v13, v14, v0, v15}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v20, v18
+
+    const/4 v15, 0x5
+
+    filled-new-array/range {v0 .. v13}, [Lso5;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    new-instance v1, Lso5;
 
-    array-length p1, p0
+    const v2, 0x829a
 
-    const/4 v2, 0x0
+    const-string v3, "ExposureTime"
 
-    :goto_0
-    if-ge v2, p1, :cond_0
+    invoke-direct {v1, v3, v2, v15}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    aget-wide v3, p0, v2
+    new-instance v2, Lso5;
 
-    long-to-int v3, v3
+    const v4, 0x829d
 
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    const-string v5, "FNumber"
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-direct {v2, v5, v4, v15}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    goto :goto_0
+    new-instance v4, Lso5;
 
-    :cond_0
-    new-instance p1, Lgo5;
+    const-string v6, "ExposureProgram"
 
-    array-length p0, p0
+    const v7, 0x8822
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+    const/4 v8, 0x3
 
-    move-result-object v0
+    invoke-direct {v4, v6, v7, v8}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {p1, v1, v0, p0}, Lgo5;-><init>(I[BI)V
+    new-instance v6, Lso5;
 
-    return-object p1
-.end method
+    const-string v7, "PhotographicSensitivity"
 
-.method public static d([Lio5;Ljava/nio/ByteOrder;)Lgo5;
-    .locals 6
+    const v9, 0x8827
 
-    sget-object v0, Lko5;->Q:[I
+    invoke-direct {v6, v7, v9, v8}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    const/4 v1, 0x5
+    new-instance v7, Lso5;
 
-    aget v0, v0, v1
+    const-string v9, "SensitivityType"
 
-    array-length v2, p0
+    const v10, 0x8830
 
-    mul-int/2addr v0, v2
+    invoke-direct {v7, v9, v10, v8}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    new-array v0, v0, [B
+    new-instance v8, Lso5;
 
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    const-string v9, "ExifVersion"
 
-    move-result-object v0
+    const v10, 0x9000
 
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    const/4 v12, 0x2
 
-    array-length p1, p0
+    invoke-direct {v8, v9, v10, v12}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    const/4 v2, 0x0
+    new-instance v9, Lso5;
 
-    :goto_0
-    if-ge v2, p1, :cond_0
+    const-string v10, "DateTimeOriginal"
 
-    aget-object v3, p0, v2
+    const v11, 0x9003
 
-    iget-wide v4, v3, Lio5;->a:J
+    invoke-direct {v9, v10, v11, v12}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    long-to-int v4, v4
+    new-instance v10, Lso5;
 
-    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    const-string v11, "DateTimeDigitized"
 
-    iget-wide v3, v3, Lio5;->b:J
+    const v13, 0x9004
 
-    long-to-int v3, v3
+    invoke-direct {v10, v11, v13, v12}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    new-instance v11, Lso5;
 
-    add-int/lit8 v2, v2, 0x1
+    const-string v12, "ComponentsConfiguration"
 
-    goto :goto_0
+    const v13, 0x9101
 
-    :cond_0
-    new-instance p1, Lgo5;
+    const/4 v15, 0x7
 
-    array-length p0, p0
+    invoke-direct {v11, v12, v13, v15}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+    new-instance v12, Lso5;
 
-    move-result-object v0
+    const-string v13, "ShutterSpeedValue"
 
-    invoke-direct {p1, v1, v0, p0}, Lgo5;-><init>(I[BI)V
+    const v15, 0x9201
 
-    return-object p1
-.end method
+    move-object/from16 v21, v1
 
-.method public static e(ILjava/nio/ByteOrder;)Lgo5;
-    .locals 0
+    const/16 v1, 0xa
 
-    filled-new-array {p0}, [I
+    invoke-direct {v12, v13, v15, v1}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    move-result-object p0
+    new-instance v13, Lso5;
 
-    invoke-static {p0, p1}, Lgo5;->f([ILjava/nio/ByteOrder;)Lgo5;
+    const-string v15, "ApertureValue"
 
-    move-result-object p0
+    const v1, 0x9202
 
-    return-object p0
-.end method
+    move-object/from16 v22, v2
 
-.method public static f([ILjava/nio/ByteOrder;)Lgo5;
-    .locals 4
+    const/4 v2, 0x5
 
-    sget-object v0, Lko5;->Q:[I
+    invoke-direct {v13, v15, v1, v2}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v2, "BrightnessValue"
+
+    const v15, 0x9203
+
+    move-object/from16 v23, v4
+
+    const/16 v4, 0xa
+
+    invoke-direct {v1, v2, v15, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v15, "ExposureBiasValue"
+
+    move-object/from16 v32, v1
+
+    const v1, 0x9204
+
+    invoke-direct {v2, v15, v1, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v4, "MaxApertureValue"
+
+    const v15, 0x9205
+
+    move-object/from16 v33, v2
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v4, v15, v2}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v4, "MeteringMode"
+
+    const v15, 0x9207
+
+    move-object/from16 v34, v1
 
     const/4 v1, 0x3
 
-    aget v0, v0, v1
+    invoke-direct {v2, v4, v15, v1}, Lso5;-><init>(Ljava/lang/String;II)V
 
-    array-length v2, p0
+    new-instance v4, Lso5;
 
-    mul-int/2addr v0, v2
+    const-string v15, "LightSource"
 
-    new-array v0, v0, [B
+    move-object/from16 v35, v2
 
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    const v2, 0x9208
+
+    invoke-direct {v4, v15, v2, v1}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v15, "Flash"
+
+    move-object/from16 v36, v4
+
+    const v4, 0x9209
+
+    invoke-direct {v2, v15, v4, v1}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v4, "FocalLength"
+
+    const v15, 0x920a
+
+    move-object/from16 v37, v2
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v4, v15, v2}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v4, "SubSecTime"
+
+    const v15, 0x9290
+
+    move-object/from16 v38, v1
+
+    const/4 v1, 0x2
+
+    invoke-direct {v2, v4, v15, v1}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lso5;
+
+    const-string v15, "SubSecTimeOriginal"
+
+    move-object/from16 v39, v2
+
+    const v2, 0x9291
+
+    invoke-direct {v4, v15, v2, v1}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v15, "SubSecTimeDigitized"
+
+    move-object/from16 v40, v4
+
+    const v4, 0x9292
+
+    invoke-direct {v2, v15, v4, v1}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v4, "FlashpixVersion"
+
+    const v15, 0xa000
+
+    move-object/from16 v41, v2
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v4, v15, v2}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v4, "ColorSpace"
+
+    const v15, 0xa001
+
+    move-object/from16 v42, v1
+
+    const/4 v1, 0x3
+
+    invoke-direct {v2, v4, v15, v1}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lso5;
+
+    const-string v15, "PixelXDimension"
+
+    move-object/from16 v43, v2
+
+    const v2, 0xa002
+
+    move-object/from16 v24, v6
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v2, v15, v1, v6}, Lso5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v15, "PixelYDimension"
+
+    move-object/from16 v44, v4
+
+    const v4, 0xa003
+
+    invoke-direct {v2, v4, v15, v1, v6}, Lso5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v4, Lso5;
+
+    const-string v15, "InteroperabilityIFDPointer"
+
+    const v1, 0xa005
+
+    invoke-direct {v4, v15, v1, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v6, Lso5;
+
+    const-string v1, "FocalPlaneResolutionUnit"
+
+    move-object/from16 v45, v2
+
+    const v2, 0xa210
+
+    move-object/from16 v46, v4
+
+    const/4 v4, 0x3
+
+    invoke-direct {v6, v1, v2, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v2, "SensingMethod"
+
+    move-object/from16 v47, v6
+
+    const v6, 0xa217
+
+    invoke-direct {v1, v2, v6, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v4, "FileSource"
+
+    const v6, 0xa300
+
+    move-object/from16 v48, v1
+
+    const/4 v1, 0x7
+
+    invoke-direct {v2, v4, v6, v1}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lso5;
+
+    const-string v6, "SceneType"
+
+    move-object/from16 v49, v2
+
+    const v2, 0xa301
+
+    invoke-direct {v4, v6, v2, v1}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v2, "CustomRendered"
+
+    const v6, 0xa401
+
+    move-object/from16 v50, v4
+
+    const/4 v4, 0x3
+
+    invoke-direct {v1, v2, v6, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v6, "ExposureMode"
+
+    move-object/from16 v51, v1
+
+    const v1, 0xa402
+
+    invoke-direct {v2, v6, v1, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v6, "WhiteBalance"
+
+    move-object/from16 v52, v2
+
+    const v2, 0xa403
+
+    invoke-direct {v1, v6, v2, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v6, "SceneCaptureType"
+
+    move-object/from16 v53, v1
+
+    const v1, 0xa406
+
+    invoke-direct {v2, v6, v1, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v6, "Contrast"
+
+    move-object/from16 v54, v2
+
+    const v2, 0xa408
+
+    invoke-direct {v1, v6, v2, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v6, "Saturation"
+
+    move-object/from16 v55, v1
+
+    const v1, 0xa409
+
+    invoke-direct {v2, v6, v1, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lso5;
+
+    const-string v6, "Sharpness"
+
+    move-object/from16 v56, v2
+
+    const v2, 0xa40a
+
+    invoke-direct {v1, v6, v2, v4}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    move-object/from16 v57, v1
+
+    move-object/from16 v25, v7
+
+    move-object/from16 v26, v8
+
+    move-object/from16 v27, v9
+
+    move-object/from16 v28, v10
+
+    move-object/from16 v29, v11
+
+    move-object/from16 v30, v12
+
+    move-object/from16 v31, v13
+
+    filled-new-array/range {v21 .. v57}, [Lso5;
+
+    move-result-object v1
+
+    new-instance v2, Lso5;
+
+    const-string v4, "GPSVersionID"
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x1
+
+    invoke-direct {v2, v4, v6, v7}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lso5;
+
+    const-string v6, "GPSLatitudeRef"
+
+    const/4 v12, 0x2
+
+    invoke-direct {v4, v6, v7, v12}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v6, Lso5;
+
+    const-string v8, "GPSLatitude"
+
+    const/16 v9, 0xa
+
+    const/4 v11, 0x5
+
+    invoke-direct {v6, v12, v8, v11, v9}, Lso5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v8, Lso5;
+
+    const-string v10, "GPSLongitudeRef"
+
+    const/4 v13, 0x3
+
+    invoke-direct {v8, v10, v13, v12}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v10, Lso5;
+
+    const-string v12, "GPSLongitude"
+
+    const/4 v13, 0x4
+
+    invoke-direct {v10, v13, v12, v11, v9}, Lso5;-><init>(ILjava/lang/String;II)V
+
+    new-instance v9, Lso5;
+
+    const-string v12, "GPSAltitudeRef"
+
+    invoke-direct {v9, v12, v11, v7}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v12, Lso5;
+
+    const-string v13, "GPSAltitude"
+
+    const/4 v7, 0x6
+
+    invoke-direct {v12, v13, v7, v11}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v7, Lso5;
+
+    const-string v13, "GPSTimeStamp"
+
+    move-object/from16 v21, v2
+
+    const/4 v2, 0x7
+
+    invoke-direct {v7, v13, v2, v11}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v11, "GPSSpeedRef"
+
+    move-object/from16 v22, v4
+
+    const/16 v4, 0xc
+
+    move-object/from16 v23, v6
+
+    const/4 v6, 0x2
+
+    invoke-direct {v2, v11, v4, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lso5;
+
+    const-string v11, "GPSTrackRef"
+
+    move-object/from16 v29, v2
+
+    const/16 v2, 0xe
+
+    invoke-direct {v4, v11, v2, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v11, "GPSImgDirectionRef"
+
+    move-object/from16 v30, v4
+
+    const/16 v4, 0x10
+
+    invoke-direct {v2, v11, v4, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lso5;
+
+    const-string v11, "GPSDestBearingRef"
+
+    move-object/from16 v31, v2
+
+    const/16 v2, 0x17
+
+    invoke-direct {v4, v11, v2, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lso5;
+
+    const-string v11, "GPSDestDistanceRef"
+
+    move-object/from16 v32, v4
+
+    const/16 v4, 0x19
+
+    invoke-direct {v2, v11, v4, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    move-object/from16 v33, v2
+
+    move-object/from16 v28, v7
+
+    move-object/from16 v24, v8
+
+    move-object/from16 v26, v9
+
+    move-object/from16 v25, v10
+
+    move-object/from16 v27, v12
+
+    filled-new-array/range {v21 .. v33}, [Lso5;
+
+    move-result-object v2
+
+    new-instance v4, Lso5;
+
+    move-object/from16 v7, v20
+
+    const/4 v6, 0x4
+
+    const/16 v8, 0x14a
+
+    invoke-direct {v4, v7, v8, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v7, Lso5;
+
+    move-object/from16 v8, v19
+
+    const v9, 0x8769
+
+    invoke-direct {v7, v8, v9, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v8, Lso5;
+
+    const v9, 0x8825
+
+    invoke-direct {v8, v14, v9, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    new-instance v9, Lso5;
+
+    const v10, 0xa005
+
+    invoke-direct {v9, v15, v10, v6}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v4, v7, v8, v9}, [Lso5;
+
+    move-result-object v4
+
+    sput-object v4, Lgo5;->c:[Lso5;
+
+    new-instance v4, Lso5;
+
+    const-string v6, "InteroperabilityIndex"
+
+    const/4 v7, 0x1
+
+    const/4 v12, 0x2
+
+    invoke-direct {v4, v6, v7, v12}, Lso5;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v4}, [Lso5;
+
+    move-result-object v4
+
+    filled-new-array {v0, v1, v2, v4}, [[Lso5;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    sput-object v0, Lgo5;->d:[[Lso5;
 
-    array-length p1, p0
+    new-instance v0, Ljava/util/HashSet;
 
-    const/4 v2, 0x0
+    filled-new-array {v5, v3, v13}, [Ljava/lang/String;
 
-    :goto_0
-    if-ge v2, p1, :cond_0
+    move-result-object v1
 
-    aget v3, p0, v2
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    int-to-short v3, v3
+    move-result-object v1
 
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    add-int/lit8 v2, v2, 0x1
+    sput-object v0, Lgo5;->e:Ljava/util/HashSet;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/nio/ByteOrder;Ljava/util/ArrayList;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lgo5;
+    const/4 v0, 0x0
 
-    array-length p0, p0
+    :goto_0
+    const-string v1, "Malformed attributes list. Number of IFDs mismatch."
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+    invoke-static {v1, v0}, Ljkj;->f(Ljava/lang/String;Z)V
 
-    move-result-object v0
+    iput-object p1, p0, Lgo5;->b:Ljava/nio/ByteOrder;
 
-    invoke-direct {p1, v1, v0, p0}, Lgo5;-><init>(I[BI)V
+    iput-object p2, p0, Lgo5;->a:Ljava/util/ArrayList;
 
-    return-object p1
+    return-void
 .end method
 
 
 # virtual methods
-.method public final g(Ljava/nio/ByteOrder;)D
-    .locals 4
-
-    invoke-virtual {p0, p1}, Lgo5;->j(Ljava/nio/ByteOrder;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_9
-
-    instance-of v0, p1, Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {p1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :cond_0
-    instance-of v0, p1, [J
-
-    const-string v1, "There are more than one component"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, [J
-
-    array-length v0, p1
-
-    if-ne v0, v3, :cond_1
-
-    aget-wide v0, p1, v2
-
-    long-to-double v0, v0
-
-    return-wide v0
-
-    :cond_1
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    instance-of v0, p1, [I
-
-    if-eqz v0, :cond_4
-
-    check-cast p1, [I
-
-    array-length v0, p1
-
-    if-ne v0, v3, :cond_3
-
-    aget p1, p1, v2
-
-    int-to-double v0, p1
-
-    return-wide v0
-
-    :cond_3
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_4
-    instance-of v0, p1, [D
-
-    if-eqz v0, :cond_6
-
-    check-cast p1, [D
-
-    array-length v0, p1
-
-    if-ne v0, v3, :cond_5
-
-    aget-wide v0, p1, v2
-
-    return-wide v0
-
-    :cond_5
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_6
-    instance-of v0, p1, [Lio5;
-
-    if-eqz v0, :cond_8
-
-    check-cast p1, [Lio5;
-
-    array-length v0, p1
-
-    if-ne v0, v3, :cond_7
-
-    aget-object p1, p1, v2
-
-    iget-wide v0, p1, Lio5;->a:J
-
-    long-to-double v0, v0
-
-    iget-wide v2, p1, Lio5;->b:J
-
-    long-to-double v2, v2
-
-    div-double/2addr v0, v2
-
-    return-wide v0
-
-    :cond_7
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_8
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    const-string v0, "Couldn\'t find a double value"
-
-    invoke-direct {p1, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_9
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    const-string v0, "NULL can\'t be converted to a double value"
-
-    invoke-direct {p1, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final h(Ljava/nio/ByteOrder;)I
-    .locals 4
-
-    invoke-virtual {p0, p1}, Lgo5;->j(Ljava/nio/ByteOrder;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    instance-of v0, p1, Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    instance-of v0, p1, [J
-
-    const-string v1, "There are more than one component"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, [J
-
-    array-length v0, p1
-
-    if-ne v0, v3, :cond_1
-
-    aget-wide v0, p1, v2
-
-    long-to-int p1, v0
-
-    return p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    instance-of v0, p1, [I
-
-    if-eqz v0, :cond_4
-
-    check-cast p1, [I
-
-    array-length v0, p1
-
-    if-ne v0, v3, :cond_3
-
-    aget p1, p1, v2
-
-    return p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_4
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    const-string v0, "Couldn\'t find a integer value"
-
-    invoke-direct {p1, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_5
-    new-instance p1, Ljava/lang/NumberFormatException;
-
-    const-string v0, "NULL can\'t be converted to a integer value"
-
-    invoke-direct {p1, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final i(Ljava/nio/ByteOrder;)Ljava/lang/String;
-    .locals 6
-
-    invoke-virtual {p0, p1}, Lgo5;->j(Ljava/nio/ByteOrder;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    goto/16 :goto_4
-
-    :cond_0
-    instance-of v0, p1, Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Ljava/lang/String;
-
-    return-object p1
-
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    instance-of v1, p1, [J
-
-    const-string v2, ","
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_4
-
-    check-cast p1, [J
-
-    :cond_2
-    :goto_0
-    array-length v1, p1
-
-    if-ge v3, v1, :cond_3
-
-    aget-wide v4, p1, v3
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x1
-
-    array-length v1, p1
-
-    if-eq v3, v1, :cond_2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_4
-    instance-of v1, p1, [I
-
-    if-eqz v1, :cond_7
-
-    check-cast p1, [I
-
-    :cond_5
-    :goto_1
-    array-length v1, p1
-
-    if-ge v3, v1, :cond_6
-
-    aget v1, p1, v3
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x1
-
-    array-length v1, p1
-
-    if-eq v3, v1, :cond_5
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_7
-    instance-of v1, p1, [D
-
-    if-eqz v1, :cond_a
-
-    check-cast p1, [D
-
-    :cond_8
-    :goto_2
-    array-length v1, p1
-
-    if-ge v3, v1, :cond_9
-
-    aget-wide v4, p1, v3
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x1
-
-    array-length v1, p1
-
-    if-eq v3, v1, :cond_8
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_2
-
-    :cond_9
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_a
-    instance-of v1, p1, [Lio5;
-
-    if-eqz v1, :cond_d
-
-    check-cast p1, [Lio5;
-
-    :cond_b
-    :goto_3
-    array-length v1, p1
-
-    if-ge v3, v1, :cond_c
-
-    aget-object v1, p1, v3
-
-    iget-wide v4, v1, Lio5;->a:J
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x2f
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    aget-object v1, p1, v3
-
-    iget-wide v4, v1, Lio5;->b:J
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x1
-
-    array-length v1, p1
-
-    if-eq v3, v1, :cond_b
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_3
-
-    :cond_c
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_d
-    :goto_4
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final j(Ljava/nio/ByteOrder;)Ljava/io/Serializable;
-    .locals 13
-
-    iget-object v0, p0, Lgo5;->d:[B
-
-    const-string v1, "IOException occurred while closing InputStream"
-
-    const-string v2, "ExifInterface"
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    new-instance v4, Lfo5;
-
-    invoke-direct {v4, v0}, Lfo5;-><init>([B)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    iput-object p1, v4, Lfo5;->b:Ljava/nio/ByteOrder;
-
-    iget p1, p0, Lgo5;->a:I
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const-wide v5, 0xffffffffL
-
-    const/4 v7, 0x0
-
-    iget v8, p0, Lgo5;->b:I
-
-    packed-switch p1, :pswitch_data_0
-
-    :try_start_2
-    invoke-virtual {v4}, Ljava/io/InputStream;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-
-    return-object v3
-
-    :catch_0
-    move-exception p1
-
-    invoke-static {v2, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return-object v3
-
-    :pswitch_0
-    :try_start_3
-    new-array p1, v8, [D
-
-    :goto_0
-    if-ge v7, v8, :cond_0
-
-    invoke-virtual {v4}, Lfo5;->readDouble()D
-
-    move-result-wide v5
-
-    aput-wide v5, p1, v7
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    move-object v3, v4
-
-    goto/16 :goto_10
-
-    :catch_1
-    move-exception p1
-
-    goto/16 :goto_e
-
-    :cond_0
-    :goto_1
-    :try_start_4
-    invoke-virtual {v4}, Ljava/io/InputStream;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
-
-    return-object p1
-
-    :catch_2
-    move-exception v0
-
-    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return-object p1
-
-    :pswitch_1
-    :try_start_5
-    new-array p1, v8, [D
-
-    :goto_2
-    if-ge v7, v8, :cond_0
-
-    invoke-virtual {v4}, Lfo5;->readFloat()F
-
-    move-result v0
-
-    float-to-double v5, v0
-
-    aput-wide v5, p1, v7
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_2
-
-    :pswitch_2
-    new-array p1, v8, [Lio5;
-
-    :goto_3
-    if-ge v7, v8, :cond_0
-
-    invoke-virtual {v4}, Lfo5;->readInt()I
-
-    move-result v0
-
-    int-to-long v5, v0
-
-    invoke-virtual {v4}, Lfo5;->readInt()I
-
-    move-result v0
-
-    int-to-long v9, v0
-
-    new-instance v0, Lio5;
-
-    invoke-direct {v0, v5, v6, v9, v10}, Lio5;-><init>(JJ)V
-
-    aput-object v0, p1, v7
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_3
-
-    :pswitch_3
-    new-array p1, v8, [I
-
-    :goto_4
-    if-ge v7, v8, :cond_0
-
-    invoke-virtual {v4}, Lfo5;->readInt()I
-
-    move-result v0
-
-    aput v0, p1, v7
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_4
-
-    :pswitch_4
-    new-array p1, v8, [I
-
-    :goto_5
-    if-ge v7, v8, :cond_0
-
-    invoke-virtual {v4}, Lfo5;->readShort()S
-
-    move-result v0
-
-    aput v0, p1, v7
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_5
-
-    :pswitch_5
-    new-array p1, v8, [Lio5;
-
-    :goto_6
-    if-ge v7, v8, :cond_0
-
-    invoke-virtual {v4}, Lfo5;->readInt()I
-
-    move-result v0
-
-    int-to-long v9, v0
-
-    and-long/2addr v9, v5
-
-    invoke-virtual {v4}, Lfo5;->readInt()I
-
-    move-result v0
-
-    int-to-long v11, v0
-
-    and-long/2addr v11, v5
-
-    new-instance v0, Lio5;
-
-    invoke-direct {v0, v9, v10, v11, v12}, Lio5;-><init>(JJ)V
-
-    aput-object v0, p1, v7
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_6
-
-    :pswitch_6
-    new-array p1, v8, [J
-
-    :goto_7
-    if-ge v7, v8, :cond_0
-
-    invoke-virtual {v4}, Lfo5;->readInt()I
-
-    move-result v0
-
-    int-to-long v9, v0
-
-    and-long/2addr v9, v5
-
-    aput-wide v9, p1, v7
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_7
-
-    :pswitch_7
-    new-array p1, v8, [I
-
-    :goto_8
-    if-ge v7, v8, :cond_0
-
-    invoke-virtual {v4}, Lfo5;->readUnsignedShort()I
-
-    move-result v0
-
-    aput v0, p1, v7
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_8
-
-    :pswitch_8
-    sget-object p1, Lko5;->R:[B
-
-    array-length p1, p1
-
-    if-lt v8, p1, :cond_3
-
-    move p1, v7
-
-    :goto_9
-    sget-object v5, Lko5;->R:[B
-
-    array-length v6, v5
-
-    if-ge p1, v6, :cond_2
-
-    aget-byte v6, v0, p1
-
-    aget-byte v5, v5, p1
-
-    if-eq v6, v5, :cond_1
-
-    goto :goto_a
-
-    :cond_1
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_9
-
-    :cond_2
-    array-length v7, v5
-
-    :cond_3
-    :goto_a
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    :goto_b
-    if-ge v7, v8, :cond_6
-
-    aget-byte v5, v0, v7
-
-    if-nez v5, :cond_4
-
-    goto :goto_d
-
-    :cond_4
-    const/16 v6, 0x20
-
-    if-lt v5, v6, :cond_5
-
-    int-to-char v5, v5
-
-    invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_c
-
-    :cond_5
-    const/16 v5, 0x3f
-
-    invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :goto_c
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_b
-
-    :cond_6
-    :goto_d
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto/16 :goto_1
-
-    :pswitch_9
-    array-length p1, v0
-
-    const/4 v5, 0x1
-
-    if-ne p1, v5, :cond_7
-
-    aget-byte p1, v0, v7
-
-    if-ltz p1, :cond_7
-
-    if-gt p1, v5, :cond_7
-
-    new-instance v0, Ljava/lang/String;
-
-    add-int/lit8 p1, p1, 0x30
-
-    int-to-char p1, p1
-
-    new-array v5, v5, [C
-
-    aput-char p1, v5, v7
-
-    invoke-direct {v0, v5}, Ljava/lang/String;-><init>([C)V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    :try_start_6
-    invoke-virtual {v4}, Ljava/io/InputStream;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
-
-    return-object v0
-
-    :catch_3
-    move-exception p1
-
-    invoke-static {v2, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return-object v0
-
-    :cond_7
-    :try_start_7
-    new-instance p1, Ljava/lang/String;
-
-    sget-object v5, Lko5;->Z:Ljava/nio/charset/Charset;
-
-    invoke-direct {p1, v0, v5}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-    :try_end_7
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
-
-    goto/16 :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_10
-
-    :catch_4
-    move-exception p1
-
-    move-object v4, v3
-
-    :goto_e
-    :try_start_8
-    const-string v0, "IOException occurred during reading a value"
-
-    invoke-static {v2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
-
-    if-eqz v4, :cond_8
-
-    :try_start_9
-    invoke-virtual {v4}, Ljava/io/InputStream;->close()V
-    :try_end_9
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_5
-
-    goto :goto_f
-
-    :catch_5
-    move-exception p1
-
-    invoke-static {v2, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_8
-    :goto_f
-    return-object v3
-
-    :goto_10
-    if-eqz v3, :cond_9
-
-    :try_start_a
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_a
-    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_6
-
-    goto :goto_11
-
-    :catch_6
-    move-exception v0
-
-    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_9
-    :goto_11
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_9
-        :pswitch_8
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final a(I)Ljava/util/Map;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Invalid IFD index: "
 
-    const-string v1, "("
+    const-string v1, ". Index should be between [0, EXIF_TAGS.length] "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lko5;->P:[Ljava/lang/String;
-
-    iget v2, p0, Lgo5;->a:I
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", data length:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgo5;->d:[B
-
-    array-length v1, v1
-
-    const-string v2, ")"
-
-    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    invoke-static {p1, v0, v1, v2}, Ljkj;->c(ILjava/lang/String;II)V
+
+    iget-object v0, p0, Lgo5;->a:Ljava/util/ArrayList;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Map;
+
+    return-object p1
 .end method

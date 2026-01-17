@@ -1,160 +1,145 @@
-.class public final Ls12;
+.class public final synthetic Ls12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lv12;
+.implements Lrw1;
+.implements Lcv;
 
 
 # instance fields
-.field public final synthetic a:Lu12;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lt12;
 
 
 # direct methods
-.method public constructor <init>(Lu12;)V
+.method public synthetic constructor <init>(Lt12;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Ls12;->a:I
 
-    iput-object p1, p0, Ls12;->a:Lu12;
+    iput-object p1, p0, Ls12;->b:Lt12;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lwe8;
-    .locals 4
+.method public apply(Ljava/lang/Object;)Lie8;
+    .locals 8
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget v0, p0, Ls12;->a:I
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    check-cast p1, Ljava/lang/Void;
 
-    iget-object v1, p0, Ls12;->a:Lu12;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, v1, Lu12;->h:Ljava/util/ArrayList;
+    sget-wide v0, Lt12;->g:J
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object p1, p0, Ls12;->b:Lt12;
 
-    move-result-object v1
+    iget-object v4, p1, Lt12;->e:Ljava/util/concurrent/ScheduledExecutorService;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object p1, p1, Lt12;->a:Ll02;
 
-    move-result v2
+    new-instance v2, Lc01;
 
-    if-eqz v2, :cond_0
+    const/16 v3, 0x19
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-direct {v2, v3}, Lc01;-><init>(I)V
 
-    move-result-object v2
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    check-cast v2, Lv12;
+    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    invoke-interface {v2, p1}, Lv12;->a(Landroid/hardware/camera2/TotalCaptureResult;)Lwe8;
+    move-result-wide v5
 
-    move-result-object v2
+    new-instance v0, Lo12;
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {v0, v2}, Lo12;-><init>(Ln12;)V
 
-    goto :goto_0
+    invoke-virtual {p1, v0}, Ll02;->p(Lk02;)V
 
-    :cond_0
-    invoke-static {v0}, Ledf;->b(Ljava/util/List;)Lhe8;
+    new-instance v1, Li02;
 
-    move-result-object p1
+    const/4 v2, 0x5
 
-    new-instance v0, Ln12;
+    invoke-direct {v1, p1, v2, v0}, Li02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/4 v1, 0x2
+    iget-object p1, p1, Ll02;->c:Lwpe;
 
-    invoke-direct {v0, v1}, Ln12;-><init>(I)V
+    iget-object v3, v0, Lo12;->b:Ltw1;
 
-    invoke-static {}, Lgbj;->a()La15;
+    iget-object v0, v3, Ltw1;->b:Lsw1;
 
-    move-result-object v1
+    invoke-virtual {v0, v1, p1}, Lf4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    new-instance v2, Lpme;
+    new-instance v2, Llz3;
 
-    const/16 v3, 0x13
+    const/4 v7, 0x3
 
-    invoke-direct {v2, v3, v0}, Lpme;-><init>(ILjava/lang/Object;)V
+    invoke-direct/range {v2 .. v7}, Llz3;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
 
-    invoke-static {p1, v2, v1}, Ledf;->m(Lwe8;Lbv;Ljava/util/concurrent/Executor;)Lu92;
+    invoke-static {v2}, Libj;->b(Lrw1;)Ltw1;
 
     move-result-object p1
 
     return-object p1
-.end method
 
-.method public final b()Z
-    .locals 2
+    :pswitch_0
+    iget-object p1, p0, Ls12;->b:Lt12;
 
-    iget-object v0, p0, Ls12;->a:Lu12;
+    iget-boolean v0, p1, Lt12;->f:Z
 
-    iget-object v0, v0, Lu12;->h:Ljava/util/ArrayList;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object p1, p1, Lt12;->a:Ll02;
 
-    move-result-object v0
+    iget-object p1, p1, Ll02;->h:Ljc6;
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v1
+    new-instance v0, Lts4;
 
-    if-eqz v1, :cond_1
+    const/16 v1, 0x17
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-direct {v0, v1, p1}, Lts4;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v1
+    invoke-static {v0}, Libj;->b(Lrw1;)Ltw1;
 
-    check-cast v1, Lv12;
-
-    invoke-interface {v1}, Lv12;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Ls12;->a:Lu12;
-
-    iget-object v0, v0, Lu12;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lv12;
-
-    invoke-interface {v1}, Lv12;->c()V
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    return-void
+    sget-object p1, Llj7;->c:Llj7;
+
+    :goto_0
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public l(Lqw1;)Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Ls12;->b:Lt12;
+
+    iget-object v0, v0, Lt12;->a:Ll02;
+
+    iget-object v0, v0, Ll02;->j:Ltpg;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p1, v1}, Ltpg;->a(Lqw1;Z)V
+
+    const-string p1, "TorchOn"
+
+    return-object p1
 .end method

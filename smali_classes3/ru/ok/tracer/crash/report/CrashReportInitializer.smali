@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leq7;
+.implements Lmp7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Leq7;"
+        "Lmp7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/crash/report/CrashReportInitializer;",
-        "Leq7;",
-        "Lypg;",
+        "Lmp7;",
+        "Lhqg;",
         "<init>",
         "()V",
         "tracer-crash-report_release"
@@ -62,25 +62,25 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 12
 
-    sget-object v0, Lupg;->a:Lupg;
+    sget-object v0, Ldqg;->a:Ldqg;
 
-    invoke-static {}, Lupg;->c()Ljava/util/Map;
+    invoke-static {}, Ldqg;->c()Ljava/util/Map;
 
     move-result-object v0
 
-    sget-object v1, Luia;->b:Lpf5;
+    sget-object v1, Lsia;->b:Lsf5;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v1, v0, Lwc4;
+    instance-of v1, v0, Lvc4;
 
     const/4 v3, 0x0
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lwc4;
+    check-cast v0, Lvc4;
 
     goto :goto_0
 
@@ -92,23 +92,23 @@
 
     if-nez v0, :cond_1
 
-    new-instance v0, Ly0j;
+    new-instance v0, Ldgj;
 
-    invoke-direct {v0, v1}, Ly0j;-><init>(I)V
+    invoke-direct {v0, v1}, Ldgj;-><init>(I)V
 
-    new-instance v4, Lwc4;
+    new-instance v4, Lvc4;
 
-    invoke-direct {v4, v0}, Lwc4;-><init>(Ly0j;)V
+    invoke-direct {v4, v0}, Lvc4;-><init>(Ldgj;)V
 
     move-object v0, v4
 
     :cond_1
-    iget-boolean v4, v0, Lwc4;->a:Z
+    iget-boolean v4, v0, Lvc4;->a:Z
 
     if-eqz v4, :cond_3
 
     :try_start_0
-    invoke-static {}, Lsjj;->b()Ljava/lang/String;
+    invoke-static {}, Lokj;->b()Ljava/lang/String;
 
     move-result-object v4
 
@@ -139,7 +139,7 @@
 
     const/16 v8, 0x3a
 
-    invoke-static {v4, v8, v6, v7}, Lqyf;->q(Ljava/lang/String;CCZ)Ljava/lang/String;
+    invoke-static {v4, v8, v6, v7}, Lzzf;->r(Ljava/lang/String;CCZ)Ljava/lang/String;
 
     move-result-object v4
 
@@ -164,11 +164,11 @@
 
     const-string v4, "minidump"
 
-    invoke-static {v5, v4}, Lq36;->g(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v5, v4}, Ln36;->h(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v4
 
-    invoke-static {v4}, Lfff;->d(Ljava/io/File;)V
+    invoke-static {v4}, Lwpj;->c(Ljava/io/File;)V
 
     sget-object v5, Lru/ok/tracer/minidump/Minidump;->c:Lru/ok/tracer/minidump/Minidump;
 
@@ -182,7 +182,7 @@
 
     :catchall_0
     :cond_3
-    sget-object v4, Lupg;->e:Lvte;
+    sget-object v4, Ldqg;->e:Lyue;
 
     if-eqz v4, :cond_4
 
@@ -194,7 +194,7 @@
     move-object v7, v3
 
     :goto_2
-    sget-object v4, Lupg;->f:Ljag;
+    sget-object v4, Ldqg;->f:Lxag;
 
     if-eqz v4, :cond_5
 
@@ -204,53 +204,55 @@
     move-object v4, v3
 
     :goto_3
-    new-instance v6, Lyc4;
+    new-instance v6, Lrz6;
 
-    invoke-direct {v6, p1}, Lyc4;-><init>(Landroid/content/Context;)V
+    const/4 v3, 0x1
 
-    new-instance v5, Lcl8;
+    invoke-direct {v6, v3, p1}, Lrz6;-><init>(ILjava/lang/Object;)V
 
-    iget v3, v0, Lwc4;->d:I
+    new-instance v5, Lpk8;
 
-    invoke-direct {v5, p1, v3}, Lcl8;-><init>(Landroid/content/Context;I)V
+    iget v3, v0, Lvc4;->d:I
 
-    new-instance v9, Lgfj;
+    invoke-direct {v5, p1, v3}, Lpk8;-><init>(Landroid/content/Context;I)V
 
-    invoke-direct {v9, v1}, Lgfj;-><init>(I)V
+    new-instance v9, Lzmj;
 
-    new-instance v8, Lwte;
+    invoke-direct {v9, v1}, Lzmj;-><init>(I)V
 
-    invoke-direct {v8}, Lwte;-><init>()V
+    new-instance v8, Lzue;
 
-    new-instance v1, Lal;
+    invoke-direct {v8}, Lzue;-><init>()V
 
-    iget v3, v0, Lwc4;->c:I
+    new-instance v1, Lbl;
 
-    invoke-direct {v1, p1, v3}, Lal;-><init>(Landroid/content/Context;I)V
+    iget v3, v0, Lvc4;->c:I
+
+    invoke-direct {v1, p1, v3}, Lbl;-><init>(Landroid/content/Context;I)V
 
     move-object v11, v9
 
     move-object v9, v5
 
-    new-instance v5, Lew3;
+    new-instance v5, Lkw3;
 
     move-object v10, v8
 
     move-object v8, v4
 
-    invoke-direct/range {v5 .. v11}, Lew3;-><init>(Lyc4;Lvte;Ljag;Lcl8;Lwte;Lgfj;)V
+    invoke-direct/range {v5 .. v11}, Lkw3;-><init>(Lrz6;Lyue;Lxag;Lpk8;Lzue;Lzmj;)V
 
     move-object v3, v7
 
     move-object v8, v10
 
-    sput-object v5, Lypg;->b:Lew3;
+    sput-object v5, Lhqg;->b:Lkw3;
 
     move-object v7, v1
 
     move-object v1, v0
 
-    new-instance v0, Luha;
+    new-instance v0, Lsha;
 
     move-object v2, p1
 
@@ -258,17 +260,17 @@
 
     move-object v9, v11
 
-    invoke-direct/range {v0 .. v9}, Luha;-><init>(Lwc4;Landroid/content/Context;Lvte;Ljag;Lcl8;Lyc4;Lal;Lwte;Lgfj;)V
+    invoke-direct/range {v0 .. v9}, Lsha;-><init>(Lvc4;Landroid/content/Context;Lyue;Lxag;Lpk8;Lrz6;Lbl;Lzue;Lzmj;)V
 
-    invoke-static {v0}, Lpqg;->b(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lzqg;->b(Ljava/lang/Runnable;)V
 
-    new-instance v0, Lqqg;
+    new-instance v0, Larg;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lv0j;->g(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+    invoke-static {v0}, Lq1j;->g(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
-    sget-object v0, Lypg;->a:Lypg;
+    sget-object v0, Lhqg;->a:Lhqg;
 
     return-object v0
 .end method

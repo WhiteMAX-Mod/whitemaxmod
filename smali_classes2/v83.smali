@@ -1,26 +1,28 @@
 .class public final Lv83;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/list/ChatsListWidget;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:Ly83;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+.method public constructor <init>(Ly83;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lv83;->X:Lone/me/chats/list/ChatsListWidget;
+    iput-object p1, p0, Lv83;->Y:Ly83;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +32,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, La43;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lv83;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,11 +42,13 @@
 
     check-cast p1, Lv83;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lv83;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -50,77 +56,140 @@
 
     new-instance v0, Lv83;
 
-    iget-object v1, p0, Lv83;->X:Lone/me/chats/list/ChatsListWidget;
+    iget-object v1, p0, Lv83;->Y:Ly83;
 
-    invoke-direct {v0, p2, v1}, Lv83;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+    invoke-direct {v0, v1, p2}, Lv83;-><init>(Ly83;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lv83;->o:Ljava/lang/Object;
+    iput-object p1, v0, Lv83;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 9
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Lv83;->X:Ljava/lang/Object;
 
-    iget-object p1, p0, Lv83;->o:Ljava/lang/Object;
+    check-cast v0, La43;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget v1, p0, Lv83;->o:I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    sget-object v2, Lb3h;->a:Lb3h;
 
-    move-result p1
+    const/4 v3, 0x1
 
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->L0:[Lp38;
+    if-eqz v1, :cond_1
 
-    iget-object v0, p0, Lv83;->X:Lone/me/chats/list/ChatsListWidget;
+    if-ne v1, v3, :cond_0
 
-    if-eqz p1, :cond_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lone/me/chats/list/ChatsListWidget;->A0()Lhab;
+    return-object v2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v0, La43;->a:Ljava/lang/Object;
+
+    invoke-static {}, Leo8;->a()Lvea;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    iget-object p1, p1, Lhab;->u0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    :cond_2
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    const/4 v0, 0x0
+    move-result v1
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+    const/4 v4, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    if-eqz v1, :cond_4
 
-    const/16 v0, 0x8
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v1
+
+    check-cast v1, Lhu2;
+
+    iget-wide v5, v1, Lhu2;->F0:J
+
+    const-wide/16 v7, 0x1
+
+    and-long/2addr v5, v7
+
+    const-wide/16 v7, 0x0
+
+    cmp-long v5, v5, v7
+
+    if-eqz v5, :cond_3
+
+    iget-wide v4, v1, Lhu2;->a:J
+
+    new-instance v1, Ljava/lang/Long;
+
+    invoke-direct {v1, v4, v5}, Ljava/lang/Long;-><init>(J)V
+
+    move-object v4, v1
+
+    :cond_3
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v4
+
+    invoke-virtual {v0, v4, v5}, Lvea;->a(J)Z
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v0}, Lone/me/chats/list/ChatsListWidget;->A0()Lhab;
+    :cond_4
+    invoke-virtual {v0}, Lvea;->i()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    iget-object p1, p0, Lv83;->Y:Ly83;
+
+    iget-object p1, p1, Ly83;->I0:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    check-cast p1, Lc5h;
 
-    move-result-object v1
+    iput-object v4, p0, Lv83;->X:Ljava/lang/Object;
 
-    sget v2, Ljcd;->chats_list_empty_state_action:I
+    iput v3, p0, Lv83;->o:I
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0, p0}, Lc5h;->e(Lvea;Lo84;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    new-instance v2, Lh6;
+    sget-object v0, Lac4;->a:Lac4;
 
-    const/16 v3, 0xd
+    if-ne p1, v0, :cond_6
 
-    invoke-direct {v2, v3, v0}, Lh6;-><init>(ILjava/lang/Object;)V
+    return-object v0
 
-    invoke-virtual {p1, v1, v2}, Lhab;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    :cond_6
+    :goto_1
+    return-object v2
 .end method

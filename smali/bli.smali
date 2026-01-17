@@ -1,118 +1,181 @@
-.class public final synthetic Lbli;
-.super Ljava/lang/Object;
+.class public final Lbli;
+.super Lwrd;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/my/tracker/core/utils/Consumer;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lcom/my/tracker/core/a;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
-
-.field public final synthetic e:Ljava/lang/Object;
+.field public final d:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/my/tracker/core/a;Ljava/lang/Object;JJI)V
+.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
     .locals 0
 
-    iput p7, p0, Lbli;->a:I
+    invoke-direct {p0}, Lwrd;-><init>()V
 
-    iput-object p1, p0, Lbli;->b:Lcom/my/tracker/core/a;
-
-    iput-object p2, p0, Lbli;->e:Ljava/lang/Object;
-
-    iput-wide p3, p0, Lbli;->c:J
-
-    iput-wide p5, p0, Lbli;->d:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbli;->d:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 8
+.method public final j()I
+    .locals 1
 
-    iget v0, p0, Lbli;->a:I
+    iget-object v0, p0, Lbli;->d:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
 
-    iget-object v0, p0, Lbli;->e:Ljava/lang/Object;
+    iget v0, v0, Lu01;->X:I
 
-    move-object v2, v0
+    return v0
+.end method
 
-    check-cast v2, Ljava/lang/String;
+.method public final s(Ltsd;I)V
+    .locals 4
 
-    iget-wide v5, p0, Lbli;->d:J
+    check-cast p1, Lali;
 
-    move-object v7, p1
+    iget-object v0, p0, Lbli;->d:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    check-cast v7, Lcom/my/tracker/core/EngineCore;
+    iget-object v1, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
 
-    iget-object v1, p0, Lbli;->b:Lcom/my/tracker/core/a;
+    iget-object v1, v1, Lu01;->a:Lh8a;
 
-    iget-wide v3, p0, Lbli;->c:J
+    iget v1, v1, Lh8a;->c:I
 
-    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->g(Lcom/my/tracker/core/a;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore;)V
+    add-int/2addr v1, p2
 
-    return-void
+    iget-object p1, p1, Lali;->F0:Landroid/widget/TextView;
 
-    :pswitch_0
-    iget-object v0, p0, Lbli;->e:Ljava/lang/Object;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
-    move-object v2, v0
+    move-result-object p2
 
-    check-cast v2, Lcom/my/tracker/core/UserInfoState;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-wide v5, p0, Lbli;->d:J
+    move-result-object v2
 
-    move-object v7, p1
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    check-cast v7, Lcom/my/tracker/core/EngineCore;
+    move-result-object v2
 
-    iget-object v1, p0, Lbli;->b:Lcom/my/tracker/core/a;
+    const-string v3, "%d"
 
-    iget-wide v3, p0, Lbli;->c:J
+    invoke-static {p2, v3, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->f(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;JJLcom/my/tracker/core/EngineCore;)V
+    move-result-object p2
 
-    return-void
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :pswitch_1
-    iget-object v0, p0, Lbli;->e:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-object v2, v0
+    move-result-object p2
 
-    check-cast v2, Ljava/lang/Boolean;
+    invoke-static {}, Libh;->b()Ljava/util/Calendar;
 
-    iget-wide v5, p0, Lbli;->d:J
+    move-result-object v2
 
-    move-object v7, p1
+    const/4 v3, 0x1
 
-    check-cast v7, Lcom/my/tracker/core/EngineCore;
+    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
 
-    iget-object v1, p0, Lbli;->b:Lcom/my/tracker/core/a;
+    move-result v2
 
-    iget-wide v3, p0, Lbli;->c:J
+    if-ne v2, v1, :cond_0
 
-    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->c(Lcom/my/tracker/core/a;Ljava/lang/Boolean;JJLcom/my/tracker/core/EngineCore;)V
+    sget v2, Ltcd;->mtrl_picker_navigate_to_current_year_description:I
 
-    return-void
+    invoke-virtual {p2, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    nop
+    move-result-object p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {p2, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_0
+    sget v2, Ltcd;->mtrl_picker_navigate_to_year_description:I
+
+    invoke-virtual {p2, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {p2, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    :goto_0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    iget-object p1, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Lws8;
+
+    invoke-static {}, Libh;->b()Ljava/util/Calendar;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v3}, Ljava/util/Calendar;->get(I)I
+
+    move-result p2
+
+    if-ne p2, v1, :cond_1
+
+    iget-object p1, p1, Lws8;->c:Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p1, p1, Lws8;->b:Ljava/lang/Object;
+
+    :goto_1
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final u(Landroid/view/ViewGroup;I)Ltsd;
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p2
+
+    sget v0, Llbd;->mtrl_calendar_year:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    new-instance p2, Lali;
+
+    invoke-direct {p2, p1}, Lali;-><init>(Landroid/widget/TextView;)V
+
+    return-object p2
 .end method

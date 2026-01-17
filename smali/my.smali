@@ -1,293 +1,112 @@
-.class public Lmy;
-.super Lilg;
+.class public final synthetic Lmy;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static j:Lmy;
+# interfaces
+.implements Landroid/media/MediaCodec$OnFrameRenderedListener;
 
 
 # instance fields
-.field public e:Z
+.field public final synthetic a:I
 
-.field public f:Lmy;
-
-.field public g:J
+.field public final synthetic b:La19;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Ld09;La19;I)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iput p3, p0, Lmy;->a:I
 
-    const-wide/16 v1, 0x3c
+    iput-object p2, p0, Lmy;->b:La19;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lmy;->h:J
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lmy;->i:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i()V
-    .locals 10
+.method public final onFrameRendered(Landroid/media/MediaCodec;JJ)V
+    .locals 2
 
-    iget-boolean v0, p0, Lmy;->e:Z
+    iget p1, p0, Lmy;->a:I
 
-    if-nez v0, :cond_8
+    packed-switch p1, :pswitch_data_0
 
-    iget-wide v0, p0, Lilg;->c:J
+    iget-object p1, p0, Lmy;->b:La19;
 
-    iget-boolean v2, p0, Lilg;->a:Z
+    iget-object p4, p1, La19;->b:Landroid/os/Handler;
 
-    const-wide/16 v3, 0x0
+    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    cmp-long v3, v0, v3
+    const/16 v0, 0x1e
 
-    if-nez v3, :cond_0
+    if-ge p5, v0, :cond_0
 
-    if-nez v2, :cond_0
+    const/16 p1, 0x20
 
-    return-void
+    shr-long v0, p2, p1
 
-    :cond_0
-    const/4 v4, 0x1
+    long-to-int p1, v0
 
-    iput-boolean v4, p0, Lmy;->e:Z
+    long-to-int p2, p2
 
-    const-class v5, Lmy;
+    const/4 p3, 0x0
 
-    monitor-enter v5
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
 
-    :try_start_0
-    sget-object v6, Lmy;->j:Lmy;
+    move-result-object p1
 
-    if-nez v6, :cond_1
-
-    new-instance v6, Lmy;
-
-    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
-
-    sput-object v6, Lmy;->j:Lmy;
-
-    new-instance v6, Ljy;
-
-    const-string v7, "Okio Watchdog"
-
-    invoke-direct {v6, v7}, Ljy;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v4}, Ljava/lang/Thread;->setDaemon(Z)V
-
-    invoke-virtual {v6}, Ljava/lang/Thread;->start()V
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    invoke-virtual {p1, p2, p3}, La19;->a(J)V
 
-    goto :goto_4
-
-    :cond_1
     :goto_0
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v6
-
-    if-eqz v3, :cond_2
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p0}, Lilg;->c()J
-
-    move-result-wide v2
-
-    sub-long/2addr v2, v6
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    add-long/2addr v0, v6
-
-    iput-wide v0, p0, Lmy;->g:J
-
-    goto :goto_1
-
-    :cond_2
-    if-eqz v3, :cond_3
-
-    add-long/2addr v0, v6
-
-    iput-wide v0, p0, Lmy;->g:J
-
-    goto :goto_1
-
-    :cond_3
-    if-eqz v2, :cond_7
-
-    invoke-virtual {p0}, Lilg;->c()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lmy;->g:J
-
-    :goto_1
-    iget-wide v0, p0, Lmy;->g:J
-
-    sub-long/2addr v0, v6
-
-    sget-object v2, Lmy;->j:Lmy;
-
-    :goto_2
-    iget-object v3, v2, Lmy;->f:Lmy;
-
-    if-eqz v3, :cond_5
-
-    iget-wide v8, v3, Lmy;->g:J
-
-    sub-long/2addr v8, v6
-
-    cmp-long v4, v0, v8
-
-    if-gez v4, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    move-object v2, v3
-
-    goto :goto_2
-
-    :cond_5
-    :goto_3
-    iput-object v3, p0, Lmy;->f:Lmy;
-
-    iput-object p0, v2, Lmy;->f:Lmy;
-
-    sget-object v0, Lmy;->j:Lmy;
-
-    if-ne v2, v0, :cond_6
-
-    const-class v0, Lmy;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->notify()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_6
-    monitor-exit v5
-
     return-void
 
-    :cond_7
-    :try_start_1
-    new-instance v0, Ljava/lang/AssertionError;
+    :pswitch_0
+    iget-object p1, p0, Lmy;->b:La19;
 
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
+    iget-object p4, p1, La19;->b:Landroid/os/Handler;
 
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    :goto_4
-    monitor-exit v5
+    const/16 v0, 0x1e
 
-    throw v0
+    if-ge p5, v0, :cond_1
 
-    :cond_8
-    const-string v0, "Unbalanced enter/exit"
+    const/16 p1, 0x20
 
-    new-instance v1, Ljava/lang/IllegalStateException;
+    shr-long v0, p2, p1
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    long-to-int p1, v0
 
-    throw v1
-.end method
+    long-to-int p2, p2
 
-.method public final j()Z
-    .locals 4
+    const/4 p3, 0x0
 
-    iget-boolean v0, p0, Lmy;->e:Z
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
 
-    const/4 v1, 0x0
+    move-result-object p1
 
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    iput-boolean v1, p0, Lmy;->e:Z
-
-    const-class v0, Lmy;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v2, Lmy;->j:Lmy;
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    iget-object v3, v2, Lmy;->f:Lmy;
-
-    if-ne v3, p0, :cond_1
-
-    iget-object v3, p0, Lmy;->f:Lmy;
-
-    iput-object v3, v2, Lmy;->f:Lmy;
-
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Lmy;->f:Lmy;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
     goto :goto_1
 
     :cond_1
-    move-object v2, v3
-
-    goto :goto_0
-
-    :cond_2
-    monitor-exit v0
-
-    const/4 v0, 0x1
-
-    return v0
+    invoke-virtual {p1, p2, p3}, La19;->a(J)V
 
     :goto_1
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public k()V
-    .locals 0
-
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

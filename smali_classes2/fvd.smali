@@ -1,44 +1,64 @@
 .class public final Lfvd;
-.super Landroid/os/Handler;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:I
-
-.field public final synthetic b:Lgvd;
-
-
-# direct methods
-.method public constructor <init>(Lgvd;Landroid/os/Looper;)V
-    .locals 0
-
-    iput-object p1, p0, Lfvd;->b:Lgvd;
-
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lfvd;->a:I
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lch2;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfvd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfvd;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lfvd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lfvd;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lfvd;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget p1, p1, Landroid/os/Message;->what:I
+    iget-object v0, p0, Lfvd;->o:Ljava/lang/Object;
 
-    iget v0, p0, Lfvd;->a:I
+    check-cast v0, Lch2;
 
-    if-ne p1, v0, :cond_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lfvd;->b:Lgvd;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Lgvd;->b()V
+    iput-object p1, v0, Lch2;->h:Ljava/lang/String;
 
-    :cond_0
-    return-void
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

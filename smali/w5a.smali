@@ -30,7 +30,274 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    const/4 v3, -0x1
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto/16 :goto_0
+
+    :sswitch_0
+    const-string v1, "audio/g711-mlaw"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto/16 :goto_0
+
+    :cond_1
+    const/16 v3, 0xa
+
+    goto/16 :goto_0
+
+    :sswitch_1
+    const-string v1, "audio/g711-alaw"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto/16 :goto_0
+
+    :cond_2
+    const/16 v3, 0x9
+
+    goto/16 :goto_0
+
+    :sswitch_2
+    const-string v1, "audio/mpeg"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto/16 :goto_0
+
+    :cond_3
+    const/16 v3, 0x8
+
+    goto/16 :goto_0
+
+    :sswitch_3
+    const-string v1, "audio/flac"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v3, 0x7
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v1, "audio/eac3"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const/4 v3, 0x6
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v1, "audio/raw"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    const/4 v3, 0x5
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v1, "audio/ac3"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    const/4 v3, 0x4
+
+    goto :goto_0
+
+    :sswitch_7
+    const-string v1, "audio/mp4a-latm"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    const/4 v3, 0x3
+
+    goto :goto_0
+
+    :sswitch_8
+    const-string v1, "audio/mpeg-L2"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_9
+    const-string v1, "audio/mpeg-L1"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_a
+
+    goto :goto_0
+
+    :cond_a
+    move v3, v2
+
+    goto :goto_0
+
+    :sswitch_a
+    const-string v1, "audio/eac3-joc"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_b
+
+    goto :goto_0
+
+    :cond_b
+    move v3, v0
+
+    :goto_0
+    packed-switch v3, :pswitch_data_0
+
+    return v0
+
+    :pswitch_0
+    if-nez p1, :cond_c
+
+    return v0
+
+    :cond_c
+    invoke-static {p1}, Lw5a;->f(Ljava/lang/String;)Lot;
+
+    move-result-object p0
+
+    if-nez p0, :cond_d
+
+    return v0
+
+    :cond_d
+    invoke-virtual {p0}, Lot;->b()I
+
+    move-result p0
+
+    if-eqz p0, :cond_e
+
+    const/16 p1, 0x10
+
+    if-eq p0, p1, :cond_e
+
+    return v2
+
+    :cond_e
+    return v0
+
+    :pswitch_1
+    return v2
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7e929daa -> :sswitch_a
+        -0x19cc928c -> :sswitch_9
+        -0x19cc928b -> :sswitch_8
+        -0x3313c2e -> :sswitch_7
+        0xb269698 -> :sswitch_6
+        0xb26d66f -> :sswitch_5
+        0x59ae0c65 -> :sswitch_4
+        0x59aeaa01 -> :sswitch_3
+        0x59b1e81e -> :sswitch_2
+        0x71710385 -> :sswitch_1
+        0x717677f9 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public static b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
     const/4 v0, 0x0
@@ -42,7 +309,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-static {p0}, Loah;->J(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {p0}, Lmbh;->i0(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
@@ -59,7 +326,7 @@
 
     aget-object v4, p0, v3
 
-    invoke-static {v4}, Lw5a;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lw5a;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -105,8 +372,8 @@
     return-object v0
 .end method
 
-.method public static b(Ljava/lang/String;Ljava/lang/String;)I
-    .locals 7
+.method public static c(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 8
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -114,7 +381,7 @@
 
     move-result v0
 
-    const/16 v1, 0x8
+    const/16 v1, 0x9
 
     const/4 v2, 0x7
 
@@ -122,9 +389,11 @@
 
     const/4 v4, 0x5
 
-    const/4 v5, 0x0
+    const/16 v5, 0x8
 
-    const/4 v6, -0x1
+    const/4 v6, 0x0
+
+    const/4 v7, -0x1
 
     sparse-switch v0, :sswitch_data_0
 
@@ -142,7 +411,7 @@
     goto/16 :goto_0
 
     :cond_0
-    move v6, v1
+    const/16 v7, 0xb
 
     goto/16 :goto_0
 
@@ -155,15 +424,15 @@
 
     if-nez p0, :cond_1
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_1
-    move v6, v2
+    const/16 v7, 0xa
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :sswitch_2
-    const-string v0, "audio/mpeg"
+    const-string v0, "audio/opus"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -171,15 +440,15 @@
 
     if-nez p0, :cond_2
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_2
-    move v6, v3
+    move v7, v1
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :sswitch_3
-    const-string v0, "audio/eac3"
+    const-string v0, "audio/mpeg"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -187,15 +456,15 @@
 
     if-nez p0, :cond_3
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_3
-    move v6, v4
+    move v7, v5
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :sswitch_4
-    const-string v0, "audio/ac4"
+    const-string v0, "audio/eac3"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -206,12 +475,12 @@
     goto :goto_0
 
     :cond_4
-    const/4 v6, 0x4
+    move v7, v2
 
     goto :goto_0
 
     :sswitch_5
-    const-string v0, "audio/ac3"
+    const-string v0, "audio/vnd.dts.uhd;profile=p2"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -222,12 +491,12 @@
     goto :goto_0
 
     :cond_5
-    const/4 v6, 0x3
+    move v7, v3
 
     goto :goto_0
 
     :sswitch_6
-    const-string v0, "audio/mp4a-latm"
+    const-string v0, "audio/ac4"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -238,12 +507,12 @@
     goto :goto_0
 
     :cond_6
-    const/4 v6, 0x2
+    move v7, v4
 
     goto :goto_0
 
     :sswitch_7
-    const-string v0, "audio/vnd.dts"
+    const-string v0, "audio/ac3"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -254,12 +523,12 @@
     goto :goto_0
 
     :cond_7
-    const/4 v6, 0x1
+    const/4 v7, 0x4
 
     goto :goto_0
 
     :sswitch_8
-    const-string v0, "audio/eac3-joc"
+    const-string v0, "audio/mp4a-latm"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -270,12 +539,60 @@
     goto :goto_0
 
     :cond_8
-    move v6, v5
+    const/4 v7, 0x3
+
+    goto :goto_0
+
+    :sswitch_9
+    const-string v0, "audio/vnd.dts"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    const/4 v7, 0x2
+
+    goto :goto_0
+
+    :sswitch_a
+    const-string v0, "audio/vnd.dts.hd;profile=lbr"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_a
+
+    goto :goto_0
+
+    :cond_a
+    const/4 v7, 0x1
+
+    goto :goto_0
+
+    :sswitch_b
+    const-string v0, "audio/eac3-joc"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_b
+
+    goto :goto_0
+
+    :cond_b
+    move v7, v6
 
     :goto_0
-    packed-switch v6, :pswitch_data_0
+    packed-switch v7, :pswitch_data_0
 
-    return v5
+    return v6
 
     :pswitch_0
     const/16 p0, 0xe
@@ -283,68 +600,85 @@
     return p0
 
     :pswitch_1
-    return v1
+    return v5
 
     :pswitch_2
-    const/16 p0, 0x9
+    const/16 p0, 0x14
 
     return p0
 
     :pswitch_3
-    return v3
+    return v1
 
     :pswitch_4
+    return v3
+
+    :pswitch_5
+    const/16 p0, 0x1e
+
+    return p0
+
+    :pswitch_6
     const/16 p0, 0x11
 
     return p0
 
-    :pswitch_5
+    :pswitch_7
     return v4
 
-    :pswitch_6
-    if-nez p1, :cond_9
+    :pswitch_8
+    if-nez p1, :cond_c
 
-    return v5
+    return v6
 
-    :cond_9
-    invoke-static {p1}, Lw5a;->e(Ljava/lang/String;)Lnt;
+    :cond_c
+    invoke-static {p1}, Lw5a;->f(Ljava/lang/String;)Lot;
 
     move-result-object p0
 
-    if-nez p0, :cond_a
+    if-nez p0, :cond_d
 
-    return v5
+    return v6
 
-    :cond_a
-    invoke-virtual {p0}, Lnt;->b()I
+    :cond_d
+    invoke-virtual {p0}, Lot;->b()I
 
     move-result p0
 
     return p0
 
-    :pswitch_7
+    :pswitch_9
     return v2
 
-    :pswitch_8
+    :pswitch_a
+    return v5
+
+    :pswitch_b
     const/16 p0, 0x12
 
     return p0
 
     :sswitch_data_0
     .sparse-switch
-        -0x7e929daa -> :sswitch_8
-        -0x41455b98 -> :sswitch_7
-        -0x3313c2e -> :sswitch_6
-        0xb269698 -> :sswitch_5
-        0xb269699 -> :sswitch_4
-        0x59ae0c65 -> :sswitch_3
-        0x59b1e81e -> :sswitch_2
+        -0x7e929daa -> :sswitch_b
+        -0x51617051 -> :sswitch_a
+        -0x41455b98 -> :sswitch_9
+        -0x3313c2e -> :sswitch_8
+        0xb269698 -> :sswitch_7
+        0xb269699 -> :sswitch_6
+        0x20d04866 -> :sswitch_5
+        0x59ae0c65 -> :sswitch_4
+        0x59b1e81e -> :sswitch_3
+        0x59b2d2d8 -> :sswitch_2
         0x59c2dc42 -> :sswitch_1
         0x5cc95062 -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
         :pswitch_8
         :pswitch_7
         :pswitch_6
@@ -357,7 +691,7 @@
     .end packed-switch
 .end method
 
-.method public static c(Ljava/lang/String;)Ljava/lang/String;
+.method public static d(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     const/4 v0, 0x0
@@ -371,7 +705,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Ll5j;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lw5j;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -515,15 +849,15 @@
 
     if-eqz v1, :cond_7
 
-    invoke-static {p0}, Lw5a;->e(Ljava/lang/String;)Lnt;
+    invoke-static {p0}, Lw5a;->f(Ljava/lang/String;)Lot;
 
     move-result-object p0
 
     if-eqz p0, :cond_7
 
-    iget p0, p0, Lnt;->b:I
+    iget p0, p0, Lot;->b:I
 
-    invoke-static {p0}, Lw5a;->d(I)Ljava/lang/String;
+    invoke-static {p0}, Lw5a;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -803,7 +1137,7 @@
     :cond_1b
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lq3g;->m(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
+    invoke-static {p0, v0}, Lmrf;->g(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
 
     move-result-object p0
 
@@ -870,30 +1204,34 @@
     return-object p0
 .end method
 
-.method public static d(I)Ljava/lang/String;
+.method public static e(I)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0x20
 
-    if-eq p0, v0, :cond_7
+    if-eq p0, v0, :cond_8
 
     const/16 v0, 0x21
 
-    if-eq p0, v0, :cond_6
+    if-eq p0, v0, :cond_7
 
     const/16 v0, 0x23
 
-    if-eq p0, v0, :cond_5
+    if-eq p0, v0, :cond_6
 
     const/16 v0, 0x40
 
-    if-eq p0, v0, :cond_4
+    if-eq p0, v0, :cond_5
 
     const/16 v0, 0xa3
 
-    if-eq p0, v0, :cond_3
+    if-eq p0, v0, :cond_4
 
     const/16 v0, 0xb1
+
+    if-eq p0, v0, :cond_3
+
+    const/16 v0, 0xdd
 
     if-eq p0, v0, :cond_2
 
@@ -934,16 +1272,21 @@
     return-object p0
 
     :pswitch_4
-    const-string p0, "video/mpeg"
+    const-string p0, "image/jpeg"
 
     return-object p0
 
     :pswitch_5
-    const-string p0, "audio/mpeg"
+    const-string p0, "video/mpeg"
 
     return-object p0
 
     :pswitch_6
+    const-string p0, "audio/mpeg"
+
+    return-object p0
+
+    :pswitch_7
     const-string p0, "video/mpeg2"
 
     return-object p0
@@ -959,32 +1302,37 @@
     return-object p0
 
     :cond_2
-    const-string p0, "video/x-vnd.on2.vp9"
+    const-string p0, "audio/vorbis"
 
     return-object p0
 
     :cond_3
-    const-string p0, "video/wvc1"
+    const-string p0, "video/x-vnd.on2.vp9"
 
     return-object p0
 
     :cond_4
-    :pswitch_7
-    const-string p0, "audio/mp4a-latm"
+    const-string p0, "video/wvc1"
 
     return-object p0
 
     :cond_5
-    const-string p0, "video/hevc"
+    :pswitch_8
+    const-string p0, "audio/mp4a-latm"
 
     return-object p0
 
     :cond_6
-    const-string p0, "video/avc"
+    const-string p0, "video/hevc"
 
     return-object p0
 
     :cond_7
+    const-string p0, "video/avc"
+
+    return-object p0
+
+    :cond_8
     const-string p0, "video/mp4v-es"
 
     return-object p0
@@ -993,18 +1341,19 @@
 
     :pswitch_data_0
     .packed-switch 0x60
-        :pswitch_6
-        :pswitch_6
-        :pswitch_6
-        :pswitch_6
-        :pswitch_6
-        :pswitch_6
         :pswitch_7
         :pswitch_7
         :pswitch_7
+        :pswitch_7
+        :pswitch_7
+        :pswitch_7
+        :pswitch_8
+        :pswitch_8
+        :pswitch_8
+        :pswitch_6
         :pswitch_5
+        :pswitch_6
         :pswitch_4
-        :pswitch_5
     .end packed-switch
 
     :pswitch_data_1
@@ -1018,7 +1367,7 @@
     .end packed-switch
 .end method
 
-.method public static e(Ljava/lang/String;)Lnt;
+.method public static f(Ljava/lang/String;)Lot;
     .locals 3
 
     sget-object v0, Lw5a;->b:Ljava/util/regex/Pattern;
@@ -1071,11 +1420,11 @@
     const/4 p0, 0x0
 
     :goto_0
-    new-instance v1, Lnt;
+    new-instance v1, Lot;
 
-    const/4 v2, 0x4
+    const/4 v2, 0x5
 
-    invoke-direct {v1, v0, p0, v2}, Lnt;-><init>(III)V
+    invoke-direct {v1, v0, p0, v2}, Lot;-><init>(III)V
 
     return-object v1
 
@@ -1086,7 +1435,7 @@
     return-object p0
 .end method
 
-.method public static f(Ljava/lang/String;)Ljava/lang/String;
+.method public static g(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     const/4 v0, 0x0
@@ -1118,8 +1467,8 @@
     return-object p0
 .end method
 
-.method public static g(Ljava/lang/String;)I
-    .locals 2
+.method public static h(Ljava/lang/String;)I
+    .locals 1
 
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1130,7 +1479,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {p0}, Lw5a;->h(Ljava/lang/String;)Z
+    invoke-static {p0}, Lw5a;->i(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1141,7 +1490,7 @@
     return p0
 
     :cond_1
-    invoke-static {p0}, Lw5a;->j(Ljava/lang/String;)Z
+    invoke-static {p0}, Lw5a;->m(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1152,7 +1501,7 @@
     return p0
 
     :cond_2
-    invoke-static {p0}, Lw5a;->i(Ljava/lang/String;)Z
+    invoke-static {p0}, Lw5a;->l(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1163,13 +1512,7 @@
     return p0
 
     :cond_3
-    const-string v0, "image"
-
-    invoke-static {p0}, Lw5a;->f(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p0}, Lw5a;->k(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1197,6 +1540,22 @@
     if-nez v0, :cond_8
 
     const-string v0, "application/x-scte35"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const-string v0, "application/x-icy"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const-string v0, "application/vnd.dvb.ait"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1236,7 +1595,7 @@
     :cond_7
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lq3g;->m(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
+    invoke-static {p0, v0}, Lmrf;->g(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
 
     move-result-object p0
 
@@ -1249,12 +1608,12 @@
     return p0
 .end method
 
-.method public static h(Ljava/lang/String;)Z
+.method public static i(Ljava/lang/String;)Z
     .locals 1
 
     const-string v0, "audio"
 
-    invoke-static {p0}, Lw5a;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lw5a;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1265,16 +1624,188 @@
     return p0
 .end method
 
-.method public static i(Ljava/lang/String;)Z
+.method public static j(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    const-string v1, "dvhe"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-nez v2, :cond_9
+
+    const-string v2, "dvh1"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "hev1"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    :cond_3
+    invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    const-string v1, "hvc1"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    :cond_4
+    const-string v1, "dvav"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const-string v1, "avc3"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    :cond_5
+    const-string v1, "dva1"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    const-string v1, "avc1"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    :cond_6
+    const-string v1, "dav1"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    const-string p1, "av01"
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_8
+
+    :cond_7
+    return v3
+
+    :cond_8
+    return v0
+
+    :cond_9
+    :goto_0
+    return v3
+.end method
+
+.method public static k(Ljava/lang/String;)Z
     .locals 2
 
-    const-string v0, "text"
+    const-string v0, "image"
 
-    invoke-static {p0}, Lw5a;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lw5a;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/x-image-uri"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static l(Ljava/lang/String;)Z
+    .locals 2
+
+    const-string v0, "text"
+
+    invoke-static {p0}, Lw5a;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/x-media3-cues"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1382,12 +1913,12 @@
     return p0
 .end method
 
-.method public static j(Ljava/lang/String;)Z
+.method public static m(Ljava/lang/String;)Z
     .locals 1
 
     const-string v0, "video"
 
-    invoke-static {p0}, Lw5a;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lw5a;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1396,4 +1927,205 @@
     move-result p0
 
     return p0
+.end method
+
+.method public static n(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {p0}, Lw5j;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "audio/mp3"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x6
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "audio/mpeg-l2"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x5
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "audio/mpeg-l1"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v1, 0x4
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "audio/x-wav"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v1, 0x3
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "application/x-mpegurl"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const/4 v1, 0x2
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "audio/x-flac"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "video/x-mvhevc"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    const/4 v1, 0x0
+
+    :goto_0
+    packed-switch v1, :pswitch_data_0
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "audio/mpeg"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "audio/mpeg-L2"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "audio/mpeg-L1"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "audio/wav"
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "application/x-mpegURL"
+
+    return-object p0
+
+    :pswitch_5
+    const-string p0, "audio/flac"
+
+    return-object p0
+
+    :pswitch_6
+    const-string p0, "video/mv-hevc"
+
+    return-object p0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x6d4a8464 -> :sswitch_6
+        -0x3c11ec0a -> :sswitch_5
+        -0x3a5bd08a -> :sswitch_4
+        -0x22f81362 -> :sswitch_3
+        -0x19cc8eac -> :sswitch_2
+        -0x19cc8eab -> :sswitch_1
+        0xb26c537 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,160 +1,158 @@
 .class public final Lrp7;
-.super Lsp9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ll38;
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/util/ArrayList;
 
-.field public b:Ljava/lang/String;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lqp7;)V
     .locals 1
 
-    invoke-direct {p0}, Lsp9;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iget-object v0, p1, Lqp7;->a:Ljava/util/ArrayList;
 
-    iput v0, p0, Lrp7;->a:I
+    iput-object v0, p0, Lrp7;->a:Ljava/util/ArrayList;
 
-    const-string v0, ""
+    iget-object p1, p1, Lqp7;->b:Ljava/lang/String;
 
-    iput-object v0, p0, Lrp7;->b:Ljava/lang/String;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lsp9;->cachedSize:I
+    iput-object p1, p0, Lrp7;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final a(Ll38;)Z
+    .locals 7
 
-    iget v0, p0, Lrp7;->a:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Lmg3;->n(II)I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    iget-object v1, p0, Lrp7;->b:Ljava/lang/String;
+    if-nez p1, :cond_0
 
-    const-string v2, ""
+    goto :goto_2
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_0
+    check-cast p1, Lrp7;
+
+    iget-object v1, p1, Lrp7;->b:Ljava/lang/String;
+
+    iget-object v2, p0, Lrp7;->b:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lzsi;->c(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lrp7;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lmg3;->l(ILjava/lang/String;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    goto :goto_2
 
     :cond_1
-    return v0
-.end method
+    iget-object p1, p1, Lrp7;->a:Ljava/util/ArrayList;
 
-.method public final mergeFrom(Llg3;)Lsp9;
-    .locals 2
+    iget-object v1, p0, Lrp7;->a:Ljava/util/ArrayList;
 
-    :cond_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    if-eq v2, v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v0
+
     :goto_0
-    invoke-virtual {p1}, Llg3;->s()I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result v0
+    move-result v3
 
-    if-eqz v0, :cond_3
+    if-ge v2, v3, :cond_6
 
-    const/16 v1, 0x8
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_2
+    move-result-object v3
 
-    const/16 v1, 0x12
+    check-cast v3, Lny0;
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->size()I
 
-    invoke-virtual {p1, v0}, Llg3;->u(I)Z
+    move-result v4
 
-    move-result v0
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    move-result-object v5
+
+    check-cast v5, Lny0;
+
+    invoke-virtual {v5}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v5
+
+    if-eq v4, v5, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v4, v0
+
+    :goto_1
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v5
+
+    if-ge v4, v5, :cond_5
+
+    invoke-virtual {v3, v4}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lhy0;
+
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lny0;
+
+    invoke-virtual {v6, v4}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Lhy0;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_4
+
+    :goto_2
+    return v0
+
+    :cond_4
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lrp7;->b:Ljava/lang/String;
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_2
-    invoke-virtual {p1}, Llg3;->p()I
+    :cond_6
+    const/4 p1, 0x1
 
-    move-result v0
-
-    iput v0, p0, Lrp7;->a:I
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Lmg3;)V
-    .locals 2
-
-    iget v0, p0, Lrp7;->a:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Lmg3;->G(II)V
-
-    :cond_0
-    iget-object v0, p0, Lrp7;->b:Ljava/lang/String;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x2
-
-    iget-object v1, p0, Lrp7;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1}, Lmg3;->E(ILjava/lang/String;)V
-
-    :cond_1
-    return-void
+    return p1
 .end method

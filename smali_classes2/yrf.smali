@@ -2,28 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly00;
+
 
 # instance fields
-.field public final a:Le1e;
-
-.field public final b:Lci;
+.field public final a:Lcsf;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 1
+.method public constructor <init>(Lcsf;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyrf;->a:Le1e;
-
-    new-instance p1, Lci;
-
-    const/16 v0, 0x15
-
-    invoke-direct {p1, v0}, Lci;-><init>(I)V
-
-    iput-object p1, p0, Lyrf;->b:Lci;
+    iput-object p1, p0, Lyrf;->a:Lcsf;
 
     return-void
 .end method

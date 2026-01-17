@@ -1,372 +1,237 @@
-.class public final Lzia;
+.class public abstract Lzia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lgeb;
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public final b:Ljs4;
+.field public static final b:Lo58;
 
-.field public final c:Ljava/util/concurrent/ExecutorService;
+.field public static final c:Lakj;
 
-.field public final d:Ljava/lang/String;
+.field public static final d:Ln8g;
 
-.field public volatile e:Z
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public volatile g:Ljava/util/concurrent/Future;
+.field public static final e:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(Lgeb;Ljs4;Ljava/util/concurrent/ExecutorService;Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object p1, p0, Lzia;->a:Lgeb;
+    new-instance v1, Ljava/util/HashMap;
 
-    iput-object p2, p0, Lzia;->b:Ljs4;
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p3, p0, Lzia;->c:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object p4, p0, Lzia;->d:Ljava/lang/String;
+    sput-object v0, Lzia;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-boolean p5, p0, Lzia;->e:Z
+    sget-object v0, Lccj;->a:Luia;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v1, 0x0
 
-    new-instance p2, Ljava/util/ArrayList;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lzia;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Laja;)V
-    .locals 7
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lzia;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/ArrayList;
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_0
-    :goto_1
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v5}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-nez v6, :cond_1
-
-    invoke-interface {v4}, Ljava/util/Iterator;->remove()V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v5}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v5
-
-    if-ne v5, p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :cond_2
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    if-eqz v0, :cond_3
-
-    return-void
-
-    :cond_3
-    :goto_2
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v4, v0
-
-    check-cast v4, Ljava/util/ArrayList;
-
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_4
-    invoke-virtual {v1, v4, v5}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    return-void
-
-    :cond_5
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eq v0, v4, :cond_4
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    if-eq v4, v2, :cond_2
+    move-object v2, v0
 
     goto :goto_0
-.end method
 
-.method public final b(Ldja;Laja;)V
-    .locals 2
+    :cond_0
+    move-object v2, v1
 
-    if-eqz p1, :cond_1
+    :goto_0
+    iget-object v2, v2, Luia;->a:Ln8g;
 
-    :try_start_0
-    iget-object v0, p1, Ldja;->b:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v0
+    sput-object v2, Lzia;->b:Lo58;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p1, Ldja;->b:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->canRead()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lzia;->d:Ljava/lang/String;
-
-    iget-object v1, p1, Ldja;->b:Ljava/io/File;
-
-    iget-object p1, p1, Ldja;->a:Ljava/lang/String;
-
-    invoke-interface {p2, v0, v1, p1}, Laja;->onFinished(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
     goto :goto_1
 
     :cond_1
-    :goto_0
-    iget-boolean p1, p0, Lzia;->e:Z
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p0, p2}, Lzia;->a(Laja;)V
-
-    invoke-virtual {p0}, Lzia;->d()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
+    move-object v0, v1
 
     :goto_1
-    instance-of v0, p1, Ljava/util/concurrent/ExecutionException;
+    iget-object v0, v0, Luia;->c:Lakj;
 
-    if-eqz v0, :cond_2
+    sput-object v0, Lzia;->c:Lakj;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    new-instance v0, Lnn9;
 
-    move-result-object p1
+    const/16 v1, 0x9
 
-    if-eqz p1, :cond_3
+    invoke-direct {v0, v1}, Lnn9;-><init>(I)V
 
-    invoke-interface {p2, p1}, Laja;->onFailed(Ljava/lang/Throwable;)V
+    new-instance v1, Ln8g;
 
-    goto :goto_2
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    :cond_2
-    invoke-interface {p2, p1}, Laja;->onFailed(Ljava/lang/Throwable;)V
+    sput-object v1, Lzia;->d:Ln8g;
 
-    :cond_3
-    :goto_2
-    iget-boolean p1, p0, Lzia;->e:Z
+    new-instance v0, Lnn9;
 
-    if-eqz p1, :cond_4
+    const/16 v1, 0xa
 
-    invoke-virtual {p0, p2}, Lzia;->a(Laja;)V
+    invoke-direct {v0, v1}, Lnn9;-><init>(I)V
 
-    invoke-virtual {p0}, Lzia;->d()V
+    new-instance v1, Ln8g;
 
-    :cond_4
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+
+    sput-object v1, Lzia;->e:Ln8g;
+
     return-void
 .end method
 
-.method public final c(Ljava/io/File;Ljava/lang/String;)V
-    .locals 4
+.method public static final a(Ljava/lang/String;IZ)Lxia;
+    .locals 11
 
-    iget-object v0, p0, Lzia;->f:Ljava/util/concurrent/atomic/AtomicReference;
+    :goto_0
+    sget-object v0, Lzia;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     move-result-object v1
 
-    check-cast v1, Ljava/lang/ref/WeakReference;
+    check-cast v1, Ljava/util/HashMap;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    new-instance v2, Ljava/util/HashMap;
 
-    move-result-object v2
+    invoke-direct {v2, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    check-cast v2, Laja;
+    invoke-virtual {v2, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v2, :cond_0
+    move-result-object v3
 
-    iget-object v3, p0, Lzia;->d:Ljava/lang/String;
+    check-cast v3, Lxia;
 
-    invoke-interface {v2, v3, p1, p2}, Laja;->onFinished(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
+    const/4 v4, 0x1
+
+    if-nez v3, :cond_3
+
+    new-instance v5, Lxia;
+
+    sget-object v3, Lccj;->a:Luia;
+
+    if-eqz v3, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->clear()V
+    const/4 v3, 0x0
 
-    goto :goto_0
+    :goto_1
+    iget-object v6, v3, Luia;->b:Lkp8;
+
+    invoke-static {p1}, Lt02;->t(I)I
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    if-ne v3, v4, :cond_1
+
+    sget-object v3, Lzia;->e:Ln8g;
+
+    invoke-virtual {v3}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lks4;
+
+    :goto_2
+    move-object v7, v3
+
+    goto :goto_3
 
     :cond_1
-    return-void
-.end method
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-.method public final d()V
-    .locals 3
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget-object v0, p0, Lzia;->g:Ljava/util/concurrent/Future;
+    throw p0
 
-    if-eqz v0, :cond_0
+    :cond_2
+    sget-object v3, Lzia;->d:Ln8g;
 
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+    invoke-virtual {v3}, Ln8g;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v3
 
-    if-nez v0, :cond_0
+    check-cast v3, Lks4;
 
-    return-void
+    goto :goto_2
 
-    :cond_0
-    iget-object v0, p0, Lzia;->c:Ljava/util/concurrent/ExecutorService;
+    :goto_3
+    sget-object v3, Lzia;->b:Lo58;
 
-    new-instance v1, Ljx0;
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
 
-    const/16 v2, 0x8
+    move-result-object v3
 
-    invoke-direct {v1, v2, p0}, Ljx0;-><init>(ILjava/lang/Object;)V
+    move-object v8, v3
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    check-cast v8, Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v0
+    move-object v9, p0
 
-    iput-object v0, p0, Lzia;->g:Ljava/util/concurrent/Future;
+    move v10, p2
 
-    return-void
-.end method
+    invoke-direct/range {v5 .. v10}, Lxia;-><init>(Lkp8;Lks4;Ljava/util/concurrent/ExecutorService;Ljava/lang/String;Z)V
 
-.method public final e(Laja;)V
-    .locals 3
+    invoke-virtual {v2, v9, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lzia;->g:Ljava/util/concurrent/Future;
+    invoke-virtual {v5}, Lxia;->d()V
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v2, v9, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lzia;->g:Ljava/util/concurrent/Future;
+    move-object v3, v5
 
-    if-eqz v0, :cond_0
+    goto :goto_4
 
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+    :cond_3
+    move-object v9, p0
 
-    move-result v0
+    move v10, p2
 
-    if-nez v0, :cond_0
+    :cond_4
+    :goto_4
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_6
+
+    if-eqz v10, :cond_5
+
+    iget-boolean p0, v3, Lxia;->e:Z
+
+    iput-boolean v4, v3, Lxia;->e:Z
+
+    if-nez p0, :cond_5
+
+    iget-boolean p0, v3, Lxia;->e:Z
+
+    if-eqz p0, :cond_5
+
+    invoke-virtual {v3}, Lxia;->d()V
+
+    :cond_5
+    return-object v3
+
+    :cond_6
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-eq p0, v1, :cond_4
+
+    move-object p0, v9
+
+    move p2, v10
 
     goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lzia;->c:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v1, Ldc9;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, p0, v2, p1}, Ldc9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0, p1}, Lzia;->a(Laja;)V
-
-    return-void
 .end method

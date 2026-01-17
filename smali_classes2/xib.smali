@@ -1,64 +1,67 @@
-.class public final synthetic Lxib;
+.class public abstract Lxib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Handler$Callback;
+
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 4
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    sget v0, Lwed;->share_bottom_button_copy_link:I
 
-    const/4 v1, 0x0
+    sput v0, Lxib;->a:I
 
-    if-nez v0, :cond_3
+    sget v0, Lwed;->share_confirm_cancel:I
 
-    sget-object v0, Lzib;->a:Landroid/os/Handler;
+    sput v0, Lxib;->b:I
 
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    sget v0, Lwed;->share_confirm_close:I
 
-    check-cast p1, Lyib;
+    sput v0, Lxib;->c:I
 
-    sget-object v0, Lzib;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget v0, Lwed;->share_confirmation_close_title:I
 
-    const/4 v2, 0x1
+    sput v0, Lxib;->d:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    sget v0, Lwed;->share_message_hint:I
 
-    move-result v3
+    sput v0, Lxib;->e:I
 
-    if-eqz v3, :cond_2
+    sget v0, Lwed;->share_search_hint:I
 
-    sget-object v3, Lzib;->b:Lyib;
+    sput v0, Lxib;->f:I
 
-    invoke-static {v3, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lwed;->share_toolbar_action_cancel_selection:I
 
-    move-result v3
+    sput v0, Lxib;->g:I
 
-    if-nez v3, :cond_0
+    sget v0, Lwed;->share_toolbar_action_select:I
 
-    sget-object v3, Lzib;->c:Lyib;
+    sput v0, Lxib;->h:I
 
-    invoke-static {v3, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lwed;->share_toolbar_title:I
 
-    move-result v3
+    sput v0, Lxib;->i:I
 
-    if-eqz v3, :cond_1
-
-    :cond_0
-    sget-object v3, Lvib;->a:Lvib;
-
-    invoke-static {p1, v3}, Lzib;->a(Lyib;Lvib;)V
-
-    :cond_1
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    :cond_2
-    return v2
-
-    :cond_3
-    return v1
+    return-void
 .end method

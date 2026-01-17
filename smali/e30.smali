@@ -1,58 +1,110 @@
-.class public final Le30;
-.super Landroid/content/BroadcastReceiver;
+.class public abstract Le30;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ltp5;
-
-.field public final b:Lo8g;
-
-.field public final synthetic c:Lop6;
-
-
 # direct methods
-.method public constructor <init>(Lop6;Lo8g;Ltp5;)V
-    .locals 0
+.method public static a()[I
+    .locals 9
 
-    iput-object p1, p0, Le30;->c:Lop6;
+    invoke-static {}, Lhk7;->i()Lek7;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    move-result-object v0
 
-    iput-object p2, p0, Le30;->b:Lo8g;
+    sget-object v1, Lg30;->e:[I
 
-    iput-object p3, p0, Le30;->a:Ltp5;
+    array-length v2, v1
 
-    return-void
-.end method
+    const/4 v3, 0x0
 
+    move v4, v3
 
-# virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
+    :goto_0
+    if-ge v4, v2, :cond_1
 
-    const-string p1, "android.media.AUDIO_BECOMING_NOISY"
+    aget v5, v1, v4
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    new-instance v6, Landroid/media/AudioFormat$Builder;
 
-    move-result-object p2
+    invoke-direct {v6}, Landroid/media/AudioFormat$Builder;-><init>()V
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/16 v7, 0xc
 
-    move-result p1
+    invoke-virtual {v6, v7}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
 
-    if-eqz p1, :cond_0
+    move-result-object v6
 
-    new-instance p1, Ll3;
+    invoke-virtual {v6, v5}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
 
-    const/16 p2, 0xc
+    move-result-object v6
 
-    invoke-direct {p1, p2, p0}, Ll3;-><init>(ILjava/lang/Object;)V
+    const v7, 0xbb80
 
-    iget-object p2, p0, Le30;->b:Lo8g;
+    invoke-virtual {v6, v7}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
 
-    invoke-virtual {p2, p1}, Lo8g;->d(Ljava/lang/Runnable;)Z
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
+
+    move-result-object v6
+
+    new-instance v7, Landroid/media/AudioAttributes$Builder;
+
+    invoke-direct {v7}, Landroid/media/AudioAttributes$Builder;-><init>()V
+
+    const/4 v8, 0x1
+
+    invoke-virtual {v7, v8}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v7
+
+    const/4 v8, 0x3
+
+    invoke-virtual {v7, v8}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v3}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lx4;->u(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Lxj7;->a(Ljava/lang/Object;)V
 
     :cond_0
-    return-void
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lxj7;->a(Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Lek7;->i()Lhud;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lq1j;->i(Ljava/util/Collection;)[I
+
+    move-result-object v0
+
+    return-object v0
 .end method

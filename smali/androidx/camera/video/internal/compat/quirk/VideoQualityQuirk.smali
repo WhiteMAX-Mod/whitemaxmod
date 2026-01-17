@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld3d;
+.implements Ld4d;
 
 
 # virtual methods
-.method public abstract a(Ln42;Lgc0;)Z
+.method public abstract a(Le42;Lgc0;)Z
 .end method

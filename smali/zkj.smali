@@ -1,160 +1,193 @@
-.class public abstract Lzkj;
-.super Ljava/lang/Object;
+.class public final Lzkj;
+.super Ligj;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/Object;
+
+
 # direct methods
-.method public static final a(Lo6e;)Ljava/lang/String;
-    .locals 6
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput p1, p0, Lzkj;->b:I
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iput-object p2, p0, Lzkj;->c:Ljava/lang/Object;
 
-    new-instance v1, Ljava/util/LinkedHashMap;
+    invoke-direct {p0}, Ligj;-><init>()V
 
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :cond_0
-    if-nez v3, :cond_1
-
-    const-string v4, "Foreign key violation(s) detected in \'"
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p0, v2}, Lo6e;->a0(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, "\'.\n"
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    const/4 v4, 0x3
-
-    invoke-interface {p0, v4}, Lo6e;->a0(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v1, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    const/4 v5, 0x2
-
-    invoke-interface {p0, v5}, Lo6e;->a0(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v1, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
-    invoke-interface {p0}, Lo6e;->r0()Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    const-string p0, "Number of different violations discovered: "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Set;->size()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, "\nNumber of rows in violation: "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, "\nViolation(s) detected in the following constraint(s):\n"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v3, "\tParent Table = "
-
-    const-string v4, ", Foreign Key Constraint Index = "
-
-    invoke-static {v0, v3, v1, v4, v2}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final b(Lm4h;)V
-    .locals 2
 
-    new-instance v0, Lh0d;
+# virtual methods
+.method public final a()V
+    .locals 5
+
+    iget v0, p0, Lzkj;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v0, Llca;
+
+    iget-object v0, v0, Llca;->b:Ljava/lang/Object;
+
+    check-cast v0, Ltqj;
+
+    iget-object v1, v0, Ltqj;->b:Lqf5;
+
+    const-string v2, "unlinkToDeath"
+
+    const/4 v3, 0x0
+
+    new-array v4, v3, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v2, v4}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, v0, Ltqj;->m:Lxzi;
+
+    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    iget-object v2, v0, Ltqj;->j:Liaj;
+
+    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lh0d;-><init>(I)V
+    iput-object v1, v0, Ltqj;->m:Lxzi;
 
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
+    iput-boolean v3, v0, Ltqj;->g:Z
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v0, Ltqj;
+
+    iget-object v0, v0, Ltqj;->f:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltqj;
+
+    iget-object v1, v1, Ltqj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-lez v1, :cond_1
+
+    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltqj;
+
+    iget-object v1, v1, Ltqj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v1
+
+    if-gtz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltqj;
+
+    iget-object v1, v1, Ltqj;->b:Lqf5;
+
+    const-string v3, "Leaving the connection open for other ongoing calls."
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v3, v2}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    monitor-exit v0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_2
+
+    :cond_1
+    :goto_0
+    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltqj;
+
+    iget-object v3, v1, Ltqj;->m:Lxzi;
+
+    if-eqz v3, :cond_2
+
+    iget-object v1, v1, Ltqj;->b:Lqf5;
+
+    const-string v3, "Unbind from service."
+
+    new-array v4, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v3, v4}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltqj;
+
+    iget-object v3, v1, Ltqj;->a:Landroid/content/Context;
+
+    iget-object v1, v1, Ltqj;->l:Llca;
+
+    invoke-virtual {v3, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+
+    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltqj;
+
+    iput-boolean v2, v1, Ltqj;->g:Z
+
+    const/4 v2, 0x0
+
+    iput-object v2, v1, Ltqj;->m:Lxzi;
+
+    iput-object v2, v1, Ltqj;->l:Llca;
+
+    :cond_2
+    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltqj;
+
+    invoke-virtual {v1}, Ltqj;->d()V
+
+    monitor-exit v0
+
+    :goto_1
+    return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

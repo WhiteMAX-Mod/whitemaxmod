@@ -1,14 +1,14 @@
 .class public final Lnpa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lx04;
+.field public c:Lc14;
 
 
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
+.method public final d(Lpq9;Ljava/lang/String;)V
     .locals 1
 
     const-string v0, "contact"
@@ -19,16 +19,16 @@
 
     if-eqz p2, :cond_0
 
-    invoke-static {p1}, Lx04;->g(Lgr9;)Lx04;
+    invoke-static {p1}, Lc14;->g(Lpq9;)Lc14;
 
     move-result-object p1
 
-    iput-object p1, p0, Lnpa;->c:Lx04;
+    iput-object p1, p0, Lnpa;->c:Lc14;
 
     return-void
 
     :cond_0
-    invoke-virtual {p1}, Lgr9;->y()V
+    invoke-virtual {p1}, Lpq9;->B()V
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lnpa;->c:Lx04;
+    iget-object v0, p0, Lnpa;->c:Lc14;
 
     new-instance v1, Ljava/lang/StringBuilder;
 

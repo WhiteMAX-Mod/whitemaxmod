@@ -3,89 +3,58 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lor6;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final synthetic a:Lxc8;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/Collection;
 
 
 # direct methods
-.method public constructor <init>(Lxc8;)V
+.method public synthetic constructor <init>(ILjava/util/Collection;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lwc8;->a:I
 
-    iput-object p1, p0, Lwc8;->a:Lxc8;
+    iput-object p2, p0, Lwc8;->b:Ljava/util/Collection;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final test(Ljava/lang/Object;)Z
     .locals 1
 
-    instance-of v0, p1, Lwc8;
+    iget v0, p0, Lwc8;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lwc8;->b:Ljava/util/Collection;
 
-    invoke-virtual {p0}, Lwc8;->getFunctionDelegate()Lhr6;
-
-    move-result-object v0
-
-    check-cast p1, Lor6;
-
-    invoke-interface {p1}, Lor6;->getFunctionDelegate()Lhr6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->c(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    :cond_0
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lwc8;->b:Ljava/util/Collection;
+
+    invoke-static {v0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->a(Ljava/util/Collection;Ljava/lang/Object;)Z
+
+    move-result p1
 
     return p1
-.end method
 
-.method public final getFunctionDelegate()Lhr6;
-    .locals 7
+    nop
 
-    new-instance v0, Lrr6;
-
-    const-string v6, "onMessageElementClick(Landroid/view/View;Lru/ok/tamtam/models/MessageElementData;)V"
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x2
-
-    const-class v3, Lxc8;
-
-    iget-object v4, p0, Lwc8;->a:Lxc8;
-
-    const-string v5, "onMessageElementClick"
-
-    invoke-direct/range {v0 .. v6}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-virtual {p0}, Lwc8;->getFunctionDelegate()Lhr6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

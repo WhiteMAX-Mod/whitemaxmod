@@ -29,7 +29,7 @@
 
 .field private final mApplicationContext:Landroid/content/Context;
 
-.field private service:Lze7;
+.field private service:Lee7;
 
 .field private serviceConnection:Landroid/content/ServiceConnection;
 
@@ -53,10 +53,10 @@
     return-void
 .end method
 
-.method public static synthetic access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lze7;)Lze7;
+.method public static synthetic access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lee7;)Lee7;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->service:Lze7;
+    iput-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->service:Lee7;
 
     return-object p1
 .end method
@@ -136,7 +136,7 @@
     iput-object v1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->serviceConnection:Landroid/content/ServiceConnection;
 
     :cond_0
-    iput-object v1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->service:Lze7;
+    iput-object v1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->service:Lee7;
 
     return-void
 .end method
@@ -172,11 +172,11 @@
     :try_start_0
     new-instance v1, Lcom/android/installreferrer/api/ReferrerDetails;
 
-    iget-object v2, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->service:Lze7;
+    iget-object v2, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->service:Lee7;
 
-    check-cast v2, Lxe7;
+    check-cast v2, Lce7;
 
-    invoke-virtual {v2, v0}, Lxe7;->i(Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-virtual {v2, v0}, Lce7;->i(Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -220,7 +220,7 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->service:Lze7;
+    iget-object v0, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->service:Lee7;
 
     if-eqz v0, :cond_0
 

@@ -1,55 +1,172 @@
 .class public final Lsj;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lpjd;
+.field public a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lvj;
-
-.field public d:Lvj;
-
-.field public o:Ljava/util/List;
-
-.field public s0:I
+.field public b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lvj;Ll84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lsj;->Z:Lvj;
+    const-class v0, Lsj;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0}, Lctd;->a(Ljava/lang/Class;)Lrd3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lrd3;->c()Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/CharSequence;)Ljava/util/List;
+    .locals 8
 
-    iput-object p1, p0, Lsj;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lsj;->b:Ljava/util/HashMap;
 
-    iget p1, p0, Lsj;->s0:I
+    instance-of v1, p1, Landroid/text/Spanned;
 
-    const/high16 v0, -0x80000000
+    if-eqz v1, :cond_6
 
-    or-int/2addr p1, v0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    iput p1, p0, Lsj;->s0:I
+    move-result v1
 
-    iget-object p1, p0, Lsj;->Z:Lvj;
+    if-nez v1, :cond_0
 
-    const/4 v0, 0x0
+    goto :goto_3
 
-    invoke-virtual {p1, v0, v0, p0}, Lvj;->n(Ljava/util/List;Lpjd;Ll84;)Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    :try_start_0
+    instance-of v5, p1, Landroid/text/Spanned;
+
+    if-eqz v5, :cond_2
+
+    move-object v5, p1
+
+    check-cast v5, Landroid/text/Spanned;
+
+    goto :goto_0
+
+    :cond_2
+    move-object v5, v4
+
+    :goto_0
+    if-eqz v5, :cond_3
+
+    const-class v6, Lo1h;
+
+    invoke-interface {v5, v3, v2, v6}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :cond_3
+    check-cast v4, [Lo1h;
+
+    if-eqz v4, :cond_5
+
+    array-length v2, v4
+
+    :goto_1
+    if-ge v3, v2, :cond_5
+
+    aget-object v5, v4, v3
+
+    :try_start_1
+    move-object v6, p1
+
+    check-cast v6, Landroid/text/Spanned;
+
+    invoke-interface {v6, v5}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v6
+
+    move-object v7, p1
+
+    check-cast v7, Landroid/text/Spanned;
+
+    invoke-interface {v7, v5}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v5
+
+    invoke-interface {p1, v6, v5}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-nez v5, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v5, Ljava/lang/ClassCastException;
+
+    invoke-direct {v5}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v5
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    :goto_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_5
+    new-instance p1, Lt95;
+
+    const/16 v0, 0x8
+
+    invoke-direct {p1, v0}, Lt95;-><init>(I)V
+
+    invoke-static {v1, p1}, Lpi3;->U(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
 
     move-result-object p1
+
+    return-object p1
+
+    :cond_6
+    :goto_3
+    sget-object p1, Ldh5;->a:Ldh5;
 
     return-object p1
 .end method

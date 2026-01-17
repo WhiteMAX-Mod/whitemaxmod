@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;
-.super Ln58;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Llq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->enableFeatureForRoles(Lab1;Ljava/util/Set;Lmq6;Loq6;)V
+    value = Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->enableFeatureForRoles(Lra1;Ljava/util/Set;Llq6;Lnq6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ln58;",
-        "Lmq6;"
+        "Ly48;",
+        "Llq6;"
     }
 .end annotation
 
@@ -43,13 +43,13 @@
 
 
 # instance fields
-.field final synthetic $feature:Lab1;
+.field final synthetic $feature:Lra1;
 
 .field final synthetic $roles:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcl1;",
+            "Lvk1;",
             ">;"
         }
     .end annotation
@@ -59,29 +59,29 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;Lab1;Ljava/util/Set;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;Lra1;Ljava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;",
-            "Lab1;",
+            "Lra1;",
             "Ljava/util/Set<",
             "+",
-            "Lcl1;",
+            "Lvk1;",
             ">;)V"
         }
     .end annotation
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->this$0:Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$feature:Lab1;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$feature:Lra1;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$roles:Ljava/util/Set;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Ln58;-><init>(I)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
@@ -105,11 +105,11 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->this$0:Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->access$getParamsCreator$p(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;)Lcb1;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->access$getParamsCreator$p(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;)Lta1;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$feature:Lab1;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$feature:Lra1;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl$enableFeatureForRoles$params$1;->$roles:Ljava/util/Set;
 
@@ -128,7 +128,7 @@
     invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 5
-    sget-object v3, Lbb1;->$EnumSwitchMapping$0:[I
+    sget-object v3, Lsa1;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -207,10 +207,10 @@
 
     move-result-object v6
 
-    check-cast v6, Lcl1;
+    check-cast v6, Lvk1;
 
     .line 13
-    sget-object v7, Lbb1;->$EnumSwitchMapping$1:[I
+    sget-object v7, Lsa1;->$EnumSwitchMapping$1:[I
 
     invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
 

@@ -1,58 +1,56 @@
-.class public final Lg9h;
+.class public final synthetic Lg9h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Liu1;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;I)V
+    .locals 0
+
+    iput p2, p0, Lg9h;->a:I
+
+    iput-object p1, p0, Lg9h;->b:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lg9h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onUrlSharingInfoUpdated(Lhu1;)V
-    .locals 2
+.method public final run()V
+    .locals 1
 
-    iget-object v0, p0, Lg9h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget v0, p0, Lg9h;->a:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lg9h;->b:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->a(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liu1;
-
-    invoke-interface {v1, p1}, Liu1;->onUrlSharingInfoUpdated(Lhu1;)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lg9h;->b:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->b(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,82 +1,140 @@
 .class public final Lu1c;
-.super Ljava/lang/Object;
+.super Lnzd;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ly1c;
+.field public c:I
 
-.field public final b:Lmd5;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:Lru/ok/messages/photoeditor/ActPhotoEditor;
-
-.field public final d:Lzfd;
-
-.field public e:Lx1c;
+.field public final synthetic o:Landroid/database/Cursor;
 
 
 # direct methods
-.method public constructor <init>(Ly1c;Lmd5;Lru/ok/messages/photoeditor/ActPhotoEditor;Lzfd;Lkd5;ZZZ)V
-    .locals 8
+.method public constructor <init>(Landroid/database/Cursor;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu1c;->o:Landroid/database/Cursor;
 
-    iput-object p1, p0, Lu1c;->a:Ly1c;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lu1c;->b:Lmd5;
+    invoke-direct {p0, p1, p2}, Lnzd;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput-object p0, p2, Lmd5;->b:Lu1c;
+    return-void
+.end method
 
-    iput-object p3, p0, Lu1c;->c:Lru/ok/messages/photoeditor/ActPhotoEditor;
 
-    iget-object p3, p1, Ly1c;->a:Ljava/util/HashSet;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p3, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    check-cast p1, Lkpe;
 
-    iput-object p4, p0, Lu1c;->d:Lzfd;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lx1c;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v6, 0x0
-
-    move v4, p6
-
-    move v5, p7
-
-    move/from16 v7, p8
-
-    invoke-direct/range {v0 .. v7}, Lx1c;-><init>(ZZZZZZZ)V
-
-    iput-object v0, p0, Lu1c;->e:Lx1c;
-
-    invoke-virtual {p1, v0}, Ly1c;->a(Lx1c;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p4, p2, p5, p1}, Lzfd;->b(Lmd5;Lkd5;Z)V
-
-    if-eqz p6, :cond_0
-
-    if-eqz p7, :cond_0
-
-    iget-object p3, p2, Lmd5;->a:Lqd5;
-
-    invoke-virtual {p3, p1}, Lqd5;->setDrawStickerEnabled(Z)V
-
-    invoke-virtual {p2}, Lmd5;->a()Lkd5;
+    invoke-virtual {p0, p1, p2}, Lu1c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 p3, 0x0
+    check-cast p1, Lu1c;
 
-    invoke-virtual {p4, p2, p1, p3}, Lzfd;->b(Lmd5;Lkd5;Z)V
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lu1c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lu1c;
+
+    iget-object v1, p0, Lu1c;->o:Landroid/database/Cursor;
+
+    invoke-direct {v0, v1, p2}, Lu1c;-><init>(Landroid/database/Cursor;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lu1c;->d:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget-object v0, p0, Lu1c;->d:Ljava/lang/Object;
+
+    check-cast v0, Lkpe;
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    iget v2, p0, Lu1c;->c:I
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lu1c;->o:Landroid/database/Cursor;
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    :goto_0
+    :try_start_1
+    invoke-interface {v4}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iput-object v0, p0, Lu1c;->d:Ljava/lang/Object;
+
+    iput v3, p0, Lu1c;->c:I
+
+    invoke-virtual {v0, v4, p0}, Lkpe;->b(Ljava/lang/Object;Lnzd;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-object v1
+
+    :cond_2
+    invoke-interface {v4}, Landroid/database/Cursor;->close()V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :goto_1
+    invoke-interface {v4}, Landroid/database/Cursor;->close()V
+
+    throw p1
 .end method

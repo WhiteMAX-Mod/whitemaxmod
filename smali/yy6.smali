@@ -4,17 +4,20 @@
 
 
 # virtual methods
-.method public abstract e(Landroid/opengl/EGLDisplay;I[I)Landroid/opengl/EGLContext;
+.method public o()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract m(Landroid/opengl/EGLDisplay;Ljava/lang/Object;IZ)Landroid/opengl/EGLSurface;
+.method public p(Lbz6;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract n(III)Lfz6;
-.end method
+.method public r()V
+    .locals 0
 
-.method public abstract p(Landroid/opengl/EGLContext;Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLSurface;
-.end method
-
-.method public abstract s(Landroid/opengl/EGLDisplay;)V
+    return-void
 .end method

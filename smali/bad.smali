@@ -3,6 +3,8 @@
 
 
 # static fields
-.field public static report_drawn:I = 0x7f0a0a1b
+.field public static fragment_container_view_tag:I = 0x7f0a0388
 
-.field public static view_tree_on_back_pressed_dispatcher_owner:I = 0x7f0a0d3a
+.field public static special_effects_controller_view_tag:I = 0x7f0a0bac
+
+.field public static visible_removing_fragment_view_tag:I = 0x7f0a0cf6

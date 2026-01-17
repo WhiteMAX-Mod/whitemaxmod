@@ -3,16 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lowa;
-.implements Lpl7;
+.implements Lxbh;
 
 
 # virtual methods
-.method public abstract e()I
+.method public abstract k()Ldk7;
 .end method
 
-.method public abstract i()J
-.end method
-
-.method public abstract j()Z
+.method public abstract p()Luk7;
 .end method

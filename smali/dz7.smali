@@ -1,57 +1,74 @@
 .class public final Ldz7;
-.super Lvy7;
+.super Ld3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lkz7;
-
-.field public final c:Lez7;
-
-.field public final d:Ldb3;
-
-.field public final o:Ljava/lang/Object;
+# static fields
+.field public static final c:Ldz7;
 
 
 # direct methods
-.method public constructor <init>(Lkz7;Lez7;Ldb3;Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
+    new-instance v0, Ldz7;
 
-    iput-object p1, p0, Ldz7;->b:Lkz7;
+    const/16 v1, 0xc
 
-    iput-object p2, p0, Ldz7;->c:Lez7;
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-    iput-object p3, p0, Ldz7;->d:Ldb3;
-
-    iput-object p4, p0, Ldz7;->o:Ljava/lang/Object;
+    sput-object v0, Ldz7;->c:Ldz7;
 
     return-void
 .end method
 
+.method public static L0(JLjava/lang/String;Ljava/lang/String;Z)Landroid/net/Uri;
+    .locals 2
 
-# virtual methods
-.method public final c()Z
-    .locals 1
+    new-instance v0, Lim4;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Lim4;-><init>()V
 
-    return v0
-.end method
+    const-string v1, ":join"
 
-.method public final d(Ljava/lang/Throwable;)V
-    .locals 3
+    iput-object v1, v0, Lim4;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Ldz7;->d:Ldb3;
+    const-string v1, "id"
 
-    iget-object v0, p0, Ldz7;->o:Ljava/lang/Object;
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v1, p0, Ldz7;->b:Lkz7;
+    move-result-object p0
 
-    iget-object v2, p0, Ldz7;->c:Lez7;
+    invoke-virtual {v0, p0, v1}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v2, p1, v0}, Lkz7;->access$continueCompleting(Lkz7;Lez7;Ldb3;Ljava/lang/Object;)V
+    const-string p0, "link"
 
-    return-void
+    invoke-virtual {v0, p3, p0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p0, "channel"
+
+    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, p0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p0, "no_anim"
+
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p1, p0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-eqz p2, :cond_0
+
+    const-string p0, "title"
+
+    invoke-virtual {v0, p2, p0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_0
+    invoke-virtual {v0}, Lim4;->a()Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -4,36 +4,24 @@
 
 
 # instance fields
-.field public final a:Lwph;
+.field public final a:I
 
-.field public final b:Lzk1;
+.field public final b:Ljava/lang/Object;
 
-.field public final c:Lz8a;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lf1c;)V
-    .locals 1
+.method public constructor <init>(ILjava/util/List;Ljava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lf1c;->b:Ljava/lang/Object;
+    iput p1, p0, Lrv1;->a:I
 
-    check-cast v0, Lwph;
+    iput-object p2, p0, Lrv1;->b:Ljava/lang/Object;
 
-    iput-object v0, p0, Lrv1;->a:Lwph;
-
-    iget-object v0, p1, Lf1c;->a:Ljava/lang/Object;
-
-    check-cast v0, Lzk1;
-
-    iput-object v0, p0, Lrv1;->b:Lzk1;
-
-    iget-object p1, p1, Lf1c;->c:Ljava/lang/Object;
-
-    check-cast p1, Lz8a;
-
-    iput-object p1, p0, Lrv1;->c:Lz8a;
+    iput-object p3, p0, Lrv1;->c:Ljava/lang/Object;
 
     return-void
 .end method
@@ -41,81 +29,94 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    const/4 v1, 0x0
+    instance-of v0, p1, Lrv1;
 
-    if-eqz p1, :cond_2
-
-    const-class v2, Lrv1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
     check-cast p1, Lrv1;
 
-    iget-object v2, p0, Lrv1;->a:Lwph;
+    iget v0, p0, Lrv1;->a:I
 
-    iget-object v3, p1, Lrv1;->a:Lwph;
+    iget v1, p1, Lrv1;->a:I
 
-    if-ne v2, v3, :cond_2
+    if-eq v0, v1, :cond_2
 
-    iget-object v2, p0, Lrv1;->b:Lzk1;
+    goto :goto_0
 
-    iget-object v3, p1, Lrv1;->b:Lzk1;
+    :cond_2
+    iget-object v0, p0, Lrv1;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2, v3}, Lzk1;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p1, Lrv1;->b:Ljava/lang/Object;
 
-    move-result v2
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v2, :cond_2
+    move-result v0
 
-    iget-object v2, p0, Lrv1;->c:Lz8a;
+    if-nez v0, :cond_3
 
-    iget-object p1, p1, Lrv1;->c:Lz8a;
+    goto :goto_0
 
-    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :cond_3
+    iget-object v0, p0, Lrv1;->c:Ljava/lang/Object;
+
+    iget-object p1, p1, Lrv1;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-nez p1, :cond_4
 
-    return v0
-
-    :cond_2
     :goto_0
-    return v1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lrv1;->b:Lzk1;
+    iget v0, p0, Lrv1;->a:I
 
-    iget-object v1, p0, Lrv1;->c:Lz8a;
-
-    iget-object v2, p0, Lrv1;->a:Lwph;
-
-    filled-new-array {v2, v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lrv1;->b:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lrv1;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
 
     return v0
 .end method
@@ -125,31 +126,31 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CallVideoTrackParticipantKey{"
+    const-string v1, "Attendee(totalCount="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lrv1;->b:Lzk1;
+    iget v1, p0, Lrv1;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrv1;->a:Lwph;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mid="
+    const-string v1, ", addedParticipantIds="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lrv1;->c:Lz8a;
+    iget-object v1, p0, Lrv1;->b:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string v1, ", removedParticipantIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrv1;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

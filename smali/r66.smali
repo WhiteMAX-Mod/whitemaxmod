@@ -1,92 +1,119 @@
 .class public final Lr66;
-.super Ljava/lang/Object;
+.super Luhc;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lr66;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public a:I
-
-.field public b:I
+.field public static final c:Lr66;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lwj4;
+    new-instance v0, Lr66;
 
-    const/16 v1, 0xd
+    sget-object v1, Lv66;->a:Lv66;
 
-    invoke-direct {v0, v1}, Lwj4;-><init>(I)V
+    invoke-direct {v0, v1}, Luhc;-><init>(La38;)V
 
-    sput-object v0, Lr66;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lr66;->c:Lr66;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, [F
 
-    return v0
+    array-length p1, p1
+
+    return p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final j(Lqp3;ILjava/lang/Object;)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p3, Lq66;
 
-    const-string v1, "SavedState{mAnchorPosition="
+    iget-object v0, p0, Luhc;->b:Lthc;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {p1, v0, p2}, Lqp3;->h(Lthc;I)F
 
-    iget v1, p0, Lr66;->a:I
+    move-result p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p3}, Lshc;->c(Lshc;)V
 
-    const-string v1, ", mAnchorOffset="
+    iget-object p2, p3, Lq66;->a:[F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p3, Lq66;->b:I
 
-    iget v1, p0, Lr66;->b:I
+    add-int/lit8 v1, v0, 0x1
 
-    const/16 v2, 0x7d
+    iput v1, p3, Lq66;->b:I
 
-    invoke-static {v0, v1, v2}, Lxd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    aput p1, p2, v0
 
-    move-result-object v0
+    return-void
+.end method
+
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, [F
+
+    new-instance v0, Lq66;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lq66;->a:[F
+
+    array-length p1, p1
+
+    iput p1, v0, Lq66;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Lq66;->b(I)V
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final n()Ljava/lang/Object;
+    .locals 1
 
-    iget p2, p0, Lr66;->a:I
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    new-array v0, v0, [F
 
-    iget p2, p0, Lr66;->b:I
+    return-object v0
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
+    .locals 3
 
+    check-cast p2, [F
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p3, :cond_0
+
+    aget v1, p2, v0
+
+    iget-object v2, p0, Luhc;->b:Lthc;
+
+    invoke-virtual {p1, v2, v0}, Lkotlinx/serialization/json/internal/b;->g(Lxpe;I)V
+
+    invoke-virtual {p1, v1}, Lkotlinx/serialization/json/internal/b;->h(F)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

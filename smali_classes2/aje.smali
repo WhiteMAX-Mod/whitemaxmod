@@ -1,67 +1,26 @@
-.class public interface abstract Laje;
+.class public abstract Laje;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfze;
+.implements Ljava/io/Serializable;
 
 
-# virtual methods
-.method public abstract a()I
-.end method
+# instance fields
+.field public final a:I
 
-.method public b()Lghg;
-    .locals 1
+.field public final b:Ljava/lang/String;
 
-    const/4 v0, 0x0
 
-    return-object v0
-.end method
+# direct methods
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 0
 
-.method public c()Luye;
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput p1, p0, Laje;->a:I
 
-    return-object v0
-.end method
+    iput-object p2, p0, Laje;->b:Ljava/lang/String;
 
-.method public d()Lghg;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public e()Lcze;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public f()Ln68;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public getType()Leze;
-    .locals 1
-
-    sget-object v0, Leze;->b:Leze;
-
-    return-object v0
+    return-void
 .end method

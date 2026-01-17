@@ -1,19 +1,30 @@
-.class public final Lq4a;
+.class public interface abstract Lq4a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
 
-# instance fields
-.field public final a:Lp4a;
 
+# virtual methods
+.method public l()Loj6;
+    .locals 1
 
-# direct methods
-.method public constructor <init>(Lp4a;)V
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public o()[B
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public p(Lj59;)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lq4a;->a:Lp4a;
 
     return-void
 .end method

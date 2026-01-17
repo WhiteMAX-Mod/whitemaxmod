@@ -1,27 +1,13 @@
-.class public final Lyhg;
+.class public abstract Lyhg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(IILjava/lang/String;)V
+.method public static a(Landroid/widget/TextView;IF)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lyhg;->a:I
-
-    iput p2, p0, Lyhg;->b:I
-
-    iput-object p3, p0, Lyhg;->c:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setLineHeight(IF)V
 
     return-void
 .end method

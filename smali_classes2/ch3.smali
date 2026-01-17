@@ -3,78 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lfh3;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lth7;
-
-.field public final synthetic c:Lqg3;
+# static fields
+.field public static final a:Lch3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfh3;Lth7;Lqg3;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p4, p0, Lch3;->a:I
+    new-instance v0, Lch3;
 
-    iput-object p2, p0, Lch3;->b:Lth7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lch3;->c:Lqg3;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lch3;->a:Lch3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lch3;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lch3;->c:Lqg3;
+    return v0
 
-    sget-object v1, Lrg3;->a:Lrg3;
+    :cond_0
+    instance-of p1, p1, Lch3;
 
-    iget-object v2, p0, Lch3;->b:Lth7;
+    if-nez p1, :cond_1
 
-    invoke-static {v2, v0, v1}, Lfh3;->n(Lth7;Lqg3;Lug3;)V
+    const/4 p1, 0x0
 
-    return-void
+    return p1
 
-    :pswitch_0
-    iget-object v0, p0, Lch3;->c:Lqg3;
+    :cond_1
+    return v0
+.end method
 
-    sget-object v1, Ltg3;->a:Ltg3;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v2, p0, Lch3;->b:Lth7;
+    const v0, -0x2855ca51
 
-    invoke-static {v2, v0, v1}, Lfh3;->n(Lth7;Lqg3;Lug3;)V
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :pswitch_1
-    iget-object v0, p0, Lch3;->c:Lqg3;
+    const-string v0, "Downloaded"
 
-    sget-object v1, Ltg3;->a:Ltg3;
-
-    iget-object v2, p0, Lch3;->b:Lth7;
-
-    invoke-static {v2, v0, v1}, Lfh3;->n(Lth7;Lqg3;Lug3;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

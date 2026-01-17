@@ -1,349 +1,144 @@
 .class public final Lsqi;
-.super Lnk0;
+.super Lr0e;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:I
+.field public final a:Landroid/app/PendingIntent;
 
-.field public f:Lkif;
-
-.field public final g:Ljava/util/ArrayList;
-
-.field public final h:Ljava/lang/Object;
-
-.field public i:Landroid/content/Context;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Ladb;Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(Landroid/app/PendingIntent;Z)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lsqi;->e:I
+    if-eqz p1, :cond_0
 
-    .line 1
-    invoke-direct {p0}, Lnk0;-><init>()V
+    iput-object p1, p0, Lsqi;->a:Landroid/app/PendingIntent;
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    .line 2
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lsqi;->g:Ljava/util/ArrayList;
-
-    iput-object p1, p0, Lsqi;->h:Ljava/lang/Object;
-
-    iput-object p2, p0, Lsqi;->i:Landroid/content/Context;
+    iput-boolean p2, p0, Lsqi;->b:Z
 
     return-void
-.end method
 
-.method public constructor <init>(Lcom/google/android/gms/maps/SupportMapFragment;)V
-    .locals 1
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const/4 v0, 0x1
+    const-string p2, "Null pendingIntent"
 
-    iput v0, p0, Lsqi;->e:I
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    .line 3
-    invoke-direct {p0}, Lnk0;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    .line 4
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lsqi;->g:Ljava/util/ArrayList;
-
-    iput-object p1, p0, Lsqi;->h:Ljava/lang/Object;
-
-    return-void
+    throw p1
 .end method
 
 
 # virtual methods
-.method public A()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget-object v0, p0, Lsqi;->i:Landroid/content/Context;
+    const/4 v0, 0x1
 
-    check-cast v0, Landroid/app/Activity;
+    if-ne p1, p0, :cond_0
 
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lsqi;->f:Lkif;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lnk0;->a:Ljava/lang/Object;
-
-    check-cast v1, Lp88;
-
-    if-nez v1, :cond_2
-
-    :try_start_0
-    const-class v1, Lht8;
-
-    monitor-enter v1
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Lcom/google/android/gms/common/GooglePlayServicesNotAvailableException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :try_start_1
-    invoke-static {v0}, Lht8;->c(Landroid/content/Context;)I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    monitor-exit v1
-
-    iget-object v0, p0, Lsqi;->i:Landroid/content/Context;
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-static {v0}, Li9j;->d(Landroid/content/Context;)Lqxi;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsqi;->i:Landroid/content/Context;
-
-    check-cast v1, Landroid/app/Activity;
-
-    new-instance v2, Laxa;
-
-    invoke-direct {v2, v1}, Laxa;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Lqxi;->Z(Laxa;)Lr9j;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    iget-object v1, p0, Lsqi;->f:Lkif;
+    instance-of v1, p1, Lr0e;
 
-    new-instance v2, Lxri;
+    const/4 v2, 0x0
 
-    iget-object v3, p0, Lsqi;->h:Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    check-cast v3, Lcom/google/android/gms/maps/SupportMapFragment;
+    check-cast p1, Lr0e;
 
-    invoke-direct {v2, v3, v0}, Lxri;-><init>(Lcom/google/android/gms/maps/SupportMapFragment;Lr9j;)V
+    move-object v1, p1
 
-    invoke-virtual {v1, v2}, Lkif;->b(Lp88;)V
+    check-cast v1, Lsqi;
 
-    iget-object v0, p0, Lsqi;->g:Ljava/util/ArrayList;
+    iget-object v1, v1, Lsqi;->a:Landroid/app/PendingIntent;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v3, p0, Lsqi;->a:Landroid/app/PendingIntent;
 
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lx1b;
-
-    iget-object v3, p0, Lnk0;->a:Ljava/lang/Object;
-
-    check-cast v3, Lp88;
-
-    check-cast v3, Lxri;
-
-    invoke-virtual {v3, v2}, Lxri;->a(Lx1b;)V
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Lcom/google/android/gms/common/GooglePlayServicesNotAvailableException; {:try_start_2 .. :try_end_2} :catch_1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    throw v0
-    :try_end_4
-    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
-    .catch Lcom/google/android/gms/common/GooglePlayServicesNotAvailableException; {:try_start_4 .. :try_end_4} :catch_1
-
-    :goto_1
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_1
-    :cond_2
-    :goto_2
-    return-void
-.end method
-
-.method public final l(Lkif;)V
-    .locals 3
-
-    iget v0, p0, Lsqi;->e:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iput-object p1, p0, Lsqi;->f:Lkif;
-
-    invoke-virtual {p0}, Lsqi;->A()V
-
-    return-void
-
-    :pswitch_0
-    iput-object p1, p0, Lsqi;->f:Lkif;
-
-    iget-object p1, p0, Lnk0;->a:Ljava/lang/Object;
-
-    check-cast p1, Lp88;
-
-    if-nez p1, :cond_2
-
-    :try_start_0
-    iget-object p1, p0, Lsqi;->i:Landroid/content/Context;
-
-    const-class v0, Lht8;
-
-    monitor-enter v0
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Lcom/google/android/gms/common/GooglePlayServicesNotAvailableException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :try_start_1
-    invoke-static {p1}, Lht8;->c(Landroid/content/Context;)I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    monitor-exit v0
-
-    invoke-static {p1}, Li9j;->d(Landroid/content/Context;)Lqxi;
-
-    move-result-object v0
-
-    new-instance v1, Laxa;
-
-    invoke-direct {v1, p1}, Laxa;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lqxi;->a0(Laxa;)Lwbj;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    iget-object v0, p0, Lsqi;->f:Lkif;
-
-    new-instance v1, Lqqi;
-
-    iget-object v2, p0, Lsqi;->h:Ljava/lang/Object;
-
-    check-cast v2, Ladb;
-
-    invoke-direct {v1, v2, p1}, Lqqi;-><init>(Ladb;Lwbj;)V
-
-    invoke-virtual {v0, v1}, Lkif;->b(Lp88;)V
-
-    iget-object p1, p0, Lsqi;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v3, v1}, Landroid/app/PendingIntent;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast p1, Lsqi;
 
-    move-result-object v1
+    iget-boolean p1, p1, Lsqi;->b:Z
 
-    check-cast v1, Lx1b;
+    iget-boolean v1, p0, Lsqi;->b:Z
 
-    iget-object v2, p0, Lnk0;->a:Ljava/lang/Object;
+    if-ne v1, p1, :cond_1
 
-    check-cast v2, Lp88;
+    return v0
 
-    check-cast v2, Lqqi;
+    :cond_1
+    return v2
+.end method
 
-    invoke-virtual {v2, v1}, Lqqi;->a(Lx1b;)V
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lsqi;->a:Landroid/app/PendingIntent;
+
+    invoke-virtual {v0}, Landroid/app/PendingIntent;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    const/4 v2, 0x1
+
+    iget-boolean v3, p0, Lsqi;->b:Z
+
+    if-eq v2, v3, :cond_0
+
+    const/16 v2, 0x4d5
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
+    :cond_0
+    const/16 v2, 0x4cf
 
-    goto :goto_1
+    :goto_0
+    mul-int/2addr v0, v1
 
-    :cond_1
-    invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Lcom/google/android/gms/common/GooglePlayServicesNotAvailableException; {:try_start_2 .. :try_end_2} :catch_1
+    xor-int/2addr v0, v2
 
-    goto :goto_2
+    return v0
+.end method
 
-    :catchall_0
-    move-exception p1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    iget-object v0, p0, Lsqi;->a:Landroid/app/PendingIntent;
 
-    :try_start_4
-    throw p1
-    :try_end_4
-    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
-    .catch Lcom/google/android/gms/common/GooglePlayServicesNotAvailableException; {:try_start_4 .. :try_end_4} :catch_1
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    :goto_1
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+    move-result-object v0
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    const-string v1, "ReviewInfo{pendingIntent="
 
-    throw v0
+    const-string v2, ", isNoOp="
 
-    :catch_1
-    :cond_2
-    :goto_2
-    return-void
+    invoke-static {v1, v0, v2}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object v0
+
+    iget-boolean v1, p0, Lsqi;->b:Z
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

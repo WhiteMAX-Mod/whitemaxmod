@@ -1,10 +1,10 @@
 .class public final Lkqa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lvd2;
+.field public c:Lod2;
 
 .field public d:J
 
@@ -12,17 +12,17 @@
 
 
 # direct methods
-.method public constructor <init>(Lgr9;)V
+.method public constructor <init>(Lpq9;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
+    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
+.method public final d(Lpq9;Ljava/lang/String;)V
     .locals 4
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -88,21 +88,21 @@
 
     packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {p1}, Lgr9;->y()V
+    invoke-virtual {p1}, Lpq9;->B()V
 
     return-void
 
     :pswitch_0
-    invoke-static {p1}, Lvd2;->a(Lgr9;)Lvd2;
+    invoke-static {p1}, Lod2;->a(Lpq9;)Lod2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lkqa;->c:Lvd2;
+    iput-object p1, p0, Lkqa;->c:Lod2;
 
     return-void
 
     :pswitch_1
-    invoke-static {p1, v2, v3}, Lisi;->m(Lgr9;J)J
+    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
 
     move-result-wide p1
 
@@ -111,7 +111,7 @@
     return-void
 
     :pswitch_2
-    invoke-static {p1, v2, v3}, Lisi;->m(Lgr9;J)J
+    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
 
     move-result-wide p1
 
@@ -141,13 +141,13 @@
 
     iget-wide v2, p0, Lkqa;->o:J
 
-    iget-object v4, p0, Lkqa;->c:Lvd2;
+    iget-object v4, p0, Lkqa;->c:Lod2;
 
     const-string v5, "{startTime="
 
     const-string v6, ", endTime="
 
-    invoke-static {v0, v1, v5, v6}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v5, v6}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

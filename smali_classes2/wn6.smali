@@ -9,16 +9,20 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lxn6;
+.field public final synthetic b:Lyn6;
+
+.field public final synthetic c:Lmo6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxn6;I)V
+.method public synthetic constructor <init>(Lyn6;Lmo6;I)V
     .locals 0
 
-    iput p2, p0, Lwn6;->a:I
+    iput p3, p0, Lwn6;->a:I
 
-    iput-object p1, p0, Lwn6;->b:Lxn6;
+    iput-object p1, p0, Lwn6;->b:Lyn6;
+
+    iput-object p2, p0, Lwn6;->c:Lmo6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,63 +32,26 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 2
 
     iget v0, p0, Lwn6;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lwn6;->b:Lxn6;
+    iget-object v0, p0, Lwn6;->b:Lyn6;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lwn6;->c:Lmo6;
 
-    iput-boolean v1, v0, Lxn6;->s0:Z
-
-    iget-object v2, v0, Lxn6;->X:Lorg/webrtc/ScreenCapturerAndroid;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v0, Lxn6;->X:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v2}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
-
-    :cond_0
-    const/4 v2, 0x0
-
-    iput-object v2, v0, Lxn6;->X:Lorg/webrtc/ScreenCapturerAndroid;
-
-    iput-boolean v1, v0, Lxn6;->t0:Z
-
-    iget-object v1, v0, Lxn6;->o:Lorg/webrtc/SurfaceTextureHelper;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lxn6;->o:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-virtual {v1}, Lorg/webrtc/SurfaceTextureHelper;->dispose()V
-
-    :cond_1
-    iput-object v2, v0, Lxn6;->o:Lorg/webrtc/SurfaceTextureHelper;
+    iput-object v1, v0, Lyn6;->Z:Lmo6;
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lwn6;->b:Lxn6;
+    iget-object v0, p0, Lwn6;->b:Lyn6;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lwn6;->c:Lmo6;
 
-    iput-boolean v1, v0, Lxn6;->s0:Z
-
-    iget-object v2, v0, Lxn6;->X:Lorg/webrtc/ScreenCapturerAndroid;
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, v0, Lxn6;->X:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v2}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
-
-    :cond_2
-    iput-boolean v1, v0, Lxn6;->t0:Z
+    iput-object v1, v0, Lyn6;->Y:Lmo6;
 
     return-void
 

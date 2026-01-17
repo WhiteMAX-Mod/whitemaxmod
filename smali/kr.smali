@@ -1,212 +1,134 @@
 .class public final Lkr;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ler6;
+.implements Lbr6;
 
 
 # instance fields
-.field public synthetic X:Lplb;
+.field public X:I
 
-.field public final synthetic Y:Landroid/widget/TextView;
+.field public final synthetic Y:Lwv2;
 
 .field public final synthetic Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-.field public synthetic o:Landroid/widget/LinearLayout;
-
-.field public final synthetic s0:Landroid/widget/TextView;
-
-.field public final synthetic t0:Landroid/widget/TextView;
-
-.field public final synthetic u0:Landroid/graphics/drawable/ShapeDrawable;
-
-.field public final synthetic v0:Lyv2;
+.field public o:Lwv2;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Lyv2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lwv2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lkr;->Y:Landroid/widget/TextView;
+    iput-object p1, p0, Lkr;->Y:Lwv2;
 
     iput-object p2, p0, Lkr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    iput-object p3, p0, Lkr;->s0:Landroid/widget/TextView;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lkr;->t0:Landroid/widget/TextView;
-
-    iput-object p5, p0, Lkr;->u0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iput-object p6, p0, Lkr;->v0:Lyv2;
-
-    const/4 p1, 0x3
-
-    invoke-direct {p0, p1, p7}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Landroid/widget/LinearLayout;
+    check-cast p1, Lzb4;
 
-    check-cast p2, Lplb;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-object v7, p3
+    invoke-virtual {p0, p1, p2}, Lkr;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v7, Lkotlin/coroutines/Continuation;
+    move-result-object p1
 
-    new-instance v0, Lkr;
+    check-cast p1, Lkr;
 
-    iget-object v5, p0, Lkr;->u0:Landroid/graphics/drawable/ShapeDrawable;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object v6, p0, Lkr;->v0:Lyv2;
+    invoke-virtual {p1, p2}, Lkr;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lkr;->Y:Landroid/widget/TextView;
+    move-result-object p1
 
-    iget-object v2, p0, Lkr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    return-object p1
+.end method
 
-    iget-object v3, p0, Lkr;->s0:Landroid/widget/TextView;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v4, p0, Lkr;->t0:Landroid/widget/TextView;
+    new-instance p1, Lkr;
 
-    invoke-direct/range {v0 .. v7}, Lkr;-><init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Lyv2;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lkr;->Y:Lwv2;
 
-    iput-object p1, v0, Lkr;->o:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lkr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    iput-object p2, v0, Lkr;->X:Lplb;
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    invoke-virtual {v0, p1}, Lkr;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Lkr;-><init>(Lwv2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget v0, p0, Lkr;->X:I
 
-    iget-object p1, p0, Lkr;->o:Landroid/widget/LinearLayout;
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Lkr;->X:Lplb;
+    if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lplb;->b()Lxf0;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v1
+    iget-object v0, p0, Lkr;->o:Lwv2;
 
-    iget v1, v1, Lxf0;->k:I
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
+    goto :goto_0
 
-    invoke-interface {v0}, Lplb;->getText()Lifg;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object p1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget p1, p1, Lifg;->g:I
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lkr;->Y:Landroid/widget/TextView;
+    throw p1
 
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lz28;
 
     iget-object p1, p0, Lkr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    iget-object v1, p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->d:Ljkd;
-
-    sget-object v2, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lp38;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, p1, v2}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    invoke-interface {v0}, Lplb;->getText()Lifg;
-
-    move-result-object v2
-
-    iget v2, v2, Lifg;->e:I
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {v0}, Lplb;->getText()Lifg;
-
-    move-result-object v1
-
-    iget v1, v1, Lifg;->g:I
-
-    iget-object v2, p0, Lkr;->s0:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {v0}, Lplb;->getText()Lifg;
-
-    move-result-object v1
-
-    iget v1, v1, Lifg;->g:I
-
-    iget-object v2, p0, Lkr;->t0:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
-
-    move-result-object v1
-
-    new-instance v2, Ljr;
-
-    iget-object v3, p0, Lkr;->v0:Lyv2;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v3, p1, v4}, Ljr;-><init>(Lyv2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v3, 0x3
-
-    invoke-static {v1, v4, v4, v2, v3}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    invoke-interface {v0}, Lplb;->b()Lxf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lxf0;->h:I
-
-    iget-object v1, p0, Lkr;->u0:Landroid/graphics/drawable/ShapeDrawable;
-
-    invoke-static {v1, v0}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
-
-    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Las;
+    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Lbs;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Las;->y()Lbbg;
+    iget-object v0, p0, Lkr;->Y:Lwv2;
 
-    move-result-object v0
+    iput-object v0, p0, Lkr;->o:Lwv2;
 
-    check-cast v0, Lb9b;
+    iput v1, p0, Lkr;->X:I
 
-    invoke-virtual {v0}, Lb9b;->a()Ltb4;
+    invoke-virtual {p1, p0}, Lbs;->w(Lo84;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v1, Lzr;
+    sget-object v1, Lac4;->a:Lac4;
 
-    invoke-direct {v1, p1, v4}, Lzr;-><init>(Las;Lkotlin/coroutines/Continuation;)V
+    if-ne p1, v1, :cond_2
 
-    const/4 v2, 0x2
+    return-object v1
 
-    invoke-static {p1, v0, v1, v2}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
+    :cond_2
+    :goto_0
+    check-cast p1, Lvv2;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0, p1}, Lwv2;->a(Lvv2;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

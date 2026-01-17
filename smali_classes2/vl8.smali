@@ -1,39 +1,45 @@
-.class public final Lvl8;
-.super Lzp;
+.class public abstract synthetic Lvl8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lvl8;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lvl8;
-
-    invoke-direct {v0}, Lzp;-><init>()V
-
-    sput-object v0, Lvl8;->a:Lvl8;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ld68;
     .locals 2
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu5;
+    invoke-static {}, Lfq9;->values()[Lfq9;
 
     move-result-object v0
 
-    const/16 v1, 0x20b
+    array-length v0, v0
 
-    invoke-virtual {v0, v1}, Lu5;->d(I)Lz7g;
+    new-array v0, v0, [I
 
-    move-result-object v0
+    :try_start_0
+    sget-object v1, Lfq9;->a:Ljava/util/HashMap;
 
-    return-object v0
+    const/4 v1, 0x1
+
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Lfq9;->a:Ljava/util/HashMap;
+
+    const/4 v1, 0x2
+
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Lvl8;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

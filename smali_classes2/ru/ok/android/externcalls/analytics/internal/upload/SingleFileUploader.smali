@@ -30,7 +30,7 @@
         "autoDetectContentCompression",
         "<init>",
         "(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZZ)V",
-        "Lv2h;",
+        "Lb3h;",
         "upload",
         "()V",
         "getSink",
@@ -67,7 +67,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader;->Companion:Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$Companion;
 
@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZZILro4;)V
+.method public synthetic constructor <init>(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZZILso4;)V
     .locals 7
 
     and-int/lit8 p7, p7, 0x8
@@ -150,7 +150,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$getSink$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lmq6;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
 
     move-result-object v0
 

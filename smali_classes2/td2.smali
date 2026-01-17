@@ -1,91 +1,63 @@
 .class public final Ltd2;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public A:Z
+.field public X:Lnd2;
 
-.field public B:J
+.field public Y:Lqd8;
 
-.field public C:Ljava/util/LinkedHashMap;
+.field public Z:Lqd8;
 
-.field public D:Lweh;
+.field public d:J
 
-.field public E:Z
+.field public o:Ljava/lang/String;
 
-.field public F:Z
+.field public t0:Z
 
-.field public G:J
+.field public synthetic u0:Ljava/lang/Object;
 
-.field public H:Ljava/util/LinkedHashMap;
+.field public final synthetic v0:Lud2;
 
-.field public I:J
+.field public w0:I
 
-.field public J:Z
 
-.field public K:J
+# direct methods
+.method public constructor <init>(Lud2;Lo84;)V
+    .locals 0
 
-.field public L:Ljava/lang/String;
+    iput-object p1, p0, Ltd2;->v0:Lud2;
 
-.field public M:J
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public N:J
+    return-void
+.end method
 
-.field public O:I
 
-.field public P:I
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-.field public Q:I
+    iput-object p1, p0, Ltd2;->u0:Ljava/lang/Object;
 
-.field public a:J
+    iget p1, p0, Ltd2;->w0:I
 
-.field public b:Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-.field public c:J
+    or-int/2addr p1, v0
 
-.field public d:Ljava/util/LinkedHashMap;
+    iput p1, p0, Ltd2;->w0:I
 
-.field public e:J
+    const-wide/16 v0, 0x0
 
-.field public f:Ljava/lang/String;
+    const/4 p1, 0x0
 
-.field public g:Ljava/lang/String;
+    iget-object v2, p0, Ltd2;->v0:Lud2;
 
-.field public h:Ljava/lang/String;
+    invoke-virtual {v2, v0, v1, p0, p1}, Lud2;->b(JLo84;Ljava/lang/String;)Ljava/io/Serializable;
 
-.field public i:Lrl9;
+    move-result-object p1
 
-.field public j:J
-
-.field public k:J
-
-.field public l:I
-
-.field public m:J
-
-.field public n:Ljava/lang/String;
-
-.field public o:Llxd;
-
-.field public p:I
-
-.field public q:Lq37;
-
-.field public r:I
-
-.field public s:Ljava/lang/String;
-
-.field public t:Lh00;
-
-.field public u:I
-
-.field public v:Lnv2;
-
-.field public w:Llw2;
-
-.field public x:Lrl9;
-
-.field public y:Z
-
-.field public z:Z
+    return-object p1
+.end method

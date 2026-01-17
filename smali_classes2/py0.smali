@@ -1,70 +1,167 @@
-.class public final Lpy0;
-.super Ljava/lang/Object;
+.class public final enum Lpy0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final enum X:Lpy0;
+
+.field public static final enum Y:Lpy0;
+
+.field public static final enum Z:Lpy0;
+
+.field public static final enum b:Lpy0;
+
+.field public static final enum c:Lpy0;
+
+.field public static final enum d:Lpy0;
+
+.field public static final enum o:Lpy0;
+
+.field public static final enum t0:Lpy0;
+
+.field public static final u0:[Lpy0;
+
+.field public static final synthetic v0:[Lpy0;
 
 
 # instance fields
-.field public final X:Z
-
-.field public final Y:J
-
-.field public final a:Lny0;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lmy0;
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ldg;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 10
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpy0;
 
-    iget-object v0, p1, Ldg;->c:Ljava/lang/Object;
+    const-string v1, "CALLBACK"
 
-    check-cast v0, Lny0;
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lpy0;->a:Lny0;
+    invoke-direct {v0, v1, v2, v1}, Lpy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iget-object v0, p1, Ldg;->d:Ljava/lang/Object;
+    sput-object v0, Lpy0;->b:Lpy0;
 
-    check-cast v0, Ljava/lang/String;
+    new-instance v1, Lpy0;
 
-    iput-object v0, p0, Lpy0;->b:Ljava/lang/String;
+    const-string v2, "LINK"
 
-    iget-object v0, p1, Ldg;->e:Ljava/lang/Object;
+    const/4 v3, 0x1
 
-    check-cast v0, Lmy0;
+    invoke-direct {v1, v2, v3, v2}, Lpy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-object v0, p0, Lpy0;->c:Lmy0;
+    sput-object v1, Lpy0;->c:Lpy0;
 
-    iget-object v0, p1, Ldg;->f:Ljava/lang/Object;
+    new-instance v2, Lpy0;
 
-    check-cast v0, Ljava/lang/String;
+    const-string v3, "REQUEST_CONTACT"
 
-    iput-object v0, p0, Lpy0;->d:Ljava/lang/String;
+    const/4 v4, 0x2
 
-    iget-object v0, p1, Ldg;->g:Ljava/lang/Object;
+    invoke-direct {v2, v3, v4, v3}, Lpy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    check-cast v0, Ljava/lang/String;
+    sput-object v2, Lpy0;->d:Lpy0;
 
-    iput-object v0, p0, Lpy0;->o:Ljava/lang/String;
+    new-instance v3, Lpy0;
 
-    iget-boolean v0, p1, Ldg;->a:Z
+    const-string v4, "REQUEST_GEO_LOCATION"
 
-    iput-boolean v0, p0, Lpy0;->X:Z
+    const/4 v5, 0x3
 
-    iget-wide v0, p1, Ldg;->b:J
+    invoke-direct {v3, v4, v5, v4}, Lpy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-wide v0, p0, Lpy0;->Y:J
+    sput-object v3, Lpy0;->o:Lpy0;
+
+    new-instance v4, Lpy0;
+
+    const-string v5, "CHAT"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v5}, Lpy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lpy0;->X:Lpy0;
+
+    new-instance v5, Lpy0;
+
+    const-string v6, "OPEN_APP"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v6}, Lpy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lpy0;->Y:Lpy0;
+
+    new-instance v6, Lpy0;
+
+    const-string v7, "MESSAGE"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v7}, Lpy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lpy0;->Z:Lpy0;
+
+    new-instance v7, Lpy0;
+
+    const-string v8, "UNKNOWN"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v8}, Lpy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lpy0;->t0:Lpy0;
+
+    filled-new-array/range {v0 .. v7}, [Lpy0;
+
+    move-result-object v0
+
+    sput-object v0, Lpy0;->v0:[Lpy0;
+
+    invoke-static {}, Lpy0;->values()[Lpy0;
+
+    move-result-object v0
+
+    sput-object v0, Lpy0;->u0:[Lpy0;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lpy0;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lpy0;
+    .locals 1
+
+    const-class v0, Lpy0;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lpy0;
+
+    return-object p0
+.end method
+
+.method public static values()[Lpy0;
+    .locals 1
+
+    sget-object v0, Lpy0;->v0:[Lpy0;
+
+    invoke-virtual {v0}, [Lpy0;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lpy0;
+
+    return-object v0
 .end method

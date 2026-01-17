@@ -3,34 +3,36 @@
 
 
 # static fields
-.field public static EmojiEditText:[I
+.field public static TextAppearance_MediaRouter_Dynamic_Body:I = 0x7f14032a
 
-.field public static EmojiEditText_maxEmojiCount:I
+.field public static TextAppearance_MediaRouter_Dynamic_Body_Light:I = 0x7f14032b
 
-.field public static EmojiExtractTextLayout:[I
+.field public static TextAppearance_MediaRouter_Dynamic_Header:I = 0x7f14032c
 
-.field public static EmojiExtractTextLayout_emojiReplaceStrategy:I
+.field public static TextAppearance_MediaRouter_Dynamic_Header_Light:I = 0x7f14032d
 
+.field public static TextAppearance_MediaRouter_Dynamic_Metadata_PrimaryText:I = 0x7f14032e
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.field public static TextAppearance_MediaRouter_Dynamic_Metadata_SecondaryText:I = 0x7f14032f
 
-    const v0, 0x7f040647
+.field public static TextAppearance_MediaRouter_PrimaryText:I = 0x7f140330
 
-    filled-new-array {v0}, [I
+.field public static TextAppearance_MediaRouter_SecondaryText:I = 0x7f140331
 
-    move-result-object v0
+.field public static TextAppearance_MediaRouter_Title:I = 0x7f140332
 
-    sput-object v0, Lpfd;->EmojiEditText:[I
+.field public static ThemeOverlay_MediaRouter_Dark:I = 0x7f140421
 
-    const v0, 0x7f040377
+.field public static ThemeOverlay_MediaRouter_Light:I = 0x7f140422
 
-    filled-new-array {v0}, [I
+.field public static Theme_MediaRouter:I = 0x7f1403a0
 
-    move-result-object v0
+.field public static Theme_MediaRouter_Light:I = 0x7f1403a1
 
-    sput-object v0, Lpfd;->EmojiExtractTextLayout:[I
+.field public static Theme_MediaRouter_LightControlPanel:I = 0x7f1403a3
 
-    return-void
-.end method
+.field public static Theme_MediaRouter_Light_DarkControlPanel:I = 0x7f1403a2
+
+.field public static Widget_MediaRouter_Light_MediaRouteButton:I = 0x7f140699
+
+.field public static Widget_MediaRouter_MediaRouteButton:I = 0x7f14069a

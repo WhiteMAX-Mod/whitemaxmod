@@ -4,26 +4,26 @@
 
 
 # instance fields
-.field public final a:La4g;
+.field public final a:Lp5g;
 
-.field public final b:La4g;
+.field public final b:Lp5g;
 
 .field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(La4g;La4g;Ljava/util/ArrayList;)V
+.method public constructor <init>(Lp5g;Lp5g;Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
-    iput-object p1, p0, Lxa0;->a:La4g;
+    iput-object p1, p0, Lxa0;->a:Lp5g;
 
     if-eqz p2, :cond_0
 
-    iput-object p2, p0, Lxa0;->b:La4g;
+    iput-object p2, p0, Lxa0;->b:Lp5g;
 
     iput-object p3, p0, Lxa0;->c:Ljava/util/ArrayList;
 
@@ -64,9 +64,9 @@
 
     check-cast p1, Lxa0;
 
-    iget-object v0, p0, Lxa0;->a:La4g;
+    iget-object v0, p0, Lxa0;->a:Lp5g;
 
-    iget-object v1, p1, Lxa0;->a:La4g;
+    iget-object v1, p1, Lxa0;->a:Lp5g;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -74,9 +74,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lxa0;->b:La4g;
+    iget-object v0, p0, Lxa0;->b:Lp5g;
 
-    iget-object v1, p1, Lxa0;->b:La4g;
+    iget-object v1, p1, Lxa0;->b:Lp5g;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -108,7 +108,7 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lxa0;->a:La4g;
+    iget-object v0, p0, Lxa0;->a:Lp5g;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -120,7 +120,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lxa0;->b:La4g;
+    iget-object v2, p0, Lxa0;->b:Lp5g;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -150,7 +150,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lxa0;->a:La4g;
+    iget-object v1, p0, Lxa0;->a:Lp5g;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -158,7 +158,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lxa0;->b:La4g;
+    iget-object v1, p0, Lxa0;->b:Lp5g;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

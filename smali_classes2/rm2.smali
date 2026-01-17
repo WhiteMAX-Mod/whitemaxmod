@@ -1,100 +1,208 @@
 .class public final Lrm2;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+.field public final a:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ln45;
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+.method public constructor <init>(JJLjava/lang/String;Ln45;Z)V
     .locals 0
 
-    iput-object p2, p0, Lrm2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Lrm2;->a:J
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lrm2;->b:J
+
+    iput-object p5, p0, Lrm2;->c:Ljava/lang/String;
+
+    iput-object p6, p0, Lrm2;->d:Ln45;
+
+    iput-boolean p7, p0, Lrm2;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lrm2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lrm2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lrm2;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-wide v3, p0, Lrm2;->a:J
 
-    invoke-virtual {p1, p2}, Lrm2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v5, p1, Lrm2;->a:J
 
-    return-object p2
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lrm2;->b:J
+
+    iget-wide v5, p1, Lrm2;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lrm2;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lrm2;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lrm2;->d:Ln45;
+
+    iget-object v3, p1, Lrm2;->d:Ln45;
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lrm2;->e:Z
+
+    iget-boolean p1, p1, Lrm2;->e:Z
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 4
 
-    new-instance v0, Lrm2;
+    iget-wide v0, p0, Lrm2;->a:J
 
-    iget-object v1, p0, Lrm2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {v0, p2, v1}, Lrm2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+    move-result v0
 
-    iput-object p1, v0, Lrm2;->o:Ljava/lang/Object;
+    const/16 v1, 0x1f
 
-    return-object v0
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lrm2;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lrm2;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lrm2;->d:Ln45;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Lrm2;->e:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const-string v0, "DownloadData(msgId="
 
-    iget-object p1, p0, Lrm2;->o:Ljava/lang/Object;
+    const-string v1, ", attachId="
 
-    check-cast p1, Ljava/lang/Number;
+    iget-wide v2, p0, Lrm2;->a:J
 
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lrm2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
-
-    iget-object v0, v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lh10;
+    const-string v1, ", localAttachId="
 
-    const/16 v1, 0x64
+    iget-wide v2, p0, Lrm2;->b:J
 
-    int-to-float v1, v1
+    iget-object v4, p0, Lrm2;->c:Ljava/lang/String;
 
-    mul-float/2addr p1, v1
+    invoke-static {v2, v3, v1, v4, v0}, Lxi4;->o(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    invoke-static {p1}, Ln7j;->c(F)I
+    const-string v1, ", cause="
 
-    move-result p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+    iget-object v1, p0, Lrm2;->d:Ln45;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, ", completed="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lrm2;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

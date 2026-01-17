@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a()Lbdf;
+.method public abstract a()Lkef;
 .end method

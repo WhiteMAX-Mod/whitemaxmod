@@ -8,7 +8,7 @@
 
 .field public final f:Ljava/util/ArrayList;
 
-.field public final g:Lyzb;
+.field public final g:Lu0c;
 
 .field public h:Ljava/lang/CharSequence;
 
@@ -16,7 +16,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lyzb;)V
+.method public constructor <init>(Lu0c;)V
     .locals 1
 
     invoke-direct {p0}, Lhsa;-><init>()V
@@ -33,7 +33,7 @@
 
     iput-object v0, p0, Lgsa;->f:Ljava/util/ArrayList;
 
-    iget-object v0, p1, Lyzb;->a:Ljava/lang/CharSequence;
+    iget-object v0, p1, Lu0c;->a:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -41,7 +41,7 @@
 
     if-nez v0, :cond_0
 
-    iput-object p1, p0, Lgsa;->g:Lyzb;
+    iput-object p1, p0, Lgsa;->g:Lu0c;
 
     return-void
 
@@ -62,9 +62,9 @@
 
     invoke-super {p0, p1}, Lhsa;->a(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lgsa;->g:Lyzb;
+    iget-object v0, p0, Lgsa;->g:Lu0c;
 
-    iget-object v1, v0, Lyzb;->a:Ljava/lang/CharSequence;
+    iget-object v1, v0, Lu0c;->a:Ljava/lang/CharSequence;
 
     const-string v2, "android.selfDisplayName"
 
@@ -72,7 +72,7 @@
 
     const-string v1, "android.messagingStyleUser"
 
-    invoke-virtual {v0}, Lyzb;->b()Landroid/os/Bundle;
+    invoke-virtual {v0}, Lu0c;->b()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -153,7 +153,7 @@
     return-void
 .end method
 
-.method public final b(Lwrg;)V
+.method public final b(Lfsg;)V
     .locals 4
 
     iget-object v0, p0, Lhsa;->b:Ljava/lang/Object;
@@ -207,13 +207,13 @@
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object v2, p0, Lgsa;->g:Lyzb;
+    iget-object v2, p0, Lgsa;->g:Lu0c;
 
     if-lt v0, v1, :cond_2
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2}, Lxzb;->b(Lyzb;)Landroid/app/Person;
+    invoke-static {v2}, Lt0c;->b(Lu0c;)Landroid/app/Person;
 
     move-result-object v0
 
@@ -224,7 +224,7 @@
     goto :goto_1
 
     :cond_2
-    iget-object v0, v2, Lyzb;->a:Ljava/lang/CharSequence;
+    iget-object v0, v2, Lu0c;->a:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Lasa;->b(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
 
@@ -318,7 +318,7 @@
     invoke-static {v0, v1}, Lcsa;->b(Landroid/app/Notification$MessagingStyle;Z)Landroid/app/Notification$MessagingStyle;
 
     :cond_7
-    iget-object p1, p1, Lwrg;->o:Ljava/lang/Object;
+    iget-object p1, p1, Lfsg;->o:Ljava/lang/Object;
 
     check-cast p1, Landroid/app/Notification$Builder;
 

@@ -1,116 +1,35 @@
 .class public final Lfma;
-.super Llrd;
+.super Ljef;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lvci;
-
-.field public final b:Loq6;
-
-.field public c:Z
-
-
-# direct methods
-.method public constructor <init>(Lvci;Loq6;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfma;->a:Lvci;
-
-    iput-object p2, p0, Lfma;->b:Loq6;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
+.method public final C()V
+    .locals 1
 
-    if-nez p2, :cond_0
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    const/4 p1, 0x0
+    check-cast v0, Le8f;
 
-    iput-boolean p1, p0, Lfma;->c:Z
+    iget-object v0, v0, Le8f;->b:Ld8f;
 
-    :cond_0
+    invoke-virtual {v0}, Ld8f;->d()V
+
     return-void
 .end method
 
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 2
+.method public final y(Lud8;)V
+    .locals 0
 
-    iget-boolean p2, p0, Lfma;->c:Z
+    check-cast p1, Lema;
 
-    if-eqz p2, :cond_0
+    iget-object p1, p0, Ltsd;->a:Landroid/view/View;
 
-    goto :goto_1
+    check-cast p1, Le8f;
 
-    :cond_0
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    iget-object p1, p1, Le8f;->b:Ld8f;
 
-    move-result-object p1
-
-    instance-of p2, p1, Landroidx/recyclerview/widget/GridLayoutManager;
-
-    if-eqz p2, :cond_1
-
-    check-cast p1, Landroidx/recyclerview/widget/GridLayoutManager;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Z0()I
-
-    move-result p1
-
-    iget-object p3, p0, Lfma;->a:Lvci;
-
-    invoke-virtual {p3}, Lbe8;->j()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-ne p2, v1, :cond_3
-
-    :goto_1
-    return-void
-
-    :cond_3
-    add-int/lit8 v0, v0, -0x1
-
-    if-ne p1, v0, :cond_4
-
-    invoke-virtual {p3, p1}, Lvci;->J(I)Lfla;
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_4
-    invoke-virtual {p3, p2}, Lvci;->J(I)Lfla;
-
-    move-result-object p1
-
-    :goto_2
-    iget-object p2, p0, Lfma;->b:Loq6;
-
-    invoke-interface {p2, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ld8f;->c()V
 
     return-void
 .end method

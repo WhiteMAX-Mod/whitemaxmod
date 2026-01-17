@@ -1,70 +1,73 @@
 .class public final Luui;
-.super Ljava/lang/Object;
+.super Llm3;
 .source "SourceFile"
 
-# interfaces
-.implements Lwwa;
 
+# instance fields
+.field public final synthetic X:I
 
-# static fields
-.field public static final a:Luui;
+.field public final synthetic Y:Lnm3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lnm3;I)V
+    .locals 0
 
-    new-instance v0, Luui;
+    iput p2, p0, Luui;->X:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luui;->Y:Lnm3;
 
-    sput-object v0, Luui;->a:Luui;
+    const/4 p2, 0x0
 
-    new-instance v0, Ldqi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
-
-    const-class v1, Lrqi;
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, p2}, Llm3;-><init>(Lnm3;B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final b(I)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Luui;->X:I
 
-    move-result-object p1
+    iget-object v1, p0, Luui;->Y:Lnm3;
 
-    throw p1
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lnm3;->w0:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lnm3;->n()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lrvi;
+
+    invoke-direct {v0, v1, p1}, Lrvi;-><init>(Lnm3;I)V
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lnm3;->w0:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lnm3;->m()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

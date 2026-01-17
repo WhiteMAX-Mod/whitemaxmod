@@ -4,401 +4,207 @@
 
 
 # instance fields
-.field public final a:Ll5;
+.field public final a:Lo58;
 
-.field public final b:Lkne;
+.field public final b:Lo58;
 
-.field public final c:Lg7b;
-
-.field public final d:Las7;
-
-.field public e:Z
-
-.field public f:I
-
-.field public final g:Lwo6;
-
-.field public final h:Lo9c;
-
-.field public final i:Lfvd;
-
-.field public j:Landroid/util/Size;
-
-.field public k:Ly3;
-
-.field public l:Z
+.field public final c:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Ll5;Lkne;Landroid/os/Looper;Lvw;Lg7b;Las7;)V
-    .locals 5
+.method public constructor <init>(Lo58;Lo58;Lo58;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgvd;->a:Ll5;
+    iput-object p3, p0, Lgvd;->a:Lo58;
 
-    iput-object p2, p0, Lgvd;->b:Lkne;
+    iput-object p1, p0, Lgvd;->b:Lo58;
 
-    iput-object p5, p0, Lgvd;->c:Lg7b;
-
-    iput-object p6, p0, Lgvd;->d:Las7;
-
-    new-instance p1, Lwo6;
-
-    new-instance p2, Levd;
-
-    const/4 p5, 0x1
-
-    invoke-direct {p2, p0, p5}, Levd;-><init>(Lgvd;I)V
-
-    const/16 p5, 0xb
-
-    const/4 p6, 0x0
-
-    invoke-direct {p1, p6, p5}, Lwo6;-><init>(CI)V
-
-    const/4 p5, 0x1
-
-    new-array p6, p5, [I
-
-    const/4 v0, 0x0
-
-    invoke-static {p5, p6, v0}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
-
-    const-string p5, "glGenTextures"
-
-    new-array v1, v0, [I
-
-    invoke-static {p5, v1}, Leca;->a(Ljava/lang/String;[I)V
-
-    aget p5, p6, v0
-
-    const p6, 0x8d65
-
-    invoke-static {p6, p5}, Landroid/opengl/GLES20;->glBindTexture(II)V
-
-    new-array v1, v0, [I
-
-    const-string v2, "glBindTexture"
-
-    invoke-static {v2, v1}, Leca;->a(Ljava/lang/String;[I)V
-
-    const/16 v1, 0x2800
-
-    const/16 v3, 0x2601
-
-    invoke-static {p6, v1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    new-array v1, v0, [I
-
-    const-string v4, "glTexParameteri"
-
-    invoke-static {v4, v1}, Leca;->a(Ljava/lang/String;[I)V
-
-    const/16 v1, 0x2801
-
-    invoke-static {p6, v1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    new-array v1, v0, [I
-
-    invoke-static {v4, v1}, Leca;->a(Ljava/lang/String;[I)V
-
-    const/16 v1, 0x2802
-
-    const v3, 0x812f
-
-    invoke-static {p6, v1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    new-array v1, v0, [I
-
-    invoke-static {v4, v1}, Leca;->a(Ljava/lang/String;[I)V
-
-    const/16 v1, 0x2803
-
-    invoke-static {p6, v1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    new-array v1, v0, [I
-
-    invoke-static {v4, v1}, Leca;->a(Ljava/lang/String;[I)V
-
-    invoke-static {p6, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
-
-    new-array p6, v0, [I
-
-    invoke-static {v2, p6}, Leca;->a(Ljava/lang/String;[I)V
-
-    iput p5, p1, Lwo6;->b:I
-
-    new-instance p5, Landroid/graphics/SurfaceTexture;
-
-    iget p6, p1, Lwo6;->b:I
-
-    invoke-direct {p5, p6}, Landroid/graphics/SurfaceTexture;-><init>(I)V
-
-    new-instance p6, Lls6;
-
-    invoke-direct {p6, v0, p2}, Lls6;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p5, p6}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-
-    iput-object p5, p1, Lwo6;->c:Ljava/lang/Object;
-
-    new-instance p2, Landroid/view/Surface;
-
-    iget-object p5, p1, Lwo6;->c:Ljava/lang/Object;
-
-    check-cast p5, Landroid/graphics/SurfaceTexture;
-
-    invoke-direct {p2, p5}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
-
-    invoke-virtual {p4, p2}, Lvw;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iput-object p2, p1, Lwo6;->d:Ljava/lang/Object;
-
-    iput-object p1, p0, Lgvd;->g:Lwo6;
-
-    new-instance p1, Lo9c;
-
-    invoke-direct {p1}, Lo9c;-><init>()V
-
-    iput-object p1, p0, Lgvd;->h:Lo9c;
-
-    new-instance p1, Lfvd;
-
-    invoke-direct {p1, p0, p3}, Lfvd;-><init>(Lgvd;Landroid/os/Looper;)V
-
-    iput-object p1, p0, Lgvd;->i:Lfvd;
+    iput-object p2, p0, Lgvd;->c:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final a(JLo84;)Ljava/lang/Object;
+    .locals 11
 
-    iget-object v0, p0, Lgvd;->h:Lo9c;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lgvd;->g:Lwo6;
-
-    iget-object v1, v0, Lwo6;->d:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/Surface;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroid/view/Surface;->release()V
-
-    :cond_0
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lwo6;->d:Ljava/lang/Object;
-
-    iget-object v2, v0, Lwo6;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/graphics/SurfaceTexture;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2, v1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-
-    :cond_1
-    iget-object v2, v0, Lwo6;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/graphics/SurfaceTexture;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->release()V
-
-    :cond_2
-    iput-object v1, v0, Lwo6;->c:Ljava/lang/Object;
-
-    iget v1, v0, Lwo6;->b:I
-
-    filled-new-array {v1}, [I
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    invoke-static {v2, v1, v3}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
-
-    const-string v1, "glDeleteTextures"
-
-    new-array v2, v3, [I
-
-    invoke-static {v1, v2}, Leca;->a(Ljava/lang/String;[I)V
-
-    const/4 v1, -0x1
-
-    iput v1, v0, Lwo6;->b:I
-
-    iget-object v0, p0, Lgvd;->k:Ly3;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ly3;->g()V
-
-    :cond_3
-    return-void
-.end method
-
-.method public final b()V
-    .locals 4
-
-    iget-object v0, p0, Lgvd;->i:Lfvd;
-
-    iget v1, v0, Lfvd;->a:I
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v0, p0, Lgvd;->j:Landroid/util/Size;
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v1, p0, Lgvd;->e:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lgvd;->k:Ly3;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v1, Ly3;->a:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/Surface;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Landroid/view/Surface;->isValid()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v1, p0, Lgvd;->k:Ly3;
-
-    if-eqz v1, :cond_4
-
-    new-instance v2, Lzx1;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v2, p0, v0, v1, v3}, Lzx1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, v2}, Ly3;->d(Loq6;)V
-
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lgvd;->k:Ly3;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, v0, Ly3;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/Surface;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lgvd;->k:Ly3;
-
-    if-eqz v0, :cond_4
-
-    new-instance v1, Lteb;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, v2, v0}, Lteb;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Ly3;->d(Loq6;)V
-
-    :cond_4
-    :goto_1
-    return-void
-.end method
-
-.method public final c(Landroid/view/Surface;)V
-    .locals 2
-
-    iget-object v0, p0, Lgvd;->k:Ly3;
+    instance-of v0, p3, Levd;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Ly3;->a:Ljava/lang/Object;
+    move-object v0, p3
 
-    check-cast v0, Landroid/view/Surface;
+    check-cast v0, Levd;
+
+    iget v1, v0, Levd;->Y:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Levd;->Y:I
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance v0, Levd;
+
+    invoke-direct {v0, p0, p3}, Levd;-><init>(Lgvd;Lo84;)V
 
     :goto_0
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p3, v0, Levd;->o:Ljava/lang/Object;
 
-    move-result v0
+    iget v1, v0, Levd;->Y:I
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x1
 
-    const/4 v0, 0x0
+    if-eqz v1, :cond_3
 
-    iput-boolean v0, p0, Lgvd;->l:Z
+    if-ne v1, v2, :cond_2
+
+    iget-wide p1, v0, Levd;->d:J
+
+    invoke-static {p3}, Lpmj;->b(Ljava/lang/Object;)V
 
     :cond_1
-    new-instance v0, Lg7b;
+    move-wide v2, p1
 
-    const/16 v1, 0x15
-
-    invoke-direct {v0, p0, v1, p1}, Lg7b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lgvd;->b:Lkne;
-
-    invoke-virtual {p1, v0}, Lkne;->h(Lmq6;)V
-
-    iget-object p1, p0, Lgvd;->k:Ly3;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Lgvd;->b()V
+    goto :goto_1
 
     :cond_2
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    invoke-static {p3}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p3, p0, Lgvd;->a:Lo58;
+
+    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lla3;
+
+    invoke-virtual {v1}, Lla3;->j()Lxg2;
+
+    move-result-object v1
+
+    sget-object v3, Ldh2;->b:Ldh2;
+
+    invoke-virtual {v1, p1, p2, v3}, Lxg2;->o(JLdh2;)V
+
+    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lla3;
+
+    new-instance v1, Lfvd;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v4, v3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-wide p1, v0, Levd;->d:J
+
+    iput v2, v0, Levd;->Y:I
+
+    invoke-virtual {p3, p1, p2, v1, v0}, Lla3;->f(JLbr6;Lo84;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p3, v0, :cond_1
+
+    return-object v0
+
+    :goto_1
+    check-cast p3, Lnd2;
+
+    if-nez p3, :cond_4
+
+    new-instance p1, Ljava/lang/Long;
+
+    const-wide/16 p2, 0x0
+
+    invoke-direct {p1, p2, p3}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p1
+
+    :cond_4
+    iget-object p1, p0, Lgvd;->c:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcy0;
+
+    new-instance v4, Lab3;
+
+    new-instance p2, Ljava/lang/Long;
+
+    invoke-direct {p2, v2, v3}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-static {p2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x7c
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v4 .. v10}, Lab3;-><init>(Ljava/util/Collection;ZZLmw4;Lgic;I)V
+
+    invoke-virtual {p1, v4}, Lcy0;->c(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgvd;->b:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v1, p1
+
+    check-cast v1, Lt2b;
+
+    iget-object p1, p3, Lnd2;->b:Luh2;
+
+    iget-wide v4, p1, Luh2;->a:J
+
+    const/4 v6, 0x0
+
+    const-string v7, ""
+
+    invoke-virtual/range {v1 .. v8}, Lt2b;->h(JJLjava/lang/String;Ljava/lang/String;Lz10;)J
+
+    move-result-wide p1
+
+    new-instance p3, Ljava/lang/Long;
+
+    invoke-direct {p3, p1, p2}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p3
 .end method

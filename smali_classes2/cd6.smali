@@ -1,53 +1,48 @@
-.class public final Lcd6;
-.super Ll84;
+.class public final synthetic Lcd6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnm4;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Ljava/lang/String;
 
-.field public final synthetic Y:Ldd6;
+.field public final synthetic b:Ljava/lang/String;
 
-.field public Z:I
-
-.field public d:Ldd6;
-
-.field public o:Lyh6;
+.field public final synthetic c:[J
 
 
 # direct methods
-.method public constructor <init>(Ldd6;Ll84;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;[J)V
     .locals 0
 
-    iput-object p1, p0, Lcd6;->Y:Ldd6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lcd6;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lcd6;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lcd6;->c:[J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lcd6;->X:Ljava/lang/Object;
+    new-instance v0, Lone/me/folders/picker/FolderMemberPickerScreen;
 
-    iget p1, p0, Lcd6;->Z:I
+    iget-object v1, p0, Lcd6;->a:Ljava/lang/String;
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Lcd6;->b:Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    iget-object v3, p0, Lcd6;->c:[J
 
-    iput p1, p0, Lcd6;->Z:I
+    invoke-direct {v0, v1, v2, v3}, Lone/me/folders/picker/FolderMemberPickerScreen;-><init>(Ljava/lang/String;Ljava/lang/String;[J)V
 
-    iget-object p1, p0, Lcd6;->Y:Ldd6;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Ldd6;->a(Ldd6;Lyh6;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

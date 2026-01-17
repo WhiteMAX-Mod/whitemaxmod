@@ -111,11 +111,11 @@
 .method private synthetic lambda$setVideoProcessor$1(Lorg/webrtc/VideoFrame;)V
     .locals 2
 
-    new-instance v0, Lqgh;
+    new-instance v0, Lghh;
 
-    const/4 v1, 0x6
+    const/4 v1, 0x7
 
-    invoke-direct {v0, p0, v1, p1}, Lqgh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lghh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {p0, v0}, Lorg/webrtc/MediaSource;->runWithReference(Ljava/lang/Runnable;)V
 
@@ -287,9 +287,9 @@
 
     if-eqz p1, :cond_1
 
-    new-instance v1, Lnph;
+    new-instance v1, Ljqh;
 
-    invoke-direct {v1, p0}, Lnph;-><init>(Lorg/webrtc/VideoSource;)V
+    invoke-direct {v1, p0}, Ljqh;-><init>(Lorg/webrtc/VideoSource;)V
 
     invoke-interface {p1, v1}, Lorg/webrtc/VideoProcessor;->setSink(Lorg/webrtc/VideoSink;)V
 

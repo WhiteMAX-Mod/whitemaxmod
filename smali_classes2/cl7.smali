@@ -1,232 +1,183 @@
-.class public final Lcl7;
-.super Lx1;
+.class public final enum Lcl7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lwk7;
+
+# static fields
+.field public static final enum X:Lcl7;
+
+.field public static final enum Y:Lcl7;
+
+.field public static final enum Z:Lcl7;
+
+.field public static final enum b:Lcl7;
+
+.field public static final enum c:Lcl7;
+
+.field public static final enum d:Lcl7;
+
+.field public static final enum o:Lcl7;
+
+.field public static final enum t0:Lcl7;
+
+.field public static final synthetic u0:[Lcl7;
+
+.field public static final synthetic v0:Lal5;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcl7;
 
-    iput-wide p1, p0, Lcl7;->a:J
+    const/4 v1, 0x0
+
+    const-string v2, "messageSent"
+
+    const-string v3, "SEND_5_MESSAGES"
+
+    invoke-direct {v0, v3, v1, v2}, Lcl7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcl7;->b:Lcl7;
+
+    new-instance v1, Lcl7;
+
+    const/4 v2, 0x1
+
+    const-string v3, "folderCreated"
+
+    const-string v4, "CREATE_FOLDER"
+
+    invoke-direct {v1, v4, v2, v3}, Lcl7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lcl7;->c:Lcl7;
+
+    new-instance v2, Lcl7;
+
+    const/4 v3, 0x2
+
+    const-string v4, "voiceMessageSent"
+
+    const-string v5, "SEND_AUDIO_MESSAGE"
+
+    invoke-direct {v2, v5, v3, v4}, Lcl7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lcl7;->d:Lcl7;
+
+    new-instance v3, Lcl7;
+
+    const/4 v4, 0x3
+
+    const-string v5, "reactionSet"
+
+    const-string v6, "ADD_2_REACTIONS"
+
+    invoke-direct {v3, v6, v4, v5}, Lcl7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lcl7;->o:Lcl7;
+
+    new-instance v4, Lcl7;
+
+    const/4 v5, 0x4
+
+    const-string v6, "stickerSent"
+
+    const-string v7, "SEND_3_STICKERS"
+
+    invoke-direct {v4, v7, v5, v6}, Lcl7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lcl7;->X:Lcl7;
+
+    new-instance v5, Lcl7;
+
+    const/4 v6, 0x5
+
+    const-string v7, "groupChatCreated"
+
+    const-string v8, "CREATE_2_GROUP_CHATS"
+
+    invoke-direct {v5, v8, v6, v7}, Lcl7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lcl7;->Y:Lcl7;
+
+    new-instance v6, Lcl7;
+
+    const/4 v7, 0x6
+
+    const-string v8, "pinMade"
+
+    const-string v9, "MADE_2_PIN"
+
+    invoke-direct {v6, v9, v7, v8}, Lcl7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lcl7;->Z:Lcl7;
+
+    new-instance v7, Lcl7;
+
+    const/4 v8, 0x7
+
+    const-string v9, "callMade"
+
+    const-string v10, "PARTICIPATED_IN_CALL"
+
+    invoke-direct {v7, v10, v8, v9}, Lcl7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lcl7;->t0:Lcl7;
+
+    filled-new-array/range {v0 .. v7}, [Lcl7;
+
+    move-result-object v0
+
+    sput-object v0, Lcl7;->u0:[Lcl7;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lcl7;->v0:Lal5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-wide v0, p0, Lcl7;->a:J
+    iput-object p3, p0, Lcl7;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method public final b()I
+.method public static valueOf(Ljava/lang/String;)Lcl7;
     .locals 1
 
-    const/4 v0, 0x3
+    const-class v0, Lcl7;
 
-    return v0
-.end method
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-.method public final c()J
-    .locals 2
+    move-result-object p0
 
-    iget-wide v0, p0, Lcl7;->a:J
-
-    return-wide v0
-.end method
-
-.method public final e()I
-    .locals 4
-
-    const-wide/32 v0, -0x80000000
-
-    iget-wide v2, p0, Lcl7;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-gtz v0, :cond_0
-
-    const-wide/32 v0, 0x7fffffff
-
-    cmp-long v0, v2, v0
-
-    if-gtz v0, :cond_0
-
-    long-to-int v0, v2
-
-    return v0
-
-    :cond_0
-    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
-
-    invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
-
-    throw v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    if-ne p1, p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lcbh;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lcbh;
-
-    check-cast p1, Lx1;
-
-    invoke-interface {p1}, Lcbh;->b()I
-
-    move-result v0
-
-    const/4 v2, 0x3
-
-    if-ne v0, v2, :cond_3
-
-    invoke-interface {p1}, Lcbh;->f()Lwk7;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lwk7;->j()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-wide v2, p0, Lcl7;->a:J
-
-    invoke-interface {p1}, Lowa;->c()J
-
-    move-result-wide v4
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_3
-    :goto_1
-    return v1
-.end method
-
-.method public final f()Lwk7;
-    .locals 0
+    check-cast p0, Lcl7;
 
     return-object p0
 .end method
 
-.method public final h()Ljava/math/BigInteger;
-    .locals 2
-
-    iget-wide v0, p0, Lcl7;->a:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    const-wide/32 v0, -0x80000000
-
-    iget-wide v2, p0, Lcl7;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-gtz v0, :cond_0
-
-    const-wide/32 v0, 0x7fffffff
-
-    cmp-long v0, v2, v0
-
-    if-gtz v0, :cond_0
-
-    long-to-int v0, v2
-
-    return v0
-
-    :cond_0
-    const/16 v0, 0x20
-
-    ushr-long v0, v2, v0
-
-    xor-long/2addr v0, v2
-
-    long-to-int v0, v0
-
-    return v0
-.end method
-
-.method public final i()J
-    .locals 2
-
-    iget-wide v0, p0, Lcl7;->a:J
-
-    return-wide v0
-.end method
-
-.method public final j()Z
+.method public static values()[Lcl7;
     .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Lcl7;->u0:[Lcl7;
 
-    return v0
-.end method
-
-.method public final k()Lwk7;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget-wide v0, p0, Lcl7;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lcl7;
 
     return-object v0
 .end method

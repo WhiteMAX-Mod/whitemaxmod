@@ -7,16 +7,24 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/util/Map;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Ljava/lang/String;JLjava/util/Map;)V
     .locals 0
 
-    iput p1, p0, Ltha;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ltha;->a:Ljava/lang/String;
+
+    iput-wide p2, p0, Ltha;->b:J
+
+    iput-object p4, p0, Ltha;->c:Ljava/util/Map;
 
     return-void
 .end method
@@ -24,37 +32,17 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 1
+    .locals 4
 
-    iget v0, p0, Ltha;->a:I
+    iget-object v0, p0, Ltha;->c:Ljava/util/Map;
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lcom/my/tracker/core/EngineMiniCore;
-
-    invoke-static {p1}, Lcom/my/tracker/userlifecycle/MyTrackerUserLifecycle;->a(Lcom/my/tracker/core/EngineMiniCore;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lcom/my/tracker/core/EngineMiniCore;
-
-    invoke-static {p1}, Lcom/my/tracker/applifecycle/MyTrackerAppLifecycle;->a(Lcom/my/tracker/core/EngineMiniCore;)V
-
-    return-void
-
-    :pswitch_1
     check-cast p1, Lcom/my/tracker/core/EngineCore;
 
-    invoke-static {p1}, Lcom/my/tracker/MyTracker;->d(Lcom/my/tracker/core/EngineCore;)V
+    iget-object v1, p0, Ltha;->a:Ljava/lang/String;
+
+    iget-wide v2, p0, Ltha;->b:J
+
+    invoke-static {v1, v2, v3, v0, p1}, Lcom/my/tracker/MyTracker;->b(Ljava/lang/String;JLjava/util/Map;Lcom/my/tracker/core/EngineCore;)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

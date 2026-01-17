@@ -1,85 +1,83 @@
-.class public final enum La0b;
-.super Ljava/lang/Enum;
+.class public final La0b;
+.super Ldxa;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:La0b;
+# instance fields
+.field public final a:Lpbe;
 
-.field public static final enum b:La0b;
+.field public final b:J
 
-.field public static final enum c:La0b;
-
-.field public static final synthetic d:[La0b;
+.field public final c:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Lpbe;)V
+    .locals 0
 
-    new-instance v0, La0b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "NO_OP"
+    iput-wide p1, p0, La0b;->b:J
 
-    const/4 v2, 0x0
+    iput-object p3, p0, La0b;->c:Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, La0b;->a:La0b;
-
-    new-instance v1, La0b;
-
-    const-string v2, "ADD"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, La0b;->b:La0b;
-
-    new-instance v2, La0b;
-
-    const-string v3, "REMOVE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, La0b;->c:La0b;
-
-    filled-new-array {v0, v1, v2}, [La0b;
-
-    move-result-object v0
-
-    sput-object v0, La0b;->d:[La0b;
+    iput-object p4, p0, La0b;->a:Lpbe;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)La0b;
-    .locals 1
 
-    const-class v0, La0b;
+# virtual methods
+.method public final k(Le0b;)V
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lzza;
 
-    move-result-object p0
+    const/4 v1, 0x0
 
-    check-cast p0, La0b;
+    invoke-direct {v0, v1, p1}, Lzza;-><init>(ILjava/lang/Object;)V
 
-    return-object p0
-.end method
+    invoke-interface {p1, v0}, Le0b;->c(Lo25;)V
 
-.method public static values()[La0b;
-    .locals 1
+    iget-wide v1, p0, La0b;->b:J
 
-    sget-object v0, La0b;->d:[La0b;
+    iget-object p1, p0, La0b;->c:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v3, p0, La0b;->a:Lpbe;
+
+    invoke-virtual {v3, v0, v1, v2, p1}, Lpbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
+
+    move-result-object p1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [La0b;
+    sget-object v1, Ls25;->a:Ls25;
 
-    return-object v0
+    if-ne v0, v1, :cond_2
+
+    invoke-interface {p1}, Lo25;->dispose()V
+
+    :cond_2
+    :goto_0
+    return-void
 .end method

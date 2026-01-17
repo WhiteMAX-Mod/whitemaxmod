@@ -1,3 +1,3 @@
-.class public interface abstract Ldji;
+.class public final Ldji;
 .super Ljava/lang/Object;
 .source "SourceFile"

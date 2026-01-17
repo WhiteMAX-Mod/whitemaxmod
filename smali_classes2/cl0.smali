@@ -15,7 +15,7 @@
 
     const/4 v0, 0x2
 
-    invoke-static {v0}, Lc12;->z(I)[I
+    invoke-static {v0}, Lt02;->w(I)[I
 
     move-result-object v1
 
@@ -41,7 +41,7 @@
     :catch_1
     sput-object v1, Lcl0;->$EnumSwitchMapping$0:[I
 
-    invoke-static {}, Lti3;->values()[Lti3;
+    invoke-static {}, Lcj3;->values()[Lcj3;
 
     move-result-object v1
 

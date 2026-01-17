@@ -1,96 +1,119 @@
 .class public final Lp81;
-.super Ljava/lang/Object;
+.super Lih;
 .source "SourceFile"
-
-# interfaces
-.implements Lmm4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final v0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput p1, p0, Lp81;->a:I
+    const-wide/16 v0, -0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x1
+
+    .line 1
+    invoke-direct {p0, v0, v1, v2}, Lp81;-><init>(JZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JZ)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    .line 2
+    invoke-direct {p0, p1, p2, v0}, Lih;-><init>(JI)V
+
+    .line 3
+    iput-boolean p3, p0, Lp81;->v0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final d()Z
+    .locals 1
 
-    iget v0, p0, Lp81;->a:I
+    iget-boolean v0, p0, Lp81;->v0:Z
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    new-instance v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
+.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/Animator;
+    .locals 2
 
-    invoke-direct {v0}, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;-><init>()V
+    new-instance p1, Landroid/animation/AnimatorSet;
 
-    return-object v0
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    :pswitch_0
-    new-instance v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    new-instance p5, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;-><init>()V
+    invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
 
-    return-object v0
+    if-eqz p4, :cond_0
 
-    :pswitch_1
-    new-instance v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    if-eqz p3, :cond_0
 
-    invoke-direct {v0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;-><init>()V
+    sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    return-object v0
+    const/4 p4, 0x2
 
-    :pswitch_2
-    new-instance v0, Lone/me/calls/ui/ui/pip/PipScreen;
+    new-array p4, p4, [F
 
-    invoke-direct {v0}, Lone/me/calls/ui/ui/pip/PipScreen;-><init>()V
+    fill-array-data p4, :array_0
 
-    return-object v0
+    invoke-static {p3, p2, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    :pswitch_3
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->O0:Ly0j;
+    move-result-object p2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p5, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
+    goto :goto_0
 
-    new-instance v1, Lysb;
+    :cond_0
+    if-nez p4, :cond_1
 
-    const-string v2, "type"
+    if-eqz p2, :cond_1
 
-    const-string v3, "ACTIVE"
+    sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    invoke-direct {v1, v2, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 p4, 0x1
 
-    filled-new-array {v1}, [Lysb;
+    new-array p4, p4, [F
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    invoke-static {v1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    aput v0, p4, v1
 
-    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
+    invoke-static {p2, p3, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    return-object v0
+    move-result-object p2
 
-    nop
+    invoke-interface {p5, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    :goto_0
+    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+
+    return-object p1
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public final n(Landroid/view/View;)V
+    .locals 0
+
+    return-void
 .end method

@@ -1,9 +1,9 @@
 .class public final Lmx2;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lmx2;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lmx2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,104 +60,79 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 4
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Lmx2;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lmx2;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p1
+    sget-object p1, Lone/me/chatscreen/ChatScreen;->n1:[Lz28;
 
-    iget-object v0, p0, Lmx2;->X:Lone/me/chatscreen/ChatScreen;
+    iget-object p1, p0, Lmx2;->X:Lone/me/chatscreen/ChatScreen;
 
-    iget-object v1, v0, Lone/me/chatscreen/ChatScreen;->Z0:Ljkd;
+    iget-object v1, p1, Lone/me/chatscreen/ChatScreen;->a1:Ljld;
 
-    sget-object v2, Lone/me/chatscreen/ChatScreen;->m1:[Lp38;
+    sget-object v2, Lone/me/chatscreen/ChatScreen;->n1:[Lz28;
 
-    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->g1()Lja2;
+    const/16 v3, 0x12
 
-    move-result-object v2
+    aget-object v2, v2, v3
 
-    const/4 v3, 0x0
+    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    move-result-object p1
 
-    move v4, v3
+    check-cast p1, Lrb3;
+
+    iget-object p1, p1, Lrb3;->a:Lw4e;
+
+    invoke-static {p1}, Lvmj;->b(Lw4e;)La94;
+
+    move-result-object p1
+
+    instance-of v1, p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
     goto :goto_0
 
     :cond_0
-    const/16 v4, 0x8
+    const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
+    if-eqz p1, :cond_2
 
-    const/16 v2, 0x12
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lone/me/chatscreen/ChatScreen;->m1:[Lp38;
-
-    aget-object p1, p1, v2
-
-    invoke-interface {v1, v0, p1}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0()Llnh;
 
     move-result-object p1
 
-    check-cast p1, Lgb3;
-
-    iget-object v0, p1, Lgb3;->a:Lw3e;
-
-    invoke-virtual {p1}, Lgb3;->b()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "video_msg_controller"
-
-    invoke-static {p1, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    invoke-virtual {v0, v3}, Lw3e;->R(Z)V
-
-    new-instance p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-direct {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;-><init>()V
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v2, v2}, Ldmj;->a(Lx84;Lkh;Lkh;)Lz3e;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Lz3e;->d(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Lw3e;->S(Lz3e;)V
-
-    goto :goto_1
+    iget-object p1, p1, Llnh;->X:Lspf;
 
     :cond_1
-    sget-object p1, Lone/me/chatscreen/ChatScreen;->m1:[Lp38;
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
 
-    aget-object p1, p1, v2
+    move-result-object v1
 
-    invoke-interface {v1, v0, p1}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
+    move-object v2, v1
 
-    move-result-object p1
+    check-cast v2, Ljava/lang/Boolean;
 
-    check-cast p1, Lgb3;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lgb3;->a()V
+    invoke-virtual {p1, v1, v0}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     :cond_2
-    :goto_1
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

@@ -1,6 +1,19 @@
-.class public abstract Lx4i;
+.class public final Lx4i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lk08;
+
+# virtual methods
+.method public final serializer()La38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "La38;"
+        }
+    .end annotation
+
+    sget-object v0, Lw4i;->a:Lw4i;
+
+    return-object v0
+.end method

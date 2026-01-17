@@ -13,7 +13,7 @@
         "Landroidx/appcompat/widget/AppCompatButton;",
         "",
         "id",
-        "Lv2h;",
+        "Lb3h;",
         "setBackground",
         "(I)V",
         "number",
@@ -26,11 +26,11 @@
         "enabled",
         "setEnabled",
         "(Z)V",
-        "Lbh;",
+        "Lzg;",
         "d",
-        "Ld68;",
+        "Lo58;",
         "getAnimations",
-        "()Lbh;",
+        "()Lzg;",
         "animations",
         "checked",
         "o",
@@ -43,7 +43,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -51,36 +51,36 @@
 
 
 # static fields
-.field public static final t0:I
-
 .field public static final u0:I
 
 .field public static final v0:I
 
+.field public static final w0:I
+
 
 # instance fields
-.field public final d:Ld68;
+.field public final d:Lo58;
 
 .field public o:Z
 
-.field public s0:Landroid/graphics/drawable/Drawable;
+.field public t0:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lh5e;->N:I
-
-    sput v0, Lone/me/sdk/gallery/view/NumericCheckButton;->t0:I
-
-    sget v0, Lh5e;->M:I
+    sget v0, Lf6e;->N:I
 
     sput v0, Lone/me/sdk/gallery/view/NumericCheckButton;->u0:I
 
-    sget v0, Lh5e;->L:I
+    sget v0, Lf6e;->M:I
 
     sput v0, Lone/me/sdk/gallery/view/NumericCheckButton;->v0:I
+
+    sget v0, Lf6e;->L:I
+
+    sput v0, Lone/me/sdk/gallery/view/NumericCheckButton;->w0:I
 
     return-void
 .end method
@@ -92,39 +92,39 @@
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/AppCompatButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget-object p1, Ldfe;->a:Ld68;
+    sget-object p1, Lzfe;->a:Lo58;
 
-    sget-object p1, Lefe;->a:Lefe;
+    sget-object p1, Lage;->a:Lage;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object p1
-
-    const/16 p2, 0xc9
-
-    invoke-virtual {p1, p2}, Lu5;->d(I)Lz7g;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->d:Ld68;
+    const/16 p2, 0xc7
 
-    sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->t0:I
+    invoke-virtual {p1, p2}, Lr5;->d(I)Ln8g;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->d:Lo58;
+
+    sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->u0:I
 
     invoke-direct {p0, p1}, Lone/me/sdk/gallery/view/NumericCheckButton;->setBackground(I)V
 
     return-void
 .end method
 
-.method private final getAnimations()Lbh;
+.method private final getAnimations()Lzg;
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->d:Ld68;
+    iget-object v0, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->d:Lo58;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lbh;
+    check-cast v0, Lzg;
 
     return-object v0
 .end method
@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -177,13 +177,13 @@
 
     invoke-direct/range {v1 .. v7}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    invoke-direct {p0}, Lone/me/sdk/gallery/view/NumericCheckButton;->getAnimations()Lbh;
+    invoke-direct {p0}, Lone/me/sdk/gallery/view/NumericCheckButton;->getAnimations()Lzg;
 
     move-result-object p1
 
-    iget-object p1, p1, Lbh;->a:Lzv4;
+    iget-object p1, p1, Lzg;->a:Law4;
 
-    invoke-virtual {p1}, Lzv4;->p()Landroid/view/animation/Interpolator;
+    invoke-virtual {p1}, Law4;->p()Landroid/view/animation/Interpolator;
 
     move-result-object p1
 
@@ -216,13 +216,13 @@
 
     invoke-virtual {v2, p1}, Landroid/view/animation/Animation;->setRepeatMode(I)V
 
-    invoke-direct {p0}, Lone/me/sdk/gallery/view/NumericCheckButton;->getAnimations()Lbh;
+    invoke-direct {p0}, Lone/me/sdk/gallery/view/NumericCheckButton;->getAnimations()Lzg;
 
     move-result-object p1
 
-    iget-object p1, p1, Lbh;->a:Lzv4;
+    iget-object p1, p1, Lzg;->a:Law4;
 
-    invoke-virtual {p1}, Lzv4;->o()Landroid/view/animation/Interpolator;
+    invoke-virtual {p1}, Law4;->o()Landroid/view/animation/Interpolator;
 
     move-result-object p1
 
@@ -253,12 +253,12 @@
 
     if-eqz p1, :cond_0
 
-    sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->t0:I
+    sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->u0:I
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->u0:I
+    sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->v0:I
 
     :goto_0
     invoke-direct {p0, p1}, Lone/me/sdk/gallery/view/NumericCheckButton;->setBackground(I)V
@@ -271,7 +271,7 @@
 
     if-lez p1, :cond_4
 
-    sget v0, Lone/me/sdk/gallery/view/NumericCheckButton;->v0:I
+    sget v0, Lone/me/sdk/gallery/view/NumericCheckButton;->w0:I
 
     invoke-direct {p0, v0}, Lone/me/sdk/gallery/view/NumericCheckButton;->setBackground(I)V
 
@@ -328,11 +328,11 @@
     return-void
 
     :cond_4
-    iget-object p1, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->s0:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->t0:Landroid/graphics/drawable/Drawable;
 
     if-nez p1, :cond_5
 
-    sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->t0:I
+    sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->u0:I
 
     invoke-direct {p0, p1}, Lone/me/sdk/gallery/view/NumericCheckButton;->setBackground(I)V
 
@@ -356,7 +356,7 @@
 .method public final setUncheckedBackground(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    iput-object p1, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->s0:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->t0:Landroid/graphics/drawable/Drawable;
 
     return-void
 .end method

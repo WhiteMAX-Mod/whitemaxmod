@@ -3,59 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzu8;
+.implements Lnq6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;)V
+.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lgr;->a:I
 
-    iput-object p1, p0, Lgr;->a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    iput-object p1, p0, Lgr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(IZ)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    sget-object v0, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lp38;
+    iget v0, p0, Lgr;->a:I
 
-    if-eqz p2, :cond_0
+    iget-object v1, p0, Lgr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    iget-object p2, p0, Lgr;->a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p2}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Las;
+    check-cast p1, Ljava/lang/Integer;
 
-    move-result-object p2
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p2}, Las;->y()Lbbg;
+    move-result p1
 
-    move-result-object v0
+    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lrdi;
 
-    check-cast v0, Lb9b;
+    invoke-virtual {v0}, Lrdi;->j()I
 
-    invoke-virtual {v0}, Lb9b;->a()Ltb4;
+    move-result v0
 
-    move-result-object v0
+    if-gtz v0, :cond_0
 
-    new-instance v1, Lxr;
+    const/4 p1, 0x0
 
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p2, p1, v2}, Lxr;-><init>(Las;ILkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {p2, v0, v1, p1}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
+    goto :goto_0
 
     :cond_0
-    return-void
+    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lrdi;
+
+    invoke-virtual {v0, p1}, Lnd8;->D(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lud8;
+
+    check-cast p1, Lfjg;
+
+    iget-boolean p1, p1, Lfjg;->a:Z
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Lbs;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lbs;->F0:Lcm5;
+
+    sget-object v0, Lag3;->b:Lag3;
+
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

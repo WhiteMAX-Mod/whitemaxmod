@@ -1,158 +1,218 @@
-.class public abstract Lnlj;
-.super Ljava/lang/Object;
+.class public final enum Lnlj;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lj0j;
+
+
+# static fields
+.field public static final enum X:Lnlj;
+
+.field public static final enum Y:Lnlj;
+
+.field public static final enum Z:Lnlj;
+
+.field public static final enum b:Lnlj;
+
+.field public static final enum c:Lnlj;
+
+.field public static final enum d:Lnlj;
+
+.field public static final enum o:Lnlj;
+
+.field public static final enum t0:Lnlj;
+
+.field public static final enum u0:Lnlj;
+
+.field public static final enum v0:Lnlj;
+
+.field public static final enum w0:Lnlj;
+
+.field public static final enum x0:Lnlj;
+
+.field public static final enum y0:Lnlj;
+
+.field public static final synthetic z0:[Lnlj;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method public static final a(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 15
 
-    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+    new-instance v0, Lnlj;
+
+    const-string v1, "TYPE_UNKNOWN"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lnlj;->b:Lnlj;
+
+    new-instance v1, Lnlj;
+
+    const-string v2, "TYPE_CONTACT_INFO"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lnlj;->c:Lnlj;
+
+    new-instance v2, Lnlj;
+
+    const-string v3, "TYPE_EMAIL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lnlj;->d:Lnlj;
+
+    new-instance v3, Lnlj;
+
+    const-string v4, "TYPE_ISBN"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v5}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lnlj;->o:Lnlj;
+
+    new-instance v4, Lnlj;
+
+    const-string v5, "TYPE_PHONE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v6}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lnlj;->X:Lnlj;
+
+    new-instance v5, Lnlj;
+
+    const-string v6, "TYPE_PRODUCT"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v7}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lnlj;->Y:Lnlj;
+
+    new-instance v6, Lnlj;
+
+    const-string v7, "TYPE_SMS"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v8}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Lnlj;->Z:Lnlj;
+
+    new-instance v7, Lnlj;
+
+    const-string v8, "TYPE_TEXT"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v9}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v7, Lnlj;->t0:Lnlj;
+
+    new-instance v8, Lnlj;
+
+    const-string v9, "TYPE_URL"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10, v10}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v8, Lnlj;->u0:Lnlj;
+
+    new-instance v9, Lnlj;
+
+    const-string v10, "TYPE_WIFI"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11, v11}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v9, Lnlj;->v0:Lnlj;
+
+    new-instance v10, Lnlj;
+
+    const-string v11, "TYPE_GEO"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12, v12}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v10, Lnlj;->w0:Lnlj;
+
+    new-instance v11, Lnlj;
+
+    const-string v12, "TYPE_CALENDAR_EVENT"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v11, v12, v13, v13}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v11, Lnlj;->x0:Lnlj;
+
+    new-instance v12, Lnlj;
+
+    const-string v13, "TYPE_DRIVER_LICENSE"
+
+    const/16 v14, 0xc
+
+    invoke-direct {v12, v13, v14, v14}, Lnlj;-><init>(Ljava/lang/String;II)V
+
+    sput-object v12, Lnlj;->y0:Lnlj;
+
+    filled-new-array/range {v0 .. v12}, [Lnlj;
 
     move-result-object v0
 
-    const v1, 0xf00d
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
-
-    move-result v0
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1, p2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {p2}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    :cond_2
-    :goto_0
-    const/4 v0, 0x5
-
-    if-ne p0, v0, :cond_4
-
-    if-eqz p3, :cond_3
-
-    invoke-interface {p3}, Ljava/lang/Runnable;->run()V
-
-    :cond_3
-    return-void
-
-    :cond_4
-    new-instance v2, Lpi5;
-
-    const/4 v7, 0x4
-
-    move v4, p0
-
-    move-object v3, p1
-
-    move-object v5, p2
-
-    move-object v6, p3
-
-    invoke-direct/range {v2 .. v7}, Lpi5;-><init>(Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v3}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object p0
-
-    invoke-static {p0, v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
-
-    move-result-object p0
-
-    iput v1, p0, Landroid/os/Message;->what:I
-
-    iput-object v5, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    invoke-virtual {v3}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
-
-    return-void
-
-    :cond_5
-    invoke-virtual {v3, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    sput-object v0, Lnlj;->z0:[Lnlj;
 
     return-void
 .end method
 
-.method public static b(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    and-int/lit8 p0, p0, 0x4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-eqz p0, :cond_0
-
-    const/4 p3, 0x0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    invoke-static {p0, p1, p2, p3}, Lnlj;->a(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    iput p3, p0, Lnlj;->a:I
 
     return-void
 .end method
 
-.method public static final c(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
+.method public static values()[Lnlj;
     .locals 1
 
-    if-eqz p3, :cond_0
+    sget-object v0, Lnlj;->z0:[Lnlj;
 
-    new-instance v0, Lgk4;
+    invoke-virtual {v0}, [Lnlj;->clone()Ljava/lang/Object;
 
-    invoke-direct {v0, p1, p2, p3}, Lgk4;-><init>(JLandroid/view/View$OnClickListener;)V
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    check-cast v0, [Lnlj;
 
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public static synthetic d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-    .locals 2
 
-    const-wide/16 v0, 0x12c
+# virtual methods
+.method public final b()I
+    .locals 1
 
-    invoke-static {p0, v0, v1, p1}, Lnlj;->c(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
+    iget v0, p0, Lnlj;->a:I
 
-    return-void
+    return v0
 .end method

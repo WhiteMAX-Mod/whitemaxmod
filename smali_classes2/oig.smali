@@ -4,40 +4,24 @@
 
 
 # instance fields
-.field public final a:F
+.field public final a:I
 
-.field public final b:F
+.field public final b:I
 
-.field public final c:[I
-
-.field public final d:[F
-
-.field public final e:F
-
-.field public final f:F
-
-.field public final g:F
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(FFFFF[F[I)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Loig;->a:F
+    iput p1, p0, Loig;->a:I
 
-    iput p2, p0, Loig;->b:F
+    iput p2, p0, Loig;->b:I
 
-    iput-object p7, p0, Loig;->c:[I
-
-    iput-object p6, p0, Loig;->d:[F
-
-    iput p3, p0, Loig;->e:F
-
-    iput p4, p0, Loig;->f:F
-
-    iput p5, p0, Loig;->g:F
+    iput p3, p0, Loig;->c:I
 
     return-void
 .end method
@@ -65,106 +49,42 @@
     :cond_1
     check-cast p1, Loig;
 
-    iget v1, p0, Loig;->a:F
+    iget v1, p0, Loig;->a:I
 
-    iget v3, p1, Loig;->a:F
+    iget v3, p1, Loig;->a:I
 
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
+    if-eq v1, v3, :cond_2
 
     return v2
 
     :cond_2
-    iget v1, p0, Loig;->b:F
+    iget v1, p0, Loig;->b:I
 
-    iget v3, p1, Loig;->b:F
+    iget v3, p1, Loig;->b:I
 
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
+    if-eq v1, v3, :cond_3
 
     return v2
 
     :cond_3
-    iget-object v1, p0, Loig;->c:[I
+    iget v1, p0, Loig;->c:I
 
-    iget-object v3, p1, Loig;->c:[I
+    iget p1, p1, Loig;->c:I
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
+    if-eq v1, p1, :cond_4
 
     return v2
 
     :cond_4
-    iget-object v1, p0, Loig;->d:[F
-
-    iget-object v3, p1, Loig;->d:[F
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget v1, p0, Loig;->e:F
-
-    iget v3, p1, Loig;->e:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget v1, p0, Loig;->f:F
-
-    iget v3, p1, Loig;->f:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget v1, p0, Loig;->g:F
-
-    iget p1, p1, Loig;->g:F
-
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    return v2
-
-    :cond_8
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Loig;->a:F
+    iget v0, p0, Loig;->a:I
 
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
@@ -172,47 +92,15 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Loig;->b:F
+    iget v2, p0, Loig;->b:I
 
-    invoke-static {v0, v2, v1}, Lqi3;->b(IFI)I
-
-    move-result v0
-
-    iget-object v2, p0, Loig;->c:[I
-
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Loig;->d:[F
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([F)I
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
     move-result v0
 
-    add-int/2addr v0, v2
+    iget v1, p0, Loig;->c:I
 
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Loig;->e:F
-
-    invoke-static {v0, v2, v1}, Lqi3;->b(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Loig;->f:F
-
-    invoke-static {v0, v2, v1}, Lqi3;->b(IFI)I
-
-    move-result v0
-
-    iget v1, p0, Loig;->g:F
-
-    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
@@ -224,71 +112,25 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    iget-object v0, p0, Loig;->c:[I
+    const-string v0, ", descriptionRes="
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    const-string v1, ", buttonRes="
+
+    const-string v2, "TextsUiModel(titleRes="
+
+    iget v3, p0, Loig;->a:I
+
+    iget v4, p0, Loig;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Loig;->d:[F
+    const-string v1, ")"
 
-    invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
+    iget v2, p0, Loig;->c:I
 
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "GradientEllipse(x="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Loig;->a:F
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v3, ", y="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v3, p0, Loig;->b:F
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v3, ", color="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", stops="
-
-    const-string v4, ", radiusX="
-
-    invoke-static {v2, v0, v3, v1, v4}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v0, p0, Loig;->e:F
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", radiusY="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Loig;->f:F
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", angle="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Loig;->g:F
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

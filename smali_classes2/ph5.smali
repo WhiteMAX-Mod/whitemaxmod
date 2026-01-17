@@ -1,31 +1,55 @@
 .class public final Lph5;
-.super Lqh5;
+.super Lrh5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lrqf;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lrqf;)V
-    .locals 3
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/String;Z)V
+    .locals 2
 
-    sget v0, Ludb;->O:I
+    sget v0, Leeb;->N:I
 
-    new-instance v1, Lbhg;
+    const/4 v1, 0x2
 
-    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
+    filled-new-array {p1, p2}, [Ljava/lang/Object;
 
-    sget v0, Ludb;->N:I
+    move-result-object p1
 
-    new-instance v2, Lbhg;
+    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    invoke-direct {v2, v0}, Lbhg;-><init>(I)V
+    move-result-object p1
 
-    invoke-direct {p0, v2, v1}, Lqh5;-><init>(Lbhg;Lghg;)V
+    new-instance p2, Lnhg;
 
-    iput-object p1, p0, Lph5;->c:Lrqf;
+    invoke-static {p1}, Lct;->C([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-direct {p2, v0, p1}, Lnhg;-><init>(ILjava/util/List;)V
+
+    if-eqz p3, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    sget p1, Lx5e;->F0:I
+
+    new-instance v0, Llhg;
+
+    invoke-direct {v0, p1}, Llhg;-><init>(I)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-direct {p0, p1, p2}, Lrh5;-><init>(Llhg;Lqhg;)V
+
+    iput-boolean p3, p0, Lph5;->c:Z
 
     return-void
 .end method
@@ -42,72 +66,53 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lph5;
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    const-class v2, Lph5;
+
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lph5;
-
-    iget-object v1, p0, Lph5;->c:Lrqf;
-
-    iget-object p1, p1, Lph5;->c:Lrqf;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    check-cast p1, Lph5;
+
+    iget-boolean v1, p0, Lph5;->c:Z
+
+    iget-boolean p1, p1, Lph5;->c:Z
+
+    if-ne v1, p1, :cond_3
+
     return v0
+
+    :cond_3
+    return v2
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lph5;->c:Lrqf;
+    iget-boolean v0, p0, Lph5;->c:Z
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Lrqf;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WithSticker(sticker="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lph5;->c:Lrqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

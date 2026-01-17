@@ -11,12 +11,12 @@
     d2 = {
         "Lone/me/android/secure/BadFileShareException;",
         "Ljava/lang/IllegalAccessException;",
-        "oneme_playGoogleRelease"
+        "oneme_googleRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30

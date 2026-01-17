@@ -1,144 +1,246 @@
 .class public final Lm27;
-.super Ljava/util/ArrayList;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Class;
+.field public a:I
 
-.field public final b:Ljava/lang/Class;
+.field public b:I
 
+.field public c:F
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;)V
-    .locals 0
+.field public d:I
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+.field public e:Z
 
-    iput-object p1, p0, Lm27;->a:Ljava/lang/Class;
-
-    iput-object p2, p0, Lm27;->b:Ljava/lang/Class;
-
-    return-void
-.end method
+.field public f:I
 
 
 # virtual methods
-.method public final a()Lcf9;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lm27;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lm27;
+
+    iget v0, p0, Lm27;->a:I
+
+    iget v1, p1, Lm27;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lm27;->b:I
+
+    iget v1, p1, Lm27;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lm27;->c:F
+
+    iget v1, p1, Lm27;->c:F
+
+    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
 
     move-result v0
 
-    iget-object v1, p0, Lm27;->a:Ljava/lang/Class;
+    if-eqz v0, :cond_4
 
-    invoke-static {v1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_4
+    iget v0, p0, Lm27;->d:I
 
-    check-cast v1, [Ljava/lang/Object;
+    iget v1, p1, Lm27;->d:I
 
-    iget-object v2, p0, Lm27;->b:Ljava/lang/Class;
+    if-eq v0, v1, :cond_5
 
-    invoke-static {v2, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v2
+    :cond_5
+    iget-boolean v0, p0, Lm27;->e:Z
 
-    check-cast v2, [Ljava/lang/Object;
+    iget-boolean v1, p1, Lm27;->e:Z
 
-    const/4 v3, 0x0
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Lm27;->f:I
+
+    iget p1, p1, Lm27;->f:I
+
+    if-eq v0, p1, :cond_7
 
     :goto_0
-    if-ge v3, v0, :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    return p1
 
-    move-result-object v4
+    :cond_7
+    :goto_1
+    const/4 p1, 0x1
 
-    check-cast v4, Landroid/util/Pair;
+    return p1
+.end method
 
-    iget-object v4, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 3
 
-    aput-object v4, v1, v3
+    iget v0, p0, Lm27;->a:I
 
-    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result-object v4
+    move-result v0
 
-    check-cast v4, Landroid/util/Pair;
+    const/16 v1, 0x1f
 
-    iget-object v4, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    aput-object v4, v2, v3
+    iget v2, p0, Lm27;->b:I
 
-    add-int/lit8 v3, v3, 0x1
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lm27;->c:F
+
+    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lm27;->d:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lm27;->e:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget v1, p0, Lm27;->f:I
+
+    invoke-static {v1}, Lt02;->t(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 9
+
+    iget v0, p0, Lm27;->a:I
+
+    iget v1, p0, Lm27;->b:I
+
+    iget v2, p0, Lm27;->c:F
+
+    iget v3, p0, Lm27;->d:I
+
+    iget-boolean v4, p0, Lm27;->e:Z
+
+    iget v5, p0, Lm27;->f:I
+
+    const-string v6, ", selectedPageIndex="
+
+    const-string v7, ", pageOffsetFraction="
+
+    const-string v8, "PageState(pagesNumber="
+
+    invoke-static {v8, v0, v6, v1, v7}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", selectedBigDotIndex="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", wasShiftedFromZeroToZero="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", dotsAnimationType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    if-eq v5, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v5, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v5, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v5, v1, :cond_0
+
+    const-string v1, "null"
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lcf9;
+    const-string v1, "ALL_DOTS_TO_RIGHT"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    array-length v3, v1
-
-    new-array v4, v3, [I
-
-    new-instance v5, Ljava/util/HashMap;
-
-    invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
-
-    const/4 v6, 0x0
-
-    :goto_1
-    if-ge v6, v3, :cond_2
-
-    aget-object v7, v1, v6
-
-    invoke-virtual {v5, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/Integer;
-
-    if-nez v8, :cond_1
-
-    invoke-virtual {v5}, Ljava/util/HashMap;->size()I
-
-    move-result v8
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
+    const-string v1, "ALL_DOTS_TO_LEFT"
 
-    move-result v7
-
-    aput v7, v4, v6
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    iput-object v4, v0, Lcf9;->a:Ljava/lang/Object;
+    const-string v1, "BIG_DOTS_CHANGE"
 
-    invoke-static {v1, v4}, Lcf9;->j([Ljava/lang/Object;[I)[Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_3
+    const-string v1, "NONE"
 
-    iput-object v1, v0, Lcf9;->b:Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v4}, Lcf9;->j([Ljava/lang/Object;[I)[Ljava/lang/Object;
+    const-string v1, ")"
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v1, v0, Lcf9;->c:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

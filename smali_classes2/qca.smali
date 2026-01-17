@@ -1,29 +1,27 @@
 .class public final Lqca;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lee8;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic Y:Lyca;
 
-.field public final synthetic Z:Lyca;
+.field public Z:I
 
-.field public d:Lyca;
+.field public d:Lqd8;
 
-.field public o:Lee8;
-
-.field public s0:I
+.field public o:Lqd8;
 
 
 # direct methods
-.method public constructor <init>(Lyca;Ll84;)V
+.method public constructor <init>(Lyca;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lqca;->Z:Lyca;
+    iput-object p1, p0, Lqca;->Y:Lyca;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -33,21 +31,21 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lqca;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lqca;->X:Ljava/lang/Object;
 
-    iget p1, p0, Lqca;->s0:I
+    iget p1, p0, Lqca;->Z:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lqca;->s0:I
+    iput p1, p0, Lqca;->Z:I
 
-    iget-object p1, p0, Lqca;->Z:Lyca;
+    iget-object p1, p0, Lqca;->Y:Lyca;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lyca;->e(Ljava/util/Set;Ll84;)Ljava/io/Serializable;
+    invoke-virtual {p1, v0, p0}, Lyca;->e(Ljava/util/Set;Lo84;)Ljava/io/Serializable;
 
     move-result-object p1
 

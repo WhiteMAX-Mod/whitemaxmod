@@ -35,19 +35,19 @@
 
     move-result-object v1
 
-    sget v2, Lf5d;->mtrl_progress_track_thickness:I
+    sget v2, Lb6d;->mtrl_progress_track_thickness:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    sget-object v4, Lefd;->BaseProgressIndicator:[I
+    sget-object v4, Lcgd;->BaseProgressIndicator:[I
 
     new-array v7, v0, [I
 
     const/4 v3, 0x0
 
-    invoke-static {p3, v3, p1, p2}, Lsig;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-static {p3, v3, p1, p2}, Ldjg;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     move v5, p1
 
@@ -55,23 +55,23 @@
 
     move-object v2, p3
 
-    invoke-static/range {v2 .. v7}, Lsig;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+    invoke-static/range {v2 .. v7}, Ldjg;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
 
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lefd;->BaseProgressIndicator_trackThickness:I
+    sget p2, Lcgd;->BaseProgressIndicator_trackThickness:I
 
-    invoke-static {v2, p1, p2, v1}, Lw6j;->d(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+    invoke-static {v2, p1, p2, v1}, Lm7j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
 
     move-result p2
 
     iput p2, p0, Lml0;->a:I
 
-    sget p2, Lefd;->BaseProgressIndicator_trackCornerRadius:I
+    sget p2, Lcgd;->BaseProgressIndicator_trackCornerRadius:I
 
-    invoke-static {v2, p1, p2, v0}, Lw6j;->d(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+    invoke-static {v2, p1, p2, v0}, Lm7j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
 
     move-result p2
 
@@ -85,7 +85,7 @@
 
     iput p2, p0, Lml0;->b:I
 
-    sget p2, Lefd;->BaseProgressIndicator_showAnimationBehavior:I
+    sget p2, Lcgd;->BaseProgressIndicator_showAnimationBehavior:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -93,7 +93,7 @@
 
     iput p2, p0, Lml0;->e:I
 
-    sget p2, Lefd;->BaseProgressIndicator_hideAnimationBehavior:I
+    sget p2, Lcgd;->BaseProgressIndicator_hideAnimationBehavior:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -101,7 +101,7 @@
 
     iput p2, p0, Lml0;->f:I
 
-    sget p2, Lefd;->BaseProgressIndicator_indicatorTrackGapSize:I
+    sget p2, Lcgd;->BaseProgressIndicator_indicatorTrackGapSize:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -109,7 +109,7 @@
 
     iput p2, p0, Lml0;->g:I
 
-    sget p2, Lefd;->BaseProgressIndicator_indicatorColor:I
+    sget p2, Lcgd;->BaseProgressIndicator_indicatorColor:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -119,9 +119,9 @@
 
     if-nez p2, :cond_0
 
-    sget p2, Lf4d;->colorPrimary:I
+    sget p2, Lf5d;->colorPrimary:I
 
-    invoke-static {p2, p3, v2}, Lu6j;->b(IILandroid/content/Context;)I
+    invoke-static {p2, p3, v2}, Le7j;->b(IILandroid/content/Context;)I
 
     move-result p2
 
@@ -134,7 +134,7 @@
     goto :goto_0
 
     :cond_0
-    sget p2, Lefd;->BaseProgressIndicator_indicatorColor:I
+    sget p2, Lcgd;->BaseProgressIndicator_indicatorColor:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
@@ -146,7 +146,7 @@
 
     if-eq p2, v1, :cond_1
 
-    sget p2, Lefd;->BaseProgressIndicator_indicatorColor:I
+    sget p2, Lcgd;->BaseProgressIndicator_indicatorColor:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -165,7 +165,7 @@
 
     move-result-object p2
 
-    sget v1, Lefd;->BaseProgressIndicator_indicatorColor:I
+    sget v1, Lcgd;->BaseProgressIndicator_indicatorColor:I
 
     invoke-virtual {p1, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -182,7 +182,7 @@
     if-eqz p2, :cond_3
 
     :goto_0
-    sget p2, Lefd;->BaseProgressIndicator_trackColor:I
+    sget p2, Lcgd;->BaseProgressIndicator_trackColor:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -190,7 +190,7 @@
 
     if-eqz p2, :cond_2
 
-    sget p2, Lefd;->BaseProgressIndicator_trackColor:I
+    sget p2, Lcgd;->BaseProgressIndicator_trackColor:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -237,7 +237,7 @@
 
     iget p3, p0, Lml0;->d:I
 
-    invoke-static {p3, p2}, Lu6j;->a(II)I
+    invoke-static {p3, p2}, Le7j;->a(II)I
 
     move-result p2
 

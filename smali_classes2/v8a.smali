@@ -11,7 +11,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljja;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method

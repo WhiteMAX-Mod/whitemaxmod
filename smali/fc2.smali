@@ -1,213 +1,205 @@
-.class public abstract Lfc2;
-.super Lzb2;
+.class public final Lfc2;
+.super Loj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:Lf76;
+.field public i:[I
+
+.field public j:[I
 
 
-# direct methods
-.method public constructor <init>(IILrb4;Lf76;)V
-    .locals 0
+# virtual methods
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 7
 
-    invoke-direct {p0, p3, p1, p2}, Lzb2;-><init>(Lrb4;II)V
+    iget-object v0, p0, Lfc2;->j:[I
 
-    iput-object p4, p0, Lfc2;->d:Lf76;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v2
+
+    sub-int v3, v2, v1
+
+    iget-object v4, p0, Loj0;->b:Lx50;
+
+    iget v4, v4, Lx50;->d:I
+
+    div-int/2addr v3, v4
+
+    iget-object v4, p0, Loj0;->c:Lx50;
+
+    iget v4, v4, Lx50;->d:I
+
+    mul-int/2addr v3, v4
+
+    invoke-virtual {p0, v3}, Loj0;->j(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    :goto_0
+    if-ge v1, v2, :cond_1
+
+    array-length v4, v0
+
+    const/4 v5, 0x0
+
+    :goto_1
+    if-ge v5, v4, :cond_0
+
+    aget v6, v0, v5
+
+    mul-int/lit8 v6, v6, 0x2
+
+    add-int/2addr v6, v1
+
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v6
+
+    invoke-virtual {v3, v6}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v4, p0, Loj0;->b:Lx50;
+
+    iget v4, v4, Lx50;->d:I
+
+    add-int/2addr v1, v4
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     return-void
 .end method
 
+.method public final f(Lx50;)Lx50;
+    .locals 8
 
-# virtual methods
-.method public final e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 5
+    iget-object v0, p0, Lfc2;->i:[I
 
-    iget v0, p0, Lzb2;->b:I
+    if-nez v0, :cond_0
 
-    const/4 v1, -0x3
+    sget-object p1, Lx50;->e:Lx50;
 
-    sget-object v2, Lbc4;->a:Lbc4;
+    return-object p1
 
-    if-ne v0, v1, :cond_4
+    :cond_0
+    iget v1, p1, Lx50;->c:I
 
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lrb4;
+    iget v2, p1, Lx50;->b:I
 
-    move-result-object v0
+    const/4 v3, 0x2
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    if-ne v1, v3, :cond_6
 
-    new-instance v3, Luj0;
+    array-length v1, v0
 
-    const/16 v4, 0xd
+    const/4 v4, 0x0
 
-    invoke-direct {v3, v4}, Luj0;-><init>(I)V
+    const/4 v5, 0x1
 
-    iget-object v4, p0, Lzb2;->a:Lrb4;
+    if-eq v2, v1, :cond_1
 
-    invoke-interface {v4, v1, v3}, Lrb4;->fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-interface {v0, v4}, Lrb4;->plus(Lrb4;)Lrb4;
-
-    move-result-object v1
+    move v1, v5
 
     goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-static {v0, v4, v1}, Likj;->a(Lrb4;Lrb4;Z)Lrb4;
-
-    move-result-object v1
+    :cond_1
+    move v1, v4
 
     :goto_0
-    invoke-static {v1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move v6, v4
 
-    move-result v3
+    :goto_1
+    array-length v7, v0
 
-    if-eqz v3, :cond_1
+    if-ge v6, v7, :cond_4
 
-    invoke-virtual {p0, p1, p2}, Lfc2;->n(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    aget v7, v0, v6
 
-    move-result-object p1
+    if-ge v7, v2, :cond_3
 
-    if-ne p1, v2, :cond_5
+    if-eq v7, v6, :cond_2
 
-    return-object p1
+    move v7, v5
 
-    :cond_1
-    sget-object v3, Lcmj;->u0:Lcmj;
+    goto :goto_2
 
-    invoke-interface {v1, v3}, Lrb4;->get(Lqb4;)Lpb4;
+    :cond_2
+    move v7, v4
 
-    move-result-object v4
+    :goto_2
+    or-int/2addr v1, v7
 
-    invoke-interface {v0, v3}, Lrb4;->get(Lqb4;)Lpb4;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lrb4;
-
-    move-result-object v0
-
-    instance-of v3, p1, Lcoe;
-
-    if-nez v3, :cond_3
-
-    instance-of v3, p1, Looa;
-
-    if-eqz v3, :cond_2
+    add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    :cond_2
-    new-instance v3, Lvx;
-
-    invoke-direct {v3, p1, v0}, Lvx;-><init>(Lh76;Lrb4;)V
-
-    move-object p1, v3
-
     :cond_3
-    :goto_1
-    new-instance v0, Lec2;
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
 
-    const/4 v3, 0x0
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lx50;)V
 
-    invoke-direct {v0, p0, v3}, Lec2;-><init>(Lfc2;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v1}, Lkotlinx/coroutines/internal/ThreadContextKt;->threadContextElements(Lrb4;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, p1, v3, v0, p2}, Lkcj;->b(Lrb4;Ljava/lang/Object;Ljava/lang/Object;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v2, :cond_5
-
-    return-object p1
+    throw v0
 
     :cond_4
-    invoke-super {p0, p1, p2}, Lzb2;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-eqz v1, :cond_5
 
-    move-result-object p1
+    new-instance v1, Lx50;
 
-    if-ne p1, v2, :cond_5
+    iget p1, p1, Lx50;->a:I
 
-    return-object p1
+    array-length v0, v0
+
+    invoke-direct {v1, p1, v0, v3}, Lx50;-><init>(III)V
+
+    return-object v1
 
     :cond_5
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lx50;->e:Lx50;
 
     return-object p1
+
+    :cond_6
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lx50;)V
+
+    throw v0
 .end method
 
-.method public final j(Lhic;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final g()V
     .locals 1
 
-    new-instance v0, Lcoe;
+    iget-object v0, p0, Lfc2;->i:[I
 
-    invoke-direct {v0, p1}, Lcoe;-><init>(Lhic;)V
+    iput-object v0, p0, Lfc2;->j:[I
 
-    invoke-virtual {p0, v0, p2}, Lfc2;->n(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lbc4;->a:Lbc4;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-void
 .end method
 
-.method public abstract n(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+.method public final i()V
+    .locals 1
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lfc2;->j:[I
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iput-object v0, p0, Lfc2;->i:[I
 
-    iget-object v1, p0, Lfc2;->d:Lf76;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " -> "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-super {p0}, Lzb2;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

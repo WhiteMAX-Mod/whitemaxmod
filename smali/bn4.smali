@@ -3,36 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lef8;
+.implements Lqe8;
+.implements Lfq4;
+.implements Lrw1;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lld;
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lld;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;II)V
     .locals 0
 
-    .line 1
+    iput-object p1, p0, Lbn4;->c:Ljava/lang/Object;
+
     iput p2, p0, Lbn4;->a:I
 
-    iput-object p1, p0, Lbn4;->b:Lld;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lld;Lnl4;I)V
-    .locals 0
-
-    .line 2
-    iput p3, p0, Lbn4;->a:I
-
-    iput-object p1, p0, Lbn4;->b:Lld;
+    iput p3, p0, Lbn4;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,74 +33,97 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 1
+.method public a(Landroid/media/MediaCodecInfo;)I
+    .locals 3
 
-    iget v0, p0, Lbn4;->a:I
+    iget-object v0, p0, Lbn4;->c:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Ljava/lang/String;
 
-    iget-object v0, p0, Lbn4;->b:Lld;
+    iget v1, p0, Lbn4;->a:I
 
-    check-cast p1, Lmd;
+    iget v2, p0, Lbn4;->b:I
 
-    invoke-interface {p1, v0}, Lmd;->v(Lld;)V
+    invoke-static {p1, v0, v1, v2}, Lgj5;->g(Landroid/media/MediaCodecInfo;Ljava/lang/String;II)Landroid/util/Size;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const p1, 0x7fffffff
+
+    return p1
+
+    :cond_0
+    mul-int/2addr v1, v2
+
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
+
+    move-result p1
+
+    mul-int/2addr p1, v0
+
+    sub-int/2addr v1, p1
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-object v0, p0, Lbn4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lid;
+
+    iget v1, p0, Lbn4;->b:I
+
+    check-cast p1, Ljd;
+
+    iget v2, p0, Lbn4;->a:I
+
+    invoke-interface {p1, v0, v2, v1}, Ljd;->M(Lid;II)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lbn4;->b:Lld;
+.method public l(Lqw1;)Ljava/lang/String;
+    .locals 4
 
-    check-cast p1, Lmd;
+    iget-object v0, p0, Lbn4;->c:Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Lmd;->S0(Lld;)V
+    check-cast v0, Lxt4;
 
-    return-void
+    new-instance v1, Lva0;
 
-    :pswitch_1
-    iget-object v0, p0, Lbn4;->b:Lld;
+    iget v2, p0, Lbn4;->a:I
 
-    check-cast p1, Lmd;
+    iget v3, p0, Lbn4;->b:I
 
-    invoke-interface {p1, v0}, Lmd;->J0(Lld;)V
+    invoke-direct {v1, v2, v3, p1}, Lva0;-><init>(IILqw1;)V
 
-    return-void
+    new-instance v2, Li02;
 
-    :pswitch_2
-    iget-object v0, p0, Lbn4;->b:Lld;
+    const/16 v3, 0x1b
 
-    check-cast p1, Lmd;
+    invoke-direct {v2, v0, v3, v1}, Li02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-interface {p1, v0}, Lmd;->V(Lld;)V
+    new-instance v1, Ltt4;
 
-    return-void
+    const/4 v3, 0x0
 
-    :pswitch_3
-    iget-object v0, p0, Lbn4;->b:Lld;
+    invoke-direct {v1, p1, v3}, Ltt4;-><init>(Lqw1;I)V
 
-    check-cast p1, Lmd;
+    invoke-virtual {v0, v2, v1}, Lxt4;->b(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    invoke-interface {p1, v0}, Lmd;->u0(Lld;)V
+    const-string p1, "DefaultSurfaceProcessor#snapshot"
 
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lbn4;->b:Lld;
-
-    check-cast p1, Lmd;
-
-    invoke-interface {p1, v0}, Lmd;->r0(Lld;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

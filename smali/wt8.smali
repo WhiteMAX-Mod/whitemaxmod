@@ -1,19 +1,25 @@
-.class public Lwt8;
-.super Ljava/lang/Object;
+.class public final Lwt8;
+.super Landroid/widget/ArrayAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lvqi;
+.field public a:Landroid/content/res/ColorStateList;
+
+.field public b:Landroid/content/res/ColorStateList;
+
+.field public final synthetic c:Lxt8;
 
 
 # direct methods
-.method public constructor <init>(Lvqi;)V
+.method public constructor <init>(Lxt8;Landroid/content/Context;I[Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwt8;->c:Lxt8;
 
-    iput-object p1, p0, Lwt8;->a:Lvqi;
+    invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Lwt8;->a()V
 
     return-void
 .end method
@@ -21,250 +27,192 @@
 
 # virtual methods
 .method public final a()V
-    .locals 3
+    .locals 7
 
-    :try_start_0
-    iget-object v0, p0, Lwt8;->a:Lvqi;
+    iget-object v0, p0, Lwt8;->c:Lxt8;
 
-    check-cast v0, Lnqi;
-
-    invoke-virtual {v0}, Lyni;->V()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lyni;->X(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final b(Lyp0;)V
-    .locals 3
-
-    const/16 v0, 0x12
-
-    iget-object v1, p0, Lwt8;->a:Lvqi;
-
-    if-nez p1, :cond_0
-
-    :try_start_0
-    check-cast v1, Lnqi;
-
-    invoke-virtual {v1}, Lyni;->V()Landroid/os/Parcel;
-
-    move-result-object p1
+    iget-object v1, v0, Lxt8;->z0:Landroid/content/res/ColorStateList;
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2}, Lxti;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    const/4 v3, 0x0
 
-    invoke-virtual {v1, p1, v0}, Lyni;->X(Landroid/os/Parcel;I)V
+    if-eqz v1, :cond_0
 
-    return-void
+    const v4, 0x10100a7
 
-    :cond_0
-    iget-object p1, p1, Lyp0;->a:Lof7;
+    filled-new-array {v4}, [I
 
-    check-cast v1, Lnqi;
+    move-result-object v4
 
-    invoke-virtual {v1}, Lyni;->V()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    invoke-static {v2, p1}, Lxti;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v1, v2, v0}, Lyni;->X(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final c(Ljava/lang/Long;)V
-    .locals 2
-
-    :try_start_0
-    iget-object v0, p0, Lwt8;->a:Lvqi;
-
-    new-instance v1, Laxa;
-
-    invoke-direct {v1, p1}, Laxa;-><init>(Ljava/lang/Object;)V
-
-    check-cast v0, Lnqi;
-
-    invoke-virtual {v0}, Lyni;->V()Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-static {p1, v1}, Lxti;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 v1, 0x1d
-
-    invoke-virtual {v0, p1, v1}, Lyni;->X(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final d()V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Lwt8;->a:Lvqi;
-
-    check-cast v0, Lnqi;
-
-    invoke-virtual {v0}, Lyni;->V()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    sget v2, Lxti;->a:I
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 v2, 0xe
-
-    invoke-virtual {v0, v1, v2}, Lyni;->X(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    instance-of v0, p1, Lwt8;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lwt8;->a:Lvqi;
-
-    check-cast p1, Lwt8;
-
-    iget-object p1, p1, Lwt8;->a:Lvqi;
-
-    check-cast v0, Lnqi;
-
-    invoke-virtual {v0}, Lyni;->V()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    invoke-static {v2, p1}, Lxti;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 p1, 0x10
-
-    invoke-virtual {v0, v2, p1}, Lyni;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v1
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Lwt8;->a:Lvqi;
-
-    check-cast v0, Lnqi;
-
-    invoke-virtual {v0}, Lyni;->V()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/16 v2, 0x11
-
-    invoke-virtual {v0, v1, v2}, Lyni;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {v1, v4, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
     move-result v1
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    filled-new-array {v1, v3}, [I
 
-    return v1
+    move-result-object v1
 
-    :catch_0
-    move-exception v0
+    new-array v5, v3, [I
 
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+    filled-new-array {v4, v5}, [[I
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    move-result-object v4
 
-    throw v1
+    new-instance v5, Landroid/content/res/ColorStateList;
+
+    invoke-direct {v5, v4, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    goto :goto_0
+
+    :cond_0
+    move-object v5, v2
+
+    :goto_0
+    iput-object v5, p0, Lwt8;->b:Landroid/content/res/ColorStateList;
+
+    iget v1, v0, Lxt8;->y0:I
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lxt8;->z0:Landroid/content/res/ColorStateList;
+
+    if-eqz v1, :cond_1
+
+    const v1, 0x1010367
+
+    const v2, -0x10100a7
+
+    filled-new-array {v1, v2}, [I
+
+    move-result-object v1
+
+    const v4, 0x10100a1
+
+    filled-new-array {v4, v2}, [I
+
+    move-result-object v2
+
+    iget-object v4, v0, Lxt8;->z0:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v4, v2, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v4
+
+    iget-object v5, v0, Lxt8;->z0:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v5, v1, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v5
+
+    iget v6, v0, Lxt8;->y0:I
+
+    invoke-static {v4, v6}, Ljj3;->g(II)I
+
+    move-result v4
+
+    iget v6, v0, Lxt8;->y0:I
+
+    invoke-static {v5, v6}, Ljj3;->g(II)I
+
+    move-result v5
+
+    iget v0, v0, Lxt8;->y0:I
+
+    filled-new-array {v4, v5, v0}, [I
+
+    move-result-object v0
+
+    new-array v3, v3, [I
+
+    filled-new-array {v2, v1, v3}, [[I
+
+    move-result-object v1
+
+    new-instance v2, Landroid/content/res/ColorStateList;
+
+    invoke-direct {v2, v1, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    :cond_1
+    iput-object v2, p0, Lwt8;->a:Landroid/content/res/ColorStateList;
+
+    return-void
+.end method
+
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
+
+    invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p1
+
+    instance-of p2, p1, Landroid/widget/TextView;
+
+    if-eqz p2, :cond_2
+
+    move-object p2, p1
+
+    check-cast p2, Landroid/widget/TextView;
+
+    iget-object p3, p0, Lwt8;->c:Lxt8;
+
+    invoke-virtual {p3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget v0, p3, Lxt8;->y0:I
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
+
+    iget p3, p3, Lxt8;->y0:I
+
+    invoke-direct {v0, p3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    iget-object p3, p0, Lwt8;->b:Landroid/content/res/ColorStateList;
+
+    if-eqz p3, :cond_0
+
+    iget-object p3, p0, Lwt8;->a:Landroid/content/res/ColorStateList;
+
+    invoke-static {v0, p3}, Lv75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    new-instance p3, Landroid/graphics/drawable/RippleDrawable;
+
+    iget-object v2, p0, Lwt8;->b:Landroid/content/res/ColorStateList;
+
+    invoke-direct {p3, v2, v0, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    move-object v1, p3
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v0
+
+    :cond_1
+    :goto_0
+    sget-object p3, Lxsh;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_2
+    return-object p1
 .end method

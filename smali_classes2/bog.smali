@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ldog;
+.field public final synthetic b:Lmmb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldog;I)V
+.method public synthetic constructor <init>(Lmmb;I)V
     .locals 0
 
     iput p2, p0, Lbog;->a:I
 
-    iput-object p1, p0, Lbog;->b:Ldog;
+    iput-object p1, p0, Lbog;->b:Lmmb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,40 +27,52 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     iget v0, p0, Lbog;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lxng;
+    iget-object v0, p0, Lbog;->b:Lmmb;
 
-    iget-object v1, p0, Lbog;->b:Ldog;
+    check-cast v0, Lkmb;
 
-    iget-object v2, v1, Ldog;->c:Lmq6;
+    iget-object v0, v0, Lkmb;->a:Lrmb;
 
-    iget v3, v1, Ldog;->o:I
+    iget-object v0, v0, Lrmb;->b:Lnq6;
 
-    iget v1, v1, Ldog;->X:I
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v2, v3, v1}, Lxng;-><init>(Lmq6;II)V
-
-    return-object v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lbog;->b:Ldog;
+    iget-object v0, p0, Lbog;->b:Lmmb;
 
-    invoke-virtual {v0}, Ldog;->dismiss()V
+    check-cast v0, Lhmb;
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    iget-object v0, v0, Lhmb;->a:Lnq6;
 
-    return-object v0
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lbog;->b:Lmmb;
+
+    check-cast v0, Lgmb;
+
+    iget-object v0, v0, Lgmb;->a:Lnq6;
+
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

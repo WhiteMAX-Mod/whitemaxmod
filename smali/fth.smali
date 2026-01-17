@@ -1,141 +1,99 @@
 .class public abstract Lfth;
-.super Lua4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lgth;
+# static fields
+.field public static final a:Ljava/lang/ThreadLocal;
 
-.field public b:I
+.field public static final b:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    .line 2
-    iput v0, p0, Lfth;->b:I
+    sput-object v0, Lfth;->a:Ljava/lang/ThreadLocal;
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-.method public constructor <init>(I)V
-    .locals 0
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p1, 0x0
-
-    .line 4
-    iput p1, p0, Lfth;->b:I
+    sput-object v0, Lfth;->b:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
+.method public static a(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 2
 
-# virtual methods
-.method public l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
-    .locals 0
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    invoke-virtual {p0, p1, p2, p3}, Lfth;->y(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
+    move-result-object v0
 
-    iget-object p1, p0, Lfth;->a:Lgth;
+    instance-of v1, v0, Landroid/view/View;
 
-    if-nez p1, :cond_0
+    if-eqz v1, :cond_0
 
-    new-instance p1, Lgth;
+    if-eq v0, p0, :cond_0
 
-    invoke-direct {p1, p2}, Lgth;-><init>(Landroid/view/View;)V
+    check-cast v0, Landroid/view/View;
 
-    iput-object p1, p0, Lfth;->a:Lgth;
+    invoke-static {p0, v0, p2}, Lfth;->a(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Matrix;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
+
+    move-result p0
+
+    neg-int p0, p0
+
+    int-to-float p0, p0
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
+
+    move-result v0
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     :cond_0
-    iget-object p1, p0, Lfth;->a:Lgth;
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
-    iget-object p2, p1, Lgth;->a:Landroid/view/View;
+    move-result p0
 
-    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+    int-to-float p0, p0
 
-    move-result p3
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
-    iput p3, p1, Lgth;->b:I
+    move-result v0
 
-    invoke-virtual {p2}, Landroid/view/View;->getLeft()I
+    int-to-float v0, v0
 
-    move-result p2
+    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    iput p2, p1, Lgth;->c:I
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
-    iget-object p1, p0, Lfth;->a:Lgth;
+    move-result-object p0
 
-    invoke-virtual {p1}, Lgth;->a()V
+    invoke-virtual {p0}, Landroid/graphics/Matrix;->isIdentity()Z
 
-    iget p1, p0, Lfth;->b:I
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-nez p0, :cond_1
 
-    iget-object p2, p0, Lfth;->a:Lgth;
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
-    invoke-virtual {p2, p1}, Lgth;->b(I)Z
+    move-result-object p0
 
-    const/4 p1, 0x0
-
-    iput p1, p0, Lfth;->b:I
+    invoke-virtual {p2, p0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
 
     :cond_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final x()I
-    .locals 1
-
-    iget-object v0, p0, Lfth;->a:Lgth;
-
-    if-eqz v0, :cond_0
-
-    iget v0, v0, Lgth;->d:I
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public y(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
-    .locals 0
-
-    invoke-virtual {p1, p2, p3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->q(Landroid/view/View;I)V
-
     return-void
-.end method
-
-.method public z(I)Z
-    .locals 1
-
-    iget-object v0, p0, Lfth;->a:Lgth;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lgth;->b(I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    iput p1, p0, Lfth;->b:I
-
-    const/4 p1, 0x0
-
-    return p1
 .end method

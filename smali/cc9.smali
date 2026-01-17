@@ -1,182 +1,263 @@
-.class public final synthetic Lcc9;
-.super Ljava/lang/Object;
+.class public final Lcc9;
+.super Landroid/app/Service;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final w0:Z
 
 
 # instance fields
-.field public final synthetic a:Ljc9;
+.field public X:Liz8;
 
-.field public final synthetic b:I
+.field public final Y:Lqy;
 
-.field public final synthetic c:Llc9;
+.field public Z:Lya9;
 
-.field public final synthetic d:Lic9;
+.field public a:Lkz8;
 
-.field public final synthetic o:Z
+.field public final b:Lski;
+
+.field public final c:Liz8;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public final o:Lys;
+
+.field public final t0:Lxb9;
+
+.field public final u0:Lgb9;
+
+.field public final v0:Lnre;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljc9;ILlc9;Lic9;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "MBServiceCompat"
 
-    iput-object p1, p0, Lcc9;->a:Ljc9;
+    const/4 v1, 0x3
 
-    iput p2, p0, Lcc9;->b:I
+    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    iput-object p3, p0, Lcc9;->c:Llc9;
+    move-result v0
 
-    iput-object p4, p0, Lcc9;->d:Lic9;
+    sput-boolean v0, Lcc9;->w0:Z
 
-    iput-boolean p5, p0, Lcc9;->o:Z
+    return-void
+.end method
+
+.method public constructor <init>(Lgb9;)V
+    .locals 8
+
+    invoke-direct {p0}, Landroid/app/Service;-><init>()V
+
+    new-instance v0, Lski;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1, p0}, Lski;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lcc9;->b:Lski;
+
+    new-instance v2, Liz8;
+
+    const/4 v6, -0x1
+
+    const/4 v7, 0x0
+
+    const-string v4, "android.media.session.MediaController"
+
+    const/4 v5, -0x1
+
+    move-object v3, p0
+
+    invoke-direct/range {v2 .. v7}, Liz8;-><init>(Lcc9;Ljava/lang/String;IILpz8;)V
+
+    iput-object v2, v3, Lcc9;->c:Liz8;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, v3, Lcc9;->d:Ljava/util/ArrayList;
+
+    new-instance v0, Lys;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ladf;-><init>(I)V
+
+    iput-object v0, v3, Lcc9;->o:Lys;
+
+    new-instance v0, Lqy;
+
+    invoke-direct {v0}, Lqy;-><init>()V
+
+    iput-object v3, v0, Lqy;->b:Ljava/lang/Object;
+
+    iput-object v0, v3, Lcc9;->Y:Lqy;
+
+    iget-object v0, p1, Lgb9;->f:Lone/me/android/media/service/OneMeMediaSessionService;
+
+    invoke-static {v0}, Lxb9;->a(Landroid/content/Context;)Lxb9;
+
+    move-result-object v0
+
+    iput-object v0, v3, Lcc9;->t0:Lxb9;
+
+    iput-object p1, v3, Lcc9;->u0:Lgb9;
+
+    new-instance v0, Lnre;
+
+    invoke-direct {v0, p1}, Lnre;-><init>(Lgb9;)V
+
+    iput-object v0, v3, Lcc9;->v0:Lnre;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final a(Lya9;)V
+    .locals 5
 
-    iget-object v0, p0, Lcc9;->d:Lic9;
+    iget-object v0, p0, Lcc9;->u0:Lgb9;
 
-    iget-object v1, p0, Lcc9;->a:Ljc9;
+    iget-object v0, v0, Lgb9;->f:Lone/me/android/media/service/OneMeMediaSessionService;
 
-    iget-object v2, v1, Ljc9;->g:Lxb9;
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
 
-    invoke-virtual {v2}, Lxb9;->j()Z
+    invoke-virtual {p0}, Lcc9;->onCreate()V
 
-    move-result v3
+    if-eqz p1, :cond_1
 
-    if-eqz v3, :cond_0
+    iget-object v0, p0, Lcc9;->Z:Lya9;
 
-    goto/16 :goto_1
+    if-nez v0, :cond_0
+
+    iput-object p1, p0, Lcc9;->Z:Lya9;
+
+    iget-object v0, p0, Lcc9;->a:Lkz8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v0, Lnk0;->d:Ljava/lang/Object;
+
+    check-cast v1, Lcc9;
+
+    iget-object v1, v1, Lcc9;->Y:Lqy;
+
+    new-instance v2, Lis6;
+
+    const/16 v3, 0xd
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v0, p1, v4, v3}, Lis6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {v1, v2}, Lqy;->c(Ljava/lang/Runnable;)V
+
+    return-void
 
     :cond_0
-    iget-object v3, v1, Ljc9;->k:Lrb9;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v3, v3, Lrb9;->b:Ljava/lang/Object;
+    const-string v0, "The session token has already been set"
 
-    check-cast v3, Llb9;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, v3, Llb9;->a:Landroid/media/session/MediaSession;
-
-    invoke-virtual {v3}, Landroid/media/session/MediaSession;->isActive()Z
-
-    move-result v3
-
-    iget v4, p0, Lcc9;->b:I
-
-    iget-object v5, p0, Lcc9;->c:Llc9;
-
-    const-string v6, "MediaSessionLegacyStub"
-
-    if-nez v3, :cond_1
-
-    const-string v0, "Ignore incoming player command before initialization. command="
-
-    const-string v1, ", pid="
-
-    invoke-static {v4, v0, v1}, Lqf7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, v5, Llc9;->a:Loc9;
-
-    iget v1, v1, Loc9;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v6, v0}, Lnfi;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    throw p1
 
     :cond_1
-    invoke-virtual {v1, v5}, Ljc9;->K(Llc9;)Leb9;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    move-result-object v3
+    const-string v0, "Session token may not be null"
 
-    iget-object v1, v1, Ljc9;->f:Lkqe;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3, v4}, Lkqe;->z(Leb9;I)Z
+    throw p1
+.end method
 
-    move-result v1
-
-    const/4 v5, 0x1
-
-    if-nez v1, :cond_2
-
-    if-ne v4, v5, :cond_3
-
-    iget-object v0, v2, Lxb9;->t:Lccc;
-
-    invoke-virtual {v0}, Lccc;->j()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    const-string v0, "Calling play() omitted due to COMMAND_PLAY_PAUSE not being available. If this play command has started the service for instance for playback resumption, this may prevent the service from being started into the foreground."
-
-    invoke-static {v6, v0}, Lnfi;->l(Ljava/lang/String;Ljava/lang/String;)V
+.method public final dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_2
-    iget-object v1, v2, Lxb9;->e:Lpme;
+.method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .locals 1
 
-    invoke-virtual {v2, v3}, Lxb9;->t(Leb9;)Leb9;
+    iget-object v0, p0, Lcc9;->a:Lkz8;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :try_start_0
-    invoke-interface {v0, v3}, Lic9;->b(Leb9;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, v0, Lnk0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljz8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, p1}, Landroid/service/media/MediaBrowserService;->onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final onCreate()V
+    .locals 3
+
+    invoke-super {p0}, Landroid/app/Service;->onCreate()V
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Llz8;
+
+    invoke-direct {v0, p0}, Llz8;-><init>(Lcc9;)V
+
+    iput-object v0, p0, Lcc9;->a:Lkz8;
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    new-instance v0, Lkz8;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0, p0}, Lkz8;-><init>(Lcc9;)V
 
-    const-string v7, "Exception in "
-
-    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v6, v1, v0}, Lnfi;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-object v0, p0, Lcc9;->a:Lkz8;
 
     :goto_0
-    iget-boolean v0, p0, Lcc9;->o:Z
+    iget-object v0, p0, Lcc9;->a:Lkz8;
 
-    if-eqz v0, :cond_3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Landroid/util/SparseBooleanArray;
+    new-instance v1, Ljz8;
 
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
+    iget-object v2, v0, Lkz8;->f:Lcc9;
 
-    invoke-virtual {v0, v4, v5}, Landroid/util/SparseBooleanArray;->append(IZ)V
+    invoke-direct {v1, v0, v2}, Ljz8;-><init>(Lkz8;Landroid/content/Context;)V
 
-    new-instance v0, Lqac;
+    iput-object v1, v0, Lnk0;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2, v3}, Lxb9;->q(Leb9;)V
+    invoke-virtual {v1}, Landroid/service/media/MediaBrowserService;->onCreate()V
 
-    :cond_3
-    :goto_1
+    return-void
+.end method
+
+.method public final onDestroy()V
+    .locals 2
+
+    iget-object v0, p0, Lcc9;->Y:Lqy;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lqy;->b:Ljava/lang/Object;
+
     return-void
 .end method

@@ -1,119 +1,156 @@
 .class public final Lf35;
-.super Lwgc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyc9;
 
-# static fields
-.field public static final c:Lf35;
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lf35;
-
-    sget-object v1, Lk35;->a:Lk35;
-
-    invoke-direct {v0, v1}, Lwgc;-><init>(Lq38;)V
-
-    sput-object v0, Lf35;->c:Lf35;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final h(Ljava/lang/Object;)I
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    check-cast p1, [D
+    iput-object p1, p0, Lf35;->a:Ljava/lang/String;
 
-    array-length p1, p1
-
-    return p1
-.end method
-
-.method public final j(Lip3;ILjava/lang/Object;)V
-    .locals 3
-
-    check-cast p3, Le35;
-
-    iget-object v0, p0, Lwgc;->b:Lvgc;
-
-    invoke-interface {p1, v0, p2}, Lip3;->f(Lvgc;I)D
-
-    move-result-wide p1
-
-    invoke-static {p3}, Lugc;->c(Lugc;)V
-
-    iget-object v0, p3, Le35;->a:[D
-
-    iget v1, p3, Le35;->b:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p3, Le35;->b:I
-
-    aput-wide p1, v0, v1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public static b(Ldch;)Lf35;
+    .locals 6
 
-    check-cast p1, [D
+    const/4 v0, 0x2
 
-    new-instance v0, Le35;
+    invoke-virtual {p0, v0}, Ldch;->F(I)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ldch;->s()I
 
-    iput-object p1, v0, Le35;->a:[D
+    move-result v0
 
-    array-length p1, p1
+    shr-int/lit8 v1, v0, 0x1
 
-    iput p1, v0, Le35;->b:I
+    and-int/lit8 v0, v0, 0x1
 
-    const/16 p1, 0xa
+    const/4 v2, 0x5
 
-    invoke-virtual {v0, p1}, Le35;->b(I)V
+    shl-int/2addr v0, v2
 
-    return-object v0
-.end method
+    invoke-virtual {p0}, Ldch;->s()I
 
-.method public final n()Ljava/lang/Object;
-    .locals 1
+    move-result p0
 
-    const/4 v0, 0x0
+    shr-int/lit8 p0, p0, 0x3
 
-    new-array v0, v0, [D
+    and-int/lit8 p0, p0, 0x1f
 
-    return-object v0
-.end method
+    or-int/2addr p0, v0
 
-.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
-    .locals 4
+    const/4 v0, 0x4
 
-    check-cast p2, [D
+    if-eq v1, v0, :cond_3
 
-    const/4 v0, 0x0
+    if-eq v1, v2, :cond_3
 
-    :goto_0
-    if-ge v0, p3, :cond_0
+    const/4 v0, 0x7
 
-    aget-wide v1, p2, v0
-
-    iget-object v3, p0, Lwgc;->b:Lvgc;
-
-    invoke-virtual {p1, v3, v0}, Lkotlinx/serialization/json/internal/b;->g(Lvoe;I)V
-
-    invoke-virtual {p1, v1, v2}, Lkotlinx/serialization/json/internal/b;->f(D)V
-
-    add-int/lit8 v0, v0, 0x1
+    if-ne v1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-void
+    const/16 v0, 0x8
+
+    if-ne v1, v0, :cond_1
+
+    const-string v0, "hev1"
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v0, 0x9
+
+    if-ne v1, v0, :cond_2
+
+    const-string v0, "avc3"
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_3
+    :goto_0
+    const-string v0, "dvhe"
+
+    :goto_1
+    const/16 v2, 0xa
+
+    const-string v3, ".0"
+
+    if-ge p0, v2, :cond_4
+
+    move-object v2, v3
+
+    goto :goto_2
+
+    :cond_4
+    const-string v2, "."
+
+    :goto_2
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x18
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    add-int/2addr v5, v4
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Lf35;
+
+    invoke-direct {v0, p0}, Lf35;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public a(Landroid/media/MediaPlayer;Landroid/content/Context;)Z
+    .locals 0
+
+    iget-object p2, p0, Lf35;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

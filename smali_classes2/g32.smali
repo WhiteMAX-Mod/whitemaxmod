@@ -11,19 +11,27 @@
 
 .field public final synthetic Y:F
 
+.field public final synthetic Z:I
+
 .field public final synthetic a:Li32;
 
 .field public final synthetic b:I
 
 .field public final synthetic c:I
 
-.field public final synthetic d:F
+.field public final synthetic d:I
 
-.field public final synthetic o:F
+.field public final synthetic o:I
+
+.field public final synthetic t0:I
+
+.field public final synthetic u0:I
+
+.field public final synthetic v0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Li32;IIFFFF)V
+.method public synthetic constructor <init>(Li32;IIIIFFIIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,13 +42,21 @@
 
     iput p3, p0, Lg32;->c:I
 
-    iput p4, p0, Lg32;->d:F
+    iput p4, p0, Lg32;->d:I
 
-    iput p5, p0, Lg32;->o:F
+    iput p5, p0, Lg32;->o:I
 
     iput p6, p0, Lg32;->X:F
 
     iput p7, p0, Lg32;->Y:F
+
+    iput p8, p0, Lg32;->Z:I
+
+    iput p9, p0, Lg32;->t0:I
+
+    iput p10, p0, Lg32;->u0:I
+
+    iput p11, p0, Lg32;->v0:I
 
     return-void
 .end method
@@ -48,89 +64,41 @@
 
 # virtual methods
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 5
+    .locals 12
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result p1
-
-    iget-object v0, p0, Lg32;->a:Li32;
-
-    iget-object v1, v0, Li32;->s0:Landroid/graphics/Paint;
-
-    iget-object v2, v0, Li32;->b:Landroid/animation/ArgbEvaluator;
-
-    iget v3, p0, Lg32;->b:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    iget v4, p0, Lg32;->c:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v2, p1, v3, v4}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget-object v1, v0, Li32;->c:Landroid/animation/FloatEvaluator;
-
-    iget v2, p0, Lg32;->d:F
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    iget v3, p0, Lg32;->o:F
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-virtual {v1, p1, v2, v3}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
-
-    move-result v2
-
-    iput v2, v0, Li32;->t0:F
-
-    iget v2, p0, Lg32;->X:F
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    iget v3, p0, Lg32;->Y:F
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-virtual {v1, p1, v2, v3}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
+    check-cast p1, Ljava/lang/Float;
+
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    move-result p1
+    move-result v11
 
-    iput p1, v0, Li32;->u0:F
+    iget-object v0, p0, Lg32;->a:Li32;
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    iget v1, p0, Lg32;->b:I
+
+    iget v2, p0, Lg32;->c:I
+
+    iget v3, p0, Lg32;->d:I
+
+    iget v4, p0, Lg32;->o:I
+
+    iget v5, p0, Lg32;->X:F
+
+    iget v6, p0, Lg32;->Y:F
+
+    iget v7, p0, Lg32;->Z:I
+
+    iget v8, p0, Lg32;->t0:I
+
+    iget v9, p0, Lg32;->u0:I
+
+    iget v10, p0, Lg32;->v0:I
+
+    invoke-static/range {v0 .. v11}, Li32;->b(Li32;IIIIFFIIIIF)V
 
     return-void
 .end method

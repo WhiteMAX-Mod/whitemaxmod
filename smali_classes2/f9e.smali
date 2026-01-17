@@ -1,61 +1,68 @@
 .class public final Lf9e;
-.super Lg9e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llpf;
 
-# static fields
-.field public static final a:Lf9e;
+
+# instance fields
+.field public final synthetic a:Lspf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lla3;)V
+    .locals 0
 
-    new-instance v0, Lf9e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, Lla3;->s()Llpf;
 
-    sput-object v0, Lf9e;->a:Lf9e;
+    move-result-object p1
+
+    check-cast p1, Lspf;
+
+    iput-object p1, p0, Lf9e;->a:Lspf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final b()Ljava/util/List;
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lf9e;->a:Lspf;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Lspf;->b()Ljava/util/List;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of p1, p1, Lf9e;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-object v0
 .end method
 
-.method public final hashCode()I
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 1
 
-    const v0, 0x7a48e5f1
+    iget-object v0, p0, Lf9e;->a:Lspf;
 
-    return v0
+    invoke-virtual {v0, p1, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    sget-object p1, Lac4;->a:Lac4;
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final getValue()Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "Timeout"
+    iget-object v0, p0, Lf9e;->a:Lspf;
+
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnd2;
 
     return-object v0
 .end method

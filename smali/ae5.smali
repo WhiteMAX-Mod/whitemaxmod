@@ -7,14 +7,14 @@
 .method public abstract a()V
 .end method
 
-.method public abstract e(Lktb;)V
+.method public abstract d(Ldch;)V
 .end method
 
-.method public abstract g(IJ)V
+.method public abstract e(IJ)V
 .end method
 
-.method public abstract i(Z)V
+.method public abstract g()V
 .end method
 
-.method public abstract j(Lit5;Lvvg;)V
+.method public abstract j(Ljt5;Lcwg;)V
 .end method

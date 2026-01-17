@@ -27,11 +27,11 @@
         "",
         "isOneLoggerEnabled",
         "isObsoleteStatisticsEnabled",
-        "Lcgd;",
+        "Lahd;",
         "log",
         "Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;",
         "create",
-        "(Landroid/content/Context;ZZLcgd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;",
+        "(Landroid/content/Context;ZZLahd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;",
         "",
         "LOG_TAG",
         "Ljava/lang/String;",
@@ -76,7 +76,7 @@
 
 
 # virtual methods
-.method public final create(Landroid/content/Context;ZZLcgd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
+.method public final create(Landroid/content/Context;ZZLahd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
     .locals 1
 
     if-eqz p2, :cond_1
@@ -84,13 +84,13 @@
     if-eqz p3, :cond_1
 
     :try_start_0
-    sget-object p2, Lk2b;->a:Lsl;
+    sget-object p2, Lp2b;->a:Ltl;
 
     if-eqz p2, :cond_0
 
     new-instance p2, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;
 
-    invoke-direct {p2, p4}, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;-><init>(Lcgd;)V
+    invoke-direct {p2, p4}, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;-><init>(Lahd;)V
 
     return-object p2
 
@@ -102,13 +102,13 @@
     :cond_0
     new-instance p2, Ljava/lang/IllegalStateException;
 
-    const-class p3, Lk2b;
+    const-class p3, Lp2b;
 
     invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p3
 
-    const-string v0, " is not initialized, please call init() method on this class\nYou can find this class in \"ru.ok.android:onelogger:0.2.7\""
+    const-string v0, " is not initialized, please call init() method on this class\nYou can find this class in \"ru.ok.android:onelogger:0.1.1\""
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
@@ -125,20 +125,20 @@
 
     const-string v0, "Can\'t initialize OneLogger, fallback to native implementation"
 
-    invoke-interface {p4, p3, v0, p2}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p4, p3, v0, p2}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     new-instance p2, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;
 
     const/4 p3, 0x1
 
-    invoke-direct {p2, p1, p3, p4}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;-><init>(Landroid/content/Context;ZLcgd;)V
+    invoke-direct {p2, p1, p3, p4}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;-><init>(Landroid/content/Context;ZLahd;)V
 
     return-object p2
 
     :cond_1
     new-instance p2, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;
 
-    invoke-direct {p2, p1, p3, p4}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;-><init>(Landroid/content/Context;ZLcgd;)V
+    invoke-direct {p2, p1, p3, p4}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;-><init>(Landroid/content/Context;ZLahd;)V
 
     return-object p2
 .end method

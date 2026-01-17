@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$2;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->y0(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->z0(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
     return-void
 .end method
@@ -49,13 +49,13 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$2;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->j0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Landroid/os/Handler;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->k0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$2;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->X(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->Y(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -63,13 +63,13 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$2;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->j0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Landroid/os/Handler;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->k0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$2;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->X(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->Y(Lru/ok/android/externcalls/sdk/ConversationImpl;)Ljava/lang/Runnable;
 
     move-result-object v1
 

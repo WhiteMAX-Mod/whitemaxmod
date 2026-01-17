@@ -1,70 +1,41 @@
 .class public final Lqui;
-.super Ljava/lang/Object;
+.super Loui;
 .source "SourceFile"
 
 # interfaces
-.implements Lwwa;
+.implements Ljava/io/Serializable;
 
 
-# static fields
-.field public static final a:Lqui;
+# instance fields
+.field public final transient c:Lnm3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lqui;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqui;->a:Lqui;
-
-    new-instance v0, Ldqi;
+    new-instance v0, Lnm3;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
+    invoke-direct {v0, v1}, Lnm3;-><init>(I)V
 
-    const-class v1, Lrqi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+    invoke-virtual {v0}, Lnm3;->isEmpty()Z
 
-    move-result-object v0
+    move-result v1
 
-    const/4 v2, 0x2
+    if-eqz v1, :cond_0
 
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    iput-object v0, p0, Lqui;->c:Lnm3;
 
     return-void
-.end method
 
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
+    throw v0
 .end method

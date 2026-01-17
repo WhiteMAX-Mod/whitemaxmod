@@ -1,198 +1,131 @@
-.class public final Lvmh;
+.class public abstract Lvmh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lunh;
 
+# static fields
+.field public static final a:Ljava/util/List;
 
-# instance fields
-.field public final synthetic a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public static final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 13
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvmh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final c()V
-    .locals 2
-
-    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lp38;
-
-    iget-object v0, p0, Lvmh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iget-object v1, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->c:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lux5;
-
-    check-cast v1, Loy5;
-
-    invoke-virtual {v1}, Loy5;->t()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->x0:Lkxd;
-
-    invoke-virtual {v0}, Lkxd;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhkh;
+    const/4 v0, 0x0
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+    invoke-static {v0, v1}, Ls66;->a(FF)J
 
-    :cond_0
-    return-void
-.end method
+    move-result-wide v2
 
-.method public final e()V
-    .locals 1
+    new-instance v4, Ls66;
 
-    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lp38;
+    invoke-direct {v4, v2, v3}, Ls66;-><init>(J)V
 
-    iget-object v0, p0, Lvmh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    const/high16 v2, 0x44610000    # 900.0f
 
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->K0()V
+    invoke-static {v2, v1}, Ls66;->a(FF)J
 
-    return-void
-.end method
+    move-result-wide v5
 
-.method public final h()V
-    .locals 1
+    new-instance v3, Ls66;
 
-    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lp38;
+    invoke-direct {v3, v5, v6}, Ls66;-><init>(J)V
 
-    iget-object v0, p0, Lvmh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    const v5, 0x44c1c000    # 1550.0f
 
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->K0()V
+    invoke-static {v5, v0}, Ls66;->a(FF)J
 
-    return-void
-.end method
+    move-result-wide v6
 
-.method public final r()V
-    .locals 7
+    new-instance v8, Ls66;
 
-    iget-object v0, p0, Lvmh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    invoke-direct {v8, v6, v7}, Ls66;-><init>(J)V
 
-    iget-object v1, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->Y:Ljava/lang/Object;
+    const v6, 0x44dac000    # 1750.0f
 
-    invoke-interface {v1}, Ld68;->e()Z
+    invoke-static {v6, v1}, Ls66;->a(FF)J
 
-    move-result v1
+    move-result-wide v9
 
-    const/4 v2, 0x0
+    new-instance v7, Ls66;
 
-    if-eqz v1, :cond_1
+    invoke-direct {v7, v9, v10}, Ls66;-><init>(J)V
 
-    iget-object v1, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->A0:Lkxd;
+    const/high16 v9, 0x44fa0000    # 2000.0f
 
-    invoke-virtual {v1}, Lkxd;->e()Z
+    invoke-static {v9, v1}, Ls66;->a(FF)J
 
-    move-result v1
+    move-result-wide v10
 
-    if-eqz v1, :cond_1
+    new-instance v12, Ls66;
 
-    iget-object v1, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0:Lglf;
+    invoke-direct {v12, v10, v11}, Ls66;-><init>(J)V
 
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lm0;->isActive()Z
-
-    move-result v1
-
-    if-ne v1, v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0()Lwnh;
-
-    move-result-object v1
-
-    sget v4, Lqa5;->d:I
-
-    const/16 v4, 0x10
-
-    sget-object v5, Lwa5;->c:Lwa5;
-
-    invoke-static {v4, v5}, Lfnj;->h(ILwa5;)J
-
-    move-result-wide v4
-
-    new-instance v6, Lynh;
-
-    invoke-direct {v6, v1, v4, v5, v2}, Lynh;-><init>(Lwnh;JLkotlin/coroutines/Continuation;)V
-
-    new-instance v1, Lt6e;
-
-    invoke-direct {v1, v6}, Lt6e;-><init>(Lcr6;)V
-
-    invoke-static {v1}, Lqx0;->m(Lf76;)Lf76;
-
-    move-result-object v1
-
-    new-instance v4, Lnnh;
-
-    invoke-direct {v4, v2, v0}, Lnnh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
-
-    new-instance v5, Lo96;
-
-    invoke-direct {v5, v1, v4, v3}, Lo96;-><init>(Lf76;Lcr6;I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()La98;
-
-    move-result-object v1
-
-    invoke-interface {v1}, La98;->p()Lc98;
-
-    move-result-object v1
-
-    sget-object v3, Lc88;->d:Lc88;
-
-    invoke-static {v5, v1, v3}, Lnu0;->a(Lf76;Lc98;Lc88;)Lxw1;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
+    filled-new-array {v4, v3, v8, v7, v12}, [Ls66;
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lqx0;->w(Lf76;Lac4;)Lglf;
+    invoke-static {v3}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v3
 
-    iput-object v1, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0:Lglf;
+    sput-object v3, Lvmh;->a:Ljava/util/List;
 
-    :cond_1
-    :goto_0
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0()Lrmh;
+    new-instance v3, Lhs;
+
+    const v4, 0x3ba3d70a    # 0.005f
+
+    invoke-direct {v3, v0, v0, v4, v0}, Lhs;-><init>(FFFF)V
+
+    new-instance v4, Lhs;
+
+    const v7, 0x3f03d70a    # 0.515f
+
+    const/high16 v8, 0x43370000    # 183.0f
+
+    invoke-direct {v4, v2, v0, v7, v8}, Lhs;-><init>(FFFF)V
+
+    new-instance v0, Lhs;
+
+    const v2, 0x3f5be76d    # 0.859f
+
+    const/high16 v7, 0x43890000    # 274.0f
+
+    const v8, 0x3f05e354    # 0.523f
+
+    invoke-direct {v0, v5, v8, v2, v7}, Lhs;-><init>(FFFF)V
+
+    new-instance v2, Lhs;
+
+    const v5, 0x3f7020c5    # 0.938f
+
+    const v7, 0x43988000    # 305.0f
+
+    const v8, 0x3f445a1d    # 0.767f
+
+    invoke-direct {v2, v6, v8, v5, v7}, Lhs;-><init>(FFFF)V
+
+    new-instance v5, Lhs;
+
+    const v6, 0x3f7eb852    # 0.995f
+
+    const/high16 v7, 0x43b40000    # 360.0f
+
+    invoke-direct {v5, v9, v6, v1, v7}, Lhs;-><init>(FFFF)V
+
+    filled-new-array {v3, v4, v0, v2, v5}, [Lhs;
 
     move-result-object v0
 
-    iget-object v0, v0, Lrmh;->z0:Lhof;
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
 
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput-object v0, Lvmh;->b:Ljava/util/List;
 
     return-void
 .end method

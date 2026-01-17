@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfze;
+.implements Lj0f;
 
 
 # virtual methods
 .method public abstract a()I
 .end method
 
-.method public b()Lghg;
+.method public b()Lqhg;
     .locals 1
 
     const/4 v0, 0x0
@@ -18,7 +18,7 @@
     return-object v0
 .end method
 
-.method public c()Luye;
+.method public c()Lyze;
     .locals 1
 
     const/4 v0, 0x0
@@ -26,7 +26,7 @@
     return-object v0
 .end method
 
-.method public d()Lghg;
+.method public d()Lqhg;
     .locals 1
 
     const/4 v0, 0x0
@@ -34,7 +34,7 @@
     return-object v0
 .end method
 
-.method public e()Lcze;
+.method public e()Lg0f;
     .locals 1
 
     const/4 v0, 0x0
@@ -42,7 +42,7 @@
     return-object v0
 .end method
 
-.method public f()Ln68;
+.method public f()Ly58;
     .locals 1
 
     const/4 v0, 0x0
@@ -50,10 +50,10 @@
     return-object v0
 .end method
 
-.method public getType()Leze;
+.method public getType()Li0f;
     .locals 1
 
-    sget-object v0, Leze;->b:Leze;
+    sget-object v0, Li0f;->b:Li0f;
 
     return-object v0
 .end method

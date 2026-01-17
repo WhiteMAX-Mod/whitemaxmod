@@ -1,89 +1,191 @@
-.class public interface abstract Ln42;
-.super Ljava/lang/Object;
+.class public Ln42;
+.super Lza9;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/Set;
-.end method
-
-.method public abstract b()I
-.end method
-
-.method public abstract c()Z
-.end method
-
-.method public abstract d()Ljava/lang/String;
-.end method
-
-.method public abstract e()Lsf8;
-.end method
-
-.method public abstract f(Ljava/util/concurrent/Executor;Lo02;)V
-.end method
-
-.method public g()Ln42;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public abstract h()I
-.end method
-
-.method public abstract i()Lukg;
-.end method
-
-.method public j()Li52;
+# direct methods
+.method public static Q(Ljava/lang/RuntimeException;)Z
     .locals 3
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    const/16 v1, 0x1c
 
-    new-instance v1, Lm42;
+    const/4 v2, 0x0
 
-    invoke-direct {v1, p0}, Lm42;-><init>(Ln42;)V
+    if-ne v0, v1, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v1, Lq78;
+    move-result-object v0
 
-    invoke-interface {p0}, Ln42;->h()I
+    const-class v1, Ljava/lang/RuntimeException;
 
-    move-result v2
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {v1, v2}, Lq78;-><init>(I)V
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
-    new-instance v1, Li52;
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
-    invoke-direct {v1, v0}, Li52;-><init>(Ljava/util/LinkedHashSet;)V
+    move-result-object p0
 
-    return-object v1
+    if-eqz p0, :cond_1
+
+    array-length v0, p0
+
+    if-gez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    aget-object p0, p0, v2
+
+    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "_enableShutterSound"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move p0, v2
+
+    :goto_1
+    if-eqz p0, :cond_2
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    return v2
 .end method
 
-.method public abstract k()Ljava/lang/String;
+
+# virtual methods
+.method public B(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
+    .locals 1
+
+    :try_start_0
+    invoke-super {p0, p1}, Lza9;->B(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    invoke-static {p1}, Ln42;->Q(Ljava/lang/RuntimeException;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
+
+    invoke-direct {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Ljava/lang/RuntimeException;)V
+
+    throw v0
+
+    :cond_0
+    throw p1
 .end method
 
-.method public abstract l(I)I
+.method public J(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lza9;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
+    :try_end_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_3
+    move-exception p1
+
+    goto :goto_2
+
+    :goto_0
+    invoke-static {p1}, Ln42;->Q(Ljava/lang/RuntimeException;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    new-instance p2, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
+
+    invoke-direct {p2, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Ljava/lang/RuntimeException;)V
+
+    throw p2
+
+    :cond_0
+    throw p1
+
+    :goto_1
+    throw p1
+
+    :goto_2
+    new-instance p2, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
+
+    invoke-direct {p2, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
+
+    throw p2
 .end method
 
-.method public abstract m()Z
+.method public final L(Lwpe;Lr02;)V
+    .locals 1
+
+    iget-object v0, p0, Lza9;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
+
+    invoke-virtual {v0, p1, p2}, Landroid/hardware/camera2/CameraManager;->registerAvailabilityCallback(Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
+
+    return-void
 .end method
 
-.method public abstract n()Laj5;
-.end method
+.method public final P(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
+    .locals 1
 
-.method public abstract o()Lxp8;
-.end method
+    iget-object v0, p0, Lza9;->b:Ljava/lang/Object;
 
-.method public abstract p(I)Ljava/util/List;
-.end method
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
 
-.method public abstract q()Lsf8;
-.end method
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraManager;->unregisterAvailabilityCallback(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
 
-.method public abstract r(Lm22;)V
+    return-void
 .end method

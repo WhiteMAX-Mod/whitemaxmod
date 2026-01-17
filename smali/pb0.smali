@@ -4,20 +4,20 @@
 
 
 # instance fields
-.field public final a:La98;
+.field public final a:Lj88;
 
 .field public final b:Lqa0;
 
 
 # direct methods
-.method public constructor <init>(La98;Lqa0;)V
+.method public constructor <init>(Lj88;Lqa0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
-    iput-object p1, p0, Lpb0;->a:La98;
+    iput-object p1, p0, Lpb0;->a:Lj88;
 
     if-eqz p2, :cond_0
 
@@ -64,9 +64,9 @@
 
     check-cast p1, Lpb0;
 
-    iget-object v1, p0, Lpb0;->a:La98;
+    iget-object v1, p0, Lpb0;->a:Lj88;
 
-    iget-object v3, p1, Lpb0;->a:La98;
+    iget-object v3, p1, Lpb0;->a:Lj88;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -93,7 +93,7 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lpb0;->a:La98;
+    iget-object v0, p0, Lpb0;->a:Lj88;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -125,7 +125,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lpb0;->a:La98;
+    iget-object v1, p0, Lpb0;->a:Lj88;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

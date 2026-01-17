@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lodd;->oneme_snackbar_cancel_btn_title:I
+    sget v0, Lubd;->oneme_gallery_max_attach_count_error:I
 
     sput v0, Lghb;->a:I
 

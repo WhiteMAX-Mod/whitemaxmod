@@ -1,148 +1,113 @@
 .class public final Lbu2;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lcu2;
+.field public final a:Lae2;
 
-.field public final synthetic Y:Lrl9;
+.field public final b:Lt2b;
 
-.field public final synthetic Z:Ltq9;
+.field public c:Ljava/lang/String;
 
-.field public o:I
+.field public d:I
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final f:Ljava/util/ArrayList;
+
+.field public g:Lyt2;
+
+.field public h:Z
+
+.field public i:J
+
+.field public j:J
+
+.field public k:I
 
 
 # direct methods
-.method public constructor <init>(Lcu2;Lrl9;Ltq9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lae2;Lt2b;)V
     .locals 0
 
-    iput-object p1, p0, Lbu2;->X:Lcu2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lbu2;->Y:Lrl9;
+    iput-object p1, p0, Lbu2;->a:Lae2;
 
-    iput-object p3, p0, Lbu2;->Z:Ltq9;
+    iput-object p2, p0, Lbu2;->b:Lt2b;
 
-    const/4 p1, 0x2
+    const/4 p1, 0x0
 
-    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbu2;->c:Ljava/lang/String;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lbu2;->d:I
+
+    invoke-static {}, Llpb;->a()Lh4g;
+
+    move-result-object p1
+
+    sget-object p2, Lf25;->a:Lct4;
+
+    sget-object p2, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lzp8;
+
+    invoke-virtual {p2}, Lzp8;->getImmediate()Lzp8;
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Lqb4;->plus(Lqb4;)Lqb4;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lbu2;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lbu2;->f:Ljava/util/ArrayList;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lbu2;->h:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lbu2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lbu2;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lbu2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()V
     .locals 3
 
-    new-instance p1, Lbu2;
+    const-wide/16 v0, 0x0
 
-    iget-object v0, p0, Lbu2;->Y:Lrl9;
+    iput-wide v0, p0, Lbu2;->i:J
 
-    iget-object v1, p0, Lbu2;->Z:Ltq9;
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lbu2;->X:Lcu2;
+    iput v2, p0, Lbu2;->k:I
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lbu2;-><init>(Lcu2;Lrl9;Ltq9;Lkotlin/coroutines/Continuation;)V
+    iput v2, p0, Lbu2;->d:I
 
-    return-object p1
-.end method
+    iget-object v2, p0, Lbu2;->f:Ljava/util/ArrayList;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    iget v0, p0, Lbu2;->o:I
+    iput-wide v0, p0, Lbu2;->j:J
 
-    iget-object v1, p0, Lbu2;->X:Lcu2;
+    const/4 v0, 0x0
 
-    const/4 v2, 0x1
+    iput-object v0, p0, Lbu2;->c:Ljava/lang/String;
 
-    if-eqz v0, :cond_1
+    const/4 v0, 0x1
 
-    if-ne v0, v2, :cond_0
+    iput-boolean v0, p0, Lbu2;->h:Z
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iput v2, p0, Lbu2;->o:I
-
-    iget-object p1, p0, Lbu2;->Y:Lrl9;
-
-    invoke-static {v1, p1, p0}, Lcu2;->a(Lcu2;Lrl9;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Ldn9;
-
-    iget-object v0, v1, Lcu2;->h:Ljava/lang/Object;
-
-    check-cast v0, Lhof;
-
-    iget-wide v6, p1, Ldn9;->b:J
-
-    iget-wide v4, p1, Lhk0;->a:J
-
-    iget-object v1, p0, Lbu2;->Z:Ltq9;
-
-    iget-object v8, v1, Ltq9;->d:Ljava/util/List;
-
-    iget-wide v2, p1, Ldn9;->c:J
-
-    new-instance v1, Lf77;
-
-    invoke-direct/range {v1 .. v8}, Lf77;-><init>(JJJLjava/util/List;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-void
 .end method

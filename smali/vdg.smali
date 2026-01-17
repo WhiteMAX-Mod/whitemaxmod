@@ -1,44 +1,42 @@
-.class public abstract Lvdg;
+.class public interface abstract Lvdg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmld;
 
-# instance fields
-.field public a:Lieg;
 
-.field public b:J
+# static fields
+.field public static final f0:Lta0;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Z
+.field public static final g0:Lta0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lta0;
 
-    iput-object p1, p0, Lvdg;->c:Ljava/lang/String;
+    const-string v1, "camerax.core.target.name"
 
-    iput-boolean p2, p0, Lvdg;->d:Z
+    const-class v2, Ljava/lang/String;
 
-    const-wide/16 p1, -0x1
+    const/4 v3, 0x0
 
-    iput-wide p1, p0, Lvdg;->b:J
+    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lvdg;->f0:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.target.class"
+
+    const-class v2, Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lvdg;->g0:Lta0;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()J
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lvdg;->c:Ljava/lang/String;
-
-    return-object v0
 .end method

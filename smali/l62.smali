@@ -1,59 +1,51 @@
 .class public final Ll62;
-.super Lmri;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lj62;
 
 
 # instance fields
-.field public final d:Landroid/graphics/Typeface;
-
-.field public final e:Lk62;
-
-.field public f:Z
+.field public final a:Ld76;
 
 
 # direct methods
-.method public constructor <init>(Lk62;Landroid/graphics/Typeface;)V
+.method public constructor <init>(Ld76;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ll62;->d:Landroid/graphics/Typeface;
-
-    iput-object p1, p0, Ll62;->e:Lk62;
+    iput-object p1, p0, Ll62;->a:Ld76;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(I)V
-    .locals 1
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
-    iget-boolean p1, p0, Ll62;->f:Z
+    new-instance v0, Lnq1;
 
-    if-nez p1, :cond_0
+    const/16 v1, 0xb
 
-    iget-object p1, p0, Ll62;->e:Lk62;
+    invoke-direct {v0, p1, v1}, Lnq1;-><init>(Lf76;I)V
 
-    iget-object v0, p0, Ll62;->d:Landroid/graphics/Typeface;
+    iget-object p1, p0, Ll62;->a:Ld76;
 
-    invoke-interface {p1, v0}, Lk62;->l(Landroid/graphics/Typeface;)V
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object p1
 
-.method public final c(Landroid/graphics/Typeface;Z)V
-    .locals 0
+    sget-object p2, Lac4;->a:Lac4;
 
-    iget-boolean p2, p0, Ll62;->f:Z
+    if-ne p1, p2, :cond_0
 
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Ll62;->e:Lk62;
-
-    invoke-interface {p2, p1}, Lk62;->l(Landroid/graphics/Typeface;)V
+    return-object p1
 
     :cond_0
-    return-void
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

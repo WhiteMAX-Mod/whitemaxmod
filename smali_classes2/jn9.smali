@@ -1,79 +1,33 @@
-.class public final Ljn9;
-.super Ljava/io/OutputStream;
+.class public abstract Ljn9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ld9h;
+# static fields
+.field public static final a:J
 
-.field public final b:Ljava/security/MessageDigest;
+.field public static final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Ld9h;Ljava/security/MessageDigest;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+    const/4 v0, -0x1
 
-    iput-object p1, p0, Ljn9;->a:Ld9h;
+    int-to-long v0, v0
 
-    iput-object p2, p0, Ljn9;->b:Ljava/security/MessageDigest;
+    const/16 v2, 0x20
 
-    return-void
-.end method
+    shl-long v2, v0, v2
 
+    const-wide v4, 0xffffffffL
 
-# virtual methods
-.method public final close()V
-    .locals 1
+    and-long/2addr v0, v4
 
-    iget-object v0, p0, Ljn9;->a:Ld9h;
+    or-long/2addr v0, v2
 
-    invoke-virtual {v0}, Ld9h;->close()V
-
-    return-void
-.end method
-
-.method public final flush()V
-    .locals 1
-
-    iget-object v0, p0, Ljn9;->a:Ld9h;
-
-    invoke-virtual {v0}, Ld9h;->flush()V
-
-    return-void
-.end method
-
-.method public final write(I)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ljn9;->a:Ld9h;
-
-    invoke-virtual {v0, p1}, Ld9h;->write(I)V
-
-    .line 2
-    iget-object v0, p0, Ljn9;->b:Ljava/security/MessageDigest;
-
-    int-to-byte p1, p1
-
-    invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->update(B)V
-
-    return-void
-.end method
-
-.method public final write([BII)V
-    .locals 1
-
-    .line 3
-    iget-object v0, p0, Ljn9;->a:Ld9h;
-
-    invoke-virtual {v0, p1, p2, p3}, Ld9h;->write([BII)V
-
-    .line 4
-    iget-object v0, p0, Ljn9;->b:Ljava/security/MessageDigest;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/security/MessageDigest;->update([BII)V
+    sput-wide v0, Ljn9;->a:J
 
     return-void
 .end method

@@ -25,7 +25,7 @@
         "<init>",
         "(Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator;F)V",
         "value",
-        "Lv2h;",
+        "Lb3h;",
         "submit",
         "(F)V",
         "get",
@@ -85,7 +85,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lfi3;->g([Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lqi3;->i([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -139,7 +139,7 @@
 
     mul-float/2addr v2, v1
 
-    invoke-static {v2}, Ln7j;->c(F)I
+    invoke-static {v2}, Lq7j;->c(F)I
 
     move-result v1
 

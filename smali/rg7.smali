@@ -1,40 +1,41 @@
-.class public abstract Lrg7;
-.super Ljava/lang/Object;
+.class public final Lrg7;
+.super Lqg7;
 .source "SourceFile"
 
-# interfaces
-.implements Lr4a;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+# virtual methods
+.method public final a(Lwi7;)Lui7;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p1}, Lwi7;->o()Lui7;
 
-    iput-object p1, p0, Lrg7;->a:Ljava/lang/String;
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final c()V
+    .locals 0
 
     return-void
 .end method
 
+.method public final e(Lui7;)V
+    .locals 2
 
-# virtual methods
-.method public describeContents()I
-    .locals 1
+    invoke-virtual {p0, p1}, Lqg7;->b(Lui7;)Lie8;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    return v0
-.end method
+    new-instance v1, Lkp8;
 
-.method public toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v1, p1}, Lkp8;-><init>(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lrg7;->a:Ljava/lang/String;
+    invoke-static {}, Lacj;->a()Lc15;
 
-    return-object v0
+    move-result-object p1
+
+    invoke-static {v0, v1, p1}, Lnge;->b(Lie8;Las6;Ljava/util/concurrent/Executor;)V
+
+    return-void
 .end method

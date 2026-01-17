@@ -4,654 +4,714 @@
 
 
 # static fields
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Ljava/lang/String;
-
-.field public static final l:Ljava/lang/String;
-
-.field public static final m:Ljava/lang/String;
-
-.field public static final n:Ljava/lang/String;
-
-.field public static final o:Ljava/lang/String;
-
-.field public static final p:Ljava/lang/String;
+.field public static final t:Luc9;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lqlg;
 
-.field public final b:I
+.field public final b:Luc9;
 
-.field public final c:Lz49;
+.field public final c:J
 
-.field public final d:Ljava/lang/Object;
+.field public final d:J
 
 .field public final e:I
 
-.field public final f:J
+.field public final f:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
-.field public final g:J
+.field public final g:Z
 
-.field public final h:I
+.field public final h:Llrg;
 
-.field public final i:I
+.field public final i:Lfsg;
+
+.field public final j:Ljava/util/List;
+
+.field public final k:Luc9;
+
+.field public final l:Z
+
+.field public final m:I
+
+.field public final n:Lxac;
+
+.field public final o:Z
+
+.field public final p:Z
+
+.field public volatile q:J
+
+.field public volatile r:J
+
+.field public volatile s:J
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Lqah;->a:Ljava/lang/String;
+    new-instance v0, Luc9;
 
-    const/4 v0, 0x0
+    new-instance v1, Ljava/lang/Object;
 
-    const/16 v1, 0x24
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-direct {v0, v1}, Luc9;-><init>(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    sput-object v0, Lvac;->j:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvac;->k:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvac;->l:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvac;->m:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvac;->n:Ljava/lang/String;
-
-    const/4 v0, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvac;->o:Ljava/lang/String;
-
-    const/4 v0, 0x6
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvac;->p:Ljava/lang/String;
+    sput-object v0, Lvac;->t:Luc9;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Object;ILz49;Ljava/lang/Object;IJJII)V
+.method public constructor <init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvac;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lvac;->a:Lqlg;
 
-    iput p2, p0, Lvac;->b:I
+    iput-object p2, p0, Lvac;->b:Luc9;
 
-    iput-object p3, p0, Lvac;->c:Lz49;
+    iput-wide p3, p0, Lvac;->c:J
 
-    iput-object p4, p0, Lvac;->d:Ljava/lang/Object;
+    iput-wide p5, p0, Lvac;->d:J
 
-    iput p5, p0, Lvac;->e:I
+    iput p7, p0, Lvac;->e:I
 
-    iput-wide p6, p0, Lvac;->f:J
+    iput-object p8, p0, Lvac;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
-    iput-wide p8, p0, Lvac;->g:J
+    iput-boolean p9, p0, Lvac;->g:Z
 
-    iput p10, p0, Lvac;->h:I
+    iput-object p10, p0, Lvac;->h:Llrg;
 
-    iput p11, p0, Lvac;->i:I
+    iput-object p11, p0, Lvac;->i:Lfsg;
+
+    iput-object p12, p0, Lvac;->j:Ljava/util/List;
+
+    iput-object p13, p0, Lvac;->k:Luc9;
+
+    iput-boolean p14, p0, Lvac;->l:Z
+
+    iput p15, p0, Lvac;->m:I
+
+    move-object/from16 p1, p16
+
+    iput-object p1, p0, Lvac;->n:Lxac;
+
+    move-wide/from16 p1, p17
+
+    iput-wide p1, p0, Lvac;->q:J
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lvac;->r:J
+
+    move-wide/from16 p1, p21
+
+    iput-wide p1, p0, Lvac;->s:J
+
+    move/from16 p1, p23
+
+    iput-boolean p1, p0, Lvac;->o:Z
+
+    move/from16 p1, p24
+
+    iput-boolean p1, p0, Lvac;->p:Z
 
     return-void
 .end method
 
-.method public static c(Landroid/os/Bundle;)Lvac;
-    .locals 14
+.method public static h(Lfsg;)Lvac;
+    .locals 25
 
-    sget-object v0, Lvac;->j:Ljava/lang/String;
+    new-instance v0, Lvac;
 
-    const/4 v1, 0x0
+    sget-object v10, Llrg;->d:Llrg;
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    sget-object v12, Lhud;->o:Lhud;
 
-    move-result v4
+    sget-object v16, Lxac;->d:Lxac;
 
-    sget-object v0, Lvac;->k:Ljava/lang/String;
+    const/16 v23, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    const/16 v24, 0x0
 
-    move-result-object v0
+    sget-object v1, Lqlg;->a:Ljlg;
 
-    if-nez v0, :cond_0
+    sget-object v2, Lvac;->t:Luc9;
 
-    const/4 v0, 0x0
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
-    :goto_0
-    move-object v5, v0
+    const-wide/16 v5, 0x0
 
-    goto :goto_1
+    const/4 v7, 0x1
 
-    :cond_0
-    invoke-static {v0}, Lz49;->b(Landroid/os/Bundle;)Lz49;
+    const/4 v8, 0x0
 
-    move-result-object v0
+    const/4 v9, 0x0
 
-    goto :goto_0
+    const/4 v14, 0x0
 
-    :goto_1
-    sget-object v0, Lvac;->l:Ljava/lang/String;
+    const/4 v15, 0x0
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    const-wide/16 v17, 0x0
 
-    move-result v7
+    const-wide/16 v19, 0x0
 
-    sget-object v0, Lvac;->m:Ljava/lang/String;
+    const-wide/16 v21, 0x0
 
-    const-wide/16 v1, 0x0
+    move-object v13, v2
 
-    invoke-virtual {p0, v0, v1, v2}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
+    move-object/from16 v11, p0
 
-    move-result-wide v8
+    invoke-direct/range {v0 .. v24}, Lvac;-><init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
 
-    sget-object v0, Lvac;->n:Ljava/lang/String;
-
-    invoke-virtual {p0, v0, v1, v2}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v10
-
-    sget-object v0, Lvac;->o:Ljava/lang/String;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v12
-
-    sget-object v0, Lvac;->p:Ljava/lang/String;
-
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v13
-
-    new-instance v2, Lvac;
-
-    const/4 v3, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v2 .. v13}, Lvac;-><init>(Ljava/lang/Object;ILz49;Ljava/lang/Object;IJJII)V
-
-    return-object v2
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lvac;)Z
-    .locals 4
+.method public final a(Luc9;)Lvac;
+    .locals 26
 
-    iget v0, p0, Lvac;->b:I
+    move-object/from16 v0, p0
 
-    iget v1, p1, Lvac;->b:I
+    new-instance v1, Lvac;
 
-    if-ne v0, v1, :cond_0
+    iget-object v2, v0, Lvac;->a:Lqlg;
 
-    iget v0, p0, Lvac;->e:I
+    iget-object v3, v0, Lvac;->b:Luc9;
 
-    iget v1, p1, Lvac;->e:I
+    iget-wide v4, v0, Lvac;->c:J
 
-    if-ne v0, v1, :cond_0
+    iget-wide v6, v0, Lvac;->d:J
 
-    iget-wide v0, p0, Lvac;->f:J
+    iget v8, v0, Lvac;->e:I
 
-    iget-wide v2, p1, Lvac;->f:J
+    iget-object v9, v0, Lvac;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
-    cmp-long v0, v0, v2
+    iget-boolean v10, v0, Lvac;->g:Z
 
-    if-nez v0, :cond_0
+    iget-object v11, v0, Lvac;->h:Llrg;
 
-    iget-wide v0, p0, Lvac;->g:J
+    iget-object v12, v0, Lvac;->i:Lfsg;
 
-    iget-wide v2, p1, Lvac;->g:J
+    iget-object v13, v0, Lvac;->j:Ljava/util/List;
 
-    cmp-long v0, v0, v2
+    iget-boolean v15, v0, Lvac;->l:Z
 
-    if-nez v0, :cond_0
+    iget v14, v0, Lvac;->m:I
 
-    iget v0, p0, Lvac;->h:I
+    move-object/from16 v16, v1
 
-    iget v1, p1, Lvac;->h:I
+    iget-object v1, v0, Lvac;->n:Lxac;
 
-    if-ne v0, v1, :cond_0
+    move-object/from16 v18, v1
 
-    iget v0, p0, Lvac;->i:I
+    move-object/from16 v17, v2
 
-    iget v1, p1, Lvac;->i:I
+    iget-wide v1, v0, Lvac;->q:J
 
-    if-ne v0, v1, :cond_0
+    move-wide/from16 v19, v1
 
-    iget-object v0, p0, Lvac;->c:Lz49;
+    iget-wide v1, v0, Lvac;->r:J
 
-    iget-object p1, p1, Lvac;->c:Lz49;
+    move-wide/from16 v21, v1
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-wide v1, v0, Lvac;->s:J
 
-    move-result p1
+    move-wide/from16 v23, v1
 
-    if-eqz p1, :cond_0
+    iget-boolean v1, v0, Lvac;->o:Z
 
-    const/4 p1, 0x1
+    iget-boolean v2, v0, Lvac;->p:Z
 
-    return p1
+    move/from16 v25, v2
 
-    :cond_0
-    const/4 p1, 0x0
+    move-object/from16 v2, v17
 
-    return p1
+    move-object/from16 v17, v18
+
+    move-wide/from16 v18, v19
+
+    move-wide/from16 v20, v21
+
+    move-wide/from16 v22, v23
+
+    move/from16 v24, v1
+
+    move-object/from16 v1, v16
+
+    move/from16 v16, v14
+
+    move-object/from16 v14, p1
+
+    invoke-direct/range {v1 .. v25}, Lvac;-><init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
 .end method
 
-.method public final b(ZZ)Lvac;
-    .locals 14
+.method public final b(Luc9;JJJJLlrg;Lfsg;Ljava/util/List;)Lvac;
+    .locals 26
 
-    if-eqz p1, :cond_0
+    move-object/from16 v0, p0
 
-    if-eqz p2, :cond_0
+    new-instance v1, Lvac;
 
-    return-object p0
+    iget-object v2, v0, Lvac;->a:Lqlg;
 
-    :cond_0
-    new-instance v0, Lvac;
+    iget v8, v0, Lvac;->e:I
 
-    const/4 v1, 0x0
+    iget-object v9, v0, Lvac;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
-    if-eqz p2, :cond_1
+    iget-boolean v10, v0, Lvac;->g:Z
 
-    iget v2, p0, Lvac;->b:I
+    iget-object v14, v0, Lvac;->k:Luc9;
 
-    goto :goto_0
+    iget-boolean v15, v0, Lvac;->l:Z
 
-    :cond_1
-    move v2, v1
+    iget v3, v0, Lvac;->m:I
 
-    :goto_0
-    if-eqz p1, :cond_2
+    iget-object v4, v0, Lvac;->n:Lxac;
 
-    iget-object v3, p0, Lvac;->c:Lz49;
+    iget-wide v5, v0, Lvac;->q:J
 
-    goto :goto_1
+    iget-boolean v7, v0, Lvac;->o:Z
 
-    :cond_2
-    const/4 v3, 0x0
+    iget-boolean v11, v0, Lvac;->p:Z
 
-    :goto_1
-    if-eqz p2, :cond_3
+    move-wide/from16 v22, p2
 
-    iget v1, p0, Lvac;->e:I
+    move-wide/from16 v20, p8
 
-    :cond_3
-    move v5, v1
+    move-object/from16 v12, p11
 
-    const-wide/16 v6, 0x0
+    move-object/from16 v13, p12
 
-    if-eqz p1, :cond_4
+    move/from16 v16, v3
 
-    iget-wide v8, p0, Lvac;->f:J
+    move-object/from16 v17, v4
 
-    goto :goto_2
+    move-wide/from16 v18, v5
 
-    :cond_4
-    move-wide v8, v6
+    move/from16 v24, v7
 
-    :goto_2
-    if-eqz p1, :cond_5
+    move/from16 v25, v11
 
-    iget-wide v6, p0, Lvac;->g:J
+    move-object/from16 v3, p1
 
-    :cond_5
-    const/4 v1, -0x1
+    move-wide/from16 v4, p4
 
-    if-eqz p1, :cond_6
+    move-wide/from16 v6, p6
 
-    iget v4, p0, Lvac;->h:I
+    move-object/from16 v11, p10
 
-    move v10, v4
+    invoke-direct/range {v1 .. v25}, Lvac;-><init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
 
-    goto :goto_3
-
-    :cond_6
-    move v10, v1
-
-    :goto_3
-    if-eqz p1, :cond_7
-
-    iget v1, p0, Lvac;->i:I
-
-    :cond_7
-    move v11, v1
-
-    iget-object v1, p0, Lvac;->a:Ljava/lang/Object;
-
-    iget-object v4, p0, Lvac;->d:Ljava/lang/Object;
-
-    move-wide v12, v8
-
-    move-wide v8, v6
-
-    move-wide v6, v12
-
-    invoke-direct/range {v0 .. v11}, Lvac;-><init>(Ljava/lang/Object;ILz49;Ljava/lang/Object;IJJII)V
-
-    return-object v0
+    return-object v1
 .end method
 
-.method public final d(I)Landroid/os/Bundle;
-    .locals 7
+.method public final c(Z)Lvac;
+    .locals 28
 
-    new-instance v0, Landroid/os/Bundle;
+    move-object/from16 v0, p0
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    new-instance v1, Lvac;
 
-    iget v1, p0, Lvac;->b:I
+    iget-object v2, v0, Lvac;->a:Lqlg;
 
-    const/4 v2, 0x3
+    iget-object v3, v0, Lvac;->b:Luc9;
 
-    if-lt p1, v2, :cond_0
+    iget-wide v4, v0, Lvac;->c:J
 
-    if-eqz v1, :cond_1
+    iget-wide v6, v0, Lvac;->d:J
 
-    :cond_0
-    sget-object v3, Lvac;->j:Ljava/lang/String;
+    iget v8, v0, Lvac;->e:I
 
-    invoke-virtual {v0, v3, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    iget-object v9, v0, Lvac;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
-    :cond_1
-    iget-object v1, p0, Lvac;->c:Lz49;
+    iget-boolean v10, v0, Lvac;->g:Z
 
-    if-eqz v1, :cond_2
+    iget-object v11, v0, Lvac;->h:Llrg;
 
-    const/4 v3, 0x0
+    iget-object v12, v0, Lvac;->i:Lfsg;
 
-    invoke-virtual {v1, v3}, Lz49;->d(Z)Landroid/os/Bundle;
+    iget-object v13, v0, Lvac;->j:Ljava/util/List;
 
-    move-result-object v1
+    iget-object v14, v0, Lvac;->k:Luc9;
 
-    sget-object v3, Lvac;->k:Ljava/lang/String;
+    iget-boolean v15, v0, Lvac;->l:Z
 
-    invoke-virtual {v0, v3, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    move-object/from16 v16, v1
 
-    :cond_2
-    iget v1, p0, Lvac;->e:I
+    iget v1, v0, Lvac;->m:I
 
-    if-lt p1, v2, :cond_3
+    move/from16 v17, v1
 
-    if-eqz v1, :cond_4
+    iget-object v1, v0, Lvac;->n:Lxac;
 
-    :cond_3
-    sget-object v3, Lvac;->l:Ljava/lang/String;
+    move-object/from16 v19, v1
 
-    invoke-virtual {v0, v3, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    move-object/from16 v18, v2
 
-    :cond_4
-    const-wide/16 v3, 0x0
+    iget-wide v1, v0, Lvac;->q:J
 
-    iget-wide v5, p0, Lvac;->f:J
+    move-wide/from16 v20, v1
 
-    if-lt p1, v2, :cond_5
+    iget-wide v1, v0, Lvac;->r:J
 
-    cmp-long v1, v5, v3
+    move-wide/from16 v22, v1
 
-    if-eqz v1, :cond_6
+    iget-wide v1, v0, Lvac;->s:J
 
-    :cond_5
-    sget-object v1, Lvac;->m:Ljava/lang/String;
+    move-wide/from16 v24, v1
 
-    invoke-virtual {v0, v1, v5, v6}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+    iget-boolean v1, v0, Lvac;->p:Z
 
-    :cond_6
-    iget-wide v5, p0, Lvac;->g:J
+    move-object/from16 v2, v18
 
-    if-lt p1, v2, :cond_7
+    move-wide/from16 v26, v24
 
-    cmp-long p1, v5, v3
+    move/from16 v24, p1
 
-    if-eqz p1, :cond_8
+    move/from16 v25, v1
 
-    :cond_7
-    sget-object p1, Lvac;->n:Ljava/lang/String;
+    move-object/from16 v1, v16
 
-    invoke-virtual {v0, p1, v5, v6}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+    move/from16 v16, v17
 
-    :cond_8
-    const/4 p1, -0x1
+    move-object/from16 v17, v19
 
-    iget v1, p0, Lvac;->h:I
+    move-wide/from16 v18, v20
 
-    if-eq v1, p1, :cond_9
+    move-wide/from16 v20, v22
 
-    sget-object v2, Lvac;->o:Ljava/lang/String;
+    move-wide/from16 v22, v26
 
-    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    invoke-direct/range {v1 .. v25}, Lvac;-><init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
 
-    :cond_9
-    iget v1, p0, Lvac;->i:I
+    move-object/from16 v16, v1
 
-    if-eq v1, p1, :cond_a
-
-    sget-object p1, Lvac;->p:Ljava/lang/String;
-
-    invoke-virtual {v0, p1, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    :cond_a
-    return-object v0
+    return-object v16
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final d(IZ)Lvac;
+    .locals 26
 
-    const/4 v0, 0x1
+    move-object/from16 v0, p0
 
-    if-ne p0, p1, :cond_0
+    new-instance v1, Lvac;
 
-    return v0
+    iget-object v2, v0, Lvac;->a:Lqlg;
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-object v3, v0, Lvac;->b:Luc9;
 
-    if-eqz p1, :cond_2
+    iget-wide v4, v0, Lvac;->c:J
 
-    const-class v2, Lvac;
+    iget-wide v6, v0, Lvac;->d:J
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v8, v0, Lvac;->e:I
 
-    move-result-object v3
+    iget-object v9, v0, Lvac;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
-    if-eq v2, v3, :cond_1
+    iget-boolean v10, v0, Lvac;->g:Z
 
-    goto :goto_0
+    iget-object v11, v0, Lvac;->h:Llrg;
 
-    :cond_1
-    check-cast p1, Lvac;
+    iget-object v12, v0, Lvac;->i:Lfsg;
 
-    invoke-virtual {p0, p1}, Lvac;->a(Lvac;)Z
+    iget-object v13, v0, Lvac;->j:Ljava/util/List;
 
-    move-result v2
+    iget-object v14, v0, Lvac;->k:Luc9;
 
-    if-eqz v2, :cond_2
+    iget-object v15, v0, Lvac;->n:Lxac;
 
-    iget-object v2, p0, Lvac;->a:Ljava/lang/Object;
+    move-object/from16 v16, v1
 
-    iget-object v3, p1, Lvac;->a:Ljava/lang/Object;
+    move-object/from16 v17, v2
 
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-wide v1, v0, Lvac;->q:J
 
-    move-result v2
+    move-wide/from16 v18, v1
 
-    if-eqz v2, :cond_2
+    iget-wide v1, v0, Lvac;->r:J
 
-    iget-object v2, p0, Lvac;->d:Ljava/lang/Object;
+    move-wide/from16 v20, v1
 
-    iget-object p1, p1, Lvac;->d:Ljava/lang/Object;
+    iget-wide v1, v0, Lvac;->s:J
 
-    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-wide/from16 v22, v1
 
-    move-result p1
+    iget-boolean v1, v0, Lvac;->o:Z
 
-    if-eqz p1, :cond_2
+    iget-boolean v2, v0, Lvac;->p:Z
 
-    return v0
+    move/from16 v24, v1
 
-    :cond_2
-    :goto_0
-    return v1
+    move/from16 v25, v2
+
+    move-object/from16 v1, v16
+
+    move-object/from16 v2, v17
+
+    move/from16 v16, p1
+
+    move-object/from16 v17, v15
+
+    move/from16 v15, p2
+
+    invoke-direct/range {v1 .. v25}, Lvac;-><init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
 .end method
 
-.method public final hashCode()I
-    .locals 10
+.method public final e(Lcom/google/android/exoplayer2/ExoPlaybackException;)Lvac;
+    .locals 26
 
-    iget v0, p0, Lvac;->b:I
+    move-object/from16 v0, p0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v1, Lvac;
 
-    move-result-object v2
+    iget-object v2, v0, Lvac;->a:Lqlg;
 
-    iget v0, p0, Lvac;->e:I
+    iget-object v3, v0, Lvac;->b:Luc9;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-wide v4, v0, Lvac;->c:J
 
-    move-result-object v5
+    iget-wide v6, v0, Lvac;->d:J
 
-    iget-wide v0, p0, Lvac;->f:J
+    iget v8, v0, Lvac;->e:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-boolean v10, v0, Lvac;->g:Z
 
-    move-result-object v6
+    iget-object v11, v0, Lvac;->h:Llrg;
 
-    iget-wide v0, p0, Lvac;->g:J
+    iget-object v12, v0, Lvac;->i:Lfsg;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v13, v0, Lvac;->j:Ljava/util/List;
 
-    move-result-object v7
+    iget-object v14, v0, Lvac;->k:Luc9;
 
-    iget v0, p0, Lvac;->h:I
+    iget-boolean v15, v0, Lvac;->l:Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget v9, v0, Lvac;->m:I
 
-    move-result-object v8
+    move-object/from16 v16, v1
 
-    iget v0, p0, Lvac;->i:I
+    iget-object v1, v0, Lvac;->n:Lxac;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-object/from16 v18, v1
 
-    move-result-object v9
+    move-object/from16 v17, v2
 
-    iget-object v1, p0, Lvac;->a:Ljava/lang/Object;
+    iget-wide v1, v0, Lvac;->q:J
 
-    iget-object v3, p0, Lvac;->c:Lz49;
+    move-wide/from16 v19, v1
 
-    iget-object v4, p0, Lvac;->d:Ljava/lang/Object;
+    iget-wide v1, v0, Lvac;->r:J
 
-    filled-new-array/range {v1 .. v9}, [Ljava/lang/Object;
+    move-wide/from16 v21, v1
 
-    move-result-object v0
+    iget-wide v1, v0, Lvac;->s:J
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    move-wide/from16 v23, v1
 
-    move-result v0
+    iget-boolean v1, v0, Lvac;->o:Z
 
-    return v0
+    iget-boolean v2, v0, Lvac;->p:Z
+
+    move/from16 v25, v2
+
+    move-object/from16 v2, v17
+
+    move-object/from16 v17, v18
+
+    move-wide/from16 v18, v19
+
+    move-wide/from16 v20, v21
+
+    move-wide/from16 v22, v23
+
+    move/from16 v24, v1
+
+    move-object/from16 v1, v16
+
+    move/from16 v16, v9
+
+    move-object/from16 v9, p1
+
+    invoke-direct/range {v1 .. v25}, Lvac;-><init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final f(I)Lvac;
+    .locals 26
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object/from16 v0, p0
 
-    const-string v1, "mediaItem="
+    new-instance v1, Lvac;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, v0, Lvac;->a:Lqlg;
 
-    iget v1, p0, Lvac;->b:I
+    iget-object v3, v0, Lvac;->b:Luc9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-wide v4, v0, Lvac;->c:J
 
-    const-string v1, ", period="
+    iget-wide v6, v0, Lvac;->d:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v9, v0, Lvac;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
-    iget v1, p0, Lvac;->e:I
+    iget-boolean v10, v0, Lvac;->g:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v11, v0, Lvac;->h:Llrg;
 
-    const-string v1, ", pos="
+    iget-object v12, v0, Lvac;->i:Lfsg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v13, v0, Lvac;->j:Ljava/util/List;
 
-    iget-wide v1, p0, Lvac;->f:J
+    iget-object v14, v0, Lvac;->k:Luc9;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-boolean v15, v0, Lvac;->l:Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v8, v0, Lvac;->m:I
 
-    move-result-object v0
+    move-object/from16 v16, v1
 
-    const/4 v1, -0x1
+    iget-object v1, v0, Lvac;->n:Lxac;
 
-    iget v2, p0, Lvac;->h:I
+    move-object/from16 v18, v1
 
-    if-ne v2, v1, :cond_0
+    move-object/from16 v17, v2
 
-    return-object v0
+    iget-wide v1, v0, Lvac;->q:J
 
-    :cond_0
-    const-string v1, ", contentPos="
+    move-wide/from16 v19, v1
 
-    invoke-static {v0, v1}, Lqf7;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v1, v0, Lvac;->r:J
 
-    move-result-object v0
+    move-wide/from16 v21, v1
 
-    iget-wide v3, p0, Lvac;->g:J
+    iget-wide v1, v0, Lvac;->s:J
 
-    const-string v1, ", adGroup="
+    move-wide/from16 v23, v1
 
-    invoke-static {v0, v3, v4, v1, v2}, Ln0c;->m(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
+    iget-boolean v1, v0, Lvac;->o:Z
 
-    const-string v1, ", ad="
+    iget-boolean v2, v0, Lvac;->p:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v25, v2
 
-    iget v1, p0, Lvac;->i:I
+    move-object/from16 v2, v17
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-object/from16 v17, v18
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-wide/from16 v18, v19
 
-    move-result-object v0
+    move-wide/from16 v20, v21
 
-    return-object v0
+    move-wide/from16 v22, v23
+
+    move/from16 v24, v1
+
+    move-object/from16 v1, v16
+
+    move/from16 v16, v8
+
+    move/from16 v8, p1
+
+    invoke-direct/range {v1 .. v25}, Lvac;-><init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
+.end method
+
+.method public final g(Lqlg;)Lvac;
+    .locals 28
+
+    move-object/from16 v0, p0
+
+    new-instance v1, Lvac;
+
+    iget-object v3, v0, Lvac;->b:Luc9;
+
+    iget-wide v4, v0, Lvac;->c:J
+
+    iget-wide v6, v0, Lvac;->d:J
+
+    iget v8, v0, Lvac;->e:I
+
+    iget-object v9, v0, Lvac;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+
+    iget-boolean v10, v0, Lvac;->g:Z
+
+    iget-object v11, v0, Lvac;->h:Llrg;
+
+    iget-object v12, v0, Lvac;->i:Lfsg;
+
+    iget-object v13, v0, Lvac;->j:Ljava/util/List;
+
+    iget-object v14, v0, Lvac;->k:Luc9;
+
+    iget-boolean v15, v0, Lvac;->l:Z
+
+    iget v2, v0, Lvac;->m:I
+
+    move-object/from16 v16, v1
+
+    iget-object v1, v0, Lvac;->n:Lxac;
+
+    move-object/from16 v18, v1
+
+    move/from16 v17, v2
+
+    iget-wide v1, v0, Lvac;->q:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Lvac;->r:J
+
+    move-wide/from16 v21, v1
+
+    iget-wide v1, v0, Lvac;->s:J
+
+    move-wide/from16 v23, v1
+
+    iget-boolean v1, v0, Lvac;->o:Z
+
+    iget-boolean v2, v0, Lvac;->p:Z
+
+    move-wide/from16 v26, v23
+
+    move/from16 v24, v1
+
+    move-object/from16 v1, v16
+
+    move/from16 v16, v17
+
+    move-object/from16 v17, v18
+
+    move-wide/from16 v18, v19
+
+    move-wide/from16 v20, v21
+
+    move-wide/from16 v22, v26
+
+    move/from16 v25, v2
+
+    move-object/from16 v2, p1
+
+    invoke-direct/range {v1 .. v25}, Lvac;-><init>(Lqlg;Luc9;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLlrg;Lfsg;Ljava/util/List;Luc9;ZILxac;JJJZZ)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
 .end method

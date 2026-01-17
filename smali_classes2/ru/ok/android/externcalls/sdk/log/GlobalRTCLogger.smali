@@ -13,11 +13,11 @@
         "",
         "<init>",
         "()V",
-        "Lcgd;",
+        "Lahd;",
         "log",
-        "Lv2h;",
+        "Lb3h;",
         "setLog",
-        "(Lcgd;)V",
+        "(Lahd;)V",
         "",
         "tag",
         "msg",
@@ -48,7 +48,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
-            "Lcgd;",
+            "Lahd;",
             ">;"
         }
     .end annotation
@@ -93,11 +93,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcgd;
+    check-cast v0, Lahd;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p0, p1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -112,11 +112,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcgd;
+    check-cast v0, Lahd;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1, p2}, Lcgd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p0, p1, p2}, Lahd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
@@ -131,17 +131,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lcgd;
+    check-cast v0, Lahd;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1, p2}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p0, p1, p2}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final setLog(Lcgd;)V
+.method public static final setLog(Lahd;)V
     .locals 1
 
     new-instance v0, Ljava/lang/ref/WeakReference;

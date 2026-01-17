@@ -72,7 +72,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->Companion:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig$Companion;
 
@@ -89,7 +89,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;-><init>(Ljava/lang/Long;IILro4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;-><init>(Ljava/lang/Long;IILso4;)V
 
     return-void
 .end method
@@ -109,7 +109,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Long;IILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/Long;IILso4;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -209,7 +209,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;->rttMs:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 

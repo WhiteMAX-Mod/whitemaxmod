@@ -1,108 +1,158 @@
 .class public final Lwid;
-.super Ljava/lang/Object;
+.super Lyid;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final a:J
 
-.field public final synthetic b:Lyid;
+.field public final b:J
 
-.field public final synthetic c:Landroid/view/View;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(ZLyid;Landroid/view/View;)V
+.method public constructor <init>(JJLjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lwid;->a:Z
+    iput-wide p1, p0, Lwid;->a:J
 
-    iput-object p2, p0, Lwid;->b:Lyid;
+    iput-wide p3, p0, Lwid;->b:J
 
-    iput-object p3, p0, Lwid;->c:Landroid/view/View;
+    iput-object p5, p0, Lwid;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    return-void
-.end method
+    const/4 v0, 0x1
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+    if-ne p0, p1, :cond_0
 
-    iget-boolean p1, p0, Lwid;->a:Z
+    return v0
 
-    if-eqz p1, :cond_2
+    :cond_0
+    instance-of v1, p1, Lwid;
 
-    iget-object p1, p0, Lwid;->b:Lyid;
+    const/4 v2, 0x0
 
-    iget-object p1, p1, Lyid;->a:Ljid;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Ljid;->invoke()Ljava/lang/Object;
+    return v2
 
-    move-result-object p1
+    :cond_1
+    check-cast p1, Lwid;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-wide v3, p0, Lwid;->a:J
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-wide v5, p1, Lwid;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lwid;->b:J
+
+    iget-wide v5, p1, Lwid;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lwid;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lwid;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, p0, Lwid;->c:Landroid/view/View;
+    if-nez p1, :cond_4
 
-    if-eqz p1, :cond_1
+    return v2
 
-    instance-of p1, v0, Liid;
+    :cond_4
+    return v0
+.end method
 
-    if-eqz p1, :cond_0
+.method public final hashCode()I
+    .locals 4
 
-    move-object p1, v0
+    iget-wide v0, p0, Lwid;->a:J
 
-    check-cast p1, Liid;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lwid;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lwid;->c:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    if-eqz p1, :cond_2
+    add-int/2addr v0, v1
 
-    invoke-virtual {p1}, Liid;->b()Z
-
-    move-result p1
-
-    const/4 v1, 0x1
-
-    if-ne p1, v1, :cond_2
-
-    :cond_1
-    sget-object p1, Lb57;->X:Lb57;
-
-    invoke-static {v0, p1}, La1h;->m(Landroid/view/View;Ld57;)Z
-
-    :cond_2
-    return-void
+    return v0
 .end method
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return-void
-.end method
+    const-string v0, "Success(messageId="
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    const-string v1, ", totalBytes="
 
-    return-void
+    iget-wide v2, p0, Lwid;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", attachId="
+
+    iget-wide v2, p0, Lwid;->b:J
+
+    iget-object v4, p0, Lwid;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3, v1, v4, v0}, Lxi4;->o(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

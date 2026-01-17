@@ -1,26 +1,26 @@
 .class public final Luy8;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lbz8;
+.field public final synthetic X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-.field public o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbz8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
     .locals 0
 
-    iput-object p1, p0, Luy8;->X:Lbz8;
+    iput-object p2, p0, Luy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Luy8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -40,81 +38,43 @@
 
     check-cast p1, Luy8;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Luy8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Luy8;
+    new-instance v0, Luy8;
 
-    iget-object v0, p0, Luy8;->X:Lbz8;
+    iget-object v1, p0, Luy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    invoke-direct {p1, v0, p2}, Luy8;-><init>(Lbz8;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Luy8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
 
-    return-object p1
+    iput-object p1, v0, Luy8;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 1
 
-    iget v0, p0, Luy8;->o:I
+    iget-object v0, p0, Luy8;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
+    check-cast v0, Lgoe;
 
-    if-ne v0, v1, :cond_0
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object p1, p0, Luy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {p1, v0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->R0(Lgoe;)V
 
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Luy8;->X:Lbz8;
-
-    iget-object v0, p1, Lbz8;->t0:Lhof;
-
-    new-instance v2, Lqw;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v2, v3, p1}, Lqw;-><init>(ILjava/lang/Object;)V
-
-    iput v1, p0, Luy8;->o:I
-
-    new-instance p1, Lcsd;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lt3;
-
-    const/16 v3, 0x19
-
-    invoke-direct {v1, p1, v2, v3}, Lt3;-><init>(Ljava/io/Serializable;Lh76;I)V
-
-    invoke-interface {v0, v1, p0}, Lf76;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lbc4;->a:Lbc4;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

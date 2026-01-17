@@ -1,465 +1,329 @@
-.class public abstract Ljqi;
-.super Lzpi;
+.class public final Ljqi;
+.super Lb07;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/List;
-.implements Ljava/util/RandomAccess;
+.implements Lhfg;
 
 
 # static fields
-.field public static final b:Lcqi;
+.field public static final k:Lxz0;
+
+.field public static final l:Lxz0;
+
+.field public static final m:Lxz0;
+
+.field public static final n:Lxz0;
+
+.field public static o:I = 0x1
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method static synthetic constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Lcqi;
+    new-instance v0, Lkme;
 
-    sget-object v1, Lcri;->o:Lcri;
+    const/16 v1, 0xd
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lkme;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Lcqi;-><init>(Ljqi;I)V
+    new-instance v1, Lxoi;
 
-    sput-object v0, Ljqi;->b:Lcqi;
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2}, Lxoi;-><init>(I)V
+
+    new-instance v2, Lxz0;
+
+    const-string v3, "ClientTelemetry.API"
+
+    invoke-direct {v2, v3, v1, v0}, Lxz0;-><init>(Ljava/lang/String;Lxoi;Lkme;)V
+
+    sput-object v2, Ljqi;->k:Lxz0;
+
+    new-instance v0, Lkme;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lkme;-><init>(I)V
+
+    new-instance v1, Lxoi;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2}, Lxoi;-><init>(I)V
+
+    new-instance v2, Lxz0;
+
+    const-string v3, "ModuleInstall.API"
+
+    invoke-direct {v2, v3, v1, v0}, Lxz0;-><init>(Ljava/lang/String;Lxoi;Lkme;)V
+
+    sput-object v2, Ljqi;->l:Lxz0;
+
+    new-instance v0, Lkme;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lkme;-><init>(I)V
+
+    new-instance v1, Lxz0;
+
+    new-instance v2, Lxoi;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v3}, Lxoi;-><init>(I)V
+
+    const-string v3, "LocationServices.API"
+
+    invoke-direct {v1, v3, v2, v0}, Lxz0;-><init>(Ljava/lang/String;Lxoi;Lkme;)V
+
+    sput-object v1, Ljqi;->m:Lxz0;
+
+    new-instance v0, Lkme;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lkme;-><init>(I)V
+
+    new-instance v1, Lxoi;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2}, Lxoi;-><init>(I)V
+
+    new-instance v2, Lxz0;
+
+    const-string v3, "SmsRetriever.API"
+
+    invoke-direct {v2, v3, v1, v0}, Lxz0;-><init>(Ljava/lang/String;Lxoi;Lkme;)V
+
+    sput-object v2, Ljqi;->n:Lxz0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a([Ljava/lang/Object;)I
-    .locals 3
+.method public varargs c([Ldqb;)Liqj;
+    .locals 6
 
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    aput-object v2, p1, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v0
-.end method
-
-.method public final add(ILjava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final addAll(ILjava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljqi;->indexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-ltz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public e(II)Ljqi;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    invoke-static {p1, p2, v0}, Leaj;->e(III)V
-
-    sub-int/2addr p2, p1
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    if-ne p2, v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    if-nez p2, :cond_1
-
-    sget-object p1, Lcri;->o:Lcri;
-
-    return-object p1
-
-    :cond_1
-    new-instance v0, Lfqi;
-
-    invoke-direct {v0, p0, p1, p2}, Lfqi;-><init>(Ljqi;II)V
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    if-ne p1, p0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    instance-of v0, p1, Ljava/util/List;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    instance-of v2, p1, Ljava/util/RandomAccess;
-
-    if-eqz v2, :cond_4
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_8
-
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    if-eq v3, v4, :cond_3
-
-    if-eqz v3, :cond_9
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_9
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p0, v1}, Ljqi;->f(I)Lcqi;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_5
-    :goto_1
-    invoke-virtual {v0}, Lcqi;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    invoke-virtual {v0}, Lcqi;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_5
-
-    if-eqz v2, :cond_9
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    goto :goto_1
-
-    :cond_7
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-nez p1, :cond_9
-
-    :cond_8
-    :goto_2
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_9
-    :goto_3
-    return v1
-.end method
-
-.method public final f(I)Lcqi;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    invoke-static {p1, v0}, Leaj;->d(II)V
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Ljqi;->b:Lcqi;
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Lcqi;
-
-    invoke-direct {v0, p0, p1}, Lcqi;-><init>(Ljqi;I)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
+    array-length v0, p1
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    :goto_0
-    if-ge v1, v0, :cond_0
+    if-lez v0, :cond_0
 
-    mul-int/lit8 v2, v2, 0x1f
-
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    add-int/lit8 v1, v1, 0x1
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    return v2
-.end method
-
-.method public final indexOf(Ljava/lang/Object;)I
-    .locals 4
-
-    const/4 v0, -0x1
-
-    if-nez p1, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x0
+    move v3, v1
 
     :goto_0
-    if-ge v2, v1, :cond_2
+    const-string v4, "Please provide at least one OptionalModuleApi."
 
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v4, v3}, Ldkj;->a(Ljava/lang/String;Z)V
 
-    move-result-object v3
+    move v3, v1
 
-    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :goto_1
+    if-ge v3, v0, :cond_1
 
-    move-result v3
+    aget-object v4, p1, v3
 
-    if-eqz v3, :cond_1
+    const-string v5, "Requested API must not be null."
 
-    return v2
+    invoke-static {v4, v5}, Ldkj;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
 
     :cond_1
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    goto :goto_0
+    move-result-object p1
+
+    invoke-static {p1, v1}, Ldm;->b(Ljava/util/List;Z)Ldm;
+
+    move-result-object p1
+
+    iget-object v0, p1, Ldm;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    new-instance p1, La8a;
+
+    invoke-direct {p1, v2, v1}, La8a;-><init>(ZI)V
+
+    invoke-static {p1}, Lmsi;->f(Ljava/lang/Object;)Liqj;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_2
-    return v0
-.end method
-
-.method public final synthetic iterator()Ljava/util/Iterator;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ljqi;->f(I)Lcqi;
+    invoke-static {}, Lxj7;->e()Ldu0;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    sget-object v2, Lk2j;->a:Lvx5;
 
-.method public final lastIndexOf(Ljava/lang/Object;)I
-    .locals 3
-
-    const/4 v0, -0x1
-
-    if-nez p1, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    :goto_0
-    if-ltz v1, :cond_2
-
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    filled-new-array {v2}, [Lvx5;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iput-object v2, v0, Ldu0;->e:Ljava/lang/Object;
 
-    move-result v2
+    const/16 v2, 0x6aa5
 
-    if-eqz v2, :cond_1
+    iput v2, v0, Ldu0;->b:I
 
-    return v1
+    iput-boolean v1, v0, Ldu0;->c:Z
 
-    :cond_1
-    add-int/lit8 v1, v1, -0x1
+    new-instance v2, Lnpd;
 
-    goto :goto_0
+    invoke-direct {v2, p0, p1}, Lnpd;-><init>(Ljqi;Ldm;)V
 
-    :cond_2
-    return v0
+    iput-object v2, v0, Ldu0;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ldu0;->e()Lqpi;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v1, p1}, Lb07;->b(ILxj7;)Liqj;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final synthetic listIterator()Ljava/util/ListIterator;
-    .locals 1
+.method public d(Lgfg;)Liqj;
+    .locals 2
 
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0}, Ljqi;->f(I)Lcqi;
+    invoke-static {}, Lxj7;->e()Ldu0;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    sget-object v1, Li2j;->a:Lvx5;
 
-.method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
-    .locals 0
+    filled-new-array {v1}, [Lvx5;
 
-    .line 2
-    invoke-virtual {p0, p1}, Ljqi;->f(I)Lcqi;
+    move-result-object v1
+
+    iput-object v1, v0, Ldu0;->e:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Ldu0;->c:Z
+
+    new-instance v1, Lkbf;
+
+    invoke-direct {v1, p1}, Lkbf;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Ldu0;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ldu0;->e()Lqpi;
+
+    move-result-object p1
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0, p1}, Lb07;->b(ILxj7;)Liqj;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final remove(I)Ljava/lang/Object;
-    .locals 0
+.method public declared-synchronized e()I
+    .locals 4
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    monitor-enter p0
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    :try_start_0
+    sget v0, Ljqi;->o:I
 
-    throw p1
-.end method
+    const/4 v1, 0x1
 
-.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    if-ne v0, v1, :cond_2
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lb07;->a:Landroid/content/Context;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    sget-object v1, Lc07;->d:Lc07;
 
-    throw p1
-.end method
+    const v2, 0xbdfcb8
 
-.method public bridge synthetic subList(II)Ljava/util/List;
-    .locals 0
+    invoke-virtual {v1, v0, v2}, Ld07;->c(Landroid/content/Context;I)I
 
-    invoke-virtual {p0, p1, p2}, Ljqi;->e(II)Ljqi;
+    move-result v2
 
-    move-result-object p1
+    if-nez v2, :cond_0
 
-    return-object p1
+    const/4 v0, 0x4
+
+    sput v0, Ljqi;->o:I
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, v3}, Ld07;->b(ILandroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "com.google.android.gms.auth.api.fallback"
+
+    invoke-static {v0, v1}, Lfc5;->a(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x3
+
+    sput v0, Ljqi;->o:I
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    sput v0, Ljqi;->o:I
+
+    :cond_2
+    :goto_0
+    sget v0, Ljqi;->o:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return v0
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

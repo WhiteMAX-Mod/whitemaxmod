@@ -1,123 +1,87 @@
-.class public abstract synthetic Loaf;
+.class public final Loaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llw9;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(J)V
+    .locals 0
 
-    invoke-static {}, Lxaf;->values()[Lxaf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-wide p1, p0, Loaf;->a:J
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    const/4 v1, 0x1
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Loaf;
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_1
 
-    :catch_0
-    const/4 v2, 0x2
+    return v2
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :cond_1
+    check-cast p1, Loaf;
 
-    :catch_1
-    const/4 v1, 0x3
+    iget-wide v3, p0, Loaf;->a:J
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-wide v5, p1, Loaf;->a:J
 
-    :catch_2
-    const/4 v2, 0x4
+    cmp-long p1, v3, v5
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    if-eqz p1, :cond_2
 
-    :catch_3
-    const/4 v1, 0x5
+    return v2
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    :cond_2
+    return v0
+.end method
 
-    :catch_4
-    const/4 v2, 0x6
+.method public final hashCode()I
+    .locals 2
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    iget-wide v0, p0, Loaf;->a:J
 
-    :catch_5
-    const/4 v1, 0x7
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    move-result v0
 
-    :catch_6
-    const/16 v2, 0x8
+    return v0
+.end method
 
-    :try_start_7
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :catch_7
-    const/16 v1, 0x9
+    const-string v0, "ShowReply(messageId="
 
-    :try_start_8
-    aput v1, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+    const-string v1, ")"
 
-    :catch_8
-    const/16 v1, 0xa
+    iget-wide v2, p0, Loaf;->a:J
 
-    :try_start_9
-    aput v1, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :catch_9
-    const/16 v1, 0xb
+    move-result-object v0
 
-    :try_start_a
-    aput v1, v0, v1
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    const/16 v1, 0xc
-
-    :try_start_b
-    aput v1, v0, v2
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
-
-    :catch_b
-    sput-object v0, Loaf;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

@@ -1,46 +1,39 @@
-.class public final Lsth;
-.super Lgj4;
+.class public interface abstract Lsth;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic g:Landroidx/viewpager2/widget/ViewPager2;
-
-
-# direct methods
-.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
-    .locals 0
-
-    iput-object p1, p0, Lsth;->g:Landroidx/viewpager2/widget/ViewPager2;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Lgj4;-><init>(I)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final g(Landroidx/recyclerview/widget/a;)Landroid/view/View;
+.method public a(Ljava/lang/Class;)Loth;
     .locals 1
 
-    iget-object v0, p0, Lsth;->g:Landroidx/viewpager2/widget/ViewPager2;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->A0:Lbu5;
+    const-string v0, "`Factory.create(String, CreationExtras)` is not implemented. You may need to override the method and provide a custom implementation. Note that using `Factory.create(String)` is not supported and considered an error."
 
-    iget-object v0, v0, Lbu5;->b:Lode;
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v0, v0, Lode;->m:Z
+    throw p1
+.end method
 
-    if-eqz v0, :cond_0
+.method public b(Ljava/lang/Class;Llea;)Loth;
+    .locals 0
 
-    const/4 p1, 0x0
+    invoke-interface {p0, p1}, Lsth;->a(Ljava/lang/Class;)Loth;
+
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :cond_0
-    invoke-super {p0, p1}, Lgj4;->g(Landroidx/recyclerview/widget/a;)Landroid/view/View;
+.method public c(Lrd3;Llea;)Loth;
+    .locals 0
+
+    invoke-interface {p1}, Lpd3;->a()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1, p2}, Lsth;->b(Ljava/lang/Class;Llea;)Loth;
 
     move-result-object p1
 

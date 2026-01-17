@@ -1,98 +1,39 @@
-.class public final synthetic Lfr;
-.super Ljava/lang/Object;
+.class public final Lfr;
+.super Llm4;
 .source "SourceFile"
 
-# interfaces
-.implements Loq6;
 
+# static fields
+.field public static final b:Lfr;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public static final c:Lhm4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lfr;->a:I
+    new-instance v0, Lfr;
 
-    iput-object p1, p0, Lfr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lfr;->b:Lfr;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xe
+
+    const-string v4, ":settings/appearance"
+
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v0
+
+    sput-object v0, Lfr;->c:Lhm4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lfr;->a:I
-
-    iget-object v1, p0, Lfr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lpf6;
-
-    invoke-virtual {v0}, Lpf6;->j()I
-
-    move-result v1
-
-    if-gtz v1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0, p1}, Lbe8;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lie8;
-
-    check-cast p1, Luig;
-
-    iget-boolean p1, p1, Luig;->a:Z
-
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
-
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lp38;
-
-    invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Las;
-
-    move-result-object p1
-
-    iget-object p1, p1, Las;->E0:Lyl5;
-
-    sget-object v0, Lpf3;->b:Lpf3;
-
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

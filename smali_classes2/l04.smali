@@ -1,204 +1,104 @@
 .class public final Ll04;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lbbh;
 
-.field public final b:J
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Lqz3;
+.field public final synthetic o:Lp04;
 
 
 # direct methods
-.method public constructor <init>(JJIILqz3;)V
+.method public constructor <init>(Lp04;Lbbh;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll04;->o:Lp04;
 
-    iput-wide p1, p0, Ll04;->a:J
+    iput-object p2, p0, Ll04;->X:Lbbh;
 
-    iput-wide p3, p0, Ll04;->b:J
+    const/4 p1, 0x2
 
-    iput p5, p0, Ll04;->c:I
-
-    iput p6, p0, Ll04;->d:I
-
-    iput-object p7, p0, Ll04;->e:Lqz3;
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lzb4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ll04;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ll04;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ll04;
 
-    iget-wide v3, p0, Ll04;->a:J
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-wide v5, p1, Ll04;->a:J
+    invoke-virtual {p1, p2}, Ll04;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v1, v3, v5
+    move-result-object p1
 
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Ll04;->b:J
-
-    iget-wide v5, p1, Ll04;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Ll04;->c:I
-
-    iget v3, p1, Ll04;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Ll04;->d:I
-
-    iget v3, p1, Ll04;->d:I
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Ll04;->e:Lqz3;
-
-    iget-object p1, p1, Ll04;->e:Lqz3;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-wide v0, p0, Ll04;->a:J
+    new-instance p1, Ll04;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, p0, Ll04;->o:Lp04;
 
-    move-result v0
+    iget-object v1, p0, Ll04;->X:Lbbh;
 
-    const/16 v1, 0x1f
+    invoke-direct {p1, v0, v1, p2}, Ll04;-><init>(Lp04;Lbbh;Lkotlin/coroutines/Continuation;)V
 
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Ll04;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    iget v2, p0, Ll04;->c:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    iget v2, p0, Ll04;->d:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Ll04;->e:Lqz3;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v0, "ContactEntity(id="
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const-string v1, ", serverId="
+    iget-object p1, p0, Ll04;->o:Lp04;
 
-    iget-wide v2, p0, Ll04;->a:J
+    iget-object p1, p1, Lp04;->z:Lo58;
 
-    invoke-static {v2, v3, v0, v1}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-string v1, ", presence="
+    check-cast p1, Lt2b;
 
-    iget-wide v2, p0, Ll04;->b:J
+    new-instance v0, Lzah;
 
-    iget v4, p0, Ll04;->c:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, v2, v3, v1, v4}, Ln0c;->m(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
+    iget-object v1, p0, Ll04;->X:Lbbh;
 
-    const-string v1, ", presenceType="
+    iput-object v1, v0, Lzah;->q:Lbbh;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Ldbh;
 
-    iget v1, p0, Ll04;->d:I
+    invoke-direct {v1, v0}, Ldbh;-><init>(Lzah;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Lt2b;->n(Ldbh;)J
 
-    const-string v1, ", contactData="
+    move-result-wide v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/Long;
 
-    iget-object v1, p0, Ll04;->e:Lqz3;
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,123 +1,130 @@
-.class public final Liz3;
+.class public final synthetic Liz3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li6;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/String;
+.field public final synthetic b:J
 
-.field public c:Ljava/lang/String;
+.field public final synthetic c:Ljava/lang/Object;
 
-.field public d:Ljava/lang/String;
 
-.field public e:J
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+    .locals 0
 
-.field public f:Ljava/util/List;
+    iput p4, p0, Liz3;->a:I
 
-.field public g:J
+    iput-object p1, p0, Liz3;->c:Ljava/lang/Object;
 
-.field public h:J
+    iput-wide p2, p0, Liz3;->b:J
 
-.field public i:Loz3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public j:I
-
-.field public k:Lpz3;
-
-.field public l:I
-
-.field public m:I
-
-.field public n:Ljava/util/List;
-
-.field public o:Ljava/lang/String;
-
-.field public p:Ljava/lang/String;
-
-.field public q:Ljava/lang/String;
-
-.field public r:J
-
-.field public s:J
-
-.field public t:J
-
-.field public u:Llz3;
-
-.field public v:[I
-
-.field public w:Lnz3;
-
-.field public x:Ljava/lang/String;
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lqz3;
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    iget-object v0, p0, Liz3;->k:Lpz3;
+    iget v0, p0, Liz3;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lpz3;->b:Lpz3;
+    iget-object v0, p0, Liz3;->c:Ljava/lang/Object;
 
-    iput-object v0, p0, Liz3;->k:Lpz3;
+    check-cast v0, Lfoa;
 
-    :cond_0
-    iget v0, p0, Liz3;->l:I
+    const-string v1, "NonBlockingUploadsRepo"
 
-    if-nez v0, :cond_1
+    const-string v2, "removeUploadWithAttachId: attachId="
 
-    const/4 v0, 0x1
+    iget-wide v3, p0, Liz3;->b:J
 
-    iput v0, p0, Liz3;->l:I
+    invoke-static {v3, v4, v2, v1}, Lob3;->g(JLjava/lang/String;Ljava/lang/String;)V
 
-    :cond_1
-    iget-object v0, p0, Liz3;->n:Ljava/util/List;
+    iget-object v0, v0, Lfoa;->c:Ljava/lang/Object;
 
-    if-nez v0, :cond_2
+    check-cast v0, Lgw3;
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v0, p0, Liz3;->n:Ljava/util/List;
+    new-instance v1, Ldoa;
 
-    :cond_2
-    iget-object v0, p0, Liz3;->f:Ljava/util/List;
+    invoke-direct {v1, v3, v4}, Ldoa;-><init>(J)V
 
-    if-eqz v0, :cond_3
+    iget-object v0, v0, Lgw3;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    :cond_3
-    sget-object v0, Lkz3;->e:Lkz3;
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
-    iput-object v0, p0, Liz3;->f:Ljava/util/List;
+    new-instance v2, Ly07;
 
-    :cond_4
-    iget-object v0, p0, Liz3;->v:[I
+    const/16 v3, 0x1c
 
-    if-nez v0, :cond_5
+    invoke-direct {v2, v3, v1}, Ly07;-><init>(ILjava/lang/Object;)V
 
-    const/4 v0, 0x0
+    new-instance v1, Lv5;
 
-    new-array v0, v0, [I
+    const/4 v3, 0x7
 
-    iput-object v0, p0, Liz3;->v:[I
+    invoke-direct {v1, v3, v2}, Lv5;-><init>(ILjava/lang/Object;)V
 
-    :cond_5
-    new-instance v0, Lqz3;
+    invoke-interface {v0, v1}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
 
-    invoke-direct {v0, p0}, Lqz3;-><init>(Liz3;)V
+    return-void
 
-    return-object v0
+    :pswitch_0
+    iget-object v0, p0, Liz3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lew5;
+
+    iget-object v0, v0, Lew5;->a:Lt2b;
+
+    const/4 v1, 0x5
+
+    iget-wide v2, p0, Liz3;->b:J
+
+    invoke-virtual {v0, v1, v2, v3}, Lt2b;->d(IJ)J
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Liz3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lmz3;
+
+    iget-object v1, v0, Lmz3;->g:Llgc;
+
+    iget-object v1, v1, Llgc;->a:Lqi8;
+
+    invoke-virtual {v1}, Lyfe;->j()J
+
+    move-result-wide v1
+
+    new-instance v3, Lf10;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v1, v2, v4}, Lf10;-><init>(JI)V
+
+    iget-wide v1, p0, Liz3;->b:J
+
+    invoke-virtual {v0, v1, v2, v3}, Lmz3;->c(JLay3;)Ley3;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

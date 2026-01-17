@@ -1,122 +1,70 @@
 .class public final Li2f;
-.super Ljava/lang/Object;
+.super Ld3;
 .source "SourceFile"
-
-# interfaces
-.implements Ldm4;
 
 
 # static fields
-.field public static final a:Li2f;
-
-.field public static final b:Lj2f;
+.field public static final c:Li2f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Li2f;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xc
 
-    sput-object v0, Li2f;->a:Li2f;
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-    sget-object v0, Lj2f;->b:Lj2f;
-
-    sput-object v0, Li2f;->b:Lj2f;
+    sput-object v0, Li2f;->c:Li2f;
 
     return-void
 .end method
 
+.method public static L0(JLjava/lang/String;)Lfm4;
+    .locals 3
 
-# virtual methods
-.method public final a()Lkm4;
-    .locals 1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object v0, Li2f;->b:Lj2f;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-object v0
-.end method
+    new-instance v1, Ljava/lang/StringBuilder;
 
-.method public final b(Ljava/lang/String;Lgm4;Landroid/os/Bundle;)Lnm4;
-    .locals 10
+    const-string v2, ":webapp:root?bot_id="
 
-    sget-object v0, Li2f;->b:Lj2f;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lkm4;->a:Ljava/util/LinkedHashSet;
+    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    const-string p0, "&entry_point=support_from_privacy"
 
-    move-result v0
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    move-result-object p0
 
-    return-object v1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_0
+
+    const-string p0, "&start_param="
+
+    invoke-virtual {p0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
-    sget-object v0, Lj2f;->b:Lj2f;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    sget-object v0, Lj2f;->c:Lgm4;
+    new-instance p1, Lfm4;
 
-    invoke-virtual {p2, v0}, Lgm4;->equals(Ljava/lang/Object;)Z
+    invoke-direct {p1, p0}, Lfm4;-><init>(Ljava/lang/String;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v8, Le;
-
-    const/16 v0, 0x1c
-
-    invoke-direct {v8, v0}, Le;-><init>(I)V
-
-    new-instance v2, Lnm4;
-
-    const/16 v9, 0x18
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Lnm4;-><init>(Ljava/lang/String;Lgm4;Landroid/os/Bundle;ILlm4;Lmm4;I)V
-
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p1, Li2f;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v4}, Lqf7;->h(Ljava/lang/String;Lgm4;)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p2, v4}, Lqf7;->h(Ljava/lang/String;Lgm4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    return-object p1
 .end method

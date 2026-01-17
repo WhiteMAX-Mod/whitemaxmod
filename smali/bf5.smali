@@ -1,22 +1,48 @@
-.class public abstract Lbf5;
-.super Ljava/lang/Object;
+.class public final Lbf5;
+.super Landroid/text/Editable$Factory;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/lang/Object;
+
+.field public static volatile b:Lbf5;
+
+.field public static c:Ljava/lang/Class;
+
+
 # direct methods
-.method public static a()Ljava/util/Set;
+.method static constructor <clinit>()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Set<",
-            "[I>;"
-        }
-    .end annotation
 
-    invoke-static {}, Lqoe;->a()Ljava/util/Set;
+    new-instance v0, Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    sput-object v0, Lbf5;->a:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    .locals 2
+
+    sget-object v0, Lbf5;->c:Ljava/lang/Class;
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Lujf;
+
+    invoke-direct {v1, v0, p1}, Lujf;-><init>(Ljava/lang/Class;Ljava/lang/CharSequence;)V
+
+    return-object v1
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/text/Editable$Factory;->newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

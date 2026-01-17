@@ -2,75 +2,72 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lj88;
+.implements Landroid/view/View$OnAttachStateChangeListener;
+
 
 # instance fields
-.field public final a:Lc98;
-
-.field public final b:Lc88;
-
-.field public final c:Lw15;
-
-.field public final d:Lro3;
+.field public a:Ll88;
 
 
-# direct methods
-.method public constructor <init>(Lc98;Lc88;Lw15;Liy7;)V
+# virtual methods
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p0, Lh88;->a:Ll88;
 
-    iput-object p1, p0, Lh88;->a:Lc98;
+    iget-object p1, p1, Ll88;->d:Lo78;
 
-    iput-object p2, p0, Lh88;->b:Lc88;
+    sget-object v0, Lo78;->a:Lo78;
 
-    iput-object p3, p0, Lh88;->c:Lw15;
+    if-ne p1, v0, :cond_0
 
-    new-instance p2, Lro3;
+    new-instance p1, Ll88;
 
-    const/4 p3, 0x1
+    invoke-direct {p1, p0}, Ll88;-><init>(Lj88;)V
 
-    invoke-direct {p2, p0, p3, p4}, Lro3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lh88;->d:Lro3;
-
-    iget-object p3, p1, Lc98;->d:Lc88;
-
-    sget-object v0, Lc88;->a:Lc88;
-
-    if-ne p3, v0, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-interface {p4, p1}, Liy7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    invoke-virtual {p0}, Lh88;->a()V
-
-    return-void
+    iput-object p1, p0, Lh88;->a:Ll88;
 
     :cond_0
-    invoke-virtual {p1, p2}, Lc98;->a(Lw88;)V
+    iget-object p1, p0, Lh88;->a:Ll88;
+
+    sget-object v0, Ln78;->ON_START:Ln78;
+
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
 
     return-void
 .end method
 
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
 
-# virtual methods
-.method public final a()V
-    .locals 2
+    iget-object p1, p0, Lh88;->a:Ll88;
 
-    iget-object v0, p0, Lh88;->a:Lc98;
+    iget-object p1, p1, Ll88;->d:Lo78;
 
-    iget-object v1, p0, Lh88;->d:Lro3;
+    sget-object v0, Lo78;->c:Lo78;
 
-    invoke-virtual {v0, v1}, Lc98;->f(Lw88;)V
+    invoke-virtual {p1, v0}, Lo78;->a(Lo78;)Z
 
-    const/4 v0, 0x1
+    move-result p1
 
-    iget-object v1, p0, Lh88;->c:Lw15;
+    if-eqz p1, :cond_0
 
-    iput-boolean v0, v1, Lw15;->b:Z
+    iget-object p1, p0, Lh88;->a:Ll88;
 
-    invoke-virtual {v1}, Lw15;->a()V
+    sget-object v0, Ln78;->ON_DESTROY:Ln78;
 
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
+
+    :cond_0
     return-void
+.end method
+
+.method public final p()Ll88;
+    .locals 1
+
+    iget-object v0, p0, Lh88;->a:Ll88;
+
+    return-object v0
 .end method

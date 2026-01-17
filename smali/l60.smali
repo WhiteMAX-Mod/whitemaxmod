@@ -9,20 +9,28 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public final synthetic b:I
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic c:J
+
+.field public final synthetic d:J
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+.method public synthetic constructor <init>(IIJJLjava/lang/Object;)V
     .locals 0
 
-    iput p4, p0, Ll60;->a:I
+    iput p2, p0, Ll60;->a:I
 
-    iput-object p1, p0, Ll60;->c:Ljava/lang/Object;
+    iput-object p7, p0, Ll60;->o:Ljava/lang/Object;
 
-    iput-wide p2, p0, Ll60;->b:J
+    iput p1, p0, Ll60;->b:I
+
+    iput-wide p3, p0, Ll60;->c:J
+
+    iput-wide p5, p0, Ll60;->d:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,126 +40,107 @@
 
 # virtual methods
 .method public final run()V
-    .locals 6
+    .locals 10
 
     iget v0, p0, Ll60;->a:I
 
-    iget-wide v1, p0, Ll60;->b:J
-
-    iget-object v3, p0, Ll60;->c:Ljava/lang/Object;
+    iget-object v1, p0, Ll60;->o:Ljava/lang/Object;
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast v3, Lmnb;
+    check-cast v1, Lvh0;
 
-    iget-object v0, v3, Lmnb;->d:Lnm0;
+    iget-object v0, v1, Lvh0;->b:Lon4;
 
-    invoke-virtual {v0, v1, v2}, Lnm0;->a(J)V
+    iget-object v1, v0, Lon4;->d:Le40;
 
-    return-void
+    iget-object v2, v1, Le40;->c:Ljava/lang/Object;
 
-    :pswitch_0
-    check-cast v3, Lone/me/messages/list/ui/MessagesListWidget;
+    check-cast v2, Lhk7;
 
-    iget-object v0, v3, Lone/me/messages/list/ui/MessagesListWidget;->A0:Ln77;
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    iget-object v3, v0, Ln77;->d:Lk77;
+    move-result v2
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
-    iget-wide v4, v3, Lk77;->a:J
-
-    cmp-long v4, v4, v1
-
-    if-nez v4, :cond_0
-
-    iget-object v3, v3, Lk77;->b:Ljava/util/List;
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 v3, 0x0
+    iget-object v1, v1, Le40;->c:Ljava/lang/Object;
+
+    check-cast v1, Lhk7;
+
+    invoke-static {v1}, Lz6f;->c(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lvc9;
 
     :goto_0
-    new-instance v4, Lk77;
-
-    invoke-direct {v4, v1, v2, v3}, Lk77;-><init>(JLjava/util/List;)V
-
-    invoke-virtual {v0, v4}, Ln77;->a(Lk77;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v3, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl;
-
-    invoke-static {v3, v1, v2}, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl;->c(Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl;J)V
-
-    return-void
-
-    :pswitch_2
-    check-cast v3, Lbh4;
-
-    iget-object v0, v3, Lbh4;->Z:Lnm0;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v1, v2}, Lnm0;->a(J)V
-
-    :cond_1
-    return-void
-
-    :pswitch_3
-    check-cast v3, Ljf4;
-
-    iget-object v0, v3, Ljf4;->c:Lnm0;
-
-    invoke-virtual {v0, v1, v2}, Lnm0;->a(J)V
-
-    return-void
-
-    :pswitch_4
-    check-cast v3, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;
-
-    invoke-static {v3, v1, v2}, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->a(Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;J)V
-
-    return-void
-
-    :pswitch_5
-    check-cast v3, Ljfc;
-
-    iget-object v0, v3, Ljfc;->c:Ljava/lang/Object;
-
-    check-cast v0, Ltp5;
-
-    sget-object v3, Lqah;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Ltp5;->a:Lzp5;
-
-    iget-object v0, v0, Lzp5;->D0:Lnn4;
-
-    invoke-virtual {v0}, Lnn4;->H()Lld;
+    invoke-virtual {v0, v1}, Lon4;->E(Lvc9;)Lid;
 
     move-result-object v3
 
-    new-instance v4, Ln02;
+    new-instance v2, Lhn4;
 
-    const/4 v5, 0x3
+    const/4 v9, 0x1
 
-    invoke-direct {v4, v3, v1, v2, v5}, Ln02;-><init>(Ljava/lang/Object;JI)V
+    iget v4, p0, Ll60;->b:I
 
-    const/16 v1, 0x3f2
+    iget-wide v5, p0, Ll60;->c:J
 
-    invoke-virtual {v0, v3, v1, v4}, Lnn4;->I(Lld;ILef8;)V
+    iget-wide v7, p0, Ll60;->d:J
+
+    invoke-direct/range {v2 .. v9}, Lhn4;-><init>(Lid;IJJI)V
+
+    const/16 v1, 0x3ee
+
+    invoke-virtual {v0, v3, v1, v2}, Lon4;->I(Lid;ILqe8;)V
 
     return-void
 
+    :pswitch_0
+    check-cast v1, Lxz0;
+
+    iget-object v0, v1, Lxz0;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxp5;
+
+    sget-object v1, Lmbh;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lxp5;->a:Ldq5;
+
+    iget-object v0, v0, Ldq5;->E0:Lon4;
+
+    invoke-virtual {v0}, Lon4;->H()Lid;
+
+    move-result-object v2
+
+    new-instance v1, Lhn4;
+
+    const/4 v8, 0x0
+
+    iget v3, p0, Ll60;->b:I
+
+    iget-wide v4, p0, Ll60;->c:J
+
+    iget-wide v6, p0, Ll60;->d:J
+
+    invoke-direct/range {v1 .. v8}, Lhn4;-><init>(Lid;IJJI)V
+
+    const/16 v3, 0x3f3
+
+    invoke-virtual {v0, v2, v3, v1}, Lon4;->I(Lid;ILqe8;)V
+
+    return-void
+
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,52 +1,74 @@
 .class public final Lo4f;
-.super Lf3;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final c:Lo4f;
+
+# instance fields
+.field public synthetic o:Ljava/lang/Object;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lo4f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lo4f;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lo4f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
     new-instance v0, Lo4f;
 
-    const/16 v1, 0xa
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Lf3;-><init>(I)V
+    invoke-direct {v0, v1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sput-object v0, Lo4f;->c:Lo4f;
+    iput-object p1, v0, Lo4f;->o:Ljava/lang/Object;
 
-    return-void
+    return-object v0
 .end method
 
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-# virtual methods
-.method public final L0()V
-    .locals 3
+    iget-object v0, p0, Lo4f;->o:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lf3;->p0()Lim4;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/String;
+
+    sget-object p1, Li2f;->c:Li2f;
+
+    invoke-virtual {p1}, Ld3;->p0()Ljm4;
+
+    move-result-object p1
+
+    const-string v1, ":settings/privacy/pincode?mode=confirm&hash="
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lim4;->d()Z
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-virtual {p1, v0, v1}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    if-nez v0, :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p0}, Lf3;->p0()Lim4;
-
-    move-result-object v0
-
-    const-string v1, ":chat-list"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

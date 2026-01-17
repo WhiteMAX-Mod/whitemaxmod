@@ -3,44 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/EglThread$RenderUpdate;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:Lorg/webrtc/EglRenderer;
 
-.field public final synthetic b:Lorg/webrtc/VideoFrame;
+.field public final synthetic b:Lorg/webrtc/RendererCommon$GlDrawer;
 
-.field public final synthetic c:J
+.field public final synthetic c:Lorg/webrtc/EglRenderer$FrameListener;
+
+.field public final synthetic d:F
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
+.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lvd5;->a:Lorg/webrtc/EglRenderer;
 
-    iput-object p2, p0, Lvd5;->b:Lorg/webrtc/VideoFrame;
+    iput-object p2, p0, Lvd5;->b:Lorg/webrtc/RendererCommon$GlDrawer;
 
-    iput-wide p3, p0, Lvd5;->c:J
+    iput-object p3, p0, Lvd5;->c:Lorg/webrtc/EglRenderer$FrameListener;
+
+    iput p4, p0, Lvd5;->d:F
+
+    iput-boolean p5, p0, Lvd5;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final update(Z)V
-    .locals 4
+.method public final run()V
+    .locals 5
 
-    iget-object v0, p0, Lvd5;->b:Lorg/webrtc/VideoFrame;
+    iget v0, p0, Lvd5;->d:F
 
-    iget-wide v1, p0, Lvd5;->c:J
+    iget-boolean v1, p0, Lvd5;->o:Z
 
-    iget-object v3, p0, Lvd5;->a:Lorg/webrtc/EglRenderer;
+    iget-object v2, p0, Lvd5;->a:Lorg/webrtc/EglRenderer;
 
-    invoke-static {v3, v0, v1, v2, p1}, Lorg/webrtc/EglRenderer;->g(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;JZ)V
+    iget-object v3, p0, Lvd5;->b:Lorg/webrtc/RendererCommon$GlDrawer;
+
+    iget-object v4, p0, Lvd5;->c:Lorg/webrtc/EglRenderer$FrameListener;
+
+    invoke-static {v2, v3, v4, v0, v1}, Lorg/webrtc/EglRenderer;->e(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
 
     return-void
 .end method

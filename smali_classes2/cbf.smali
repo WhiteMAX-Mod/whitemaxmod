@@ -3,185 +3,184 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lcbf;
+
+
 # instance fields
-.field public final a:Ll5;
+.field public final a:I
 
-.field public final b:Lvna;
-
-.field public final c:Lwpj;
-
-.field public final d:Lole;
-
-.field public final e:Lxp8;
-
-.field public final f:Lkqe;
-
-.field public final g:Lrb9;
-
-.field public final h:Laoa;
-
-.field public final i:Lqw1;
-
-.field public final j:Lwt;
-
-.field public final k:Lwt;
-
-.field public final l:Lks6;
-
-.field public final m:Lgd6;
-
-.field public final n:Lwzi;
-
-.field public final o:La6e;
-
-.field public final p:Lb2e;
-
-.field public final q:Lhg5;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lcgd;Lel1;Lwh1;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lcbf;
+
+    const/4 v1, 0x1
+
+    sget-object v2, Ldh5;->a:Ldh5;
+
+    invoke-direct {v0, v1, v2}, Lcbf;-><init>(ILjava/util/List;)V
+
+    sput-object v0, Lcbf;->c:Lcbf;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v3, Ll5;
+    iput p1, p0, Lcbf;->a:I
 
-    const/16 v0, 0x15
-
-    invoke-direct {v3, v0, p1}, Ll5;-><init>(ILjava/lang/Object;)V
-
-    iput-object v3, p0, Lcbf;->a:Ll5;
-
-    new-instance v0, Lvna;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Lvna;-><init>(I)V
-
-    iput-object v0, p0, Lcbf;->b:Lvna;
-
-    new-instance v6, Lwpj;
-
-    const/16 v0, 0x14
-
-    invoke-direct {v6, v0}, Lwpj;-><init>(I)V
-
-    iput-object v6, p0, Lcbf;->c:Lwpj;
-
-    new-instance v0, Lole;
-
-    invoke-direct {v0, v1}, Lole;-><init>(I)V
-
-    iput-object v0, p0, Lcbf;->d:Lole;
-
-    new-instance v7, Lwt;
-
-    invoke-direct {v7, p1}, Lwt;-><init>(Lcgd;)V
-
-    new-instance v4, Lxp8;
-
-    const/16 v0, 0x15
-
-    invoke-direct {v4, v0, p1}, Lxp8;-><init>(ILjava/lang/Object;)V
-
-    iput-object v4, p0, Lcbf;->e:Lxp8;
-
-    new-instance v0, Lkqe;
-
-    const/16 v5, 0xa
-
-    move-object v1, p2
-
-    move-object v2, p3
-
-    invoke-direct/range {v0 .. v5}, Lkqe;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iput-object v0, p0, Lcbf;->f:Lkqe;
-
-    new-instance p2, Lrb9;
-
-    const/16 p3, 0x19
-
-    invoke-direct {p2, p1, p3, v0}, Lrb9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lcbf;->g:Lrb9;
-
-    new-instance p3, Laoa;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {p3, v1}, Laoa;-><init>(I)V
-
-    iput-object p3, p0, Lcbf;->h:Laoa;
-
-    new-instance v1, Lqw1;
-
-    invoke-direct {v1, p1, p3}, Lqw1;-><init>(Lcgd;Laoa;)V
-
-    iput-object v1, p0, Lcbf;->i:Lqw1;
-
-    new-instance v2, Lwt;
-
-    invoke-direct {v2, p1, p3}, Lwt;-><init>(Lcgd;Laoa;)V
-
-    iput-object v2, p0, Lcbf;->j:Lwt;
-
-    new-instance v2, Lwt;
-
-    invoke-direct {v2, p1, p3}, Lwt;-><init>(Lcgd;Laoa;)V
-
-    iput-object v2, p0, Lcbf;->k:Lwt;
-
-    new-instance v3, Lks6;
-
-    const/16 v4, 0x8
-
-    invoke-direct {v3, v4, p1}, Lks6;-><init>(ILjava/lang/Object;)V
-
-    iput-object v3, p0, Lcbf;->l:Lks6;
-
-    new-instance v3, Lgd6;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v3, Lgd6;->a:Ljava/lang/Object;
-
-    iput-object v7, v3, Lgd6;->b:Ljava/lang/Object;
-
-    iput-object p2, v3, Lgd6;->c:Ljava/lang/Object;
-
-    iput-object v1, v3, Lgd6;->d:Ljava/lang/Object;
-
-    iput-object v2, v3, Lgd6;->e:Ljava/lang/Object;
-
-    iput-object v3, p0, Lcbf;->m:Lgd6;
-
-    new-instance p2, Lwzi;
-
-    invoke-direct {p2, p1, p3, v7, v0}, Lwzi;-><init>(Lcgd;Laoa;Lwt;Lkqe;)V
-
-    iput-object p2, p0, Lcbf;->n:Lwzi;
-
-    new-instance p2, La6e;
-
-    invoke-direct {p2, p1, p3, v3}, La6e;-><init>(Lcgd;Laoa;Lgd6;)V
-
-    iput-object p2, p0, Lcbf;->o:La6e;
-
-    new-instance p2, Lb2e;
-
-    invoke-direct {p2, p1, v6, v7}, Lb2e;-><init>(Lcgd;Lwpj;Lwt;)V
-
-    iput-object p2, p0, Lcbf;->p:Lb2e;
-
-    new-instance p2, Lhg5;
-
-    const/16 p3, 0xc
-
-    invoke-direct {p2, p3, p1}, Lhg5;-><init>(ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lcbf;->q:Lhg5;
+    iput-object p2, p0, Lcbf;->b:Ljava/util/List;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lcbf;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lcbf;
+
+    iget v0, p0, Lcbf;->a:I
+
+    iget v1, p1, Lcbf;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcbf;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lcbf;->b:Ljava/util/List;
+
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lcbf;->a:I
+
+    invoke-static {v0}, Lt02;->t(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcbf;->b:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowcaseState(state="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lcbf;->a:I
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "EMPTY_SEARCH"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "CONTENT_SEARCH"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "CONTENT"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "LOADING"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", content="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcbf;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

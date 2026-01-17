@@ -103,6 +103,25 @@
     throw p0
 .end method
 
+.method public static dump(Lru/ok/android/onelog/OneLogItem;Li28;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 9
+    sget-object v0, Lru/ok/android/onelog/ItemSerializer;->INSTANCE:Lru/ok/android/onelog/ItemSerializer;
+
+    invoke-virtual {v0, p1, p0}, Lru/ok/android/onelog/ItemSerializer;->serialize(Li28;Lru/ok/android/onelog/OneLogItem;)V
+
+    return-void
+.end method
+
 .method public static dump(Lru/ok/android/onelog/OneLogItem;Ljava/io/OutputStream;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -115,9 +134,9 @@
     .end annotation
 
     .line 5
-    new-instance v0, Lbrb;
+    new-instance v0, Lnrb;
 
-    invoke-direct {v0, p1}, Lbrb;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v0, p1}, Lnrb;-><init>(Ljava/io/OutputStream;)V
 
     invoke-static {p0, v0}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Ljava/io/Writer;)V
 
@@ -136,34 +155,15 @@
     .end annotation
 
     .line 6
-    new-instance v0, Lq9c;
+    new-instance v0, Llac;
 
-    invoke-direct {v0, p1}, Lq9c;-><init>(Ljava/io/Writer;)V
+    invoke-direct {v0, p1}, Llac;-><init>(Ljava/io/Writer;)V
 
     .line 7
-    invoke-static {p0, v0}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Lx28;)V
+    invoke-static {p0, v0}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Li28;)V
 
     .line 8
-    invoke-virtual {v0}, Lq9c;->flush()V
-
-    return-void
-.end method
-
-.method public static dump(Lru/ok/android/onelog/OneLogItem;Lx28;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 9
-    sget-object v0, Lru/ok/android/onelog/ItemSerializer;->INSTANCE:Lru/ok/android/onelog/ItemSerializer;
-
-    invoke-virtual {v0, p1, p0}, Lru/ok/android/onelog/ItemSerializer;->serialize(Lx28;Lru/ok/android/onelog/OneLogItem;)V
+    invoke-virtual {v0}, Llac;->flush()V
 
     return-void
 .end method

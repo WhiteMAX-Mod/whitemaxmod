@@ -1,5 +1,5 @@
 .class public final Lgqa;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
@@ -10,18 +10,18 @@
 
 .field public Z:I
 
-.field public d:Lhqa;
+.field public d:J
 
-.field public o:Lrl9;
+.field public o:Lxk9;
 
 
 # direct methods
-.method public constructor <init>(Lhqa;Ll84;)V
+.method public constructor <init>(Lhqa;Lo84;)V
     .locals 0
 
     iput-object p1, p0, Lgqa;->Y:Lhqa;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 
     iget-object v2, p0, Lgqa;->Y:Lhqa;
 
-    invoke-static {v2, v0, v1, p1, p0}, Lhqa;->a(Lhqa;JLrl9;Ll84;)Ljava/lang/Object;
+    invoke-static {v2, v0, v1, p1, p0}, Lhqa;->a(Lhqa;JLxk9;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

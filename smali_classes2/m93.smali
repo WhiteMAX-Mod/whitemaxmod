@@ -1,108 +1,250 @@
 .class public final Lm93;
-.super Lb5g;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Luig;
 
 
 # instance fields
-.field public final synthetic X:Ldc3;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Lhgb;
 
 
 # direct methods
-.method public constructor <init>(Ldc3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
 
-    iput-object p1, p0, Lm93;->X:Ldc3;
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    const/4 p1, 0x2
+    new-instance v0, Lhgb;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1}, Lhgb;-><init>(Landroid/content/Context;)V
+
+    sget-object p1, Lwfb;->a:Lwfb;
+
+    invoke-virtual {v0, p1}, Lhgb;->setAppearance(Lagb;)V
+
+    const/16 p1, 0x1c
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, p1
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lnd3;->setIndicatorSize(I)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lnd3;->setIndicatorDirection(I)V
+
+    const/4 v2, 0x3
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lq7j;->c(F)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lnd3;->setTrackThickness(I)V
+
+    const/4 v2, 0x2
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lq7j;->c(F)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lll0;->setIndicatorTrackGapSize(I)V
+
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, p1
+
+    invoke-static {v3}, Lq7j;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, p1
+
+    invoke-static {v4}, Lq7j;->c(F)I
+
+    move-result v4
+
+    invoke-direct {v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const/16 v3, 0x11
+
+    iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iput-object v0, p0, Lm93;->a:Lhgb;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    const/16 v0, 0xa
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v0
+
+    invoke-static {v2}, Lq7j;->c(F)I
+
+    move-result v2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v3
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    invoke-virtual {p0, v1, v2, v1, v0}, Landroid/view/View;->setPadding(IIII)V
+
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {p1, v1, v2}, Lxi4;->c(FFI)I
+
+    move-result p1
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final getProgress()Lhgb;
+    .locals 1
 
-    check-cast p1, Lud2;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lm93;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lm93;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lm93;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lm93;
-
-    iget-object v1, p0, Lm93;->X:Ldc3;
-
-    invoke-direct {v0, v1, p2}, Lm93;-><init>(Ldc3;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lm93;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lm93;->a:Lhgb;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final onAttachedToWindow()V
+    .locals 1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    iget-object p1, p0, Lm93;->o:Ljava/lang/Object;
+    sget-object v0, Lpc3;->t0:Lkme;
 
-    check-cast p1, Lud2;
-
-    iget-object v0, p0, Lm93;->X:Ldc3;
-
-    iget-object v0, v0, Ldc3;->o:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-wide v1, p1, Lud2;->a:J
-
-    new-instance v3, Ljava/lang/Long;
-
-    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    new-instance v1, Lj93;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, p1, v2}, Lj93;-><init>(Lud2;I)V
-
-    new-instance v2, Lmi;
-
-    const/16 v4, 0xa
-
-    invoke-direct {v2, v4, v1}, Lmi;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
     move-result-object v0
 
-    check-cast v0, Lofa;
+    invoke-virtual {p0, v0}, Lm93;->onThemeChanged(Lzlb;)V
 
-    invoke-interface {v0, p1}, Lofa;->setValue(Ljava/lang/Object;)V
+    return-void
+.end method
 
-    sget-object p1, Lv2h;->a:Lv2h;
+.method public final onThemeChanged(Lzlb;)V
+    .locals 1
 
-    return-object p1
+    iget-object v0, p0, Lm93;->a:Lhgb;
+
+    invoke-virtual {v0, p1}, Lhgb;->onThemeChanged(Lzlb;)V
+
+    return-void
 .end method

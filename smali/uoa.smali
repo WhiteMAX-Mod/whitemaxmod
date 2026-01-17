@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvoe;
+.implements Lxpe;
 
 
 # static fields
@@ -53,10 +53,10 @@
     throw p1
 .end method
 
-.method public final e()Lrnj;
+.method public final e()Lqoj;
     .locals 1
 
-    sget-object v0, Lbzf;->e:Lbzf;
+    sget-object v0, Lj0g;->e:Lj0g;
 
     return-object v0
 .end method
@@ -99,7 +99,7 @@
 .method public final getAnnotations()Ljava/util/List;
     .locals 1
 
-    sget-object v0, Lch5;->a:Lch5;
+    sget-object v0, Ldh5;->a:Ldh5;
 
     return-object v0
 .end method
@@ -119,9 +119,9 @@
 .method public final hashCode()I
     .locals 2
 
-    sget-object v0, Lbzf;->e:Lbzf;
+    sget-object v0, Lj0g;->e:Lj0g;
 
-    invoke-virtual {v0}, Lrnj;->hashCode()I
+    invoke-virtual {v0}, Lqoj;->hashCode()I
 
     move-result v0
 
@@ -134,7 +134,7 @@
     return v0
 .end method
 
-.method public final i(I)Lvoe;
+.method public final i(I)Lxpe;
     .locals 1
 
     new-instance p1, Ljava/lang/IllegalStateException;

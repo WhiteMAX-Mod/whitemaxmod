@@ -1,73 +1,41 @@
-.class public final enum Lsbe;
-.super Ljava/lang/Enum;
+.class public abstract Lsbe;
+.super Lkn5;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lsbe;
-
-.field public static final enum b:Lsbe;
-
-.field public static final synthetic c:[Lsbe;
+# instance fields
+.field public a:Lyb4;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+# virtual methods
+.method public final H()Ljava/util/concurrent/Executor;
+    .locals 1
 
-    new-instance v0, Lsbe;
+    iget-object v0, p0, Lsbe;->a:Lyb4;
 
-    const-string v1, "PREVIEW_VIEW"
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final dispatch(Lqb4;Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object p1, p0, Lsbe;->a:Lyb4;
 
-    sput-object v0, Lsbe;->a:Lsbe;
+    const/4 v0, 0x6
 
-    new-instance v1, Lsbe;
-
-    const-string v2, "SCREEN_FLASH_VIEW"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lsbe;->b:Lsbe;
-
-    filled-new-array {v0, v1}, [Lsbe;
-
-    move-result-object v0
-
-    sput-object v0, Lsbe;->c:[Lsbe;
+    invoke-static {p1, p2, v0}, Lyb4;->H(Lyb4;Ljava/lang/Runnable;I)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lsbe;
+.method public final dispatchYield(Lqb4;Ljava/lang/Runnable;)V
     .locals 1
 
-    const-class v0, Lsbe;
+    iget-object p1, p0, Lsbe;->a:Lyb4;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x2
 
-    move-result-object p0
+    invoke-static {p1, p2, v0}, Lyb4;->H(Lyb4;Ljava/lang/Runnable;I)V
 
-    check-cast p0, Lsbe;
-
-    return-object p0
-.end method
-
-.method public static values()[Lsbe;
-    .locals 1
-
-    sget-object v0, Lsbe;->c:[Lsbe;
-
-    invoke-virtual {v0}, [Lsbe;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lsbe;
-
-    return-object v0
+    return-void
 .end method

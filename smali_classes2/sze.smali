@@ -1,3 +1,3 @@
-.class public abstract Lsze;
-.super Ladf;
+.class public interface abstract Lsze;
+.super Ljava/lang/Object;
 .source "SourceFile"

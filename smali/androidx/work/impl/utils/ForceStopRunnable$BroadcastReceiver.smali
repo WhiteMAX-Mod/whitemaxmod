@@ -13,7 +13,7 @@
 
     const-string v0, "ForceStopRunnable$Rcvr"
 
-    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -49,15 +49,15 @@
 
     if-eqz p2, :cond_0
 
-    invoke-static {}, Lwki;->l()Lwki;
+    invoke-static {}, Lkgi;->g()Lkgi;
 
     move-result-object p2
 
     sget-object v0, Landroidx/work/impl/utils/ForceStopRunnable$BroadcastReceiver;->a:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lwki;->q(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lkgi;->l(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lxi6;->c(Landroid/content/Context;)V
+    invoke-static {p1}, Lvi6;->c(Landroid/content/Context;)V
 
     :cond_0
     return-void

@@ -1,12 +1,12 @@
 .class public Lcom/google/android/material/search/SearchView$Behavior;
-.super Lua4;
+.super Lxa4;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lua4;"
+        "Lxa4;"
     }
 .end annotation
 
@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public final h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
+.method public final d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
     new-instance p1, Ljava/lang/ClassCastException;

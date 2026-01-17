@@ -1,48 +1,14 @@
-.class public final Lfc8;
-.super Ll84;
+.class public interface abstract Lfc8;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lr00;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lr00;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public a(Ltm9;)V
     .locals 0
-
-    iput-object p1, p0, Lfc8;->X:Lr00;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lfc8;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lfc8;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lfc8;->o:I
-
-    iget-object p1, p0, Lfc8;->X:Lr00;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lr00;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract b(Ljava/lang/String;Lkc8;Landroid/text/style/ClickableSpan;)V
 .end method

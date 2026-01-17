@@ -22,7 +22,7 @@
         "",
         "Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;",
         "event",
-        "Lv2h;",
+        "Lb3h;",
         "onNewEvent",
         "(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V",
         "calls-sdk-analytics_release"

@@ -22,11 +22,11 @@
         "",
         "<init>",
         "()V",
-        "Lunf;",
+        "Lfpf;",
         "operation",
         "Lru/ok/android/externcalls/sdk/log/LogItem$Builder;",
         "simpleBuilder",
-        "(Lunf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;",
+        "(Lfpf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;",
         "",
         "simpleBuilderAny",
         "(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;",
@@ -54,7 +54,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lro4;)V
+.method public synthetic constructor <init>(Lso4;)V
     .locals 0
 
     .line 1
@@ -65,7 +65,7 @@
 
 
 # virtual methods
-.method public final simpleBuilder(Lunf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
+.method public final simpleBuilder(Lfpf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
     .locals 2
 
     new-instance v0, Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
@@ -84,7 +84,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/log/LogItem$Builder;->setOperation(Lunf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/log/LogItem$Builder;->setOperation(Lfpf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
 
     move-result-object p1
 

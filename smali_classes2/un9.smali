@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzn9;
+.implements Lxn9;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x28af2f47
+    const v0, 0xf856882
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ConnectionRestored"
+    const-string v0, "Delayed"
 
     return-object v0
 .end method

@@ -1,48 +1,180 @@
 .class public final Le03;
-.super Ll84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ld76;
 
 
 # instance fields
-.field public final synthetic X:Luq1;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Lold;
 
 
 # direct methods
-.method public constructor <init>(Luq1;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lold;I)V
     .locals 0
 
-    iput-object p1, p0, Le03;->X:Luq1;
+    iput p2, p0, Le03;->a:I
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Le03;->b:Lold;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Le03;->d:Ljava/lang/Object;
+    iget v0, p0, Le03;->a:I
 
-    iget p1, p0, Le03;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Lg4a;
 
-    or-int/2addr p1, v0
+    const/4 v1, 0x0
 
-    iput p1, p0, Le03;->o:I
+    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
 
-    iget-object p1, p0, Le03;->X:Luq1;
+    iget-object p1, p0, Le03;->b:Lold;
 
-    const/4 v0, 0x0
+    iget-object p1, p1, Lold;->a:Le7f;
 
-    invoke-virtual {p1, v0, p0}, Luq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_0
     return-object p1
+
+    :pswitch_0
+    new-instance v0, Lnq7;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Le03;->b:Lold;
+
+    iget-object p1, p1, Lold;->a:Le7f;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Lnq7;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Le03;->b:Lold;
+
+    iget-object p1, p1, Lold;->a:Le7f;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_2
+    return-object p1
+
+    :pswitch_2
+    new-instance v0, Lnq7;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Le03;->b:Lold;
+
+    iget-object p1, p1, Lold;->a:Le7f;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_3
+    return-object p1
+
+    :pswitch_3
+    new-instance v0, Lnq1;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, p1, v1}, Lnq1;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Le03;->b:Lold;
+
+    iget-object p1, p1, Lold;->a:Le7f;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_4
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

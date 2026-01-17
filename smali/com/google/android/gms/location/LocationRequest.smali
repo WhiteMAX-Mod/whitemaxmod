@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/gms/location/LocationRequest;
-.super Li4;
+.super Lg4;
 .source "SourceFile"
 
 # interfaces
@@ -35,28 +35,28 @@
 
 .field public final o:J
 
-.field public final s0:J
-
-.field public final t0:I
+.field public final t0:J
 
 .field public final u0:I
 
-.field public final v0:Z
+.field public final v0:I
 
-.field public final w0:Landroid/os/WorkSource;
+.field public final w0:Z
 
-.field public final x0:Loxi;
+.field public final x0:Landroid/os/WorkSource;
+
+.field public final y0:Llyi;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lgqi;
+    new-instance v0, Leri;
 
-    const/4 v1, 0x3
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Lgqi;-><init>(I)V
+    invoke-direct {v0, v1}, Leri;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/location/LocationRequest;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -103,12 +103,12 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct/range {v0 .. v21}, Lcom/google/android/gms/location/LocationRequest;-><init>(IJJJJJIFZJIIZLandroid/os/WorkSource;Loxi;)V
+    invoke-direct/range {v0 .. v21}, Lcom/google/android/gms/location/LocationRequest;-><init>(IJJJJJIFZJIIZLandroid/os/WorkSource;Llyi;)V
 
     return-void
 .end method
 
-.method public constructor <init>(IJJJJJIFZJIIZLandroid/os/WorkSource;Loxi;)V
+.method public constructor <init>(IJJJJJIFZJIIZLandroid/os/WorkSource;Llyi;)V
     .locals 3
 
     .line 1
@@ -186,27 +186,27 @@
     move-wide/from16 p2, p15
 
     :cond_2
-    iput-wide p2, p0, Lcom/google/android/gms/location/LocationRequest;->s0:J
+    iput-wide p2, p0, Lcom/google/android/gms/location/LocationRequest;->t0:J
 
     move/from16 p1, p17
 
-    iput p1, p0, Lcom/google/android/gms/location/LocationRequest;->t0:I
+    iput p1, p0, Lcom/google/android/gms/location/LocationRequest;->u0:I
 
     move/from16 p1, p18
 
-    iput p1, p0, Lcom/google/android/gms/location/LocationRequest;->u0:I
+    iput p1, p0, Lcom/google/android/gms/location/LocationRequest;->v0:I
 
     move/from16 p1, p19
 
-    iput-boolean p1, p0, Lcom/google/android/gms/location/LocationRequest;->v0:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Z
 
     move-object/from16 p1, p20
 
-    iput-object p1, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Landroid/os/WorkSource;
+    iput-object p1, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Landroid/os/WorkSource;
 
     move-object/from16 p1, p21
 
-    iput-object p1, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Loxi;
+    iput-object p1, p0, Lcom/google/android/gms/location/LocationRequest;->y0:Llyi;
 
     return-void
 .end method
@@ -225,7 +225,7 @@
     return-object p0
 
     :cond_0
-    sget-object v0, Liyi;->a:Ljava/lang/StringBuilder;
+    sget-object v0, Lfzi;->a:Ljava/lang/StringBuilder;
 
     monitor-enter v0
 
@@ -234,7 +234,7 @@
     :try_start_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    invoke-static {p0, p1, v0}, Liyi;->a(JLjava/lang/StringBuilder;)V
+    invoke-static {p0, p1, v0}, Lfzi;->a(JLjava/lang/StringBuilder;)V
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -377,27 +377,27 @@
 
     if-ne v0, v1, :cond_2
 
-    iget v0, p0, Lcom/google/android/gms/location/LocationRequest;->t0:I
-
-    iget v1, p1, Lcom/google/android/gms/location/LocationRequest;->t0:I
-
-    if-ne v0, v1, :cond_2
-
     iget v0, p0, Lcom/google/android/gms/location/LocationRequest;->u0:I
 
     iget v1, p1, Lcom/google/android/gms/location/LocationRequest;->u0:I
 
     if-ne v0, v1, :cond_2
 
-    iget-boolean v0, p0, Lcom/google/android/gms/location/LocationRequest;->v0:Z
+    iget v0, p0, Lcom/google/android/gms/location/LocationRequest;->v0:I
 
-    iget-boolean v1, p1, Lcom/google/android/gms/location/LocationRequest;->v0:Z
+    iget v1, p1, Lcom/google/android/gms/location/LocationRequest;->v0:I
 
     if-ne v0, v1, :cond_2
 
-    iget-object v0, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Landroid/os/WorkSource;
+    iget-boolean v0, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Z
 
-    iget-object v1, p1, Lcom/google/android/gms/location/LocationRequest;->w0:Landroid/os/WorkSource;
+    iget-boolean v1, p1, Lcom/google/android/gms/location/LocationRequest;->w0:Z
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Landroid/os/WorkSource;
+
+    iget-object v1, p1, Lcom/google/android/gms/location/LocationRequest;->x0:Landroid/os/WorkSource;
 
     invoke-virtual {v0, v1}, Landroid/os/WorkSource;->equals(Ljava/lang/Object;)Z
 
@@ -405,11 +405,11 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Loxi;
+    iget-object v0, p0, Lcom/google/android/gms/location/LocationRequest;->y0:Llyi;
 
-    iget-object p1, p1, Lcom/google/android/gms/location/LocationRequest;->x0:Loxi;
+    iget-object p1, p1, Lcom/google/android/gms/location/LocationRequest;->y0:Llyi;
 
-    invoke-static {v0, p1}, Lkcj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -446,7 +446,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Landroid/os/WorkSource;
+    iget-object v3, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Landroid/os/WorkSource;
 
     filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
 
@@ -464,7 +464,7 @@
 
     const-string v0, "Request["
 
-    invoke-static {v0}, Lc12;->n(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lhc0;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -480,7 +480,7 @@
 
     if-ne v1, v7, :cond_0
 
-    invoke-static {v1}, La9j;->b(I)Ljava/lang/String;
+    invoke-static {v1}, Lgaj;->c(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -494,7 +494,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v4, v0}, Liyi;->a(JLjava/lang/StringBuilder;)V
+    invoke-static {v3, v4, v0}, Lfzi;->a(JLjava/lang/StringBuilder;)V
 
     goto :goto_1
 
@@ -509,16 +509,16 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {v5, v6, v0}, Liyi;->a(JLjava/lang/StringBuilder;)V
+    invoke-static {v5, v6, v0}, Lfzi;->a(JLjava/lang/StringBuilder;)V
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v4, v0}, Liyi;->a(JLjava/lang/StringBuilder;)V
+    invoke-static {v3, v4, v0}, Lfzi;->a(JLjava/lang/StringBuilder;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-static {v5, v6, v0}, Liyi;->a(JLjava/lang/StringBuilder;)V
+    invoke-static {v5, v6, v0}, Lfzi;->a(JLjava/lang/StringBuilder;)V
 
     :goto_0
     const-string v1, " "
@@ -527,7 +527,7 @@
 
     iget v1, p0, Lcom/google/android/gms/location/LocationRequest;->a:I
 
-    invoke-static {v1}, La9j;->b(I)Ljava/lang/String;
+    invoke-static {v1}, Lgaj;->c(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -581,7 +581,7 @@
 
     const-wide v2, 0x7fffffffffffffffL
 
-    iget-wide v8, p0, Lcom/google/android/gms/location/LocationRequest;->s0:J
+    iget-wide v8, p0, Lcom/google/android/gms/location/LocationRequest;->t0:J
 
     if-ne v1, v7, :cond_6
 
@@ -618,7 +618,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v4, v5, v0}, Liyi;->a(JLjava/lang/StringBuilder;)V
+    invoke-static {v4, v5, v0}, Lfzi;->a(JLjava/lang/StringBuilder;)V
 
     :cond_8
     const v1, 0x7fffffff
@@ -638,7 +638,7 @@
 
     const/4 v2, 0x1
 
-    iget v3, p0, Lcom/google/android/gms/location/LocationRequest;->u0:I
+    iget v3, p0, Lcom/google/android/gms/location/LocationRequest;->v0:I
 
     const-string v4, ", "
 
@@ -675,7 +675,7 @@
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_d
-    iget v3, p0, Lcom/google/android/gms/location/LocationRequest;->t0:I
+    iget v3, p0, Lcom/google/android/gms/location/LocationRequest;->u0:I
 
     if-eqz v3, :cond_11
 
@@ -719,7 +719,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_12
-    iget-boolean v1, p0, Lcom/google/android/gms/location/LocationRequest;->v0:Z
+    iget-boolean v1, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Z
 
     if-eqz v1, :cond_13
 
@@ -728,9 +728,9 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_13
-    sget-object v1, Lhii;->d:Ljava/lang/reflect/Method;
+    sget-object v1, Leji;->d:Ljava/lang/reflect/Method;
 
-    iget-object v3, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Landroid/os/WorkSource;
+    iget-object v3, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Landroid/os/WorkSource;
 
     const-string v5, "WorkSourceUtil"
 
@@ -743,7 +743,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lijj;->g(Ljava/lang/Object;)V
+    invoke-static {v1}, Ldkj;->g(Ljava/lang/Object;)V
 
     check-cast v1, Ljava/lang/Boolean;
 
@@ -763,7 +763,7 @@
     invoke-static {v5, v7, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_14
-    sget-object v1, Lhii;->c:Ljava/lang/reflect/Method;
+    sget-object v1, Leji;->c:Ljava/lang/reflect/Method;
 
     const/4 v7, 0x0
 
@@ -774,7 +774,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lijj;->g(Ljava/lang/Object;)V
+    invoke-static {v1}, Ldkj;->g(Ljava/lang/Object;)V
 
     check-cast v1, Ljava/lang/Integer;
 
@@ -812,7 +812,7 @@
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     :cond_17
-    iget-object v1, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Loxi;
+    iget-object v1, p0, Lcom/google/android/gms/location/LocationRequest;->y0:Llyi;
 
     if-eqz v1, :cond_18
 
@@ -839,7 +839,7 @@
 
     const/16 v0, 0x4f45
 
-    invoke-static {p1, v0}, Lwmj;->k(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, Lsnj;->k(Landroid/os/Parcel;I)I
 
     move-result v0
 
@@ -849,7 +849,7 @@
 
     const/4 v3, 0x4
 
-    invoke-static {p1, v2, v3}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v2, v3}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -857,7 +857,7 @@
 
     const/16 v2, 0x8
 
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget-wide v4, p0, Lcom/google/android/gms/location/LocationRequest;->b:J
 
@@ -865,7 +865,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget-wide v4, p0, Lcom/google/android/gms/location/LocationRequest;->c:J
 
@@ -873,7 +873,7 @@
 
     const/4 v1, 0x6
 
-    invoke-static {p1, v1, v3}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v3}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget v1, p0, Lcom/google/android/gms/location/LocationRequest;->X:I
 
@@ -881,13 +881,13 @@
 
     const/4 v1, 0x7
 
-    invoke-static {p1, v1, v3}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v3}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget v1, p0, Lcom/google/android/gms/location/LocationRequest;->Y:F
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-static {p1, v2, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v2, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget-wide v4, p0, Lcom/google/android/gms/location/LocationRequest;->d:J
 
@@ -895,7 +895,7 @@
 
     const/16 v1, 0x9
 
-    invoke-static {p1, v1, v3}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v3}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget-boolean v1, p0, Lcom/google/android/gms/location/LocationRequest;->Z:Z
 
@@ -903,7 +903,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget-wide v4, p0, Lcom/google/android/gms/location/LocationRequest;->o:J
 
@@ -911,49 +911,49 @@
 
     const/16 v1, 0xb
 
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    iget-wide v1, p0, Lcom/google/android/gms/location/LocationRequest;->s0:J
+    iget-wide v1, p0, Lcom/google/android/gms/location/LocationRequest;->t0:J
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
     const/16 v1, 0xc
 
-    invoke-static {p1, v1, v3}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    iget v1, p0, Lcom/google/android/gms/location/LocationRequest;->t0:I
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 v1, 0xd
-
-    invoke-static {p1, v1, v3}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v3}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget v1, p0, Lcom/google/android/gms/location/LocationRequest;->u0:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    const/16 v1, 0xd
+
+    invoke-static {p1, v1, v3}, Lsnj;->m(Landroid/os/Parcel;II)V
+
+    iget v1, p0, Lcom/google/android/gms/location/LocationRequest;->v0:I
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
     const/16 v1, 0xf
 
-    invoke-static {p1, v1, v3}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v3}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    iget-boolean v1, p0, Lcom/google/android/gms/location/LocationRequest;->v0:Z
+    iget-boolean v1, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Z
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     const/16 v1, 0x10
 
-    iget-object v2, p0, Lcom/google/android/gms/location/LocationRequest;->w0:Landroid/os/WorkSource;
+    iget-object v2, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Landroid/os/WorkSource;
 
-    invoke-static {p1, v1, v2, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
     const/16 v1, 0x11
 
-    iget-object v2, p0, Lcom/google/android/gms/location/LocationRequest;->x0:Loxi;
+    iget-object v2, p0, Lcom/google/android/gms/location/LocationRequest;->y0:Llyi;
 
-    invoke-static {p1, v1, v2, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-static {p1, v0}, Lwmj;->l(Landroid/os/Parcel;I)V
+    invoke-static {p1, v0}, Lsnj;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

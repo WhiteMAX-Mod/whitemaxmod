@@ -1,89 +1,44 @@
-.class public abstract Lk95;
+.class public interface abstract Lk95;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/reflect/Method;
-
-.field public static final b:Ljava/lang/reflect/Method;
-
-.field public static final c:Ljava/lang/reflect/Method;
-
-.field public static final d:Z
+.field public static final a:Lh95;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 1
 
-    const-class v0, Landroid/widget/AdapterView;
+    new-instance v0, Lh95;
 
-    :try_start_0
-    const-class v1, Landroid/widget/AbsListView;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "positionSelector"
-
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-class v4, Landroid/view/View;
-
-    sget-object v5, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    sget-object v6, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v3, v4, v5, v6, v6}, [Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    sput-object v1, Lk95;->a:Ljava/lang/reflect/Method;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    const-string v1, "setSelectedPositionInt"
-
-    filled-new-array {v3}, [Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v1, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    sput-object v1, Lk95;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    const-string v1, "setNextSelectedPositionInt"
-
-    filled-new-array {v3}, [Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    sput-object v0, Lk95;->c:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    sput-boolean v2, Lk95;->d:Z
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v0, Lk95;->a:Lh95;
 
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+# virtual methods
+.method public abstract a(Lto6;Loj6;)La4a;
+.end method
+
+.method public abstract b(Loj6;)I
+.end method
+
+.method public abstract c(Landroid/os/Looper;Ljcc;)V
+.end method
+
+.method public prepare()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public release()V
+    .locals 0
 
     return-void
 .end method

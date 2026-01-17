@@ -15,7 +15,7 @@
         "()V",
         "Lru/ok/android/externcalls/analytics/internal/event/EventChannel;",
         "channel",
-        "Lv2h;",
+        "Lb3h;",
         "startUpload",
         "(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V",
         "resumeUpload",
@@ -161,11 +161,11 @@
     return-void
 
     :cond_0
-    new-instance v1, Lm8h;
+    new-instance v1, Lg9h;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v2}, Lm8h;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;I)V
+    invoke-direct {v1, p1, v2}, Lg9h;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -192,11 +192,11 @@
     return-void
 
     :cond_0
-    new-instance v1, Lm8h;
+    new-instance v1, Lg9h;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2}, Lm8h;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;I)V
+    invoke-direct {v1, p1, v2}, Lg9h;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

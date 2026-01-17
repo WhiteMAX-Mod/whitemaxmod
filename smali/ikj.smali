@@ -4,191 +4,110 @@
 
 
 # direct methods
-.method public static final a(Lrb4;Lrb4;Z)Lrb4;
-    .locals 3
+.method public static a(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
 
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    if-eqz p0, :cond_0
 
-    new-instance v0, Luj0;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Luj0;-><init>(I)V
-
-    invoke-interface {p0, p2, v0}, Lrb4;->fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    new-instance v1, Luj0;
-
-    const/16 v2, 0xd
-
-    invoke-direct {v1, v2}, Luj0;-><init>(I)V
-
-    invoke-interface {p1, p2, v1}, Lrb4;->fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    if-nez v0, :cond_0
-
-    if-nez p2, :cond_0
-
-    invoke-interface {p0, p1}, Lrb4;->plus(Lrb4;)Lrb4;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 
     :cond_0
-    new-instance v0, Luj0;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const/16 v1, 0xe
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Luj0;-><init>(I)V
+    throw p0
+.end method
 
-    sget-object v1, Lwg5;->a:Lwg5;
+.method public static final b(Landroid/database/Cursor;I)Landroid/net/Uri;
+    .locals 3
 
-    invoke-interface {p0, v1, v0}, Lrb4;->fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
+    :try_start_0
+    invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast p0, Lrb4;
+    goto :goto_0
 
-    if-eqz p2, :cond_1
+    :catchall_0
+    move-exception p0
 
-    check-cast p1, Lrb4;
+    new-instance p1, Lszd;
 
-    new-instance p2, Luj0;
+    invoke-direct {p1, p0}, Lszd;-><init>(Ljava/lang/Throwable;)V
 
-    const/16 v0, 0xf
+    move-object p0, p1
 
-    invoke-direct {p2, v0}, Luj0;-><init>(I)V
+    :goto_0
+    nop
 
-    invoke-interface {p1, v1, p2}, Lrb4;->fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
+    instance-of p1, p0, Lszd;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    move-object p0, v0
+
+    :cond_0
+    check-cast p0, Ljava/lang/String;
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :try_start_1
+    invoke-static {p0}, Lngf;->e(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p0}, Lxti;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    :cond_1
-    check-cast p1, Lrb4;
-
-    invoke-interface {p0, p1}, Lrb4;->plus(Lrb4;)Lrb4;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Lac4;Lrb4;)Lrb4;
-    .locals 1
-
-    invoke-interface {p0}, Lac4;->getCoroutineContext()Lrb4;
-
-    move-result-object p0
-
-    const/4 v0, 0x1
-
-    invoke-static {p0, p1, v0}, Likj;->a(Lrb4;Lrb4;Z)Lrb4;
-
-    move-result-object p0
-
-    sget-object p1, Lc25;->a:Lbt4;
-
-    if-eq p0, p1, :cond_0
-
-    sget-object v0, Lcmj;->u0:Lcmj;
-
-    invoke-interface {p0, v0}, Lrb4;->get(Lqb4;)Lpb4;
+    invoke-static {p1}, Lt3j;->m(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    if-nez v0, :cond_0
+    goto :goto_1
 
-    invoke-interface {p0, p1}, Lrb4;->plus(Lrb4;)Lrb4;
+    :catchall_1
+    move-exception p1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failure Uri.fromFile(File("
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "))"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    :cond_0
-    return-object p0
-.end method
+    const-string v1, "LocalMediaRepository:Cursor:getUri"
 
-.method public static c(I)Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "ProfileItemId(value="
-
-    const-string v1, ")"
-
-    invoke-static {p0, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final d(Lkotlin/coroutines/Continuation;Lrb4;Ljava/lang/Object;)Lq2h;
-    .locals 2
-
-    instance-of v0, p0, Lcc4;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    sget-object v0, Lr2h;->a:Lr2h;
-
-    invoke-interface {p1, v0}, Lrb4;->get(Lqb4;)Lpb4;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    check-cast p0, Lcc4;
-
-    :cond_1
-    instance-of v0, p0, Lz15;
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
+    invoke-static {v1, p0, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
-    invoke-interface {p0}, Lcc4;->getCallerFrame()Lcc4;
-
-    move-result-object p0
-
-    if-nez p0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    instance-of v0, p0, Lq2h;
-
-    if-eqz v0, :cond_1
-
-    move-object v1, p0
-
-    check-cast v1, Lq2h;
-
-    :goto_0
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1, p1, p2}, Lq2h;->E(Lrb4;Ljava/lang/Object;)V
-
-    :cond_4
-    return-object v1
+    :goto_1
+    return-object v0
 .end method

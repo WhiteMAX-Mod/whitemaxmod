@@ -1,637 +1,791 @@
-.class public abstract Lefb;
-.super Ljava/lang/Object;
+.class public final Lefb;
+.super Landroid/widget/LinearLayout;
 .source "SourceFile"
 
+# interfaces
+.implements Luig;
 
-# static fields
-.field public static final A:I
 
-.field public static final A0:I
+# instance fields
+.field public a:Ldfb;
 
-.field public static final B:I
+.field public b:Lnq6;
 
-.field public static final B0:I
+.field public c:Lr9b;
 
-.field public static final C:I
+.field public final d:Lftd;
 
-.field public static final C0:I
+.field public o:Z
 
-.field public static final D:I
+.field public final t0:Landroid/widget/TextView;
 
-.field public static final D0:I
+.field public final u0:Landroid/widget/TextView;
 
-.field public static final E:I
+.field public final v0:Landroid/widget/ImageView;
 
-.field public static final E0:I
+.field public final w0:Landroid/widget/EditText;
 
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final z:I
-
-.field public static final z0:I
+.field public x0:Lk3;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 18
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v3, Lftd;
+
+    const-string v4, "^[+\\d][\\d\\s\\u00A0-]*$"
+
+    invoke-direct {v3, v4}, Lftd;-><init>(Ljava/lang/String;)V
+
+    iput-object v3, v0, Lefb;->d:Lftd;
+
+    new-instance v3, Lbfb;
+
+    invoke-direct {v3, v0}, Lbfb;-><init>(Lefb;)V
+
+    const/4 v4, 0x1
+
+    new-array v5, v4, [Landroid/text/InputFilter;
+
+    const/4 v6, 0x0
+
+    aput-object v3, v5, v6
+
+    new-instance v3, Landroid/widget/TextView;
+
+    invoke-direct {v3, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    const/16 v7, 0x11
+
+    invoke-virtual {v3, v7}, Landroid/widget/TextView;->setGravity(I)V
+
+    const/4 v7, 0x4
+
+    invoke-virtual {v3, v7}, Landroid/view/View;->setTextAlignment(I)V
+
+    iput-object v3, v0, Lefb;->t0:Landroid/widget/TextView;
+
+    new-instance v8, Landroid/widget/TextView;
+
+    invoke-direct {v8, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget v9, Lw5e;->R:I
+
+    invoke-virtual {v8, v9}, Landroid/view/View;->setId(I)V
+
+    sget-object v9, Lr1h;->h:Lrhg;
+
+    invoke-static {v9, v8}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+
+    int-to-float v7, v7
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v10
+
+    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v10, v7
+
+    invoke-static {v10}, Lq7j;->c(F)I
+
+    move-result v10
+
+    int-to-float v11, v6
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v12
+
+    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v12, v11
+
+    invoke-static {v12}, Lq7j;->c(F)I
+
+    move-result v12
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v13
+
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v7, v13
+
+    invoke-static {v7}, Lq7j;->c(F)I
+
+    move-result v7
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v13
+
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v11, v13
+
+    invoke-static {v11}, Lq7j;->c(F)I
+
+    move-result v11
+
+    invoke-virtual {v8, v10, v12, v7, v11}, Landroid/view/View;->setPadding(IIII)V
+
+    iput-object v8, v0, Lefb;->u0:Landroid/widget/TextView;
+
+    new-instance v7, Landroid/widget/ImageView;
+
+    invoke-direct {v7, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    sget v10, Lv5e;->d0:I
+
+    invoke-virtual {v7, v10}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    iput-object v7, v0, Lefb;->v0:Landroid/widget/ImageView;
+
+    new-instance v10, Lqvb;
+
+    new-instance v11, Lg3b;
+
+    const/4 v12, 0x2
+
+    invoke-direct {v11, v12, v0}, Lg3b;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v10, v1, v11}, Lqvb;-><init>(Landroid/content/Context;Lg3b;)V
+
+    new-instance v11, Landroid/widget/EditText;
+
+    invoke-direct {v11, v1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lw5e;->S:I
+
+    invoke-virtual {v11, v1}, Landroid/view/View;->setId(I)V
+
+    invoke-virtual {v11, v6, v6, v6, v6}, Landroid/view/View;->setPadding(IIII)V
+
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v12, -0x1
+
+    const/4 v13, -0x2
+
+    invoke-direct {v1, v12, v13}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    const/16 v14, 0x8
+
+    int-to-float v14, v14
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v15
+
+    iget v15, v15, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v14, v15
+
+    invoke-static {v14}, Lq7j;->c(F)I
+
+    move-result v14
+
+    invoke-virtual {v1, v14, v6, v6, v6}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+
+    invoke-virtual {v11, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-static {v9, v11}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+
+    const-string v1, "phone"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v11, v1}, Landroid/view/View;->setAutofillHints([Ljava/lang/String;)V
+
+    invoke-virtual {v11, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v1, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {v1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    invoke-virtual {v1, v6}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    float-to-double v14, v2
+
+    const-wide/high16 v16, 0x3ff8000000000000L    # 1.5
+
+    mul-double v14, v14, v16
+
+    invoke-static {v14, v15}, Lq7j;->b(D)I
+
+    move-result v2
+
+    invoke-virtual {v11}, Landroid/widget/TextView;->getLineHeight()I
+
+    move-result v9
+
+    invoke-virtual {v1, v2, v9}, Landroid/graphics/drawable/GradientDrawable;->setSize(II)V
+
+    invoke-static {v11, v1}, Lcti;->u(Landroid/widget/EditText;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v11, v5}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
+
+    const-string v1, "0123456789 -()"
+
+    invoke-static {v1}, Landroid/text/method/DigitsKeyListener;->getInstance(Ljava/lang/String;)Landroid/text/method/DigitsKeyListener;
+
+    move-result-object v1
+
+    invoke-virtual {v11, v1}, Landroid/widget/TextView;->setKeyListener(Landroid/text/method/KeyListener;)V
+
+    invoke-virtual {v11, v4}, Landroid/view/View;->setImportantForAutofill(I)V
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v11, v1}, Landroid/widget/TextView;->setInputType(I)V
+
+    invoke-virtual {v11, v4}, Landroid/widget/TextView;->setSingleLine(Z)V
+
+    invoke-virtual {v11, v6}, Landroid/view/View;->setSaveEnabled(Z)V
+
+    invoke-virtual {v11, v4}, Landroid/view/View;->setFocusable(Z)V
+
+    invoke-virtual {v11, v4}, Landroid/view/View;->setFocusableInTouchMode(Z)V
+
+    invoke-virtual {v11, v10}, Landroid/widget/TextView;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
+
+    invoke-virtual {v11, v10}, Landroid/widget/TextView;->setCustomInsertionActionModeCallback(Landroid/view/ActionMode$Callback;)V
+
+    new-instance v2, Lle3;
+
+    invoke-direct {v2, v1, v0}, Lle3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v2}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+
+    new-instance v1, Lcfb;
+
+    invoke-direct {v1, v0}, Lcfb;-><init>(Lefb;)V
+
+    invoke-virtual {v11, v1}, Landroid/view/View;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
+
+    iput-object v11, v0, Lefb;->w0:Landroid/widget/EditText;
+
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v1, v12, v13}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/16 v1, 0x10
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setGravity(I)V
+
+    const/16 v1, 0xc
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Lq7j;->c(F)I
+
+    move-result v2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v5
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v5
+
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v9
+
+    invoke-virtual {v0, v2, v5, v1, v9}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    const/16 v1, 0x34
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setMinimumHeight(I)V
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->setClipToOutline(Z)V
+
+    new-instance v1, Lnb4;
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v4, 0x41800000    # 16.0f
+
+    mul-float/2addr v2, v4
+
+    invoke-direct {v1, v2}, Lnb4;-><init>(F)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v0, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v0, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v0, v11}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    sget-object v1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lefb;->onThemeChanged(Lzlb;)V
+
+    new-instance v1, Lk3;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, v0}, Lk3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    iput-object v1, v0, Lefb;->x0:Lk3;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getCode()Ljava/lang/String;
     .locals 1
 
-    sget v0, Lj8d;->profile_avatar_select_screen:I
+    iget-object v0, p0, Lefb;->u0:Landroid/widget/TextView;
 
-    sput v0, Lefb;->a:I
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    sget v0, Lj8d;->profile_change_inactive_ttl_delete_1_month:I
+    move-result-object v0
 
-    sput v0, Lefb;->b:I
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    sget v0, Lj8d;->profile_change_inactive_ttl_delete_3_month:I
+    move-result-object v0
 
-    sput v0, Lefb;->c:I
+    return-object v0
+.end method
 
-    sget v0, Lj8d;->profile_change_inactive_ttl_delete_6_month:I
+.method public final getOnWindowFocusChanged()Lnq6;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lnq6;"
+        }
+    .end annotation
 
-    sput v0, Lefb;->d:I
+    iget-object v0, p0, Lefb;->b:Lnq6;
 
-    sget v0, Lj8d;->profile_confirmation_sheet_cancel:I
+    return-object v0
+.end method
 
-    sput v0, Lefb;->e:I
+.method public final getPhone()Ljava/lang/String;
+    .locals 3
 
-    sget v0, Lj8d;->profile_delete_contact_confirmation_sheet_confirm:I
+    iget-object v0, p0, Lefb;->u0:Landroid/widget/TextView;
 
-    sput v0, Lefb;->f:I
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    sget v0, Lj8d;->profile_edit_admin_chat_type:I
+    move-result-object v0
 
-    sput v0, Lefb;->g:I
+    iget-object v1, p0, Lefb;->w0:Landroid/widget/EditText;
 
-    sget v0, Lj8d;->profile_edit_admin_clear_channel_history:I
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    sput v0, Lefb;->h:I
+    move-result-object v1
 
-    sget v0, Lj8d;->profile_edit_admin_clear_chat_history:I
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    sput v0, Lefb;->i:I
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v0, Lj8d;->profile_edit_admin_clear_chat_history_cancel:I
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sput v0, Lefb;->j:I
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget v0, Lj8d;->profile_edit_admin_clear_chat_history_confirm_for_all:I
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sput v0, Lefb;->k:I
+    move-result-object v0
 
-    sget v0, Lj8d;->profile_edit_admin_clear_chat_history_confirm_for_yourself:I
+    return-object v0
+.end method
 
-    sput v0, Lefb;->l:I
+.method public final getPhoneFormatterProvider()Ldfb;
+    .locals 1
 
-    sget v0, Lj8d;->profile_edit_admin_close_channel:I
+    iget-object v0, p0, Lefb;->a:Ldfb;
 
-    sput v0, Lefb;->m:I
+    return-object v0
+.end method
 
-    sget v0, Lj8d;->profile_edit_admin_close_channel_cancel:I
+.method public final getPhoneWithoutCode()Ljava/lang/String;
+    .locals 1
 
-    sput v0, Lefb;->n:I
+    iget-object v0, p0, Lefb;->w0:Landroid/widget/EditText;
 
-    sget v0, Lj8d;->profile_edit_admin_close_channel_certain_confirm:I
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    sput v0, Lefb;->o:I
+    move-result-object v0
 
-    sget v0, Lj8d;->profile_edit_admin_close_channel_confirm:I
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    sput v0, Lefb;->p:I
+    move-result-object v0
 
-    sget v0, Lj8d;->profile_edit_admin_close_chat:I
+    return-object v0
+.end method
 
-    sput v0, Lefb;->q:I
+.method public final onDetachedFromWindow()V
+    .locals 2
 
-    sget v0, Lj8d;->profile_edit_admin_close_chat_cancel:I
+    iget-object v0, p0, Lefb;->w0:Landroid/widget/EditText;
 
-    sput v0, Lefb;->r:I
+    iget-object v1, p0, Lefb;->x0:Lk3;
 
-    sget v0, Lj8d;->profile_edit_admin_close_chat_certain_confirm:I
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
-    sput v0, Lefb;->s:I
+    const/4 v0, 0x0
 
-    sget v0, Lj8d;->profile_edit_admin_close_chat_confirm:I
+    iput-object v0, p0, Lefb;->x0:Lk3;
 
-    sput v0, Lefb;->t:I
+    iput-object v0, p0, Lefb;->a:Ldfb;
 
-    sget v0, Lj8d;->profile_edit_admin_leave_channel:I
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    sput v0, Lefb;->u:I
+    return-void
+.end method
 
-    sget v0, Lj8d;->profile_edit_admin_leave_channel_and_change_owner_confirm:I
+.method public final onThemeChanged(Lzlb;)V
+    .locals 3
 
-    sput v0, Lefb;->v:I
+    invoke-interface {p1}, Lzlb;->b()Lxf0;
 
-    sget v0, Lj8d;->profile_edit_admin_leave_channel_cancel:I
+    move-result-object v0
 
-    sput v0, Lefb;->w:I
+    iget-object v0, v0, Lxf0;->a:Lwf0;
 
-    sget v0, Lj8d;->profile_edit_admin_leave_channel_confirm:I
+    iget v0, v0, Lwf0;->h:I
 
-    sput v0, Lefb;->x:I
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    sget v0, Lj8d;->profile_edit_admin_leave_chat:I
+    iget-object v0, p0, Lefb;->w0:Landroid/widget/EditText;
 
-    sput v0, Lefb;->y:I
+    invoke-static {v0}, Lcti;->c(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
 
-    sget v0, Lj8d;->profile_edit_admin_leave_chat_and_change_owner_confirm:I
+    move-result-object v1
 
-    sput v0, Lefb;->z:I
+    instance-of v2, v1, Landroid/graphics/drawable/GradientDrawable;
 
-    sget v0, Lj8d;->profile_edit_admin_leave_chat_cancel:I
+    if-eqz v2, :cond_0
 
-    sput v0, Lefb;->A:I
+    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
 
-    sget v0, Lj8d;->profile_edit_admin_leave_chat_confirm:I
+    goto :goto_0
 
-    sput v0, Lefb;->B:I
+    :cond_0
+    const/4 v1, 0x0
 
-    sget v0, Lj8d;->profile_edit_admin_move_rights:I
+    :goto_0
+    if-eqz v1, :cond_1
 
-    sput v0, Lefb;->C:I
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
-    sget v0, Lj8d;->profile_edit_admin_participants_permission:I
+    move-result-object v2
 
-    sput v0, Lefb;->D:I
+    iget v2, v2, Lrfg;->j:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_change_chat_info:I
+    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    sput v0, Lefb;->E:I
+    move-result-object v2
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_change_owner_cancel_action:I
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/GradientDrawable;->setColor(Landroid/content/res/ColorStateList;)V
 
-    sput v0, Lefb;->F:I
+    :cond_1
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_change_owner_change_action:I
+    move-result-object v1
 
-    sput v0, Lefb;->G:I
+    iget v1, v1, Lrfg;->e:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_control_admin:I
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sput v0, Lefb;->H:I
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_delete_from_admins_cancel_action:I
+    move-result-object v1
 
-    sput v0, Lefb;->I:I
+    iget v1, v1, Lrfg;->g:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_delete_from_admins_delete_action:I
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setHintTextColor(I)V
 
-    sput v0, Lefb;->J:I
+    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_delete_messages:I
+    move-result-object v0
 
-    sput v0, Lefb;->K:I
+    iget v0, v0, Lwe7;->j:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_edit_chat_link:I
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    sput v0, Lefb;->L:I
+    move-result-object v0
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_edit_chat_members:I
+    iget-object v1, p0, Lefb;->v0:Landroid/widget/ImageView;
 
-    sput v0, Lefb;->M:I
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_edit_messages:I
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
-    sput v0, Lefb;->N:I
+    move-result-object p1
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_pin_messages:I
+    iget p1, p1, Lrfg;->e:I
 
-    sput v0, Lefb;->O:I
+    iget-object v0, p0, Lefb;->u0:Landroid/widget/TextView;
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_recycler_view:I
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sput v0, Lefb;->P:I
+    return-void
+.end method
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_send_messages:I
+.method public final onWindowFocusChanged(Z)V
+    .locals 1
 
-    sput v0, Lefb;->Q:I
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowFocusChanged(Z)V
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_toolbar_view:I
+    iget-object v0, p0, Lefb;->b:Lnq6;
 
-    sput v0, Lefb;->R:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lj8d;->profile_edit_admin_view_stats:I
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    sput v0, Lefb;->S:I
+    move-result-object p1
 
-    sget v0, Lj8d;->profile_edit_appbar_layout:I
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sput v0, Lefb;->T:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lj8d;->profile_edit_avatar:I
+.method public final setCountry(Lr9b;)V
+    .locals 3
 
-    sput v0, Lefb;->U:I
+    iput-object p1, p0, Lefb;->c:Lr9b;
 
-    sget v0, Lj8d;->profile_edit_change_avatar_cancel:I
+    iget v0, p1, Lr9b;->b:I
 
-    sput v0, Lefb;->V:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget v0, Lj8d;->profile_edit_change_avatar_remove_current:I
+    const-string v2, "+"
 
-    sput v0, Lefb;->W:I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v0, Lj8d;->profile_edit_change_avatar_select_neuro_avatar:I
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sput v0, Lefb;->X:I
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget v0, Lj8d;->profile_edit_change_avatar_upload_from_camera:I
+    move-result-object v0
 
-    sput v0, Lefb;->Y:I
+    iget-object v1, p0, Lefb;->u0:Landroid/widget/TextView;
 
-    sget v0, Lj8d;->profile_edit_change_avatar_upload_from_gallery:I
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    sput v0, Lefb;->Z:I
+    iget-object p1, p1, Lr9b;->d:Ljava/lang/CharSequence;
 
-    sget v0, Lj8d;->profile_edit_collapsible_container_layout:I
+    if-eqz p1, :cond_0
 
-    sput v0, Lefb;->a0:I
+    iget-object v0, p0, Lefb;->t0:Landroid/widget/TextView;
 
-    sget v0, Lj8d;->profile_edit_confirm_exit_button:I
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    sput v0, Lefb;->b0:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lj8d;->profile_edit_confirm_save_button:I
+.method public final setHint(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    sput v0, Lefb;->c0:I
+    iget-object v0, p0, Lefb;->w0:Landroid/widget/EditText;
 
-    sget v0, Lj8d;->profile_edit_contact_delete_action:I
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
-    sput v0, Lefb;->d0:I
+    return-void
+.end method
 
-    sget v0, Lj8d;->profile_edit_delete_profile_button:I
+.method public final setOnCountryViewClickListener(Llq6;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Llq6;",
+            ")V"
+        }
+    .end annotation
 
-    sput v0, Lefb;->e0:I
+    new-instance v0, Lq6;
 
-    sget v0, Lj8d;->profile_edit_delete_profile_cancel_button:I
+    const/16 v1, 0xa
 
-    sput v0, Lefb;->f0:I
+    invoke-direct {v0, v1, p1}, Lq6;-><init>(ILlq6;)V
 
-    sget v0, Lj8d;->profile_edit_invite_by_link:I
+    iget-object p1, p0, Lefb;->t0:Landroid/widget/TextView;
 
-    sput v0, Lefb;->g0:I
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v0, Lj8d;->profile_edit_link_private:I
+    iget-object p1, p0, Lefb;->u0:Landroid/widget/TextView;
 
-    sput v0, Lefb;->h0:I
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v0, Lj8d;->profile_edit_link_public:I
+    iget-object p1, p0, Lefb;->v0:Landroid/widget/ImageView;
 
-    sput v0, Lefb;->i0:I
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v0, Lj8d;->profile_edit_logout_confirm_action:I
+    return-void
+.end method
 
-    sput v0, Lefb;->j0:I
+.method public final setOnWindowFocusChanged(Lnq6;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnq6;",
+            ")V"
+        }
+    .end annotation
 
-    sget v0, Lj8d;->profile_edit_member_permissions_add_user:I
+    iput-object p1, p0, Lefb;->b:Lnq6;
 
-    sput v0, Lefb;->k0:I
+    return-void
+.end method
 
-    sget v0, Lj8d;->profile_edit_member_permissions_call_to_chat:I
+.method public final setPhoneFormatterProvider(Ldfb;)V
+    .locals 0
 
-    sput v0, Lefb;->l0:I
+    iput-object p1, p0, Lefb;->a:Ldfb;
 
-    sget v0, Lj8d;->profile_edit_member_permissions_change_photo:I
+    return-void
+.end method
 
-    sput v0, Lefb;->m0:I
+.method public final setText(Ljava/lang/CharSequence;)V
+    .locals 2
 
-    sget v0, Lj8d;->profile_edit_member_permissions_pin_message:I
+    sget-object v0, Landroid/widget/TextView$BufferType;->NORMAL:Landroid/widget/TextView$BufferType;
 
-    sput v0, Lefb;->n0:I
+    iget-object v1, p0, Lefb;->w0:Landroid/widget/EditText;
 
-    sget v0, Lj8d;->profile_edit_member_permissions_see_private_link:I
+    invoke-virtual {v1, p1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    sput v0, Lefb;->o0:I
+    :try_start_0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    sget v0, Lj8d;->profile_edit_oneme_toolbar:I
+    move-result p1
 
-    sput v0, Lefb;->p0:I
+    invoke-virtual {v1, p1}, Landroid/widget/EditText;->setSelection(I)V
+    :try_end_0
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget v0, Lj8d;->profile_edit_reactions:I
+    return-void
 
-    sput v0, Lefb;->q0:I
+    :catch_0
+    move-exception p1
 
-    sget v0, Lj8d;->profile_edit_reactions_settings_activation_switch:I
+    const-class v0, Lefb;
 
-    sput v0, Lefb;->r0:I
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    sget v0, Lj8d;->profile_edit_reactions_settings_added_reactions:I
+    move-result-object v0
 
-    sput v0, Lefb;->s0:I
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    sget v0, Lj8d;->profile_edit_reactions_settings_added_reactions_title:I
+    move-result-object v1
 
-    sput v0, Lefb;->t0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_constraint_layout:I
-
-    sput v0, Lefb;->u0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_count_slider:I
-
-    sput v0, Lefb;->v0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_count_slider_current_value:I
-
-    sput v0, Lefb;->w0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_count_slider_max_value:I
-
-    sput v0, Lefb;->x0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_count_slider_min_value:I
-
-    sput v0, Lefb;->y0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_error_view:I
-
-    sput v0, Lefb;->z0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_exit_without_save:I
-
-    sput v0, Lefb;->A0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_linear_layout:I
-
-    sput v0, Lefb;->B0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_loading_container:I
-
-    sput v0, Lefb;->C0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_loading_reactions_container:I
-
-    sput v0, Lefb;->D0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_media_keyboard_container:I
-
-    sput v0, Lefb;->E0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_save:I
-
-    sput v0, Lefb;->F0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_save_and_exit:I
-
-    sput v0, Lefb;->G0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_scrollview:I
-
-    sput v0, Lefb;->H0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_slider_container:I
-
-    sput v0, Lefb;->I0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_slider_title:I
-
-    sput v0, Lefb;->J0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_to_default_settings:I
-
-    sput v0, Lefb;->K0:I
-
-    sget v0, Lj8d;->profile_edit_reactions_settings_toolbar:I
-
-    sput v0, Lefb;->L0:I
-
-    sget v0, Lj8d;->profile_edit_recycler_view:I
-
-    sput v0, Lefb;->M0:I
-
-    sget v0, Lj8d;->profile_edit_selectable_item_checkbox:I
-
-    sput v0, Lefb;->N0:I
-
-    sget v0, Lj8d;->profile_edit_selectable_item_subtitle:I
-
-    sput v0, Lefb;->O0:I
-
-    sget v0, Lj8d;->profile_edit_selectable_item_title:I
-
-    sput v0, Lefb;->P0:I
-
-    sget v0, Lj8d;->profile_edit_short_link:I
-
-    sput v0, Lefb;->Q0:I
-
-    sget v0, Lj8d;->profile_edit_short_link_input_button:I
-
-    sput v0, Lefb;->R0:I
-
-    sget v0, Lj8d;->profile_edit_short_link_toolbar:I
-
-    sput v0, Lefb;->S0:I
-
-    sget v0, Lj8d;->profile_edit_shortlink_action_copy:I
-
-    sput v0, Lefb;->T0:I
-
-    sget v0, Lj8d;->profile_edit_shortlink_action_qr_code:I
-
-    sput v0, Lefb;->U0:I
-
-    sget v0, Lj8d;->profile_edit_shortlink_action_refresh_link:I
-
-    sput v0, Lefb;->V0:I
-
-    sget v0, Lj8d;->profile_edit_shortlink_action_share:I
-
-    sput v0, Lefb;->W0:I
-
-    sget v0, Lj8d;->profile_edit_shortlink_action_share_external:I
-
-    sput v0, Lefb;->X0:I
-
-    sget v0, Lj8d;->profile_edit_shortlink_confirm_button:I
-
-    sput v0, Lefb;->Y0:I
-
-    sget v0, Lj8d;->profile_edit_shortlink_confirm_update:I
-
-    sput v0, Lefb;->Z0:I
+    invoke-static {v0, v1, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

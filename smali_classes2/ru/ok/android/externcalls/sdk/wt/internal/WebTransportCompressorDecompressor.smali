@@ -20,10 +20,10 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;",
-        "Lcgd;",
+        "Lahd;",
         "log",
         "<init>",
-        "(Lcgd;)V",
+        "(Lahd;)V",
         "",
         "rawData",
         "",
@@ -33,10 +33,10 @@
         "([BII)[B",
         "compressedData",
         "decompress",
-        "Lv2h;",
+        "Lb3h;",
         "release",
         "()V",
-        "Lcgd;",
+        "Lahd;",
         "Ljava/util/zip/Deflater;",
         "deflater",
         "Ljava/util/zip/Deflater;",
@@ -86,7 +86,7 @@
 
 .field private final inflaterOutput:Ljava/io/ByteArrayOutputStream;
 
-.field private final log:Lcgd;
+.field private final log:Lahd;
 
 
 # direct methods
@@ -97,19 +97,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->Companion:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcgd;)V
+.method public constructor <init>(Lahd;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lcgd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lahd;
 
     new-instance p1, Ljava/util/zip/Deflater;
 
@@ -272,11 +272,11 @@
 
     invoke-virtual {v1}, Ljava/util/zip/Deflater;->end()V
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lcgd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lahd;
 
     const-string v2, "deflater released"
 
-    invoke-interface {v1, v0, v2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -285,11 +285,11 @@
     :catchall_0
     move-exception v1
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lcgd;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lahd;
 
     const-string v3, "Error finalizing deflater"
 
-    invoke-interface {v2, v0, v3, v1}, Lcgd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v2, v0, v3, v1}, Lahd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     :try_start_1
@@ -297,11 +297,11 @@
 
     invoke-virtual {v1}, Ljava/util/zip/Inflater;->end()V
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lcgd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lahd;
 
     const-string v2, "inflater released"
 
-    invoke-interface {v1, v0, v2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -310,11 +310,11 @@
     :catchall_1
     move-exception v1
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lcgd;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;->log:Lahd;
 
     const-string v3, "Error finalizing inflater"
 
-    invoke-interface {v2, v0, v3, v1}, Lcgd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v2, v0, v3, v1}, Lahd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
     return-void

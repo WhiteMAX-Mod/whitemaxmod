@@ -1,8 +1,11 @@
-.class public interface abstract Lh1b;
-.super Ljava/lang/Object;
+.class public final Lh1b;
+.super Lcz5;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract E(Landroid/view/View;Lahi;)Lahi;
-.end method
+# instance fields
+.field public d:J
+
+.field public e:J
+
+.field public f:J

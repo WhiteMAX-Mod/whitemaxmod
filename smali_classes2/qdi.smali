@@ -1,39 +1,38 @@
 .class public final Lqdi;
-.super Lkm4;
+.super Ljef;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lqdi;
-
-.field public static final c:Lgm4;
+# instance fields
+.field public F0:Lndi;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+# virtual methods
+.method public final y(Lud8;)V
+    .locals 1
 
-    new-instance v0, Lqdi;
+    instance-of v0, p1, Lmdi;
 
-    invoke-direct {v0}, Lkm4;-><init>()V
+    if-nez v0, :cond_0
 
-    sput-object v0, Lqdi;->b:Lqdi;
+    return-void
 
-    const/4 v1, 0x0
+    :cond_0
+    move-object v0, p1
 
-    new-array v1, v1, [Ljava/lang/String;
+    check-cast v0, Lndi;
 
-    const/4 v2, 0x0
+    iput-object v0, p0, Lqdi;->F0:Lndi;
 
-    const/4 v3, 0x2
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    const-string v4, ":webview/faq"
+    check-cast v0, Lt0f;
 
-    invoke-static {v0, v4, v1, v2, v3}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    check-cast p1, Lmdi;
 
-    move-result-object v0
+    iget-object p1, p1, Lmdi;->a:Lv0f;
 
-    sput-object v0, Lqdi;->c:Lgm4;
+    invoke-virtual {v0, p1}, Lt0f;->setModelItem(Lj0f;)V
 
     return-void
 .end method

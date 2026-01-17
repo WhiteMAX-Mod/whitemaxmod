@@ -1,63 +1,90 @@
-.class public final Lhs1;
-.super Lie0;
+.class public final synthetic Lhs1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final b:Lhs1;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljs1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljs1;I)V
+    .locals 0
 
-    new-instance v0, Lhs1;
+    iput p2, p0, Lhs1;->a:I
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    iput-object p1, p0, Lhs1;->b:Ljs1;
 
-    invoke-direct {v0, v1}, Ljja;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Lhs1;->b:Lhs1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget p1, p0, Lhs1;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lhs1;->b:Ljs1;
 
-    return v0
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, v0, Ljs1;->L0:Lis1;
+
+    if-eqz p1, :cond_0
+
+    check-cast p1, Lon1;
+
+    iget-object p1, p1, Lon1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lsq1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lsq1;->Z:Lgu1;
+
+    invoke-virtual {p1}, Lgu1;->h()V
 
     :cond_0
-    instance-of p1, p1, Lhs1;
+    return-void
 
-    if-nez p1, :cond_1
+    :pswitch_0
+    iget-object p1, v0, Ljs1;->L0:Lis1;
 
-    const/4 p1, 0x0
+    if-eqz p1, :cond_1
 
-    return p1
+    iget-object v0, v0, Ljs1;->Q0:Lyk1;
+
+    check-cast p1, Lon1;
+
+    iget-object p1, p1, Lon1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+
+    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lsq1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lsq1;->Z:Lgu1;
+
+    invoke-virtual {p1, v0}, Lgu1;->f(Lyk1;)V
 
     :cond_1
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 1
+    nop
 
-    const v0, -0x34cc058a    # -1.1795062E7f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ShowCreateP2PLinkCallErrorBanner"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

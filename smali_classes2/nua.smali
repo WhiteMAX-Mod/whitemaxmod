@@ -1,59 +1,64 @@
-.class public final Lnua;
-.super Ll84;
+.class public interface abstract Lnua;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:J
-
-.field public Y:Z
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lsua;
-
-.field public o:Lud2;
-
-.field public final synthetic s0:Lsua;
-
-.field public t0:I
-
-
-# direct methods
-.method public constructor <init>(Lsua;Ll84;)V
-    .locals 0
-
-    iput-object p1, p0, Lnua;->s0:Lsua;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lj0f;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public b()Lqhg;
+    .locals 1
 
-    iput-object p1, p0, Lnua;->Z:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    iget p1, p0, Lnua;->t0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public c()Lyze;
+    .locals 1
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x0
 
-    iput p1, p0, Lnua;->t0:I
+    return-object v0
+.end method
 
-    const/4 p1, 0x0
+.method public d()Lqhg;
+    .locals 1
 
-    const-wide/16 v0, 0x0
+    const/4 v0, 0x0
 
-    iget-object v2, p0, Lnua;->s0:Lsua;
+    return-object v0
+.end method
 
-    invoke-static {v2, p1, v0, v1, p0}, Lsua;->a(Lsua;Lud2;JLl84;)Ljava/lang/Object;
+.method public e()Lg0f;
+    .locals 1
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    return-object p1
+    return-object v0
+.end method
+
+.method public f()Ly58;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Li0f;
+    .locals 1
+
+    sget-object v0, Li0f;->b:Li0f;
+
+    return-object v0
 .end method

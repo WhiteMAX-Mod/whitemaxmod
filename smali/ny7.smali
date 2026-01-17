@@ -1,52 +1,75 @@
 .class public final Lny7;
-.super Ljava/lang/Object;
+.super Lg62;
 .source "SourceFile"
-
-# interfaces
-.implements Loy7;
 
 
 # instance fields
-.field public final a:Landroid/content/Intent;
-
-.field public final b:I
-
-.field public final synthetic c:Lty7;
+.field public final X:Lvy7;
 
 
 # direct methods
-.method public constructor <init>(Lty7;Landroid/content/Intent;I)V
-    .locals 0
+.method public constructor <init>(Lvy7;Lkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lny7;->c:Lty7;
+    invoke-direct {p0, v0, p2}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput-object p2, p0, Lny7;->a:Landroid/content/Intent;
-
-    iput p3, p0, Lny7;->b:I
+    iput-object p1, p0, Lny7;->X:Lvy7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final l(Lvy7;)Ljava/lang/Throwable;
     .locals 2
 
-    iget-object v0, p0, Lny7;->c:Lty7;
+    iget-object v0, p0, Lny7;->X:Lvy7;
 
-    iget v1, p0, Lny7;->b:I
+    invoke-virtual {v0}, Lvy7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/app/Service;->stopSelf(I)V
+    move-result-object v0
 
-    return-void
+    instance-of v1, v0, Lpy7;
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v0
+
+    check-cast v1, Lpy7;
+
+    invoke-virtual {v1}, Lpy7;->c()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    return-object v1
+
+    :cond_0
+    instance-of v1, v0, Lso3;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lso3;
+
+    iget-object p1, v0, Lso3;->a:Ljava/lang/Throwable;
+
+    return-object p1
+
+    :cond_1
+    invoke-interface {p1}, Lsx7;->getCancellationException()Ljava/util/concurrent/CancellationException;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final getIntent()Landroid/content/Intent;
+.method public final u()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lny7;->a:Landroid/content/Intent;
+    const-string v0, "AwaitContinuation"
 
     return-object v0
 .end method

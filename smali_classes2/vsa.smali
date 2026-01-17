@@ -49,7 +49,7 @@
 
     iget-object v1, p1, Lvsa;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -71,7 +71,7 @@
 
     iget-object p1, p1, Lvsa;->c:Landroid/net/Uri;
 
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -112,7 +112,7 @@
 
     iget-boolean v2, p0, Lvsa;->b:Z
 
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
     move-result v0
 

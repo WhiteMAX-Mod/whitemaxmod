@@ -1,178 +1,322 @@
-.class public abstract Lxlj;
+.class public final Lxlj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static a:Lyej;
+.field public static final g:Ljava/lang/Object;
+
+.field public static h:Lxlj;
+
+.field public static i:Landroid/os/HandlerThread;
+
+
+# instance fields
+.field public final a:Ljava/util/HashMap;
+
+.field public final b:Landroid/content/Context;
+
+.field public volatile c:Lz7a;
+
+.field public final d:Lgw3;
+
+.field public final e:J
+
+.field public final f:J
 
 
 # direct methods
-.method public static a(Ljava/util/List;Luoe;Lm47;)Lbx1;
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 1
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    sput-object v0, Lxlj;->g:Ljava/lang/Object;
 
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lvv4;
-
-    invoke-virtual {v2}, Lvv4;->c()Lwe8;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ledf;->i(Lwe8;)Lwe8;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v0}, Ledf;->l(Ljava/util/ArrayList;)Lhe8;
-
-    move-result-object v4
-
-    new-instance v3, Lgz3;
-
-    const/4 v8, 0x4
-
-    const-wide/16 v6, 0x1388
-
-    move-object v5, p2
-
-    invoke-direct/range {v3 .. v8}, Lgz3;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
-
-    invoke-static {v3}, Loaj;->b(Lzw1;)Lbx1;
-
-    move-result-object p2
-
-    new-instance v0, Lol;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p2, p1, p0, v1}, Lol;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {v0}, Loaj;->b(Lzw1;)Lbx1;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final b(Loq6;Le1e;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 7
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;)V
+    .locals 2
 
-    new-instance v5, Lg1e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v5, p0, v0}, Lg1e;-><init>(Loq6;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lrb4;
+    iput-object v0, p0, Lxlj;->a:Ljava/util/HashMap;
 
-    move-result-object p0
+    new-instance v0, Lhif;
 
-    sget-object v1, Lisg;->c:Lchf;
+    const/4 v1, 0x2
 
-    invoke-interface {p0, v1}, Lrb4;->get(Lqb4;)Lpb4;
+    invoke-direct {v0, v1, p0}, Lhif;-><init>(ILjava/lang/Object;)V
 
-    move-result-object p0
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    check-cast p0, Lisg;
+    move-result-object p1
 
-    if-eqz p0, :cond_0
+    iput-object p1, p0, Lxlj;->b:Landroid/content/Context;
 
-    iget-object p0, p0, Lisg;->a:Lm84;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p0, v0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-static {p0, v5, p2}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lrb4;
-
-    move-result-object v2
-
-    new-instance v3, Lp62;
-
-    invoke-static {p2}, Lv0j;->e(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    const/4 p2, 0x1
-
-    invoke-direct {v3, p2, p0}, Lp62;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v3}, Lp62;->o()V
-
-    :try_start_0
-    iget-object p0, p1, Le1e;->d:Lyoe;
-
-    if-nez p0, :cond_2
-
-    move-object p0, v0
-
-    :cond_2
-    new-instance v0, Lvii;
+    new-instance p1, Lz7a;
 
     const/4 v1, 0x6
 
-    const/4 v6, 0x0
+    invoke-direct {p1, p2, v0, v1}, Lz7a;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;I)V
 
-    move-object v4, p1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-direct/range {v0 .. v6}, Lvii;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+    iput-object p1, p0, Lxlj;->c:Lz7a;
 
-    invoke-virtual {p0, v0}, Lyoe;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {}, Lgw3;->a()Lgw3;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxlj;->d:Lgw3;
+
+    const-wide/16 p1, 0x1388
+
+    iput-wide p1, p0, Lxlj;->e:J
+
+    const-wide/32 p1, 0x493e0
+
+    iput-wide p1, p0, Lxlj;->f:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/String;Landroid/content/ServiceConnection;Z)V
+    .locals 4
+
+    new-instance v0, Lqhj;
+
+    invoke-direct {v0, p1, p3}, Lqhj;-><init>(Ljava/lang/String;Z)V
+
+    const-string p1, "Trying to unbind a GmsServiceConnection  that was not bound before.  config="
+
+    const-string p3, "Nonexistent connection status for service config: "
+
+    const-string v1, "ServiceConnection must not be null"
+
+    invoke-static {p2, v1}, Ldkj;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lxlj;->a:Ljava/util/HashMap;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, p0, Lxlj;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltij;
+
+    if-eqz v2, :cond_2
+
+    iget-object p3, v2, Ltij;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p3, p2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    iget-object p1, v2, Ltij;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p1, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, v2, Ltij;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lxlj;->c:Lz7a;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lxlj;->c:Lz7a;
+
+    iget-wide v2, p0, Lxlj;->e:J
+
+    invoke-virtual {p2, p1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    :goto_0
+    monitor-exit v1
 
-    move-object p0, v0
+    return-void
 
+    :cond_1
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {v0}, Lqhj;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p2, "Unable to acquire a thread to perform the database transaction."
+    invoke-virtual {v0}, Lqhj;->toString()Ljava/lang/String;
 
-    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object p2
 
-    invoke-virtual {v3, p1}, Lp62;->h(Ljava/lang/Throwable;)Z
+    invoke-virtual {p3, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :goto_1
-    invoke-virtual {v3}, Lp62;->n()Ljava/lang/Object;
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object p0
+    throw p1
+.end method
 
-    return-object p0
+.method public final b(Lqhj;Ljyi;Ljava/lang/String;)Z
+    .locals 6
+
+    const-string v0, "Trying to bind a GmsServiceConnection that was already connected before.  config="
+
+    iget-object v1, p0, Lxlj;->a:Ljava/util/HashMap;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, p0, Lxlj;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltij;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Ltij;
+
+    invoke-direct {v2, p0, p1}, Ltij;-><init>(Lxlj;Lqhj;)V
+
+    iget-object v0, v2, Ltij;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p2, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v2, p3, v3}, Ltij;->a(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
+
+    iget-object p2, p0, Lxlj;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p2, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v4, p0, Lxlj;->c:Lz7a;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5, p1}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
+
+    iget-object v4, v2, Ltij;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v4, p2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    iget-object p1, v2, Ltij;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p1, p2, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget p1, v2, Ltij;->b:I
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_2
+
+    const/4 p2, 0x2
+
+    if-eq p1, p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v2, p3, v3}, Ltij;->a(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, v2, Ltij;->X:Landroid/content/ComponentName;
+
+    iget-object p3, v2, Ltij;->d:Landroid/os/IBinder;
+
+    invoke-virtual {p2, p1, p3}, Ljyi;->onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+
+    :goto_0
+    iget-boolean p1, v2, Ltij;->c:Z
+
+    monitor-exit v1
+
+    return p1
+
+    :cond_3
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Lqhj;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

@@ -1,104 +1,70 @@
-.class public final Lem1;
-.super Lb5g;
+.class public final synthetic Lem1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lgm1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;)V
+.method public synthetic constructor <init>(Lgm1;I)V
     .locals 0
 
-    iput-object p2, p0, Lem1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+    iput p2, p0, Lem1;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lem1;->b:Lgm1;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lem1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lem1;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lem1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Lem1;
+    iget v0, p0, Lem1;->a:I
 
-    iget-object v1, p0, Lem1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p2, v1}, Lem1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;)V
+    iget-object v0, p0, Lem1;->b:Lgm1;
 
-    iput-object p1, v0, Lem1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lem1;->o:Ljava/lang/Object;
-
-    check-cast p1, Lgm1;
-
-    iget-object v0, p0, Lem1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
-
-    iget-object v1, v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;->Y:Ljkd;
-
-    sget-object v2, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;->Z:[Lp38;
-
-    const/4 v3, 0x2
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, v0, v2}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
+    invoke-static {v0}, Lgm1;->u(Lgm1;)Landroid/graphics/drawable/LayerDrawable;
 
     move-result-object v0
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    return-object v0
 
-    iget-boolean p1, p1, Lgm1;->a:Z
+    :pswitch_0
+    sget v0, Lv5e;->U0:I
 
-    if-eqz p1, :cond_0
+    iget-object v1, p0, Lem1;->b:Lgm1;
 
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_0
-    const/16 p1, 0x8
+    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v0
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

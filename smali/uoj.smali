@@ -3,145 +3,137 @@
 .source "SourceFile"
 
 
-# direct methods
-.method public static c(Ljava/io/File;)Z
-    .locals 4
-
-    invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, v0, v2
-
-    invoke-static {v3}, Luoj;->c(Ljava/io/File;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/io/File;->delete()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static d(Ljava/io/File;Ld26;)V
-    .locals 5
-
-    invoke-interface {p1, p0}, Ld26;->p(Ljava/io/File;)V
-
-    invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-static {v3, p1}, Luoj;->d(Ljava/io/File;Ld26;)V
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {p1, v3}, Ld26;->f(Ljava/io/File;)V
-
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {p1, p0}, Ld26;->q(Ljava/io/File;)V
-
-    return-void
-.end method
+# static fields
+.field public static a:Lski;
 
 
 # virtual methods
-.method public a(Ly4a;)Lt4a;
-    .locals 2
+.method public abstract a(Lk7e;Ljava/lang/Object;)V
+.end method
 
-    iget-object v0, p1, Lol4;->d:Ljava/nio/ByteBuffer;
+.method public abstract b()Ljava/lang/String;
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public c(Lf7e;Ljava/lang/Object;)I
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasArray()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->arrayOffset()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {v1}, Ln5j;->b(Z)V
-
-    const/high16 v1, -0x80000000
-
-    invoke-virtual {p1, v1}, Ldz;->j(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
+    if-nez p2, :cond_0
 
     const/4 p1, 0x0
 
-    return-object p1
+    return p1
 
-    :cond_1
-    invoke-virtual {p0, p1, v0}, Luoj;->b(Ly4a;Ljava/nio/ByteBuffer;)Lt4a;
+    :cond_0
+    invoke-virtual {p0}, Luoj;->b()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    invoke-interface {p1, v0}, Lf7e;->x0(Ljava/lang/String;)Lk7e;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-virtual {p0, v0, p2}, Luoj;->a(Lk7e;Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lk7e;->t0()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 p2, 0x0
+
+    invoke-static {v0, p2}, Lo7j;->b(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Lpnj;->a(Lf7e;)I
+
+    move-result p1
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception p2
+
+    invoke-static {v0, p1}, Lo7j;->b(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method
 
-.method public abstract b(Ly4a;Ljava/nio/ByteBuffer;)Lt4a;
+.method public d(Lf7e;Ljava/lang/Iterable;)V
+    .locals 2
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Luoj;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lf7e;->x0(Ljava/lang/String;)Lk7e;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_1
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0, v0, v1}, Luoj;->a(Lk7e;Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lk7e;->t0()Z
+
+    invoke-interface {v0}, Lk7e;->reset()V
+
+    invoke-static {p1}, Lpnj;->a(Lf7e;)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    invoke-static {v0, p1}, Lo7j;->b(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception p2
+
+    invoke-static {v0, p1}, Lo7j;->b(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

@@ -1,49 +1,64 @@
-.class public final Locf;
-.super Ll84;
+.class public final synthetic Locf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lwcf;
+.field public final synthetic a:I
 
-.field public Y:I
+.field public final synthetic b:Lrcf;
 
-.field public d:Lwcf;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lwcf;Ll84;)V
+.method public synthetic constructor <init>(Lrcf;ILjava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Locf;->X:Lwcf;
+    iput p2, p0, Locf;->a:I
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Locf;->b:Lrcf;
+
+    iput-object p3, p0, Locf;->c:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iput-object p1, p0, Locf;->o:Ljava/lang/Object;
+    iget v0, p0, Locf;->a:I
 
-    iget p1, p0, Locf;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Locf;->b:Lrcf;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Locf;->c:Ljava/lang/String;
 
-    iput p1, p0, Locf;->Y:I
+    invoke-static {v0, v1}, Lrcf;->a(Lrcf;Ljava/lang/String;)V
 
-    iget-object p1, p0, Locf;->X:Lwcf;
+    return-void
 
-    invoke-static {p1, p0}, Lwcf;->g(Lwcf;Ll84;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Locf;->b:Lrcf;
 
-    move-result-object p1
+    iget-object v1, p0, Locf;->c:Ljava/lang/String;
 
-    return-object p1
+    invoke-static {v0, v1}, Lrcf;->b(Lrcf;Ljava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

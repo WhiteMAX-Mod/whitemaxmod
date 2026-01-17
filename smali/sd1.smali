@@ -1,60 +1,63 @@
-.class public final synthetic Lsd1;
-.super Ljava/lang/Object;
+.class public final Lsd1;
+.super Lie0;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lzd1;
+# static fields
+.field public static final b:Lsd1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzd1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lsd1;->a:I
+    new-instance v0, Lsd1;
 
-    iput-object p1, p0, Lsd1;->b:Lzd1;
+    const/4 v1, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lie0;-><init>(I)V
+
+    sput-object v0, Lsd1;->b:Lsd1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lsd1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lud1;
+    return v0
 
-    iget-object v1, p0, Lsd1;->b:Lzd1;
+    :cond_0
+    instance-of p1, p1, Lsd1;
 
-    invoke-direct {v0, v1}, Lud1;-><init>(Lzd1;)V
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x5d3948c3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OpenActiveCall"
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Ltd1;
-
-    iget-object v1, p0, Lsd1;->b:Lzd1;
-
-    invoke-direct {v0, v1}, Ltd1;-><init>(Lzd1;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,132 +1,90 @@
 .class public final Lbwc;
-.super Lb5g;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lcwc;
+.field public final a:Ljava/lang/String;
 
-.field public o:I
+.field public b:I
+
+.field public c:Z
+
+.field public d:Lgc8;
 
 
 # direct methods
-.method public constructor <init>(Lcwc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lbwc;->X:Lcwc;
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lbwc;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lbwc;->b:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lbwc;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-    check-cast p1, Lac4;
+    iget-object p1, p0, Lbwc;->d:Lgc8;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lbwc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p1, Lgc8;->a:Lic8;
 
-    move-result-object p1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    check-cast p1, Lbwc;
+    move-result-wide v0
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object v2, Lic8;->d:Lf7;
 
-    invoke-virtual {p1, p2}, Lbwc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v3, v2, Lf7;->a:J
 
-    move-result-object p1
+    sub-long v3, v0, v3
 
-    return-object p1
-.end method
+    const-wide/16 v5, 0x12c
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    cmp-long v3, v3, v5
 
-    new-instance p1, Lbwc;
+    if-lez v3, :cond_0
 
-    iget-object v0, p0, Lbwc;->X:Lcwc;
+    iput-wide v0, v2, Lf7;->a:J
 
-    invoke-direct {p1, v0, p2}, Lbwc;-><init>(Lcwc;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p1, Lic8;->a:Lfc8;
 
-    return-object p1
-.end method
+    if-eqz p1, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    sget-object v0, Lkc8;->o:Lkc8;
 
-    iget v0, p0, Lbwc;->o:I
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lbwc;->X:Lcwc;
+    iget-object v2, p0, Lbwc;->a:Ljava/lang/String;
 
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-interface {p1, v2, v0, v1}, Lfc8;->b(Ljava/lang/String;Lkc8;Landroid/text/style/ClickableSpan;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
+.end method
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget v0, p0, Lbwc;->b:I
 
-    throw p1
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-boolean v0, p0, Lbwc;->c:Z
 
-    iget-object p1, v1, Lcwc;->U0:Loic;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    iput v2, p0, Lbwc;->o:I
-
-    invoke-virtual {p1, p0}, Loic;->C(Lbwc;)Lv2h;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    iget-object p1, v1, Lcwc;->F0:Lyl5;
-
-    new-instance v0, Lxuc;
-
-    sget v1, Lx4e;->q:I
-
-    new-instance v2, Ljava/lang/Integer;
-
-    invoke-direct {v2, v1}, Ljava/lang/Integer;-><init>(I)V
-
-    sget v1, Lkfb;->G0:I
-
-    new-instance v3, Lbhg;
-
-    invoke-direct {v3, v1}, Lbhg;-><init>(I)V
-
-    invoke-direct {v0, v3, v2}, Lxuc;-><init>(Lghg;Ljava/lang/Integer;)V
-
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-void
 .end method

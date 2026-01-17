@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmm;
+.implements Lnm;
 
 
 # instance fields
@@ -27,10 +27,10 @@
 
 
 # virtual methods
-.method public final getScope()Lpm;
+.method public final getScope()Lqm;
     .locals 1
 
-    sget-object v0, Lpm;->b:Lpm;
+    sget-object v0, Lqm;->b:Lqm;
 
     return-object v0
 .end method
@@ -40,61 +40,61 @@
 
     const-string v0, "auth.anonymLogin"
 
-    invoke-static {v0}, Lym;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lzm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final populateParams(Lim;)V
+.method public final populateParams(Ljm;)V
     .locals 5
 
     const-string v0, "referrer"
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lim;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Ljm;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "deviceId"
 
     iget-object v2, p0, Lb90;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Lim;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Ljm;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lqs0;
+    new-instance v0, Lps0;
 
     const-string v3, "verification_supported"
 
     const/4 v4, 0x1
 
-    invoke-direct {v0, v3, v4}, Lqs0;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, v3, v4}, Lps0;-><init>(Ljava/lang/String;Z)V
 
-    invoke-virtual {p1, v0}, Lim;->a(Lhm;)V
+    invoke-virtual {p1, v0}, Ljm;->a(Lim;)V
 
     const-string v0, "verification_token"
 
-    invoke-virtual {p1, v0, v1}, Lim;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Ljm;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "verification_supported_v"
 
     const-string v1, "1"
 
-    invoke-virtual {p1, v0, v1}, Lim;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Ljm;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "client"
 
     const-string v1, "test"
 
-    invoke-virtual {p1, v0, v1}, Lim;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Ljm;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lqs0;
+    new-instance v0, Lps0;
 
     const-string v3, "gen_token"
 
-    invoke-direct {v0, v3, v4}, Lqs0;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, v3, v4}, Lps0;-><init>(Ljava/lang/String;Z)V
 
-    invoke-virtual {p1, v0}, Lim;->a(Lhm;)V
+    invoke-virtual {p1, v0}, Ljm;->a(Lim;)V
 
     if-nez v2, :cond_0
 
@@ -111,7 +111,7 @@
 
     const-string v4, "\", \"version\": 3, \"device_id\": \""
 
-    invoke-static {v3, v1, v4, v2, v0}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v1, v4, v2, v0}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -120,14 +120,14 @@
     :cond_1
     const-string v1, "{\"version\": 2, \"device_id\": \""
 
-    invoke-static {v1, v2, v0}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     :goto_0
     const-string v1, "session_data"
 
-    invoke-virtual {p1, v1, v0}, Lim;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v0}, Ljm;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

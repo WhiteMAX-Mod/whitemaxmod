@@ -3,113 +3,149 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lefc;
+.implements Lcy3;
 
 
 # instance fields
-.field public final synthetic a:Lch2;
+.field public final synthetic a:I
 
-.field public final synthetic b:Z
-
-.field public final synthetic c:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lch2;ZZ)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Lkg2;->a:I
+
+    iput-object p2, p0, Lkg2;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkg2;->a:Lch2;
-
-    iput-boolean p2, p0, Lkg2;->b:Z
-
-    iput-boolean p3, p0, Lkg2;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j(Ljava/lang/Comparable;)Z
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    check-cast p1, Lud2;
+    iget v0, p0, Lkg2;->a:I
 
-    iget-object v0, p1, Lud2;->b:Lzh2;
+    iget-object v1, p0, Lkg2;->b:Ljava/lang/Object;
 
-    iget v0, v0, Lzh2;->m:I
+    packed-switch v0, :pswitch_data_0
 
-    iget-boolean v1, p0, Lkg2;->b:Z
+    check-cast v1, Ljava/util/ArrayList;
 
-    if-gtz v0, :cond_0
+    check-cast p1, Ljava/util/List;
 
-    if-eqz v1, :cond_4
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    invoke-virtual {p1}, Lud2;->p0()Z
+    return-void
 
-    move-result v0
+    :pswitch_0
+    check-cast v1, Landroid/view/View;
 
-    if-eqz v0, :cond_4
+    check-cast p1, Landroid/graphics/Rect;
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v1, Lnd2;
+
+    check-cast p1, Lch2;
+
+    iget-object v0, v1, Lnd2;->b:Luh2;
+
+    iget-wide v0, v0, Luh2;->n0:J
+
+    iput-wide v0, p1, Lch2;->o0:J
+
+    const-string p1, "uj2"
+
+    const-string v2, "updated last delayed load time to: "
+
+    invoke-static {v0, v1, v2, p1}, Lob3;->g(JLjava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_2
+    check-cast v1, Lu03;
+
+    check-cast p1, Lch2;
+
+    iget-object v0, p1, Lch2;->o:Lkh2;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Lkg2;->c:Z
+    sget-object v0, Lkh2;->h:Lkh2;
 
-    if-nez v0, :cond_1
+    :goto_0
+    invoke-static {v1, v0}, Los8;->h(Lu03;Lkh2;)Lkh2;
 
-    iget-object v0, p0, Lkg2;->a:Lch2;
+    move-result-object v0
 
-    iget-object v0, v0, Lch2;->o:Lpfc;
+    iput-object v0, p1, Lch2;->o:Lkh2;
 
-    iget-object v0, v0, Lpfc;->a:Ldj8;
+    return-void
 
-    invoke-virtual {p1, v0}, Lud2;->b0(Lte3;)Z
+    :pswitch_3
+    check-cast v1, Lih2;
 
-    move-result v0
+    check-cast p1, Lch2;
 
-    if-eqz v0, :cond_1
+    iput-object v1, p1, Lch2;->p:Lih2;
 
-    invoke-virtual {p1}, Lud2;->F()Z
+    return-void
 
-    move-result v0
+    :pswitch_4
+    check-cast v1, Ljava/lang/String;
 
-    if-eqz v0, :cond_4
+    check-cast p1, Lch2;
+
+    iput-object v1, p1, Lch2;->h:Ljava/lang/String;
+
+    return-void
+
+    :pswitch_5
+    check-cast v1, [Lcy3;
+
+    check-cast p1, Lch2;
+
+    array-length v0, v1
+
+    const/4 v2, 0x0
+
+    :goto_1
+    if-ge v2, v0, :cond_2
+
+    aget-object v3, v1, v2
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v3, p1}, Lcy3;->accept(Ljava/lang/Object;)V
 
     :cond_1
-    invoke-virtual {p1}, Lud2;->K()Z
+    add-int/lit8 v2, v2, 0x1
 
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p1}, Lud2;->l0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Lud2;->o0()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
+    goto :goto_1
 
     :cond_2
-    if-eqz v1, :cond_4
+    return-void
 
-    invoke-virtual {p1}, Lud2;->p0()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    :cond_3
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_4
-    const/4 p1, 0x0
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

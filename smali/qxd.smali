@@ -1,27 +1,38 @@
-.class public final Lqxd;
+.class public interface abstract Lqxd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lt56;
+# virtual methods
+.method public abstract a(Lcj7;Ljava/lang/String;Z)V
+.end method
 
-.field public final b:Lrxd;
+.method public abstract b(Lcj7;Ljava/lang/Object;Ljava/lang/String;Z)V
+.end method
 
-.field public final c:Lyx6;
+.method public abstract c(Lcj7;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+.end method
 
+.method public abstract d(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-# direct methods
-.method public constructor <init>(Lt56;Lrxd;Lyx6;)V
-    .locals 0
+.method public abstract e(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract f(Ljava/lang/String;Ljava/lang/String;Z)V
+.end method
 
-    iput-object p1, p0, Lqxd;->a:Lt56;
+.method public abstract g(Ljava/lang/String;)V
+.end method
 
-    iput-object p2, p0, Lqxd;->b:Lrxd;
+.method public abstract h(Ljava/lang/String;)Z
+.end method
 
-    iput-object p3, p0, Lqxd;->c:Lyx6;
+.method public abstract i(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+.end method
 
-    return-void
+.method public abstract j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
+.end method
+
+.method public abstract k(Ljava/lang/String;)V
 .end method

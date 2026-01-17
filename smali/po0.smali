@@ -1,714 +1,525 @@
-.class public abstract Lpo0;
+.class public final Lpo0;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lk7e;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
-
-.field public e:Ljava/lang/Object;
+.field public final b:Lk7e;
 
 
 # direct methods
-.method public constructor <init>(Lko0;Lno0;JJJJJI)V
-    .locals 1
+.method public synthetic constructor <init>(Lk7e;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lpo0;->a:I
 
-    iput v0, p0, Lpo0;->a:I
+    iput-object p1, p0, Lpo0;->b:Lk7e;
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p2, p0, Lpo0;->d:Ljava/lang/Object;
-
-    .line 3
-    iput p13, p0, Lpo0;->b:I
-
-    move-object p2, p1
-
-    .line 4
-    new-instance p1, Lho0;
-
-    invoke-direct/range {p1 .. p12}, Lho0;-><init>(Lko0;JJJJJ)V
-
-    iput-object p1, p0, Lpo0;->c:Ljava/lang/Object;
-
     return-void
-.end method
-
-.method public constructor <init>(Llo0;Loo0;JJJJJI)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lpo0;->a:I
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object p2, p0, Lpo0;->d:Ljava/lang/Object;
-
-    .line 7
-    iput p13, p0, Lpo0;->b:I
-
-    move-object p2, p1
-
-    .line 8
-    new-instance p1, Lio0;
-
-    invoke-direct/range {p1 .. p12}, Lio0;-><init>(Llo0;JJJJJ)V
-
-    iput-object p1, p0, Lpo0;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public static c(Lft5;JLl7;)I
-    .locals 2
-
-    invoke-interface {p0}, Lft5;->getPosition()J
-
-    move-result-wide v0
-
-    cmp-long p0, p1, v0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    iput-wide p1, p3, Ll7;->a:J
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static d(Lgt5;JLl7;)I
-    .locals 2
-
-    invoke-interface {p0}, Lgt5;->getPosition()J
-
-    move-result-wide v0
-
-    cmp-long p0, p1, v0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    iput-wide p1, p3, Ll7;->a:J
-
-    const/4 p0, 0x1
-
-    return p0
 .end method
 
 
 # virtual methods
-.method public a(Lft5;Ll7;)I
-    .locals 27
+.method public final G(ILjava/lang/String;)V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lpo0;->a:I
 
-    move-object/from16 v1, p1
+    packed-switch v0, :pswitch_data_0
 
-    move-object/from16 v2, p2
+    iget-object v0, p0, Lpo0;->b:Lk7e;
 
-    iget-object v3, v0, Lpo0;->d:Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lk7e;->G(ILjava/lang/String;)V
 
-    check-cast v3, Lno0;
-
-    :goto_0
-    iget-object v4, v0, Lpo0;->e:Ljava/lang/Object;
-
-    check-cast v4, Ljo0;
-
-    invoke-static {v4}, Ln5j;->e(Ljava/lang/Object;)V
-
-    iget-wide v5, v4, Ljo0;->f:J
-
-    iget-wide v7, v4, Ljo0;->g:J
-
-    iget-wide v9, v4, Ljo0;->h:J
-
-    sub-long/2addr v7, v5
-
-    iget v11, v0, Lpo0;->b:I
-
-    int-to-long v11, v11
-
-    cmp-long v7, v7, v11
-
-    const/4 v8, 0x0
-
-    if-gtz v7, :cond_0
-
-    iput-object v8, v0, Lpo0;->e:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lno0;->g()V
-
-    invoke-static {v1, v5, v6, v2}, Lpo0;->c(Lft5;JLl7;)I
-
-    move-result v1
-
-    return v1
-
-    :cond_0
-    invoke-interface {v1}, Lft5;->getPosition()J
-
-    move-result-wide v5
-
-    sub-long v5, v9, v5
-
-    const-wide/16 v11, 0x0
-
-    cmp-long v7, v5, v11
-
-    if-ltz v7, :cond_6
-
-    const-wide/32 v13, 0x40000
-
-    cmp-long v7, v5, v13
-
-    if-gtz v7, :cond_6
-
-    long-to-int v5, v5
-
-    invoke-interface {v1, v5}, Lft5;->y(I)V
-
-    invoke-interface {v1}, Lft5;->x()V
-
-    iget-wide v5, v4, Ljo0;->b:J
-
-    invoke-interface {v3, v1, v5, v6}, Lno0;->i(Lft5;J)Lmo0;
-
-    move-result-object v5
-
-    iget v6, v5, Lmo0;->a:I
-
-    move-wide v15, v11
-
-    iget-wide v11, v5, Lmo0;->b:J
-
-    move-wide/from16 v17, v13
-
-    iget-wide v13, v5, Lmo0;->c:J
-
-    const/4 v5, -0x3
-
-    if-eq v6, v5, :cond_5
-
-    const/4 v5, -0x2
-
-    if-eq v6, v5, :cond_4
-
-    const/4 v5, -0x1
-
-    if-eq v6, v5, :cond_3
-
-    if-nez v6, :cond_2
-
-    invoke-interface {v1}, Lft5;->getPosition()J
-
-    move-result-wide v4
-
-    sub-long v4, v13, v4
-
-    cmp-long v6, v4, v15
-
-    if-ltz v6, :cond_1
-
-    cmp-long v6, v4, v17
-
-    if-gtz v6, :cond_1
-
-    long-to-int v4, v4
-
-    invoke-interface {v1, v4}, Lft5;->y(I)V
-
-    :cond_1
-    iput-object v8, v0, Lpo0;->e:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lno0;->g()V
-
-    invoke-static {v1, v13, v14, v2}, Lpo0;->c(Lft5;JLl7;)I
-
-    move-result v1
-
-    return v1
-
-    :cond_2
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "Invalid case"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_3
-    iput-wide v11, v4, Ljo0;->e:J
-
-    iput-wide v13, v4, Ljo0;->g:J
-
-    iget-wide v5, v4, Ljo0;->b:J
-
-    iget-wide v7, v4, Ljo0;->d:J
-
-    iget-wide v9, v4, Ljo0;->f:J
-
-    move-wide v15, v5
-
-    iget-wide v5, v4, Ljo0;->c:J
-
-    move-wide/from16 v25, v5
-
-    move-wide/from16 v17, v7
-
-    move-wide/from16 v21, v9
-
-    move-wide/from16 v19, v11
-
-    move-wide/from16 v23, v13
-
-    invoke-static/range {v15 .. v26}, Ljo0;->a(JJJJJJ)J
-
-    move-result-wide v5
-
-    iput-wide v5, v4, Ljo0;->h:J
-
-    goto/16 :goto_0
-
-    :cond_4
-    move-wide v5, v11
-
-    move-wide v7, v13
-
-    iput-wide v5, v4, Ljo0;->d:J
-
-    iput-wide v7, v4, Ljo0;->f:J
-
-    iget-wide v9, v4, Ljo0;->b:J
-
-    iget-wide v11, v4, Ljo0;->e:J
-
-    iget-wide v13, v4, Ljo0;->g:J
-
-    move-wide/from16 v19, v5
-
-    iget-wide v5, v4, Ljo0;->c:J
-
-    move-wide/from16 v25, v5
-
-    move-wide/from16 v21, v7
-
-    move-wide v15, v9
-
-    move-wide/from16 v23, v13
-
-    move-wide/from16 v17, v19
-
-    move-wide/from16 v19, v11
-
-    invoke-static/range {v15 .. v26}, Ljo0;->a(JJJJJJ)J
-
-    move-result-wide v5
-
-    iput-wide v5, v4, Ljo0;->h:J
-
-    goto/16 :goto_0
-
-    :cond_5
-    iput-object v8, v0, Lpo0;->e:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lno0;->g()V
-
-    invoke-static {v1, v9, v10, v2}, Lpo0;->c(Lft5;JLl7;)I
-
-    move-result v1
-
-    return v1
-
-    :cond_6
-    invoke-static {v1, v9, v10, v2}, Lpo0;->c(Lft5;JLl7;)I
-
-    move-result v1
-
-    return v1
-.end method
-
-.method public b(Lgt5;Ll7;)I
-    .locals 27
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move-object/from16 v2, p2
-
-    iget-object v3, v0, Lpo0;->d:Ljava/lang/Object;
-
-    check-cast v3, Loo0;
-
-    :goto_0
-    iget-object v4, v0, Lpo0;->e:Ljava/lang/Object;
-
-    check-cast v4, Ljo0;
-
-    invoke-static {v4}, Lp5j;->h(Ljava/lang/Object;)V
-
-    iget-wide v5, v4, Ljo0;->f:J
-
-    iget-wide v7, v4, Ljo0;->g:J
-
-    iget-wide v9, v4, Ljo0;->h:J
-
-    sub-long/2addr v7, v5
-
-    iget v11, v0, Lpo0;->b:I
-
-    int-to-long v11, v11
-
-    cmp-long v7, v7, v11
-
-    const/4 v8, 0x0
-
-    if-gtz v7, :cond_0
-
-    iput-object v8, v0, Lpo0;->e:Ljava/lang/Object;
-
-    invoke-interface {v3}, Loo0;->g()V
-
-    invoke-static {v1, v5, v6, v2}, Lpo0;->d(Lgt5;JLl7;)I
-
-    move-result v1
-
-    return v1
-
-    :cond_0
-    invoke-interface {v1}, Lgt5;->getPosition()J
-
-    move-result-wide v5
-
-    sub-long v5, v9, v5
-
-    const-wide/16 v11, 0x0
-
-    cmp-long v7, v5, v11
-
-    if-ltz v7, :cond_6
-
-    const-wide/32 v13, 0x40000
-
-    cmp-long v7, v5, v13
-
-    if-gtz v7, :cond_6
-
-    long-to-int v5, v5
-
-    invoke-interface {v1, v5}, Lgt5;->y(I)V
-
-    invoke-interface {v1}, Lgt5;->x()V
-
-    iget-wide v5, v4, Ljo0;->b:J
-
-    invoke-interface {v3, v1, v5, v6}, Loo0;->d(Lgt5;J)Lmo0;
-
-    move-result-object v5
-
-    iget v6, v5, Lmo0;->a:I
-
-    move-wide v15, v11
-
-    iget-wide v11, v5, Lmo0;->b:J
-
-    move-wide/from16 v17, v13
-
-    iget-wide v13, v5, Lmo0;->c:J
-
-    const/4 v5, -0x3
-
-    if-eq v6, v5, :cond_5
-
-    const/4 v5, -0x2
-
-    if-eq v6, v5, :cond_4
-
-    const/4 v5, -0x1
-
-    if-eq v6, v5, :cond_3
-
-    if-nez v6, :cond_2
-
-    invoke-interface {v1}, Lgt5;->getPosition()J
-
-    move-result-wide v4
-
-    sub-long v4, v13, v4
-
-    cmp-long v6, v4, v15
-
-    if-ltz v6, :cond_1
-
-    cmp-long v6, v4, v17
-
-    if-gtz v6, :cond_1
-
-    long-to-int v4, v4
-
-    invoke-interface {v1, v4}, Lgt5;->y(I)V
-
-    :cond_1
-    iput-object v8, v0, Lpo0;->e:Ljava/lang/Object;
-
-    invoke-interface {v3}, Loo0;->g()V
-
-    invoke-static {v1, v13, v14, v2}, Lpo0;->d(Lgt5;JLl7;)I
-
-    move-result v1
-
-    return v1
-
-    :cond_2
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "Invalid case"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_3
-    iput-wide v11, v4, Ljo0;->e:J
-
-    iput-wide v13, v4, Ljo0;->g:J
-
-    iget-wide v5, v4, Ljo0;->b:J
-
-    iget-wide v7, v4, Ljo0;->d:J
-
-    iget-wide v9, v4, Ljo0;->f:J
-
-    move-wide v15, v5
-
-    iget-wide v5, v4, Ljo0;->c:J
-
-    move-wide/from16 v25, v5
-
-    move-wide/from16 v17, v7
-
-    move-wide/from16 v21, v9
-
-    move-wide/from16 v19, v11
-
-    move-wide/from16 v23, v13
-
-    invoke-static/range {v15 .. v26}, Ljo0;->b(JJJJJJ)J
-
-    move-result-wide v5
-
-    iput-wide v5, v4, Ljo0;->h:J
-
-    goto/16 :goto_0
-
-    :cond_4
-    move-wide v5, v11
-
-    move-wide v7, v13
-
-    iput-wide v5, v4, Ljo0;->d:J
-
-    iput-wide v7, v4, Ljo0;->f:J
-
-    iget-wide v9, v4, Ljo0;->b:J
-
-    iget-wide v11, v4, Ljo0;->e:J
-
-    iget-wide v13, v4, Ljo0;->g:J
-
-    move-wide/from16 v19, v5
-
-    iget-wide v5, v4, Ljo0;->c:J
-
-    move-wide/from16 v25, v5
-
-    move-wide/from16 v21, v7
-
-    move-wide v15, v9
-
-    move-wide/from16 v23, v13
-
-    move-wide/from16 v17, v19
-
-    move-wide/from16 v19, v11
-
-    invoke-static/range {v15 .. v26}, Ljo0;->b(JJJJJJ)J
-
-    move-result-wide v5
-
-    iput-wide v5, v4, Ljo0;->h:J
-
-    goto/16 :goto_0
-
-    :cond_5
-    iput-object v8, v0, Lpo0;->e:Ljava/lang/Object;
-
-    invoke-interface {v3}, Loo0;->g()V
-
-    invoke-static {v1, v9, v10, v2}, Lpo0;->d(Lgt5;JLl7;)I
-
-    move-result v1
-
-    return v1
-
-    :cond_6
-    invoke-static {v1, v9, v10, v2}, Lpo0;->d(Lgt5;JLl7;)I
-
-    move-result v1
-
-    return v1
-.end method
-
-.method public final e(J)V
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    move-wide/from16 v2, p1
-
-    iget v1, v0, Lpo0;->a:I
-
-    packed-switch v1, :pswitch_data_0
-
-    iget-object v1, v0, Lpo0;->e:Ljava/lang/Object;
-
-    check-cast v1, Ljo0;
-
-    if-eqz v1, :cond_0
-
-    iget-wide v4, v1, Ljo0;->a:J
-
-    cmp-long v1, v4, v2
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Ljo0;
-
-    iget-object v4, v0, Lpo0;->c:Ljava/lang/Object;
-
-    check-cast v4, Lio0;
-
-    iget-object v5, v4, Lio0;->a:Llo0;
-
-    invoke-interface {v5, v2, v3}, Llo0;->a(J)J
-
-    move-result-wide v5
-
-    move-wide v8, v5
-
-    iget-wide v6, v4, Lio0;->c:J
-
-    move-wide v10, v8
-
-    iget-wide v8, v4, Lio0;->d:J
-
-    move-wide v12, v10
-
-    iget-wide v10, v4, Lio0;->o:J
-
-    iget-wide v4, v4, Lio0;->X:J
-
-    const/4 v14, 0x1
-
-    move-wide v15, v12
-
-    move-wide v12, v4
-
-    move-wide v4, v15
-
-    invoke-direct/range {v1 .. v14}, Ljo0;-><init>(JJJJJJI)V
-
-    iput-object v1, v0, Lpo0;->e:Ljava/lang/Object;
-
-    :goto_0
     return-void
 
     :pswitch_0
-    iget-object v1, v0, Lpo0;->e:Ljava/lang/Object;
+    iget-object v0, p0, Lpo0;->b:Lk7e;
 
-    check-cast v1, Ljo0;
+    invoke-interface {v0, p1, p2}, Lk7e;->G(ILjava/lang/String;)V
 
-    if-eqz v1, :cond_1
-
-    iget-wide v4, v1, Ljo0;->a:J
-
-    cmp-long v1, v4, v2
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v1, Ljo0;
-
-    iget-object v4, v0, Lpo0;->c:Ljava/lang/Object;
-
-    check-cast v4, Lho0;
-
-    iget-object v5, v4, Lho0;->a:Lko0;
-
-    invoke-interface {v5, v2, v3}, Lko0;->a(J)J
-
-    move-result-wide v5
-
-    move-wide v8, v5
-
-    iget-wide v6, v4, Lho0;->c:J
-
-    move-wide v10, v8
-
-    iget-wide v8, v4, Lho0;->d:J
-
-    move-wide v12, v10
-
-    iget-wide v10, v4, Lho0;->e:J
-
-    iget-wide v4, v4, Lho0;->f:J
-
-    const/4 v14, 0x0
-
-    move-wide v15, v12
-
-    move-wide v12, v4
-
-    move-wide v4, v15
-
-    invoke-direct/range {v1 .. v14}, Ljo0;-><init>(JJJJJJI)V
-
-    iput-object v1, v0, Lpo0;->e:Ljava/lang/Object;
-
-    :goto_1
     return-void
 
     nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final L()Z
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0}, Lk7e;->L()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0}, Lk7e;->L()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final a(ID)V
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1, p2, p3}, Lk7e;->a(ID)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1, p2, p3}, Lk7e;->a(ID)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(IJ)V
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1, p2, p3}, Lk7e;->b(IJ)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1, p2, p3}, Lk7e;->b(IJ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(I[B)V
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1, p2}, Lk7e;->c(I[B)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1, p2}, Lk7e;->c(I[B)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0}, Lk7e;->reset()V
+
+    invoke-interface {v0}, Lk7e;->s()V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d0(I)Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1}, Lk7e;->d0(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e(I)V
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1}, Lk7e;->e(I)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1}, Lk7e;->e(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getBlob(I)[B
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1}, Lk7e;->getBlob(I)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getColumnCount()I
+    .locals 2
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0}, Lk7e;->getColumnCount()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getColumnName(I)Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1}, Lk7e;->getColumnName(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getDouble(I)D
+    .locals 2
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1}, Lk7e;->getDouble(I)D
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getLong(I)J
+    .locals 2
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1}, Lk7e;->getLong(I)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final isNull(I)Z
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0, p1}, Lk7e;->isNull(I)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final reset()V
+    .locals 2
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0}, Lk7e;->reset()V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final s()V
+    .locals 1
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0}, Lk7e;->s()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0}, Lk7e;->s()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final t0()Z
+    .locals 2
+
+    iget v0, p0, Lpo0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpo0;->b:Lk7e;
+
+    invoke-interface {v0}, Lk7e;->t0()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :pswitch_data_0
     .packed-switch 0x0

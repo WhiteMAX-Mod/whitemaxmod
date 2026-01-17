@@ -1,64 +1,32 @@
-.class public final Lsnd;
+.class public interface abstract Lsnd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvnd;
-
-
-# static fields
-.field public static final a:Lsnd;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lsnd;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lsnd;->a:Lsnd;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lsnd;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+.method public abstract a()V
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x7ab69f16
-
-    return v0
+.method public abstract b()V
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public abstract c(Z)V
+.end method
 
-    const-string v0, "PerformErrorHaptic"
+.method public abstract clear()V
+.end method
 
-    return-object v0
+.method public abstract d()V
+.end method
+
+.method public abstract e()V
+.end method
+
+.method public abstract f()V
+.end method
+
+.method public abstract g(Ljava/lang/Long;)V
+.end method
+
+.method public abstract h(Lwnd;)V
 .end method

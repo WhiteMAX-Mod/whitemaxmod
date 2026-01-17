@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$BluetoothServiceListener$onServiceDisconnected$1;
-.super Ln58;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lnq6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ln58;",
-        "Loq6;"
+        "Ly48;",
+        "Lnq6;"
     }
 .end annotation
 
@@ -30,7 +30,7 @@
     d2 = {
         "",
         "ex",
-        "Lv2h;",
+        "Lb3h;",
         "invoke",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"
@@ -60,7 +60,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Ln58;-><init>(I)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
@@ -75,13 +75,13 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$BluetoothServiceListener$onServiceDisconnected$1;->invoke(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method
 
 .method public final invoke(Ljava/lang/Throwable;)V
-    .locals 5
+    .locals 4
 
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$BluetoothServiceListener$onServiceDisconnected$1;->this$0:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;
@@ -90,23 +90,21 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->access$getLOG_TAG$cp()Ljava/lang/String;
+    iget v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$BluetoothServiceListener$onServiceDisconnected$1;->$profile:I
+
+    const-string v2, "Error at onServiceDisconnected("
+
+    const-string v3, ")"
+
+    .line 3
+    invoke-static {v1, v2, v3}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$BluetoothServiceListener$onServiceDisconnected$1;->$profile:I
-
-    const-string v3, "Error at onServiceDisconnected("
-
-    const-string v4, ")"
-
-    .line 3
-    invoke-static {v2, v3, v4}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
     .line 4
-    invoke-interface {v0, v1, v2, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v2, "CallsBluetoothManager"
+
+    invoke-interface {v0, v2, v1, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

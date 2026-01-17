@@ -2,69 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwwa;
 
+# instance fields
+.field public final a:Lucj;
 
-# static fields
-.field public static final a:Ly7j;
+.field public final b:Lu7j;
+
+.field public final c:Lk7j;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Llji;)V
+    .locals 1
 
-    new-instance v0, Ly7j;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p1, Llji;->a:Ljava/lang/Object;
 
-    sput-object v0, Ly7j;->a:Ly7j;
+    check-cast v0, Lucj;
 
-    new-instance v0, Lyyi;
+    iput-object v0, p0, Ly7j;->a:Lucj;
 
-    const/4 v1, 0x1
+    iget-object v0, p1, Llji;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+    check-cast v0, Lu7j;
 
-    const-class v1, Lqzi;
+    iput-object v0, p0, Ly7j;->b:Lu7j;
 
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    iget-object p1, p1, Llji;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Lk7j;
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    iput-object p1, p0, Ly7j;->c:Lk7j;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

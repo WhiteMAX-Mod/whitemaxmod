@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lux3;
+.implements Lay3;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lux3;"
+        "Lay3;"
     }
 .end annotation
 
@@ -34,7 +34,7 @@
         "",
         "kotlin.jvm.PlatformType",
         "turnOffInMs",
-        "Lv2h;",
+        "Lb3h;",
         "accept",
         "(Ljava/lang/Long;)V",
         "<anonymous>"
@@ -78,11 +78,11 @@
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$setKeywordSpotterParams$1;->this$0:Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;
 
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->access$getTimeProvider$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lnkg;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->access$getTimeProvider$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lxkg;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lnkg;->getMsSinceBoot()J
+    invoke-interface {p1}, Lxkg;->getMsSinceBoot()J
 
     move-result-wide v3
 

@@ -1,354 +1,241 @@
-.class public abstract Ldm5;
+.class public final Ldm5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-.implements Ljava/lang/Comparable;
-.implements Lo25;
-.implements Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
-
 
 # instance fields
-.field private volatile _heap:Ljava/lang/Object;
+.field public final a:Ljava/lang/Object;
 
-.field public a:J
+.field public final b:Ljava/lang/reflect/Method;
 
-.field public b:I
+.field public final c:I
+
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/reflect/Method;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ldm5;->a:J
+    const/4 v0, 0x1
 
-    const/4 p1, -0x1
+    iput-boolean v0, p0, Ldm5;->d:Z
 
-    iput p1, p0, Ldm5;->b:I
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    iput-object p1, p0, Ldm5;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Ldm5;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {p2, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->hashCode()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, 0x1f
+
+    mul-int/lit8 p2, p2, 0x1f
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    add-int/2addr p1, p2
+
+    iput p1, p0, Ldm5;->c:I
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "EventHandler method cannot be null."
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "EventHandler target cannot be null."
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final c(JLem5;Lfm5;)I
-    .locals 8
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    monitor-enter p0
+    iget-boolean v0, p0, Ldm5;->d:Z
+
+    if-eqz v0, :cond_1
 
     :try_start_0
-    iget-object v0, p0, Ldm5;->_heap:Ljava/lang/Object;
+    iget-object v0, p0, Ldm5;->b:Ljava/lang/reflect/Method;
 
-    sget-object v1, Lhm5;->a:Lkotlinx/coroutines/internal/Symbol;
+    iget-object v1, p0, Ldm5;->a:Ljava/lang/Object;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-ne v0, v1, :cond_0
+    return-void
 
-    monitor-exit p0
+    :catch_0
+    move-exception p1
 
-    const/4 p1, 0x2
+    goto :goto_0
 
-    return p1
+    :catch_1
+    move-exception p1
 
-    :cond_0
-    :try_start_1
-    monitor-enter p3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    goto :goto_1
 
-    :try_start_2
-    invoke-virtual {p3}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->firstImpl()Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+    :goto_0
+    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    check-cast v0, Ldm5;
+    instance-of v0, v0, Ljava/lang/Error;
 
-    sget-object v1, Lfm5;->Y:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, p4}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
-    move-result p4
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    move-result-object p1
 
-    const/4 v1, 0x0
+    check-cast p1, Ljava/lang/Error;
 
-    const/4 v2, 0x1
+    throw p1
 
-    if-eqz p4, :cond_1
-
-    move p4, v2
-
-    goto :goto_0
-
-    :cond_1
-    move p4, v1
-
-    :goto_0
-    if-eqz p4, :cond_2
-
-    :try_start_3
-    monitor-exit p3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    monitor-exit p0
-
-    return v2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_4
-
-    :cond_2
-    const-wide/16 v2, 0x0
-
-    if-nez v0, :cond_3
-
-    :try_start_4
-    iput-wide p1, p3, Lem5;->b:J
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_3
-    iget-wide v4, v0, Ldm5;->a:J
-
-    sub-long v6, v4, p1
-
-    cmp-long p4, v6, v2
-
-    if-ltz p4, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    move-wide p1, v4
+    :cond_0
+    throw p1
 
     :goto_1
-    iget-wide v4, p3, Lem5;->b:J
+    new-instance v0, Ljava/lang/AssertionError;
 
-    sub-long v4, p1, v4
+    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    cmp-long p4, v4, v2
+    throw v0
 
-    if-lez p4, :cond_5
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iput-wide p1, p3, Lem5;->b:J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_5
-    :goto_2
-    iget-wide p1, p0, Ldm5;->a:J
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v4, p3, Lem5;->b:J
+    invoke-virtual {p0}, Ldm5;->toString()Ljava/lang/String;
 
-    sub-long/2addr p1, v4
+    move-result-object v1
 
-    cmp-long p1, p1, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-gez p1, :cond_6
+    const-string v1, " has been invalidated and can no longer handle events."
 
-    iput-wide v4, p0, Ldm5;->a:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_6
-    invoke-virtual {p3, p0}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->addImpl(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :try_start_5
-    monitor-exit p3
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    move-result-object v0
 
-    monitor-exit p0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_1
 
     return v1
 
-    :goto_3
-    :try_start_6
-    monitor-exit p3
-
-    throw p1
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    :goto_4
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
-
-    check-cast p1, Ldm5;
-
-    iget-wide v0, p0, Ldm5;->a:J
-
-    iget-wide v2, p1, Ldm5;->a:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-gez p1, :cond_1
-
-    const/4 p1, -0x1
-
-    return p1
-
     :cond_1
-    const/4 p1, 0x0
+    const-class v2, Ldm5;
 
-    return p1
-.end method
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final dispose()V
-    .locals 3
+    move-result-object v3
 
-    monitor-enter p0
+    if-eq v2, v3, :cond_2
 
-    :try_start_0
-    iget-object v0, p0, Ldm5;->_heap:Ljava/lang/Object;
-
-    sget-object v1, Lhm5;->a:Lkotlinx/coroutines/internal/Symbol;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-ne v0, v1, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    instance-of v2, v0, Lem5;
-
-    if-eqz v2, :cond_1
-
-    check-cast v0, Lem5;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, p0}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->remove(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)Z
+    return v1
 
     :cond_2
-    iput-object v1, p0, Ldm5;->_heap:Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    check-cast p1, Ldm5;
 
-    monitor-exit p0
+    iget-object v2, p0, Ldm5;->b:Ljava/lang/reflect/Method;
 
-    return-void
+    iget-object v3, p1, Ldm5;->b:Ljava/lang/reflect/Method;
 
-    :goto_1
-    monitor-exit p0
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->equals(Ljava/lang/Object;)Z
 
-    throw v0
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Ldm5;->a:Ljava/lang/Object;
+
+    iget-object p1, p1, Ldm5;->a:Ljava/lang/Object;
+
+    if-ne v2, p1, :cond_3
+
+    return v0
+
+    :cond_3
+    return v1
 .end method
 
-.method public final getHeap()Lkotlinx/coroutines/internal/ThreadSafeHeap;
-    .locals 2
-
-    iget-object v0, p0, Ldm5;->_heap:Ljava/lang/Object;
-
-    instance-of v1, v0, Lkotlinx/coroutines/internal/ThreadSafeHeap;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lkotlinx/coroutines/internal/ThreadSafeHeap;
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getIndex()I
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Ldm5;->b:I
+    iget v0, p0, Ldm5;->c:I
 
     return v0
 .end method
 
-.method public final setHeap(Lkotlinx/coroutines/internal/ThreadSafeHeap;)V
+.method public final toString()Ljava/lang/String;
     .locals 2
-
-    iget-object v0, p0, Ldm5;->_heap:Ljava/lang/Object;
-
-    sget-object v1, Lhm5;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object p1, p0, Ldm5;->_heap:Ljava/lang/Object;
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Failed requirement."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final setIndex(I)V
-    .locals 0
-
-    iput p1, p0, Ldm5;->b:I
-
-    return-void
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Delayed[nanos="
+    const-string v1, "[EventHandler "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Ldm5;->a:J
+    iget-object v1, p0, Ldm5;->b:Ljava/lang/reflect/Method;
 
-    const/16 v3, 0x5d
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v2, v3}, Ln0c;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

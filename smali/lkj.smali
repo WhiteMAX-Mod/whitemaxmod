@@ -1,130 +1,55 @@
-.class public abstract Llkj;
+.class public final Llkj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/lang/Long;
+
+.field public final b:Lclj;
+
+.field public final c:Ljava/lang/Boolean;
+
+.field public final d:Ljava/lang/Boolean;
+
+.field public final e:Ljava/lang/Boolean;
+
+
 # direct methods
-.method public static final a(III)I
+.method public synthetic constructor <init>(Lxx6;)V
     .locals 1
 
-    if-lez p2, :cond_4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-lt p0, p1, :cond_0
+    iget-object v0, p1, Lxx6;->a:Ljava/lang/Object;
 
-    goto :goto_3
+    check-cast v0, Ljava/lang/Long;
 
-    :cond_0
-    rem-int v0, p1, p2
+    iput-object v0, p0, Llkj;->a:Ljava/lang/Long;
 
-    if-ltz v0, :cond_1
+    iget-object v0, p1, Lxx6;->b:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lclj;
 
-    :cond_1
-    add-int/2addr v0, p2
+    iput-object v0, p0, Llkj;->b:Lclj;
 
-    :goto_0
-    rem-int/2addr p0, p2
+    iget-object v0, p1, Lxx6;->c:Ljava/lang/Object;
 
-    if-ltz p0, :cond_2
+    check-cast v0, Ljava/lang/Boolean;
 
-    goto :goto_1
+    iput-object v0, p0, Llkj;->c:Ljava/lang/Boolean;
 
-    :cond_2
-    add-int/2addr p0, p2
+    iget-object v0, p1, Lxx6;->d:Ljava/lang/Object;
 
-    :goto_1
-    sub-int/2addr v0, p0
+    check-cast v0, Ljava/lang/Boolean;
 
-    rem-int/2addr v0, p2
+    iput-object v0, p0, Llkj;->d:Ljava/lang/Boolean;
 
-    if-ltz v0, :cond_3
+    iget-object p1, p1, Lxx6;->e:Ljava/lang/Object;
 
-    goto :goto_2
+    check-cast p1, Ljava/lang/Boolean;
 
-    :cond_3
-    add-int/2addr v0, p2
+    iput-object p1, p0, Llkj;->e:Ljava/lang/Boolean;
 
-    :goto_2
-    sub-int/2addr p1, v0
-
-    return p1
-
-    :cond_4
-    if-gez p2, :cond_9
-
-    if-gt p0, p1, :cond_5
-
-    :goto_3
-    return p1
-
-    :cond_5
-    neg-int p2, p2
-
-    rem-int/2addr p0, p2
-
-    if-ltz p0, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    add-int/2addr p0, p2
-
-    :goto_4
-    rem-int v0, p1, p2
-
-    if-ltz v0, :cond_7
-
-    goto :goto_5
-
-    :cond_7
-    add-int/2addr v0, p2
-
-    :goto_5
-    sub-int/2addr p0, v0
-
-    rem-int/2addr p0, p2
-
-    if-ltz p0, :cond_8
-
-    goto :goto_6
-
-    :cond_8
-    add-int/2addr p0, p2
-
-    :goto_6
-    add-int/2addr p0, p1
-
-    return p0
-
-    :cond_9
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Step is zero."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static final b()Le7;
-    .locals 3
-
-    new-instance v0, Le7;
-
-    const/16 v1, 0xb
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Le7;-><init>(IZ)V
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v1, v0, Le7;->b:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method

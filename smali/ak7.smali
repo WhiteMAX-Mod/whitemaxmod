@@ -1,41 +1,58 @@
-.class public abstract Lak7;
-.super Ljava/lang/Object;
+.class public final Lak7;
+.super Lx2;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
-    .locals 0
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    const/4 v1, 0x0
 
-    return-object p0
-.end method
+    invoke-direct {p0, v0, v1}, Lx2;-><init>(ZI)V
 
-.method public static b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
-    .locals 0
+    iput-object p1, p0, Lak7;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    iput-object p2, p0, Lak7;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
+
+# virtual methods
+.method public final getKey()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lak7;->b:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lak7;->c:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    return-void
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

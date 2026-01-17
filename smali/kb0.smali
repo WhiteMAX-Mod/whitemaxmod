@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lui7;
+.implements Lbi7;
 
 
 # instance fields
-.field public final a:Lhag;
+.field public final a:Lvag;
 
 .field public final b:J
 
@@ -17,14 +17,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lhag;JILandroid/graphics/Matrix;)V
+.method public constructor <init>(Lvag;JILandroid/graphics/Matrix;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
-    iput-object p1, p0, Lkb0;->a:Lhag;
+    iput-object p1, p0, Lkb0;->a:Lvag;
 
     iput-wide p2, p0, Lkb0;->b:J
 
@@ -65,28 +65,28 @@
     return v0
 .end method
 
-.method public final b(Lbo5;)V
+.method public final b()Landroid/graphics/Matrix;
     .locals 1
 
-    iget v0, p0, Lkb0;->c:I
-
-    invoke-virtual {p1, v0}, Lbo5;->d(I)V
-
-    return-void
-.end method
-
-.method public final c()Lhag;
-    .locals 1
-
-    iget-object v0, p0, Lkb0;->a:Lhag;
+    iget-object v0, p0, Lkb0;->d:Landroid/graphics/Matrix;
 
     return-object v0
 .end method
 
-.method public final d()Landroid/graphics/Matrix;
+.method public final d(Lfo5;)V
     .locals 1
 
-    iget-object v0, p0, Lkb0;->d:Landroid/graphics/Matrix;
+    iget v0, p0, Lkb0;->c:I
+
+    invoke-virtual {p1, v0}, Lfo5;->d(I)V
+
+    return-void
+.end method
+
+.method public final e()Lvag;
+    .locals 1
+
+    iget-object v0, p0, Lkb0;->a:Lvag;
 
     return-object v0
 .end method
@@ -109,9 +109,9 @@
 
     check-cast p1, Lkb0;
 
-    iget-object v1, p0, Lkb0;->a:Lhag;
+    iget-object v1, p0, Lkb0;->a:Lvag;
 
-    iget-object v3, p1, Lkb0;->a:Lhag;
+    iget-object v3, p1, Lkb0;->a:Lvag;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -160,7 +160,7 @@
 .method public final hashCode()I
     .locals 7
 
-    iget-object v0, p0, Lkb0;->a:Lhag;
+    iget-object v0, p0, Lkb0;->a:Lvag;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -212,7 +212,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lkb0;->a:Lhag;
+    iget-object v1, p0, Lkb0;->a:Lvag;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

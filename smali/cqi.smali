@@ -1,184 +1,31 @@
 .class public final Lcqi;
-.super Lz3h;
+.super Lcom/google/android/gms/common/api/internal/BasePendingResult;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public final b:I
-
-.field public c:I
-
-.field public final d:Ljqi;
+.field public final k:Lcom/google/android/gms/common/api/Status;
 
 
 # direct methods
-.method public constructor <init>(Ljqi;I)V
-    .locals 2
+.method public constructor <init>(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+    const/4 v0, 0x0
 
-    move-result v0
+    invoke-direct {p0, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Lgpi;)V
 
-    const/4 v1, 0x2
-
-    invoke-direct {p0, v1}, Lz3h;-><init>(I)V
-
-    invoke-static {p2, v0}, Leaj;->d(II)V
-
-    iput v0, p0, Lcqi;->b:I
-
-    iput p2, p0, Lcqi;->c:I
-
-    iput-object p1, p0, Lcqi;->d:Ljqi;
+    iput-object p1, p0, Lcqi;->k:Lcom/google/android/gms/common/api/Status;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Ljava/lang/Object;
-    .locals 1
+.method public final g(Lcom/google/android/gms/common/api/Status;)Lwzd;
+    .locals 0
 
-    iget-object v0, p0, Lcqi;->d:Ljqi;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
+    iget-object p1, p0, Lcqi;->k:Lcom/google/android/gms/common/api/Status;
 
     return-object p1
-.end method
-
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final hasNext()Z
-    .locals 2
-
-    iget v0, p0, Lcqi;->c:I
-
-    iget v1, p0, Lcqi;->b:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasPrevious()Z
-    .locals 1
-
-    iget v0, p0, Lcqi;->c:I
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    invoke-virtual {p0}, Lcqi;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcqi;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lcqi;->c:I
-
-    invoke-virtual {p0, v0}, Lcqi;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    iget v0, p0, Lcqi;->c:I
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lcqi;->hasPrevious()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcqi;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lcqi;->c:I
-
-    invoke-virtual {p0, v0}, Lcqi;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget v0, p0, Lcqi;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
 .end method

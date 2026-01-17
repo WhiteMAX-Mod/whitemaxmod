@@ -1,142 +1,92 @@
 .class public final Ltjd;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
-.field public final synthetic o:Ldkd;
+.field public final synthetic a:Landroid/view/View;
+
+.field public final synthetic b:Lpb5;
+
+.field public final synthetic c:F
 
 
 # direct methods
-.method public constructor <init>(Ldkd;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/view/View;Lpb5;F)V
     .locals 0
 
-    iput-object p1, p0, Ltjd;->o:Ldkd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ltjd;->a:Landroid/view/View;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ltjd;->b:Lpb5;
+
+    iput p3, p0, Ltjd;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onTransitionCancel(Landroid/transition/Transition;)V
     .locals 0
 
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltjd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ltjd;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Ltjd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final onTransitionEnd(Landroid/transition/Transition;)V
+    .locals 0
 
-    new-instance p1, Ltjd;
-
-    iget-object v0, p0, Ltjd;->o:Ldkd;
-
-    invoke-direct {p1, v0, p2}, Ltjd;-><init>(Ldkd;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final onTransitionPause(Landroid/transition/Transition;)V
+    .locals 0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    return-void
+.end method
 
-    iget-object p1, p0, Ltjd;->o:Ldkd;
+.method public final onTransitionResume(Landroid/transition/Transition;)V
+    .locals 0
 
-    iget-object p1, p1, Ldkd;->z0:Ljxd;
+    return-void
+.end method
 
-    invoke-virtual {p1}, Ljxd;->getValue()Ljava/lang/Object;
+.method public final onTransitionStart(Landroid/transition/Transition;)V
+    .locals 3
 
-    move-result-object p1
+    new-instance p1, Lzkf;
 
-    check-cast p1, Ljava/lang/Iterable;
+    iget-object v0, p0, Ltjd;->a:Landroid/view/View;
 
-    const/16 v0, 0x8
+    iget-object v1, p0, Ltjd;->b:Lpb5;
 
-    invoke-static {p1, v0}, Lei3;->V(Ljava/lang/Iterable;I)Ljava/util/List;
+    iget v2, p0, Ltjd;->c:F
 
-    move-result-object v1
+    invoke-direct {p1, v0, v1, v2}, Lzkf;-><init>(Ljava/lang/Object;Lw40;F)V
 
-    sget-object p1, Lm4j;->a:Lvcb;
+    const/4 v0, 0x0
 
-    if-nez p1, :cond_0
+    iput v0, p1, Lzkf;->a:F
 
-    goto :goto_0
+    new-instance v0, Lalf;
 
-    :cond_0
-    sget-object v0, Lxk8;->d:Lxk8;
+    invoke-direct {v0, v2}, Lalf;-><init>(F)V
 
-    invoke-virtual {p1, v0}, Lvcb;->b(Lxk8;)Z
+    const/high16 v1, 0x43c80000    # 400.0f
 
-    move-result v2
+    invoke-virtual {v0, v1}, Lalf;->b(F)V
 
-    if-eqz v2, :cond_1
+    const v1, 0x3f2e147b    # 0.68f
 
-    sget-object v5, Lo8;->s0:Lo8;
+    invoke-virtual {v0, v1}, Lalf;->a(F)V
 
-    const/16 v6, 0x18
+    iput-object v0, p1, Lzkf;->m:Lalf;
 
-    const-string v2, ","
+    invoke-virtual {p1}, Lzkf;->g()V
 
-    const-string v3, "["
-
-    const-string v4, "]"
-
-    invoke-static/range {v1 .. v6}, Lei3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Loq6;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "Warmup reactions. defaultReactions = "
-
-    const-string v3, "]"
-
-    invoke-static {v2, v1, v3}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "sdk:ReactionsViewModel"
-
-    invoke-virtual {p1, v0, v3, v1, v2}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Ltjd;->o:Ldkd;
-
-    invoke-virtual {p1}, Ldkd;->v()Lud2;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p1, Lud2;->b:Lzh2;
-
-    iget-wide v0, p1, Lzh2;->j0:J
-
-    :cond_2
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-void
 .end method

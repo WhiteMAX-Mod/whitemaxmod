@@ -4,38 +4,20 @@
 
 
 # direct methods
-.method public static a(Landroid/widget/TextView;)I
+.method public static a(Ljava/lang/String;)Landroid/os/LocaleList;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
+    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
 
-    move-result p0
+    move-result-object p0
 
-    return p0
+    return-object p0
 .end method
 
-.method public static b(Landroid/widget/TextView;IIII)V
+.method public static b(Landroid/widget/TextView;Landroid/os/LocaleList;)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextLocales(Landroid/os/LocaleList;)V
 
     return-void
-.end method
-
-.method public static c(Landroid/widget/TextView;[II)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
-
-    return-void
-.end method
-
-.method public static d(Landroid/widget/TextView;Ljava/lang/String;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFontVariationSettings(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
 .end method

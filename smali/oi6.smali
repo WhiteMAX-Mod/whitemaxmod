@@ -1,95 +1,207 @@
-.class public final Loi6;
+.class public abstract Loi6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
+# static fields
+.field public static final a:Lzo8;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public static final c:Ljava/lang/Object;
 
-.field public final synthetic c:Landroid/content/Context;
-
-.field public final synthetic d:Lzfd;
-
-.field public final synthetic o:I
+.field public static final d:Ladf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Landroid/content/Context;Lzfd;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    iput p5, p0, Loi6;->a:I
+    new-instance v0, Lzo8;
 
-    iput-object p1, p0, Loi6;->b:Ljava/lang/String;
+    const/16 v1, 0x10
 
-    iput-object p2, p0, Loi6;->c:Landroid/content/Context;
+    invoke-direct {v0, v1}, Lzo8;-><init>(I)V
 
-    iput-object p3, p0, Loi6;->d:Lzfd;
+    sput-object v0, Loi6;->a:Lzo8;
 
-    iput p4, p0, Loi6;->o:I
+    new-instance v9, Ll67;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
+
+    invoke-direct {v9, v0}, Ll67;-><init>(I)V
+
+    new-instance v2, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    const/16 v0, 0x2710
+
+    int-to-long v5, v0
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v8, Ljava/util/concurrent/LinkedBlockingDeque;
+
+    invoke-direct {v8}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-direct/range {v2 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
+
+    sput-object v2, Loi6;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Loi6;->c:Ljava/lang/Object;
+
+    new-instance v0, Ladf;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ladf;-><init>(I)V
+
+    sput-object v0, Loi6;->d:Ladf;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;Landroid/content/Context;Lxgd;I)Lni6;
+    .locals 6
 
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 4
+    sget-object v0, Loi6;->a:Lzo8;
 
-    iget v0, p0, Loi6;->a:I
+    invoke-virtual {v0, p0}, Lzo8;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v1
 
+    check-cast v1, Landroid/graphics/Typeface;
+
+    if-eqz v1, :cond_0
+
+    new-instance p0, Lni6;
+
+    invoke-direct {p0, v1}, Lni6;-><init>(Landroid/graphics/Typeface;)V
+
+    return-object p0
+
+    :cond_0
     :try_start_0
-    iget-object v0, p0, Loi6;->b:Ljava/lang/String;
+    invoke-static {p1, p2}, Lu0e;->b(Landroid/content/Context;Lxgd;)Lyi;
 
-    iget-object v1, p0, Loi6;->c:Landroid/content/Context;
-
-    iget-object v2, p0, Loi6;->d:Lzfd;
-
-    iget v3, p0, Loi6;->o:I
-
-    invoke-static {v0, v1, v2, v3}, Lqi6;->a(Ljava/lang/String;Landroid/content/Context;Lzfd;I)Lpi6;
-
-    move-result-object v0
+    move-result-object p2
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object v1, p2, Lyi;->c:Ljava/lang/Object;
+
+    check-cast v1, [Lui6;
+
+    iget p2, p2, Lyi;->b:I
+
+    const/4 v2, -0x3
+
+    const/4 v3, 0x1
+
+    if-eqz p2, :cond_2
+
+    if-eq p2, v3, :cond_1
+
+    :goto_0
+    move v3, v2
+
+    goto :goto_2
+
+    :cond_1
+    const/4 v3, -0x2
+
+    goto :goto_2
+
+    :cond_2
+    if-eqz v1, :cond_6
+
+    array-length p2, v1
+
+    if-nez p2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    array-length p2, v1
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_1
+    if-ge v4, p2, :cond_6
+
+    aget-object v5, v1, v4
+
+    iget v5, v5, Lui6;->e:I
+
+    if-eqz v5, :cond_5
+
+    if-gez v5, :cond_4
 
     goto :goto_0
 
-    :catchall_0
-    new-instance v0, Lpi6;
+    :cond_4
+    move v3, v5
 
-    const/4 v1, -0x3
+    goto :goto_2
 
-    invoke-direct {v0, v1}, Lpi6;-><init>(I)V
+    :cond_5
+    add-int/lit8 v4, v4, 0x1
 
-    :goto_0
-    return-object v0
+    goto :goto_1
 
-    :pswitch_0
-    iget-object v0, p0, Loi6;->d:Lzfd;
+    :cond_6
+    :goto_2
+    if-eqz v3, :cond_7
 
-    iget v1, p0, Loi6;->o:I
+    new-instance p0, Lni6;
 
-    iget-object v2, p0, Loi6;->b:Ljava/lang/String;
+    invoke-direct {p0, v3}, Lni6;-><init>(I)V
 
-    iget-object v3, p0, Loi6;->c:Landroid/content/Context;
+    return-object p0
 
-    invoke-static {v2, v3, v0, v1}, Lqi6;->a(Ljava/lang/String;Landroid/content/Context;Lzfd;I)Lpi6;
+    :cond_7
+    sget-object p2, Lj1h;->a:Ld3;
 
-    move-result-object v0
+    invoke-virtual {p2, p1, v1, p3}, Ld3;->f0(Landroid/content/Context;[Lui6;I)Landroid/graphics/Typeface;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz p1, :cond_8
+
+    invoke-virtual {v0, p0, p1}, Lzo8;->d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p0, Lni6;
+
+    invoke-direct {p0, p1}, Lni6;-><init>(Landroid/graphics/Typeface;)V
+
+    return-object p0
+
+    :cond_8
+    new-instance p0, Lni6;
+
+    invoke-direct {p0, v2}, Lni6;-><init>(I)V
+
+    return-object p0
+
+    :catch_0
+    new-instance p0, Lni6;
+
+    const/4 p1, -0x1
+
+    invoke-direct {p0, p1}, Lni6;-><init>(I)V
+
+    return-object p0
 .end method

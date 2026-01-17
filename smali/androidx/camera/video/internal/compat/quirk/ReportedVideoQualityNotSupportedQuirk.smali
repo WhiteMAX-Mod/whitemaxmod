@@ -176,7 +176,7 @@
 
 
 # virtual methods
-.method public final a(Ln42;Lgc0;)Z
+.method public final a(Le42;Lgc0;)Z
     .locals 3
 
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;->e()Z
@@ -233,7 +233,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-interface {p1}, Ln42;->h()I
+    invoke-interface {p1}, Le42;->h()I
 
     move-result p1
 
@@ -256,7 +256,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-interface {p1}, Ln42;->h()I
+    invoke-interface {p1}, Le42;->h()I
 
     move-result p1
 

@@ -1,49 +1,130 @@
-.class public abstract Lthi;
-.super Ljava/lang/Object;
+.class public Lthi;
+.super Lshi;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a(Landroidx/work/WorkRequest;)V
-    .locals 6
+# instance fields
+.field public n:Lcs7;
 
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+.field public o:Lcs7;
 
-    move-result-object v4
+.field public p:Lcs7;
 
-    move-object v1, p0
 
-    check-cast v1, Lwhi;
+# direct methods
+.method public constructor <init>(Lxhi;Landroid/view/WindowInsets;)V
+    .locals 0
 
-    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
+    invoke-direct {p0, p1, p2}, Lshi;-><init>(Lxhi;Landroid/view/WindowInsets;)V
 
-    move-result p1
+    const/4 p1, 0x0
 
-    if-nez p1, :cond_0
+    iput-object p1, p0, Lthi;->n:Lcs7;
 
-    new-instance v0, Lkhi;
+    iput-object p1, p0, Lthi;->o:Lcs7;
 
-    sget-object v3, Lpo5;->b:Lpo5;
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lkhi;-><init>(Lwhi;Ljava/lang/String;Lpo5;Ljava/util/List;I)V
-
-    invoke-virtual {v0}, Lkhi;->e()Lnpb;
+    iput-object p1, p0, Lthi;->p:Lcs7;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "enqueue needs at least one WorkRequest."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method public abstract b(Ljava/lang/String;ILbyb;)Lnpb;
+
+# virtual methods
+.method public g()Lcs7;
+    .locals 1
+
+    iget-object v0, p0, Lthi;->o:Lcs7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lqhi;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lnvh;->q(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcs7;->c(Landroid/graphics/Insets;)Lcs7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lthi;->o:Lcs7;
+
+    :cond_0
+    iget-object v0, p0, Lthi;->o:Lcs7;
+
+    return-object v0
+.end method
+
+.method public i()Lcs7;
+    .locals 1
+
+    iget-object v0, p0, Lthi;->n:Lcs7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lqhi;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lnvh;->u(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcs7;->c(Landroid/graphics/Insets;)Lcs7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lthi;->n:Lcs7;
+
+    :cond_0
+    iget-object v0, p0, Lthi;->n:Lcs7;
+
+    return-object v0
+.end method
+
+.method public k()Lcs7;
+    .locals 1
+
+    iget-object v0, p0, Lthi;->p:Lcs7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lqhi;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lnvh;->b(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcs7;->c(Landroid/graphics/Insets;)Lcs7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lthi;->p:Lcs7;
+
+    :cond_0
+    iget-object v0, p0, Lthi;->p:Lcs7;
+
+    return-object v0
+.end method
+
+.method public l(IIII)Lxhi;
+    .locals 1
+
+    iget-object v0, p0, Lqhi;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0, p1, p2, p3, p4}, Lnvh;->i(Landroid/view/WindowInsets;IIII)Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-static {p2, p1}, Lxhi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lxhi;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public r(Lcs7;)V
+    .locals 0
+
+    return-void
 .end method

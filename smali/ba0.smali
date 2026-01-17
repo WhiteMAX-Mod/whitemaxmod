@@ -69,7 +69,7 @@
 
     div-float/2addr p1, p2
 
-    invoke-static {p1, v3, v6}, Lte8;->b(FFF)F
+    invoke-static {p1, v3, v6}, Lfe8;->b(FFF)F
 
     move-result p1
 
@@ -91,7 +91,7 @@
 
     div-float/2addr p1, p2
 
-    invoke-static {p1, v3, v6}, Lte8;->b(FFF)F
+    invoke-static {p1, v3, v6}, Lfe8;->b(FFF)F
 
     move-result p1
 

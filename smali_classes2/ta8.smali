@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnb8;
+.implements Lxa8;
 
 
 # static fields
@@ -17,26 +17,32 @@
     .end annotation
 .end field
 
-.field public static final a:Lta8;
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lta8;
+    new-instance v0, Lj58;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x15
 
-    sput-object v0, Lta8;->a:Lta8;
-
-    new-instance v0, Ly58;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Ly58;-><init>(I)V
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
 
     sput-object v0, Lta8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lta8;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -51,50 +57,12 @@
     return v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lta8;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x2f7912c2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ErrorBrokenLink"
-
-    return-object v0
-.end method
-
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    const/4 p2, 0x1
+    iget-object p2, p0, Lta8;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return-void
 .end method

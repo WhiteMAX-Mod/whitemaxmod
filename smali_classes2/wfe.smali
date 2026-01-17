@@ -1,24 +1,24 @@
-.class public final synthetic Lwfe;
+.class public final Lwfe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
+.field public final synthetic b:Lr5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
+.method public synthetic constructor <init>(Lr5;I)V
     .locals 0
 
     iput p2, p0, Lwfe;->a:I
 
-    iput-object p1, p0, Lwfe;->b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
+    iput-object p1, p0, Lwfe;->b:Lr5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,224 +27,214 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 7
 
-    iget p1, p0, Lwfe;->a:I
+    iget v0, p0, Lwfe;->a:I
 
-    iget-object v0, p0, Lwfe;->b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
+    const/16 v1, 0x46
 
-    packed-switch p1, :pswitch_data_0
+    const/16 v2, 0x4e
 
-    iget-boolean p1, v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->X:Z
+    const/16 v3, 0xa7
 
-    if-eqz p1, :cond_4
+    iget-object v4, p0, Lwfe;->b:Lr5;
 
-    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0()Lhge;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
-
-    iget-object p1, p1, Lhge;->d:Lcu2;
-
-    iget-object p1, p1, Lcu2;->a:Ljava/lang/Object;
-
-    move-object v1, p1
-
-    check-cast v1, Lfu2;
-
-    iget-object p1, v1, Lfu2;->f:Ljava/util/ArrayList;
-
-    iget v0, v1, Lfu2;->d:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-gt v0, v2, :cond_2
-
-    iget v0, v1, Lfu2;->d:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, v1, Lfu2;->d:I
-
-    iget-object v2, v1, Lfu2;->g:Lcu2;
-
-    if-eqz v2, :cond_0
-
-    iget v3, v1, Lfu2;->k:I
-
-    invoke-virtual {v2, v0, v3}, Lcu2;->b(II)V
-
-    :cond_0
-    iget-object v0, v1, Lfu2;->g:Lcu2;
-
-    if-eqz v0, :cond_1
-
-    iget v2, v1, Lfu2;->d:I
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ltq9;
-
-    invoke-virtual {v0, v2}, Lcu2;->c(Ltq9;)V
-
-    :cond_1
-    iget v0, v1, Lfu2;->d:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-gt v0, v2, :cond_2
-
-    iget-object v0, v1, Lfu2;->g:Lcu2;
-
-    if-eqz v0, :cond_2
-
-    iget v0, v1, Lfu2;->d:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v4, v3}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ltq9;
+    check-cast v0, Lplf;
 
-    :cond_2
-    iget-object v2, v1, Lfu2;->c:Ljava/lang/String;
+    iget-object v0, v0, Lplf;->f:Ln8g;
 
-    iget-boolean v0, v1, Lfu2;->h:Z
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    if-eqz v0, :cond_4
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    check-cast v0, Ljavax/net/ssl/SSLContext;
 
-    move-result p1
-
-    iget v0, v1, Lfu2;->d:I
-
-    sub-int/2addr p1, v0
-
-    const/4 v0, 0x5
-
-    if-ge p1, v0, :cond_4
-
-    iget-wide v3, v1, Lfu2;->j:J
-
-    const-wide/16 v5, 0x0
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_4
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const-string p1, "fu2"
-
-    const-string v0, "Search for next messages"
-
-    invoke-static {p1, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, v1, Lfu2;->h:Z
-
-    iget-wide v3, v1, Lfu2;->j:J
-
-    iget-object p1, v1, Lfu2;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v0, Ldu2;
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v0 .. v5}, Ldu2;-><init>(Lfu2;Ljava/lang/String;JLkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v2, v2, v0, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    :cond_4
-    :goto_0
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-boolean p1, v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Y:Z
+    invoke-virtual {v4, v3}, Lr5;->c(I)Ljava/lang/Object;
 
-    if-eqz p1, :cond_6
+    move-result-object v0
 
-    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0()Lhge;
+    check-cast v0, Lplf;
 
-    move-result-object p1
+    iget-object v0, v0, Lplf;->f:Ln8g;
 
-    iget-object p1, p1, Lhge;->d:Lcu2;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p1, Lcu2;->a:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p1, Lfu2;
+    check-cast v0, Ljavax/net/ssl/SSLContext;
 
-    iget-object v0, p1, Lfu2;->f:Ljava/util/ArrayList;
+    return-object v0
 
-    iget v1, p1, Lfu2;->d:I
+    :pswitch_1
+    invoke-virtual {v4, v2}, Lr5;->c(I)Ljava/lang/Object;
 
-    add-int/lit8 v2, v1, -0x1
+    move-result-object v0
 
-    if-ltz v2, :cond_6
+    check-cast v0, Lyab;
 
-    add-int/lit8 v1, v1, -0x1
+    invoke-virtual {v0}, Lyab;->c()Ljava/util/concurrent/ExecutorService;
 
-    iput v1, p1, Lfu2;->d:I
+    move-result-object v0
 
-    iget-object v2, p1, Lfu2;->g:Lcu2;
+    return-object v0
 
-    if-eqz v2, :cond_5
+    :pswitch_2
+    invoke-virtual {v4, v2}, Lr5;->c(I)Ljava/lang/Object;
 
-    iget v3, p1, Lfu2;->k:I
+    move-result-object v0
 
-    invoke-virtual {v2, v1, v3}, Lcu2;->b(II)V
+    move-object v1, v0
 
-    :cond_5
-    iget-object v1, p1, Lfu2;->g:Lcu2;
+    check-cast v1, Lyab;
 
-    if-eqz v1, :cond_6
+    sget-object v0, Lyab;->q:[Lz28;
 
-    iget p1, p1, Lfu2;->d:I
+    const/4 v5, 0x5
 
-    add-int/lit8 p1, p1, -0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const-string v3, "upload-video"
 
-    move-result-object p1
+    const/4 v4, 0x2
 
-    check-cast p1, Ltq9;
+    const/4 v6, 0x1
 
-    invoke-virtual {v1, p1}, Lcu2;->c(Ltq9;)V
+    invoke-virtual/range {v1 .. v6}, Lyab;->f(ILjava/lang/String;IIZ)Ljava/util/concurrent/ExecutorService;
 
-    :cond_6
-    return-void
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    const/16 v0, 0x33
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    const/16 v0, 0xe1
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_5
+    const/16 v0, 0x110
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_6
+    const/16 v0, 0x117
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_7
+    const/16 v0, 0x34
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_8
+    invoke-virtual {v4, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_9
+    const/16 v0, 0x93
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_a
+    const/16 v0, 0xb8
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_b
+    const/16 v0, 0xe6
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_c
+    const/16 v0, 0x116
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_d
+    invoke-virtual {v4, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_e
+    const/16 v0, 0xd
+
+    invoke-virtual {v4, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

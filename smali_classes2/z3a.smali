@@ -1,5 +1,5 @@
 .class public abstract Lz3a;
-.super Ljja;
+.super Lhja;
 .source "SourceFile"
 
 
@@ -7,9 +7,9 @@
 .method public constructor <init>()V
     .locals 1
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    invoke-direct {p0, v0}, Ljja;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method

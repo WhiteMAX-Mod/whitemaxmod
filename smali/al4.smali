@@ -1,283 +1,42 @@
-.class public abstract Lal4;
+.class public final Lal4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lty6;
 
-# static fields
-.field public static final a:Ljava/util/LinkedHashMap;
+
+# instance fields
+.field public final a:Lc01;
+
+.field public final b:Lzi3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 14
+.method public constructor <init>(Lc01;Lzi3;)V
+    .locals 0
 
-    new-instance v0, Lwo6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x4
+    iput-object p1, p0, Lal4;->a:Lc01;
 
-    invoke-direct {v0, v1}, Lwo6;-><init>(I)V
-
-    const-string v1, "Start"
-
-    invoke-static {v1}, Lal7;->m(Ljava/lang/Object;)Lltd;
-
-    move-result-object v1
-
-    const-string v2, "TransformerInternal"
-
-    invoke-virtual {v0, v2, v1}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v1, "InputFormat"
-
-    const-string v2, "OutputFormat"
-
-    invoke-static {v1, v2}, Lal7;->n(Ljava/lang/Object;Ljava/lang/Object;)Lltd;
-
-    move-result-object v3
-
-    const-string v4, "AssetLoader"
-
-    invoke-virtual {v0, v4, v3}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v9, "InputEnded"
-
-    const-string v10, "OutputEnded"
-
-    const-string v5, "InputFormat"
-
-    const-string v6, "OutputFormat"
-
-    const-string v7, "AcceptedInput"
-
-    const-string v8, "ProducedOutput"
-
-    invoke-static/range {v5 .. v10}, Lal7;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lltd;
-
-    move-result-object v3
-
-    const-string v4, "AudioDecoder"
-
-    invoke-virtual {v0, v4, v3}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v3, "RegisterNewInputStream"
-
-    const-string v4, "OutputEnded"
-
-    invoke-static {v3, v4}, Lal7;->n(Ljava/lang/Object;Ljava/lang/Object;)Lltd;
-
-    move-result-object v5
-
-    const-string v6, "AudioGraph"
-
-    invoke-virtual {v0, v6, v5}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v5, "ProducedOutput"
-
-    filled-new-array {v3, v2, v5}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const/4 v3, 0x3
-
-    invoke-static {v3, v2}, Lhcj;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v3, v2}, Lal7;->h(I[Ljava/lang/Object;)Lltd;
-
-    move-result-object v2
-
-    const-string v3, "AudioMixer"
-
-    invoke-virtual {v0, v3, v2}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v9, "InputEnded"
-
-    const-string v10, "OutputEnded"
-
-    const-string v5, "InputFormat"
-
-    const-string v6, "OutputFormat"
-
-    const-string v7, "AcceptedInput"
-
-    const-string v8, "ProducedOutput"
-
-    invoke-static/range {v5 .. v10}, Lal7;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lltd;
-
-    move-result-object v2
-
-    const-string v3, "AudioEncoder"
-
-    invoke-virtual {v0, v3, v2}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v9, "InputEnded"
-
-    const-string v10, "OutputEnded"
-
-    const-string v5, "InputFormat"
-
-    const-string v6, "OutputFormat"
-
-    const-string v7, "AcceptedInput"
-
-    const-string v8, "ProducedOutput"
-
-    invoke-static/range {v5 .. v10}, Lal7;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lltd;
-
-    move-result-object v2
-
-    const-string v3, "VideoDecoder"
-
-    invoke-virtual {v0, v3, v2}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v5, "RegisterNewInputStream"
-
-    const-string v6, "SurfaceTextureInput"
-
-    const-string v7, "QueueFrame"
-
-    const-string v8, "QueueBitmap"
-
-    const-string v9, "QueueTexture"
-
-    const-string v10, "RenderedToOutputSurface"
-
-    const-string v11, "OutputTextureRendered"
-
-    const-string v12, "ReceiveEndOfAllInput"
-
-    const-string v13, "SignalEnded"
-
-    filled-new-array/range {v5 .. v13}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const/16 v3, 0x9
-
-    invoke-static {v3, v2}, Lhcj;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v3, v2}, Lal7;->h(I[Ljava/lang/Object;)Lltd;
-
-    move-result-object v2
-
-    const-string v3, "VideoFrameProcessor"
-
-    invoke-virtual {v0, v3, v2}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v2, "SurfaceTextureTransformFix"
-
-    const-string v3, "SignalEOS"
-
-    invoke-static {v3, v2}, Lal7;->n(Ljava/lang/Object;Ljava/lang/Object;)Lltd;
-
-    move-result-object v2
-
-    const-string v5, "ExternalTextureManager"
-
-    invoke-virtual {v0, v5, v2}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v2, "BitmapTextureManager"
-
-    invoke-static {v3}, Lal7;->m(Ljava/lang/Object;)Lltd;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v2, v5}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v2, "TexIdTextureManager"
-
-    invoke-static {v3}, Lal7;->m(Ljava/lang/Object;)Lltd;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v2, v3}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v2, "OutputTextureRendered"
-
-    invoke-static {v2}, Lal7;->m(Ljava/lang/Object;)Lltd;
-
-    move-result-object v2
-
-    const-string v3, "Compositor"
-
-    invoke-virtual {v0, v3, v2}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v9, "InputEnded"
-
-    const-string v10, "OutputEnded"
-
-    const-string v5, "InputFormat"
-
-    const-string v6, "OutputFormat"
-
-    const-string v7, "AcceptedInput"
-
-    const-string v8, "ProducedOutput"
-
-    invoke-static/range {v5 .. v10}, Lal7;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lltd;
-
-    move-result-object v2
-
-    const-string v3, "VideoEncoder"
-
-    invoke-virtual {v0, v3, v2}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    const-string v2, "AcceptedInput"
-
-    const-string v3, "InputEnded"
-
-    const-string v5, "CanWriteSample"
-
-    invoke-static {v1, v5, v2, v3, v4}, Lal7;->o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lltd;
-
-    move-result-object v1
-
-    const-string v2, "Muxer"
-
-    invoke-virtual {v0, v2, v1}, Lwo6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lwo6;
-
-    invoke-virtual {v0}, Lwo6;->w()Lel7;
-
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    sput-object v0, Lal4;->a:Ljava/util/LinkedHashMap;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iput-object p2, p0, Lal4;->b:Lzi3;
 
     return-void
 .end method
 
-.method public static declared-synchronized a()V
+
+# virtual methods
+.method public final a(Landroid/content/Context;Z)Laz6;
     .locals 2
 
-    const-class v0, Lal4;
+    new-instance p2, Lbl4;
 
-    monitor-enter v0
+    iget-object v0, p0, Lal4;->a:Lc01;
 
-    :try_start_0
-    const-class v1, Lal4;
+    iget-object v1, p0, Lal4;->b:Lzi3;
 
-    monitor-enter v1
+    invoke-direct {p2, p1, v0, v1}, Lbl4;-><init>(Landroid/content/Context;Lc01;Lzi3;)V
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_0
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
+    return-object p2
 .end method

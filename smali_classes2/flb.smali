@@ -1,146 +1,75 @@
 .class public final Lflb;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:F
+.field public X:Ljava/lang/String;
 
-.field public final b:I
+.field public Y:Ljava/io/File;
+
+.field public Z:Lz8b;
+
+.field public d:Ljava/io/File;
+
+.field public o:Ln6g;
+
+.field public t0:Ldlb;
+
+.field public u0:Z
+
+.field public synthetic v0:Ljava/lang/Object;
+
+.field public final synthetic w0:Lklb;
+
+.field public x0:I
 
 
 # direct methods
-.method public constructor <init>(IF)V
+.method public constructor <init>(Lklb;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lflb;->w0:Lklb;
 
-    iput p2, p0, Lflb;->a:F
-
-    iput p1, p0, Lflb;->b:I
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lflb;->v0:Ljava/lang/Object;
 
-    goto :goto_1
+    iget p1, p0, Lflb;->x0:I
 
-    :cond_0
-    instance-of v0, p1, Lflb;
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_1
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lflb;->x0:I
 
-    :cond_1
-    check-cast p1, Lflb;
+    const/4 v5, 0x0
 
-    iget v0, p0, Lflb;->a:F
+    const/4 v6, 0x0
 
-    iget v1, p1, Lflb;->a:F
+    iget-object v0, p0, Lflb;->w0:Lklb;
 
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    invoke-static {v0, v0}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lflb;->b:I
-
-    iget p1, p1, Lflb;->b:I
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lflb;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1}, Lqi3;->b(IFI)I
+    const/4 v3, 0x0
 
-    move-result v0
+    const/4 v4, 0x0
 
-    iget v1, p0, Lflb;->b:I
+    move-object v7, p0
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual/range {v0 .. v7}, Lklb;->b(Ljava/lang/String;Ljava/io/File;Ln6g;Ljava/lang/String;ZLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "IndicatorConfig(topCorners="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lflb;->a:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bottomCorners=0.0, height="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lflb;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

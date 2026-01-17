@@ -4,90 +4,213 @@
 
 
 # instance fields
-.field public a:F
+.field public final a:Ljava/util/List;
 
-.field public b:F
+.field public final b:Lrp7;
 
-.field public c:Lg1d;
-
-.field public d:Z
+.field public final c:Ltwd;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    sget-object p1, Lg1d;->X:Lg1d;
-
-    iput-object p1, p0, Lk20;->c:Lg1d;
-
-    return-void
-
-    .line 8
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    sget-object p1, Lg1d;->X:Lg1d;
-
-    iput-object p1, p0, Lk20;->c:Lg1d;
-
-    const/4 p1, 0x0
-
-    .line 10
-    iput p1, p0, Lk20;->a:F
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    .line 11
-    iput p1, p0, Lk20;->b:F
-
-    const/4 p1, 0x0
-
-    .line 12
-    iput-boolean p1, p0, Lk20;->d:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(Lk20;)V
+.method public constructor <init>(Lj20;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iget v0, p1, Lk20;->a:F
+    iget-object v0, p1, Lj20;->a:Ljava/util/List;
 
-    iput v0, p0, Lk20;->a:F
+    iput-object v0, p0, Lk20;->a:Ljava/util/List;
 
-    .line 3
-    iget v0, p1, Lk20;->b:F
+    iget-object v0, p1, Lj20;->b:Lrp7;
 
-    iput v0, p0, Lk20;->b:F
+    iput-object v0, p0, Lk20;->b:Lrp7;
 
-    .line 4
-    iget-object v0, p1, Lk20;->c:Lg1d;
+    iget-object p1, p1, Lj20;->c:Ltwd;
 
-    iput-object v0, p0, Lk20;->c:Lg1d;
-
-    .line 5
-    iget-boolean p1, p1, Lk20;->d:Z
-
-    iput-boolean p1, p0, Lk20;->d:Z
+    iput-object p1, p0, Lk20;->c:Ltwd;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(I)Li20;
+    .locals 2
+
+    if-ltz p1, :cond_1
+
+    iget-object v0, p0, Lk20;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lt p1, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Li20;
+
+    return-object p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final b()I
+    .locals 1
+
+    iget-object v0, p0, Lk20;->a:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c(Le20;)I
+    .locals 3
+
+    iget-object v0, p0, Lk20;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Li20;
+
+    iget-object v2, v2, Li20;->a:Le20;
+
+    if-ne v2, p1, :cond_0
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
+.end method
+
+.method public final d(Ljava/lang/String;)Li20;
+    .locals 3
+
+    iget-object v0, p0, Lk20;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Li20;
+
+    iget-object v2, v1, Li20;->r:Ljava/lang/String;
+
+    invoke-static {p1, v2}, Lzsi;->c(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    return-object v1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final e(Le20;)Li20;
+    .locals 3
+
+    iget-object v0, p0, Lk20;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Li20;
+
+    iget-object v2, v1, Li20;->a:Le20;
+
+    if-ne v2, p1, :cond_0
+
+    return-object v1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final f()Lj20;
+    .locals 3
+
+    new-instance v0, Lj20;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget-object v2, p0, Lk20;->a:Ljava/util/List;
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object v1, v0, Lj20;->a:Ljava/util/List;
+
+    iget-object v1, p0, Lk20;->b:Lrp7;
+
+    iput-object v1, v0, Lj20;->b:Lrp7;
+
+    return-object v0
 .end method

@@ -3032,11 +3032,6 @@
         <item name="android:src">@drawable/ic_more_vertical_24</item>
         <item name="android:tint">@color/white</item>
     </style>
-    <style name="MessageActionButton">
-        <item name="android:layout_width">58.0dip</item>
-        <item name="android:layout_height">48.0dip</item>
-        <item name="android:scaleType">center</item>
-    </style>
     <style name="OneMe.Launch" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/launch_background</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
@@ -3289,15 +3284,11 @@
     <style name="ScheduledSendPickerDialog" />
     <style name="ScheduledSendPickerDialog.DateTimePicker" parent="@style/ScheduledSendPickerDialog" />
     <style name="ScheduledSendPickerDialog.DateTimePicker.Text" parent="@style/ScheduledSendPickerDialog.DateTimePicker">
-        <item name="android:textSize">18.0sp</item>
+        <item name="android:textSize">20.0dip</item>
         <item name="android:gravity">center</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textAlignment">center</item>
-    </style>
-    <style name="ScheduledSendPickerDialog.TextAppearance" parent="@style/ScheduledSendPickerDialog" />
-    <style name="ScheduledSendPickerDialog.TextAppearance.Title" parent="@style/ScheduledSendPickerDialog.TextAppearance">
-        <item name="android:textSize">18.0sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:fontWeight">@integer/font_weight_medium</item>
     </style>
     <style name="ShapeAppearance.M3.Comp.Badge.Large.Shape" parent="@style/ShapeAppearance.M3.Sys.Shape.Corner.Full" />
     <style name="ShapeAppearance.M3.Comp.Badge.Shape" parent="@style/ShapeAppearance.M3.Sys.Shape.Corner.Full" />
@@ -4715,15 +4706,6 @@
         <item name="lineHeight">22.0dip</item>
     </style>
     <style name="UiUtils" />
-    <style name="UiUtils.BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/bottom_sheet_background_shape_rounded</item>
-    </style>
-    <style name="UiUtils.LightBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
-        <item name="android:windowIsFloating">false</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="bottomSheetStyle">@style/UiUtils.BottomSheet</item>
-        <item name="colorPrimary">#ff697cff</item>
-    </style>
     <style name="UiUtils.TextAppearance" parent="@style/UiUtils" />
     <style name="UiUtils.TextAppearance.LongRoundedTitleSubtitleButton" parent="@style/UiUtils.TextAppearance" />
     <style name="UiUtils.TextAppearance.LongRoundedTitleSubtitleButton.Subtitle" parent="@style/UiUtils.TextAppearance.LongRoundedTitleSubtitleButton">

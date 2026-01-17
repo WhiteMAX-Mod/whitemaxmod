@@ -8,7 +8,7 @@
 
 .field public final b:Ljava/lang/Integer;
 
-.field public final c:Ldi5;
+.field public final c:Lgi5;
 
 .field public final d:J
 
@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;Ldi5;JJLjava/util/HashMap;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;Lgi5;JJLjava/util/HashMap;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +27,7 @@
 
     iput-object p2, p0, Lcb0;->b:Ljava/lang/Integer;
 
-    iput-object p3, p0, Lcb0;->c:Ldi5;
+    iput-object p3, p0, Lcb0;->c:Lgi5;
 
     iput-wide p4, p0, Lcb0;->d:J
 
@@ -88,28 +88,28 @@
     return p1
 .end method
 
-.method public final c()Lh40;
+.method public final c()Lz8b;
     .locals 3
 
-    new-instance v0, Lh40;
+    new-instance v0, Lz8b;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lz8b;-><init>()V
 
     iget-object v1, p0, Lcb0;->a:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    iput-object v1, v0, Lh40;->a:Ljava/lang/Object;
+    iput-object v1, v0, Lz8b;->b:Ljava/lang/Object;
 
     iget-object v1, p0, Lcb0;->b:Ljava/lang/Integer;
 
-    iput-object v1, v0, Lh40;->b:Ljava/lang/Object;
+    iput-object v1, v0, Lz8b;->c:Ljava/lang/Object;
 
-    iget-object v1, p0, Lcb0;->c:Ldi5;
+    iget-object v1, p0, Lcb0;->c:Lgi5;
 
     if-eqz v1, :cond_0
 
-    iput-object v1, v0, Lh40;->c:Ljava/lang/Object;
+    iput-object v1, v0, Lz8b;->d:Ljava/lang/Object;
 
     iget-wide v1, p0, Lcb0;->d:J
 
@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lh40;->d:Ljava/lang/Object;
+    iput-object v1, v0, Lz8b;->e:Ljava/lang/Object;
 
     iget-wide v1, p0, Lcb0;->e:J
 
@@ -125,7 +125,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lh40;->e:Ljava/lang/Object;
+    iput-object v1, v0, Lz8b;->f:Ljava/lang/Object;
 
     new-instance v1, Ljava/util/HashMap;
 
@@ -133,7 +133,7 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    iput-object v1, v0, Lh40;->f:Ljava/lang/Object;
+    iput-object v1, v0, Lz8b;->g:Ljava/lang/Object;
 
     return-object v0
 
@@ -202,11 +202,11 @@
     if-eqz v1, :cond_2
 
     :goto_0
-    iget-object v1, p0, Lcb0;->c:Ldi5;
+    iget-object v1, p0, Lcb0;->c:Lgi5;
 
-    iget-object v3, p1, Lcb0;->c:Ldi5;
+    iget-object v3, p1, Lcb0;->c:Lgi5;
 
-    invoke-virtual {v1, v3}, Ldi5;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lgi5;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -277,9 +277,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lcb0;->c:Ldi5;
+    iget-object v2, p0, Lcb0;->c:Lgi5;
 
-    invoke-virtual {v2}, Ldi5;->hashCode()I
+    invoke-virtual {v2}, Lgi5;->hashCode()I
 
     move-result v2
 
@@ -349,7 +349,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcb0;->c:Ldi5;
+    iget-object v1, p0, Lcb0;->c:Lgi5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

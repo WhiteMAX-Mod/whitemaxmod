@@ -1,112 +1,240 @@
-.class public final Lku9;
+.class public interface abstract Lku9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru9;
-
-
-# instance fields
-.field public final a:J
-
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public static a(Lku9;J)Ljava/util/List;
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p0, Liv9;
 
-    iput-wide p1, p0, Lku9;->a:J
+    iget-object v0, p0, Liv9;->a:Lb2e;
 
-    return-void
+    new-instance v1, Llu9;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p1, p2, p0, v2}, Llu9;-><init>(JLiv9;I)V
+
+    const/4 p0, 0x1
+
+    const/4 p1, 0x0
+
+    invoke-static {v0, p0, p1, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/List;
+
+    return-object p0
 .end method
 
+.method public static b(Lku9;Lxm9;Lip9;JLjava/lang/Long;Ljava/lang/Long;I)Lip9;
+    .locals 23
 
-# virtual methods
-.method public final a()Z
-    .locals 1
+    move-object/from16 v0, p1
 
-    const/4 v0, 0x1
+    move-object/from16 v1, p2
 
-    return v0
-.end method
+    iget-object v2, v0, Lxm9;->g:Ljava/lang/String;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    and-int/lit8 v3, p7, 0x8
 
-    const/4 v0, 0x1
+    const/4 v4, 0x0
 
-    if-ne p0, p1, :cond_0
+    if-eqz v3, :cond_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lku9;
-
-    if-nez v1, :cond_1
+    move-object v3, v4
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lku9;
-
-    iget-wide v1, p0, Lku9;->a:J
-
-    iget-wide v3, p1, Lku9;->a:J
-
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_2
+    :cond_0
+    move-object/from16 v3, p5
 
     :goto_0
-    const/4 p1, 0x0
+    and-int/lit8 v5, p7, 0x10
 
-    return p1
+    if-eqz v5, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move-object/from16 v4, p6
+
+    :goto_1
+    iget-object v5, v1, Lip9;->h:Ljava/lang/String;
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    if-nez v6, :cond_4
 
     :cond_2
-    return v0
-.end method
+    if-eqz v2, :cond_4
 
-.method public final hashCode()I
-    .locals 2
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    iget-wide v0, p0, Lku9;->a:J
+    move-result v6
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    if-nez v6, :cond_3
 
-    move-result v0
+    goto :goto_2
 
-    mul-int/lit8 v0, v0, 0x1f
+    :cond_3
+    move-object v10, v2
 
-    const/4 v1, 0x1
+    goto :goto_3
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    :cond_4
+    :goto_2
+    move-object v10, v5
 
-    move-result v1
+    :goto_3
+    iget-wide v5, v1, Lip9;->l:J
 
-    add-int/2addr v1, v0
+    const-wide/16 v7, 0x0
 
-    return v1
-.end method
+    cmp-long v2, v5, v7
 
-.method public final j()J
-    .locals 2
+    if-nez v2, :cond_5
 
-    iget-wide v0, p0, Lku9;->a:J
+    iget-wide v5, v0, Lxm9;->p:J
 
-    return-wide v0
-.end method
+    :cond_5
+    move-wide v13, v5
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget v2, v1, Lip9;->k:I
 
-    const-string v0, "OnUnsupportedAttachButtonClick(messageId="
+    if-nez v2, :cond_6
 
-    const-string v1, ", isSkippableForMultiSelect=true)"
+    iget v2, v0, Lxm9;->o:I
 
-    iget-wide v2, p0, Lku9;->a:J
+    :cond_6
+    move v12, v2
 
-    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-wide v5, v1, Lip9;->n:J
+
+    cmp-long v2, v5, v7
+
+    if-nez v2, :cond_7
+
+    iget-wide v5, v0, Lxm9;->r:J
+
+    :cond_7
+    move-wide/from16 v16, v5
+
+    iget-object v2, v1, Lip9;->p:Ljava/lang/String;
+
+    if-nez v2, :cond_8
+
+    iget-object v2, v0, Lxm9;->t:Ljava/lang/String;
+
+    :cond_8
+    move-object/from16 v19, v2
+
+    iget-object v2, v1, Lip9;->o:Ljava/lang/String;
+
+    if-nez v2, :cond_9
+
+    iget-object v2, v0, Lxm9;->s:Ljava/lang/String;
+
+    :cond_9
+    move-object/from16 v18, v2
+
+    iget-object v2, v1, Lip9;->q:Ljava/lang/String;
+
+    if-nez v2, :cond_a
+
+    iget-object v2, v0, Lxm9;->u:Ljava/lang/String;
+
+    :cond_a
+    move-object/from16 v20, v2
+
+    iget v2, v1, Lip9;->r:I
+
+    if-nez v2, :cond_b
+
+    iget v2, v0, Lxm9;->J:I
+
+    :cond_b
+    move/from16 v21, v2
+
+    iget-object v2, v1, Lip9;->j:Ltp9;
+
+    if-nez v2, :cond_c
+
+    iget-object v2, v0, Lxm9;->E:Ltp9;
+
+    :cond_c
+    move-object v11, v2
+
+    iget-boolean v2, v0, Lxm9;->q:Z
+
+    if-eqz v2, :cond_d
+
+    iget-boolean v2, v1, Lip9;->m:Z
+
+    if-eqz v2, :cond_d
+
+    const/4 v2, 0x1
+
+    :goto_4
+    move v15, v2
+
+    goto :goto_5
+
+    :cond_d
+    const/4 v2, 0x0
+
+    goto :goto_4
+
+    :goto_5
+    if-eqz v3, :cond_e
+
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    goto :goto_6
+
+    :cond_e
+    iget-wide v2, v1, Lip9;->b:J
+
+    :goto_6
+    if-eqz v4, :cond_f
+
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    :goto_7
+    move-wide v8, v4
+
+    goto :goto_8
+
+    :cond_f
+    iget-wide v4, v1, Lip9;->g:J
+
+    goto :goto_7
+
+    :goto_8
+    iget-wide v4, v0, Lxm9;->a:J
+
+    const v22, 0x1fc0134
+
+    move-wide v6, v4
+
+    move-wide v4, v2
+
+    move-wide v2, v6
+
+    move-wide/from16 v6, p3
+
+    invoke-static/range {v1 .. v22}, Lip9;->a(Lip9;JJJJLjava/lang/String;Ltp9;IJZJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)Lip9;
 
     move-result-object v0
 

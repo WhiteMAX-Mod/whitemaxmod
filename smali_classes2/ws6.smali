@@ -1,178 +1,201 @@
-.class public final Lws6;
-.super Lys6;
+.class public abstract Lws6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final e:Lws6;
+.field public static final d:Ljava/util/List;
 
-.field public static final f:Landroid/net/Uri;
 
-.field public static final g:Ljava/lang/String;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final h:Ljava/lang/String;
+.field public final b:Ljava/lang/String;
 
-.field public static final i:Ljava/lang/String;
-
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Ljava/lang/String;
-
-.field public static final l:Ljava/lang/String;
-
-.field public static final m:Ljava/lang/String;
-
-.field public static final n:Ljava/lang/String;
+.field public final c:[Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lws6;
+    const/4 v0, 0x2
 
-    const-string v1, "_size > 0"
+    new-array v0, v0, [Lws6;
 
-    invoke-direct {v0, v1}, Lys6;-><init>(Ljava/lang/String;)V
+    sget-object v1, Lus6;->e:Lus6;
 
-    sput-object v0, Lws6;->e:Lws6;
+    const/4 v2, 0x0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d
+    sget-object v1, Lvs6;->e:Lvs6;
 
-    if-lt v0, v1, :cond_1
+    const/4 v2, 0x1
 
-    const-string v0, "external"
+    aput-object v1, v0, v2
 
-    invoke-static {v0}, Landroid/provider/MediaStore$Images$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    sput-object v0, Lws6;->d:Ljava/util/List;
 
-    goto :goto_0
+    return-void
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 9
 
-    const-string v1, "no content uri for MediaStore.Images.Media"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lws6;->a:Ljava/lang/String;
 
-    throw v0
+    invoke-virtual {p0}, Lws6;->d()Ljava/lang/String;
 
-    :cond_1
-    sget-object v0, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    move-result-object p1
 
-    :goto_0
-    sput-object v0, Lws6;->f:Landroid/net/Uri;
+    const-string v0, " DESC"
 
-    const-string v0, "_id"
+    invoke-static {p1, v0}, Lhc0;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    sput-object v0, Lws6;->g:Ljava/lang/String;
+    move-result-object p1
 
-    const-string v0, "bucket_id"
+    iput-object p1, p0, Lws6;->b:Ljava/lang/String;
 
-    sput-object v0, Lws6;->h:Ljava/lang/String;
+    invoke-virtual {p0}, Lws6;->f()Ljava/lang/String;
 
-    const-string v0, "bucket_display_name"
+    move-result-object v0
 
-    sput-object v0, Lws6;->i:Ljava/lang/String;
+    invoke-virtual {p0}, Lws6;->b()Ljava/lang/String;
 
-    const-string v0, "_data"
+    move-result-object v1
 
-    sput-object v0, Lws6;->j:Ljava/lang/String;
+    invoke-virtual {p0}, Lws6;->a()Ljava/lang/String;
 
-    const-string v0, "date_modified"
+    move-result-object v2
 
-    sput-object v0, Lws6;->k:Ljava/lang/String;
+    invoke-virtual {p0}, Lws6;->c()Ljava/lang/String;
 
-    const-string v0, "mime_type"
+    move-result-object v3
 
-    sput-object v0, Lws6;->l:Ljava/lang/String;
+    invoke-virtual {p0}, Lws6;->d()Ljava/lang/String;
 
-    const-string v0, "orientation"
+    move-result-object v4
 
-    sput-object v0, Lws6;->m:Ljava/lang/String;
+    invoke-virtual {p0}, Lws6;->h()Ljava/lang/String;
 
-    const-string v0, "image/jpeg"
+    move-result-object v5
 
-    sput-object v0, Lws6;->n:Ljava/lang/String;
+    invoke-virtual {p0}, Lws6;->i()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Lws6;->e()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {p0}, Lws6;->g()Ljava/lang/String;
+
+    move-result-object v8
+
+    filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lct;->t([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/lang/String;
+
+    iput-object p1, p0, Lws6;->c:[Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
+.method public abstract a()Ljava/lang/String;
+.end method
+
+.method public abstract b()Ljava/lang/String;
+.end method
+
+.method public abstract c()Ljava/lang/String;
+.end method
+
+.method public abstract d()Ljava/lang/String;
+.end method
+
+.method public e()Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lws6;->i:Ljava/lang/String;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final b()Ljava/lang/String;
+.method public abstract f()Ljava/lang/String;
+.end method
+
+.method public g()Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lws6;->h:Ljava/lang/String;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final c()Ljava/lang/String;
+.method public abstract h()Ljava/lang/String;
+.end method
+
+.method public i()Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lws6;->j:Ljava/lang/String;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lws6;->k:Ljava/lang/String;
-
-    return-object v0
+.method public abstract j()Landroid/net/Uri;
 .end method
 
-.method public final f()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lws6;->g:Ljava/lang/String;
-
-    return-object v0
+.method public abstract k()Ljava/lang/String;
 .end method
 
-.method public final h()Ljava/lang/String;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object v0, Lws6;->l:Ljava/lang/String;
+    const/16 v0, 0x2a
 
-    return-object v0
-.end method
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
-.method public final i()Ljava/lang/String;
-    .locals 1
+    move-result-object v0
 
-    sget-object v0, Lws6;->m:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    const-string v2, "QueryParams(name=\'"
 
-.method public final j()Landroid/net/Uri;
-    .locals 1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v0, Lws6;->f:Landroid/net/Uri;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    const-string v0, "\')"
 
-.method public final k()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lws6;->n:Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

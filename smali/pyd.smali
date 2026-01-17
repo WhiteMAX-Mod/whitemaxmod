@@ -1,6 +1,8 @@
-.class public final Lpyd;
+.class public interface abstract Lpyd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfzc;
+
+# virtual methods
+.method public abstract d(Ljava/lang/Object;)V
+.end method

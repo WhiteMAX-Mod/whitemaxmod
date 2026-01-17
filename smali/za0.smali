@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbj5;
+.implements Lej5;
 
 
 # instance fields
@@ -246,7 +246,7 @@
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lc12;->k(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lecj;->b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

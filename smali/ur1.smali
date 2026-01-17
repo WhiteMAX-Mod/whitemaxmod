@@ -1,96 +1,64 @@
-.class public final synthetic Lur1;
+.class public final Lur1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lvr1;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lwr1;
+# static fields
+.field public static final a:Lur1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwr1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lur1;->a:I
+    new-instance v0, Lur1;
 
-    iput-object p1, p0, Lur1;->b:Lwr1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lur1;->a:Lur1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p1, p0, Lur1;->a:I
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lur1;->b:Lwr1;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, v0, Lwr1;->F0:Lvr1;
-
-    if-eqz p1, :cond_0
-
-    iget-boolean v0, v0, Lwr1;->G0:Z
-
-    xor-int/lit8 v0, v0, 0x1
-
-    check-cast p1, Lfo1;
-
-    iget-object p1, p1, Lfo1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->O0:Ly0j;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lzq1;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lzq1;->c:Lvx1;
-
-    iget-object p1, p1, Lvx1;->h:Lnbe;
-
-    invoke-virtual {p1, v0}, Lnbe;->a(Z)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of p1, p1, Lur1;
 
-    :pswitch_0
-    iget-object p1, v0, Lwr1;->F0:Lvr1;
+    if-nez p1, :cond_1
 
-    if-eqz p1, :cond_1
+    const/4 p1, 0x0
 
-    check-cast p1, Lfo1;
-
-    iget-object p1, p1, Lfo1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->O0:Ly0j;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lzq1;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Lzq1;->A(ZLandroid/content/Intent;)V
+    return p1
 
     :cond_1
-    return-void
+    return v0
+.end method
 
-    nop
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const v0, -0x42ba2470
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Show"
+
+    return-object v0
 .end method

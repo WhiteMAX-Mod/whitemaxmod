@@ -23,7 +23,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
 
     const-string v0, "space_dark"
 
@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     iget-object p1, p1, Lkg0;->a:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -108,7 +108,7 @@
 
     iget-object v2, p0, Lkg0;->a:Ljava/lang/String;
 
-    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

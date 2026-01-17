@@ -1,10 +1,10 @@
 .class public final Liqa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lvd2;
+.field public final c:Lod2;
 
 .field public final d:[J
 
@@ -12,12 +12,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lvd2;[JZ)V
+.method public constructor <init>(Lod2;[JZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Liqa;->c:Lvd2;
+    iput-object p1, p0, Liqa;->c:Lod2;
 
     iput-object p2, p0, Liqa;->d:[J
 
@@ -58,11 +58,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Liqa;->c:Lvd2;
+    iget-object v1, p0, Liqa;->c:Lod2;
 
-    iget-object v3, p1, Liqa;->c:Lvd2;
+    iget-object v3, p1, Liqa;->c:Lod2;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -98,7 +98,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Liqa;->c:Lvd2;
+    iget-object v1, p0, Liqa;->c:Lod2;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -134,7 +134,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Liqa;->c:Lvd2;
+    iget-object v2, p0, Liqa;->c:Lod2;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -152,7 +152,7 @@
 
     iget-boolean v2, p0, Liqa;->o:Z
 
-    invoke-static {v1, v2, v0}, Lc12;->l(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

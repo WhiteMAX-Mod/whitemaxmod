@@ -1,136 +1,132 @@
-.class public final synthetic Lkt2;
-.super Ljava/lang/Object;
+.class public final Lkt2;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/profile/screens/members/ChatMembersScreen;
 
-.field public final synthetic b:Lone/me/profile/screens/members/ChatMembersScreen;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatMembersScreen;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/members/ChatMembersScreen;)V
     .locals 0
 
-    iput p2, p0, Lkt2;->a:I
+    iput-object p2, p0, Lkt2;->X:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    iput-object p1, p0, Lkt2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lkt2;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lkt2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
+    invoke-virtual {p0, p1, p2}, Lkt2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget-object v0, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lp38;
+    check-cast p1, Lkt2;
 
-    new-instance v2, Lub1;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatMembersScreen;->A0()Lyt2;
+    invoke-virtual {p1, p2}, Lkt2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v4
+    return-object p2
+.end method
 
-    const/4 v8, 0x0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/16 v9, 0xb
+    new-instance v0, Lkt2;
 
-    const/4 v3, 0x0
+    iget-object v1, p0, Lkt2;->X:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    const-class v5, Lyt2;
+    invoke-direct {v0, p2, v1}, Lkt2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/members/ChatMembersScreen;)V
 
-    const-string v6, "getMemberListActions"
-
-    const-string v7, "getMemberListActions()Lkotlinx/coroutines/flow/Flow;"
-
-    invoke-direct/range {v2 .. v9}, Lub1;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v3, Le9;
-
-    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatMembersScreen;->z0()J
-
-    move-result-wide v4
-
-    sget-object v0, Lvkc;->a:Lvkc;
-
-    invoke-virtual {v0}, Lvkc;->a()Ld68;
-
-    move-result-object v6
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v7
-
-    const/16 v8, 0xcb
-
-    invoke-virtual {v7, v8}, Lu5;->d(I)Lz7g;
-
-    move-result-object v7
-
-    invoke-virtual {v0}, Lvkc;->b()Ld68;
-
-    move-result-object v8
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v9
-
-    const/16 v10, 0xcd
-
-    invoke-virtual {v9, v10}, Lu5;->d(I)Lz7g;
-
-    move-result-object v9
-
-    invoke-virtual {v0}, Lvkc;->e()Ld68;
-
-    move-result-object v10
-
-    const/4 v11, 0x1
-
-    invoke-direct/range {v3 .. v11}, Le9;-><init>(JLd68;Ld68;Ld68;Ld68;Ld68;I)V
-
-    new-instance v0, Lei9;
-
-    new-instance v4, Llt2;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v4, v1, v5}, Llt2;-><init>(Lone/me/profile/screens/members/ChatMembersScreen;I)V
-
-    invoke-direct {v0, v4, v3, v2}, Lei9;-><init>(Loq6;Les4;Lmq6;)V
+    iput-object p1, v0, Lkt2;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lp38;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Lyt2;
+    iget-object v0, p0, Lkt2;->o:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatMembersScreen;->z0()J
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-wide v1
+    check-cast v0, Ljava/util/Set;
 
-    const/16 v3, 0x7e
+    iget-object p1, p0, Lkt2;->X:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    invoke-direct {v0, v1, v2, v3}, Lyt2;-><init>(JI)V
+    if-eqz v0, :cond_0
 
-    return-object v0
+    sget-object v1, Lone/me/profile/screens/members/ChatMembersScreen;->u0:[Lz28;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1}, Lone/me/profile/screens/members/ChatMembersScreen;->C0()Lymb;
+
+    move-result-object v1
+
+    invoke-interface {v0}, Ljava/util/Set;->size()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Lvmb;
+
+    sget v4, Lj6e;->I0:I
+
+    sget v5, Lf6e;->V0:I
+
+    const/16 v6, 0x2775
+
+    invoke-direct {v3, v6, v4, v5}, Lvmb;-><init>(III)V
+
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    new-instance v4, Lwn2;
+
+    const/4 v5, 0x6
+
+    invoke-direct {v4, v5, p1}, Lwn2;-><init>(ILjava/lang/Object;)V
+
+    new-instance v5, Lew1;
+
+    const/4 v6, 0x1
+
+    invoke-direct {v5, v0, v6, p1}, Lew1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2, v3, v4, v5}, Lymb;->c(Ljava/lang/String;Ljava/util/List;Llq6;Lnq6;)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lone/me/profile/screens/members/ChatMembersScreen;->u0:[Lz28;
+
+    invoke-virtual {p1}, Lone/me/profile/screens/members/ChatMembersScreen;->C0()Lymb;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lymb;->a()V
+
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

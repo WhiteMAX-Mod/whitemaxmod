@@ -13,14 +13,14 @@
         "",
         "<init>",
         "()V",
-        "Lv5e;",
+        "Lt6e;",
         "rxApiClient",
-        "(Lv5e;)V",
+        "(Lt6e;)V",
         "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
         "params",
         "Lsm0;",
         "joinReq",
-        "Lv2h;",
+        "Lb3h;",
         "addJoinToConversationParams",
         "(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsm0;)V",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lv5e;)V
+.method public constructor <init>(Lt6e;)V
     .locals 0
 
     .line 2
@@ -99,7 +99,7 @@
 
     move-object v0, p2
 
-    invoke-static/range {v0 .. v5}, Lei3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Loq6;I)Ljava/lang/String;
+    invoke-static/range {v0 .. v5}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -144,7 +144,7 @@
 
     move-object v0, p2
 
-    invoke-static/range {v0 .. v5}, Lei3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Loq6;I)Ljava/lang/String;
+    invoke-static/range {v0 .. v5}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
 
     move-result-object p1
 

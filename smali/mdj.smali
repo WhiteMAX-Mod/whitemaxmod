@@ -1,49 +1,70 @@
 .class public final Lmdj;
-.super Lpdj;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvwa;
 
 
 # static fields
-.field public static final Y:Lmdj;
+.field public static final a:Lmdj;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lmdj;
 
-    const-string v1, "unusedTag"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lpdj;-><init>(Ljava/lang/String;)V
+    sput-object v0, Lmdj;->a:Lmdj;
 
-    sput-object v0, Lmdj;->Y:Lmdj;
+    new-instance v0, Lvzi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+
+    const-class v1, Ln0j;
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(J)V
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-.method public final E(J)V
-    .locals 0
+    move-result-object p1
 
-    return-void
-.end method
-
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final bridge synthetic l()V
-    .locals 0
-
-    return-void
+    throw p1
 .end method

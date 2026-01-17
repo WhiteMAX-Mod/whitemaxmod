@@ -1,104 +1,91 @@
 .class public final Lac6;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Lx1;
 .source "SourceFile"
-
-# interfaces
-.implements Lqzf;
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lozf;
+.field public final synthetic d:I
 
-.field public volatile b:Z
+.field public final o:Ljava/lang/Iterable;
 
 
 # direct methods
-.method public constructor <init>(Lozf;)V
-    .locals 0
+.method public constructor <init>(Lbc6;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lac6;->a:Lozf;
+    iput v0, p0, Lac6;->d:I
+
+    .line 1
+    iput-object p1, p0, Lac6;->o:Ljava/lang/Iterable;
+
+    const/4 p1, 0x0
+
+    .line 2
+    invoke-direct {p0, p2, p1}, Lx1;-><init>(II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lhk7;I)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lac6;->d:I
+
+    .line 3
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    invoke-direct {p0, v0, p2}, Lx1;-><init>(II)V
+
+    .line 4
+    iput-object p1, p0, Lac6;->o:Ljava/lang/Iterable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 0
+.method public final a(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p0}, Lp25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    iget v0, p0, Lac6;->d:I
 
-    return-void
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final g(J)V
-    .locals 0
+    iget-object v0, p0, Lac6;->o:Ljava/lang/Iterable;
 
-    invoke-static {p1, p2}, Ltzf;->f(J)Z
+    check-cast v0, Lhk7;
 
-    move-result p1
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    move-result-object p1
 
-    const/4 p1, 0x1
+    return-object p1
 
-    iput-boolean p1, p0, Lac6;->b:Z
+    :pswitch_0
+    iget-object v0, p0, Lac6;->o:Ljava/lang/Iterable;
 
-    :cond_0
-    return-void
-.end method
+    check-cast v0, Lbc6;
 
-.method public final run()V
-    .locals 4
+    iget-object v0, v0, Lbc6;->a:[Ljava/lang/Iterable;
 
-    sget-object v0, Lxg5;->a:Lxg5;
+    aget-object p1, v0, p1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object p1
 
-    sget-object v2, Lp25;->a:Lp25;
+    return-object p1
 
-    if-eq v1, v2, :cond_1
+    nop
 
-    iget-boolean v1, p0, Lac6;->b:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lac6;->a:Lozf;
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Lozf;->d(Ljava/lang/Object;)V
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lac6;->a:Lozf;
-
-    invoke-interface {v0}, Lozf;->b()V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lac6;->a:Lozf;
-
-    new-instance v1, Lio/reactivex/rxjava3/exceptions/MissingBackpressureException;
-
-    const-string v2, "Could not emit value due to lack of requests"
-
-    invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Lozf;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

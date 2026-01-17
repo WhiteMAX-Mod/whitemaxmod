@@ -281,7 +281,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->addedIds:Ljava/util/Collection;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -294,7 +294,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->accepted:Ljava/util/Collection;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -307,7 +307,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->rejectedParticipantsIds:Ljava/util/Collection;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -320,7 +320,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;->bannedParticipantIds:Ljava/util/Collection;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

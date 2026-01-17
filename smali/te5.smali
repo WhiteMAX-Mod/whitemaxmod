@@ -1,8 +1,14 @@
-.class public interface abstract Lte5;
+.class public abstract Lte5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a(Lpnj;)V
+.method public a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract b()V
 .end method

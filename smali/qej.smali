@@ -1,80 +1,106 @@
 .class public final Lqej;
-.super Ljava/lang/Object;
+.super Lc8j;
 .source "SourceFile"
 
-# interfaces
-.implements Lwwa;
 
+# instance fields
+.field public final synthetic b:Lieg;
 
-# static fields
-.field public static final a:Lqej;
+.field public final synthetic c:Lyzi;
+
+.field public final synthetic d:Lhnj;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lhnj;Lieg;Lieg;Lyzi;)V
+    .locals 0
 
-    new-instance v0, Lqej;
+    iput-object p3, p0, Lqej;->b:Lieg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lqej;->c:Lyzi;
 
-    sput-object v0, Lqej;->a:Lqej;
+    iput-object p1, p0, Lqej;->d:Lhnj;
 
-    new-instance v0, Lyyi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
-
-    const-class v1, Lqzi;
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    invoke-direct {p0, p2}, Lc8j;-><init>(Lieg;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()V
+    .locals 6
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lqej;->d:Lhnj;
 
-    move-result-object p1
+    iget-object v0, v0, Lhnj;->f:Ljava/lang/Object;
 
-    throw p1
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lqej;->d:Lhnj;
+
+    iget-object v2, p0, Lqej;->b:Lieg;
+
+    iget-object v3, v1, Lhnj;->e:Ljava/util/HashSet;
+
+    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    iget-object v3, v2, Lieg;->a:Liqj;
+
+    new-instance v4, Lo2b;
+
+    const/16 v5, 0x16
+
+    invoke-direct {v4, v1, v5, v2}, Lo2b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v3, v4}, Liqj;->i(Lx1b;)Liqj;
+
+    iget-object v1, p0, Lqej;->d:Lhnj;
+
+    iget-object v1, v1, Lhnj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    iget-object v1, p0, Lqej;->d:Lhnj;
+
+    iget-object v1, v1, Lhnj;->b:Lu59;
+
+    const-string v2, "Already connected to the service."
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v2, v3}, Lu59;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Lqej;->d:Lhnj;
+
+    iget-object v2, p0, Lqej;->c:Lyzi;
+
+    invoke-static {v1, v2}, Lhnj;->b(Lhnj;Lyzi;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

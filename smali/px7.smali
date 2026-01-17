@@ -3,217 +3,265 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Ljava/lang/reflect/InvocationHandler;
 
 
 # instance fields
-.field public final a:F
+.field public a:Z
 
-.field public final b:F
+.field public b:Ljava/lang/String;
 
-.field public final c:F
-
-.field public final d:F
-
-.field public final e:Lwrd;
-
-.field public final f:I
-
-.field public final g:Landroid/animation/ValueAnimator;
-
-.field public h:Z
-
-.field public i:F
-
-.field public j:F
-
-.field public k:Z
-
-.field public l:Z
-
-.field public m:F
-
-.field public final synthetic n:I
-
-.field public final synthetic o:Lwrd;
-
-.field public final synthetic p:Ltx7;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ltx7;Lwrd;IFFFFILwrd;)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpx7;->p:Ltx7;
-
-    iput p8, p0, Lpx7;->n:I
-
-    iput-object p9, p0, Lpx7;->o:Lwrd;
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lpx7;->k:Z
-
-    iput-boolean p1, p0, Lpx7;->l:Z
-
-    iput p3, p0, Lpx7;->f:I
-
-    iput-object p2, p0, Lpx7;->e:Lwrd;
-
-    iput p4, p0, Lpx7;->a:F
-
-    iput p5, p0, Lpx7;->b:F
-
-    iput p6, p0, Lpx7;->c:F
-
-    iput p7, p0, Lpx7;->d:F
-
-    const/4 p1, 0x2
-
-    new-array p1, p1, [F
-
-    fill-array-data p1, :array_0
-
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lpx7;->g:Landroid/animation/ValueAnimator;
-
-    new-instance p3, Lsl0;
-
-    const/4 p4, 0x5
-
-    invoke-direct {p3, p4, p0}, Lsl0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    iget-object p2, p2, Lwrd;->a:Landroid/view/View;
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->setTarget(Ljava/lang/Object;)V
-
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lpx7;->m:F
+    iput-object p1, p0, Lpx7;->c:Ljava/util/ArrayList;
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/animation/Animator;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-boolean p1, p0, Lpx7;->l:Z
+    const/4 p1, 0x0
 
-    const/4 v0, 0x1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lpx7;->e:Lwrd;
-
-    invoke-virtual {p1, v0}, Lwrd;->w(Z)V
-
-    :cond_0
-    iput-boolean v0, p0, Lpx7;->l:Z
-
-    return-void
-.end method
-
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    iput p1, p0, Lpx7;->m:F
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 4
-
-    invoke-virtual {p0, p1}, Lpx7;->a(Landroid/animation/Animator;)V
-
-    iget-boolean p1, p0, Lpx7;->k:Z
-
-    if-eqz p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget p1, p0, Lpx7;->n:I
-
-    iget-object v0, p0, Lpx7;->o:Lwrd;
-
-    iget-object v1, p0, Lpx7;->p:Ltx7;
-
-    if-gtz p1, :cond_1
-
-    iget-object p1, v1, Ltx7;->w0:Lsx7;
-
-    iget-object v2, v1, Ltx7;->B0:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1, v2, v0}, Lsx7;->a(Landroidx/recyclerview/widget/RecyclerView;Lwrd;)V
+    if-eqz p3, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    new-array p3, p1, [Ljava/lang/Object;
+
+    :goto_0
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
+
+    move-result-object v1
+
+    const-string v2, "supports"
+
+    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    invoke-static {v2, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    return-object p1
+
     :cond_1
-    iget-object v2, v1, Ltx7;->a:Ljava/util/ArrayList;
+    const-string v2, "unsupported"
 
-    iget-object v3, v0, Lwrd;->a:Landroid/view/View;
+    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v2
 
-    const/4 v2, 0x1
+    const/4 v3, 0x0
 
-    iput-boolean v2, p0, Lpx7;->h:Z
+    const/4 v4, 0x1
 
-    if-lez p1, :cond_2
+    if-eqz v2, :cond_2
 
-    iget-object v2, v1, Ltx7;->B0:Landroidx/recyclerview/widget/RecyclerView;
+    sget-object v2, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
-    new-instance v3, Lis6;
+    invoke-static {v2, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v3, v1, p0, p1}, Lis6;-><init>(Ltx7;Lpx7;I)V
+    move-result v2
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    if-eqz v2, :cond_2
+
+    iput-boolean v4, p0, Lpx7;->a:Z
+
+    return-object v3
 
     :cond_2
-    :goto_0
-    iget-object p1, v1, Ltx7;->G0:Landroid/view/View;
+    const-string v2, "protocols"
 
-    iget-object v0, v0, Lwrd;->a:Landroid/view/View;
+    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-ne p1, v0, :cond_3
+    move-result v2
 
-    invoke-virtual {v1, v0}, Ltx7;->s(Landroid/view/View;)V
+    iget-object v5, p0, Lpx7;->c:Ljava/util/ArrayList;
+
+    if-eqz v2, :cond_3
+
+    array-length v2, p3
+
+    if-nez v2, :cond_3
+
+    return-object v5
 
     :cond_3
+    const-string v2, "selectProtocol"
+
+    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const-string v6, "null cannot be cast to non-null type kotlin.String"
+
+    if-nez v2, :cond_4
+
+    const-string v2, "select"
+
+    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    :cond_4
+    const-class v2, Ljava/lang/String;
+
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    array-length v1, p3
+
+    if-ne v1, v4, :cond_9
+
+    aget-object v1, p3, p1
+
+    instance-of v2, v1, Ljava/util/List;
+
+    if-eqz v2, :cond_9
+
+    if-eqz v1, :cond_8
+
+    check-cast v1, Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    if-ltz p2, :cond_7
+
+    move p3, p1
+
     :goto_1
-    return-void
-.end method
+    invoke-interface {v1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
+    if-eqz v0, :cond_6
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    check-cast v0, Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    iput-object v0, p0, Lpx7;->b:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_5
+    if-eq p3, p2, :cond_7
+
+    add-int/lit8 p3, p3, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v6}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lpx7;->b:Ljava/lang/String;
+
+    return-object p1
+
+    :cond_8
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.collections.List<*>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_9
+    const-string v1, "protocolSelected"
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_a
+
+    const-string v1, "selected"
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    :cond_a
+    array-length v0, p3
+
+    if-ne v0, v4, :cond_c
+
+    aget-object p1, p3, p1
+
+    if-eqz p1, :cond_b
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lpx7;->b:Ljava/lang/String;
+
+    return-object v3
+
+    :cond_b
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v6}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_c
+    array-length p1, p3
+
+    invoke-static {p3, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

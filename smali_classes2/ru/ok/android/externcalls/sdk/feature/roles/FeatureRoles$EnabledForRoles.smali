@@ -21,7 +21,7 @@
         "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;",
         "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
         "",
-        "Lcl1;",
+        "Lvk1;",
         "roles",
         "<init>",
         "(Ljava/util/Set;)V",
@@ -59,7 +59,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcl1;",
+            "Lvk1;",
             ">;"
         }
     .end annotation
@@ -74,14 +74,14 @@
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lcl1;",
+            "Lvk1;",
             ">;)V"
         }
     .end annotation
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;-><init>(Lro4;)V
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;-><init>(Lso4;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;->roles:Ljava/util/Set;
 
@@ -113,7 +113,7 @@
         value = {
             "()",
             "Ljava/util/Set<",
-            "Lcl1;",
+            "Lvk1;",
             ">;"
         }
     .end annotation
@@ -130,7 +130,7 @@
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lcl1;",
+            "Lvk1;",
             ">;)",
             "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;"
         }
@@ -168,7 +168,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;->roles:Ljava/util/Set;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -186,7 +186,7 @@
         value = {
             "()",
             "Ljava/util/Set<",
-            "Lcl1;",
+            "Lvk1;",
             ">;"
         }
     .end annotation

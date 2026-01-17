@@ -1,51 +1,160 @@
-.class public abstract synthetic Losh;
+.class public abstract Losh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(Landroid/view/View;Ljava/util/Collection;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/View;",
+            "Ljava/util/Collection<",
+            "Landroid/view/View;",
+            ">;I)V"
+        }
+    .end annotation
 
-    invoke-static {}, Lpsh;->values()[Lpsh;
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->addKeyboardNavigationClusters(Ljava/util/Collection;I)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    array-length v0, v0
+.method public static b(Landroid/view/View;)Landroid/view/autofill/AutofillId;
+    .locals 0
 
-    new-array v0, v0, [I
+    invoke-virtual {p0}, Landroid/view/View;->getAutofillId()Landroid/view/autofill/AutofillId;
 
-    const/4 v1, 0x1
+    move-result-object p0
 
-    const/4 v2, 0x0
+    return-object p0
+.end method
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+.method public static c(Landroid/view/View;)I
+    .locals 0
 
-    :catch_0
-    const/4 v2, 0x2
+    invoke-virtual {p0}, Landroid/view/View;->getImportantForAutofill()I
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    move-result p0
 
-    :catch_1
-    const/4 v1, 0x3
+    return p0
+.end method
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+.method public static d(Landroid/view/View;)I
+    .locals 0
 
-    :catch_2
-    sput-object v0, Losh;->$EnumSwitchMapping$0:[I
+    invoke-virtual {p0}, Landroid/view/View;->getNextClusterForwardId()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static e(Landroid/view/View;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->hasExplicitFocusable()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static f(Landroid/view/View;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->isFocusedByDefault()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static g(Landroid/view/View;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->isImportantForAutofill()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static h(Landroid/view/View;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->isKeyboardNavigationCluster()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static i(Landroid/view/View;Landroid/view/View;I)Landroid/view/View;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->keyboardNavigationClusterSearch(Landroid/view/View;I)Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static j(Landroid/view/View;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->restoreDefaultFocus()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static varargs k(Landroid/view/View;[Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAutofillHints([Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static l(Landroid/view/View;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusedByDefault(Z)V
+
+    return-void
+.end method
+
+.method public static m(Landroid/view/View;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAutofill(I)V
+
+    return-void
+.end method
+
+.method public static n(Landroid/view/View;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setKeyboardNavigationCluster(Z)V
+
+    return-void
+.end method
+
+.method public static o(Landroid/view/View;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setNextClusterForwardId(I)V
+
+    return-void
+.end method
+
+.method public static p(Landroid/view/View;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTooltipText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

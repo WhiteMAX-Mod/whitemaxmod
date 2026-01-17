@@ -1,58 +1,102 @@
 .class public final Ll71;
-.super Ljava/lang/Object;
+.super Licg;
 .source "SourceFile"
-
-# interfaces
-.implements Lk71;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Ll71;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Ll71;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDecorativeParticipantIdChanged(Lj71;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Ll71;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    :cond_0
+    instance-of v1, p1, Ll71;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ll71;
+
+    iget-object v1, p0, Ll71;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Ll71;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ll71;->c:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Ll71;->c:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const-string v2, "*"
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    invoke-static {v0, v3, v1, v2}, Lrzf;->Q(Ljava/lang/CharSequence;IILjava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    check-cast v1, Lk71;
+    move-result-object v0
 
-    invoke-interface {v1, p1}, Lk71;->onDecorativeParticipantIdChanged(Lj71;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    return-void
+    const-string v1, "Response(joinLink="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,26 +1,30 @@
 .class public final Lv78;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lb36;
+.field public final synthetic X:Lw78;
+
+.field public final synthetic Y:Lu78;
 
 .field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lb36;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lw78;Lu78;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lv78;->X:Lb36;
+    iput-object p1, p0, Lv78;->X:Lw78;
+
+    iput-object p2, p0, Lv78;->Y:Lu78;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +44,7 @@
 
     check-cast p1, Lv78;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lv78;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,43 +54,33 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance p1, Lv78;
 
-    iget-object v0, p0, Lv78;->X:Lb36;
+    iget-object v0, p0, Lv78;->X:Lw78;
 
-    invoke-direct {p1, v0, p2}, Lv78;-><init>(Lb36;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lv78;->Y:Lu78;
+
+    invoke-direct {p1, v0, v1, p2}, Lv78;-><init>(Lw78;Lu78;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 4
 
     iget v0, p0, Lv78;->o:I
 
-    sget-object v1, Lv2h;->a:Lv2h;
-
-    iget-object v2, p0, Lv78;->X:Lb36;
-
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v3, :cond_0
+    if-ne v0, v1, :cond_0
 
-    :try_start_0
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-object v1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -98,90 +92,45 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    :try_start_1
-    iget-object p1, v2, Lb36;->Z:Ljava/lang/Object;
+    iget-object p1, p0, Lv78;->X:Lw78;
 
-    check-cast p1, Lz7g;
+    check-cast p1, Ly78;
 
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Ly78;->a:Ll88;
 
-    move-result-object p1
+    iput v1, p0, Lv78;->o:I
 
-    check-cast p1, Lnpf;
+    sget-object v0, Lf25;->a:Lct4;
 
-    iput v3, p0, Lv78;->o:I
+    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lzp8;
 
-    check-cast p1, La2e;
-
-    iget-object p1, p1, La2e;->b:Lz7g;
-
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkpf;
-
-    iget-object p1, p1, Lkpf;->a:Le1e;
-
-    new-instance v0, Latd;
-
-    const/16 v4, 0x13
-
-    invoke-direct {v0, v4}, Latd;-><init>(I)V
-
-    const/4 v4, 0x0
-
-    invoke-static {v0, p1, p0, v4, v3}, Lykj;->f(Loq6;Le1e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object p1, v1
-
-    :goto_0
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    return-object v1
-
-    :goto_1
-    const-string v0, "LibraryUpgradeHelper"
-
-    const-string v3, "fail to migrate 4"
-
-    invoke-static {v0, v3, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, v2, Lb36;->s0:Ljava/lang/Object;
-
-    check-cast v0, Lz7g;
-
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lzp8;->getImmediate()Lzp8;
 
     move-result-object v0
 
-    check-cast v0, Lxc4;
+    new-instance v1, Llwb;
 
-    new-instance v2, Lone/me/android/LibraryUpgradeHelper$FailToClearStatException;
+    const/4 v2, 0x0
 
-    const-string v3, "fail to clear stats"
+    iget-object v3, p0, Lv78;->Y:Lu78;
 
-    invoke-direct {v2, v3, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, p1, v3, v2}, Llwb;-><init>(Ll88;Lu78;Lkotlin/coroutines/Continuation;)V
 
-    const-string p1, "ONEME-14182"
+    invoke-static {v0, v1, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, v2}, Lxc4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object p1
 
-    return-object v1
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

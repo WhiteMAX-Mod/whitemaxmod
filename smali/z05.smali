@@ -54,7 +54,7 @@
 
     sget-object v0, Lz05;->b:[Lz05;
 
-    invoke-virtual {v0}, [Lz05;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "MoreExecutors.directExecutor()"
+    const-string v0, "DirectExecutor"
 
     return-object v0
 .end method

@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsgh;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lpv4;
+
+.field public final synthetic c:Ljava/lang/InterruptedException;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lpv4;Ljava/lang/InterruptedException;I)V
     .locals 0
 
-    iput p1, p0, Ljv4;->a:I
+    iput p3, p0, Ljv4;->a:I
 
-    iput-object p2, p0, Ljv4;->b:Ljava/lang/Object;
+    iput-object p1, p0, Ljv4;->b:Lpv4;
+
+    iput-object p2, p0, Ljv4;->c:Ljava/lang/InterruptedException;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,69 +32,43 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 3
 
     iget v0, p0, Ljv4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ljv4;->b:Ljava/lang/Object;
+    iget-object v0, p0, Ljv4;->b:Lpv4;
 
-    check-cast v0, Lg3;
+    iget-object v0, v0, Lpv4;->h:Lqhh;
 
-    invoke-virtual {v0}, Lg3;->f()V
+    new-instance v1, Landroidx/media3/common/VideoFrameProcessingException;
+
+    iget-object v2, p0, Ljv4;->c:Ljava/lang/InterruptedException;
+
+    invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v1}, Lqhh;->b(Landroidx/media3/common/VideoFrameProcessingException;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Ljv4;->b:Ljava/lang/Object;
+    iget-object v0, p0, Ljv4;->b:Lpv4;
 
-    check-cast v0, Lwrg;
+    iget-object v0, v0, Lpv4;->h:Lqhh;
 
-    invoke-virtual {v0}, Lwrg;->n()V
+    iget-object v1, p0, Ljv4;->c:Ljava/lang/InterruptedException;
 
-    return-void
+    invoke-static {v1}, Landroidx/media3/common/VideoFrameProcessingException;->a(Ljava/lang/Exception;)Landroidx/media3/common/VideoFrameProcessingException;
 
-    :pswitch_1
-    iget-object v0, p0, Ljv4;->b:Ljava/lang/Object;
+    move-result-object v1
 
-    check-cast v0, Ldfg;
-
-    iget-object v0, v0, Ldfg;->d:Lwrg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lwrg;->Y()V
-
-    invoke-static {}, Lal4;->a()V
+    invoke-interface {v0, v1}, Lqhh;->b(Landroidx/media3/common/VideoFrameProcessingException;)V
 
     return-void
-
-    :pswitch_2
-    iget-object v0, p0, Ljv4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ly36;
-
-    invoke-virtual {v0}, Ly36;->flush()V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Ljv4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

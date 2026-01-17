@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
-.super Lsp9;
+.super Lbp9;
 .source "SourceFile"
 
 
@@ -46,7 +46,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lsp9;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->clear()Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
 
@@ -60,7 +60,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ldu7;->b:Ljava/lang/Object;
+    sget-object v0, Llt7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -102,7 +102,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
+.method public static parseFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -115,7 +115,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
 
     move-result-object p0
 
@@ -135,7 +135,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;-><init>()V
 
-    invoke-static {v0, p0}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
+    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
 
     move-result-object p0
 
@@ -175,7 +175,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lsp9;->cachedSize:I
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-object p0
 .end method
@@ -189,7 +189,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lmg3;->a(I)I
+    invoke-static {v0}, Lwg3;->a(I)I
 
     move-result v0
 
@@ -205,7 +205,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -218,7 +218,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -231,7 +231,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -244,7 +244,7 @@
 
     const/4 v1, 0x5
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -257,7 +257,7 @@
 
     const/4 v1, 0x7
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -270,7 +270,7 @@
 
     const/16 v1, 0x8
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -283,7 +283,7 @@
 
     const/16 v1, 0x9
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -296,7 +296,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -309,7 +309,7 @@
 
     const/16 v1, 0xb
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -322,7 +322,7 @@
 
     const/16 v1, 0xc
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -334,7 +334,23 @@
     return v0
 .end method
 
-.method public mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
+.method public bridge synthetic mergeFrom(Lvg3;)Lbp9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -345,14 +361,14 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Llg3;->s()I
+    invoke-virtual {p1}, Lvg3;->s()I
 
     move-result v0
 
     sparse-switch v0, :sswitch_data_0
 
     .line 3
-    invoke-virtual {p1, v0}, Llg3;->u(I)Z
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
 
     move-result v0
 
@@ -362,7 +378,7 @@
 
     .line 4
     :sswitch_0
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -372,7 +388,7 @@
 
     .line 5
     :sswitch_1
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -382,7 +398,7 @@
 
     .line 6
     :sswitch_2
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -392,7 +408,7 @@
 
     .line 7
     :sswitch_3
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -402,7 +418,7 @@
 
     .line 8
     :sswitch_4
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -412,7 +428,7 @@
 
     .line 9
     :sswitch_5
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -422,7 +438,7 @@
 
     .line 10
     :sswitch_6
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -432,7 +448,7 @@
 
     .line 11
     :sswitch_7
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -442,7 +458,7 @@
 
     .line 12
     :sswitch_8
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -452,7 +468,7 @@
 
     .line 13
     :sswitch_9
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -462,7 +478,7 @@
 
     .line 14
     :sswitch_a
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -491,23 +507,7 @@
     .end sparse-switch
 .end method
 
-.method public bridge synthetic mergeFrom(Llg3;)Lsp9;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public writeTo(Lmg3;)V
+.method public writeTo(Lwg3;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -521,7 +521,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_0
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->onlyOwnerCanChangeIconTitle:Z
@@ -530,7 +530,7 @@
 
     const/4 v1, 0x2
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_1
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->official:Z
@@ -539,7 +539,7 @@
 
     const/4 v1, 0x3
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_2
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->allCanPinMessage:Z
@@ -548,7 +548,7 @@
 
     const/4 v1, 0x4
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_3
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->onlyAdminCanAddMember:Z
@@ -557,7 +557,7 @@
 
     const/4 v1, 0x5
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_4
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->onlyAdminCanCall:Z
@@ -566,7 +566,7 @@
 
     const/4 v1, 0x7
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_5
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->sentByPhone:Z
@@ -575,7 +575,7 @@
 
     const/16 v1, 0x8
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_6
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->serviceChat:Z
@@ -584,7 +584,7 @@
 
     const/16 v1, 0x9
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_7
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->membersCanSeePrivateLink:Z
@@ -593,7 +593,7 @@
 
     const/16 v1, 0xa
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_8
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->contentLevelChat:Z
@@ -602,7 +602,7 @@
 
     const/16 v1, 0xb
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_9
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->aPlusChannel:Z
@@ -611,7 +611,7 @@
 
     const/16 v1, 0xc
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_a
     return-void

@@ -179,11 +179,11 @@
 .method public final a()Landroid/app/Notification;
     .locals 3
 
-    new-instance v0, Lwrg;
+    new-instance v0, Lfsg;
 
-    invoke-direct {v0, p0}, Lwrg;-><init>(Ltra;)V
+    invoke-direct {v0, p0}, Lfsg;-><init>(Ltra;)V
 
-    iget-object v1, v0, Lwrg;->X:Ljava/lang/Object;
+    iget-object v1, v0, Lfsg;->X:Ljava/lang/Object;
 
     check-cast v1, Ltra;
 
@@ -191,10 +191,10 @@
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2, v0}, Lhsa;->b(Lwrg;)V
+    invoke-virtual {v2, v0}, Lhsa;->b(Lfsg;)V
 
     :cond_0
-    iget-object v0, v0, Lwrg;->o:Ljava/lang/Object;
+    iget-object v0, v0, Lfsg;->o:Ljava/lang/Object;
 
     check-cast v0, Landroid/app/Notification$Builder;
 
@@ -325,13 +325,13 @@
 
     move-result-object v0
 
-    sget v1, Lb5d;->compat_notification_large_icon_max_width:I
+    sget v1, Ly5d;->compat_notification_large_icon_max_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    sget v2, Lb5d;->compat_notification_large_icon_max_height:I
+    sget v2, Ly5d;->compat_notification_large_icon_max_height:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

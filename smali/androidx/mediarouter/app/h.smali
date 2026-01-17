@@ -28,11 +28,11 @@
 
     iget-object v0, p0, Landroidx/mediarouter/app/h;->a:Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;
 
-    iget-boolean v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->u0:Z
+    iget-boolean v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->v0:Z
 
     xor-int/lit8 v2, v1, 0x1
 
-    iput-boolean v2, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->u0:Z
+    iput-boolean v2, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->v0:Z
 
     if-nez v1, :cond_0
 
@@ -44,7 +44,7 @@
 
     invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->t0:Ljava/lang/String;
+    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->u0:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -59,12 +59,12 @@
 
     invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->s0:Ljava/lang/String;
+    iget-object v1, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->t0:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :goto_0
-    iget-object v0, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->v0:Landroid/view/View$OnClickListener;
+    iget-object v0, v0, Landroidx/mediarouter/app/MediaRouteExpandCollapseButton;->w0:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_1
 

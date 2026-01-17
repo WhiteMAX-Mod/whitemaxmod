@@ -1,5 +1,5 @@
 .class public final Ll8a;
-.super Lm1;
+.super Ll1;
 .source "SourceFile"
 
 # interfaces
@@ -64,7 +64,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0, v0}, Lu1;->l(Ljava/lang/Throwable;)Z
+    invoke-virtual {p0, v0}, Lt1;->l(Ljava/lang/Throwable;)Z
 
     throw v0
 .end method

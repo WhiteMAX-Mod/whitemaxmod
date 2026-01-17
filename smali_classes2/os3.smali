@@ -1,81 +1,131 @@
-.class public final synthetic Los3;
-.super Ljava/lang/Object;
+.class public final Los3;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Loq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/login/confirm/ConfirmPhoneScreen;
+.field public final c:Lahc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lahc;)V
+    .locals 1
 
-    iput p2, p0, Los3;->a:I
+    const/4 v0, 0x7
 
-    iput-object p1, p0, Los3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Los3;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Los3;->c:Lahc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Los3;->a:I
+    const/4 v0, 0x1
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Los3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
+    return v0
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ltt3;
-
-    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lp38;
-
-    sget-object v0, Ltt3;->b:Ltt3;
-
-    if-ne p1, v0, :cond_0
-
-    invoke-virtual {v2}, Lone/me/login/confirm/ConfirmPhoneScreen;->E0()Let3;
-
-    move-result-object p1
-
-    iget-object p1, p1, Let3;->A0:Lhof;
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    :cond_0
+    instance-of v1, p1, Los3;
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v2, v0}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-nez v1, :cond_1
 
-    :cond_0
-    return-object v1
+    return v2
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    :cond_1
+    check-cast p1, Los3;
 
-    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lp38;
+    iget-object v1, p0, Los3;->b:Ljava/lang/String;
 
-    invoke-virtual {v2}, Lx84;->getRouter()Lw3e;
+    iget-object v3, p1, Los3;->b:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Lw3e;->C()Z
+    move-result v1
 
-    return-object v1
+    if-nez v1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Los3;->c:Lahc;
+
+    iget-object p1, p1, Los3;->c:Lahc;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Los3;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Los3;->c:Lahc;
+
+    invoke-virtual {v1}, Lahc;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NameInputScreen(token="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Los3;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", presetAvatars="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Los3;->c:Lahc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

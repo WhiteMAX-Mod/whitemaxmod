@@ -1,51 +1,148 @@
 .class public final Ltue;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfr1;
 
 
 # instance fields
-.field public final synthetic X:Lqw;
-
-.field public Y:I
-
-.field public d:Lqw;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lqw;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Ltue;->X:Lqw;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onCurrentParticipantActiveRoomChanged(Lbr1;)V
+    .locals 2
 
-    iput-object p1, p0, Ltue;->o:Ljava/lang/Object;
+    iget-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget p1, p0, Ltue;->Y:I
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iput p1, p0, Ltue;->Y:I
+    move-result v1
 
-    iget-object p1, p0, Ltue;->X:Lqw;
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lqw;->b(Lnic;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    check-cast v1, Lfr1;
 
-    return-object p1
+    invoke-interface {v1, p1}, Lfr1;->onCurrentParticipantActiveRoomChanged(Lbr1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onCurrentParticipantInvitedToRoom(Lcr1;)V
+    .locals 2
+
+    iget-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lfr1;
+
+    invoke-interface {v1, p1}, Lfr1;->onCurrentParticipantInvitedToRoom(Lcr1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRoomRemoved(Ldr1;)V
+    .locals 2
+
+    iget-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lfr1;
+
+    invoke-interface {v1, p1}, Lfr1;->onRoomRemoved(Ldr1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRoomUpdated(Ler1;)V
+    .locals 2
+
+    iget-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lfr1;
+
+    invoke-interface {v1, p1}, Lfr1;->onRoomUpdated(Ler1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

@@ -4,213 +4,165 @@
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final a:Z
 
-.field public final b:Ld68;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Ld68;
-
-.field public final d:Ld68;
-
-.field public volatile e:Z
+.field public final c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
 
 # direct methods
-.method public constructor <init>(Ld68;Ld68;Ld68;Ld68;)V
+.method public constructor <init>(ZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr48;->a:Ld68;
+    iput-boolean p1, p0, Lr48;->a:Z
 
-    iput-object p2, p0, Lr48;->b:Ld68;
+    iput-object p2, p0, Lr48;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lr48;->c:Ld68;
-
-    iput-object p4, p0, Lr48;->d:Ld68;
+    iput-object p3, p0, Lr48;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-boolean v0, p0, Lr48;->e:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lr48;->e:Z
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lr48;->a:Ld68;
+    return v0
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgqf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lcqf;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Lcqf;-><init>(Lgqf;I)V
-
-    new-instance v2, Lh6e;
-
-    const/16 v3, 0x1a
-
-    invoke-direct {v2, v3}, Lh6e;-><init>(I)V
-
-    iget-object v0, v0, Lgqf;->h:Lqae;
-
-    invoke-static {v1, v2, v0}, Li6e;->a(Ln6;Lux3;Lqae;)Lvw1;
-
-    iget-object v0, p0, Lr48;->b:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpw5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Low5;
+    :cond_0
+    instance-of v1, p1, Lr48;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0}, Low5;-><init>(ILjava/lang/Object;)V
+    if-nez v1, :cond_1
 
-    new-instance v2, Lfo3;
+    return v2
 
-    const/4 v3, 0x3
+    :cond_1
+    check-cast p1, Lr48;
 
-    invoke-direct {v2, v3, v1}, Lfo3;-><init>(ILjava/lang/Object;)V
+    iget-boolean v1, p0, Lr48;->a:Z
 
-    iget-object v1, v0, Lpw5;->d:Lg35;
+    iget-boolean v3, p1, Lr48;->a:Z
 
-    invoke-virtual {v1}, Lg35;->get()Ljava/lang/Object;
+    if-eq v1, v3, :cond_2
 
-    move-result-object v1
+    return v2
 
-    check-cast v1, Lqae;
+    :cond_2
+    iget-object v1, p0, Lr48;->b:Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Lcxa;->o(Lqae;)Lsxa;
+    iget-object v3, p1, Lr48;->b:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v2, v0, Lpw5;->c:Lg35;
+    move-result v1
 
-    invoke-virtual {v2}, Lg35;->get()Ljava/lang/Object;
+    if-nez v1, :cond_3
 
-    move-result-object v2
+    return v2
 
-    check-cast v2, Lqae;
+    :cond_3
+    iget-object v1, p0, Lr48;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
-    invoke-virtual {v1, v2}, Lcxa;->l(Lqae;)Lzya;
+    iget-object p1, p1, Lr48;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
-    move-result-object v1
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v2, Lnw5;
+    move-result p1
 
-    const/4 v3, 0x1
+    if-nez p1, :cond_4
 
-    invoke-direct {v2, v0, v3}, Lnw5;-><init>(Lpw5;I)V
+    return v2
 
-    new-instance v0, Lev5;
+    :cond_4
+    return v0
+.end method
 
-    const/16 v3, 0x19
+.method public final hashCode()I
+    .locals 2
 
-    invoke-direct {v0, v3}, Lev5;-><init>(I)V
+    iget-boolean v0, p0, Lr48;->a:Z
 
-    sget-object v3, Lz7f;->f:Ltr6;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    new-instance v4, Lo58;
+    move-result v0
 
-    invoke-direct {v4, v2, v0, v3}, Lo58;-><init>(Lux3;Lux3;Ln6;)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v1, v4}, Lcxa;->a(Lc0b;)V
+    iget-object v1, p0, Lr48;->b:Ljava/lang/String;
 
-    iget-object v0, p0, Lr48;->c:Ld68;
+    if-nez v1, :cond_0
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lr48;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "KeywordSpotterParams(isEnabled="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lr48;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", filePath="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lr48;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", consumer="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lr48;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lrv5;
-
-    invoke-virtual {v0}, Lrv5;->a()Lgo3;
-
-    move-result-object v1
-
-    new-instance v2, Lev5;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v2, v4}, Lev5;-><init>(I)V
-
-    new-instance v4, Lkw8;
-
-    const/4 v5, 0x4
-
-    invoke-direct {v4, v1, v2, v5}, Lkw8;-><init>(Ljava/lang/Object;Ldr6;I)V
-
-    iget-object v1, v0, Lrv5;->d:Lz7g;
-
-    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqae;
-
-    invoke-virtual {v4, v2}, Lcxa;->o(Lqae;)Lsxa;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqae;
-
-    invoke-virtual {v2, v1}, Lcxa;->l(Lqae;)Lzya;
-
-    move-result-object v1
-
-    new-instance v2, Lkv5;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, v0, v4}, Lkv5;-><init>(Lrv5;I)V
-
-    new-instance v0, Lev5;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v0, v4}, Lev5;-><init>(I)V
-
-    new-instance v4, Lo58;
-
-    invoke-direct {v4, v2, v0, v3}, Lo58;-><init>(Lux3;Lux3;Ln6;)V
-
-    invoke-virtual {v1, v4}, Lcxa;->a(Lc0b;)V
-
-    iget-object v0, p0, Lr48;->d:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwtf;
-
-    return-void
+    return-object v0
 .end method

@@ -26,11 +26,11 @@
 # instance fields
 .field public final a:I
 
-.field public final b:Lhbe;
+.field public final b:Lgce;
 
 
 # direct methods
-.method public constructor <init>(ILhbe;)V
+.method public constructor <init>(ILgce;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -39,7 +39,7 @@
 
     iput p1, p0, Lscout/exception/ObjectNullabilityException;->a:I
 
-    iput-object p2, p0, Lscout/exception/ObjectNullabilityException;->b:Lhbe;
+    iput-object p2, p0, Lscout/exception/ObjectNullabilityException;->b:Lgce;
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lew4;->a()Lmm3;
+    invoke-static {}, Lfw4;->a()Lvm3;
 
     move-result-object v2
 
@@ -77,9 +77,9 @@
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lmm3;->a()V
+    invoke-virtual {v2}, Lvm3;->a()V
 
-    iget-object v2, v2, Lmm3;->b:Ljava/util/HashMap;
+    iget-object v2, v2, Lvm3;->b:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -115,7 +115,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lscout/exception/ObjectNullabilityException;->b:Lhbe;
+    iget-object v1, p0, Lscout/exception/ObjectNullabilityException;->b:Lgce;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

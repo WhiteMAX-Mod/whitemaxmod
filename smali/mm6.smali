@@ -1,27 +1,64 @@
-.class public final Lmm6;
+.class public final synthetic Lmm6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldy3;
+
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
 
-.field public b:I
+.field public final synthetic b:Landroidx/fragment/app/b;
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
+    .locals 0
 
-.field public e:I
+    iput p2, p0, Lmm6;->a:I
 
-.field public f:I
+    iput-object p1, p0, Lmm6;->b:Landroidx/fragment/app/b;
 
-.field public g:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public h:Ljava/lang/Object;
+    return-void
+.end method
 
-.field public i:Ljava/lang/Object;
 
-.field public j:F
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-.field public k:Landroid/view/View;
+    iget v0, p0, Lmm6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/content/Intent;
+
+    iget-object p1, p0, Lmm6;->b:Landroidx/fragment/app/b;
+
+    iget-object p1, p1, Landroidx/fragment/app/b;->E0:Lrz6;
+
+    invoke-virtual {p1}, Lrz6;->O()V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Landroid/content/res/Configuration;
+
+    iget-object p1, p0, Lmm6;->b:Landroidx/fragment/app/b;
+
+    iget-object p1, p1, Landroidx/fragment/app/b;->E0:Lrz6;
+
+    invoke-virtual {p1}, Lrz6;->O()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

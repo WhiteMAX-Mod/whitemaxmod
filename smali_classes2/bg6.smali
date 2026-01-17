@@ -3,43 +3,48 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkrd;
+.implements Lwf6;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:J
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget v0, Lg8d;->oneme_folder_widget_section_empty_view_type:I
+
+    iput v0, p0, Lbg6;->a:I
+
+    sget v0, Lg8d;->oneme_folder_widget_section_empty_id:I
+
+    int-to-long v0, v0
+
+    iput-wide v0, p0, Lbg6;->b:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Landroid/view/MotionEvent;)V
-    .locals 0
+.method public final getItemId()J
+    .locals 2
 
-    return-void
+    iget-wide v0, p0, Lbg6;->b:J
+
+    return-wide v0
 .end method
 
-.method public final c(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)Z
+.method public final m()I
     .locals 1
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    iget v0, p0, Lbg6;->a:I
 
-    move-result p2
-
-    const/4 v0, 0x2
-
-    if-ne p2, v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    invoke-interface {p1, p2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final e(Z)V
-    .locals 0
-
-    return-void
+    return v0
 .end method

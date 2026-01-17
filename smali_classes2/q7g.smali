@@ -1,84 +1,71 @@
-.class public final Lq7g;
-.super Lkk0;
+.class public final synthetic Lq7g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final b:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Ls7g;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public synthetic constructor <init>(Ls7g;I)V
     .locals 0
 
-    invoke-direct {p0}, Lkk0;-><init>()V
+    iput p2, p0, Lq7g;->a:I
 
-    iput-boolean p1, p0, Lq7g;->b:Z
+    iput-object p1, p0, Lq7g;->b:Ls7g;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lq7g;->a:I
 
-    goto :goto_1
+    check-cast p1, Ljava/lang/Float;
 
-    :cond_0
-    instance-of v0, p1, Lq7g;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    if-nez v0, :cond_1
+    move-result p1
+
+    check-cast p2, Ljava/lang/Float;
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    iget-object v0, p0, Lq7g;->b:Ls7g;
+
+    invoke-static {v0, p1, p2}, Ls7g;->b(Ls7g;FF)V
+
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p0, Lq7g;->b:Ls7g;
+
+    invoke-static {p2, p1}, Ls7g;->a(Ls7g;F)V
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lq7g;
-
-    iget-boolean v0, p0, Lq7g;->b:Z
-
-    iget-boolean p1, p1, Lq7g;->b:Z
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lq7g;->b:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "SyncMutedChatsEvent(isSuccessful="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lq7g;->b:Z
-
-    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

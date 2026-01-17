@@ -1,32 +1,26 @@
 .class public final Lec4;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Landroidx/work/CoroutineWorker;
 
-.field public final synthetic Y:Luy7;
-
-.field public final synthetic Z:Landroidx/work/CoroutineWorker;
-
-.field public o:Luy7;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Luy7;Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lec4;->Y:Luy7;
-
-    iput-object p2, p0, Lec4;->Z:Landroidx/work/CoroutineWorker;
+    iput-object p1, p0, Lec4;->X:Landroidx/work/CoroutineWorker;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -46,49 +40,53 @@
 
     check-cast p1, Lec4;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lec4;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
     new-instance p1, Lec4;
 
-    iget-object v0, p0, Lec4;->Y:Luy7;
+    iget-object v0, p0, Lec4;->X:Landroidx/work/CoroutineWorker;
 
-    iget-object v1, p0, Lec4;->Z:Landroidx/work/CoroutineWorker;
-
-    invoke-direct {p1, v0, v1, p2}, Lec4;-><init>(Luy7;Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lec4;-><init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 4
 
-    iget v0, p0, Lec4;->X:I
+    iget-object v0, p0, Lec4;->X:Landroidx/work/CoroutineWorker;
 
-    const/4 v1, 0x1
+    iget-object v1, v0, Landroidx/work/CoroutineWorker;->X:Lrve;
 
-    if-eqz v0, :cond_1
+    iget v2, p0, Lec4;->o:I
 
-    if-ne v0, v1, :cond_0
+    const/4 v3, 0x1
 
-    iget-object v0, p0, Lec4;->o:Luy7;
+    if-eqz v2, :cond_1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    if-ne v2, v3, :cond_0
 
-    iget-object v0, v0, Luy7;->a:Loue;
+    :try_start_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, p1}, Loue;->i(Ljava/lang/Object;)Z
+    goto :goto_0
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    :catchall_0
+    move-exception p1
 
-    return-object p1
+    goto :goto_1
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -100,19 +98,39 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lec4;->Y:Luy7;
+    :try_start_1
+    iput v3, p0, Lec4;->o:I
 
-    iput-object p1, p0, Lec4;->o:Luy7;
+    invoke-virtual {v0, p0}, Landroidx/work/CoroutineWorker;->g(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iput v1, p0, Lec4;->X:I
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v0, Lac4;->a:Lac4;
 
-    const-string v0, "Not implemented"
+    if-ne p1, v0, :cond_2
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return-object v0
 
-    throw p1
+    :cond_2
+    :goto_0
+    :try_start_2
+    check-cast p1, Lme8;
+
+    invoke-virtual {v1, p1}, Lrve;->i(Ljava/lang/Object;)Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_2
+
+    :goto_1
+    invoke-virtual {v1, p1}, Lrve;->j(Ljava/lang/Throwable;)Z
+
+    :goto_2
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

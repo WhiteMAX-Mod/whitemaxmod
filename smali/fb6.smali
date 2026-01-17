@@ -1,47 +1,85 @@
 .class public final Lfb6;
-.super Ly0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Le0b;
+.implements Lb1g;
 
 
 # instance fields
-.field public final c:Lole;
+.field public final a:Lz0g;
 
-.field public final d:I
+.field public b:Lo25;
 
 
 # direct methods
-.method public constructor <init>(Lra6;)V
+.method public constructor <init>(Lz0g;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ly0;-><init>(Lra6;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object p1, Lz7f;->d:Lole;
-
-    iput-object p1, p0, Lfb6;->c:Lole;
-
-    const p1, 0x7fffffff
-
-    iput p1, p0, Lfb6;->d:I
+    iput-object p1, p0, Lfb6;->a:Lz0g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lzb6;)V
-    .locals 3
+.method public final b()V
+    .locals 1
 
-    new-instance v0, Leb6;
+    iget-object v0, p0, Lfb6;->a:Lz0g;
 
-    iget-object v1, p0, Lfb6;->c:Lole;
+    invoke-interface {v0}, Lz0g;->b()V
 
-    iget v2, p0, Lfb6;->d:I
+    return-void
+.end method
 
-    invoke-direct {v0, p1, v1, v2}, Leb6;-><init>(Lozf;Lole;I)V
+.method public final c(Lo25;)V
+    .locals 0
 
-    iget-object p1, p0, Ly0;->b:Lra6;
+    iput-object p1, p0, Lfb6;->b:Lo25;
 
-    invoke-virtual {p1, v0}, Lra6;->c(Lzb6;)V
+    iget-object p1, p0, Lfb6;->a:Lz0g;
+
+    invoke-interface {p1, p0}, Lz0g;->d(Lb1g;)V
+
+    return-void
+.end method
+
+.method public final cancel()V
+    .locals 1
+
+    iget-object v0, p0, Lfb6;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    return-void
+.end method
+
+.method public final f(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Lfb6;->a:Lz0g;
+
+    invoke-interface {v0, p1}, Lz0g;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lfb6;->a:Lz0g;
+
+    invoke-interface {v0, p1}, Lz0g;->r(Ljava/lang/Object;)V
 
     return-void
 .end method

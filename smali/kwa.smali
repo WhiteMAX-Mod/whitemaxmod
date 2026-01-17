@@ -3,32 +3,32 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq38;
+.implements La38;
 
 
 # instance fields
-.field public final a:Lq38;
+.field public final a:La38;
 
-.field public final b:Lwoe;
+.field public final b:Lype;
 
 
 # direct methods
-.method public constructor <init>(Lq38;)V
+.method public constructor <init>(La38;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkwa;->a:Lq38;
+    iput-object p1, p0, Lkwa;->a:La38;
 
-    new-instance v0, Lwoe;
+    new-instance v0, Lype;
 
-    invoke-interface {p1}, Lq38;->d()Lvoe;
+    invoke-interface {p1}, La38;->d()Lxpe;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lwoe;-><init>(Lvoe;)V
+    invoke-direct {v0, p1}, Lype;-><init>(Lxpe;)V
 
-    iput-object v0, p0, Lkwa;->b:Lwoe;
+    iput-object v0, p0, Lkwa;->b:Lype;
 
     return-void
 .end method
@@ -40,9 +40,11 @@
 
     if-eqz p2, :cond_0
 
-    iget-object v0, p0, Lkwa;->a:Lq38;
+    iget-object v0, p0, Lkwa;->a:La38;
 
-    invoke-virtual {p1, v0, p2}, Lkotlinx/serialization/json/internal/b;->p(Lq38;Ljava/lang/Object;)V
+    check-cast v0, La38;
+
+    invoke-virtual {p1, v0, p2}, Lkotlinx/serialization/json/internal/b;->p(La38;Ljava/lang/Object;)V
 
     return-void
 
@@ -52,18 +54,20 @@
     return-void
 .end method
 
-.method public final b(Lll4;)Ljava/lang/Object;
+.method public final b(Lkl4;)Ljava/lang/Object;
     .locals 1
 
-    invoke-interface {p1}, Lll4;->v()Z
+    invoke-interface {p1}, Lkl4;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lkwa;->a:Lq38;
+    iget-object v0, p0, Lkwa;->a:La38;
 
-    invoke-interface {p1, v0}, Lll4;->d(Lq38;)Ljava/lang/Object;
+    check-cast v0, La38;
+
+    invoke-interface {p1, v0}, Lkl4;->d(La38;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -75,10 +79,10 @@
     return-object p1
 .end method
 
-.method public final d()Lvoe;
+.method public final d()Lxpe;
     .locals 1
 
-    iget-object v0, p0, Lkwa;->b:Lwoe;
+    iget-object v0, p0, Lkwa;->b:Lype;
 
     return-object v0
 .end method
@@ -110,11 +114,11 @@
     :cond_1
     check-cast p1, Lkwa;
 
-    iget-object v2, p0, Lkwa;->a:Lq38;
+    iget-object v2, p0, Lkwa;->a:La38;
 
-    iget-object p1, p1, Lkwa;->a:Lq38;
+    iget-object p1, p1, Lkwa;->a:La38;
 
-    invoke-static {v2, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -133,7 +137,7 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lkwa;->a:Lq38;
+    iget-object v0, p0, Lkwa;->a:La38;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 

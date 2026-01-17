@@ -1,48 +1,72 @@
-.class public final Lwfi;
+.class public final synthetic Lwfi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lufi;
-
-
-# static fields
-.field public static final d:Landroid/util/Size;
+.implements Lnq6;
 
 
 # instance fields
-.field public final a:Landroid/util/Size;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Lone/me/sdk/arch/Widget;
 
-.field public final c:Z
+.field public final synthetic c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;II)V
+    .locals 0
 
-    new-instance v0, Landroid/util/Size;
+    iput p3, p0, Lwfi;->a:I
 
-    const/16 v1, 0x28
+    iput-object p1, p0, Lwfi;->b:Lone/me/sdk/arch/Widget;
 
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+    iput p2, p0, Lwfi;->c:I
 
-    sput-object v0, Lwfi;->d:Landroid/util/Size;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/util/Size;Ljava/lang/String;Z)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lwfi;->a:Landroid/util/Size;
+    iget v0, p0, Lwfi;->a:I
 
-    iput-object p2, p0, Lwfi;->b:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iput-boolean p3, p0, Lwfi;->c:Z
+    iget v0, p0, Lwfi;->c:I
 
-    return-void
+    check-cast p1, Landroid/view/View;
+
+    iget-object v1, p0, Lwfi;->b:Lone/me/sdk/arch/Widget;
+
+    invoke-static {v1, v0, p1}, Lone/me/sdk/arch/Widget;->s0(Lone/me/sdk/arch/Widget;ILandroid/view/View;)Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget v0, p0, Lwfi;->c:I
+
+    check-cast p1, Lrb3;
+
+    iget-object v1, p0, Lwfi;->b:Lone/me/sdk/arch/Widget;
+
+    invoke-static {v1, v0, p1}, Lone/me/sdk/arch/Widget;->u0(Lone/me/sdk/arch/Widget;ILrb3;)Lrb3;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

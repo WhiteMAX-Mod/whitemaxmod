@@ -1,5 +1,5 @@
 .class public final Lr3a;
-.super Lzp;
+.super Laq;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lr3a;
 
-    invoke-direct {v0}, Lzp;-><init>()V
+    invoke-direct {v0}, Laq;-><init>()V
 
     sput-object v0, Lr3a;->a:Lr3a;
 

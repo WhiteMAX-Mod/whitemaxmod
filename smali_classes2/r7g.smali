@@ -1,27 +1,23 @@
-.class public final Lr7g;
-.super Lkk0;
+.class public interface abstract Lr7g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljava/util/List;
+# virtual methods
+.method public abstract c()I
+.end method
 
-.field public final c:Ljava/util/Map;
+.method public abstract j()I
+.end method
 
-.field public final d:Ljava/util/HashMap;
+.method public abstract m()V
+.end method
 
+.method public abstract onDismiss()V
+.end method
 
-# direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/Map;Ljava/util/HashMap;)V
-    .locals 0
+.method public abstract p()Landroid/view/View;
+.end method
 
-    invoke-direct {p0}, Lkk0;-><init>()V
-
-    iput-object p1, p0, Lr7g;->b:Ljava/util/List;
-
-    iput-object p2, p0, Lr7g;->c:Ljava/util/Map;
-
-    iput-object p3, p0, Lr7g;->d:Ljava/util/HashMap;
-
-    return-void
+.method public abstract r()I
 .end method

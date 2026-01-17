@@ -1,113 +1,73 @@
-.class public final Lnhc;
-.super Ljava/lang/Object;
+.class public final enum Lnhc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lmhc;
+# static fields
+.field public static final enum a:Lnhc;
+
+.field public static final enum b:Lnhc;
+
+.field public static final synthetic c:[Lnhc;
 
 
 # direct methods
-.method public constructor <init>(Lmhc;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnhc;
 
-    iput-object p1, p0, Lnhc;->a:Lmhc;
+    const-string v1, "IDLE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lnhc;->a:Lnhc;
+
+    new-instance v1, Lnhc;
+
+    const-string v2, "STREAMING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lnhc;->b:Lnhc;
+
+    filled-new-array {v0, v1}, [Lnhc;
+
+    move-result-object v0
+
+    sput-object v0, Lnhc;->c:[Lnhc;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lnhc;
+    .locals 1
 
-# virtual methods
-.method public final varargs a([Lj9h;)V
-    .locals 3
+    const-class v0, Lnhc;
 
-    iget-object v0, p0, Lnhc;->a:Lmhc;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    const-string v1, "CX:unbind"
+    check-cast p0, Lnhc;
 
-    invoke-static {v1}, Lkti;->e(Ljava/lang/String;)Ljava/lang/String;
+    return-object p0
+.end method
 
-    move-result-object v1
+.method public static values()[Lnhc;
+    .locals 1
 
-    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    sget-object v0, Lnhc;->c:[Lnhc;
 
-    :try_start_0
-    invoke-static {}, Ltsi;->a()V
+    invoke-virtual {v0}, [Lnhc;->clone()Ljava/lang/Object;
 
-    iget-object v1, v0, Lmhc;->d:Lt52;
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    check-cast v0, [Lnhc;
 
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, v1, Lt52;->f:Lt02;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, v1, Lt02;->b:Lwrg;
-
-    iget v1, v1, Lwrg;->b:I
-
-    :goto_0
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_1
-
-    iget-object v0, v0, Lmhc;->c:Ldd6;
-
-    array-length v1, p1
-
-    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ldd6;->l(Ljava/util/List;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_1
-    :try_start_1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Unbind usecase is not supported in concurrent camera mode, call unbindAll() first."
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "CameraX not initialized yet."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_1
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    throw p1
+    return-object v0
 .end method

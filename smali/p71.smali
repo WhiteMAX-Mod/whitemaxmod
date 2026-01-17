@@ -1,270 +1,240 @@
-.class public final synthetic Lp71;
+.class public final Lp71;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lr71;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic a:I
+.field public final b:Z
 
-.field public final synthetic b:J
+.field public final c:Z
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final d:Z
 
-.field public final synthetic d:Ljava/lang/Object;
+.field public final e:Z
 
-.field public final synthetic o:Ljava/lang/Object;
+.field public final f:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldl;JLr71;Le33;Lla;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lp71;->a:I
+.method public constructor <init>(Ljava/lang/String;ZZZZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lp71;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lp71;->a:Ljava/lang/String;
 
-    iput-wide p2, p0, Lp71;->b:J
+    iput-boolean p2, p0, Lp71;->b:Z
 
-    iput-object p4, p0, Lp71;->d:Ljava/lang/Object;
+    iput-boolean p3, p0, Lp71;->c:Z
 
-    iput-object p5, p0, Lp71;->o:Ljava/lang/Object;
+    iput-boolean p4, p0, Lp71;->d:Z
 
-    iput-object p6, p0, Lp71;->X:Ljava/lang/Object;
+    iput-boolean p5, p0, Lp71;->e:Z
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lmv9;Ljava/lang/String;Lwq9;JLjava/util/List;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lp71;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp71;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lp71;->d:Ljava/lang/Object;
-
-    iput-object p3, p0, Lp71;->o:Ljava/lang/Object;
-
-    iput-wide p4, p0, Lp71;->b:J
-
-    iput-object p6, p0, Lp71;->X:Ljava/lang/Object;
+    iput-boolean p6, p0, Lp71;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a()Z
+    .locals 1
 
-    iget v0, p0, Lp71;->a:I
+    iget-boolean v0, p0, Lp71;->e:Z
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lp71;->c:Ljava/lang/Object;
+.method public final b()Z
+    .locals 1
 
-    check-cast v0, Lmv9;
+    iget-boolean v0, p0, Lp71;->f:Z
 
-    iget-object v1, p0, Lp71;->d:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast v1, Ljava/lang/String;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v2, p0, Lp71;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v2, Lwq9;
+    if-ne p0, p1, :cond_0
 
-    iget-wide v3, p0, Lp71;->b:J
-
-    iget-object v5, p0, Lp71;->X:Ljava/lang/Object;
-
-    check-cast v5, Ljava/util/List;
-
-    check-cast p1, Lj6e;
-
-    invoke-interface {p1, v1}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
-
-    move-result-object p1
-
-    :try_start_0
-    invoke-virtual {v0}, Lmv9;->b()Ll4a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, v2, Lwq9;->a:I
-
-    int-to-long v0, v0
-
-    const/4 v2, 0x1
-
-    invoke-interface {p1, v2, v0, v1}, Lo6e;->b(IJ)V
-
-    const/4 v0, 0x2
-
-    invoke-interface {p1, v0, v3, v4}, Lo6e;->b(IJ)V
-
-    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x3
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    if-nez v2, :cond_0
-
-    invoke-interface {p1, v1}, Lo6e;->e(I)V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    instance-of v1, p1, Lp71;
 
-    move-result-wide v2
+    const/4 v2, 0x0
 
-    invoke-interface {p1, v1, v2, v3}, Lo6e;->b(IJ)V
+    if-nez v1, :cond_1
 
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p1, Lp71;
 
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    iget-object v1, p0, Lp71;->a:Ljava/lang/String;
 
-    const/4 p1, 0x0
+    iget-object v3, p1, Lp71;->a:Ljava/lang/String;
 
-    return-object p1
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_2
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    move-result v1
 
-    throw v0
+    if-nez v1, :cond_2
 
-    :pswitch_0
-    iget-object v0, p0, Lp71;->c:Ljava/lang/Object;
-
-    check-cast v0, Ldl;
-
-    iget-object v1, p0, Lp71;->d:Ljava/lang/Object;
-
-    check-cast v1, Lr71;
-
-    iget-object v2, p0, Lp71;->o:Ljava/lang/Object;
-
-    check-cast v2, Le33;
-
-    iget-object v3, p0, Lp71;->X:Ljava/lang/Object;
-
-    check-cast v3, Lla;
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    iget-wide v4, v0, Ldl;->a:J
-
-    invoke-static {v4, v5}, Lztb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v4
-
-    invoke-virtual {p1, v4}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setOpponentId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    move-result-object p1
-
-    iget-object v4, v0, Ldl;->c:Ljava/lang/String;
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {p1, v4}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationParams(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    return v2
 
     :cond_2
-    iget-object v0, v0, Ldl;->b:Ljava/lang/String;
+    iget-boolean v1, p0, Lp71;->b:Z
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationId(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    iget-boolean v3, p1, Lp71;->b:Z
 
-    move-result-object p1
+    if-eq v1, v3, :cond_3
 
-    iget-wide v4, p0, Lp71;->b:J
+    return v2
 
-    invoke-static {v4, v5}, Lztb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    :cond_3
+    iget-boolean v1, p0, Lp71;->c:Z
+
+    iget-boolean v3, p1, Lp71;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lp71;->d:Z
+
+    iget-boolean v3, p1, Lp71;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lp71;->e:Z
+
+    iget-boolean v3, p1, Lp71;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lp71;->f:Z
+
+    iget-boolean p1, p1, Lp71;->f:Z
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lp71;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lp71;->b:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lp71;->c:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lp71;->d:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lp71;->e:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lp71;->f:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Link(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lp71;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isNewLink="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lp71;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVideoCall="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isFrontCameraEnabled="
+
+    const-string v2, ", isVideoEnabled="
+
+    iget-boolean v3, p0, Lp71;->c:Z
+
+    iget-boolean v4, p0, Lp71;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", isAudioEnabled="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lp71;->e:Z
+
+    iget-boolean v4, p0, Lp71;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lhc0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    iget-object v0, v1, Lr71;->b:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldz1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    invoke-virtual {p1, v2}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Loq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    invoke-virtual {p1, v3}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Loq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

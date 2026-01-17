@@ -1,21 +1,11 @@
-.class public abstract Lpsi;
+.class public interface abstract Lpsi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/IInterface;
 
-# static fields
-.field public static final a:Ljava/util/Random;
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/util/Random;
-
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
-
-    sput-object v0, Lpsi;->a:Ljava/util/Random;
-
-    return-void
+# virtual methods
+.method public abstract O(Ly1j;)V
 .end method

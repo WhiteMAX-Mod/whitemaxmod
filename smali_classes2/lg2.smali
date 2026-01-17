@@ -3,18 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwx3;
+.implements Lcy3;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Z
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(ZI)V
     .locals 0
 
-    iput p1, p0, Llg2;->a:I
+    iput p2, p0, Llg2;->a:I
+
+    iput-boolean p1, p0, Llg2;->b:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,27 +28,45 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 2
+    .locals 3
 
     iget v0, p0, Llg2;->a:I
 
-    check-cast p1, Lhh2;
-
     packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lnd2;
+
+    iget-object p1, p1, Lnd2;->b:Luh2;
+
+    iget-boolean v0, p0, Llg2;->b:Z
+
+    iput-boolean v0, p1, Luh2;->g0:Z
 
     return-void
 
     :pswitch_0
-    const/4 v0, 0x0
+    check-cast p1, Lch2;
 
-    iput-object v0, p1, Lhh2;->k0:Luh2;
+    iget-object v0, p1, Lch2;->b0:Lpt0;
+
+    new-instance v1, Lpt0;
+
+    iget-boolean v0, v0, Lpt0;->a:Z
+
+    iget-boolean v2, p0, Llg2;->b:Z
+
+    invoke-direct {v1, v0, v2}, Lpt0;-><init>(ZZ)V
+
+    iput-object v1, p1, Lch2;->b0:Lpt0;
 
     return-void
 
     :pswitch_1
-    const-wide/16 v0, 0x0
+    iget-boolean v0, p0, Llg2;->b:Z
 
-    iput-wide v0, p1, Lhh2;->M:J
+    check-cast p1, Lch2;
+
+    iput-boolean v0, p1, Lch2;->j0:Z
 
     return-void
 

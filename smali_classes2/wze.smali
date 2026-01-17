@@ -1,6 +1,9 @@
 .class public final Lwze;
-.super Lyze;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lyze;
 
 
 # static fields
@@ -47,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x1c00c5e5
+    const v0, 0x589f1ca
 
     return v0
 .end method
@@ -55,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ScrollToTop"
+    const-string v0, "Alert"
 
     return-object v0
 .end method

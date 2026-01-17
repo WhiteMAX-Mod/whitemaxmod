@@ -1,84 +1,97 @@
-.class public final Ln1b;
+.class public abstract Ln1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/window/OnBackAnimationCallback;
-
 
 # instance fields
-.field public final synthetic a:Loq6;
+.field public a:Z
 
-.field public final synthetic b:Loq6;
+.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.field public final synthetic c:Lmq6;
-
-.field public final synthetic d:Lmq6;
+.field public c:Lqr6;
 
 
 # direct methods
-.method public constructor <init>(Loq6;Loq6;Lmq6;Lmq6;)V
+.method public constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln1b;->a:Loq6;
+    iput-boolean p1, p0, Ln1b;->a:Z
 
-    iput-object p2, p0, Ln1b;->b:Loq6;
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iput-object p3, p0, Ln1b;->c:Lmq6;
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    iput-object p4, p0, Ln1b;->d:Lmq6;
+    iput-object p1, p0, Ln1b;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBackCancelled()V
-    .locals 1
-
-    iget-object v0, p0, Ln1b;->d:Lmq6;
-
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+.method public a()V
+    .locals 0
 
     return-void
 .end method
 
-.method public final onBackInvoked()V
-    .locals 1
+.method public abstract b()V
+.end method
 
-    iget-object v0, p0, Ln1b;->c:Lmq6;
-
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+.method public c(Lpf0;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final onBackProgressed(Landroid/window/BackEvent;)V
-    .locals 1
-
-    new-instance v0, Lpf0;
-
-    invoke-direct {v0, p1}, Lpf0;-><init>(Landroid/window/BackEvent;)V
-
-    iget-object p1, p0, Ln1b;->b:Loq6;
-
-    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public d()V
+    .locals 0
 
     return-void
 .end method
 
-.method public final onBackStarted(Landroid/window/BackEvent;)V
-    .locals 1
+.method public final e()V
+    .locals 2
 
-    new-instance v0, Lpf0;
+    iget-object v0, p0, Ln1b;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-direct {v0, p1}, Lpf0;-><init>(Landroid/window/BackEvent;)V
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    iget-object p1, p0, Ln1b;->a:Loq6;
+    move-result-object v0
 
-    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Le62;
+
+    invoke-interface {v1}, Le62;->cancel()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Ln1b;->a:Z
+
+    iget-object p1, p0, Ln1b;->c:Lqr6;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+
+    :cond_0
     return-void
 .end method

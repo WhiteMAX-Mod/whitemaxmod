@@ -1,70 +1,64 @@
-.class public final Lc8j;
+.class public abstract Lc8j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwwa;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lc8j;
+# instance fields
+.field public final a:Lieg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lc8j;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Lc8j;->a:Lc8j;
+    iput-object v0, p0, Lc8j;->a:Lieg;
 
-    new-instance v0, Lyyi;
+    return-void
+.end method
 
-    const/4 v1, 0x1
+.method public constructor <init>(Lieg;)V
+    .locals 0
 
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v1, Lqzi;
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lc8j;->a:Lieg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public abstract a()V
+.end method
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+.method public final run()V
+    .locals 2
 
-    move-result-object p1
+    :try_start_0
+    invoke-virtual {p0}, Lc8j;->a()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    throw p1
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v1, p0, Lc8j;->a:Lieg;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, v0}, Lieg;->c(Ljava/lang/Exception;)Z
+
+    :cond_0
+    return-void
 .end method

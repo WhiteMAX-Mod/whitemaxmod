@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxsh;
+.implements Lsth;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Lssh;
+.method public final a(Ljava/lang/Class;)Loth;
     .locals 0
 
     new-instance p1, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;

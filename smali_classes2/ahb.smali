@@ -4,20 +4,6 @@
 
 
 # static fields
-.field public static final A:I
-
-.field public static final B:I
-
-.field public static final C:I
-
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
 .field public static final a:I
 
 .field public static final b:I
@@ -68,144 +54,110 @@
 
 .field public static final y:I
 
-.field public static final z:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lv8d;->audio_record__action_view:I
+    sget v0, Lu6d;->emoji_sprite_0:I
 
     sput v0, Lahb;->a:I
 
-    sget v0, Lv8d;->audio_record__action_view_background:I
+    sget v0, Lu6d;->emoji_sprite_1:I
 
     sput v0, Lahb;->b:I
 
-    sget v0, Lv8d;->audio_record__action_view_bg_container:I
+    sget v0, Lu6d;->emoji_sprite_10:I
 
     sput v0, Lahb;->c:I
 
-    sget v0, Lv8d;->audio_record__action_view_container:I
+    sget v0, Lu6d;->emoji_sprite_11:I
 
     sput v0, Lahb;->d:I
 
-    sget v0, Lv8d;->audio_record__audio_hand_free_record_view:I
+    sget v0, Lu6d;->emoji_sprite_12:I
 
     sput v0, Lahb;->e:I
 
-    sget v0, Lv8d;->audio_record__audio_record_root:I
+    sget v0, Lu6d;->emoji_sprite_13:I
 
     sput v0, Lahb;->f:I
 
-    sget v0, Lv8d;->audio_record__cancel_view:I
+    sget v0, Lu6d;->emoji_sprite_14:I
 
     sput v0, Lahb;->g:I
 
-    sget v0, Lv8d;->audio_record__dot_view:I
+    sget v0, Lu6d;->emoji_sprite_15:I
 
     sput v0, Lahb;->h:I
 
-    sget v0, Lv8d;->audio_record__duration_view:I
+    sget v0, Lu6d;->emoji_sprite_16:I
 
     sput v0, Lahb;->i:I
 
-    sget v0, Lv8d;->audio_record__hand_free_dot_view:I
+    sget v0, Lu6d;->emoji_sprite_17:I
 
     sput v0, Lahb;->j:I
 
-    sget v0, Lv8d;->audio_record__hand_free_duration_view:I
+    sget v0, Lu6d;->emoji_sprite_18:I
 
     sput v0, Lahb;->k:I
 
-    sget v0, Lv8d;->audio_record__lock_view:I
+    sget v0, Lu6d;->emoji_sprite_19:I
 
     sput v0, Lahb;->l:I
 
-    sget v0, Lv8d;->audio_record__pause_recording_button:I
+    sget v0, Lu6d;->emoji_sprite_2:I
 
     sput v0, Lahb;->m:I
 
-    sget v0, Lv8d;->audio_record__play_pause_listening_button:I
+    sget v0, Lu6d;->emoji_sprite_20:I
 
     sput v0, Lahb;->n:I
 
-    sget v0, Lv8d;->audio_record__play_recording_button:I
+    sget v0, Lu6d;->emoji_sprite_21:I
 
     sput v0, Lahb;->o:I
 
-    sget v0, Lv8d;->audio_record__recording_panel:I
+    sget v0, Lu6d;->emoji_sprite_22:I
 
     sput v0, Lahb;->p:I
 
-    sget v0, Lv8d;->audio_record__remove_button:I
+    sget v0, Lu6d;->emoji_sprite_23:I
 
     sput v0, Lahb;->q:I
 
-    sget v0, Lv8d;->audio_record__swipe_remove_button:I
+    sget v0, Lu6d;->emoji_sprite_24:I
 
     sput v0, Lahb;->r:I
 
-    sget v0, Lv8d;->audio_record__wave_container:I
+    sget v0, Lu6d;->emoji_sprite_3:I
 
     sput v0, Lahb;->s:I
 
-    sget v0, Lv8d;->audio_record__wave_view:I
+    sget v0, Lu6d;->emoji_sprite_4:I
 
     sput v0, Lahb;->t:I
 
-    sget v0, Lv8d;->writebar__add_link_bottom_sheet_button_add:I
+    sget v0, Lu6d;->emoji_sprite_5:I
 
     sput v0, Lahb;->u:I
 
-    sget v0, Lv8d;->writebar__add_link_bottom_sheet_input:I
+    sget v0, Lu6d;->emoji_sprite_6:I
 
     sput v0, Lahb;->v:I
 
-    sget v0, Lv8d;->writebar__container:I
+    sget v0, Lu6d;->emoji_sprite_7:I
 
     sput v0, Lahb;->w:I
 
-    sget v0, Lv8d;->writebar__record_controls:I
+    sget v0, Lu6d;->emoji_sprite_8:I
 
     sput v0, Lahb;->x:I
 
-    sget v0, Lv8d;->writebar__root:I
+    sget v0, Lu6d;->emoji_sprite_9:I
 
     sput v0, Lahb;->y:I
-
-    sget v0, Lv8d;->writebar__suggestion_close_button:I
-
-    sput v0, Lahb;->z:I
-
-    sget v0, Lv8d;->writebar__suggestion_close_panel:I
-
-    sput v0, Lahb;->A:I
-
-    sget v0, Lv8d;->writebar__suggestion_item:I
-
-    sput v0, Lahb;->B:I
-
-    sget v0, Lv8d;->writebar__suggestion_not_found:I
-
-    sput v0, Lahb;->C:I
-
-    sget v0, Lv8d;->writebar__suggestion_popup_drag_layout:I
-
-    sput v0, Lahb;->D:I
-
-    sget v0, Lv8d;->writebar__suggestion_popup_layout_content:I
-
-    sput v0, Lahb;->E:I
-
-    sget v0, Lv8d;->writebar__suggestion_popup_layout_list:I
-
-    sput v0, Lahb;->F:I
-
-    sget v0, Lv8d;->writebar__suggestion_title:I
-
-    sput v0, Lahb;->G:I
 
     return-void
 .end method

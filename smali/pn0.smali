@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract test(Ljava/lang/Object;Ljava/lang/Object;)Z
 .end method

@@ -1,104 +1,48 @@
 .class public final Lx53;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lktg;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic X:Lnq1;
 
-.field public final synthetic b:Ly53;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:Z
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ly53;Z)V
+.method public constructor <init>(Lnq1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lx53;->X:Lnq1;
 
-    iput-object p1, p0, Lx53;->a:Landroid/view/View;
-
-    iput-object p2, p0, Lx53;->b:Ly53;
-
-    iput-boolean p3, p0, Lx53;->c:Z
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lltg;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p1, p0, Lx53;->a:Landroid/view/View;
+    iput-object p1, p0, Lx53;->d:Ljava/lang/Object;
 
-    if-nez p1, :cond_0
+    iget p1, p0, Lx53;->o:I
 
-    goto :goto_0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    iget-object v0, p0, Lx53;->b:Ly53;
+    or-int/2addr p1, v0
 
-    iget-object v0, v0, Ly53;->w0:Ljava/lang/String;
+    iput p1, p0, Lx53;->o:I
 
-    invoke-static {p1, v0}, Lv0j;->c(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
+    iget-object p1, p0, Lx53;->X:Lnq1;
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    check-cast p1, Lpmb;
-
-    iget-boolean v0, p0, Lx53;->c:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lpmb;->getSearchView()Lthb;
+    invoke-virtual {p1, v0, p0}, Lnq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lthb;->d()V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1}, Lpmb;->getSearchView()Lthb;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lthb;->b()V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final c(Lltg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(Lltg;)V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

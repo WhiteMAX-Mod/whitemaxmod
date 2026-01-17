@@ -1,13 +1,8 @@
-.class public final Lgrd;
+.class public interface abstract Lgrd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
-
-.field public b:I
-
-.field public c:Z
-
-.field public d:Z
+# virtual methods
+.method public abstract a(Lga0;Ljava/util/concurrent/Executor;)Lq60;
+.end method

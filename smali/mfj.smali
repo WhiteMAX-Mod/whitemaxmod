@@ -1,191 +1,70 @@
 .class public final Lmfj;
-.super Lg7j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final synthetic b:I
 
-.field public final synthetic c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lmfj;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p1, p0, Lmfj;->b:I
+    new-instance v0, Lmfj;
 
-    iput-object p2, p0, Lmfj;->c:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lg7j;-><init>()V
+    sput-object v0, Lmfj;->a:Lmfj;
+
+    new-instance v0, Lvzi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+
+    const-class v1, Ln0j;
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lmfj;->b:I
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v0, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v0, Llca;
-
-    iget-object v0, v0, Llca;->b:Ljava/lang/Object;
-
-    check-cast v0, Lkmj;
-
-    iget-object v1, v0, Lkmj;->b:Lzz7;
-
-    const-string v2, "unlinkToDeath"
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v4}, Lzz7;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lkmj;->m:Lczi;
-
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    iget-object v2, v0, Lkmj;->j:Lm9j;
-
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lkmj;->m:Lczi;
-
-    iput-boolean v3, v0, Lkmj;->g:Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v0, Lkmj;
-
-    iget-object v0, v0, Lkmj;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v1, Lkmj;
-
-    iget-object v1, v1, Lkmj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v1, Lkmj;
-
-    iget-object v1, v1, Lkmj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v1, Lkmj;
-
-    iget-object v1, v1, Lkmj;->b:Lzz7;
-
-    const-string v3, "Leaving the connection open for other ongoing calls."
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v3, v2}, Lzz7;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v1, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v1, Lkmj;
-
-    iget-object v3, v1, Lkmj;->m:Lczi;
-
-    if-eqz v3, :cond_1
-
-    iget-object v1, v1, Lkmj;->b:Lzz7;
-
-    const-string v3, "Unbind from service."
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v3, v4}, Lzz7;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v1, Lkmj;
-
-    iget-object v3, v1, Lkmj;->a:Landroid/content/Context;
-
-    iget-object v1, v1, Lkmj;->l:Llca;
-
-    invoke-virtual {v3, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    iget-object v1, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v1, Lkmj;
-
-    iput-boolean v2, v1, Lkmj;->g:Z
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Lkmj;->m:Lczi;
-
-    iput-object v2, v1, Lkmj;->l:Llca;
-
-    :cond_1
-    iget-object v1, p0, Lmfj;->c:Ljava/lang/Object;
-
-    check-cast v1, Lkmj;
-
-    invoke-virtual {v1}, Lkmj;->c()V
-
-    monitor-exit v0
-
-    :goto_0
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

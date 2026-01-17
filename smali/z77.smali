@@ -1,159 +1,117 @@
 .class public final Lz77;
-.super Ljava/lang/Object;
+.super Lqc3;
 .source "SourceFile"
-
-# interfaces
-.implements Lb87;
 
 
 # instance fields
-.field public final a:J
+.field public u0:[B
 
-.field public final b:J
+.field public volatile v0:Z
 
-.field public final c:Ljava/util/ArrayList;
+.field public w0:[B
 
 
-# direct methods
-.method public constructor <init>(JJLjava/util/ArrayList;)V
-    .locals 0
+# virtual methods
+.method public final a()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-wide p1, p0, Lz77;->a:J
-
-    iput-wide p3, p0, Lz77;->b:J
-
-    iput-object p5, p0, Lz77;->c:Ljava/util/ArrayList;
+    iput-boolean v0, p0, Lz77;->v0:Z
 
     return-void
 .end method
 
+.method public final load()V
+    .locals 6
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    :try_start_0
+    iget-object v0, p0, Lqc3;->t0:Lwqf;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lqc3;->b:Lzi4;
 
-    goto :goto_1
+    invoke-virtual {v0, v1}, Lwqf;->R(Lzi4;)J
+
+    const/4 v0, 0x0
+
+    move v1, v0
 
     :cond_0
-    instance-of v0, p1, Lz77;
+    :goto_0
+    const/4 v2, -0x1
 
-    if-nez v0, :cond_1
+    if-eq v0, v2, :cond_2
 
-    goto :goto_0
+    iget-boolean v0, p0, Lz77;->v0:Z
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lz77;->u0:[B
+
+    array-length v3, v0
+
+    add-int/lit16 v4, v1, 0x4000
+
+    const/16 v5, 0x4000
+
+    if-ge v3, v4, :cond_1
+
+    array-length v3, v0
+
+    add-int/2addr v3, v5
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lz77;->u0:[B
 
     :cond_1
-    check-cast p1, Lz77;
+    iget-object v0, p0, Lqc3;->t0:Lwqf;
 
-    iget-wide v0, p0, Lz77;->a:J
+    iget-object v3, p0, Lz77;->u0:[B
 
-    iget-wide v2, p1, Lz77;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v0, p0, Lz77;->b:J
-
-    iget-wide v2, p1, Lz77;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lz77;->c:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lz77;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lz77;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0, v3, v1, v5}, Lwqf;->read([BII)I
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lz77;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lz77;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    if-eq v0, v2, :cond_0
 
     add-int/2addr v1, v0
 
-    return v1
-.end method
+    goto :goto_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    :catchall_0
+    move-exception v0
 
-    const-string v0, "OneToOne(opponentId="
+    goto :goto_1
 
-    const-string v1, ", chatId="
+    :cond_2
+    iget-boolean v0, p0, Lz77;->v0:Z
 
-    iget-wide v2, p0, Lz77;->a:J
+    if-nez v0, :cond_3
 
-    invoke-static {v2, v3, v0, v1}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lz77;->u0:[B
 
-    move-result-object v0
-
-    iget-wide v1, p0, Lz77;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messagesIds="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lz77;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Lz77;->w0:[B
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_3
+    iget-object v0, p0, Lqc3;->t0:Lwqf;
+
+    invoke-static {v0}, Lcmj;->a(Lqi4;)V
+
+    return-void
+
+    :goto_1
+    iget-object v1, p0, Lqc3;->t0:Lwqf;
+
+    invoke-static {v1}, Lcmj;->a(Lqi4;)V
+
+    throw v0
 .end method

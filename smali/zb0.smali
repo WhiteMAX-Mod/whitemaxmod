@@ -6,20 +6,20 @@
 # instance fields
 .field public final a:J
 
-.field public final b:Lbd0;
+.field public final b:Lcd0;
 
 .field public final c:Lcb0;
 
 
 # direct methods
-.method public constructor <init>(JLbd0;Lcb0;)V
+.method public constructor <init>(JLcd0;Lcb0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lzb0;->a:J
 
-    iput-object p3, p0, Lzb0;->b:Lbd0;
+    iput-object p3, p0, Lzb0;->b:Lcd0;
 
     iput-object p4, p0, Lzb0;->c:Lcb0;
 
@@ -54,11 +54,11 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lzb0;->b:Lbd0;
+    iget-object v1, p0, Lzb0;->b:Lcd0;
 
-    iget-object v3, p1, Lzb0;->b:Lbd0;
+    iget-object v3, p1, Lzb0;->b:Lcd0;
 
-    invoke-virtual {v1, v3}, Lbd0;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lcd0;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -99,9 +99,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lzb0;->b:Lbd0;
+    iget-object v2, p0, Lzb0;->b:Lcd0;
 
-    invoke-virtual {v2}, Lbd0;->hashCode()I
+    invoke-virtual {v2}, Lcd0;->hashCode()I
 
     move-result v2
 
@@ -137,7 +137,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lzb0;->b:Lbd0;
+    iget-object v1, p0, Lzb0;->b:Lcd0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

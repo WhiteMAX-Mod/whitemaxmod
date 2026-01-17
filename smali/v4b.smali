@@ -1,146 +1,90 @@
 .class public final Lv4b;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lw4b;
-
-.field public o:I
+.field public final synthetic a:Lr5;
 
 
 # direct methods
-.method public constructor <init>(Lw4b;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lr5;)V
     .locals 0
 
-    iput-object p1, p0, Lv4b;->X:Lw4b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lv4b;->a:Lr5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Z)I
+    .locals 3
 
-    check-cast p1, Lac4;
+    sget-object v0, Lpc3;->t0:Lkme;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/16 v1, 0x11
 
-    invoke-virtual {p0, p1, p2}, Lv4b;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lv4b;->a:Lr5;
 
-    move-result-object p1
+    if-eqz p1, :cond_0
 
-    check-cast p1, Lv4b;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lv4b;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    check-cast p1, Landroid/content/Context;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v0, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
 
-    new-instance p1, Lv4b;
+    move-result-object p1
 
-    iget-object v0, p0, Lv4b;->X:Lw4b;
+    invoke-virtual {p1}, Lpc3;->j()Lzlb;
 
-    invoke-direct {p1, v0, p2}, Lv4b;-><init>(Lw4b;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    return-object p1
-.end method
+    invoke-interface {p1}, Lzlb;->a()Ln13;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    move-result-object p1
 
-    iget-object v0, p0, Lv4b;->X:Lw4b;
+    invoke-interface {p1}, Ln13;->i()Lfv0;
 
-    iget-object v1, v0, Lw4b;->b:Ld68;
+    move-result-object p1
 
-    iget v2, p0, Lv4b;->o:I
+    iget-object p1, p1, Lfv0;->d:Liv0;
 
-    const/4 v3, 0x1
+    iget p1, p1, Liv0;->b:I
 
-    if-eqz v2, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lo9g;
+    check-cast p1, Landroid/content/Context;
 
-    iput v3, p0, Lv4b;->o:I
-
-    invoke-virtual {p1, p0}, Lo9g;->a(Ll84;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
 
     move-result-object p1
 
-    sget-object v2, Lbc4;->a:Lbc4;
-
-    if-ne p1, v2, :cond_2
-
-    return-object v2
-
-    :cond_2
-    :goto_0
-    const-string p1, "PushToken"
-
-    const-string v2, "Refresh current token succeed."
-
-    invoke-static {p1, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lpc3;->j()Lzlb;
 
     move-result-object p1
 
-    check-cast p1, Lo9g;
+    invoke-interface {p1}, Lzlb;->a()Ln13;
 
-    new-instance v1, Lu4b;
+    move-result-object p1
 
-    invoke-direct {v1, v0}, Lu4b;-><init>(Lw4b;)V
+    invoke-interface {p1}, Ln13;->q()Lfv0;
 
-    iget-object v0, p1, Lo9g;->u0:Lkotlinx/coroutines/internal/ContextScope;
+    move-result-object p1
 
-    new-instance v2, Lg9g;
+    iget-object p1, p1, Lfv0;->d:Liv0;
 
-    const/4 v3, 0x0
+    iget p1, p1, Liv0;->b:I
 
-    invoke-direct {v2, p1, v1, v3}, Lg9g;-><init>(Lo9g;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, v3, v3, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return p1
 .end method

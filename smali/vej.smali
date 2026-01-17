@@ -1,230 +1,228 @@
 .class public final Lvej;
-.super Ljava/lang/Object;
+.super Ligj;
 .source "SourceFile"
-
-# interfaces
-.implements Ldej;
 
 
 # instance fields
-.field public final a:Le68;
+.field public final synthetic b:I
 
-.field public final b:Laej;
+.field public final synthetic c:Lieg;
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Laej;)V
-    .locals 2
+.method public constructor <init>(Ltqj;Lieg;Lieg;Lvej;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Lvej;->b:Laej;
+    iput v0, p0, Lvej;->b:I
 
-    sget-object p2, Lsz0;->e:Lsz0;
+    .line 2
+    iput-object p1, p0, Lvej;->o:Ljava/lang/Object;
 
-    invoke-static {p1}, Leug;->b(Landroid/content/Context;)V
+    iput-object p3, p0, Lvej;->c:Lieg;
 
-    invoke-static {}, Leug;->a()Leug;
+    iput-object p4, p0, Lvej;->d:Ljava/lang/Object;
 
-    move-result-object p1
+    invoke-direct {p0, p2}, Ligj;-><init>(Lieg;)V
 
-    invoke-virtual {p1, p2}, Leug;->c(Lbi5;)Lbug;
+    return-void
+.end method
 
-    move-result-object p1
+.method public constructor <init>(Lykj;Lieg;Ljava/lang/String;Lieg;)V
+    .locals 1
 
-    sget-object p2, Lsz0;->d:Ljava/util/Set;
+    const/4 v0, 0x0
 
-    new-instance v0, Lej5;
+    iput v0, p0, Lvej;->b:I
 
-    const-string v1, "json"
+    .line 1
+    iput-object p1, p0, Lvej;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lej5;-><init>(Ljava/lang/String;)V
+    iput-object p3, p0, Lvej;->d:Ljava/lang/Object;
 
-    invoke-interface {p2, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    iput-object p4, p0, Lvej;->c:Lieg;
 
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    new-instance p2, Le68;
-
-    new-instance v0, Lrej;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lrej;-><init>(Lbug;I)V
-
-    invoke-direct {p2, v0}, Le68;-><init>(Lhyc;)V
-
-    :cond_0
-    new-instance p2, Le68;
-
-    new-instance v0, Lrej;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Lrej;-><init>(Lbug;I)V
-
-    invoke-direct {p2, v0}, Le68;-><init>(Lhyc;)V
-
-    iput-object p2, p0, Lvej;->a:Le68;
+    invoke-direct {p0, p2}, Ligj;-><init>(Lieg;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lase;)V
+.method public final a()V
     .locals 7
 
-    iget-object v0, p0, Lvej;->a:Le68;
+    iget v0, p0, Lvej;->b:I
 
-    invoke-virtual {v0}, Le68;->get()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lvej;->o:Ljava/lang/Object;
 
-    check-cast v0, Lcug;
+    check-cast v0, Ltqj;
 
-    const-class v1, Lc7j;
+    iget-object v0, v0, Ltqj;->f:Ljava/lang/Object;
 
-    sget-object v2, Ly0j;->z0:Ly0j;
-
-    iget-object v3, p1, Lase;->b:Ljava/lang/Object;
-
-    check-cast v3, Lcf9;
-
-    iget-object v4, p1, Lase;->c:Ljava/lang/Object;
-
-    check-cast v4, Lobj;
-
-    const/4 v5, 0x0
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v5
-
-    iput-object v5, v4, Lobj;->h:Ljava/lang/Boolean;
-
-    iget-object p1, p1, Lase;->c:Ljava/lang/Object;
-
-    check-cast p1, Lobj;
-
-    sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object v4, p1, Lobj;->f:Ljava/lang/Boolean;
-
-    new-instance v4, Lxbj;
-
-    invoke-direct {v4, p1}, Lxbj;-><init>(Lobj;)V
-
-    iput-object v4, v3, Lcf9;->a:Ljava/lang/Object;
+    monitor-enter v0
 
     :try_start_0
-    invoke-static {}, Lgfj;->L()V
+    iget-object v1, p0, Lvej;->o:Ljava/lang/Object;
 
-    new-instance p1, Lc7j;
+    check-cast v1, Ltqj;
 
-    invoke-direct {p1, v3}, Lc7j;-><init>(Lcf9;)V
+    iget-object v2, p0, Lvej;->c:Lieg;
 
-    new-instance v3, Lqg8;
+    iget-object v3, v1, Ltqj;->e:Ljava/util/HashSet;
 
-    const/16 v4, 0x13
+    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v3, v4}, Lqg8;-><init>(I)V
+    iget-object v3, v2, Lieg;->a:Liqj;
 
-    invoke-virtual {v2, v3}, Ly0j;->i(Lki5;)V
+    new-instance v4, Lvnb;
 
-    new-instance v2, Ljava/util/HashMap;
+    const/16 v5, 0x16
 
-    iget-object v4, v3, Lqg8;->a:Ljava/lang/Object;
+    invoke-direct {v4, v1, v5, v2}, Lvnb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    check-cast v4, Ljava/util/HashMap;
+    invoke-virtual {v3, v4}, Liqj;->i(Lx1b;)Liqj;
 
-    invoke-direct {v2, v4}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    iget-object v1, p0, Lvej;->o:Ljava/lang/Object;
 
-    new-instance v4, Ljava/util/HashMap;
+    check-cast v1, Ltqj;
 
-    iget-object v5, v3, Lqg8;->b:Ljava/lang/Object;
+    iget-object v1, v1, Ltqj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    check-cast v5, Ljava/util/HashMap;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    invoke-direct {v4, v5}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    move-result v1
 
-    iget-object v3, v3, Lqg8;->c:Ljava/lang/Object;
+    if-lez v1, :cond_0
 
-    check-cast v3, Lyqi;
+    iget-object v1, p0, Lvej;->o:Ljava/lang/Object;
 
-    new-instance v5, Ljava/io/ByteArrayOutputStream;
+    check-cast v1, Ltqj;
 
-    invoke-direct {v5}, Ljava/io/ByteArrayOutputStream;-><init>()V
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_1
+    iget-object v1, v1, Ltqj;->b:Lqf5;
 
-    :try_start_1
-    new-instance v6, Lari;
+    const-string v2, "Already connected to the service."
 
-    invoke-direct {v6, v5, v2, v4, v3}, Lari;-><init>(Ljava/io/ByteArrayOutputStream;Ljava/util/HashMap;Ljava/util/HashMap;Lwwa;)V
+    const/4 v3, 0x0
 
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    move-result-object v2
-
-    check-cast v2, Lwwa;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1, v6}, Lhi5;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v1, v2, v3}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
     :cond_0
-    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "No encoder for "
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p1, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-
-    :catch_0
     :goto_0
-    :try_start_2
-    invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    iget-object v1, p0, Lvej;->o:Ljava/lang/Object;
 
-    move-result-object p1
-    :try_end_2
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_2 .. :try_end_2} :catch_1
+    check-cast v1, Ltqj;
 
-    new-instance v1, Lbb0;
+    iget-object v2, p0, Lvej;->d:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast v2, Lvej;
 
-    sget-object v3, Lbhc;->b:Lbhc;
+    invoke-static {v1, v2}, Ltqj;->b(Ltqj;Lvej;)V
 
-    invoke-direct {v1, p1, v3, v2}, Lbb0;-><init>(Ljava/lang/Object;Lbhc;Lec0;)V
-
-    invoke-virtual {v0, v1}, Lcug;->a(Lbb0;)V
+    monitor-exit v0
 
     return-void
 
-    :catch_1
-    move-exception p1
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    throw v1
 
-    const-string v1, "Failed to covert logging to UTF-8 byte array"
+    :pswitch_0
+    iget-object v0, p0, Lvej;->c:Lieg;
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v1, p0, Lvej;->o:Ljava/lang/Object;
 
-    throw v0
+    check-cast v1, Lykj;
+
+    iget-object v2, p0, Lvej;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/String;
+
+    :try_start_1
+    iget-object v3, v1, Lykj;->a:Ltqj;
+
+    iget-object v3, v3, Ltqj;->m:Lxzi;
+
+    iget-object v4, v1, Lykj;->b:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lykj;->a(Lykj;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v5
+
+    new-instance v6, Lzjj;
+
+    invoke-direct {v6, v1, v0, v2}, Lzjj;-><init>(Lykj;Lieg;Ljava/lang/String;)V
+
+    invoke-interface {v3, v4, v5, v6}, Lxzi;->l(Ljava/lang/String;Landroid/os/Bundle;Lzjj;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v1
+
+    sget-object v3, Lykj;->e:Lqf5;
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v4, "requestUpdateInfo(%s)"
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v5, "PlayCore"
+
+    const/4 v6, 0x6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    iget-object v3, v3, Lqf5;->a:Ljava/lang/String;
+
+    invoke-static {v3, v4, v2}, Lqf5;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v5, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_1
+    new-instance v2, Ljava/lang/RuntimeException;
+
+    invoke-direct {v2, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, v2}, Lieg;->c(Ljava/lang/Exception;)Z
+
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

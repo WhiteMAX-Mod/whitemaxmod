@@ -1,20 +1,24 @@
-.class public final Lr41;
+.class public final synthetic Lr41;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lys7;
+.implements Ld4e;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Lt41;
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lt41;I)V
     .locals 0
 
-    iput p1, p0, Lr41;->a:I
+    iput p2, p0, Lr41;->a:I
+
+    iput-object p1, p0, Lr41;->b:Lt41;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,541 +27,391 @@
 
 
 # virtual methods
-.method public final a(Lu5;)Ljava/lang/Object;
-    .locals 11
+.method public final a()V
+    .locals 19
 
-    iget v0, p0, Lr41;->a:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, v0, Lr41;->a:I
 
-    sget-object p1, Lea3;->a:Lea3;
+    sget-object v2, Lzv8;->a:Lzv8;
 
-    return-object p1
+    sget-object v3, Lzv8;->c:Lzv8;
 
-    :pswitch_0
-    new-instance v0, Lio6;
+    sget-object v4, Lzv8;->d:Lzv8;
 
-    const/16 v1, 0x243
+    sget-object v5, Lzv8;->o:Lzv8;
 
-    invoke-virtual {p1, v1}, Lu5;->d(I)Lz7g;
+    const/4 v6, 0x4
+
+    const/4 v7, 0x3
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x1
+
+    sget-object v10, Lzv8;->b:Lzv8;
+
+    iget-object v11, v0, Lr41;->b:Lt41;
+
+    packed-switch v1, :pswitch_data_0
+
+    iget-object v1, v11, Lt41;->Q0:Ls41;
+
+    if-eqz v1, :cond_2
+
+    check-cast v1, Lkp8;
+
+    iget-object v1, v1, Lkp8;->a:Ljava/lang/Object;
+
+    check-cast v1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    sget-object v2, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->A0()Ln51;
 
     move-result-object v1
 
-    const/16 v2, 0x49
+    iget-object v2, v1, Ln51;->c:Lsq1;
 
-    invoke-virtual {p1, v2}, Lu5;->d(I)Lz7g;
+    invoke-virtual {v1}, Ln51;->u()Lnx1;
 
-    move-result-object v2
+    move-result-object v1
 
-    const/16 v3, 0xb
+    iget-object v3, v1, Lnx1;->i:Lzce;
 
-    invoke-virtual {p1, v3}, Lu5;->d(I)Lz7g;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v3, Ljde;
+
+    iget-object v3, v3, Ljde;->v0:Lspf;
+
+    invoke-virtual {v3}, Lspf;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    const/16 v4, 0xd
+    check-cast v3, Lkde;
 
-    invoke-virtual {p1, v4}, Lu5;->c(I)Ljava/lang/Object;
+    iget-object v3, v3, Lkde;->b:Lyce;
 
-    move-result-object p1
+    if-eqz v3, :cond_0
 
-    check-cast p1, Lub4;
+    iget-object v3, v3, Lyce;->c:Lyk1;
 
-    invoke-direct {v0, v1, v2, v3, p1}, Lio6;-><init>(Ld68;Ld68;Ld68;Lub4;)V
+    goto :goto_0
 
-    return-object v0
-
-    :pswitch_1
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->force-play-embed:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    const-string v2, "\u0410\u0432\u0442\u043e\u043f\u043b\u0435\u0439 \u0432\u0438\u0434\u0435\u043e \u0432 WebView"
-
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_2
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->inline-ev-player:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    const-string v2, "\u0415\u0434\u0438\u043d\u043e\u0435 \u0432\u0438\u0434\u0435\u043e \u0432 WebView \u0432 \u0447\u0430\u0442\u0435"
-
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_3
-    new-instance p1, Lk79;
-
-    const/4 v0, 0x6
-
-    invoke-direct {p1, v0}, Lk79;-><init>(I)V
-
-    return-object p1
-
-    :pswitch_4
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-media-scrollable-caption-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    const-string v2, "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0444\u0443\u043b\u0432\u044c\u044e \u043f\u043e\u0441\u0442\u0430 \u0432\u043e viewer"
-
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_5
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->media-viewer-rotation-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    const-string v2, "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u043e\u0432\u043e\u0440\u043e\u0442 Media \u0432\u043e viewer"
-
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_6
-    new-instance v0, Ldlc;
-
-    const/16 v1, 0x34
-
-    invoke-virtual {p1, v1}, Lu5;->d(I)Lz7g;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Ldlc;-><init>(Ld68;I)V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Lc26;
-
-    const/16 v1, 0x36
-
-    invoke-virtual {p1, v1}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljy0;
-
-    const/16 v2, 0xb
-
-    invoke-virtual {p1, v2}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbbg;
-
-    invoke-direct {v0, v1, p1}, Lc26;-><init>(Ljy0;Lbbg;)V
-
-    return-object v0
-
-    :pswitch_8
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->video-group-call:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0412\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u0432\u0438\u0434\u0435\u043e-\u0437\u0432\u043e\u043d\u043a\u0430 \u0432 \u0433\u0440\u0443\u043f\u043f\u043e\u0432\u044b\u0445 \u0447\u0430\u0442\u0430\u0445"
-
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_9
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->call-icons-reorder:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u043f\u043e\u0440\u044f\u0434\u043a\u0430 \u0438\u043a\u043e\u043d\u043e\u043a \u0437\u0432\u043e\u043d\u043a\u043e\u0432 \u0432 \u0447\u0430\u0442\u0435"
-
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_a
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-anim:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lipe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_b
-    new-instance v0, Lbi2;
-
-    const/16 v1, 0x34
-
-    invoke-virtual {p1, v1}, Lu5;->d(I)Lz7g;
-
-    move-result-object v1
-
-    const/16 v2, 0xdb
-
-    invoke-virtual {p1, v2}, Lu5;->d(I)Lz7g;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, p1}, Lbi2;-><init>(Ld68;Ld68;)V
-
-    return-object v0
-
-    :pswitch_c
-    new-instance v2, Ltpe;
-
-    sget-object v3, Lru/ok/tamtam/android/prefs/PmsKey;->call-permissions-interval:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const-string p1, "0 - \u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0441\u0442\u0430\u0440\u0430\u044f \u043b\u043e\u0433\u0438\u043a\u0430"
-
-    const-string v0, "> 0 - \u0412\u0440\u0435\u043c\u044f \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0430\u0445, \u0447\u0435\u0440\u0435\u0437 \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0431\u0443\u0434\u0435\u0442 \u043e\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043b\u0435\u043d\u0430 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u043d\u0430 \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u043d\u044b\u0435 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f"
-
-    filled-new-array {p1, v0}, [Ljava/lang/String;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x14
-
-    const-wide/16 v4, 0x0
-
-    invoke-direct/range {v2 .. v8}, Ltpe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;J[Ljava/lang/String;Lfhg;I)V
-
-    return-object v2
-
-    :pswitch_d
-    const/16 v0, 0x81
-
-    invoke-virtual {p1, v0}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lin8;
-
-    return-object p1
-
-    :pswitch_e
-    new-instance p1, Lw2f;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, v0}, Lw2f;-><init>(I)V
-
-    return-object p1
-
-    :pswitch_f
-    sget-object p1, Ldc1;->a:Ldc1;
-
-    return-object p1
-
-    :pswitch_10
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gc-link-pre-settings:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u041f\u0440\u0435\u0434\u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0433\u0440\u0443\u043f\u043f\u043e\u0432\u043e\u0433\u043e \u0437\u0432\u043e\u043d\u043a\u0430 \u043f\u043e \u0441\u0441\u044b\u043b\u043a\u0435"
-
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_11
-    new-instance p1, Lipe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gc-from-p2p:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u041f\u0435\u0440\u0435\u0445\u043e\u0434 \u0438\u0437 1-1 \u0437\u0432\u043e\u043d\u043a\u0430 \u0432 \u0433\u0440\u0443\u043f\u043f\u043e\u0432\u043e\u0439"
-
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
-
-    :pswitch_12
-    const/16 v0, 0x32
-
-    invoke-virtual {p1, v0}, Lu5;->d(I)Lz7g;
-
-    move-result-object p1
-
-    new-instance v1, Lfhg;
-
-    const-string v0, "\ud83d\udcde Debug-menu \u0432 \u0437\u0432\u043e\u043d\u043a\u0435"
-
-    invoke-direct {v1, v0}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v2, Lqv;
-
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lte3;
-
+    :cond_0
     const/4 v3, 0x0
 
-    const/4 v4, 0x1
+    :goto_0
+    iget-object v1, v1, Lnx1;->d:Lnub;
 
-    const-class v5, Lte3;
+    check-cast v1, Ldvb;
 
-    const-string v7, "isCallsDebugMenuEnabled"
+    invoke-virtual {v1}, Ldvb;->c()Leub;
 
-    const-string v8, "isCallsDebugMenuEnabled()Z"
+    move-result-object v1
 
-    invoke-direct/range {v2 .. v8}, Lqv;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, v1, Leub;->a:Lal1;
 
-    sget v4, Lm5d;->ic_call_22:I
+    invoke-interface {v1}, Lal1;->getId()Lyk1;
 
-    new-instance v0, Lph8;
+    move-result-object v1
 
-    new-instance v3, Ls41;
+    invoke-static {v3, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/4 v5, 0x0
+    move-result v1
 
-    invoke-direct {v3, p1, v5}, Ls41;-><init>(Ld68;I)V
+    if-eqz v1, :cond_1
 
-    const/16 v5, 0x10
+    iget-object v1, v2, Lsq1;->J0:Lcm5;
 
-    invoke-direct/range {v0 .. v5}, Lph8;-><init>(Lghg;Lmq6;Loq6;II)V
+    sget-object v2, Lko1;->D:Lko1;
 
-    return-object v0
+    invoke-static {v1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
-    :pswitch_13
-    new-instance p1, Leqe;
+    goto :goto_1
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-ai-opus-bwe:Lru/ok/tamtam/android/prefs/PmsKey;
+    :cond_1
+    iget-object v1, v2, Lsq1;->J0:Lcm5;
 
-    invoke-direct {p1, v0}, Leqe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;)V
+    sget-object v2, Lfo1;->D:Lfo1;
 
-    return-object p1
+    invoke-static {v1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
-    :pswitch_14
-    new-instance p1, Lipe;
+    :cond_2
+    :goto_1
+    return-void
 
-    new-instance v0, Lfhg;
+    :pswitch_0
+    iget-object v1, v11, Lt41;->S0:Lzv8;
 
-    const-string v1, "\ud83d\udcde \u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u043e\u0434\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0448\u0443\u043c\u043e\u0432 \u043f\u0440\u0438 \u0440\u0430\u0431\u043e\u0442\u0435 DTX"
+    if-eqz v1, :cond_a
 
-    invoke-direct {v0, v1}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+    iget-object v11, v11, Lt41;->Q0:Ls41;
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-enable-dtxdenoise:Lru/ok/tamtam/android/prefs/PmsKey;
+    if-eqz v11, :cond_a
 
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-direct {p1, v0, v1, v2}, Lipe;-><init>(Lfhg;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    move-result v1
 
-    return-object p1
+    if-eqz v1, :cond_6
 
-    :pswitch_15
-    new-instance p1, Lipe;
+    if-eq v1, v9, :cond_7
 
-    new-instance v0, Lfhg;
+    if-eq v1, v8, :cond_5
 
-    const-string v1, "\ud83d\udcde \u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043d\u043e\u0442\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 session-state"
+    if-eq v1, v7, :cond_4
 
-    invoke-direct {v0, v1}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+    if-ne v1, v6, :cond_3
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-session-state:Lru/ok/tamtam/android/prefs/PmsKey;
+    move-object v2, v5
 
-    const/4 v2, 0x0
+    goto :goto_2
 
-    invoke-direct {p1, v0, v1, v2}, Lipe;-><init>(Lfhg;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    :cond_3
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
-    return-object p1
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    :pswitch_16
-    new-instance p1, Lipe;
+    throw v1
 
-    new-instance v0, Lfhg;
+    :cond_4
+    move-object v2, v4
 
-    const-string v1, "\ud83d\udcde \u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0440\u0435\u0436\u0438\u043c NoHost"
+    goto :goto_2
 
-    invoke-direct {v0, v1}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+    :cond_5
+    move-object v2, v3
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-enable-nohost:Lru/ok/tamtam/android/prefs/PmsKey;
+    goto :goto_2
 
-    const/4 v2, 0x0
+    :cond_6
+    move-object v2, v10
 
-    invoke-direct {p1, v0, v1, v2}, Lipe;-><init>(Lfhg;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    :cond_7
+    :goto_2
+    check-cast v11, Lkp8;
 
-    return-object p1
+    iget-object v1, v11, Lkp8;->a:Ljava/lang/Object;
 
-    :pswitch_17
-    new-instance p1, Lipe;
+    check-cast v1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    new-instance v0, Lfhg;
+    sget-object v3, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
 
-    const-string v1, "\ud83d\udcde \u041a\u043e\u043c\u043d\u0430\u0442\u0430 \u043e\u0436\u0438\u0434\u0430\u043d\u0438\u044f \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430 \u0432 \u0433\u0440\u0443\u043f\u043f\u043e\u0432\u044b\u0445 \u0437\u0432\u043e\u043d\u043a\u0430\u0445"
+    invoke-virtual {v1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->A0()Ln51;
 
-    invoke-direct {v0, v1}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+    move-result-object v1
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->gc-wait-admin:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x0
+    if-ne v2, v10, :cond_8
 
-    invoke-direct {p1, v0, v1, v2}, Lipe;-><init>(Lfhg;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    goto :goto_3
 
-    return-object p1
+    :cond_8
+    const/4 v9, 0x0
 
-    :pswitch_18
-    new-instance p1, Lipe;
+    :goto_3
+    iget-object v2, v1, Ln51;->X:Lo58;
 
-    new-instance v0, Lfhg;
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
 
-    const-string v1, "\ud83d\udcde \u0421\u043a\u0440\u044b\u0432\u0430\u0442\u044c \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435 \u043f\u0440\u0438 \u043e\u0442\u043a\u0440\u044b\u0442\u0438\u0438 \u044d\u043a\u0440\u0430\u043d\u0430 \u0432\u0445\u043e\u0434\u044f\u0449\u0435\u0433\u043e \u0437\u0432\u043e\u043d\u043a\u0430"
+    move-result-object v2
 
-    invoke-direct {v0, v1}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+    move-object v10, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->hide-incoming-call-notif:Lru/ok/tamtam/android/prefs/PmsKey;
+    check-cast v10, Lsz1;
 
-    const/4 v2, 0x0
+    iget-object v2, v1, Ln51;->c:Lsq1;
 
-    invoke-direct {p1, v0, v1, v2}, Lipe;-><init>(Lfhg;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    invoke-virtual {v2}, Lsq1;->u()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v12
 
-    :pswitch_19
-    new-instance p1, Lipe;
+    invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lfhg;
+    if-eqz v9, :cond_9
 
-    const-string v1, "\ud83d\udcde \u041b\u043e\u0433\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 WebRtc \u0432 \u0437\u0432\u043e\u043d\u043a\u0430\u0445"
+    const-wide/16 v2, 0x1
 
-    invoke-direct {v0, v1}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+    goto :goto_4
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-webrtc-logs:Lru/ok/tamtam/android/prefs/PmsKey;
+    :cond_9
+    const-wide/16 v2, 0x0
 
-    const/4 v2, 0x0
+    :goto_4
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {p1, v0, v1, v2}, Lipe;-><init>(Lfhg;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    move-result-object v14
 
-    return-object p1
+    const/16 v17, 0x0
 
-    :pswitch_1a
-    new-instance v8, Lfhg;
+    const/16 v18, 0xf4
 
-    const-string p1, "\ud83d\udcde \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0430\u0443\u0434\u0438\u043e \u0444\u043e\u043a\u0443\u0441\u0430 \u043f\u043b\u0435\u0435\u0440\u0430 \u0440\u0438\u043d\u0433\u0442\u043e\u043d\u043e\u0432"
+    const-string v11, "HAND_RAISED"
 
-    invoke-direct {v8, p1}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+    const/4 v13, 0x0
 
-    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-player-focus:Lru/ok/tamtam/android/prefs/PmsKey;
+    const/4 v15, 0x0
 
-    const-string p1, "1 - \u0437\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044c \u043f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u044b\u0439 \u0444\u043e\u043a\u0443\u0441"
+    const/16 v16, 0x0
 
-    const-string v0, "2 - \u0438\u0433\u043d\u043e\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u043e\u0431 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0438 \u0444\u043e\u043a\u0443\u0441\u0430"
+    invoke-static/range {v10 .. v18}, Lsz1;->d(Lsz1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
 
-    const-string v1, "0 - \u0437\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044c \u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0439 \u0444\u043e\u043a\u0443\u0441 (\u0441\u0442\u0430\u0440\u043e\u0435 \u043f\u043e\u0432\u0435\u0434\u0435\u043d\u0438\u0435)"
+    invoke-virtual {v1}, Ln51;->u()Lnx1;
 
-    filled-new-array {v1, p1, v0}, [Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v7
+    iget-object v1, v1, Lnx1;->l:Lh21;
 
-    new-instance v3, Ltpe;
+    check-cast v1, Ld31;
 
-    const-wide/16 v5, 0x0
+    invoke-virtual {v1, v9}, Ld31;->l(Z)V
 
-    const/4 v9, 0x4
+    :cond_a
+    return-void
 
-    invoke-direct/range {v3 .. v9}, Ltpe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;J[Ljava/lang/String;Lfhg;I)V
+    :pswitch_1
+    iget-object v1, v11, Lt41;->T0:Lzv8;
 
-    return-object v3
+    if-eqz v1, :cond_10
 
-    :pswitch_1b
-    new-instance v9, Lfhg;
+    iget-object v11, v11, Lt41;->Q0:Ls41;
 
-    const-string p1, "\ud83d\udcde \u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0438\u043d\u0434\u0438\u043a\u0430\u0442\u043e\u0440\u0430 \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e\u0433\u043e \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0430"
+    if-eqz v11, :cond_10
 
-    invoke-direct {v9, p1}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->enable-unknown-contact-bottom-sheet:Lru/ok/tamtam/android/prefs/PmsKey;
+    move-result v1
 
-    const-string p1, "1 - \u043a\u043d\u043e\u043f\u043a\u0438 \u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0432 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b \u0438 \u0417\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u0442\u044c"
+    if-eqz v1, :cond_e
 
-    const-string v0, "2 - \u043a\u043d\u043e\u043f\u043a\u0438 \u0412\u0441\u0451 \u0432 \u043f\u043e\u0440\u044f\u0434\u043a\u0435 \u0438 \u0417\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u0442\u044c"
+    if-eq v1, v9, :cond_f
 
-    const-string v1, "0 - \u043d\u0435 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u043e\u043f\u0440\u043e\u0441"
+    if-eq v1, v8, :cond_d
 
-    filled-new-array {v1, p1, v0}, [Ljava/lang/String;
+    if-eq v1, v7, :cond_c
 
-    move-result-object v8
+    if-ne v1, v6, :cond_b
 
-    new-instance v4, Ltpe;
+    move-object v2, v5
 
-    const-wide/16 v6, 0x0
+    goto :goto_5
 
-    const/4 v10, 0x4
+    :cond_b
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-direct/range {v4 .. v10}, Ltpe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;J[Ljava/lang/String;Lfhg;I)V
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    return-object v4
+    throw v1
 
-    :pswitch_1c
-    new-instance p1, Lipe;
+    :cond_c
+    move-object v2, v4
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-summary-stats-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    goto :goto_5
 
-    const/4 v1, 0x0
+    :cond_d
+    move-object v2, v3
 
-    const-string v2, "\ud83d\udcde \u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043d\u043e\u0432\u0443\u044e \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0443 \u0441\u0438\u0433\u043d\u0430\u043b\u0438\u043d\u0433\u0430"
+    goto :goto_5
 
-    invoke-direct {p1, v2, v0, v1}, Lipe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    :cond_e
+    move-object v2, v10
 
-    return-object p1
+    :cond_f
+    :goto_5
+    check-cast v11, Lkp8;
 
-    nop
+    iget-object v1, v11, Lkp8;->a:Ljava/lang/Object;
+
+    check-cast v1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    sget-object v3, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->A0()Ln51;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Ln51;->w(Lzv8;)V
+
+    :cond_10
+    return-void
+
+    :pswitch_2
+    iget-object v1, v11, Lt41;->R0:Lzv8;
+
+    if-eqz v1, :cond_16
+
+    iget-object v11, v11, Lt41;->Q0:Ls41;
+
+    if-eqz v11, :cond_16
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    if-eqz v1, :cond_14
+
+    if-eq v1, v9, :cond_15
+
+    if-eq v1, v8, :cond_13
+
+    if-eq v1, v7, :cond_12
+
+    if-ne v1, v6, :cond_11
+
+    move-object v2, v5
+
+    goto :goto_6
+
+    :cond_11
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
+
+    :cond_12
+    move-object v2, v4
+
+    goto :goto_6
+
+    :cond_13
+    move-object v2, v3
+
+    goto :goto_6
+
+    :cond_14
+    move-object v2, v10
+
+    :cond_15
+    :goto_6
+    check-cast v11, Lkp8;
+
+    iget-object v1, v11, Lkp8;->a:Ljava/lang/Object;
+
+    check-cast v1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    sget-object v3, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->A0()Ln51;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Ln51;->v(Lzv8;)V
+
+    :cond_16
+    return-void
+
+    :pswitch_3
+    invoke-static {v11}, Lt41;->u(Lt41;)V
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1

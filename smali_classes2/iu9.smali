@@ -1,48 +1,75 @@
-.class public final Liu9;
+.class public abstract Liu9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru9;
 
+# static fields
+.field public static final a:Lo58;
 
-# instance fields
-.field public final a:J
+.field public static final b:Lo58;
 
-.field public final b:J
-
-.field public final c:J
+.field public static final c:Lo58;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lju9;->a:Lju9;
 
-    iput-wide p1, p0, Liu9;->a:J
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    iput-wide p3, p0, Liu9;->b:J
+    move-result-object v1
 
-    iput-wide p5, p0, Liu9;->c:J
+    const/16 v2, 0x69
+
+    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
+
+    move-result-object v1
+
+    sput-object v1, Liu9;->a:Lo58;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const/16 v2, 0xde
+
+    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
+
+    move-result-object v1
+
+    sput-object v1, Liu9;->b:Lo58;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0x215
+
+    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+
+    move-result-object v0
+
+    sput-object v0, Liu9;->c:Lo58;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final j()J
+.method public static a()Lo58;
     .locals 2
 
-    iget-wide v0, p0, Liu9;->a:J
+    sget-object v0, Lju9;->a:Lju9;
 
-    return-wide v0
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0x35
+
+    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+
+    move-result-object v0
+
+    return-object v0
 .end method

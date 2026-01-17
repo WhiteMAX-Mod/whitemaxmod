@@ -1,9 +1,9 @@
 .class public final Lsta;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
@@ -11,20 +11,24 @@
 
 .field public final synthetic Y:J
 
+.field public final synthetic Z:Landroid/content/Intent;
+
 .field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;JLandroid/content/Intent;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
     iput-object p1, p0, Lsta;->X:Lru/ok/tamtam/android/services/NotificationTamService;
 
     iput-wide p2, p0, Lsta;->Y:J
 
+    iput-object p4, p0, Lsta;->Z:Landroid/content/Intent;
+
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p5}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +38,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +48,7 @@
 
     check-cast p1, Lsta;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lsta;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -54,25 +58,29 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 6
 
-    new-instance p1, Lsta;
+    new-instance v0, Lsta;
 
-    iget-object v0, p0, Lsta;->X:Lru/ok/tamtam/android/services/NotificationTamService;
+    iget-wide v2, p0, Lsta;->Y:J
 
-    iget-wide v1, p0, Lsta;->Y:J
+    iget-object v4, p0, Lsta;->Z:Landroid/content/Intent;
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lsta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lsta;->X:Lru/ok/tamtam/android/services/NotificationTamService;
 
-    return-object p1
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lsta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLandroid/content/Intent;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    .locals 12
 
     iget v0, p0, Lsta;->o:I
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    sget-object v1, Lb3h;->a:Lb3h;
 
     const/4 v2, 0x1
 
@@ -80,7 +88,7 @@
 
     if-ne v0, v2, :cond_0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -94,39 +102,47 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lsta;->X:Lru/ok/tamtam/android/services/NotificationTamService;
 
-    iget-object p1, p1, Lru/ok/tamtam/android/services/NotificationTamService;->t0:Lz7g;
+    iget-object p1, p1, Lru/ok/tamtam/android/services/NotificationTamService;->u0:Ln8g;
 
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lh1a;
+    check-cast p1, Lg1a;
+
+    const-string v0, "ru.ok.tamtam.extra.MESSAGE_SERVER_ID"
+
+    const-wide/16 v3, -0x1
+
+    iget-object v5, p0, Lsta;->Z:Landroid/content/Intent;
+
+    invoke-virtual {v5, v0, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v10
 
     iput v2, p0, Lsta;->o:I
 
-    move-object v4, p1
+    move-object v7, p1
 
-    check-cast v4, Le2a;
+    check-cast v7, Le2a;
 
-    iget-object p1, v4, Le2a;->o:Lfx0;
+    iget-object p1, v7, Le2a;->o:Lyw0;
 
-    new-instance v3, Ls1a;
+    new-instance v6, Lr1a;
 
-    iget-wide v5, p0, Lsta;->Y:J
+    iget-wide v8, p0, Lsta;->Y:J
 
-    const-wide/16 v7, -0x1
+    invoke-direct/range {v6 .. v11}, Lr1a;-><init>(Le2a;JJ)V
 
-    invoke-direct/range {v3 .. v8}, Ls1a;-><init>(Le2a;JJ)V
-
-    invoke-interface {p1, v3, p0}, Lhne;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p1, v6, p0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    sget-object v0, Lac4;->a:Lac4;
 
     if-ne p1, v0, :cond_2
 

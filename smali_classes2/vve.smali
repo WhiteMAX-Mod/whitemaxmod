@@ -1,128 +1,244 @@
 .class public final Lvve;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lyve;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:I
+.field public final b:Ljava/lang/String;
 
-.field public o:I
+.field public final c:Ljava/lang/Long;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lyve;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lvve;->X:Lyve;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lvve;->Y:I
+    iput-object p2, p0, Lvve;->a:Ljava/lang/String;
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Lvve;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvve;->c:Ljava/lang/Long;
+
+    iput-object p4, p0, Lvve;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lvve;->e:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvve;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvve;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lvve;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lvve;
-
-    iget-object v0, p0, Lvve;->X:Lyve;
-
-    iget v1, p0, Lvve;->Y:I
-
-    invoke-direct {p1, v0, v1, p2}, Lvve;-><init>(Lyve;ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lvve;->o:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_1
+    return v0
 
-    if-ne v0, v1, :cond_0
+    :cond_0
+    instance-of v1, p1, Lvve;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvve;
+
+    iget-object v1, p0, Lvve;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lvve;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lvve;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lvve;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lvve;->c:Ljava/lang/Long;
+
+    iget-object v3, p1, Lvve;->c:Ljava/lang/Long;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lvve;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lvve;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lvve;->e:Ljava/lang/String;
+
+    iget-object p1, p1, Lvve;->e:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lvve;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lvve;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lvve;->c:Ljava/lang/Long;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result v3
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :goto_0
+    add-int/2addr v0, v3
 
-    throw p1
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Lvve;->d:Ljava/lang/String;
+
+    if-nez v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    sget-object p1, Lyve;->A0:[Lp38;
+    move-result v3
 
-    iget-object p1, p0, Lvve;->X:Lyve;
+    :goto_1
+    add-int/2addr v0, v3
 
-    invoke-virtual {p1}, Lyve;->t()Ljah;
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lvve;->e:Ljava/lang/String;
+
+    if-nez v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", title="
+
+    const-string v1, ", appId="
+
+    const-string v2, "SettingEntryBanner(iconUrl="
+
+    iget-object v3, p0, Lvve;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lvve;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget v2, p0, Lvve;->Y:I
+    iget-object v1, p0, Lvve;->c:Ljava/lang/Long;
 
-    const-string v3, "app.media.load.video_messages"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2, v3}, Lz3;->g(ILjava/lang/String;)V
+    const-string v1, ", url="
 
-    iput v1, p0, Lvve;->o:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, p0}, Lyve;->s(Lyve;Lb5g;)Ljava/lang/Object;
+    iget-object v1, p0, Lvve;->d:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    const-string v1, ", startParam="
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lvve;->e:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
 .end method

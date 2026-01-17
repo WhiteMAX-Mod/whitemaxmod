@@ -11,7 +11,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/ui/RendererView;",
         "",
-        "Lej1;",
+        "Lxi1;",
         "renderer",
         "Lorg/webrtc/RendererCommon$RendererEvents;",
         "rendererEvents",
@@ -19,12 +19,12 @@
         "drawer",
         "",
         "init",
-        "(Lej1;Lorg/webrtc/RendererCommon$RendererEvents;Lorg/webrtc/RendererCommon$GlDrawer;)Z",
+        "(Lxi1;Lorg/webrtc/RendererCommon$RendererEvents;Lorg/webrtc/RendererCommon$GlDrawer;)Z",
         "Lru/ok/android/externcalls/sdk/ui/FrameDecorator;",
         "frameDecorator",
-        "(Lej1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)Z",
+        "(Lxi1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)Z",
         "mirror",
-        "Lv2h;",
+        "Lb3h;",
         "setMirror",
         "(Z)V",
         "Lorg/webrtc/RendererCommon$ScalingType;",
@@ -43,7 +43,7 @@
         "Lkotlin/Function2;",
         "",
         "setFrameSizeListener",
-        "(Lcr6;)V",
+        "(Lbr6;)V",
         "clearImage",
         "()V",
         "release",
@@ -66,7 +66,7 @@
 
 
 # direct methods
-.method public static synthetic init$default(Lru/ok/android/externcalls/sdk/ui/RendererView;Lej1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;ILjava/lang/Object;)Z
+.method public static synthetic init$default(Lru/ok/android/externcalls/sdk/ui/RendererView;Lxi1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;ILjava/lang/Object;)Z
     .locals 0
 
     if-nez p5, :cond_1
@@ -82,7 +82,7 @@
     move-result-object p3
 
     :cond_0
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ui/RendererView;->init(Lej1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)Z
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ui/RendererView;->init(Lxi1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)Z
 
     move-result p0
 
@@ -112,10 +112,10 @@
 .method public abstract getUseAlternateLayout()Z
 .end method
 
-.method public abstract init(Lej1;Lorg/webrtc/RendererCommon$RendererEvents;Lorg/webrtc/RendererCommon$GlDrawer;)Z
+.method public abstract init(Lxi1;Lorg/webrtc/RendererCommon$RendererEvents;Lorg/webrtc/RendererCommon$GlDrawer;)Z
 .end method
 
-.method public abstract init(Lej1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)Z
+.method public abstract init(Lxi1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)Z
 .end method
 
 .method public abstract release()V
@@ -124,11 +124,11 @@
 .method public abstract setFrameDecorator(Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)V
 .end method
 
-.method public abstract setFrameSizeListener(Lcr6;)V
+.method public abstract setFrameSizeListener(Lbr6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcr6;",
+            "Lbr6;",
             ")V"
         }
     .end annotation

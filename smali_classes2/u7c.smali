@@ -1,77 +1,107 @@
-.class public final synthetic Lu7c;
-.super Ljava/lang/Object;
+.class public final Lu7c;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Luib;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Ly7c;
+.field public final synthetic X:Lone/me/pinbars/PinBarsWidget;
 
-.field public final synthetic b:Lud2;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly7c;Lud2;JJ)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lu7c;->X:Lone/me/pinbars/PinBarsWidget;
 
-    iput-object p1, p0, Lu7c;->a:Ly7c;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lu7c;->b:Lud2;
-
-    iput-wide p3, p0, Lu7c;->c:J
-
-    iput-wide p5, p0, Lu7c;->d:J
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final v(Lvib;)V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lvib;->o:Lvib;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p1, v0, :cond_0
+    invoke-virtual {p0, p1, p2}, Lu7c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lu7c;->a:Ly7c;
+    move-result-object p1
 
-    iget-object p1, v2, Ly7c;->d:Lac4;
+    check-cast p1, Lu7c;
 
-    iget-object v0, v2, Ly7c;->b:Lbbg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    check-cast v0, Lb9b;
+    invoke-virtual {p1, p2}, Lu7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lb9b;->b()Ltb4;
+    return-object p2
+.end method
 
-    move-result-object v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v1, Lv7c;
+    new-instance v0, Lu7c;
 
-    const/4 v8, 0x0
+    iget-object v1, p0, Lu7c;->X:Lone/me/pinbars/PinBarsWidget;
 
-    iget-object v3, p0, Lu7c;->b:Lud2;
+    invoke-direct {v0, p2, v1}, Lu7c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    iget-wide v4, p0, Lu7c;->c:J
+    iput-object p1, v0, Lu7c;->o:Ljava/lang/Object;
 
-    iget-wide v6, p0, Lu7c;->d:J
+    return-object v0
+.end method
 
-    invoke-direct/range {v1 .. v8}, Lv7c;-><init>(Ly7c;Lud2;JJLkotlin/coroutines/Continuation;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const/4 v2, 0x2
+    iget-object v0, p0, Lu7c;->o:Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1, v0, v3, v1, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    check-cast v0, Lz27;
+
+    sget-object p1, Lone/me/pinbars/PinBarsWidget;->x0:[Lz28;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lu7c;->X:Lone/me/pinbars/PinBarsWidget;
+
+    iget-object p1, p1, Lone/me/pinbars/PinBarsWidget;->o:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljl1;
+
+    iget-object v1, v0, Lz27;->a:Ljava/lang/String;
+
+    iget-boolean v2, v0, Lz27;->b:Z
+
+    new-instance v3, Ll7b;
+
+    const/16 v4, 0x13
+
+    invoke-direct {v3, v4, v0}, Ll7b;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p1, v1, v2, v3}, Ljl1;->k(Ljl1;Ljava/lang/String;ZLlq6;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 
     :cond_0
-    return-void
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

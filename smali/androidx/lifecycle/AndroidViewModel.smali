@@ -1,5 +1,5 @@
 .class public abstract Landroidx/lifecycle/AndroidViewModel;
-.super Lssh;
+.super Loth;
 .source "SourceFile"
 
 
@@ -10,7 +10,7 @@
     }
     d2 = {
         "Landroidx/lifecycle/AndroidViewModel;",
-        "Lssh;",
+        "Loth;",
         "lifecycle-viewmodel_release"
     }
     k = 0x1
@@ -21,19 +21,3 @@
     }
     xi = 0x30
 .end annotation
-
-
-# instance fields
-.field public final b:Landroid/app/Application;
-
-
-# direct methods
-.method public constructor <init>(Landroid/app/Application;)V
-    .locals 0
-
-    invoke-direct {p0}, Lssh;-><init>()V
-
-    iput-object p1, p0, Landroidx/lifecycle/AndroidViewModel;->b:Landroid/app/Application;
-
-    return-void
-.end method

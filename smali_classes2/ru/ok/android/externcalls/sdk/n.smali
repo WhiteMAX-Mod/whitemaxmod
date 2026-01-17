@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvx3;
+.implements Lby3;
 
 
 # instance fields
@@ -30,7 +30,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->J(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->M(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/String;)V
 
     return-void
 .end method

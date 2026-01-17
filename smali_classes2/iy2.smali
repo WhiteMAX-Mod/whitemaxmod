@@ -1,23 +1,91 @@
-.class public final Liy2;
-.super Lf3;
+.class public final synthetic Liy2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnq6;
 
-# static fields
-.field public static final c:Liy2;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ll03;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ll03;JI)V
+    .locals 0
 
-    new-instance v0, Liy2;
+    iput p4, p0, Liy2;->a:I
 
-    const/16 v1, 0xa
+    iput-object p1, p0, Liy2;->b:Ll03;
 
-    invoke-direct {v0, v1}, Lf3;-><init>(I)V
+    iput-wide p2, p0, Liy2;->c:J
 
-    sput-object v0, Liy2;->c:Liy2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Liy2;->a:I
+
+    check-cast p1, Landroid/view/View;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Liy2;->b:Ll03;
+
+    iget-object p1, p1, Ll03;->h1:Lcm5;
+
+    new-instance v0, Luy2;
+
+    const/4 v6, 0x0
+
+    const/4 v1, 0x6
+
+    iget-wide v2, p0, Liy2;->c:J
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Luy2;-><init>(IJJLjava/lang/String;)V
+
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object p1, p0, Liy2;->b:Ll03;
+
+    iget-object p1, p1, Ll03;->h1:Lcm5;
+
+    new-instance v0, Luy2;
+
+    const/4 v6, 0x0
+
+    const/16 v1, 0xe
+
+    iget-wide v2, p0, Liy2;->c:J
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Luy2;-><init>(IJJLjava/lang/String;)V
+
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

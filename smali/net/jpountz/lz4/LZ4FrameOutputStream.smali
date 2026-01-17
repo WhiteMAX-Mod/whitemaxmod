@@ -33,7 +33,7 @@
 # instance fields
 .field private final buffer:Ljava/nio/ByteBuffer;
 
-.field private final checksum:Lsji;
+.field private final checksum:Lrki;
 
 .field private final compressedBuffer:[B
 
@@ -95,7 +95,7 @@
     return-void
 .end method
 
-.method public varargs constructor <init>(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;JLnet/jpountz/lz4/LZ4Compressor;Lsji;[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V
+.method public varargs constructor <init>(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;JLnet/jpountz/lz4/LZ4Compressor;Lrki;[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -236,7 +236,7 @@
 
     invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4Factory;->fastCompressor()Lnet/jpountz/lz4/LZ4Compressor;
 
-    invoke-static {}, Ltji;->c()Ltji;
+    invoke-static {}, Lski;->r()Lski;
 
     const/4 p1, 0x0
 

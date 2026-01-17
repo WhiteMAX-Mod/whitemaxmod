@@ -4,28 +4,50 @@
 
 
 # instance fields
-.field public final a:Lpj3;
-
-.field public final b:Lrj3;
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lpj3;Lrj3;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqj3;->a:Lpj3;
-
-    iput-object p2, p0, Lqj3;->b:Lrj3;
+    iput-object p1, p0, Lqj3;->a:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a(Landroid/content/Context;)Ljava/lang/String;
+    .locals 6
+
+    new-instance v4, Lwe0;
+
+    const/4 v0, 0x2
+
+    invoke-direct {v4, p1, v0}, Lwe0;-><init>(Landroid/content/Context;I)V
+
+    const/16 v5, 0x1e
+
+    iget-object v0, p0, Lqj3;->a:Ljava/util/List;
+
+    const-string v1, "\n"
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static/range {v0 .. v5}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -45,55 +67,32 @@
     :cond_1
     check-cast p1, Lqj3;
 
-    iget-object v1, p0, Lqj3;->a:Lpj3;
+    iget-object v1, p0, Lqj3;->a:Ljava/util/List;
 
-    iget-object v3, p1, Lqj3;->a:Lpj3;
+    iget-object p1, p1, Lqj3;->a:Ljava/util/List;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lqj3;->b:Lrj3;
-
-    iget-object p1, p1, Lqj3;->b:Lrj3;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lqj3;->a:Lpj3;
+    iget-object v0, p0, Lqj3;->a:Ljava/util/List;
 
-    invoke-virtual {v0}, Lpj3;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lqj3;->b:Lrj3;
-
-    invoke-virtual {v1}, Lrj3;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -101,19 +100,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CommonActionColors(background="
+    const-string v1, "CombinedError(errors="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqj3;->a:Lpj3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lqj3;->b:Lrj3;
+    iget-object v1, p0, Lqj3;->a:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

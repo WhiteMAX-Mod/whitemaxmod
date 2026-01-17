@@ -6,18 +6,18 @@
 # instance fields
 .field public final a:J
 
-.field public final b:Li10;
+.field public final b:Le10;
 
 
 # direct methods
-.method public constructor <init>(JLi10;)V
+.method public constructor <init>(JLe10;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lxoa;->a:J
 
-    iput-object p3, p0, Lxoa;->b:Li10;
+    iput-object p3, p0, Lxoa;->b:Le10;
 
     return-void
 .end method
@@ -50,9 +50,9 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lxoa;->b:Li10;
+    iget-object v1, p0, Lxoa;->b:Le10;
 
-    iget-object p1, p1, Lxoa;->b:Li10;
+    iget-object p1, p1, Lxoa;->b:Le10;
 
     if-ne v1, p1, :cond_1
 
@@ -73,7 +73,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lxoa;->b:Li10;
+    iget-object v1, p0, Lxoa;->b:Le10;
 
     invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 

@@ -4,230 +4,229 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:I
 
-.field public final b:J
+.field public final b:I
 
-.field public final c:J
+.field public final c:I
 
-.field public final d:J
+.field public final d:I
 
-.field public final e:J
+.field public final e:Z
 
-.field public final f:J
+.field public final f:Z
 
-.field public final g:J
-
-.field public final h:J
-
-.field public final i:J
-
-.field public final j:J
-
-.field public final k:J
-
-.field public final l:D
-
-.field public final m:D
-
-.field public final n:D
-
-.field public final o:D
-
-.field public final p:Ljp6;
+.field public final g:Z
 
 
 # direct methods
-.method public constructor <init>(JJJJJJJJJJJDDDDLjp6;)V
+.method public constructor <init>(IIIIZZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lwce;->a:J
+    iput p1, p0, Lwce;->a:I
 
-    iput-wide p3, p0, Lwce;->b:J
+    iput p2, p0, Lwce;->b:I
 
-    iput-wide p5, p0, Lwce;->c:J
+    iput p3, p0, Lwce;->c:I
 
-    iput-wide p7, p0, Lwce;->d:J
+    iput p4, p0, Lwce;->d:I
 
-    iput-wide p9, p0, Lwce;->e:J
+    iput-boolean p5, p0, Lwce;->e:Z
 
-    iput-wide p11, p0, Lwce;->f:J
+    iput-boolean p6, p0, Lwce;->f:Z
 
-    iput-wide p13, p0, Lwce;->g:J
-
-    move-wide p1, p15
-
-    iput-wide p1, p0, Lwce;->h:J
-
-    move-wide/from16 p1, p17
-
-    iput-wide p1, p0, Lwce;->i:J
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, Lwce;->j:J
-
-    move-wide/from16 p1, p21
-
-    iput-wide p1, p0, Lwce;->k:J
-
-    move-wide/from16 p1, p23
-
-    iput-wide p1, p0, Lwce;->l:D
-
-    move-wide/from16 p1, p25
-
-    iput-wide p1, p0, Lwce;->m:D
-
-    move-wide/from16 p1, p27
-
-    iput-wide p1, p0, Lwce;->n:D
-
-    move-wide/from16 p1, p29
-
-    iput-wide p1, p0, Lwce;->o:D
-
-    move-object/from16 p1, p31
-
-    iput-object p1, p0, Lwce;->p:Ljp6;
+    iput-boolean p7, p0, Lwce;->g:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lwce;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwce;
+
+    iget v1, p0, Lwce;->a:I
+
+    iget v3, p1, Lwce;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lwce;->b:I
+
+    iget v3, p1, Lwce;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lwce;->c:I
+
+    iget v3, p1, Lwce;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lwce;->d:I
+
+    iget v3, p1, Lwce;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lwce;->e:Z
+
+    iget-boolean v3, p1, Lwce;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lwce;->f:Z
+
+    iget-boolean v3, p1, Lwce;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Lwce;->g:Z
+
+    iget-boolean p1, p1, Lwce;->g:Z
+
+    if-eq v1, p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lwce;->a:I
 
-    const-string v1, "ScreenshareRecvStat{packetsRecvStat="
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    iget-wide v1, p0, Lwce;->a:J
+    const/16 v1, 0x1f
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    mul-int/2addr v0, v1
 
-    const-string v1, ", frameStartsRecvStat="
+    iget v2, p0, Lwce;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    iget-wide v1, p0, Lwce;->b:J
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget v2, p0, Lwce;->c:I
 
-    const-string v1, ", recvOdditiesStat="
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    iget-wide v1, p0, Lwce;->c:J
+    iget v2, p0, Lwce;->d:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    const-string v1, ", completeFramesStat="
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v2, p0, Lwce;->e:Z
 
-    iget-wide v1, p0, Lwce;->d:J
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v1, ", keyFramesEnqStat="
+    iget-boolean v2, p0, Lwce;->f:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    iget-wide v1, p0, Lwce;->e:J
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-boolean v1, p0, Lwce;->g:Z
 
-    const-string v1, ", deltaFramesEnqStat="
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    iget-wide v1, p0, Lwce;->f:J
+    add-int/2addr v1, v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    return v1
+.end method
 
-    const-string v1, ", framesDroppedOnEnqStat="
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ", realWidth="
 
-    iget-wide v1, p0, Lwce;->g:J
+    const-string v1, ", topInset="
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v2, "ScreenInfo(realHeight="
 
-    const-string v1, ", framesDecodedStat="
+    iget v3, p0, Lwce;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v4, p0, Lwce;->b:I
 
-    iget-wide v1, p0, Lwce;->h:J
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, ", decodeErrors="
+    const-string v1, ", bottomInset="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ", isWeakDevice="
 
-    iget-wide v1, p0, Lwce;->i:J
+    iget v3, p0, Lwce;->c:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget v4, p0, Lwce;->d:I
 
-    const-string v1, ", allocatedBuffersStat="
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ", isLong="
 
-    iget-wide v1, p0, Lwce;->j:J
+    const-string v2, ", isWide="
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-boolean v3, p0, Lwce;->e:Z
 
-    const-string v1, ", allocatedMemStat="
+    iget-boolean v4, p0, Lwce;->f:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
-    iget-wide v1, p0, Lwce;->k:J
+    const-string v1, ")"
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-boolean v2, p0, Lwce;->g:Z
 
-    const-string v1, ", packetReceivedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwce;->l:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameReceivedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwce;->m:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameDecodedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwce;->n:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameDecodeErrorEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwce;->o:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

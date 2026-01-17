@@ -1,164 +1,579 @@
-.class public Lilg;
+.class public final Lilg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lhlg;
-
-
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
 
-.field public b:J
+.field public b:[J
 
-.field public c:J
+.field public c:[Ljava/lang/Object;
+
+.field public d:I
+
+.field public e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(I)V
     .locals 1
 
-    new-instance v0, Lhlg;
+    iput p1, p0, Lilg;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    packed-switch p1, :pswitch_data_0
 
-    sput-object v0, Lilg;->d:Lhlg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 p1, 0xa
+
+    new-array v0, p1, [J
+
+    iput-object v0, p0, Lilg;->b:[J
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    iput-object p1, p0, Lilg;->c:[Ljava/lang/Object;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 p1, 0xa
+
+    new-array v0, p1, [J
+
+    iput-object v0, p0, Lilg;->b:[J
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    iput-object p1, p0, Lilg;->c:[Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a()Lilg;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lilg;->a:Z
-
-    return-object p0
-.end method
-
-.method public b()Lilg;
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lilg;->c:J
-
-    return-object p0
-.end method
-
-.method public c()J
-    .locals 2
-
-    iget-boolean v0, p0, Lilg;->a:Z
-
-    if-eqz v0, :cond_0
-
-    iget-wide v0, p0, Lilg;->b:J
-
-    return-wide v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "No deadline"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public d(J)Lilg;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lilg;->a:Z
-
-    iput-wide p1, p0, Lilg;->b:J
-
-    return-object p0
-.end method
-
-.method public e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lilg;->a:Z
-
-    return v0
-.end method
-
-.method public f()V
+.method public final declared-synchronized a(JLjava/lang/Object;)V
     .locals 4
 
-    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+    iget v0, p0, Lilg;->a:I
 
-    move-result v0
+    monitor-enter p0
 
-    if-nez v0, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    iget-boolean v0, p0, Lilg;->a:Z
-
-    if-eqz v0, :cond_1
-
-    iget-wide v0, p0, Lilg;->b:J
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
+    :try_start_0
+    iget v0, p0, Lilg;->e:I
 
     if-lez v0, :cond_0
 
+    iget v1, p0, Lilg;->d:I
+
+    add-int/2addr v1, v0
+
+    add-int/lit8 v1, v1, -0x1
+
+    iget-object v0, p0, Lilg;->c:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    rem-int/2addr v1, v0
+
+    iget-object v0, p0, Lilg;->b:[J
+
+    aget-wide v1, v0, v1
+
+    cmp-long v0, p1, v1
+
+    if-gtz v0, :cond_0
+
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const/4 v0, 0x0
+
+    :try_start_1
+    iput v0, p0, Lilg;->d:I
+
+    iput v0, p0, Lilg;->e:I
+
+    iget-object v0, p0, Lilg;->c:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw p1
+
     :cond_0
-    new-instance v0, Ljava/io/InterruptedIOException;
-
-    const-string v1, "deadline reached"
-
-    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
     :goto_0
+    invoke-virtual {p0}, Lilg;->c()V
+
+    iget v0, p0, Lilg;->d:I
+
+    iget v1, p0, Lilg;->e:I
+
+    add-int/2addr v0, v1
+
+    iget-object v2, p0, Lilg;->c:[Ljava/lang/Object;
+
+    array-length v3, v2
+
+    rem-int/2addr v0, v3
+
+    iget-object v3, p0, Lilg;->b:[J
+
+    aput-wide p1, v3, v0
+
+    aput-object p3, v2, v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lilg;->e:I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    monitor-exit p0
+
     return-void
 
-    :cond_2
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    :catchall_1
+    move-exception p1
 
-    move-result-object v0
+    :try_start_5
+    monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+    throw p1
 
-    new-instance v0, Ljava/io/InterruptedIOException;
+    :pswitch_0
+    :try_start_6
+    iget v0, p0, Lilg;->e:I
 
-    const-string v1, "interrupted"
+    if-lez v0, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
+    iget v1, p0, Lilg;->d:I
+
+    add-int/2addr v1, v0
+
+    add-int/lit8 v1, v1, -0x1
+
+    iget-object v0, p0, Lilg;->c:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    rem-int/2addr v1, v0
+
+    iget-object v0, p0, Lilg;->b:[J
+
+    aget-wide v1, v0, v1
+
+    cmp-long v0, p1, v1
+
+    if-gtz v0, :cond_1
+
+    invoke-virtual {p0}, Lilg;->b()V
+
+    :cond_1
+    invoke-virtual {p0}, Lilg;->c()V
+
+    iget v0, p0, Lilg;->d:I
+
+    iget v1, p0, Lilg;->e:I
+
+    add-int/2addr v0, v1
+
+    iget-object v2, p0, Lilg;->c:[Ljava/lang/Object;
+
+    array-length v3, v2
+
+    rem-int/2addr v0, v3
+
+    iget-object v3, p0, Lilg;->b:[J
+
+    aput-wide p1, v3, v0
+
+    aput-object p3, v2, v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lilg;->e:I
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_7
+    monitor-exit p0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public declared-synchronized b()V
+    .locals 2
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iput v0, p0, Lilg;->d:I
+
+    iput v0, p0, Lilg;->e:I
+
+    iget-object v0, p0, Lilg;->c:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
 .end method
 
-.method public g(JLjava/util/concurrent/TimeUnit;)Lilg;
-    .locals 2
+.method public final c()V
+    .locals 6
 
-    const-wide/16 v0, 0x0
+    iget v0, p0, Lilg;->a:I
 
-    cmp-long v0, p1, v0
+    packed-switch v0, :pswitch_data_0
 
-    if-ltz v0, :cond_0
+    iget-object v0, p0, Lilg;->c:[Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    array-length v0, v0
+
+    iget v1, p0, Lilg;->e:I
+
+    if-ge v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    mul-int/lit8 v1, v0, 0x2
+
+    new-array v2, v1, [J
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iget v3, p0, Lilg;->d:I
+
+    sub-int/2addr v0, v3
+
+    iget-object v4, p0, Lilg;->b:[J
+
+    const/4 v5, 0x0
+
+    invoke-static {v4, v3, v2, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v3, p0, Lilg;->c:[Ljava/lang/Object;
+
+    iget v4, p0, Lilg;->d:I
+
+    invoke-static {v3, v4, v1, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget v3, p0, Lilg;->d:I
+
+    if-lez v3, :cond_1
+
+    iget-object v4, p0, Lilg;->b:[J
+
+    invoke-static {v4, v5, v2, v0, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v3, p0, Lilg;->c:[Ljava/lang/Object;
+
+    iget v4, p0, Lilg;->d:I
+
+    invoke-static {v3, v5, v1, v0, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_1
+    iput-object v2, p0, Lilg;->b:[J
+
+    iput-object v1, p0, Lilg;->c:[Ljava/lang/Object;
+
+    iput v5, p0, Lilg;->d:I
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lilg;->c:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    iget v1, p0, Lilg;->e:I
+
+    if-ge v1, v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    mul-int/lit8 v1, v0, 0x2
+
+    new-array v2, v1, [J
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iget v3, p0, Lilg;->d:I
+
+    sub-int/2addr v0, v3
+
+    iget-object v4, p0, Lilg;->b:[J
+
+    const/4 v5, 0x0
+
+    invoke-static {v4, v3, v2, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v3, p0, Lilg;->c:[Ljava/lang/Object;
+
+    iget v4, p0, Lilg;->d:I
+
+    invoke-static {v3, v4, v1, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget v3, p0, Lilg;->d:I
+
+    if-lez v3, :cond_3
+
+    iget-object v4, p0, Lilg;->b:[J
+
+    invoke-static {v4, v5, v2, v0, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v3, p0, Lilg;->c:[Ljava/lang/Object;
+
+    iget v4, p0, Lilg;->d:I
+
+    invoke-static {v3, v5, v1, v0, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_3
+    iput-object v2, p0, Lilg;->b:[J
+
+    iput-object v1, p0, Lilg;->c:[Ljava/lang/Object;
+
+    iput v5, p0, Lilg;->d:I
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public d(JZ)Ljava/lang/Object;
+    .locals 7
+
+    const/4 v0, 0x0
+
+    const-wide v1, 0x7fffffffffffffffL
+
+    :goto_0
+    iget v3, p0, Lilg;->e:I
+
+    if-lez v3, :cond_1
+
+    iget-object v3, p0, Lilg;->b:[J
+
+    iget v4, p0, Lilg;->d:I
+
+    aget-wide v4, v3, v4
+
+    sub-long v3, p1, v4
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v5, v3, v5
+
+    if-gez v5, :cond_0
+
+    if-nez p3, :cond_1
+
+    neg-long v5, v3
+
+    cmp-long v1, v5, v1
+
+    if-ltz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Lilg;->g()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-wide v1, v3
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-object v0
+.end method
+
+.method public declared-synchronized e()Ljava/lang/Object;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget v0, p0, Lilg;->e:I
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lilg;->g()Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized f(J)Ljava/lang/Object;
+    .locals 5
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    :try_start_0
+    iget v1, p0, Lilg;->e:I
+
+    if-lez v1, :cond_1
+
+    iget-object v1, p0, Lilg;->b:[J
+
+    iget v2, p0, Lilg;->d:I
+
+    aget-wide v2, v1, v2
+
+    sub-long v1, p1, v2
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-gez v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Lilg;->g()Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    monitor-exit p0
+
+    return-object v0
+
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+.end method
+
+.method public final g()Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lilg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lilg;->e:I
+
+    const/4 v1, 0x1
+
+    if-lez v0, :cond_0
+
+    move v0, v1
 
     goto :goto_0
 
@@ -166,38 +581,106 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-eqz v0, :cond_1
+    invoke-static {v0}, Lh6j;->g(Z)V
 
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+    iget-object v0, p0, Lilg;->c:[Ljava/lang/Object;
 
-    move-result-wide p1
+    iget v2, p0, Lilg;->d:I
 
-    iput-wide p1, p0, Lilg;->c:J
+    aget-object v3, v0, v2
 
-    return-object p0
+    const/4 v4, 0x0
+
+    aput-object v4, v0, v2
+
+    add-int/2addr v2, v1
+
+    array-length v0, v0
+
+    rem-int/2addr v2, v0
+
+    iput v2, p0, Lilg;->d:I
+
+    iget v0, p0, Lilg;->e:I
+
+    sub-int/2addr v0, v1
+
+    iput v0, p0, Lilg;->e:I
+
+    return-object v3
+
+    :pswitch_0
+    iget v0, p0, Lilg;->e:I
+
+    const/4 v1, 0x1
+
+    if-lez v0, :cond_1
+
+    move v0, v1
+
+    goto :goto_1
 
     :cond_1
-    const-string p3, "timeout < 0: "
+    const/4 v0, 0x0
 
-    invoke-static {p1, p2, p3}, Lgg9;->e(JLjava/lang/String;)Ljava/lang/String;
+    :goto_1
+    invoke-static {v0}, Ly5j;->d(Z)V
 
-    move-result-object p1
+    iget-object v0, p0, Lilg;->c:[Ljava/lang/Object;
 
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    iget v2, p0, Lilg;->d:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    aget-object v3, v0, v2
 
-    move-result-object p1
+    const/4 v4, 0x0
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    aput-object v4, v0, v2
 
-    throw p2
+    add-int/2addr v2, v1
+
+    array-length v0, v0
+
+    rem-int/2addr v2, v0
+
+    iput v2, p0, Lilg;->d:I
+
+    iget v0, p0, Lilg;->e:I
+
+    sub-int/2addr v0, v1
+
+    iput v0, p0, Lilg;->e:I
+
+    return-object v3
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public h()J
-    .locals 2
+.method public declared-synchronized h()I
+    .locals 1
 
-    iget-wide v0, p0, Lilg;->c:J
+    monitor-enter p0
 
-    return-wide v0
+    :try_start_0
+    iget v0, p0, Lilg;->e:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

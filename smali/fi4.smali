@@ -1,5 +1,5 @@
 .class public final Lfi4;
-.super Lrh8;
+.super Ldh8;
 .source "SourceFile"
 
 
@@ -8,19 +8,19 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lmt8;I)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lxz0;I)V
     .locals 0
 
     iput p3, p0, Lfi4;->c:I
 
-    invoke-direct {p0, p1, p2}, Lrh8;-><init>(Ljava/util/concurrent/Executor;Lmt8;)V
+    invoke-direct {p0, p1, p2}, Ldh8;-><init>(Ljava/util/concurrent/Executor;Lxz0;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lvj7;)Lci5;
+.method public final d(Lcj7;)Lei5;
     .locals 4
 
     iget v0, p0, Lfi4;->c:I
@@ -29,7 +29,7 @@
 
     new-instance v0, Ljava/io/FileInputStream;
 
-    invoke-virtual {p1}, Lvj7;->d()Ljava/io/File;
+    invoke-virtual {p1}, Lcj7;->d()Ljava/io/File;
 
     move-result-object v1
 
@@ -39,7 +39,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lvj7;->d()Ljava/io/File;
+    invoke-virtual {p1}, Lcj7;->d()Ljava/io/File;
 
     move-result-object p1
 
@@ -49,14 +49,14 @@
 
     long-to-int p1, v1
 
-    invoke-virtual {p0, v0, p1}, Lrh8;->c(Ljava/io/InputStream;I)Lci5;
+    invoke-virtual {p0, v0, p1}, Ldh8;->c(Ljava/io/InputStream;I)Lei5;
 
     move-result-object p1
 
     return-object p1
 
     :pswitch_0
-    iget-object p1, p1, Lvj7;->b:Landroid/net/Uri;
+    iget-object p1, p1, Lcj7;->b:Landroid/net/Uri;
 
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -154,7 +154,7 @@
 
     array-length p1, p1
 
-    invoke-virtual {p0, v0, p1}, Lrh8;->c(Ljava/io/InputStream;I)Lci5;
+    invoke-virtual {p0, v0, p1}, Ldh8;->c(Ljava/io/InputStream;I)Lei5;
 
     move-result-object p1
 

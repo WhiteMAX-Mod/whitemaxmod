@@ -13,11 +13,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lhbd;->oneme_in_app_review_rating_bar_accessibility:I
+    sget v0, Lecd;->oneme_folders_picker_snackbar_add_channel_title:I
 
     sput v0, Lwbb;->a:I
 
-    sget v0, Lhbd;->oneme_in_app_review_rating_star_accessibility:I
+    sget v0, Lecd;->oneme_folders_picker_snackbar_add_chat_title:I
 
     sput v0, Lwbb;->b:I
 

@@ -1,13 +1,14 @@
-.class public abstract Luuh;
+.class public interface abstract Luuh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/view/View;I)V
-    .locals 0
+# virtual methods
+.method public abstract a()V
+.end method
 
-    invoke-static {p0, p1}, Lruh;->m(Landroid/view/View;I)V
+.method public abstract b()V
+.end method
 
-    return-void
+.method public abstract c()V
 .end method

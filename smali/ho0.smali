@@ -3,10 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmje;
+.implements Like;
 
 
 # instance fields
+.field public final X:J
+
 .field public final a:Lko0;
 
 .field public final b:J
@@ -15,9 +17,7 @@
 
 .field public final d:J
 
-.field public final e:J
-
-.field public final f:J
+.field public final o:J
 
 
 # direct methods
@@ -34,9 +34,9 @@
 
     iput-wide p6, p0, Lho0;->d:J
 
-    iput-wide p8, p0, Lho0;->e:J
+    iput-wide p8, p0, Lho0;->o:J
 
-    iput-wide p10, p0, Lho0;->f:J
+    iput-wide p10, p0, Lho0;->X:J
 
     return-void
 .end method
@@ -51,18 +51,18 @@
     return v0
 .end method
 
-.method public final e(J)Lkje;
+.method public final e(J)Lgke;
     .locals 13
 
     iget-object v0, p0, Lho0;->a:Lko0;
 
-    invoke-interface {v0, p1, p2}, Lko0;->a(J)J
+    invoke-interface {v0, p1, p2}, Lko0;->c(J)J
 
     move-result-wide v1
 
-    iget-wide v9, p0, Lho0;->e:J
+    iget-wide v9, p0, Lho0;->o:J
 
-    iget-wide v11, p0, Lho0;->f:J
+    iget-wide v11, p0, Lho0;->X:J
 
     const-wide/16 v3, 0x0
 
@@ -70,17 +70,17 @@
 
     iget-wide v7, p0, Lho0;->d:J
 
-    invoke-static/range {v1 .. v12}, Ljo0;->a(JJJJJJ)J
+    invoke-static/range {v1 .. v12}, Lio0;->b(JJJJJJ)J
 
     move-result-wide v0
 
-    new-instance v2, Lkje;
+    new-instance v2, Lgke;
 
-    new-instance v3, Lqje;
+    new-instance v3, Lmke;
 
-    invoke-direct {v3, p1, p2, v0, v1}, Lqje;-><init>(JJ)V
+    invoke-direct {v3, p1, p2, v0, v1}, Lmke;-><init>(JJ)V
 
-    invoke-direct {v2, v3, v3}, Lkje;-><init>(Lqje;Lqje;)V
+    invoke-direct {v2, v3, v3}, Lgke;-><init>(Lmke;Lmke;)V
 
     return-object v2
 .end method

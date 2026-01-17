@@ -1,9 +1,9 @@
 .class public final Loh0;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
 
     check-cast p1, Loh0;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Loh0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -78,20 +78,20 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget v0, p0, Loh0;->o:I
 
-    iget p1, p0, Loh0;->o:I
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-ltz p1, :cond_0
+    if-ltz v0, :cond_0
 
-    iget-object v0, p0, Loh0;->X:Lph0;
+    iget-object p1, p0, Loh0;->X:Lph0;
 
-    iget-object v0, v0, Lph0;->a:Landroid/content/Context;
+    iget-object p1, p1, Lph0;->a:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lme/leolin/shortcutbadger/ShortcutBadger;->applyCount(Landroid/content/Context;I)Z
+    invoke-static {p1, v0}, Lme/leolin/shortcutbadger/ShortcutBadger;->applyCount(Landroid/content/Context;I)Z
 
     :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

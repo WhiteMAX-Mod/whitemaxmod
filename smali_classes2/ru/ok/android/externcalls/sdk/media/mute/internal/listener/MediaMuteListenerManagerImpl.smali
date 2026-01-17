@@ -19,14 +19,14 @@
         "()V",
         "Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;",
         "listener",
-        "Lv2h;",
+        "Lb3h;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;)V",
         "removeListener",
-        "Lqfa;",
+        "Lofa;",
         "muteEvent",
         "onMuteStateInitialized",
-        "(Lqfa;)V",
+        "(Lofa;)V",
         "onMuteChanged",
         "Ljava/util/concurrent/CopyOnWriteArraySet;",
         "listeners",
@@ -82,7 +82,7 @@
     return-void
 .end method
 
-.method public onMuteChanged(Lqfa;)V
+.method public onMuteChanged(Lofa;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/listener/MediaMuteListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -104,7 +104,7 @@
 
     check-cast v1, Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;
 
-    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;->onMuteChanged(Lqfa;)V
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;->onMuteChanged(Lofa;)V
 
     goto :goto_0
 
@@ -112,7 +112,7 @@
     return-void
 .end method
 
-.method public onMuteStateInitialized(Lqfa;)V
+.method public onMuteStateInitialized(Lofa;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/listener/MediaMuteListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -134,7 +134,7 @@
 
     check-cast v1, Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;
 
-    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;->onMuteStateInitialized(Lqfa;)V
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;->onMuteStateInitialized(Lofa;)V
 
     goto :goto_0
 

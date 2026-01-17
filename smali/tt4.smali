@@ -9,16 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lj4g;
+.field public final synthetic b:Lqw1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj4g;I)V
+.method public synthetic constructor <init>(Lqw1;I)V
     .locals 0
 
     iput p2, p0, Ltt4;->a:I
 
-    iput-object p1, p0, Ltt4;->b:Lj4g;
+    iput-object p1, p0, Ltt4;->b:Lqw1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,22 +34,28 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ltt4;->b:Lj4g;
+    iget-object v0, p0, Ltt4;->b:Lqw1;
 
-    iget-object v0, v0, Lj4g;->g:Lbx1;
+    const/4 v1, 0x0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lbx1;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Lqw1;->b(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Ltt4;->b:Lj4g;
+    new-instance v0, Ljava/lang/Exception;
 
-    invoke-virtual {v0}, Lj4g;->d()V
+    const-string v1, "Failed to snapshot: OpenGLRenderer not ready."
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ltt4;->b:Lqw1;
+
+    invoke-virtual {v1, v0}, Lqw1;->d(Ljava/lang/Throwable;)Z
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

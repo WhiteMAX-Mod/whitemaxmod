@@ -1,24 +1,24 @@
 .class public final Lcea;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Lkea;
+.field public final synthetic o:Ljea;
 
 
 # direct methods
-.method public constructor <init>(Lkea;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljea;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lcea;->o:Lkea;
+    iput-object p1, p0, Lcea;->o:Ljea;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,7 +38,7 @@
 
     check-cast p1, Lcea;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lcea;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,48 +50,51 @@
 
     new-instance p1, Lcea;
 
-    iget-object v0, p0, Lcea;->o:Lkea;
+    iget-object v0, p0, Lcea;->o:Ljea;
 
-    invoke-direct {p1, v0, p2}, Lcea;-><init>(Lkea;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lcea;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lcea;->o:Lkea;
+    iget-object p1, p0, Lcea;->o:Ljea;
 
-    iget-object p1, p1, Lkea;->x0:Le29;
+    iget-object v0, p1, Ljea;->y0:Li19;
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Le29;->D()V
-
-    iget-object p1, p1, Le29;->c:Ld29;
-
-    invoke-interface {p1}, Ld29;->isConnected()Z
+    invoke-virtual {v0}, Li19;->getPlaybackState()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x3
 
-    const-string p1, "MediaController"
-
-    const-string v0, "The controller is not connected. Ignoring pause()."
-
-    invoke-static {p1, v0}, Lnfi;->l(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Ld29;->pause()V
+    iget-object v0, p1, Ljea;->y0:Li19;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Li19;->prepare()V
 
     :cond_1
     :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget-object p1, p1, Ljea;->y0:Li19;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Li19;->play()V
+
+    :cond_2
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

@@ -1,27 +1,27 @@
 .class public Lcom/facebook/imagepipeline/memory/NativeMemoryChunkPool;
-.super Lyj9;
+.super Lej9;
 .source "SourceFile"
 
 
 # annotations
-.annotation build Lb35;
+.annotation build Le35;
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Ldk9;Lcdc;Lddc;)V
+.method public constructor <init>(Ljj9;Lxdc;Lydc;)V
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
-    invoke-direct {p0, p1, p2, p3}, Lyj9;-><init>(Ldk9;Lcdc;Lddc;)V
+    invoke-direct {p0, p1, p2, p3}, Lej9;-><init>(Ljj9;Lxdc;Lydc;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(I)Ljava/lang/Object;
+.method public final e(I)Ljava/lang/Object;
     .locals 1
 
     new-instance v0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;

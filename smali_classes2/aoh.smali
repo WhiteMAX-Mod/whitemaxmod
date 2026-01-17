@@ -1,101 +1,86 @@
 .class public final Laoh;
-.super Lo3j;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-.field public final synthetic b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
     .locals 0
 
-    iput p2, p0, Laoh;->a:I
+    iput-object p2, p0, Laoh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iput-object p1, p0, Laoh;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Laoh;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Laoh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Laoh;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+    move-result-object p1
 
-    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+    check-cast p1, Laoh;
 
-    const/4 v2, 0x4
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, p2}, Laoh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Lrx4;
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Laoh;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Lrx4;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method
 
-.method public c()V
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Laoh;->a:I
+    new-instance v0, Laoh;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Laoh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    return-void
+    invoke-direct {v0, p2, v1}, Laoh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
 
-    :pswitch_0
-    iget-object v0, p0, Laoh;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+    iput-object p1, v0, Laoh;->o:Ljava/lang/Object;
 
-    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p0, Laoh;->o:Ljava/lang/Object;
 
-    iget-object v0, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 v1, 0x0
+    check-cast v0, Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+    iget-object p1, p0, Laoh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    return-void
+    iget-object p1, p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->B0:Lfyd;
 
-    nop
+    invoke-virtual {p1}, Lfyd;->getValue()Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    check-cast p1, Lsmh;
+
+    invoke-virtual {p1, v0}, Lsmh;->setFramesListBitmap(Landroid/graphics/Bitmap;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

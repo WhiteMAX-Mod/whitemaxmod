@@ -1,98 +1,67 @@
-.class public final synthetic Lw2b;
+.class public abstract Lw2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Z
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ZI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lw2b;->a:I
+    sget v0, Lx7d;->appearance_settings_chat_preview:I
 
-    iput-boolean p1, p0, Lw2b;->b:Z
+    sput v0, Lw2b;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lx7d;->appearance_settings_current_theme_title:I
+
+    sput v0, Lw2b;->b:I
+
+    sget v0, Lx7d;->appearance_settings_font_size_reset:I
+
+    sput v0, Lw2b;->c:I
+
+    sget v0, Lx7d;->appearance_settings_font_size_title:I
+
+    sput v0, Lw2b;->d:I
+
+    sget v0, Lx7d;->appearance_settings_font_size_view:I
+
+    sput v0, Lw2b;->e:I
+
+    sget v0, Lx7d;->appearance_settings_recycler:I
+
+    sput v0, Lw2b;->f:I
+
+    sget v0, Lx7d;->appearance_settings_screen_mode:I
+
+    sput v0, Lw2b;->g:I
+
+    sget v0, Lx7d;->appearance_settings_screen_toolbar:I
+
+    sput v0, Lw2b;->h:I
+
+    sget v0, Lx7d;->appearance_settings_segmented_buttons_group:I
+
+    sput v0, Lw2b;->i:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lw2b;->a:I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    iget-boolean v3, p0, Lw2b;->b:Z
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/android/OneMeApplication;->s0:Ly2b;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    if-eqz v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :cond_1
-    :goto_0
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    sget-object v0, Lone/me/android/OneMeApplication;->s0:Ly2b;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    if-eqz v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move v1, v2
-
-    :cond_3
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -136,7 +136,7 @@
 
     const-string v1, "length must be >= 0, got "
 
-    invoke-static {p0, v1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

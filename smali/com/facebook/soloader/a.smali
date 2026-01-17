@@ -8,7 +8,7 @@
 
 .field public final Y:I
 
-.field public a:[Lct5;
+.field public a:[Let5;
 
 .field public final b:Ljava/util/zip/ZipFile;
 
@@ -41,7 +41,7 @@
 
     new-instance p2, Ljava/io/File;
 
-    iget-object p3, p1, Lc4h;->d:Landroid/content/Context;
+    iget-object p3, p1, Lh4h;->d:Landroid/content/Context;
 
     invoke-virtual {p3}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
@@ -62,10 +62,10 @@
 
 
 # virtual methods
-.method public final B(Ljava/io/File;)V
+.method public final E(Ljava/io/File;)V
     .locals 8
 
-    invoke-virtual {p0}, Lcom/facebook/soloader/a;->c0()[Lct5;
+    invoke-virtual {p0}, Lcom/facebook/soloader/a;->f0()[Let5;
 
     move-result-object v0
 
@@ -84,30 +84,30 @@
 
     iget-object v5, p0, Lcom/facebook/soloader/a;->b:Ljava/util/zip/ZipFile;
 
-    iget-object v6, v4, Lct5;->d:Ljava/util/zip/ZipEntry;
+    iget-object v6, v4, Let5;->d:Ljava/util/zip/ZipEntry;
 
     invoke-virtual {v5, v6}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v5
 
     :try_start_0
-    new-instance v6, La16;
+    new-instance v6, Lc16;
 
     const/4 v7, 0x2
 
-    invoke-direct {v6, v4, v7, v5}, La16;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v6, v4, v7, v5}, Lc16;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v5, 0x0
 
     :try_start_1
-    invoke-static {v6, v1, p1}, Lcom/facebook/soloader/e;->d(La16;[BLjava/io/File;)V
+    invoke-static {v6, v1, p1}, Lcom/facebook/soloader/e;->d(Lc16;[BLjava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :try_start_2
-    invoke-virtual {v6}, La16;->close()V
+    invoke-virtual {v6}, Lc16;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -124,7 +124,7 @@
     move-exception p1
 
     :try_start_3
-    invoke-virtual {v6}, La16;->close()V
+    invoke-virtual {v6}, Lc16;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -153,7 +153,7 @@
     return-void
 .end method
 
-.method public final E()[Lct5;
+.method public final H()[Let5;
     .locals 10
 
     new-instance v0, Ljava/util/LinkedHashSet;
@@ -264,18 +264,18 @@
 
     move-result-object v7
 
-    check-cast v7, Lct5;
+    check-cast v7, Let5;
 
     if-eqz v7, :cond_5
 
-    iget v7, v7, Lct5;->o:I
+    iget v7, v7, Let5;->o:I
 
     if-ge v8, v7, :cond_0
 
     :cond_5
-    new-instance v7, Lct5;
+    new-instance v7, Let5;
 
-    invoke-direct {v7, v6, v5, v8}, Lct5;-><init>(Ljava/lang/String;Ljava/util/zip/ZipEntry;I)V
+    invoke-direct {v7, v6, v5, v8}, Let5;-><init>(Ljava/lang/String;Ljava/util/zip/ZipEntry;I)V
 
     invoke-virtual {v1, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -306,34 +306,44 @@
 
     move-result v1
 
-    new-array v1, v1, [Lct5;
+    new-array v1, v1, [Let5;
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lct5;
+    check-cast v0, [Let5;
 
     invoke-static {v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method public final c0()[Lct5;
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/facebook/soloader/a;->b:Ljava/util/zip/ZipFile;
+
+    invoke-virtual {v0}, Ljava/util/zip/ZipFile;->close()V
+
+    return-void
+.end method
+
+.method public final f0()[Let5;
     .locals 15
 
-    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Lct5;
+    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Let5;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/facebook/soloader/a;->E()[Lct5;
+    invoke-virtual {p0}, Lcom/facebook/soloader/a;->H()[Let5;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/soloader/a;->a:[Lct5;
+    iput-object v0, p0, Lcom/facebook/soloader/a;->a:[Let5;
 
     iget-boolean v1, p0, Lcom/facebook/soloader/a;->o:Z
 
@@ -345,7 +355,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Lct5;
+    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Let5;
 
     return-object v0
 
@@ -360,7 +370,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Lct5;
+    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Let5;
 
     return-object v0
 
@@ -376,9 +386,9 @@
 
     aget-object v5, v0, v4
 
-    iget-object v6, v5, Lct5;->d:Ljava/util/zip/ZipEntry;
+    iget-object v6, v5, Let5;->d:Ljava/util/zip/ZipEntry;
 
-    iget-object v5, v5, Lk2;->b:Ljava/lang/Object;
+    iget-object v5, v5, Lj2;->b:Ljava/lang/Object;
 
     check-cast v5, Ljava/lang/String;
 
@@ -429,7 +439,7 @@
 
     move-result-object v6
 
-    invoke-static {v2, v6}, Ls4j;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v6}, Li5j;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -451,7 +461,7 @@
 
     const-string v0, " not in system lib dir"
 
-    invoke-static {v12, v9, v7, v5, v0}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v12, v9, v7, v5, v0}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -488,14 +498,14 @@
 
     const-string v3, " bytes long in the APK"
 
-    invoke-static {v5, v6, v1, v3, v0}, Lzy4;->i(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v5, v6, v1, v3, v0}, Lxi4;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
-    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Lct5;
+    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Let5;
 
     return-object v0
 
@@ -521,7 +531,7 @@
     :goto_2
     const-string v10, ", IOException when constructing path: "
 
-    invoke-static {v8, v9, v7, v5, v10}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v9, v7, v5, v10}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
@@ -543,27 +553,17 @@
     goto/16 :goto_0
 
     :cond_6
-    new-array v0, v3, [Lct5;
+    new-array v0, v3, [Let5;
 
-    iput-object v0, p0, Lcom/facebook/soloader/a;->a:[Lct5;
+    iput-object v0, p0, Lcom/facebook/soloader/a;->a:[Let5;
 
     return-object v0
 .end method
 
-.method public final close()V
+.method public final l()[Lj2;
     .locals 1
 
-    iget-object v0, p0, Lcom/facebook/soloader/a;->b:Ljava/util/zip/ZipFile;
-
-    invoke-virtual {v0}, Ljava/util/zip/ZipFile;->close()V
-
-    return-void
-.end method
-
-.method public final l()[Lk2;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/facebook/soloader/a;->c0()[Lct5;
+    invoke-virtual {p0}, Lcom/facebook/soloader/a;->f0()[Let5;
 
     move-result-object v0
 

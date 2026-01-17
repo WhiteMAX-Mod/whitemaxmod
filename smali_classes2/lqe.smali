@@ -1,378 +1,103 @@
-.class public abstract Llqe;
+.class public final Llqe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lmqe;
+.field public A:Lnce;
+
+.field public B:Ls11;
+
+.field public C:Lr11;
+
+.field public D:Z
+
+.field public a:Lq7f;
+
+.field public b:Ln7f;
+
+.field public c:Lcrd;
+
+.field public d:Ljava/util/concurrent/ExecutorService;
+
+.field public e:Landroid/content/Context;
+
+.field public f:Lorg/webrtc/EglBase;
+
+.field public g:Lzea;
+
+.field public h:Lcl1;
+
+.field public i:Lqbf;
+
+.field public final j:Ljava/util/ArrayList;
+
+.field public final k:Ljava/util/ArrayList;
+
+.field public final l:Ljava/util/ArrayList;
+
+.field public m:Lrk1;
+
+.field public n:Lsg3;
+
+.field public o:Lahd;
+
+.field public p:Ldhd;
+
+.field public q:Ly46;
+
+.field public r:Lfgc;
+
+.field public s:Z
+
+.field public t:Lakj;
+
+.field public u:Lzh;
+
+.field public v:Lnh1;
+
+.field public w:Lhw8;
+
+.field public x:Lrde;
+
+.field public y:Z
+
+.field public z:Lxkg;
 
 
-# virtual methods
-.method public final a()Lo2b;
-    .locals 1
+# direct methods
+.method public constructor <init>()V
+    .locals 2
 
-    iget-object v0, p0, Llqe;->a:Lmqe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    new-instance v0, Ljava/util/ArrayList;
 
-    goto :goto_0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    :cond_0
+    iput-object v0, p0, Llqe;->j:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Llqe;->k:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Llqe;->l:Ljava/util/ArrayList;
+
     const/4 v0, 0x0
 
-    :goto_0
-    iget-object v0, v0, Lmqe;->o:Ld68;
+    iput-boolean v0, p0, Llqe;->s:Z
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    iput-boolean v1, p0, Llqe;->y:Z
 
-    check-cast v0, Lo2b;
-
-    return-object v0
-.end method
-
-.method public final b()Lch2;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->k:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lch2;
-
-    return-object v0
-.end method
-
-.method public final e()Lxj2;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->s:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxj2;
-
-    return-object v0
-.end method
-
-.method public final h()Lch2;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->k:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lch2;
-
-    return-object v0
-.end method
-
-.method public final i()Lte3;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->f:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lte3;
-
-    return-object v0
-.end method
-
-.method public final j()Lbk8;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->E:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbk8;
-
-    return-object v0
-.end method
-
-.method public final k()Ljk8;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->x:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljk8;
-
-    return-object v0
-.end method
-
-.method public final l()Lbn9;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->n:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbn9;
-
-    return-object v0
-.end method
-
-.method public final m()Lbn9;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->n:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbn9;
-
-    return-object v0
-.end method
-
-.method public final n()Lpfc;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->e:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpfc;
-
-    return-object v0
-.end method
-
-.method public final o()Lybg;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->v:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lybg;
-
-    return-object v0
-.end method
-
-.method public final p()Lkeg;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->l:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkeg;
-
-    return-object v0
-.end method
-
-.method public final q()Lkeg;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->l:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkeg;
-
-    return-object v0
-.end method
-
-.method public final r()Ljy0;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->c:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljy0;
-
-    return-object v0
-.end method
-
-.method public final s()Lwii;
-    .locals 1
-
-    iget-object v0, p0, Llqe;->a:Lmqe;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v0, v0, Lmqe;->g:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwii;
-
-    return-object v0
-.end method
-
-.method public t()V
-    .locals 0
+    iput-boolean v0, p0, Llqe;->D:Z
 
     return-void
-.end method
-
-.method public abstract u()V
 .end method

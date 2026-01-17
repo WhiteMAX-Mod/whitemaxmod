@@ -6,7 +6,7 @@
 # instance fields
 .field public final a:Landroid/text/TextPaint;
 
-.field public final b:Lzv8;
+.field public final b:Lav8;
 
 
 # direct methods
@@ -45,13 +45,13 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    new-instance v0, Lzv8;
+    new-instance v0, Lav8;
 
     const/16 v1, 0x64
 
-    invoke-direct {v0, v1, v2}, Lzv8;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lav8;-><init>(II)V
 
-    iput-object v0, p0, Lye0;->b:Lzv8;
+    iput-object v0, p0, Lye0;->b:Lav8;
 
     return-void
 .end method

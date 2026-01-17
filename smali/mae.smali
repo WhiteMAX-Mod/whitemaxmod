@@ -3,81 +3,127 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ll25;
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/RunnableFuture;
+.implements Ljava/util/concurrent/ScheduledFuture;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
-
-.field public final b:Loae;
-
-.field public c:Ljava/lang/Thread;
+.field public final a:Ljava/util/concurrent/FutureTask;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Loae;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+    .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmae;->a:Ljava/lang/Runnable;
+    .line 4
+    new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    iput-object p2, p0, Lmae;->b:Loae;
+    invoke-direct {v0, p1, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lmae;->a:Ljava/util/concurrent/FutureTask;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/concurrent/Callable;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/util/concurrent/FutureTask;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
+
+    iput-object v0, p0, Lmae;->a:Ljava/util/concurrent/FutureTask;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispose()V
-    .locals 2
-
-    iget-object v0, p0, Lmae;->c:Ljava/lang/Thread;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lmae;->b:Loae;
-
-    instance-of v1, v0, Lina;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lina;
-
-    iget-boolean v1, v0, Lina;->b:Z
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lina;->b:Z
-
-    iget-object v0, v0, Lina;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lmae;->b:Loae;
-
-    invoke-interface {v0}, Ll25;->dispose()V
-
-    return-void
-.end method
-
-.method public final f()Z
+.method public final cancel(Z)Z
     .locals 1
 
-    iget-object v0, p0, Lmae;->b:Loae;
+    iget-object v0, p0, Lmae;->a:Ljava/util/concurrent/FutureTask;
 
-    invoke-interface {v0}, Ll25;->f()Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p1, Ljava/util/concurrent/Delayed;
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmae;->a:Ljava/util/concurrent/FutureTask;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lmae;->a:Ljava/util/concurrent/FutureTask;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/FutureTask;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    iget-object v0, p0, Lmae;->a:Ljava/util/concurrent/FutureTask;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->isCancelled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    iget-object v0, p0, Lmae;->a:Ljava/util/concurrent/FutureTask;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->isDone()Z
 
     move-result v0
 
@@ -85,45 +131,11 @@
 .end method
 
 .method public final run()V
-    .locals 2
+    .locals 1
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    iget-object v0, p0, Lmae;->a:Ljava/util/concurrent/FutureTask;
 
-    move-result-object v0
-
-    iput-object v0, p0, Lmae;->c:Ljava/lang/Thread;
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-object v1, p0, Lmae;->a:Ljava/lang/Runnable;
-
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p0}, Lmae;->dispose()V
-
-    iput-object v0, p0, Lmae;->c:Ljava/lang/Thread;
+    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->run()V
 
     return-void
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    invoke-static {v1}, Lomj;->d(Ljava/lang/Throwable;)V
-
-    throw v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception v1
-
-    invoke-virtual {p0}, Lmae;->dispose()V
-
-    iput-object v0, p0, Lmae;->c:Ljava/lang/Thread;
-
-    throw v1
 .end method

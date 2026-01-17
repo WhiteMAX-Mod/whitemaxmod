@@ -1,80 +1,93 @@
 .class public final Lmmd;
-.super Ljava/lang/Object;
+.super Ldmj;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final a:Lud2;
-
-.field public final b:Lyx3;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lud2;Lyx3;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmmd;->a:Lud2;
-
-    iput-object p2, p0, Lmmd;->b:Lyx3;
+    iput-object p1, p0, Lmmd;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lmmd;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lmmd;->a:Lud2;
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lud2;->b:Lzh2;
-
-    iget-wide v0, v0, Lzh2;->Z:J
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lmmd;->b:Lyx3;
+    instance-of v1, p1, Lmmd;
 
-    iget-object v0, v0, Lyx3;->a:Lrz3;
+    const/4 v2, 0x0
 
-    iget-object v0, v0, Lrz3;->b:Lqz3;
+    if-nez v1, :cond_1
 
-    iget-wide v0, v0, Lqz3;->r:J
-
-    :goto_0
-    iget-object v2, p1, Lmmd;->a:Lud2;
-
-    if-eqz v2, :cond_1
-
-    iget-object p1, v2, Lud2;->b:Lzh2;
-
-    iget-wide v2, p1, Lzh2;->Z:J
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    iget-object p1, p1, Lmmd;->b:Lyx3;
+    check-cast p1, Lmmd;
 
-    iget-object p1, p1, Lyx3;->a:Lrz3;
+    iget-object v1, p0, Lmmd;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Lrz3;->b:Lqz3;
+    iget-object p1, p1, Lmmd;->a:Ljava/lang/String;
 
-    iget-wide v2, p1, Lqz3;->r:J
-
-    :goto_1
-    invoke-static {v2, v3, v0, v1}, Lc0j;->c(JJ)I
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lmmd;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Avatar(avatarUrl="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lmmd;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

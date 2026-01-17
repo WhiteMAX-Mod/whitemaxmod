@@ -1,147 +1,207 @@
 .class public final Lr2c;
-.super Lb5g;
+.super Lgl0;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/location/map/pick/PickLocationScreen;
+.field public final synthetic c:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/pick/PickLocationScreen;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    iput-object p2, p0, Lr2c;->X:Lone/me/location/map/pick/PickLocationScreen;
+    iput p2, p0, Lr2c;->c:I
 
-    const/4 p2, 0x2
+    iput p1, p0, Lr2c;->d:I
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroid/graphics/Bitmap;Loac;)Lkg3;
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p2, p0, Lr2c;->c:I
 
-    invoke-virtual {p0, p1, p2}, Lr2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch p2, :pswitch_data_0
 
-    move-result-object p1
+    new-instance v5, Landroid/graphics/Matrix;
 
-    check-cast p1, Lr2c;
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget p2, p0, Lr2c;->d:I
 
-    invoke-virtual {p1, p2}, Lr2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-lez p2, :cond_0
 
-    return-object p2
-.end method
+    int-to-float p2, p2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    new-instance v0, Lr2c;
+    move-result v0
 
-    iget-object v1, p0, Lr2c;->X:Lone/me/location/map/pick/PickLocationScreen;
+    int-to-float v0, v0
 
-    invoke-direct {v0, p2, v1}, Lr2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/pick/PickLocationScreen;)V
+    const/high16 v1, 0x40000000    # 2.0f
 
-    iput-object p1, v0, Lr2c;->o:Ljava/lang/Object;
+    div-float/2addr v0, v1
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    move-result v2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    int-to-float v2, v2
 
-    iget-object p1, p0, Lr2c;->o:Ljava/lang/Object;
+    div-float/2addr v2, v1
 
-    check-cast p1, Lu2c;
+    invoke-virtual {v5, p2, v0, v2}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
-    iget-object v0, p1, Lu2c;->f:Ljava/lang/String;
+    :cond_0
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    iget-boolean v1, p1, Lu2c;->g:Z
+    move-result v3
 
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lr2c;->X:Lone/me/location/map/pick/PickLocationScreen;
-
-    if-eqz v0, :cond_2
-
-    invoke-static {v0}, Liyf;->G(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
 
-    if-nez v4, :cond_0
+    const/4 v6, 0x1
 
-    if-nez v1, :cond_0
+    const/4 v1, 0x0
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :cond_0
-    move-object v0, v2
+    move-object v0, p1
 
-    :goto_0
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v2, v0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v3}, Lx84;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    sget v2, Lvcd;->oneme_location_map_send_unknown_address:I
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    :cond_3
-    :goto_2
-    sget-object v0, Lone/me/location/map/pick/PickLocationScreen;->v0:[Lp38;
-
-    invoke-virtual {v3}, Lone/me/location/map/pick/PickLocationScreen;->z0()Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lu2c;->e:Lghg;
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {p1, v4}, Lghg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, v2}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+    new-instance p2, Lu0b;
 
-    invoke-virtual {v3}, Lone/me/location/map/pick/PickLocationScreen;->z0()Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+    const/16 v0, 0x8
+
+    invoke-direct {p2, v0}, Lu0b;-><init>(I)V
+
+    sget-object v0, Lkg3;->X:Lvqj;
+
+    invoke-static {p1, p2, v0}, Lkg3;->C0(Ljava/lang/Object;Lpyd;Ljg3;)Lpo4;
 
     move-result-object p1
-
-    invoke-virtual {p1, v1}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->setProgressEnabled(Z)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
+
+    :pswitch_0
+    move-object v0, p1
+
+    new-instance v5, Landroid/graphics/Matrix;
+
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
+
+    iget p1, p0, Lr2c;->d:I
+
+    if-lez p1, :cond_1
+
+    int-to-float p1, p1
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p2
+
+    div-int/lit8 p2, p2, 0x2
+
+    int-to-float p2, p2
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-virtual {v5, p1, p2, v1}, Landroid/graphics/Matrix;->postRotate(FFF)Z
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    const/4 v6, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    new-instance p2, Lu0b;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p2, v0}, Lu0b;-><init>(I)V
+
+    sget-object v0, Lkg3;->X:Lvqj;
+
+    invoke-static {p1, p2, v0}, Lkg3;->C0(Ljava/lang/Object;Lpyd;Ljg3;)Lpo4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()Lb01;
+    .locals 2
+
+    iget v0, p0, Lr2c;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lr2c;->d:I
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lddf;
+
+    invoke-direct {v1, v0}, Lddf;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+
+    :pswitch_0
+    iget v0, p0, Lr2c;->d:I
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lddf;
+
+    invoke-direct {v1, v0}, Lddf;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,78 +1,87 @@
-.class public abstract Lk18;
+.class public final Lk18;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La38;
+
 
 # static fields
-.field public static final a:Lgq7;
+.field public static final a:Lk18;
+
+.field public static final b:Lzpe;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    const-string v0, "kotlinx.serialization.json.JsonUnquotedLiteral"
+    new-instance v0, Lk18;
 
-    sget-object v1, Leyf;->a:Leyf;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v0}, Lkti;->a(Lq38;Ljava/lang/String;)Lgq7;
+    sput-object v0, Lk18;->a:Lk18;
+
+    sget-object v0, Lcqe;->c:Lcqe;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lxpe;
+
+    const-string v2, "kotlinx.serialization.json.JsonNull"
+
+    invoke-static {v2, v0, v1}, Lpoj;->a(Ljava/lang/String;Lqoj;[Lxpe;)Lzpe;
 
     move-result-object v0
 
-    sput-object v0, Lk18;->a:Lgq7;
+    sput-object v0, Lk18;->b:Lzpe;
 
     return-void
 .end method
 
-.method public static final a(Lj18;)Lk28;
-    .locals 3
 
-    instance-of v0, p0, Lk28;
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 0
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lj18;
 
-    move-object v0, p0
+    invoke-static {p1}, Lo2j;->a(Lkotlinx/serialization/json/internal/b;)V
 
-    check-cast v0, Lk28;
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->m()V
 
-    goto :goto_0
+    return-void
+.end method
+
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lo2j;->b(Lkl4;)Lkotlinx/serialization/json/internal/a;
+
+    invoke-interface {p1}, Lkl4;->v()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lj18;->INSTANCE:Lj18;
+
+    return-object p1
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance p1, Lkotlinx/serialization/json/internal/JsonDecodingException;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    const-string v0, "Expected \'null\' literal"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final d()Lxpe;
+    .locals 1
+
+    sget-object v0, Lk18;->b:Lzpe;
 
     return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Element "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, " is not a JsonPrimitive"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

@@ -1,30 +1,39 @@
 .class public final Lgwf;
-.super Lh08;
+.super Llm4;
 .source "SourceFile"
 
-# interfaces
-.implements Liwf;
 
+# static fields
+.field public static final b:Lgwf;
 
-# instance fields
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Z
+.field public static final c:Lhm4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Lh08;-><init>()V
+    new-instance v0, Lgwf;
 
-    iput-object p1, p0, Lgwf;->c:Ljava/lang/String;
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    iput-object p2, p0, Lgwf;->d:Ljava/lang/String;
+    sput-object v0, Lgwf;->b:Lgwf;
 
-    iput-boolean p3, p0, Lgwf;->e:Z
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xe
+
+    const-string v4, ":stickers/showcase"
+
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v0
+
+    sput-object v0, Lgwf;->c:Lhm4;
 
     return-void
 .end method

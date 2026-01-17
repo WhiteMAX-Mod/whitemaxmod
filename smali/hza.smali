@@ -1,17 +1,19 @@
-.class public interface abstract Lhza;
-.super Ljava/lang/Object;
+.class public final Lhza;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# instance fields
+.field public final a:Ljava/lang/Object;
 
-.method public abstract b(Ljava/lang/Object;)V
-.end method
 
-.method public abstract c(Lfza;)V
-.end method
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-.method public abstract d(Ljava/lang/Throwable;)V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lhza;->a:Ljava/lang/Object;
+
+    return-void
 .end method

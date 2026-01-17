@@ -1,205 +1,68 @@
-.class public final Lung;
-.super Lzth;
+.class public final synthetic Lung;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:Z
-
-.field public c:I
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Landroidx/appcompat/widget/Toolbar;
 
 
 # direct methods
-.method public constructor <init>(Lvng;I)V
-    .locals 1
+.method public synthetic constructor <init>(Landroidx/appcompat/widget/Toolbar;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lung;->a:I
 
-    iput v0, p0, Lung;->a:I
+    iput-object p1, p0, Lung;->b:Landroidx/appcompat/widget/Toolbar;
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object p1, p0, Lung;->d:Ljava/lang/Object;
-
-    iput p2, p0, Lung;->c:I
-
-    const/4 p1, 0x0
-
-    .line 7
-    iput-boolean p1, p0, Lung;->b:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Lx39;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lung;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lung;->d:Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    .line 3
-    iput-boolean p1, p0, Lung;->b:Z
-
-    .line 4
-    iput p1, p0, Lung;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
+.method public final run()V
     .locals 1
 
     iget v0, p0, Lung;->a:I
 
     packed-switch v0, :pswitch_data_0
 
+    iget-object v0, p0, Lung;->b:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->n()V
+
     return-void
 
     :pswitch_0
-    const/4 v0, 0x1
+    iget-object v0, p0, Lung;->b:Landroidx/appcompat/widget/Toolbar;
 
-    iput-boolean v0, p0, Lung;->b:Z
+    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->a1:Lwng;
 
-    return-void
+    if-nez v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b()V
-    .locals 2
-
-    iget v0, p0, Lung;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Lung;->b:Z
-
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x1
+    iget-object v0, v0, Lwng;->b:Lrj9;
 
-    iput-boolean v0, p0, Lung;->b:Z
-
-    iget-object v0, p0, Lung;->d:Ljava/lang/Object;
-
-    check-cast v0, Lx39;
-
-    iget-object v0, v0, Lx39;->o:Ljava/lang/Object;
-
-    check-cast v0, Lyth;
-
+    :goto_0
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lyth;->b()V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lung;->d:Ljava/lang/Object;
-
-    check-cast v0, Lvng;
-
-    iget-object v0, v0, Lvng;->a:Landroidx/appcompat/widget/Toolbar;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget v0, p0, Lung;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lung;->c:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lung;->c:I
-
-    iget-object v1, p0, Lung;->d:Ljava/lang/Object;
-
-    check-cast v1, Lx39;
-
-    iget-object v2, v1, Lx39;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ne v0, v2, :cond_1
-
-    iget-object v0, v1, Lx39;->o:Ljava/lang/Object;
-
-    check-cast v0, Lyth;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lyth;->c()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput v0, p0, Lung;->c:I
-
-    iput-boolean v0, p0, Lung;->b:Z
-
-    iput-boolean v0, v1, Lx39;->c:Z
+    invoke-virtual {v0}, Lrj9;->collapseActionView()Z
 
     :cond_1
     return-void
 
-    :pswitch_0
-    iget-boolean v0, p0, Lung;->b:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lung;->d:Ljava/lang/Object;
-
-    check-cast v0, Lvng;
-
-    iget-object v0, v0, Lvng;->a:Landroidx/appcompat/widget/Toolbar;
-
-    iget v1, p0, Lung;->c:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    return-void
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

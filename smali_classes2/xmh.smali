@@ -1,154 +1,125 @@
 .class public final Lxmh;
-.super Lb5g;
+.super Lbnh;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public final a:Luih;
 
-.field public final synthetic Y:Lcsd;
-
-.field public final synthetic Z:Leih;
-
-.field public o:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;Lcsd;Leih;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Luih;Z)V
     .locals 0
 
-    iput-object p1, p0, Lxmh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxmh;->Y:Lcsd;
+    iput-object p1, p0, Lxmh;->a:Luih;
 
-    iput-object p3, p0, Lxmh;->Z:Leih;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lxmh;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lxmh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lxmh;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lxmh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lxmh;
-
-    iget-object v0, p0, Lxmh;->Y:Lcsd;
-
-    iget-object v1, p0, Lxmh;->Z:Leih;
-
-    iget-object v2, p0, Lxmh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lxmh;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;Lcsd;Leih;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lxmh;->o:I
+    const/4 v0, 0x1
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lxmh;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast p1, Lxmh;
 
-    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lp38;
+    iget-object v1, p0, Lxmh;->a:Luih;
 
-    iget-object p1, p0, Lxmh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iget-object v3, p1, Lxmh;->a:Luih;
 
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0()Lrmh;
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v1
 
-    new-instance v0, Landroid/util/Size;
+    if-nez v1, :cond_2
 
-    iget-object v3, p0, Lxmh;->Y:Lcsd;
-
-    iget v3, v3, Lcsd;->a:I
-
-    invoke-direct {v0, v3, v3}, Landroid/util/Size;-><init>(II)V
-
-    iget-object v3, p0, Lxmh;->Z:Leih;
-
-    invoke-virtual {v3}, Leih;->getSurfaceProvider()Lfgc;
-
-    move-result-object v3
-
-    iput v2, p0, Lxmh;->o:I
-
-    iget-object p1, p1, Lrmh;->b:Laih;
-
-    check-cast p1, Lllh;
-
-    invoke-virtual {p1, v0, v3, p0}, Lllh;->m(Landroid/util/Size;Lfgc;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    move-object p1, v1
+    iget-boolean v1, p0, Lxmh;->b:Z
 
-    :goto_0
-    if-ne p1, v0, :cond_3
+    iget-boolean p1, p1, Lxmh;->b:Z
 
-    return-object v0
+    if-eq v1, p1, :cond_3
+
+    return v2
 
     :cond_3
-    :goto_1
-    return-object v1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lxmh;->a:Luih;
+
+    invoke-virtual {v0}, Luih;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lxmh;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "BackCamera(torchState="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lxmh;->a:Luih;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isTimerVisible="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lxmh;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

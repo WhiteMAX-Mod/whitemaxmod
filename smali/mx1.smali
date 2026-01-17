@@ -1,140 +1,125 @@
-.class public final synthetic Lmx1;
-.super Ljava/lang/Object;
+.class public final Lmx1;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lnx1;
 
-.field public final synthetic b:Lvx1;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvx1;I)V
+.method public constructor <init>(Lnx1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lmx1;->a:I
+    iput-object p1, p0, Lmx1;->X:Lnx1;
 
-    iput-object p1, p0, Lmx1;->b:Lvx1;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lmx1;->a:I
+    check-cast p1, Lnah;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lqx1;
+    invoke-virtual {p0, p1, p2}, Lmx1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lmx1;->b:Lvx1;
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Lqx1;-><init>(Lvx1;)V
+    check-cast p1, Lmx1;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lmx1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lmx1;
+
+    iget-object v1, p0, Lmx1;->X:Lnx1;
+
+    invoke-direct {v0, v1, p2}, Lmx1;-><init>(Lnx1;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lmx1;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Lru/ok/android/externcalls/sdk/AudioLevelListener;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    new-instance v1, Landroid/os/Handler;
+    iget-object v0, p0, Lmx1;->o:Ljava/lang/Object;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    check-cast v0, Lnah;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lnah;->a:Lnah;
+
+    iget-object v1, p0, Lmx1;->X:Lnx1;
+
+    if-ne v0, p1, :cond_0
+
+    invoke-virtual {v1}, Lnx1;->b()Lspf;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lye4;
+
+    iget-object v2, v1, Lnx1;->n:Lo58;
+
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    move-object v3, v2
 
-    new-instance v2, Ll3;
+    check-cast v3, Lsz1;
 
-    const/16 v3, 0x1b
+    iget-object v5, p1, Lye4;->c:Ljava/lang/String;
 
-    iget-object v4, p0, Lmx1;->b:Lvx1;
+    iget-boolean v10, p1, Lye4;->i:Z
 
-    invoke-direct {v2, v3, v4}, Ll3;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v3, 0x1f4
+    const/4 v9, 0x0
 
-    invoke-direct {v0, v3, v1, v2}, Lru/ok/android/externcalls/sdk/AudioLevelListener;-><init>(SLandroid/os/Handler;Ljava/lang/Runnable;)V
+    const/16 v11, 0x78
 
-    return-object v0
+    const-string v4, "BAD_CONNECTION_ALERT"
 
-    :pswitch_1
-    iget-object v0, p0, Lmx1;->b:Lvx1;
+    const-string v6, "VPN"
 
-    iget-object v0, v0, Lvx1;->t:Lz7g;
+    const/4 v7, 0x0
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    const/4 v8, 0x0
 
-    move-result-object v0
+    invoke-static/range {v3 .. v11}, Lsz1;->d(Lsz1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
 
-    check-cast v0, Lnfa;
+    :cond_0
+    invoke-virtual {v1, v0}, Lnx1;->p(Lnah;)V
 
-    return-object v0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :pswitch_2
-    iget-object v0, p0, Lmx1;->b:Lvx1;
-
-    iget-object v0, v0, Lvx1;->t:Lz7g;
-
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfa;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {v0, v1}, Lnfa;->h(Ljava/lang/Object;)Z
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lmx1;->b:Lvx1;
-
-    iget-object v0, v0, Lvx1;->r:Lz7g;
-
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lofa;
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lmx1;->b:Lvx1;
-
-    iget-object v0, v0, Lvx1;->b:Lk41;
-
-    check-cast v0, Ll41;
-
-    invoke-virtual {v0}, Ll41;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    move-result-object v0
-
-    invoke-static {v0}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

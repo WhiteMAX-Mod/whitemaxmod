@@ -3,46 +3,36 @@
 
 
 # static fields
-.field public static compat_button_inset_horizontal_material:I = 0x7f07007d
+.field public static alpha:I = 0x7f04003c
 
-.field public static compat_button_inset_vertical_material:I = 0x7f07007e
+.field public static font:I = 0x7f0403e3
 
-.field public static compat_button_padding_horizontal_material:I = 0x7f07007f
+.field public static fontProviderAuthority:I = 0x7f0403e5
 
-.field public static compat_button_padding_vertical_material:I = 0x7f070080
+.field public static fontProviderCerts:I = 0x7f0403e6
 
-.field public static compat_control_corner_material:I = 0x7f070081
+.field public static fontProviderFetchStrategy:I = 0x7f0403e7
 
-.field public static compat_notification_large_icon_max_height:I = 0x7f070082
+.field public static fontProviderFetchTimeout:I = 0x7f0403e8
 
-.field public static compat_notification_large_icon_max_width:I = 0x7f070083
+.field public static fontProviderPackage:I = 0x7f0403e9
 
-.field public static notification_action_icon_size:I = 0x7f070427
+.field public static fontProviderQuery:I = 0x7f0403ea
 
-.field public static notification_action_text_size:I = 0x7f070428
+.field public static fontProviderSystemFontFamily:I = 0x7f0403eb
 
-.field public static notification_big_circle_margin:I = 0x7f070429
+.field public static fontStyle:I = 0x7f0403ec
 
-.field public static notification_content_margin_start:I = 0x7f07042a
+.field public static fontVariationSettings:I = 0x7f0403ed
 
-.field public static notification_large_icon_height:I = 0x7f07042b
+.field public static fontWeight:I = 0x7f0403ee
 
-.field public static notification_large_icon_width:I = 0x7f07042c
+.field public static lStar:I = 0x7f04058b
 
-.field public static notification_main_column_padding_top:I = 0x7f07042d
+.field public static nestedScrollViewStyle:I = 0x7f0406b0
 
-.field public static notification_media_narrow_margin:I = 0x7f07042e
+.field public static queryPatterns:I = 0x7f04070c
 
-.field public static notification_right_icon_size:I = 0x7f07042f
+.field public static shortcutMatchRequired:I = 0x7f04075e
 
-.field public static notification_right_side_padding_top:I = 0x7f070430
-
-.field public static notification_small_icon_background_padding:I = 0x7f070431
-
-.field public static notification_small_icon_size_as_large:I = 0x7f070432
-
-.field public static notification_subtext_size:I = 0x7f070433
-
-.field public static notification_top_pad:I = 0x7f070434
-
-.field public static notification_top_pad_large_text:I = 0x7f070435
+.field public static ttcIndex:I = 0x7f0408c2

@@ -6,20 +6,14 @@
 # static fields
 .field public static final a:I
 
-.field public static final b:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Ldbd;->call_users_in_wait_room_count:I
+    sget v0, Li6d;->ic_warning_56:I
 
     sput v0, Lu6b;->a:I
-
-    sget v0, Ldbd;->call_users_info_count:I
-
-    sput v0, Lu6b;->b:I
 
     return-void
 .end method

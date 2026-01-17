@@ -1,27 +1,10 @@
-.class public final enum Lkbi;
-.super Ljava/lang/Enum;
+.class public final Lkbi;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lk5i;
 
 
 # static fields
-.field public static final enum X:Lkbi;
-
-.field public static final enum Y:Lkbi;
-
-.field public static final enum Z:Lkbi;
-
-.field public static final enum d:Lkbi;
-
-.field public static final enum o:Lkbi;
-
-.field public static final enum s0:Lkbi;
-
-.field public static final synthetic t0:[Lkbi;
-
-.field public static final synthetic u0:Lwk5;
+.field public static final Companion:Libi;
 
 
 # instance fields
@@ -29,212 +12,211 @@
 
 .field public final b:Ljava/lang/String;
 
-.field public final c:Ljava/lang/Integer;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 1
 
-    new-instance v0, Lkbi;
+    new-instance v0, Libi;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const-string v1, "SECURE_SAVE_KEY"
-
-    const/4 v2, 0x0
-
-    const-string v3, "WebAppSecureStorageSaveKey"
-
-    const-string v4, "secure_storage_save_key"
-
-    invoke-direct/range {v0 .. v5}, Lkbi;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v0, Lkbi;->d:Lkbi;
-
-    new-instance v1, Lkbi;
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-string v2, "SECURE_GET_KEY"
-
-    const/4 v3, 0x1
-
-    const-string v4, "WebAppSecureStorageGetKey"
-
-    const-string v5, "secure_storage_get_key"
-
-    invoke-direct/range {v1 .. v6}, Lkbi;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v1, Lkbi;->o:Lkbi;
-
-    new-instance v2, Lkbi;
-
-    const/4 v3, 0x4
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const-string v3, "SECURE_CLEAR_KEYS"
-
-    const/4 v4, 0x2
-
-    const-string v5, "WebAppSecureStorageClear"
-
-    const-string v6, "secure_storage_clear"
-
-    invoke-direct/range {v2 .. v7}, Lkbi;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v2, Lkbi;->X:Lkbi;
-
-    new-instance v3, Lkbi;
-
-    const/4 v4, 0x5
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const-string v4, "SAVE_KEY"
-
-    const/4 v5, 0x3
-
-    const-string v6, "WebAppDeviceStorageSaveKey"
-
-    const-string v7, "device_storage_save_key"
-
-    invoke-direct/range {v3 .. v8}, Lkbi;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v3, Lkbi;->Y:Lkbi;
-
-    new-instance v4, Lkbi;
-
-    const/4 v5, 0x6
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    const-string v5, "GET_KEY"
-
-    const/4 v6, 0x4
-
-    const-string v7, "WebAppDeviceStorageGetKey"
-
-    const-string v8, "device_storage_get_key"
-
-    invoke-direct/range {v4 .. v9}, Lkbi;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v4, Lkbi;->Z:Lkbi;
-
-    new-instance v5, Lkbi;
-
-    const/4 v6, 0x7
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    const-string v6, "CLEAR_KEYS"
-
-    const/4 v7, 0x5
-
-    const-string v8, "WebAppDeviceStorageClear"
-
-    const-string v9, "device_storage_clear"
-
-    invoke-direct/range {v5 .. v10}, Lkbi;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v5, Lkbi;->s0:Lkbi;
-
-    filled-new-array/range {v0 .. v5}, [Lkbi;
-
-    move-result-object v0
-
-    sput-object v0, Lkbi;->t0:[Lkbi;
-
-    new-instance v1, Lwk5;
-
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lkbi;->u0:Lwk5;
+    sput-object v0, Lkbi;->Companion:Libi;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-    .locals 0
+.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    and-int/lit8 v0, p2, 0x1
 
-    iput-object p3, p0, Lkbi;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    iput-object p4, p0, Lkbi;->b:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    iput-object p5, p0, Lkbi;->c:Ljava/lang/Integer;
+    if-ne v2, v0, :cond_2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkbi;->a:Ljava/lang/String;
+
+    and-int/lit8 p1, p2, 0x2
+
+    if-nez p1, :cond_0
+
+    iput-object v1, p0, Lkbi;->b:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_0
+    iput-object p3, p0, Lkbi;->b:Ljava/lang/String;
+
+    :goto_0
+    and-int/lit8 p1, p2, 0x4
+
+    if-nez p1, :cond_1
+
+    iput-object v1, p0, Lkbi;->c:Ljava/lang/String;
 
     return-void
-.end method
 
-.method public static valueOf(Ljava/lang/String;)Lkbi;
-    .locals 1
+    :cond_1
+    iput-object p4, p0, Lkbi;->c:Ljava/lang/String;
 
-    const-class v0, Lkbi;
+    return-void
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    :cond_2
+    sget-object p1, Lgbi;->a:Lgbi;
 
-    move-result-object p0
+    invoke-virtual {p1}, Lgbi;->d()Lxpe;
 
-    check-cast p0, Lkbi;
+    move-result-object p1
 
-    return-object p0
-.end method
+    invoke-static {p2, v2, p1}, Lqjj;->b(IILxpe;)V
 
-.method public static values()[Lkbi;
-    .locals 1
-
-    sget-object v0, Lkbi;->t0:[Lkbi;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lkbi;
-
-    return-object v0
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lkbi;->c:Ljava/lang/Integer;
+    const/4 v0, 0x1
 
-    return-object v0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lkbi;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lkbi;
+
+    iget-object v1, p0, Lkbi;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lkbi;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lkbi;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lkbi;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lkbi;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lkbi;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
     iget-object v0, p0, Lkbi;->a:Ljava/lang/String;
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lkbi;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_0
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lkbi;->c:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_1
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object v0, p0, Lkbi;->b:Ljava/lang/String;
+    const-string v0, ", text="
+
+    const-string v1, ", link="
+
+    const-string v2, "WebAppShareRequest(requestId="
+
+    iget-object v3, p0, Lkbi;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lkbi;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lkbi;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

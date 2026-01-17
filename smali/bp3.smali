@@ -1,8 +1,9 @@
-.class public interface abstract Lbp3;
+.class public final Lbp3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract l(Lzv4;)Ljava/lang/Object;
-.end method
+# instance fields
+.field public a:Ljava/lang/Object;
+
+.field public b:Luth;

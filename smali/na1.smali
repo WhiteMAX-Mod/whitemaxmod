@@ -1,67 +1,77 @@
 .class public final Lna1;
-.super Lqr4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbhd;
+.implements Ld6c;
 
 
 # instance fields
-.field public final synthetic t:Loa1;
+.field public final a:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Loa1;)V
-    .locals 2
+.method public synthetic constructor <init>(Lo58;)V
+    .locals 0
 
-    iput-object p1, p0, Lna1;->t:Loa1;
+    iput-object p1, p0, Lna1;->a:Lo58;
 
-    invoke-direct {p0}, Lqr4;-><init>()V
-
-    const-wide/16 v0, 0x12c
-
-    iput-wide v0, p0, Lerd;->d:J
-
-    iput-wide v0, p0, Lerd;->c:J
-
-    iput-wide v0, p0, Lerd;->f:J
-
-    iput-wide v0, p0, Lerd;->e:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m()V
+.method public e(J)Ld76;
     .locals 3
 
-    iget-object v0, p0, Lna1;->t:Loa1;
+    iget-object v0, p0, Lna1;->a:Lo58;
 
-    iget-object v0, v0, Loa1;->a:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    check-cast v0, Lla3;
 
-    move-result-object v1
+    invoke-virtual {v0, p1, p2}, Lla3;->k(J)Lpld;
 
-    if-eqz v1, :cond_0
+    move-result-object v0
 
-    const/4 v2, -0x2
+    new-instance v1, Lr83;
 
-    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    const/16 v2, 0xc
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {v1, v0, v2}, Lr83;-><init>(Ld76;I)V
 
-    return-void
+    new-instance v0, Ly23;
 
-    :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
+    const/4 v2, 0x0
 
-    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    invoke-direct {v0, p1, p2, v2}, Ly23;-><init>(JLkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lgu0;->y(Ld76;Lbr6;)Ldc2;
 
-    throw v0
+    move-result-object p1
 
-    :cond_1
-    return-void
+    return-object p1
+.end method
+
+.method public shouldHideSensitiveInformation()Z
+    .locals 1
+
+    iget-object v0, p0, Lna1;->a:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt5b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

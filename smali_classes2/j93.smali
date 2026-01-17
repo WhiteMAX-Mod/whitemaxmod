@@ -1,70 +1,48 @@
-.class public final synthetic Lj93;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Loq6;
+.class public final Lj93;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ld83;
 
-.field public final synthetic b:Lud2;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lud2;I)V
+.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lj93;->a:I
+    iput-object p1, p0, Lj93;->X:Ld83;
 
-    iput-object p1, p0, Lj93;->b:Lud2;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lj93;->a:I
+    iput-object p1, p0, Lj93;->d:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Long;
+    iget p1, p0, Lj93;->o:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Lj93;->b:Lud2;
+    or-int/2addr p1, v0
 
-    invoke-static {p1}, Liof;->a(Ljava/lang/Object;)Lhof;
+    iput p1, p0, Lj93;->o:I
 
-    move-result-object p1
+    iget-object p1, p0, Lj93;->X:Ld83;
 
-    return-object p1
+    const/4 v0, 0x0
 
-    :pswitch_0
-    iget-object p1, p0, Lj93;->b:Lud2;
-
-    invoke-static {p1}, Liof;->a(Ljava/lang/Object;)Lhof;
+    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-
-    :pswitch_1
-    iget-object p1, p0, Lj93;->b:Lud2;
-
-    invoke-static {p1}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

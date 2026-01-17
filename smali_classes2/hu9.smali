@@ -1,40 +1,16 @@
-.class public final Lhu9;
+.class public interface abstract Lhu9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru9;
-
-
-# instance fields
-.field public final a:Lc10;
-
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Lc10;JLjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhu9;->a:Lc10;
-
-    iput-wide p2, p0, Lhu9;->b:J
-
-    iput-object p4, p0, Lhu9;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final j()J
-    .locals 2
+.method public a()Z
+    .locals 1
 
-    iget-wide v0, p0, Lhu9;->b:J
+    const/4 v0, 0x0
 
-    return-wide v0
+    return v0
+.end method
+
+.method public abstract j()J
 .end method

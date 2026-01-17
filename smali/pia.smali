@@ -1,320 +1,77 @@
-.class public abstract enum Lpia;
+.class public final enum Lpia;
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static a:Z = false
+.field public static final enum c:Lpia;
 
-.field public static final synthetic b:[Lpia;
+.field public static final enum d:Lpia;
+
+.field public static final synthetic o:[Lpia;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    const/4 v0, 0x0
+    new-instance v0, Lpia;
 
-    new-array v0, v0, [Lpia;
+    const/4 v1, 0x0
 
-    sput-object v0, Lpia;->b:[Lpia;
+    const-string v2, "jingle_peerconnection_so"
+
+    const-string v3, "WEBRTC"
+
+    invoke-direct {v0, v3, v1, v2}, Lpia;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lpia;->c:Lpia;
+
+    new-instance v1, Lpia;
+
+    const/4 v2, 0x1
+
+    const-string v3, "tensorflowlite"
+
+    const-string v4, "TENSORFLOW"
+
+    invoke-direct {v1, v4, v2, v3}, Lpia;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lpia;->d:Lpia;
+
+    filled-new-array {v0, v1}, [Lpia;
+
+    move-result-object v0
+
+    sput-object v0, Lpia;->o:[Lpia;
 
     return-void
 .end method
 
-.method public static a()V
-    .locals 7
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ljava/io/File;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v1, "java.io.tmpdir"
+    iput-object p3, p0, Lpia;->a:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    const-string p1, "lib"
 
-    move-result-object v1
+    const-string p2, ".so"
 
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-static {p1, p3, p2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    iput-object p1, p0, Lpia;->b:Ljava/lang/String;
 
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    new-instance v0, Loia;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2}, Loia;-><init>(I)V
-
-    invoke-virtual {v1, v0}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    new-instance v4, Ljava/io/File;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v6, ".lck"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4}, Ljava/io/File;->exists()Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    :try_start_0
-    invoke-virtual {v3}, Ljava/io/File;->delete()Z
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v3
-
-    sget-object v4, Ljava/lang/System;->err:Ljava/io/PrintStream;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Failed to delete old temp lib"
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
-.end method
-
-.method public static c()I
-    .locals 3
-
-    const-string v0, "os.name"
-
-    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Linux"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x2
-
-    return v0
-
-    :cond_0
-    const-string v1, "Mac"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v0, 0x3
-
-    return v0
-
-    :cond_1
-    const-string v1, "Windows"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_2
-    const-string v1, "Solaris"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    const-string v1, "SunOS"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    new-instance v1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v2, "Unsupported operating system: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_4
-    :goto_0
-    const/4 v0, 0x4
-
-    return v0
-.end method
-
-.method public static d()Ljava/lang/String;
-    .locals 4
-
-    invoke-static {}, Lpia;->c()I
-
-    move-result v0
-
-    const-class v1, Lpia;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/16 v2, 0x2e
-
-    const/16 v3, 0x2f
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "/"
-
-    invoke-static {v2, v1, v2}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_3
-
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_2
-
-    const/4 v3, 0x3
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v3, 0x4
-
-    if-ne v0, v3, :cond_0
-
-    const-string v3, "solaris"
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_1
-    const-string v3, "darwin"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v3, "linux"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v3, "win32"
-
-    :goto_0
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "os.arch"
-
-    invoke-static {v2}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "/liblz4-java."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Lgg9;->b(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lpia;
@@ -326,19 +83,17 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lzy4;->r(Ljava/lang/Object;)V
+    check-cast p0, Lpia;
 
-    const/4 p0, 0x0
-
-    throw p0
+    return-object p0
 .end method
 
 .method public static values()[Lpia;
     .locals 1
 
-    sget-object v0, Lpia;->b:[Lpia;
+    sget-object v0, Lpia;->o:[Lpia;
 
-    invoke-virtual {v0}, [Lpia;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -1,31 +1,54 @@
-.class public abstract Li5e;
+.class public final Li5e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final b:I
+.field public final b:Lahd;
 
-.field public static final c:I
+.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public final d:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lahd;)V
+    .locals 3
 
-    sget v0, Lx9d;->cancel:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Li5e;->a:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    sget v0, Lx9d;->presense_accent:I
+    const-wide/16 v1, 0x1
 
-    sput v0, Li5e;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
 
-    sget v0, Lx9d;->presense_bg:I
+    iput-object v0, p0, Li5e;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
-    sput v0, Li5e;->c:I
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Li5e;->d:Ljava/util/concurrent/ConcurrentHashMap;
+
+    if-eqz p1, :cond_0
+
+    const-string v0, "RtcCommands"
+
+    iput-object v0, p0, Li5e;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Li5e;->b:Lahd;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Illegal \'logger\' value: null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

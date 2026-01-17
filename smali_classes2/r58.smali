@@ -2,136 +2,220 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/content/SharedPreferences;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/util/List;
+.field public final a:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ll16;Lm16;Limf;I)V
+    .locals 6
+
+    and-int/lit8 p5, p5, 0x10
+
+    if-eqz p5, :cond_0
+
+    const/4 p4, 0x0
+
+    :cond_0
+    move-object v4, p4
+
+    const-string p4, "file_prefs"
+
+    const/4 p5, 0x0
+
+    invoke-virtual {p1, p4, p5}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
+
+    move-result-object v1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr58;->a:Ljava/lang/String;
+    new-instance v0, Lhq;
 
-    iput-object p2, p0, Lr58;->b:Ljava/util/List;
+    const/4 v5, 0x4
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v5}, Lhq;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance p1, Ln8g;
+
+    invoke-direct {p1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p1, p0, Lr58;->a:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Lk16;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lr58;->a:Ln8g;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of v1, p1, Lr58;
+    check-cast v0, Lk16;
 
-    const/4 v2, 0x0
+    return-object v0
+.end method
 
-    if-nez v1, :cond_1
+.method public final contains(Ljava/lang/String;)Z
+    .locals 1
 
-    return v2
+    invoke-virtual {p0}, Lr58;->a()Lk16;
 
-    :cond_1
-    check-cast p1, Lr58;
+    move-result-object v0
 
-    iget-object v1, p0, Lr58;->a:Ljava/lang/String;
+    iget-object v0, v0, Lk16;->c:Ljfa;
 
-    iget-object v3, p1, Lr58;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lr58;->b:Ljava/util/List;
-
-    iget-object p1, p1, Lr58;->b:Ljava/util/List;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljfa;->b(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final edit()Landroid/content/SharedPreferences$Editor;
+    .locals 1
 
-    iget-object v0, p0, Lr58;->a:Ljava/lang/String;
+    invoke-virtual {p0}, Lr58;->a()Lk16;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    move-result-object v0
 
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lr58;->b:Ljava/util/List;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "LastInputText(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lr58;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageElementsData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr58;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lk16;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final getAll()Ljava/util/Map;
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lk16;->getAll()Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getBoolean(Ljava/lang/String;Z)Z
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lk16;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getFloat(Ljava/lang/String;F)F
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lk16;->getFloat(Ljava/lang/String;F)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getInt(Ljava/lang/String;I)I
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lk16;->getInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getLong(Ljava/lang/String;J)J
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2, p3}, Lk16;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lk16;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lk16;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lk16;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    return-void
+.end method
+
+.method public final unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lr58;->a()Lk16;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lk16;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    return-void
 .end method

@@ -2,63 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Land;
 
+# instance fields
+.field public final a:Lb2e;
 
-# static fields
-.field public static final a:Lxmd;
+.field public final b:Lai;
+
+.field public final c:Lcua;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lb2e;)V
     .locals 1
 
-    new-instance v0, Lxmd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxmd;->a:Lb2e;
 
-    sput-object v0, Lxmd;->a:Lxmd;
+    new-instance p1, Lai;
+
+    const/16 v0, 0x10
+
+    invoke-direct {p1, v0}, Lai;-><init>(I)V
+
+    iput-object p1, p0, Lxmd;->b:Lai;
+
+    new-instance p1, Lcua;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0}, Lcua;-><init>(I)V
+
+    iput-object p1, p0, Lxmd;->c:Lcua;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lxmd;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x500f739a
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraNotFound"
-
-    return-object v0
 .end method

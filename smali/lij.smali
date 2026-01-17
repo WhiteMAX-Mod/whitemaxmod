@@ -1,85 +1,60 @@
-.class public abstract Llij;
+.class public final Llij;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Llij;
+
 
 # direct methods
-.method public static varargs a([Loq6;)Llm3;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    array-length v0, p0
+    new-instance v0, Llij;
 
-    if-lez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Llm3;
+    sput-object v0, Llij;->a:Llij;
+
+    new-instance v0, Lvzi;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Llm3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    return-object v0
+    const-class v1, Ln0j;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    const-string v0, "Failed requirement."
+    move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x2
 
-    throw p0
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    if-ne p0, p1, :cond_0
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    const/4 p0, 0x0
+    move-result-object p1
 
-    return p0
-
-    :cond_0
-    if-nez p0, :cond_1
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_1
-    if-nez p1, :cond_2
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    invoke-interface {p0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static varargs c(I[I)I
-    .locals 3
-
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    aget v2, p1, v1
-
-    invoke-static {p0, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result p0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return p0
+    throw p1
 .end method

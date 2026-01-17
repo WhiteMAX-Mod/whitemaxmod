@@ -30,11 +30,11 @@
         "getErrorCustomKey",
         "errorCustomJson",
         "getErrorCustomJson",
-        "Ldm;",
+        "Lem;",
         "errorPage",
-        "Ldm;",
+        "Lem;",
         "getErrorPage",
-        "()Ldm;",
+        "()Lem;",
         "odnoklassniki-android-api_release"
     }
     k = 0x1
@@ -60,7 +60,7 @@
 
 .field private final errorMessage:Ljava/lang/String;
 
-.field private final errorPage:Ldm;
+.field private final errorPage:Lem;
 
 
 # direct methods
@@ -84,12 +84,12 @@
     move-object v2, p2
 
     .line 1
-    invoke-direct/range {v0 .. v7}, Lru/ok/android/api/core/ApiInvocationException;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldm;)V
+    invoke-direct/range {v0 .. v7}, Lru/ok/android/api/core/ApiInvocationException;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldm;)V
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem;)V
     .locals 2
 
     .line 2
@@ -131,7 +131,7 @@
     iput-object p6, p0, Lru/ok/android/api/core/ApiInvocationException;->errorCustomJson:Ljava/lang/String;
 
     .line 10
-    iput-object p7, p0, Lru/ok/android/api/core/ApiInvocationException;->errorPage:Ldm;
+    iput-object p7, p0, Lru/ok/android/api/core/ApiInvocationException;->errorPage:Lem;
 
     return-void
 .end method
@@ -186,10 +186,10 @@
     return-object v0
 .end method
 
-.method public final getErrorPage()Ldm;
+.method public final getErrorPage()Lem;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/api/core/ApiInvocationException;->errorPage:Ldm;
+    iget-object v0, p0, Lru/ok/android/api/core/ApiInvocationException;->errorPage:Lem;
 
     return-object v0
 .end method
@@ -247,7 +247,7 @@
 
     const-string v2, "\'}"
 
-    invoke-static {v0, v1, v2}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

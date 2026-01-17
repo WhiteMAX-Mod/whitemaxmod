@@ -1,48 +1,85 @@
-.class public final Lrkb;
-.super Ll84;
+.class public abstract Lrkb;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lvr7;
+# static fields
+.field public static final a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:I
 
-.field public o:I
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
 
 
 # direct methods
-.method public constructor <init>(Lvr7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lrkb;->X:Lvr7;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lrkb;->d:Ljava/lang/Object;
+    sget v0, Liad;->oneme_stickers_preview_action_favorite:I
 
-    iget p1, p0, Lrkb;->o:I
+    sput v0, Lrkb;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Liad;->oneme_stickers_preview_action_forward:I
 
-    or-int/2addr p1, v0
+    sput v0, Lrkb;->b:I
 
-    iput p1, p0, Lrkb;->o:I
+    sget v0, Liad;->oneme_stickers_preview_action_send:I
 
-    iget-object p1, p0, Lrkb;->X:Lvr7;
+    sput v0, Lrkb;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Liad;->oneme_stickers_preview_content_container:I
 
-    invoke-virtual {p1, v0, p0}, Lvr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    sput v0, Lrkb;->d:I
 
-    move-result-object p1
+    sget v0, Liad;->oneme_stickers_preview_lottie_cell:I
 
-    return-object p1
+    sput v0, Lrkb;->e:I
+
+    sget v0, Liad;->oneme_stickers_preview_static_cell:I
+
+    sput v0, Lrkb;->f:I
+
+    sget v0, Liad;->oneme_stickers_preview_sticker_container:I
+
+    sput v0, Lrkb;->g:I
+
+    sget v0, Liad;->oneme_stickers_preview_stickers_set_container:I
+
+    sput v0, Lrkb;->h:I
+
+    sget v0, Liad;->oneme_stickers_preview_stickers_set_content:I
+
+    sput v0, Lrkb;->i:I
+
+    sget v0, Liad;->oneme_stickers_preview_stickers_set_header:I
+
+    sput v0, Lrkb;->j:I
+
+    sget v0, Liad;->oneme_stickers_preview_toolbar:I
+
+    sput v0, Lrkb;->k:I
+
+    sget v0, Liad;->oneme_stickers_preview_webm_cell:I
+
+    sput v0, Lrkb;->l:I
+
+    return-void
 .end method

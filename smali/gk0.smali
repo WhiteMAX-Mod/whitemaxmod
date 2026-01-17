@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Laj4;
+.implements Lbj4;
 
 
 # virtual methods
@@ -42,14 +42,14 @@
 .method public final d(Lpi4;)V
     .locals 2
 
-    check-cast p1, Lp0;
+    check-cast p1, Lo0;
 
-    invoke-virtual {p1}, Lp0;->g()Z
+    invoke-virtual {p1}, Lo0;->g()Z
 
     move-result v0
 
     :try_start_0
-    invoke-virtual {p0, p1}, Lgk0;->f(Lp0;)V
+    invoke-virtual {p0, p1}, Lgk0;->f(Lo0;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -74,5 +74,5 @@
 .method public abstract e(Lpi4;)V
 .end method
 
-.method public abstract f(Lp0;)V
+.method public abstract f(Lo0;)V
 .end method

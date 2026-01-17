@@ -1,79 +1,61 @@
 .class public final Lhk2;
-.super Lkk0;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public X:Ljava/lang/Object;
 
-.field public final c:J
+.field public Y:I
 
-.field public final d:I
+.field public Z:I
+
+.field public d:Lwk2;
+
+.field public o:Lxg2;
+
+.field public t0:I
+
+.field public u0:I
+
+.field public synthetic v0:Ljava/lang/Object;
+
+.field public final synthetic w0:Lxg2;
+
+.field public x0:I
 
 
 # direct methods
-.method public constructor <init>(IJJLjava/lang/String;)V
+.method public constructor <init>(Lxg2;Lo84;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3}, Lkk0;-><init>(J)V
+    iput-object p1, p0, Lhk2;->w0:Lxg2;
 
-    iput-object p6, p0, Lhk2;->b:Ljava/lang/String;
-
-    iput-wide p4, p0, Lhk2;->c:J
-
-    iput p1, p0, Lhk2;->d:I
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lhk2;->v0:Ljava/lang/Object;
 
-    const-string v1, "ChatJoinEvent{link=\'"
+    iget p1, p0, Lhk2;->x0:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lhk2;->b:Ljava/lang/String;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lhk2;->x0:I
 
-    const-string v1, "\', chatId="
+    iget-object p1, p0, Lhk2;->w0:Lxg2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, p0}, Lwk2;->a(Lxg2;Lo84;)Ljava/lang/Object;
 
-    iget-wide v1, p0, Lhk2;->c:J
+    move-result-object p1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lhk2;->d:I
-
-    invoke-static {v1}, Lx02;->y(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-super {p0}, Lkk0;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

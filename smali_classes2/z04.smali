@@ -1,105 +1,141 @@
 .class public final Lz04;
-.super Lxbg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lx04;
+.field public final a:Li7f;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lx04;)V
-    .locals 0
+.method public constructor <init>(Lcy0;Lmbg;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz04;->c:Lx04;
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lz04;->a:Li7f;
+
+    check-cast p2, Lj9b;
+
+    invoke-virtual {p2}, Lj9b;->a()Lsb4;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a()Ld76;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lold;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lz04;->a:Li7f;
 
-    return v0
+    invoke-direct {v0, v1}, Lold;-><init>(Llfa;)V
 
-    :cond_0
-    instance-of v1, p1, Lz04;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lz04;
-
-    iget-object v1, p0, Lz04;->c:Lx04;
-
-    iget-object p1, p1, Lz04;->c:Lx04;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onEvent(Lk2c;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    iget-object v0, p0, Lz04;->c:Lx04;
-
-    if-nez v0, :cond_0
+    .line 2
+    new-instance p1, Lw04;
 
     const/4 v0, 0x0
 
-    return v0
+    invoke-direct {p1, p0, v0}, Lw04;-><init>(Lz04;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/4 v1, 0x3
 
-    move-result v0
+    iget-object v2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    return v0
+    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final onEvent(Lm5h;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 4
+    new-instance p1, Ly04;
 
-    const-string v1, "CONTACT_INFO_BY_PHONE.Response(contact="
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0, v0}, Ly04;-><init>(Lz04;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lz04;->c:Lx04;
+    const/4 v1, 0x3
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iget-object v2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-object v1
+    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const/16 v1, 0x29
+.method public final onEvent(Lrl8;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    .line 1
+    new-instance p1, Lv04;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-direct {p1, p0, v0}, Lv04;-><init>(Lz04;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lu64;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
+
+    .line 3
+    new-instance v0, Lx04;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lx04;-><init>(Lz04;Lu64;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
 .end method

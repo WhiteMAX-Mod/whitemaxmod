@@ -4,23 +4,17 @@
 
 
 # virtual methods
-.method public abstract clear()V
+.method public abstract e()V
 .end method
 
-.method public abstract g(I)Z
+.method public abstract f(III)Lkg3;
 .end method
 
-.method public abstract i()Lag3;
+.method public abstract g()V
 .end method
 
-.method public abstract n(ILag3;)V
+.method public abstract h(Lho4;Laq0;Lup0;I)V
 .end method
 
-.method public abstract q(ILag3;)V
-.end method
-
-.method public abstract r()Lag3;
-.end method
-
-.method public abstract s(I)Lag3;
+.method public abstract i(II)V
 .end method

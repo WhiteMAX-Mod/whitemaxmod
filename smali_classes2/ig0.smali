@@ -76,7 +76,7 @@
 
     iget v2, p0, Lig0;->a:I
 
-    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

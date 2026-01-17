@@ -25,5 +25,4 @@
     <dimen name="mtrl_calendar_title_baseline_to_top">24.0dip</dimen>
     <dimen name="mtrl_calendar_title_baseline_to_top_fullscreen">32.0dip</dimen>
     <item type="dimen" name="picker_height">@dimen/date_picker_land_height</item>
-    <dimen name="picker_width">460.0dip</dimen>
 </resources>

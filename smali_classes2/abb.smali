@@ -1,120 +1,76 @@
-.class public final Labb;
-.super Lb5g;
+.class public final synthetic Labb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Ljava/io/FileFilter;
 
 
 # instance fields
-.field public final synthetic X:Lhbb;
-
-.field public final synthetic Y:Ljava/nio/file/Path;
-
-.field public o:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lhbb;Ljava/nio/file/Path;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Labb;->X:Lhbb;
+    iput p1, p0, Labb;->a:I
 
-    iput-object p2, p0, Labb;->Y:Ljava/nio/file/Path;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/io/File;)Z
+    .locals 1
 
-    check-cast p1, Lac4;
+    iget v0, p0, Labb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Labb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Labb;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Labb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Ln36;->d(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    const-string v0, "log"
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    new-instance p1, Labb;
+    move-result p1
 
-    iget-object v0, p0, Labb;->X:Lhbb;
+    return p1
 
-    iget-object v1, p0, Labb;->Y:Ljava/nio/file/Path;
-
-    invoke-direct {p1, v0, v1, p2}, Labb;-><init>(Lhbb;Ljava/nio/file/Path;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Labb;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Labb;->Y:Ljava/nio/file/Path;
-
-    iget-object v0, p0, Labb;->X:Lhbb;
-
-    invoke-static {v0, p1}, Lhbb;->c(Lhbb;Ljava/nio/file/Path;)V
-
-    iput v1, p0, Labb;->o:I
-
-    invoke-static {v0, p0}, Lhbb;->a(Lhbb;Ll84;)Ljava/lang/Object;
+    :pswitch_0
+    invoke-static {p1}, Ln36;->d(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object p1
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    const-string v0, "zip"
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result p1
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    return p1
 
-    return-object p1
+    :pswitch_1
+    invoke-static {p1}, Ln36;->d(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "zip"
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

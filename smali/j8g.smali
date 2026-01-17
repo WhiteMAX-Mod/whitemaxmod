@@ -3,11 +3,39 @@
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/app/Service;ILandroid/app/Notification;I)V
+# virtual methods
+.method public a(Lm8g;)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
+    return-void
+.end method
+
+.method public b(Lm8g;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(Lm8g;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract d(Lm8g;)V
+.end method
+
+.method public abstract e(Lm8g;)V
+.end method
+
+.method public abstract f(Lm8g;)V
+.end method
+
+.method public abstract g(Lm8g;)V
+.end method
+
+.method public h(Lm8g;Landroid/view/Surface;)V
+    .locals 0
 
     return-void
 .end method

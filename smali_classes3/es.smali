@@ -1,390 +1,251 @@
-.class public final Les;
-.super Lnr5;
+.class public final synthetic Les;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:Ljava/lang/Object;
+.field public final synthetic b:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Les;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Les;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 4
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    .line 5
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    aget-object p1, p1, v1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    .line 6
-    iput-object p1, p0, Les;->b:Ljava/lang/Object;
-
-    return-void
-
-    .line 7
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "protocol cannot be empty"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/nio/ByteBuffer;)V
-    .locals 5
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Les;->a:I
-
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    sget-object v0, Lymg;->o:Lymg;
-
-    iget-short v0, v0, Lymg;->a:S
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p0, p1, v0, v1}, Lnr5;->b(Ljava/nio/ByteBuffer;II)I
-
-    move-result v0
-
-    .line 10
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v1
-
-    add-int/lit8 v0, v0, -0x2
-
-    if-ne v1, v0, :cond_2
-
-    .line 11
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Les;->b:Ljava/lang/Object;
-
-    :goto_0
-    if-lez v1, :cond_1
-
-    .line 12
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    add-int/lit8 v2, v1, -0x1
-
-    if-gt v0, v2, :cond_0
-
-    .line 13
-    new-array v2, v0, [B
-
-    .line 14
-    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    .line 15
-    iget-object v3, p0, Les;->b:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/List;
-
-    new-instance v4, Ljava/lang/String;
-
-    invoke-direct {v4, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    sub-int/2addr v1, v0
-
-    goto :goto_0
-
-    .line 16
-    :cond_0
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v0, "incorrect length"
-
-    invoke-direct {p1, v0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    return-void
-
-    .line 17
-    :cond_2
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v0, "inconsistent lengths"
-
-    invoke-direct {p1, v0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public static c(ILjava/nio/ByteBuffer;)V
+.method public synthetic constructor <init>(ILjava/nio/ByteBuffer;)V
     .locals 0
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    iput p1, p0, Les;->a:I
 
-    move-result p1
+    iput-object p2, p0, Les;->b:Ljava/nio/ByteBuffer;
 
-    if-lt p1, p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance p0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string p1, "extension underflow"
-
-    invoke-direct {p0, p1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final a()[B
+.method public final accept(Ljava/lang/Object;)V
     .locals 4
 
     iget v0, p0, Les;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Les;->b:Ljava/lang/Object;
+    check-cast p1, Lmdh;
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {p1}, Lmdh;->a()[B
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    move-result-object p1
 
-    move-result v0
+    iget-object v0, p0, Les;->b:Ljava/nio/ByteBuffer;
 
-    int-to-short v0, v0
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    add-int/lit8 v1, v0, 0x5
+    return-void
 
-    int-to-short v1, v1
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
 
-    add-int/lit8 v2, v1, 0x4
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    move-result-object v0
 
-    move-result-object v2
+    check-cast v0, Ljava/lang/Long;
 
-    sget-object v3, Lymg;->b:Lymg;
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    iget-short v3, v3, Lymg;->a:S
+    move-result-wide v0
 
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    const-wide/16 v2, 0x8
 
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    cmp-long v0, v0, v2
 
-    add-int/lit8 v1, v0, 0x3
+    if-nez v0, :cond_0
 
-    int-to-short v1, v1
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x1
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Les;->b:Ljava/nio/ByteBuffer;
+
+    invoke-static {v0, v1, v2}, Lv4j;->c(JLjava/nio/ByteBuffer;)I
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1, v2}, Lv4j;->c(JLjava/nio/ByteBuffer;)I
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    check-cast p1, Lmdh;
+
+    invoke-virtual {p1}, Lmdh;->a()[B
+
+    move-result-object p1
+
+    iget-object v0, p0, Les;->b:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Les;->b:Ljava/nio/ByteBuffer;
+
+    check-cast p1, Lb3d;
+
+    invoke-virtual {p1, v0}, Lb3d;->f(Ljava/nio/ByteBuffer;)V
+
+    return-void
+
+    :pswitch_3
+    check-cast p1, Lmng;
+
+    iget-byte p1, p1, Lmng;->a:B
+
+    iget-object v0, p0, Les;->b:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Les;->b:Ljava/nio/ByteBuffer;
+
+    check-cast p1, [B
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :pswitch_5
+    check-cast p1, [B
+
+    array-length v0, p1
+
+    const v1, 0xfff0
+
+    if-gt v0, v1, :cond_2
+
+    iget-object v0, p0, Les;->b:Ljava/nio/ByteBuffer;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    iget-object v0, p0, Les;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    const-string v1, "ASCII"
-
-    invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Les;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v1
-
-    new-instance v2, Ll0;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v3}, Ll0;-><init>(I)V
-
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
-
-    move-result v1
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x6
-
-    add-int/2addr v2, v1
-
-    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v1
-
-    sget-object v3, Lymg;->o:Lymg;
-
-    iget-short v3, v3, Lymg;->a:S
-
-    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v3, v2, -0x4
-
-    int-to-short v3, v3
-
-    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v2, v2, -0x6
+    array-length v2, p1
 
     int-to-short v2, v2
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    new-instance v2, Lds;
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    invoke-direct {v2, v3, v1}, Lds;-><init>(ILjava/nio/ByteBuffer;)V
+    return-void
 
-    invoke-interface {v0, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
+    :cond_2
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+    const-string v0, "Certificate size not supported"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_6
+    check-cast p1, Ljavax/security/auth/x500/X500Principal;
+
+    invoke-virtual {p1}, Ljavax/security/auth/x500/X500Principal;->getEncoded()[B
 
     move-result-object v0
 
-    return-object v0
+    array-length v0, v0
+
+    int-to-short v0, v0
+
+    iget-object v1, p0, Les;->b:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1}, Ljavax/security/auth/x500/X500Principal;->getEncoded()[B
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :pswitch_7
+    check-cast p1, Ljava/lang/String;
+
+    const-string v0, "UTF-8"
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p1
+
+    array-length v0, p1
+
+    int-to-byte v0, v0
+
+    iget-object v1, p0, Les;->b:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Les;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Les;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/List;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "AlpnExtension "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

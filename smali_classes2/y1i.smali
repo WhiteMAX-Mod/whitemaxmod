@@ -1,102 +1,210 @@
-.class public final enum Ly1i;
-.super Ljava/lang/Enum;
+.class public final Ly1i;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lk5i;
 
 
 # static fields
-.field public static final enum a:Ly1i;
+.field public static final Companion:Lx1i;
 
-.field public static final synthetic b:[Ly1i;
 
-.field public static final synthetic c:Lwk5;
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Ly1i;
+    new-instance v0, Lx1i;
 
-    const-string v1, "OPEN"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ly1i;->a:Ly1i;
-
-    filled-new-array {v0}, [Ly1i;
-
-    move-result-object v0
-
-    sput-object v0, Ly1i;->b:[Ly1i;
-
-    new-instance v1, Lwk5;
-
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ly1i;->c:Lwk5;
+    sput-object v0, Ly1i;->Companion:Lx1i;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ly1i;
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Z)V
+    .locals 2
 
-    const-class v0, Ly1i;
+    and-int/lit8 v0, p2, 0x7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v1, 0x7
 
-    move-result-object p0
+    if-ne v1, v0, :cond_0
 
-    check-cast p0, Ly1i;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    iput-object p1, p0, Ly1i;->a:Ljava/lang/String;
+
+    iput-boolean p4, p0, Ly1i;->b:Z
+
+    iput-object p3, p0, Ly1i;->c:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p1, Lw1i;->a:Lw1i;
+
+    invoke-virtual {p1}, Lw1i;->d()Lxpe;
+
+    move-result-object p1
+
+    invoke-static {p2, v1, p1}, Lqjj;->b(IILxpe;)V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method
 
-.method public static values()[Ly1i;
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    sget-object v0, Ly1i;->b:[Ly1i;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 3
+    iput-object p1, p0, Ly1i;->a:Ljava/lang/String;
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    check-cast v0, [Ly1i;
+    .line 4
+    iput-boolean p1, p0, Ly1i;->b:Z
 
-    return-object v0
+    .line 5
+    iput-object p2, p0, Ly1i;->c:Ljava/lang/String;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const/16 v0, 0x1e
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ly1i;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ly1i;
+
+    iget-object v1, p0, Ly1i;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Ly1i;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Ly1i;->b:Z
+
+    iget-boolean v3, p1, Ly1i;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ly1i;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Ly1i;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ly1i;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Ly1i;->b:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Ly1i;->c:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebAppBiometryUnavailableResponse(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ly1i;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", available="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ly1i;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", deviceId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Ly1i;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final c()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "WebAppOpenCodeReader"
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "open_code_reader"
 
     return-object v0
 .end method

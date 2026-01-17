@@ -1294,7 +1294,7 @@
 
     const-string v6, "updateInputFormat format: "
 
-    invoke-static {v0, v6, p1, v4, v5}, Ln0c;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v6, p1, v4, v5}, Lpqb;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -1622,11 +1622,11 @@
 
     invoke-virtual {v3}, Lorg/webrtc/HardwareVideoEncoder$BusyCount;->increment()V
 
-    new-instance v9, Lb40;
+    new-instance v9, Ly30;
 
     const/16 v3, 0xb
 
-    invoke-direct {v9, p0, v5, v3}, Lb40;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v9, p0, v5, v3}, Ly30;-><init>(Ljava/lang/Object;II)V
 
     :goto_2
     if-eqz v7, :cond_a
@@ -2177,7 +2177,7 @@
 
     const-string v7, "initEncode name: "
 
-    invoke-static {v7, p2, v5, v0, v6}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v7, p2, v5, v0, v6}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
@@ -2185,13 +2185,13 @@
 
     const-string v5, " framerate_fps: "
 
-    invoke-static {p2, v1, v0, v2, v5}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {p2, v1, v0, v2, v5}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     const-string v0, " bitrate_kbps: "
 
     const-string v1, " surface mode: "
 
-    invoke-static {p2, v3, v0, p1, v1}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {p2, v3, v0, p1, v1}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2293,7 +2293,7 @@
 
     const-string v1, "Unsupported colorFormat: "
 
-    invoke-static {p1, v1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

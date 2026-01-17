@@ -3,366 +3,338 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Ljava/util/Map$Entry;
+.implements Ljava/util/Set;
 
 
 # instance fields
-.field public a:I
-
-.field public b:I
-
-.field public c:Z
-
-.field public final synthetic d:Lxs;
+.field public final synthetic a:Lys;
 
 
 # direct methods
-.method public constructor <init>(Lxs;)V
+.method public constructor <init>(Lys;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvs;->d:Lxs;
-
-    iget p1, p1, Lwbf;->c:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, p0, Lvs;->a:I
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lvs;->b:I
+    iput-object p1, p0, Lvs;->a:Lys;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    iget-object v0, p0, Lvs;->a:Lys;
+
+    invoke-virtual {v0}, Ladf;->clear()V
+
+    return-void
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lvs;->a:Lys;
+
+    invoke-virtual {v0, p1}, Ladf;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    iget-object v0, p0, Lvs;->a:Lys;
+
+    invoke-virtual {v0, p1}, Lys;->j(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget-boolean v0, p0, Lvs;->c:Z
+    iget-object v0, p0, Lvs;->a:Lys;
 
-    if-eqz v0, :cond_2
-
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    check-cast p1, Ljava/util/Map$Entry;
+    instance-of v1, p1, Ljava/util/Set;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    move-result-object v0
+    check-cast p1, Ljava/util/Set;
 
-    iget v1, p0, Lvs;->b:I
+    :try_start_0
+    iget v1, v0, Ladf;->c:I
 
-    iget-object v2, p0, Lvs;->d:Lxs;
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    invoke-virtual {v2, v1}, Lwbf;->f(I)Ljava/lang/Object;
+    move-result v2
 
-    move-result-object v1
+    if-ne v1, v2, :cond_1
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lys;->j(Ljava/util/Collection;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :catch_0
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-object v0, p0, Lvs;->a:Lys;
+
+    iget v1, v0, Ladf;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ltz v1, :cond_1
+
+    invoke-virtual {v0, v1}, Ladf;->f(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    if-nez v4, :cond_0
+
+    move v4, v2
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v4}, Ljava/lang/Object;->hashCode()I
+
+    move-result v4
+
+    :goto_1
+    add-int/2addr v3, v4
+
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v3
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lvs;->a:Lys;
+
+    invoke-virtual {v0}, Ladf;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    move-result-object p1
+    new-instance v0, Lus;
 
-    iget v0, p0, Lvs;->b:I
+    iget-object v1, p0, Lvs;->a:Lys;
 
-    invoke-virtual {v2, v0}, Lwbf;->i(I)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, v1, v2}, Lus;-><init>(Lys;I)V
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lvs;->a:Lys;
+
+    invoke-virtual {v0, p1}, Ladf;->d(Ljava/lang/Object;)I
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-ltz p1, :cond_0
+
+    invoke-virtual {v0, p1}, Ladf;->g(I)Ljava/lang/Object;
 
     const/4 p1, 0x1
 
     return p1
 
-    :cond_1
-    :goto_0
+    :cond_0
     const/4 p1, 0x0
 
     return p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "This container does not support retaining Map.Entry objects"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method public final getKey()Ljava/lang/Object;
-    .locals 2
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    iget-boolean v0, p0, Lvs;->c:Z
+    iget-object v0, p0, Lvs;->a:Lys;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1}, Lys;->k(Ljava/util/Collection;)Z
 
-    iget-object v0, p0, Lvs;->d:Lxs;
+    move-result p1
 
-    iget v1, p0, Lvs;->b:I
-
-    invoke-virtual {v0, v1}, Lwbf;->f(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This container does not support retaining Map.Entry objects"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return p1
 .end method
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 2
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    iget-boolean v0, p0, Lvs;->c:Z
+    iget-object v0, p0, Lvs;->a:Lys;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1}, Lys;->l(Ljava/util/Collection;)Z
 
-    iget-object v0, p0, Lvs;->d:Lxs;
+    move-result p1
 
-    iget v1, p0, Lvs;->b:I
-
-    invoke-virtual {v0, v1}, Lwbf;->i(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This container does not support retaining Map.Entry objects"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return p1
 .end method
 
-.method public final hasNext()Z
-    .locals 2
+.method public final size()I
+    .locals 1
 
-    iget v0, p0, Lvs;->b:I
+    iget-object v0, p0, Lvs;->a:Lys;
 
-    iget v1, p0, Lvs;->a:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
+    iget v0, v0, Ladf;->c:I
 
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final toArray()[Ljava/lang/Object;
+    .locals 5
 
-    iget-boolean v0, p0, Lvs;->c:Z
+    .line 1
+    iget-object v0, p0, Lvs;->a:Lys;
 
-    if-eqz v0, :cond_2
+    iget v1, v0, Ladf;->c:I
 
-    iget v0, p0, Lvs;->b:I
+    .line 2
+    new-array v2, v1, [Ljava/lang/Object;
 
-    iget-object v1, p0, Lvs;->d:Lxs;
+    const/4 v3, 0x0
 
-    invoke-virtual {v1, v0}, Lwbf;->f(I)Ljava/lang/Object;
+    :goto_0
+    if-ge v3, v1, :cond_0
 
-    move-result-object v0
+    .line 3
+    invoke-virtual {v0, v3}, Ladf;->f(I)Ljava/lang/Object;
 
-    iget v2, p0, Lvs;->b:I
+    move-result-object v4
 
-    invoke-virtual {v1, v2}, Lwbf;->i(I)Ljava/lang/Object;
+    aput-object v4, v2, v3
 
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    move v0, v2
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    xor-int/2addr v0, v2
-
-    return v0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This container does not support retaining Map.Entry objects"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object v2
 .end method
 
-.method public final next()Ljava/lang/Object;
-    .locals 2
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {p0}, Lvs;->hasNext()Z
+    .line 4
+    iget-object v0, p0, Lvs;->a:Lys;
 
-    move-result v0
+    iget v1, v0, Ladf;->c:I
 
-    if-eqz v0, :cond_0
+    .line 5
+    array-length v2, p1
 
-    iget v0, p0, Lvs;->b:I
+    if-ge v2, v1, :cond_0
 
-    const/4 v1, 0x1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lvs;->b:I
-
-    iput-boolean v1, p0, Lvs;->c:Z
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    iget-boolean v0, p0, Lvs;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lvs;->d:Lxs;
-
-    iget v1, p0, Lvs;->b:I
-
-    invoke-virtual {v0, v1}, Lwbf;->g(I)Ljava/lang/Object;
-
-    iget v0, p0, Lvs;->b:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lvs;->b:I
-
-    iget v0, p0, Lvs;->a:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lvs;->a:I
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lvs;->c:Z
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget-boolean v0, p0, Lvs;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lvs;->d:Lxs;
-
-    iget v1, p0, Lvs;->b:I
-
-    invoke-virtual {v0, v1, p1}, Lwbf;->h(ILjava/lang/Object;)Ljava/lang/Object;
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-static {p1, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/lang/Object;
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v2, 0x0
 
-    const-string v0, "This container does not support retaining Map.Entry objects"
+    :goto_0
+    if-ge v2, v1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 7
+    invoke-virtual {v0, v2}, Ladf;->f(I)Ljava/lang/Object;
 
-    throw p1
-.end method
+    move-result-object v3
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    aput-object v3, p1, v2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    goto :goto_0
 
-    invoke-virtual {p0}, Lvs;->getKey()Ljava/lang/Object;
+    .line 8
+    :cond_1
+    array-length v0, p1
 
-    move-result-object v1
+    if-le v0, v1, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, "="
+    .line 9
+    aput-object v0, p1, v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lvs;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_2
+    return-object p1
 .end method

@@ -2,122 +2,137 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljavax/inject/Provider;
-
-
-# static fields
-.field public static final c:Ljava/lang/Object;
-
 
 # instance fields
-.field public volatile a:Ls2e;
+.field public final a:I
 
-.field public volatile b:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    iput p1, p0, Lg35;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lg35;->b:Ljava/lang/String;
 
-    sput-object v0, Lg35;->c:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Lwtb;)Lg35;
+    .locals 6
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 5
+    const/4 v0, 0x2
 
-    iget-object v0, p0, Lg35;->b:Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lwtb;->K(I)V
 
-    sget-object v1, Lg35;->c:Ljava/lang/Object;
+    invoke-virtual {p0}, Lwtb;->x()I
 
-    if-ne v0, v1, :cond_3
+    move-result v0
 
-    monitor-enter p0
+    shr-int/lit8 v1, v0, 0x1
 
-    :try_start_0
-    iget-object v0, p0, Lg35;->b:Ljava/lang/Object;
+    and-int/lit8 v0, v0, 0x1
 
-    if-ne v0, v1, :cond_2
+    const/4 v2, 0x5
 
-    iget-object v0, p0, Lg35;->a:Ls2e;
+    shl-int/2addr v0, v2
 
-    invoke-virtual {v0}, Ls2e;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lwtb;->x()I
 
-    move-result-object v0
+    move-result p0
 
-    iget-object v2, p0, Lg35;->b:Ljava/lang/Object;
+    shr-int/lit8 p0, p0, 0x3
 
-    if-eq v2, v1, :cond_1
+    and-int/lit8 p0, p0, 0x1f
 
-    if-ne v2, v0, :cond_0
+    or-int/2addr p0, v0
+
+    const/4 v0, 0x4
+
+    const/16 v3, 0xa
+
+    if-eq v1, v0, :cond_3
+
+    if-eq v1, v2, :cond_3
+
+    const/4 v0, 0x7
+
+    if-eq v1, v0, :cond_3
+
+    const/16 v0, 0x8
+
+    if-ne v1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    const/16 v0, 0x9
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    if-ne v1, v0, :cond_1
 
-    const-string v4, "Scoped provider was invoked recursively returning different results: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " & "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". This is likely due to a circular dependency."
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    :goto_0
-    iput-object v0, p0, Lg35;->b:Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lg35;->a:Ls2e;
+    const-string v0, "dvav"
 
     goto :goto_1
 
-    :catchall_0
-    move-exception v0
+    :cond_1
+    if-ne v1, v3, :cond_2
+
+    const-string v0, "dav1"
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_3
+    :goto_0
+    const-string v0, "dvhe"
+
+    :goto_1
+    invoke-static {v0}, Lhc0;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "."
+
+    const-string v4, ".0"
+
+    if-ge v1, v3, :cond_4
+
+    move-object v5, v4
 
     goto :goto_2
 
-    :cond_2
-    :goto_1
-    monitor-exit p0
-
-    return-object v0
+    :cond_4
+    move-object v5, v2
 
     :goto_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_3
+    if-ge p0, v3, :cond_5
+
+    move-object v2, v4
+
+    :cond_5
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Lg35;
+
+    invoke-direct {v0, v1, p0}, Lg35;-><init>(ILjava/lang/String;)V
+
     return-object v0
 .end method

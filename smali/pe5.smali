@@ -1,244 +1,209 @@
 .class public final Lpe5;
-.super Ljava/lang/Object;
+.super Lloj;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
-
-.field public volatile b:Ljava/lang/Object;
-
-.field public volatile c:Ljava/lang/Object;
+.field public final synthetic a:Lqe5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Lqe5;)V
     .locals 0
 
-    iput-object p1, p0, Lpe5;->a:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpe5;->a:Lqe5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 9
+.method public final a(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iget-object v0, p0, Lpe5;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lpe5;->a:Lqe5;
 
-    check-cast v0, Lzj;
+    iget-object v0, v0, Lqe5;->a:Ljava/lang/Object;
 
-    iget-object v1, v0, Lzj;->a:Lbi;
+    check-cast v0, Lve5;
 
-    iget-object v1, v1, Lbi;->b:Lcgd;
+    invoke-virtual {v0, p1}, Lve5;->d(Ljava/lang/Throwable;)V
 
-    iget-object v2, v0, Lzj;->c:Ljava/lang/Integer;
+    return-void
+.end method
 
-    iget-object v3, p0, Lpe5;->b:Ljava/lang/Object;
+.method public final b(Lloe;)V
+    .locals 8
 
-    check-cast v3, Ljava/lang/Integer;
+    iget-object v0, p0, Lpe5;->a:Lqe5;
 
-    const/4 v4, 0x0
+    iput-object p1, v0, Lqe5;->c:Ljava/lang/Object;
 
-    if-eqz v3, :cond_1
+    new-instance v1, La2c;
 
-    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
+    iget-object p1, v0, Lqe5;->c:Ljava/lang/Object;
 
-    move-result v3
+    check-cast p1, Lloe;
 
-    int-to-long v5, v3
+    iget-object v2, v0, Lqe5;->a:Ljava/lang/Object;
 
-    const-wide v7, 0xffffffffL
+    check-cast v2, Lve5;
 
-    and-long/2addr v5, v7
+    iget-object v3, v2, Lve5;->g:Lw7a;
 
-    const/16 v3, 0x10
+    iget-object v2, v2, Lve5;->i:Lpq4;
 
-    invoke-static {v3}, Lucj;->a(I)V
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v5, v6, v3}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
+    const/16 v5, 0x22
 
-    move-result-object v3
+    if-lt v4, v5, :cond_0
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    invoke-static {}, Lcf5;->a()Ljava/util/Set;
 
-    move-result v5
-
-    const/4 v6, 0x6
-
-    if-le v5, v6, :cond_0
-
-    const/16 v6, 0x8
-
-    :cond_0
-    const/16 v5, 0x30
-
-    invoke-static {v3, v6, v5}, Liyf;->K(Ljava/lang/String;IC)Ljava/lang/String;
-
-    move-result-object v3
+    move-result-object v4
 
     goto :goto_0
 
-    :cond_1
-    move-object v3, v4
+    :cond_0
+    invoke-static {}, Lmoj;->b()Ljava/util/Set;
+
+    move-result-object v4
 
     :goto_0
-    iget-object v5, p0, Lpe5;->a:Ljava/lang/Object;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    check-cast v5, Lzj;
+    iput-object v3, v1, La2c;->a:Ljava/lang/Object;
 
-    iget-object v5, v5, Lzj;->d:Lai4;
+    iput-object p1, v1, La2c;->b:Ljava/lang/Object;
 
-    if-eqz v5, :cond_2
+    iput-object v2, v1, La2c;->c:Ljava/lang/Object;
 
-    invoke-virtual {v5}, Lai4;->b()Z
+    invoke-interface {v4}, Ljava/util/Set;->isEmpty()Z
 
-    move-result v5
+    move-result p1
 
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-eqz p1, :cond_1
 
-    move-result-object v5
+    goto :goto_2
+
+    :cond_1
+    invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [I
+
+    move-object v3, v2
+
+    new-instance v2, Ljava/lang/String;
+
+    const/4 v4, 0x0
+
+    array-length v5, v3
+
+    invoke-direct {v2, v3, v4, v5}, Ljava/lang/String;-><init>([III)V
+
+    new-instance v7, Lqf5;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v7, v2, v3}, Lqf5;-><init>(Ljava/lang/String;Z)V
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x1
+
+    invoke-virtual/range {v1 .. v7}, La2c;->z(Ljava/lang/CharSequence;IIIZLpf5;)Ljava/lang/Object;
 
     goto :goto_1
 
     :cond_2
-    move-object v5, v4
+    :goto_2
+    iput-object v1, v0, Lqe5;->b:Ljava/lang/Object;
 
-    :goto_1
-    iget-object v6, p0, Lpe5;->a:Ljava/lang/Object;
+    iget-object p1, v0, Lqe5;->a:Ljava/lang/Object;
 
-    check-cast v6, Lzj;
+    check-cast p1, Lve5;
 
-    iget-object v6, v6, Lzj;->e:Lci4;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p1, Lve5;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    const-string v0, ": isReady: v="
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " bgColor="
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "} connected="
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " senderThread="
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "AniSend"
-
-    invoke-interface {v1, v2, v0}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lpe5;->a:Ljava/lang/Object;
-
-    check-cast v0, Lzj;
-
-    iget-object v0, v0, Lzj;->c:Ljava/lang/Integer;
-
-    if-nez v0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_4
+    :try_start_0
+    iput v1, p1, Lve5;->c:I
 
-    goto :goto_2
+    iget-object v1, p1, Lve5;->b:Lbt;
 
-    :cond_4
-    iget-object v0, p0, Lpe5;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    check-cast v0, Ljava/lang/Integer;
+    iget-object v1, p1, Lve5;->b:Lbt;
 
-    if-eqz v0, :cond_6
+    invoke-virtual {v1}, Lbt;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Lpe5;->a:Ljava/lang/Object;
+    iget-object v1, p1, Lve5;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    check-cast v0, Lzj;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
 
-    iget-object v0, v0, Lzj;->e:Lci4;
+    move-result-object v1
 
-    if-eqz v0, :cond_6
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    iget-object v0, p0, Lpe5;->a:Ljava/lang/Object;
+    iget-object v1, p1, Lve5;->d:Landroid/os/Handler;
 
-    check-cast v0, Lzj;
+    new-instance v2, Ltl0;
 
-    iget-object v0, v0, Lzj;->d:Lai4;
+    iget p1, p1, Lve5;->c:I
 
-    if-eqz v0, :cond_6
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, Lai4;->b()Z
+    invoke-direct {v2, v0, p1, v3}, Ltl0;-><init>(Ljava/util/List;ILjava/lang/Throwable;)V
 
-    move-result v0
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    if-ne v0, v1, :cond_6
-
-    :goto_2
-    iget-object v0, p0, Lpe5;->a:Ljava/lang/Object;
-
-    check-cast v0, Lzj;
-
-    iput-object v4, v0, Lzj;->g:Lpe5;
-
-    iget-object v0, p0, Lpe5;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Integer;
-
-    if-eqz v0, :cond_5
-
-    iget-object v1, p0, Lpe5;->a:Ljava/lang/Object;
-
-    check-cast v1, Lzj;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Lzj;->e(I)V
-
-    :cond_5
-    iget-object v0, p0, Lpe5;->c:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Double;
-
-    if-eqz v0, :cond_6
-
-    iget-object v1, p0, Lpe5;->a:Ljava/lang/Object;
-
-    check-cast v1, Lzj;
-
-    invoke-virtual {v1, v0}, Lzj;->a([Ljava/lang/Double;)V
-
-    :cond_6
-    :goto_3
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    iget-object p1, p1, Lve5;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    throw v0
 .end method

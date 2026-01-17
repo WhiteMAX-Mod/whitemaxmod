@@ -1,73 +1,118 @@
-.class public abstract Lwcb;
-.super Ljava/lang/Object;
+.class public final Lwcb;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic X:Lcl4;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcl4;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, La8d;->oneme_main_bottom_bar:I
+    iput-object p1, p0, Lwcb;->X:Lcl4;
 
-    sput v0, Lwcb;->a:I
+    const/4 p1, 0x2
 
-    sget v0, La8d;->oneme_main_calls_bottom_item:I
-
-    sput v0, Lwcb;->b:I
-
-    sget v0, La8d;->oneme_main_calls_container:I
-
-    sput v0, Lwcb;->c:I
-
-    sget v0, La8d;->oneme_main_chats_bottom_item:I
-
-    sput v0, Lwcb;->d:I
-
-    sget v0, La8d;->oneme_main_chats_container:I
-
-    sput v0, Lwcb;->e:I
-
-    sget v0, La8d;->oneme_main_contacts_bottom_item:I
-
-    sput v0, Lwcb;->f:I
-
-    sget v0, La8d;->oneme_main_contacts_container:I
-
-    sput v0, Lwcb;->g:I
-
-    sget v0, La8d;->oneme_main_root:I
-
-    sput v0, Lwcb;->h:I
-
-    sget v0, La8d;->oneme_main_settings_bottom_item:I
-
-    sput v0, Lwcb;->i:I
-
-    sget v0, La8d;->oneme_main_settings_container:I
-
-    sput v0, Lwcb;->j:I
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lwcb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lwcb;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lwcb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lwcb;
+
+    iget-object v0, p0, Lwcb;->X:Lcl4;
+
+    invoke-direct {p1, v0, p2}, Lwcb;-><init>(Lcl4;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lwcb;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lwcb;->o:I
+
+    new-instance p1, Llbb;
+
+    const/4 v0, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v1, v0, v2}, Llbb;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iget-object v0, p0, Lwcb;->X:Lcl4;
+
+    invoke-virtual {v0, p1, p0}, Lcl4;->d(Lnq6;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

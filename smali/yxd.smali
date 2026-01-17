@@ -1,39 +1,82 @@
-.class public final Lyxd;
+.class public final synthetic Lyxd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Landroid/content/res/ColorStateList;
+.field public final synthetic a:I
 
-.field public final b:Landroid/content/res/Configuration;
-
-.field public final c:I
+.field public final synthetic b:Lzxd;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;Landroid/content/res/Resources$Theme;)V
+.method public synthetic constructor <init>(Lzxd;I)V
     .locals 0
+
+    iput p2, p0, Lyxd;->a:I
+
+    iput-object p1, p0, Lyxd;->b:Lzxd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyxd;->a:Landroid/content/res/ColorStateList;
+    return-void
+.end method
 
-    iput-object p2, p0, Lyxd;->b:Landroid/content/res/Configuration;
 
-    if-nez p3, :cond_0
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    const/4 p1, 0x0
+    iget v0, p0, Lyxd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyxd;->b:Lzxd;
+
+    iget-object v0, v0, Lzxd;->c:Lac0;
+
+    iget-object v1, v0, Lac0;->g:Ljava/lang/Object;
+
+    check-cast v1, Lzxd;
+
+    if-eqz v1, :cond_1
+
+    iget v1, v0, Lac0;->a:I
+
+    and-int/lit8 v1, v1, 0x3
+
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p3}, Landroid/content/res/Resources$Theme;->hashCode()I
+    invoke-virtual {v0}, Lac0;->b()V
 
-    move-result p1
-
+    :cond_1
     :goto_0
-    iput p1, p0, Lyxd;->c:I
-
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lyxd;->b:Lzxd;
+
+    iget-object v0, v0, Lzxd;->c:Lac0;
+
+    iget-object v1, v0, Lac0;->g:Ljava/lang/Object;
+
+    check-cast v1, Lzxd;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Lac0;->b()V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

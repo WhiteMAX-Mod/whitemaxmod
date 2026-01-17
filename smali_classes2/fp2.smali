@@ -1,93 +1,140 @@
-.class public final Lfp2;
-.super Lrsh;
+.class public final enum Lfp2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
 
-# instance fields
-.field public final b:Lhof;
 
-.field public final c:Lpkd;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfp2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final enum a:Lfp2;
+
+.field public static final enum b:Lfp2;
+
+.field public static final synthetic c:[Lfp2;
+
+.field public static final synthetic d:Lal5;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 6
 
-    sget-object v0, Lvkc;->a:Lvkc;
+    new-instance v0, Lfp2;
 
-    invoke-virtual {v0}, Lvkc;->a()Ld68;
-
-    move-result-object v1
-
-    check-cast v1, Lz7g;
-
-    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lca3;
-
-    invoke-virtual {v0}, Lvkc;->d()Ld68;
-
-    move-result-object v0
-
-    check-cast v0, Lz7g;
-
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbbg;
-
-    invoke-direct {p0}, Lrsh;-><init>()V
+    const-string v1, "MEDIA"
 
     const/4 v2, 0x0
 
-    invoke-static {v2}, Liof;->a(Ljava/lang/Object;)Lhof;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v3
+    sput-object v0, Lfp2;->a:Lfp2;
 
-    iput-object v3, p0, Lfp2;->b:Lhof;
+    new-instance v1, Lfp2;
 
-    new-instance v4, Lpkd;
+    const-string v2, "FILE"
 
-    invoke-direct {v4, v3}, Lpkd;-><init>(Lofa;)V
+    const/4 v3, 0x1
 
-    iput-object v4, p0, Lfp2;->c:Lpkd;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v1, p1, p2}, Lca3;->k(J)Lpkd;
+    new-instance v2, Lfp2;
 
-    move-result-object p1
+    const-string v3, "LINK"
 
-    new-instance p2, Li83;
+    const/4 v4, 0x2
 
-    const/16 v1, 0xc
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p2, p1, v1}, Li83;-><init>(Lf76;I)V
+    new-instance v3, Lfp2;
 
-    new-instance p1, Ldp2;
+    const-string v4, "AUDIO"
 
-    invoke-direct {p1, p0, v2}, Ldp2;-><init>(Lfp2;Lkotlin/coroutines/Continuation;)V
+    const/4 v5, 0x3
 
-    new-instance v1, Lo96;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v2, 0x1
+    sput-object v3, Lfp2;->b:Lfp2;
 
-    invoke-direct {v1, p2, p1, v2}, Lo96;-><init>(Lf76;Lcr6;I)V
+    filled-new-array {v0, v1, v2, v3}, [Lfp2;
 
-    check-cast v0, Lb9b;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lb9b;->a()Ltb4;
+    sput-object v0, Lfp2;->c:[Lfp2;
 
-    move-result-object p1
+    new-instance v1, Lal5;
 
-    invoke-static {v1, p1}, Lqx0;->u(Lf76;Lrb4;)Lf76;
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
 
-    move-result-object p1
+    sput-object v1, Lfp2;->d:Lal5;
 
-    iget-object p2, p0, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
+    new-instance v0, Lz7;
 
-    invoke-static {p1, p2}, Lqx0;->w(Lf76;Lac4;)Lglf;
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+
+    sput-object v0, Lfp2;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lfp2;
+    .locals 1
+
+    const-class v0, Lfp2;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lfp2;
+
+    return-object p0
+.end method
+
+.method public static values()[Lfp2;
+    .locals 1
+
+    sget-object v0, Lfp2;->c:[Lfp2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lfp2;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return-void
 .end method

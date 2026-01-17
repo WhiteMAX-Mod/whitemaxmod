@@ -1,102 +1,78 @@
 .class public final Lzk6;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lp48;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public final synthetic o:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lzk6;->a:I
+    iput-object p1, p0, Lzk6;->o:Landroid/view/ViewGroup;
 
-    iput-object p1, p0, Lzk6;->b:Lone/me/sdk/arch/Widget;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k()V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lzk6;->a:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v2, p0, Lzk6;->b:Lone/me/sdk/arch/Widget;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lzk6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v2, Lone/me/sharedata/ShareDataPickerScreen;
+    move-result-object p1
 
-    iget-object v0, v2, Lone/me/sharedata/ShareDataPickerScreen;->y0:Lso0;
+    check-cast p1, Lzk6;
 
-    invoke-virtual {v0}, Lso0;->e()Z
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-result v2
+    invoke-virtual {p1, p2}, Lzk6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v2, :cond_0
+    return-object p2
+.end method
 
-    invoke-virtual {v0}, Lso0;->getValue()Ljava/lang/Object;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    move-result-object v0
+    new-instance p1, Lzk6;
 
-    check-cast v0, Luo9;
+    iget-object v0, p0, Lzk6;->o:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Luo9;->e(Z)V
+    invoke-direct {p1, v0, p2}, Lzk6;-><init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    return-void
+    return-object p1
+.end method
 
-    :pswitch_0
-    check-cast v2, Lone/me/chatscreen/mediabar/MediaBarWidget;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lp38;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->J0()Luo9;
+    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->K0:Les7;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Luo9;->e(Z)V
+    iget-object v1, p0, Lzk6;->o:Landroid/view/ViewGroup;
 
-    return-void
+    invoke-static {v1, p1, v0}, Lfui;->b(Landroid/view/View;Les7;Lnq6;)V
 
-    :pswitch_1
-    check-cast v2, Lone/me/chats/forward/ForwardPickerScreen;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-object v0, v2, Lone/me/chats/forward/ForwardPickerScreen;->A0:Lso0;
-
-    invoke-virtual {v0}, Lso0;->e()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v0}, Lso0;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Luo9;
-
-    invoke-virtual {v0, v1}, Luo9;->e(Z)V
-
-    :cond_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

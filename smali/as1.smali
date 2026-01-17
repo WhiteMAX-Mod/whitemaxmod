@@ -1,24 +1,23 @@
 .class public final Las1;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Lcs1;
 
 
 # static fields
-.field public static final a:Las1;
+.field public static final b:Las1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Las1;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    sput-object v0, Las1;->a:Las1;
+    invoke-direct {v0, v1}, Lhja;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Las1;->b:Las1;
 
     return-void
 .end method
@@ -50,7 +49,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x7d43b3c9
+    const v0, -0x34cc058a    # -1.1795062E7f
 
     return v0
 .end method
@@ -58,7 +57,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Loading"
+    const-string v0, "ShowCreateP2PLinkCallErrorBanner"
 
     return-object v0
 .end method

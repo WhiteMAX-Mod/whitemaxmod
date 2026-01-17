@@ -27,7 +27,7 @@
         "<init>",
         "(FFI)V",
         "value",
-        "Lv2h;",
+        "Lb3h;",
         "submit",
         "(F)V",
         "get",
@@ -79,7 +79,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator;->Companion:Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator$Companion;
 
@@ -125,7 +125,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(FFIILro4;)V
+.method public synthetic constructor <init>(FFIILso4;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4

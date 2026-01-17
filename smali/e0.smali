@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnb4;
+.implements Lmb4;
 
 
 # instance fields

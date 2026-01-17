@@ -1,19 +1,19 @@
 .class public final Lxo1;
-.super Ljp1;
+.super Lcp1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final D:Lfl1;
+.field public final D:Z
 
 
 # direct methods
-.method public constructor <init>(Lfl1;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljp1;-><init>()V
+    invoke-direct {p0}, Lcp1;-><init>()V
 
-    iput-object p1, p0, Lxo1;->D:Lfl1;
+    iput-boolean p1, p0, Lxo1;->D:Z
 
     return-void
 .end method
@@ -21,48 +21,46 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lxo1;
+    instance-of v0, p1, Lxo1;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lxo1;
 
-    iget-object v1, p0, Lxo1;->D:Lfl1;
+    iget-boolean v0, p0, Lxo1;->D:Z
 
-    iget-object p1, p1, Lxo1;->D:Lfl1;
+    iget-boolean p1, p1, Lxo1;->D:Z
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v0, p1, :cond_2
 
-    move-result p1
+    :goto_0
+    const/4 p1, 0x0
 
-    if-nez p1, :cond_2
-
-    return v2
+    return p1
 
     :cond_2
-    return v0
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lxo1;->D:Lfl1;
+    iget-boolean v0, p0, Lxo1;->D:Z
 
-    invoke-virtual {v0}, Lfl1;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -70,23 +68,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenRemoveUserConfirmation(participantId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lxo1;->D:Lfl1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "ShareScreen(isEnabled="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v2, p0, Lxo1;->D:Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

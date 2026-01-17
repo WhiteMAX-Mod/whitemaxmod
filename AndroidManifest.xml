@@ -101,8 +101,8 @@
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:icon="@mipmap/ic_ny_launcher" android:label="@string/oneme_app_name" android:largeHeap="@bool/large_heap" android:name="one.me.android.OneMeApplication" android:requestLegacyExternalStorage="true" android:theme="@style/OneMe.Launch">
-        <activity android:enabled="false" android:name="one.me.android.concurrent.SingleCoreActivity"/>
         <profileable android:enabled="false" android:shell="false"/>
+        <activity android:enabled="false" android:name="one.me.android.concurrent.SingleCoreActivity"/>
         <activity android:configChanges="locale|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_ny_launcher" android:label="@string/oneme_app_name" android:launchMode="singleTask" android:name="one.me.android.MainActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Launch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

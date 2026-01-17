@@ -1,19 +1,17 @@
-.class public final Li18;
+.class public interface abstract annotation Li18;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
+
+
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
+
 
 # virtual methods
-.method public final serializer()Lq38;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lq38;"
-        }
-    .end annotation
-
-    sget-object v0, Lm18;->a:Lm18;
-
-    return-object v0
+.method public abstract names()[Ljava/lang/String;
 .end method

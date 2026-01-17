@@ -1,154 +1,72 @@
-.class public abstract Lvbf;
-.super Lbe8;
+.class public final Lvbf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lubf;
+
+
+# instance fields
+.field public final a:Lpt0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 3
+.method public constructor <init>(Lpt0;)V
+    .locals 0
 
-    new-instance v0, Lyj4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lyj4;-><init>(I)V
-
-    new-instance v1, Ljfc;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, p1, v2, v0}, Ljfc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-direct {p0, v1}, Lbe8;-><init>(Ljfc;)V
-
-    const/4 p1, 0x1
-
-    invoke-super {p0, p1}, Lzqd;->A(Z)V
+    iput-object p1, p0, Lvbf;->a:Lpt0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(I)Lie8;
-    .locals 1
+.method public final a()Lorg/json/JSONObject;
+    .locals 5
 
-    if-ltz p1, :cond_0
+    new-instance v0, Lorg/json/JSONObject;
 
-    iget-object v0, p0, Lbe8;->d:Lfv;
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    iget-object v0, v0, Lfv;->f:Ljava/util/List;
+    const-string v1, "command"
 
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
+    const-string v2, "update-media-modifiers"
 
-    move-result v0
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    if-ge p1, v0, :cond_0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lbe8;->C(I)Ljava/lang/Object;
+    iget-object v1, p0, Lvbf;->a:Lpt0;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p1, Lie8;
+    new-instance v2, Lorg/json/JSONObject;
 
-    return-object p1
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    :cond_0
-    const/4 p1, 0x0
+    :try_start_0
+    const-string v3, "denoise"
 
-    return-object p1
-.end method
+    iget-boolean v4, v1, Lpt0;->a:Z
 
-.method public H(Ladf;I)V
-    .locals 0
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    invoke-virtual {p0, p2}, Lbe8;->C(I)Ljava/lang/Object;
+    const-string v3, "denoiseAnn"
 
-    move-result-object p2
+    iget-boolean v1, v1, Lpt0;->b:Z
 
-    check-cast p2, Lie8;
+    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1, p2}, Ladf;->z(Lie8;)V
+    :catch_0
+    const-string v1, "mediaModifiers"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-.method public I(Ladf;)V
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p1}, Ladf;->E()V
-
-    return-void
-.end method
-
-.method public k(I)J
-    .locals 2
-
-    invoke-virtual {p0, p1}, Lbe8;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lie8;
-
-    invoke-interface {p1}, Lie8;->getItemId()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public l(I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lbe8;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lie8;
-
-    invoke-interface {p1}, Lie8;->m()I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public bridge synthetic r(Lwrd;I)V
-    .locals 0
-
-    check-cast p1, Ladf;
-
-    invoke-virtual {p0, p1, p2}, Lvbf;->H(Ladf;I)V
-
-    return-void
-.end method
-
-.method public final w(Lwrd;)V
-    .locals 0
-
-    check-cast p1, Ladf;
-
-    invoke-virtual {p1}, Ladf;->B()V
-
-    return-void
-.end method
-
-.method public final x(Lwrd;)V
-    .locals 0
-
-    check-cast p1, Ladf;
-
-    invoke-virtual {p1}, Ladf;->C()V
-
-    return-void
-.end method
-
-.method public bridge synthetic y(Lwrd;)V
-    .locals 0
-
-    check-cast p1, Ladf;
-
-    invoke-virtual {p0, p1}, Lvbf;->I(Ladf;)V
-
-    return-void
+    return-object v0
 .end method

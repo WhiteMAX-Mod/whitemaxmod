@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lux3;
+.implements Lay3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lpw5;
+.field public final synthetic b:Lqw5;
 
-.field public final synthetic c:J
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpw5;JI)V
+.method public synthetic constructor <init>(Lqw5;Ljava/util/List;I)V
     .locals 0
 
-    iput p4, p0, Lmw5;->a:I
+    iput p3, p0, Lmw5;->a:I
 
-    iput-object p1, p0, Lmw5;->b:Lpw5;
+    iput-object p1, p0, Lmw5;->b:Lqw5;
 
-    iput-wide p2, p0, Lmw5;->c:J
+    iput-object p2, p0, Lmw5;->c:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,15 +32,15 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 6
+    .locals 5
 
     iget v0, p0, Lmw5;->a:I
 
-    const-string v1, "pw5"
+    const-string v1, "qw5"
 
-    iget-wide v2, p0, Lmw5;->c:J
+    iget-object v2, p0, Lmw5;->c:Ljava/util/List;
 
-    iget-object v4, p0, Lmw5;->b:Lpw5;
+    iget-object v3, p0, Lmw5;->b:Lqw5;
 
     check-cast p1, Ljava/lang/Throwable;
 
@@ -48,38 +48,38 @@
 
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v4, "onListUpdated: failed to store stickers %s"
 
-    const-string v5, "onNotifUpdated: failed for id: "
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v4}, Lpw5;->f()V
+    invoke-virtual {v3}, Lqw5;->f()V
 
     return-void
 
     :pswitch_0
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    const-string v0, "onNotifAdded: failed to add sticker "
+    const-string v4, "onNotifRemoved: failed to remove stickers %s from cache"
 
-    const-string v5, " to cache"
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    invoke-static {v2, v3, v0, v5}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v4}, Lpw5;->f()V
+    invoke-virtual {v3}, Lqw5;->f()V
 
     return-void
 

@@ -1,151 +1,119 @@
-.class public abstract synthetic Li35;
-.super Ljava/lang/Object;
+.class public final Li35;
+.super Luhc;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:[I
+.field public static final c:Li35;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Li35;
+
+    sget-object v1, Ln35;->a:Ln35;
+
+    invoke-direct {v0, v1}, Luhc;-><init>(La38;)V
+
+    sput-object v0, Li35;->c:Li35;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p1, [D
+
+    array-length p1, p1
+
+    return p1
+.end method
+
+.method public final j(Lqp3;ILjava/lang/Object;)V
     .locals 3
 
-    invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
+    check-cast p3, Lh35;
 
-    move-result-object v0
+    iget-object v0, p0, Luhc;->b:Lthc;
 
-    array-length v0, v0
+    invoke-interface {p1, v0, p2}, Lqp3;->f(Lthc;I)D
 
-    new-array v0, v0, [I
+    move-result-wide p1
 
-    sput-object v0, Li35;->a:[I
+    invoke-static {p3}, Lshc;->c(Lshc;)V
 
-    :try_start_0
-    sget-object v1, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
+    iget-object v0, p3, Lh35;->a:[D
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iget v1, p3, Lh35;->b:I
 
-    move-result v1
+    add-int/lit8 v2, v1, 0x1
 
-    const/4 v2, 0x1
+    iput v2, p3, Lh35;->b:I
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    aput-wide p1, v0, v1
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Li35;->a:[I
+    return-void
+.end method
 
-    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    check-cast p1, [D
 
-    move-result v1
+    new-instance v0, Lh35;
 
-    const/4 v2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iput-object p1, v0, Lh35;->a:[D
 
-    :catch_1
-    :try_start_2
-    sget-object v0, Li35;->a:[I
+    array-length p1, p1
 
-    sget-object v1, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
+    iput p1, v0, Lh35;->b:I
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const/16 p1, 0xa
 
-    move-result v1
+    invoke-virtual {v0, p1}, Lh35;->b(I)V
 
-    const/4 v2, 0x3
+    return-object v0
+.end method
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+.method public final n()Ljava/lang/Object;
+    .locals 1
 
-    :catch_2
-    :try_start_3
-    sget-object v0, Li35;->a:[I
+    const/4 v0, 0x0
 
-    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+    new-array v0, v0, [D
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    return-object v0
+.end method
 
-    move-result v1
+.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
+    .locals 4
 
-    const/4 v2, 0x4
+    check-cast p2, [D
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    const/4 v0, 0x0
 
-    :catch_3
-    :try_start_4
-    sget-object v0, Li35;->a:[I
+    :goto_0
+    if-ge v0, p3, :cond_0
 
-    sget-object v1, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
+    aget-wide v1, p2, v0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iget-object v3, p0, Luhc;->b:Lthc;
 
-    move-result v1
+    invoke-virtual {p1, v3, v0}, Lkotlinx/serialization/json/internal/b;->g(Lxpe;I)V
 
-    const/4 v2, 0x5
+    invoke-virtual {p1, v1, v2}, Lkotlinx/serialization/json/internal/b;->f(D)V
 
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    add-int/lit8 v0, v0, 0x1
 
-    :catch_4
-    :try_start_5
-    sget-object v0, Li35;->a:[I
+    goto :goto_0
 
-    sget-object v1, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v0, Li35;->a:[I
-
-    sget-object v1, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    sget-object v0, Li35;->a:[I
-
-    sget-object v1, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
+    :cond_0
     return-void
 .end method

@@ -1,61 +1,39 @@
 .class public final Lzc2;
-.super Lugc;
+.super Lxc2;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:[C
-
-.field public b:I
+# static fields
+.field public static final a:Lzc2;
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget-object v0, p0, Lzc2;->a:[C
+    new-instance v0, Lzc2;
 
-    iget v1, p0, Lzc2;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([CI)[C
+    sput-object v0, Lzc2;->a:Lzc2;
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b(I)V
-    .locals 2
-
-    iget-object v0, p0, Lzc2;->a:[C
-
-    array-length v1, v0
-
-    if-ge v1, p1, :cond_1
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([CI)[C
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzc2;->a:[C
-
-    :cond_1
     return-void
 .end method
 
-.method public final d()I
+
+# virtual methods
+.method public final a(C)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lzc2;->b:I
+    const-string v0, "CharMatcher.none()"
 
-    return v0
+    return-object v0
 .end method

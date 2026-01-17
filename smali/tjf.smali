@@ -2,550 +2,188 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/TextWatcher;
+.implements Landroid/text/SpanWatcher;
+
 
 # instance fields
-.field public a:D
+.field public final a:Ljava/lang/Object;
 
-.field public b:D
-
-.field public c:Z
-
-.field public d:D
-
-.field public e:D
-
-.field public f:D
-
-.field public g:D
-
-.field public h:D
-
-.field public i:D
-
-.field public final j:Lpb5;
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide v0, 0x4097700000000000L    # 1500.0
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 2
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+    const/4 v1, 0x0
 
-    move-result-wide v0
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    iput-wide v0, p0, Ltjf;->a:D
+    iput-object v0, p0, Ltjf;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
-
-    .line 3
-    iput-wide v0, p0, Ltjf;->b:D
-
-    const/4 v0, 0x0
-
-    .line 4
-    iput-boolean v0, p0, Ltjf;->c:Z
-
-    const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
-
-    .line 5
-    iput-wide v0, p0, Ltjf;->i:D
-
-    .line 6
-    new-instance v0, Lpb5;
-
-    .line 7
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    iput-object v0, p0, Ltjf;->j:Lpb5;
-
-    return-void
-.end method
-
-.method public constructor <init>(F)V
-    .locals 2
-
-    .line 9
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide v0, 0x4097700000000000L    # 1500.0
-
-    .line 10
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ltjf;->a:D
-
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
-
-    .line 11
-    iput-wide v0, p0, Ltjf;->b:D
-
-    const/4 v0, 0x0
-
-    .line 12
-    iput-boolean v0, p0, Ltjf;->c:Z
-
-    .line 13
-    new-instance v0, Lpb5;
-
-    .line 14
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    iput-object v0, p0, Ltjf;->j:Lpb5;
-
-    float-to-double v0, p1
-
-    .line 16
-    iput-wide v0, p0, Ltjf;->i:D
+    iput-object p1, p0, Ltjf;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(F)V
-    .locals 2
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ltjf;->a:Ljava/lang/Object;
 
-    cmpg-float v0, p1, v0
+    check-cast v0, Landroid/text/TextWatcher;
 
-    if-ltz v0, :cond_0
-
-    float-to-double v0, p1
-
-    iput-wide v0, p0, Ltjf;->b:D
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Ltjf;->c:Z
+    invoke-interface {v0, p1}, Landroid/text/TextWatcher;->afterTextChanged(Landroid/text/Editable;)V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Damping ratio must be non-negative"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method public final b(F)V
-    .locals 2
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ltjf;->a:Ljava/lang/Object;
 
-    cmpg-float v0, p1, v0
+    check-cast v0, Landroid/text/TextWatcher;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->beforeTextChanged(Ljava/lang/CharSequence;III)V
+
+    return-void
+.end method
+
+.method public final onSpanAdded(Landroid/text/Spannable;Ljava/lang/Object;II)V
+    .locals 1
+
+    iget-object v0, p0, Ltjf;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
 
     if-lez v0, :cond_0
 
-    float-to-double v0, p1
+    instance-of v0, p2, Lo1h;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ltjf;->a:D
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Ltjf;->c:Z
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Ltjf;->a:Ljava/lang/Object;
 
-    const-string v0, "Spring stiffness constant must be positive."
+    check-cast v0, Landroid/text/SpanWatcher;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/SpanWatcher;->onSpanAdded(Landroid/text/Spannable;Ljava/lang/Object;II)V
 
-    throw p1
+    return-void
 .end method
 
-.method public final c(DDJ)Lpb5;
-    .locals 16
+.method public final onSpanChanged(Landroid/text/Spannable;Ljava/lang/Object;IIII)V
+    .locals 8
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ltjf;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget-boolean v1, v0, Ltjf;->c:Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-lez v0, :cond_0
 
-    :goto_0
-    move-wide/from16 v4, p5
+    instance-of v0, p2, Lo1h;
 
-    goto :goto_2
+    if-eqz v0, :cond_0
+
+    return-void
 
     :cond_0
-    iget-wide v4, v0, Ltjf;->i:D
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-wide v6, 0x7fefffffffffffffL    # Double.MAX_VALUE
+    const/16 v1, 0x1c
 
-    cmpl-double v1, v4, v6
+    if-ge v0, v1, :cond_2
 
-    if-eqz v1, :cond_5
+    const/4 v0, 0x0
 
-    iget-wide v4, v0, Ltjf;->b:D
+    if-le p3, p4, :cond_1
 
-    cmpl-double v1, v4, v2
-
-    if-lez v1, :cond_1
-
-    neg-double v6, v4
-
-    iget-wide v8, v0, Ltjf;->a:D
-
-    mul-double/2addr v6, v8
-
-    mul-double/2addr v4, v4
-
-    sub-double/2addr v4, v2
-
-    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v4
-
-    mul-double/2addr v4, v8
-
-    add-double/2addr v4, v6
-
-    iput-wide v4, v0, Ltjf;->f:D
-
-    iget-wide v4, v0, Ltjf;->b:D
-
-    neg-double v6, v4
-
-    iget-wide v8, v0, Ltjf;->a:D
-
-    mul-double/2addr v6, v8
-
-    mul-double/2addr v4, v4
-
-    sub-double/2addr v4, v2
-
-    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v4
-
-    mul-double/2addr v4, v8
-
-    sub-double/2addr v6, v4
-
-    iput-wide v6, v0, Ltjf;->g:D
-
-    goto :goto_1
+    move p3, v0
 
     :cond_1
-    const-wide/16 v6, 0x0
+    if-le p5, p6, :cond_2
 
-    cmpl-double v1, v4, v6
+    move v4, p3
 
-    if-ltz v1, :cond_2
-
-    cmpg-double v1, v4, v2
-
-    if-gez v1, :cond_2
-
-    iget-wide v6, v0, Ltjf;->a:D
-
-    mul-double/2addr v4, v4
-
-    sub-double v4, v2, v4
-
-    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v4
-
-    mul-double/2addr v4, v6
-
-    iput-wide v4, v0, Ltjf;->h:D
-
-    :cond_2
-    :goto_1
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Ltjf;->c:Z
+    move v6, v0
 
     goto :goto_0
 
-    :goto_2
-    long-to-double v4, v4
+    :cond_2
+    move v4, p3
 
-    const-wide v6, 0x408f400000000000L    # 1000.0
+    move v6, p5
 
-    div-double/2addr v4, v6
+    :goto_0
+    iget-object p3, p0, Ltjf;->a:Ljava/lang/Object;
 
-    iget-wide v6, v0, Ltjf;->i:D
+    move-object v1, p3
 
-    sub-double v6, p1, v6
+    check-cast v1, Landroid/text/SpanWatcher;
 
-    iget-wide v8, v0, Ltjf;->b:D
+    move-object v2, p1
 
-    cmpl-double v1, v8, v2
+    move-object v3, p2
 
-    const-wide v10, 0x4005bf0a8b145769L    # Math.E
+    move v5, p4
 
-    if-lez v1, :cond_3
+    move v7, p6
 
-    iget-wide v1, v0, Ltjf;->g:D
+    invoke-interface/range {v1 .. v7}, Landroid/text/SpanWatcher;->onSpanChanged(Landroid/text/Spannable;Ljava/lang/Object;IIII)V
 
-    mul-double v8, v1, v6
+    return-void
+.end method
 
-    sub-double v8, v8, p3
+.method public final onSpanRemoved(Landroid/text/Spannable;Ljava/lang/Object;II)V
+    .locals 1
 
-    iget-wide v12, v0, Ltjf;->f:D
+    iget-object v0, p0, Ltjf;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sub-double v12, v1, v12
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    div-double/2addr v8, v12
+    move-result v0
 
-    sub-double/2addr v6, v8
+    if-lez v0, :cond_0
 
-    mul-double/2addr v1, v4
+    instance-of v0, p2, Lo1h;
 
-    invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->pow(DD)D
+    if-eqz v0, :cond_0
 
-    move-result-wide v1
+    return-void
 
-    mul-double/2addr v1, v6
+    :cond_0
+    iget-object v0, p0, Ltjf;->a:Ljava/lang/Object;
 
-    iget-wide v12, v0, Ltjf;->f:D
+    check-cast v0, Landroid/text/SpanWatcher;
 
-    mul-double/2addr v12, v4
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/SpanWatcher;->onSpanRemoved(Landroid/text/Spannable;Ljava/lang/Object;II)V
 
-    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
+    return-void
+.end method
 
-    move-result-wide v12
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 1
 
-    mul-double/2addr v12, v8
+    iget-object v0, p0, Ltjf;->a:Ljava/lang/Object;
 
-    add-double/2addr v12, v1
+    check-cast v0, Landroid/text/TextWatcher;
 
-    iget-wide v1, v0, Ltjf;->g:D
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->onTextChanged(Ljava/lang/CharSequence;III)V
 
-    mul-double/2addr v6, v1
-
-    mul-double/2addr v1, v4
-
-    invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v1
-
-    mul-double/2addr v1, v6
-
-    iget-wide v6, v0, Ltjf;->f:D
-
-    mul-double/2addr v8, v6
-
-    mul-double/2addr v6, v4
-
-    invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v3
-
-    mul-double/2addr v3, v8
-
-    add-double/2addr v3, v1
-
-    goto/16 :goto_3
-
-    :cond_3
-    if-nez v1, :cond_4
-
-    iget-wide v1, v0, Ltjf;->a:D
-
-    mul-double v8, v1, v6
-
-    add-double v8, v8, p3
-
-    mul-double v12, v8, v4
-
-    add-double/2addr v12, v6
-
-    neg-double v1, v1
-
-    mul-double/2addr v1, v4
-
-    invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v1
-
-    mul-double/2addr v1, v12
-
-    iget-wide v6, v0, Ltjf;->a:D
-
-    neg-double v6, v6
-
-    mul-double/2addr v6, v4
-
-    invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v6
-
-    mul-double/2addr v6, v12
-
-    iget-wide v12, v0, Ltjf;->a:D
-
-    neg-double v12, v12
-
-    mul-double/2addr v6, v12
-
-    mul-double/2addr v12, v4
-
-    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v3
-
-    mul-double/2addr v3, v8
-
-    add-double/2addr v3, v6
-
-    move-wide v12, v1
-
-    goto :goto_3
-
-    :cond_4
-    iget-wide v12, v0, Ltjf;->h:D
-
-    div-double/2addr v2, v12
-
-    iget-wide v12, v0, Ltjf;->a:D
-
-    mul-double v14, v8, v12
-
-    mul-double/2addr v14, v6
-
-    add-double v14, v14, p3
-
-    mul-double/2addr v14, v2
-
-    neg-double v1, v8
-
-    mul-double/2addr v1, v12
-
-    mul-double/2addr v1, v4
-
-    invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v1
-
-    iget-wide v8, v0, Ltjf;->h:D
-
-    mul-double/2addr v8, v4
-
-    invoke-static {v8, v9}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v8
-
-    mul-double/2addr v8, v6
-
-    iget-wide v12, v0, Ltjf;->h:D
-
-    mul-double/2addr v12, v4
-
-    invoke-static {v12, v13}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v12
-
-    mul-double/2addr v12, v14
-
-    add-double/2addr v12, v8
-
-    mul-double/2addr v12, v1
-
-    iget-wide v1, v0, Ltjf;->a:D
-
-    neg-double v8, v1
-
-    mul-double/2addr v8, v12
-
-    iget-wide v10, v0, Ltjf;->b:D
-
-    mul-double/2addr v8, v10
-
-    neg-double v10, v10
-
-    mul-double/2addr v10, v1
-
-    mul-double/2addr v10, v4
-
-    const-wide v1, 0x4005bf0a8b145769L    # Math.E
-
-    invoke-static {v1, v2, v10, v11}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v1
-
-    iget-wide v10, v0, Ltjf;->h:D
-
-    move-wide/from16 p1, v1
-
-    neg-double v1, v10
-
-    mul-double/2addr v1, v6
-
-    mul-double/2addr v10, v4
-
-    invoke-static {v10, v11}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v6
-
-    mul-double/2addr v6, v1
-
-    iget-wide v1, v0, Ltjf;->h:D
-
-    mul-double/2addr v14, v1
-
-    mul-double/2addr v1, v4
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v1
-
-    mul-double/2addr v1, v14
-
-    add-double/2addr v1, v6
-
-    mul-double v1, v1, p1
-
-    add-double v3, v1, v8
-
-    :goto_3
-    iget-wide v1, v0, Ltjf;->i:D
-
-    add-double/2addr v12, v1
-
-    double-to-float v1, v12
-
-    iget-object v2, v0, Ltjf;->j:Lpb5;
-
-    iput v1, v2, Lpb5;->a:F
-
-    double-to-float v1, v3
-
-    iput v1, v2, Lpb5;->b:F
-
-    return-object v2
-
-    :cond_5
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "Error: Final position of the spring must be set before the animation starts"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    return-void
 .end method

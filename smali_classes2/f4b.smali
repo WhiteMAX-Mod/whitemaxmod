@@ -1,61 +1,64 @@
 .class public final Lf4b;
-.super Ledj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:Lf4b;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lj4b;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lj4b;Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
-    new-instance v0, Lf4b;
+    iput p3, p0, Lf4b;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lf4b;->b:Lj4b;
 
-    sput-object v0, Lf4b;->a:Lf4b;
+    iput-object p2, p0, Lf4b;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lf4b;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lf4b;->b:Lj4b;
 
-    :cond_0
-    instance-of p1, p1, Lf4b;
+    iget-object v1, p0, Lf4b;->c:Landroid/graphics/drawable/Drawable;
 
-    if-nez p1, :cond_1
+    invoke-static {v0, v1}, Lj4b;->d(Lj4b;Landroid/graphics/drawable/Drawable;)V
 
-    const/4 p1, 0x0
+    return-void
 
-    return p1
+    :pswitch_0
+    iget-object v0, p0, Lf4b;->b:Lj4b;
 
-    :cond_1
-    return v0
-.end method
+    iget-object v1, p0, Lf4b;->c:Landroid/graphics/drawable/Drawable;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-static {v0, v1}, Lj4b;->b(Lj4b;Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x5bcc451e
+    return-void
 
-    return v0
-.end method
+    nop
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "None"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

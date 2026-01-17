@@ -1,21 +1,17 @@
-.class public final Lej7;
+.class public interface abstract Lej7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lej7;
+# virtual methods
+.method public abstract a()Ljava/lang/String;
+.end method
 
+.method public abstract b(Lei5;Lgj9;Lw3e;Liyd;Landroid/graphics/ColorSpace;)Lr56;
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public abstract c(Lxh7;)Z
+.end method
 
-    new-instance v0, Lej7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lej7;->a:Lej7;
-
-    return-void
+.method public abstract d(Lei5;Lw3e;Liyd;)Z
 .end method

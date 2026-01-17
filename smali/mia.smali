@@ -2,66 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/FilenameFilter;
+
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:F
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:I
-
-.field public final m:Z
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(IIIIIIFZZIIIZ)V
+.method public synthetic constructor <init>(I)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lmia;->a:I
 
-    iput p2, p0, Lmia;->b:I
-
-    iput p3, p0, Lmia;->c:I
-
-    iput p4, p0, Lmia;->d:I
-
-    iput p5, p0, Lmia;->e:I
-
-    iput p6, p0, Lmia;->f:I
-
-    iput p7, p0, Lmia;->g:F
-
-    iput-boolean p8, p0, Lmia;->h:Z
-
-    iput-boolean p9, p0, Lmia;->i:Z
-
-    iput p10, p0, Lmia;->j:I
-
-    iput p11, p0, Lmia;->k:I
-
-    iput p12, p0, Lmia;->l:I
-
-    iput-boolean p13, p0, Lmia;->m:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 0
+
+    iget p1, p0, Lmia;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    const-string p1, "dso_state"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, "dso_lock"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, "dso_deps"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    const-string p1, "liblz4-java-"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const-string p1, ".lck"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

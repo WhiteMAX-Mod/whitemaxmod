@@ -3,97 +3,86 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lef8;
-.implements Ltx3;
+.implements Lqe8;
 
 
 # instance fields
-.field public final synthetic a:Leg8;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lz59;
+.field public final synthetic b:Lof8;
 
-.field public final synthetic c:Ljava/io/IOException;
-
-.field public final synthetic d:Z
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Le59;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Leg8;Lz59;Ljava/io/IOException;Z)V
+.method public synthetic constructor <init>(Lid;Lof8;Le59;)V
     .locals 0
 
-    iput-object p1, p0, Lkn4;->o:Ljava/lang/Object;
+    .line 1
+    const/4 p1, 0x1
 
-    iput-object p2, p0, Lkn4;->a:Leg8;
-
-    iput-object p3, p0, Lkn4;->b:Lz59;
-
-    iput-object p4, p0, Lkn4;->c:Ljava/io/IOException;
-
-    iput-boolean p5, p0, Lkn4;->d:Z
+    iput p1, p0, Lkn4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lkn4;->b:Lof8;
+
+    iput-object p3, p0, Lkn4;->c:Le59;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lid;Lof8;Le59;I)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x0
+
+    iput p1, p0, Lkn4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lkn4;->b:Lof8;
+
+    iput-object p3, p0, Lkn4;->c:Le59;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 8
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lkn4;->o:Ljava/lang/Object;
+    iget v0, p0, Lkn4;->a:I
 
-    check-cast v0, Lwo6;
+    packed-switch v0, :pswitch_data_0
 
-    move-object v1, p1
+    iget-object v0, p0, Lkn4;->c:Le59;
 
-    check-cast v1, Lxd9;
+    check-cast p1, Ljd;
 
-    iget v2, v0, Lwo6;->b:I
+    iget-object v1, p0, Lkn4;->b:Lof8;
 
-    iget-object p1, v0, Lwo6;->c:Ljava/lang/Object;
-
-    move-object v3, p1
-
-    check-cast v3, Lnd9;
-
-    iget-object v4, p0, Lkn4;->a:Leg8;
-
-    iget-object v5, p0, Lkn4;->b:Lz59;
-
-    iget-object v6, p0, Lkn4;->c:Ljava/io/IOException;
-
-    iget-boolean v7, p0, Lkn4;->d:Z
-
-    invoke-interface/range {v1 .. v7}, Lxd9;->a(ILnd9;Leg8;Lz59;Ljava/io/IOException;Z)V
+    invoke-interface {p1, v1, v0}, Ljd;->H(Lof8;Le59;)V
 
     return-void
-.end method
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 7
+    :pswitch_0
+    check-cast p1, Ljd;
 
-    iget-object v0, p0, Lkn4;->o:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object v2, v0
+    iget-object v0, p0, Lkn4;->b:Lof8;
 
-    check-cast v2, Lld;
+    iget-object v1, p0, Lkn4;->c:Le59;
 
-    iget-boolean v6, p0, Lkn4;->d:Z
-
-    move-object v1, p1
-
-    check-cast v1, Lmd;
-
-    iget-object v3, p0, Lkn4;->a:Leg8;
-
-    iget-object v4, p0, Lkn4;->b:Lz59;
-
-    iget-object v5, p0, Lkn4;->c:Ljava/io/IOException;
-
-    invoke-interface/range {v1 .. v6}, Lmd;->d0(Lld;Leg8;Lz59;Ljava/io/IOException;Z)V
+    invoke-interface {p1, v0, v1}, Ljd;->R(Lof8;Le59;)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

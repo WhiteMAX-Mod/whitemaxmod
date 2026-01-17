@@ -15,11 +15,11 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lvch;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ltdh;Landroid/os/Bundle;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi28;-><init>(Landroid/content/Context;Ljava/lang/String;Lvch;Landroid/os/Bundle;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi28;-><init>(Landroid/content/Context;Ljava/lang/String;Ltdh;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -37,7 +37,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lx75;->j(Landroid/media/session/MediaController;)Landroid/os/Bundle;
+    invoke-static {p1}, La85;->j(Landroid/media/session/MediaController;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -51,7 +51,7 @@
 .method public createFwkMediaSession(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
     .locals 0
 
-    invoke-static {p1, p2, p3}, Lx75;->i(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
+    invoke-static {p1, p2, p3}, La85;->i(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
 
     move-result-object p1
 

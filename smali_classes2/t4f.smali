@@ -1,64 +1,47 @@
 .class public final Lt4f;
-.super Ljava/lang/Object;
+.super Landroid/opengl/GLSurfaceView;
 .source "SourceFile"
 
-# interfaces
-.implements Lz4f;
 
-
-# static fields
-.field public static final a:Lt4f;
+# instance fields
+.field public final a:Ls4f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    new-instance v0, Lt4f;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, v0}, Landroid/opengl/GLSurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sput-object v0, Lt4f;->a:Lt4f;
+    const/4 p1, 0x2
+
+    invoke-virtual {p0, p1}, Landroid/opengl/GLSurfaceView;->setEGLContextClientVersion(I)V
+
+    new-instance p1, Ls4f;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p1, Ls4f;->X:J
+
+    iput-object p1, p0, Lt4f;->a:Ls4f;
+
+    invoke-virtual {p0, p1}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final getRenderer()Ls4f;
     .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lt4f;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x50cc4ef4
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CancelShare"
+    iget-object v0, p0, Lt4f;->a:Ls4f;
 
     return-object v0
 .end method

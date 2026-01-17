@@ -2,53 +2,48 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/graphics/drawable/Drawable$Callback;
-
 
 # instance fields
-.field public final synthetic a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+.field public final a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+.field public final b:Landroid/animation/AnimatorSet;
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
-    .locals 0
+.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;Landroid/animation/AnimatorSet;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lbk5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    return-void
-.end method
+    invoke-virtual {p2}, Landroid/animation/AnimatorSet;->clone()Landroid/animation/AnimatorSet;
 
+    move-result-object p1
 
-# virtual methods
-.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    iput-object p1, p0, Lbk5;->b:Landroid/animation/AnimatorSet;
 
-    iget-object p1, p0, Lbk5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    move-result-wide p1
 
-    return-void
-.end method
+    const-wide/16 v0, -0x1
 
-.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-    .locals 0
+    cmp-long p1, p1, v0
 
-    iget-object p1, p0, Lbk5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    if-nez p1, :cond_0
 
-    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+    const/4 p1, 0x1
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-    .locals 0
+    :cond_0
+    const/4 p1, 0x0
 
-    iget-object p1, p0, Lbk5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+    :goto_0
+    iput-boolean p1, p0, Lbk5;->c:Z
 
     return-void
 .end method

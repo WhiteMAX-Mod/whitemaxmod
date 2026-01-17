@@ -1,94 +1,118 @@
 .class public final Lz15;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-
 # instance fields
-.field private volatile synthetic _decision$volatile:I
+.field public a:Z
+
+.field public b:Z
+
+.field public c:Z
+
+.field public final d:Ljava/util/ArrayDeque;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    const-class v0, Lz15;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "_decision$volatile"
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-boolean v0, p0, Lz15;->a:Z
 
-    move-result-object v0
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    sput-object v0, Lz15;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lz15;->d:Ljava/util/ArrayDeque;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterCompletion(Ljava/lang/Object;)V
-    .locals 0
+.method public final a()V
+    .locals 4
 
-    invoke-virtual {p0, p1}, Lz15;->afterResume(Ljava/lang/Object;)V
+    iget-object v0, p0, Lz15;->d:Ljava/util/ArrayDeque;
+
+    iget-boolean v1, p0, Lz15;->c:Z
+
+    if-eqz v1, :cond_0
 
     return-void
-.end method
-
-.method public final afterResume(Ljava/lang/Object;)V
-    .locals 3
 
     :cond_0
-    sget-object v0, Lz15;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    const/4 v2, 0x0
 
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-eqz v1, :cond_2
-
-    const/4 v0, 0x1
-
-    if-ne v1, v0, :cond_1
-
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
-
-    invoke-static {v0}, Lv0j;->e(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v0
-
-    invoke-static {p1}, Lnij;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p1, v1, v2, v1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Loq6;ILjava/lang/Object;)V
-
-    return-void
+    :try_start_0
+    iput-boolean v1, p0, Lz15;->c:Z
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    const-string v0, "Already resumed"
+    move-result v3
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v3, :cond_5
 
-    throw p1
+    iget-boolean v3, p0, Lz15;->b:Z
+
+    if-nez v3, :cond_3
+
+    iget-boolean v3, p0, Lz15;->a:Z
+
+    if-nez v3, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    const/4 v1, 0x0
+    move v3, v2
 
-    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
+    goto :goto_2
 
-    move-result v0
+    :cond_3
+    :goto_1
+    move v3, v1
 
-    if-eqz v0, :cond_0
+    :goto_2
+    if-nez v3, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Runnable;
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_5
+    :goto_3
+    iput-boolean v2, p0, Lz15;->c:Z
 
     return-void
+
+    :goto_4
+    iput-boolean v2, p0, Lz15;->c:Z
+
+    throw v0
 .end method

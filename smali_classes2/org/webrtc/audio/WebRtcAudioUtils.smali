@@ -30,7 +30,7 @@
 
     const-string v0, "Invalid encoding: "
 
-    invoke-static {p0, v0}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -199,7 +199,7 @@
 
     const-string v1, ")"
 
-    invoke-static {p0, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -418,7 +418,7 @@
 
     const-string v4, ", id="
 
-    invoke-static {v0, v2, v3, v1, v4}, Lq3g;->q(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v3, v1, v4}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -679,7 +679,7 @@
 
     const-string v0, ", speakerphone: "
 
-    invoke-static {p1, v0, v4, v1, v2}, Lc12;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    invoke-static {p1, v0, v4, v1, v2}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -863,19 +863,19 @@
 
     const-string v1, ", Id: "
 
-    invoke-static {v9, v2, v0, v3, v1}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v2, v0, v3, v1}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, ", Hardware: "
 
     const-string v1, ", Manufacturer: "
 
-    invoke-static {v9, v4, v0, v5, v1}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v4, v0, v5, v1}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, ", Model: "
 
     const-string v1, ", Product: "
 
-    invoke-static {v9, v6, v0, v7, v1}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v6, v0, v7, v1}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

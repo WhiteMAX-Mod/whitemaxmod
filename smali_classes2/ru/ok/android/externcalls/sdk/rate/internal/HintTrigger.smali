@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "stat",
-        "Lv2h;",
+        "Lb3h;",
         "onNetworkStat",
         "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
         "calls-sdk_release"

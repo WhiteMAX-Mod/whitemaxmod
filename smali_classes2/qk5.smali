@@ -1,184 +1,150 @@
 .class public final Lqk5;
-.super Lrsh;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lst3;
-
-
-# static fields
-.field public static final synthetic t0:[Lp38;
+.implements Lbr6;
 
 
 # instance fields
-.field public final X:Lyl5;
+.field public final synthetic X:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-.field public final Y:Lyl5;
-
-.field public final Z:Le7;
-
-.field public final b:Ld68;
-
-.field public final c:Ld68;
-
-.field public final d:Ld68;
-
-.field public final o:Lyl5;
-
-.field public s0:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
+    .locals 0
 
-    new-instance v0, Lifa;
+    iput-object p2, p0, Lqk5;->X:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    const-string v1, "codeJob"
+    const/4 p2, 0x2
 
-    const-string v2, "getCodeJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lqk5;
-
-    invoke-direct {v0, v3, v1, v2}, Lifa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lfsd;->a:Lgsd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lp38;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lqk5;->t0:[Lp38;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 4
-
-    sget-object v0, Lb1f;->a:Lb1f;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v1
-
-    const/16 v2, 0x32
-
-    invoke-virtual {v1, v2}, Lu5;->d(I)Lz7g;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lb1f;->a()Ld68;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v0
-
-    const/16 v3, 0xd
-
-    invoke-virtual {v0, v3}, Lu5;->d(I)Lz7g;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lrsh;-><init>()V
-
-    iput-object v1, p0, Lqk5;->b:Ld68;
-
-    iput-object v2, p0, Lqk5;->c:Ld68;
-
-    iput-object v0, p0, Lqk5;->d:Ld68;
-
-    new-instance v0, Lyl5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lyl5;-><init>(I)V
-
-    iput-object v0, p0, Lqk5;->o:Lyl5;
-
-    new-instance v0, Lyl5;
-
-    invoke-direct {v0, v1}, Lyl5;-><init>(I)V
-
-    iput-object v0, p0, Lqk5;->X:Lyl5;
-
-    new-instance v0, Lyl5;
-
-    invoke-direct {v0, v1}, Lyl5;-><init>(I)V
-
-    iput-object v0, p0, Lqk5;->Y:Lyl5;
-
-    invoke-static {}, Llkj;->b()Le7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqk5;->Z:Le7;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lqk5;->c:Ld68;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbbg;
-
-    check-cast v0, Lb9b;
-
-    invoke-virtual {v0}, Lb9b;->a()Ltb4;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqk5;->d:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lub4;
-
-    invoke-virtual {v0, v1}, Ln0;->plus(Lrb4;)Lrb4;
-
-    move-result-object v0
-
-    new-instance v1, Lpk5;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lpk5;-><init>(Lqk5;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    iget-object p1, p0, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object v2, Ldc4;->b:Ldc4;
-
-    invoke-static {p1, v0, v2, v1}, Ly8j;->d(Lac4;Lrb4;Ldc4;Lcr6;)Lglf;
+    invoke-virtual {p0, p1, p2}, Lqk5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object v0, Lqk5;->t0:[Lp38;
+    check-cast p1, Lqk5;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lqk5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lqk5;
+
+    iget-object v1, p0, Lqk5;->X:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+
+    invoke-direct {v0, p2, v1}, Lqk5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
+
+    iput-object p1, v0, Lqk5;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Lqk5;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lb3h;
+
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->C0:[Lz28;
+
+    new-instance v1, Lone/me/settings/privacy/ui/ForgotPinCodeDialog;
+
+    invoke-direct {v1}, Lone/me/settings/privacy/ui/ForgotPinCodeDialog;-><init>()V
+
+    iget-object p1, p0, Lqk5;->X:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
+
+    :goto_0
+    invoke-virtual {p1}, La94;->getParentController()La94;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, La94;->getParentController()La94;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lc5e;
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lc5e;
+
+    goto :goto_1
+
+    :cond_1
+    move-object p1, v2
+
+    :goto_1
+    if-eqz p1, :cond_2
+
+    check-cast p1, Lone/me/android/root/RootController;
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->F0()Lw4e;
+
+    move-result-object v2
+
+    :cond_2
+    move-object p1, v2
+
+    if-eqz p1, :cond_3
+
+    new-instance v0, Lz4e;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
 
     const/4 v1, 0x0
 
-    aget-object v0, v0, v1
+    const/4 v2, 0x1
 
-    iget-object v1, p0, Lqk5;->Z:Le7;
+    const-string v3, "forgot-pin"
 
-    invoke-virtual {v1, p0, v0, p1}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lt02;->s(ZLz4e;ZLjava/lang/String;)V
 
-    return-void
+    invoke-virtual {p1, v0}, Lw4e;->H(Lz4e;)V
+
+    :cond_3
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

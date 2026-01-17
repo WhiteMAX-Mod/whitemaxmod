@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadException$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadException$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/upload/UploadException;->Companion:Lru/ok/android/externcalls/analytics/internal/upload/UploadException$Companion;
 

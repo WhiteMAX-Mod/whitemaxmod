@@ -1,55 +1,117 @@
-.class public final Lnf3;
-.super Lk2;
+.class public abstract Lnf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic d:I
+# static fields
+.field public static final a:Legc;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILwa5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lnf3;->d:I
+    new-instance v0, Legc;
 
-    invoke-direct {p0, p2}, Lk2;-><init>(Lwa5;)V
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Legc;-><init>(Landroid/os/Looper;)V
+
+    sput-object v0, Lnf3;->a:Legc;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 3
 
-# virtual methods
-.method public final i0()J
+    new-instance v0, Lzi;
+
+    const/16 v1, 0xf
+
+    const-string v2, "Copied Text"
+
+    invoke-direct {v0, p0, v2, p1, v1}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    sget-object p0, Lnf3;->a:Legc;
+
+    invoke-virtual {p0, v0}, Legc;->s(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static final b()Z
     .locals 2
 
-    iget v0, p0, Lnf3;->d:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    packed-switch v0, :pswitch_data_0
+    const/16 v1, 0x20
 
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    if-le v0, v1, :cond_1
 
-    move-result-wide v0
+    sget-object v0, Lidh;->a:Ln8g;
 
-    return-wide v0
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    :pswitch_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    move-result-object v0
 
-    move-result-wide v0
+    check-cast v0, Ljava/lang/Boolean;
 
-    return-wide v0
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :pswitch_1
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    move-result v0
 
-    move-result-wide v0
+    if-eqz v0, :cond_0
 
-    return-wide v0
+    goto :goto_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public static final c(Landroid/content/Context;)Ljava/lang/CharSequence;
+    .locals 1
+
+    const-string v0, "clipboard"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/content/ClipboardManager;
+
+    invoke-virtual {p0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

@@ -1,293 +1,206 @@
 .class public final Lr0d;
-.super Lrsh;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic w0:[Lp38;
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final X:Lyl5;
+.field public final synthetic X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
 
-.field public final Y:Le7;
-
-.field public final Z:Lglf;
-
-.field public final b:Lw07;
-
-.field public final c:Lbbg;
-
-.field public final d:Lpkd;
-
-.field public final o:Lo7a;
-
-.field public final s0:Lhof;
-
-.field public final t0:Lpkd;
-
-.field public final u0:Lhof;
-
-.field public final v0:Lpkd;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lifa;
+    iput-object p1, p0, Lr0d;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
 
-    const-string v1, "scanLocalImageJob"
+    const/4 p1, 0x2
 
-    const-string v2, "getScanLocalImageJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lr0d;
-
-    invoke-direct {v0, v3, v1, v2}, Lifa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lfsd;->a:Lgsd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lp38;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lr0d;->w0:[Lp38;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 8
-
-    sget-object v0, Li0d;->a:Li0d;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v1
-
-    const/16 v2, 0x10
-
-    invoke-virtual {v1, v2}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/Context;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v2
-
-    const/16 v3, 0x3e
-
-    invoke-virtual {v2, v3}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lpab;
-
-    new-instance v3, Lw07;
-
-    invoke-virtual {v2}, Lpab;->c()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v2
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, v3, Lw07;->a:Ljava/lang/Object;
-
-    iput-object v2, v3, Lw07;->b:Ljava/lang/Object;
-
-    new-instance v1, Lb64;
-
-    const/16 v4, 0x1c
-
-    invoke-direct {v1, v4, v3}, Lb64;-><init>(ILjava/lang/Object;)V
-
-    new-instance v4, Lz7g;
-
-    invoke-direct {v4, v1}, Lz7g;-><init>(Lmq6;)V
-
-    iput-object v4, v3, Lw07;->c:Ljava/lang/Object;
-
-    sget-object v1, Le0d;->a:Le0d;
-
-    invoke-static {v1}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object v1
-
-    iput-object v1, v3, Lw07;->d:Ljava/lang/Object;
-
-    new-instance v4, Lpkd;
-
-    invoke-direct {v4, v1}, Lpkd;-><init>(Lofa;)V
-
-    iput-object v4, v3, Lw07;->e:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v0
-
-    const/16 v1, 0xb
-
-    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbbg;
-
-    invoke-direct {p0}, Lrsh;-><init>()V
-
-    iput-object v3, p0, Lr0d;->b:Lw07;
-
-    iput-object v0, p0, Lr0d;->c:Lbbg;
-
-    iget-object v1, v3, Lw07;->e:Ljava/lang/Object;
-
-    check-cast v1, Lpkd;
-
-    iput-object v1, p0, Lr0d;->d:Lpkd;
-
-    const-class v1, Lw07;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v4, Lm4j;->a:Lvcb;
-
-    const/4 v5, 0x0
-
-    if-nez v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v6, Lxk8;->d:Lxk8;
-
-    invoke-virtual {v4, v6}, Lvcb;->b(Lxk8;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    const-string v7, "GoogleMlKit analyzer"
-
-    invoke-virtual {v4, v6, v1, v7, v5}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    new-instance v1, Lo7a;
-
-    iget-object v4, v3, Lw07;->c:Ljava/lang/Object;
-
-    check-cast v4, Lz7g;
-
-    invoke-virtual {v4}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lfj0;
-
-    invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    new-instance v6, Lv52;
-
-    const/4 v7, 0x1
-
-    invoke-direct {v6, v7, v3}, Lv52;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v1, v4, v2, v6}, Lo7a;-><init>(Ljava/util/List;Ljava/util/concurrent/ExecutorService;Lv52;)V
-
-    iput-object v1, p0, Lr0d;->o:Lo7a;
-
-    new-instance v1, Lyl5;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lyl5;-><init>(I)V
-
-    iput-object v1, p0, Lr0d;->X:Lyl5;
-
-    invoke-static {}, Llkj;->b()Le7;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lr0d;->Y:Le7;
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {v1}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lr0d;->s0:Lhof;
-
-    new-instance v3, Lpkd;
-
-    invoke-direct {v3, v2}, Lpkd;-><init>(Lofa;)V
-
-    iput-object v3, p0, Lr0d;->t0:Lpkd;
-
-    invoke-static {v1}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lr0d;->u0:Lhof;
-
-    new-instance v2, Lpkd;
-
-    invoke-direct {v2, v1}, Lpkd;-><init>(Lofa;)V
-
-    iput-object v2, p0, Lr0d;->v0:Lpkd;
-
-    iget-object v1, p0, Lr0d;->Z:Lglf;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1, v5}, Lkz7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_2
-    check-cast v0, Lb9b;
-
-    invoke-virtual {v0}, Lb9b;->a()Ltb4;
-
-    move-result-object v0
-
-    new-instance v1, Lq0d;
-
-    invoke-direct {v1, p0, v5}, Lq0d;-><init>(Lr0d;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    invoke-static {p0, v0, v1, v2}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lr0d;->Z:Lglf;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final s(Lg9e;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lr0d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lr0d;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lr0d;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    new-instance v0, Ln0d;
+    new-instance p1, Lr0d;
 
-    invoke-direct {v0, p1}, Ln0d;-><init>(Lg9e;)V
+    iget-object v0, p0, Lr0d;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
 
-    iget-object p1, p0, Lr0d;->X:Lyl5;
+    invoke-direct {p1, v0, p2}, Lr0d;-><init>(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    return-object p1
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lr0d;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lr0d;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lj88;->p()Ll88;
+
+    move-result-object v0
+
+    sget-object v2, Lf25;->a:Lct4;
+
+    sget-object v2, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lzp8;
+
+    invoke-virtual {v2}, Lzp8;->getImmediate()Lzp8;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lo84;->b:Lqb4;
+
+    invoke-virtual {v2, v3}, Lsb4;->isDispatchNeeded(Lqb4;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    iget-object v4, v0, Ll88;->d:Lo78;
+
+    sget-object v5, Lo78;->a:Lo78;
+
+    if-eq v4, v5, :cond_2
+
+    sget-object v5, Lo78;->o:Lo78;
+
+    invoke-virtual {v4, v5}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_3
+
+    invoke-static {p1}, Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;->z0(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;)V
+
+    goto :goto_1
+
+    :cond_2
+    new-instance p1, Landroidx/lifecycle/LifecycleDestroyedException;
+
+    invoke-direct {p1}, Landroidx/lifecycle/LifecycleDestroyedException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    new-instance v4, Lje;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v5, p1}, Lje;-><init>(ILjava/lang/Object;)V
+
+    iput v1, p0, Lr0d;->o:I
+
+    new-instance p1, Lg62;
+
+    invoke-static {p0}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object v5
+
+    invoke-direct {p1, v1, v5}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-virtual {p1}, Lg62;->o()V
+
+    new-instance v1, Lvm6;
+
+    invoke-direct {v1, v0, p1, v4}, Lvm6;-><init>(Ll88;Lg62;Lje;)V
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_4
+
+    new-instance v3, Ldkg;
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v0, v1, v4, v5}, Ldkg;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    sget-object v5, Lxg5;->a:Lxg5;
+
+    invoke-virtual {v2, v5, v3}, Lsb4;->dispatch(Lqb4;Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v0, v1}, Ll88;->a(Lg88;)V
+
+    :goto_0
+    new-instance v3, Lbii;
+
+    invoke-direct {v3, v2, v0, v1, v4}, Lbii;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {p1, v3}, Lg62;->f(Lnq6;)V
+
+    invoke-virtual {p1}, Lg62;->n()Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    :goto_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

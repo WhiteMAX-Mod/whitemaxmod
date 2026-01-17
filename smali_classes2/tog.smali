@@ -10,11 +10,9 @@
 
 .field public final c:I
 
-.field public final d:I
-
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,8 +22,6 @@
     iput p2, p0, Ltog;->b:I
 
     iput p3, p0, Ltog;->c:I
-
-    iput p4, p0, Ltog;->d:I
 
     return-void
 .end method
@@ -69,25 +65,16 @@
     :cond_3
     iget v0, p0, Ltog;->c:I
 
-    iget v1, p1, Ltog;->c:I
+    iget p1, p1, Ltog;->c:I
 
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Ltog;->d:I
-
-    iget p1, p1, Ltog;->d:I
-
-    if-eq v0, p1, :cond_5
+    if-eq v0, p1, :cond_4
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_5
+    :cond_4
     :goto_1
     const/4 p1, 0x1
 
@@ -107,25 +94,13 @@
 
     mul-int/2addr v0, v1
 
-    const/4 v2, -0x1
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
     iget v2, p0, Ltog;->b:I
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
     move-result v0
 
-    iget v2, p0, Ltog;->c:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    iget v1, p0, Ltog;->d:I
+    iget v1, p0, Ltog;->c:I
 
     invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -139,29 +114,25 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", contrastStatic=-1, primary="
+    const-string v0, ", neutralFade="
 
-    const-string v1, ", secondary="
+    const-string v1, ", themed="
 
-    const-string v2, "TopbarTextDefaultColors(contrast="
+    const-string v2, "TopbarBackgroundDisabledColors(neutral="
 
     iget v3, p0, Ltog;->a:I
 
     iget v4, p0, Ltog;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ", themed="
+    const-string v1, ")"
 
-    const-string v2, ")"
+    iget v2, p0, Ltog;->c:I
 
-    iget v3, p0, Ltog;->c:I
-
-    iget v4, p0, Ltog;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lxd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,74 +1,40 @@
-.class public final synthetic Lsc3;
+.class public interface abstract Lsc3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/ToLongFunction;
-
-
-# instance fields
-.field public final synthetic a:I
-
-
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lsc3;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final applyAsLong(Ljava/lang/Object;)J
+.method public abstract a()J
+.end method
+
+.method public b(J)Z
     .locals 2
 
-    iget v0, p0, Lsc3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lj3b;->a:Lj3b;
-
-    sget-object v1, Lone/me/android/OneMeApplication;->s0:Ly2b;
-
-    invoke-virtual {v0, p1}, Lj3b;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    invoke-interface {p0}, Lsc3;->a()J
 
     move-result-wide v0
 
-    return-wide v0
+    cmp-long v0, v0, p1
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    if-gtz v0, :cond_0
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lsc3;->c()J
 
-    move-result-object p1
+    move-result-wide v0
 
-    check-cast p1, Lxoa;
+    cmp-long p1, p1, v0
 
-    iget-wide v0, p1, Lxoa;->a:J
+    if-gtz p1, :cond_0
 
-    return-wide v0
+    const/4 p1, 0x1
 
-    :pswitch_1
-    check-cast p1, Lrh2;
+    return p1
 
-    iget-wide v0, p1, Lrh2;->a:J
+    :cond_0
+    const/4 p1, 0x0
 
-    return-wide v0
+    return p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public abstract c()J
 .end method

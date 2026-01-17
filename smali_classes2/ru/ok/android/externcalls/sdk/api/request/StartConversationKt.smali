@@ -15,7 +15,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
         "Lsm0;",
-        "Lv2h;",
+        "Lb3h;",
         "AddParamsByExternalOpponentIdsCallback",
         "",
         "AddParamsCallback",

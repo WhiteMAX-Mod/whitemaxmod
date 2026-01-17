@@ -6,18 +6,18 @@
 # instance fields
 .field public final a:J
 
-.field public final b:Lcbg;
+.field public final b:Lnbg;
 
 
 # direct methods
-.method public constructor <init>(JLcbg;)V
+.method public constructor <init>(JLnbg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lkj0;->a:J
 
-    iput-object p3, p0, Lkj0;->b:Lcbg;
+    iput-object p3, p0, Lkj0;->b:Lnbg;
 
     return-void
 .end method
@@ -56,11 +56,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lkj0;->b:Lcbg;
+    iget-object v1, p0, Lkj0;->b:Lnbg;
 
-    iget-object p1, p1, Lkj0;->b:Lcbg;
+    iget-object p1, p1, Lkj0;->b:Lnbg;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -83,7 +83,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lkj0;->b:Lcbg;
+    iget-object v1, p0, Lkj0;->b:Lnbg;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lkj0;->b:Lcbg;
+    iget-object v1, p0, Lkj0;->b:Lnbg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -1,48 +1,49 @@
-.class public final synthetic Lj0d;
-.super Ljava/lang/Object;
+.class public final Lj0d;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lmm4;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public X:I
 
-.field public final synthetic b:Ljava/lang/Long;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:Ll0d;
+.field public final synthetic o:Lm0d;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLjava/lang/Long;Ll0d;)V
+.method public constructor <init>(Lm0d;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj0d;->o:Lm0d;
 
-    iput-boolean p1, p0, Lj0d;->a:Z
-
-    iput-object p2, p0, Lj0d;->b:Ljava/lang/Long;
-
-    iput-object p3, p0, Lj0d;->c:Ll0d;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lone/me/qrscanner/QrScannerWidget;
+    iput-object p1, p0, Lj0d;->d:Ljava/lang/Object;
 
-    iget-boolean v1, p0, Lj0d;->a:Z
+    iget p1, p0, Lj0d;->X:I
 
-    iget-object v2, p0, Lj0d;->b:Ljava/lang/Long;
+    const/high16 v0, -0x80000000
 
-    iget-object v3, p0, Lj0d;->c:Ll0d;
+    or-int/2addr p1, v0
 
-    invoke-direct {v0, v1, v2, v3}, Lone/me/qrscanner/QrScannerWidget;-><init>(ZLjava/lang/Long;Ll0d;)V
+    iput p1, p0, Lj0d;->X:I
 
-    return-object v0
+    iget-object p1, p0, Lj0d;->o:Lm0d;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lm0d;->c(Lqx5;Lax5;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

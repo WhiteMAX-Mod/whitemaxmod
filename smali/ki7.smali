@@ -1,135 +1,59 @@
 .class public final Lki7;
-.super Lm12;
+.super Lck0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lki7;
+# instance fields
+.field public final b:Lrk4;
+
+.field public c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lrk4;)V
+    .locals 2
 
-    new-instance v0, Lki7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lole;
+    iput-object p1, p0, Lki7;->b:Lrk4;
 
-    const/16 v2, 0x16
+    const-wide/16 v0, -0x1
 
-    invoke-direct {v1, v2}, Lole;-><init>(I)V
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lki7;->b:Lki7;
+    iput-wide v0, p0, Lki7;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lm9h;Lm40;)V
-    .locals 3
+.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Lm12;->a(Lm9h;Lm40;)V
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    instance-of v0, p1, Lji7;
+    move-result-wide p1
 
-    if-eqz v0, :cond_4
+    iget-wide v0, p0, Lki7;->c:J
 
-    check-cast p1, Lji7;
+    sub-long/2addr p1, v0
 
-    invoke-static {}, Lgfa;->e()Lgfa;
+    iget-object p3, p0, Lki7;->b:Lrk4;
 
-    move-result-object v0
+    iput-wide p1, p3, Lrk4;->s:J
 
-    sget-object v1, Lji7;->b:Lta0;
-
-    invoke-interface {p1, v1}, Lmkd;->i(Lta0;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {p1, v1}, Lmkd;->f(Lta0;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    const-class v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
-
-    sget-object v2, Lmz4;->a:Lxp8;
-
-    invoke-virtual {v2, v1}, Lxp8;->s(Ljava/lang/Class;)Ld3d;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const/4 v1, 0x1
-
-    if-eq p1, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lg22;->Q(Landroid/hardware/camera2/CaptureRequest$Key;)Lta0;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v1}, Lgfa;->v(Lta0;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lg22;->Q(Landroid/hardware/camera2/CaptureRequest$Key;)Lta0;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v1}, Lgfa;->v(Lta0;Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_0
-    new-instance p1, Lg22;
-
-    invoke-static {v0}, Lwpb;->c(Lkr3;)Lwpb;
-
-    move-result-object v0
-
-    const/16 v1, 0x9
-
-    invoke-direct {p1, v1, v0}, Ls2e;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p2, p1}, Lm40;->c(Lkr3;)V
+    invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
+.end method
 
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+.method public final g(Ljava/lang/String;)V
+    .locals 2
 
-    const-string p2, "config is not ImageCaptureConfig"
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-wide v0
 
-    throw p1
+    iput-wide v0, p0, Lki7;->c:J
+
+    return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmtb;
+.implements Lytb;
 
 
 # static fields
@@ -34,7 +34,7 @@
 
     new-instance v0, Ljava/io/InputStreamReader;
 
-    sget-object v1, Lrd2;->c:Ljava/nio/charset/Charset;
+    sget-object v1, Lkd2;->c:Ljava/nio/charset/Charset;
 
     invoke-direct {v0, p2, v1}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
 

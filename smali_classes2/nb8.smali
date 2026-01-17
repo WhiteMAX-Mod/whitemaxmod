@@ -1,39 +1,61 @@
-.class public interface abstract Lnb8;
-.super Ljava/lang/Object;
+.class public final Lnb8;
+.super Lo84;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
+
+# instance fields
+.field public X:Ljd8;
+
+.field public Y:Ljava/lang/Object;
+
+.field public Z:Ljava/lang/Throwable;
+
+.field public d:Lfjc;
+
+.field public o:Landroid/net/Uri;
+
+.field public t0:I
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Ltb8;
+
+.field public w0:I
+
+
+# direct methods
+.method public constructor <init>(Ltb8;Lo84;)V
+    .locals 0
+
+    iput-object p1, p0, Lnb8;->v0:Ltb8;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public n()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    instance-of v0, p0, Llb8;
+    iput-object p1, p0, Lnb8;->u0:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget p1, p0, Lnb8;->w0:I
 
-    if-eqz v0, :cond_0
+    const/high16 v0, -0x80000000
 
-    move-object v0, p0
+    or-int/2addr p1, v0
 
-    check-cast v0, Llb8;
+    iput p1, p0, Lnb8;->w0:I
 
-    goto :goto_0
+    iget-object p1, p0, Lnb8;->v0:Ltb8;
 
-    :cond_0
-    move-object v0, v1
+    const/4 v0, 0x0
 
-    :goto_0
-    if-eqz v0, :cond_1
+    invoke-static {p1, v0, v0, p0}, Ltb8;->a(Ltb8;Lfjc;Landroid/net/Uri;Lo84;)Ljava/lang/Object;
 
-    invoke-interface {v0}, Llb8;->n()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
-    return-object v1
+    return-object p1
 .end method

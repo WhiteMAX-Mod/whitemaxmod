@@ -16,16 +16,8 @@
     k = 0x2
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
 .end annotation
-
-
-# direct methods
-.method public static synthetic LocalAtomicInt$annotations()V
-    .locals 0
-
-    return-void
-.end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmm4;
+.implements Lnm4;
 
 
 # instance fields
@@ -57,7 +57,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;-><init>(Landroid/os/Bundle;ILro4;)V
+    invoke-direct {v0, v1, v2, v1}, Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;-><init>(Landroid/os/Bundle;ILso4;)V
 
     return-object v0
 
@@ -68,7 +68,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lone/me/settings/devices/SettingsDevicesScreen;-><init>(Landroid/os/Bundle;ILro4;)V
+    invoke-direct {v0, v1, v2, v1}, Lone/me/settings/devices/SettingsDevicesScreen;-><init>(Landroid/os/Bundle;ILso4;)V
 
     return-object v0
 
@@ -194,14 +194,14 @@
     :pswitch_15
     new-instance v0, Lone/me/contactlist/ContactListWidget;
 
-    sget-object v1, Ly24;->a:Ly24;
+    sget-object v1, Lc34;->a:Lc34;
 
-    invoke-direct {v0, v1}, Lone/me/contactlist/ContactListWidget;-><init>(Ly24;)V
+    invoke-direct {v0, v1}, Lone/me/contactlist/ContactListWidget;-><init>(Lc34;)V
 
     return-object v0
 
     :pswitch_16
-    new-instance v0, Lj54;
+    new-instance v0, Lp54;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 

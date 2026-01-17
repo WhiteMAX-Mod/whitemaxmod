@@ -1,154 +1,60 @@
 .class public final La14;
-.super Lxbg;
+.super Lc14;
 .source "SourceFile"
 
 # interfaces
-.implements Lll8;
+.implements Lxk8;
 
 
-# instance fields
-.field public final c:Ljava/util/List;
+# static fields
+.field public static final B0:La14;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 21
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, La14;
 
-    iput-object p1, p0, La14;->c:Ljava/util/List;
+    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [I
+
+    const-string v20, ""
+
+    move-object/from16 v19, v1
+
+    const-wide/16 v1, 0x0
+
+    const-wide/16 v3, 0x0
+
+    const-string v5, ""
+
+    const-string v6, ""
+
+    const-wide/16 v8, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const/4 v12, 0x2
+
+    const/4 v13, 0x1
+
+    const-string v15, ""
+
+    const-string v16, ""
+
+    const-string v17, ""
+
+    const/16 v18, 0x0
+
+    move-object v14, v7
+
+    invoke-direct/range {v0 .. v20}, Lc14;-><init>(JJLjava/lang/String;Ljava/lang/String;Ljava/util/List;JJIILjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lm38;[ILjava/lang/String;)V
+
+    sput-object v0, La14;->B0:La14;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(ZZ)Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CONTACT_INFO.Response(contacts="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, La14;->c:Ljava/util/List;
-
-    invoke-static {v1, p1, p2}, Lu4j;->e(Ljava/util/List;ZZ)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p1, 0x29
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, La14;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, La14;
-
-    iget-object v1, p0, La14;->c:Ljava/util/List;
-
-    iget-object p1, p1, La14;->c:Ljava/util/List;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final f()Ljava/util/List;
-    .locals 5
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v1, p0, La14;->c:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Lx04;
-
-    sget-object v4, Lv04;->A0:Lv04;
-
-    if-eq v3, v4, :cond_0
-
-    invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, La14;->c:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v0}, La14;->a(ZZ)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

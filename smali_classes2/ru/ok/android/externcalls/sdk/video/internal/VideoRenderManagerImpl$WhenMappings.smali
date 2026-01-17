@@ -32,7 +32,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lwph;->values()[Lwph;
+    invoke-static {}, Lsqh;->values()[Lsqh;
 
     move-result-object v0
 

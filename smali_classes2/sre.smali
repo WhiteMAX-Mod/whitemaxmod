@@ -1,88 +1,103 @@
 .class public final Lsre;
-.super Llqe;
+.super Lnse;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic h:I
+
+.field public final i:Ljm9;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Ljm9;I)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lsre;->h:I
 
-    iput-wide p1, p0, Lsre;->b:J
+    packed-switch p2, :pswitch_data_0
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p0, v0, v1}, Lnse;-><init>(J)V
+
+    iput-object p1, p0, Lsre;->i:Ljm9;
 
     return-void
+
+    :pswitch_0
+    iget-wide v0, p1, Ljm9;->Z:J
+
+    invoke-direct {p0, v0, v1}, Lnse;-><init>(J)V
+
+    iput-object p1, p0, Lsre;->i:Ljm9;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final u()V
-    .locals 5
+.method public final a()Lose;
+    .locals 1
 
-    invoke-virtual {p0}, Llqe;->b()Lch2;
+    iget v0, p0, Lsre;->h:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Lfse;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0, p0}, Lfse;-><init>(Lsre;)V
 
-    const-string v2, "storeChatFromCache chatId = "
+    return-object v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    new-instance v0, Ltre;
 
-    iget-wide v2, p0, Lsre;->b:J
+    invoke-direct {v0, p0}, Ltre;-><init>(Lsre;)V
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    return-object v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    nop
 
-    move-result-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const-string v4, "ch2"
+.method public b(Lnw4;)Lnse;
+    .locals 1
 
-    invoke-static {v4, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    iget v0, p0, Lsre;->h:I
 
-    invoke-virtual {v0, v2, v3}, Lch2;->K(J)Lai2;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v1
+    invoke-super {p0, p1}, Lnse;->b(Lnw4;)Lnse;
 
-    if-nez v1, :cond_0
+    return-object p0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :pswitch_0
+    const-string p1, "fse"
 
-    const-string v1, "storeChatFromCache, chatId = "
+    const-string v0, "try to set delayed attrs in builder"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-object p1, p0, Lnse;->f:Lnw4;
 
-    move-result-object v0
+    return-object p0
 
-    invoke-static {v4, v0}, Lm4j;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    iget-object v1, v1, Lai2;->b:Lzh2;
-
-    iget-object v0, v0, Lch2;->m:Lg35;
-
-    invoke-virtual {v0}, Lg35;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lii4;
-
-    iget-object v0, v0, Lii4;->b:Lw0e;
-
-    invoke-virtual {v0, v2, v3, v1}, Lw0e;->g(JLzh2;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

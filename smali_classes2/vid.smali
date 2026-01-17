@@ -1,92 +1,129 @@
 .class public final Lvid;
-.super Ljava/lang/Object;
+.super Lyid;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final a:J
 
-.field public final synthetic b:Lnb5;
-
-.field public final synthetic c:F
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lnb5;F)V
+.method public constructor <init>(JLjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvid;->a:Landroid/view/View;
+    iput-wide p1, p0, Lvid;->a:J
 
-    iput-object p2, p0, Lvid;->b:Lnb5;
-
-    iput p3, p0, Lvid;->c:F
+    iput-object p3, p0, Lvid;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lvid;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvid;
+
+    iget-wide v3, p0, Lvid;->a:J
+
+    iget-wide v5, p1, Lvid;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lvid;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lvid;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    return-void
+    iget-wide v0, p0, Lvid;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lvid;->b:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return-void
-.end method
+    const-string v0, "Processing(messageId="
 
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
+    const-string v1, ", attachId="
 
-    return-void
-.end method
+    iget-wide v2, p0, Lvid;->a:J
 
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 3
+    iget-object v4, p0, Lvid;->b:Ljava/lang/String;
 
-    new-instance p1, Lsjf;
+    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lvid;->a:Landroid/view/View;
+    move-result-object v0
 
-    iget-object v1, p0, Lvid;->b:Lnb5;
+    const-string v1, ")"
 
-    iget v2, p0, Lvid;->c:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v0, v1, v2}, Lsjf;-><init>(Ljava/lang/Object;Leg0;F)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    iput v0, p1, Lsjf;->a:F
-
-    new-instance v0, Ltjf;
-
-    invoke-direct {v0, v2}, Ltjf;-><init>(F)V
-
-    const/high16 v1, 0x43c80000    # 400.0f
-
-    invoke-virtual {v0, v1}, Ltjf;->b(F)V
-
-    const v1, 0x3f2e147b    # 0.68f
-
-    invoke-virtual {v0, v1}, Ltjf;->a(F)V
-
-    iput-object v0, p1, Lsjf;->m:Ltjf;
-
-    invoke-virtual {p1}, Lsjf;->g()V
-
-    return-void
+    return-object v0
 .end method

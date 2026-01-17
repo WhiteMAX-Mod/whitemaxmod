@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/record/RecordManager;
-.implements Lmr1;
-.implements Ldn1;
+.implements Lfr1;
+.implements Lxm1;
 
 
 # annotations
@@ -22,9 +22,9 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;",
         "Lru/ok/android/externcalls/sdk/record/RecordManager;",
-        "Lmr1;",
-        "Ldn1;",
-        "Lcgd;",
+        "Lfr1;",
+        "Lxm1;",
+        "Lahd;",
         "logger",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "participantStore",
@@ -37,28 +37,28 @@
         "Lru/ok/android/externcalls/sdk/events/RecordEventListener;",
         "deprecatedRecordListener",
         "<init>",
-        "(Lcgd;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lru/ok/android/externcalls/sdk/events/RecordEventListener;)V",
-        "Lkte;",
+        "(Lahd;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lru/ok/android/externcalls/sdk/events/RecordEventListener;)V",
+        "Lnue;",
         "oldRoomId",
         "newRoomId",
-        "Lv2h;",
+        "Lb3h;",
         "notifyListenersWhenActiveRoomChanged",
-        "(Lkte;Lkte;)V",
-        "Lbn1;",
+        "(Lnue;Lnue;)V",
+        "Lvm1;",
         "info",
         "applyRecordStarted",
-        "(Lbn1;)V",
-        "Lzm1;",
+        "(Lvm1;)V",
+        "Ltm1;",
         "Lru/ok/android/externcalls/sdk/record/RecordDescription;",
         "toRecordDescription",
-        "(Lzm1;)Lru/ok/android/externcalls/sdk/record/RecordDescription;",
+        "(Ltm1;)Lru/ok/android/externcalls/sdk/record/RecordDescription;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "initiatorId",
         "sessionRoomId",
         "current",
         "setMyRecordHistory",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lru/ok/android/externcalls/sdk/record/RecordDescription;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Lru/ok/android/externcalls/sdk/record/RecordDescription;)V",
         "reportStarted",
         "()V",
         "whoStoppedRecordId",
@@ -72,10 +72,10 @@
         "addRecordListener",
         "(Lru/ok/android/externcalls/sdk/events/RecordEventListener;)V",
         "removeRecordListener",
-        "Lir1;",
+        "Lbr1;",
         "params",
         "onCurrentParticipantActiveRoomChanged",
-        "(Lir1;)V",
+        "(Lbr1;)V",
         "Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;",
         "Lkotlin/Function0;",
         "onSuccess",
@@ -83,10 +83,10 @@
         "",
         "onError",
         "startRecord",
-        "(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lmq6;Loq6;)V",
+        "(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Llq6;Lnq6;)V",
         "Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;",
         "stopRecord",
-        "(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lmq6;Loq6;)V",
+        "(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Llq6;Lnq6;)V",
         "getRecordDescription",
         "()Lru/ok/android/externcalls/sdk/record/RecordDescription;",
         "",
@@ -96,21 +96,21 @@
         "getRecordAdmin",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "onRecordStarted",
-        "Lcn1;",
+        "Lwm1;",
         "onRecordStopped",
-        "(Lcn1;)V",
-        "Lan1;",
+        "(Lwm1;)V",
+        "Lum1;",
         "onRecordError",
-        "(Lan1;)V",
-        "Lcgd;",
+        "(Lum1;)V",
+        "Lahd;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;",
         "Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "Lru/ok/android/externcalls/sdk/events/RecordEventListener;",
-        "Lbnd;",
+        "Lxnd;",
         "commandParamsCreator",
-        "Lbnd;",
+        "Lxnd;",
         "Ljava/util/concurrent/CopyOnWriteArraySet;",
         "listeners",
         "Ljava/util/concurrent/CopyOnWriteArraySet;",
@@ -120,7 +120,7 @@
         "Ljava/util/HashMap;",
         "sessionRoomToRecordInfoHistory",
         "activeRoomId",
-        "Lkte;",
+        "Lnue;",
         "Companion",
         "calls-sdk_release"
     }
@@ -143,9 +143,9 @@
 
 
 # instance fields
-.field private activeRoomId:Lkte;
+.field private activeRoomId:Lnue;
 
-.field private final commandParamsCreator:Lbnd;
+.field private final commandParamsCreator:Lxnd;
 
 .field private final deprecatedRecordListener:Lru/ok/android/externcalls/sdk/events/RecordEventListener;
 
@@ -163,7 +163,7 @@
     .end annotation
 .end field
 
-.field private final logger:Lcgd;
+.field private final logger:Lahd;
 
 .field private final participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
@@ -171,7 +171,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
-            "Lkte;",
+            "Lnue;",
             "Lru/ok/android/externcalls/sdk/record/RecordDescription;",
             ">;"
         }
@@ -182,7 +182,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
-            "Lkte;",
+            "Lnue;",
             "Lru/ok/android/externcalls/sdk/record/RecordDescriptionHistory;",
             ">;"
         }
@@ -200,19 +200,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->Companion:Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcgd;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lru/ok/android/externcalls/sdk/events/RecordEventListener;)V
+.method public constructor <init>(Lahd;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lru/ok/android/externcalls/sdk/events/RecordEventListener;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->logger:Lcgd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->logger:Lahd;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
@@ -224,11 +224,11 @@
 
     iput-object p6, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->deprecatedRecordListener:Lru/ok/android/externcalls/sdk/events/RecordEventListener;
 
-    new-instance p1, Lbnd;
+    new-instance p1, Lxnd;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->commandParamsCreator:Lbnd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->commandParamsCreator:Lxnd;
 
     new-instance p1, Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -248,29 +248,29 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->sessionRoomToRecordInfoHistory:Ljava/util/HashMap;
 
-    sget-object p1, Lite;->a:Lite;
+    sget-object p1, Llue;->a:Llue;
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
     return-void
 .end method
 
-.method public static synthetic a(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Loq6;Lorg/json/JSONObject;)V
+.method public static synthetic a(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lnq6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->stopRecord$lambda$3(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Loq6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->stopRecord$lambda$3(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lnq6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private final applyRecordStarted(Lbn1;)V
+.method private final applyRecordStarted(Lvm1;)V
     .locals 2
 
-    iget-object v0, p1, Lbn1;->b:Lzm1;
+    iget-object v0, p1, Lvm1;->b:Ltm1;
 
-    iget-object p1, p1, Lbn1;->a:Lkte;
+    iget-object p1, p1, Lvm1;->a:Lnue;
 
-    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->toRecordDescription(Lzm1;)Lru/ok/android/externcalls/sdk/record/RecordDescription;
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->toRecordDescription(Ltm1;)Lru/ok/android/externcalls/sdk/record/RecordDescription;
 
     move-result-object v0
 
@@ -283,15 +283,15 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1, p1, v0}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->setMyRecordHistory(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lru/ok/android/externcalls/sdk/record/RecordDescription;)V
+    invoke-direct {p0, v1, p1, v0}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->setMyRecordHistory(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Lru/ok/android/externcalls/sdk/record/RecordDescription;)V
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->sessionRoomToRecordInfo:Ljava/util/HashMap;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -304,26 +304,26 @@
     return-void
 .end method
 
-.method public static synthetic b(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lbn1;)V
+.method public static synthetic b(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lvm1;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->onRecordStarted$lambda$4(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lbn1;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->onRecordStarted$lambda$4(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lvm1;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lmq6;Lorg/json/JSONObject;)V
+.method public static synthetic c(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Llq6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->stopRecord$lambda$2(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lmq6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->stopRecord$lambda$2(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Llq6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic d(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Loq6;Lorg/json/JSONObject;)V
+.method public static synthetic d(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lnq6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->startRecord$lambda$1(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Loq6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->startRecord$lambda$1(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lnq6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -336,15 +336,15 @@
     return-void
 .end method
 
-.method public static synthetic f(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lmq6;Lorg/json/JSONObject;)V
+.method public static synthetic f(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Llq6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->startRecord$lambda$0(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lmq6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->startRecord$lambda$0(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Llq6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private final notifyListenersWhenActiveRoomChanged(Lkte;Lkte;)V
+.method private final notifyListenersWhenActiveRoomChanged(Lnue;Lnue;)V
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->sessionRoomToRecordInfo:Ljava/util/HashMap;
@@ -392,10 +392,10 @@
     return-void
 .end method
 
-.method private static final onRecordStarted$lambda$4(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lbn1;)V
+.method private static final onRecordStarted$lambda$4(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lvm1;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->applyRecordStarted(Lbn1;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->applyRecordStarted(Lvm1;)V
 
     return-void
 .end method
@@ -403,13 +403,13 @@
 .method private static final onRecordStarted$lambda$5(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;)V
     .locals 2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->logger:Lcgd;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->logger:Lahd;
 
     const-string v0, "RecordManagerImpl"
 
     const-string v1, "Can\'t resolve internal id"
 
-    invoke-interface {p0, v0, v1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, v0, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -530,7 +530,7 @@
     return-void
 .end method
 
-.method private final setMyRecordHistory(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lru/ok/android/externcalls/sdk/record/RecordDescription;)V
+.method private final setMyRecordHistory(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Lru/ok/android/externcalls/sdk/record/RecordDescription;)V
     .locals 3
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
@@ -553,7 +553,7 @@
     move-object v0, v1
 
     :goto_0
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -584,16 +584,16 @@
     return-void
 .end method
 
-.method private static final startRecord$lambda$0(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lmq6;Lorg/json/JSONObject;)V
+.method private static final startRecord$lambda$0(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Llq6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getOnSuccess()Loq6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getOnSuccess()Lnq6;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getOnSuccess()Loq6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getOnSuccess()Lnq6;
 
     move-result-object p0
 
@@ -601,20 +601,20 @@
 
     invoke-direct {p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartRecordInfo;-><init>()V
 
-    invoke-interface {p0, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_0
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
     :cond_1
     return-void
 .end method
 
-.method private static final startRecord$lambda$1(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Loq6;Lorg/json/JSONObject;)V
+.method private static final startRecord$lambda$1(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lnq6;Lorg/json/JSONObject;)V
     .locals 2
 
     const-string v0, "type"
@@ -640,7 +640,7 @@
     invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->reportError(Ljava/lang/String;)V
 
     :cond_0
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getOnError()Loq6;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getOnError()Lnq6;
 
     move-result-object p0
 
@@ -670,16 +670,16 @@
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p2, p0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
     return-void
 .end method
 
-.method private static final stopRecord$lambda$2(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lmq6;Lorg/json/JSONObject;)V
+.method private static final stopRecord$lambda$2(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Llq6;Lorg/json/JSONObject;)V
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getOnSuccess()Loq6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getOnSuccess()Lnq6;
 
     move-result-object v0
 
@@ -705,7 +705,7 @@
 
     const-string p2, "record.remove_unsupported"
 
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -729,7 +729,7 @@
     sget-object p1, Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;->NOT_REQUESTED:Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;
 
     :goto_0
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getOnSuccess()Loq6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getOnSuccess()Lnq6;
 
     move-result-object p0
 
@@ -737,20 +737,20 @@
 
     invoke-direct {p2, p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo;-><init>(Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;)V
 
-    invoke-interface {p0, p2}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_3
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
     :cond_4
     return-void
 .end method
 
-.method private static final stopRecord$lambda$3(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Loq6;Lorg/json/JSONObject;)V
+.method private static final stopRecord$lambda$3(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lnq6;Lorg/json/JSONObject;)V
     .locals 2
 
     const-string v0, "type"
@@ -776,7 +776,7 @@
     invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->reportError(Ljava/lang/String;)V
 
     :cond_0
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getOnError()Loq6;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getOnError()Lnq6;
 
     move-result-object p0
 
@@ -806,20 +806,20 @@
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p2, p0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
     return-void
 .end method
 
-.method private final toRecordDescription(Lzm1;)Lru/ok/android/externcalls/sdk/record/RecordDescription;
+.method private final toRecordDescription(Ltm1;)Lru/ok/android/externcalls/sdk/record/RecordDescription;
     .locals 9
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v1, p1, Lzm1;->c:Lzk1;
+    iget-object v1, p1, Ltm1;->c:Lsk1;
 
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v0
 
@@ -842,9 +842,9 @@
     :goto_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    iget-object v1, p1, Lzm1;->c:Lzk1;
+    iget-object v1, p1, Ltm1;->c:Lsk1;
 
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByInternal(Lsk1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v0
 
@@ -857,17 +857,17 @@
     :goto_1
     new-instance v0, Lru/ok/android/externcalls/sdk/record/RecordDescription;
 
-    iget-object v2, p1, Lzm1;->b:Lzpd;
+    iget-object v2, p1, Ltm1;->b:Lvqd;
 
-    iget-wide v3, p1, Lzm1;->d:J
+    iget-wide v3, p1, Ltm1;->d:J
 
-    iget-wide v5, p1, Lzm1;->a:J
+    iget-wide v5, p1, Ltm1;->a:J
 
-    iget-object v7, p1, Lzm1;->e:Ljava/lang/String;
+    iget-object v7, p1, Ltm1;->e:Ljava/lang/String;
 
-    iget-object v8, p1, Lzm1;->f:Ljava/lang/String;
+    iget-object v8, p1, Ltm1;->f:Ljava/lang/String;
 
-    invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/record/RecordDescription;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzpd;JJLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/record/RecordDescription;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvqd;JJLjava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -889,7 +889,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->sessionRoomToRecordInfo:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -916,7 +916,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->sessionRoomToRecordInfo:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -933,7 +933,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lkte;",
+            "Lnue;",
             "Lru/ok/android/externcalls/sdk/record/RecordDescriptionHistory;",
             ">;"
         }
@@ -944,14 +944,14 @@
     return-object v0
 .end method
 
-.method public onCurrentParticipantActiveRoomChanged(Lir1;)V
+.method public onCurrentParticipantActiveRoomChanged(Lbr1;)V
     .locals 1
 
-    iget-object p1, p1, Lir1;->a:Lkte;
+    iget-object p1, p1, Lbr1;->a:Lnue;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -960,47 +960,47 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
-    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->notifyListenersWhenActiveRoomChanged(Lkte;Lkte;)V
+    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->notifyListenersWhenActiveRoomChanged(Lnue;Lnue;)V
 
     return-void
 .end method
 
-.method public bridge synthetic onCurrentParticipantInvitedToRoom(Ljr1;)V
+.method public bridge synthetic onCurrentParticipantInvitedToRoom(Lcr1;)V
     .locals 0
 
     return-void
 .end method
 
-.method public onRecordError(Lan1;)V
+.method public onRecordError(Lum1;)V
     .locals 0
 
-    iget-object p1, p1, Lan1;->a:Ljava/lang/String;
+    iget-object p1, p1, Lum1;->a:Ljava/lang/String;
 
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->reportError(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public onRecordStarted(Lbn1;)V
+.method public onRecordStarted(Lvm1;)V
     .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v1, p1, Lbn1;->b:Lzm1;
+    iget-object v1, p1, Lvm1;->b:Ltm1;
 
-    iget-object v1, v1, Lzm1;->c:Lzk1;
+    iget-object v1, v1, Ltm1;->c:Lsk1;
 
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->applyRecordStarted(Lbn1;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->applyRecordStarted(Lvm1;)V
 
     return-void
 
@@ -1011,29 +1011,29 @@
 
     move-result-object v1
 
-    new-instance v2, Llgc;
+    new-instance v2, Lbhc;
 
-    const/16 v3, 0x9
+    const/16 v3, 0xb
 
-    invoke-direct {v2, p0, v3, p1}, Llgc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v3, p1}, Lbhc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance p1, Lc9b;
+    new-instance p1, Lk9b;
 
-    const/16 v3, 0xf
+    const/16 v3, 0x10
 
-    invoke-direct {p1, v3, p0}, Lc9b;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v3, p0}, Lk9b;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {v0, v1, v2, p1}, Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;->resolveExternalsByInternalsIds(Ljava/util/List;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public onRecordStopped(Lcn1;)V
+.method public onRecordStopped(Lwm1;)V
     .locals 3
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->sessionRoomToRecordInfo:Ljava/util/HashMap;
 
-    iget-object v1, p1, Lcn1;->a:Lkte;
+    iget-object v1, p1, Lwm1;->a:Lnue;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1055,27 +1055,27 @@
     move-object v0, v2
 
     :goto_0
-    invoke-direct {p0, v0, v1, v2}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->setMyRecordHistory(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lru/ok/android/externcalls/sdk/record/RecordDescription;)V
+    invoke-direct {p0, v0, v1, v2}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->setMyRecordHistory(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Lru/ok/android/externcalls/sdk/record/RecordDescription;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->sessionRoomToRecordInfo:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
-    invoke-static {v1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    iget-object p1, p1, Lcn1;->b:Lzk1;
+    iget-object p1, p1, Lwm1;->b:Lsk1;
 
     if-eqz p1, :cond_1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object p1
 
@@ -1098,13 +1098,13 @@
     return-void
 .end method
 
-.method public bridge synthetic onRoomRemoved(Lkr1;)V
+.method public bridge synthetic onRoomRemoved(Ldr1;)V
     .locals 0
 
     return-void
 .end method
 
-.method public bridge synthetic onRoomUpdated(Llr1;)V
+.method public bridge synthetic onRoomUpdated(Ler1;)V
     .locals 0
 
     return-void
@@ -1120,14 +1120,14 @@
     return-void
 .end method
 
-.method public startRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lmq6;Loq6;)V
+.method public startRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Llq6;Lnq6;)V
     .locals 21
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;",
-            "Lmq6;",
-            "Loq6;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -1140,7 +1140,7 @@
 
     iget-object v3, v1, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-static {v3, v2}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Loq6;)Lmaf;
+    invoke-static {v3, v2}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lnq6;)Lqbf;
 
     move-result-object v3
 
@@ -1149,7 +1149,7 @@
     return-void
 
     :cond_0
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->commandParamsCreator:Lbnd;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->commandParamsCreator:Lxnd;
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->isStream()Z
 
@@ -1159,13 +1159,13 @@
 
     move-result-object v6
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getSessionRoomId()Lkte;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getSessionRoomId()Lnue;
 
     move-result-object v7
 
     if-nez v7, :cond_1
 
-    iget-object v7, v1, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iget-object v7, v1, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
     :cond_1
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;->getGroupId()Ljava/lang/Long;
@@ -1328,21 +1328,21 @@
 
     move-result-object v5
 
-    invoke-static {v5, v4}, Lsoj;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lpv6;
+    invoke-static {v5, v4}, Lspj;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lnv6;
 
     move-result-object v4
 
-    instance-of v5, v7, Ljte;
+    instance-of v5, v7, Lmue;
 
     if-eqz v5, :cond_3
 
     const-string v5, "roomId"
 
-    check-cast v7, Ljte;
+    check-cast v7, Lmue;
 
-    iget v6, v7, Ljte;->a:I
+    iget v6, v7, Lmue;->a:I
 
-    invoke-virtual {v4, v6, v5}, Lpv6;->b(ILjava/lang/String;)V
+    invoke-virtual {v4, v6, v5}, Lnv6;->b(ILjava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1355,23 +1355,23 @@
 
     :cond_3
     :goto_0
-    new-instance v5, Lypd;
+    new-instance v5, Luqd;
 
     const/4 v6, 0x1
 
     move-object/from16 v7, p2
 
-    invoke-direct {v5, v0, v7, v6}, Lypd;-><init>(Ljava/lang/Object;Lmq6;I)V
+    invoke-direct {v5, v0, v7, v6}, Luqd;-><init>(Ljava/lang/Object;Llq6;I)V
 
-    new-instance v6, Le11;
+    new-instance v6, Ly01;
 
     const/4 v7, 0x5
 
-    invoke-direct {v6, v1, v0, v2, v7}, Le11;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v6, v1, v0, v2, v7}, Ly01;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     const/4 v0, 0x0
 
-    invoke-virtual {v3, v4, v0, v5, v6}, Lmaf;->d(Lqaf;ZLjaf;Ljaf;)V
+    invoke-virtual {v3, v4, v0, v5, v6}, Lqbf;->d(Lubf;ZLnbf;Lnbf;)V
 
     return-void
 
@@ -1383,21 +1383,21 @@
     throw v2
 .end method
 
-.method public stopRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lmq6;Loq6;)V
+.method public stopRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Llq6;Lnq6;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;",
-            "Lmq6;",
-            "Loq6;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-static {v0, p3}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Loq6;)Lmaf;
+    invoke-static {v0, p3}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lnq6;)Lqbf;
 
     move-result-object v0
 
@@ -1406,15 +1406,15 @@
     return-void
 
     :cond_0
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->commandParamsCreator:Lbnd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->commandParamsCreator:Lxnd;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getSessionRoomId()Lkte;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getSessionRoomId()Lnue;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lkte;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->activeRoomId:Lnue;
 
     :cond_1
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;->getRemoveRecord()Z
@@ -1427,27 +1427,27 @@
 
     const-string v4, "record-stop"
 
-    invoke-static {v1, v4}, Lsoj;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lpv6;
+    invoke-static {v1, v4}, Lspj;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lnv6;
 
     move-result-object v1
 
-    iget-object v5, v1, Lpv6;->a:Lorg/json/JSONObject;
+    iget-object v5, v1, Lnv6;->a:Lorg/json/JSONObject;
 
     const-string v6, "command"
 
     invoke-virtual {v5, v6, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    instance-of v4, v2, Ljte;
+    instance-of v4, v2, Lmue;
 
     if-eqz v4, :cond_2
 
-    check-cast v2, Ljte;
+    check-cast v2, Lmue;
 
-    iget v2, v2, Ljte;->a:I
+    iget v2, v2, Lmue;->a:I
 
     const-string v4, "roomId"
 
-    invoke-virtual {v1, v2, v4}, Lpv6;->b(ILjava/lang/String;)V
+    invoke-virtual {v1, v2, v4}, Lnv6;->b(ILjava/lang/String;)V
 
     :cond_2
     if-eqz v3, :cond_3
@@ -1457,21 +1457,21 @@
     invoke-virtual {v5, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     :cond_3
-    new-instance v2, Lypd;
+    new-instance v2, Luqd;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p1, p2, v3}, Lypd;-><init>(Ljava/lang/Object;Lmq6;I)V
+    invoke-direct {v2, p1, p2, v3}, Luqd;-><init>(Ljava/lang/Object;Llq6;I)V
 
-    new-instance p2, Le11;
+    new-instance p2, Ly01;
 
     const/4 v3, 0x4
 
-    invoke-direct {p2, p0, p1, p3, v3}, Le11;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {p2, p0, p1, p3, v3}, Ly01;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {v0, v1, p1, v2, p2}, Lmaf;->d(Lqaf;ZLjaf;Ljaf;)V
+    invoke-virtual {v0, v1, p1, v2, p2}, Lqbf;->d(Lubf;ZLnbf;Lnbf;)V
 
     return-void
 .end method

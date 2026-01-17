@@ -1,41 +1,67 @@
-.class public final Lc49;
+.class public interface abstract Lc49;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:J
-
-.field public b:J
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/high16 v0, -0x8000000000000000L
-
-    iput-wide v0, p0, Lc49;->b:J
-
-    return-void
-.end method
+# interfaces
+.implements Lud8;
 
 
 # virtual methods
-.method public final a()Lg49;
-    .locals 1
+.method public h(Lud8;)Z
+    .locals 4
 
-    new-instance v0, Lg49;
+    instance-of v0, p1, Lc49;
 
-    invoke-direct {v0, p0}, Le49;-><init>(Lc49;)V
+    if-nez v0, :cond_0
 
-    return-object v0
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p0}, Lc49;->j()J
+
+    move-result-wide v0
+
+    check-cast p1, Lc49;
+
+    invoke-interface {p1}, Lc49;->j()J
+
+    move-result-wide v2
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p0}, Lc49;->i()J
+
+    move-result-wide v0
+
+    invoke-interface {p1}, Lc49;->i()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public abstract i()J
+.end method
+
+.method public abstract j()J
+.end method
+
+.method public abstract v()Ly00;
+.end method
+
+.method public abstract w()Ljava/lang/String;
 .end method

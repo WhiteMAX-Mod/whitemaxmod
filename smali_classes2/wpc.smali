@@ -1,245 +1,154 @@
 .class public final Lwpc;
-.super Lvbf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final o:Lone/me/profile/screens/invite/ProfileInviteScreen;
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:La0c;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lone/me/profile/screens/invite/ProfileInviteScreen;)V
+.method public constructor <init>(JJLa0c;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lvbf;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lwpc;->o:Lone/me/profile/screens/invite/ProfileInviteScreen;
+    iput-wide p1, p0, Lwpc;->a:J
+
+    iput-wide p3, p0, Lwpc;->b:J
+
+    iput-object p5, p0, Lwpc;->c:La0c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Ladf;I)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Ldvc;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lwpc;->J(Ldvc;I)V
+    if-ne p0, p1, :cond_0
 
-    return-void
-.end method
-
-.method public final J(Ldvc;I)V
-    .locals 5
-
-    invoke-virtual {p0, p2}, Lbe8;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lie8;
-
-    check-cast p2, Lerc;
-
-    invoke-virtual {p1, p2}, Ladf;->z(Lie8;)V
-
-    instance-of v0, p2, Lxqc;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    instance-of v0, p1, Lkv7;
-
-    if-eqz v0, :cond_0
-
-    move-object v1, p1
-
-    check-cast v1, Lkv7;
+    return v0
 
     :cond_0
-    if-eqz v1, :cond_5
+    instance-of v1, p1, Lwpc;
 
-    new-instance p1, Lg7b;
+    const/4 v2, 0x0
 
-    const/16 v0, 0xe
+    if-nez v1, :cond_1
 
-    invoke-direct {p1, p0, v0, p2}, Lg7b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p2, v1, Lwrd;->a:Landroid/view/View;
-
-    new-instance v0, Lij6;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, p1}, Lij6;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p2, v0}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-void
+    return v2
 
     :cond_1
-    instance-of p2, p2, Lqqc;
+    check-cast p1, Lwpc;
 
-    if-eqz p2, :cond_5
+    iget-wide v3, p0, Lwpc;->a:J
 
-    instance-of p2, p1, Lll2;
+    iget-wide v5, p1, Lwpc;->a:J
 
-    if-eqz p2, :cond_2
+    cmp-long v1, v3, v5
 
-    move-object v0, p1
+    if-eqz v1, :cond_2
 
-    check-cast v0, Lll2;
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    move-object v0, v1
+    iget-wide v3, p0, Lwpc;->b:J
 
-    :goto_0
-    if-eqz v0, :cond_3
+    iget-wide v5, p1, Lwpc;->b:J
 
-    new-instance v2, Lvpc;
+    cmp-long v1, v3, v5
 
-    const/4 v3, 0x0
+    if-eqz v1, :cond_3
 
-    invoke-direct {v2, p0, v3}, Lvpc;-><init>(Lwpc;I)V
-
-    iget-object v0, v0, Lwrd;->a:Landroid/view/View;
-
-    new-instance v3, Lh6;
-
-    const/16 v4, 0xc
-
-    invoke-direct {v3, v4, v2}, Lh6;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v3}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    return v2
 
     :cond_3
-    if-eqz p2, :cond_4
+    iget-object v1, p0, Lwpc;->c:La0c;
 
-    move-object v1, p1
+    iget-object p1, p1, Lwpc;->c:La0c;
 
-    check-cast v1, Lll2;
-
-    :cond_4
-    if-eqz v1, :cond_5
-
-    new-instance p1, Lvpc;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p0, p2}, Lvpc;-><init>(Lwpc;I)V
-
-    iget-object p2, v1, Lwrd;->a:Landroid/view/View;
-
-    check-cast p2, Lil2;
-
-    invoke-virtual {p2, p1}, Lil2;->setOnMoreActionsClickListener(Lmq6;)V
-
-    :cond_5
-    return-void
-.end method
-
-.method public final l(I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lbe8;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lie8;
-
-    check-cast p1, Lerc;
-
-    invoke-interface {p1}, Lie8;->m()I
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public final bridge synthetic r(Lwrd;I)V
-    .locals 0
+.method public final hashCode()I
+    .locals 4
 
-    check-cast p1, Ldvc;
+    iget-wide v0, p0, Lwpc;->a:J
 
-    invoke-virtual {p0, p1, p2}, Lwpc;->J(Ldvc;I)V
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    return-void
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lwpc;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lwpc;->c:La0c;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final t(Landroid/view/ViewGroup;I)Lwrd;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    const v0, 0xfffffff
+    const-string v0, "ProfileEntity(id="
 
-    and-int/2addr v0, p2
+    const-string v1, ", serverId="
 
-    const/16 v1, 0x2000
+    iget-wide v2, p0, Lwpc;->a:J
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance p2, Lkv7;
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-wide v1, p0, Lwpc;->b:J
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lpze;
+    const-string v1, ", profileData="
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v1}, Lpze;-><init>(Landroid/content/Context;I)V
+    iget-object v1, p0, Lwpc;->c:La0c;
 
-    invoke-direct {p2, v0}, Lwrd;-><init>(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p2
+    const-string v1, ")"
 
-    :cond_0
-    const/4 v1, 0x4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance p2, Lq20;
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Lq20;-><init>(Landroid/content/Context;)V
-
-    return-object p2
-
-    :cond_1
-    const/16 v1, 0x4000
-
-    if-ne v0, v1, :cond_2
-
-    new-instance p2, Lll2;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Lil2;
-
-    invoke-direct {v0, p1}, Lil2;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p2, v0}, Lwrd;-><init>(Landroid/view/View;)V
-
-    return-object p2
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "unknown item viewType: "
-
-    invoke-static {p2, v0}, Lq3g;->n(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

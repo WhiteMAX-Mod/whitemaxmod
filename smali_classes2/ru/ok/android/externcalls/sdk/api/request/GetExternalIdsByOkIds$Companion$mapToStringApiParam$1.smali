@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion$mapToStringApiParam$1;
-.super Ln58;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lnq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;->mapToStringApiParam(Ljava/util/List;)Layf;
+    value = Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;->mapToStringApiParam(Ljava/util/List;)Ljzf;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ln58;",
-        "Loq6;"
+        "Ly48;",
+        "Lnq6;"
     }
 .end annotation
 
@@ -28,12 +28,12 @@
         "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\r\n\u0002\u0008\u0003\u0010\u0006\u001a\u00020\u00032\n\u0010\u0002\u001a\u00060\u0000j\u0002`\u0001H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
     }
     d2 = {
-        "Lzk1;",
+        "Lsk1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "it",
         "",
         "invoke",
-        "(Lzk1;)Ljava/lang/CharSequence;",
+        "(Lsk1;)Ljava/lang/CharSequence;",
         "<anonymous>"
     }
     k = 0x3
@@ -67,18 +67,18 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Ln58;-><init>(I)V
+    invoke-direct {p0, v0}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Lzk1;)Ljava/lang/CharSequence;
+.method public final invoke(Lsk1;)Ljava/lang/CharSequence;
     .locals 2
 
     .line 1
-    iget-wide v0, p1, Lzk1;->a:J
+    iget-wide v0, p1, Lsk1;->a:J
 
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -91,9 +91,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lzk1;
+    check-cast p1, Lsk1;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion$mapToStringApiParam$1;->invoke(Lzk1;)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion$mapToStringApiParam$1;->invoke(Lsk1;)Ljava/lang/CharSequence;
 
     move-result-object p1
 

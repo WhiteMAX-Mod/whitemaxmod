@@ -139,7 +139,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/stereo/hands/StereoHandQueueItem;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 

@@ -1,45 +1,21 @@
-.class public final Lqph;
-.super Lf3;
+.class public abstract Lqph;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Z
-
-.field public Y:Z
-
-.field public Z:I
-
-.field public final c:Lhbh;
-
-.field public final d:Lhbh;
-
-.field public o:I
+.field public final a:Li16;
 
 
 # direct methods
-.method public constructor <init>(Lhrg;)V
-    .locals 1
+.method public constructor <init>(Li16;Ljc0;)V
+    .locals 0
 
-    const/16 v0, 0xd
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p1}, Lf3;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p1, Lhbh;
-
-    sget-object v0, Lnsi;->c:[B
-
-    invoke-direct {p1, v0}, Lhbh;-><init>([B)V
-
-    iput-object p1, p0, Lqph;->c:Lhbh;
-
-    new-instance p1, Lhbh;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v0}, Lhbh;-><init>(I)V
-
-    iput-object p1, p0, Lqph;->d:Lhbh;
+    iput-object p1, p0, Lqph;->a:Li16;
 
     return-void
 .end method

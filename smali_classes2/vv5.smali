@@ -1,43 +1,80 @@
-.class public final Lvv5;
+.class public final synthetic Lvv5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
 
 # instance fields
-.field public final a:Ldgb;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljw5;
 
 
 # direct methods
-.method public constructor <init>(Ldgb;)V
+.method public synthetic constructor <init>(Ljw5;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lvv5;->a:I
 
-    iput-object p1, p0, Lvv5;->a:Ldgb;
+    iput-object p1, p0, Lvv5;->b:Ljw5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljdf;
-    .locals 3
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lvv5;->a:Ldgb;
+    iget v0, p0, Lvv5;->a:I
 
-    invoke-virtual {v0}, Ldgb;->B()Lgo3;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lvv5;->b:Ljw5;
 
-    new-instance v1, Lev5;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2}, Lev5;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lbdf;->h(Ldr6;)Ljdf;
+    invoke-virtual {v0}, Ljw5;->c()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lvv5;->b:Ljw5;
+
+    iget-object v0, v0, Ljw5;->a:Lb2e;
+
+    new-instance v1, Lm75;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, v2}, Lm75;-><init>(I)V
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v2, v3, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

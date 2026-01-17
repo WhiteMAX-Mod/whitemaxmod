@@ -3,9 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhr6;
-
-
-# virtual methods
-.method public abstract k(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lja6;)Ljava/lang/Object;
-.end method
+.implements Lgr6;

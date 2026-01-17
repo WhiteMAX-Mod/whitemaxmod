@@ -1,187 +1,216 @@
 .class public final Lpzg;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lszg;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
+.field public final a:Llhg;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:J
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/configuration/TwoFASettingsScreen;)V
-    .locals 0
+.method public constructor <init>(Llhg;)V
+    .locals 3
 
-    iput-object p2, p0, Lpzg;->X:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
+    sget v0, Lfad;->oneme_settings_twofa_configuration_description_item:I
 
-    const/4 p2, 0x2
+    int-to-long v1, v0
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpzg;->a:Llhg;
+
+    iput-wide v1, p0, Lpzg;->b:J
+
+    iput v0, p0, Lpzg;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x4
 
-    invoke-virtual {p0, p1, p2}, Lpzg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpzg;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lpzg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Lpzg;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lpzg;->X:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
-
-    invoke-direct {v0, p2, v1}, Lpzg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/configuration/TwoFASettingsScreen;)V
-
-    iput-object p1, v0, Lpzg;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpzg;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljja;
-
-    iget-object v0, p0, Lpzg;->X:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
-
-    iget-object v0, v0, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;->o:Ljava/lang/Object;
-
-    sget v1, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;->X:I
-
-    instance-of v1, p1, Lem4;
-
-    if-eqz v1, :cond_0
-
-    sget-object v0, Luyg;->c:Luyg;
-
-    check-cast p1, Lem4;
-
-    invoke-virtual {v0, p1}, Lf3;->s0(Lem4;)V
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lmxg;
+    instance-of v0, p1, Lpzg;
 
-    if-eqz v1, :cond_3
-
-    check-cast p1, Lmxg;
-
-    instance-of v1, p1, Llxg;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llu7;
-
-    check-cast p1, Llxg;
-
-    iget-object v7, p1, Llxg;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    const-string v5, "CREATE_PASSWORD"
-
-    const-string v6, "SETTINGS"
-
-    const-string v4, "EDIT"
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v3 .. v8}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnu7;)V
-
-    invoke-static {v3, v2, v2}, Ldmj;->a(Lx84;Lkh;Lkh;)Lz3e;
-
-    move-result-object p1
-
-    const-string v1, "CREATE_PASSWORD"
-
-    invoke-virtual {v0, p1, v1}, Llu7;->a(Lz3e;Ljava/lang/String;)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    instance-of v1, p1, Lkxg;
+    check-cast p1, Lpzg;
 
-    if-eqz v1, :cond_2
+    iget-object v0, p0, Lpzg;->a:Llhg;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    iget-object v1, p1, Lpzg;->a:Llhg;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
 
-    check-cast v0, Llu7;
+    move-result v0
 
-    check-cast p1, Lkxg;
-
-    iget-object v7, p1, Lkxg;->b:Ljava/lang/String;
-
-    iget-object v8, p1, Lkxg;->c:Lnu7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    const-string v5, "ADD_EMAIL"
-
-    const-string v6, "SETTINGS"
-
-    const-string v4, "EDIT"
-
-    invoke-direct/range {v3 .. v8}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnu7;)V
-
-    invoke-static {v3, v2, v2}, Ldmj;->a(Lx84;Lkh;Lkh;)Lz3e;
-
-    move-result-object p1
-
-    const-string v1, "ADD_EMAIL"
-
-    invoke-virtual {v0, p1, v1}, Llu7;->a(Lz3e;Ljava/lang/String;)V
+    if-nez v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    iget-wide v0, p0, Lpzg;->b:J
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget-wide v2, p1, Lpzg;->b:J
 
-    throw p1
+    cmp-long p1, v0, v2
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_3
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    :goto_1
+    const/4 p1, 0x1
 
-    return-object p1
+    return p1
+.end method
+
+.method public final g()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lpzg;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lqhg;
+    .locals 1
+
+    iget-object v0, p0, Lpzg;->a:Llhg;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lpzg;->a:Llhg;
+
+    iget v0, v0, Llhg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v2, v0, v1}, Lpqb;->i(III)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lpzg;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lpzg;->c:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Description(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpzg;->a:Llhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sectionId=0, sectionItemType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Liwd;->j(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", itemId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lpzg;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,25 +1,25 @@
 .class public final Lji9;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lni9;
+.field public final synthetic X:Ljji;
 
 .field public Y:I
 
-.field public d:Ljava/util/List;
+.field public d:Ljava/lang/Object;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lni9;Ll84;)V
+.method public constructor <init>(Ljji;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lji9;->X:Lni9;
+    iput-object p1, p0, Lji9;->X:Ljji;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -39,11 +39,9 @@
 
     iput p1, p0, Lji9;->Y:I
 
-    iget-object p1, p0, Lji9;->X:Lni9;
+    iget-object p1, p0, Lji9;->X:Ljji;
 
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, v0, p0}, Lni9;->s(Lni9;Ljava/util/List;Lkh9;Ll84;)Ljava/lang/Object;
+    invoke-static {p1, p0}, Ljji;->d(Ljji;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

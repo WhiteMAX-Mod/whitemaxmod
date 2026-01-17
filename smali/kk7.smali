@@ -1,49 +1,73 @@
-.class public abstract Lkk7;
-.super Lel7;
+.class public final Lkk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkk7;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Lkk7;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lkk7;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final d()Lrk7;
-    .locals 2
+.method public final a()Ljava/lang/IllegalArgumentException;
+    .locals 5
 
-    new-instance v0, Ljava/lang/AssertionError;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "should never be called"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    const-string v2, "Multiple entries with same key: "
 
-    throw v0
-.end method
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final h()Lrk7;
-    .locals 1
+    iget-object v2, p0, Lkk7;->a:Ljava/lang/Object;
 
-    move-object v0, p0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lktd;
+    const-string v3, "="
 
-    iget-object v0, v0, Lktd;->Z:Lktd;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lel7;->g()Lll7;
+    iget-object v4, p0, Lkk7;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    const-string v4, " and "
 
-.method public final values()Ljava/util/Collection;
-    .locals 1
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v0, p0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lktd;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lktd;->Z:Lktd;
+    iget-object v2, p0, Lkk7;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lel7;->g()Lll7;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method

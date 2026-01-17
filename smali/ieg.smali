@@ -4,467 +4,146 @@
 
 
 # instance fields
-.field public a:Z
-
-.field public b:Lvdg;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public d:Z
-
-.field public final e:Lleg;
-
-.field public final f:Ljava/lang/String;
+.field public final a:Liqj;
 
 
 # direct methods
-.method public constructor <init>(Lleg;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lieg;->e:Lleg;
+    new-instance v0, Liqj;
 
-    iput-object p2, p0, Lieg;->f:Ljava/lang/String;
+    invoke-direct {v0}, Liqj;-><init>()V
 
-    new-instance p1, Ljava/util/ArrayList;
+    iput-object v0, p0, Lieg;->a:Liqj;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Lieg;->c:Ljava/util/ArrayList;
+.method public constructor <init>(Legc;)V
+    .locals 3
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Liqj;
+
+    invoke-direct {v0}, Liqj;-><init>()V
+
+    iput-object v0, p0, Lieg;->a:Liqj;
+
+    new-instance v0, Ld0e;
+
+    invoke-direct {v0, p0}, Ld0e;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 3
+    new-instance v1, Ljbc;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v1, v2, v0}, Ljbc;-><init>(ILjava/lang/Object;)V
+
+    iget-object p1, p1, Legc;->b:Ljava/lang/Object;
+
+    check-cast p1, Liqj;
+
+    sget-object v0, Lneg;->a:Lpw7;
+
+    invoke-virtual {p1, v0, v1}, Liqj;->d(Ljava/util/concurrent/Executor;Lh2b;)Liqj;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final a(Ljava/lang/Exception;)V
+    .locals 1
 
-    sget-object v0, Lpah;->a:[B
+    iget-object v0, p0, Lieg;->a:Liqj;
 
-    iget-object v0, p0, Lieg;->e:Lleg;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Lieg;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lieg;->e:Lleg;
-
-    invoke-virtual {v1, p0}, Lleg;->d(Lieg;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    invoke-virtual {v0, p1}, Liqj;->n(Ljava/lang/Exception;)V
 
     return-void
-
-    :goto_1
-    monitor-exit v0
-
-    throw v1
 .end method
 
-.method public final b()Z
-    .locals 6
+.method public final b(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lieg;->b:Lvdg;
+    iget-object v0, p0, Lieg;->a:Liqj;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, p1}, Liqj;->o(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, v0, Lvdg;->d:Z
-
-    if-eqz v0, :cond_0
-
-    iput-boolean v1, p0, Lieg;->d:Z
-
-    :cond_0
-    iget-object v0, p0, Lieg;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    sub-int/2addr v2, v1
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ltz v2, :cond_3
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lvdg;
-
-    iget-boolean v4, v4, Lvdg;->d:Z
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lvdg;
-
-    sget-object v4, Lleg;->i:Ljava/util/logging/Logger;
-
-    sget-object v5, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
-
-    invoke-virtual {v4, v5}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "canceled"
-
-    invoke-static {v3, p0, v4}, Lnfi;->a(Lvdg;Lieg;Ljava/lang/String;)V
-
-    :cond_1
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move v3, v1
-
-    :cond_2
-    add-int/lit8 v2, v2, -0x1
-
-    goto :goto_0
-
-    :cond_3
-    return v3
+    return-void
 .end method
 
-.method public final c(Lvdg;J)V
-    .locals 2
+.method public final c(Ljava/lang/Exception;)Z
+    .locals 3
 
-    iget-object v0, p0, Lieg;->e:Lleg;
+    iget-object v0, p0, Lieg;->a:Liqj;
 
-    monitor-enter v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v1, "Exception must not be null"
+
+    invoke-static {p1, v1}, Ldkj;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v1, v0, Liqj;->a:Ljava/lang/Object;
+
+    monitor-enter v1
 
     :try_start_0
-    iget-boolean v1, p0, Lieg;->a:Z
+    iget-boolean v2, v0, Liqj;->c:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v2, :cond_0
 
-    iget-boolean p2, p1, Lvdg;->d:Z
+    monitor-exit v1
 
-    if-eqz p2, :cond_1
+    const/4 p1, 0x0
 
-    sget-object p2, Lleg;->i:Ljava/util/logging/Logger;
-
-    sget-object p3, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
-
-    invoke-virtual {p2, p3}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    const-string p2, "schedule canceled (queue is shutdown)"
-
-    invoke-static {p1, p0, p2}, Lnfi;->a(Lvdg;Lieg;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
+    return p1
 
     :catchall_0
     move-exception p1
 
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :cond_1
-    :try_start_1
-    sget-object p2, Lleg;->i:Ljava/util/logging/Logger;
-
-    sget-object p3, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
-
-    invoke-virtual {p2, p3}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    const-string p2, "schedule failed (queue is shutdown)"
-
-    invoke-static {p1, p0, p2}, Lnfi;->a(Lvdg;Lieg;Ljava/lang/String;)V
-
-    :cond_2
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
-
-    invoke-direct {p1}, Ljava/util/concurrent/RejectedExecutionException;-><init>()V
-
-    throw p1
-
-    :cond_3
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p1, p2, p3, v1}, Lieg;->d(Lvdg;JZ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p0, Lieg;->e:Lleg;
-
-    invoke-virtual {p1, p0}, Lleg;->d(Lieg;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :cond_4
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public final d(Lvdg;JZ)Z
-    .locals 10
-
-    iget-object v0, p1, Lvdg;->a:Lieg;
-
-    if-ne v0, p0, :cond_0
-
     goto :goto_0
 
     :cond_0
-    if-nez v0, :cond_9
+    const/4 v2, 0x1
 
-    iput-object p0, p1, Lvdg;->a:Lieg;
+    iput-boolean v2, v0, Liqj;->c:Z
 
-    :goto_0
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    iput-object p1, v0, Liqj;->f:Ljava/lang/Exception;
 
-    move-result-wide v0
-
-    add-long v2, v0, p2
-
-    iget-object v4, p0, Lieg;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result v5
-
-    const/4 v6, 0x0
-
-    const/4 v7, -0x1
-
-    if-eq v5, v7, :cond_2
-
-    iget-wide v8, p1, Lvdg;->b:J
-
-    cmp-long v8, v8, v2
-
-    if-gtz v8, :cond_1
-
-    sget-object p2, Lleg;->i:Ljava/util/logging/Logger;
-
-    sget-object p3, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
-
-    invoke-virtual {p2, p3}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_8
-
-    const-string p2, "already scheduled"
-
-    invoke-static {p1, p0, p2}, Lnfi;->a(Lvdg;Lieg;Ljava/lang/String;)V
-
-    return v6
-
-    :cond_1
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    :cond_2
-    iput-wide v2, p1, Lvdg;->b:J
-
-    sget-object v5, Lleg;->i:Ljava/util/logging/Logger;
-
-    sget-object v8, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
-
-    invoke-virtual {v5, v8}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    if-eqz p4, :cond_3
-
-    sub-long/2addr v2, v0
-
-    invoke-static {v2, v3}, Lnfi;->g(J)Ljava/lang/String;
-
-    move-result-object p4
-
-    const-string v2, "run again after "
-
-    invoke-virtual {v2, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p4
-
-    goto :goto_1
-
-    :cond_3
-    sub-long/2addr v2, v0
-
-    invoke-static {v2, v3}, Lnfi;->g(J)Ljava/lang/String;
-
-    move-result-object p4
-
-    const-string v2, "scheduled after "
-
-    invoke-virtual {v2, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p4
-
-    :goto_1
-    invoke-static {p1, p0, p4}, Lnfi;->a(Lvdg;Lieg;Ljava/lang/String;)V
-
-    :cond_4
-    invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p4
-
-    move v2, v6
-
-    :goto_2
-    invoke-interface {p4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    invoke-interface {p4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lvdg;
-
-    iget-wide v8, v3, Lvdg;->b:J
-
-    sub-long/2addr v8, v0
-
-    cmp-long v3, v8, p2
-
-    if-lez v3, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_6
-    move v2, v7
-
-    :goto_3
-    if-ne v2, v7, :cond_7
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    :cond_7
-    invoke-virtual {v4, v2, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    if-nez v2, :cond_8
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_8
-    return v6
-
-    :cond_9
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "task is in multiple queues"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final e()V
-    .locals 2
-
-    sget-object v0, Lpah;->a:[B
-
-    iget-object v0, p0, Lieg;->e:Lleg;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput-boolean v1, p0, Lieg;->a:Z
-
-    invoke-virtual {p0}, Lieg;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lieg;->e:Lleg;
-
-    invoke-virtual {v1, p0}, Lleg;->d(Lieg;)V
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    iget-object p1, v0, Liqj;->b:Lvd;
 
-    :catchall_0
-    move-exception v1
+    invoke-virtual {p1, v0}, Lvd;->v(Lcom/google/android/gms/tasks/Task;)V
 
-    goto :goto_1
+    return v2
 
-    :cond_0
     :goto_0
-    monitor-exit v0
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-void
-
-    :goto_1
-    monitor-exit v0
-
-    throw v1
+    throw p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final d(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lieg;->f:Ljava/lang/String;
+    iget-object v0, p0, Lieg;->a:Liqj;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Liqj;->q(Ljava/lang/Object;)Z
+
+    return-void
 .end method

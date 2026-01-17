@@ -1,138 +1,43 @@
-.class public final synthetic Lzvb;
+.class public abstract Lzvb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Llwb;
-
-.field public final synthetic c:Lqja;
+# static fields
+.field public static final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llwb;Lqja;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lzvb;->a:I
+    new-instance v0, La3b;
 
-    iput-object p1, p0, Lzvb;->b:Llwb;
+    const/16 v1, 0x19
 
-    iput-object p2, p0, Lzvb;->c:Lqja;
+    invoke-direct {v0, v1}, La3b;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    sput-object v0, Lzvb;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static final a()Landroid/graphics/Paint;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    sget-object v0, Lzvb;->a:Ljava/lang/Object;
 
-    iget v0, p0, Lzvb;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lzvb;->b:Llwb;
-
-    iget-object v0, v0, Llwb;->T:Ljava/lang/ref/WeakReference;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lx11;
+    check-cast v0, Landroid/graphics/Paint;
 
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Lzvb;->c:Lqja;
-
-    invoke-interface {v0, v1}, Lx11;->onNegotiationError(Lqja;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lzvb;->b:Llwb;
-
-    iget-object v0, v0, Llwb;->T:Ljava/lang/ref/WeakReference;
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lx11;
-
-    :goto_1
-    if-eqz v0, :cond_3
-
-    iget-object v1, p0, Lzvb;->c:Lqja;
-
-    invoke-interface {v0, v1}, Lx11;->onNegotiationError(Lqja;)V
-
-    :cond_3
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lzvb;->b:Llwb;
-
-    iget-object v1, v0, Llwb;->v:Landroid/os/Handler;
-
-    new-instance v2, Lzvb;
-
-    const/4 v3, 0x3
-
-    iget-object v4, p0, Lzvb;->c:Lqja;
-
-    invoke-direct {v2, v0, v4, v3}, Lzvb;-><init>(Llwb;Lqja;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lzvb;->b:Llwb;
-
-    iget-object v1, v0, Llwb;->v:Landroid/os/Handler;
-
-    new-instance v2, Lzvb;
-
-    const/4 v3, 0x2
-
-    iget-object v4, p0, Lzvb;->c:Lqja;
-
-    invoke-direct {v2, v0, v4, v3}, Lzvb;-><init>(Llwb;Lqja;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

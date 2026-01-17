@@ -1,26 +1,24 @@
 .class public final Lbof;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:J
-
-.field public o:I
+.field public final synthetic o:Lgof;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lgof;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-wide p1, p0, Lbof;->X:J
+    iput-object p1, p0, Lbof;->o:Lgof;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,71 +38,110 @@
 
     check-cast p1, Lbof;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lbof;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
     new-instance p1, Lbof;
 
-    iget-wide v0, p0, Lbof;->X:J
+    iget-object v0, p0, Lbof;->o:Lgof;
 
-    invoke-direct {p1, v0, v1, p2}, Lbof;-><init>(JLkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lbof;-><init>(Lgof;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 7
 
-    iget v0, p0, Lbof;->o:I
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lbof;->o:Lgof;
 
-    if-eqz v0, :cond_1
+    iget-object v0, p1, Lgof;->z0:Lspf;
 
-    if-ne v0, v1, :cond_0
+    invoke-static {}, Lqi3;->c()Lqd8;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    move-result-object v1
 
-    goto :goto_0
+    new-instance v2, Lxc4;
+
+    sget v3, Lokb;->s:I
+
+    sget v4, Lv5e;->j2:I
+
+    sget v5, Lj6e;->y:I
+
+    new-instance v6, Llhg;
+
+    invoke-direct {v6, v5}, Llhg;-><init>(I)V
+
+    invoke-direct {v2, v3, v4, v6}, Lxc4;-><init>(IILlhg;)V
+
+    invoke-virtual {v1, v2}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p1, Lgof;->d:Lgre;
+
+    check-cast p1, Lidc;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->channels-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v2, v3}, Lidc;->j(Ljava/lang/Enum;Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Lxc4;
+
+    sget v2, Lokb;->r:I
+
+    sget v3, Lwgb;->m:I
+
+    sget v4, Lj6e;->P:I
+
+    new-instance v5, Llhg;
+
+    invoke-direct {v5, v4}, Llhg;-><init>(I)V
+
+    invoke-direct {p1, v2, v3, v5}, Lxc4;-><init>(IILlhg;)V
+
+    invoke-virtual {v1, p1}, Lqd8;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Lxc4;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    sget v2, Lokb;->t:I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sget v3, Lv5e;->h0:I
 
-    throw p1
+    sget v4, Lx5e;->m0:I
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    new-instance v5, Llhg;
 
-    iput v1, p0, Lbof;->o:I
+    invoke-direct {v5, v4}, Llhg;-><init>(I)V
 
-    iget-wide v0, p0, Lbof;->X:J
+    invoke-direct {p1, v2, v3, v5}, Lxc4;-><init>(IILlhg;)V
 
-    invoke-static {v0, v1, p0}, Lzlj;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v1}, Lqi3;->b(Ljava/util/List;)Lqd8;
 
     move-result-object p1
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    invoke-virtual {v0, p1}, Lspf;->setValue(Ljava/lang/Object;)V
 
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

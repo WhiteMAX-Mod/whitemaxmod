@@ -3,61 +3,68 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf76;
+.implements Ljava/util/concurrent/Future;
 
 
 # instance fields
-.field public final a:Lf76;
-
-.field public final b:Lcr6;
+.field public final a:Lo25;
 
 
 # direct methods
-.method public constructor <init>(Lf76;Lcr6;)V
+.method public constructor <init>(Lo25;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu25;->a:Lf76;
-
-    iput-object p2, p0, Lu25;->b:Lcr6;
+    iput-object p1, p0, Lu25;->a:Lo25;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final cancel(Z)Z
+    .locals 0
 
-    new-instance v0, Lesd;
+    iget-object p1, p0, Lu25;->a:Lo25;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p1}, Lo25;->dispose()V
 
-    sget-object v1, Ljwa;->a:Lkotlinx/coroutines/internal/Symbol;
+    const/4 p1, 0x0
 
-    iput-object v1, v0, Lesd;->a:Ljava/lang/Object;
+    return p1
+.end method
 
-    new-instance v1, Lvx;
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    const/4 v2, 0x7
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-direct {v1, p0, v0, p1, v2}, Lvx;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lu25;->a:Lf76;
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-interface {p1, v1, p2}, Lf76;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lbc4;->a:Lbc4;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    .line 2
+    const/4 p1, 0x0
 
     return-object p1
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

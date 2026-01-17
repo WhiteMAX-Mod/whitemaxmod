@@ -4,88 +4,112 @@
 
 
 # instance fields
-.field public a:Ldgb;
+.field public final a:J
+
+.field public final b:Z
+
+
+# direct methods
+.method public constructor <init>(JZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lnr9;->a:J
+
+    iput-boolean p3, p0, Lnr9;->b:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Llw8;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-virtual {p0}, Lnr9;->b()Ljdf;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Led9;
+    return v0
 
-    const/4 v2, 0x7
+    :cond_0
+    instance-of v1, p1, Lnr9;
 
-    invoke-direct {v1, v2}, Led9;-><init>(I)V
+    const/4 v2, 0x0
 
-    new-instance v2, Llw8;
+    if-nez v1, :cond_1
 
-    const/4 v3, 0x1
+    return v2
 
-    invoke-direct {v2, v0, v1, v3}, Llw8;-><init>(Ljava/lang/Object;Ldr6;I)V
+    :cond_1
+    check-cast p1, Lnr9;
 
-    new-instance v0, Lsrf;
+    iget-wide v3, p0, Lnr9;->a:J
 
-    const/4 v1, 0x5
+    iget-wide v5, p1, Lnr9;->a:J
 
-    invoke-direct {v0, v1}, Lsrf;-><init>(I)V
+    cmp-long v1, v3, v5
 
-    new-instance v1, Lkw8;
+    if-eqz v1, :cond_2
 
-    const/4 v3, 0x0
+    return v2
 
-    invoke-direct {v1, v2, v0, v3}, Lkw8;-><init>(Ljava/lang/Object;Ldr6;I)V
+    :cond_2
+    iget-boolean v1, p0, Lnr9;->b:Z
 
-    new-instance v0, Led9;
+    iget-boolean p1, p1, Lnr9;->b:Z
 
-    const/16 v2, 0x8
+    if-eq v1, p1, :cond_3
 
-    invoke-direct {v0, v2}, Led9;-><init>(I)V
+    return v2
 
-    new-instance v2, Lvxa;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, v1, v0, v3}, Lvxa;-><init>(Lcxa;Ldr6;I)V
-
-    invoke-virtual {v2}, Lcxa;->r()Lgxa;
-
-    move-result-object v0
-
-    new-instance v1, Led9;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2}, Led9;-><init>(I)V
-
-    new-instance v2, Llw8;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v1, v3}, Llw8;-><init>(Ljava/lang/Object;Ldr6;I)V
-
-    return-object v2
+    :cond_3
+    return v0
 .end method
 
-.method public final b()Ljdf;
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Lnr9;->a:Ldgb;
+    iget-wide v0, p0, Lnr9;->a:J
 
-    invoke-virtual {v0}, Ldgb;->B()Lgo3;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lnr9;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "InputEditData(messageId="
+
+    const-string v1, ", shouldInsertOriginalText="
+
+    iget-wide v2, p0, Lnr9;->a:J
+
+    iget-boolean v4, p0, Lnr9;->b:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lhc0;->k(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    new-instance v1, Led9;
+    const-string v1, ")"
 
-    const/16 v2, 0xc
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Led9;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lbdf;->h(Ldr6;)Ljdf;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

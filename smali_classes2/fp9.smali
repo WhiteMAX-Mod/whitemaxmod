@@ -2,272 +2,173 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Cloneable;
+
 
 # instance fields
-.field public final a:J
+.field public a:Ljava/nio/charset/CodingErrorAction;
 
-.field public final b:J
+.field public b:Ljava/nio/charset/CodingErrorAction;
 
-.field public final c:Landroid/text/Layout;
+.field public c:I
 
-.field public final d:Lcp9;
+.field public d:I
 
-.field public final e:Lxo9;
-
-.field public final f:Z
-
-
-# direct methods
-.method public constructor <init>(JJLandroid/text/Layout;Lcp9;Lxo9;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lfp9;->a:J
-
-    iput-wide p3, p0, Lfp9;->b:J
-
-    iput-object p5, p0, Lfp9;->c:Landroid/text/Layout;
-
-    iput-object p6, p0, Lfp9;->d:Lcp9;
-
-    iput-object p7, p0, Lfp9;->e:Lxo9;
-
-    iput-boolean p8, p0, Lfp9;->f:Z
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final clone()Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lfp9;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return v0
+    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
 
-    :cond_0
-    instance-of v1, p1, Lfp9;
+    iput-object v1, v0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    const/4 v2, 0x0
+    iput-object v1, v0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    if-nez v1, :cond_1
+    const v1, 0x7fffffff
 
-    return v2
+    iput v1, v0, Lfp9;->c:I
 
-    :cond_1
-    check-cast p1, Lfp9;
+    const/16 v1, 0x2000
 
-    iget-wide v3, p0, Lfp9;->a:J
+    iput v1, v0, Lfp9;->d:I
 
-    iget-wide v5, p1, Lfp9;->a:J
+    iput v1, v0, Lfp9;->o:I
 
-    cmp-long v1, v3, v5
+    iget-object v1, p0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    if-eqz v1, :cond_2
+    iput-object v1, v0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    return v2
+    iget-object v1, p0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    :cond_2
-    iget-wide v3, p0, Lfp9;->b:J
+    iput-object v1, v0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    iget-wide v5, p1, Lfp9;->b:J
+    iget v1, p0, Lfp9;->c:I
 
-    cmp-long v1, v3, v5
+    iput v1, v0, Lfp9;->c:I
 
-    if-eqz v1, :cond_3
+    iget v1, p0, Lfp9;->d:I
 
-    return v2
+    iput v1, v0, Lfp9;->d:I
 
-    :cond_3
-    iget-object v1, p0, Lfp9;->c:Landroid/text/Layout;
-
-    iget-object v3, p1, Lfp9;->c:Landroid/text/Layout;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lfp9;->d:Lcp9;
-
-    iget-object v3, p1, Lfp9;->d:Lcp9;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lfp9;->e:Lxo9;
-
-    iget-object v3, p1, Lfp9;->e:Lxo9;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lfp9;->f:Z
-
-    iget-boolean p1, p1, Lfp9;->f:Z
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-wide v0, p0, Lfp9;->a:J
+    instance-of v0, p1, Lfp9;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lfp9;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lfp9;->c:Landroid/text/Layout;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    check-cast p1, Lfp9;
 
-    move-result v3
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_0
-    add-int/2addr v0, v3
+    iget-object v0, p0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    mul-int/2addr v0, v1
+    iget-object v1, p1, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    iget-object v3, p0, Lfp9;->d:Lcp9;
+    if-ne v0, v1, :cond_1
 
-    if-nez v3, :cond_1
+    iget-object v0, p0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    move v3, v2
+    iget-object v1, p1, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    goto :goto_1
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Lfp9;->c:I
+
+    iget v1, p1, Lfp9;->c:I
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Lfp9;->o:I
+
+    iget v1, p1, Lfp9;->o:I
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Lfp9;->d:I
+
+    iget p1, p1, Lfp9;->d:I
+
+    if-ne v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    :goto_0
+    const/4 p1, 0x0
 
-    move-result v3
+    return p1
+.end method
 
-    :goto_1
-    add-int/2addr v0, v3
+.method public final hashCode()I
+    .locals 3
 
-    mul-int/2addr v0, v1
+    iget-object v0, p0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    iget-object v3, p0, Lfp9;->e:Lxo9;
+    const/4 v1, 0x0
 
-    if-nez v3, :cond_2
+    if-eqz v0, :cond_0
 
-    goto :goto_2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    move-result v0
 
-    move-result v2
+    goto :goto_0
 
-    :goto_2
-    add-int/2addr v0, v2
+    :cond_0
+    move v0, v1
 
-    mul-int/2addr v0, v1
+    :goto_0
+    const/16 v2, 0x3e0
 
-    iget-boolean v1, p0, Lfp9;->f:Z
+    add-int/2addr v2, v0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v0, p0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :cond_1
+    add-int/2addr v2, v1
 
-    return v1
-.end method
+    mul-int/lit8 v2, v2, 0x1f
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget v0, p0, Lfp9;->c:I
 
-    const-string v0, "MessageLink(messageId="
+    add-int/2addr v2, v0
 
-    const-string v1, ", messageLinkId="
+    mul-int/lit8 v2, v2, 0x1f
 
-    iget-wide v2, p0, Lfp9;->a:J
+    iget v0, p0, Lfp9;->d:I
 
-    invoke-static {v2, v3, v0, v1}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/2addr v2, v0
 
-    move-result-object v0
+    mul-int/lit8 v2, v2, 0x1f
 
-    iget-wide v1, p0, Lfp9;->b:J
+    iget v0, p0, Lfp9;->o:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    add-int/2addr v2, v0
 
-    const-string v1, ", senderLayout="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfp9;->c:Landroid/text/Layout;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", replyModel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfp9;->d:Lcp9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", forwardModel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfp9;->e:Lxo9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isFloating="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lfp9;->f:Z
-
-    invoke-static {v0, v1, v3, v2}, Lgg9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v2
 .end method

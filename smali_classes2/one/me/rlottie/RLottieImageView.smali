@@ -10,13 +10,13 @@
 
 .field public o:Lone/me/rlottie/RLottieDrawable;
 
-.field public s0:Z
-
 .field public t0:Z
 
 .field public u0:Z
 
 .field public v0:Z
+
+.field public w0:Z
 
 
 # direct methods
@@ -40,7 +40,7 @@
     const/4 p1, 0x0
 
     .line 3
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->v0:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->w0:Z
 
     return-void
 .end method
@@ -138,7 +138,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->t0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
 
     iget-object v0, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
 
@@ -146,7 +146,7 @@
 
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->v0:Z
 
     if-eqz v0, :cond_0
 
@@ -165,7 +165,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->t0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
 
     iget-object v0, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
 
@@ -189,9 +189,9 @@
     :cond_0
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->v0:Z
 
-    iget-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->t0:Z
+    iget-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
 
     if-eqz v1, :cond_1
 
@@ -236,20 +236,20 @@
     const-string v1, ""
 
     .line 3
-    invoke-static {p1, v1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     int-to-float p2, p2
 
     .line 4
-    invoke-static {p2}, Lle;->a(F)I
+    invoke-static {p2}, Lie;->a(F)I
 
     move-result v3
 
     int-to-float p2, p3
 
-    invoke-static {p2}, Lle;->a(F)I
+    invoke-static {p2}, Lie;->a(F)I
 
     move-result v4
 
@@ -284,7 +284,7 @@
     invoke-virtual {p1, p0}, Lone/me/rlottie/RLottieDrawable;->setMasterParent(Landroid/view/View;)V
 
     .line 12
-    iget-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->s0:Z
+    iget-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->t0:Z
 
     const/4 v0, 0x1
 
@@ -376,11 +376,11 @@
 .method public setAutoRepeat(Z)V
     .locals 2
 
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->s0:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->t0:Z
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->v0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->w0:Z
 
     iget-object v1, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
 
@@ -407,13 +407,13 @@
 
     iput-object p1, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->v0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->w0:Z
 
     const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->s0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieImageView;->t0:Z
 
     if-eqz v0, :cond_0
 
@@ -430,7 +430,7 @@
 
     invoke-virtual {p1, p0}, Lone/me/rlottie/RLottieDrawable;->setMasterParent(Landroid/view/View;)V
 
-    iget-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->s0:Z
+    iget-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->t0:Z
 
     if-eqz p1, :cond_2
 
@@ -504,14 +504,14 @@
 
     iget-object p1, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
 
-    iget-boolean p1, p1, Lone/me/rlottie/RLottieDrawable;->a1:Z
+    iget-boolean p1, p1, Lone/me/rlottie/RLottieDrawable;->b1:Z
 
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieImageView;->v0:Z
 
     goto :goto_2
 
     :cond_5
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->v0:Z
 
     :goto_2
     iget-object p1, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
@@ -638,9 +638,9 @@
     :cond_0
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->v0:Z
 
-    iget-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->t0:Z
+    iget-boolean v1, p0, Lone/me/rlottie/RLottieImageView;->u0:Z
 
     if-eqz v1, :cond_1
 

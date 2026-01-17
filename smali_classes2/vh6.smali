@@ -1,28 +1,24 @@
-.class public final synthetic Lvh6;
+.class public final Lvh6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lkag;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lxh6;
-
-.field public final synthetic c:Lelb;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxh6;Lelb;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p3, p0, Lvh6;->a:I
+    iput p1, p0, Lvh6;->a:I
 
-    iput-object p1, p0, Lvh6;->b:Lxh6;
-
-    iput-object p2, p0, Lvh6;->c:Lelb;
+    iput-object p2, p0, Lvh6;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,69 +27,108 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final a(Lmag;)V
+    .locals 3
 
     iget v0, p0, Lvh6;->a:I
 
+    iget-object v1, p0, Lvh6;->b:Ljava/lang/Object;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvh6;->b:Lxh6;
+    check-cast v1, Landroidx/viewpager/widget/ViewPager;
 
-    iget-object v1, v0, Lxh6;->d:Lwh6;
+    iget p1, p1, Lmag;->a:I
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v1, p1}, Landroidx/viewpager/widget/ViewPager;->setCurrentItem(I)V
 
-    iget-object v2, p0, Lvh6;->c:Lelb;
-
-    invoke-virtual {v2, v1}, Lcom/google/android/material/tabs/TabLayout;->k(Lw9g;)V
-
-    :cond_0
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lxh6;->d:Lwh6;
-
-    iput-object v1, v0, Lxh6;->o:Lelb;
-
-    iget-object v2, v0, Lxh6;->v0:Lfv;
-
-    iget-object v3, v2, Lfv;->f:Ljava/util/List;
-
-    iput-object v3, v0, Lxh6;->s0:Ljava/util/List;
-
-    invoke-virtual {v2, v1, v1}, Lfv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    :goto_0
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lvh6;->b:Lxh6;
+    check-cast v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    iget-object v1, v0, Lxh6;->s0:Ljava/util/List;
+    iget v0, p1, Lmag;->a:I
+
+    if-lez v0, :cond_0
+
+    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->L0:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->z0()Lln;
+
+    move-result-object v0
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0, v2}, Lln;->setExpanded(Z)V
 
-    iget-object v3, p0, Lvh6;->c:Lelb;
+    :cond_0
+    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->L0:[Lz28;
 
-    invoke-virtual {v3}, Lcom/google/android/material/tabs/TabLayout;->j()V
+    invoke-virtual {v1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->D0()Lqma;
 
-    iget-object v3, v0, Lxh6;->v0:Lfv;
+    move-result-object v0
 
-    invoke-virtual {v3, v1, v2}, Lfv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+    iget p1, p1, Lmag;->a:I
 
-    :cond_1
-    iput-object v2, v0, Lxh6;->s0:Ljava/util/List;
+    invoke-virtual {v0, p1}, Lqma;->y(I)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v1, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
+
+    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->O0:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->P0()Lqma;
+
+    move-result-object v0
+
+    iget p1, p1, Lmag;->a:I
+
+    invoke-virtual {v0, p1}, Lqma;->y(I)V
+
+    return-void
+
+    :pswitch_2
+    check-cast v1, Lwh6;
+
+    iget-object p1, p1, Lmag;->b:Landroid/view/View;
+
+    instance-of v0, p1, Lnlb;
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lnlb;
 
     goto :goto_0
+
+    :cond_1
+    move-object p1, v2
+
+    :goto_0
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lnlb;->getTabItem()Lp4b;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    iget-object v2, p1, Lp4b;->a:Ljava/lang/String;
+
+    :cond_2
+    iput-object v2, v1, Lwh6;->o:Ljava/lang/Object;
+
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

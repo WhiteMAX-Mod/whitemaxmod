@@ -4,418 +4,655 @@
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lo58;
+
+.field public final c:Lo58;
+
+.field public final d:Lo58;
+
+.field public final e:Lo58;
+
+.field public final f:Lo58;
+
+.field public final g:Lo58;
+
+.field public final h:Lo58;
+
+.field public final i:Lo58;
+
+.field public final j:Lo58;
+
+.field public final k:Lo58;
+
+.field public final l:Lo58;
+
+.field public final m:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Ld68;)V
-    .locals 0
+.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llz5;->a:Ld68;
+    const-class v0, Llz5;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Llz5;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Llz5;->b:Lo58;
+
+    iput-object p2, p0, Llz5;->c:Lo58;
+
+    iput-object p3, p0, Llz5;->d:Lo58;
+
+    iput-object p4, p0, Llz5;->e:Lo58;
+
+    iput-object p5, p0, Llz5;->f:Lo58;
+
+    iput-object p6, p0, Llz5;->g:Lo58;
+
+    iput-object p7, p0, Llz5;->h:Lo58;
+
+    iput-object p8, p0, Llz5;->i:Lo58;
+
+    iput-object p9, p0, Llz5;->j:Lo58;
+
+    iput-object p10, p0, Llz5;->k:Lo58;
+
+    iput-object p11, p0, Llz5;->l:Lo58;
+
+    iput-object p12, p0, Llz5;->m:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lxdg;)Li83;
-    .locals 38
+.method public final a(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lrz5;Lo84;)Ljava/lang/Object;
+    .locals 19
 
-    move-object/from16 v0, p0
+    move-object/from16 v1, p0
 
-    move-object/from16 v1, p1
+    move-object/from16 v0, p7
 
-    iget-object v2, v0, Llz5;->a:Ld68;
+    move-object/from16 v2, p9
 
-    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+    sget-object v10, Lhpb;->a:Lhpb;
 
-    move-result-object v2
+    instance-of v3, v2, Liz5;
 
-    check-cast v2, Laii;
+    if-eqz v3, :cond_0
 
-    iget-object v3, v1, Lxdg;->k:Ljava/lang/String;
+    move-object v3, v2
 
-    const-string v4, "start %s"
+    check-cast v3, Liz5;
 
-    filled-new-array {v1}, [Ljava/lang/Object;
+    iget v4, v3, Liz5;->X:I
+
+    const/high16 v5, -0x80000000
+
+    and-int v6, v4, v5
+
+    if-eqz v6, :cond_0
+
+    sub-int/2addr v4, v5
+
+    iput v4, v3, Liz5;->X:I
+
+    :goto_0
+    move-object v9, v3
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v3, Liz5;
+
+    invoke-direct {v3, v1, v2}, Liz5;-><init>(Llz5;Lo84;)V
+
+    goto :goto_0
+
+    :goto_1
+    iget-object v2, v9, Liz5;->d:Ljava/lang/Object;
+
+    sget-object v11, Lac4;->a:Lac4;
+
+    iget v3, v9, Liz5;->X:I
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_2
+
+    if-ne v3, v4, :cond_1
+
+    :try_start_0
+    invoke-static {v2}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v10
+
+    :catchall_0
+    move-exception v0
+
+    goto/16 :goto_6
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    invoke-static {v2}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object v2, v1, Llz5;->a:Ljava/lang/String;
+
+    const-string v3, "File attach click. Start process open file"
+
+    invoke-static {v2, v3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v0, :cond_4
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    new-instance v2, Ljava/io/File;
+
+    invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    move-object v3, v2
+
+    move-object/from16 v2, p6
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    iget-object v0, v1, Llz5;->c:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm36;
+
+    move-object/from16 v2, p6
+
+    invoke-virtual {v0, v2}, Lm36;->h(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    :goto_3
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    iget-object v14, v1, Llz5;->a:Ljava/lang/String;
+
+    const-string v15, "file attach not found"
+
+    sget-object v12, Lc5j;->a:Ledb;
+
+    if-eqz v12, :cond_5
+
+    sget-object v13, Lkk8;->Y:Lkk8;
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x8
+
+    const/16 v16, 0x0
+
+    invoke-static/range {v12 .. v18}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+
+    :cond_5
+    iget-object v0, v1, Llz5;->e:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lc6h;
+
+    sget-object v8, Lb20;->a:Lb20;
+
+    iput v4, v9, Liz5;->X:I
+
+    move-wide/from16 v3, p1
+
+    move-wide/from16 v5, p3
+
+    move-object/from16 v7, p5
+
+    invoke-virtual/range {v2 .. v9}, Lc6h;->a(JJLjava/lang/String;Lb20;Lo84;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-ne v0, v11, :cond_d
+
+    return-object v11
+
+    :cond_6
+    move-wide/from16 v5, p3
+
+    move-object/from16 v7, p5
+
+    :try_start_2
+    invoke-static {v3}, Ln36;->d(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Lrzf;->H(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    if-nez v0, :cond_8
+
+    const/4 v9, 0x0
+
+    :try_start_3
+    new-instance v0, Lorg/json/JSONObject;
+
+    iget-object v11, v1, Llz5;->m:Lo58;
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lkpf;
+
+    check-cast v11, Lqkb;
+
+    iget-object v12, v11, Lqkb;->h:Lnre;
+
+    sget-object v13, Lqkb;->p:[Lz28;
+
+    aget-object v13, v13, v9
+
+    invoke-virtual {v12, v11, v13}, Lnre;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Ljava/lang/String;
+
+    invoke-direct {v0, v11}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    goto :goto_4
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_4
+    new-instance v11, Lszd;
+
+    invoke-direct {v11, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v11
+
+    :goto_4
+    new-instance v11, Lorg/json/JSONObject;
+
+    invoke-direct {v11}, Lorg/json/JSONObject;-><init>()V
+
+    instance-of v12, v0, Lszd;
+
+    if-eqz v12, :cond_7
+
+    move-object v0, v11
+
+    :cond_7
+    check-cast v0, Lorg/json/JSONObject;
+
+    sget-object v11, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v8, v11}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v8, v11}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v0, v8}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+
+    move-result v8
+
+    add-int/2addr v8, v4
+
+    invoke-virtual {v0, v12, v8}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    iget-object v8, v1, Llz5;->m:Lo58;
+
+    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lkpf;
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    check-cast v8, Lqkb;
+
+    iget-object v11, v8, Lqkb;->h:Lnre;
+
+    sget-object v12, Lqkb;->p:[Lz28;
+
+    aget-object v9, v12, v9
+
+    invoke-virtual {v11, v8, v9, v0}, Lnre;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    :catchall_2
+    :cond_8
+    :try_start_5
+    invoke-virtual/range {p8 .. p8}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    if-eq v0, v4, :cond_b
+
+    const/4 v5, 0x2
+
+    if-ne v0, v5, :cond_a
+
+    iget-object v0, v1, Llz5;->c:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm36;
+
+    iget-object v5, v1, Llz5;->d:Lo58;
+
+    invoke-interface {v5}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    const-string v6, "workers:DownloadFileAttachWorker"
+    check-cast v5, Landroid/content/Context;
 
-    invoke-static {v6, v4, v5}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v0, v5, v3}, Lm36;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
 
-    iget-wide v4, v1, Lxdg;->a:J
+    move-result-object v0
 
-    iget-object v7, v1, Lxdg;->b:Ljava/lang/String;
+    new-instance v3, Landroid/content/Intent;
 
-    iget-wide v8, v1, Lxdg;->c:J
+    const-string v5, "android.intent.action.VIEW"
 
-    iget-wide v10, v1, Lxdg;->d:J
+    invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iget-wide v12, v1, Lxdg;->e:J
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    iget-wide v14, v1, Lxdg;->f:J
+    invoke-static {v2}, Lt3j;->i(Ljava/lang/String;)Ljava/lang/String;
 
-    move-object/from16 v16, v2
+    move-result-object v2
 
-    move-object/from16 v17, v3
+    if-nez v2, :cond_9
 
-    iget-wide v2, v1, Lxdg;->j:J
+    const-string v2, "*/*"
 
-    invoke-static {}, Lm4j;->a()Z
+    :cond_9
+    invoke-virtual {v3, v0, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result v18
+    new-instance v2, Lipb;
 
-    if-eqz v18, :cond_0
+    invoke-direct {v2, v3, v0}, Lipb;-><init>(Landroid/content/Intent;Landroid/net/Uri;)V
 
-    move-object/from16 v0, v17
+    goto :goto_5
+
+    :cond_a
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_b
+    new-instance v2, Ljpb;
+
+    invoke-direct {v2, v5, v6, v7}, Ljpb;-><init>(JLjava/lang/String;)V
+
+    goto :goto_5
+
+    :cond_c
+    new-instance v2, Ljpb;
+
+    invoke-direct {v2, v5, v6, v7}, Ljpb;-><init>(JLjava/lang/String;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :goto_5
+    return-object v2
+
+    :goto_6
+    new-instance v2, Lszd;
+
+    invoke-direct {v2, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-static {v2}, Luzd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    iget-object v2, v1, Llz5;->a:Ljava/lang/String;
+
+    const-string v3, "cant open file attach"
+
+    invoke-static {v2, v3, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_d
+    return-object v10
+.end method
+
+.method public final b(JJJLjava/lang/String;JLo84;)Ljava/lang/Object;
+    .locals 10
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p5, v0
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    iget-object v2, p0, Llz5;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const-string p1, "File attach click. Start process delete message"
+
+    invoke-static {v2, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Llz5;->f:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnm9;
+
+    const/4 p2, 0x1
+
+    move-object/from16 v9, p10
+
+    invoke-static {p1, p2, p3, p4, v9}, Lnm9;->b(Lnm9;ZJLo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_1
+
+    return-object p1
+
+    :cond_0
+    move-object/from16 v9, p10
+
+    const-string v0, "File attach click. Start process cancel download"
+
+    invoke-static {v2, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Llz5;->l:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm00;
+
+    new-instance v2, Luid;
+
+    move-wide v3, p3
+
+    move-object/from16 v7, p7
+
+    move-wide/from16 v5, p8
+
+    invoke-direct/range {v2 .. v7}, Luid;-><init>(JJLjava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Lm00;->a(Lyid;)V
+
+    iget-object v0, p0, Llz5;->e:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lc6h;
+
+    sget-object v8, Lb20;->b:Lb20;
+
+    move-wide v3, p1
+
+    move-wide v5, p3
+
+    invoke-virtual/range {v2 .. v9}, Lc6h;->a(JJLjava/lang/String;Lb20;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_1
+
+    return-object p1
+
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+.end method
+
+.method public final c(JJJJLjava/lang/String;Ljava/lang/String;JLo84;)Ljava/lang/Object;
+    .locals 16
+
+    move-object/from16 v1, p0
+
+    iget-object v0, v1, Llz5;->c:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm36;
+
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1d
+
+    if-ge v2, v3, :cond_1
+
+    iget-object v0, v0, Lm36;->c:Landroid/content/Context;
+
+    const-string v2, "android.permission.WRITE_EXTERNAL_STORAGE"
+
+    invoke-static {v0, v2}, Lu7;->b(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v18, "*****"
+    sget-object v0, Lhof;->a:Lhof;
 
-    move-object/from16 v0, v18
-
-    :goto_0
-    const-string v1, "TaskAttachDownloadData{messageId="
-
-    move-object/from16 v18, v6
-
-    const-string v6, ", attachId=\'"
-
-    invoke-static {v1, v4, v5, v6, v7}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v6, "\', videoId="
-
-    move-wide/from16 v19, v4
-
-    const-string v4, ", audioId="
-
-    invoke-static {v8, v9, v6, v4, v1}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v1, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", mp4GifId="
-
-    const-string v5, ", stickerId="
-
-    invoke-static {v12, v13, v4, v5, v1}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v1, v14, v15}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", fileId="
-
-    const-string v5, ", fileName=\'"
-
-    invoke-static {v2, v3, v4, v5, v1}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v4, "\'}"
-
-    invoke-static {v1, v0, v4}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "workers:DownloadFileAttachWorker/"
-
-    invoke-static {v1, v0}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ldnb;
-
-    const-class v4, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
-
-    invoke-direct {v1, v4}, Ldnb;-><init>(Ljava/lang/Class;)V
-
-    sget-object v4, Llqb;->a:Llqb;
-
-    invoke-virtual {v1, v4}, Landroidx/work/WorkRequest$Builder;->setExpedited(Llqb;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v1
-
-    check-cast v1, Ldnb;
-
-    const-wide/16 v4, 0x2710
-
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    move-wide/from16 v21, v2
-
-    sget-object v2, Lah0;->b:Lah0;
-
-    invoke-virtual {v1, v2, v4, v5, v6}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Lah0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v1
-
-    check-cast v1, Ldnb;
-
-    move-object/from16 v2, v18
-
-    invoke-virtual {v1, v2}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v1
-
-    check-cast v1, Ldnb;
-
-    new-instance v2, Lysb;
-
-    const-string v3, "taskName"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static/range {v19 .. v20}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    new-instance v4, Lysb;
-
-    const-string v5, "messageId"
-
-    invoke-direct {v4, v5, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v3, Lysb;
-
-    const-string v5, "attachId"
-
-    invoke-direct {v3, v5, v7}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    new-instance v6, Lysb;
-
-    const-string v7, "videoId"
-
-    invoke-direct {v6, v7, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    new-instance v7, Lysb;
-
-    const-string v8, "audioId"
-
-    invoke-direct {v7, v8, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    new-instance v8, Lysb;
-
-    const-string v9, "mp4GifId"
-
-    invoke-direct {v8, v9, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    new-instance v9, Lysb;
-
-    const-string v10, "stickerId"
-
-    invoke-direct {v9, v10, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object/from16 v5, p1
-
-    iget-object v10, v5, Lxdg;->g:Ljava/lang/String;
-
-    new-instance v11, Lysb;
-
-    const-string v12, "url"
-
-    invoke-direct {v11, v12, v10}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v10, v5, Lxdg;->h:Z
-
-    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v10
-
-    new-instance v12, Lysb;
-
-    const-string v13, "notifyProgress"
-
-    invoke-direct {v12, v13, v10}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v10, v5, Lxdg;->i:Z
-
-    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v10
-
-    new-instance v13, Lysb;
-
-    const-string v14, "checkAutoLoadConnection"
-
-    invoke-direct {v13, v14, v10}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static/range {v21 .. v22}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v10
-
-    new-instance v14, Lysb;
-
-    const-string v15, "fileId"
-
-    invoke-direct {v14, v15, v10}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v10, Lysb;
-
-    const-string v15, "fileName"
-
-    move-object/from16 v23, v2
-
-    move-object/from16 v2, v17
-
-    invoke-direct {v10, v15, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget v2, v5, Lxdg;->l:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v15, Lysb;
-
-    move-object/from16 v25, v3
-
-    const-string v3, "invalidateCount"
-
-    invoke-direct {v15, v3, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v2, v5, Lxdg;->m:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    new-instance v3, Lysb;
-
-    move-object/from16 v24, v4
-
-    const-string v4, "useOriginalExtension"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v2, v5, Lxdg;->n:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    new-instance v4, Lysb;
-
-    const-string v5, "notCopyVideoToGallery"
-
-    invoke-direct {v4, v5, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object/from16 v36, v3
-
-    move-object/from16 v37, v4
-
-    move-object/from16 v26, v6
-
-    move-object/from16 v27, v7
-
-    move-object/from16 v28, v8
-
-    move-object/from16 v29, v9
-
-    move-object/from16 v34, v10
-
-    move-object/from16 v30, v11
-
-    move-object/from16 v31, v12
-
-    move-object/from16 v32, v13
-
-    move-object/from16 v33, v14
-
-    move-object/from16 v35, v15
-
-    filled-new-array/range {v23 .. v37}, [Lysb;
-
-    move-result-object v2
-
-    new-instance v3, Ls2e;
-
-    const/16 v4, 0xe
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, v4, v5}, Ls2e;-><init>(IB)V
-
-    :goto_1
-    const/16 v4, 0xf
-
-    if-ge v5, v4, :cond_1
-
-    aget-object v4, v2, v5
-
-    iget-object v6, v4, Lysb;->a:Ljava/lang/Object;
-
-    check-cast v6, Ljava/lang/String;
-
-    iget-object v4, v4, Lysb;->b:Ljava/lang/Object;
-
-    invoke-virtual {v3, v4, v6}, Ls2e;->F(Ljava/lang/Object;Ljava/lang/String;)V
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_1
+    return-object v0
 
     :cond_1
-    invoke-virtual {v3}, Ls2e;->z()Lyh4;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v2
+    :goto_0
+    iget-object v0, v1, Llz5;->g:Lo58;
 
-    invoke-virtual {v1, v2}, Landroidx/work/WorkRequest$Builder;->setInputData(Lyh4;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v1
-
-    check-cast v1, Ldnb;
-
-    invoke-virtual {v1}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
-
-    move-result-object v1
-
-    check-cast v1, Lenb;
-
-    sget-object v2, Lpo5;->b:Lpo5;
-
-    move-object/from16 v3, v16
-
-    invoke-virtual {v3, v0, v2, v1}, Laii;->b(Ljava/lang/String;Lpo5;Lenb;)Lh98;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lh98;->e()Lhr3;
+    check-cast v0, Lmbg;
 
-    iget-object v0, v0, Lh98;->b:Lkhi;
+    check-cast v0, Lj9b;
 
-    invoke-virtual {v0}, Lkhi;->f()Lsf8;
+    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+
+    move-result-object v15
+
+    new-instance v0, Lkz5;
+
+    const/4 v14, 0x0
+
+    move-wide/from16 v9, p1
+
+    move-wide/from16 v11, p3
+
+    move-wide/from16 v2, p5
+
+    move-wide/from16 v4, p7
+
+    move-object/from16 v6, p9
+
+    move-object/from16 v13, p10
+
+    move-wide/from16 v7, p11
+
+    invoke-direct/range {v0 .. v14}, Lkz5;-><init>(Llz5;JJLjava/lang/String;JJJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    move-object v1, v0
+
+    move-object/from16 v0, p13
+
+    invoke-static {v15, v1, v0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Li34;->a(Lsf8;)Lf76;
-
-    move-result-object v0
-
-    new-instance v1, Li83;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v1, v0, v2}, Li83;-><init>(Lf76;I)V
-
-    return-object v1
+    return-object v0
 .end method

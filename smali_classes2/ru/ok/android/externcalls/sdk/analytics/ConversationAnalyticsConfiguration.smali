@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;",
         "provider",
-        "Lv2h;",
+        "Lb3h;",
         "setApplicationNameProvider",
         "(Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;)V",
         "Lru/ok/android/externcalls/sdk/analytics/UploadConfigProvider;",

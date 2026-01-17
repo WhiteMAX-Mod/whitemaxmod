@@ -2,32 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgie;
 
-# instance fields
-.field public a:Lole;
 
-.field public b:Ljava/lang/String;
+# static fields
+.field public static final a:Ldie;
 
-.field public c:Ljava/lang/String;
 
-.field public d:Ljava/util/List;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public e:Ljava/util/List;
+    new-instance v0, Ldie;
 
-.field public f:Ljava/util/List;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public g:J
+    sput-object v0, Ldie;->a:Ldie;
 
-.field public h:I
+    return-void
+.end method
 
-.field public i:Z
 
-.field public j:J
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public k:Ljava/util/List;
+    const/4 v0, 0x1
 
-.field public l:Ljava/util/List;
+    if-ne p0, p1, :cond_0
 
-.field public m:Ljava/lang/String;
+    return v0
 
-.field public n:Ljava/util/List;
+    :cond_0
+    instance-of p1, p1, Ldie;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x24f68a67
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "None"
+
+    return-object v0
+.end method

@@ -1,112 +1,117 @@
 .class public final Lqjc;
-.super Lb5g;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lzjc;
+.field public final b:J
 
-.field public o:I
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lzjc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Lqjc;->X:Lzjc;
+    invoke-direct {p0}, Lkk0;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lqjc;->b:J
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lqjc;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lac4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lqjc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqjc;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lqjc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lqjc;
-
-    iget-object v0, p0, Lqjc;->X:Lzjc;
-
-    invoke-direct {p1, v0, p2}, Lqjc;-><init>(Lzjc;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lqjc;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lqjc;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast p1, Lqjc;
 
-    iget-object p1, p0, Lqjc;->X:Lzjc;
+    iget-wide v3, p0, Lqjc;->b:J
 
-    iget-object p1, p1, Lzjc;->b:Ldjc;
+    iget-wide v5, p1, Lqjc;->b:J
 
-    iput v1, p0, Lqjc;->o:I
+    cmp-long v1, v3, v5
 
-    invoke-interface {p1, p0}, Ldjc;->a(Ll84;)Ljava/lang/Object;
+    if-eqz v1, :cond_2
 
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget-wide v3, p0, Lqjc;->c:J
 
-    return-object p1
+    iget-wide v5, p1, Lqjc;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lqjc;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lqjc;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ProfileAvatarUpdatedEvent(requestId="
+
+    const-string v1, ", photoId="
+
+    iget-wide v2, p0, Lqjc;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lqjc;->c:J
+
+    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

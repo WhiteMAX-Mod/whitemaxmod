@@ -1,80 +1,121 @@
 .class public final Ls6i;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
+
+# static fields
+.field public static final Companion:Lr6i;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Ls6i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    new-instance v0, Lr6i;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ls6i;->Companion:Lr6i;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ls6i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ls6i;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Ls6i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public synthetic constructor <init>(ILjava/lang/String;)V
     .locals 2
 
-    new-instance v0, Ls6i;
+    and-int/lit8 v0, p1, 0x1
 
-    iget-object v1, p0, Ls6i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    const/4 v1, 0x1
 
-    invoke-direct {v0, p2, v1}, Ls6i;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    if-ne v1, v0, :cond_0
 
-    iput-object p1, v0, Ls6i;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    iput-object p2, p0, Ls6i;->a:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Lq6i;->a:Lq6i;
+
+    invoke-virtual {p2}, Lq6i;->d()Lxpe;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lqjj;->b(IILxpe;)V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ls6i;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ls6i;
+
+    iget-object v1, p0, Ls6i;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Ls6i;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Ls6i;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Ls6i;->o:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    check-cast p1, Lq7i;
+    move-result v0
 
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->R0:[Lp38;
+    return v0
+.end method
 
-    iget-object v0, p0, Ls6i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {v0, p1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->T0(Lq7i;)V
+    const-string v0, "WebAppOpenMaxLinkRequest(url="
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    const-string v1, ")"
 
-    return-object p1
+    iget-object v2, p0, Ls6i;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

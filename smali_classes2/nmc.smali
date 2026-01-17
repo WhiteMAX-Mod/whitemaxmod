@@ -1,113 +1,171 @@
 .class public final Lnmc;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lpmc;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.field public final a:Lqhg;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lqhg;
+
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+.method public constructor <init>(Lqhg;Lnhg;Ljava/util/List;)V
     .locals 0
 
-    iput-object p2, p0, Lnmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lnmc;->a:Lqhg;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lnmc;->b:Lqhg;
+
+    iput-object p3, p0, Lnmc;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lnmc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
-    check-cast p1, Lnmc;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lnmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lnmc;
-
-    iget-object v1, p0, Lnmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    invoke-direct {v0, p2, v1}, Lnmc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
-
-    iput-object p1, v0, Lnmc;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnmc;->o:Ljava/lang/Object;
-
-    check-cast p1, Lamc;
-
-    iget-object v0, p0, Lnmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    iget-object v1, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->s0:Lkxd;
-
-    invoke-virtual {v1}, Lkxd;->e()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1}, Lkxd;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    iget-boolean v2, p1, Lamc;->b:Z
-
-    if-eqz v2, :cond_0
+    :cond_0
+    instance-of v1, p1, Lnmc;
 
     const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lnmc;
+
+    iget-object v1, p0, Lnmc;->a:Lqhg;
+
+    iget-object v3, p1, Lnmc;->a:Lqhg;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lnmc;->b:Lqhg;
+
+    iget-object v3, p1, Lnmc;->b:Lqhg;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lnmc;->c:Ljava/util/List;
+
+    iget-object p1, p1, Lnmc;->c:Ljava/util/List;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lnmc;->a:Lqhg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnmc;->b:Lqhg;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/16 v2, 0x8
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    add-int/2addr v0, v1
 
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()V
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_1
-    iget-object v0, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Lvci;
+    iget-object v1, p0, Lnmc;->c:Ljava/util/List;
 
-    iget-object p1, p1, Lamc;->a:Ljava/util/List;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v0, p1}, Lbe8;->E(Ljava/util/List;)V
+    move-result v1
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    add-int/2addr v1, v0
 
-    return-object p1
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowConfirmation(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnmc;->a:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnmc;->b:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lnmc;->c:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Lecj;->b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

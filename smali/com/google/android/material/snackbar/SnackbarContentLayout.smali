@@ -17,11 +17,11 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget p2, Lf4d;->motionEasingEmphasizedInterpolator:I
+    sget p2, Lf5d;->motionEasingEmphasizedInterpolator:I
 
-    sget-object v0, Ltg;->b:Luu5;
+    sget-object v0, Lrg;->b:Lvu5;
 
-    invoke-static {p1, p2, v0}, Lwaj;->e(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+    invoke-static {p1, p2, v0}, Lqbj;->e(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     :goto_1
     iget-object p1, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->a:Landroid/widget/TextView;
 
-    sget-object v0, Lash;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lxsh;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p1}, Landroid/view/View;->isPaddingRelative()Z
 
@@ -129,7 +129,7 @@
 
     invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
 
-    sget v0, Lw6d;->snackbar_text:I
+    sget v0, Lt7d;->snackbar_text:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -139,7 +139,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->a:Landroid/widget/TextView;
 
-    sget v0, Lw6d;->snackbar_action:I
+    sget v0, Lt7d;->snackbar_action:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -172,7 +172,7 @@
 
     move-result-object v0
 
-    sget v2, Lf5d;->design_snackbar_padding_vertical_2lines:I
+    sget v2, Lb6d;->design_snackbar_padding_vertical_2lines:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -182,7 +182,7 @@
 
     move-result-object v2
 
-    sget v3, Lf5d;->design_snackbar_padding_vertical:I
+    sget v3, Lb6d;->design_snackbar_padding_vertical:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

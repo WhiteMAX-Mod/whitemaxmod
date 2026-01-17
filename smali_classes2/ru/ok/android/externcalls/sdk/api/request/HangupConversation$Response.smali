@@ -43,10 +43,10 @@
 # static fields
 .field public static final Companion:Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response$Companion;
 
-.field private static final PARSER:Lf28;
+.field private static final PARSER:Lq18;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lf28;"
+            "Lq18;"
         }
     .end annotation
 .end field
@@ -60,17 +60,17 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->Companion:Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response$Companion;
 
-    new-instance v0, Lbx5;
+    new-instance v0, Ldx5;
 
     const/16 v1, 0x10
 
-    invoke-direct {v0, v1}, Lbx5;-><init>(I)V
+    invoke-direct {v0, v1}, Ldx5;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->PARSER:Lf28;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->PARSER:Lq18;
 
     return-void
 .end method
@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method private static final PARSER$lambda$0(Lo28;)Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;
+.method private static final PARSER$lambda$0(Lz18;)Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;
     .locals 0
 
     new-instance p0, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;
@@ -93,20 +93,20 @@
     return-object p0
 .end method
 
-.method public static synthetic a(Lo28;)Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;
+.method public static synthetic a(Lz18;)Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->PARSER$lambda$0(Lo28;)Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->PARSER$lambda$0(Lz18;)Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getPARSER$cp()Lf28;
+.method public static final synthetic access$getPARSER$cp()Lq18;
     .locals 1
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->PARSER:Lf28;
+    sget-object v0, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->PARSER:Lq18;
 
     return-object v0
 .end method

@@ -4,186 +4,115 @@
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Landroid/util/SparseBooleanArray;
-
-.field public c:Z
+.field public final a:Landroid/util/SparseBooleanArray;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Landroid/util/SparseBooleanArray;)V
     .locals 0
 
-    iput p1, p0, Lg66;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Landroid/util/SparseBooleanArray;
-
-    invoke-direct {p1}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    iput-object p1, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
+    iput-object p1, p0, Lg66;->a:Landroid/util/SparseBooleanArray;
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Landroid/util/SparseBooleanArray;
-
-    invoke-direct {p1}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    iput-object p1, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 2
-
-    iget v0, p0, Lg66;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Lg66;->c:Z
-
-    const/4 v1, 0x1
-
-    xor-int/2addr v0, v1
-
-    invoke-static {v0}, Lp5j;->g(Z)V
-
-    iget-object v0, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->append(IZ)V
-
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Lg66;->c:Z
-
-    const/4 v1, 0x1
-
-    xor-int/2addr v0, v1
-
-    invoke-static {v0}, Ln5j;->d(Z)V
-
-    iget-object v0, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->append(IZ)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b(Li66;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p1, Li66;->a:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    invoke-virtual {p1, v0}, Li66;->b(I)I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Lg66;->a(I)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public varargs c([I)V
-    .locals 3
+.method public final varargs a([I)Z
+    .locals 5
 
     array-length v0, p1
 
     const/4 v1, 0x0
 
+    move v2, v1
+
     :goto_0
-    if-ge v1, v0, :cond_0
+    if-ge v2, v0, :cond_1
 
-    aget v2, p1, v1
+    aget v3, p1, v2
 
-    invoke-virtual {p0, v2}, Lg66;->a(I)V
+    iget-object v4, p0, Lg66;->a:Landroid/util/SparseBooleanArray;
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {v4, v3}, Landroid/util/SparseBooleanArray;->get(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    :cond_1
+    return v1
+.end method
+
+.method public final b(I)I
+    .locals 2
+
+    iget-object v0, p0, Lg66;->a:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v1
+
+    invoke-static {p1, v1}, Lh6j;->c(II)V
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
     :cond_0
-    return-void
+    instance-of v0, p1, Lg66;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lg66;
+
+    iget-object v0, p0, Lg66;->a:Landroid/util/SparseBooleanArray;
+
+    iget-object p1, p1, Lg66;->a:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public d()Lh66;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    iget-boolean v0, p0, Lg66;->c:Z
+    iget-object v0, p0, Lg66;->a:Landroid/util/SparseBooleanArray;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->hashCode()I
 
-    xor-int/2addr v0, v1
+    move-result v0
 
-    invoke-static {v0}, Ln5j;->d(Z)V
-
-    iput-boolean v1, p0, Lg66;->c:Z
-
-    new-instance v0, Lh66;
-
-    iget-object v1, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
-
-    invoke-direct {v0, v1}, Lh66;-><init>(Landroid/util/SparseBooleanArray;)V
-
-    return-object v0
-.end method
-
-.method public e()Li66;
-    .locals 2
-
-    iget-boolean v0, p0, Lg66;->c:Z
-
-    const/4 v1, 0x1
-
-    xor-int/2addr v0, v1
-
-    invoke-static {v0}, Lp5j;->g(Z)V
-
-    iput-boolean v1, p0, Lg66;->c:Z
-
-    new-instance v0, Li66;
-
-    iget-object v1, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
-
-    invoke-direct {v0, v1}, Li66;-><init>(Landroid/util/SparseBooleanArray;)V
-
-    return-object v0
+    return v0
 .end method

@@ -1,97 +1,121 @@
 .class public final Lnd6;
-.super Ljava/lang/Object;
+.super Lcsd;
 .source "SourceFile"
-
-# interfaces
-.implements Lod6;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final a:Lts4;
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(Lts4;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnd6;->a:Ljava/util/List;
+    iput-object p1, p0, Lnd6;->a:Lts4;
+
+    const/16 p1, 0x10
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v0
+
+    invoke-static {p1}, Lq7j;->c(F)I
+
+    move-result p1
+
+    iput p1, p0, Lnd6;->b:I
+
+    const/16 p1, 0xc
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v0
+
+    invoke-static {p1}, Lq7j;->c(F)I
+
+    move-result p1
+
+    iput p1, p0, Lnd6;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final g(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lpsd;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
 
-    if-ne p0, p1, :cond_0
+    move-result p2
 
-    return v0
+    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_1
+
+    if-ltz p2, :cond_1
+
+    invoke-virtual {p3}, Lwrd;->j()I
+
+    move-result p3
+
+    if-ge p2, p3, :cond_1
+
+    iget p3, p0, Lnd6;->c:I
+
+    iput p3, p1, Landroid/graphics/Rect;->left:I
+
+    iput p3, p1, Landroid/graphics/Rect;->right:I
+
+    iget-object p3, p0, Lnd6;->a:Lts4;
+
+    invoke-virtual {p3, p2}, Lts4;->h(I)I
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const/4 p3, 0x1
+
+    if-eq p2, p3, :cond_0
+
+    const/4 p3, 0x4
+
+    if-ne p2, p3, :cond_1
 
     :cond_0
-    instance-of v1, p1, Lnd6;
+    iget p2, p0, Lnd6;->b:I
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
+    iput p2, p1, Landroid/graphics/Rect;->top:I
 
     :cond_1
-    check-cast p1, Lnd6;
-
-    iget-object v1, p0, Lnd6;->a:Ljava/util/List;
-
-    iget-object p1, p1, Lnd6;->a:Ljava/util/List;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lnd6;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenPicker(includes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lnd6;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

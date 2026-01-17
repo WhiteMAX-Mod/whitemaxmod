@@ -1,102 +1,54 @@
 .class public final Lwqc;
-.super Ldrc;
+.super Lp6g;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:J
-
-
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lwqc;->a:J
-
-    return-void
-.end method
+# interfaces
+.implements Lbr6;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lzb4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lwqc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lwqc;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lwqc;
 
-    iget-wide v3, p0, Lwqc;->a:J
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-wide v5, p1, Lwqc;->a:J
+    invoke-virtual {p1, p2}, Lwqc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x1000
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lwqc;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const/16 v0, 0x1000
+    new-instance p1, Lwqc;
 
-    return v0
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "DebugProfileInfo(id="
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    sget-object p1, Lbtc;->c:Lbtc;
 
-    iget-wide v2, p0, Lwqc;->a:J
+    invoke-virtual {p1}, Lbtc;->S0()V
 
-    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

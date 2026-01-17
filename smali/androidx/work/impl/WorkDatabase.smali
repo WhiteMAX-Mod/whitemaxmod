@@ -1,5 +1,5 @@
 .class public abstract Landroidx/work/impl/WorkDatabase;
-.super Le1e;
+.super Lb2e;
 .source "SourceFile"
 
 
@@ -10,7 +10,7 @@
     }
     d2 = {
         "Landroidx/work/impl/WorkDatabase;",
-        "Le1e;",
+        "Lb2e;",
         "<init>",
         "()V",
         "work-runtime_release"
@@ -29,30 +29,30 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Le1e;-><init>()V
+    invoke-direct {p0}, Lb2e;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract A()Lmii;
+.method public abstract A()Le9g;
 .end method
 
-.method public abstract B()Loii;
+.method public abstract B()Lzii;
 .end method
 
-.method public abstract v()Lrx4;
+.method public abstract C()Laji;
 .end method
 
-.method public abstract w()Ljfc;
+.method public abstract D()Ljji;
 .end method
 
-.method public abstract x()Lr8g;
+.method public abstract E()Llji;
 .end method
 
-.method public abstract y()Lcii;
+.method public abstract y()Ltx4;
 .end method
 
-.method public abstract z()Ldii;
+.method public abstract z()Ldgc;
 .end method

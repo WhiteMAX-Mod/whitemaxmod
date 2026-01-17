@@ -1,293 +1,264 @@
-.class public abstract Liaj;
+.class public final synthetic Liaj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/IBinder$DeathRecipient;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a(Ljava/nio/MappedByteBuffer;)Lb5a;
-    .locals 13
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
+    iput p1, p0, Liaj;->a:I
 
-    move-result-object p0
+    iput-object p2, p0, Liaj;->b:Ljava/lang/Object;
 
-    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    return-void
+.end method
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
 
-    move-result v0
+# virtual methods
+.method public final binderDied()V
+    .locals 6
 
-    add-int/lit8 v0, v0, 0x4
+    iget v0, p0, Liaj;->a:I
 
-    invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
+    iget-object v0, p0, Liaj;->b:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Ltqj;
 
-    const v1, 0xffff
+    iget-object v1, v0, Ltqj;->b:Lqf5;
 
-    and-int/2addr v0, v1
+    const-string v2, "reportBinderDeath"
 
-    const/16 v1, 0x64
+    const/4 v3, 0x0
 
-    const-string v2, "Cannot read metadata."
+    new-array v3, v3, [Ljava/lang/Object;
 
-    if-gt v0, v1, :cond_5
+    invoke-virtual {v1, v2, v3}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
+    iget-object v1, v0, Ltqj;->i:Ljava/lang/ref/WeakReference;
 
-    move-result v1
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    add-int/lit8 v1, v1, 0x6
+    move-result-object v1
 
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    if-nez v1, :cond_2
 
-    const/4 v1, 0x0
+    iget-object v1, v0, Ltqj;->b:Lqf5;
 
-    move v3, v1
+    iget-object v2, v0, Ltqj;->c:Ljava/lang/String;
 
-    :goto_0
-    const-wide v4, 0xffffffffL
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    const-wide/16 v6, -0x1
+    move-result-object v2
 
-    if-ge v3, v0, :cond_1
+    const-string v3, "%s : Binder has died."
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
+    invoke-virtual {v1, v3, v2}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result v8
+    iget-object v1, v0, Ltqj;->d:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result v9
-
-    add-int/lit8 v9, v9, 0x4
-
-    invoke-virtual {p0, v9}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v9
-
-    int-to-long v9, v9
-
-    and-long/2addr v9, v4
-
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
-
-    move-result v11
-
-    add-int/lit8 v11, v11, 0x4
-
-    invoke-virtual {p0, v11}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    const v11, 0x6d657461
-
-    if-ne v11, v8, :cond_0
-
-    goto :goto_1
+    move-result-object v1
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ligj;
+
+    new-instance v3, Landroid/os/RemoteException;
+
+    iget-object v4, v0, Ltqj;->c:Ljava/lang/String;
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, " : Binder has died."
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, v2, Ligj;->a:Lieg;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, v3}, Lieg;->c(Ljava/lang/Exception;)Z
 
     goto :goto_0
 
     :cond_1
-    move-wide v9, v6
+    iget-object v1, v0, Ltqj;->d:Ljava/util/ArrayList;
 
-    :goto_1
-    cmp-long v0, v9, v6
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    if-eqz v0, :cond_4
+    iget-object v1, v0, Ltqj;->f:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
+    monitor-enter v1
 
-    move-result v0
+    :try_start_0
+    invoke-virtual {v0}, Ltqj;->d()V
 
-    int-to-long v6, v0
+    monitor-exit v1
 
-    sub-long v6, v9, v6
+    return-void
 
-    long-to-int v0, v6
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v3
-
-    add-int/2addr v3, v0
-
-    invoke-virtual {p0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0xc
-
-    invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v0
-
-    int-to-long v6, v0
-
-    and-long/2addr v6, v4
-
-    :goto_2
-    int-to-long v11, v1
-
-    cmp-long v0, v11, v6
-
-    if-gez v0, :cond_4
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v3
-
-    int-to-long v11, v3
-
-    and-long/2addr v11, v4
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    const v3, 0x456d6a69
-
-    if-eq v3, v0, :cond_3
-
-    const v3, 0x656d6a69
-
-    if-ne v3, v0, :cond_2
-
-    goto :goto_3
+    throw v0
 
     :cond_2
-    add-int/lit8 v1, v1, 0x1
+    new-instance v0, Ljava/lang/ClassCastException;
 
-    goto :goto_2
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Liaj;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhnj;
+
+    iget-object v1, v0, Lhnj;->b:Lu59;
+
+    const-string v2, "reportBinderDeath"
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v2, v3}, Lu59;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lhnj;->i:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_5
+
+    iget-object v1, v0, Lhnj;->b:Lu59;
+
+    iget-object v2, v0, Lhnj;->c:Ljava/lang/String;
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "%s : Binder has died."
+
+    invoke-virtual {v1, v3, v2}, Lu59;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lhnj;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
 
     :cond_3
-    :goto_3
-    add-long/2addr v11, v9
-
-    long-to-int v0, v11
-
-    invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    new-instance v0, Lb5a;
-
-    invoke-direct {v0}, Lbs8;-><init>()V
-
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->getInt(I)I
-
-    move-result v1
-
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    add-int/2addr v2, v1
+    if-eqz v2, :cond_4
 
-    iput-object p0, v0, Lbs8;->d:Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iput v2, v0, Lbs8;->a:I
+    move-result-object v2
 
-    invoke-virtual {p0, v2}, Ljava/nio/ByteBuffer;->getInt(I)I
+    check-cast v2, Lc8j;
 
-    move-result p0
+    iget-object v3, v0, Lhnj;->c:Ljava/lang/String;
 
-    sub-int/2addr v2, p0
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    iput v2, v0, Lbs8;->b:I
+    move-result-object v3
 
-    iget-object p0, v0, Lbs8;->d:Ljava/lang/Object;
+    const-string v4, " : Binder has died."
 
-    check-cast p0, Ljava/nio/ByteBuffer;
+    new-instance v5, Landroid/os/RemoteException;
 
-    invoke-virtual {p0, v2}, Ljava/nio/ByteBuffer;->getShort(I)S
+    invoke-virtual {v3, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result p0
+    move-result-object v3
 
-    iput p0, v0, Lbs8;->c:I
+    invoke-direct {v5, v3}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    iget-object v2, v2, Lc8j;->a:Lieg;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2, v5}, Lieg;->c(Ljava/lang/Exception;)Z
+
+    goto :goto_1
 
     :cond_4
-    new-instance p0, Ljava/io/IOException;
+    iget-object v1, v0, Lhnj;->d:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    throw p0
+    iget-object v1, v0, Lhnj;->f:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_1
+    invoke-virtual {v0}, Lhnj;->c()V
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    throw v0
 
     :cond_5
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/lang/ClassCastException;
 
-    invoke-direct {p0, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
 
-    throw p0
-.end method
+    throw v0
 
-.method public static final b(Lebf;)Lzm1;
-    .locals 9
+    nop
 
-    new-instance v0, Lzm1;
-
-    iget-wide v1, p0, Lebf;->a:J
-
-    iget-object v3, p0, Lebf;->b:Lzpd;
-
-    iget-object v4, p0, Lebf;->c:Lzk1;
-
-    iget-wide v5, p0, Lebf;->d:J
-
-    iget-object v7, p0, Lebf;->e:Ljava/lang/String;
-
-    iget-object v8, p0, Lebf;->f:Ljava/lang/String;
-
-    invoke-direct/range {v0 .. v8}, Lzm1;-><init>(JLzpd;Lzk1;JLjava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static c(I)I
-    .locals 4
-
-    int-to-long v0, p0
-
-    const-wide/32 v2, -0x3361d2af
-
-    mul-long/2addr v0, v2
-
-    long-to-int p0, v0
-
-    const/16 v0, 0xf
-
-    invoke-static {p0, v0}, Ljava/lang/Integer;->rotateLeft(II)I
-
-    move-result p0
-
-    int-to-long v0, p0
-
-    const-wide/32 v2, 0x1b873593
-
-    mul-long/2addr v0, v2
-
-    long-to-int p0, v0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -33,7 +33,7 @@
     .line 3
     const-string v0, "output channel is null"
 
-    invoke-static {p1, v0}, Lnjj;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Likj;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lorg/msgpack/core/buffer/ChannelBufferOutput;->channel:Ljava/nio/channels/WritableByteChannel;
 

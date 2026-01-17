@@ -2,217 +2,243 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhxb;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public A:Z
 
-.field public final b:Llfa;
+.field public B:Ljava/lang/Integer;
 
-.field public final c:Laxb;
+.field public C:Lxkg;
 
-.field public final d:Ljava/lang/String;
+.field public D:Lnce;
+
+.field public E:Lorg/webrtc/PeerConnection$IceTransportsType;
+
+.field public F:Lorg/webrtc/PeerConnection$VpnPreference;
+
+.field public G:Ljava/lang/Object;
+
+.field public H:I
+
+.field public a:Lq7f;
+
+.field public b:Ln7f;
+
+.field public c:Ljava/util/concurrent/ExecutorService;
+
+.field public d:Lrk1;
+
+.field public e:Landroid/content/Context;
+
+.field public f:Ldhd;
+
+.field public g:Lahd;
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:Z
+
+.field public k:Z
+
+.field public l:Z
+
+.field public m:Z
+
+.field public n:Z
+
+.field public o:[Ljava/lang/String;
+
+.field public p:[Ljava/lang/String;
+
+.field public q:Z
+
+.field public r:Z
+
+.field public s:Z
+
+.field public t:Z
+
+.field public u:Z
+
+.field public v:Z
+
+.field public w:Lakj;
+
+.field public x:Lxj;
+
+.field public y:Lwi;
+
+.field public z:Lrde;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Llfa;Laxb;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldxb;->a:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Ldxb;->b:Llfa;
+    iput-boolean v0, p0, Ldxb;->h:Z
 
-    iput-object p3, p0, Ldxb;->c:Laxb;
+    iput-boolean v0, p0, Ldxb;->i:Z
 
-    iput-object p4, p0, Ldxb;->d:Ljava/lang/String;
+    iput-boolean v0, p0, Ldxb;->j:Z
+
+    iput-boolean v0, p0, Ldxb;->k:Z
+
+    iput-boolean v0, p0, Ldxb;->l:Z
+
+    iput-boolean v0, p0, Ldxb;->m:Z
+
+    iput-boolean v0, p0, Ldxb;->n:Z
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Ldxb;->o:[Ljava/lang/String;
+
+    iput-object v1, p0, Ldxb;->p:[Ljava/lang/String;
+
+    iput-boolean v0, p0, Ldxb;->q:Z
+
+    iput-boolean v0, p0, Ldxb;->r:Z
+
+    iput-boolean v0, p0, Ldxb;->s:Z
+
+    iput-boolean v0, p0, Ldxb;->t:Z
+
+    iput-boolean v0, p0, Ldxb;->u:Z
+
+    iput-boolean v0, p0, Ldxb;->v:Z
+
+    const/4 v2, 0x4
+
+    iput v2, p0, Ldxb;->H:I
+
+    iput-boolean v0, p0, Ldxb;->A:Z
+
+    iput-object v1, p0, Ldxb;->B:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Ldxb;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final b()Llfa;
-    .locals 1
-
-    iget-object v0, p0, Ldxb;->b:Llfa;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Lfxb;
     .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ldxb;->a:Lq7f;
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    iget-object v0, p0, Ldxb;->b:Ln7f;
 
-    :cond_0
-    instance-of v1, p1, Ldxb;
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Ldxb;->c:Ljava/util/concurrent/ExecutorService;
 
-    if-nez v1, :cond_1
+    if-eqz v0, :cond_0
 
-    return v2
+    iget-object v0, p0, Ldxb;->d:Lrk1;
 
-    :cond_1
-    check-cast p1, Ldxb;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Ldxb;->a:Ljava/lang/String;
+    iget-object v0, p0, Ldxb;->e:Landroid/content/Context;
 
-    iget-object v3, p1, Ldxb;->a:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p0, Ldxb;->f:Ldhd;
 
-    move-result v1
+    if-eqz v0, :cond_0
 
-    if-nez v1, :cond_2
+    iget-object v0, p0, Ldxb;->g:Lahd;
 
-    return v2
+    if-eqz v0, :cond_0
 
-    :cond_2
-    iget-object v1, p0, Ldxb;->b:Llfa;
+    iget-object v0, p0, Ldxb;->w:Lakj;
 
-    iget-object v3, p1, Ldxb;->b:Llfa;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p0, Ldxb;->C:Lxkg;
 
-    move-result v1
+    if-eqz v0, :cond_0
 
-    if-nez v1, :cond_3
+    new-instance v0, Lfxb;
 
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Ldxb;->c:Laxb;
-
-    iget-object v3, p1, Ldxb;->c:Laxb;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Ldxb;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Ldxb;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ldxb;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ldxb;->b:Llfa;
-
-    invoke-virtual {v1}, Llfa;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ldxb;->c:Laxb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ldxb;->d:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "FailMetric(type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldxb;->c:Laxb;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", desc="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldxb;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", props="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldxb;->b:Llfa;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p0}, Lfxb;-><init>(Ldxb;)V
 
     return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "failed to build peerConnectionClient"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Ldxb;->a:Lq7f;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ldxb;->b:Ln7f;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ldxb;->c:Ljava/util/concurrent/ExecutorService;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ldxb;->d:Lrk1;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ldxb;->e:Landroid/content/Context;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ldxb;->f:Ldhd;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ldxb;->g:Lahd;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ldxb;->w:Lakj;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Ldxb;->C:Lxkg;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

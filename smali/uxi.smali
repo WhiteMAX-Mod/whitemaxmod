@@ -1,100 +1,61 @@
 .class public final Luxi;
-.super Ljava/lang/Object;
+.super Liwi;
 .source "SourceFile"
 
-# interfaces
-.implements Lwwa;
 
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
 
-# static fields
-.field public static final a:Luxi;
+.field public final transient d:I
+
+.field public final transient o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(I[Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Luxi;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Luxi;->c:[Ljava/lang/Object;
 
-    sput-object v0, Luxi;->a:Luxi;
+    iput p1, p0, Luxi;->d:I
 
-    new-instance v0, Ldqi;
+    const/4 p1, 0x1
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
-
-    const-class v1, Lrqi;
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    iput p1, p0, Luxi;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Luxi;->o:I
 
-    move-result-object p1
+    invoke-static {p1, v0}, Lqaj;->c(II)V
 
-    throw p1
+    add-int/2addr p1, p1
+
+    iget v0, p0, Luxi;->d:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Luxi;->c:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Luxi;->o:I
+
+    return v0
 .end method

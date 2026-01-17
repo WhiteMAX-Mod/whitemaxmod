@@ -1,48 +1,90 @@
 .class public final Lge1;
-.super Ll84;
+.super Lp6g;
+.source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lsx;
+.field public final synthetic X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lsx;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
     .locals 0
 
-    iput-object p1, p0, Lge1;->X:Lsx;
+    iput-object p2, p0, Lge1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lge1;->d:Ljava/lang/Object;
+    check-cast p1, Lud1;
 
-    iget p1, p0, Lge1;->o:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lge1;->o:I
-
-    iget-object p1, p0, Lge1;->X:Lsx;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lsx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lge1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
+
+    check-cast p1, Lge1;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lge1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lge1;
+
+    iget-object v1, p0, Lge1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+    invoke-direct {v0, p2, v1}, Lge1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+
+    iput-object p1, v0, Lge1;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lge1;->o:Ljava/lang/Object;
+
+    check-cast v0, Lud1;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lge1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->z0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lwd1;
+
+    move-result-object p1
+
+    iget-object v1, v0, Lud1;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v1}, Lwd1;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v0, v0, Lud1;->b:Lvd1;
+
+    invoke-virtual {p1, v0}, Lwd1;->setIndicatorState(Lvd1;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

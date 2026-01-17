@@ -1,180 +1,129 @@
-.class public final synthetic Liv2;
-.super Ljava/lang/Object;
+.class public final enum Liv2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
+
+# static fields
+.field public static final synthetic X:[Liv2;
+
+.field public static final enum b:Liv2;
+
+.field public static final enum c:Liv2;
+
+.field public static final enum d:Liv2;
+
+.field public static final o:I
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Liv2;->a:I
+    new-instance v0, Liv2;
 
-    iput-object p1, p0, Liv2;->b:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
+    const-string v1, "SOUND"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v1}, Liv2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Liv2;->b:Liv2;
+
+    new-instance v1, Liv2;
+
+    const/4 v2, 0x1
+
+    const-string v3, "VIBR"
+
+    const-string v4, "VIBRATION"
+
+    invoke-direct {v1, v4, v2, v3}, Liv2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Liv2;->c:Liv2;
+
+    new-instance v2, Liv2;
+
+    const-string v3, "LED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Liv2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Liv2;->d:Liv2;
+
+    filled-new-array {v0, v1, v2}, [Liv2;
+
+    move-result-object v0
+
+    sput-object v0, Liv2;->X:[Liv2;
+
+    invoke-static {}, Liv2;->values()[Liv2;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    sput v0, Liv2;->o:I
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Liv2;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Liv2;
+    .locals 1
+
+    const-class v0, Liv2;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Liv2;
+
+    return-object p0
+.end method
+
+.method public static values()[Liv2;
+    .locals 1
+
+    sget-object v0, Liv2;->X:[Liv2;
+
+    invoke-virtual {v0}, [Liv2;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Liv2;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Liv2;->a:I
+    const-string v0, "{value=\'"
 
-    const/4 v1, 0x6
+    const-string v1, "\'}"
 
-    iget-object v2, p0, Liv2;->b:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
+    iget-object v2, p0, Liv2;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v0, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;->X:[Lp38;
-
-    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v3, v4, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    sget v1, Lleb;->c:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v1, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    invoke-direct {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOverScrollMode(I)V
-
-    iget-object v3, v2, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;->c:Lhze;
-
-    invoke-virtual {v0, v3}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lzqd;)V
-
-    new-instance v7, Lm82;
-
-    const/16 v11, 0x8
-
-    invoke-direct {v7, v11, v2}, Lm82;-><init>(ILjava/lang/Object;)V
-
-    new-instance v5, Lije;
-
-    sget-object v6, Ldc3;->s0:Lole;
-
-    invoke-virtual {v6, v0}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object v6
-
-    const/4 v9, 0x0
-
-    const/16 v10, 0x1c
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v5 .. v10}, Lije;-><init>(Lplb;Lgje;Loq6;Lqfe;I)V
-
-    invoke-virtual {v0, v5}, Landroidx/recyclerview/widget/RecyclerView;->j(Lfrd;)V
-
-    new-instance v5, La21;
-
-    invoke-direct {v5, v1}, La21;-><init>(I)V
-
-    invoke-virtual {v0, v5}, Landroidx/recyclerview/widget/RecyclerView;->j(Lfrd;)V
-
-    new-instance v1, Luz6;
-
-    new-instance v5, Lla;
-
-    const/16 v6, 0xa
-
-    invoke-direct {v5, v2, v6, v0}, Lla;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-direct {v1, v11, v5}, Luz6;-><init>(ILjava/lang/Object;)V
-
-    new-instance v2, Lawf;
-
-    invoke-direct {v2, v0, v3, v1}, Lawf;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lzqd;Lbwf;)V
-
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lfrd;)V
-
-    new-instance v1, Ljv2;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v4, v3}, Ljv2;-><init>(Lawf;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v1, v0}, Ll5j;->c(Ler6;Landroid/view/View;)V
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;->X:[Lp38;
-
-    new-instance v0, Lpmb;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2, v1}, Lpmb;-><init>(Landroid/content/Context;I)V
-
-    sget v1, Lleb;->e:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    sget-object v1, Lhmb;->b:Lhmb;
-
-    invoke-virtual {v0, v1}, Lpmb;->setForm(Lhmb;)V
-
-    sget v1, Lneb;->e:I
-
-    invoke-virtual {v0, v1}, Lpmb;->setTitle(I)V
-
-    new-instance v1, Lxlb;
-
-    new-instance v2, Ljh1;
-
-    const/16 v3, 0x19
-
-    invoke-direct {v2, v3}, Ljh1;-><init>(I)V
-
-    invoke-direct {v1, v2}, Lxlb;-><init>(Loq6;)V
-
-    invoke-virtual {v0, v1}, Lpmb;->setLeftActions(Ldmb;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

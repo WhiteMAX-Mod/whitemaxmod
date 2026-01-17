@@ -51,29 +51,29 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    iget-object v3, v0, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Lcom/google/android/material/timepicker/ClockHandView;
+    iget-object v3, v0, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Lcom/google/android/material/timepicker/ClockHandView;
 
     iget v3, v3, Lcom/google/android/material/timepicker/ClockHandView;->d:I
 
     sub-int/2addr v1, v3
 
-    iget v3, v0, Lcom/google/android/material/timepicker/ClockFaceView;->Q0:I
+    iget v3, v0, Lcom/google/android/material/timepicker/ClockFaceView;->R0:I
 
     sub-int/2addr v1, v3
 
-    iget v3, v0, Lhgd;->G0:I
+    iget v3, v0, Lfhd;->H0:I
 
     if-eq v1, v3, :cond_1
 
-    iput v1, v0, Lhgd;->G0:I
+    iput v1, v0, Lfhd;->H0:I
 
-    invoke-virtual {v0}, Lcom/google/android/material/timepicker/ClockFaceView;->v()V
+    invoke-virtual {v0}, Lcom/google/android/material/timepicker/ClockFaceView;->u()V
 
-    iget-object v1, v0, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Lcom/google/android/material/timepicker/ClockHandView;
+    iget-object v1, v0, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Lcom/google/android/material/timepicker/ClockHandView;
 
-    iget v0, v0, Lhgd;->G0:I
+    iget v0, v0, Lfhd;->H0:I
 
-    iput v0, v1, Lcom/google/android/material/timepicker/ClockHandView;->y0:I
+    iput v0, v1, Lcom/google/android/material/timepicker/ClockHandView;->z0:I
 
     invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 

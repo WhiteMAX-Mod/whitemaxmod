@@ -1,143 +1,141 @@
 .class public final Lfic;
-.super Ljava/lang/Object;
+.super Lwf7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/ContentResolver;
+.field public final b:Ljava/lang/String;
 
-.field public final b:Landroid/content/res/Resources;
-
-.field public final c:Landroid/content/res/AssetManager;
-
-.field public final d:Lnv6;
-
-.field public final e:Lni7;
-
-.field public final f:Lrod;
-
-.field public final g:Lu65;
-
-.field public final h:Z
-
-.field public final i:Lwn5;
-
-.field public final j:Lmt8;
-
-.field public final k:Lq2g;
-
-.field public final l:Luj9;
-
-.field public final m:Luj9;
-
-.field public final n:Ljo4;
-
-.field public final o:Lt9c;
-
-.field public final p:Lhg5;
-
-.field public final q:I
+.field public final c:[B
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lnv6;Lgr4;Lrod;Lu65;ZLwn5;Lmt8;Lct7;Lct7;Lq2g;Ljo4;Lt9c;ILhg5;)V
+.method public constructor <init>(Ljava/lang/String;[B)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "PRIV"
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-direct {p0, v0}, Lwf7;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    iput-object p1, p0, Lfic;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lfic;->a:Landroid/content/ContentResolver;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lfic;->b:Landroid/content/res/Resources;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lfic;->c:Landroid/content/res/AssetManager;
-
-    iput-object p2, p0, Lfic;->d:Lnv6;
-
-    iput-object p3, p0, Lfic;->e:Lni7;
-
-    iput-object p4, p0, Lfic;->f:Lrod;
-
-    iput-object p5, p0, Lfic;->g:Lu65;
-
-    iput-boolean p6, p0, Lfic;->h:Z
-
-    iput-object p7, p0, Lfic;->i:Lwn5;
-
-    iput-object p8, p0, Lfic;->j:Lmt8;
-
-    iput-object p9, p0, Lfic;->m:Luj9;
-
-    iput-object p10, p0, Lfic;->l:Luj9;
-
-    iput-object p11, p0, Lfic;->k:Lq2g;
-
-    iput-object p12, p0, Lfic;->n:Ljo4;
-
-    iput-object p13, p0, Lfic;->o:Lt9c;
-
-    new-instance p1, Ljo4;
-
-    invoke-direct {p1}, Ljo4;-><init>()V
-
-    new-instance p1, Ljo4;
-
-    invoke-direct {p1}, Ljo4;-><init>()V
-
-    iput p14, p0, Lfic;->q:I
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Lfic;->p:Lhg5;
+    iput-object p2, p0, Lfic;->c:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcic;ZLyj7;)Lnxd;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Lnxd;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lfic;->i:Lwn5;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v1}, Lwn5;->i()Ljava/util/concurrent/ExecutorService;
+    return v0
 
-    move-result-object v1
+    :cond_0
+    const/4 v1, 0x0
 
-    iget-object v2, p0, Lfic;->j:Lmt8;
+    if-eqz p1, :cond_2
 
-    move-object v3, p1
+    const-class v2, Lfic;
 
-    move v4, p2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object v5, p3
+    move-result-object v3
 
-    invoke-direct/range {v0 .. v5}, Lnxd;-><init>(Ljava/util/concurrent/Executor;Lmt8;Lcic;ZLyj7;)V
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lfic;
+
+    iget-object v2, p0, Lfic;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lfic;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lfic;->c:[B
+
+    iget-object p1, p1, Lfic;->c:[B
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lfic;->b:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const/16 v1, 0x20f
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lfic;->c:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lwf7;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ": owner="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfic;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

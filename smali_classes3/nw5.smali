@@ -3,23 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lux3;
-.implements Ldr6;
+.implements Lay3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lpw5;
+.field public final synthetic b:Lqw5;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpw5;I)V
+.method public synthetic constructor <init>(Lqw5;JI)V
     .locals 0
 
-    iput p2, p0, Lnw5;->a:I
+    iput p4, p0, Lnw5;->a:I
 
-    iput-object p1, p0, Lnw5;->b:Lpw5;
+    iput-object p1, p0, Lnw5;->b:Lqw5;
+
+    iput-wide p2, p0, Lnw5;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,91 +31,55 @@
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
     iget v0, p0, Lnw5;->a:I
 
-    const-string v1, "pw5"
+    const-string v1, "qw5"
+
+    iget-wide v2, p0, Lnw5;->c:J
+
+    iget-object v4, p0, Lnw5;->b:Lqw5;
+
+    check-cast p1, Ljava/lang/Throwable;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lnw5;->b:Lpw5;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    check-cast p1, Ljw5;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v5, "onNotifUpdated: failed for id: "
 
-    iget-wide v1, p1, Ljw5;->b:J
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-wide/16 v3, 0x0
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    cmp-long p1, v1, v3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Lpw5;->b(J)V
+    invoke-static {v1, v0, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_0
+    invoke-virtual {v4}, Lqw5;->f()V
+
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lnw5;->b:Lpw5;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    check-cast p1, Ljava/util/List;
+    const-string v0, "onNotifAdded: failed to add sticker "
 
-    const-string v2, "publishFavoritesIds: %s"
+    const-string v5, " to cache"
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-static {v2, v3, v0, v5}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-static {v1, v2, v3}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v1, v0, Lpw5;->Z:Ljp3;
-
-    iget-boolean v1, v1, Ljp3;->b:Z
-
-    if-nez v1, :cond_1
-
-    iget-object v0, v0, Lpw5;->s0:Lmn0;
-
-    invoke-virtual {v0, p1}, Lmn0;->d(Ljava/lang/Object;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lnw5;->b:Lpw5;
-
-    check-cast p1, Ljava/util/List;
-
-    const-string v2, "on next favorite sticker ids from obs: %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v3}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v0, p1}, Lpw5;->e(Ljava/util/List;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lnw5;->b:Lpw5;
-
-    check-cast p1, Ljava/util/List;
-
-    const-string v2, "onNotifUpdated: updated ids: %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v3}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v0, p1}, Lpw5;->e(Ljava/util/List;)V
+    invoke-virtual {v4}, Lqw5;->f()V
 
     return-void
 
@@ -120,72 +87,6 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lnw5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lnw5;->b:Lpw5;
-
-    iget-object v0, v0, Lpw5;->a:Lg35;
-
-    invoke-virtual {v0}, Lg35;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgv5;
-
-    invoke-virtual {v0}, Lgv5;->a()Ljdf;
-
-    move-result-object v0
-
-    new-instance v1, Lzj2;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2, p1}, Lzj2;-><init>(ILjava/util/List;)V
-
-    new-instance p1, Ltn3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p1, v0, v2, v1}, Ltn3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Long;
-
-    iget-object v0, p0, Lnw5;->b:Lpw5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lvs5;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v0, v2, p1}, Lvs5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Lvn3;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, v0, v1}, Lvn3;-><init>(ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x3
         :pswitch_0
     .end packed-switch
 .end method

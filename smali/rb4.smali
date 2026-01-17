@@ -1,17 +1,35 @@
-.class public interface abstract Lrb4;
+.class public final Lrb4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpb4;
 
-# virtual methods
-.method public abstract fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
-.end method
 
-.method public abstract get(Lqb4;)Lpb4;
-.end method
+# instance fields
+.field public final a:Lnq6;
 
-.method public abstract minusKey(Lqb4;)Lrb4;
-.end method
+.field public final b:Lpb4;
 
-.method public abstract plus(Lrb4;)Lrb4;
+
+# direct methods
+.method public constructor <init>(Lpb4;Lnq6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lrb4;->a:Lnq6;
+
+    instance-of p2, p1, Lrb4;
+
+    if-eqz p2, :cond_0
+
+    check-cast p1, Lrb4;
+
+    iget-object p1, p1, Lrb4;->b:Lpb4;
+
+    :cond_0
+    iput-object p1, p0, Lrb4;->b:Lpb4;
+
+    return-void
 .end method

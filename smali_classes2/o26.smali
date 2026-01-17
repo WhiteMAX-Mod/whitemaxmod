@@ -1,63 +1,76 @@
-.class public final Lo26;
+.class public final synthetic Lo26;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final synthetic b:Lone/me/sdk/richvector/VectorPath;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lone/me/sdk/richvector/VectorPath;I)V
     .locals 0
 
+    iput p2, p0, Lo26;->a:I
+
+    iput-object p1, p0, Lo26;->b:Lone/me/sdk/richvector/VectorPath;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lo26;->a:J
-
-    iput-object p3, p0, Lo26;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lo26;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 1
 
-    iget-object v0, p0, Lo26;->b:Ljava/lang/String;
+    iget v0, p0, Lo26;->a:I
 
-    invoke-static {v0}, Ltri;->e(Ljava/lang/CharSequence;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    xor-int/lit8 v0, v0, 0x1
+    move-result-object p1
 
-    const-string v1, "FileUploadInfo{fileId="
+    check-cast p1, Ljava/lang/Integer;
 
-    const-string v2, ", token=\'"
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    iget-wide v3, p0, Lo26;->a:J
+    move-result p1
 
-    invoke-static {v3, v4, v1, v2, v0}, Lxd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lo26;->b:Lone/me/sdk/richvector/VectorPath;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
 
-    const-string v1, "\', url=\'"
+    return-void
 
-    const-string v2, "\'}"
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget-object v3, p0, Lo26;->c:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v0, v1, v3, v2}, La3e;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    check-cast p1, Ljava/lang/Integer;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    return-object v0
+    move-result p1
+
+    iget-object v0, p0, Lo26;->b:Lone/me/sdk/richvector/VectorPath;
+
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

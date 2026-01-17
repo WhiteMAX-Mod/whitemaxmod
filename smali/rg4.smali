@@ -13,11 +13,11 @@
 
 .field public a:Ljavax/inject/Provider;
 
-.field public b:Lzs7;
+.field public b:Ls3e;
 
 .field public c:Ljavax/inject/Provider;
 
-.field public d:Lyqd;
+.field public d:Lig5;
 
 .field public o:Ljavax/inject/Provider;
 
@@ -32,11 +32,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lnm5;
+    check-cast v0, Lrm5;
 
-    check-cast v0, Ln6e;
+    check-cast v0, Lj7e;
 
-    invoke-virtual {v0}, Ln6e;->close()V
+    invoke-virtual {v0}, Lj7e;->close()V
 
     return-void
 .end method

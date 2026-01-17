@@ -1,25 +1,40 @@
-.class public abstract synthetic Liw6;
+.class public final Liw6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llw6;
+
 
 # static fields
-.field public static final synthetic a:Lwk5;
+.field public static final a:Liw6;
+
+.field public static final b:Liw6;
+
+.field public static final c:Liw6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method static synthetic constructor <clinit>()V
+    .locals 1
 
-    invoke-static {}, Lbn3;->values()[Lbn3;
+    new-instance v0, Liw6;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lwk5;
+    sput-object v0, Liw6;->a:Liw6;
 
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+    new-instance v0, Liw6;
 
-    sput-object v1, Liw6;->a:Lwk5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Liw6;->b:Liw6;
+
+    new-instance v0, Liw6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Liw6;->c:Liw6;
 
     return-void
 .end method

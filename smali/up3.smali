@@ -1,90 +1,40 @@
-.class public final Lup3;
+.class public final synthetic Lup3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmoe;
+.implements Lwc9;
 
 
 # instance fields
-.field public final a:Lmoe;
+.field public final synthetic a:Lzp3;
 
-.field public final b:Lal7;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lmoe;Ljava/util/List;)V
+.method public synthetic constructor <init>(Lzp3;Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lup3;->a:Lmoe;
+    iput-object p1, p0, Lup3;->a:Lzp3;
 
-    invoke-static {p2}, Lal7;->j(Ljava/util/Collection;)Lal7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lup3;->b:Lal7;
+    iput-object p2, p0, Lup3;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()J
+.method public final a(Lwk0;Lqlg;)V
     .locals 2
 
-    iget-object v0, p0, Lup3;->a:Lmoe;
+    iget-object v0, p0, Lup3;->a:Lzp3;
 
-    invoke-interface {v0}, Lmoe;->c()J
+    iget-object v1, p0, Lup3;->b:Ljava/lang/Object;
 
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    iget-object v0, p0, Lup3;->a:Lmoe;
-
-    invoke-interface {v0}, Lmoe;->i()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final l()J
-    .locals 2
-
-    iget-object v0, p0, Lup3;->a:Lmoe;
-
-    invoke-interface {v0}, Lmoe;->l()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final m(J)V
-    .locals 1
-
-    iget-object v0, p0, Lup3;->a:Lmoe;
-
-    invoke-interface {v0, p1, p2}, Lmoe;->m(J)V
+    invoke-virtual {v0, v1, p1, p2}, Lzp3;->q(Ljava/lang/Object;Lwk0;Lqlg;)V
 
     return-void
-.end method
-
-.method public final t(Lxg8;)Z
-    .locals 1
-
-    iget-object v0, p0, Lup3;->a:Lmoe;
-
-    invoke-interface {v0, p1}, Lmoe;->t(Lxg8;)Z
-
-    move-result p1
-
-    return p1
 .end method

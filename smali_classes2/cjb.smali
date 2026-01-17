@@ -1,99 +1,41 @@
 .class public final Lcjb;
-.super Lfjb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lcjb;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final b:Lcjb;
+# instance fields
+.field public final synthetic a:Lv40;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lv40;)V
+    .locals 0
 
-    new-instance v0, Lcjb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide v1, 0x7fffffffffffffffL
-
-    invoke-direct {v0, v1, v2}, Lfjb;-><init>(J)V
-
-    sput-object v0, Lcjb;->b:Lcjb;
-
-    new-instance v0, Lev8;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lev8;-><init>(I)V
-
-    sput-object v0, Lcjb;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p1, p0, Lcjb;->a:Lv40;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcjb;->a:Lv40;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget-object v1, Ljjb;->a:Landroid/os/Handler;
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Lv40;->h:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    check-cast v0, Lgjb;
 
-    return v0
+    sget-object v1, Lfjb;->c:Lfjb;
 
-    :cond_0
-    instance-of p1, p1, Lcjb;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x6f5f0da2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Indeterminate"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v0, v1}, Ljjb;->b(Lgjb;Lfjb;)V
 
     return-void
 .end method

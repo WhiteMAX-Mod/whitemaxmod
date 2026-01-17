@@ -1,3 +1,7 @@
-.class public interface abstract Lpwa;
-.super Ljava/lang/Object;
+.class public final Lpwa;
+.super Lorg/webrtc/HardwareVideoDecoderFactory;
 .source "SourceFile"
+
+
+# static fields
+.field public static final synthetic a:I

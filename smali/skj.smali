@@ -1,55 +1,74 @@
-.class public final Lskj;
+.class public abstract Lskj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lojj;
-
-.field public final b:Ldpj;
-
-.field public final c:Lowi;
-
-.field public final d:Lowi;
-
-.field public final e:Lkjj;
-
-
 # direct methods
-.method public synthetic constructor <init>(Lw07;)V
-    .locals 1
+.method public static final b(Lr4h;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lq4b;
 
-    iget-object v0, p1, Lw07;->a:Ljava/lang/Object;
+    const/16 v1, 0x1d
 
-    check-cast v0, Lojj;
+    invoke-direct {v0, v1}, Lq4b;-><init>(I)V
 
-    iput-object v0, p0, Lskj;->a:Lojj;
+    const/4 v1, 0x1
 
-    iget-object v0, p1, Lw07;->b:Ljava/lang/Object;
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
 
-    check-cast v0, Ldpj;
+    new-instance v0, Lr4b;
 
-    iput-object v0, p0, Lskj;->b:Ldpj;
+    const/16 v1, 0x17
 
-    iget-object v0, p1, Lw07;->c:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lr4b;-><init>(I)V
 
-    check-cast v0, Lowi;
+    const/16 v1, 0x20b
 
-    iput-object v0, p0, Lskj;->c:Lowi;
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    iget-object v0, p1, Lw07;->d:Ljava/lang/Object;
+    new-instance v0, Lmnc;
 
-    check-cast v0, Lowi;
+    const/4 v1, 0x2
 
-    iput-object v0, p0, Lskj;->d:Lowi;
+    invoke-direct {v0, v1}, Lmnc;-><init>(I)V
 
-    iget-object p1, p1, Lw07;->e:Ljava/lang/Object;
+    const/16 v1, 0x20c
 
-    check-cast p1, Lkjj;
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    iput-object p1, p0, Lskj;->e:Lkjj;
+    new-instance v0, Lmnc;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lmnc;-><init>(I)V
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lmnc;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2}, Lmnc;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lr4b;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Lr4b;-><init>(I)V
+
+    const/16 v1, 0x20d
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(Lf5f;FF)V
 .end method

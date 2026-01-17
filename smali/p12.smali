@@ -1,148 +1,98 @@
-.class public final Lp12;
+.class public final synthetic Lp12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv12;
-
 
 # instance fields
-.field public final a:Ls02;
+.field public final synthetic a:I
 
-.field public b:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ls02;)V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lp12;->a:I
+
+    iput-object p2, p0, Lp12;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lp12;->b:Z
-
-    iput-object p1, p0, Lp12;->a:Ls02;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lwe8;
+.method public final a()V
     .locals 4
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iget v0, p0, Lp12;->a:I
 
-    invoke-static {v0}, Ledf;->g(Ljava/lang/Object;)Lek7;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lp12;->b:Ljava/lang/Object;
 
-    if-nez p1, :cond_0
+    check-cast v0, Lvce;
+
+    iget-object v1, v0, Lvce;->b:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v0, Lvce;->d:Lp12;
+
+    if-nez v2, :cond_0
+
+    const-string v2, "ScreenFlashWrapper"
+
+    const-string v3, "apply: pendingListener is null!"
+
+    invoke-static {v2, v3}, Lm5j;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_0
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureResult$Key;
+    :goto_0
+    invoke-virtual {v0}, Lvce;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    monitor-exit v1
 
-    move-result-object v1
+    return-void
 
-    check-cast v1, Ljava/lang/Integer;
+    :goto_1
+    monitor-exit v1
 
-    if-nez v1, :cond_1
+    throw v0
 
-    goto :goto_0
+    :pswitch_0
+    iget-object v0, p0, Lp12;->b:Ljava/lang/Object;
 
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    check-cast v0, Lqw1;
 
-    move-result v1
+    const-string v1, "Camera2CapturePipeline"
 
-    const/4 v2, 0x1
+    const-string v2, "ScreenFlashTask#preCapture: UI change applied"
 
-    if-eq v1, v2, :cond_2
-
-    const/4 v3, 0x2
-
-    if-eq v1, v3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "TriggerAf? AF mode auto"
-
-    const-string v3, "Camera2CapturePipeline"
-
-    invoke-static {v3, v1}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
-
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    const-string p1, "Trigger AF"
-
-    invoke-static {v3, p1}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-boolean v2, p0, Lp12;->b:Z
-
-    iget-object p1, p0, Lp12;->a:Ls02;
-
-    iget-object p1, p1, Ls02;->h:Llc6;
+    invoke-static {v1, v2}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v1}, Llc6;->f(Z)V
+    invoke-virtual {v0, v1}, Lqw1;->b(Ljava/lang/Object;)Z
 
-    :cond_3
-    :goto_0
-    return-object v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget-boolean v0, p0, Lp12;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Camera2CapturePipeline"
-
-    const-string v1, "cancel TriggerAF"
-
-    invoke-static {v0, v1}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lp12;->a:Ls02;
-
-    iget-object v0, v0, Ls02;->h:Llc6;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Llc6;->a(ZZ)V
-
-    :cond_0
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

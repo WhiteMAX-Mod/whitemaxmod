@@ -25,7 +25,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -75,7 +75,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lwrd;
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Ltsd;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
     return-void
 
     :cond_1
-    instance-of v1, v1, Lo84;
+    instance-of v1, v1, Lr84;
 
     if-eqz v1, :cond_2
 

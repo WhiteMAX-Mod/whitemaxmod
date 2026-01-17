@@ -3,280 +3,718 @@
 
 
 # static fields
-.field public static abc_action_bar_content_inset_material:I = 0x7f070000
+.field public static actionBarDivider:I = 0x7f040002
 
-.field public static abc_action_bar_content_inset_with_nav:I = 0x7f070001
+.field public static actionBarItemBackground:I = 0x7f040003
 
-.field public static abc_action_bar_default_height_material:I = 0x7f070002
+.field public static actionBarPopupTheme:I = 0x7f040004
 
-.field public static abc_action_bar_default_padding_end_material:I = 0x7f070003
+.field public static actionBarSize:I = 0x7f040005
 
-.field public static abc_action_bar_default_padding_start_material:I = 0x7f070004
+.field public static actionBarSplitStyle:I = 0x7f040006
 
-.field public static abc_action_bar_elevation_material:I = 0x7f070005
+.field public static actionBarStyle:I = 0x7f040007
 
-.field public static abc_action_bar_icon_vertical_padding_material:I = 0x7f070006
+.field public static actionBarTabBarStyle:I = 0x7f040008
 
-.field public static abc_action_bar_overflow_padding_end_material:I = 0x7f070007
+.field public static actionBarTabStyle:I = 0x7f040009
 
-.field public static abc_action_bar_overflow_padding_start_material:I = 0x7f070008
+.field public static actionBarTabTextStyle:I = 0x7f04000a
 
-.field public static abc_action_bar_stacked_max_height:I = 0x7f070009
+.field public static actionBarTheme:I = 0x7f04000b
 
-.field public static abc_action_bar_stacked_tab_max_width:I = 0x7f07000a
+.field public static actionBarWidgetTheme:I = 0x7f04000c
 
-.field public static abc_action_bar_subtitle_bottom_margin_material:I = 0x7f07000b
+.field public static actionButtonStyle:I = 0x7f04000d
 
-.field public static abc_action_bar_subtitle_top_margin_material:I = 0x7f07000c
+.field public static actionDropDownStyle:I = 0x7f04000e
 
-.field public static abc_action_button_min_height_material:I = 0x7f07000d
+.field public static actionLayout:I = 0x7f04000f
 
-.field public static abc_action_button_min_width_material:I = 0x7f07000e
+.field public static actionMenuTextAppearance:I = 0x7f040010
 
-.field public static abc_action_button_min_width_overflow_material:I = 0x7f07000f
+.field public static actionMenuTextColor:I = 0x7f040011
 
-.field public static abc_alert_dialog_button_bar_height:I = 0x7f070010
+.field public static actionModeBackground:I = 0x7f040012
 
-.field public static abc_alert_dialog_button_dimen:I = 0x7f070011
+.field public static actionModeCloseButtonStyle:I = 0x7f040013
 
-.field public static abc_button_inset_horizontal_material:I = 0x7f070012
+.field public static actionModeCloseContentDescription:I = 0x7f040014
 
-.field public static abc_button_inset_vertical_material:I = 0x7f070013
+.field public static actionModeCloseDrawable:I = 0x7f040015
 
-.field public static abc_button_padding_horizontal_material:I = 0x7f070014
+.field public static actionModeCopyDrawable:I = 0x7f040016
 
-.field public static abc_button_padding_vertical_material:I = 0x7f070015
+.field public static actionModeCutDrawable:I = 0x7f040017
 
-.field public static abc_cascading_menus_min_smallest_width:I = 0x7f070016
+.field public static actionModeFindDrawable:I = 0x7f040018
 
-.field public static abc_config_prefDialogWidth:I = 0x7f070017
+.field public static actionModePasteDrawable:I = 0x7f040019
 
-.field public static abc_control_corner_material:I = 0x7f070018
+.field public static actionModePopupWindowStyle:I = 0x7f04001a
 
-.field public static abc_control_inset_material:I = 0x7f070019
+.field public static actionModeSelectAllDrawable:I = 0x7f04001b
 
-.field public static abc_control_padding_material:I = 0x7f07001a
+.field public static actionModeShareDrawable:I = 0x7f04001c
 
-.field public static abc_dialog_corner_radius_material:I = 0x7f07001b
+.field public static actionModeSplitBackground:I = 0x7f04001d
 
-.field public static abc_dialog_fixed_height_major:I = 0x7f07001c
+.field public static actionModeStyle:I = 0x7f04001e
 
-.field public static abc_dialog_fixed_height_minor:I = 0x7f07001d
+.field public static actionModeTheme:I = 0x7f04001f
 
-.field public static abc_dialog_fixed_width_major:I = 0x7f07001e
+.field public static actionModeWebSearchDrawable:I = 0x7f040020
 
-.field public static abc_dialog_fixed_width_minor:I = 0x7f07001f
+.field public static actionOverflowButtonStyle:I = 0x7f040021
 
-.field public static abc_dialog_list_padding_bottom_no_buttons:I = 0x7f070020
+.field public static actionOverflowMenuStyle:I = 0x7f040022
 
-.field public static abc_dialog_list_padding_top_no_title:I = 0x7f070021
+.field public static actionProviderClass:I = 0x7f040023
 
-.field public static abc_dialog_min_width_major:I = 0x7f070022
+.field public static actionViewClass:I = 0x7f040025
 
-.field public static abc_dialog_min_width_minor:I = 0x7f070023
+.field public static activityChooserViewStyle:I = 0x7f040028
 
-.field public static abc_dialog_padding_material:I = 0x7f070024
+.field public static alertDialogButtonGroupStyle:I = 0x7f040031
 
-.field public static abc_dialog_padding_top_material:I = 0x7f070025
+.field public static alertDialogCenterButtons:I = 0x7f040032
 
-.field public static abc_dialog_title_divider_material:I = 0x7f070026
+.field public static alertDialogStyle:I = 0x7f040033
 
-.field public static abc_disabled_alpha_material_dark:I = 0x7f070027
+.field public static alertDialogTheme:I = 0x7f040034
 
-.field public static abc_disabled_alpha_material_light:I = 0x7f070028
+.field public static allowStacking:I = 0x7f04003b
 
-.field public static abc_dropdownitem_icon_width:I = 0x7f070029
+.field public static alpha:I = 0x7f04003c
 
-.field public static abc_dropdownitem_text_padding_left:I = 0x7f07002a
+.field public static alphabeticModifiers:I = 0x7f04003d
 
-.field public static abc_dropdownitem_text_padding_right:I = 0x7f07002b
+.field public static arrowHeadLength:I = 0x7f04004a
 
-.field public static abc_edit_text_inset_bottom_material:I = 0x7f07002c
+.field public static arrowShaftLength:I = 0x7f04004c
 
-.field public static abc_edit_text_inset_horizontal_material:I = 0x7f07002d
+.field public static autoCompleteTextViewStyle:I = 0x7f040051
 
-.field public static abc_edit_text_inset_top_material:I = 0x7f07002e
+.field public static autoSizeMaxTextSize:I = 0x7f040053
 
-.field public static abc_floating_window_z:I = 0x7f07002f
+.field public static autoSizeMinTextSize:I = 0x7f040054
 
-.field public static abc_list_item_height_large_material:I = 0x7f070030
+.field public static autoSizePresetSizes:I = 0x7f040055
 
-.field public static abc_list_item_height_material:I = 0x7f070031
+.field public static autoSizeStepGranularity:I = 0x7f040056
 
-.field public static abc_list_item_height_small_material:I = 0x7f070032
+.field public static autoSizeTextType:I = 0x7f040057
 
-.field public static abc_list_item_padding_horizontal_material:I = 0x7f070033
+.field public static background:I = 0x7f04005b
 
-.field public static abc_panel_menu_list_width:I = 0x7f070034
+.field public static backgroundSplit:I = 0x7f040063
 
-.field public static abc_progress_bar_height_material:I = 0x7f070035
+.field public static backgroundStacked:I = 0x7f040064
 
-.field public static abc_search_view_preferred_height:I = 0x7f070036
+.field public static backgroundTint:I = 0x7f040065
 
-.field public static abc_search_view_preferred_width:I = 0x7f070037
+.field public static backgroundTintMode:I = 0x7f040066
 
-.field public static abc_seekbar_track_background_height_material:I = 0x7f070038
+.field public static barLength:I = 0x7f040078
 
-.field public static abc_seekbar_track_progress_height_material:I = 0x7f070039
+.field public static borderlessButtonStyle:I = 0x7f04008e
 
-.field public static abc_select_dialog_padding_start_material:I = 0x7f07003a
+.field public static buttonBarButtonStyle:I = 0x7f0400a4
 
-.field public static abc_star_big:I = 0x7f07003b
+.field public static buttonBarNegativeButtonStyle:I = 0x7f0400a5
 
-.field public static abc_star_medium:I = 0x7f07003c
+.field public static buttonBarNeutralButtonStyle:I = 0x7f0400a6
 
-.field public static abc_star_small:I = 0x7f07003d
+.field public static buttonBarPositiveButtonStyle:I = 0x7f0400a7
 
-.field public static abc_switch_padding:I = 0x7f07003e
+.field public static buttonBarStyle:I = 0x7f0400a8
 
-.field public static abc_text_size_body_1_material:I = 0x7f07003f
+.field public static buttonCompat:I = 0x7f0400a9
 
-.field public static abc_text_size_body_2_material:I = 0x7f070040
+.field public static buttonGravity:I = 0x7f0400aa
 
-.field public static abc_text_size_button_material:I = 0x7f070041
+.field public static buttonIconDimen:I = 0x7f0400ac
 
-.field public static abc_text_size_caption_material:I = 0x7f070042
+.field public static buttonPanelSideLayout:I = 0x7f0400af
 
-.field public static abc_text_size_display_1_material:I = 0x7f070043
+.field public static buttonStyle:I = 0x7f0400b1
 
-.field public static abc_text_size_display_2_material:I = 0x7f070044
+.field public static buttonStyleSmall:I = 0x7f0400b2
 
-.field public static abc_text_size_display_3_material:I = 0x7f070045
+.field public static buttonTint:I = 0x7f0400b3
 
-.field public static abc_text_size_display_4_material:I = 0x7f070046
+.field public static buttonTintMode:I = 0x7f0400b4
 
-.field public static abc_text_size_headline_material:I = 0x7f070047
+.field public static cardBackgroundColor:I = 0x7f0400bc
 
-.field public static abc_text_size_large_material:I = 0x7f070048
+.field public static cardCornerRadius:I = 0x7f0400bd
 
-.field public static abc_text_size_medium_material:I = 0x7f070049
+.field public static cardElevation:I = 0x7f0400be
 
-.field public static abc_text_size_menu_header_material:I = 0x7f07004a
+.field public static cardMaxElevation:I = 0x7f0400c0
 
-.field public static abc_text_size_menu_material:I = 0x7f07004b
+.field public static cardPreventCornerOverlap:I = 0x7f0400c1
 
-.field public static abc_text_size_small_material:I = 0x7f07004c
+.field public static cardUseCompatPadding:I = 0x7f0400c2
 
-.field public static abc_text_size_subhead_material:I = 0x7f07004d
+.field public static cardViewStyle:I = 0x7f0400c3
 
-.field public static abc_text_size_subtitle_material_toolbar:I = 0x7f07004e
+.field public static ccpDialog_allowSearch:I = 0x7f0400cf
 
-.field public static abc_text_size_title_material:I = 0x7f07004f
+.field public static ccpDialog_background:I = 0x7f0400d0
 
-.field public static abc_text_size_title_material_toolbar:I = 0x7f070050
+.field public static ccpDialog_backgroundColor:I = 0x7f0400d1
 
-.field public static cardview_compat_inset_shadow:I = 0x7f07006b
+.field public static ccpDialog_cornerRadius:I = 0x7f0400d2
 
-.field public static cardview_default_elevation:I = 0x7f07006c
+.field public static ccpDialog_fastScroller_bubbleColor:I = 0x7f0400d3
 
-.field public static cardview_default_radius:I = 0x7f07006d
+.field public static ccpDialog_fastScroller_bubbleTextAppearance:I = 0x7f0400d4
 
-.field public static ccp_padding:I = 0x7f07006e
+.field public static ccpDialog_fastScroller_handleColor:I = 0x7f0400d5
 
-.field public static compat_button_inset_horizontal_material:I = 0x7f07007d
+.field public static ccpDialog_initialScrollToSelection:I = 0x7f0400d6
 
-.field public static compat_button_inset_vertical_material:I = 0x7f07007e
+.field public static ccpDialog_keyboardAutoPopup:I = 0x7f0400d7
 
-.field public static compat_button_padding_horizontal_material:I = 0x7f07007f
+.field public static ccpDialog_searchEditTextTint:I = 0x7f0400d8
 
-.field public static compat_button_padding_vertical_material:I = 0x7f070080
+.field public static ccpDialog_showCloseIcon:I = 0x7f0400d9
 
-.field public static compat_control_corner_material:I = 0x7f070081
+.field public static ccpDialog_showFastScroller:I = 0x7f0400da
 
-.field public static compat_notification_large_icon_max_height:I = 0x7f070082
+.field public static ccpDialog_showFlag:I = 0x7f0400db
 
-.field public static compat_notification_large_icon_max_width:I = 0x7f070083
+.field public static ccpDialog_showNameCode:I = 0x7f0400dc
 
-.field public static disabled_alpha_material_dark:I = 0x7f0700c2
+.field public static ccpDialog_showPhoneCode:I = 0x7f0400dd
 
-.field public static disabled_alpha_material_light:I = 0x7f0700c3
+.field public static ccpDialog_showTitle:I = 0x7f0400de
 
-.field public static fastscroll__bubble_corner:I = 0x7f0700ec
+.field public static ccpDialog_textColor:I = 0x7f0400df
 
-.field public static fastscroll__bubble_size:I = 0x7f0700ed
+.field public static ccp_areaCodeDetectedCountry:I = 0x7f0400e0
 
-.field public static fastscroll__handle_clickable_width:I = 0x7f0700ee
+.field public static ccp_arrowColor:I = 0x7f0400e1
 
-.field public static fastscroll__handle_corner:I = 0x7f0700ef
+.field public static ccp_arrowSize:I = 0x7f0400e2
 
-.field public static fastscroll__handle_height:I = 0x7f0700f0
+.field public static ccp_autoDetectCountry:I = 0x7f0400e3
 
-.field public static fastscroll__handle_inset:I = 0x7f0700f1
+.field public static ccp_autoDetectLanguage:I = 0x7f0400e4
 
-.field public static fastscroll__handle_padding:I = 0x7f0700f2
+.field public static ccp_autoFormatNumber:I = 0x7f0400e5
 
-.field public static fastscroll__handle_width:I = 0x7f0700f3
+.field public static ccp_clickable:I = 0x7f0400e6
 
-.field public static fastscroll_default_thickness:I = 0x7f0700f4
+.field public static ccp_contentColor:I = 0x7f0400e7
 
-.field public static fastscroll_margin:I = 0x7f0700f5
+.field public static ccp_countryAutoDetectionPref:I = 0x7f0400e8
 
-.field public static fastscroll_minimum_range:I = 0x7f0700f6
+.field public static ccp_countryPreference:I = 0x7f0400e9
 
-.field public static google_1x:I = 0x7f07013b
+.field public static ccp_customMasterCountries:I = 0x7f0400ea
 
-.field public static highlight_alpha_material_colored:I = 0x7f07013c
+.field public static ccp_defaultLanguage:I = 0x7f0400eb
 
-.field public static highlight_alpha_material_dark:I = 0x7f07013d
+.field public static ccp_defaultNameCode:I = 0x7f0400ec
 
-.field public static highlight_alpha_material_light:I = 0x7f07013e
+.field public static ccp_defaultPhoneCode:I = 0x7f0400ed
 
-.field public static hint_alpha_material_dark:I = 0x7f07013f
+.field public static ccp_excludedCountries:I = 0x7f0400ee
 
-.field public static hint_alpha_material_light:I = 0x7f070140
+.field public static ccp_flagBorderColor:I = 0x7f0400ef
 
-.field public static hint_pressed_alpha_material_dark:I = 0x7f070141
+.field public static ccp_hintExampleNumber:I = 0x7f0400f0
 
-.field public static hint_pressed_alpha_material_light:I = 0x7f070142
+.field public static ccp_hintExampleNumberType:I = 0x7f0400f1
 
-.field public static item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070144
+.field public static ccp_internationalFormattingOnly:I = 0x7f0400f2
 
-.field public static item_touch_helper_swipe_escape_max_velocity:I = 0x7f070145
+.field public static ccp_padding:I = 0x7f0400f3
 
-.field public static item_touch_helper_swipe_escape_velocity:I = 0x7f070146
+.field public static ccp_rememberLastSelection:I = 0x7f0400f4
 
-.field public static notification_action_icon_size:I = 0x7f070427
+.field public static ccp_selectionMemoryTag:I = 0x7f0400f5
 
-.field public static notification_action_text_size:I = 0x7f070428
+.field public static ccp_showArrow:I = 0x7f0400f6
 
-.field public static notification_big_circle_margin:I = 0x7f070429
+.field public static ccp_showFlag:I = 0x7f0400f7
 
-.field public static notification_content_margin_start:I = 0x7f07042a
+.field public static ccp_showFullName:I = 0x7f0400f8
 
-.field public static notification_large_icon_height:I = 0x7f07042b
+.field public static ccp_showNameCode:I = 0x7f0400f9
 
-.field public static notification_large_icon_width:I = 0x7f07042c
+.field public static ccp_showPhoneCode:I = 0x7f0400fa
 
-.field public static notification_main_column_padding_top:I = 0x7f07042d
+.field public static ccp_textGravity:I = 0x7f0400fb
 
-.field public static notification_media_narrow_margin:I = 0x7f07042e
+.field public static ccp_textSize:I = 0x7f0400fc
 
-.field public static notification_right_icon_size:I = 0x7f07042f
+.field public static ccp_useDummyEmojiForPreview:I = 0x7f0400fd
 
-.field public static notification_right_side_padding_top:I = 0x7f070430
+.field public static ccp_useFlagEmoji:I = 0x7f0400fe
 
-.field public static notification_small_icon_background_padding:I = 0x7f070431
+.field public static checkboxStyle:I = 0x7f04026d
 
-.field public static notification_small_icon_size_as_large:I = 0x7f070432
+.field public static checkedTextViewStyle:I = 0x7f040278
 
-.field public static notification_subtext_size:I = 0x7f070433
+.field public static closeIcon:I = 0x7f04029f
 
-.field public static notification_top_pad:I = 0x7f070434
+.field public static closeItemLayout:I = 0x7f0402a6
 
-.field public static notification_top_pad_large_text:I = 0x7f070435
+.field public static collapseContentDescription:I = 0x7f0402a7
 
-.field public static tooltip_corner_radius:I = 0x7f0704bd
+.field public static collapseIcon:I = 0x7f0402a8
 
-.field public static tooltip_horizontal_padding:I = 0x7f0704be
+.field public static color:I = 0x7f0402b2
 
-.field public static tooltip_margin:I = 0x7f0704bf
+.field public static colorAccent:I = 0x7f0402b3
 
-.field public static tooltip_precise_anchor_extra_offset:I = 0x7f0704c0
+.field public static colorBackgroundFloating:I = 0x7f0402b4
 
-.field public static tooltip_precise_anchor_threshold:I = 0x7f0704c1
+.field public static colorButtonNormal:I = 0x7f0402b5
 
-.field public static tooltip_vertical_padding:I = 0x7f0704c2
+.field public static colorControlActivated:I = 0x7f0402b7
 
-.field public static tooltip_y_offset_non_touch:I = 0x7f0704c3
+.field public static colorControlHighlight:I = 0x7f0402b8
 
-.field public static tooltip_y_offset_touch:I = 0x7f0704c4
+.field public static colorControlNormal:I = 0x7f0402b9
+
+.field public static colorError:I = 0x7f0402ba
+
+.field public static colorPrimary:I = 0x7f0402d3
+
+.field public static colorPrimaryDark:I = 0x7f0402d5
+
+.field public static colorSwitchThumbNormal:I = 0x7f0402eb
+
+.field public static commitIcon:I = 0x7f0402f3
+
+.field public static contentDescription:I = 0x7f0402fe
+
+.field public static contentInsetEnd:I = 0x7f0402ff
+
+.field public static contentInsetEndWithActions:I = 0x7f040300
+
+.field public static contentInsetLeft:I = 0x7f040301
+
+.field public static contentInsetRight:I = 0x7f040302
+
+.field public static contentInsetStart:I = 0x7f040303
+
+.field public static contentInsetStartWithNavigation:I = 0x7f040304
+
+.field public static contentPadding:I = 0x7f040305
+
+.field public static contentPaddingBottom:I = 0x7f040306
+
+.field public static contentPaddingLeft:I = 0x7f040308
+
+.field public static contentPaddingRight:I = 0x7f040309
+
+.field public static contentPaddingTop:I = 0x7f04030b
+
+.field public static controlBackground:I = 0x7f04030e
+
+.field public static customNavigationLayout:I = 0x7f040330
+
+.field public static defaultQueryHint:I = 0x7f04033a
+
+.field public static dialogCornerRadius:I = 0x7f040343
+
+.field public static dialogPreferredPadding:I = 0x7f040348
+
+.field public static dialogTheme:I = 0x7f040349
+
+.field public static displayOptions:I = 0x7f04034c
+
+.field public static divider:I = 0x7f04034d
+
+.field public static dividerHorizontal:I = 0x7f040352
+
+.field public static dividerPadding:I = 0x7f040355
+
+.field public static dividerVertical:I = 0x7f040357
+
+.field public static drawableBottomCompat:I = 0x7f04035c
+
+.field public static drawableEndCompat:I = 0x7f04035d
+
+.field public static drawableLeftCompat:I = 0x7f04035e
+
+.field public static drawableRightCompat:I = 0x7f04035f
+
+.field public static drawableSize:I = 0x7f040360
+
+.field public static drawableStartCompat:I = 0x7f040361
+
+.field public static drawableTint:I = 0x7f040362
+
+.field public static drawableTintMode:I = 0x7f040363
+
+.field public static drawableTopCompat:I = 0x7f040364
+
+.field public static drawerArrowStyle:I = 0x7f040365
+
+.field public static dropDownListViewStyle:I = 0x7f040369
+
+.field public static dropdownListPreferredItemHeight:I = 0x7f04036a
+
+.field public static editTextBackground:I = 0x7f04036e
+
+.field public static editTextColor:I = 0x7f04036f
+
+.field public static editTextStyle:I = 0x7f040371
+
+.field public static elevation:I = 0x7f040372
+
+.field public static expandActivityOverflowButtonDrawable:I = 0x7f040392
+
+.field public static fastScrollEnabled:I = 0x7f0403b3
+
+.field public static fastScrollHorizontalThumbDrawable:I = 0x7f0403b4
+
+.field public static fastScrollHorizontalTrackDrawable:I = 0x7f0403b5
+
+.field public static fastScrollVerticalThumbDrawable:I = 0x7f0403b6
+
+.field public static fastScrollVerticalTrackDrawable:I = 0x7f0403b7
+
+.field public static fastscroll__bubbleColor:I = 0x7f0403b8
+
+.field public static fastscroll__bubbleTextAppearance:I = 0x7f0403b9
+
+.field public static fastscroll__handleColor:I = 0x7f0403ba
+
+.field public static fastscroll__style:I = 0x7f0403bb
+
+.field public static firstBaselineToTopHeight:I = 0x7f0403be
+
+.field public static font:I = 0x7f0403e3
+
+.field public static fontFamily:I = 0x7f0403e4
+
+.field public static fontProviderAuthority:I = 0x7f0403e5
+
+.field public static fontProviderCerts:I = 0x7f0403e6
+
+.field public static fontProviderFetchStrategy:I = 0x7f0403e7
+
+.field public static fontProviderFetchTimeout:I = 0x7f0403e8
+
+.field public static fontProviderPackage:I = 0x7f0403e9
+
+.field public static fontProviderQuery:I = 0x7f0403ea
+
+.field public static fontProviderSystemFontFamily:I = 0x7f0403eb
+
+.field public static fontStyle:I = 0x7f0403ec
+
+.field public static fontVariationSettings:I = 0x7f0403ed
+
+.field public static fontWeight:I = 0x7f0403ee
+
+.field public static gapBetweenBars:I = 0x7f0403f5
+
+.field public static goIcon:I = 0x7f040527
+
+.field public static height:I = 0x7f04052c
+
+.field public static hideOnContentScroll:I = 0x7f040534
+
+.field public static homeAsUpIndicator:I = 0x7f04053d
+
+.field public static homeLayout:I = 0x7f04053e
+
+.field public static icon:I = 0x7f040542
+
+.field public static iconTint:I = 0x7f040549
+
+.field public static iconTintMode:I = 0x7f04054a
+
+.field public static iconifiedByDefault:I = 0x7f04054b
+
+.field public static imageButtonStyle:I = 0x7f040550
+
+.field public static indeterminateProgressStyle:I = 0x7f040557
+
+.field public static initialActivityCount:I = 0x7f04055e
+
+.field public static isLightTheme:I = 0x7f040561
+
+.field public static itemPadding:I = 0x7f040571
+
+.field public static lastBaselineToBottomHeight:I = 0x7f040590
+
+.field public static layout:I = 0x7f040596
+
+.field public static layoutManager:I = 0x7f040599
+
+.field public static lineHeight:I = 0x7f0405f4
+
+.field public static listChoiceBackgroundIndicator:I = 0x7f0405f7
+
+.field public static listChoiceIndicatorMultipleAnimated:I = 0x7f0405f8
+
+.field public static listChoiceIndicatorSingleAnimated:I = 0x7f0405f9
+
+.field public static listDividerAlertDialog:I = 0x7f0405fa
+
+.field public static listItemLayout:I = 0x7f0405fb
+
+.field public static listLayout:I = 0x7f0405fc
+
+.field public static listMenuViewStyle:I = 0x7f0405fd
+
+.field public static listPopupWindowStyle:I = 0x7f0405fe
+
+.field public static listPreferredItemHeight:I = 0x7f0405ff
+
+.field public static listPreferredItemHeightLarge:I = 0x7f040600
+
+.field public static listPreferredItemHeightSmall:I = 0x7f040601
+
+.field public static listPreferredItemPaddingEnd:I = 0x7f040602
+
+.field public static listPreferredItemPaddingLeft:I = 0x7f040603
+
+.field public static listPreferredItemPaddingRight:I = 0x7f040604
+
+.field public static listPreferredItemPaddingStart:I = 0x7f040605
+
+.field public static logo:I = 0x7f040607
+
+.field public static logoDescription:I = 0x7f040609
+
+.field public static maxButtonHeight:I = 0x7f040645
+
+.field public static measureWithLargestChild:I = 0x7f040651
+
+.field public static menu:I = 0x7f040662
+
+.field public static multiChoiceItemLayout:I = 0x7f0406a7
+
+.field public static navigationContentDescription:I = 0x7f0406a8
+
+.field public static navigationIcon:I = 0x7f0406a9
+
+.field public static navigationMode:I = 0x7f0406ab
+
+.field public static nestedScrollViewStyle:I = 0x7f0406b0
+
+.field public static numericModifiers:I = 0x7f0406b4
+
+.field public static overlapAnchor:I = 0x7f0406c0
+
+.field public static paddingBottomNoButtons:I = 0x7f0406c5
+
+.field public static paddingEnd:I = 0x7f0406c7
+
+.field public static paddingStart:I = 0x7f0406ca
+
+.field public static paddingTopNoTitle:I = 0x7f0406cc
+
+.field public static panelBackground:I = 0x7f0406ce
+
+.field public static panelMenuListTheme:I = 0x7f0406cf
+
+.field public static panelMenuListWidth:I = 0x7f0406d0
+
+.field public static popupMenuStyle:I = 0x7f0406ec
+
+.field public static popupTheme:I = 0x7f0406ed
+
+.field public static popupWindowStyle:I = 0x7f0406ee
+
+.field public static preserveIconSpacing:I = 0x7f0406fe
+
+.field public static progressBarPadding:I = 0x7f040705
+
+.field public static progressBarStyle:I = 0x7f040706
+
+.field public static queryBackground:I = 0x7f04070a
+
+.field public static queryHint:I = 0x7f04070b
+
+.field public static queryPatterns:I = 0x7f04070c
+
+.field public static radioButtonStyle:I = 0x7f04070d
+
+.field public static ratingBarStyle:I = 0x7f04070f
+
+.field public static ratingBarStyleIndicator:I = 0x7f040710
+
+.field public static ratingBarStyleSmall:I = 0x7f040711
+
+.field public static recyclerViewStyle:I = 0x7f040716
+
+.field public static reverseLayout:I = 0x7f040720
+
+.field public static searchHintIcon:I = 0x7f040742
+
+.field public static searchIcon:I = 0x7f040743
+
+.field public static searchViewStyle:I = 0x7f040745
+
+.field public static seekBarStyle:I = 0x7f04074b
+
+.field public static selectableItemBackground:I = 0x7f04074d
+
+.field public static selectableItemBackgroundBorderless:I = 0x7f04074e
+
+.field public static shortcutMatchRequired:I = 0x7f04075e
+
+.field public static showAsAction:I = 0x7f040762
+
+.field public static showDividers:I = 0x7f040767
+
+.field public static showText:I = 0x7f04076c
+
+.field public static showTitle:I = 0x7f04076d
+
+.field public static singleChoiceItemLayout:I = 0x7f04077f
+
+.field public static spanCount:I = 0x7f040793
+
+.field public static spinBars:I = 0x7f04079c
+
+.field public static spinnerDropDownItemStyle:I = 0x7f04079d
+
+.field public static spinnerStyle:I = 0x7f04079e
+
+.field public static splitTrack:I = 0x7f0407a4
+
+.field public static srcCompat:I = 0x7f0407aa
+
+.field public static stackFromEnd:I = 0x7f0407d8
+
+.field public static state_above_anchor:I = 0x7f0407e1
+
+.field public static subMenuArrow:I = 0x7f0407ef
+
+.field public static submitBackground:I = 0x7f0407f4
+
+.field public static subtitle:I = 0x7f0407f5
+
+.field public static subtitleTextAppearance:I = 0x7f0407f7
+
+.field public static subtitleTextColor:I = 0x7f0407f8
+
+.field public static subtitleTextStyle:I = 0x7f0407f9
+
+.field public static suggestionRowLayout:I = 0x7f0407fd
+
+.field public static switchMinWidth:I = 0x7f040802
+
+.field public static switchPadding:I = 0x7f040803
+
+.field public static switchStyle:I = 0x7f040806
+
+.field public static switchTextAppearance:I = 0x7f040807
+
+.field public static textAllCaps:I = 0x7f04082b
+
+.field public static textAppearanceLargePopupMenu:I = 0x7f040842
+
+.field public static textAppearanceListItem:I = 0x7f040844
+
+.field public static textAppearanceListItemSecondary:I = 0x7f040845
+
+.field public static textAppearanceListItemSmall:I = 0x7f040846
+
+.field public static textAppearancePopupMenuHeader:I = 0x7f040848
+
+.field public static textAppearanceSearchResultSubtitle:I = 0x7f040849
+
+.field public static textAppearanceSearchResultTitle:I = 0x7f04084a
+
+.field public static textAppearanceSmallPopupMenu:I = 0x7f04084b
+
+.field public static textColorAlertDialogListItem:I = 0x7f040856
+
+.field public static textColorSearchUrl:I = 0x7f040857
+
+.field public static textLocale:I = 0x7f040862
+
+.field public static theme:I = 0x7f04086c
+
+.field public static thickness:I = 0x7f04086d
+
+.field public static thumbTextPadding:I = 0x7f040878
+
+.field public static thumbTint:I = 0x7f040879
+
+.field public static thumbTintMode:I = 0x7f04087a
+
+.field public static tickMark:I = 0x7f040880
+
+.field public static tickMarkTint:I = 0x7f040881
+
+.field public static tickMarkTintMode:I = 0x7f040882
+
+.field public static tint:I = 0x7f040888
+
+.field public static tintMode:I = 0x7f040889
+
+.field public static title:I = 0x7f04088b
+
+.field public static titleMargin:I = 0x7f04088f
+
+.field public static titleMarginBottom:I = 0x7f040890
+
+.field public static titleMarginEnd:I = 0x7f040891
+
+.field public static titleMarginStart:I = 0x7f040892
+
+.field public static titleMarginTop:I = 0x7f040893
+
+.field public static titleMargins:I = 0x7f040894
+
+.field public static titleTextAppearance:I = 0x7f040896
+
+.field public static titleTextColor:I = 0x7f040897
+
+.field public static titleTextStyle:I = 0x7f040899
+
+.field public static toolbarNavigationButtonStyle:I = 0x7f04089e
+
+.field public static toolbarStyle:I = 0x7f04089f
+
+.field public static tooltipForegroundColor:I = 0x7f0408a1
+
+.field public static tooltipFrameBackground:I = 0x7f0408a2
+
+.field public static tooltipText:I = 0x7f0408a4
+
+.field public static track:I = 0x7f0408ab
+
+.field public static trackTint:I = 0x7f0408b7
+
+.field public static trackTintMode:I = 0x7f0408b8
+
+.field public static ttcIndex:I = 0x7f0408c2
+
+.field public static viewInflaterClass:I = 0x7f0408dc
+
+.field public static voiceIcon:I = 0x7f0408e2
+
+.field public static windowActionBar:I = 0x7f0408eb
+
+.field public static windowActionBarOverlay:I = 0x7f0408ec
+
+.field public static windowActionModeOverlay:I = 0x7f0408ed
+
+.field public static windowFixedHeightMajor:I = 0x7f0408ee
+
+.field public static windowFixedHeightMinor:I = 0x7f0408ef
+
+.field public static windowFixedWidthMajor:I = 0x7f0408f0
+
+.field public static windowFixedWidthMinor:I = 0x7f0408f1
+
+.field public static windowMinWidthMajor:I = 0x7f0408f2
+
+.field public static windowMinWidthMinor:I = 0x7f0408f3
+
+.field public static windowNoTitle:I = 0x7f0408f4

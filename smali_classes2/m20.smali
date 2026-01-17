@@ -3,430 +3,302 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic B:I
-
-
 # instance fields
-.field public final A:Ljava/lang/String;
+.field public final a:Landroid/content/Context;
 
-.field public final a:Li20;
+.field public final b:Lb10;
 
-.field public final b:La20;
+.field public final c:Lrfe;
 
-.field public final c:Lt10;
+.field public final d:Ljava/util/Map;
 
-.field public final d:Ll20;
-
-.field public final e:Lm10;
-
-.field public final f:Lh20;
-
-.field public final g:Le20;
-
-.field public final h:Lk10;
-
-.field public final i:Lp10;
-
-.field public final j:Lv10;
-
-.field public final k:Lq10;
-
-.field public final l:Lb20;
-
-.field public final m:Lx10;
-
-.field public final n:Lkfi;
-
-.field public final o:Lf20;
-
-.field public final p:J
-
-.field public final q:F
-
-.field public final r:Ljava/lang/String;
-
-.field public final s:Ljava/lang/String;
-
-.field public final t:Z
-
-.field public final u:J
-
-.field public final v:J
-
-.field public final w:J
-
-.field public final x:Lc20;
-
-.field public final y:Z
-
-.field public final z:Z
+.field public final e:Landroid/util/LruCache;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ln10;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Ln10;->a()Lm20;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ln10;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Lb10;Lrfe;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Ln10;->a:Li20;
+    iput-object p1, p0, Lm20;->a:Landroid/content/Context;
 
-    iput-object v0, p0, Lm20;->a:Li20;
+    iput-object p2, p0, Lm20;->b:Lb10;
 
-    iget-object v0, p1, Ln10;->b:La20;
+    iput-object p3, p0, Lm20;->c:Lrfe;
 
-    iput-object v0, p0, Lm20;->b:La20;
+    new-instance p1, Ljava/util/HashMap;
 
-    iget-object v0, p1, Ln10;->c:Lt10;
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lm20;->c:Lt10;
+    new-instance p1, Lav8;
 
-    iget-object v0, p1, Ln10;->d:Ll20;
+    const/4 p2, 0x0
 
-    iput-object v0, p0, Lm20;->d:Ll20;
+    const/16 p3, 0xc8
 
-    iget-object v0, p1, Ln10;->e:Lm10;
+    invoke-direct {p1, p3, p2}, Lav8;-><init>(II)V
 
-    iput-object v0, p0, Lm20;->e:Lm10;
+    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
-    iget-object v0, p1, Ln10;->f:Lh20;
+    move-result-object p1
 
-    iput-object v0, p0, Lm20;->f:Lh20;
+    iput-object p1, p0, Lm20;->d:Ljava/util/Map;
 
-    iget-object v0, p1, Ln10;->g:Le20;
+    new-instance p1, Landroid/util/LruCache;
 
-    iput-object v0, p0, Lm20;->g:Le20;
+    invoke-direct {p1, p3}, Landroid/util/LruCache;-><init>(I)V
 
-    iget-object v0, p1, Ln10;->h:Lk10;
+    iput-object p1, p0, Lm20;->e:Landroid/util/LruCache;
 
-    iput-object v0, p0, Lm20;->h:Lk10;
+    new-instance p1, Ljava/util/HashSet;
 
-    iget-object v0, p1, Ln10;->q:Lp10;
-
-    iput-object v0, p0, Lm20;->i:Lp10;
-
-    iget-object v0, p1, Ln10;->r:Lv10;
-
-    iput-object v0, p0, Lm20;->j:Lv10;
-
-    iget-object v0, p1, Ln10;->s:Lq10;
-
-    iput-object v0, p0, Lm20;->k:Lq10;
-
-    iget-object v0, p1, Ln10;->t:Lb20;
-
-    iput-object v0, p0, Lm20;->l:Lb20;
-
-    iget-object v0, p1, Ln10;->i:Lf20;
-
-    iput-object v0, p0, Lm20;->o:Lf20;
-
-    iget-wide v0, p1, Ln10;->j:J
-
-    iput-wide v0, p0, Lm20;->p:J
-
-    iget v0, p1, Ln10;->k:F
-
-    iput v0, p0, Lm20;->q:F
-
-    iget-object v0, p1, Ln10;->l:Ljava/lang/String;
-
-    iput-object v0, p0, Lm20;->r:Ljava/lang/String;
-
-    iget-object v0, p1, Ln10;->m:Ljava/lang/String;
-
-    iput-object v0, p0, Lm20;->s:Ljava/lang/String;
-
-    iget-boolean v0, p1, Ln10;->n:Z
-
-    iput-boolean v0, p0, Lm20;->t:Z
-
-    iget-wide v0, p1, Ln10;->o:J
-
-    iput-wide v0, p0, Lm20;->u:J
-
-    iget-wide v0, p1, Ln10;->p:J
-
-    iput-wide v0, p0, Lm20;->v:J
-
-    iget-wide v0, p1, Ln10;->u:J
-
-    iput-wide v0, p0, Lm20;->w:J
-
-    iget-object v0, p1, Ln10;->v:Lx10;
-
-    iput-object v0, p0, Lm20;->m:Lx10;
-
-    iget-object v0, p1, Ln10;->w:Lkfi;
-
-    iput-object v0, p0, Lm20;->n:Lkfi;
-
-    iget-object v0, p1, Ln10;->x:Lc20;
-
-    iput-object v0, p0, Lm20;->x:Lc20;
-
-    iget-boolean v0, p1, Ln10;->y:Z
-
-    iput-boolean v0, p0, Lm20;->y:Z
-
-    iget-boolean v0, p1, Ln10;->z:Z
-
-    iput-boolean v0, p0, Lm20;->z:Z
-
-    iget-object p1, p1, Ln10;->A:Ljava/lang/String;
-
-    iput-object p1, p0, Lm20;->A:Ljava/lang/String;
+    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final a(Li20;)Landroid/net/Uri;
+    .locals 5
 
-    iget-object v0, p0, Lm20;->e:Lm10;
+    iget-object v0, p1, Li20;->j:Lr10;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p1, Li20;->g:La20;
 
-    const/4 v0, 0x1
+    iget-object v2, p0, Lm20;->b:Lb10;
 
-    return v0
+    iget-object v2, v2, Lb10;->c:Lav8;
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v3, p1, Li20;->r:Ljava/lang/String;
 
-    return v0
-.end method
+    invoke-virtual {v2, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public final b()Z
-    .locals 1
+    move-result-object v2
 
-    iget-object v0, p0, Lm20;->k:Lq10;
+    check-cast v2, Landroid/net/Uri;
 
-    if-eqz v0, :cond_0
+    if-nez v2, :cond_8
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Li20;->g()Z
 
-    return v0
+    move-result v3
 
-    :cond_0
-    const/4 v0, 0x0
+    if-nez v3, :cond_6
 
-    return v0
-.end method
+    invoke-static {p1}, Lr6j;->i(Li20;)Z
 
-.method public final c()Z
-    .locals 1
+    move-result v3
 
-    iget-object v0, p0, Lm20;->j:Lv10;
+    if-eqz v3, :cond_0
 
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    goto :goto_3
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Li20;->e()Z
 
-    return v0
+    move-result v3
+
+    sget-object v4, Lgm0;->o:Lgm0;
+
+    if-nez v3, :cond_4
+
+    invoke-static {p1}, Lr6j;->h(Li20;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Li20;->f()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    iget-object p1, v1, La20;->f:Lw10;
+
+    if-eqz p1, :cond_3
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, v4}, Lw10;->b(Lgm0;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Lxti;->j(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_3
+    return-object v2
+
+    :cond_4
+    :goto_1
+    invoke-static {p1}, Lr6j;->h(Li20;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iget-object p1, v0, Lr10;->d:Li20;
+
+    iget-object p1, p1, Li20;->b:Lw10;
+
+    goto :goto_2
+
+    :cond_5
+    iget-object p1, p1, Li20;->b:Lw10;
+
+    :goto_2
+    invoke-virtual {p1, v4}, Lw10;->b(Lgm0;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lxti;->j(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_6
+    :goto_3
+    invoke-static {p1}, Lr6j;->i(Li20;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    iget-object p1, v0, Lr10;->d:Li20;
+
+    iget-object p1, p1, Li20;->d:Lh20;
+
+    goto :goto_4
+
+    :cond_7
+    iget-object p1, p1, Li20;->d:Lh20;
+
+    :goto_4
+    iget-object p1, p1, Lh20;->d:Ljava/lang/String;
+
+    invoke-static {p1}, Lxti;->j(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_8
+    return-object v2
 .end method
 
-.method public final d()Z
-    .locals 1
+.method public final b(Li20;Z)Landroid/net/Uri;
+    .locals 4
 
-    iget-object v0, p0, Lm20;->b:La20;
+    new-instance v0, Ll20;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p1, Li20;->r:Ljava/lang/String;
 
-    iget-boolean v0, v0, La20;->o:Z
+    invoke-direct {v0, v1, p2}, Ll20;-><init>(Ljava/lang/String;Z)V
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lm20;->e:Landroid/util/LruCache;
 
-    const/4 v0, 0x1
+    invoke-virtual {v1, v0}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    move-result-object v2
+
+    check-cast v2, Landroid/net/Uri;
+
+    if-eqz v2, :cond_0
+
+    return-object v2
 
     :cond_0
-    const/4 v0, 0x0
+    iget-object v2, p1, Li20;->j:Lr10;
 
-    return v0
-.end method
+    if-eqz v2, :cond_1
 
-.method public final e()Z
-    .locals 1
+    iget-object v2, v2, Lr10;->d:Li20;
 
-    iget-object v0, p0, Lm20;->b:La20;
+    if-eqz v2, :cond_1
 
-    if-eqz v0, :cond_0
+    move-object p1, v2
 
-    const/4 v0, 0x1
+    :cond_1
+    invoke-static {p1}, Lr6j;->e(Li20;)[B
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    const/4 v0, 0x0
+    if-eqz p1, :cond_4
 
-    return v0
-.end method
+    array-length v2, p1
 
-.method public final f()Z
-    .locals 1
+    if-nez v2, :cond_2
 
-    iget-object v0, p0, Lm20;->g:Le20;
+    goto :goto_1
 
-    if-eqz v0, :cond_0
+    :cond_2
+    if-eqz p2, :cond_3
 
-    const/4 v0, 0x1
+    :try_start_0
+    iget-object p2, p0, Lm20;->c:Lrfe;
 
-    return v0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    const/4 v0, 0x0
+    goto :goto_0
 
-    return v0
-.end method
+    :catch_0
+    move-exception p2
 
-.method public final g()Z
-    .locals 1
+    const-string v2, "m20"
 
-    iget-object v0, p0, Lm20;->d:Ll20;
+    const-string v3, "AttachmentsPreviewCache:"
 
-    if-eqz v0, :cond_0
+    invoke-static {v2, v3, p2}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 v0, 0x1
+    :cond_3
+    :goto_0
+    const/4 p2, 0x2
 
-    return v0
+    invoke-static {p1, p2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object p1
 
-    return v0
-.end method
+    new-instance p2, Ljava/lang/StringBuilder;
 
-.method public final h()Ln10;
-    .locals 3
+    const-string v2, "data:image/png;base64,"
 
-    new-instance v0, Ln10;
+    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lm20;->a:Li20;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-object v1, v0, Ln10;->a:Li20;
+    move-result-object p1
 
-    iget-object v1, p0, Lm20;->b:La20;
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    iput-object v1, v0, Ln10;->b:La20;
+    move-result-object p1
 
-    iget-object v1, p0, Lm20;->c:Lt10;
+    invoke-virtual {v1, v0, p1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v1, v0, Ln10;->c:Lt10;
+    return-object p1
 
-    iget-object v1, p0, Lm20;->d:Ll20;
+    :cond_4
+    :goto_1
+    const/4 p1, 0x0
 
-    iput-object v1, v0, Ln10;->d:Ll20;
-
-    iget-object v1, p0, Lm20;->e:Lm10;
-
-    iput-object v1, v0, Ln10;->e:Lm10;
-
-    iget-object v1, p0, Lm20;->f:Lh20;
-
-    iput-object v1, v0, Ln10;->f:Lh20;
-
-    iget-object v1, p0, Lm20;->g:Le20;
-
-    iput-object v1, v0, Ln10;->g:Le20;
-
-    iget-object v1, p0, Lm20;->h:Lk10;
-
-    iput-object v1, v0, Ln10;->h:Lk10;
-
-    iget-object v1, p0, Lm20;->i:Lp10;
-
-    iput-object v1, v0, Ln10;->q:Lp10;
-
-    iget-object v1, p0, Lm20;->j:Lv10;
-
-    iput-object v1, v0, Ln10;->r:Lv10;
-
-    iget-object v1, p0, Lm20;->k:Lq10;
-
-    iput-object v1, v0, Ln10;->s:Lq10;
-
-    iget-object v1, p0, Lm20;->l:Lb20;
-
-    iput-object v1, v0, Ln10;->t:Lb20;
-
-    iget-object v1, p0, Lm20;->o:Lf20;
-
-    iput-object v1, v0, Ln10;->i:Lf20;
-
-    iget-wide v1, p0, Lm20;->p:J
-
-    iput-wide v1, v0, Ln10;->j:J
-
-    iget v1, p0, Lm20;->q:F
-
-    iput v1, v0, Ln10;->k:F
-
-    iget-object v1, p0, Lm20;->r:Ljava/lang/String;
-
-    iput-object v1, v0, Ln10;->l:Ljava/lang/String;
-
-    iget-object v1, p0, Lm20;->s:Ljava/lang/String;
-
-    iput-object v1, v0, Ln10;->m:Ljava/lang/String;
-
-    iget-boolean v1, p0, Lm20;->t:Z
-
-    iput-boolean v1, v0, Ln10;->n:Z
-
-    iget-wide v1, p0, Lm20;->u:J
-
-    iput-wide v1, v0, Ln10;->o:J
-
-    iget-wide v1, p0, Lm20;->v:J
-
-    iput-wide v1, v0, Ln10;->p:J
-
-    iget-wide v1, p0, Lm20;->w:J
-
-    iput-wide v1, v0, Ln10;->u:J
-
-    iget-object v1, p0, Lm20;->m:Lx10;
-
-    iput-object v1, v0, Ln10;->v:Lx10;
-
-    iget-object v1, p0, Lm20;->x:Lc20;
-
-    iput-object v1, v0, Ln10;->x:Lc20;
-
-    iget-boolean v1, p0, Lm20;->y:Z
-
-    iput-boolean v1, v0, Ln10;->y:Z
-
-    iget-boolean v1, p0, Lm20;->z:Z
-
-    iput-boolean v1, v0, Ln10;->z:Z
-
-    iget-object v1, p0, Lm20;->n:Lkfi;
-
-    iput-object v1, v0, Ln10;->w:Lkfi;
-
-    return-object v0
+    return-object p1
 .end method

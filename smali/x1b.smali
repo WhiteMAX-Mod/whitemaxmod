@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract T(Lu07;)V
+.method public abstract A(Lcom/google/android/gms/tasks/Task;)V
 .end method

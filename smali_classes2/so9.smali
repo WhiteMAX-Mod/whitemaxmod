@@ -1,233 +1,67 @@
-.class public final Lso9;
+.class public abstract synthetic Lso9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Luo9;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Luo9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lso9;->a:I
+    invoke-static {}, Lro9;->values()[Lro9;
 
-    iput-object p1, p0, Lso9;->b:Luo9;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    :catch_0
+    const/4 v2, 0x2
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    return-void
-.end method
+    :catch_1
+    const/4 v1, 0x3
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    return-void
-.end method
+    :catch_2
+    const/4 v2, 0x4
 
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    return-void
-.end method
+    :catch_3
+    const/4 v1, 0x5
 
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    return-void
-.end method
-
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
+    :catch_4
+    sput-object v0, Lso9;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final j(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final k(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final l(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final m(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final n(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final o(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lso9;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Lso9;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lso9;->b:Luo9;
-
-    iget-object p1, p1, Luo9;->v0:Landroid/widget/ImageView;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lso9;->b:Luo9;
-
-    iget-object p1, p1, Luo9;->v0:Landroid/widget/ImageView;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    :pswitch_2
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Lso9;->b:Luo9;
-
-    iget-object p1, p1, Luo9;->v0:Landroid/widget/ImageView;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lso9;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, Lso9;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lso9;->b:Luo9;
-
-    iget-object p1, p1, Luo9;->v0:Landroid/widget/ImageView;
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lso9;->b:Luo9;
-
-    iget-object v0, p1, Luo9;->v0:Landroid/widget/ImageView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
-
-    iget-object p1, p1, Luo9;->v0:Landroid/widget/ImageView;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :pswitch_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
 .end method

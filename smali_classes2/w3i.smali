@@ -4,12 +4,12 @@
 
 
 # virtual methods
-.method public final serializer()Lq38;
+.method public final serializer()La38;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lq38;"
+            "La38;"
         }
     .end annotation
 

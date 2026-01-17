@@ -1,120 +1,120 @@
-.class public final synthetic Lak2;
-.super Ljava/lang/Object;
+.class public final Lak2;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lwx3;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lck2;
 
-.field public final synthetic b:J
+.field public final synthetic Y:Lzj2;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+.method public constructor <init>(Lck2;Lzj2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p4, p0, Lak2;->a:I
+    iput-object p1, p0, Lak2;->X:Lck2;
 
-    iput-object p1, p0, Lak2;->c:Ljava/lang/Object;
+    iput-object p2, p0, Lak2;->Y:Lzj2;
 
-    iput-wide p2, p0, Lak2;->b:J
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lak2;->a:I
+    check-cast p1, Lzb4;
 
-    iget-object v1, p0, Lak2;->c:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v1, Lt1e;
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1, p2}, Lak2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lak2;
 
-    move-result v0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2}, Lak2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    check-cast v0, Lnqb;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-wide v2, p0, Lak2;->b:J
+    new-instance p1, Lak2;
 
-    invoke-virtual {v1, v0, v2, v3}, Lt1e;->g(Lnqb;J)V
+    iget-object v0, p0, Lak2;->X:Lck2;
+
+    iget-object v1, p0, Lak2;->Y:Lzj2;
+
+    invoke-direct {p1, v0, v1, p2}, Lak2;-><init>(Lck2;Lzj2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lak2;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_0
-    move-object v5, v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    check-cast v5, Lbk2;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-object v8, p1
+    throw p1
 
-    check-cast v8, Ljava/util/Collection;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p0, Lak2;->X:Lck2;
 
-    invoke-interface {v8}, Ljava/util/Collection;->size()I
+    iget-object p1, p1, Lck2;->a:Li7f;
 
-    move-result p1
+    iput v1, p0, Lak2;->o:I
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lak2;->Y:Lzj2;
 
-    move-result-object p1
-
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string v0, "bk2"
+    sget-object v0, Lac4;->a:Lac4;
 
-    const-string v1, "ValidateMessagesTimeUseCase found some items for delete, size = %d"
+    if-ne p1, v0, :cond_2
 
-    invoke-static {v0, v1, p1}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    return-object v0
 
-    iget-object p1, v5, Lbk2;->h:Lqae;
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    new-instance v4, Lyj2;
-
-    const/4 v9, 0x0
-
-    iget-wide v6, p0, Lak2;->b:J
-
-    invoke-direct/range {v4 .. v9}, Lyj2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
-
-    invoke-virtual {p1, v4}, Lqae;->b(Ljava/lang/Runnable;)Ll25;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

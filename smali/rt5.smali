@@ -1,108 +1,126 @@
-.class public final synthetic Lrt5;
-.super Ljava/lang/Object;
+.class public final Lrt5;
+.super Lih;
 .source "SourceFile"
-
-# interfaces
-.implements Lmq6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lut5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lut5;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p2, p0, Lrt5;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lrt5;->b:Lut5;
+    .line 1
+    invoke-direct {p0, v0}, Lih;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 2
+
+    const-wide/16 v0, 0x96
+
+    const/4 p1, 0x2
+
+    .line 2
+    invoke-direct {p0, v0, v1, p1}, Lih;-><init>(JI)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final b()Lf94;
+    .locals 4
 
-    iget v0, p0, Lrt5;->a:I
+    new-instance v0, Lrt5;
 
-    packed-switch v0, :pswitch_data_0
+    iget-wide v1, p0, Lih;->d:J
 
-    iget-object v0, p0, Lrt5;->b:Lut5;
+    iget-boolean v3, p0, Lih;->u0:Z
 
-    invoke-virtual {v0}, Lut5;->b()Ls8c;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ls8c;->X:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lphh;
+    invoke-direct {v0, v1, v2, v3}, Lih;-><init>(JZ)V
 
     return-object v0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lf71;->a:Lf71;
+.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/Animator;
+    .locals 5
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    new-instance p1, Landroid/animation/AnimatorSet;
 
-    move-result-object v1
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    const/16 v2, 0x14
+    const/4 v0, 0x1
 
-    invoke-virtual {v1, v2}, Lu5;->c(I)Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    move-object v3, v1
+    if-eqz p3, :cond_1
 
-    check-cast v3, Lbub;
+    if-eqz p5, :cond_0
 
-    invoke-virtual {v0}, Lf71;->a()Ldz1;
+    move p5, v2
 
-    move-result-object v5
+    goto :goto_0
 
-    iget-object v0, p0, Lrt5;->b:Lut5;
+    :cond_0
+    invoke-virtual {p3}, Landroid/view/View;->getAlpha()F
 
-    iget-object v1, v0, Lut5;->e:Ld68;
+    move-result p5
 
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    :goto_0
+    sget-object v3, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    move-result-object v1
+    const/4 v4, 0x2
 
-    move-object v4, v1
+    new-array v4, v4, [F
 
-    check-cast v4, Lyx1;
+    aput p5, v4, v1
 
-    new-instance v6, Ll9b;
+    const/high16 p5, 0x3f800000    # 1.0f
 
-    const/16 v1, 0xf
+    aput p5, v4, v0
 
-    invoke-direct {v6, v1, v0}, Ll9b;-><init>(ILjava/lang/Object;)V
+    invoke-static {p3, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    invoke-static {}, Lko1;->b()Ld68;
+    move-result-object p3
 
-    move-result-object v7
+    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    new-instance v2, Ls8c;
+    :cond_1
+    if-eqz p2, :cond_3
 
-    invoke-direct/range {v2 .. v7}, Ls8c;-><init>(Lbub;Lyx1;Ldz1;Lq8c;Ld68;)V
+    if-eqz p4, :cond_2
 
-    return-object v2
+    iget-boolean p3, p0, Lih;->u0:Z
 
-    nop
+    if-eqz p3, :cond_3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
+
+    new-array p4, v0, [F
+
+    aput v2, p4, v1
+
+    invoke-static {p2, p3, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    :cond_3
+    return-object p1
+.end method
+
+.method public final n(Landroid/view/View;)V
+    .locals 1
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
 .end method

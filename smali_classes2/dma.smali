@@ -1,138 +1,116 @@
 .class public final Ldma;
-.super Lb5g;
+.super Lisd;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public final a:Lnf6;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lnq6;
+
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+.method public constructor <init>(Lnf6;Lnq6;)V
     .locals 0
 
-    iput-object p2, p0, Ldma;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Ldma;->a:Lnf6;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ldma;->b:Lnq6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-nez p2, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ldma;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x0
 
-    move-result-object p1
-
-    check-cast p1, Ldma;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Ldma;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ldma;
-
-    iget-object v1, p0, Ldma;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-direct {v0, p2, v1}, Ldma;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-
-    iput-object p1, v0, Ldma;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldma;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljja;
-
-    instance-of v0, p1, Lqla;
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lvl8;->a:Lvl8;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object p1
-
-    const/4 v0, 0x3
-
-    invoke-virtual {p1, v0}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lxxb;
-
-    invoke-virtual {p1}, Lxxb;->c()V
-
-    sget-object p1, Lom8;->c:Lom8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Lf3;->p0()Lim4;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    const-string v1, ":chat-list"
-
-    invoke-virtual {p1, v1, v0}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
+    iput-boolean p1, p0, Ldma;->c:Z
 
     :cond_0
-    instance-of v0, p1, Lem4;
+    return-void
+.end method
 
-    if-eqz v0, :cond_1
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 2
 
-    sget-object v0, Lom8;->c:Lom8;
+    iget-boolean p2, p0, Ldma;->c:Z
 
-    check-cast p1, Lem4;
+    if-eqz p2, :cond_0
 
-    invoke-virtual {v0, p1}, Lf3;->s0(Lem4;)V
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p1
+
+    instance-of p2, p1, Landroidx/recyclerview/widget/GridLayoutManager;
+
+    if-eqz p2, :cond_1
+
+    check-cast p1, Landroidx/recyclerview/widget/GridLayoutManager;
 
     goto :goto_0
 
     :cond_1
-    instance-of p1, p1, Lpf3;
+    const/4 p1, 0x0
 
-    if-eqz p1, :cond_2
+    :goto_0
+    if-nez p1, :cond_2
 
-    iget-object p1, p0, Ldma;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    goto :goto_1
 
-    invoke-virtual {p1}, Lx84;->getRouter()Lw3e;
+    :cond_2
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Z0()I
+
+    move-result p1
+
+    iget-object p3, p0, Ldma;->a:Lnf6;
+
+    invoke-virtual {p3}, Lnd8;->j()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne p2, v1, :cond_3
+
+    :goto_1
+    return-void
+
+    :cond_3
+    add-int/lit8 v0, v0, -0x1
+
+    if-ne p1, v0, :cond_4
+
+    invoke-virtual {p3, p1}, Lnf6;->K(I)Ldla;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lw3e;->C()Z
+    goto :goto_2
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    :cond_4
+    invoke-virtual {p3, p2}, Lnf6;->K(I)Ldla;
 
-    return-object p1
+    move-result-object p1
+
+    :goto_2
+    iget-object p2, p0, Ldma;->b:Lnq6;
+
+    invoke-interface {p2, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

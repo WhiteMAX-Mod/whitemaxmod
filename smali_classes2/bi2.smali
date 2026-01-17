@@ -1,436 +1,546 @@
 .class public final Lbi2;
-.super Ljava/lang/Object;
+.super Landroid/view/View;
 .source "SourceFile"
 
 # interfaces
-.implements Ldm4;
+.implements Luig;
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final a:I
 
-.field public final b:Ld68;
+.field public final b:I
 
-.field public final c:Ldi2;
+.field public final c:I
+
+.field public final d:Landroid/text/TextPaint;
+
+.field public final o:Landroid/graphics/drawable/Drawable;
+
+.field public t0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ld68;Ld68;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lbi2;->a:Ld68;
+    invoke-direct {p0, p1, v0}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput-object p1, p0, Lbi2;->b:Ld68;
+    const/4 p1, 0x4
 
-    sget-object p1, Ldi2;->b:Ldi2;
+    int-to-float p1, p1
 
-    iput-object p1, p0, Lbi2;->c:Ldi2;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v0
+
+    invoke-static {p1}, Lq7j;->c(F)I
+
+    move-result p1
+
+    iput p1, p0, Lbi2;->a:I
+
+    const/16 p1, 0xc
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p0, Lbi2;->b:I
+
+    const/4 v0, 0x6
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p0, Lbi2;->c:I
+
+    new-instance v0, Landroid/text/TextPaint;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
+
+    sget-object v1, Lr1h;->o:Lrhg;
+
+    invoke-static {p0, v0, v1}, Lusi;->g(Landroid/view/View;Landroid/text/TextPaint;Lrhg;)V
+
+    iput-object v0, p0, Lbi2;->d:Landroid/text/TextPaint;
+
+    sget v0, Lv5e;->l:I
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, p1
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v2
+
+    invoke-static {p1}, Lq7j;->c(F)I
+
+    move-result p1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v2, v1, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iput-object v0, p0, Lbi2;->o:Landroid/graphics/drawable/Drawable;
+
+    sget-object p1, Ldh5;->a:Ldh5;
+
+    iput-object p1, p0, Lbi2;->t0:Ljava/lang/Object;
+
+    sget-object p1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {p1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lbi2;->onThemeChanged(Lzlb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkm4;
-    .locals 1
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 13
 
-    iget-object v0, p0, Lbi2;->c:Ldi2;
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lbi2;->d:Landroid/text/TextPaint;
 
-.method public final b(Ljava/lang/String;Lgm4;Landroid/os/Bundle;)Lnm4;
-    .locals 20
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
 
-    move-object/from16 v0, p0
+    move-result-object v1
 
-    move-object/from16 v3, p2
+    iget v2, v1, Landroid/graphics/Paint$FontMetrics;->descent:F
 
-    move-object/from16 v4, p3
+    iget v3, v1, Landroid/graphics/Paint$FontMetrics;->ascent:F
 
-    iget-object v1, v0, Lbi2;->c:Ldi2;
+    sub-float/2addr v2, v3
 
-    iget-object v1, v1, Lkm4;->a:Ljava/util/LinkedHashSet;
+    float-to-int v2, v2
 
-    invoke-interface {v1, v3}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    iget v3, p0, Lbi2;->a:I
 
-    move-result v1
+    add-int/2addr v2, v3
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    if-nez v1, :cond_0
+    move-result v4
 
-    return-object v2
+    add-int/2addr v4, v3
+
+    iget-object v3, p0, Lbi2;->t0:Ljava/lang/Object;
+
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/CharSequence;
+
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    if-nez v5, :cond_1
 
     :cond_0
-    sget-object v1, Ldi2;->c:Lgm4;
-
-    invoke-virtual {v3, v1}, Lgm4;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const-string v5, "type"
-
-    const-string v6, "id"
-
-    if-eqz v1, :cond_4
-
-    invoke-static {v6, v4}, Lulj;->h(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v7
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    new-instance v7, Lysb;
-
-    invoke-direct {v7, v6, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static {v5, v4}, Lulj;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v6, Lci2;->d:Lwk5;
-
-    invoke-virtual {v6}, Lf2;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
+    const-string v5, ""
 
     :cond_1
-    move-object v8, v6
+    int-to-float v6, v4
 
-    check-cast v8, Lc2;
+    iget v7, v1, Landroid/graphics/Paint$FontMetrics;->ascent:F
 
-    invoke-virtual {v8}, Lc2;->hasNext()Z
+    sub-float/2addr v6, v7
+
+    iget v8, v1, Landroid/graphics/Paint$FontMetrics;->descent:F
+
+    add-float/2addr v7, v8
+
+    const/4 v8, 0x2
+
+    int-to-float v8, v8
+
+    div-float/2addr v7, v8
+
+    add-float/2addr v7, v6
+
+    iget v8, p0, Lbi2;->b:I
+
+    div-int/lit8 v9, v8, 0x2
+
+    int-to-float v9, v9
+
+    sub-float v10, v7, v9
+
+    float-to-int v10, v10
+
+    add-float/2addr v7, v9
+
+    float-to-int v7, v7
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v9
 
-    if-eqz v9, :cond_3
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    invoke-virtual {v8}, Lc2;->next()Ljava/lang/Object;
+    move-result v11
 
-    move-result-object v8
+    add-int/2addr v11, v8
 
-    check-cast v8, Lci2;
+    iget-object v12, p0, Lbi2;->o:Landroid/graphics/drawable/Drawable;
 
-    iget-object v9, v8, Lci2;->a:Ljava/lang/String;
+    invoke-virtual {v12, v9, v10, v11, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    invoke-virtual {v9, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v12, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    move-result v9
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    if-eqz v9, :cond_1
+    move-result v7
 
-    new-instance v1, Lysb;
+    add-int/2addr v7, v8
 
-    invoke-direct {v1, v5, v8}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget v8, p0, Lbi2;->c:I
 
-    const-string v5, "load_mark"
+    add-int/2addr v7, v8
 
-    invoke-static {v5, v4}, Lulj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    int-to-float v7, v7
 
-    move-result-object v6
+    invoke-virtual {p1, v5, v7, v6, v0}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    new-instance v9, Lysb;
-
-    invoke-direct {v9, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v5, "message_id"
-
-    invoke-static {v5, v4}, Lulj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
-
-    move-result-object v6
-
-    new-instance v10, Lysb;
-
-    invoke-direct {v10, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v5, "highlights"
-
-    invoke-virtual {v4, v5}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    invoke-static {v5, v4}, Lulj;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v8, ","
-
-    filled-new-array {v8}, [Ljava/lang/String;
-
-    move-result-object v8
-
-    const/4 v11, 0x4
-
-    invoke-static {v6, v8, v11}, Liyf;->T(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object v6
+    add-int/2addr v4, v2
 
     goto :goto_0
 
     :cond_2
-    move-object v6, v2
+    return-void
+.end method
+
+.method public final onMeasure(II)V
+    .locals 5
+
+    iget-object v0, p0, Lbi2;->d:Landroid/text/TextPaint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
+
+    move-result-object v1
+
+    iget v2, v1, Landroid/graphics/Paint$FontMetrics;->descent:F
+
+    iget v1, v1, Landroid/graphics/Paint$FontMetrics;->ascent:F
+
+    sub-float/2addr v2, v1
+
+    iget v1, p0, Lbi2;->a:I
+
+    int-to-float v1, v1
+
+    add-float/2addr v2, v1
+
+    iget-object v1, p0, Lbi2;->t0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    iget-object v2, p0, Lbi2;->t0:Ljava/lang/Object;
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    const/16 v4, 0xa
+
+    invoke-static {v2, v4}, Lri3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v4
+
+    invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
 
     :goto_0
-    new-instance v11, Lysb;
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v11, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result v4
 
-    const-string v5, "highlight_message"
+    if-eqz v4, :cond_2
 
-    invoke-static {v5, v4}, Lulj;->a(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v4
 
-    new-instance v12, Lysb;
+    check-cast v4, Ljava/lang/CharSequence;
 
-    invoke-direct {v12, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz v4, :cond_0
 
-    const-string v5, "from_forward"
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-static {v5, v4}, Lulj;->a(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
+    move-result-object v4
 
-    move-result-object v6
+    if-nez v4, :cond_1
 
-    new-instance v13, Lysb;
+    :cond_0
+    const-string v4, ""
 
-    invoke-direct {v13, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    :cond_1
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    const-string v5, "forward_cht_id"
+    move-result v4
 
-    invoke-static {v5, v4}, Lulj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v6
+    move-result-object v4
 
-    new-instance v14, Lysb;
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v14, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    goto :goto_0
 
-    const-string v5, "forward_msg_ids"
+    :cond_2
+    invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-static {v5, v4}, Lulj;->d(Ljava/lang/String;Landroid/os/Bundle;)[J
+    move-result-object v0
 
-    move-result-object v6
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance v15, Lysb;
+    move-result v2
 
-    invoke-direct {v15, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-nez v2, :cond_3
 
-    const-string v5, "forward_attach_id"
+    const/4 v0, 0x0
 
-    invoke-static {v5, v4}, Lulj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    goto :goto_2
 
-    move-result-object v6
+    :cond_3
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-instance v8, Lysb;
+    move-result-object v2
 
-    invoke-direct {v8, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    check-cast v2, Ljava/lang/Number;
 
-    const-string v5, "is_forward_attach"
+    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
 
-    invoke-static {v5, v4}, Lulj;->a(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
+    move-result v2
 
-    move-result-object v6
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance v2, Lysb;
+    move-result v3
 
-    invoke-direct {v2, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz v3, :cond_4
 
-    const-string v5, "payload"
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v4, v5}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v6
+    check-cast v3, Ljava/lang/Number;
 
-    move-object/from16 v16, v1
+    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
 
-    new-instance v1, Lysb;
+    move-result v3
 
-    invoke-direct {v1, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
 
-    const-string v5, "push_link"
-
-    invoke-virtual {v4, v5}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    move-object/from16 v18, v1
-
-    new-instance v1, Lysb;
-
-    invoke-direct {v1, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object/from16 v17, v16
-
-    move-object/from16 v16, v8
-
-    move-object/from16 v8, v17
-
-    move-object/from16 v19, v1
-
-    move-object/from16 v17, v2
-
-    filled-new-array/range {v7 .. v19}, [Lysb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    new-instance v2, Lqr1;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v2, v1, v5}, Lqr1;-><init>(Landroid/os/Bundle;I)V
-
-    move-object v7, v2
+    move-result v2
 
     goto :goto_1
 
-    :cond_3
-    new-instance v1, Ljava/util/NoSuchElementException;
-
-    const-string v2, "Collection contains no element matching the predicate."
-
-    invoke-direct {v1, v2}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
     :cond_4
-    sget-object v1, Ldi2;->d:Lgm4;
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-virtual {v3, v1}, Lgm4;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    iget-object v1, v0, Lbi2;->a:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Li8e;
-
-    iget-object v1, v1, Li8e;->a:Lhof;
-
-    invoke-virtual {v1}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lud2;
-
-    if-eqz v1, :cond_6
-
-    new-instance v2, Landroid/os/Bundle;
-
-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
-
-    iget-wide v7, v1, Lud2;->a:J
-
-    invoke-virtual {v2, v6, v7, v8}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
-
-    sget-object v1, Lci2;->b:Lci2;
-
-    invoke-virtual {v2, v5, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    new-instance v1, Lqr1;
-
-    const/4 v5, 0x2
-
-    invoke-direct {v1, v2, v5}, Lqr1;-><init>(Landroid/os/Bundle;I)V
-
-    move-object v7, v1
-
-    :goto_1
-    iget-object v1, v0, Lbi2;->b:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lux5;
-
-    check-cast v1, Loy5;
-
-    invoke-virtual {v1}, Loy5;->C()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    new-instance v1, Llm4;
-
-    new-instance v2, Lfe2;
-
-    const/4 v5, 0x3
-
-    invoke-direct {v2, v5}, Lfe2;-><init>(I)V
-
-    new-instance v5, Lfe2;
-
-    const/4 v6, 0x4
-
-    invoke-direct {v5, v6}, Lfe2;-><init>(I)V
-
-    invoke-direct {v1, v2, v5}, Llm4;-><init>(Lmq6;Lmq6;)V
+    move-result-object v0
 
     :goto_2
-    move-object v6, v1
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
 
     goto :goto_3
 
     :cond_5
-    new-instance v1, Llm4;
-
-    const/4 v2, 0x3
-
-    const/4 v5, 0x0
-
-    invoke-direct {v1, v5, v2}, Llm4;-><init>(Luxf;I)V
-
-    goto :goto_2
+    const/4 v0, 0x0
 
     :goto_3
-    new-instance v1, Lnm4;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    const/16 v8, 0x8
+    move-result v2
 
-    const/4 v5, 0x0
+    iget v3, p0, Lbi2;->b:I
 
-    move-object/from16 v2, p1
+    add-int/2addr v2, v3
 
-    invoke-direct/range {v1 .. v8}, Lnm4;-><init>(Ljava/lang/String;Lgm4;Landroid/os/Bundle;ILlm4;Lmm4;I)V
+    iget v3, p0, Lbi2;->c:I
 
-    return-object v1
+    add-int/2addr v2, v3
 
-    :cond_6
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    int-to-float v2, v2
 
-    const-string v2, "Required value was null."
+    add-float/2addr v2, v0
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
-    throw v1
+    move-result v0
 
-    :cond_7
-    new-instance v1, Ljava/lang/IllegalStateException;
+    int-to-float v0, v0
 
-    const-string v2, "invalid route "
+    add-float/2addr v2, v0
 
-    invoke-static {v2, v3}, Lc12;->i(Ljava/lang/String;Lgm4;)Ljava/lang/String;
+    float-to-int v0, v2
 
-    move-result-object v2
+    invoke-static {v0, p1}, Landroid/view/View;->resolveSize(II)I
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result p1
 
-    throw v1
+    invoke-static {v1, p2}, Landroid/view/View;->resolveSize(II)I
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public final onThemeChanged(Lzlb;)V
+    .locals 2
+
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+
+    move-result-object v0
+
+    iget v0, v0, Lrfg;->h:I
+
+    iget-object v1, p0, Lbi2;->d:Landroid/text/TextPaint;
+
+    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-interface {p1}, Lzlb;->a()Ln13;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ln13;->C()Lkl3;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lkl3;->a:Lyj3;
+
+    iget-object p1, p1, Lyj3;->b:Lzj3;
+
+    iget p1, p1, Lzj3;->b:I
+
+    iget-object v0, p0, Lbi2;->o:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
 .end method

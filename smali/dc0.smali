@@ -4,22 +4,22 @@
 
 
 # instance fields
-.field public final a:Lxhc;
+.field public final a:Lvic;
 
-.field public final b:Lnj7;
+.field public final b:Lui7;
 
 
 # direct methods
-.method public constructor <init>(Lxhc;Lnj7;)V
+.method public constructor <init>(Lvic;Lui7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_0
 
-    iput-object p1, p0, Ldc0;->a:Lxhc;
+    iput-object p1, p0, Ldc0;->a:Lvic;
 
-    iput-object p2, p0, Ldc0;->b:Lnj7;
+    iput-object p2, p0, Ldc0;->b:Lui7;
 
     return-void
 
@@ -53,9 +53,9 @@
 
     check-cast p1, Ldc0;
 
-    iget-object v1, p0, Ldc0;->a:Lxhc;
+    iget-object v1, p0, Ldc0;->a:Lvic;
 
-    iget-object v3, p1, Ldc0;->a:Lxhc;
+    iget-object v3, p1, Ldc0;->a:Lvic;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -63,9 +63,9 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Ldc0;->b:Lnj7;
+    iget-object v1, p0, Ldc0;->b:Lui7;
 
-    iget-object p1, p1, Ldc0;->b:Lnj7;
+    iget-object p1, p1, Ldc0;->b:Lui7;
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -82,7 +82,7 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Ldc0;->a:Lxhc;
+    iget-object v0, p0, Ldc0;->a:Lvic;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -94,7 +94,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Ldc0;->b:Lnj7;
+    iget-object v1, p0, Ldc0;->b:Lui7;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -114,7 +114,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ldc0;->a:Lxhc;
+    iget-object v1, p0, Ldc0;->a:Lvic;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -122,7 +122,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ldc0;->b:Lnj7;
+    iget-object v1, p0, Ldc0;->b:Lui7;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmm;
-.implements Lv0b;
-.implements Lzl;
+.implements Lnm;
+.implements Ly0b;
+.implements Lam;
 
 
 # annotations
@@ -21,9 +21,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lmm;",
-        "Lv0b;",
-        "Lzl;"
+        "Lnm;",
+        "Ly0b;",
+        "Lam;"
     }
 .end annotation
 
@@ -33,12 +33,12 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;",
-        "Lmm;",
-        "Lv0b;",
-        "Lzl;",
+        "Lnm;",
+        "Ly0b;",
+        "Lam;",
         "Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;",
         "",
-        "Lzk1;",
+        "Lsk1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "candidates",
         "<init>",
@@ -51,23 +51,23 @@
         "shouldReport",
         "willWriteParams",
         "willWriteSupplyParams",
-        "Lx28;",
+        "Li28;",
         "writer",
-        "Lv2h;",
+        "Lb3h;",
         "writeParams",
-        "(Lx28;)V",
+        "(Li28;)V",
         "writeSupplyParams",
         "",
         "handleInterruptedIO",
         "()Ljava/lang/Object;",
-        "Lvl;",
+        "Lwl;",
         "getConfigExtractor",
-        "()Lvl;",
+        "()Lwl;",
         "configExtractor",
-        "Lf28;",
+        "Lq18;",
         "Lru/ok/android/api/core/ApiInvocationException;",
         "getFailParser",
-        "()Lf28;",
+        "()Lq18;",
         "failParser",
         "getOkParser",
         "okParser",
@@ -75,13 +75,13 @@
         "getPriority",
         "()I",
         "priority",
-        "Lpm;",
-        "getScope",
-        "()Lpm;",
-        "scope",
         "Lqm;",
-        "getScopeAfter",
+        "getScope",
         "()Lqm;",
+        "scope",
+        "Lrm;",
+        "getScopeAfter",
+        "()Lrm;",
         "scopeAfter",
         "Landroid/net/Uri;",
         "getUri",
@@ -116,7 +116,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lzk1;",
+            "Lsk1;",
             ">;)V"
         }
     .end annotation
@@ -125,29 +125,29 @@
 
     const-string v0, "vchat.getExternalIdsByOkIds"
 
-    invoke-static {v0}, Lym;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lzm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    new-instance v1, Lim;
+    new-instance v1, Ljm;
 
-    invoke-direct {v1}, Lim;-><init>()V
+    invoke-direct {v1}, Ljm;-><init>()V
 
     sget-object v2, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds;->Companion:Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;
 
-    invoke-static {v2, p1}, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;->access$mapToStringApiParam(Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;Ljava/util/List;)Layf;
+    invoke-static {v2, p1}, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;->access$mapToStringApiParam(Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;Ljava/util/List;)Ljzf;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lim;->a(Lhm;)V
+    invoke-virtual {v1, p1}, Ljm;->a(Lim;)V
 
-    sget-object p1, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;->INSTANCE:Lf28;
+    sget-object p1, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;->INSTANCE:Lq18;
 
     new-instance v2, Ltm0;
 
-    sget-object v3, Lpm;->c:Lpm;
+    sget-object v3, Lqm;->c:Lqm;
 
-    invoke-direct {v2, v0, v3, v1, p1}, Ltm0;-><init>(Landroid/net/Uri;Lpm;Lim;Lf28;)V
+    invoke-direct {v2, v0, v3, v1, p1}, Ltm0;-><init>(Landroid/net/Uri;Lqm;Ljm;Lq18;)V
 
     iput-object v2, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
@@ -161,19 +161,19 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Ltm0;->c:Lim;
+    iget-object v0, v0, Ltm0;->c:Ljm;
 
-    iget-boolean v0, v0, Lim;->b:Z
+    iget-boolean v0, v0, Ljm;->b:Z
 
     return v0
 .end method
 
-.method public getConfigExtractor()Lvl;
+.method public getConfigExtractor()Lwl;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lvl;"
+            "Lwl;"
         }
     .end annotation
 
@@ -181,17 +181,17 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lvl;->f:Ly0j;
+    sget-object v0, Lwl;->f:Lv1j;
 
     return-object v0
 .end method
 
-.method public getFailParser()Lf28;
+.method public getFailParser()Lq18;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lf28;"
+            "Lq18;"
         }
     .end annotation
 
@@ -199,23 +199,23 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lxna;->c:Lxna;
+    sget-object v0, Lvna;->c:Lvna;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lf28;
+.method public getOkParser()Lq18;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lf28;"
+            "Lq18;"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Ltm0;->d:Lf28;
+    iget-object v0, v0, Ltm0;->d:Lq18;
 
     return-object v0
 .end method
@@ -232,24 +232,24 @@
     return v0
 .end method
 
-.method public getScope()Lpm;
+.method public getScope()Lqm;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Ltm0;->b:Lpm;
+    iget-object v0, v0, Ltm0;->b:Lqm;
 
     return-object v0
 .end method
 
-.method public getScopeAfter()Lqm;
+.method public getScopeAfter()Lrm;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lqm;->a:Lqm;
+    sget-object v0, Lrm;->a:Lrm;
 
     return-object v0
 .end method
@@ -295,9 +295,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Ltm0;->c:Lim;
+    iget-object v0, v0, Ltm0;->c:Ljm;
 
-    iget-boolean v0, v0, Lim;->c:Z
+    iget-boolean v0, v0, Ljm;->c:Z
 
     return v0
 .end method
@@ -319,9 +319,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Ltm0;->c:Lim;
+    iget-object v0, v0, Ltm0;->c:Ljm;
 
-    iget-boolean v0, v0, Lim;->d:Z
+    iget-boolean v0, v0, Ljm;->d:Z
 
     return v0
 .end method
@@ -331,29 +331,29 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Ltm0;->c:Lim;
+    iget-object v0, v0, Ltm0;->c:Ljm;
 
-    iget-boolean v0, v0, Lim;->e:Z
+    iget-boolean v0, v0, Ljm;->e:Z
 
     return v0
 .end method
 
-.method public writeParams(Lx28;)V
+.method public writeParams(Li28;)V
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
-    invoke-virtual {v0, p1}, Ltm0;->writeParams(Lx28;)V
+    invoke-virtual {v0, p1}, Ltm0;->writeParams(Li28;)V
 
     return-void
 .end method
 
-.method public writeSupplyParams(Lx28;)V
+.method public writeSupplyParams(Li28;)V
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Request;->$$delegate_0:Ltm0;
 
-    invoke-virtual {v0, p1}, Ltm0;->writeSupplyParams(Lx28;)V
+    invoke-virtual {v0, p1}, Ltm0;->writeSupplyParams(Li28;)V
 
     return-void
 .end method

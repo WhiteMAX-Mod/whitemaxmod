@@ -1,59 +1,59 @@
-.class public abstract synthetic Lu69;
-.super Ljava/lang/Object;
+.class public final Lu69;
+.super Ld3;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final c:Lu69;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lu69;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lu69;->c:Lu69;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final L0(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {}, Lr69;->values()[Lr69;
+    invoke-virtual {p0}, Ld3;->p0()Ljm4;
 
     move-result-object v0
 
-    array-length v0, v0
+    new-instance v1, Lktb;
 
-    new-array v0, v0, [I
+    const-string v2, "image_uri"
 
-    const/4 v1, 0x1
+    invoke-direct {v1, v2, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const/4 v2, 0x0
+    new-instance p1, Lktb;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v2, "file_path"
 
-    :catch_0
-    const/4 v2, 0x2
+    invoke-direct {p1, v2, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    filled-new-array {v1, p1}, [Lktb;
 
-    :catch_1
-    const/4 v1, 0x3
+    move-result-object p1
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
 
-    :catch_2
-    const/4 v2, 0x4
+    move-result-object p1
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    const-string p2, ":media-picker/edit/avatar"
 
-    :catch_3
-    sput-object v0, Lu69;->$EnumSwitchMapping$0:[I
+    invoke-virtual {v0, p2, p1}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     return-void
 .end method

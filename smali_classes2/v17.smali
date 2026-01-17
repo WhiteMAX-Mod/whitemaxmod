@@ -97,13 +97,13 @@
 
     const-string v1, ")"
 
-    const-string v2, "GradientsLoadingIconNeutralThemedColors(filled="
+    const-string v2, "GradientsLoadingIconThemedColors(filled="
 
     iget v3, p0, Lv17;->a:I
 
     iget v4, p0, Lv17;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

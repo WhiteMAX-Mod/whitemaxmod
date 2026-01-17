@@ -1,28 +1,24 @@
 .class public final Lk91;
-.super Lpvh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll91;
+.implements Lq91;
 
 
 # static fields
-.field public static final c:Lk91;
+.field public static final a:Lk91;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     new-instance v0, Lk91;
 
-    sget v1, Lgcd;->call_screen_connection_restoring:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v1}, Lpvh;-><init>(Ljava/lang/Long;I)V
-
-    sput-object v0, Lk91;->c:Lk91;
+    sput-object v0, Lk91;->a:Lk91;
 
     return-void
 .end method
@@ -54,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x9c8d45e
+    const v0, -0x3f0d84a0
 
     return v0
 .end method
@@ -62,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Restoring"
+    const-string v0, "Logout"
 
     return-object v0
 .end method

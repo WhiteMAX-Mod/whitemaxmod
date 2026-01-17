@@ -1,205 +1,244 @@
-.class public abstract Lqe5;
+.class public final Lqe5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public a:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/Object;
+.field public volatile b:Ljava/lang/Object;
 
-.field public final c:Ljava/lang/Object;
+.field public volatile c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
+    iput-object p1, p0, Lqe5;->a:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Lqe5;->a:I
-
-    .line 3
-    iput-object p2, p0, Lqe5;->b:Ljava/lang/Object;
-
-    .line 4
-    iput-object p3, p0, Lqe5;->c:Ljava/lang/Object;
-
     return-void
-.end method
-
-.method public constructor <init>(Landroidx/recyclerview/widget/a;)V
-    .locals 1
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/high16 v0, -0x80000000
-
-    .line 6
-    iput v0, p0, Lqe5;->a:I
-
-    .line 7
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Lqe5;->c:Ljava/lang/Object;
-
-    .line 8
-    iput-object p1, p0, Lqe5;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lte5;)V
-    .locals 1
-
-    .line 9
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 10
-    iput v0, p0, Lqe5;->a:I
-
-    .line 11
-    new-instance v0, Loq4;
-
-    invoke-direct {v0}, Loq4;-><init>()V
-
-    iput-object v0, p0, Lqe5;->c:Ljava/lang/Object;
-
-    .line 12
-    iput-object p1, p0, Lqe5;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public static b(Landroidx/recyclerview/widget/a;I)Lqe5;
-    .locals 1
-
-    if-eqz p1, :cond_1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    new-instance p1, Laqb;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, p0, v0}, Laqb;-><init>(Landroidx/recyclerview/widget/a;I)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "invalid orientation"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p1, Laqb;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Laqb;-><init>(Landroidx/recyclerview/widget/a;I)V
-
-    return-object p1
 .end method
 
 
 # virtual methods
-.method public abstract a(Lj6e;)V
-.end method
+.method public a()V
+    .locals 9
 
-.method public abstract c(Lj6e;)V
-.end method
+    iget-object v0, p0, Lqe5;->a:Ljava/lang/Object;
 
-.method public abstract d(Landroid/view/View;)I
-.end method
+    check-cast v0, Lxj;
 
-.method public abstract e(Landroid/view/View;)I
-.end method
+    iget-object v1, v0, Lxj;->a:Lzh;
 
-.method public abstract f(Landroid/view/View;)I
-.end method
+    iget-object v1, v1, Lzh;->b:Lahd;
 
-.method public abstract g(Landroid/view/View;)I
-.end method
+    iget-object v2, v0, Lxj;->c:Ljava/lang/Integer;
 
-.method public abstract h()I
-.end method
+    iget-object v3, p0, Lqe5;->b:Ljava/lang/Object;
 
-.method public abstract i()I
-.end method
+    check-cast v3, Ljava/lang/Integer;
 
-.method public abstract j()I
-.end method
+    const/4 v4, 0x0
 
-.method public abstract k()I
-.end method
+    if-eqz v3, :cond_1
 
-.method public abstract l()I
-.end method
+    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
 
-.method public abstract m()I
-.end method
+    move-result v3
 
-.method public abstract n()I
-.end method
+    int-to-long v5, v3
 
-.method public o()I
-    .locals 2
+    const-wide v7, 0xffffffffL
 
-    const/high16 v0, -0x80000000
+    and-long/2addr v5, v7
 
-    iget v1, p0, Lqe5;->a:I
+    const/16 v3, 0x10
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v3}, Lndj;->a(I)V
 
-    const/4 v0, 0x0
+    invoke-static {v5, v6, v3}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
 
-    return v0
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    const/4 v6, 0x6
+
+    if-le v5, v6, :cond_0
+
+    const/16 v6, 0x8
 
     :cond_0
-    invoke-virtual {p0}, Lqe5;->n()I
+    const/16 v5, 0x30
+
+    invoke-static {v3, v6, v5}, Lrzf;->L(Ljava/lang/String;IC)Ljava/lang/String;
+
+    move-result-object v3
+
+    goto :goto_0
+
+    :cond_1
+    move-object v3, v4
+
+    :goto_0
+    iget-object v5, p0, Lqe5;->a:Ljava/lang/Object;
+
+    check-cast v5, Lxj;
+
+    iget-object v5, v5, Lxj;->d:Lai4;
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v5}, Lai4;->b()Z
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    goto :goto_1
+
+    :cond_2
+    move-object v5, v4
+
+    :goto_1
+    iget-object v6, p0, Lqe5;->a:Ljava/lang/Object;
+
+    check-cast v6, Lxj;
+
+    iget-object v6, v6, Lxj;->e:Lci4;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ": isReady: v="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " bgColor="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "} connected="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " senderThread="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "AniSend"
+
+    invoke-interface {v1, v2, v0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lqe5;->a:Ljava/lang/Object;
+
+    check-cast v0, Lxj;
+
+    iget-object v0, v0, Lxj;->c:Ljava/lang/Integer;
+
+    if-nez v0, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    iget v1, p0, Lqe5;->a:I
+    const/4 v1, 0x1
 
-    sub-int/2addr v0, v1
+    if-ne v0, v1, :cond_4
 
-    return v0
-.end method
+    goto :goto_2
 
-.method public abstract p(Landroid/view/View;)I
-.end method
+    :cond_4
+    iget-object v0, p0, Lqe5;->b:Ljava/lang/Object;
 
-.method public abstract q(Landroid/view/View;)I
-.end method
+    check-cast v0, Ljava/lang/Integer;
 
-.method public abstract r(I)V
-.end method
+    if-eqz v0, :cond_6
 
-.method public abstract s()V
-.end method
+    iget-object v0, p0, Lqe5;->a:Ljava/lang/Object;
 
-.method public abstract t(Lj6e;)V
-.end method
+    check-cast v0, Lxj;
 
-.method public abstract u()V
-.end method
+    iget-object v0, v0, Lxj;->e:Lci4;
 
-.method public abstract v(Lj6e;)V
-.end method
+    if-eqz v0, :cond_6
 
-.method public abstract w(Lj6e;)Lyq9;
+    iget-object v0, p0, Lqe5;->a:Ljava/lang/Object;
+
+    check-cast v0, Lxj;
+
+    iget-object v0, v0, Lxj;->d:Lai4;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v0}, Lai4;->b()Z
+
+    move-result v0
+
+    if-ne v0, v1, :cond_6
+
+    :goto_2
+    iget-object v0, p0, Lqe5;->a:Ljava/lang/Object;
+
+    check-cast v0, Lxj;
+
+    iput-object v4, v0, Lxj;->g:Lqe5;
+
+    iget-object v0, p0, Lqe5;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_5
+
+    iget-object v1, p0, Lqe5;->a:Ljava/lang/Object;
+
+    check-cast v1, Lxj;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Lxj;->e(I)V
+
+    :cond_5
+    iget-object v0, p0, Lqe5;->c:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Double;
+
+    if-eqz v0, :cond_6
+
+    iget-object v1, p0, Lqe5;->a:Ljava/lang/Object;
+
+    check-cast v1, Lxj;
+
+    invoke-virtual {v1, v0}, Lxj;->a([Ljava/lang/Double;)V
+
+    :cond_6
+    :goto_3
+    return-void
 .end method

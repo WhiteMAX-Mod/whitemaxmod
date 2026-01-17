@@ -1,116 +1,136 @@
 .class public final Lzrh;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/util/ArrayList;
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public a:Ljava/util/WeakHashMap;
+.field public final synthetic X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
 
-.field public b:Landroid/util/SparseArray;
-
-.field public c:Ljava/lang/ref/WeakReference;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/VideoWebViewScreen;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p2, p0, Lzrh;->X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lzrh;->d:Ljava/util/ArrayList;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;)Landroid/view/View;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lzrh;->a:Ljava/util/WeakHashMap;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_4
+    invoke-virtual {p0, p1, p2}, Lzrh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->containsKey(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v0
+    check-cast p1, Lzrh;
 
-    if-nez v0, :cond_0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    goto :goto_1
+    invoke-virtual {p1, p2}, Lzrh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    instance-of v0, p1, Landroid/view/ViewGroup;
+    return-object p2
+.end method
 
-    if-eqz v0, :cond_2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-object v0, p1
+    new-instance v0, Lzrh;
 
-    check-cast v0, Landroid/view/ViewGroup;
+    iget-object v1, p0, Lzrh;->X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-direct {v0, p2, v1}, Lzrh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/VideoWebViewScreen;)V
+
+    iput-object p1, v0, Lzrh;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget-object v0, p0, Lzrh;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lt94;
+
+    iget-object p1, p0, Lzrh;->X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+
+    sget-object v1, Lone/me/chatmedia/viewer/VideoWebViewScreen;->J0:[Lz28;
+
+    sget-object v1, Lo94;->a:Lo94;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    add-int/lit8 v1, v1, -0x1
+    if-eqz v1, :cond_0
 
-    :goto_0
-    if-ltz v1, :cond_2
+    invoke-virtual {p1}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->R0()Lqrh;
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    move-result-object p1
 
-    move-result-object v2
+    sget v0, Lt7b;->y:I
 
-    invoke-virtual {p0, v2}, Lzrh;->a(Landroid/view/View;)Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    return-object v2
-
-    :cond_1
-    add-int/lit8 v1, v1, -0x1
+    invoke-virtual {p1, v0}, Lqrh;->t(I)V
 
     goto :goto_0
 
+    :cond_0
+    const-class p1, Lone/me/chatmedia/viewer/VideoWebViewScreen;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v1, Lc5j;->a:Ledb;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Lkk8;->d:Lkk8;
+
+    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "videoWebView: Info panel event handle "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, p1, v0, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :cond_2
-    sget v0, Li8d;->tag_unhandled_key_listeners:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/ArrayList;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    if-gez v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {p1, v0}, Lq3g;->m(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x0
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

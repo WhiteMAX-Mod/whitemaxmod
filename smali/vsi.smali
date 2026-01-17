@@ -1,551 +1,539 @@
-.class public abstract Lvsi;
+.class public final Lvsi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz78;
 
-# static fields
-.field public static final a:[Lvoe;
+
+# instance fields
+.field public final a:Landroidx/fragment/app/a;
+
+.field public final b:Lnaj;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/google/android/gms/maps/SupportMapFragment;Lnaj;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [Lvoe;
+    iput-object p2, p0, Lvsi;->b:Lnaj;
 
-    sput-object v0, Lvsi;->a:[Lvoe;
+    invoke-static {p1}, Ldkj;->g(Ljava/lang/Object;)V
 
-    return-void
-.end method
-
-.method public static final a(Ljava/lang/Appendable;I)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p1, :cond_0
-
-    const-string v1, "\t"
-
-    invoke-interface {p0, v1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static final b(Ljava/lang/Throwable;Ljava/lang/Appendable;)V
-    .locals 7
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v4
-
-    new-instance v6, Ljava/util/IdentityHashMap;
-
-    invoke-direct {v6}, Ljava/util/IdentityHashMap;-><init>()V
-
-    const-string v3, ""
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    invoke-static/range {v0 .. v6}, Lvsi;->c(Ljava/lang/Throwable;Ljava/lang/Appendable;ILjava/lang/String;[Ljava/lang/StackTraceElement;ILjava/util/IdentityHashMap;)V
+    iput-object p1, p0, Lvsi;->a:Landroidx/fragment/app/a;
 
     return-void
 .end method
 
-.method public static final c(Ljava/lang/Throwable;Ljava/lang/Appendable;ILjava/lang/String;[Ljava/lang/StackTraceElement;ILjava/util/IdentityHashMap;)V
-    .locals 10
 
-    move-object/from16 v6, p6
+# virtual methods
+.method public final a(Lb2b;)V
+    .locals 3
 
-    invoke-virtual {v6, p0}, Ljava/util/IdentityHashMap;->containsKey(Ljava/lang/Object;)Z
+    :try_start_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
 
-    move-result v1
+    new-instance v1, Ljri;
 
-    const/16 v2, 0xa
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    invoke-direct {v1, p1, v2}, Ljri;-><init>(Lb2b;I)V
 
-    if-eqz v1, :cond_0
-
-    invoke-static {p1, v3}, Lvsi;->a(Ljava/lang/Appendable;I)V
-
-    const-string p2, "[CIRCULAR REFERENCE: "
-
-    invoke-interface {p1, p2}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+    invoke-static {p1, v1}, Lvui;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    move-result-object p0
+    const/16 v1, 0xc
 
-    invoke-interface {p1, p0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    move-result-object p0
-
-    const-string p1, "]"
-
-    invoke-interface {p0, p1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    move-result-object p0
-
-    invoke-interface {p0, v2}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
+    invoke-virtual {v0, p1, v1}, Lwoi;->X(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :cond_0
-    sget-object v1, Lv2h;->a:Lv2h;
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {v6, p0, v1}, Ljava/util/IdentityHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    invoke-static/range {p1 .. p2}, Lvsi;->a(Ljava/lang/Appendable;I)V
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-interface {p1, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    throw v0
+.end method
 
-    move-result-object p3
+.method public final b()V
+    .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+    :try_start_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
+
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
 
     move-result-object v1
 
-    invoke-interface {p3, v1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    const/16 v2, 0x8
 
-    move-result-object p3
+    invoke-virtual {v0, v1, v2}, Lwoi;->X(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {p3, v2}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
-
-    instance-of p3, p0, Ljava/lang/StackOverflowError;
-
-    const/4 v1, 0x0
-
-    if-eqz p3, :cond_2
-
-    aget-object p3, p4, v1
-
-    array-length v4, p4
-
-    :goto_0
-    if-ge v3, v4, :cond_2
-
-    aget-object v5, p4, v3
-
-    invoke-static {p3, v5}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v3, v1
-
-    :goto_1
-    if-lez v3, :cond_3
-
-    move p3, v3
-
-    goto :goto_2
-
-    :cond_3
-    array-length p3, p4
-
-    sub-int/2addr p3, p5
-
-    :goto_2
-    move v4, v1
-
-    :goto_3
-    if-ge v4, p3, :cond_4
-
-    aget-object v5, p4, v4
-
-    add-int/lit8 v7, p2, 0x1
-
-    const/4 v8, 0x4
-
-    invoke-static {v5, p1, v7, v8}, Lvsi;->d(Ljava/lang/StackTraceElement;Ljava/lang/Appendable;II)V
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_3
-
-    :cond_4
-    const-string p3, "... "
-
-    if-lez v3, :cond_5
-
-    add-int/lit8 v4, p2, 0x1
-
-    invoke-static {p1, v4}, Lvsi;->a(Ljava/lang/Appendable;I)V
-
-    invoke-interface {p1, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    move-result-object p3
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {p3, v3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    move-result-object p3
-
-    const-string v3, " calls repeat"
-
-    invoke-interface {p3, v3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    move-result-object p3
-
-    invoke-interface {p3, v2}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
-
-    goto :goto_4
-
-    :cond_5
-    if-eqz p5, :cond_6
-
-    add-int/lit8 v3, p2, 0x1
-
-    invoke-static {p1, v3}, Lvsi;->a(Ljava/lang/Appendable;I)V
-
-    invoke-interface {p1, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    move-result-object p3
-
-    invoke-static {p5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {p3, v3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    move-result-object p3
-
-    const-string v3, " more"
-
-    invoke-interface {p3, v3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    move-result-object p3
-
-    invoke-interface {p3, v2}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
-
-    :cond_6
-    :goto_4
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getSuppressed()[Ljava/lang/Throwable;
-
-    move-result-object p3
-
-    array-length v8, p3
-
-    move v9, v1
-
-    :goto_5
-    if-ge v9, v8, :cond_7
-
-    aget-object v1, p3, v9
-
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v5
-
-    add-int/lit8 v3, p2, 0x1
-
-    const-string v4, "Suppressed: "
-
-    invoke-static {p4, v5}, Lvsi;->g([Ljava/lang/StackTraceElement;[Ljava/lang/StackTraceElement;)I
-
-    move-result v6
-
-    move-object v2, p1
-
-    move-object/from16 v7, p6
-
-    invoke-static/range {v1 .. v7}, Lvsi;->c(Ljava/lang/Throwable;Ljava/lang/Appendable;ILjava/lang/String;[Ljava/lang/StackTraceElement;ILjava/util/IdentityHashMap;)V
-
-    add-int/lit8 v9, v9, 0x1
-
-    move-object/from16 v6, p6
-
-    goto :goto_5
-
-    :cond_7
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_8
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v4
-
-    const-string v3, "Caused by: "
-
-    invoke-static {p4, v4}, Lvsi;->g([Ljava/lang/StackTraceElement;[Ljava/lang/StackTraceElement;)I
-
-    move-result v5
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move-object/from16 v6, p6
-
-    invoke-static/range {v0 .. v6}, Lvsi;->c(Ljava/lang/Throwable;Ljava/lang/Appendable;ILjava/lang/String;[Ljava/lang/StackTraceElement;ILjava/util/IdentityHashMap;)V
-
-    :cond_8
     return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public static d(Ljava/lang/StackTraceElement;Ljava/lang/Appendable;II)V
-    .locals 1
+.method public final e()V
+    .locals 3
 
-    and-int/lit8 p3, p3, 0x2
+    :try_start_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
 
-    if-eqz p3, :cond_0
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
 
-    const/4 p2, 0x1
+    move-result-object v1
 
-    :cond_0
-    invoke-static {p1, p2}, Lvsi;->a(Ljava/lang/Appendable;I)V
+    const/16 v2, 0x10
 
-    const-string p2, "at "
+    invoke-virtual {v0, v1, v2}, Lwoi;->X(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {p1, p2}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    return-void
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->isNativeMethod()Z
+    :catch_0
+    move-exception v0
 
-    move-result p2
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    if-eqz p2, :cond_1
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    const-string p2, "Native Method"
+    throw v1
+.end method
 
-    goto :goto_0
+.method public final i()V
+    .locals 3
 
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
+    :try_start_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
+
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/4 v2, 0x6
+
+    invoke-virtual {v0, v1, v2}, Lwoi;->X(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final j(Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;)V
+    .locals 3
+
+    const-string v0, "MapOptions"
+
+    invoke-virtual {p2, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p2
 
-    if-nez p2, :cond_2
+    check-cast p2, Lcom/google/android/gms/maps/GoogleMapOptions;
 
-    const-string p2, "Unknown Source"
+    :try_start_0
+    new-instance v0, Landroid/os/Bundle;
 
-    :cond_2
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    move-result-object p3
+    invoke-static {p3, v0}, Lkvi;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
 
-    invoke-interface {p1, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    iget-object v1, p0, Lvsi;->b:Lnaj;
 
-    move-result-object p3
+    new-instance v2, Laxa;
 
-    const-string v0, "."
+    invoke-direct {v2, p1}, Laxa;-><init>(Ljava/lang/Object;)V
 
-    invoke-interface {p3, v0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    invoke-virtual {v1}, Lwoi;->V()Landroid/os/Parcel;
 
-    move-result-object p3
+    move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
+    invoke-static {p1, v2}, Lvui;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    move-result-object v0
+    invoke-static {p1, p2}, Lvui;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
-    invoke-interface {p3, v0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    invoke-static {p1, v0}, Lvui;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
-    move-result-object p3
+    const/4 p2, 0x2
 
-    const-string v0, "("
+    invoke-virtual {v1, p1, p2}, Lwoi;->X(Landroid/os/Parcel;I)V
 
-    invoke-interface {p3, v0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    invoke-static {v0, p3}, Lkvi;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p3
+    return-void
 
-    invoke-interface {p3, p2}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getLineNumber()I
+    new-instance p2, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    move-result p2
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    if-ltz p2, :cond_3
+    throw p2
+.end method
 
-    const-string p2, ":"
+.method public final k()V
+    .locals 3
 
-    invoke-interface {p1, p2}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    :try_start_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
+
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/4 v2, 0x5
+
+    invoke-virtual {v0, v1, v2}, Lwoi;->X(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final l(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 4
+
+    :try_start_0
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    invoke-static {p3, v0}, Lkvi;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+
+    invoke-static {}, Landroid/os/StrictMode;->getThreadPolicy()Landroid/os/StrictMode$ThreadPolicy;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    invoke-direct {v2, v1}, Landroid/os/StrictMode$ThreadPolicy$Builder;-><init>(Landroid/os/StrictMode$ThreadPolicy;)V
+
+    invoke-virtual {v2}, Landroid/os/StrictMode$ThreadPolicy$Builder;->permitAll()Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/os/StrictMode$ThreadPolicy$Builder;->build()Landroid/os/StrictMode$ThreadPolicy;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    iget-object v2, p0, Lvsi;->b:Lnaj;
+
+    new-instance v3, Laxa;
+
+    invoke-direct {v3, p1}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    new-instance p1, Laxa;
+
+    invoke-direct {p1, p2}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v2}, Lwoi;->V()Landroid/os/Parcel;
 
     move-result-object p2
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getLineNumber()I
+    invoke-static {p2, v3}, Lvui;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    move-result p0
+    invoke-static {p2, p1}, Lvui;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-static {p2, v0}, Lvui;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
-    move-result-object p0
+    const/4 p1, 0x4
 
-    invoke-interface {p2, p0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    invoke-virtual {v2, p2, p1}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    :cond_3
-    const-string p0, ")"
+    move-result-object p1
 
-    invoke-interface {p1, p0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    move-result-object p0
+    move-result-object p2
 
-    const/16 p1, 0xa
+    invoke-static {p2}, Laxa;->Y(Landroid/os/IBinder;)Lte7;
 
-    invoke-interface {p0, p1}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
+    move-result-object p2
 
-    return-void
-.end method
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-.method public static final e(Lvoe;)Ljava/util/Set;
-    .locals 4
+    :try_start_2
+    invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    instance-of v0, p0, Lw01;
+    invoke-static {v0, p3}, Lkvi;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+    :try_end_2
+    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    if-eqz v0, :cond_0
+    invoke-static {p2}, Laxa;->Z(Lte7;)Ljava/lang/Object;
 
-    check-cast p0, Lw01;
+    move-result-object p1
 
-    invoke-interface {p0}, Lw01;->b()Ljava/util/Set;
+    check-cast p1, Landroid/view/View;
 
-    move-result-object p0
+    return-object p1
 
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-interface {p0}, Lvoe;->f()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
-
-    invoke-interface {p0}, Lvoe;->f()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    invoke-interface {p0, v2}, Lvoe;->g(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
+    :catch_0
+    move-exception p1
 
     goto :goto_0
 
-    :cond_1
-    return-object v0
-.end method
+    :catchall_0
+    move-exception p1
 
-.method public static final f(Ljava/util/List;)[Lvoe;
-    .locals 1
+    :try_start_3
+    invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    if-eqz p0, :cond_0
+    throw p1
+    :try_end_3
+    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
 
-    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :cond_1
-    if-eqz p0, :cond_3
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Lvoe;
-
-    invoke-interface {p0, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [Lvoe;
-
-    if-nez p0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    return-object p0
-
-    :cond_3
     :goto_0
-    sget-object p0, Lvsi;->a:[Lvoe;
+    new-instance p2, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    return-object p0
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
 .end method
 
-.method public static final g([Ljava/lang/StackTraceElement;[Ljava/lang/StackTraceElement;)I
+.method public final m(Landroid/os/Bundle;)V
     .locals 4
 
-    array-length v0, p0
+    :try_start_0
+    new-instance v0, Landroid/os/Bundle;
 
-    add-int/lit8 v0, v0, -0x1
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    array-length v1, p1
+    invoke-static {p1, v0}, Lkvi;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
 
-    add-int/lit8 v1, v1, -0x1
+    iget-object v1, p0, Lvsi;->b:Lnaj;
 
-    :goto_0
-    if-ltz v0, :cond_0
+    invoke-virtual {v1}, Lwoi;->V()Landroid/os/Parcel;
 
-    if-ltz v1, :cond_0
+    move-result-object v2
 
-    aget-object v2, p0, v0
+    invoke-static {v2, v0}, Lvui;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
-    aget-object v3, p1, v1
+    const/16 v3, 0xa
 
-    invoke-static {v2, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2, v3}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    add-int/lit8 v0, v0, -0x1
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->readFromParcel(Landroid/os/Parcel;)V
 
-    add-int/lit8 v1, v1, -0x1
+    :cond_0
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-static {v0, p1}, Lkvi;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final n()V
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
+
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/4 v2, 0x7
+
+    invoke-virtual {v0, v1, v2}, Lwoi;->X(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final o()V
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
+
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/16 v2, 0xf
+
+    invoke-virtual {v0, v1, v2}, Lwoi;->X(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final onLowMemory()V
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
+
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v0, v1, v2}, Lwoi;->X(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final p(Landroid/os/Bundle;)V
+    .locals 4
+
+    const-string v0, "MapOptions"
+
+    :try_start_0
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    invoke-static {p1, v1}, Lkvi;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+
+    iget-object v2, p0, Lvsi;->a:Landroidx/fragment/app/a;
+
+    iget-object v2, v2, Landroidx/fragment/app/a;->X:Landroid/os/Bundle;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Lkvi;->h(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/Parcelable;)V
 
     goto :goto_0
 
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
     :cond_0
-    array-length p0, p0
+    :goto_0
+    iget-object v0, p0, Lvsi;->b:Lnaj;
 
-    add-int/lit8 p0, p0, -0x1
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
 
-    sub-int/2addr p0, v0
+    move-result-object v2
 
-    return p0
+    invoke-static {v2, v1}, Lvui;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    const/4 v3, 0x3
+
+    invoke-virtual {v0, v2, v3}, Lwoi;->X(Landroid/os/Parcel;I)V
+
+    invoke-static {v1, p1}, Lkvi;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :goto_1
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

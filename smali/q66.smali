@@ -1,93 +1,61 @@
 .class public final Lq66;
-.super Ljava/lang/Object;
+.super Lshc;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public a:[F
 
-.field public b:Z
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:Z
+.field public b:I
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lq66;->a:[F
 
-    const-string v1, "LayoutState{mAvailable="
+    iget v1, p0, Lq66;->b:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lq66;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mFlexLinePosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lq66;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mPosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lq66;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mOffset="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lq66;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mScrollingOffset="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lq66;->f:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mLastScrollDelta="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lq66;->g:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mItemDirection=1, mLayoutDirection="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lq66;->h:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lxd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([FI)[F
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final b(I)V
+    .locals 2
+
+    iget-object v0, p0, Lq66;->a:[F
+
+    array-length v1, v0
+
+    if-ge v1, p1, :cond_1
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    if-ge p1, v1, :cond_0
+
+    move p1, v1
+
+    :cond_0
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([FI)[F
+
+    move-result-object p1
+
+    iput-object p1, p0, Lq66;->a:[F
+
+    :cond_1
+    return-void
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Lq66;->b:I
+
+    return v0
 .end method

@@ -55,7 +55,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;-><init>(Lro4;)V
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;-><init>(Lso4;)V
 
     return-void
 .end method

@@ -1,14 +1,14 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal$startConversationImpl$request$1;
-.super Lrr6;
+.super Lqr6;
 .source "SourceFile"
 
 # interfaces
-.implements Lgr6;
+.implements Lfr6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->startConversationImpl(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lbdf;
+    value = Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->startConversationImpl(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lkef;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lrr6;",
-        "Lgr6;"
+        "Lqr6;",
+        "Lfr6;"
     }
 .end annotation
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal$startConversationImpl$request$1;->invoke(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsm0;)V
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method
@@ -94,7 +94,7 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lsw1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lkw1;->receiver:Ljava/lang/Object;
 
     check-cast v0, Lru/ok/android/externcalls/sdk/api/OkApiService;
 

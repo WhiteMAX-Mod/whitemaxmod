@@ -1,47 +1,28 @@
 .class public abstract Lfgd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static COLLECTOR_VIDEO:Ljava/lang/String; = "ok.mobile.apps.video"
+.field public static MarkdownItemView:[I = null
 
-.field public static COLLECTOR_WEBRTC:Ljava/lang/String; = "webrtc.aggregation"
+.field public static MarkdownItemView_miv_highlight_title:I = 0x0
 
-
-# instance fields
-.field public conversationId:Ljava/lang/String;
+.field public static MarkdownItemView_miv_title:I = 0x1
 
 
-# virtual methods
-.method public abstract log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
-.end method
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 2
 
-.method public abstract log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-.end method
+    const v0, 0x7f040671
 
-.method public final log(Lunf;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 6
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    const v1, 0x7f040672
 
-    .line 1
-    iget-object v1, p1, Lunf;->a:Ljava/lang/String;
+    filled-new-array {v0, v1}, [I
 
-    invoke-virtual {p0}, Lfgd;->time()J
+    move-result-object v0
 
-    move-result-wide v2
-
-    move-object v0, p0
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-virtual/range {v0 .. v5}, Lfgd;->log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
+    sput-object v0, Lfgd;->MarkdownItemView:[I
 
     return-void
-.end method
-
-.method public abstract time()J
 .end method

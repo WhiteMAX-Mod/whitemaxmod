@@ -13,7 +13,7 @@
 
     const-string v0, "BatteryChrgTracker"
 
-    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

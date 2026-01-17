@@ -1,19 +1,11 @@
-.class public abstract Lk5e;
+.class public interface abstract Lk5e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public abstract a(I[B)Lp52;
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Lsbd;->call_incoming:I
-
-    sput v0, Lk5e;->a:I
-
-    return-void
+.method public abstract b(JLe5e;)Lyi;
 .end method

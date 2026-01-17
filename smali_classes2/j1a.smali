@@ -1,67 +1,142 @@
 .class public final Lj1a;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final synthetic X:Lo58;
 
-.field public final b:Ld68;
+.field public final synthetic Y:Ley3;
 
-.field public final c:Lz7g;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lux5;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ltee;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;)V
-    .locals 15
+.method public constructor <init>(Lo58;Ley3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj1a;->X:Lo58;
 
-    move-object/from16 v0, p15
+    iput-object p2, p0, Lj1a;->Y:Ley3;
 
-    iput-object v0, p0, Lj1a;->a:Ld68;
+    const/4 p1, 0x2
 
-    move-object/from16 v0, p16
-
-    iput-object v0, p0, Lj1a;->b:Ld68;
-
-    new-instance v0, Li1a;
-
-    move-object v1, p0
-
-    move-object/from16 v5, p1
-
-    move-object/from16 v6, p2
-
-    move-object/from16 v7, p3
-
-    move-object/from16 v8, p4
-
-    move-object/from16 v9, p5
-
-    move-object/from16 v10, p6
-
-    move-object/from16 v11, p7
-
-    move-object/from16 v12, p8
-
-    move-object/from16 v13, p9
-
-    move-object/from16 v14, p10
-
-    move-object/from16 v2, p11
-
-    move-object/from16 v3, p12
-
-    move-object/from16 v4, p13
-
-    invoke-direct/range {v0 .. v14}, Li1a;-><init>(Lj1a;Ld68;Ld68;Ld68;Landroid/content/Context;Lux5;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ltee;)V
-
-    new-instance v2, Lz7g;
-
-    invoke-direct {v2, v0}, Lz7g;-><init>(Lmq6;)V
-
-    iput-object v2, p0, Lj1a;->c:Lz7g;
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lj1a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lj1a;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lj1a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lj1a;
+
+    iget-object v0, p0, Lj1a;->X:Lo58;
+
+    iget-object v1, p0, Lj1a;->Y:Ley3;
+
+    invoke-direct {p1, v0, v1, p2}, Lj1a;-><init>(Lo58;Ley3;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lj1a;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lj1a;->X:Lo58;
+
+    iget-object v0, p0, Lj1a;->Y:Ley3;
+
+    :try_start_1
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lkeb;
+
+    iput v1, p0, Lj1a;->o:I
+
+    invoke-virtual {p1, v0, p0}, Lkeb;->c(Ley3;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
+
+    :catchall_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :goto_0
+    throw p1
 .end method

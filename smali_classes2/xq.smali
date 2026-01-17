@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lnq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lp62;
+.field public final synthetic b:Lg62;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp62;I)V
+.method public synthetic constructor <init>(Lg62;I)V
     .locals 0
 
     iput p2, p0, Lxq;->a:I
 
-    iput-object p1, p0, Lxq;->b:Lp62;
+    iput-object p1, p0, Lxq;->b:Lg62;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,11 +36,11 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    iget-object p1, p0, Lxq;->b:Lp62;
+    iget-object p1, p0, Lxq;->b:Lg62;
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p1, v0}, Lp62;->resumeWith(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lg62;->resumeWith(Ljava/lang/Object;)V
 
     return-object v0
 
@@ -61,15 +61,15 @@
     const/4 p1, 0x0
 
     :goto_0
+    iget-object v0, p0, Lxq;->b:Lg62;
+
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    iget-object v0, p0, Lxq;->b:Lp62;
+    invoke-virtual {v0, p1}, Lg62;->resumeWith(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Lp62;->resumeWith(Ljava/lang/Object;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 

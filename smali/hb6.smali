@@ -1,85 +1,46 @@
 .class public final Lhb6;
-.super Ljava/lang/Object;
+.super Lpa6;
 .source "SourceFile"
 
 # interfaces
-.implements Lc0b;
-.implements Lqzf;
+.implements Ls9e;
 
 
 # instance fields
-.field public final a:Lozf;
-
-.field public b:Ll25;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lozf;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhb6;->a:Lozf;
+    iput-object p1, p0, Lhb6;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final f(Lxb6;)V
+    .locals 2
+
+    new-instance v0, Lr9e;
+
+    iget-object v1, p0, Lhb6;->b:Ljava/lang/Object;
+
+    invoke-direct {v0, p1, v1}, Lr9e;-><init>(Lz0g;Ljava/lang/Object;)V
+
+    invoke-interface {p1, v0}, Lz0g;->d(Lb1g;)V
+
+    return-void
+.end method
+
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lhb6;->a:Lozf;
+    iget-object v0, p0, Lhb6;->b:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lozf;->b()V
-
-    return-void
-.end method
-
-.method public final c(Ll25;)V
-    .locals 0
-
-    iput-object p1, p0, Lhb6;->b:Ll25;
-
-    iget-object p1, p0, Lhb6;->a:Lozf;
-
-    invoke-interface {p1, p0}, Lozf;->e(Lqzf;)V
-
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    iget-object v0, p0, Lhb6;->b:Ll25;
-
-    invoke-interface {v0}, Ll25;->dispose()V
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lhb6;->a:Lozf;
-
-    invoke-interface {v0, p1}, Lozf;->d(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final g(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Lhb6;->a:Lozf;
-
-    invoke-interface {v0, p1}, Lozf;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method

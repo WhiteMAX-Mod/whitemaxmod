@@ -1,22 +1,36 @@
 .class public final Lmye;
-.super Ljava/lang/Object;
+.super Ljef;
 .source "SourceFile"
 
-# interfaces
-.implements Loye;
 
+# virtual methods
+.method public final y(Lud8;)V
+    .locals 4
 
-# instance fields
-.field public final a:Ljava/util/List;
+    instance-of v0, p1, Ldr0;
 
+    if-nez v0, :cond_0
 
-# direct methods
-.method public constructor <init>(Lee8;)V
-    .locals 0
+    return-void
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    iput-object p1, p0, Lmye;->a:Ljava/util/List;
+    check-cast v0, Lk7b;
+
+    check-cast p1, Ldr0;
+
+    iget-object v1, p1, Ldr0;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-wide v1, p1, Ldr0;->a:J
+
+    iget-object v3, p1, Ldr0;->d:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Ldr0;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2, v3, p1}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
     return-void
 .end method

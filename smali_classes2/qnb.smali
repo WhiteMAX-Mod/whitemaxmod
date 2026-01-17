@@ -1,109 +1,236 @@
-.class public final enum Lqnb;
-.super Ljava/lang/Enum;
+.class public final Lqnb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxh0;
 
-# static fields
-.field public static final synthetic X:[Lqnb;
 
-.field public static final enum a:Lqnb;
+# instance fields
+.field public final a:Lhr5;
 
-.field public static final enum b:Lqnb;
+.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.field public static final enum c:Lqnb;
-
-.field public static final enum d:Lqnb;
-
-.field public static final enum o:Lqnb;
+.field public final c:Lpnb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 8
 
-    new-instance v0, Lqnb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SOURCE"
+    new-instance v0, Lov4;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1}, Lov4;-><init>(I)V
 
-    sput-object v0, Lqnb;->a:Lqnb;
+    new-instance v1, Lchf;
 
-    new-instance v1, Lqnb;
+    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
 
-    const-string v2, "RENDERER"
+    const-wide/16 v4, 0x0
 
-    const/4 v3, 0x1
+    invoke-static {v2, v3, v4, v5}, Lamj;->b(DD)D
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-wide v2
 
-    sput-object v1, Lqnb;->b:Lqnb;
+    invoke-direct {v1, v2, v3}, Lchf;-><init>(D)V
 
-    new-instance v2, Lqnb;
+    iput-object v1, v0, Lov4;->c:Ljava/lang/Object;
 
-    const-string v3, "UNEXPECTED"
+    const-wide/32 v1, 0x1f400
 
-    const/4 v4, 0x2
+    iput-wide v1, v0, Lov4;->b:J
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v1, 0x3
 
-    sput-object v2, Lqnb;->c:Lqnb;
+    iput v1, v0, Lov4;->a:I
 
-    new-instance v3, Lqnb;
+    new-instance v2, Lwkf;
 
-    const-string v4, "REMOTE"
+    invoke-direct {v2, v0}, Lwkf;-><init>(Lov4;)V
 
-    const/4 v5, 0x3
+    new-instance v0, Lnxb;
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/16 v3, 0xa
 
-    sput-object v3, Lqnb;->d:Lqnb;
+    invoke-direct {v0, v3}, Lnxb;-><init>(I)V
 
-    new-instance v4, Lqnb;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    const-string v5, "UNKNOWN"
+    move-result-object p1
 
-    const/4 v6, 0x4
+    new-instance v4, Lav8;
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v4}, Lav8;-><init>()V
 
-    sput-object v4, Lqnb;->o:Lqnb;
+    new-instance v4, Ljava/util/ArrayList;
 
-    filled-new-array {v0, v1, v2, v3, v4}, [Lqnb;
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v0
+    new-instance v4, Lehf;
 
-    sput-object v0, Lqnb;->X:[Lqnb;
+    invoke-direct {v4}, Lehf;-><init>()V
+
+    new-instance v4, La4a;
+
+    const/4 v5, 0x4
+
+    const/4 v6, 0x0
+
+    invoke-direct {v4, v5, v6}, La4a;-><init>(IB)V
+
+    new-instance v4, Ljava/util/HashMap;
+
+    const/16 v5, 0x8
+
+    invoke-direct {v4, v5}, Ljava/util/HashMap;-><init>(I)V
+
+    const/4 v5, 0x0
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-wide/32 v6, 0xf4240
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v5, 0x2
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x5
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x9
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x7
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Lhr5;
+
+    invoke-direct {v1, p1, v4, v0, v2}, Lhr5;-><init>(Landroid/content/Context;Ljava/util/HashMap;Lnxb;Lwkf;)V
+
+    iput-object v1, p0, Lqnb;->a:Lhr5;
+
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object p1, p0, Lqnb;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance p1, Lpnb;
+
+    invoke-direct {p1, p0}, Lpnb;-><init>(Lqnb;)V
+
+    iput-object p1, p0, Lqnb;->c:Lpnb;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lqnb;
+
+# virtual methods
+.method public final a(Lon4;)V
     .locals 1
 
-    const-class v0, Lqnb;
+    iget-object v0, p0, Lqnb;->a:Lhr5;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {v0, p1}, Lhr5;->a(Lon4;)V
 
-    move-result-object p0
-
-    check-cast p0, Lqnb;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lqnb;
+.method public final b()J
+    .locals 2
+
+    iget-object v0, p0, Lqnb;->a:Lhr5;
+
+    invoke-virtual {v0}, Lhr5;->b()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final e()Lysg;
     .locals 1
 
-    sget-object v0, Lqnb;->X:[Lqnb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lqnb;
+    iget-object v0, p0, Lqnb;->c:Lpnb;
 
     return-object v0
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-object v0, p0, Lqnb;->a:Lhr5;
+
+    invoke-virtual {v0}, Lhr5;->f()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final g(Landroid/os/Handler;Lon4;)V
+    .locals 1
+
+    iget-object v0, p0, Lqnb;->a:Lhr5;
+
+    invoke-virtual {v0, p1, p2}, Lhr5;->g(Landroid/os/Handler;Lon4;)V
+
+    return-void
 .end method

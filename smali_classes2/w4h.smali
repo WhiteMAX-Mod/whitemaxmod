@@ -1,27 +1,29 @@
 .class public final Lw4h;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Ltfa;
 
-.field public final synthetic Y:Lx4h;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public Z:I
+.field public final synthetic Z:Lc5h;
 
-.field public d:Lx4h;
+.field public d:J
 
-.field public o:Lxaa;
+.field public o:J
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Lx4h;Ll84;)V
+.method public constructor <init>(Lc5h;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lw4h;->Y:Lx4h;
+    iput-object p1, p0, Lw4h;->Z:Lc5h;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -29,23 +31,27 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 6
 
-    iput-object p1, p0, Lw4h;->X:Ljava/lang/Object;
+    iput-object p1, p0, Lw4h;->Y:Ljava/lang/Object;
 
-    iget p1, p0, Lw4h;->Z:I
+    iget p1, p0, Lw4h;->t0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lw4h;->Z:I
+    iput p1, p0, Lw4h;->t0:I
 
-    iget-object p1, p0, Lw4h;->Y:Lx4h;
+    const-wide/16 v1, 0x0
 
-    const/4 v0, 0x0
+    const-wide/16 v3, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lx4h;->f(Lxaa;Ll84;)Ljava/lang/Object;
+    iget-object v0, p0, Lw4h;->Z:Lc5h;
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lc5h;->c(JJLo84;)Ljava/lang/Object;
 
     move-result-object p1
 

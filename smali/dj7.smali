@@ -1,59 +1,359 @@
 .class public final Ldj7;
-.super Lck0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lqk4;
+# static fields
+.field public static final o:Ljava/util/HashSet;
 
-.field public c:J
+
+# instance fields
+.field public a:Landroid/net/Uri;
+
+.field public b:Lbj7;
+
+.field public c:I
+
+.field public d:Liyd;
+
+.field public e:Lw3e;
+
+.field public f:Lth7;
+
+.field public g:Laj7;
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:Laic;
+
+.field public k:Lhfc;
+
+.field public l:Lpl0;
+
+.field public m:Ljava/lang/Boolean;
+
+.field public n:Lx65;
 
 
 # direct methods
-.method public constructor <init>(Lqk4;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object p1, p0, Ldj7;->b:Lqk4;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    const-wide/16 v0, -0x1
-
-    iput-wide v0, p0, Ldj7;->c:J
+    sput-object v0, Ldj7;->o:Ljava/util/HashSet;
 
     return-void
+.end method
+
+.method public static b(Lcj7;)Ldj7;
+    .locals 2
+
+    iget-object v0, p0, Lcj7;->b:Landroid/net/Uri;
+
+    invoke-static {v0}, Ldj7;->d(Landroid/net/Uri;)Ldj7;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcj7;->g:Lth7;
+
+    iput-object v1, v0, Ldj7;->f:Lth7;
+
+    iget-object v1, p0, Lcj7;->a:Laj7;
+
+    iput-object v1, v0, Ldj7;->g:Laj7;
+
+    iget-boolean v1, p0, Lcj7;->e:Z
+
+    iput-boolean v1, v0, Ldj7;->h:Z
+
+    invoke-virtual {p0}, Lcj7;->c()Z
+
+    move-result v1
+
+    iput-boolean v1, v0, Ldj7;->i:Z
+
+    iget-object v1, p0, Lcj7;->k:Lbj7;
+
+    iput-object v1, v0, Ldj7;->b:Lbj7;
+
+    iget v1, p0, Lcj7;->l:I
+
+    iput v1, v0, Ldj7;->c:I
+
+    iget-object v1, p0, Lcj7;->o:Lhfc;
+
+    iput-object v1, v0, Ldj7;->k:Lhfc;
+
+    iget-object v1, p0, Lcj7;->j:Laic;
+
+    iput-object v1, v0, Ldj7;->j:Laic;
+
+    iget-object v1, p0, Lcj7;->h:Liyd;
+
+    iput-object v1, v0, Ldj7;->d:Liyd;
+
+    iget-object v1, p0, Lcj7;->p:Lpl0;
+
+    iput-object v1, v0, Ldj7;->l:Lpl0;
+
+    iget-object v1, p0, Lcj7;->i:Lw3e;
+
+    iput-object v1, v0, Ldj7;->e:Lw3e;
+
+    iget-object v1, p0, Lcj7;->r:Lx65;
+
+    iput-object v1, v0, Ldj7;->n:Lx65;
+
+    iget-object p0, p0, Lcj7;->q:Ljava/lang/Boolean;
+
+    iput-object p0, v0, Ldj7;->m:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public static c(Landroid/net/Uri;)Z
+    .locals 3
+
+    sget-object v0, Ldj7;->o:Ljava/util/HashSet;
+
+    if-eqz v0, :cond_2
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static d(Landroid/net/Uri;)Ldj7;
+    .locals 4
+
+    new-instance v0, Ldj7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Ldj7;->a:Landroid/net/Uri;
+
+    sget-object v2, Lbj7;->b:Lbj7;
+
+    iput-object v2, v0, Ldj7;->b:Lbj7;
+
+    const/4 v2, 0x0
+
+    iput v2, v0, Ldj7;->c:I
+
+    iput-object v1, v0, Ldj7;->d:Liyd;
+
+    iput-object v1, v0, Ldj7;->e:Lw3e;
+
+    sget-object v3, Lth7;->c:Lth7;
+
+    iput-object v3, v0, Ldj7;->f:Lth7;
+
+    sget-object v3, Laj7;->b:Laj7;
+
+    iput-object v3, v0, Ldj7;->g:Laj7;
+
+    iput-boolean v2, v0, Ldj7;->h:Z
+
+    iput-boolean v2, v0, Ldj7;->i:Z
+
+    sget-object v2, Laic;->c:Laic;
+
+    iput-object v2, v0, Ldj7;->j:Laic;
+
+    iput-object v1, v0, Ldj7;->k:Lhfc;
+
+    iput-object v1, v0, Ldj7;->m:Ljava/lang/Boolean;
+
+    iput-object v1, v0, Ldj7;->n:Lx65;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p0, v0, Ldj7;->a:Landroid/net/Uri;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
+.method public final a()Lcj7;
     .locals 2
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iget-object v0, p0, Ldj7;->a:Landroid/net/Uri;
 
-    move-result-wide p1
+    if-eqz v0, :cond_5
 
-    iget-wide v0, p0, Ldj7;->c:J
+    invoke-static {v0}, Lw9h;->b(Landroid/net/Uri;)Ljava/lang/String;
 
-    sub-long/2addr p1, v0
+    move-result-object v0
 
-    iget-object p3, p0, Ldj7;->b:Lqk4;
+    const-string v1, "res"
 
-    iput-wide p1, p3, Lqk4;->s:J
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    move-result v0
 
-    return-void
-.end method
+    if-eqz v0, :cond_2
 
-.method public final g(Ljava/lang/String;)V
-    .locals 2
+    iget-object v0, p0, Ldj7;->a:Landroid/net/Uri;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v0}, Landroid/net/Uri;->isAbsolute()Z
 
-    move-result-wide v0
+    move-result v0
 
-    iput-wide v0, p0, Ldj7;->c:J
+    if-eqz v0, :cond_1
 
-    return-void
+    iget-object v0, p0, Ldj7;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Ldj7;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    new-instance v0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;
+
+    const-string v1, "Resource URI path must be a resource id."
+
+    invoke-direct {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;
+
+    const-string v1, "Resource URI must not be empty"
+
+    invoke-direct {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;
+
+    const-string v1, "Resource URI path must be absolute."
+
+    invoke-direct {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Ldj7;->a:Landroid/net/Uri;
+
+    invoke-static {v0}, Lw9h;->b(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "asset"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Ldj7;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->isAbsolute()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;
+
+    const-string v1, "Asset URI path must be absolute."
+
+    invoke-direct {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_4
+    :goto_1
+    new-instance v0, Lcj7;
+
+    invoke-direct {v0, p0}, Lcj7;-><init>(Ldj7;)V
+
+    return-object v0
+
+    :cond_5
+    new-instance v0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;
+
+    const-string v1, "Source must be set!"
+
+    invoke-direct {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder$BuilderException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

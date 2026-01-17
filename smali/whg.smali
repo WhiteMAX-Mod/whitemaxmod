@@ -2,19 +2,14 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/TextWatcher;
 
-
-# virtual methods
-.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
+# direct methods
+.method public static a(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
     .locals 0
 
-    return-void
-.end method
+    invoke-static {p0}, Landroid/icu/text/DecimalFormatSymbols;->getInstance(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method

@@ -1,65 +1,128 @@
-.class public abstract Lpqg;
-.super Ljava/lang/Object;
+.class public final Lpqg;
+.super Ly48;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
 
-# static fields
-.field public static final a:Lz7g;
 
-.field public static final b:Lz7g;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqqg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lqqg;I)V
+    .locals 0
 
-    sget-object v0, Li8;->Z:Li8;
+    iput p2, p0, Lpqg;->a:I
 
-    new-instance v1, Lz7g;
+    iput-object p1, p0, Lpqg;->b:Lqqg;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    const/4 p1, 0x0
 
-    sput-object v1, Lpqg;->a:Lz7g;
-
-    sget-object v0, Li8;->Y:Li8;
-
-    new-instance v1, Lz7g;
-
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
-
-    sput-object v1, Lpqg;->b:Lz7g;
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Runnable;)V
-    .locals 1
 
-    sget-object v0, Lpqg;->b:Lz7g;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    iget v0, p0, Lpqg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpqg;->b:Lqqg;
+
+    iget-object v0, v0, Lqqg;->a:Ljava/lang/String;
+
+    :try_start_0
+    invoke-static {v0}, La1j;->c(Ljava/lang/String;)Lsqg;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-string v1, "Could not find manifest for library "
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/concurrent/Executor;
+    const-string v1, "Tracer"
 
-    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public static b(Ljava/lang/Runnable;)V
-    .locals 1
+    :goto_0
+    return-object v0
 
-    sget-object v0, Lpqg;->a:Lz7g;
+    :pswitch_0
+    new-instance v0, Lkqg;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lpqg;->b:Lqqg;
 
-    move-result-object v0
+    iget-object v2, v1, Lqqg;->a:Ljava/lang/String;
 
-    check-cast v0, Ljava/util/concurrent/Executor;
+    invoke-virtual {v1}, Lqqg;->a()Lsqg;
 
-    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    move-result-object v3
 
-    return-void
+    if-eqz v3, :cond_0
+
+    invoke-interface {v3}, Lxl0;->d()Ljava/lang/String;
+
+    move-result-object v3
+
+    goto :goto_1
+
+    :cond_0
+    const-string v3, "NA"
+
+    :goto_1
+    invoke-virtual {v1}, Lqqg;->a()Lsqg;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v4}, Lxl0;->c()Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_2
+
+    :cond_1
+    move-object v4, v5
+
+    :goto_2
+    invoke-virtual {v1}, Lqqg;->a()Lsqg;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    const-string v5, "release"
+
+    :cond_2
+    invoke-direct {v0, v2, v3, v4, v5}, Lkqg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

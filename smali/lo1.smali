@@ -1,10 +1,10 @@
 .class public final Llo1;
-.super Lzp;
+.super Lcp1;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Llo1;
+.field public static final D:Llo1;
 
 
 # direct methods
@@ -13,47 +13,49 @@
 
     new-instance v0, Llo1;
 
-    invoke-direct {v0}, Lzp;-><init>()V
+    invoke-direct {v0}, Lcp1;-><init>()V
 
-    sput-object v0, Llo1;->a:Llo1;
+    sput-object v0, Llo1;->D:Llo1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lvx1;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu5;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    const/16 v1, 0x211
+    return v0
 
-    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+    :cond_0
+    instance-of p1, p1, Llo1;
 
-    move-result-object v0
+    if-nez p1, :cond_1
 
-    check-cast v0, Lvx1;
+    const/4 p1, 0x0
 
-    return-object v0
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final b()Lpab;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu5;
+    const v0, -0x377eee04
 
-    move-result-object v0
+    return v0
+.end method
 
-    const/16 v1, 0x3e
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpab;
+    const-string v0, "InviteToP2PCall"
 
     return-object v0
 .end method

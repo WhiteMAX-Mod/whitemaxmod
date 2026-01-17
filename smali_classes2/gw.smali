@@ -1,9 +1,9 @@
 .class public final synthetic Lgw;
-.super Lrr6;
+.super Lqr6;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lnq6;
 
 
 # static fields
@@ -22,11 +22,11 @@
 
     const/4 v1, 0x1
 
-    const-class v2, Lw77;
+    const-class v2, Lg77;
 
     const-string v3, "getTime"
 
-    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     sput-object v0, Lgw;->a:Lgw;
 
@@ -38,9 +38,9 @@
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    check-cast p1, Lw77;
+    check-cast p1, Lg77;
 
-    invoke-interface {p1}, Lw77;->getTime()J
+    invoke-interface {p1}, Lg77;->getTime()J
 
     move-result-wide v0
 

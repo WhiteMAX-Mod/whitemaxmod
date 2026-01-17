@@ -1,325 +1,268 @@
-.class public final synthetic Lp26;
-.super Ljava/lang/Object;
+.class public final Lp26;
+.super Lfk5;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Luig;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Landroid/animation/AnimatorSet;
 
-.field public final synthetic b:La36;
+.field public Y:Z
+
+.field public d:I
+
+.field public final o:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public synthetic constructor <init>(La36;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 9
 
-    iput p2, p0, Lp26;->a:I
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    iput-object p1, p0, Lp26;->b:La36;
+    sget v1, Lb7d;->file_typing:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Lfk5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+
+    const/16 p1, 0xff
+
+    iput p1, p0, Lp26;->d:I
+
+    new-instance v1, Landroid/graphics/RectF;
+
+    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v1, p0, Lp26;->o:Landroid/graphics/RectF;
+
+    new-instance v1, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
+
+    new-instance v2, Landroid/view/animation/PathInterpolator;
+
+    const v3, 0x3e4ccccd    # 0.2f
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    const v5, 0x3ecccccd    # 0.4f
+
+    const/4 v6, 0x0
+
+    invoke-direct {v2, v5, v6, v3, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    const-string v3, "_R_G_L_4_G_D_0_P_0"
+
+    invoke-virtual {v0, v3}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v3, 0x7a
+
+    filled-new-array {v3, p1}, [I
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    move-result-object v4
+
+    const-wide/16 v5, 0x15e
+
+    invoke-virtual {v4, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v4, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v7, Lo26;
+
+    const/4 v8, 0x0
+
+    invoke-direct {v7, v0, v8}, Lo26;-><init>(Lone/me/sdk/richvector/VectorPath;I)V
+
+    invoke-virtual {v4, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    filled-new-array {p1, v3}, [I
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p1, v5, v6}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
+
+    invoke-virtual {p1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v2, Lo26;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v3}, Lo26;-><init>(Lone/me/sdk/richvector/VectorPath;I)V
+
+    invoke-virtual {p1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Landroid/animation/Animator;
+
+    aput-object v4, v0, v8
+
+    aput-object p1, v0, v3
+
+    invoke-virtual {v1, v0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+
+    :goto_0
+    iput-object v1, p0, Lp26;->X:Landroid/animation/AnimatorSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final a()V
+    .locals 1
 
-    iget v0, p0, Lp26;->a:I
+    iget-object v0, p0, Lp26;->X:Landroid/animation/AnimatorSet;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    iget-object v0, p0, Lp26;->b:La36;
+    iget-boolean v0, p0, Lp26;->Y:Z
 
-    iget-object v1, v0, La36;->j:Ljava/io/File;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    new-array v3, v2, [Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
-
-    move-result-object v1
-
-    sget-object v3, Ljava/nio/file/StandardOpenOption;->READ:Ljava/nio/file/StandardOpenOption;
-
-    invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v3
-
-    iget-object v0, v0, La36;->f:Lz7g;
-
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
-
-    new-array v2, v2, [Ljava/nio/file/attribute/FileAttribute;
-
-    invoke-static {v1, v3, v0, v2}, Ljava/nio/channels/AsynchronousFileChannel;->open(Ljava/nio/file/Path;Ljava/util/Set;Ljava/util/concurrent/ExecutorService;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/channels/AsynchronousFileChannel;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lp26;->b:La36;
-
-    iget-object v0, v0, La36;->e:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbbg;
-
-    check-cast v0, Lb9b;
-
-    invoke-virtual {v0}, Lb9b;->d()Ltb4;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lp26;->b:La36;
-
-    iget-object v1, v0, La36;->i:Ljava/net/URI;
-
-    iget v2, v0, La36;->a:I
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_0
-
-    const-string v2, "application/octet-stream"
-
-    goto :goto_0
+    invoke-virtual {p0}, Lp26;->start()V
 
     :cond_0
-    const-string v2, "application/x-binary; charset=x-user-defined"
+    return-void
+.end method
 
-    :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
+.method public final b()V
+    .locals 1
 
-    const-string v4, "POST "
+    iget-boolean v0, p0, Lp26;->Y:Z
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/net/URI;->getRawPath()Ljava/lang/String;
+    iget-object v0, p0, Lp26;->X:Landroid/animation/AnimatorSet;
 
-    move-result-object v4
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
+.end method
 
-    const/16 v4, 0x3f
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 3
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/net/URI;->getRawQuery()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, " HTTP/1.1\nHost: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/net/URI;->getHost()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\nContent-Type: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0xa
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, La36;->j:Ljava/io/File;
-
-    iget-object v4, v0, La36;->b:Ljava/lang/String;
-
-    iget v5, v0, La36;->a:I
-
-    const/4 v6, 0x5
-
-    if-ne v5, v6, :cond_3
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_3
-    if-eqz v4, :cond_5
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_5
-    :goto_2
-    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_3
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Content-Disposition: attachment; filename="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\n"
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "X-Uploading-Mode: parallel\nConnection: keep-alive\nUser-Agent: "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, La36;->c:Lnsg;
-
-    iget-object v2, v2, Lnsg;->d:Lz7g;
-
-    invoke-virtual {v2}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-static {v3, v2, v1}, Lzy4;->l(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-boolean v2, v0, La36;->v:Z
-
-    if-eqz v2, :cond_7
-
-    iget-object v2, v0, La36;->d:Ljava/lang/String;
-
-    sget-object v3, Lm4j;->a:Lvcb;
-
-    if-nez v3, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    sget-object v4, Lxk8;->d:Lxk8;
-
-    invoke-virtual {v3, v4}, Lvcb;->b(Lxk8;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_7
-
-    const-string v5, "Prepared sharedHeaders: "
-
-    invoke-virtual {v5, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v3, v4, v2, v5, v6}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
-    :goto_4
-    sget-object v2, Lqd2;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v1
-
-    invoke-virtual {v0}, La36;->c()Lgw0;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    array-length v2, v1
+    iget-object v1, p0, Lfk5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    invoke-interface {v0, v2}, Lgw0;->a(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    iget-object v2, p0, Lp26;->o:Landroid/graphics/RectF;
 
-    return-object v0
+    invoke-virtual {v2, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget v0, p0, Lp26;->d:I
+
+    invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->saveLayerAlpha(Landroid/graphics/RectF;I)I
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    return-void
+.end method
+
+.method public final onThemeChanged(Lzlb;)V
+    .locals 2
+
+    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
+
+    move-result-object v0
+
+    iget v0, v0, Lwe7;->j:I
+
+    shr-int/lit8 v0, v0, 0x18
+
+    and-int/lit16 v0, v0, 0xff
+
+    iput v0, p0, Lp26;->d:I
+
+    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
+
+    move-result-object p1
+
+    iget p1, p1, Lwe7;->j:I
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-static {p1, v0}, Ldjj;->b(IF)I
+
+    move-result p1
+
+    const-string v0, "_R_G_L_3_G_D_0_P_0"
+
+    iget-object v1, p0, Lfk5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-static {v1, v0, p1}, Lroj;->c(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->c(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_1_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->c(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->c(Ladh;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_4_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lroj;->c(Ladh;Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final start()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lp26;->Y:Z
+
+    invoke-super {p0}, Lfk5;->start()V
+
+    return-void
+.end method
+
+.method public final stop()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lp26;->Y:Z
+
+    invoke-super {p0}, Lfk5;->stop()V
+
+    return-void
 .end method

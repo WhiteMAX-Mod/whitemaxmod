@@ -1,84 +1,42 @@
-.class public final Lj1f;
-.super Lb5g;
+.class public final synthetic Lj1f;
+.super Lt8;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final Z:Lj1f;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/SettingsPrivacyScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p2, p0, Lj1f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+    new-instance v0, Lj1f;
 
-    const/4 p2, 0x2
+    const-class v1, Lowe;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v2, "<init>(Lru/ok/tamtam/android/SelfId;Lkotlin/Lazy;Lkotlin/Lazy;Lone/me/settings/usecase/GetCurrentUserProfileDataUseCase;Lone/me/sdk/uikit/qr/GetQrCodeUseCase;Lone/me/settings/ProfileEvents;Lkotlin/Lazy;Lkotlin/Lazy;Landroid/app/Application;Lkotlin/Lazy;Lkotlin/Lazy;Lru/ok/tamtam/android/profile/ProfileRepository;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;)V"
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v1, v2, v3}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lj1f;->Z:Lj1f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lowe;
 
-    invoke-virtual {p0, p1, p2}, Lj1f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lj1f;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lj1f;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lj1f;
-
-    iget-object v1, p0, Lj1f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
-
-    invoke-direct {v0, p2, v1}, Lj1f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/SettingsPrivacyScreen;)V
-
-    iput-object p1, v0, Lj1f;->o:Ljava/lang/Object;
+    invoke-direct {v0}, Lowe;-><init>()V
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lj1f;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    new-instance v0, Ltib;
-
-    iget-object v1, p0, Lj1f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
-
-    invoke-direct {v0, v1}, Ltib;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v0, p1}, Ltib;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0}, Ltib;->i()Lsib;
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
 .end method

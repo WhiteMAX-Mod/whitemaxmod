@@ -1,119 +1,114 @@
 .class public final Lau9;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lhu9;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-.field public synthetic o:I
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p2, p0, Lau9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lau9;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Z
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lau9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lau9;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lau9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    new-instance v0, Lau9;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lau9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p2, v1}, Lau9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iput p1, v0, Lau9;->o:I
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget p1, p0, Lau9;->o:I
-
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
-
-    iget-object v0, p0, Lau9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0()Lb2g;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lb2g;->G0:Lhof;
+    return v0
 
     :cond_0
-    invoke-virtual {v0}, Lhof;->getValue()Ljava/lang/Object;
+    instance-of v1, p1, Lau9;
 
-    move-result-object v1
+    if-nez v1, :cond_1
 
-    move-object v2, v1
+    goto :goto_0
 
-    check-cast v2, Ljava/lang/Number;
+    :cond_1
+    check-cast p1, Lau9;
 
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+    iget-wide v1, p0, Lau9;->a:J
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-wide v3, p1, Lau9;->a:J
 
-    move-result-object v2
+    cmp-long p1, v1, v3
 
-    invoke-virtual {v0, v1, v2}, Lhof;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lau9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    add-int/2addr v1, v0
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    return v1
+.end method
 
-    return-object p1
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lau9;->a:J
+
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "OnUnsupportedAttachButtonClick(messageId="
+
+    const-string v1, ", isSkippableForMultiSelect=true)"
+
+    iget-wide v2, p0, Lau9;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

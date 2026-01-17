@@ -1,48 +1,59 @@
-.class public abstract Llo5;
+.class public final Llo5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Ljava/io/FileDescriptor;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/system/ErrnoException;
-        }
-    .end annotation
+# instance fields
+.field public final a:I
 
-    invoke-static {p0}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
+
+
+# direct methods
+.method public constructor <init>(ILjava/lang/String;II)V
+    .locals 0
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    iput-object p2, p0, Llo5;->b:Ljava/lang/String;
+
+    .line 8
+    iput p1, p0, Llo5;->a:I
+
+    .line 9
+    iput p3, p0, Llo5;->c:I
+
+    .line 10
+    iput p4, p0, Llo5;->d:I
 
     return-void
 .end method
 
-.method public static b(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/system/ErrnoException;
-        }
-    .end annotation
 
-    invoke-static {p0}, Landroid/system/Os;->dup(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    .line 2
+    iput-object p1, p0, Llo5;->b:Ljava/lang/String;
 
-    return-object p0
-.end method
+    .line 3
+    iput p2, p0, Llo5;->a:I
 
-.method public static c(Ljava/io/FileDescriptor;JI)J
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/system/ErrnoException;
-        }
-    .end annotation
+    .line 4
+    iput p3, p0, Llo5;->c:I
 
-    invoke-static {p0, p1, p2, p3}, Landroid/system/Os;->lseek(Ljava/io/FileDescriptor;JI)J
+    const/4 p1, -0x1
 
-    move-result-wide p0
+    .line 5
+    iput p1, p0, Llo5;->d:I
 
-    return-wide p0
+    return-void
 .end method

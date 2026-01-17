@@ -1,45 +1,55 @@
-.class public abstract synthetic Lrib;
+.class public abstract Lrib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:J
+
+.field public static final b:J
+
+.field public static final c:J
+
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final synthetic f:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    const/4 v0, 0x5
+    sget v0, Ldad;->oneme_settings_ringtone_section_bottom_vh:I
 
-    invoke-static {v0}, Lc12;->z(I)[I
+    int-to-long v0, v0
 
-    move-result-object v0
+    sput-wide v0, Lrib;->a:J
 
-    array-length v0, v0
+    sget v0, Ldad;->oneme_settings_ringtone_section_custom_add:I
 
-    new-array v0, v0, [I
+    int-to-long v0, v0
 
-    const/4 v1, 0x1
+    sput-wide v0, Lrib;->b:J
 
-    const/4 v2, 0x2
+    sget v0, Ldad;->oneme_settings_ringtone_section_default:I
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    int-to-long v0, v0
 
-    :catch_0
-    const/4 v1, 0x4
+    sput-wide v0, Lrib;->c:J
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sget v0, Ldad;->oneme_settings_ringtone_section_header_vh:I
 
-    :catch_1
-    sput-object v0, Lrib;->$EnumSwitchMapping$0:[I
+    int-to-long v0, v0
+
+    sput-wide v0, Lrib;->d:J
+
+    sget v0, Ldad;->oneme_settings_ringtone_section_system:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lrib;->e:J
 
     return-void
 .end method

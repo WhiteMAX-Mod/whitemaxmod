@@ -1,84 +1,112 @@
-.class public abstract Llwd;
+.class public final Llwd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lc88;
+
 
 # instance fields
-.field public final a:Lqj6;
+.field public final synthetic X:Ltfa;
 
-.field public final b:Lal7;
+.field public final synthetic Y:Lp6g;
 
-.field public final c:J
+.field public final synthetic a:Ln78;
 
-.field public final d:Ljava/util/List;
+.field public final synthetic b:Lbtd;
 
-.field public final o:Lugd;
+.field public final synthetic c:Lzb4;
+
+.field public final synthetic d:Ln78;
+
+.field public final synthetic o:Lg62;
 
 
 # direct methods
-.method public constructor <init>(Lqj6;Ljava/util/List;Lmke;Ljava/util/List;)V
-    .locals 6
+.method public constructor <init>(Ln78;Lbtd;Lzb4;Ln78;Lg62;Ltfa;Lbr6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+    iput-object p1, p0, Llwd;->a:Ln78;
 
-    move-result v0
+    iput-object p2, p0, Llwd;->b:Lbtd;
 
-    xor-int/lit8 v0, v0, 0x1
+    iput-object p3, p0, Llwd;->c:Lzb4;
 
-    invoke-static {v0}, Ln5j;->b(Z)V
+    iput-object p4, p0, Llwd;->d:Ln78;
 
-    iput-object p1, p0, Llwd;->a:Lqj6;
+    iput-object p5, p0, Llwd;->o:Lg62;
 
-    invoke-static {p2}, Lal7;->j(Ljava/util/Collection;)Lal7;
+    iput-object p6, p0, Llwd;->X:Ltfa;
 
-    move-result-object p1
+    check-cast p7, Lp6g;
 
-    iput-object p1, p0, Llwd;->b:Lal7;
-
-    if-nez p4, :cond_0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    :goto_0
-    iput-object p1, p0, Llwd;->d:Ljava/util/List;
-
-    invoke-virtual {p3, p0}, Lmke;->a(Llwd;)Lugd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Llwd;->o:Lugd;
-
-    iget-wide v0, p3, Lmke;->b:J
-
-    const-wide/32 v2, 0xf4240
-
-    iget-wide v4, p3, Lmke;->a:J
-
-    invoke-static/range {v0 .. v5}, Loah;->H(JJJ)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Llwd;->c:J
+    iput-object p7, p0, Llwd;->Y:Lp6g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+.method public final d(Lj88;Ln78;)V
+    .locals 3
 
-.method public abstract c()Lth4;
-.end method
+    iget-object p1, p0, Llwd;->a:Ln78;
 
-.method public abstract d()Lugd;
+    iget-object v0, p0, Llwd;->b:Lbtd;
+
+    const/4 v1, 0x0
+
+    if-ne p2, p1, :cond_0
+
+    new-instance p1, Lkwd;
+
+    iget-object p2, p0, Llwd;->X:Ltfa;
+
+    iget-object v2, p0, Llwd;->Y:Lp6g;
+
+    invoke-direct {p1, p2, v2, v1}, Lkwd;-><init>(Ltfa;Lbr6;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p2, 0x3
+
+    iget-object v2, p0, Llwd;->c:Lzb4;
+
+    invoke-static {v2, v1, v1, p1, p2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lbtd;->a:Ljava/lang/Object;
+
+    return-void
+
+    :cond_0
+    iget-object p1, p0, Llwd;->d:Ln78;
+
+    if-ne p2, p1, :cond_2
+
+    iget-object p1, v0, Lbtd;->a:Ljava/lang/Object;
+
+    check-cast p1, Lsx7;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1, v1}, Lsx7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_1
+    iput-object v1, v0, Lbtd;->a:Ljava/lang/Object;
+
+    :cond_2
+    sget-object p1, Ln78;->ON_DESTROY:Ln78;
+
+    if-ne p2, p1, :cond_3
+
+    iget-object p1, p0, Llwd;->o:Lg62;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lg62;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_3
+    return-void
 .end method

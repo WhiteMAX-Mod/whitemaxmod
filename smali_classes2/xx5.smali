@@ -1,51 +1,24 @@
-.class public final Lxx5;
+.class public final synthetic Lxx5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljkd;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Loy5;
-
-.field public final synthetic c:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public final synthetic b:Lidc;
 
 
 # direct methods
-.method public constructor <init>(Loy5;Lru/ok/tamtam/android/prefs/PmsKey;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lxx5;->a:I
-
-    sget-object v0, Lus4;->e:Lus4;
-
-    sget-object v0, Lus4;->e:Lus4;
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lxx5;->b:Loy5;
-
-    iput-object p2, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Loy5;Lru/ok/tamtam/android/prefs/PmsKey;I)V
+.method public synthetic constructor <init>(Lidc;I)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Lxx5;->a:I
+    iput p2, p0, Lxx5;->a:I
 
-    iput-object p1, p0, Lxx5;->b:Loy5;
-
-    iput-object p2, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    iput-object p1, p0, Lxx5;->b:Lidc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,848 +27,612 @@
 
 
 # virtual methods
-.method public final D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke()Ljava/lang/Object;
+    .locals 27
 
-    iget p1, p0, Lxx5;->a:I
+    move-object/from16 v1, p0
 
-    packed-switch p1, :pswitch_data_0
+    iget v0, v1, Lxx5;->a:I
 
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p2, p0, Lxx5;->b:Loy5;
+    iget-object v2, v1, Lxx5;->b:Lidc;
 
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v3, Lgre;->a:Lbt;
 
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v1
-
-    const-class v2, Ljava/lang/Boolean;
-
-    if-eqz v1, :cond_0
-
-    iget-object p2, p2, Lz3;->g:Lg68;
+    :try_start_0
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->react-errors:Lru/ok/tamtam/android/prefs/PmsKey;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+    const/4 v4, 0x0
 
-    move-result-object v1
+    invoke-virtual {v2, v0, v4}, Lx3;->e(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
 
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    if-eqz v0, :cond_0
+
+    new-instance v4, Lbt;
+
+    invoke-direct {v4, v0}, Lbt;-><init>(Ljava/util/Collection;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v3, v4
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    iget-object v2, v2, Lx3;->f:Ljava/lang/String;
+
+    const-string v4, "reactErrors parse failure!"
+
+    invoke-static {v2, v4, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :cond_0
-    iget-object p2, p2, Ljfe;->h:Lncc;
-
-    iget-object v1, p2, Lncc;->h:Lcr5;
-
-    iget-object v1, v1, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object p2, p2, Lncc;->h:Lcr5;
-
-    :cond_1
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
-
     :goto_0
-    return-object p1
+    return-object v3
 
     :pswitch_0
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->user-debug-report:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    iget-object p2, p0, Lxx5;->b:Loy5;
+    const-wide/16 v2, 0x0
 
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    iget-object v4, v1, Lxx5;->b:Lidc;
 
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+    invoke-virtual {v4, v0, v2, v3}, Lidc;->m(Ljava/lang/Enum;J)J
 
-    move-result v1
+    move-result-wide v2
 
-    const-class v2, Ljava/lang/Boolean;
-
-    if-eqz v1, :cond_2
-
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_1
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->debug-mode:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    int-to-long v2, v2
+
+    iget-object v4, v1, Lxx5;->b:Lidc;
+
+    invoke-virtual {v4, v0, v2, v3}, Lidc;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v2
+
+    long-to-int v0, v2
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    const-string v0, "settings-entry-banners"
+
+    iget-object v2, v1, Lxx5;->b:Lidc;
+
+    iget-object v2, v2, Lx3;->g:Lr58;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v0, v3}, Lr58;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    iget-object p2, p2, Ljfe;->h:Lncc;
+    :cond_1
+    :try_start_1
+    new-instance v2, Lorg/json/JSONArray;
 
-    iget-object v1, p2, Lncc;->h:Lcr5;
-
-    iget-object v1, v1, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object p2, p2, Lncc;->h:Lcr5;
-
-    :cond_3
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    :goto_1
-    return-object p1
-
-    :pswitch_1
-    const-wide/16 p1, 0x0
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lxx5;->b:Loy5;
-
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v1
-
-    const-class v2, Ljava/lang/Long;
-
-    if-eqz v1, :cond_4
-
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
+    invoke-direct {v2, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_2
 
-    :cond_4
-    iget-object p2, p2, Ljfe;->h:Lncc;
-
-    iget-object v1, p2, Lncc;->h:Lcr5;
-
-    iget-object v1, v1, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    iget-object p2, p2, Lncc;->h:Lcr5;
-
-    :cond_5
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
+    :catch_0
+    :goto_1
+    move-object v2, v3
 
     :goto_2
-    return-object p1
+    if-eqz v2, :cond_20
 
-    :pswitch_2
-    const-wide/16 p1, 0x0
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result v0
 
-    move-result-object p1
+    const-string v4, "startParam"
 
-    iget-object p2, p0, Lxx5;->b:Loy5;
+    const-string v5, "url"
 
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    const-string v6, "icon"
 
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+    const-string v7, "appid"
 
-    move-result v1
+    sget-object v12, Lkye;->b:Lkye;
 
-    const-class v2, Ljava/lang/Long;
+    const-string v8, "title"
 
-    if-eqz v1, :cond_6
+    const/4 v9, 0x0
 
-    iget-object p2, p2, Lz3;->g:Lg68;
+    if-nez v0, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    move-object v0, v3
 
-    move-result-object v0
+    goto/16 :goto_c
 
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+    :cond_2
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result-object v1
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
+    move-result v10
 
-    move-result-object p1
+    invoke-direct {v0, v10}, Ljava/util/ArrayList;-><init>(I)V
 
-    goto :goto_3
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
-    :cond_6
-    iget-object p2, p2, Ljfe;->h:Lncc;
+    move-result v10
 
-    iget-object v1, p2, Lncc;->h:Lcr5;
-
-    iget-object v1, v1, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    iget-object p2, p2, Lncc;->h:Lcr5;
-
-    :cond_7
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
+    move v11, v9
 
     :goto_3
-    return-object p1
+    if-ge v11, v10, :cond_13
 
-    :pswitch_3
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-virtual {v2, v11}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
-    iget-object p2, p0, Lxx5;->b:Loy5;
+    move-result-object v13
 
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    if-nez v13, :cond_3
 
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+    goto/16 :goto_b
 
-    move-result v1
+    :cond_3
+    const-string v14, "id"
 
-    const-class v2, Ljava/lang/Boolean;
+    invoke-virtual {v13, v14, v9}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    if-eqz v1, :cond_8
+    move-result v16
 
-    iget-object p2, p2, Lz3;->g:Lg68;
+    const-string v14, "logo"
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-virtual {v13, v14, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v17
 
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+    invoke-virtual {v13, v8, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v18
 
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
+    const-string v14, "align"
 
-    move-result-object p1
+    const/4 v15, 0x1
 
-    goto :goto_4
+    invoke-virtual {v13, v14, v15}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    :cond_8
-    iget-object p2, p2, Ljfe;->h:Lncc;
+    move-result v14
 
-    iget-object v1, p2, Lncc;->h:Lcr5;
+    sget-object v15, Lkye;->d:Lal5;
 
-    iget-object v1, v1, Lz3;->g:Lg68;
+    invoke-virtual {v15}, Le2;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    iget-object p2, p2, Lncc;->h:Lcr5;
-
-    :cond_9
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
+    move-result-object v15
 
     :goto_4
-    return-object p1
+    move-object/from16 v19, v15
 
-    :pswitch_4
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    check-cast v19, Lb2;
 
-    iget-object p2, p0, Lxx5;->b:Loy5;
+    invoke-virtual/range {v19 .. v19}, Lb2;->hasNext()Z
 
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    move-result v20
 
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+    if-eqz v20, :cond_5
 
-    move-result v1
+    invoke-virtual/range {v19 .. v19}, Lb2;->next()Ljava/lang/Object;
 
-    const-class v2, Ljava/lang/Boolean;
+    move-result-object v19
 
-    if-eqz v1, :cond_a
+    move-object/from16 v9, v19
 
-    iget-object p2, p2, Lz3;->g:Lg68;
+    check-cast v9, Lkye;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    iget v9, v9, Lkye;->a:I
 
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
+    if-ne v9, v14, :cond_4
 
     goto :goto_5
 
-    :cond_a
-    iget-object p2, p2, Ljfe;->h:Lncc;
+    :cond_4
+    const/4 v9, 0x0
 
-    iget-object v1, p2, Lncc;->h:Lcr5;
+    goto :goto_4
 
-    iget-object v1, v1, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    iget-object p2, p2, Lncc;->h:Lcr5;
-
-    :cond_b
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
+    :cond_5
+    move-object/from16 v19, v3
 
     :goto_5
-    return-object p1
+    check-cast v19, Lkye;
 
-    :pswitch_5
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    if-nez v19, :cond_6
 
-    iget-object p2, p0, Lxx5;->b:Loy5;
+    move-object/from16 v19, v12
 
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    :cond_6
+    const-string v9, "items"
 
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+    invoke-virtual {v13, v9}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    move-result v1
+    move-result-object v9
 
-    const-class v2, Ljava/lang/Boolean;
+    if-nez v9, :cond_7
 
-    if-eqz v1, :cond_c
+    goto/16 :goto_a
 
-    iget-object p2, p2, Lz3;->g:Lg68;
+    :cond_7
+    invoke-virtual {v9}, Lorg/json/JSONArray;->length()I
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    move-result v13
 
-    move-result-object v0
+    if-nez v13, :cond_8
 
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+    goto/16 :goto_a
 
-    move-result-object v1
+    :cond_8
+    new-instance v13, Ljava/util/ArrayList;
 
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
+    invoke-virtual {v9}, Lorg/json/JSONArray;->length()I
 
-    move-result-object p1
+    move-result v14
 
-    goto :goto_6
+    invoke-direct {v13, v14}, Ljava/util/ArrayList;-><init>(I)V
 
-    :cond_c
-    iget-object p2, p2, Ljfe;->h:Lncc;
+    invoke-virtual {v9}, Lorg/json/JSONArray;->length()I
 
-    iget-object v1, p2, Lncc;->h:Lcr5;
+    move-result v14
 
-    iget-object v1, v1, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_d
-
-    iget-object p2, p2, Lncc;->h:Lcr5;
-
-    :cond_d
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
+    const/4 v15, 0x0
 
     :goto_6
-    return-object p1
+    if-ge v15, v14, :cond_10
 
-    :pswitch_6
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iget-object p2, p0, Lxx5;->b:Loy5;
-
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v1
-
-    const-class v2, Ljava/lang/Boolean;
-
-    if-eqz v1, :cond_e
-
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    goto :goto_7
-
-    :cond_e
-    iget-object p2, p2, Ljfe;->h:Lncc;
-
-    iget-object v1, p2, Lncc;->h:Lcr5;
-
-    iget-object v1, v1, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-virtual {v9, v15}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
+    if-nez v3, :cond_9
 
-    move-result v1
+    goto :goto_9
 
-    if-eqz v1, :cond_f
+    :cond_9
+    const/4 v1, 0x0
 
-    iget-object p2, p2, Lncc;->h:Lcr5;
+    invoke-virtual {v3, v6, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_f
-    iget-object p2, p2, Lz3;->g:Lg68;
+    move-result-object v23
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    :goto_7
-    return-object p1
-
-    :pswitch_7
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iget-object p2, p0, Lxx5;->b:Loy5;
-
-    iget-object v0, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {p2, v0}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v1
-
-    const-class v2, Ljava/lang/Boolean;
-
-    if-eqz v1, :cond_10
-
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
+    if-nez v23, :cond_a
 
     goto :goto_8
 
+    :cond_a
+    invoke-virtual {v3, v8, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v24
+
+    if-nez v24, :cond_b
+
+    goto :goto_8
+
+    :cond_b
+    invoke-virtual {v3, v5, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v25
+
+    invoke-virtual {v3, v7}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_c
+
+    const/16 v22, 0x0
+
+    goto :goto_7
+
+    :cond_c
+    invoke-virtual {v3, v7}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
+
+    move-result-wide v21
+
+    invoke-static/range {v21 .. v22}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    move-object/from16 v22, v1
+
+    :goto_7
+    if-eqz v25, :cond_d
+
+    invoke-virtual/range {v25 .. v25}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    :cond_d
+    if-nez v22, :cond_e
+
+    const/4 v1, 0x0
+
+    goto :goto_8
+
+    :cond_e
+    new-instance v21, Lvve;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v3, v4, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v26
+
+    invoke-direct/range {v21 .. v26}, Lvve;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v1, v21
+
+    :goto_8
+    if-eqz v1, :cond_f
+
+    invoke-virtual {v13, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_f
+    :goto_9
+    add-int/lit8 v15, v15, 0x1
+
+    move-object/from16 v1, p0
+
+    const/4 v3, 0x0
+
+    goto :goto_6
+
     :cond_10
-    iget-object p2, p2, Ljfe;->h:Lncc;
-
-    iget-object v1, p2, Lncc;->h:Lcr5;
-
-    iget-object v1, v1, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lg68;->contains(Ljava/lang/String;)Z
+    invoke-virtual {v13}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_11
 
-    iget-object p2, p2, Lncc;->h:Lcr5;
-
-    :cond_11
-    iget-object p2, p2, Lz3;->g:Lg68;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, p1, v1}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    :goto_8
-    return-object p1
-
-    :pswitch_8
-    iget-object p1, p0, Lxx5;->b:Loy5;
-
-    iget-object p2, p1, Ljfe;->i:Ljava/util/concurrent/ConcurrentHashMap;
-
-    sget-object v0, Lus4;->e:Lus4;
-
-    iget-object v1, p0, Lxx5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {p2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1a
-
-    invoke-virtual {p1, v1}, Ljfe;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v2
-
-    const-class v3, Ljava/lang/String;
-
-    const/4 v4, 0x0
-
-    if-eqz v2, :cond_12
-
-    iget-object p1, p1, Lz3;->g:Lg68;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v3}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v3
-
-    invoke-static {p1, v2, v4, v3}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    goto :goto_9
-
-    :cond_12
-    iget-object p1, p1, Ljfe;->h:Lncc;
-
-    iget-object v2, p1, Lncc;->h:Lcr5;
-
-    iget-object v2, v2, Lz3;->g:Lg68;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Lg68;->contains(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_13
-
-    iget-object p1, p1, Lncc;->h:Lcr5;
-
-    :cond_13
-    iget-object p1, p1, Lz3;->g:Lg68;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v3}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v3
-
-    invoke-static {p1, v2, v4, v3}, Lpoj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lgd3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    :goto_9
-    check-cast p1, Ljava/lang/String;
-
-    if-eqz p1, :cond_18
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-nez v2, :cond_14
-
-    goto :goto_d
-
-    :cond_14
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v3, 0x0
 
     goto :goto_a
 
-    :catchall_0
-    move-exception p1
+    :cond_11
+    new-instance v15, Llye;
 
-    new-instance v0, Lyyd;
+    move-object/from16 v20, v13
 
-    invoke-direct {v0, p1}, Lyyd;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct/range {v15 .. v20}, Llye;-><init>(ILjava/lang/String;Ljava/lang/String;Lkye;Ljava/util/ArrayList;)V
+
+    move-object v3, v15
 
     :goto_a
-    instance-of p1, v0, Lyyd;
+    if-eqz v3, :cond_12
 
-    if-eqz p1, :cond_15
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_b
-
-    :cond_15
-    move-object v4, v0
-
+    :cond_12
     :goto_b
-    check-cast v4, Lorg/json/JSONObject;
+    add-int/lit8 v11, v11, 0x1
 
-    if-nez v4, :cond_16
-
-    sget-object v0, Lus4;->e:Lus4;
-
-    goto :goto_d
-
-    :cond_16
-    const-string p1, "isActive"
-
-    const/4 v0, 0x1
-
-    invoke-virtual {v4, p1, v0}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    const-string v0, "count"
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v4, v0, v2}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    const-string v2, "included"
+    move-object/from16 v1, p0
 
     const/4 v3, 0x0
 
-    invoke-virtual {v4, v2, v3}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+    const/4 v9, 0x0
 
-    move-result v2
+    goto/16 :goto_3
 
-    const-string v5, "reactionIds"
+    :cond_13
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-virtual {v4, v5}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    move-result v1
 
-    move-result-object v4
+    if-eqz v1, :cond_14
 
-    new-instance v5, Ljava/util/ArrayList;
+    const/4 v0, 0x0
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
-
-    move-result v6
-
+    :cond_14
     :goto_c
-    if-ge v3, v6, :cond_17
+    if-nez v0, :cond_1f
 
-    :try_start_1
-    invoke-virtual {v4, v3}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
-    move-result-object v7
+    move-result v0
 
-    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
+    if-nez v0, :cond_15
 
-    :catch_0
-    add-int/lit8 v3, v3, 0x1
+    const/4 v3, 0x0
 
-    goto :goto_c
+    goto/16 :goto_12
+
+    :cond_15
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+
+    move-result v0
+
+    invoke-direct {v13, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+
+    move-result v0
+
+    const/4 v9, 0x0
+
+    :goto_d
+    if-ge v9, v0, :cond_1d
+
+    invoke-virtual {v2, v9}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-nez v1, :cond_16
+
+    const/4 v3, 0x0
+
+    goto :goto_11
+
+    :cond_16
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v6, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v16
+
+    if-nez v16, :cond_17
+
+    :goto_e
+    move-object v1, v3
+
+    goto :goto_10
 
     :cond_17
-    new-instance v3, Lus4;
+    invoke-virtual {v1, v8, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v3, p1, v0, v2, v5}, Lus4;-><init>(ZIZLjava/util/List;)V
+    move-result-object v17
 
-    move-object v0, v3
-
-    :cond_18
-    :goto_d
-    invoke-virtual {p2, v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-nez p1, :cond_19
-
-    move-object v2, v0
+    if-nez v17, :cond_18
 
     goto :goto_e
 
+    :cond_18
+    invoke-virtual {v1, v5, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v18
+
+    invoke-virtual {v1, v7}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_19
+
+    const/4 v15, 0x0
+
+    goto :goto_f
+
     :cond_19
-    move-object v2, p1
+    invoke-virtual {v1, v7}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
+
+    move-result-wide v10
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    move-object v15, v3
+
+    :goto_f
+    if-eqz v18, :cond_1a
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-nez v3, :cond_1b
 
     :cond_1a
-    :goto_e
-    check-cast v2, Lus4;
+    if-nez v15, :cond_1b
 
-    return-object v2
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
+
+    goto :goto_10
+
+    :cond_1b
+    new-instance v14, Lvve;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v4, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v19
+
+    invoke-direct/range {v14 .. v19}, Lvve;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v1, v14
+
+    :goto_10
+    if-eqz v1, :cond_1c
+
+    invoke-virtual {v13, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1c
+    :goto_11
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_d
+
+    :cond_1d
+    const/4 v3, 0x0
+
+    invoke-virtual {v13}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1e
+
+    goto :goto_12
+
+    :cond_1e
+    new-instance v8, Llye;
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-direct/range {v8 .. v13}, Llye;-><init>(ILjava/lang/String;Ljava/lang/String;Lkye;Ljava/util/ArrayList;)V
+
+    invoke-static {v8}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    goto :goto_12
+
+    :cond_1f
+    move-object v3, v0
+
+    :cond_20
+    :goto_12
+    return-object v3
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

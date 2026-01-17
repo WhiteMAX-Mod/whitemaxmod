@@ -1,17 +1,13 @@
-.class public abstract Laf8;
-.super Ljava/lang/Object;
+.class public final Laf8;
+.super Lcf8;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a()Lxe8;
-    .locals 2
+# virtual methods
+.method public final e()Z
+    .locals 1
 
-    new-instance v0, Lxe8;
+    const/4 v0, 0x1
 
-    sget-object v1, Lyh4;->c:Lyh4;
-
-    invoke-direct {v0, v1}, Lxe8;-><init>(Lyh4;)V
-
-    return-object v0
+    return v0
 .end method

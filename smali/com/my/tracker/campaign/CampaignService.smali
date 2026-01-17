@@ -92,11 +92,11 @@
 
     if-nez v1, :cond_1
 
-    new-instance v1, Lp02;
+    new-instance v1, Li02;
 
     const/4 v2, 0x7
 
-    invoke-direct {v1, p0, v2, p1}, Lp02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v2, p1}, Li02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v1}, Lcom/my/tracker/TrackerUtils;->runOnAnyBackground(Ljava/lang/Runnable;)V
 
@@ -107,11 +107,11 @@
     return p1
 
     :cond_1
-    new-instance p1, Ly02;
+    new-instance p1, Lp02;
 
     const/16 p2, 0x8
 
-    invoke-direct {p1, p2, p0}, Ly02;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Lp02;-><init>(ILjava/lang/Object;)V
 
     invoke-static {p1}, Lcom/my/tracker/TrackerUtils;->runOnAnyBackground(Ljava/lang/Runnable;)V
 

@@ -1,69 +1,55 @@
 .class public final Lh2i;
-.super Lkm4;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lh2i;
+# instance fields
+.field public X:Lrz7;
 
-.field public static final c:Lgm4;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static final d:Lgm4;
+.field public final synthetic Z:Lj2i;
 
-.field public static final e:Lgm4;
+.field public d:Lf2i;
+
+.field public o:Lm2i;
+
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lj2i;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lh2i;
+    iput-object p1, p0, Lh2i;->Z:Lj2i;
 
-    invoke-direct {v0}, Lkm4;-><init>()V
-
-    sput-object v0, Lh2i;->b:Lh2i;
-
-    const-string v1, "bot_id"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ":webapp:root"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
-
-    move-result-object v2
-
-    sput-object v2, Lh2i;->c:Lgm4;
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, ":settings/webapps"
-
-    invoke-static {v0, v3, v2, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
-
-    move-result-object v2
-
-    sput-object v2, Lh2i;->d:Lgm4;
-
-    const-string v2, ":settings/webapp"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v2, v1, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
-
-    move-result-object v0
-
-    sput-object v0, Lh2i;->e:Lgm4;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lh2i;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lh2i;->t0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lh2i;->t0:I
+
+    iget-object p1, p0, Lh2i;->Z:Lj2i;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lj2i;->e(Ljava/lang/String;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

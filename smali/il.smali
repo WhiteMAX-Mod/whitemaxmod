@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final a(Landroid/content/Context;)Ljava/io/File;
+    .locals 0
 
-    invoke-static {}, Landroid/app/Application;->getProcessName()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    return-object p1
 .end method

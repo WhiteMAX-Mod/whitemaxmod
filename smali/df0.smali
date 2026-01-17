@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public static a(Lktb;)Ldf0;
+.method public static a(Lwtb;)Ldf0;
     .locals 17
 
     move-object/from16 v0, p0
@@ -70,9 +70,9 @@
     const/4 v1, 0x4
 
     :try_start_0
-    invoke-virtual {v0, v1}, Lktb;->K(I)V
+    invoke-virtual {v0, v1}, Lwtb;->K(I)V
 
-    invoke-virtual {v0}, Lktb;->x()I
+    invoke-virtual {v0}, Lwtb;->x()I
 
     move-result v2
 
@@ -88,7 +88,7 @@
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v0}, Lktb;->x()I
+    invoke-virtual {v0}, Lwtb;->x()I
 
     move-result v2
 
@@ -101,17 +101,17 @@
     :goto_0
     if-ge v4, v2, :cond_0
 
-    invoke-virtual {v0}, Lktb;->D()I
+    invoke-virtual {v0}, Lwtb;->D()I
 
     move-result v7
 
-    iget v8, v0, Lktb;->b:I
+    iget v8, v0, Lwtb;->b:I
 
-    invoke-virtual {v0, v7}, Lktb;->K(I)V
+    invoke-virtual {v0, v7}, Lwtb;->K(I)V
 
-    iget-object v9, v0, Lktb;->a:[B
+    iget-object v9, v0, Lwtb;->a:[B
 
-    sget-object v10, Ljg3;->a:[B
+    sget-object v10, Ltg3;->a:[B
 
     add-int/lit8 v11, v7, 0x4
 
@@ -128,7 +128,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lktb;->x()I
+    invoke-virtual {v0}, Lwtb;->x()I
 
     move-result v4
 
@@ -137,17 +137,17 @@
     :goto_1
     if-ge v7, v4, :cond_1
 
-    invoke-virtual {v0}, Lktb;->D()I
+    invoke-virtual {v0}, Lwtb;->D()I
 
     move-result v8
 
-    iget v9, v0, Lktb;->b:I
+    iget v9, v0, Lwtb;->b:I
 
-    invoke-virtual {v0, v8}, Lktb;->K(I)V
+    invoke-virtual {v0, v8}, Lwtb;->K(I)V
 
-    iget-object v10, v0, Lktb;->a:[B
+    iget-object v10, v0, Lwtb;->a:[B
 
-    sget-object v11, Ljg3;->a:[B
+    sget-object v11, Ltg3;->a:[B
 
     add-int/lit8 v12, v8, 0x4
 
@@ -180,39 +180,39 @@
 
     array-length v0, v0
 
-    invoke-static {v1, v2, v0}, Losi;->l(I[BI)Lnia;
+    invoke-static {v1, v2, v0}, Llti;->n(I[BI)Llia;
 
     move-result-object v0
 
-    iget v1, v0, Lnia;->e:I
+    iget v1, v0, Llia;->e:I
 
-    iget v2, v0, Lnia;->f:I
+    iget v2, v0, Llia;->f:I
 
-    iget v3, v0, Lnia;->h:I
+    iget v3, v0, Llia;->h:I
 
     add-int/lit8 v3, v3, 0x8
 
-    iget v4, v0, Lnia;->i:I
+    iget v4, v0, Llia;->i:I
 
     add-int/lit8 v4, v4, 0x8
 
-    iget v7, v0, Lnia;->p:I
+    iget v7, v0, Llia;->p:I
 
-    iget v8, v0, Lnia;->q:I
+    iget v8, v0, Llia;->q:I
 
-    iget v9, v0, Lnia;->r:I
+    iget v9, v0, Llia;->r:I
 
-    iget v10, v0, Lnia;->s:I
+    iget v10, v0, Llia;->s:I
 
-    iget v11, v0, Lnia;->g:F
+    iget v11, v0, Llia;->g:F
 
-    iget v12, v0, Lnia;->a:I
+    iget v12, v0, Llia;->a:I
 
-    iget v13, v0, Lnia;->b:I
+    iget v13, v0, Llia;->b:I
 
-    iget v0, v0, Lnia;->c:I
+    iget v0, v0, Llia;->c:I
 
-    sget-object v14, Ljg3;->a:[B
+    sget-object v14, Ltg3;->a:[B
 
     const-string v14, "avc1.%02X%02X%02X"
 

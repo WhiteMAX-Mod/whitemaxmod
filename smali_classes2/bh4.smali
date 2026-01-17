@@ -25,11 +25,11 @@
 
     iput-object v0, p0, Lbh4;->Y:Landroid/os/Handler;
 
-    new-instance v0, Lxna;
+    new-instance v0, Lyna;
 
     const/16 v1, 0x1c
 
-    invoke-direct {v0, v1}, Lxna;-><init>(I)V
+    invoke-direct {v0, v1}, Lyna;-><init>(I)V
 
     invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public k(Lorg/xmlpull/v1/XmlPullParser;Landroid/net/Uri;)Lah4;
+.method public l(Lorg/xmlpull/v1/XmlPullParser;Landroid/net/Uri;)Lah4;
     .locals 41
 
     move-object/from16 v1, p1
@@ -80,7 +80,7 @@
 
     const-string v5, "urn:dvb:dash:profile:dvb-dash:"
 
-    invoke-static {v4, v5, v12}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v4, v5, v12}, Lzzf;->t(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v4
 
@@ -114,7 +114,7 @@
     goto :goto_3
 
     :cond_3
-    invoke-static {v0}, Lqah;->X(Ljava/lang/String;)J
+    invoke-static {v0}, Lmbh;->X(Ljava/lang/String;)J
 
     move-result-wide v4
 
@@ -123,13 +123,13 @@
     :goto_3
     const-string v0, "mediaPresentationDuration"
 
-    invoke-static {v1, v0, v2, v3}, Lfh4;->i(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+    invoke-static {v1, v0, v2, v3}, Lfh4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
     move-result-wide v18
 
     const-string v0, "minBufferTime"
 
-    invoke-static {v1, v0, v2, v3}, Lfh4;->i(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+    invoke-static {v1, v0, v2, v3}, Lfh4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
     move-result-wide v20
 
@@ -149,7 +149,7 @@
 
     const-string v0, "minimumUpdatePeriod"
 
-    invoke-static {v1, v0, v2, v3}, Lfh4;->i(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+    invoke-static {v1, v0, v2, v3}, Lfh4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
     move-result-wide v4
 
@@ -165,7 +165,7 @@
 
     const-string v0, "timeShiftBufferDepth"
 
-    invoke-static {v1, v0, v2, v3}, Lfh4;->i(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+    invoke-static {v1, v0, v2, v3}, Lfh4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
     move-result-wide v4
 
@@ -181,7 +181,7 @@
 
     const-string v0, "suggestedPresentationDelay"
 
-    invoke-static {v1, v0, v2, v3}, Lfh4;->i(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+    invoke-static {v1, v0, v2, v3}, Lfh4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
     move-result-wide v4
 
@@ -206,7 +206,7 @@
     goto :goto_7
 
     :cond_7
-    invoke-static {v0}, Lqah;->X(Ljava/lang/String;)J
+    invoke-static {v0}, Lmbh;->X(Ljava/lang/String;)J
 
     move-result-wide v4
 
@@ -247,7 +247,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb4j;->c([Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lr4j;->b([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -286,7 +286,7 @@
 
     const-string v2, "BaseURL"
 
-    invoke-static {v1, v2}, Ld8j;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lj9j;->d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -376,13 +376,13 @@
     :cond_d
     const-string v2, "ProgramInformation"
 
-    invoke-static {v1, v2}, Ld8j;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lj9j;->d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_e
 
-    invoke-static {v1}, Lfh4;->n(Lorg/xmlpull/v1/XmlPullParser;)Lewc;
+    invoke-static {v1}, Lfh4;->n(Lorg/xmlpull/v1/XmlPullParser;)Lgxc;
 
     move-result-object v33
 
@@ -391,7 +391,7 @@
     :cond_e
     const-string v2, "UTCTiming"
 
-    invoke-static {v1, v2}, Ld8j;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lj9j;->d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -411,13 +411,11 @@
 
     move-result-object v12
 
-    new-instance v3, Lryc;
+    new-instance v3, Liab;
 
-    const/16 v13, 0xb
+    const/16 v13, 0x11
 
-    const/4 v15, 0x0
-
-    invoke-direct {v3, v2, v12, v15, v13}, Lryc;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    invoke-direct {v3, v2, v13, v12}, Liab;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     move-object v12, v0
 
@@ -428,7 +426,7 @@
     :cond_f
     const-string v2, "Location"
 
-    invoke-static {v1, v2}, Ld8j;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lj9j;->d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -442,7 +440,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lx2j;->f(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v2, v3}, Ld4j;->g(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v36
 
@@ -451,13 +449,13 @@
     :cond_10
     const-string v2, "ServiceDescription"
 
-    invoke-static {v1, v2}, Ld8j;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lj9j;->d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_11
 
-    invoke-static {v1}, Lfh4;->w(Lorg/xmlpull/v1/XmlPullParser;)Ll49;
+    invoke-static {v1}, Lfh4;->w(Lorg/xmlpull/v1/XmlPullParser;)Lp39;
 
     move-result-object v37
 
@@ -466,7 +464,7 @@
     :cond_11
     const-string v2, "Period"
 
-    invoke-static {v1, v2}, Ld8j;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lj9j;->d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -535,7 +533,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lfi3;->g([Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lqi3;->i([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -550,11 +548,11 @@
 
     iget-object v7, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    check-cast v7, Lzxb;
+    check-cast v7, Lsyb;
 
     move-object/from16 v35, v15
 
-    iget-wide v14, v7, Lzxb;->b:J
+    iget-wide v14, v7, Lsyb;->b:J
 
     cmp-long v14, v14, v38
 
@@ -619,7 +617,7 @@
 
     :cond_18
     :goto_12
-    iget-wide v3, v7, Lzxb;->b:J
+    iget-wide v3, v7, Lsyb;->b:J
 
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
@@ -652,7 +650,7 @@
 
     const-string v2, "vk:Attrs"
 
-    invoke-static {v1, v2}, Ld8j;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lj9j;->d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v7
 
@@ -663,7 +661,7 @@
 
     const-string v7, "vk:XPlaybackDuration"
 
-    invoke-static {v1, v7}, Ld8j;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v7}, Lj9j;->d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v7
 
@@ -684,7 +682,7 @@
     :cond_1b
     invoke-static {v1}, Lfh4;->b(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    invoke-static {v1, v2}, Ld8j;->e(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lj9j;->c(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v7
 
@@ -694,11 +692,11 @@
     move-wide/from16 v14, v25
 
     :goto_15
-    new-instance v2, Ll60;
+    new-instance v2, Lk60;
 
     const/4 v7, 0x3
 
-    invoke-direct {v2, v0, v14, v15, v7}, Ll60;-><init>(Ljava/lang/Object;JI)V
+    invoke-direct {v2, v0, v14, v15, v7}, Lk60;-><init>(Ljava/lang/Object;JI)V
 
     iget-object v7, v0, Lbh4;->Y:Landroid/os/Handler;
 
@@ -717,7 +715,7 @@
     :goto_17
     const-string v6, "MPD"
 
-    invoke-static {v1, v6}, Ld8j;->e(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {v1, v6}, Lj9j;->c(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v6
 
@@ -776,7 +774,7 @@
 
     move-object/from16 v33, v37
 
-    invoke-direct/range {v15 .. v35}, Lah4;-><init>(JJJZJJJJLewc;Lryc;Ll49;Landroid/net/Uri;Ljava/util/ArrayList;)V
+    invoke-direct/range {v15 .. v35}, Lah4;-><init>(JJJZJJJJLgxc;Liab;Lp39;Landroid/net/Uri;Ljava/util/ArrayList;)V
 
     return-object v15
 
@@ -809,7 +807,7 @@
     goto/16 :goto_b
 .end method
 
-.method public final p(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIFIILjava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Lmke;JJJJJZ)Ldh4;
+.method public final p(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIFIILjava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Lhle;JJJJJZ)Ldh4;
     .locals 9
 
     const/4 v0, 0x0
@@ -825,60 +823,60 @@
     const-string v0, ""
 
     :cond_0
-    invoke-super/range {p0 .. p28}, Lfh4;->p(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIFIILjava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Lmke;JJJJJZ)Ldh4;
+    invoke-super/range {p0 .. p28}, Lfh4;->p(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIFIILjava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Lhle;JJJJJZ)Ldh4;
 
     move-result-object p1
 
-    iget-object p2, p1, Ldh4;->a:Lrj6;
+    iget-object p2, p1, Ldh4;->a:Lpj6;
 
-    invoke-static {v0}, Liyf;->G(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lrzf;->H(Ljava/lang/CharSequence;)Z
 
     move-result p3
 
     if-nez p3, :cond_2
 
-    iget-object p3, p2, Lrj6;->l:Lu4a;
+    iget-object p3, p2, Lpj6;->l:Lt4a;
 
     const/4 v1, 0x0
 
     if-nez p3, :cond_1
 
-    new-instance p3, Lu4a;
+    new-instance p3, Lt4a;
 
-    new-array v2, v1, [Ls4a;
+    new-array v2, v1, [Lr4a;
 
-    invoke-direct {p3, v2}, Lu4a;-><init>([Ls4a;)V
+    invoke-direct {p3, v2}, Lt4a;-><init>([Lr4a;)V
 
     :cond_1
-    new-instance v2, Lyah;
+    new-instance v2, Lvbh;
 
-    invoke-direct {v2, v0}, Lyah;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Lvbh;-><init>(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Ls4a;
+    new-array v0, v0, [Lr4a;
 
     aput-object v2, v0, v1
 
-    invoke-virtual {p3, v0}, Lu4a;->a([Ls4a;)Lu4a;
+    invoke-virtual {p3, v0}, Lt4a;->a([Lr4a;)Lt4a;
 
     move-result-object p3
 
-    invoke-virtual {p2}, Lrj6;->a()Lpj6;
+    invoke-virtual {p2}, Lpj6;->a()Lnj6;
 
     move-result-object p2
 
-    iput-object p3, p2, Lpj6;->k:Lu4a;
+    iput-object p3, p2, Lnj6;->k:Lt4a;
 
-    new-instance p3, Lrj6;
+    new-instance p3, Lpj6;
 
-    invoke-direct {p3, p2}, Lrj6;-><init>(Lpj6;)V
+    invoke-direct {p3, p2}, Lpj6;-><init>(Lnj6;)V
 
     new-instance p2, Ldh4;
 
-    iget-object v0, p1, Ldh4;->b:Lal7;
+    iget-object v0, p1, Ldh4;->b:Lhk7;
 
-    iget-object v1, p1, Ldh4;->c:Lmke;
+    iget-object v1, p1, Ldh4;->c:Lhle;
 
     iget-object v2, p1, Ldh4;->d:Ljava/lang/String;
 
@@ -912,7 +910,7 @@
 
     move-wide/from16 p13, v7
 
-    invoke-direct/range {p4 .. p14}, Ldh4;-><init>(Lrj6;Ljava/util/List;Lmke;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;J)V
+    invoke-direct/range {p4 .. p14}, Ldh4;-><init>(Lpj6;Ljava/util/List;Lhle;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;J)V
 
     move-object p1, p4
 

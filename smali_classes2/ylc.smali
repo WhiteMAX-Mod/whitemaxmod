@@ -1,52 +1,68 @@
 .class public final synthetic Lylc;
-.super Lw8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ler6;
+.implements Lnm4;
 
 
-# static fields
-.field public static final Z:Lylc;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(IJZ)V
+    .locals 0
 
-    new-instance v0, Lylc;
+    iput p1, p0, Lylc;->a:I
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    iput-wide p2, p0, Lylc;->b:J
 
-    const/4 v2, 0x4
+    iput-boolean p4, p0, Lylc;->c:Z
 
-    const/4 v3, 0x3
-
-    const-class v4, Lysb;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lw8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lylc;->Z:Lylc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Lud2;
+    iget v0, p0, Lylc;->a:I
 
-    check-cast p2, Lyx3;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
 
-    sget-object p3, Limc;->F0:[Lp38;
+    iget-wide v1, p0, Lylc;->b:J
 
-    new-instance p3, Lysb;
+    iget-boolean v3, p0, Lylc;->c:Z
 
-    invoke-direct {p3, p1, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;-><init>(JZ)V
 
-    return-object p3
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+
+    iget-wide v1, p0, Lylc;->b:J
+
+    iget-boolean v3, p0, Lylc;->c:Z
+
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/addmembers/AddChatMembersScreen;-><init>(JZ)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,17 +1,23 @@
-.class public interface abstract Lx11;
+.class public final Lx11;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract onIceRestart()V
-.end method
+# instance fields
+.field public final a:Ljava/util/Collection;
 
-.method public abstract onNegotiationError(Lqja;)V
-.end method
+.field public final b:Ljava/util/Collection;
 
-.method public abstract onPeerConnectionStateChanged(Lorg/webrtc/PeerConnection$PeerConnectionState;)V
-.end method
 
-.method public abstract onSelectedCandidatePairChanged(Lorg/webrtc/CandidatePairChangeEvent;)V
+# direct methods
+.method public constructor <init>(Ljava/util/Collection;Ljava/util/Collection;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lx11;->a:Ljava/util/Collection;
+
+    iput-object p2, p0, Lx11;->b:Ljava/util/Collection;
+
+    return-void
 .end method

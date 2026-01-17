@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lux3;
+.implements Lay3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;->hangupConversation(Ly47;)V
+    value = Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;->hangupConversation(Li47;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lux3;"
+        "Lay3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "",
         "it",
-        "Lv2h;",
+        "Lb3h;",
         "accept",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"

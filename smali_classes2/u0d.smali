@@ -1,154 +1,214 @@
-.class public final synthetic Lu0d;
+.class public final Lu0d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/text/Layout;
 
-.field public final synthetic b:Lone/me/qrscanner/QrScannerWidget;
+.field public final b:Landroid/text/Layout;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/qrscanner/QrScannerWidget;I)V
+.method public constructor <init>(Landroid/text/Layout;Landroid/text/Layout;III)V
     .locals 0
 
-    iput p2, p0, Lu0d;->a:I
-
-    iput-object p1, p0, Lu0d;->b:Lone/me/qrscanner/QrScannerWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lu0d;->a:Landroid/text/Layout;
+
+    iput-object p2, p0, Lu0d;->b:Landroid/text/Layout;
+
+    iput p3, p0, Lu0d;->c:I
+
+    iput p4, p0, Lu0d;->d:I
+
+    iput p5, p0, Lu0d;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lu0d;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lu0d;->b:Lone/me/qrscanner/QrScannerWidget;
+    return v0
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of v1, p1, Lu0d;
 
-    iput-boolean v1, v2, Lone/me/qrscanner/QrScannerWidget;->D0:Z
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
 
-    :pswitch_0
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->F0:[Lp38;
+    return v2
 
-    invoke-virtual {v2}, Lone/me/qrscanner/QrScannerWidget;->A0()Lc0d;
+    :cond_1
+    check-cast p1, Lu0d;
 
-    move-result-object v0
+    iget-object v1, p0, Lu0d;->a:Landroid/text/Layout;
 
-    iget-object v1, v0, Lc0d;->c:Landroid/animation/ValueAnimator;
+    iget-object v3, p1, Lu0d;->a:Landroid/text/Layout;
 
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->isRunning()Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lu0d;->b:Landroid/text/Layout;
+
+    iget-object v3, p1, Lu0d;->b:Landroid/text/Layout;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lu0d;->c:I
+
+    iget v3, p1, Lu0d;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lu0d;->d:I
+
+    iget v3, p1, Lu0d;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lu0d;->e:I
+
+    iget p1, p1, Lu0d;->e:I
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lu0d;->a:Landroid/text/Layout;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lu0d;->b:Landroid/text/Layout;
 
     if-nez v2, :cond_0
 
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
+    const/4 v2, 0x0
+
+    goto :goto_0
 
     :cond_0
-    iget-object v1, v0, Lc0d;->a:Landroid/graphics/Paint;
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    iget v2, v0, Lc0d;->x0:I
+    move-result v2
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+    :goto_0
+    add-int/2addr v0, v2
 
-    const/4 v1, 0x0
+    mul-int/2addr v0, v1
 
-    iput-boolean v1, v0, Lc0d;->y0:Z
+    iget v2, p0, Lu0d;->c:I
 
-    const/4 v1, 0x0
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    iput-object v1, v0, Lc0d;->o:Landroid/graphics/RectF;
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    iget v2, p0, Lu0d;->d:I
 
-    return-void
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    :pswitch_1
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->F0:[Lp38;
+    move-result v0
 
-    invoke-virtual {v2}, Lone/me/qrscanner/QrScannerWidget;->A0()Lc0d;
+    iget v1, p0, Lu0d;->e:I
 
-    move-result-object v0
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    move-result v1
 
-    move-result-object v0
+    add-int/2addr v1, v0
 
-    const-wide/16 v3, 0xc8
+    return v1
+.end method
 
-    invoke-virtual {v0, v3, v4}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    move-result-object v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/high16 v3, 0x3f800000    # 1.0f
+    const-string v1, "LayoutBundle(titleLayout="
 
-    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    iget-object v1, p0, Lu0d;->a:Landroid/text/Layout;
 
-    iget-object v3, v2, Lone/me/qrscanner/QrScannerWidget;->E0:Lz7g;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Lz7g;->getValue()Ljava/lang/Object;
+    const-string v1, ", subtitleLayout="
 
-    move-result-object v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v3, Landroid/view/animation/PathInterpolator;
+    iget-object v1, p0, Lu0d;->b:Landroid/text/Layout;
 
-    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", subtitleHeight="
 
-    const-wide/16 v3, 0x29e
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    const-string v1, ", titleSubtitleMargin="
 
-    move-result-object v0
+    const-string v2, ", qrBitmapSize="
 
-    new-instance v3, Lu0d;
+    iget v3, p0, Lu0d;->c:I
 
-    invoke-direct {v3, v2, v1}, Lu0d;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
+    iget v4, p0, Lu0d;->d:I
 
-    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->withStartAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    move-result-object v0
+    const-string v1, ")"
 
-    new-instance v1, Lu0d;
+    iget v2, p0, Lu0d;->e:I
 
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v3}, Lu0d;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, v2, Lone/me/qrscanner/QrScannerWidget;->C0:Landroid/view/ViewPropertyAnimator;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    :cond_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,79 +1,74 @@
-.class public final Lr8b;
-.super Ll84;
+.class public final synthetic Lr8b;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnq6;
 
 
 # instance fields
-.field public A0:I
+.field public final synthetic a:Lnd2;
 
-.field public B0:I
+.field public final synthetic b:I
 
-.field public synthetic C0:Ljava/lang/Object;
+.field public final synthetic c:Lone/me/messages/list/loader/MessageModel;
 
-.field public final synthetic D0:Ly8b;
+.field public final synthetic d:Ljava/util/List;
 
-.field public E0:I
-
-.field public X:Ljava/lang/Object;
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Object;
-
-.field public s0:Ljava/lang/Object;
-
-.field public t0:Ljava/lang/CharSequence;
-
-.field public u0:Lim9;
-
-.field public v0:Z
-
-.field public w0:Z
-
-.field public x0:J
-
-.field public y0:J
-
-.field public z0:I
+.field public final synthetic o:Lbtd;
 
 
 # direct methods
-.method public constructor <init>(Ly8b;Ll84;)V
+.method public synthetic constructor <init>(Lnd2;ILone/me/messages/list/loader/MessageModel;Ljava/util/List;Lbtd;)V
     .locals 0
 
-    iput-object p1, p0, Lr8b;->D0:Ly8b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lr8b;->a:Lnd2;
+
+    iput p2, p0, Lr8b;->b:I
+
+    iput-object p3, p0, Lr8b;->c:Lone/me/messages/list/loader/MessageModel;
+
+    iput-object p4, p0, Lr8b;->d:Ljava/util/List;
+
+    iput-object p5, p0, Lr8b;->o:Lbtd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lr8b;->C0:Ljava/lang/Object;
+    check-cast p1, Les8;
 
-    iget p1, p0, Lr8b;->E0:I
+    iget-object v0, p0, Lr8b;->a:Lnd2;
 
-    const/high16 v0, -0x80000000
+    iput-object v0, p1, Les8;->a:Lnd2;
 
-    or-int/2addr p1, v0
+    iget v0, p0, Lr8b;->b:I
 
-    iput p1, p0, Lr8b;->E0:I
+    iput v0, p1, Les8;->b:I
 
-    iget-object p1, p0, Lr8b;->D0:Ly8b;
+    iget-object v0, p0, Lr8b;->c:Lone/me/messages/list/loader/MessageModel;
 
-    const/4 v0, 0x0
+    iput-object v0, p1, Les8;->d:Lone/me/messages/list/loader/MessageModel;
 
-    invoke-static {p1, v0, v0, p0}, Ly8b;->a(Ly8b;Lvs8;La00;Ll84;)Ljava/lang/Object;
+    iget-object v0, p0, Lr8b;->d:Ljava/util/List;
 
-    move-result-object p1
+    iput-object v0, p1, Les8;->f:Ljava/util/List;
+
+    iget-object v0, p0, Lr8b;->o:Lbtd;
+
+    iget-object v0, v0, Lbtd;->a:Ljava/lang/Object;
+
+    check-cast v0, Lmfc;
+
+    iput-object v0, p1, Les8;->e:Lmfc;
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

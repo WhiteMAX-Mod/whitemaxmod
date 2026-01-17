@@ -1,106 +1,126 @@
 .class public final Lgkb;
-.super Lz3;
+.super Ld3;
 .source "SourceFile"
-
-# interfaces
-.implements Lznf;
-
-
-# static fields
-.field public static final synthetic j:[Lp38;
 
 
 # instance fields
-.field public final h:Lkqe;
+.field public final synthetic c:I
 
-.field public final i:Lkqe;
+.field public final synthetic d:Lhkb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lhkb;I)V
+    .locals 0
 
-    new-instance v0, Lifa;
+    iput p2, p0, Lgkb;->c:I
 
-    const-string v1, "fileOpenStats"
+    iput-object p1, p0, Lgkb;->d:Lhkb;
 
-    const-string v2, "getFileOpenStats()Ljava/lang/String;"
+    const/16 p1, 0xd
 
-    const-class v3, Lgkb;
+    packed-switch p2, :pswitch_data_0
 
-    invoke-direct {v0, v3, v1, v2}, Lifa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    sget-object p2, Lsjb;->a:Lsjb;
 
-    sget-object v1, Lfsd;->a:Lgsd;
-
-    const-string v2, "opcodeStats"
-
-    const-string v4, "getOpcodeStats()Ljava/lang/String;"
-
-    invoke-static {v1, v3, v2, v4}, Lzy4;->h(Lgsd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lifa;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Lp38;
-
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    sput-object v2, Lgkb;->j:[Lp38;
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lckb;->a:Lckb;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    sget-object p2, Lzjb;->a:Lzjb;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lk16;)V
-    .locals 13
 
-    const-string v0, "stat_prefs"
+# virtual methods
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-direct {p0, p1, v0, p2}, Lz3;-><init>(Landroid/content/Context;Ljava/lang/String;Lk16;)V
+    iget v0, p0, Lgkb;->c:I
 
-    new-instance v1, Lkqe;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v4, p0, Lz3;->g:Lg68;
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-class p1, Ljava/lang/String;
+    move-result v0
 
-    invoke-static {p1}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+    if-nez v0, :cond_0
 
-    move-result-object v5
+    check-cast p2, Lckb;
 
-    const/4 v6, 0x1
+    check-cast p1, Lckb;
 
-    const-string v2, "file.open_stats"
+    iget-object p1, p0, Lgkb;->d:Lhkb;
 
-    const-string v3, ""
+    invoke-static {p1, p2}, Lhkb;->x(Lhkb;Lckb;)V
 
-    invoke-direct/range {v1 .. v6}, Lkqe;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-virtual {p1}, Lhkb;->y()V
 
-    iput-object v1, p0, Lgkb;->h:Lkqe;
-
-    new-instance v7, Lkqe;
-
-    iget-object v10, p0, Lz3;->g:Lg68;
-
-    invoke-static {p1}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
-
-    move-result-object v11
-
-    const/4 v12, 0x1
-
-    const-string v8, "session.opcode_stats"
-
-    move-object v9, v3
-
-    invoke-direct/range {v7 .. v12}, Lkqe;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iput-object v7, p0, Lgkb;->i:Lkqe;
-
+    :cond_0
     return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Lbkb;
+
+    check-cast p1, Lbkb;
+
+    iget-object p1, p0, Lgkb;->d:Lhkb;
+
+    invoke-static {p1, p2}, Lhkb;->w(Lhkb;Lbkb;)V
+
+    invoke-virtual {p1}, Lhkb;->y()V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    check-cast p2, Lvjb;
+
+    check-cast p1, Lvjb;
+
+    iget-object p1, p0, Lgkb;->d:Lhkb;
+
+    invoke-static {p1, p2}, Lhkb;->v(Lhkb;Lvjb;)V
+
+    invoke-virtual {p1}, Lhkb;->y()V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

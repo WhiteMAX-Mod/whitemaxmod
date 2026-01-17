@@ -1,199 +1,122 @@
 .class public final Lf63;
-.super Lb5g;
+.super Ld7f;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lg73;
-
-.field public final synthetic Y:J
-
-.field public o:I
+.field public x0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lg73;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lf63;->X:Lg73;
+    invoke-direct {p0}, Ld7f;-><init>()V
 
-    iput-wide p2, p0, Lf63;->Y:J
+    const-string v0, ""
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lf63;->x0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lf63;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lf63;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lf63;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lstg;ZLv40;)V
     .locals 3
 
-    new-instance p1, Lf63;
+    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    iget-object v0, p0, Lf63;->X:Lg73;
+    move-result-object v0
 
-    iget-wide v1, p0, Lf63;->Y:J
+    sget v1, La8b;->u:I
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lf63;-><init>(Lg73;JLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    iput-object v0, p0, Lf63;->x0:Ljava/lang/String;
 
-    iget v0, p0, Lf63;->o:I
+    if-eqz p3, :cond_3
 
-    const/4 v1, 0x1
+    if-nez p5, :cond_3
 
-    if-eqz v0, :cond_1
+    invoke-static {p3, v0}, Lc2j;->c(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    instance-of v1, v0, Lymb;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lymb;
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    const/4 v1, 0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    throw p1
+    invoke-virtual {v0}, Lymb;->getSearchView()Ldib;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2, v1}, Ldib;->setExpandable(Z)V
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    if-eqz v0, :cond_2
 
-    iget-object p1, p0, Lf63;->X:Lg73;
-
-    iget-object p1, p1, Lg73;->y0:Ld68;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbe2;
-
-    iput v1, p0, Lf63;->o:I
-
-    iget-wide v0, p0, Lf63;->Y:J
-
-    const-string v2, "all.chat.folder"
-
-    invoke-virtual {p1, v0, v1, p0, v2}, Lbe2;->b(JLl84;Ljava/lang/String;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    invoke-virtual {v0}, Lymb;->g()V
 
     :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/Iterable;
+    if-eqz v0, :cond_3
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lwd2;
-
-    sget-object v3, Lwd2;->y0:Lwd2;
-
-    if-ne v2, v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p1, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {v0, v1}, Lgi3;->n(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lymb;->getSearchView()Ldib;
 
     move-result-object v0
 
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_3
 
-    move-result v1
+    sget v2, Ldib;->J0:I
 
-    if-eqz v1, :cond_5
+    invoke-virtual {v0, v1}, Ldib;->c(Z)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_3
+    invoke-super/range {p0 .. p6}, Ld7f;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lstg;ZLv40;)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    check-cast v1, Lwd2;
+.method public final o()V
+    .locals 2
 
-    invoke-static {v1}, Lwcj;->a(Lwd2;)Lx74;
+    iget-object v0, p0, Lf63;->x0:Ljava/lang/String;
 
-    move-result-object v1
+    iget-object v1, p0, Ld7f;->Y:Lys;
 
-    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0, v0}, Ladf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_2
+    return-void
+.end method
 
-    :cond_5
-    return-object p1
+.method public final p(Landroid/view/View;Z)Laug;
+    .locals 2
+
+    new-instance v0, Laug;
+
+    invoke-direct {v0}, Laug;-><init>()V
+
+    new-instance v1, Le63;
+
+    invoke-direct {v1, p1, p0, p2}, Le63;-><init>(Landroid/view/View;Lf63;Z)V
+
+    invoke-virtual {v0, v1}, Laug;->Q(Lrtg;)V
+
+    return-object v0
 .end method

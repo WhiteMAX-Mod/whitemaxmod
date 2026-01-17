@@ -10,7 +10,7 @@
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Ljava/lang/Boolean;
 
 
 # direct methods
@@ -26,7 +26,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/Boolean;)V
     .locals 2
 
     and-int/lit8 v0, p1, 0x3
@@ -35,42 +35,26 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p2, p0, Lj6i;->a:Ljava/lang/String;
 
-    iput-object p3, p0, Lj6i;->b:Ljava/lang/String;
+    iput-object p3, p0, Lj6i;->b:Ljava/lang/Boolean;
 
     return-void
 
     :cond_0
     sget-object p2, Lh6i;->a:Lh6i;
 
-    invoke-virtual {p2}, Lh6i;->d()Lvoe;
+    invoke-virtual {p2}, Lh6i;->d()Lxpe;
 
     move-result-object p2
 
-    invoke-static {p1, v1, p2}, Lvij;->b(IILvoe;)V
+    invoke-static {p1, v1, p2}, Lqjj;->b(IILxpe;)V
 
     const/4 p1, 0x0
 
     throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lj6i;->a:Ljava/lang/String;
-
-    .line 4
-    iput-object p2, p0, Lj6i;->b:Ljava/lang/String;
-
-    return-void
 .end method
 
 
@@ -100,7 +84,7 @@
 
     iget-object v3, p1, Lj6i;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -109,11 +93,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lj6i;->b:Ljava/lang/String;
+    iget-object v1, p0, Lj6i;->b:Ljava/lang/Boolean;
 
-    iget-object p1, p1, Lj6i;->b:Ljava/lang/String;
+    iget-object p1, p1, Lj6i;->b:Ljava/lang/Boolean;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -136,31 +120,51 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lj6i;->b:Ljava/lang/String;
+    iget-object v1, p0, Lj6i;->b:Ljava/lang/Boolean;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :goto_0
+    add-int/2addr v0, v1
 
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
-    const-string v0, ", phone="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebAppOpenCodeReaderRequest(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lj6i;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fileSelect="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lj6i;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    const-string v2, "WebAppRequestPhoneResponse(requestId="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lj6i;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lj6i;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

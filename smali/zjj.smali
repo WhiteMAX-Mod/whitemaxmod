@@ -1,73 +1,43 @@
 .class public final Lzjj;
-.super Lyni;
+.super Lcpi;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final Y(Laxa;Ljava/lang/String;ILaxa;)Lof7;
+# instance fields
+.field public final d:Lqf5;
+
+.field public final e:Lieg;
+
+.field public final synthetic f:Lykj;
+
+.field public final synthetic g:Lykj;
+
+
+# direct methods
+.method public constructor <init>(Lykj;Lieg;Ljava/lang/String;)V
     .locals 1
 
-    invoke-virtual {p0}, Lyni;->V()Landroid/os/Parcel;
+    iput-object p1, p0, Lzjj;->g:Lykj;
 
-    move-result-object v0
+    new-instance p3, Lqf5;
 
-    invoke-static {v0, p1}, Lhui;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    const-string v0, "OnRequestInstallCallback"
 
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-direct {p3, v0}, Lqf5;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {v0, p4}, Lhui;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    iput-object p1, p0, Lzjj;->f:Lykj;
 
     const/4 p1, 0x2
 
-    invoke-virtual {p0, v0, p1}, Lyni;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    invoke-direct {p0, p1}, Lcpi;-><init>(I)V
 
-    move-result-object p1
+    const-string p1, "com.google.android.play.core.appupdate.protocol.IAppUpdateServiceCallback"
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    move-result-object p2
+    iput-object p3, p0, Lzjj;->d:Lqf5;
 
-    invoke-static {p2}, Laxa;->Y(Landroid/os/IBinder;)Lof7;
+    iput-object p2, p0, Lzjj;->e:Lieg;
 
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
-.end method
-
-.method public final Z(Laxa;Ljava/lang/String;ILaxa;)Lof7;
-    .locals 1
-
-    invoke-virtual {p0}, Lyni;->V()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lhui;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {v0, p4}, Lhui;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/4 p1, 0x3
-
-    invoke-virtual {p0, v0, p1}, Lyni;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Laxa;->Y(Landroid/os/IBinder;)Lof7;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
+    return-void
 .end method

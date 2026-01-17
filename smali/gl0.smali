@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnec;
+.implements Lhfc;
 
 
 # static fields
@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method public a(Landroid/graphics/Bitmap;Lt9c;)Lag3;
+.method public a(Landroid/graphics/Bitmap;Loac;)Lkg3;
     .locals 3
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
@@ -48,12 +48,12 @@
     sget-object v0, Lgl0;->a:Landroid/graphics/Bitmap$Config;
 
     :goto_0
-    invoke-virtual {p2, v1, v2, v0}, Lt9c;->c(IILandroid/graphics/Bitmap$Config;)Lag3;
+    invoke-virtual {p2, v1, v2, v0}, Loac;->c(IILandroid/graphics/Bitmap$Config;)Lkg3;
 
     move-result-object p2
 
     :try_start_0
-    invoke-virtual {p2}, Lag3;->n0()Ljava/lang/Object;
+    invoke-virtual {p2}, Lkg3;->p0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -61,25 +61,25 @@
 
     invoke-virtual {p0, v0, p1}, Lgl0;->d(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p2}, Lag3;->l()Lag3;
+    invoke-virtual {p2}, Lkg3;->l()Lkg3;
 
     move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p2}, Lag3;->close()V
+    invoke-virtual {p2}, Lkg3;->close()V
 
     return-object p1
 
     :catchall_0
     move-exception p1
 
-    invoke-virtual {p2}, Lag3;->close()V
+    invoke-virtual {p2}, Lkg3;->close()V
 
     throw p1
 .end method
 
-.method public b()Lh01;
+.method public b()Lb01;
     .locals 1
 
     const/4 v0, 0x0

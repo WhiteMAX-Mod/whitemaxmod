@@ -10,7 +10,7 @@
 
 
 # instance fields
-.field public a:Lfp3;
+.field public a:Lnp3;
 
 
 # direct methods
@@ -48,11 +48,11 @@
     :goto_0
     const-string v2, "MlKitContext has not been initialized"
 
-    invoke-static {v2, v1}, Lijj;->i(Ljava/lang/String;Z)V
+    invoke-static {v2, v1}, Ldkj;->i(Ljava/lang/String;Z)V
 
     sget-object v1, Lp7a;->c:Lp7a;
 
-    invoke-static {v1}, Lijj;->g(Ljava/lang/Object;)V
+    invoke-static {v1}, Ldkj;->g(Ljava/lang/Object;)V
 
     monitor-exit v0
 
@@ -94,7 +94,7 @@
     :goto_0
     const-string v4, "MlKitContext is already initialized"
 
-    invoke-static {v4, v1}, Lijj;->i(Ljava/lang/String;Z)V
+    invoke-static {v4, v1}, Ldkj;->i(Ljava/lang/String;Z)V
 
     new-instance v1, Lp7a;
 
@@ -113,19 +113,19 @@
     :cond_1
     const-class v4, Lcom/google/mlkit/common/internal/MlKitComponentDiscoveryService;
 
-    new-instance v5, Lykc;
+    new-instance v5, Ldgc;
 
-    new-instance v6, Ll5;
+    new-instance v6, Lig5;
 
-    const/16 v7, 0x9
+    const/16 v7, 0xb
 
-    invoke-direct {v6, v7, v4}, Ll5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v6, v7, v4}, Lig5;-><init>(ILjava/lang/Object;)V
 
-    const/16 v4, 0xa
+    const/16 v4, 0xc
 
-    invoke-direct {v5, p0, v4, v6}, Lykc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v5, p0, v4, v6}, Ldgc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v5}, Lykc;->g()Ljava/util/ArrayList;
+    invoke-virtual {v5}, Ldgc;->o()Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -137,7 +137,7 @@
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    sget-object v7, Lcp3;->n:Lye3;
+    sget-object v7, Lkp3;->n:Ljf3;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
@@ -145,7 +145,7 @@
 
     new-array v8, v3, [Ljava/lang/Class;
 
-    invoke-static {p0, v4, v8}, Lmo3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lmo3;
+    invoke-static {p0, v4, v8}, Luo3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Luo3;
 
     move-result-object p0
 
@@ -155,19 +155,19 @@
 
     new-array v3, v3, [Ljava/lang/Class;
 
-    invoke-static {v1, p0, v3}, Lmo3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lmo3;
+    invoke-static {v1, p0, v3}, Luo3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Luo3;
 
     move-result-object p0
 
     invoke-virtual {v6, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance p0, Lfp3;
+    new-instance p0, Lnp3;
 
-    invoke-direct {p0, p1, v5, v6, v7}, Lfp3;-><init>(Ljava/util/concurrent/Executor;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcp3;)V
+    invoke-direct {p0, p1, v5, v6, v7}, Lnp3;-><init>(Ljava/util/concurrent/Executor;Ljava/util/ArrayList;Ljava/util/ArrayList;Lkp3;)V
 
-    iput-object p0, v1, Lp7a;->a:Lfp3;
+    iput-object p0, v1, Lp7a;->a:Lnp3;
 
-    invoke-virtual {p0, v2}, Lfp3;->o(Z)V
+    invoke-virtual {p0, v2}, Lnp3;->o(Z)V
 
     sget-object p0, Lp7a;->c:Lp7a;
 
@@ -204,15 +204,15 @@
     :goto_0
     const-string v1, "MlKitContext has been deleted"
 
-    invoke-static {v1, v0}, Lijj;->i(Ljava/lang/String;Z)V
+    invoke-static {v1, v0}, Ldkj;->i(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lp7a;->a:Lfp3;
+    iget-object v0, p0, Lp7a;->a:Lnp3;
 
-    invoke-static {v0}, Lijj;->g(Ljava/lang/Object;)V
+    invoke-static {v0}, Ldkj;->g(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lp7a;->a:Lfp3;
+    iget-object v0, p0, Lp7a;->a:Lnp3;
 
-    invoke-interface {v0, p1}, Lyo3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgp3;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 

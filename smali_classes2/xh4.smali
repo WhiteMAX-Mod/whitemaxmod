@@ -1,5 +1,5 @@
 .class public final Lxh4;
-.super Loph;
+.super Lkqh;
 .source "SourceFile"
 
 
@@ -19,7 +19,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p2, p1, v0}, Loph;-><init>(ILandroid/net/Uri;Z)V
+    invoke-direct {p0, p2, p1, v0}, Lkqh;-><init>(ILandroid/net/Uri;Z)V
 
     return-void
 
@@ -28,7 +28,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p2, p1, v0}, Loph;-><init>(ILandroid/net/Uri;Z)V
+    invoke-direct {p0, p2, p1, v0}, Lkqh;-><init>(ILandroid/net/Uri;Z)V
 
     return-void
 
@@ -37,7 +37,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p2, p1, v0}, Loph;-><init>(ILandroid/net/Uri;Z)V
+    invoke-direct {p0, p2, p1, v0}, Lkqh;-><init>(ILandroid/net/Uri;Z)V
 
     return-void
 
@@ -46,7 +46,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p2, p1, v0}, Loph;-><init>(ILandroid/net/Uri;Z)V
+    invoke-direct {p0, p2, p1, v0}, Lkqh;-><init>(ILandroid/net/Uri;Z)V
 
     return-void
 
@@ -62,7 +62,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Loph;
+.method public final a(Ljava/lang/String;)Lkqh;
     .locals 2
 
     iget v0, p0, Lxh4;->d:I
@@ -71,9 +71,9 @@
 
     new-instance v0, Lxh4;
 
-    iget-object v1, p0, Loph;->b:Landroid/net/Uri;
+    iget-object v1, p0, Lkqh;->b:Landroid/net/Uri;
 
-    invoke-static {v1, p1}, Loph;->b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v1, p1}, Lkqh;->b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
@@ -86,9 +86,9 @@
     :pswitch_0
     new-instance v0, Lxh4;
 
-    iget-object v1, p0, Loph;->b:Landroid/net/Uri;
+    iget-object v1, p0, Lkqh;->b:Landroid/net/Uri;
 
-    invoke-static {v1, p1}, Loph;->b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v1, p1}, Lkqh;->b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
@@ -101,9 +101,9 @@
     :pswitch_1
     new-instance v0, Lxh4;
 
-    iget-object v1, p0, Loph;->b:Landroid/net/Uri;
+    iget-object v1, p0, Lkqh;->b:Landroid/net/Uri;
 
-    invoke-static {v1, p1}, Loph;->b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v1, p1}, Lkqh;->b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
@@ -116,9 +116,9 @@
     :pswitch_2
     new-instance v0, Lxh4;
 
-    iget-object v1, p0, Loph;->b:Landroid/net/Uri;
+    iget-object v1, p0, Lkqh;->b:Landroid/net/Uri;
 
-    invoke-static {v1, p1}, Loph;->b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v1, p1}, Lkqh;->b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 

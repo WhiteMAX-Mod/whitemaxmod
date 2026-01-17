@@ -3,78 +3,74 @@
 .source "SourceFile"
 
 # interfaces
-.implements Laga;
-
-
-# static fields
-.field public static final b:Ljava/lang/String;
+.implements Lvfa;
 
 
 # instance fields
-.field public final a:Lxo6;
+.field public final a:Lsna;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Lxo6;->X:Ljava/lang/String;
-
-    sput-object v0, Lhs4;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lxo6;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhs4;->a:Lxo6;
+    new-instance v0, Lsna;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lsna;-><init>(I)V
+
+    iput-object v0, p0, Lhs4;->a:Lsna;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final I(Ls4a;)V
+.method public final a(I)Lhud;
     .locals 1
 
-    iget-object v0, p0, Lhs4;->a:Lxo6;
+    iget-object v0, p0, Lhs4;->a:Lsna;
 
-    invoke-virtual {v0, p1}, Lxo6;->I(Ls4a;)V
+    invoke-virtual {v0, p1}, Lsna;->a(I)Lhud;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final T(ILjava/nio/ByteBuffer;Lnw0;)V
-    .locals 1
+.method public final d(Ljava/lang/String;)Lyfa;
+    .locals 3
 
-    iget-object v0, p0, Lhs4;->a:Lxo6;
+    new-instance v0, Lis4;
 
-    invoke-virtual {v0, p1, p2, p3}, Lxo6;->T(ILjava/nio/ByteBuffer;Lnw0;)V
+    :try_start_0
+    new-instance v1, Landroid/media/MediaMuxer;
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public final close()V
-    .locals 1
+    invoke-direct {v1, p1, v2}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lhs4;->a:Lxo6;
+    new-instance p1, Luo6;
 
-    invoke-virtual {v0}, Lxo6;->close()V
+    invoke-direct {p1, v1}, Luo6;-><init>(Landroid/media/MediaMuxer;)V
 
-    return-void
-.end method
+    invoke-direct {v0, p1}, Lis4;-><init>(Luo6;)V
 
-.method public final q0(Lrj6;)I
-    .locals 1
+    return-object v0
 
-    iget-object v0, p0, Lhs4;->a:Lxo6;
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {v0, p1}, Lxo6;->q0(Lrj6;)I
+    new-instance v0, Landroidx/media3/muxer/MuxerException;
 
-    move-result p1
+    const-string v1, "Error creating muxer"
 
-    return p1
+    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

@@ -1,393 +1,126 @@
 .class public final Lrn;
-.super Ljava/lang/Object;
+.super Landroid/widget/CheckedTextView;
 .source "SourceFile"
+
+# interfaces
+.implements Lwe5;
 
 
 # instance fields
-.field public a:Landroid/os/Parcelable;
+.field public final a:Lsn;
 
-.field public b:Ljava/lang/Object;
+.field public final b:Lv8;
 
-.field public c:Z
+.field public final c:Lop;
 
-.field public d:Z
-
-.field public e:Z
-
-.field public final f:Ljava/lang/Object;
+.field public d:Lpo;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 8
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v6, Lh5d;->checkedTextViewStyle:I
 
-    .line 3
-    new-instance v0, Ly6e;
+    invoke-static {p1}, Lzlg;->a(Landroid/content/Context;)V
 
-    invoke-direct {v0}, Ly6e;-><init>()V
+    invoke-direct {p0, p1, p2, v6}, Landroid/widget/CheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object v0, p0, Lrn;->f:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    .line 4
-    iput-boolean v0, p0, Lrn;->e:Z
+    invoke-static {p0, p1}, Ljjg;->a(Landroid/view/View;Landroid/content/Context;)V
 
-    return-void
-.end method
+    new-instance p1, Lop;
 
-.method public synthetic constructor <init>(Landroid/widget/TextView;)V
-    .locals 1
+    invoke-direct {p1, p0}, Lop;-><init>(Landroid/widget/TextView;)V
 
-    .line 1
-    const/4 v0, 0x0
+    iput-object p1, p0, Lrn;->c:Lop;
 
-    iput-object v0, p0, Lrn;->a:Landroid/os/Parcelable;
+    invoke-virtual {p1, p2, v6}, Lop;->f(Landroid/util/AttributeSet;I)V
 
-    iput-object v0, p0, Lrn;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Lop;->b()V
 
-    const/4 v0, 0x0
+    new-instance p1, Lv8;
 
-    iput-boolean v0, p0, Lrn;->c:Z
+    invoke-direct {p1, p0}, Lv8;-><init>(Landroid/view/View;)V
 
-    iput-boolean v0, p0, Lrn;->d:Z
+    iput-object p1, p0, Lrn;->b:Lv8;
 
-    iput-object p1, p0, Lrn;->f:Ljava/lang/Object;
+    invoke-virtual {p1, p2, v6}, Lv8;->v(Landroid/util/AttributeSet;I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p1, Lsn;
 
-    return-void
-.end method
+    invoke-direct {p1, p0}, Lsn;-><init>(Landroid/widget/TextView;)V
 
+    iput-object p1, p0, Lrn;->a:Lsn;
 
-# virtual methods
-.method public a()V
-    .locals 3
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-object v0, p0, Lrn;->f:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Landroid/widget/CompoundButton;
+    sget-object v0, Lrgd;->CheckedTextView:[I
 
-    invoke-static {v0}, Lcq3;->a(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2, v0, v6}, Lbg8;->w(Landroid/content/Context;Landroid/util/AttributeSet;[II)Lbg8;
 
-    move-result-object v1
+    move-result-object p1
 
-    if-eqz v1, :cond_4
-
-    iget-boolean v2, p0, Lrn;->c:Z
-
-    if-nez v2, :cond_0
-
-    iget-boolean v2, p0, Lrn;->d:Z
-
-    if-eqz v2, :cond_4
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    iget-boolean v2, p0, Lrn;->c:Z
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lrn;->a:Landroid/os/Parcelable;
-
-    check-cast v2, Landroid/content/res/ColorStateList;
-
-    invoke-static {v1, v2}, Ls75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    :cond_1
-    iget-boolean v2, p0, Lrn;->d:Z
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lrn;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {v1, v2}, Ls75;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    :cond_2
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/View;->getDrawableState()[I
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    :cond_3
-    invoke-virtual {v0, v1}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_4
-    return-void
-.end method
-
-.method public b()V
-    .locals 3
-
-    iget-object v0, p0, Lrn;->f:Ljava/lang/Object;
-
-    check-cast v0, Lqn;
-
-    invoke-virtual {v0}, Landroid/widget/CheckedTextView;->getCheckMarkDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    iget-boolean v2, p0, Lrn;->c:Z
-
-    if-nez v2, :cond_0
-
-    iget-boolean v2, p0, Lrn;->d:Z
-
-    if-eqz v2, :cond_4
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    iget-boolean v2, p0, Lrn;->c:Z
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lrn;->a:Landroid/os/Parcelable;
-
-    check-cast v2, Landroid/content/res/ColorStateList;
-
-    invoke-static {v1, v2}, Ls75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    :cond_1
-    iget-boolean v2, p0, Lrn;->d:Z
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lrn;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {v1, v2}, Ls75;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    :cond_2
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/View;->getDrawableState()[I
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    :cond_3
-    invoke-virtual {v0, v1}, Lqn;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_4
-    return-void
-.end method
-
-.method public c(Ljava/lang/String;)Landroid/os/Bundle;
-    .locals 3
-
-    iget-boolean v0, p0, Lrn;->d:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lrn;->a:Landroid/os/Parcelable;
-
-    check-cast v0, Landroid/os/Bundle;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lrn;->a:Landroid/os/Parcelable;
-
-    check-cast v2, Landroid/os/Bundle;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2, p1}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
-
-    :cond_0
-    iget-object p1, p0, Lrn;->a:Landroid/os/Parcelable;
-
-    check-cast p1, Landroid/os/Bundle;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Landroid/os/BaseBundle;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    return-object v0
-
-    :cond_1
-    iput-object v1, p0, Lrn;->a:Landroid/os/Parcelable;
-
-    return-object v0
-
-    :cond_2
-    return-object v1
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "You can consumeRestoredStateForKey only after super.onCreate of corresponding component"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public d()Lq8e;
-    .locals 4
-
-    iget-object v0, p0, Lrn;->f:Ljava/lang/Object;
-
-    check-cast v0, Ly6e;
-
-    invoke-virtual {v0}, Ly6e;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    move-object v1, v0
-
-    check-cast v1, Lu6e;
-
-    invoke-virtual {v1}, Lu6e;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1}, Lu6e;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lq8e;
-
-    const-string v3, "androidx.lifecycle.internal.SavedStateHandlesProvider"
-
-    invoke-static {v2, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-object v1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public e(Landroid/util/AttributeSet;I)V
-    .locals 9
-
-    iget-object v0, p0, Lrn;->f:Ljava/lang/Object;
-
-    move-object v1, v0
-
-    check-cast v1, Landroid/widget/CompoundButton;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v2, Ltfd;->CompoundButton:[I
-
-    invoke-static {v0, p1, v2, p2}, Lf1c;->u(Landroid/content/Context;Landroid/util/AttributeSet;[II)Lf1c;
-
-    move-result-object v8
-
-    iget-object v0, v8, Lf1c;->a:Ljava/lang/Object;
+    iget-object v0, p1, Lbg8;->b:Ljava/lang/Object;
 
     check-cast v0, Landroid/content/res/TypedArray;
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    sget-object v3, Ltfd;->CompoundButton:[I
+    sget-object v3, Lrgd;->CheckedTextView:[I
 
-    iget-object v4, v8, Lf1c;->a:Ljava/lang/Object;
+    iget-object v1, p1, Lbg8;->b:Ljava/lang/Object;
 
-    move-object v5, v4
+    move-object v5, v1
 
     check-cast v5, Landroid/content/res/TypedArray;
 
     const/4 v7, 0x0
 
-    move-object v4, p1
+    move-object v1, p0
 
-    move v6, p2
+    move-object v4, p2
 
-    invoke-static/range {v1 .. v7}, Lash;->m(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    invoke-static/range {v1 .. v7}, Lxsh;->m(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
     :try_start_0
-    sget p1, Ltfd;->CompoundButton_buttonCompat:I
+    sget p2, Lrgd;->CheckedTextView_checkMarkCompat:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {v0, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    move-result p1
+    move-result p2
 
-    const/4 p2, 0x0
+    const/4 v2, 0x0
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_0
 
-    sget p1, Ltfd;->CompoundButton_buttonCompat:I
+    sget p2, Lrgd;->CheckedTextView_checkMarkCompat:I
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {v0, p2, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    move-result p1
+    move-result p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_0
 
     :try_start_1
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2, p1}, Lm4j;->k(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v3, p2}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-virtual {v1, p1}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, p2}, Lrn;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
     :try_end_1
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -397,243 +130,541 @@
     :catchall_0
     move-exception v0
 
-    move-object p1, v0
+    move-object p2, v0
 
     goto :goto_1
 
     :catch_0
     :cond_0
     :try_start_2
-    sget p1, Ltfd;->CompoundButton_android_button:I
+    sget p2, Lrgd;->CheckedTextView_android_checkMark:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {v0, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_1
+    if-eqz p2, :cond_1
 
-    sget p1, Ltfd;->CompoundButton_android_button:I
+    sget p2, Lrgd;->CheckedTextView_android_checkMark:I
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {v0, p2, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_1
+    if-eqz p2, :cond_1
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, p2}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
-    invoke-static {p2, p1}, Lm4j;->k(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, p2}, Lrn;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_1
     :goto_0
-    sget p1, Ltfd;->CompoundButton_buttonTint:I
+    sget p2, Lrgd;->CheckedTextView_checkMarkTint:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {v0, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_2
+    if-eqz p2, :cond_2
 
-    sget p1, Ltfd;->CompoundButton_buttonTint:I
+    sget p2, Lrgd;->CheckedTextView_checkMarkTint:I
 
-    invoke-virtual {v8, p1}, Lf1c;->k(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p1, p2}, Lbg8;->n(I)Landroid/content/res/ColorStateList;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-static {v1, p1}, Lbq3;->c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, p2}, Landroid/widget/CheckedTextView;->setCheckMarkTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_2
-    sget p1, Ltfd;->CompoundButton_buttonTintMode:I
+    sget p2, Lrgd;->CheckedTextView_checkMarkTintMode:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {v0, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_3
+    if-eqz p2, :cond_3
 
-    sget p1, Ltfd;->CompoundButton_buttonTintMode:I
+    sget p2, Lrgd;->CheckedTextView_checkMarkTintMode:I
 
-    const/4 p2, -0x1
+    const/4 v2, -0x1
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v0, p2, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    move-result p1
+    move-result p2
 
-    const/4 p2, 0x0
+    const/4 v0, 0x0
 
-    invoke-static {p1, p2}, Lc85;->c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {p2, v0}, Lf85;->c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-static {v1, p1}, Lbq3;->d(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {p0, p2}, Landroid/widget/CheckedTextView;->setCheckMarkTintMode(Landroid/graphics/PorterDuff$Mode;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :cond_3
-    invoke-virtual {v8}, Lf1c;->B()V
+    invoke-virtual {p1}, Lbg8;->A()V
+
+    invoke-direct {p0}, Lrn;->getEmojiTextViewHelper()Lpo;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v4, v6}, Lpo;->c(Landroid/util/AttributeSet;I)V
 
     return-void
 
     :goto_1
-    invoke-virtual {v8}, Lf1c;->B()V
+    invoke-virtual {p1}, Lbg8;->A()V
 
-    throw p1
+    throw p2
 .end method
 
-.method public f(Ljava/lang/String;Lq8e;)V
-    .locals 2
+.method private getEmojiTextViewHelper()Lpo;
+    .locals 1
 
-    iget-object v0, p0, Lrn;->f:Ljava/lang/Object;
+    iget-object v0, p0, Lrn;->d:Lpo;
 
-    check-cast v0, Ly6e;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, p1}, Ly6e;->a(Ljava/lang/Object;)Lv6e;
+    new-instance v0, Lpo;
 
-    move-result-object v1
+    invoke-direct {v0, p0}, Lpo;-><init>(Landroid/widget/TextView;)V
 
-    if-eqz v1, :cond_0
-
-    iget-object p1, v1, Lv6e;->b:Ljava/lang/Object;
-
-    goto :goto_1
+    iput-object v0, p0, Lrn;->d:Lpo;
 
     :cond_0
-    new-instance v1, Lv6e;
+    iget-object v0, p0, Lrn;->d:Lpo;
 
-    invoke-direct {v1, p1, p2}, Lv6e;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    return-object v0
+.end method
 
-    iget p1, v0, Ly6e;->d:I
 
-    add-int/lit8 p1, p1, 0x1
+# virtual methods
+.method public final a()Z
+    .locals 1
 
-    iput p1, v0, Ly6e;->d:I
+    invoke-direct {p0}, Lrn;->getEmojiTextViewHelper()Lpo;
 
-    iget-object p1, v0, Ly6e;->b:Lv6e;
+    move-result-object v0
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0}, Lpo;->b()Z
 
-    iput-object v1, v0, Ly6e;->a:Lv6e;
+    move-result v0
 
-    iput-object v1, v0, Ly6e;->b:Lv6e;
+    return v0
+.end method
 
-    goto :goto_0
+.method public final drawableStateChanged()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/widget/CheckedTextView;->drawableStateChanged()V
+
+    iget-object v0, p0, Lrn;->c:Lop;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lop;->b()V
+
+    :cond_0
+    iget-object v0, p0, Lrn;->b:Lv8;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lv8;->j()V
 
     :cond_1
-    iput-object v1, p1, Lv6e;->c:Lv6e;
+    iget-object v0, p0, Lrn;->a:Lsn;
 
-    iput-object p1, v1, Lv6e;->d:Lv6e;
+    if-eqz v0, :cond_2
 
-    iput-object v1, v0, Ly6e;->b:Lv6e;
+    invoke-virtual {v0}, Lsn;->b()V
 
-    :goto_0
-    const/4 p1, 0x0
+    :cond_2
+    return-void
+.end method
 
-    :goto_1
-    check-cast p1, Lq8e;
+.method public getCustomSelectionActionModeCallback()Landroid/view/ActionMode$Callback;
+    .locals 1
 
-    if-nez p1, :cond_2
+    invoke-super {p0}, Landroid/widget/TextView;->getCustomSelectionActionModeCallback()Landroid/view/ActionMode$Callback;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroidx/core/widget/a;->e(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+
+    iget-object v0, p0, Lrn;->b:Lv8;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lv8;->r()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+
+    iget-object v0, p0, Lrn;->b:Lv8;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lv8;->s()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getSupportCheckMarkTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+
+    iget-object v0, p0, Lrn;->a:Lsn;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lsn;->a:Landroid/os/Parcelable;
+
+    check-cast v0, Landroid/content/res/ColorStateList;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getSupportCheckMarkTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+
+    iget-object v0, p0, Lrn;->a:Lsn;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lsn;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/graphics/PorterDuff$Mode;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getSupportCompoundDrawablesTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+
+    iget-object v0, p0, Lrn;->c:Lop;
+
+    invoke-virtual {v0}, Lop;->d()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getSupportCompoundDrawablesTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+
+    iget-object v0, p0, Lrn;->c:Lop;
+
+    invoke-virtual {v0}, Lop;->e()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, p0}, Le5j;->c(Landroid/view/inputmethod/EditorInfo;Landroid/view/inputmethod/InputConnection;Landroid/widget/TextView;)V
+
+    return-object v0
+.end method
+
+.method public setAllCaps(Z)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->setAllCaps(Z)V
+
+    invoke-direct {p0}, Lrn;->getEmojiTextViewHelper()Lpo;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lpo;->d(Z)V
+
+    return-void
+.end method
+
+.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object p1, p0, Lrn;->b:Lv8;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lv8;->y()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setBackgroundResource(I)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lrn;->b:Lv8;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lv8;->z(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setCheckMarkDrawable(I)V
+    .locals 1
+
+    .line 7
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lrn;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/CheckedTextView;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 2
+    iget-object p1, p0, Lrn;->a:Lsn;
+
+    if-eqz p1, :cond_1
+
+    .line 3
+    iget-boolean v0, p1, Lsn;->e:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 4
+    iput-boolean v0, p1, Lsn;->e:Z
 
     return-void
 
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "SavedStateProvider with the given key is already registered"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public g()V
-    .locals 5
-
-    const-class v0, Lg78;
-
-    iget-boolean v1, p0, Lrn;->e:Z
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lrn;->b:Ljava/lang/Object;
-
-    check-cast v1, Lln;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lln;
-
-    invoke-direct {v1, p0}, Lln;-><init>(Lrn;)V
-
     :cond_0
-    iput-object v1, p0, Lrn;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    .line 5
+    iput-boolean v0, p1, Lsn;->e:Z
 
-    :try_start_0
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    iget-object v1, p0, Lrn;->b:Ljava/lang/Object;
-
-    check-cast v1, Lln;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, v1, Lln;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/LinkedHashSet;
-
-    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    .line 6
+    invoke-virtual {p1}, Lsn;->b()V
 
     :cond_1
     return-void
+.end method
 
-    :catch_0
-    move-exception v1
+.method public final setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    new-instance v2, Ljava/lang/IllegalArgumentException;
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lrn;->c:Lop;
 
-    const-string v4, "Class "
+    if-eqz p1, :cond_0
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lop;->b()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    :cond_0
+    return-void
+.end method
+
+.method public final setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    iget-object p1, p0, Lrn;->c:Lop;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lop;->b()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
+    .locals 0
+
+    invoke-static {p1, p0}, Landroidx/core/widget/a;->f(Landroid/view/ActionMode$Callback;Landroid/widget/TextView;)Landroid/view/ActionMode$Callback;
+
+    move-result-object p1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
+
+    return-void
+.end method
+
+.method public setEmojiCompatEnabled(Z)V
+    .locals 1
+
+    invoke-direct {p0}, Lrn;->getEmojiTextViewHelper()Lpo;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Lpo;->e(Z)V
 
-    const-string v0, " must have default constructor in order to be automatically recreated"
+    return-void
+.end method
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lrn;->b:Lv8;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-direct {v2, v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lv8;->G(Landroid/content/res/ColorStateList;)V
 
-    throw v2
+    :cond_0
+    return-void
+.end method
 
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
+.method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
 
-    const-string v1, "Can not perform this action after onSaveInstanceState"
+    iget-object v0, p0, Lrn;->b:Lv8;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    throw v0
+    invoke-virtual {v0, p1}, Lv8;->H(Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportCheckMarkTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+
+    iget-object v0, p0, Lrn;->a:Lsn;
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, v0, Lsn;->a:Landroid/os/Parcelable;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, Lsn;->c:Z
+
+    invoke-virtual {v0}, Lsn;->b()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportCheckMarkTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+
+    iget-object v0, p0, Lrn;->a:Lsn;
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, v0, Lsn;->b:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, Lsn;->d:Z
+
+    invoke-virtual {v0}, Lsn;->b()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+
+    iget-object v0, p0, Lrn;->c:Lop;
+
+    invoke-virtual {v0, p1}, Lop;->l(Landroid/content/res/ColorStateList;)V
+
+    invoke-virtual {v0}, Lop;->b()V
+
+    return-void
+.end method
+
+.method public setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+
+    iget-object v0, p0, Lrn;->c:Lop;
+
+    invoke-virtual {v0, p1}, Lop;->m(Landroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v0}, Lop;->b()V
+
+    return-void
+.end method
+
+.method public final setTextAppearance(Landroid/content/Context;I)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
+
+    iget-object v0, p0, Lrn;->c:Lop;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lop;->g(Landroid/content/Context;I)V
+
+    :cond_0
+    return-void
 .end method

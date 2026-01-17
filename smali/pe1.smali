@@ -1,84 +1,96 @@
 .class public final Lpe1;
-.super Lb5g;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    iput-object p2, p0, Lpe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    const/4 v0, 0x2
 
-    const/4 p2, 0x2
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpe1;->b:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Ljava/lang/String;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lpe1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lpe1;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lpe1;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-object v1, p0, Lpe1;->b:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, p2}, Lpe1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lpe1;->b:Ljava/lang/CharSequence;
 
-    return-object p2
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lpe1;
-
-    iget-object v1, p0, Lpe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    invoke-direct {v0, p2, v1}, Lpe1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
-
-    iput-object p1, v0, Lpe1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Lpe1;->b:Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Lpe1;->o:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p1, Ljava/lang/String;
+    move-result v0
 
-    iget-object v0, p0, Lpe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    return v0
+.end method
 
-    invoke-static {v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->z0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lee1;
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShareLink(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpe1;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lee1;->setTime(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-object v0
 .end method

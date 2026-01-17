@@ -1,127 +1,116 @@
-.class public abstract Lgcb;
+.class public final synthetic Lgcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic X:Lo58;
 
-.field public static final c:I
+.field public final synthetic Y:Lo58;
 
-.field public static final d:I
+.field public final synthetic a:I
 
-.field public static final e:I
+.field public final synthetic b:Lo58;
 
-.field public static final f:I
+.field public final synthetic c:Lo58;
 
-.field public static final g:I
+.field public final synthetic d:Lo58;
 
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
+.field public final synthetic o:Lo58;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;I)V
+    .locals 0
 
-    sget v0, Lw7d;->oneme_media_keyboard_bottom_panel:I
+    iput p7, p0, Lgcb;->a:I
 
-    sput v0, Lgcb;->a:I
+    iput-object p1, p0, Lgcb;->b:Lo58;
 
-    sget v0, Lw7d;->oneme_media_keyboard_close_action:I
+    iput-object p2, p0, Lgcb;->c:Lo58;
 
-    sput v0, Lgcb;->b:I
+    iput-object p3, p0, Lgcb;->d:Lo58;
 
-    sget v0, Lw7d;->oneme_media_keyboard_emoji_container:I
+    iput-object p4, p0, Lgcb;->o:Lo58;
 
-    sput v0, Lgcb;->c:I
+    iput-object p5, p0, Lgcb;->X:Lo58;
 
-    sget v0, Lw7d;->oneme_media_keyboard_emoji_list:I
+    iput-object p6, p0, Lgcb;->Y:Lo58;
 
-    sput v0, Lgcb;->d:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_emoji_tabs:I
-
-    sput v0, Lgcb;->e:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_fake_search_view:I
-
-    sput v0, Lgcb;->f:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_pager:I
-
-    sput v0, Lgcb;->g:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_recent_clear_confirmation_action:I
-
-    sput v0, Lgcb;->h:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_recent_clear_confirmation_cancel:I
-
-    sput v0, Lgcb;->i:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_remove_action:I
-
-    sput v0, Lgcb;->j:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_settings_action:I
-
-    sput v0, Lgcb;->k:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_showcase_action:I
-
-    sput v0, Lgcb;->l:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_stickers_container:I
-
-    sput v0, Lgcb;->m:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_stickers_header_title:I
-
-    sput v0, Lgcb;->n:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_stickers_list:I
-
-    sput v0, Lgcb;->o:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_stickers_tabs:I
-
-    sput v0, Lgcb;->p:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_tabs:I
-
-    sput v0, Lgcb;->q:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_view_type_category_emoji:I
-
-    sput v0, Lgcb;->r:I
-
-    sget v0, Lw7d;->oneme_media_keyboard_view_type_fake_search:I
-
-    sput v0, Lgcb;->s:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Lgcb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v1, Ldn1;
+
+    iget-object v0, p0, Lgcb;->b:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Landroid/content/Context;
+
+    iget-object v0, p0, Lgcb;->c:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Lgre;
+
+    iget-object v4, p0, Lgcb;->d:Lo58;
+
+    iget-object v5, p0, Lgcb;->o:Lo58;
+
+    iget-object v6, p0, Lgcb;->X:Lo58;
+
+    iget-object v7, p0, Lgcb;->Y:Lo58;
+
+    invoke-direct/range {v1 .. v7}, Ldn1;-><init>(Landroid/content/Context;Lgre;Lo58;Lo58;Lo58;Lo58;)V
+
+    return-object v1
+
+    :pswitch_0
+    new-instance v2, Lb6a;
+
+    iget-object v3, p0, Lgcb;->b:Lo58;
+
+    iget-object v4, p0, Lgcb;->c:Lo58;
+
+    iget-object v5, p0, Lgcb;->d:Lo58;
+
+    iget-object v6, p0, Lgcb;->o:Lo58;
+
+    iget-object v7, p0, Lgcb;->X:Lo58;
+
+    iget-object v8, p0, Lgcb;->Y:Lo58;
+
+    invoke-direct/range {v2 .. v8}, Lb6a;-><init>(Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,57 +1,31 @@
 .class public final Lea2;
-.super Ll84;
+.super Lda2;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lga2;
-
-.field public d:Lga2;
-
-.field public o:Ljava/lang/String;
-
-.field public s0:I
-
-
-# direct methods
-.method public constructor <init>(Lga2;Ll84;)V
-    .locals 0
-
-    iput-object p1, p0, Lea2;->Z:Lga2;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .locals 3
 
-    iput-object p1, p0, Lea2;->Y:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    iget p1, p0, Lea2;->s0:I
+    move-result v0
 
-    const/high16 v0, -0x80000000
+    const/4 v1, 0x0
 
-    or-int/2addr p1, v0
+    :goto_0
+    if-ge v1, v0, :cond_0
 
-    iput p1, p0, Lea2;->s0:I
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    const-wide/16 v0, 0x0
+    move-result-object v2
 
-    const/4 p1, 0x0
+    invoke-virtual {v2, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    iget-object v2, p0, Lea2;->Z:Lga2;
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v2, v0, v1, p0, p1}, Lga2;->a(JLl84;Ljava/lang/String;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
-
+    :cond_0
     return-object p1
 .end method

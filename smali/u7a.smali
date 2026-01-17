@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvje;
+.implements Lqke;
 
 
 # instance fields
@@ -39,7 +39,7 @@
 
     aget-wide p1, p4, p1
 
-    invoke-static {p1, p2}, Lqah;->U(J)J
+    invoke-static {p1, p2}, Lmbh;->U(J)J
 
     move-result-wide p1
 
@@ -54,7 +54,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p2, p0, p1, v0}, Lqah;->e([JJZ)I
+    invoke-static {p2, p0, p1, v0}, Lmbh;->e([JJZ)I
 
     move-result v1
 
@@ -136,15 +136,7 @@
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public final b(J)J
+.method public final a(J)J
     .locals 2
 
     iget-object v0, p0, Lu7a;->a:[J
@@ -163,11 +155,19 @@
 
     move-result-wide p1
 
-    invoke-static {p1, p2}, Lqah;->U(J)J
+    invoke-static {p1, p2}, Lmbh;->U(J)J
 
     move-result-wide p1
 
     return-wide p1
+.end method
+
+.method public final b()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
 .end method
 
 .method public final c()Z
@@ -178,7 +178,7 @@
     return v0
 .end method
 
-.method public final e(J)Llje;
+.method public final e(J)Lgke;
     .locals 6
 
     const-wide/16 v2, 0x0
@@ -187,11 +187,11 @@
 
     move-wide v0, p1
 
-    invoke-static/range {v0 .. v5}, Lqah;->j(JJJ)J
+    invoke-static/range {v0 .. v5}, Lmbh;->j(JJJ)J
 
     move-result-wide p1
 
-    invoke-static {p1, p2}, Lqah;->m0(J)J
+    invoke-static {p1, p2}, Lmbh;->m0(J)J
 
     move-result-wide p1
 
@@ -211,7 +211,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lqah;->U(J)J
+    invoke-static {v0, v1}, Lmbh;->U(J)J
 
     move-result-wide v0
 
@@ -223,13 +223,13 @@
 
     move-result-wide p1
 
-    new-instance v2, Llje;
+    new-instance v2, Lgke;
 
-    new-instance v3, Lrje;
+    new-instance v3, Lmke;
 
-    invoke-direct {v3, v0, v1, p1, p2}, Lrje;-><init>(JJ)V
+    invoke-direct {v3, v0, v1, p1, p2}, Lmke;-><init>(JJ)V
 
-    invoke-direct {v2, v3, v3}, Llje;-><init>(Lrje;Lrje;)V
+    invoke-direct {v2, v3, v3}, Lgke;-><init>(Lmke;Lmke;)V
 
     return-object v2
 .end method

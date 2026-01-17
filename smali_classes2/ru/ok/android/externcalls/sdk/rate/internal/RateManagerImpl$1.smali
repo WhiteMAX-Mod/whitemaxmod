@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lux3;
+.implements Lay3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;-><init>(Lcgd;Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;Lmq6;Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;)V
+    value = Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;-><init>(Lahd;Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;Llq6;Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lux3;"
+        "Lay3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;",
         "config",
-        "Lv2h;",
+        "Lb3h;",
         "accept",
         "(Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;)V",
         "<anonymous>"

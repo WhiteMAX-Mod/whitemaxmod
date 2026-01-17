@@ -1,188 +1,197 @@
-.class public final synthetic Lh1f;
-.super Ljava/lang/Object;
+.class public final Lh1f;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/settings/SettingsListScreen;
 
-.field public final synthetic b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/SettingsPrivacyScreen;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
     .locals 0
 
-    iput p2, p0, Lh1f;->a:I
+    iput-object p2, p0, Lh1f;->X:Lone/me/settings/SettingsListScreen;
 
-    iput-object p1, p0, Lh1f;->b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lh1f;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lh1f;->b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+    invoke-virtual {p0, p1, p2}, Lh1f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget-object v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->Z:[Lp38;
+    check-cast p1, Lh1f;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lh1f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lh1f;
+
+    iget-object v1, p0, Lh1f;->X:Lone/me/settings/SettingsListScreen;
+
+    invoke-direct {v0, p2, v1}, Lh1f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+
+    iput-object p1, v0, Lh1f;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lh1f;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lxl5;
+
+    instance-of p1, v0, Lc1f;
+
+    if-eqz p1, :cond_0
+
+    check-cast v0, Lc1f;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    instance-of p1, v0, Lz0f;
+
+    iget-object v1, p0, Lh1f;->X:Lone/me/settings/SettingsListScreen;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    check-cast v0, Lz0f;
+
+    iget-object v2, v0, Lz0f;->a:Ljava/lang/String;
+
+    invoke-static {p1, v2}, Lnf3;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-static {}, Lnf3;->b()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, v0, Lz0f;->b:Llhg;
 
     invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {p1, v0}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    :pswitch_0
-    sget-object v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->Z:[Lp38;
+    move-result-object p1
 
-    new-instance v2, Ld2f;
+    if-nez p1, :cond_1
 
-    new-instance v3, Lcwe;
+    goto :goto_1
 
-    sget-object v0, Lb1f;->a:Lb1f;
+    :cond_1
+    iget-object v0, v1, Lone/me/settings/SettingsListScreen;->u0:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v4
-
-    const/16 v5, 0x36
-
-    invoke-virtual {v4, v5}, Lu5;->d(I)Lz7g;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lb1f;->a()Ld68;
-
-    move-result-object v5
-
-    check-cast v5, Lz7g;
-
-    invoke-virtual {v5}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lbbg;
-
-    invoke-direct {v3, v4, v5}, Lcwe;-><init>(Ld68;Lbbg;)V
-
-    new-instance v4, Lase;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v5
-
-    const/16 v6, 0x32
-
-    invoke-virtual {v5, v6}, Lu5;->d(I)Lz7g;
-
-    move-result-object v5
-
-    new-instance v7, Lh1f;
-
-    const/4 v8, 0x1
-
-    invoke-direct {v7, v1, v8}, Lh1f;-><init>(Lone/me/settings/privacy/ui/SettingsPrivacyScreen;I)V
-
-    const/4 v1, 0x5
-
-    invoke-direct {v4, v5, v1, v7}, Lase;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0}, Lb1f;->a()Ld68;
-
-    move-result-object v1
-
-    check-cast v1, Lz7g;
-
-    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v5, v1
-
-    check-cast v5, Lbbg;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v1
-
-    const/16 v7, 0x56
-
-    invoke-virtual {v1, v7}, Lu5;->d(I)Lz7g;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v6}, Lu5;->d(I)Lz7g;
-
-    move-result-object v7
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v6
-
-    const/16 v8, 0x34
-
-    invoke-virtual {v6, v8}, Lu5;->d(I)Lz7g;
-
-    move-result-object v8
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v6
-
-    const/16 v9, 0x4b
-
-    invoke-virtual {v6, v9}, Lu5;->d(I)Lz7g;
-
-    move-result-object v9
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v6
-
-    const/16 v10, 0x45
-
-    invoke-virtual {v6, v10}, Lu5;->d(I)Lz7g;
-
-    move-result-object v10
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/16 v6, 0x18b
+    check-cast v0, Ldjb;
 
-    invoke-virtual {v0, v6}, Lu5;->c(I)Ljava/lang/Object;
+    new-instance v1, Lrjb;
 
-    move-result-object v0
+    sget v2, Lv5e;->v:I
 
-    move-object v11, v0
+    invoke-direct {v1, v2}, Lrjb;-><init>(I)V
 
-    check-cast v11, Lwr3;
+    invoke-virtual {v0, v1}, Ldjb;->e(Lvjb;)V
 
-    move-object v6, v1
+    invoke-virtual {v0, p1}, Ldjb;->h(Ljava/lang/CharSequence;)V
 
-    invoke-direct/range {v2 .. v11}, Ld2f;-><init>(Lcwe;Lase;Lbbg;Ld68;Ld68;Ld68;Ld68;Ld68;Lwr3;)V
+    invoke-virtual {v0}, Ldjb;->i()Lcjb;
 
-    return-object v2
+    goto :goto_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    instance-of p1, v0, Lb1f;
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, v1, Lone/me/settings/SettingsListScreen;->X:Ln8g;
+
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Li14;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    check-cast v0, Lb1f;
+
+    iget-object v0, v0, Lb1f;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1, v1, v0}, Li14;->a(Landroid/content/Context;Landroid/net/Uri;)V
+
+    goto :goto_1
+
+    :cond_3
+    sget-object p1, La1f;->a:La1f;
+
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {v1}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
+
+    iget-object p1, v1, Lone/me/settings/SettingsListScreen;->y0:Lln;
+
+    if-eqz p1, :cond_4
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0, v0, v0}, Lln;->f(ZZZ)V
+
+    :cond_4
+    :goto_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

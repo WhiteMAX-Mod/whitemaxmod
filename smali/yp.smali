@@ -1,234 +1,216 @@
-.class public Lyp;
+.class public final Lyp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:[Ljava/lang/Class;
-
-.field public static final c:[I
-
-.field public static final d:[I
-
-.field public static final e:[I
-
-.field public static final f:[I
-
-.field public static final g:[Ljava/lang/String;
-
-.field public static final h:Lwbf;
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public final a:Landroid/view/View;
+
+.field public final b:Ljava/lang/String;
+
+.field public c:Ljava/lang/reflect/Method;
+
+.field public d:Landroid/content/Context;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    const-class v0, Landroid/content/Context;
-
-    const-class v1, Landroid/util/AttributeSet;
-
-    filled-new-array {v0, v1}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    sput-object v0, Lyp;->b:[Ljava/lang/Class;
-
-    const v0, 0x101026f
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lyp;->c:[I
-
-    const v0, 0x1010580
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lyp;->d:[I
-
-    const v0, 0x101057c
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lyp;->e:[I
-
-    const v0, 0x1010574
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lyp;->f:[I
-
-    const-string v0, "android.view."
-
-    const-string v1, "android.webkit."
-
-    const-string v2, "android.widget."
-
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lyp;->g:[Ljava/lang/String;
-
-    new-instance v0, Lwbf;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lwbf;-><init>(I)V
-
-    sput-object v0, Lyp;->h:Lwbf;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x2
+    iput-object p1, p0, Lyp;->a:Landroid/view/View;
 
-    new-array v0, v0, [Ljava/lang/Object;
-
-    iput-object v0, p0, Lyp;->a:[Ljava/lang/Object;
+    iput-object p2, p0, Lyp;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Landroid/util/AttributeSet;)Lon;
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    new-instance v0, Lon;
+    iget-object v0, p0, Lyp;->c:Ljava/lang/reflect/Method;
 
-    sget v1, Lh4d;->autoCompleteTextViewStyle:I
+    if-nez v0, :cond_4
 
-    invoke-direct {v0, p1, p2, v1}, Lon;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iget-object v0, p0, Lyp;->a:Landroid/view/View;
 
-    return-object v0
-.end method
-
-.method public b(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/AppCompatButton;
-    .locals 1
-
-    new-instance v0, Landroidx/appcompat/widget/AppCompatButton;
-
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-object v0
-.end method
-
-.method public c(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/AppCompatCheckBox;
-    .locals 1
-
-    new-instance v0, Landroidx/appcompat/widget/AppCompatCheckBox;
-
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-object v0
-.end method
-
-.method public d(Landroid/content/Context;Landroid/util/AttributeSet;)Lro;
-    .locals 1
-
-    new-instance v0, Lro;
-
-    invoke-direct {v0, p1, p2}, Lro;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-object v0
-.end method
-
-.method public e(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/AppCompatTextView;
-    .locals 1
-
-    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-object v0
-.end method
-
-.method public final f(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
-    .locals 2
-
-    sget-object v0, Lyp;->h:Lwbf;
-
-    invoke-virtual {v0, p2}, Lwbf;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/reflect/Constructor;
+    :goto_0
+    iget-object v2, p0, Lyp;->b:Ljava/lang/String;
 
-    if-nez v1, :cond_1
-
-    if-eqz p3, :cond_0
+    if-eqz v1, :cond_2
 
     :try_start_0
-    invoke-virtual {p3, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/content/Context;->isRestricted()Z
 
-    move-result-object p3
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    const-class v4, Landroid/view/View;
+
+    filled-new-array {v4}, [Ljava/lang/Class;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    iput-object v2, p0, Lyp;->c:Ljava/lang/reflect/Method;
+
+    iput-object v1, p0, Lyp;->d:Landroid/content/Context;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    :cond_0
+    instance-of v2, v1, Landroid/content/ContextWrapper;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Landroid/content/ContextWrapper;
+
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v1
 
     goto :goto_0
 
-    :cond_0
-    move-object p3, p2
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object p1
-
+    :cond_1
     const/4 v1, 0x0
 
-    invoke-static {p3, v1, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Landroid/view/View;->getId()I
+
+    move-result p1
+
+    const/4 v1, -0x1
+
+    if-ne p1, v1, :cond_3
+
+    const-string p1, ""
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, " with id \'"
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const-class p3, Landroid/view/View;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+    const-string p1, "\'"
 
-    move-result-object p1
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p3, Lyp;->b:[Ljava/lang/Class;
-
-    invoke-virtual {p1, p3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    iget-object p1, p0, Lyp;->a:[Ljava/lang/Object;
-
-    invoke-virtual {v1, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Landroid/view/View;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    :goto_1
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    return-object p1
+    const-string v3, "Could not find method "
 
-    :catch_0
-    const/4 p1, 0x0
+    const-string v4, "(View) in a parent or ancestor Context for android:onClick attribute defined on view "
 
-    return-object p1
+    invoke-static {v3, v2, v4}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_4
+    :goto_2
+    :try_start_1
+    iget-object v0, p0, Lyp;->c:Ljava/lang/reflect/Method;
+
+    iget-object v1, p0, Lyp;->d:Landroid/content/Context;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
+
+    return-void
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_3
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_4
+
+    :goto_3
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Could not execute method for android:onClick"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :goto_4
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Could not execute non-public method for android:onClick"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

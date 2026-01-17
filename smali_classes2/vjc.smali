@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxjc;
+.implements Lwjc;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lvjc;->a:I
+    iput-object p1, p0, Lvjc;->a:Landroid/net/Uri;
 
     return-void
 .end method
@@ -44,11 +44,15 @@
     :cond_1
     check-cast p1, Lvjc;
 
-    iget v1, p0, Lvjc;->a:I
+    iget-object v1, p0, Lvjc;->a:Landroid/net/Uri;
 
-    iget p1, p1, Lvjc;->a:I
+    iget-object p1, p1, Lvjc;->a:Landroid/net/Uri;
 
-    if-eq v1, p1, :cond_2
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -59,9 +63,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lvjc;->a:I
+    iget-object v0, p0, Lvjc;->a:Landroid/net/Uri;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
     move-result v0
 
@@ -69,15 +73,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "ShowPhoto(index="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShareImage(uri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvjc;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget v2, p0, Lvjc;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

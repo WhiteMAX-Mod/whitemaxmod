@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method public constructor <init>(IIIIILrj6;ZLjava/lang/RuntimeException;)V
+.method public constructor <init>(IIIIILpj6;ZLjava/lang/RuntimeException;)V
     .locals 3
 
     const-string v0, "AudioTrack init failed "
@@ -19,11 +19,11 @@
 
     const-string v2, ", "
 
-    invoke-static {v0, p1, v1, p2, v2}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p1, v1, p2, v2}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
-    invoke-static {p2, p3, v2, p4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {p2, p3, v2, p4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual {p2, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

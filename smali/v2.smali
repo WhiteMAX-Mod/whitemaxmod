@@ -1,136 +1,160 @@
-.class public Lv2;
-.super Lq2;
+.class public final Lv2;
+.super Ln2;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/SortedSet;
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public final synthetic d:Lhda;
+.field public final synthetic o:Lw2;
 
 
 # direct methods
-.method public constructor <init>(Lhda;Ljava/util/SortedMap;)V
+.method public constructor <init>(Lw2;)V
     .locals 0
 
-    iput-object p1, p0, Lv2;->d:Lhda;
+    .line 1
+    iput-object p1, p0, Lv2;->o:Lw2;
 
-    invoke-direct {p0, p1, p2}, Lq2;-><init>(Lh2;Ljava/util/Map;)V
+    invoke-direct {p0, p1}, Ln2;-><init>(Lw2;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lw2;I)V
+    .locals 1
+
+    .line 2
+    iput-object p1, p0, Lv2;->o:Lw2;
+
+    .line 3
+    iget-object v0, p1, Lw2;->c:Ljava/util/Collection;
+
+    .line 4
+    check-cast v0, Ljava/util/List;
+
+    .line 5
+    invoke-interface {v0, p2}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p2
+
+    invoke-direct {p0, p1, p2}, Ln2;-><init>(Lw2;Ljava/util/ListIterator;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/util/SortedMap;
+.method public final add(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-object v0, p0, Lv2;->o:Lw2;
+
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v1
+
+    invoke-virtual {p0}, Lv2;->c()Ljava/util/ListIterator;
+
+    move-result-object v2
+
+    invoke-interface {v2, p1}, Ljava/util/ListIterator;->add(Ljava/lang/Object;)V
+
+    iget-object p1, v0, Lw2;->Y:Ljava/io/Serializable;
+
+    check-cast p1, Lg2;
+
+    iget v2, p1, Lg2;->o:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    iput v2, p1, Lg2;->o:I
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lw2;->a()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c()Ljava/util/ListIterator;
     .locals 1
 
-    iget-object v0, p0, Lq2;->b:Ljava/util/Map;
+    invoke-virtual {p0}, Ln2;->a()V
 
-    check-cast v0, Ljava/util/SortedMap;
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
 
     return-object v0
 .end method
 
-.method public final comparator()Ljava/util/Comparator;
+.method public final hasPrevious()Z
     .locals 1
 
-    invoke-virtual {p0}, Lv2;->a()Ljava/util/SortedMap;
+    invoke-virtual {p0}, Lv2;->c()Ljava/util/ListIterator;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/SortedMap;->comparator()Ljava/util/Comparator;
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
+    return v0
 .end method
 
-.method public final first()Ljava/lang/Object;
+.method public final nextIndex()I
     .locals 1
 
-    invoke-virtual {p0}, Lv2;->a()Ljava/util/SortedMap;
+    invoke-virtual {p0}, Lv2;->c()Ljava/util/ListIterator;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/SortedMap;->firstKey()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
+    return v0
 .end method
 
-.method public headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
-
-    new-instance v0, Lv2;
-
-    invoke-virtual {p0}, Lv2;->a()Ljava/util/SortedMap;
-
-    move-result-object v1
-
-    invoke-interface {v1, p1}, Ljava/util/SortedMap;->headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lv2;->d:Lhda;
-
-    invoke-direct {v0, v1, p1}, Lv2;-><init>(Lhda;Ljava/util/SortedMap;)V
-
-    return-object v0
-.end method
-
-.method public final last()Ljava/lang/Object;
+.method public final previous()Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Lv2;->a()Ljava/util/SortedMap;
+    invoke-virtual {p0}, Lv2;->c()Ljava/util/ListIterator;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/SortedMap;->lastKey()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
+.method public final previousIndex()I
+    .locals 1
 
-    new-instance v0, Lv2;
+    invoke-virtual {p0}, Lv2;->c()Ljava/util/ListIterator;
 
-    invoke-virtual {p0}, Lv2;->a()Ljava/util/SortedMap;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
 
-    invoke-interface {v1, p1, p2}, Ljava/util/SortedMap;->subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
+    move-result v0
 
-    move-result-object p1
-
-    iget-object p2, p0, Lv2;->d:Lhda;
-
-    invoke-direct {v0, p2, p1}, Lv2;-><init>(Lhda;Ljava/util/SortedMap;)V
-
-    return-object v0
+    return v0
 .end method
 
-.method public tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
+.method public final set(Ljava/lang/Object;)V
+    .locals 1
 
-    new-instance v0, Lv2;
+    invoke-virtual {p0}, Lv2;->c()Ljava/util/ListIterator;
 
-    invoke-virtual {p0}, Lv2;->a()Ljava/util/SortedMap;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-interface {v0, p1}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
 
-    invoke-interface {v1, p1}, Ljava/util/SortedMap;->tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lv2;->d:Lhda;
-
-    invoke-direct {v0, v1, p1}, Lv2;-><init>(Lhda;Ljava/util/SortedMap;)V
-
-    return-object v0
+    return-void
 .end method

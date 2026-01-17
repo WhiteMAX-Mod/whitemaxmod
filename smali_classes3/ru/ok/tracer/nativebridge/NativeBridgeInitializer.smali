@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leq7;
+.implements Lmp7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Leq7;"
+        "Lmp7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/nativebridge/NativeBridgeInitializer;",
-        "Leq7;",
-        "Lv2h;",
+        "Lmp7;",
+        "Lb3h;",
         "<init>",
         "()V",
         "tracer-crash-report-native_release"
@@ -68,7 +68,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :catchall_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

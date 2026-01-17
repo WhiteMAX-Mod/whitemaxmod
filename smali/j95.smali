@@ -1,13 +1,28 @@
-.class public abstract Lj95;
+.class public interface abstract Lj95;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/view/View;FF)V
-    .locals 0
+# static fields
+.field public static final p:Lxp4;
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->drawableHotspotChanged(FF)V
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lxp4;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lxp4;-><init>(I)V
+
+    sput-object v0, Lj95;->p:Lxp4;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract release()V
 .end method

@@ -9,24 +9,20 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lzw4;
+.field public final synthetic b:Ljava/lang/Runnable;
 
-.field public final synthetic c:Ljava/lang/Runnable;
-
-.field public final synthetic d:Luz6;
+.field public final synthetic c:Lski;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzw4;Ljava/lang/Runnable;Luz6;I)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;Lski;I)V
     .locals 0
 
-    iput p4, p0, Lxw4;->a:I
+    iput p3, p0, Lxw4;->a:I
 
-    iput-object p1, p0, Lxw4;->b:Lzw4;
+    iput-object p1, p0, Lxw4;->b:Ljava/lang/Runnable;
 
-    iput-object p2, p0, Lxw4;->c:Ljava/lang/Runnable;
-
-    iput-object p3, p0, Lxw4;->d:Luz6;
+    iput-object p2, p0, Lxw4;->c:Lski;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,69 +32,85 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 2
 
     iget v0, p0, Lxw4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lxw4;->b:Lzw4;
+    iget-object v0, p0, Lxw4;->b:Ljava/lang/Runnable;
 
-    iget-object v0, v0, Lzw4;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v1, p0, Lxw4;->c:Lski;
 
-    new-instance v1, Lvw4;
+    iget-object v1, v1, Lski;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    check-cast v1, Ldx4;
 
-    iget-object v3, p0, Lxw4;->c:Ljava/lang/Runnable;
+    :try_start_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    iget-object v4, p0, Lxw4;->d:Luz6;
+    const/4 v0, 0x0
 
-    invoke-direct {v1, v3, v4, v2}, Lvw4;-><init>(Ljava/lang/Runnable;Luz6;I)V
+    invoke-virtual {v1, v0}, Lf4;->m(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    goto :goto_0
 
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v1, v0}, Lf4;->n(Ljava/lang/Throwable;)Z
+
+    :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lxw4;->b:Lzw4;
+    iget-object v0, p0, Lxw4;->b:Ljava/lang/Runnable;
 
-    iget-object v0, v0, Lzw4;->a:Ljava/util/concurrent/ExecutorService;
+    :try_start_1
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    new-instance v1, Lvw4;
+    goto :goto_1
 
-    const/4 v2, 0x2
+    :catch_1
+    move-exception v0
 
-    iget-object v3, p0, Lxw4;->c:Ljava/lang/Runnable;
+    iget-object v1, p0, Lxw4;->c:Lski;
 
-    iget-object v4, p0, Lxw4;->d:Luz6;
+    iget-object v1, v1, Lski;->b:Ljava/lang/Object;
 
-    invoke-direct {v1, v3, v4, v2}, Lvw4;-><init>(Ljava/lang/Runnable;Luz6;I)V
+    check-cast v1, Ldx4;
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v0}, Lf4;->n(Ljava/lang/Throwable;)Z
 
+    :goto_1
     return-void
 
     :pswitch_1
-    iget-object v0, p0, Lxw4;->b:Lzw4;
+    iget-object v0, p0, Lxw4;->b:Ljava/lang/Runnable;
 
-    iget-object v0, v0, Lzw4;->a:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v1, Lvw4;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lxw4;->c:Ljava/lang/Runnable;
-
-    iget-object v4, p0, Lxw4;->d:Luz6;
-
-    invoke-direct {v1, v3, v4, v2}, Lvw4;-><init>(Ljava/lang/Runnable;Luz6;I)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_start_2
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
     return-void
 
-    nop
+    :catch_2
+    move-exception v0
+
+    iget-object v1, p0, Lxw4;->c:Lski;
+
+    iget-object v1, v1, Lski;->b:Ljava/lang/Object;
+
+    check-cast v1, Ldx4;
+
+    invoke-virtual {v1, v0}, Lf4;->n(Ljava/lang/Throwable;)Z
+
+    throw v0
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -1,3 +1,6 @@
 .class public final Lgpj;
-.super Lyni;
+.super Lwoi;
 .source "SourceFile"
+
+# interfaces
+.implements Lrqj;

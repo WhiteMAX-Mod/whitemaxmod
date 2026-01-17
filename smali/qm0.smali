@@ -1,3 +1,3 @@
 .class public final Lqm0;
-.super Lq05;
+.super Ls05;
 .source "SourceFile"

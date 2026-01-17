@@ -1,158 +1,236 @@
 .class public final Lgzc;
-.super Ljava/lang/Object;
+.super Lbp9;
 .source "SourceFile"
 
 
 # instance fields
-.field public volatile a:Z
+.field public a:F
 
-.field public final b:Ljava/lang/Object;
+.field public b:F
 
+.field public c:I
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lgzc;->a:Z
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lgzc;->b:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public d:Z
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final computeSerializedSize()I
+    .locals 3
 
-    iget-object v0, p0, Lgzc;->b:Ljava/lang/Object;
+    iget v0, p0, Lgzc;->a:F
 
-    monitor-enter v0
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    const/4 v1, 0x1
+    move-result v0
 
-    :try_start_0
-    iput-boolean v1, p0, Lgzc;->a:Z
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lgzc;->b:Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v2
 
-    monitor-exit v0
+    if-eq v0, v2, :cond_0
 
-    return-void
+    const/4 v0, 0x1
 
-    :catchall_0
-    move-exception v1
+    invoke-static {v0}, Lwg3;->e(I)I
 
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public final b(J)V
-    .locals 5
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    add-long/2addr p1, v0
-
-    cmp-long v2, p1, v0
-
-    const/4 v3, 0x0
-
-    if-gez v2, :cond_1
-
-    iget-object p1, p0, Lgzc;->b:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :goto_0
-    :try_start_0
-    iget-boolean p2, p0, Lgzc;->a:Z
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lgzc;->b:Ljava/lang/Object;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->wait()V
+    move-result v0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p2
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v2, p0, Lgzc;->b:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Lwg3;->e(I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_1
+    iget v1, p0, Lgzc;->c:I
+
+    if-eqz v1, :cond_2
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v1}, Lwg3;->f(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_2
+    iget-boolean v1, p0, Lgzc;->d:Z
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Lwg3;->a(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final mergeFrom(Lvg3;)Lbp9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lvg3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xd
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x15
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x18
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x20
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     goto :goto_1
 
-    :cond_0
-    iput-boolean v3, p0, Lgzc;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    return-void
-
-    :goto_1
-    monitor-exit p1
-
-    throw p2
-
     :cond_1
-    iget-object v2, p0, Lgzc;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Lvg3;->f()Z
 
-    monitor-enter v2
+    move-result v0
 
-    :goto_2
-    :try_start_1
-    iget-boolean v4, p0, Lgzc;->a:Z
+    iput-boolean v0, p0, Lgzc;->d:Z
 
-    if-nez v4, :cond_2
-
-    cmp-long v4, v0, p1
-
-    if-gez v4, :cond_2
-
-    iget-object v4, p0, Lgzc;->b:Ljava/lang/Object;
-
-    sub-long v0, p1, v0
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/Object;->wait(J)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_3
+    goto :goto_0
 
     :cond_2
-    iput-boolean v3, p0, Lgzc;->a:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-virtual {p1}, Lvg3;->p()I
 
-    monitor-exit v2
+    move-result v0
 
+    iput v0, p0, Lgzc;->c:I
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Lvg3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lgzc;->b:F
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lvg3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lgzc;->a:F
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lwg3;)V
+    .locals 3
+
+    iget v0, p0, Lgzc;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    iget v2, p0, Lgzc;->a:F
+
+    invoke-virtual {p1, v0, v2}, Lwg3;->v(IF)V
+
+    :cond_0
+    iget v0, p0, Lgzc;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v0, 0x2
+
+    iget v1, p0, Lgzc;->b:F
+
+    invoke-virtual {p1, v0, v1}, Lwg3;->v(IF)V
+
+    :cond_1
+    iget v0, p0, Lgzc;->c:I
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
+
+    :cond_2
+    iget-boolean v0, p0, Lgzc;->d:Z
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
+
+    :cond_3
     return-void
-
-    :goto_3
-    monitor-exit v2
-
-    throw p1
 .end method

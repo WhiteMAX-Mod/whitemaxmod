@@ -1,143 +1,155 @@
 .class public final Leqi;
-.super Ljava/lang/Object;
+.super Lhpi;
 .source "SourceFile"
-
-# interfaces
-.implements Liqi;
-
-
-# static fields
-.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field public volatile a:Liqi;
-
-.field public volatile b:Ljava/lang/Object;
+.field public final b:Lieg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Loe8;Lieg;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    const/4 p1, 0x4
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lhqi;-><init>(I)V
 
-    sput-object v0, Leqi;->c:Ljava/lang/Object;
+    iput-object p2, p0, Leqi;->b:Lieg;
 
     return-void
 .end method
 
-.method public static a(Liqi;)Liqi;
-    .locals 2
-
-    instance-of v0, p0, Leqi;
-
-    if-eqz v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Leqi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v1, Leqi;->c:Ljava/lang/Object;
-
-    iput-object v1, v0, Leqi;->b:Ljava/lang/Object;
-
-    iput-object p0, v0, Leqi;->a:Liqi;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final d()Ljava/lang/Object;
-    .locals 5
+.method public final a(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
 
-    const-string v0, "Scoped provider was invoked recursively returning different results: "
+    new-instance v0, Lcom/google/android/gms/common/api/ApiException;
 
-    iget-object v1, p0, Leqi;->b:Ljava/lang/Object;
+    invoke-direct {v0, p1}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
 
-    sget-object v2, Leqi;->c:Ljava/lang/Object;
+    iget-object p1, p0, Leqi;->b:Lieg;
 
-    if-ne v1, v2, :cond_3
+    invoke-virtual {p1, v0}, Lieg;->c(Ljava/lang/Exception;)Z
 
-    monitor-enter p0
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Exception;)V
+    .locals 1
+
+    iget-object v0, p0, Leqi;->b:Lieg;
+
+    invoke-virtual {v0, p1}, Lieg;->c(Ljava/lang/Exception;)Z
+
+    return-void
+.end method
+
+.method public final c(Lepi;)V
+    .locals 1
 
     :try_start_0
-    iget-object v1, p0, Leqi;->b:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Leqi;->h(Lepi;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-ne v1, v2, :cond_2
+    return-void
 
-    iget-object v1, p0, Leqi;->a:Liqi;
+    :catch_0
+    move-exception p1
 
-    invoke-interface {v1}, Liqi;->d()Ljava/lang/Object;
+    iget-object v0, p0, Leqi;->b:Lieg;
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Lieg;->c(Ljava/lang/Exception;)Z
 
-    iget-object v3, p0, Leqi;->b:Ljava/lang/Object;
+    return-void
 
-    if-eq v3, v2, :cond_1
+    :catch_1
+    move-exception p1
 
-    if-ne v3, v1, :cond_0
+    invoke-static {p1}, Lhqi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    new-instance v2, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0, p1}, Leqi;->a(Lcom/google/android/gms/common/api/Status;)V
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :catch_2
+    move-exception p1
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " & "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". This is likely due to a circular dependency."
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Lhqi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Leqi;->a(Lcom/google/android/gms/common/api/Status;)V
 
-    throw v2
+    throw p1
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public final bridge synthetic d(Lvnb;Z)V
+    .locals 0
 
-    goto :goto_1
+    return-void
+.end method
 
-    :cond_1
-    :goto_0
-    iput-object v1, p0, Leqi;->b:Ljava/lang/Object;
+.method public final f(Lepi;)Z
+    .locals 1
+
+    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Leqi;->a:Liqi;
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    monitor-exit p0
+    move-result-object p1
 
-    return-object v1
+    check-cast p1, Lopi;
 
-    :goto_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 p1, 0x0
 
-    throw v0
+    return p1
+.end method
 
-    :cond_3
-    return-object v1
+.method public final g(Lepi;)[Lvx5;
+    .locals 1
+
+    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lopi;
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final h(Lepi;)V
+    .locals 1
+
+    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lopi;
+
+    iget-object p1, p0, Leqi;->b:Lieg;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1, v0}, Lieg;->d(Ljava/lang/Object;)V
+
+    return-void
 .end method

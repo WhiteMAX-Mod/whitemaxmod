@@ -1,148 +1,85 @@
 .class public final La8i;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lq8i;
 
 
 # instance fields
-.field public final synthetic X:Ln8i;
-
-.field public o:I
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Ln8i;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput-object p1, p0, La8i;->X:Ln8i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, La8i;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lac4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, La8i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, La8i;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, La8i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, La8i;
-
-    iget-object v0, p0, La8i;->X:Ln8i;
-
-    invoke-direct {p1, v0, p2}, La8i;-><init>(Ln8i;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, La8i;->X:Ln8i;
-
-    iget-object v1, v0, Ln8i;->b1:Lyl5;
-
-    iget v2, p0, La8i;->o:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, La8i;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast p1, La8i;
 
-    iget-object p1, v0, Ln8i;->N0:Lhof;
+    iget-boolean v1, p0, La8i;->a:Z
 
-    invoke-virtual {p1}, Lhof;->getValue()Ljava/lang/Object;
+    iget-boolean p1, p1, La8i;->a:Z
 
-    move-result-object p1
+    if-eq v1, p1, :cond_2
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, v0, Ln8i;->Q0:Lhof;
-
-    iput v3, p0, La8i;->o:I
-
-    invoke-static {p1, p0}, Lqx0;->p(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/String;
+    return v0
+.end method
 
-    new-instance v0, Li7i;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-direct {v0, p1}, Li7i;-><init>(Ljava/lang/String;)V
+    iget-boolean v0, p0, La8i;->a:Z
 
-    invoke-static {v1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    goto :goto_1
+    move-result v0
 
-    :cond_3
-    new-instance p1, Lz6i;
+    return v0
+.end method
 
-    const/4 v0, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-direct {p1, v0}, Lz6i;-><init>(Z)V
+    const-string v0, "OpenQrScanner(fileSelect="
 
-    invoke-static {v1, p1}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    const-string v1, ")"
 
-    :goto_1
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget-boolean v2, p0, La8i;->a:Z
 
-    return-object p1
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

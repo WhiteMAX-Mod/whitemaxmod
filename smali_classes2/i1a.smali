@@ -1,142 +1,67 @@
-.class public final synthetic Li1a;
+.class public final Li1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
-
 
 # instance fields
-.field public final synthetic X:Lux5;
+.field public final a:Lo58;
 
-.field public final synthetic Y:Ld68;
+.field public final b:Lo58;
 
-.field public final synthetic Z:Ld68;
-
-.field public final synthetic a:Lj1a;
-
-.field public final synthetic b:Ld68;
-
-.field public final synthetic c:Ld68;
-
-.field public final synthetic d:Ld68;
-
-.field public final synthetic o:Landroid/content/Context;
-
-.field public final synthetic s0:Ld68;
-
-.field public final synthetic t0:Ld68;
-
-.field public final synthetic u0:Ld68;
-
-.field public final synthetic v0:Ld68;
-
-.field public final synthetic w0:Ld68;
-
-.field public final synthetic x0:Ltee;
+.field public final c:Ln8g;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj1a;Ld68;Ld68;Ld68;Landroid/content/Context;Lux5;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ltee;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lwx5;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lqfe;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;)V
+    .locals 15
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Li1a;->a:Lj1a;
+    move-object/from16 v0, p15
 
-    iput-object p2, p0, Li1a;->b:Ld68;
+    iput-object v0, p0, Li1a;->a:Lo58;
 
-    iput-object p3, p0, Li1a;->c:Ld68;
+    move-object/from16 v0, p16
 
-    iput-object p4, p0, Li1a;->d:Ld68;
+    iput-object v0, p0, Li1a;->b:Lo58;
 
-    iput-object p5, p0, Li1a;->o:Landroid/content/Context;
+    new-instance v0, Lh1a;
 
-    iput-object p6, p0, Li1a;->X:Lux5;
+    move-object v1, p0
 
-    iput-object p7, p0, Li1a;->Y:Ld68;
+    move-object/from16 v5, p1
 
-    iput-object p8, p0, Li1a;->Z:Ld68;
+    move-object/from16 v6, p2
 
-    iput-object p9, p0, Li1a;->s0:Ld68;
+    move-object/from16 v7, p3
 
-    iput-object p10, p0, Li1a;->t0:Ld68;
+    move-object/from16 v8, p4
 
-    iput-object p11, p0, Li1a;->u0:Ld68;
+    move-object/from16 v9, p5
 
-    iput-object p12, p0, Li1a;->v0:Ld68;
+    move-object/from16 v10, p6
 
-    iput-object p13, p0, Li1a;->w0:Ld68;
+    move-object/from16 v11, p7
 
-    iput-object p14, p0, Li1a;->x0:Ltee;
+    move-object/from16 v12, p8
+
+    move-object/from16 v13, p9
+
+    move-object/from16 v14, p10
+
+    move-object/from16 v2, p11
+
+    move-object/from16 v3, p12
+
+    move-object/from16 v4, p13
+
+    invoke-direct/range {v0 .. v14}, Lh1a;-><init>(Li1a;Lo58;Lo58;Lo58;Landroid/content/Context;Lwx5;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lqfe;)V
+
+    new-instance v2, Ln8g;
+
+    invoke-direct {v2, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v2, p0, Li1a;->c:Ln8g;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Li1a;->a:Lj1a;
-
-    iget-object v12, v1, Lj1a;->b:Ld68;
-
-    iget-object v1, v0, Li1a;->b:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v14, v1
-
-    check-cast v14, Lbbg;
-
-    iget-object v1, v0, Li1a;->c:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v15, v1
-
-    check-cast v15, Ldah;
-
-    iget-object v1, v0, Li1a;->d:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object/from16 v16, v1
-
-    check-cast v16, Len8;
-
-    new-instance v2, Le2a;
-
-    iget-object v3, v0, Li1a;->o:Landroid/content/Context;
-
-    iget-object v4, v0, Li1a;->X:Lux5;
-
-    iget-object v5, v0, Li1a;->Y:Ld68;
-
-    iget-object v6, v0, Li1a;->Z:Ld68;
-
-    iget-object v7, v0, Li1a;->s0:Ld68;
-
-    iget-object v8, v0, Li1a;->t0:Ld68;
-
-    iget-object v9, v0, Li1a;->u0:Ld68;
-
-    iget-object v10, v0, Li1a;->v0:Ld68;
-
-    iget-object v11, v0, Li1a;->w0:Ld68;
-
-    iget-object v13, v0, Li1a;->x0:Ltee;
-
-    invoke-direct/range {v2 .. v16}, Le2a;-><init>(Landroid/content/Context;Lux5;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ltee;Lbbg;Ldah;Len8;)V
-
-    return-object v2
 .end method

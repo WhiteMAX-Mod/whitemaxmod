@@ -1,205 +1,304 @@
 .class public final Lmc2;
-.super Loj0;
+.super Lkotlinx/coroutines/internal/Segment;
 .source "SourceFile"
 
 
 # instance fields
-.field public i:[I
+.field public final a:Lyw0;
 
-.field public j:[I
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+
+# direct methods
+.method public constructor <init>(JLmc2;Lyw0;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3, p5}, Lkotlinx/coroutines/internal/Segment;-><init>(JLkotlinx/coroutines/internal/Segment;I)V
+
+    iput-object p4, p0, Lmc2;->a:Lyw0;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    sget p2, Lax0;->b:I
+
+    mul-int/lit8 p2, p2, 0x2
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+
+    iput-object p1, p0, Lmc2;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final c(Ljava/nio/ByteBuffer;)V
-    .locals 7
+.method public final a(Ljava/lang/Object;ILjava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Lmc2;->j:[I
+    mul-int/lit8 p2, p2, 0x2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    add-int/2addr p2, v0
 
-    move-result v1
+    :cond_0
+    iget-object v1, p0, Lmc2;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {v1, p2, p1, p3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
-    sub-int v3, v2, v1
+    if-eqz v2, :cond_1
 
-    iget-object v4, p0, Loj0;->b:Lz50;
-
-    iget v4, v4, Lz50;->d:I
-
-    div-int/2addr v3, v4
-
-    iget-object v4, p0, Loj0;->c:Lz50;
-
-    iget v4, v4, Lz50;->d:I
-
-    mul-int/2addr v3, v4
-
-    invoke-virtual {p0, v3}, Loj0;->j(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v3
-
-    :goto_0
-    if-ge v1, v2, :cond_1
-
-    array-length v4, v0
-
-    const/4 v5, 0x0
-
-    :goto_1
-    if-ge v5, v4, :cond_0
-
-    aget v6, v0, v5
-
-    mul-int/lit8 v6, v6, 0x2
-
-    add-int/2addr v6, v1
-
-    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result v6
-
-    invoke-virtual {v3, v6}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v4, p0, Loj0;->b:Lz50;
-
-    iget v4, v4, Lz50;->d:I
-
-    add-int/2addr v1, v4
-
-    goto :goto_0
+    return v0
 
     :cond_1
-    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    move-result-object v1
+
+    if-eq v1, p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final c(I)Ljava/lang/Object;
+    .locals 1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    add-int/lit8 p1, p1, 0x1
+
+    iget-object v0, p0, Lmc2;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d(IZ)V
+    .locals 4
+
+    if-eqz p2, :cond_0
+
+    iget-wide v0, p0, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    sget p2, Lax0;->b:I
+
+    int-to-long v2, p2
+
+    mul-long/2addr v0, v2
+
+    int-to-long p1, p1
+
+    add-long/2addr v0, p1
+
+    iget-object p1, p0, Lmc2;->a:Lyw0;
+
+    invoke-virtual {p1, v0, v1}, Lyw0;->M(J)V
+
+    :cond_0
+    invoke-virtual {p0}, Lkotlinx/coroutines/internal/Segment;->onSlotCleaned()V
 
     return-void
 .end method
 
-.method public final f(Lz50;)Lz50;
-    .locals 8
+.method public final e(ILjava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lmc2;->i:[I
+    mul-int/lit8 p1, p1, 0x2
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lmc2;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    sget-object p1, Lz50;->e:Lz50;
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
 
-    return-object p1
+    return-void
+.end method
+
+.method public final f(ILjava/lang/Object;)V
+    .locals 1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    add-int/lit8 p1, p1, 0x1
+
+    iget-object v0, p0, Lmc2;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final getNumberOfSlots()I
+    .locals 1
+
+    sget v0, Lax0;->b:I
+
+    return v0
+.end method
+
+.method public final onCancellation(ILjava/lang/Throwable;Lqb4;)V
+    .locals 5
+
+    sget p2, Lax0;->b:I
+
+    if-lt p1, p2, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    iget v1, p1, Lz50;->c:I
+    const/4 v0, 0x0
 
-    iget v2, p1, Lz50;->b:I
+    :goto_0
+    if-eqz v0, :cond_1
 
-    const/4 v3, 0x2
+    sub-int/2addr p1, p2
 
-    if-ne v1, v3, :cond_6
+    :cond_1
+    mul-int/lit8 p2, p1, 0x2
 
-    array-length v1, v0
+    iget-object v1, p0, Lmc2;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    :cond_2
+    :goto_1
+    invoke-virtual {p0, p1}, Lmc2;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Ldxh;
+
+    iget-object v3, p0, Lmc2;->a:Lyw0;
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x1
+    if-nez v2, :cond_9
 
-    if-eq v2, v1, :cond_1
+    instance-of v2, v1, Lexh;
 
-    move v1, v5
+    if-eqz v2, :cond_3
 
-    goto :goto_0
+    goto :goto_3
 
-    :cond_1
-    move v1, v4
+    :cond_3
+    sget-object v2, Lax0;->j:Lkotlinx/coroutines/internal/Symbol;
 
-    :goto_0
-    move v6, v4
+    if-eq v1, v2, :cond_8
 
-    :goto_1
-    array-length v7, v0
+    sget-object v2, Lax0;->k:Lkotlinx/coroutines/internal/Symbol;
 
-    if-ge v6, v7, :cond_4
-
-    aget v7, v0, v6
-
-    if-ge v7, v2, :cond_3
-
-    if-eq v7, v6, :cond_2
-
-    move v7, v5
+    if-ne v1, v2, :cond_4
 
     goto :goto_2
 
-    :cond_2
-    move v7, v4
+    :cond_4
+    sget-object v2, Lax0;->g:Lkotlinx/coroutines/internal/Symbol;
 
-    :goto_2
-    or-int/2addr v1, v7
+    if-eq v1, v2, :cond_2
 
-    add-int/lit8 v6, v6, 0x1
+    sget-object v2, Lax0;->f:Lkotlinx/coroutines/internal/Symbol;
+
+    if-ne v1, v2, :cond_5
 
     goto :goto_1
 
-    :cond_3
-    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
-
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lz50;)V
-
-    throw v0
-
-    :cond_4
-    if-eqz v1, :cond_5
-
-    new-instance v1, Lz50;
-
-    iget p1, p1, Lz50;->a:I
-
-    array-length v0, v0
-
-    invoke-direct {v1, p1, v0, v3}, Lz50;-><init>(III)V
-
-    return-object v1
-
     :cond_5
-    sget-object p1, Lz50;->e:Lz50;
+    sget-object p1, Lax0;->i:Lkotlinx/coroutines/internal/Symbol;
 
-    return-object p1
+    if-eq v1, p1, :cond_b
+
+    sget-object p1, Lax0;->d:Lkotlinx/coroutines/internal/Symbol;
+
+    if-ne v1, p1, :cond_6
+
+    goto :goto_5
 
     :cond_6
-    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
+    sget-object p1, Lax0;->l:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lz50;)V
+    if-ne v1, p1, :cond_7
 
-    throw v0
-.end method
+    goto :goto_5
 
-.method public final g()V
-    .locals 1
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v0, p0, Lmc2;->i:[I
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lmc2;->j:[I
+    const-string p3, "unexpected state: "
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_8
+    :goto_2
+    invoke-virtual {p0, p1, v4}, Lmc2;->e(ILjava/lang/Object;)V
+
+    if-eqz v0, :cond_b
+
+    iget-object p1, v3, Lyw0;->b:Lnq6;
+
+    if-eqz p1, :cond_b
+
+    invoke-static {p1, p2, p3}, Lkotlinx/coroutines/internal/OnUndeliveredElementKt;->callUndeliveredElement(Lnq6;Ljava/lang/Object;Lqb4;)V
 
     return-void
-.end method
 
-.method public final i()V
-    .locals 1
+    :cond_9
+    :goto_3
+    if-eqz v0, :cond_a
 
-    const/4 v0, 0x0
+    sget-object v2, Lax0;->j:Lkotlinx/coroutines/internal/Symbol;
 
-    iput-object v0, p0, Lmc2;->j:[I
+    goto :goto_4
 
-    iput-object v0, p0, Lmc2;->i:[I
+    :cond_a
+    sget-object v2, Lax0;->k:Lkotlinx/coroutines/internal/Symbol;
 
+    :goto_4
+    invoke-virtual {p0, v1, p1, v2}, Lmc2;->a(Ljava/lang/Object;ILjava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0, p1, v4}, Lmc2;->e(ILjava/lang/Object;)V
+
+    xor-int/lit8 v1, v0, 0x1
+
+    invoke-virtual {p0, p1, v1}, Lmc2;->d(IZ)V
+
+    if-eqz v0, :cond_b
+
+    iget-object p1, v3, Lyw0;->b:Lnq6;
+
+    if-eqz p1, :cond_b
+
+    invoke-static {p1, p2, p3}, Lkotlinx/coroutines/internal/OnUndeliveredElementKt;->callUndeliveredElement(Lnq6;Ljava/lang/Object;Lqb4;)V
+
+    :cond_b
+    :goto_5
     return-void
 .end method

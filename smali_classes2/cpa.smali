@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public final a:Lh6f;
+.field public final a:Li7f;
 
-.field public final b:Lokd;
+.field public final b:Lold;
 
 
 # direct methods
@@ -19,17 +19,17 @@
 
     const/4 v1, 0x7
 
-    invoke-static {v0, v0, v1}, Li6f;->b(III)Lh6f;
+    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcpa;->a:Lh6f;
+    iput-object v0, p0, Lcpa;->a:Li7f;
 
-    new-instance v1, Lokd;
+    new-instance v1, Lold;
 
-    invoke-direct {v1, v0}, Lokd;-><init>(Lnfa;)V
+    invoke-direct {v1, v0}, Lold;-><init>(Llfa;)V
 
-    iput-object v1, p0, Lcpa;->b:Lokd;
+    iput-object v1, p0, Lcpa;->b:Lold;
 
     return-void
 .end method

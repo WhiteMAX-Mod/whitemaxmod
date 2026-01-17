@@ -4,57 +4,84 @@
 
 
 # instance fields
-.field public final a:Lqaf;
+.field public final a:Ll5a;
 
 .field public final b:J
 
-.field public final c:Lemi;
-
-.field public final d:Ljaf;
-
-.field public final e:Ljaf;
-
-.field public final synthetic f:Lmaf;
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>(Lmaf;Lqaf;Lemi;Ljaf;Ljaf;)V
+.method public constructor <init>(JLl5a;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lomi;->f:Lmaf;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iget-wide v0, p3, Lemi;->b:J
+    move-result-wide v0
 
-    iput-object p2, p0, Lomi;->a:Lqaf;
+    iput-wide v0, p0, Lomi;->c:J
 
-    iput-wide v0, p0, Lomi;->b:J
+    iput-object p3, p0, Lomi;->a:Ll5a;
 
-    iput-object p3, p0, Lomi;->c:Lemi;
-
-    iput-object p4, p0, Lomi;->d:Ljaf;
-
-    iput-object p5, p0, Lomi;->e:Ljaf;
+    iput-wide p1, p0, Lomi;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Lomi;->c:Lemi;
+    if-ne p0, p1, :cond_0
 
-    if-nez v0, :cond_0
+    const/4 p1, 0x1
 
-    const-string v0, "<unknown command>"
-
-    return-object v0
+    return p1
 
     :cond_0
-    iget-object v0, v0, Lemi;->a:Ljava/lang/String;
+    if-eqz p1, :cond_2
 
-    return-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-class v1, Lomi;
+
+    if-eq v1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lomi;
+
+    iget-object v0, p0, Lomi;->a:Ll5a;
+
+    iget-object p1, p1, Lomi;->a:Ll5a;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lomi;->a:Ll5a;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

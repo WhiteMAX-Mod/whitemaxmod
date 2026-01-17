@@ -1,43 +1,50 @@
-.class public final Lc09;
+.class public interface abstract Lc09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Z
-
-
-# instance fields
-.field public final a:La09;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-string v0, "MediaBrowserCompat"
-
-    const/4 v1, 0x3
-
-    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    sput-boolean v0, Lc09;->b:Z
-
-    return-void
+# virtual methods
+.method public abstract d(JIII)V
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lf1c;Landroid/os/Bundle;)V
-    .locals 1
+.method public abstract flush()V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract getInputBuffer(I)Ljava/nio/ByteBuffer;
+.end method
 
-    new-instance v0, La09;
+.method public abstract getOutputBuffer(I)Ljava/nio/ByteBuffer;
+.end method
 
-    invoke-direct {v0, p1, p2, p3, p4}, La09;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Lf1c;Landroid/os/Bundle;)V
+.method public abstract getOutputFormat()Landroid/media/MediaFormat;
+.end method
 
-    iput-object v0, p0, Lc09;->a:La09;
+.method public abstract h(IJ)V
+.end method
 
-    return-void
+.method public abstract i()I
+.end method
+
+.method public abstract l(Landroid/media/MediaCodec$BufferInfo;)I
+.end method
+
+.method public abstract o(I)V
+.end method
+
+.method public abstract q(Landroid/view/Surface;)V
+.end method
+
+.method public abstract release()V
+.end method
+
+.method public abstract releaseOutputBuffer(IZ)V
+.end method
+
+.method public abstract s(ILle4;J)V
+.end method
+
+.method public abstract setParameters(Landroid/os/Bundle;)V
+.end method
+
+.method public abstract t(La19;Landroid/os/Handler;)V
 .end method

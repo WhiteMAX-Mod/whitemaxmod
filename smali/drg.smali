@@ -3,235 +3,105 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ldrg;
-
-.field public static final e:Ljava/lang/String;
-
-
 # instance fields
 .field public final a:I
 
-.field public final b:Lltd;
+.field public final b:I
 
-.field public c:I
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:Lpj6;
+
+.field public final h:I
+
+.field public final i:[J
+
+.field public final j:[J
+
+.field public final k:I
+
+.field public final l:[Lhrg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Ldrg;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Larg;
-
-    invoke-direct {v0, v2}, Ldrg;-><init>([Larg;)V
-
-    sput-object v0, Ldrg;->d:Ldrg;
-
-    sget-object v0, Lqah;->a:Ljava/lang/String;
-
-    const/16 v0, 0x24
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ldrg;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public varargs constructor <init>([Larg;)V
-    .locals 6
+.method public constructor <init>(IIJJJJLpj6;I[Lhrg;I[J[J)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lal7;->k([Ljava/lang/Object;)Lltd;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldrg;->b:Lltd;
-
-    array-length p1, p1
-
     iput p1, p0, Ldrg;->a:I
 
-    const/4 p1, 0x0
+    iput p2, p0, Ldrg;->b:I
 
-    :goto_0
-    iget v1, v0, Lltd;->d:I
+    iput-wide p3, p0, Ldrg;->c:J
 
-    if-ge p1, v1, :cond_2
+    iput-wide p5, p0, Ldrg;->d:J
 
-    add-int/lit8 v1, p1, 0x1
+    iput-wide p7, p0, Ldrg;->e:J
 
-    move v2, v1
+    iput-wide p9, p0, Ldrg;->f:J
 
-    :goto_1
-    iget v3, v0, Lltd;->d:I
+    iput-object p11, p0, Ldrg;->g:Lpj6;
 
-    if-ge v2, v3, :cond_1
+    iput p12, p0, Ldrg;->h:I
 
-    invoke-virtual {v0, p1}, Lltd;->get(I)Ljava/lang/Object;
+    iput-object p13, p0, Ldrg;->l:[Lhrg;
 
-    move-result-object v3
+    iput p14, p0, Ldrg;->k:I
 
-    check-cast v3, Larg;
+    iput-object p15, p0, Ldrg;->i:[J
 
-    invoke-virtual {v0, v2}, Lltd;->get(I)Ljava/lang/Object;
+    move-object/from16 p1, p16
 
-    move-result-object v4
+    iput-object p1, p0, Ldrg;->j:[J
 
-    invoke-virtual {v3, v4}, Larg;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    new-instance v3, Ljava/lang/IllegalArgumentException;
-
-    const-string v4, "Multiple identical TrackGroups added to one TrackGroupArray."
-
-    invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    const-string v4, "TrackGroupArray"
-
-    const-string v5, ""
-
-    invoke-static {v4, v5, v3}, Lnfi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Larg;
-    .locals 1
+.method public final a(Lpj6;)Ldrg;
+    .locals 18
 
-    iget-object v0, p0, Ldrg;->b:Lltd;
+    move-object/from16 v0, p0
 
-    invoke-virtual {v0, p1}, Lltd;->get(I)Ljava/lang/Object;
+    new-instance v1, Ldrg;
 
-    move-result-object p1
+    iget-object v2, v0, Ldrg;->i:[J
 
-    check-cast p1, Larg;
+    iget-object v3, v0, Ldrg;->j:[J
 
-    return-object p1
-.end method
+    move-object/from16 v16, v2
 
-.method public final b(Larg;)I
-    .locals 1
+    iget v2, v0, Ldrg;->a:I
 
-    iget-object v0, p0, Ldrg;->b:Lltd;
+    move-object/from16 v17, v3
 
-    invoke-virtual {v0, p1}, Lal7;->indexOf(Ljava/lang/Object;)I
+    iget v3, v0, Ldrg;->b:I
 
-    move-result p1
+    iget-wide v4, v0, Ldrg;->c:J
 
-    if-ltz p1, :cond_0
+    iget-wide v6, v0, Ldrg;->d:J
 
-    return p1
+    iget-wide v8, v0, Ldrg;->e:J
 
-    :cond_0
-    const/4 p1, -0x1
+    iget-wide v10, v0, Ldrg;->f:J
 
-    return p1
-.end method
+    iget v13, v0, Ldrg;->h:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    iget-object v14, v0, Ldrg;->l:[Lhrg;
 
-    if-ne p0, p1, :cond_0
+    iget v15, v0, Ldrg;->k:I
 
-    goto :goto_0
+    move-object/from16 v12, p1
 
-    :cond_0
-    if-eqz p1, :cond_2
+    invoke-direct/range {v1 .. v17}, Ldrg;-><init>(IIJJJJLpj6;I[Lhrg;I[J[J)V
 
-    const-class v0, Ldrg;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Ldrg;
-
-    iget v0, p0, Ldrg;->a:I
-
-    iget v1, p1, Ldrg;->a:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Ldrg;->b:Lltd;
-
-    iget-object p1, p1, Ldrg;->b:Lltd;
-
-    invoke-virtual {v0, p1}, Lal7;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Ldrg;->c:I
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ldrg;->b:Lltd;
-
-    invoke-virtual {v0}, Lal7;->hashCode()I
-
-    move-result v0
-
-    iput v0, p0, Ldrg;->c:I
-
-    :cond_0
-    iget v0, p0, Ldrg;->c:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Ldrg;->b:Lltd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object v1
 .end method

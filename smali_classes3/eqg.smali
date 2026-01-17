@@ -1,128 +1,100 @@
 .class public final Leqg;
-.super Ln58;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lyue;
 
-.field public final synthetic b:Lfqg;
+.field public b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfqg;I)V
+.method public constructor <init>(Lyue;)V
     .locals 0
 
-    iput p2, p0, Leqg;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Leqg;->b:Lfqg;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Ln58;-><init>(I)V
+    iput-object p1, p0, Leqg;->a:Lyue;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
-    iget v0, p0, Leqg;->a:I
+    return-void
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 0
 
-    iget-object v0, p0, Leqg;->b:Lfqg;
+    return-void
+.end method
 
-    iget-object v0, v0, Lfqg;->a:Ljava/lang/String;
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 1
 
-    :try_start_0
-    invoke-static {v0}, Lmui;->e(Ljava/lang/String;)Lhqg;
+    iget p1, p0, Leqg;->b:I
 
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v0, 0x1
 
-    goto :goto_0
+    sub-int/2addr p1, v0
 
-    :catch_0
-    const-string v1, "Could not find manifest for library "
+    iput p1, p0, Leqg;->b:I
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    if-nez p1, :cond_0
 
-    move-result-object v0
+    iget-object p1, p0, Leqg;->a:Lyue;
 
-    const-string v1, "Tracer"
+    invoke-virtual {p1, v0}, Lyue;->e(Z)V
 
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :cond_0
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 1
+
+    iget p1, p0, Leqg;->b:I
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Leqg;->a:Lyue;
 
     const/4 v0, 0x0
 
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lbqg;
-
-    iget-object v1, p0, Leqg;->b:Lfqg;
-
-    iget-object v2, v1, Lfqg;->a:Ljava/lang/String;
-
-    invoke-virtual {v1}, Lfqg;->a()Lhqg;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v3}, Lxl0;->versionName()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-nez v3, :cond_1
+    invoke-virtual {p1, v0}, Lyue;->e(Z)V
 
     :cond_0
-    const-string v3, "NA"
+    iget p1, p0, Leqg;->b:I
 
-    :cond_1
-    invoke-virtual {v1}, Lfqg;->a()Lhqg;
+    add-int/lit8 p1, p1, 0x1
 
-    move-result-object v4
+    iput p1, p0, Leqg;->b:I
 
-    const/4 v5, 0x0
+    return-void
+.end method
 
-    if-eqz v4, :cond_2
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
-    invoke-interface {v4}, Lxl0;->buildUuid()Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v4
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 0
 
-    goto :goto_1
+    return-void
+.end method
 
-    :cond_2
-    move-object v4, v5
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
 
-    :goto_1
-    invoke-virtual {v1}, Lfqg;->a()Lhqg;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v1}, Lxl0;->environment()Ljava/lang/String;
-
-    move-result-object v5
-
-    :cond_3
-    invoke-direct {v0, v2, v3, v4, v5}, Lbqg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

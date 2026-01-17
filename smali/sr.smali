@@ -1,204 +1,281 @@
 .class public final Lsr;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lsr;
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public X:Lbs;
 
-.field public final b:Ljava/util/List;
+.field public Y:Ljava/lang/Object;
 
-.field public final c:Landroid/graphics/drawable/Drawable;
+.field public Z:Ltr;
+
+.field public o:Lmfa;
+
+.field public t0:Ljava/util/List;
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:I
+
+.field public final synthetic x0:Lbs;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lsr;
-
-    sget-object v1, Lch5;->a:Lch5;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v1, v2}, Lsr;-><init>(Ljava/util/List;Ljava/util/List;Landroid/graphics/drawable/Drawable;)V
-
-    sput-object v0, Lsr;->d:Lsr;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;Landroid/graphics/drawable/Drawable;)V
+.method public constructor <init>(Lbs;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsr;->x0:Lbs;
 
-    iput-object p1, p0, Lsr;->a:Ljava/util/List;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lsr;->b:Ljava/util/List;
-
-    iput-object p3, p0, Lsr;->c:Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static a(Lsr;Ljava/util/List;Landroid/graphics/drawable/Drawable;)Lsr;
-    .locals 1
-
-    iget-object v0, p0, Lsr;->b:Ljava/util/List;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lsr;
-
-    invoke-direct {p0, p1, v0, p2}, Lsr;-><init>(Ljava/util/List;Ljava/util/List;Landroid/graphics/drawable/Drawable;)V
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lb3h;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lsr;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lsr;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lsr;
 
-    iget-object v1, p0, Lsr;->a:Ljava/util/List;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object v3, p1, Lsr;->a:Ljava/util/List;
+    invoke-virtual {p1, p2}, Lsr;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lsr;->b:Ljava/util/List;
-
-    iget-object v3, p1, Lsr;->b:Ljava/util/List;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lsr;->c:Landroid/graphics/drawable/Drawable;
-
-    iget-object p1, p1, Lsr;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lsr;->a:Ljava/util/List;
+    new-instance p1, Lsr;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lsr;->x0:Lbs;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lsr;-><init>(Lbs;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v1, 0x1f
+    return-object p1
+.end method
 
-    mul-int/2addr v0, v1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    iget-object v2, p0, Lsr;->b:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Lq3g;->l(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lsr;->c:Landroid/graphics/drawable/Drawable;
-
-    if-nez v1, :cond_0
+    iget v0, p0, Lsr;->w0:I
 
     const/4 v1, 0x0
 
-    goto :goto_0
+    const/4 v2, 0x2
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const/4 v3, 0x1
 
-    move-result v1
+    sget-object v4, Lac4;->a:Lac4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    iget v0, p0, Lsr;->u0:I
+
+    iget-object v5, p0, Lsr;->t0:Ljava/util/List;
+
+    iget-object v6, p0, Lsr;->Z:Ltr;
+
+    iget-object v7, p0, Lsr;->Y:Ljava/lang/Object;
+
+    iget-object v8, p0, Lsr;->X:Lbs;
+
+    iget-object v9, p0, Lsr;->o:Lmfa;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     :goto_0
-    add-int/2addr v0, v1
+    move-object v10, v6
 
-    return v0
-.end method
+    move v6, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-object v0, v9
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object v9, v7
 
-    const-string v1, "State(themes="
+    move-object v7, v10
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto/16 :goto_4
 
-    iget-object v1, p0, Lsr;->a:Ljava/util/List;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const-string v1, ", modes="
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw p1
 
-    iget-object v1, p0, Lsr;->b:Ljava/util/List;
+    :cond_1
+    iget v0, p0, Lsr;->v0:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v5, p0, Lsr;->u0:I
 
-    const-string v1, ", currentThemeDrawable="
+    iget-object v6, p0, Lsr;->Z:Ltr;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lsr;->Y:Ljava/lang/Object;
 
-    iget-object v1, p0, Lsr;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v8, p0, Lsr;->X:Lbs;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v9, p0, Lsr;->o:Lmfa;
 
-    const-string v1, ")"
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move v10, v5
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move v5, v0
 
-    move-result-object v0
+    move v0, v10
 
-    return-object v0
+    goto :goto_2
+
+    :cond_2
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lsr;->x0:Lbs;
+
+    iget-object v0, p1, Lbs;->C0:Lspf;
+
+    move v5, v1
+
+    :goto_1
+    invoke-interface {v0}, Lmfa;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    move-object v7, v6
+
+    check-cast v7, Ltr;
+
+    iget-object v8, v7, Ltr;->a:Ljava/util/List;
+
+    iput-object v0, p0, Lsr;->o:Lmfa;
+
+    iput-object p1, p0, Lsr;->X:Lbs;
+
+    iput-object v6, p0, Lsr;->Y:Ljava/lang/Object;
+
+    iput-object v7, p0, Lsr;->Z:Ltr;
+
+    const/4 v9, 0x0
+
+    iput-object v9, p0, Lsr;->t0:Ljava/util/List;
+
+    iput v5, p0, Lsr;->u0:I
+
+    iput v1, p0, Lsr;->v0:I
+
+    iput v3, p0, Lsr;->w0:I
+
+    invoke-static {p1, v8}, Lbs;->u(Lbs;Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v8
+
+    if-ne v8, v4, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    move-object v9, v8
+
+    move-object v8, p1
+
+    move-object p1, v9
+
+    move-object v9, v7
+
+    move-object v7, v6
+
+    move-object v6, v9
+
+    move-object v9, v0
+
+    move v0, v5
+
+    move v5, v1
+
+    :goto_2
+    check-cast p1, Ljava/util/List;
+
+    iput-object v9, p0, Lsr;->o:Lmfa;
+
+    iput-object v8, p0, Lsr;->X:Lbs;
+
+    iput-object v7, p0, Lsr;->Y:Ljava/lang/Object;
+
+    iput-object v6, p0, Lsr;->Z:Ltr;
+
+    iput-object p1, p0, Lsr;->t0:Ljava/util/List;
+
+    iput v0, p0, Lsr;->u0:I
+
+    iput v5, p0, Lsr;->v0:I
+
+    iput v2, p0, Lsr;->w0:I
+
+    invoke-static {v8}, Lbs;->t(Lbs;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v5
+
+    if-ne v5, v4, :cond_4
+
+    :goto_3
+    return-object v4
+
+    :cond_4
+    move-object v10, v5
+
+    move-object v5, p1
+
+    move-object p1, v10
+
+    goto :goto_0
+
+    :goto_4
+    check-cast p1, Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v7, v5, p1}, Ltr;->a(Ltr;Ljava/util/List;Landroid/graphics/drawable/Drawable;)Ltr;
+
+    move-result-object p1
+
+    invoke-interface {v0, v9, p1}, Lmfa;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :cond_5
+    move v5, v6
+
+    move-object p1, v8
+
+    goto :goto_1
 .end method

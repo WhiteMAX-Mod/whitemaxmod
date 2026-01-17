@@ -27,7 +27,7 @@
         "currentTask",
         "<init>",
         "(Lkotlinx/coroutines/internal/LimitedDispatcher;Ljava/lang/Runnable;)V",
-        "Lv2h;",
+        "Lb3h;",
         "run",
         "()V",
         "Ljava/lang/Runnable;",
@@ -36,7 +36,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -72,7 +72,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -89,9 +89,10 @@
     :catchall_0
     move-exception v1
 
-    sget-object v2, Lwg5;->a:Lwg5;
+    :try_start_1
+    sget-object v2, Lxg5;->a:Lxg5;
 
-    invoke-static {v2, v1}, Lkkj;->a(Lrb4;Ljava/lang/Throwable;)V
+    invoke-static {v2, v1}, Lglj;->a(Lqb4;Ljava/lang/Throwable;)V
 
     :goto_0
     iget-object v1, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
@@ -102,7 +103,7 @@
 
     if-nez v1, :cond_1
 
-    return-void
+    goto :goto_1
 
     :cond_1
     iput-object v1, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->currentTask:Ljava/lang/Runnable;
@@ -115,13 +116,13 @@
 
     iget-object v1, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
 
-    invoke-static {v1}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getDispatcher$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Ltb4;
+    invoke-static {v1}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getDispatcher$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Lsb4;
 
     move-result-object v1
 
     iget-object v2, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
 
-    invoke-virtual {v1, v2}, Ltb4;->isDispatchNeeded(Lrb4;)Z
+    invoke-static {v1, v2}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->safeIsDispatchNeeded(Lsb4;Lqb4;)Z
 
     move-result v1
 
@@ -129,13 +130,49 @@
 
     iget-object v0, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
 
-    invoke-static {v0}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getDispatcher$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Ltb4;
+    invoke-static {v0}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getDispatcher$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Lsb4;
 
     move-result-object v0
 
     iget-object v1, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
 
-    invoke-virtual {v0, v1, p0}, Ltb4;->dispatch(Lrb4;Ljava/lang/Runnable;)V
+    invoke-static {v0, v1, p0}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->safeDispatch(Lsb4;Lqb4;Ljava/lang/Runnable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    :goto_1
     return-void
+
+    :catchall_1
+    move-exception v0
+
+    iget-object v1, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
+
+    invoke-static {v1}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getWorkerAllocationLock$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
+
+    monitor-enter v1
+
+    :try_start_2
+    invoke-static {}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getRunningWorkers$volatile$FU()Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    monitor-exit v1
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
 .end method

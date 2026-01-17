@@ -552,7 +552,7 @@
 
     const-string v3, " exceeds route length "
 
-    invoke-static {v2, p1, v0, v3}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v0, v3}, Lj27;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -565,7 +565,7 @@
 
     const-string v1, "Hop index must not be negative: "
 
-    invoke-static {p1, v1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

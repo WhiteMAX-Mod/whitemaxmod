@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lnm4;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
     iput p2, p0, Lf81;->a:I
 
-    iput-object p1, p0, Lf81;->b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
+    iput-object p1, p0, Lf81;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lf81;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,62 +31,82 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
     iget v0, p0, Lf81;->a:I
 
-    iget-object v1, p0, Lf81;->b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lp38;
+    iget-object v0, p0, Lf81;->b:Ljava/lang/Object;
 
-    new-instance v0, Lh81;
+    move-object v4, v0
 
-    invoke-direct {v0, v1}, Lh81;-><init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;)V
+    check-cast v4, Ljava/lang/String;
 
-    return-object v0
+    iget-object v0, p0, Lf81;->c:Ljava/lang/Object;
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lp38;
+    move-object v5, v0
 
-    new-instance v4, Lv3e;
+    check-cast v5, Ljava/lang/String;
 
-    const/16 v0, 0xb
+    new-instance v1, Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
-    invoke-direct {v4, v0, v1}, Lv3e;-><init>(ILjava/lang/Object;)V
+    const/16 v7, 0x10
 
-    new-instance v2, Lije;
+    const/4 v8, 0x0
 
-    sget-object v0, Ldc3;->s0:Lole;
+    const-string v2, "CREATE"
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lole;->o(Landroid/content/Context;)Lrbb;
-
-    move-result-object v0
-
-    iget-object v3, v0, Lrbb;->c:Lplb;
-
-    new-instance v5, Li;
-
-    const/16 v0, 0x11
-
-    invoke-direct {v5, v0, v1}, Li;-><init>(ILjava/lang/Object;)V
+    const-string v3, "CREATE_PASSWORD"
 
     const/4 v6, 0x0
 
-    const/16 v7, 0x14
+    invoke-direct/range {v1 .. v8}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvt7;ILso4;)V
 
-    invoke-direct/range {v2 .. v7}, Lije;-><init>(Lplb;Lgje;Loq6;Lqfe;I)V
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Lf81;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhm4;
+
+    iget-object v1, p0, Lf81;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/os/Bundle;
+
+    new-instance v2, Lone/me/main/MainScreen;
+
+    iget-object v0, v0, Lhm4;->a:Landroid/net/Uri;
+
+    invoke-static {v0}, Lpm4;->a(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0, v1}, Lone/me/main/MainScreen;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-object v2
 
+    :pswitch_1
+    iget-object v0, p0, Lf81;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v1, p0, Lf81;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    new-instance v2, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+
+    invoke-direct {v2, v0, v1}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;-><init>(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    return-object v2
+
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

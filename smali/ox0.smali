@@ -1,33 +1,21 @@
-.class public final Lox0;
+.class public abstract Lox0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lox0;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static final a(Landroid/os/Bundle;Ljava/lang/String;Landroid/util/Size;)V
+    .locals 0
 
-    new-instance v0, Lox0;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lox0;->a:Lox0;
+    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->putSize(Ljava/lang/String;Landroid/util/Size;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(I)I
+.method public static final b(Landroid/os/Bundle;Ljava/lang/String;Landroid/util/SizeF;)V
     .locals 0
 
-    invoke-static {p1}, Landroid/os/ext/SdkExtensions;->getExtensionVersion(I)I
+    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->putSizeF(Ljava/lang/String;Landroid/util/SizeF;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

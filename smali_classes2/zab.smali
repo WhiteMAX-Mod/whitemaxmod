@@ -1,140 +1,96 @@
-.class public final Lzab;
-.super Lb5g;
+.class public final synthetic Lzab;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # instance fields
-.field public final synthetic X:[Ljava/io/File;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lhbb;
+.field public final synthetic b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-.field public o:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>([Ljava/io/File;Lhbb;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Thread$UncaughtExceptionHandler;I)V
     .locals 0
 
-    iput-object p1, p0, Lzab;->X:[Ljava/io/File;
+    iput p3, p0, Lzab;->a:I
 
-    iput-object p2, p0, Lzab;->Y:Lhbb;
+    iput-object p1, p0, Lzab;->c:Ljava/lang/Object;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lzab;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 8
 
-    check-cast p1, Lac4;
+    iget v0, p0, Lzab;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lzab;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lzab;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    move-object v3, v0
 
-    check-cast p1, Lzab;
+    check-cast v3, Lcl4;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    new-instance v1, Lscb;
 
-    invoke-virtual {p1, p2}, Lzab;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v6, 0x0
 
-    move-result-object p1
+    iget-object v4, p0, Lzab;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    return-object p1
-.end method
+    move-object v5, p1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-object v2, p2
 
-    new-instance p1, Lzab;
+    invoke-direct/range {v1 .. v6}, Lscb;-><init>(Ljava/lang/Throwable;Lcl4;Ljava/lang/Thread$UncaughtExceptionHandler;Ljava/lang/Thread;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v0, p0, Lzab;->X:[Ljava/io/File;
+    invoke-static {v1}, Ls9j;->i(Lbr6;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lzab;->Y:Lhbb;
+    return-void
 
-    invoke-direct {p1, v0, v1, p2}, Lzab;-><init>([Ljava/io/File;Lhbb;Lkotlin/coroutines/Continuation;)V
+    :pswitch_0
+    move-object v5, p1
 
-    return-object p1
-.end method
+    move-object v2, p2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    iget-object p1, p0, Lzab;->c:Ljava/lang/Object;
 
-    iget v0, p0, Lzab;->o:I
+    move-object v4, p1
 
-    const/4 v1, 0x1
+    check-cast v4, Lpbb;
 
-    if-eqz v0, :cond_1
+    move-object v3, v2
 
-    if-ne v0, v1, :cond_0
+    new-instance v2, Lgbb;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const/4 v7, 0x0
 
-    goto :goto_1
+    move-object v6, v5
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v5, p0, Lzab;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct/range {v2 .. v7}, Lgbb;-><init>(Ljava/lang/Throwable;Lpbb;Ljava/lang/Thread$UncaughtExceptionHandler;Ljava/lang/Thread;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v2}, Ls9j;->i(Lbr6;)Ljava/lang/Object;
 
-    throw p1
+    return-void
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    nop
 
-    iget-object p1, p0, Lzab;->Y:Lhbb;
-
-    iget-object v0, p0, Lzab;->X:[Ljava/io/File;
-
-    if-eqz v0, :cond_2
-
-    array-length v2, v0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_2
-
-    aget-object v4, v0, v3
-
-    invoke-virtual {v4}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
-
-    move-result-object v4
-
-    invoke-static {p1, v4}, Lhbb;->c(Lhbb;Ljava/nio/file/Path;)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iput v1, p0, Lzab;->o:I
-
-    invoke-static {p1, p0}, Lhbb;->a(Lhbb;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    :goto_1
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

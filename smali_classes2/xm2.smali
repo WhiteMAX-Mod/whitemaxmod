@@ -1,58 +1,65 @@
-.class public final synthetic Lxm2;
-.super Ljava/lang/Object;
+.class public final Lxm2;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public X:J
 
-.field public final synthetic b:J
+.field public Y:J
 
-.field public final synthetic c:Ljava/lang/String;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public final synthetic d:Lk45;
+.field public d:Ljava/lang/String;
+
+.field public o:Lr10;
+
+.field public final synthetic t0:Lgn2;
+
+.field public u0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;Lk45;)V
+.method public constructor <init>(Lgn2;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxm2;->t0:Lgn2;
 
-    iput-wide p1, p0, Lxm2;->a:J
-
-    iput-wide p3, p0, Lxm2;->b:J
-
-    iput-object p5, p0, Lxm2;->c:Ljava/lang/String;
-
-    iput-object p6, p0, Lxm2;->d:Lk45;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
-    check-cast p1, Ltm2;
+    iput-object p1, p0, Lxm2;->Z:Ljava/lang/Object;
 
-    new-instance v0, Ltm2;
+    iget p1, p0, Lxm2;->u0:I
 
-    const/4 v7, 0x0
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lxm2;->a:J
+    or-int/2addr p1, v0
 
-    iget-wide v3, p0, Lxm2;->b:J
+    iput p1, p0, Lxm2;->u0:I
 
-    iget-object v5, p0, Lxm2;->c:Ljava/lang/String;
+    const-wide/16 v4, 0x0
 
-    iget-object v6, p0, Lxm2;->d:Lk45;
+    const/4 v6, 0x0
 
-    invoke-direct/range {v0 .. v7}, Ltm2;-><init>(JJLjava/lang/String;Lk45;Z)V
+    iget-object v0, p0, Lxm2;->t0:Lgn2;
 
-    return-object v0
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    move-object v7, p0
+
+    invoke-virtual/range {v0 .. v7}, Lgn2;->v(Ljava/lang/String;JJLr10;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,209 +1,221 @@
-.class public final synthetic Lb33;
+.class public final Lb33;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loq6;
+
+# static fields
+.field public static final c:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lo58;
 
-.field public final synthetic b:Lj33;
+.field public final b:Landroid/util/DisplayMetrics;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj33;I)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-class v0, La33;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lb33;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/res/Resources;Lo58;)V
     .locals 0
 
-    iput p2, p0, Lb33;->a:I
-
-    iput-object p1, p0, Lb33;->b:Lj33;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lb33;->a:Lo58;
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb33;->b:Landroid/util/DisplayMetrics;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 23
-
-    move-object/from16 v1, p0
-
-    iget v0, v1, Lb33;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    move-object/from16 v0, p1
-
-    check-cast v0, Lj6e;
-
-    iget-object v0, v1, Lb33;->b:Lj33;
-
-    iget-object v0, v0, Lj33;->a:Le1e;
-
-    new-instance v2, Ljh1;
-
-    const/16 v3, 0x1b
-
-    invoke-direct {v2, v3}, Ljh1;-><init>(I)V
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    invoke-static {v0, v3, v4, v2}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
-
-    new-instance v2, Ljh1;
-
-    const/16 v5, 0x1c
-
-    invoke-direct {v2, v5}, Ljh1;-><init>(I)V
-
-    invoke-static {v0, v3, v4, v2}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
-
-    :pswitch_0
-    move-object/from16 v0, p1
-
-    check-cast v0, Lj6e;
-
-    iget-object v2, v1, Lb33;->b:Lj33;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v3, "SELECT * FROM chats"
-
-    invoke-interface {v0, v3}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
-
-    move-result-object v3
+.method public final a()[B
+    .locals 6
 
     :try_start_0
-    const-string v0, "id"
+    iget-object v0, p0, Lb33;->b:Landroid/util/DisplayMetrics;
 
-    invoke-static {v3, v0}, Lumj;->b(Lo6e;Ljava/lang/String;)I
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
 
     move-result v0
 
-    const-string v4, "server_id"
+    iget-object v1, p0, Lb33;->b:Landroid/util/DisplayMetrics;
 
-    invoke-static {v3, v4}, Lumj;->b(Lo6e;Ljava/lang/String;)I
+    iget v1, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    move-result v4
+    const/16 v2, 0x50
 
-    const-string v5, "data"
+    int-to-float v2, v2
 
-    invoke-static {v3, v5}, Lumj;->b(Lo6e;Ljava/lang/String;)I
+    mul-float/2addr v2, v0
 
-    move-result v5
+    invoke-static {v2}, Lq7j;->c(F)I
 
-    const-string v6, "favourite_index"
+    move-result v0
 
-    invoke-static {v3, v6}, Lumj;->b(Lo6e;Ljava/lang/String;)I
+    div-int/2addr v1, v0
 
-    move-result v6
+    const/16 v0, 0x32
 
-    const-string v7, "sort_time"
+    if-le v1, v0, :cond_0
 
-    invoke-static {v3, v7}, Lumj;->b(Lo6e;Ljava/lang/String;)I
-
-    move-result v7
-
-    const-string v8, "cid"
-
-    invoke-static {v3, v8}, Lumj;->b(Lo6e;Ljava/lang/String;)I
-
-    move-result v8
-
-    new-instance v9, Ljava/util/ArrayList;
-
-    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
-
-    :goto_0
-    invoke-interface {v3}, Lo6e;->r0()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_1
-
-    invoke-interface {v3, v0}, Lo6e;->getLong(I)J
-
-    move-result-wide v12
-
-    invoke-interface {v3, v4}, Lo6e;->getLong(I)J
-
-    move-result-wide v14
-
-    invoke-interface {v3, v5}, Lo6e;->isNull(I)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_0
-
-    const/4 v10, 0x0
-
-    goto :goto_1
+    move v1, v0
 
     :cond_0
-    invoke-interface {v3, v5}, Lo6e;->getBlob(I)[B
+    iget-object v2, p0, Lb33;->a:Lo58;
 
-    move-result-object v10
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
 
-    :goto_1
-    invoke-virtual {v2}, Lj33;->a()Lqa3;
+    move-result-object v2
 
-    move-result-object v11
+    check-cast v2, Ljv3;
 
-    invoke-virtual {v11, v10}, Lqa3;->c([B)Lzh2;
+    invoke-interface {v2}, Ljv3;->f()Z
 
-    move-result-object v16
+    move-result v2
 
-    invoke-interface {v3, v6}, Lo6e;->getLong(I)J
+    const/4 v3, 0x2
 
-    move-result-wide v17
+    const/4 v4, 0x1
 
-    invoke-interface {v3, v7}, Lo6e;->getLong(I)J
+    const/16 v5, 0xc
 
-    move-result-wide v19
+    if-eqz v2, :cond_6
 
-    invoke-interface {v3, v8}, Lo6e;->getLong(I)J
+    iget-object v2, p0, Lb33;->a:Lo58;
 
-    move-result-wide v21
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
 
-    new-instance v11, Lzi2;
+    move-result-object v2
 
-    invoke-direct/range {v11 .. v22}, Lzi2;-><init>(JJLzh2;JJJ)V
+    check-cast v2, Ljv3;
 
-    invoke-virtual {v9, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {v2}, Ljv3;->b()Liw3;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    if-eq v2, v4, :cond_2
+
+    if-eq v2, v3, :cond_4
+
+    const/4 v5, 0x3
+
+    if-eq v2, v5, :cond_3
+
+    const/4 v5, 0x4
+
+    if-ne v2, v5, :cond_1
 
     goto :goto_0
+
+    :cond_1
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
 
     :catchall_0
     move-exception v0
 
+    goto :goto_3
+
+    :cond_2
+    :goto_0
+    move v5, v0
+
+    goto :goto_1
+
+    :cond_3
+    const/16 v5, 0x14
+
+    :cond_4
+    :goto_1
+    if-le v5, v0, :cond_5
+
     goto :goto_2
 
-    :cond_1
-    invoke-interface {v3}, Ljava/lang/AutoCloseable;->close()V
-
-    return-object v9
+    :cond_5
+    move v0, v5
 
     :goto_2
-    invoke-interface {v3}, Ljava/lang/AutoCloseable;->close()V
+    move v5, v0
 
-    throw v0
+    :cond_6
+    int-to-byte v0, v1
 
-    nop
+    int-to-byte v1, v5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    new-array v2, v3, [B
+
+    const/4 v3, 0x0
+
+    aput-byte v0, v2, v3
+
+    aput-byte v1, v2, v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v2
+
+    :goto_3
+    sget-object v1, Lb33;->c:Ljava/lang/String;
+
+    new-instance v2, Lqxb;
+
+    const-string v3, "ONEME-29014"
+
+    const-string v4, "failed to count chats for login"
+
+    invoke-direct {v2, v3, v4, v0}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object v0, Lc5j;->a:Ledb;
+
+    if-nez v0, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    sget-object v3, Lkk8;->Y:Lkk8;
+
+    invoke-virtual {v0, v3}, Ledb;->b(Lkk8;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    invoke-virtual {v0, v3, v1, v4, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_8
+    :goto_4
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

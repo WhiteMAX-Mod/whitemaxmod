@@ -1,155 +1,106 @@
 .class public final Lgpi;
-.super Ljoi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Ljava/util/Set;
+
+
 # instance fields
-.field public final b:Lydg;
+.field public final a:Lb07;
 
 
 # direct methods
-.method public constructor <init>(Lcf8;Lydg;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/WeakHashMap;
+
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lgpi;->b:Ljava/util/Set;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lb07;)V
     .locals 0
 
-    const/4 p1, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ljpi;-><init>(I)V
-
-    iput-object p2, p0, Lgpi;->b:Lydg;
+    iput-object p1, p0, Lgpi;->a:Lb07;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/google/android/gms/common/api/Status;)V
-    .locals 1
+.method public final a(Li8j;)Li8j;
+    .locals 5
 
-    new-instance v0, Lcom/google/android/gms/common/api/ApiException;
+    iget-boolean v0, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
 
-    invoke-direct {v0, p1}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lgpi;->b:Lydg;
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1, v0}, Lydg;->c(Ljava/lang/Exception;)Z
+    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Lay0;
 
-    return-void
-.end method
-
-.method public final b(Ljava/lang/Exception;)V
-    .locals 1
-
-    iget-object v0, p0, Lgpi;->b:Lydg;
-
-    invoke-virtual {v0, p1}, Lydg;->c(Ljava/lang/Exception;)Z
-
-    return-void
-.end method
-
-.method public final c(Lgoi;)V
-    .locals 1
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Lgpi;->h(Lgoi;)V
-    :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    iget-object v0, p0, Lgpi;->b:Lydg;
-
-    invoke-virtual {v0, p1}, Lydg;->c(Ljava/lang/Exception;)Z
-
-    return-void
-
-    :catch_1
-    move-exception p1
-
-    invoke-static {p1}, Ljpi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lgpi;->a(Lcom/google/android/gms/common/api/Status;)V
-
-    return-void
-
-    :catch_2
-    move-exception p1
-
-    invoke-static {p1}, Ljpi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lgpi;->a(Lcom/google/android/gms/common/api/Status;)V
+    check-cast v0, Ljava/lang/Boolean;
 
-    throw p1
-.end method
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-.method public final bridge synthetic d(Lx1d;Z)V
-    .locals 0
+    move-result v0
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public final f(Lgoi;)Z
-    .locals 1
+    goto :goto_0
 
-    iget-object p1, p1, Lgoi;->h:Ljava/util/HashMap;
+    :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    :cond_1
+    :goto_0
+    iput-boolean v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
 
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lgpi;->a:Lb07;
 
-    move-result-object p1
+    iget-object v1, v0, Lb07;->j:Lg07;
 
-    check-cast p1, Lqoi;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p1, 0x0
+    new-instance v2, Lvpi;
 
-    return p1
-.end method
+    invoke-direct {v2, p1}, Lvpi;-><init>(Li8j;)V
 
-.method public final g(Lgoi;)[Ltx5;
-    .locals 1
+    iget-object v3, v1, Lg07;->t0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget-object p1, p1, Lgoi;->h:Ljava/util/HashMap;
+    new-instance v4, Lnpi;
 
-    const/4 v0, 0x0
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v3
 
-    move-result-object p1
+    invoke-direct {v4, v2, v3, v0}, Lnpi;-><init>(Lhqi;ILb07;)V
 
-    check-cast p1, Lqoi;
+    iget-object v0, v1, Lg07;->x0:Lz7a;
 
-    const/4 p1, 0x0
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1, v4}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-object p1
-.end method
-
-.method public final h(Lgoi;)V
-    .locals 1
-
-    iget-object p1, p1, Lgoi;->h:Ljava/util/HashMap;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqoi;
-
-    iget-object p1, p0, Lgpi;->b:Lydg;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {p1, v0}, Lydg;->d(Ljava/lang/Object;)V
-
-    return-void
 .end method

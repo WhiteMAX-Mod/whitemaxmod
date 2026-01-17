@@ -1,138 +1,82 @@
 .class public final Lsdi;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ln8i;
+.field public final synthetic X:Lone/me/webapp/settings/WebAppsSettingScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ln8i;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppsSettingScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lsdi;->X:Lone/me/webapp/settings/WebAppsSettingScreen;
 
-    iput-object p1, p0, Lsdi;->a:Ln8i;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final postEvent(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 11
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lsdi;->a:Ln8i;
+    check-cast p1, Ljava/util/List;
 
-    iget-object v1, v0, Ln8i;->G0:Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v2, Lm4j;->a:Lvcb;
+    invoke-virtual {p0, p1, p2}, Lsdi;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    if-nez v2, :cond_0
+    check-cast p1, Lsdi;
 
-    goto :goto_0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :cond_0
-    sget-object v4, Lxk8;->d:Lxk8;
+    invoke-virtual {p1, p2}, Lsdi;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v2, v4}, Lvcb;->b(Lxk8;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    iget-wide v5, v0, Ln8i;->b:J
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v7
-
-    const-string v8, " "
-
-    const-string v9, ", botId: "
-
-    const-string v10, "onJsEvent: "
-
-    invoke-static {v10, p1, v8, p2, v9}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v5, ", hash: "
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v4, v1, v5, v3}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, v0, Ln8i;->K0:Lvd3;
-
-    iget-object v1, v0, Lvd3;->a:Ljava/lang/Object;
-
-    check-cast v1, Lac4;
-
-    iget-object v2, v0, Lvd3;->b:Ljava/lang/Object;
-
-    check-cast v2, Lbbg;
-
-    check-cast v2, Lb9b;
-
-    invoke-virtual {v2}, Lb9b;->a()Ltb4;
-
-    move-result-object v2
-
-    new-instance v4, Ln08;
-
-    invoke-direct {v4, p1, p2, v0, v3}, Ln08;-><init>(Ljava/lang/String;Ljava/lang/String;Lvd3;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v1, v2, v3, v4, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    return-void
+    return-object p2
 .end method
 
-.method public final resolveShare(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
-    .locals 7
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v1, p0, Lsdi;->a:Ln8i;
+    new-instance v0, Lsdi;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lsdi;->X:Lone/me/webapp/settings/WebAppsSettingScreen;
 
-    new-instance v0, Ld8i;
+    invoke-direct {v0, p2, v1}, Lsdi;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppsSettingScreen;)V
 
-    const/4 v6, 0x0
+    iput-object p1, v0, Lsdi;->o:Ljava/lang/Object;
 
-    move-object v2, p1
+    return-object v0
+.end method
 
-    move-object v3, p2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-object v4, p3
+    iget-object v0, p0, Lsdi;->o:Ljava/lang/Object;
 
-    move-object v5, p4
+    check-cast v0, Ljava/util/List;
 
-    invoke-direct/range {v0 .. v6}, Ld8i;-><init>(Ln8i;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 p1, 0x3
+    iget-object p1, p0, Lsdi;->X:Lone/me/webapp/settings/WebAppsSettingScreen;
 
-    const/4 p2, 0x0
+    iget-object p1, p1, Lone/me/webapp/settings/WebAppsSettingScreen;->d:Lrdi;
 
-    invoke-static {v1, p2, v0, p1}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
 
-    return-void
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

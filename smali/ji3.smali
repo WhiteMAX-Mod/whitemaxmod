@@ -1,22 +1,27 @@
-.class public abstract Lji3;
-.super Lii3;
+.class public final Lji3;
+.super Landroid/widget/FrameLayout$LayoutParams;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:I
+
+.field public b:F
+
+
 # direct methods
-.method public static p(Ljava/util/Comparator;Ljava/util/List;)V
-    .locals 2
+.method public constructor <init>(II)V
+    .locals 0
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    move-result v0
+    const/4 p1, 0x0
 
-    const/4 v1, 0x1
+    iput p1, p0, Lji3;->a:I
 
-    if-le v0, v1, :cond_0
+    const/high16 p1, 0x3f000000    # 0.5f
 
-    invoke-static {p1, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+    iput p1, p0, Lji3;->b:F
 
-    :cond_0
     return-void
 .end method

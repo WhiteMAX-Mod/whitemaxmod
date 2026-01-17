@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lse8;
+.implements Lee8;
 
 
 # instance fields
-.field public final a:Lse8;
+.field public final a:Lee8;
 
 .field public b:I
 
@@ -19,7 +19,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lse8;)V
+.method public constructor <init>(Lee8;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,173 +38,14 @@
 
     iput-object v0, p0, Lgn0;->o:Ljava/lang/Object;
 
-    iput-object p1, p0, Lgn0;->a:Lse8;
+    iput-object p1, p0, Lgn0;->a:Lee8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
-
-    iget v0, p0, Lgn0;->b:I
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lgn0;->a:Lse8;
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget v0, p0, Lgn0;->c:I
-
-    iget v1, p0, Lgn0;->d:I
-
-    iget-object v3, p0, Lgn0;->o:Ljava/lang/Object;
-
-    invoke-interface {v2, v0, v1, v3}, Lse8;->v(IILjava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lgn0;->c:I
-
-    iget v1, p0, Lgn0;->d:I
-
-    invoke-interface {v2, v0, v1}, Lse8;->q(II)V
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lgn0;->c:I
-
-    iget v1, p0, Lgn0;->d:I
-
-    invoke-interface {v2, v0, v1}, Lse8;->i(II)V
-
-    :goto_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lgn0;->o:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lgn0;->b:I
-
-    return-void
-.end method
-
-.method public final b(II)V
-    .locals 1
-
-    invoke-virtual {p0}, Lgn0;->a()V
-
-    iget-object v0, p0, Lgn0;->a:Lse8;
-
-    invoke-interface {v0, p1, p2}, Lse8;->b(II)V
-
-    return-void
-.end method
-
-.method public final i(II)V
-    .locals 4
-
-    iget v0, p0, Lgn0;->b:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Lgn0;->c:I
-
-    if-lt p1, v0, :cond_0
-
-    iget v2, p0, Lgn0;->d:I
-
-    add-int v3, v0, v2
-
-    if-gt p1, v3, :cond_0
-
-    add-int/2addr v2, p2
-
-    iput v2, p0, Lgn0;->d:I
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    iput p1, p0, Lgn0;->c:I
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lgn0;->a()V
-
-    iput p1, p0, Lgn0;->c:I
-
-    iput p2, p0, Lgn0;->d:I
-
-    iput v1, p0, Lgn0;->b:I
-
-    return-void
-.end method
-
-.method public final q(II)V
-    .locals 3
-
-    iget v0, p0, Lgn0;->b:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Lgn0;->c:I
-
-    if-lt v0, p1, :cond_0
-
-    add-int v2, p1, p2
-
-    if-gt v0, v2, :cond_0
-
-    iget v0, p0, Lgn0;->d:I
-
-    add-int/2addr v0, p2
-
-    iput v0, p0, Lgn0;->d:I
-
-    iput p1, p0, Lgn0;->c:I
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lgn0;->a()V
-
-    iput p1, p0, Lgn0;->c:I
-
-    iput p2, p0, Lgn0;->d:I
-
-    iput v1, p0, Lgn0;->b:I
-
-    return-void
-.end method
-
-.method public final v(IILjava/lang/Object;)V
+.method public final E(IILjava/lang/Object;)V
     .locals 5
 
     iget v0, p0, Lgn0;->b:I
@@ -255,6 +96,165 @@
     iput p2, p0, Lgn0;->d:I
 
     iput-object p3, p0, Lgn0;->o:Ljava/lang/Object;
+
+    iput v1, p0, Lgn0;->b:I
+
+    return-void
+.end method
+
+.method public final a()V
+    .locals 4
+
+    iget v0, p0, Lgn0;->b:I
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lgn0;->a:Lee8;
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Lgn0;->c:I
+
+    iget v1, p0, Lgn0;->d:I
+
+    iget-object v3, p0, Lgn0;->o:Ljava/lang/Object;
+
+    invoke-interface {v2, v0, v1, v3}, Lee8;->E(IILjava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lgn0;->c:I
+
+    iget v1, p0, Lgn0;->d:I
+
+    invoke-interface {v2, v0, v1}, Lee8;->v(II)V
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lgn0;->c:I
+
+    iget v1, p0, Lgn0;->d:I
+
+    invoke-interface {v2, v0, v1}, Lee8;->r(II)V
+
+    :goto_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lgn0;->o:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgn0;->b:I
+
+    return-void
+.end method
+
+.method public final b(II)V
+    .locals 1
+
+    invoke-virtual {p0}, Lgn0;->a()V
+
+    iget-object v0, p0, Lgn0;->a:Lee8;
+
+    invoke-interface {v0, p1, p2}, Lee8;->b(II)V
+
+    return-void
+.end method
+
+.method public final r(II)V
+    .locals 4
+
+    iget v0, p0, Lgn0;->b:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Lgn0;->c:I
+
+    if-lt p1, v0, :cond_0
+
+    iget v2, p0, Lgn0;->d:I
+
+    add-int v3, v0, v2
+
+    if-gt p1, v3, :cond_0
+
+    add-int/2addr v2, p2
+
+    iput v2, p0, Lgn0;->d:I
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    iput p1, p0, Lgn0;->c:I
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lgn0;->a()V
+
+    iput p1, p0, Lgn0;->c:I
+
+    iput p2, p0, Lgn0;->d:I
+
+    iput v1, p0, Lgn0;->b:I
+
+    return-void
+.end method
+
+.method public final v(II)V
+    .locals 3
+
+    iget v0, p0, Lgn0;->b:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Lgn0;->c:I
+
+    if-lt v0, p1, :cond_0
+
+    add-int v2, p1, p2
+
+    if-gt v0, v2, :cond_0
+
+    iget v0, p0, Lgn0;->d:I
+
+    add-int/2addr v0, p2
+
+    iput v0, p0, Lgn0;->d:I
+
+    iput p1, p0, Lgn0;->c:I
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lgn0;->a()V
+
+    iput p1, p0, Lgn0;->c:I
+
+    iput p2, p0, Lgn0;->d:I
 
     iput v1, p0, Lgn0;->b:I
 

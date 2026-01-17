@@ -1,155 +1,249 @@
-.class public final synthetic Ldzd;
-.super Ljava/lang/Object;
+.class public final Ldzd;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ls88;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lbg8;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic Y:J
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lbg8;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Ldzd;->a:I
+    iput-object p1, p0, Ldzd;->X:Lbg8;
 
-    iput-object p2, p0, Ldzd;->b:Ljava/lang/Object;
+    iput-wide p2, p0, Ldzd;->Y:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(La98;Lb88;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Ldzd;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Ldzd;->b:Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ldzd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lrn;
+    move-result-object p1
 
-    sget-object v0, Lb88;->ON_START:Lb88;
+    check-cast p1, Ldzd;
 
-    if-ne p2, v0, :cond_0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const/4 p2, 0x1
+    invoke-virtual {p1, p2}, Ldzd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-boolean p2, p1, Lrn;->e:Z
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
+
+    new-instance v0, Ldzd;
+
+    iget-object v1, p0, Ldzd;->X:Lbg8;
+
+    iget-wide v2, p0, Ldzd;->Y:J
+
+    invoke-direct {v0, v1, v2, v3, p2}, Ldzd;-><init>(Lbg8;JLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ldzd;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Ldzd;->o:Ljava/lang/Object;
+
+    check-cast v0, Lzb4;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-wide v1, p0, Ldzd;->Y:J
+
+    sget-object v3, Lc5j;->a:Ledb;
+
+    const/4 v4, 0x0
+
+    if-nez v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lb88;->ON_STOP:Lb88;
+    sget-object v5, Lkk8;->d:Lkk8;
 
-    if-ne p2, v0, :cond_1
+    invoke-virtual {v3, v5}, Ledb;->b(Lkk8;)Z
 
-    const/4 p2, 0x0
+    move-result v6
 
-    iput-boolean p2, p1, Lrn;->e:Z
+    if-eqz v6, :cond_1
+
+    const-string v6, "start restore draft for chatId:"
+
+    invoke-static {v1, v2, v6}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v5, p1, v1, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    return-void
+    iget-object p1, p0, Ldzd;->X:Lbg8;
 
-    :pswitch_0
-    iget-object p1, p0, Ldzd;->b:Ljava/lang/Object;
+    iget-object p1, p1, Lbg8;->a:Ljava/lang/Object;
 
-    check-cast p1, Lfzd;
+    check-cast p1, Lo58;
 
-    iget-object v0, p1, Lfzd;->e:Ljava/lang/ref/WeakReference;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    sget-object v1, Lezd;->$EnumSwitchMapping$0:[I
+    move-result-object p1
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    check-cast p1, Lla3;
 
-    move-result p2
+    iget-wide v1, p0, Ldzd;->Y:J
 
-    aget p2, v1, p2
+    invoke-virtual {p1, v1, v2}, Lla3;->k(J)Lpld;
 
-    const/4 v1, 0x0
+    move-result-object p1
 
-    const/4 v2, 0x1
+    iget-object p1, p1, Lpld;->a:Llpf;
 
-    if-eq p2, v2, :cond_4
+    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x2
+    move-result-object p1
 
-    if-eq p2, v2, :cond_2
+    check-cast p1, Lnd2;
 
-    goto :goto_1
+    if-nez p1, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "can\'t restore draft because chat is null"
+
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v4
 
     :cond_2
-    const/4 p2, 0x0
+    iget-object p1, p1, Lnd2;->b:Luh2;
 
-    iput-boolean p2, p1, Lfzd;->g:Z
+    iget-object p1, p1, Luh2;->d0:Lgab;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    instance-of v1, p1, Lgab;
 
-    move-result-object p2
-
-    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz p2, :cond_6
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lzqd;
-
-    move-result-object v0
-
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p2, Landroidx/recyclerview/widget/RecyclerView;->F0:Z
-
-    if-eqz v0, :cond_3
-
-    move-object v1, p2
-
-    :cond_3
-    if-eqz v1, :cond_6
-
-    invoke-virtual {p1, v1}, Lfzd;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    if-eqz v1, :cond_3
 
     goto :goto_1
 
+    :cond_3
+    move-object p1, v4
+
+    :goto_1
+    if-nez p1, :cond_4
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Draft empty in chat don\'t need restore"
+
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v4
+
     :cond_4
-    iput-boolean v2, p1, Lfzd;->g:Z
+    new-instance v0, Lczd;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget-object v1, p0, Ldzd;->X:Lbg8;
 
-    move-result-object p2
+    iget-object v2, p1, Lgab;->b:Lc58;
 
-    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+    invoke-static {v2}, Lzdj;->b(Lc58;)Z
 
-    if-eqz p2, :cond_6
+    move-result v3
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lzqd;
+    if-eqz v3, :cond_5
 
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    move-object v1, p2
+    goto :goto_2
 
     :cond_5
-    if-eqz v1, :cond_6
+    iget-object v3, v1, Lbg8;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1, v1}, Lfzd;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    check-cast v3, Lo58;
 
-    :cond_6
-    :goto_1
-    return-void
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object v3
+
+    check-cast v3, Lydb;
+
+    iget-object v4, v2, Lc58;->a:Ljava/lang/String;
+
+    iget-object v2, v2, Lc58;->b:Ljava/util/List;
+
+    invoke-virtual {v3, v4, v2}, Lydb;->o(Ljava/lang/CharSequence;Ljava/util/List;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    iget-object v1, v1, Lbg8;->b:Ljava/lang/Object;
+
+    check-cast v1, Lo58;
+
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lydb;
+
+    iget-object v1, v1, Lydb;->j:Lof5;
+
+    invoke-virtual {v1, v2}, Lof5;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    :goto_2
+    iget-object v1, p1, Lgab;->d:Ljava/lang/Long;
+
+    iget-object p1, p1, Lgab;->c:Ljava/lang/Long;
+
+    invoke-direct {v0, v4, v1, p1}, Lczd;-><init>(Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/Long;)V
+
+    return-object v0
 .end method

@@ -1,66 +1,62 @@
-.class public final Lcse;
+.class public final synthetic Lcse;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Li6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Z
+.field public final synthetic b:Ldse;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public synthetic constructor <init>(Ldse;I)V
     .locals 0
 
+    iput p2, p0, Lcse;->a:I
+
+    iput-object p1, p0, Lcse;->b:Ldse;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lcse;->a:J
-
-    iput-object p3, p0, Lcse;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lcse;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lcse;->d:Ljava/lang/String;
-
-    iput-boolean p6, p0, Lcse;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final run()V
+    .locals 4
 
-    const-string v0, "Session{="
+    iget v0, p0, Lcse;->a:I
 
-    const-string v1, ", current="
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v2, p0, Lcse;->a:J
+    iget-object v0, p0, Lcse;->b:Ldse;
 
-    iget-boolean v4, p0, Lcse;->o:Z
+    invoke-virtual {v0}, Ldse;->u()V
 
-    invoke-static {v2, v3, v0, v1, v4}, Lxd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Lcse;->b:Ldse;
 
-    const-string v1, "}"
+    invoke-virtual {v0}, Lore;->o()Lteg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-wide v2, v0, Ldse;->b:J
 
-    move-result-object v0
+    invoke-virtual {v1, v2, v3}, Lteg;->c(J)V
 
-    return-object v0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

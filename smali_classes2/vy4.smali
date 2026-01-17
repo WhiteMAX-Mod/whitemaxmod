@@ -1,106 +1,61 @@
 .class public final Lvy4;
-.super Lmf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld76;
 
-# virtual methods
-.method public final E(Lw3e;I)V
-    .locals 7
 
-    invoke-virtual {p1}, Lw3e;->n()Z
+# instance fields
+.field public final synthetic a:Ld76;
 
-    move-result v0
+.field public final synthetic b:Lone/me/devmenu/DevMenuGeneralPageScreen;
 
-    if-eqz v0, :cond_0
+.field public final synthetic c:I
 
-    return-void
 
-    :cond_0
-    sget-object v0, Lyy4;->a:Ljava/util/List;
+# direct methods
+.method public constructor <init>(Llpf;Lone/me/devmenu/DevMenuGeneralPageScreen;I)V
+    .locals 0
 
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    iput-object p1, p0, Lvy4;->a:Ld76;
 
-    check-cast v1, Lxy4;
+    iput-object p2, p0, Lvy4;->b:Lone/me/devmenu/DevMenuGeneralPageScreen;
 
-    iget v1, v1, Lxy4;->a:I
-
-    if-eqz v1, :cond_2
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_1
-
-    new-instance p2, Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
-
-    invoke-direct {p2}, Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;-><init>()V
-
-    :goto_0
-    move-object v1, p2
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lxy4;
-
-    iget p2, p2, Lxy4;->a:I
-
-    const-string v0, "Unknown tab id: "
-
-    invoke-static {p2, v0}, Lq3g;->n(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p2, Lone/me/devmenu/DevMenuGeneralPageScreen;
-
-    invoke-direct {p2}, Lone/me/devmenu/DevMenuGeneralPageScreen;-><init>()V
-
-    goto :goto_0
-
-    :goto_1
-    sget-object p2, Lw84;->b:Lw84;
-
-    invoke-virtual {v1, p2}, Lx84;->setRetainViewMode(Lw84;)V
-
-    new-instance v0, Lz3e;
-
-    const/4 v5, 0x0
-
-    const/4 v6, -0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lz3e;-><init>(Lx84;Ljava/lang/String;Lc94;Lc94;ZI)V
-
-    invoke-virtual {p1, v0}, Lw3e;->S(Lz3e;)V
+    iput p3, p0, Lvy4;->c:I
 
     return-void
 .end method
 
-.method public final j()I
-    .locals 1
 
-    sget-object v0, Lyy4;->a:Ljava/util/List;
+# virtual methods
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    new-instance v0, Lkf2;
 
-    move-result v0
+    iget-object v1, p0, Lvy4;->b:Lone/me/devmenu/DevMenuGeneralPageScreen;
 
-    return v0
+    iget v2, p0, Lvy4;->c:I
+
+    invoke-direct {v0, p1, v1, v2}, Lkf2;-><init>(Lf76;Lone/me/devmenu/DevMenuGeneralPageScreen;I)V
+
+    iget-object p1, p0, Lvy4;->a:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

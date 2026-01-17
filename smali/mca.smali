@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnf7;
+.implements Lse7;
 
 
 # static fields
@@ -22,7 +22,7 @@
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    sget-object p1, Lnf7;->b:Ljava/lang/String;
+    sget-object p1, Lse7;->b:Ljava/lang/String;
 
     invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public final K(Llf7;I)V
+.method public final K(Lqe7;I)V
     .locals 3
 
     iget-object v0, p0, Lmca;->c:Landroidx/room/MultiInstanceInvalidationService;
@@ -168,9 +168,9 @@
 
     move-result-object v5
 
-    check-cast v5, Llf7;
+    check-cast v5, Lqe7;
 
-    invoke-interface {v5, p2}, Llf7;->j([Ljava/lang/String;)V
+    invoke-interface {v5, p2}, Lqe7;->j([Ljava/lang/String;)V
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -231,7 +231,7 @@
     return-object p0
 .end method
 
-.method public final n(Llf7;Ljava/lang/String;)I
+.method public final n(Lqe7;Ljava/lang/String;)I
     .locals 6
 
     const/4 v0, 0x0
@@ -266,13 +266,13 @@
 
     if-eqz p1, :cond_1
 
+    iget-object p1, v1, Landroidx/room/MultiInstanceInvalidationService;->b:Ljava/util/LinkedHashMap;
+
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object v0
 
-    iget-object v0, v1, Landroidx/room/MultiInstanceInvalidationService;->b:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move v0, v3
 
@@ -306,7 +306,7 @@
 .method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 3
 
-    sget-object v0, Lnf7;->b:Ljava/lang/String;
+    sget-object v0, Lse7;->b:Ljava/lang/String;
 
     const/4 v1, 0x1
 
@@ -369,7 +369,7 @@
     goto :goto_0
 
     :cond_4
-    sget-object p4, Llf7;->a:Ljava/lang/String;
+    sget-object p4, Lqe7;->a:Ljava/lang/String;
 
     invoke-interface {p1, p4}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
@@ -377,29 +377,29 @@
 
     if-eqz p4, :cond_5
 
-    instance-of v0, p4, Llf7;
+    instance-of v0, p4, Lqe7;
 
     if-eqz v0, :cond_5
 
     move-object v0, p4
 
-    check-cast v0, Llf7;
+    check-cast v0, Lqe7;
 
     goto :goto_0
 
     :cond_5
-    new-instance v0, Lkf7;
+    new-instance v0, Lpe7;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, v0, Lkf7;->c:Landroid/os/IBinder;
+    iput-object p1, v0, Lpe7;->c:Landroid/os/IBinder;
 
     :goto_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    invoke-virtual {p0, v0, p1}, Lmca;->K(Llf7;I)V
+    invoke-virtual {p0, v0, p1}, Lmca;->K(Lqe7;I)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -415,7 +415,7 @@
     goto :goto_1
 
     :cond_7
-    sget-object p4, Llf7;->a:Ljava/lang/String;
+    sget-object p4, Lqe7;->a:Ljava/lang/String;
 
     invoke-interface {p1, p4}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
@@ -423,29 +423,29 @@
 
     if-eqz p4, :cond_8
 
-    instance-of v0, p4, Llf7;
+    instance-of v0, p4, Lqe7;
 
     if-eqz v0, :cond_8
 
     move-object v0, p4
 
-    check-cast v0, Llf7;
+    check-cast v0, Lqe7;
 
     goto :goto_1
 
     :cond_8
-    new-instance v0, Lkf7;
+    new-instance v0, Lpe7;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, v0, Lkf7;->c:Landroid/os/IBinder;
+    iput-object p1, v0, Lpe7;->c:Landroid/os/IBinder;
 
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, v0, p1}, Lmca;->n(Llf7;Ljava/lang/String;)I
+    invoke-virtual {p0, v0, p1}, Lmca;->n(Lqe7;Ljava/lang/String;)I
 
     move-result p1
 

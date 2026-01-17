@@ -4,26 +4,28 @@
 
 
 # instance fields
-.field public final a:Leac;
+.field public final a:Lxac;
 
-.field public final b:J
+.field public final b:Z
 
 .field public final c:J
 
-.field public d:J
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(Leac;JJ)V
+.method public constructor <init>(Lxac;ZJJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvn4;->a:Leac;
+    iput-object p1, p0, Lvn4;->a:Lxac;
 
-    iput-wide p2, p0, Lvn4;->b:J
+    iput-boolean p2, p0, Lvn4;->b:Z
 
-    iput-wide p4, p0, Lvn4;->c:J
+    iput-wide p3, p0, Lvn4;->c:J
+
+    iput-wide p5, p0, Lvn4;->d:J
 
     return-void
 .end method

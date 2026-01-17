@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract G(JLjava/util/List;)V
+.method public abstract B(JLjava/util/List;)V
 .end method

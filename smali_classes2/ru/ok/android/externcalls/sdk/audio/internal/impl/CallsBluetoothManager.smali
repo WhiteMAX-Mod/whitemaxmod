@@ -30,7 +30,7 @@
         "logger",
         "<init>",
         "(Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;Lru/ok/android/externcalls/sdk/audio/Logger;)V",
-        "Lv2h;",
+        "Lb3h;",
         "start",
         "()V",
         "stop",
@@ -142,7 +142,7 @@
 
 .field private static final Companion:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$Companion;
 
-.field private static final LOG_TAG:Ljava/lang/String;
+.field private static final LOG_TAG:Ljava/lang/String; = "CallsBluetoothManager"
 
 .field private static final MAX_SCO_CONNECTION_ATTEMPTS:I = 0x3
 
@@ -177,13 +177,9 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$Companion;
-
-    const-string v0, "CallsBluetoothManager"
-
-    sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -223,25 +219,25 @@
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetReceiver:Landroid/content/BroadcastReceiver;
 
-    new-instance p2, Llx1;
+    new-instance p2, Ldx1;
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, p0, v0}, Llx1;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
+    invoke-direct {p2, p0, v0}, Ldx1;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothTimeoutRunnable:Ljava/lang/Runnable;
 
-    new-instance p2, Llx1;
+    new-instance p2, Ldx1;
 
     const/4 v0, 0x1
 
-    invoke-direct {p2, p0, v0}, Llx1;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
+    invoke-direct {p2, p0, v0}, Ldx1;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateAudioManagerRunnable:Ljava/lang/Runnable;
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->context:Landroid/content/Context;
 
-    sget-object p1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string p1, "CallsBluetoothManager"
 
     const-string p2, "CAM BT is created"
 
@@ -264,14 +260,6 @@
     iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->callsAudioManager:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;
 
     return-object p0
-.end method
-
-.method public static final synthetic access$getLOG_TAG$cp()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public static final synthetic access$getLogger$p(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;)Lru/ok/android/externcalls/sdk/audio/Logger;
@@ -319,35 +307,35 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "BT SCO timed out, state "
 
-    const-string v4, "BT SCO timed out, state "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    instance-of v2, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    instance-of v1, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Ignore timeout event because headset not available"
+    const-string v1, "Ignore timeout event because headset not available"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -356,36 +344,36 @@
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getConnectionState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;
 
-    move-result-object v2
+    move-result-object v1
 
-    instance-of v3, v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    instance-of v3, v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
     if-nez v3, :cond_1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Ignore timeout event because headset is not connected"
+    const-string v1, "Ignore timeout event because headset is not connected"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_1
-    check-cast v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    check-cast v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->getAudioState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->getAudioState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;
 
-    move-result-object v2
+    move-result-object v1
 
-    instance-of v3, v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;
+    instance-of v3, v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;
 
     if-nez v3, :cond_2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Ignore timeout event because we are not connecting now"
+    const-string v1, "Ignore timeout event because we are not connecting now"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -408,9 +396,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    check-cast v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;
+    check-cast v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;->getConnectionAttempt()I
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;->getConnectionAttempt()I
 
     move-result v3
 
@@ -426,9 +414,9 @@
 
     move-result-object v3
 
-    invoke-interface {v0, v1, v3}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v3}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;->getConnectionAttempt()I
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;->getConnectionAttempt()I
 
     move-result v0
 
@@ -464,7 +452,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "CallsBluetoothManager"
 
     const-string v2, "cancel timers"
 
@@ -484,7 +472,7 @@
 .end method
 
 .method private final closeProfileProxy(Landroid/bluetooth/BluetoothHeadset;)V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
@@ -492,21 +480,21 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "Close bluetooth profile proxy: "
 
-    const-string v4, "Close bluetooth profile proxy: "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v3
+    const-string v3, "CallsBluetoothManager"
 
-    invoke-interface {v1, v2, v3}, Lru/ok/android/externcalls/sdk/audio/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v3, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -537,7 +525,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {p1}, Lc5;->q(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
+    invoke-static {p1}, La5;->q(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -579,7 +567,7 @@
 
     iget-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object p3, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string p3, "CallsBluetoothManager"
 
     const-string v1, "Can\'t get bluetooth profile proxy"
 
@@ -589,7 +577,7 @@
 .end method
 
 .method private final getConnectedBluetoothDevice(Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothDevice;
-    .locals 7
+    .locals 8
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "MissingPermission"
@@ -598,11 +586,11 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "Looking for connected bluetooth device..."
 
-    const-string v2, "Looking for connected bluetooth device..."
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothHeadset;->getConnectedDevices()Ljava/util/List;
 
@@ -610,17 +598,17 @@
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    move-result v2
+    move-result v1
 
     const/4 v3, 0x0
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
     const-string v0, "No connected divice found..."
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v3
 
@@ -644,44 +632,42 @@
 
     invoke-virtual {p1, v1}, Landroid/bluetooth/BluetoothHeadset;->getConnectionState(Landroid/bluetooth/BluetoothDevice;)I
 
-    move-result v2
+    move-result v4
 
     invoke-direct {p0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->getBluetoothDeviceName(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    if-eqz v2, :cond_4
+    if-eqz v4, :cond_4
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    const-string v6, "Connected device found: "
+    const-string v7, "Connected device found: "
 
-    if-eq v2, v5, :cond_3
+    if-eq v4, v6, :cond_3
 
-    const/4 v5, 0x2
+    const/4 v6, 0x2
 
-    if-eq v2, v5, :cond_2
+    if-eq v4, v6, :cond_2
 
     const/4 v1, 0x3
 
-    if-eq v2, v1, :cond_1
+    if-eq v4, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
-
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v6, "Disconnecting device found: "
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -692,34 +678,30 @@
     :cond_2
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v0, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v2
-
-    invoke-interface {p1, v0, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
     :cond_3
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-direct {v4, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -730,17 +712,15 @@
     :cond_4
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
-
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v6, "Disconnected device found: "
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -769,7 +749,7 @@
 
     const-string v1, "android.permission.BLUETOOTH"
 
-    invoke-static {v0, v1}, Lx7;->b(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lu7;->b(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 
@@ -785,7 +765,7 @@
 
     const-string v1, "android.permission.BLUETOOTH_CONNECT"
 
-    invoke-static {v0, v1}, Lx7;->b(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lu7;->b(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 
@@ -802,37 +782,37 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "audio connected, state "
 
-    const-string v4, "audio connected, state "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->cancelTimer()V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    instance-of v2, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    instance-of v1, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Weird! audio connected notification while headset not available, ignore"
+    const-string v1, "Weird! audio connected notification while headset not available, ignore"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -841,24 +821,24 @@
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getConnectionState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;
 
-    move-result-object v2
+    move-result-object v1
 
-    instance-of v3, v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    instance-of v3, v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
     if-nez v3, :cond_1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Weird! audio connected notification while we are not even connected, ignore"
+    const-string v1, "Weird! audio connected notification while we are not even connected, ignore"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_1
-    check-cast v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    check-cast v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->getAudioState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->getAudioState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;
 
     move-result-object v3
 
@@ -870,16 +850,16 @@
 
     const-string v4, "Unexpected state for BluetoothHeadset.STATE_AUDIO_CONNECTED"
 
-    invoke-interface {v3, v1, v4}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v2, v4}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connected;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connected;
+    sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connected;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connected;
 
     const/4 v3, 0x0
 
     const/4 v4, 0x1
 
-    invoke-static {v2, v3, v1, v4, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    invoke-static {v1, v3, v2, v4, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
     move-result-object v1
 
@@ -901,35 +881,35 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "audio has started connecting, state "
 
-    const-string v4, "audio has started connecting, state "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    instance-of v2, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    instance-of v1, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Weird! audio connecting notification while headset not available, ignore"
+    const-string v1, "Weird! audio connecting notification while headset not available, ignore"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -938,24 +918,24 @@
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getConnectionState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;
 
-    move-result-object v2
+    move-result-object v1
 
-    instance-of v3, v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    instance-of v3, v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
     if-nez v3, :cond_1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Weird! audio connecting notification while we are not even connected, ignore"
+    const-string v1, "Weird! audio connecting notification while we are not even connected, ignore"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_1
-    check-cast v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    check-cast v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->getAudioState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->getAudioState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;
 
     move-result-object v3
 
@@ -967,19 +947,19 @@
 
     const-string v4, "Weird! our state is wrong? Reset to connecting"
 
-    invoke-interface {v3, v1, v4}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v2, v4}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;
+    new-instance v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;-><init>(I)V
+    invoke-direct {v2, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;-><init>(I)V
 
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
-    invoke-static {v2, v4, v1, v5, v4}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    invoke-static {v1, v4, v2, v5, v4}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
     move-result-object v1
 
@@ -996,35 +976,35 @@
     :cond_2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Since we are in connecting state, ignore event"
+    const-string v1, "Since we are in connecting state, ignore event"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private final onAudioDisconnected(Z)V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "audio disconnected, state "
 
-    const-string v4, "audio disconnected, state "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -1045,11 +1025,11 @@
 
     const/4 v0, 0x2
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     const/4 v3, 0x0
 
-    invoke-static {p0, p1, v3, v0, v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateCurrentConnectionState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Landroid/bluetooth/BluetoothHeadset;ZILjava/lang/Object;)Z
+    invoke-static {p0, p1, v3, v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateCurrentConnectionState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Landroid/bluetooth/BluetoothHeadset;ZILjava/lang/Object;)Z
 
     goto :goto_0
 
@@ -1058,26 +1038,26 @@
 
     const-string v0, "Weird! Headset is not available when sco goes down"
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v3, "audio disconnected, state after update: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1087,29 +1067,29 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "received "
 
-    const-string v4, "received "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v3, ", state is "
 
-    const-string v4, ", state is "
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
@@ -1121,7 +1101,7 @@
 
     const-string p2, "Our headset was not initialized yet, ignore broadcast event"
 
-    invoke-interface {p1, v1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1134,17 +1114,17 @@
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     const v3, -0x5591500b
 
     const-string v4, "android.bluetooth.profile.extra.STATE"
 
-    if-eq v2, v3, :cond_4
+    if-eq v1, v3, :cond_4
 
     const p2, 0x2083ec2d
 
-    if-eq v2, p2, :cond_1
+    if-eq v1, p2, :cond_1
 
     goto :goto_0
 
@@ -1167,9 +1147,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "intent action is ACTION_CONNECTION_STATE_CHANGED, connection state is "
+    const-string v1, "intent action is ACTION_CONNECTION_STATE_CHANGED, connection state is "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1177,7 +1157,7 @@
 
     move-result-object v0
 
-    invoke-interface {p2, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_3
 
@@ -1198,9 +1178,9 @@
     return-void
 
     :cond_4
-    const-string v2, "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED"
+    const-string v1, "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED"
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1217,19 +1197,19 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v3, "intent action is ACTION_AUDIO_STATE_CHANGED, audio state is "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     packed-switch p1, :pswitch_data_0
 
@@ -1261,39 +1241,39 @@
 .end method
 
 .method private final onHeadsetConnected()V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "BT headset connected: "
 
-    const-string v4, "BT headset connected: "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    instance-of v2, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    instance-of v1, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Unexpected state when headset connected"
+    const-string v1, "Unexpected state when headset connected"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1320,19 +1300,19 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "BT headset disconnected"
 
-    const-string v2, "BT headset disconnected"
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->stopScoAudio()V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    instance-of v2, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    instance-of v1, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     check-cast v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
@@ -1355,7 +1335,7 @@
     return-void
 
     :cond_0
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1373,39 +1353,39 @@
 
     move-result-object v0
 
-    invoke-interface {v2, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private final onServiceConnectedImpl(ILandroid/bluetooth/BluetoothProfile;)V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "connected "
 
-    const-string v4, "connected "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v3, ", our state is "
 
-    const-string v4, ", our state is "
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -1415,7 +1395,7 @@
 
     sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$None;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$None;
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1442,39 +1422,39 @@
 
     const-string p2, "Own state or connected profile don\'t match to expected one, ignore event"
 
-    invoke-interface {p1, v1, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private final onServiceDisconnectedImpl(I)V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "disconnected "
 
-    const-string v4, "disconnected "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v3, ", our state is "
 
-    const-string v4, ", our state is "
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -1484,7 +1464,7 @@
 
     sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$None;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$None;
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1513,7 +1493,7 @@
 
     const-string v0, "Own state or connected profile don\'t match to expected one, ignore event"
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1523,7 +1503,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "CallsBluetoothManager"
 
     const-string v2, "registering receiver"
 
@@ -1542,40 +1522,40 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "start sco requested, state: "
 
-    const-string v4, "start sco requested, state: "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
     .line 4
-    instance-of v2, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    instance-of v1, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
     const/4 v3, 0x0
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
     .line 5
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
     const-string v0, "BT SCO connection fails - no headset available"
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
@@ -1585,10 +1565,10 @@
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getConnectionState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;
 
-    move-result-object v2
+    move-result-object v1
 
     .line 7
-    instance-of v4, v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    instance-of v4, v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
     if-nez v4, :cond_1
 
@@ -1597,15 +1577,15 @@
 
     const-string v0, "BT SCO connection fails - headset is not connected yet"
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
     .line 9
     :cond_1
-    check-cast v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    check-cast v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->getAudioState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->getAudioState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;
 
     move-result-object v4
 
@@ -1621,7 +1601,7 @@
 
     const-string v0, "BT SCO is already connected"
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return v6
 
@@ -1636,7 +1616,7 @@
 
     const-string v0, "BT SCO is about to connect, ignore this attempt"
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return v6
 
@@ -1651,7 +1631,7 @@
 
     const-string v0, "BT SCO is about to disconnect, ignore this attempt"
 
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
@@ -1661,17 +1641,17 @@
 
     const-string v5, "BT SCO connection condition satisfied, update state and request for connection"
 
-    invoke-interface {v4, v1, v5}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v4, v2, v5}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
-    new-instance v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;
+    new-instance v4, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;
 
-    invoke-direct {v1, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;-><init>(I)V
+    invoke-direct {v4, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connecting;-><init>(I)V
 
     const/4 p1, 0x0
 
     .line 18
-    invoke-static {v2, p1, v1, v6, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    invoke-static {v1, p1, v4, v6, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
     move-result-object v1
 
@@ -1680,10 +1660,10 @@
 
     move-result-object v1
 
-    const/4 v2, 0x2
+    const/4 v4, 0x2
 
     .line 20
-    invoke-static {p0, v1, v3, v2, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateHeadsetState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;ZILjava/lang/Object;)V
+    invoke-static {p0, v1, v3, v4, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateHeadsetState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;ZILjava/lang/Object;)V
 
     .line 21
     :try_start_0
@@ -1707,20 +1687,18 @@
     move-exception v1
 
     .line 24
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
-
-    sget-object v5, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v5, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
     const-string v6, "Error on startBluetoothSco()"
 
-    invoke-interface {v4, v5, v6, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v5, v2, v6, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 25
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getHeadset()Landroid/bluetooth/BluetoothHeadset;
 
     move-result-object v0
 
-    invoke-static {p0, v0, v3, v2, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateCurrentConnectionState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Landroid/bluetooth/BluetoothHeadset;ZILjava/lang/Object;)Z
+    invoke-static {p0, v0, v3, v4, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateCurrentConnectionState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Landroid/bluetooth/BluetoothHeadset;ZILjava/lang/Object;)Z
 
     return v3
 .end method
@@ -1749,7 +1727,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "CallsBluetoothManager"
 
     const-string v2, "start connection timers"
 
@@ -1775,7 +1753,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "CallsBluetoothManager"
 
     const-string v2, "unregistering receiver"
 
@@ -1793,7 +1771,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "CallsBluetoothManager"
 
     const-string v2, "Calling update CAM state because of BT state change"
 
@@ -1826,34 +1804,34 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    const-string v4, "BT headset check begin: "
 
-    const-string v5, "BT headset check begin: "
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v3
+    const-string v3, "CallsBluetoothManager"
 
-    invoke-interface {v1, v2, v3}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v3, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     :try_start_0
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->getConnectedBluetoothDevice(Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothDevice;
 
-    move-result-object v3
+    move-result-object v2
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p1, v3}, Landroid/bluetooth/BluetoothHeadset;->isAudioConnected(Landroid/bluetooth/BluetoothDevice;)Z
+    invoke-virtual {p1, v2}, Landroid/bluetooth/BluetoothHeadset;->isAudioConnected(Landroid/bluetooth/BluetoothDevice;)Z
 
     move-result v4
 
@@ -1861,13 +1839,13 @@
 
     new-instance v4, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
-    invoke-direct {p0, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->getBluetoothDeviceName(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->getBluetoothDeviceName(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     sget-object v5, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connected;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Connected;
 
-    invoke-direct {v4, v3, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;)V
+    invoke-direct {v4, v2, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;)V
 
     goto :goto_0
 
@@ -1882,17 +1860,17 @@
     goto :goto_2
 
     :cond_0
-    if-eqz v3, :cond_1
+    if-eqz v2, :cond_1
 
     new-instance v4, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
-    invoke-direct {p0, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->getBluetoothDeviceName(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->getBluetoothDeviceName(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     sget-object v5, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Disconnected;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Disconnected;
 
-    invoke-direct {v4, v3, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;)V
+    invoke-direct {v4, v2, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;)V
 
     goto :goto_0
 
@@ -1900,27 +1878,27 @@
     sget-object v4, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Disconnected;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Disconnected;
 
     :goto_0
-    new-instance v3, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    new-instance v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
-    invoke-direct {v3, p1, v4}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;-><init>(Landroid/bluetooth/BluetoothHeadset;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;)V
+    invoke-direct {v2, p1, v4}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;-><init>(Landroid/bluetooth/BluetoothHeadset;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;)V
 
-    invoke-direct {p0, v3, p2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateHeadsetState(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;Z)V
+    invoke-direct {p0, v2, p2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateHeadsetState(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;Z)V
 
     iget-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p2, v2, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v3, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     instance-of p2, v4, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
@@ -1949,22 +1927,18 @@
     :goto_1
     iget-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v0, "Error detecting remote audio device"
 
-    const-string v2, "Error detecting remote audio device"
-
-    invoke-interface {p2, v0, v2, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p2, v3, v0, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v1
 
     :goto_2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v2, "SecurityException: did you permit android.permission.BLUETOOTH_CONNECT?"
 
-    const-string v3, "SecurityException: did you permit android.permission.BLUETOOTH_CONNECT?"
-
-    invoke-interface {v0, v2, v3, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v3, v2, p2}, Lru/ok/android/externcalls/sdk/audio/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->closeProfileProxy(Landroid/bluetooth/BluetoothHeadset;)V
 
@@ -1991,7 +1965,7 @@
 .end method
 
 .method private final updateHeadsetState(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;Z)V
-    .locals 4
+    .locals 3
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
@@ -2016,19 +1990,19 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "BT state did change to: "
 
-    const-string v3, "BT state did change to: "
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
+
+    const-string v1, "CallsBluetoothManager"
 
     invoke-interface {v0, v1, p1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2191,11 +2165,11 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "start requested"
 
-    const-string v2, "start requested"
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
@@ -2205,7 +2179,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2213,13 +2187,13 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2234,7 +2208,7 @@
 
     invoke-static {}, Landroid/os/Process;->myPid()I
 
-    move-result v2
+    move-result v1
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2242,17 +2216,17 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v2, ") lacks BLUETOOTH permission"
+    const-string v1, ") lacks BLUETOOTH permission"
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2267,9 +2241,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Bluetooth SCO audio is not available off call"
+    const-string v1, "Bluetooth SCO audio is not available off call"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2282,9 +2256,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Device does not support Bluetooth"
+    const-string v1, "Device does not support Bluetooth"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2293,17 +2267,17 @@
 
     sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Unavailable;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Unavailable;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateHeadsetState(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;Z)V
+    invoke-direct {p0, v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateHeadsetState(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;Z)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->context:Landroid/content/Context;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
     const/4 v3, 0x1
 
-    invoke-direct {p0, v0, v2, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->getBluetoothProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
+    invoke-direct {p0, v0, v1, v3}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->getBluetoothProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
 
     move-result v0
 
@@ -2311,9 +2285,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "BluetoothAdapter.getProfileProxy(HEADSET) failed"
+    const-string v1, "BluetoothAdapter.getProfileProxy(HEADSET) failed"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2355,7 +2329,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    const-string v1, "CallsBluetoothManager"
 
     const-string v2, "stop requested"
 
@@ -2392,48 +2366,48 @@
 .end method
 
 .method public final stopScoAudio()V
-    .locals 8
+    .locals 9
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "stop sco requested; state: "
 
-    const-string v4, "stop sco requested; state: "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CallsBluetoothManager"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetState:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;
 
-    instance-of v2, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    instance-of v1, v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "BT SCO disconnection ignored - no headset available"
+    const-string v1, "BT SCO disconnection ignored - no headset available"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_0
-    move-object v2, v0
+    move-object v1, v0
 
-    check-cast v2, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    check-cast v1, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getConnectionState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getConnectionState()Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;
 
     move-result-object v3
 
@@ -2443,9 +2417,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "BT SCO disconnection ignored - no headset connected"
+    const-string v1, "BT SCO disconnection ignored - no headset connected"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2464,9 +2438,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "BT SCO is already disconnected. Ignore stop SCO request"
+    const-string v1, "BT SCO is already disconnected. Ignore stop SCO request"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2477,39 +2451,39 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    const-string v2, "Disconnecting is in progress. Ignore stop SCO request"
+    const-string v1, "Disconnecting is in progress. Ignore stop SCO request"
 
-    invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/sdk/audio/Logger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_3
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->cancelTimer()V
 
-    const/4 v1, 0x2
-
-    const/4 v4, 0x0
+    const/4 v4, 0x2
 
     const/4 v5, 0x0
+
+    const/4 v6, 0x0
 
     :try_start_0
     check-cast v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
     check-cast v3, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
-    sget-object v6, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Disconnecting;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Disconnecting;
+    sget-object v7, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Disconnecting;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState$Disconnecting;
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
-    invoke-static {v3, v5, v6, v7, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
+    invoke-static {v3, v6, v7, v8, v6}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;Ljava/lang/String;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$SCOAudioState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState$Connected;
 
     move-result-object v3
 
-    invoke-static {v0, v5, v3, v7, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;Landroid/bluetooth/BluetoothHeadset;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
+    invoke-static {v0, v6, v3, v8, v6}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->copy$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;Landroid/bluetooth/BluetoothHeadset;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$ConnectionState;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;
 
     move-result-object v0
 
-    invoke-static {p0, v0, v4, v1, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateHeadsetState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;ZILjava/lang/Object;)V
+    invoke-static {p0, v0, v5, v4, v6}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateHeadsetState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState;ZILjava/lang/Object;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->audioManager:Landroid/media/AudioManager;
 
@@ -2517,7 +2491,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->audioManager:Landroid/media/AudioManager;
 
-    invoke-virtual {v0, v4}, Landroid/media/AudioManager;->setBluetoothScoOn(Z)V
+    invoke-virtual {v0, v5}, Landroid/media/AudioManager;->setBluetoothScoOn(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2528,17 +2502,15 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
-    sget-object v6, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->LOG_TAG:Ljava/lang/String;
-
     const-string v7, "Can\'t stop bluetooth sco"
 
-    invoke-interface {v3, v6, v7, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v3, v2, v7, v0}, Lru/ok/android/externcalls/sdk/audio/Logger;->reportError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getHeadset()Landroid/bluetooth/BluetoothHeadset;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$Available;->getHeadset()Landroid/bluetooth/BluetoothHeadset;
 
     move-result-object v0
 
-    invoke-static {p0, v0, v4, v1, v5}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateCurrentConnectionState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Landroid/bluetooth/BluetoothHeadset;ZILjava/lang/Object;)Z
+    invoke-static {p0, v0, v5, v4, v6}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateCurrentConnectionState$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;Landroid/bluetooth/BluetoothHeadset;ZILjava/lang/Object;)Z
 
     return-void
 .end method

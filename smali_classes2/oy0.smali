@@ -2,157 +2,138 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
-
 
 # instance fields
-.field public final X:Z
-
-.field public final Y:J
-
-.field public final Z:Z
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lwy0;
-
-.field public final c:I
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public final a:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Lly0;)V
-    .locals 2
+.method public constructor <init>(Lo58;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lly0;->a:Ljava/lang/String;
-
-    iput-object v0, p0, Loy0;->a:Ljava/lang/String;
-
-    iget-object v0, p1, Lly0;->b:Lwy0;
-
-    iput-object v0, p0, Loy0;->b:Lwy0;
-
-    iget v0, p1, Lly0;->c:I
-
-    iput v0, p0, Loy0;->c:I
-
-    iget-object v0, p1, Lly0;->d:Ljava/lang/String;
-
-    iput-object v0, p0, Loy0;->d:Ljava/lang/String;
-
-    iget-object v0, p1, Lly0;->e:Ljava/lang/String;
-
-    iput-object v0, p0, Loy0;->o:Ljava/lang/String;
-
-    iget-boolean v0, p1, Lly0;->f:Z
-
-    iput-boolean v0, p0, Loy0;->X:Z
-
-    iget-boolean v0, p1, Lly0;->g:Z
-
-    iput-boolean v0, p0, Loy0;->Z:Z
-
-    iget-wide v0, p1, Lly0;->h:J
-
-    iput-wide v0, p0, Loy0;->Y:J
+    iput-object p1, p0, Loy0;->a:Lo58;
 
     return-void
 .end method
 
+.method public static a()Lh6b;
+    .locals 7
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    new-instance v0, Lh6b;
 
-    instance-of v0, p1, Loy0;
+    sget v1, Lqfb;->d1:I
 
-    if-nez v0, :cond_0
+    sget v2, Lsfb;->B:I
 
-    goto :goto_0
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_0
-    check-cast p1, Loy0;
+    move-result-object v2
 
-    iget-object v0, p0, Loy0;->a:Ljava/lang/String;
+    sget v3, Lv5e;->A1:I
 
-    iget-object v1, p1, Loy0;->a:Ljava/lang/String;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Ltri;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    move-result-object v4
 
-    move-result v0
+    const/4 v5, 0x0
 
-    if-nez v0, :cond_1
+    const/16 v6, 0x34
 
-    goto :goto_0
+    const/4 v3, 0x0
 
-    :cond_1
-    iget-object v0, p0, Loy0;->o:Ljava/lang/String;
+    invoke-direct/range {v0 .. v6}, Lh6b;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
 
-    iget-object v1, p1, Loy0;->o:Ljava/lang/String;
+    return-object v0
+.end method
 
-    invoke-static {v0, v1}, Ltri;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+.method public static b()Lh6b;
+    .locals 7
 
-    move-result v0
+    new-instance v0, Lh6b;
 
-    if-nez v0, :cond_2
+    sget v1, Lqfb;->e1:I
 
-    goto :goto_0
+    sget v2, Lsfb;->B:I
 
-    :cond_2
-    iget-object v0, p0, Loy0;->b:Lwy0;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v1, p1, Loy0;->b:Lwy0;
+    move-result-object v2
 
-    if-eq v0, v1, :cond_3
+    sget v3, Lv5e;->B1:I
 
-    goto :goto_0
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_3
-    iget-boolean v0, p0, Loy0;->X:Z
+    move-result-object v4
 
-    iget-boolean v1, p1, Loy0;->X:Z
+    const/4 v5, 0x0
 
-    if-eq v0, v1, :cond_4
+    const/16 v6, 0x34
 
-    goto :goto_0
+    const/4 v3, 0x0
 
-    :cond_4
-    iget v0, p0, Loy0;->c:I
+    invoke-direct/range {v0 .. v6}, Lh6b;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
 
-    iget v1, p1, Loy0;->c:I
+    return-object v0
+.end method
 
-    if-eq v0, v1, :cond_5
+.method public static c()Lh6b;
+    .locals 7
 
-    goto :goto_0
+    new-instance v0, Lh6b;
 
-    :cond_5
-    iget-wide v0, p0, Loy0;->Y:J
+    sget v1, Lqfb;->u1:I
 
-    iget-wide v2, p1, Loy0;->Y:J
+    sget v2, Lsfb;->C:I
 
-    cmp-long v0, v0, v2
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eqz v0, :cond_6
+    move-result-object v2
 
-    :goto_0
-    const/4 p1, 0x0
+    sget v3, Lv5e;->P0:I
 
-    return p1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_6
-    iget-object v0, p0, Loy0;->d:Ljava/lang/String;
+    move-result-object v4
 
-    iget-object p1, p1, Loy0;->d:Ljava/lang/String;
+    const/4 v5, 0x0
 
-    invoke-static {v0, p1}, Ltri;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    const/16 v6, 0x34
 
-    move-result p1
+    const/4 v3, 0x0
 
-    return p1
+    invoke-direct/range {v0 .. v6}, Lh6b;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
+.end method
+
+.method public static d()Lh6b;
+    .locals 7
+
+    new-instance v0, Lh6b;
+
+    sget v1, Lqfb;->w1:I
+
+    sget v2, Lsfb;->S:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    sget v3, Lv5e;->s1:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x34
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lh6b;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
 .end method

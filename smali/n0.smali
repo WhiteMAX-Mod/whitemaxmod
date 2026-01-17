@@ -1,93 +1,66 @@
-.class public abstract Ln0;
+.class public final Ln0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpb4;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final key:Lqb4;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lqb4;"
-        }
-    .end annotation
-.end field
+.field public final synthetic a:Z
+
+.field public final synthetic b:Lbj4;
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Lo0;
 
 
 # direct methods
-.method public constructor <init>(Lqb4;)V
+.method public constructor <init>(Lo0;ZLbj4;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln0;->key:Lqb4;
+    iput-object p1, p0, Ln0;->d:Lo0;
+
+    iput-boolean p2, p0, Ln0;->a:Z
+
+    iput-object p3, p0, Ln0;->b:Lbj4;
+
+    iput-boolean p4, p0, Ln0;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<R:",
-            "Ljava/lang/Object;",
-            ">(TR;",
-            "Lcr6;",
-            ")TR;"
-        }
-    .end annotation
+.method public final run()V
+    .locals 3
 
-    invoke-interface {p2, p1, p0}, Lcr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v0, p0, Ln0;->a:Z
 
-    move-result-object p1
+    iget-object v1, p0, Ln0;->d:Lo0;
 
-    return-object p1
-.end method
+    iget-object v2, p0, Ln0;->b:Lbj4;
 
-.method public get(Lqb4;)Lpb4;
-    .locals 0
+    if-eqz v0, :cond_0
 
-    invoke-static {p0, p1}, Lxjj;->a(Lpb4;Lqb4;)Lpb4;
+    invoke-interface {v2, v1}, Lbj4;->b(Lpi4;)V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
-.end method
+    :cond_0
+    iget-boolean v0, p0, Ln0;->c:Z
 
-.method public getKey()Lqb4;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lqb4;"
-        }
-    .end annotation
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Ln0;->key:Lqb4;
+    invoke-interface {v2}, Lbj4;->c()V
 
-    return-object v0
-.end method
+    return-void
 
-.method public minusKey(Lqb4;)Lrb4;
-    .locals 0
+    :cond_1
+    invoke-interface {v2, v1}, Lbj4;->d(Lpi4;)V
 
-    invoke-static {p0, p1}, Lxjj;->b(Lpb4;Lqb4;)Lrb4;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public plus(Lrb4;)Lrb4;
-    .locals 0
-
-    invoke-static {p0, p1}, Lwjj;->a(Lrb4;Lrb4;)Lrb4;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

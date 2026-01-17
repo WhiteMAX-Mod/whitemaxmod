@@ -2,6 +2,13 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lb38;
-.implements Ly28;
+
+# virtual methods
+.method public abstract a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+.end method
+
+.method public abstract b(Lkl4;)Ljava/lang/Object;
+.end method
+
+.method public abstract d()Lxpe;
+.end method

@@ -1,60 +1,82 @@
-.class public final Lecj;
+.class public abstract synthetic Lecj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwwa;
-
-
-# static fields
-.field public static final a:Lecj;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(ILdgc;)Lfz5;
+    .locals 2
 
-    new-instance v0, Lecj;
+    new-instance v0, Lvzi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p0}, Lvzi;-><init>(I)V
 
-    sput-object v0, Lecj;->a:Lecj;
+    iget-object p0, p1, Ldgc;->c:Ljava/lang/Object;
 
-    new-instance v0, Lyyi;
+    check-cast p0, Ljava/util/HashMap;
 
-    const/4 v1, 0x1
+    if-nez p0, :cond_0
 
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+    new-instance p0, Ljava/util/HashMap;
 
-    const-class v1, Lqzi;
+    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    iput-object p0, p1, Ldgc;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    :cond_0
+    iget-object p0, p1, Ldgc;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x2
+    check-cast p0, Ljava/util/HashMap;
 
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+    const-class v1, Ln0j;
 
-    move-result-object v0
+    invoke-virtual {p0, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    new-instance p0, Lfz5;
 
-    move-result-object v0
+    iget-object v0, p1, Ldgc;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    check-cast v0, Ljava/lang/String;
 
-    return-void
-.end method
+    iget-object v1, p1, Ldgc;->c:Ljava/lang/Object;
 
+    check-cast v1, Ljava/util/HashMap;
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    if-nez v1, :cond_1
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Ljava/util/HashMap;
+
+    iget-object p1, p1, Ldgc;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/HashMap;
+
+    invoke-direct {v1, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
-    throw p1
+    :goto_0
+    invoke-direct {p0, v0, p1}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    return-object p0
+.end method
+
+.method public static b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -1,3 +1,3 @@
 .class public final La5a;
-.super Lbs8;
+.super Lkr8;
 .source "SourceFile"

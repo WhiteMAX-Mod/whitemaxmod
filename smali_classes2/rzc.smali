@@ -2,140 +2,182 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfre;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lo58;
 
-.field public final b:Landroid/graphics/Rect;
+.field public final b:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Landroid/graphics/Rect;)V
+.method public constructor <init>(Lo58;Lo58;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrzc;->a:Ljava/lang/String;
+    iput-object p1, p0, Lrzc;->a:Lo58;
 
-    iput-object p2, p0, Lrzc;->b:Landroid/graphics/Rect;
+    iput-object p2, p0, Lrzc;->b:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne p0, p1, :cond_0
+    const-string v1, "onProxyEnableChange: oldValue="
 
-    return v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    instance-of v1, p1, Lrzc;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    const-string p1, ", newValue="
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v2
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    check-cast p1, Lrzc;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v1, p0, Lrzc;->a:Ljava/lang/String;
+    move-result-object p1
 
-    iget-object v3, p1, Lrzc;->a:Ljava/lang/String;
+    const-string v0, "rzc"
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v1
+    iget-object p1, p0, Lrzc;->a:Lo58;
 
-    if-nez v1, :cond_2
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    return v2
+    move-result-object p1
 
-    :cond_2
-    iget-object v1, p0, Lrzc;->b:Landroid/graphics/Rect;
+    check-cast p1, Lxbg;
 
-    iget-object p1, p1, Lrzc;->b:Landroid/graphics/Rect;
+    invoke-virtual {p1, p2}, Lxbg;->f(Ljava/lang/String;)V
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result p1
 
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lrzc;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lrzc;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    invoke-static {}, Lm4j;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lrzc;->a:Ljava/lang/String;
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "****"
+    iget-object p1, p0, Lrzc;->b:Lo58;
 
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lwc4;
+
+    const-string v0, "proxy"
+
+    invoke-virtual {p1, v0, p2}, Lwc4;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
     :goto_0
+    return-void
+.end method
+
+.method public final b(Ljava/util/List;Ljava/util/List;)V
+    .locals 7
+
+    const-string v0, "rzc"
+
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "QrCode(text="
+    const-string v2, "onProxyDomainsChanged: oldValue="
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, ", boundingRect="
+    const-string p1, ", newValue="
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lrzc;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lrzc;->a:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxbg;
+
+    monitor-enter p1
+
+    :try_start_0
+    iput-object p2, p1, Lxbg;->f:Ljava/util/List;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lrzc;->b:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lwc4;
+
+    const-string v0, "proxyDomains"
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x3f
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v1, p2
+
+    invoke-static/range {v1 .. v6}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, v0, p2}, Lwc4;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    move-object p2, v0
+
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p2
 .end method

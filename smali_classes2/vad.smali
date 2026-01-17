@@ -3,10 +3,10 @@
 
 
 # static fields
-.field public static inactive_ttl:I = 0x7f110018
+.field public static cancel:I = 0x7f0a021f
 
-.field public static inactive_ttl_item:I = 0x7f110019
+.field public static music_player_control_thumb_bg:I = 0x7f0a05a8
 
-.field public static profile_delete_dates_days_left:I = 0x7f110037
+.field public static music_player_control_thumb_circle:I = 0x7f0a05a9
 
-.field public static profile_edit_reactions_settings_slider_current_value:I = 0x7f110038
+.field public static ripple_bg:I = 0x7f0a0a01

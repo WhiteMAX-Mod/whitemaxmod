@@ -1,59 +1,41 @@
 .class public final Lxk2;
-.super Ll84;
+.super Lkk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ldl2;
-
-.field public d:Ldl2;
-
-.field public o:J
-
-.field public s0:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ldl2;Ll84;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Lxk2;->Z:Ldl2;
+    invoke-direct {p0}, Lkk0;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lxk2;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iput-object p1, p0, Lxk2;->Y:Ljava/lang/Object;
+    invoke-super {p0}, Lkk0;->toString()Ljava/lang/String;
 
-    iget p1, p0, Lxk2;->s0:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    const-string v1, "ChatLastReactionUpdatedEvent{chatId="
 
-    or-int/2addr p1, v0
+    const-string v2, "\'lastReactionMessageId=0\', lastReaction=null}"
 
-    iput p1, p0, Lxk2;->s0:I
+    iget-wide v3, p0, Lxk2;->b:J
 
-    const-wide/16 v1, 0x0
+    invoke-static {v1, v3, v4, v2, v0}, Lcbh;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const-wide/16 v3, 0x0
+    move-result-object v0
 
-    iget-object v0, p0, Lxk2;->Z:Ldl2;
-
-    move-object v5, p0
-
-    invoke-static/range {v0 .. v5}, Ldl2;->f(Ldl2;JJLl84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

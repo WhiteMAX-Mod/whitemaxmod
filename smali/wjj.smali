@@ -1,90 +1,174 @@
-.class public abstract Lwjj;
-.super Ljava/lang/Object;
+.class public final Lwjj;
+.super Lcom/google/android/gms/common/internal/a;
 .source "SourceFile"
 
 
+# instance fields
+.field public final J0:Ls70;
+
+
 # direct methods
-.method public static a(Lrb4;Lrb4;)Lrb4;
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lj5a;Ls70;Lepi;Lepi;)V
+    .locals 8
 
-    sget-object v0, Lwg5;->a:Lwg5;
+    const/16 v3, 0x44
 
-    if-ne p1, v0, :cond_0
+    const/4 v7, 0x0
 
-    return-object p0
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p3
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILj5a;Le07;Lf07;I)V
+
+    new-instance p1, Lzii;
+
+    if-nez p4, :cond_0
+
+    sget-object p4, Ls70;->c:Ls70;
 
     :cond_0
-    sget-object v0, Lgj3;->c:Lgj3;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1, p0, v0}, Lrb4;->fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
+    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result-object p0
+    iput-object p2, p1, Lzii;->a:Ljava/lang/Object;
 
-    check-cast p0, Lrb4;
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p0
-.end method
+    iget-boolean p2, p4, Ls70;->a:Z
 
-.method public static final b(Lm4h;)V
-    .locals 3
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    new-instance v0, Lh4b;
+    move-result-object p2
 
-    const/16 v1, 0x1a
+    iput-object p2, p1, Lzii;->a:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lh4b;-><init>(I)V
+    iget-object p2, p4, Ls70;->b:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    iput-object p2, p1, Lzii;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
+    const/16 p2, 0x10
 
-    new-instance v0, Li4b;
+    new-array p2, p2, [B
 
-    const/16 v1, 0x17
+    sget-object p3, Lnti;->a:Ljava/util/Random;
 
-    invoke-direct {v0, v1}, Li4b;-><init>(I)V
+    invoke-virtual {p3, p2}, Ljava/util/Random;->nextBytes([B)V
 
-    const/16 v1, 0x20c
+    const/16 p3, 0xb
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    invoke-static {p2, p3}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    new-instance v0, Lh4b;
+    move-result-object p2
 
-    const/16 v1, 0x1d
+    iput-object p2, p1, Lzii;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lh4b;-><init>(I)V
+    new-instance p2, Ls70;
 
-    const/16 v1, 0x20d
+    invoke-direct {p2, p1}, Ls70;-><init>(Lzii;)V
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Lh4b;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lh4b;-><init>(I)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
-
-    new-instance v0, Lh4b;
-
-    const/16 v2, 0x1c
-
-    invoke-direct {v0, v2}, Lh4b;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
-
-    new-instance v0, Li4b;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Li4b;-><init>(I)V
-
-    const/16 v1, 0x20e
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    iput-object p2, v0, Lwjj;->J0:Ls70;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final g()I
+    .locals 1
+
+    const v0, 0xc35000
+
+    return v0
+.end method
+
+.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
+    .locals 3
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    const-string v0, "com.google.android.gms.auth.api.credentials.internal.ICredentialsService"
+
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lfqj;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lfqj;
+
+    return-object v1
+
+    :cond_1
+    new-instance v1, Lfqj;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, p1, v0, v2}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    return-object v1
+.end method
+
+.method public final n()Landroid/os/Bundle;
+    .locals 4
+
+    iget-object v0, p0, Lwjj;->J0:Ls70;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v2, "consumer_package"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "force_save_dialog"
+
+    iget-boolean v3, v0, Ls70;->a:Z
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string v2, "log_session_id"
+
+    iget-object v0, v0, Ls70;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
+.end method
+
+.method public final p()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.auth.api.credentials.internal.ICredentialsService"
+
+    return-object v0
+.end method
+
+.method public final q()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.auth.api.credentials.service.START"
+
+    return-object v0
 .end method

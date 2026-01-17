@@ -3,80 +3,67 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lee7;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final synthetic a:Ld2d;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ljava/io/InputStream;
+.field public final b:I
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/io/Closeable;
 
 
 # direct methods
-.method public constructor <init>(Ld2d;Lqwf;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/io/Closeable;I)V
     .locals 0
+
+    iput p4, p0, Lmd7;->a:I
+
+    iput p1, p0, Lmd7;->b:I
+
+    iput-object p2, p0, Lmd7;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lmd7;->d:Ljava/io/Closeable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmd7;->a:Ld2d;
+    return-void
+.end method
 
-    iput-object p2, p0, Lmd7;->b:Ljava/io/InputStream;
+.method private final l()V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/io/OutputStream;
+.method public final close()V
     .locals 1
 
-    iget-object v0, p0, Lmd7;->a:Ld2d;
+    iget v0, p0, Lmd7;->a:I
 
-    iget-object v0, v0, Ld2d;->f:Lzwf;
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lmd7;->d:Ljava/io/Closeable;
 
-.method public final b()Ljava/io/InputStream;
-    .locals 1
+    check-cast v0, Ljp4;
 
-    iget-object v0, p0, Lmd7;->b:Ljava/io/InputStream;
+    if-eqz v0, :cond_0
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljp4;->close()V
 
-.method public final c()Z
-    .locals 1
-
-    iget-object v0, p0, Lmd7;->a:Ld2d;
-
-    invoke-virtual {v0}, Ld2d;->c()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final d(J)V
-    .locals 1
-
-    iget-object v0, p0, Lmd7;->a:Ld2d;
-
-    iget-object v0, v0, Ld2d;->e:Lqwf;
-
-    invoke-virtual {v0, p1, p2}, Lqwf;->B(J)V
-
+    :cond_0
+    :pswitch_0
     return-void
-.end method
 
-.method public final e(J)V
-    .locals 1
+    nop
 
-    iget-object v0, p0, Lmd7;->a:Ld2d;
-
-    iget-object v0, v0, Ld2d;->f:Lzwf;
-
-    invoke-virtual {v0, p1, p2}, Lzwf;->B(J)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

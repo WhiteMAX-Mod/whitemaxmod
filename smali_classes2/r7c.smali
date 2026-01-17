@@ -1,96 +1,131 @@
 .class public final Lr7c;
-.super Lum;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lucg;
+.implements Lbr6;
 
 
 # instance fields
-.field public final d:Z
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lifb;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public constructor <init>(Lifb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lum;-><init>(J)V
+    iput-object p1, p0, Lr7c;->Y:Lifb;
 
-    iput-boolean p3, p0, Lr7c;->d:Z
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lxbg;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lr7c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lr7c;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lr7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final h()Lk2;
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v0, Li06;
+    new-instance v0, Lr7c;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lr7c;->Y:Lifb;
 
-    const/16 v2, 0x14
+    invoke-direct {v0, v1, p2}, Lr7c;-><init>(Lifb;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1, v2}, Li06;-><init>(Lmob;I)V
-
-    const-string v1, "interactive"
-
-    iget-boolean v2, p0, Lr7c;->d:Z
-
-    invoke-virtual {v0, v1, v2}, Lk2;->j(Ljava/lang/String;Z)V
+    iput-object p1, v0, Lr7c;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final l(Lcbg;)V
-    .locals 8
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const-class v0, Lr7c;
+    iget-object v0, p0, Lr7c;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    check-cast v0, Lzb4;
 
-    move-result-object v3
+    iget v1, p0, Lr7c;->o:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onFail "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v1, Lm4j;->a:Lvcb;
+    const/4 v2, 0x1
 
     if-eqz v1, :cond_1
 
-    sget-object v2, Lxk8;->Y:Lxk8;
+    if-ne v1, v2, :cond_0
 
-    if-nez p1, :cond_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const-string p1, ""
+    goto :goto_0
 
     :cond_0
-    move-object v4, p1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v6, 0x0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/16 v7, 0x8
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 v5, 0x0
-
-    invoke-static/range {v1 .. v7}, Lvcb;->f(Lvcb;Lxk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    throw p1
 
     :cond_1
-    return-void
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lr7c;->X:Ljava/lang/Object;
+
+    iput v2, p0, Lr7c;->o:I
+
+    const-wide/16 v3, 0x258
+
+    invoke-static {v3, v4, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    if-ne p1, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    invoke-static {v0}, Lilj;->e(Lzb4;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p0, Lr7c;->Y:Lifb;
+
+    invoke-virtual {p1, v2}, Lifb;->setShimmerEnabled(Z)V
+
+    :cond_3
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpw2;
+.implements Low2;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x7ad7119e
+    const v0, -0x3874dcf6
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Loading"
+    const-string v0, "LoadingError"
 
     return-object v0
 .end method

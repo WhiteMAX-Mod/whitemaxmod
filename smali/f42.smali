@@ -1,73 +1,171 @@
-.class public final synthetic Lf42;
-.super Ljava/lang/Object;
+.class public final enum Lf42;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/RejectedExecutionHandler;
+
+# static fields
+.field public static final enum X:Lf42;
+
+.field public static final enum Y:Lf42;
+
+.field public static final enum Z:Lf42;
+
+.field public static final enum b:Lf42;
+
+.field public static final enum c:Lf42;
+
+.field public static final enum d:Lf42;
+
+.field public static final enum o:Lf42;
+
+.field public static final enum t0:Lf42;
+
+.field public static final synthetic u0:[Lf42;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    iput p1, p0, Lf42;->a:I
+    new-instance v0, Lf42;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "RELEASED"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lf42;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v0, Lf42;->b:Lf42;
+
+    new-instance v1, Lf42;
+
+    const-string v3, "RELEASING"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v3, v4, v4}, Lf42;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v1, Lf42;->c:Lf42;
+
+    move v3, v2
+
+    new-instance v2, Lf42;
+
+    const-string v5, "CLOSED"
+
+    const/4 v6, 0x2
+
+    invoke-direct {v2, v5, v6, v3}, Lf42;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v2, Lf42;->d:Lf42;
+
+    move v5, v3
+
+    new-instance v3, Lf42;
+
+    const-string v6, "PENDING_OPEN"
+
+    const/4 v7, 0x3
+
+    invoke-direct {v3, v6, v7, v5}, Lf42;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v3, Lf42;->o:Lf42;
+
+    move v5, v4
+
+    new-instance v4, Lf42;
+
+    const-string v6, "CLOSING"
+
+    const/4 v7, 0x4
+
+    invoke-direct {v4, v6, v7, v5}, Lf42;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v4, Lf42;->X:Lf42;
+
+    move v6, v5
+
+    new-instance v5, Lf42;
+
+    const-string v7, "OPENING"
+
+    const/4 v8, 0x5
+
+    invoke-direct {v5, v7, v8, v6}, Lf42;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v5, Lf42;->Y:Lf42;
+
+    move v7, v6
+
+    new-instance v6, Lf42;
+
+    const-string v8, "OPEN"
+
+    const/4 v9, 0x6
+
+    invoke-direct {v6, v8, v9, v7}, Lf42;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v6, Lf42;->Z:Lf42;
+
+    move v8, v7
+
+    new-instance v7, Lf42;
+
+    const-string v9, "CONFIGURED"
+
+    const/4 v10, 0x7
+
+    invoke-direct {v7, v9, v10, v8}, Lf42;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v7, Lf42;->t0:Lf42;
+
+    filled-new-array/range {v0 .. v7}, [Lf42;
+
+    move-result-object v0
+
+    sput-object v0, Lf42;->u0:[Lf42;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 0
 
-# virtual methods
-.method public final rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-boolean p3, p0, Lf42;->a:Z
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lf42;
     .locals 1
 
-    iget v0, p0, Lf42;->a:I
+    const-class v0, Lf42;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :try_start_0
-    invoke-virtual {p2}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
+    move-result-object p0
 
-    move-result-object p2
+    check-cast p0, Lf42;
 
-    invoke-interface {p2, p1}, Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    return-object p0
+.end method
 
-    goto :goto_0
+.method public static values()[Lf42;
+    .locals 1
 
-    :catch_0
-    move-exception p1
+    sget-object v0, Lf42;->u0:[Lf42;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-virtual {v0}, [Lf42;->clone()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
+    check-cast v0, [Lf42;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    const-string p1, "CameraExecutor"
-
-    const-string p2, "A rejected execution occurred in CameraExecutor!"
-
-    invoke-static {p1, p2}, Lw4j;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

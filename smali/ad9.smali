@@ -3,106 +3,84 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzx3;
 
 
 # instance fields
-.field public final synthetic X:Lid9;
+.field public final synthetic a:I
 
-.field public final synthetic a:Ljd9;
+.field public final synthetic b:Lto6;
 
-.field public final synthetic b:Leb9;
+.field public final synthetic c:Lof8;
 
-.field public final synthetic c:I
-
-.field public final synthetic d:Lxb9;
-
-.field public final synthetic o:I
+.field public final synthetic d:Le59;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljd9;Leb9;ILxb9;ILid9;)V
+.method public synthetic constructor <init>(Lto6;Lof8;Le59;I)V
     .locals 0
 
+    iput p4, p0, Lad9;->a:I
+
+    iput-object p1, p0, Lad9;->b:Lto6;
+
+    iput-object p2, p0, Lad9;->c:Lof8;
+
+    iput-object p3, p0, Lad9;->d:Le59;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lad9;->a:Ljd9;
-
-    iput-object p2, p0, Lad9;->b:Leb9;
-
-    iput p3, p0, Lad9;->c:I
-
-    iput-object p4, p0, Lad9;->d:Lxb9;
-
-    iput p5, p0, Lad9;->o:I
-
-    iput-object p6, p0, Lad9;->X:Lid9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v0, p0, Lad9;->a:Ljd9;
+    iget v0, p0, Lad9;->a:I
 
-    iget-object v0, v0, Ljd9;->d:Lkqe;
+    check-cast p1, Led9;
 
-    iget-object v1, p0, Lad9;->b:Leb9;
+    packed-switch v0, :pswitch_data_0
 
-    iget v2, p0, Lad9;->c:I
+    iget-object v0, p0, Lad9;->b:Lto6;
 
-    invoke-virtual {v0, v1, v2}, Lkqe;->z(Leb9;I)Z
+    iget v1, v0, Lto6;->b:I
 
-    move-result v3
+    iget-object v0, v0, Lto6;->c:Ljava/lang/Object;
 
-    iget-object v4, p0, Lad9;->d:Lxb9;
+    check-cast v0, Lvc9;
 
-    iget v5, p0, Lad9;->o:I
+    iget-object v2, p0, Lad9;->c:Lof8;
 
-    if-nez v3, :cond_0
+    iget-object v3, p0, Lad9;->d:Le59;
 
-    new-instance v0, Ldte;
-
-    const/4 v2, -0x4
-
-    invoke-direct {v0, v2}, Ldte;-><init>(I)V
-
-    invoke-static {v4, v1, v5, v0}, Ljd9;->Z(Lxb9;Leb9;ILdte;)V
+    invoke-interface {p1, v1, v0, v2, v3}, Led9;->d(ILvc9;Lof8;Le59;)V
 
     return-void
 
-    :cond_0
-    iget-object v3, v4, Lxb9;->e:Lpme;
+    :pswitch_0
+    iget-object v0, p0, Lad9;->b:Lto6;
 
-    invoke-virtual {v4, v1}, Lxb9;->t(Leb9;)Leb9;
+    iget v1, v0, Lto6;->b:I
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, v0, Lto6;->c:Ljava/lang/Object;
 
-    const/16 v3, 0x1b
+    check-cast v0, Lvc9;
 
-    iget-object v6, p0, Lad9;->X:Lid9;
+    iget-object v2, p0, Lad9;->c:Lof8;
 
-    if-ne v2, v3, :cond_1
+    iget-object v3, p0, Lad9;->d:Le59;
 
-    invoke-interface {v6, v4, v1, v5}, Lid9;->m(Lxb9;Leb9;I)Ljava/lang/Object;
-
-    new-instance v3, Lcd9;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0, v1, v2, v3}, Lkqe;->b(Leb9;ILmu3;)V
+    invoke-interface {p1, v1, v0, v2, v3}, Led9;->u(ILvc9;Lof8;Le59;)V
 
     return-void
 
-    :cond_1
-    new-instance v3, Ldd9;
+    nop
 
-    invoke-direct {v3, v6, v4, v1, v5}, Ldd9;-><init>(Lid9;Lxb9;Leb9;I)V
-
-    invoke-virtual {v0, v1, v2, v3}, Lkqe;->b(Leb9;ILmu3;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final a:Lqzf;
+.field public final a:Lb1g;
 
 
 # direct methods
-.method public constructor <init>(Lqzf;)V
+.method public constructor <init>(Lb1g;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lysa;->a:Lqzf;
+    iput-object p1, p0, Lysa;->a:Lb1g;
 
     return-void
 .end method
@@ -32,7 +32,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lysa;->a:Lqzf;
+    iget-object v1, p0, Lysa;->a:Lb1g;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

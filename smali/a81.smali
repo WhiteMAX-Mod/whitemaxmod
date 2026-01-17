@@ -3,62 +3,51 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb81;
+.implements Le94;
 
 
-# static fields
-.field public static final a:La81;
+# instance fields
+.field public final synthetic a:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;)V
+    .locals 0
 
-    new-instance v0, La81;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, La81;->a:La81;
+    iput-object p1, p0, La81;->a:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(La94;La94;Z)V
+    .locals 0
 
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    if-ne p0, p1, :cond_0
+.method public final b(La94;La94;Z)V
+    .locals 0
 
-    return v0
+    if-eqz p3, :cond_0
+
+    sget-object p1, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lz28;
+
+    iget-object p1, p0, La81;->a:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
+
+    iget-object p1, p1, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->b:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Le81;
+
+    invoke-virtual {p1}, Le81;->s()V
 
     :cond_0
-    instance-of p1, p1, La81;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x35b676d9
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Finished"
-
-    return-object v0
+    return-void
 .end method

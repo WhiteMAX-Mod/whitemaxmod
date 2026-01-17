@@ -2,69 +2,66 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln62;
 
-
-# instance fields
-.field public final a:Lj1b;
-
-.field public final synthetic b:Lr1b;
+# static fields
+.field public static final a:Lq1b;
 
 
 # direct methods
-.method public constructor <init>(Lr1b;Lj1b;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lq1b;
 
-    iput-object p1, p0, Lq1b;->b:Lr1b;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lq1b;->a:Lj1b;
+    sput-object v0, Lq1b;->a:Lq1b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 4
+.method public final a(Llq6;)Landroid/window/OnBackInvokedCallback;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Llq6;",
+            ")",
+            "Landroid/window/OnBackInvokedCallback;"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lq1b;->b:Lr1b;
+    new-instance v0, Lco;
 
-    iget-object v1, v0, Lr1b;->b:Lms;
+    const/4 v1, 0x1
 
-    iget-object v2, p0, Lq1b;->a:Lj1b;
+    invoke-direct {v0, v1, p1}, Lco;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v1, v2}, Lms;->remove(Ljava/lang/Object;)Z
+    return-object v0
+.end method
 
-    iget-object v1, v0, Lr1b;->c:Lj1b;
+.method public final b(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-static {v1, v2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p1, Landroid/window/OnBackInvokedDispatcher;
 
-    move-result v1
+    check-cast p3, Landroid/window/OnBackInvokedCallback;
 
-    const/4 v3, 0x0
+    invoke-interface {p1, p2, p3}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
 
-    if-eqz v1, :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v2}, Lj1b;->a()V
+.method public final c(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iput-object v3, v0, Lr1b;->c:Lj1b;
+    check-cast p1, Landroid/window/OnBackInvokedDispatcher;
 
-    :cond_0
-    iget-object v0, v2, Lj1b;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    check-cast p2, Landroid/window/OnBackInvokedCallback;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, v2, Lj1b;->c:Lrr6;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
-
-    :cond_1
-    iput-object v3, v2, Lj1b;->c:Lrr6;
+    invoke-interface {p1, p2}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
 
     return-void
 .end method

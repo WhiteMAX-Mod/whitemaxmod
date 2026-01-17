@@ -1,27 +1,23 @@
 .class public final Lmqc;
-.super Ldrc;
+.super Lnqc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final a:Llhg;
 
 .field public final b:I
 
-.field public final c:I
-
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(ILlhg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lmqc;->a:I
+    iput-object p2, p0, Lmqc;->a:Llhg;
 
-    iput p2, p0, Lmqc;->b:I
-
-    iput p2, p0, Lmqc;->c:I
+    iput p1, p0, Lmqc;->b:I
 
     return-void
 .end method
@@ -33,59 +29,55 @@
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     instance-of v0, p1, Lmqc;
 
     if-nez v0, :cond_1
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lmqc;
 
-    iget v0, p0, Lmqc;->a:I
+    iget-object v0, p0, Lmqc;->a:Llhg;
 
-    iget v1, p1, Lmqc;->a:I
+    iget-object v1, p1, Lmqc;->a:Llhg;
 
-    if-eq v0, v1, :cond_2
+    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_1
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
     iget v0, p0, Lmqc;->b:I
 
     iget p1, p1, Lmqc;->b:I
 
-    if-ne v0, p1, :cond_3
+    if-eq v0, p1, :cond_3
 
     :goto_0
-    const/4 p1, 0x1
+    const/4 p1, 0x0
 
     return p1
 
     :cond_3
     :goto_1
-    const/4 p1, 0x0
+    const/4 p1, 0x1
 
     return p1
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x40
-
-    int-to-long v0, v0
-
-    return-wide v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lmqc;->a:I
+    iget-object v0, p0, Lmqc;->a:Llhg;
+
+    iget v0, v0, Llhg;->c:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -104,44 +96,32 @@
     return v1
 .end method
 
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lmqc;->c:I
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lmqc;->b:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Likj;->c(I)Ljava/lang/String;
+    const-string v1, "ShowSuccessSnackbar(title="
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lmqc;->a:Llhg;
 
-    const-string v2, "Admins(count="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, ", icon="
 
-    iget v2, p0, Lmqc;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v1, p0, Lmqc;->b:I
 
-    const-string v2, ", itemViewType="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ")"
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

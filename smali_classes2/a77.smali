@@ -1,6 +1,9 @@
-.class public final La77;
-.super Ltl5;
+.class public final synthetic La77;
+.super Lqr6;
 .source "SourceFile"
+
+# interfaces
+.implements Lnq6;
 
 
 # static fields
@@ -9,11 +12,21 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
     new-instance v0, La77;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v4, "getId()J"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lg77;
+
+    const-string v3, "getId"
+
+    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     sput-object v0, La77;->a:La77;
 
@@ -22,40 +35,18 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    check-cast p1, Lg77;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {p1}, Lg77;->getId()J
 
-    return v0
+    move-result-wide v0
 
-    :cond_0
-    instance-of p1, p1, La77;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-nez p1, :cond_1
+    move-result-object p1
 
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x3e8b5524
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "HidePlaceholderSurnameEvent"
-
-    return-object v0
+    return-object p1
 .end method

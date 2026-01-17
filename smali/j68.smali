@@ -1,63 +1,48 @@
 .class public final Lj68;
-.super Lglf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lkotlin/coroutines/Continuation;
-
-
 # direct methods
-.method public constructor <init>(Lrb4;Lcr6;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, p1, v1, v0}, Lm0;-><init>(Lrb4;ZZ)V
-
-    invoke-static {p2, p0, p0}, Lv0j;->b(Lcr6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lj68;->a:Lkotlin/coroutines/Continuation;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onStart()V
+.method public static a(Ljava/util/Date;)Ljava/lang/String;
     .locals 4
 
-    iget-object v0, p0, Lj68;->a:Lkotlin/coroutines/Continuation;
+    sget-object v0, Lhp6;->v:Ljava/lang/Object;
+
+    monitor-enter v0
 
     :try_start_0
-    invoke-static {v0}, Lv0j;->e(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v1, Lhp6;->u:Ljava/text/SimpleDateFormat;
 
-    move-result-object v0
+    if-nez v1, :cond_0
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    new-instance v1, Ljava/text/SimpleDateFormat;
 
-    const/4 v2, 0x2
+    const-string v2, "yyyyMMdd_HHmmss_SSS"
 
-    const/4 v3, 0x0
+    sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-static {v0, v1, v3, v2, v3}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Loq6;ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    sput-object v1, Lhp6;->u:Ljava/text/SimpleDateFormat;
+
+    :cond_0
+    sget-object v1, Lhp6;->u:Ljava/text/SimpleDateFormat;
+
+    invoke-virtual {v1, p0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lyyd;
-
-    invoke-direct {v1, v0}, Lyyd;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {p0, v1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    throw v0
+    throw p0
 .end method

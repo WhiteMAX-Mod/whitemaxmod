@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo1d;
+.implements Lp2d;
 
 
 # virtual methods

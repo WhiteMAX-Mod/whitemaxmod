@@ -4,269 +4,438 @@
 
 
 # direct methods
-.method public static a()La15;
-    .locals 3
+.method public static final a(Lodb;II)Ljava/util/List;
+    .locals 9
 
-    sget-object v0, La15;->b:La15;
+    iget-object p0, p0, Lodb;->a:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast p0, Ljava/util/LinkedHashMap;
 
-    sget-object v0, La15;->b:La15;
+    if-ne p1, p2, :cond_0
 
-    return-object v0
+    sget-object p0, Ldh5;->a:Ldh5;
+
+    return-object p0
 
     :cond_0
-    const-class v0, La15;
+    const/4 v0, 0x0
 
-    monitor-enter v0
+    const/4 v1, 0x1
 
-    :try_start_0
-    sget-object v1, La15;->b:La15;
+    if-le p2, p1, :cond_1
 
-    if-nez v1, :cond_1
-
-    new-instance v1, La15;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, La15;-><init>(I)V
-
-    sput-object v1, La15;->b:La15;
+    move v2, v1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
+    :cond_1
+    move v2, v0
+
+    :goto_0
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    if-ge p1, p2, :cond_b
 
     goto :goto_1
 
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, La15;->b:La15;
-
-    return-object v0
+    :cond_3
+    if-le p1, p2, :cond_b
 
     :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const/4 v4, 0x0
 
-    throw v1
+    if-eqz v2, :cond_5
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {p0, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/util/TreeMap;
+
+    if-nez v5, :cond_4
+
+    :goto_2
+    move-object v7, v4
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v5}, Ljava/util/TreeMap;->descendingKeySet()Ljava/util/NavigableSet;
+
+    move-result-object v6
+
+    new-instance v7, Lktb;
+
+    invoke-direct {v7, v5, v6}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_5
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {p0, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/util/TreeMap;
+
+    if-nez v5, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {v5}, Ljava/util/TreeMap;->keySet()Ljava/util/Set;
+
+    move-result-object v6
+
+    new-instance v7, Lktb;
+
+    invoke-direct {v7, v5, v6}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :goto_3
+    if-nez v7, :cond_7
+
+    goto :goto_6
+
+    :cond_7
+    iget-object v5, v7, Lktb;->a:Ljava/lang/Object;
+
+    check-cast v5, Ljava/util/Map;
+
+    iget-object v6, v7, Lktb;->b:Ljava/lang/Object;
+
+    check-cast v6, Ljava/lang/Iterable;
+
+    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :cond_8
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_a
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Number;
+
+    invoke-virtual {v7}, Ljava/lang/Number;->intValue()I
+
+    move-result v7
+
+    if-eqz v2, :cond_9
+
+    add-int/lit8 v8, p1, 0x1
+
+    if-gt v8, v7, :cond_8
+
+    if-gt v7, p2, :cond_8
+
+    goto :goto_4
+
+    :cond_9
+    if-gt p2, v7, :cond_8
+
+    if-ge v7, p1, :cond_8
+
+    :goto_4
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v5, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move v5, v1
+
+    move p1, v7
+
+    goto :goto_5
+
+    :cond_a
+    move v5, v0
+
+    :goto_5
+    if-nez v5, :cond_2
+
+    :goto_6
+    return-object v4
+
+    :cond_b
+    return-object v3
 .end method
 
-.method public static b()Lbp0;
-    .locals 3
+.method public static final b(Ldj4;II)Z
+    .locals 1
 
-    sget-object v0, Lbp0;->c:Lbp0;
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    if-le p1, p2, :cond_0
 
-    sget-object v0, Lbp0;->c:Lbp0;
+    iget-boolean p2, p0, Ldj4;->l:Z
 
-    return-object v0
+    if-eqz p2, :cond_0
+
+    return v0
 
     :cond_0
-    const-class v0, Lbp0;
+    iget-object p2, p0, Ldj4;->m:Ljava/util/Set;
 
-    monitor-enter v0
+    iget-boolean p0, p0, Ldj4;->k:Z
 
-    :try_start_0
-    sget-object v1, Lbp0;->c:Lbp0;
+    if-eqz p0, :cond_2
 
-    if-nez v1, :cond_1
+    if-eqz p2, :cond_1
 
-    new-instance v1, Lbp0;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v2, 0x3
+    move-result-object p0
 
-    invoke-direct {v1, v2}, Lbp0;-><init>(I)V
+    invoke-interface {p2, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    sput-object v1, Lbp0;->c:Lbp0;
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    return v0
+.end method
+
+.method public static d(II)V
+    .locals 2
+
+    if-ltz p0, :cond_1
+
+    if-lt p0, p1, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
+    :cond_0
+    return-void
 
     :cond_1
     :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    sget-object v0, Lbp0;->c:Lbp0;
+    const-string v1, "index"
 
-    return-object v0
+    if-ltz p0, :cond_3
+
+    if-gez p1, :cond_2
+
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "negative size: "
+
+    invoke-static {p1, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    filled-new-array {v1, p0, p1}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string p1, "%s (%s) must be less than size (%s)"
+
+    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    filled-new-array {v1, p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string p1, "%s (%s) must not be negative"
+
+    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
 
     :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 .end method
 
-.method public static c()Lex7;
-    .locals 3
+.method public static e(III)V
+    .locals 1
 
-    sget-object v0, Lex7;->c:Lex7;
+    if-ltz p0, :cond_1
 
-    if-eqz v0, :cond_0
+    if-lt p1, p0, :cond_1
 
-    sget-object v0, Lex7;->c:Lex7;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Lex7;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lex7;->c:Lex7;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lex7;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lex7;-><init>(I)V
-
-    sput-object v1, Lex7;->c:Lex7;
+    if-le p1, p2, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lex7;->c:Lex7;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static d()Lm47;
-    .locals 4
-
-    sget-object v0, Lur8;->a:Lm47;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lur8;->a:Lm47;
-
-    return-object v0
-
     :cond_0
-    const-class v0, Lur8;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lur8;->a:Lm47;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lm47;
-
-    new-instance v2, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    invoke-direct {v1, v2}, Lm47;-><init>(Landroid/os/Handler;)V
-
-    sput-object v1, Lur8;->a:Lm47;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
+    return-void
 
     :cond_1
     :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    sget-object v0, Lur8;->a:Lm47;
+    if-ltz p0, :cond_4
 
-    return-object v0
+    if-gt p0, p2, :cond_4
 
+    if-ltz p1, :cond_3
+
+    if-le p1, p2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    filled-new-array {p1, p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string p1, "end index (%s) must not be less than start index (%s)"
+
+    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_2
+
+    :cond_3
     :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-string p0, "end index"
 
-    throw v1
+    invoke-static {p1, p2, p0}, Lgbj;->f(IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_2
+
+    :cond_4
+    const-string p1, "start index"
+
+    invoke-static {p0, p2, p1}, Lgbj;->f(IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    :goto_2
+    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public static e(Lsfa;Loq6;Ll84;)Ljava/lang/Object;
-    .locals 3
+.method public static f(IILjava/lang/String;)Ljava/lang/String;
+    .locals 0
 
-    new-instance v0, Lasd;
+    if-gez p0, :cond_0
 
-    invoke-direct {v0, p0}, Lasd;-><init>(Lsfa;)V
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lrb4;
+    move-result-object p0
 
-    move-result-object v1
+    filled-new-array {p2, p0}, [Ljava/lang/Object;
 
-    invoke-interface {v1, v0}, Lrb4;->get(Lqb4;)Lpb4;
+    move-result-object p0
 
-    move-result-object v1
+    const-string p1, "%s (%s) must not be negative"
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {p1, p2}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
     :cond_0
-    new-instance v1, Lzrd;
+    if-ltz p1, :cond_1
 
-    invoke-direct {v1, v0}, Lzrd;-><init>(Lasd;)V
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v0, Ltfa;
+    move-result-object p0
 
-    const/4 v2, 0x0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v0, p0, p1, v2}, Ltfa;-><init>(Lsfa;Loq6;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    invoke-static {v1, v0, p2}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    filled-new-array {p2, p0, p1}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string p1, "%s (%s) must not be greater than size (%s)"
+
+    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "negative size: "
+
+    invoke-static {p1, p2}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public c()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -45,7 +45,7 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lvk5;
+.field private static final synthetic $ENTRIES:Lzk5;
 
 .field private static final synthetic $VALUES:[Lru/ok/android/externcalls/sdk/Conversation$CallType;
 
@@ -112,11 +112,11 @@
 
     sput-object v0, Lru/ok/android/externcalls/sdk/Conversation$CallType;->$VALUES:[Lru/ok/android/externcalls/sdk/Conversation$CallType;
 
-    new-instance v1, Lwk5;
+    new-instance v1, Lal5;
 
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/Conversation$CallType;->$ENTRIES:Lvk5;
+    sput-object v1, Lru/ok/android/externcalls/sdk/Conversation$CallType;->$ENTRIES:Lzk5;
 
     return-void
 .end method
@@ -134,16 +134,16 @@
     return-void
 .end method
 
-.method public static getEntries()Lvk5;
+.method public static getEntries()Lzk5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lvk5;"
+            "Lzk5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/Conversation$CallType;->$ENTRIES:Lvk5;
+    sget-object v0, Lru/ok/android/externcalls/sdk/Conversation$CallType;->$ENTRIES:Lzk5;
 
     return-object v0
 .end method

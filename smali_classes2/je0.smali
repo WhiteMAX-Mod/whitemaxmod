@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract r(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
+.method public abstract s(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
 .end method

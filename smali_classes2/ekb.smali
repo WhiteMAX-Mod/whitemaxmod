@@ -1,133 +1,108 @@
-.class public abstract Lekb;
+.class public final synthetic Lekb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
+.field public final synthetic b:Lhkb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lhkb;I)V
+    .locals 0
 
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_avatars_cancel_action:I
+    iput p2, p0, Lekb;->a:I
 
-    sput v0, Lekb;->a:I
+    iput-object p1, p0, Lekb;->b:Lhkb;
 
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I
-
-    sput v0, Lekb;->b:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_avatars_take_photo_action:I
-
-    sput v0, Lekb;->c:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_constraint_layout:I
-
-    sput v0, Lekb;->d:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_create_button_view:I
-
-    sput v0, Lekb;->e:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_create_hint_text_view:I
-
-    sput v0, Lekb;->f:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_description_view:I
-
-    sput v0, Lekb;->g:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_icon_view:I
-
-    sput v0, Lekb;->h:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_title_view:I
-
-    sput v0, Lekb;->i:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_titleicon_toolbar:I
-
-    sput v0, Lekb;->j:I
-
-    sget v0, Lj9d;->oneme_startconversation_chat_toolbar:I
-
-    sput v0, Lekb;->k:I
-
-    sget v0, Lj9d;->oneme_startconversation_confirm_add_subscribers_button:I
-
-    sput v0, Lekb;->l:I
-
-    sget v0, Lj9d;->oneme_startconversation_container:I
-
-    sput v0, Lekb;->m:I
-
-    sget v0, Lj9d;->oneme_startconversation_create_button_view_type:I
-
-    sput v0, Lekb;->n:I
-
-    sget v0, Lj9d;->oneme_startconversation_recyclerview:I
-
-    sput v0, Lekb;->o:I
-
-    sget v0, Lj9d;->oneme_startconversation_select_channel_subscribers_toolbar:I
-
-    sput v0, Lekb;->p:I
-
-    sget v0, Lj9d;->oneme_startconversation_toolbar:I
-
-    sput v0, Lekb;->q:I
-
-    sget v0, Lj9d;->oneme_startconversations_create_channel:I
-
-    sput v0, Lekb;->r:I
-
-    sget v0, Lj9d;->oneme_startconversations_create_chat:I
-
-    sput v0, Lekb;->s:I
-
-    sget v0, Lj9d;->oneme_startconversations_create_group_call:I
-
-    sput v0, Lekb;->t:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lekb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lekb;->b:Lhkb;
+
+    sget-object v1, Ll47;->X:Ll47;
+
+    invoke-static {v0, v1}, Loqf;->d(Landroid/view/View;Ln47;)Z
+
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lpc3;->t0:Lkme;
+
+    iget-object v1, p0, Lekb;->b:Lhkb;
+
+    invoke-virtual {v0, v1}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lzlb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lxf0;->e:I
+
+    const-wide v2, 0xff6813ffL
+
+    long-to-int v2, v2
+
+    filled-new-array {v0, v2}, [I
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofArgb([I)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    new-instance v2, Lc10;
+
+    const/16 v3, 0x13
+
+    invoke-direct {v2, v3, v1}, Lc10;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    const-wide/16 v1, 0x28a
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    const-wide/16 v1, 0x320
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lekb;->b:Lhkb;
+
+    invoke-static {v0}, Lhkb;->u(Lhkb;)Landroid/animation/AnimatorSet;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

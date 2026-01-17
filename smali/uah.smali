@@ -2,105 +2,170 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:J
-
-.field public static final c:Ljava/util/regex/Pattern;
-
-.field public static d:Luah;
+# interfaces
+.implements Lj0f;
 
 
 # instance fields
-.field public final a:Lhjf;
+.field public final a:Lnhg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Luah;->b:J
-
-    const-string v0, "\\AA[\\w-]{38}\\z"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Luah;->c:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lhjf;)V
+.method public constructor <init>(Lnhg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luah;->a:Lhjf;
+    iput-object p1, p0, Luah;->a:Lnhg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbc0;)Z
-    .locals 6
+.method public final b()Lqhg;
+    .locals 1
 
-    iget-object v0, p1, Lbc0;->c:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    return-object v0
+.end method
 
-    move-result v0
+.method public final c()Lyze;
+    .locals 1
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final d()Lqhg;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final e()Lg0f;
+    .locals 1
+
+    sget-object v0, Lzze;->a:Lzze;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Luah;
+
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    iget-wide v0, p1, Lbc0;->f:J
+    :cond_1
+    check-cast p1, Luah;
 
-    iget-wide v2, p1, Lbc0;->e:J
+    iget-object v0, p0, Luah;->a:Lnhg;
 
-    add-long/2addr v0, v2
+    iget-object p1, p1, Luah;->a:Lnhg;
 
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-virtual {v0, p1}, Lnhg;->equals(Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Luah;->a:Lhjf;
+    move-result p1
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1, v2, v3}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v2
-
-    sget-wide v4, Luah;->b:J
-
-    add-long/2addr v2, v4
-
-    cmp-long p1, v0, v2
-
-    if-gez p1, :cond_1
+    if-nez p1, :cond_2
 
     :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
     const/4 p1, 0x0
 
     return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final f()Ly58;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lqhg;
+    .locals 1
+
+    iget-object v0, p0, Luah;->a:Lnhg;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Luah;->a:Lnhg;
+
+    invoke-virtual {v0}, Lnhg;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Ly6b;->V0:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UserInWaitingMore(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Luah;->a:Lnhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

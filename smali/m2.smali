@@ -1,169 +1,291 @@
 .class public final Lm2;
-.super Ljava/lang/Object;
+.super Love;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public final a:Ljava/util/Iterator;
-
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/util/Collection;
-
-.field public d:Ljava/util/Iterator;
-
-.field public final synthetic o:Lh2;
+.field public final synthetic b:Lo2;
 
 
 # direct methods
-.method public constructor <init>(Lh2;)V
+.method public constructor <init>(Lo2;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lm2;->o:Lh2;
-
-    iget-object p1, p1, Lh2;->d:Ljava/util/Map;
-
-    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lm2;->a:Ljava/util/Iterator;
+    iput-object p1, p0, Lm2;->b:Lo2;
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lm2;->b:Ljava/lang/Object;
-
-    iput-object p1, p0, Lm2;->c:Ljava/util/Collection;
-
-    sget-object p1, Lzx7;->a:Lzx7;
-
-    iput-object p1, p0, Lm2;->d:Ljava/util/Iterator;
+    invoke-direct {p0, p1}, Love;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
+.method public final clear()V
     .locals 1
 
-    iget-object v0, p0, Lm2;->a:Ljava/util/Iterator;
+    iget-object v0, p0, Lm2;->b:Lo2;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Lo2;->clear()V
+
+    return-void
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lm2;->b:Lo2;
+
+    iget-object v0, v0, Lo2;->b:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lm2;->b:Lo2;
+
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lm2;->d:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final next()Ljava/lang/Object;
+.method public final iterator()Ljava/util/Iterator;
     .locals 2
 
-    iget-object v0, p0, Lm2;->d:Ljava/util/Iterator;
+    new-instance v0, Ln2;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v1, p0, Lm2;->b:Lo2;
+
+    invoke-direct {v0, v1}, Ln2;-><init>(Lo2;)V
+
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 2
+
+    invoke-virtual {p0, p1}, Lm2;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lm2;->a:Ljava/util/Iterator;
+    const/4 p1, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return p1
+
+    :cond_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Map$Entry;
+
+    iget-object v0, p0, Lm2;->b:Lo2;
+
+    iget-object v0, v0, Lo2;->o:Ljava/io/Serializable;
+
+    check-cast v0, Lg2;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v1, v0, Lg2;->d:Ljava/util/Map;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 p1, 0x0
+
+    :goto_0
+    check-cast p1, Ljava/util/Collection;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result v1
+
+    invoke-interface {p1}, Ljava/util/Collection;->clear()V
+
+    iget p1, v0, Lg2;->o:I
+
+    sub-int/2addr p1, v1
+
+    iput p1, v0, Lg2;->o:I
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 2
+
+    :try_start_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-super {p0, p1}, Love;->removeAll(Ljava/util/Collection;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {p0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    or-int/2addr v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    return v0
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 3
+
+    :try_start_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-super {p0, p1}, Love;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-static {v0}, Lt6j;->a(I)I
+
+    move-result v0
+
+    invoke-direct {v1, v0}, Ljava/util/HashSet;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
+
+    invoke-virtual {p0, v0}, Lm2;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    instance-of v2, v0, Ljava/util/Map$Entry;
+
+    if-eqz v2, :cond_0
 
     check-cast v0, Ljava/util/Map$Entry;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v1
-
-    iput-object v1, p0, Lm2;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
     move-result-object v0
 
-    check-cast v0, Ljava/util/Collection;
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    iput-object v0, p0, Lm2;->c:Ljava/util/Collection;
+    goto :goto_0
 
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    :cond_1
+    iget-object p1, p0, Lm2;->b:Lo2;
 
-    move-result-object v0
+    invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
-    iput-object v0, p0, Lm2;->d:Ljava/util/Iterator;
+    move-result-object p1
 
-    :cond_0
-    iget-object v0, p0, Lm2;->d:Ljava/util/Iterator;
+    invoke-interface {p1, v1}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method
 
-.method public final remove()V
-    .locals 2
+.method public final size()I
+    .locals 1
 
-    iget-object v0, p0, Lm2;->d:Ljava/util/Iterator;
+    iget-object v0, p0, Lm2;->b:Lo2;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+    iget-object v0, v0, Lo2;->b:Ljava/util/Map;
 
-    iget-object v0, p0, Lm2;->c:Ljava/util/Collection;
-
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    invoke-interface {v0}, Ljava/util/Map;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lm2;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    :cond_0
-    iget-object v0, p0, Lm2;->o:Lh2;
-
-    iget v1, v0, Lh2;->o:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, v0, Lh2;->o:I
-
-    return-void
+    return v0
 .end method

@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lkotlin/coroutines/Continuation;
-.implements Lcc4;
+.implements Lbc4;
 .implements Ljava/io/Serializable;
 
 
@@ -25,16 +25,16 @@
 
 
 # virtual methods
-.method public getCallerFrame()Lcc4;
+.method public getCallerFrame()Lbc4;
     .locals 2
 
     iget-object v0, p0, Lak0;->a:Lkotlin/coroutines/Continuation;
 
-    instance-of v1, v0, Lcc4;
+    instance-of v1, v0, Lbc4;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lcc4;
+    check-cast v0, Lbc4;
 
     return-object v0
 
@@ -51,29 +51,33 @@
 
     move-result-object v0
 
-    const-class v1, Lrk4;
+    const-class v1, Lsk4;
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
 
     move-result-object v0
 
-    check-cast v0, Lrk4;
+    check-cast v0, Lsk4;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    return-object v1
+    goto :goto_0
 
     :cond_0
-    invoke-interface {v0}, Lrk4;->v()I
+    invoke-interface {v0}, Lsk4;->v()I
 
     move-result v2
 
     const/4 v3, 0x1
 
-    if-gt v2, v3, :cond_d
+    if-ge v2, v3, :cond_1
 
+    :goto_0
+    return-object v1
+
+    :cond_1
     const/4 v2, -0x1
 
     :try_start_0
@@ -95,17 +99,17 @@
 
     instance-of v5, v4, Ljava/lang/Integer;
 
-    if-eqz v5, :cond_1
+    if-eqz v5, :cond_2
 
     check-cast v4, Ljava/lang/Integer;
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :cond_2
     move-object v4, v1
 
-    :goto_0
-    if-eqz v4, :cond_2
+    :goto_1
+    if-eqz v4, :cond_3
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
@@ -113,37 +117,37 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_2
+    :cond_3
     const/4 v4, 0x0
 
-    :goto_1
+    :goto_2
     sub-int/2addr v4, v3
 
-    goto :goto_2
+    goto :goto_3
 
     :catch_0
     move v4, v2
 
-    :goto_2
-    if-gez v4, :cond_3
+    :goto_3
+    if-gez v4, :cond_4
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_3
-    invoke-interface {v0}, Lrk4;->l()[I
+    :cond_4
+    invoke-interface {v0}, Lsk4;->l()[I
 
     move-result-object v2
 
     aget v2, v2, v4
 
-    :goto_3
-    sget-object v3, Lbsi;->b:Lke5;
+    :goto_4
+    sget-object v3, Lxsi;->b:Latc;
 
-    sget-object v4, Lbsi;->a:Lke5;
+    sget-object v4, Lxsi;->a:Latc;
 
-    if-nez v3, :cond_4
+    if-nez v3, :cond_5
 
     :try_start_1
     const-class v3, Ljava/lang/Class;
@@ -194,37 +198,37 @@
 
     move-result-object v6
 
-    new-instance v7, Lke5;
+    new-instance v7, Latc;
 
-    const/16 v8, 0xb
+    const/16 v8, 0xa
 
-    invoke-direct {v7, v3, v5, v6, v8}, Lke5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v7, v3, v5, v6, v8}, Latc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    sput-object v7, Lbsi;->b:Lke5;
+    sput-object v7, Lxsi;->b:Latc;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     move-object v3, v7
 
-    goto :goto_4
+    goto :goto_5
 
     :catch_1
-    sput-object v4, Lbsi;->b:Lke5;
+    sput-object v4, Lxsi;->b:Latc;
 
     move-object v3, v4
 
-    :cond_4
-    :goto_4
-    if-ne v3, v4, :cond_5
-
-    goto :goto_8
-
     :cond_5
-    iget-object v4, v3, Lke5;->b:Ljava/lang/Object;
+    :goto_5
+    if-ne v3, v4, :cond_6
+
+    goto :goto_7
+
+    :cond_6
+    iget-object v4, v3, Latc;->b:Ljava/lang/Object;
 
     check-cast v4, Ljava/lang/reflect/Method;
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_a
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -234,73 +238,61 @@
 
     move-result-object v4
 
-    goto :goto_5
-
-    :cond_6
-    move-object v4, v1
-
-    :goto_5
     if-nez v4, :cond_7
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_7
-    iget-object v5, v3, Lke5;->c:Ljava/lang/Object;
+    iget-object v5, v3, Latc;->c:Ljava/lang/Object;
 
     check-cast v5, Ljava/lang/reflect/Method;
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_a
 
     invoke-virtual {v5, v4, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    goto :goto_6
+    if-nez v4, :cond_8
+
+    goto :goto_7
 
     :cond_8
-    move-object v4, v1
-
-    :goto_6
-    if-nez v4, :cond_9
-
-    goto :goto_8
-
-    :cond_9
-    iget-object v3, v3, Lke5;->d:Ljava/lang/Object;
+    iget-object v3, v3, Latc;->d:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/reflect/Method;
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_9
 
     invoke-virtual {v3, v4, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
-    goto :goto_7
+    goto :goto_6
 
-    :cond_a
+    :cond_9
     move-object v3, v1
 
-    :goto_7
+    :goto_6
     instance-of v4, v3, Ljava/lang/String;
 
-    if-eqz v4, :cond_b
+    if-eqz v4, :cond_a
 
     move-object v1, v3
 
     check-cast v1, Ljava/lang/String;
 
-    :cond_b
-    :goto_8
-    if-nez v1, :cond_c
+    :cond_a
+    :goto_7
+    if-nez v1, :cond_b
 
-    invoke-interface {v0}, Lrk4;->c()Ljava/lang/String;
+    invoke-interface {v0}, Lsk4;->c()Ljava/lang/String;
 
     move-result-object v1
 
-    goto :goto_9
+    goto :goto_8
 
-    :cond_c
+    :cond_b
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,7 +303,7 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lrk4;->c()Ljava/lang/String;
+    invoke-interface {v0}, Lsk4;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -321,47 +313,20 @@
 
     move-result-object v1
 
-    :goto_9
+    :goto_8
     new-instance v3, Ljava/lang/StackTraceElement;
 
-    invoke-interface {v0}, Lrk4;->m()Ljava/lang/String;
+    invoke-interface {v0}, Lsk4;->m()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-interface {v0}, Lrk4;->f()Ljava/lang/String;
+    invoke-interface {v0}, Lsk4;->f()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {v3, v1, v4, v0, v2}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-object v3
-
-    :cond_d
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Debug metadata version mismatch. Expected: 1, got "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ". Please update the Kotlin standard library."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
 .method public l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -400,7 +365,7 @@
 
     move-result-object p1
 
-    sget-object v2, Lbc4;->a:Lbc4;
+    sget-object v2, Lac4;->a:Lac4;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -411,9 +376,9 @@
     :catchall_0
     move-exception p1
 
-    new-instance v2, Lyyd;
+    new-instance v2, Lszd;
 
-    invoke-direct {v2, p1}, Lyyd;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v2, p1}, Lszd;-><init>(Ljava/lang/Throwable;)V
 
     move-object p1, v2
 
@@ -447,11 +412,8 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
-    goto :goto_0
-
-    :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -460,7 +422,7 @@
 
     move-result-object v1
 
-    :goto_0
+    :cond_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

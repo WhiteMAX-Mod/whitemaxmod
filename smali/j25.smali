@@ -1,149 +1,475 @@
 .class public final Lj25;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
+
+# static fields
+.field public static final e:Landroid/util/Size;
+
+.field public static final f:Landroid/util/Size;
+
+.field public static final g:Landroid/util/Size;
+
+.field public static final h:Ljava/lang/Object;
+
+.field public static volatile i:Lj25;
 
 
 # instance fields
-.field public final synthetic X:Lk25;
+.field public final a:Landroid/hardware/display/DisplayManager;
 
-.field public o:I
+.field public volatile b:Landroid/util/Size;
+
+.field public final c:La4a;
+
+.field public final d:Ls3e;
 
 
 # direct methods
-.method public constructor <init>(Lk25;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lj25;->X:Lk25;
+    new-instance v0, Landroid/util/Size;
 
-    const/4 p1, 0x2
+    const/16 v1, 0x780
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 v2, 0x438
+
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+
+    sput-object v0, Lj25;->e:Landroid/util/Size;
+
+    new-instance v0, Landroid/util/Size;
+
+    const/16 v1, 0x140
+
+    const/16 v2, 0xf0
+
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+
+    sput-object v0, Lj25;->f:Landroid/util/Size;
+
+    new-instance v0, Landroid/util/Size;
+
+    const/16 v1, 0x280
+
+    const/16 v2, 0x1e0
+
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+
+    sput-object v0, Lj25;->g:Landroid/util/Size;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lj25;->h:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lac4;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object v0, p0, Lj25;->b:Landroid/util/Size;
 
-    invoke-virtual {p0, p1, p2}, Lj25;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, La4a;
+
+    const/16 v1, 0x16
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, La4a;-><init>(IB)V
+
+    iput-object v0, p0, Lj25;->c:La4a;
+
+    new-instance v0, Ls3e;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Ls3e;-><init>(I)V
+
+    iput-object v0, p0, Lj25;->d:Ls3e;
+
+    const-string v0, "display"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lj25;
+    check-cast p1, Landroid/hardware/display/DisplayManager;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iput-object p1, p0, Lj25;->a:Landroid/hardware/display/DisplayManager;
 
-    invoke-virtual {p1, p2}, Lj25;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public static b(Landroid/content/Context;)Lj25;
+    .locals 2
 
-    new-instance p1, Lj25;
+    sget-object v0, Lj25;->i:Lj25;
 
-    iget-object v0, p0, Lj25;->X:Lk25;
+    if-nez v0, :cond_1
 
-    invoke-direct {p1, v0, p2}, Lj25;-><init>(Lk25;Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Lj25;->h:Ljava/lang/Object;
 
-    return-object p1
-.end method
+    monitor-enter v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    :try_start_0
+    sget-object v1, Lj25;->i:Lj25;
 
-    iget v0, p0, Lj25;->o:I
+    if-nez v1, :cond_0
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    new-instance v1, Lj25;
 
-    const/4 v2, 0x1
+    invoke-direct {v1, p0}, Lj25;-><init>(Landroid/content/Context;)V
 
-    if-eqz v0, :cond_1
+    sput-object v1, Lj25;->i:Lj25;
 
-    if-ne v0, v2, :cond_0
+    goto :goto_0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :catchall_0
+    move-exception p0
 
-    return-object v1
+    goto :goto_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :goto_0
+    monitor-exit v0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    goto :goto_2
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :goto_2
+    sget-object p0, Lj25;->i:Lj25;
 
-    iget-object p1, p0, Lj25;->X:Lk25;
+    return-object p0
+.end method
 
-    iget-object v0, p1, Lk25;->d:Lz7g;
+.method public static d([Landroid/view/Display;Z)Landroid/view/Display;
+    .locals 7
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    array-length v0, p0
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    check-cast v0, Lnfa;
+    const/4 v2, -0x1
 
-    sget v3, Lqa5;->d:I
+    const/4 v3, 0x0
 
-    sget-object v3, Lwa5;->d:Lwa5;
+    :goto_0
+    if-ge v3, v0, :cond_2
 
-    invoke-static {v2, v3}, Lfnj;->h(ILwa5;)J
+    aget-object v4, p0, v3
 
-    move-result-wide v3
+    if-eqz p1, :cond_0
 
-    invoke-static {v0, v3, v4}, Lnt0;->i(Lf76;J)Lac2;
+    invoke-virtual {v4}, Landroid/view/Display;->getState()I
 
-    move-result-object v0
+    move-result v5
 
-    new-instance v3, Lqw;
+    const/4 v6, 0x1
 
-    const/4 v4, 0x5
+    if-ne v5, v6, :cond_0
 
-    invoke-direct {v3, v4, p1}, Lqw;-><init>(ILjava/lang/Object;)V
+    goto :goto_1
 
-    iput v2, p0, Lj25;->o:I
+    :cond_0
+    new-instance v5, Landroid/graphics/Point;
 
-    new-instance v2, Lv73;
+    invoke-direct {v5}, Landroid/graphics/Point;-><init>()V
 
-    const/16 v4, 0xd
+    invoke-virtual {v4, v5}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    invoke-direct {v2, v3, p1, v4}, Lv73;-><init>(Lh76;Ljava/lang/Object;I)V
+    iget v6, v5, Landroid/graphics/Point;->x:I
 
-    invoke-virtual {v0, v2, p0}, Lzb2;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget v5, v5, Landroid/graphics/Point;->y:I
 
-    move-result-object p1
+    mul-int/2addr v6, v5
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    if-le v6, v2, :cond_1
 
-    if-ne p1, v0, :cond_2
+    move-object v1, v4
+
+    move v2, v6
+
+    :cond_1
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_2
-    move-object p1, v1
+    return-object v1
+.end method
+
+
+# virtual methods
+.method public final a()Landroid/util/Size;
+    .locals 5
+
+    new-instance v0, Landroid/graphics/Point;
+
+    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lj25;->c(Z)Landroid/view/Display;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+
+    new-instance v1, Landroid/util/Size;
+
+    iget v2, v0, Landroid/graphics/Point;->x:I
+
+    iget v0, v0, Landroid/graphics/Point;->y:I
+
+    invoke-direct {v1, v2, v0}, Landroid/util/Size;-><init>(II)V
+
+    sget-object v0, Lmgf;->a:Landroid/util/Size;
+
+    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
+
+    move-result v2
+
+    mul-int/2addr v2, v0
+
+    sget-object v0, Lj25;->f:Landroid/util/Size;
+
+    invoke-static {v0}, Lmgf;->a(Landroid/util/Size;)I
+
+    move-result v0
+
+    if-ge v2, v0, :cond_1
+
+    iget-object v0, p0, Lj25;->d:Ls3e;
+
+    iget-object v0, v0, Ls3e;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/SmallDisplaySizeQuirk;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroidx/camera/camera2/internal/compat/quirk/SmallDisplaySizeQuirk;->a:Ljava/util/HashMap;
+
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
 
     :goto_0
-    if-ne p1, v0, :cond_3
+    move-object v1, v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    if-nez v1, :cond_1
+
+    sget-object v1, Lj25;->g:Landroid/util/Size;
+
+    :cond_1
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+
+    move-result v2
+
+    if-le v0, v2, :cond_2
+
+    new-instance v0, Landroid/util/Size;
+
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-direct {v0, v2, v1}, Landroid/util/Size;-><init>(II)V
+
+    move-object v1, v0
+
+    :cond_2
+    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
+
+    move-result v2
+
+    mul-int/2addr v2, v0
+
+    sget-object v0, Lj25;->e:Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v4
+
+    mul-int/2addr v4, v3
+
+    if-le v2, v4, :cond_3
+
+    move-object v1, v0
+
+    :cond_3
+    iget-object v0, p0, Lj25;->c:La4a;
+
+    iget-object v0, v0, La4a;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/ExtraCroppingQuirk;
+
+    if-nez v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Landroidx/camera/camera2/internal/compat/quirk/ExtraCroppingQuirk;->e(I)Landroid/util/Size;
+
+    move-result-object v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v3
+
+    mul-int/2addr v3, v2
+
+    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
+
+    move-result v4
+
+    mul-int/2addr v4, v2
+
+    if-le v3, v4, :cond_6
 
     return-object v0
 
-    :cond_3
+    :cond_6
+    :goto_2
     return-object v1
+.end method
+
+.method public final c(Z)Landroid/view/Display;
+    .locals 4
+
+    iget-object v0, p0, Lj25;->a:Landroid/hardware/display/DisplayManager;
+
+    invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->getDisplays()[Landroid/view/Display;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-ne v1, v2, :cond_0
+
+    aget-object p1, v0, v3
+
+    return-object p1
+
+    :cond_0
+    invoke-static {v0, p1}, Lj25;->d([Landroid/view/Display;Z)Landroid/view/Display;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {v0, v3}, Lj25;->d([Landroid/view/Display;Z)Landroid/view/Display;
+
+    move-result-object v1
+
+    :cond_1
+    if-eqz v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "No display can be found from the input display manager!"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final e()Landroid/util/Size;
+    .locals 1
+
+    iget-object v0, p0, Lj25;->b:Landroid/util/Size;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lj25;->b:Landroid/util/Size;
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Lj25;->a()Landroid/util/Size;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lj25;->b:Landroid/util/Size;
+
+    iget-object v0, p0, Lj25;->b:Landroid/util/Size;
+
+    return-object v0
 .end method

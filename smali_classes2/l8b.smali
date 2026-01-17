@@ -1,129 +1,139 @@
-.class public final synthetic Ll8b;
+.class public abstract Ll8b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lp8b;
+.field public static final c:I
 
-.field public final synthetic c:Lws8;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp8b;Lvs8;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Ll8b;->a:I
+    sget v0, Ljdd;->contact_list_confirm_contact_block_action:I
 
-    iput-object p1, p0, Ll8b;->b:Lp8b;
+    sput v0, Ll8b;->a:I
 
-    iput-object p2, p0, Ll8b;->c:Lws8;
+    sget v0, Ljdd;->contact_list_confirm_contact_block_description:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Ll8b;->b:I
+
+    sget v0, Ljdd;->contact_list_confirm_contact_block_title:I
+
+    sput v0, Ll8b;->c:I
+
+    sget v0, Ljdd;->contact_list_confirm_contact_delete_action:I
+
+    sput v0, Ll8b;->d:I
+
+    sget v0, Ljdd;->contact_list_confirm_contact_delete_title:I
+
+    sput v0, Ll8b;->e:I
+
+    sget v0, Ljdd;->contact_list_confirm_contact_unblock_action:I
+
+    sput v0, Ll8b;->f:I
+
+    sget v0, Ljdd;->contact_list_confirm_contact_unblock_description:I
+
+    sput v0, Ll8b;->g:I
+
+    sget v0, Ljdd;->contact_list_confirm_contact_unblock_title:I
+
+    sput v0, Ll8b;->h:I
+
+    sget v0, Ljdd;->contact_list_contact_block_snackbar_title:I
+
+    sput v0, Ll8b;->i:I
+
+    sget v0, Ljdd;->contact_list_contact_delete_snackbar_title:I
+
+    sput v0, Ll8b;->j:I
+
+    sget v0, Ljdd;->contact_list_contact_unblock_snackbar_title:I
+
+    sput v0, Ll8b;->k:I
+
+    sget v0, Ljdd;->contact_list_menu_item_add_contact:I
+
+    sput v0, Ll8b;->l:I
+
+    sget v0, Ljdd;->contact_list_search_hint:I
+
+    sput v0, Ll8b;->m:I
+
+    sget v0, Ljdd;->contact_list_search_hint_with_nick:I
+
+    sput v0, Ll8b;->n:I
+
+    sget v0, Ljdd;->empty_contact_list_description:I
+
+    sput v0, Ll8b;->o:I
+
+    sget v0, Ljdd;->empty_contact_list_title:I
+
+    sput v0, Ll8b;->p:I
+
+    sget v0, Ljdd;->empty_search_contact_btn_title:I
+
+    sput v0, Ll8b;->q:I
+
+    sget v0, Ljdd;->empty_search_contact_disabled_description:I
+
+    sput v0, Ll8b;->r:I
+
+    sget v0, Ljdd;->empty_search_contact_enabled_description:I
+
+    sput v0, Ll8b;->s:I
+
+    sget v0, Ljdd;->empty_search_contact_title:I
+
+    sput v0, Ll8b;->t:I
+
+    sget v0, Ljdd;->snackbar_self_title:I
+
+    sput v0, Ll8b;->u:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Ll8b;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ll8b;->c:Lws8;
-
-    move-object v1, v0
-
-    check-cast v1, Lvs8;
-
-    invoke-virtual {v1}, Lvs8;->c()Ljava/util/List;
-
-    move-result-object v2
-
-    iget v3, v1, Lvs8;->c:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lone/me/messages/list/loader/MessageModel;
-
-    invoke-virtual {v1}, Lvs8;->c()Ljava/util/List;
-
-    move-result-object v1
-
-    add-int/lit8 v3, v3, 0x1
-
-    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lone/me/messages/list/loader/MessageModel;
-
-    iget-object v3, p0, Ll8b;->b:Lp8b;
-
-    invoke-virtual {v3, v0, v2, v1}, Lp8b;->c(Lws8;Lone/me/messages/list/loader/MessageModel;Lone/me/messages/list/loader/MessageModel;)Z
-
-    move-result v0
-
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ll8b;->c:Lws8;
-
-    move-object v1, v0
-
-    check-cast v1, Lvs8;
-
-    invoke-virtual {v1}, Lvs8;->c()Ljava/util/List;
-
-    move-result-object v2
-
-    iget v3, v1, Lvs8;->c:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lone/me/messages/list/loader/MessageModel;
-
-    invoke-virtual {v1}, Lvs8;->c()Ljava/util/List;
-
-    move-result-object v1
-
-    add-int/lit8 v3, v3, -0x1
-
-    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lone/me/messages/list/loader/MessageModel;
-
-    iget-object v3, p0, Ll8b;->b:Lp8b;
-
-    invoke-virtual {v3, v0, v2, v1}, Lp8b;->c(Lws8;Lone/me/messages/list/loader/MessageModel;Lone/me/messages/list/loader/MessageModel;)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

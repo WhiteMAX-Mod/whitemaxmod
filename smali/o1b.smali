@@ -1,44 +1,158 @@
 .class public final Lo1b;
-.super Ljava/lang/Object;
+.super Ly48;
 .source "SourceFile"
 
+# interfaces
+.implements Lnq6;
 
-# static fields
-.field public static final a:Lo1b;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lv1b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lv1b;I)V
+    .locals 0
 
-    new-instance v0, Lo1b;
+    iput p2, p0, Lo1b;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lo1b;->b:Lv1b;
 
-    sput-object v0, Lo1b;->a:Lo1b;
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Loq6;Loq6;Lmq6;Lmq6;)Landroid/window/OnBackInvokedCallback;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Loq6;",
-            "Loq6;",
-            "Lmq6;",
-            "Lmq6;",
-            ")",
-            "Landroid/window/OnBackInvokedCallback;"
-        }
-    .end annotation
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v0, Ln1b;
+    iget v0, p0, Lo1b;->a:I
 
-    invoke-direct {v0, p1, p2, p3, p4}, Ln1b;-><init>(Loq6;Loq6;Lmq6;Lmq6;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
+    check-cast p1, Lpf0;
+
+    iget-object v0, p0, Lo1b;->b:Lv1b;
+
+    iget-object v1, v0, Lv1b;->c:Ln1b;
+
+    if-nez v1, :cond_2
+
+    iget-object v0, v0, Lv1b;->b:Lns;
+
+    invoke-virtual {v0}, Lns;->getSize()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractList;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ln1b;
+
+    iget-boolean v2, v2, Ln1b;->a:Z
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    check-cast v1, Ln1b;
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1, p1}, Ln1b;->c(Lpf0;)V
+
+    :cond_3
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lpf0;
+
+    iget-object p1, p0, Lo1b;->b:Lv1b;
+
+    iget-object v0, p1, Lv1b;->b:Lns;
+
+    invoke-virtual {v0}, Lns;->getSize()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractList;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    :cond_4
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ln1b;
+
+    iget-boolean v2, v2, Ln1b;->a:Z
+
+    if-eqz v2, :cond_4
+
+    goto :goto_1
+
+    :cond_5
+    const/4 v1, 0x0
+
+    :goto_1
+    check-cast v1, Ln1b;
+
+    iget-object v0, p1, Lv1b;->c:Ln1b;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {p1}, Lv1b;->c()V
+
+    :cond_6
+    iput-object v1, p1, Lv1b;->c:Ln1b;
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v1}, Ln1b;->d()V
+
+    :cond_7
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,67 +1,107 @@
-.class public abstract Lo09;
-.super Lec3;
+.class public final synthetic Lo09;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lu09;
 
 
 # instance fields
-.field public final t0:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpj6;
 
 
 # direct methods
-.method public constructor <init>(Lqi4;Lyi4;Lqj6;ILjava/lang/Object;JJJ)V
-    .locals 11
+.method public synthetic constructor <init>(ILpj6;)V
+    .locals 0
 
-    const/4 v3, 0x1
+    iput p1, p0, Lo09;->a:I
 
-    move-object v0, p0
+    iput-object p2, p0, Lo09;->b:Lpj6;
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object/from16 v6, p5
-
-    move-wide/from16 v7, p6
-
-    move-wide/from16 v9, p8
-
-    invoke-direct/range {v0 .. v10}, Lec3;-><init>(Lqi4;Lyi4;ILqj6;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-wide/from16 p1, p10
-
-    iput-wide p1, p0, Lo09;->t0:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()J
-    .locals 5
+.method public final a(Ljava/lang/Object;)I
+    .locals 4
 
-    iget-wide v0, p0, Lo09;->t0:J
+    iget v0, p0, Lo09;->a:I
 
-    const-wide/16 v2, -0x1
+    packed-switch v0, :pswitch_data_0
 
-    cmp-long v4, v0, v2
+    check-cast p1, Li09;
 
-    if-eqz v4, :cond_0
+    iget-object v0, p1, Li09;->b:Ljava/lang/String;
 
-    const-wide/16 v2, 0x1
+    iget-object v1, p0, Lo09;->b:Lpj6;
 
-    add-long/2addr v0, v2
+    iget-object v2, v1, Lpj6;->n:Ljava/lang/String;
 
-    return-wide v0
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    invoke-static {v1}, Lw09;->b(Lpj6;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     :cond_0
-    return-wide v2
-.end method
+    invoke-virtual {p1, v1, v3}, Li09;->c(Lpj6;Z)Z
 
-.method public abstract c()Z
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1, v1}, Li09;->d(Lpj6;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 v3, 0x1
+
+    :cond_1
+    return v3
+
+    :pswitch_0
+    iget-object v0, p0, Lo09;->b:Lpj6;
+
+    check-cast p1, Li09;
+
+    :try_start_0
+    invoke-virtual {p1, v0}, Li09;->e(Lpj6;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Landroidx/media3/exoplayer/mediacodec/MediaCodecUtil$DecoderQueryException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 p1, -0x1
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

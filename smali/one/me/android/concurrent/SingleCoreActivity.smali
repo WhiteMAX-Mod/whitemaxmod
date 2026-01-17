@@ -13,12 +13,12 @@
         "Landroid/app/Activity;",
         "<init>",
         "()V",
-        "oneme_playGoogleRelease"
+        "oneme_googleRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30

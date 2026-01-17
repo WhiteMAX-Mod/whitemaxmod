@@ -1,92 +1,138 @@
-.class public final synthetic Lvla;
-.super Ljava/lang/Object;
+.class public final Lvla;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn;
+.implements Ldr6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public synthetic X:Lln;
+
+.field public synthetic Y:Lzlb;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lvla;->o:I
 
-    iput-object p1, p0, Lvla;->a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e0(Lkn;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lp38;
+    iget v0, p0, Lvla;->o:I
 
-    iget-object p1, p0, Lvla;->a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    check-cast p1, Lln;
 
-    invoke-virtual {p1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->z0()Lkn;
+    check-cast p2, Lzlb;
 
-    move-result-object v0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Lkn;->getTotalScrollRange()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    new-instance v0, Lvla;
 
-    iget-object v1, p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->w0:Luu5;
+    const/4 v1, 0x3
 
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+    const/4 v2, 0x1
 
-    move-result p2
+    invoke-direct {v0, v1, p3, v2}, Lvla;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    int-to-float p2, p2
+    iput-object p1, v0, Lvla;->X:Lln;
 
-    int-to-float v0, v0
+    iput-object p2, v0, Lvla;->Y:Lzlb;
 
-    div-float/2addr p2, v0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v1, p2}, Luo8;->getInterpolation(F)F
+    invoke-virtual {v0, p1}, Lvla;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p2
+    return-object p1
 
-    iget-object v0, p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->Y:Ljkd;
+    :pswitch_0
+    new-instance v0, Lvla;
 
-    sget-object v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lp38;
+    const/4 v1, 0x3
 
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
-    aget-object v2, v1, v2
+    invoke-direct {v0, v1, p3, v2}, Lvla;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-interface {v0, p1, v2}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
+    iput-object p1, v0, Lvla;->X:Lln;
 
-    move-result-object v0
+    iput-object p2, v0, Lvla;->Y:Lzlb;
 
-    check-cast v0, Landroid/view/ViewGroup;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    invoke-virtual {v0, p1}, Lvla;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sub-float/2addr v2, p2
+    return-object p1
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
+    nop
 
-    iget-object v0, p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->s0:Ljkd;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const/4 v2, 0x4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    aget-object v1, v1, v2
+    iget v0, p0, Lvla;->o:I
 
-    invoke-interface {v0, p1, v1}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lvla;->X:Lln;
+
+    iget-object v1, p0, Lvla;->Y:Lzlb;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
 
     move-result-object p1
 
-    check-cast p1, Lpmb;
+    iget p1, p1, Lxf0;->k:I
 
-    invoke-virtual {p1, p2}, Lpmb;->setTitleAlpha(F)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    return-void
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lvla;->X:Lln;
+
+    iget-object v1, p0, Lvla;->Y:Lzlb;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->l:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

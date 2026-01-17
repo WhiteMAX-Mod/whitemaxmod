@@ -1,157 +1,99 @@
-.class public final enum Lw03;
-.super Ljava/lang/Enum;
+.class public abstract synthetic Lw03;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum X:Lw03;
-
-.field public static final enum Y:Lw03;
-
-.field public static final enum Z:Lw03;
-
-.field public static final enum a:Lw03;
-
-.field public static final enum b:Lw03;
-
-.field public static final enum c:Lw03;
-
-.field public static final enum d:Lw03;
-
-.field public static final enum o:Lw03;
-
-.field public static final enum s0:Lw03;
-
-.field public static final synthetic t0:[Lw03;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 7
 
-    new-instance v0, Lw03;
+    invoke-static {}, Lv03;->values()[Lv03;
 
-    const-string v1, "UNBLOCK"
+    move-result-object v0
 
-    const/4 v2, 0x0
+    array-length v0, v0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-array v0, v0, [I
 
-    sput-object v0, Lw03;->a:Lw03;
+    const/4 v1, 0x1
 
-    new-instance v1, Lw03;
+    const/4 v2, 0x4
 
-    const-string v2, "REMOVE_CHAT"
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v3, 0x1
+    :catch_0
+    const/4 v3, 0x2
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v4, 0x6
 
-    sput-object v1, Lw03;->b:Lw03;
+    :try_start_1
+    aput v3, v0, v4
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    new-instance v2, Lw03;
-
-    const-string v3, "LEAVE_CHAT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lw03;->c:Lw03;
-
-    new-instance v3, Lw03;
-
-    const-string v4, "JOIN_CHAT"
-
+    :catch_1
     const/4 v5, 0x3
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v6, 0x7
 
-    sput-object v3, Lw03;->d:Lw03;
+    :try_start_2
+    aput v5, v0, v6
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    new-instance v4, Lw03;
+    :catch_2
+    :try_start_3
+    aput v2, v0, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    const-string v5, "START_BOT"
+    :catch_3
+    const/4 v2, 0x5
 
-    const/4 v6, 0x4
+    const/16 v5, 0x8
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :try_start_4
+    aput v2, v0, v5
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    sput-object v4, Lw03;->o:Lw03;
+    :catch_4
+    :try_start_5
+    aput v4, v0, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    new-instance v5, Lw03;
+    :catch_5
+    const/4 v2, 0x0
 
-    const-string v6, "POST_RESTRICTED"
+    :try_start_6
+    aput v6, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    const/4 v7, 0x5
+    :catch_6
+    :try_start_7
+    aput v5, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :catch_7
+    const/16 v1, 0x9
 
-    sput-object v5, Lw03;->X:Lw03;
+    :try_start_8
+    aput v1, v0, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    new-instance v6, Lw03;
-
-    const-string v7, "UNMUTE_CHAT"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lw03;->Y:Lw03;
-
-    new-instance v7, Lw03;
-
-    const-string v8, "MUTE_CHAT"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lw03;->Z:Lw03;
-
-    new-instance v8, Lw03;
-
-    const-string v9, "SUBSCRIBE"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lw03;->s0:Lw03;
-
-    filled-new-array/range {v0 .. v8}, [Lw03;
-
-    move-result-object v0
-
-    sput-object v0, Lw03;->t0:[Lw03;
+    :catch_8
+    sput-object v0, Lw03;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lw03;
-    .locals 1
-
-    const-class v0, Lw03;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lw03;
-
-    return-object p0
-.end method
-
-.method public static values()[Lw03;
-    .locals 1
-
-    sget-object v0, Lw03;->t0:[Lw03;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lw03;
-
-    return-object v0
 .end method

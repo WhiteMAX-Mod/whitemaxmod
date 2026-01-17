@@ -1,98 +1,126 @@
 .class public final Lrpc;
-.super Lie0;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final b:Ldhg;
+.field public final synthetic X:Landroid/graphics/RectF;
+
+.field public final synthetic o:Lvpc;
 
 
 # direct methods
-.method public constructor <init>(Ldhg;)V
-    .locals 1
+.method public constructor <init>(Lvpc;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0xf
+    iput-object p1, p0, Lrpc;->o:Lvpc;
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    iput-object p2, p0, Lrpc;->X:Landroid/graphics/RectF;
 
-    iput-object p1, p0, Lrpc;->b:Ldhg;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lzb4;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lrpc;
+    invoke-virtual {p0, p1, p2}, Lrpc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lrpc;
 
-    iget-object v0, p0, Lrpc;->b:Ldhg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object p1, p1, Lrpc;->b:Ldhg;
+    invoke-virtual {p1, p2}, Lrpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ldhg;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lrpc;->b:Ldhg;
-
-    invoke-virtual {v0}, Ldhg;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Lrpc;
 
-    const-string v1, "ShareLink(link="
+    iget-object v0, p0, Lrpc;->o:Lvpc;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lrpc;->X:Landroid/graphics/RectF;
 
-    iget-object v1, p0, Lrpc;->b:Ldhg;
+    invoke-direct {p1, v0, v1, p2}, Lrpc;-><init>(Lvpc;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, ")"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object p1, Lvpc;->A0:[Lz28;
+
+    iget-object p1, p0, Lrpc;->o:Lvpc;
+
+    iget-object v0, p1, Lvpc;->X:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lm36;
+
+    iget-object v1, p1, Lvpc;->z0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lm36;->p(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1}, Lvpc;->s()Lmbg;
+
+    move-result-object v2
+
+    check-cast v2, Lj9b;
+
+    invoke-virtual {v2}, Lj9b;->b()Lsb4;
+
+    move-result-object v2
+
+    new-instance v3, Lqpc;
+
+    iget-object v4, p0, Lrpc;->X:Landroid/graphics/RectF;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, p1, v0, v4, v5}, Lqpc;-><init>(Lvpc;Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v1, v2, v5, v3, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

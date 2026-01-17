@@ -1,548 +1,900 @@
-.class public abstract Ljx3;
+.class public final Ljx3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lttb;
-
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public a:I
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lmx3;
 
-.field public final c:Ljava/lang/Object;
+.field public final c:Llx3;
 
-.field public d:Ljava/lang/Object;
+.field public final d:Lkx3;
 
-.field public e:Ljava/lang/Object;
+.field public final e:Lnx3;
+
+.field public f:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lf1c;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 9
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
-    iput-object p2, p0, Ljx3;->a:Ljava/lang/Object;
+    new-instance v0, Lmx3;
 
-    .line 13
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Ljx3;->b:Ljava/lang/Object;
+    iput v1, v0, Lmx3;->a:I
 
-    .line 14
-    new-instance p1, Ljava/lang/Object;
+    iput v1, v0, Lmx3;->b:I
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    iput-object p1, p0, Ljx3;->c:Ljava/lang/Object;
+    iput v2, v0, Lmx3;->c:F
 
-    .line 15
-    new-instance p1, Ljava/util/LinkedHashSet;
+    const/high16 v3, 0x7fc00000    # Float.NaN
 
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+    iput v3, v0, Lmx3;->d:F
 
-    iput-object p1, p0, Ljx3;->e:Ljava/lang/Object;
+    iput-object v0, p0, Ljx3;->b:Lmx3;
 
-    return-void
-.end method
+    new-instance v0, Llx3;
 
-.method public constructor <init>(Lgjg;Lcgd;Lewb;Le7;)V
-    .locals 0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v4, -0x1
 
-    .line 2
-    iput-object p1, p0, Ljx3;->a:Ljava/lang/Object;
+    iput v4, v0, Llx3;->a:I
 
-    .line 3
-    iput-object p2, p0, Ljx3;->b:Ljava/lang/Object;
+    iput v1, v0, Llx3;->b:I
 
-    .line 4
-    iput-object p3, p0, Ljx3;->d:Ljava/lang/Object;
+    iput v4, v0, Llx3;->c:I
 
-    .line 5
-    new-instance p1, Landroid/os/Handler;
+    iput v3, v0, Llx3;->d:F
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iput v3, v0, Llx3;->e:F
 
-    move-result-object p2
+    iput v3, v0, Llx3;->f:F
 
-    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput v4, v0, Llx3;->g:I
 
-    iput-object p1, p0, Ljx3;->c:Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    .line 6
-    iput-object p4, p0, Ljx3;->e:Ljava/lang/Object;
+    iput-object v5, v0, Llx3;->h:Ljava/lang/String;
 
-    return-void
-.end method
+    iput v4, v0, Llx3;->i:I
 
-.method public constructor <init>(Ljava/lang/String;Lorg/webrtc/MediaStream;Lcgd;)V
-    .locals 0
+    iput-object v0, p0, Ljx3;->c:Llx3;
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkx3;
 
-    .line 8
-    iput-object p1, p0, Ljx3;->a:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
-    iput-object p2, p0, Ljx3;->b:Ljava/lang/Object;
+    iput-boolean v1, v0, Lkx3;->a:Z
 
-    .line 10
-    iput-object p3, p0, Ljx3;->c:Ljava/lang/Object;
+    iput v4, v0, Lkx3;->d:I
+
+    iput v4, v0, Lkx3;->e:I
+
+    const/high16 v6, -0x40800000    # -1.0f
+
+    iput v6, v0, Lkx3;->f:F
+
+    const/4 v7, 0x1
+
+    iput-boolean v7, v0, Lkx3;->g:Z
+
+    iput v4, v0, Lkx3;->h:I
+
+    iput v4, v0, Lkx3;->i:I
+
+    iput v4, v0, Lkx3;->j:I
+
+    iput v4, v0, Lkx3;->k:I
+
+    iput v4, v0, Lkx3;->l:I
+
+    iput v4, v0, Lkx3;->m:I
+
+    iput v4, v0, Lkx3;->n:I
+
+    iput v4, v0, Lkx3;->o:I
+
+    iput v4, v0, Lkx3;->p:I
+
+    iput v4, v0, Lkx3;->q:I
+
+    iput v4, v0, Lkx3;->r:I
+
+    iput v4, v0, Lkx3;->s:I
+
+    iput v4, v0, Lkx3;->t:I
+
+    iput v4, v0, Lkx3;->u:I
+
+    iput v4, v0, Lkx3;->v:I
+
+    const/high16 v8, 0x3f000000    # 0.5f
+
+    iput v8, v0, Lkx3;->w:F
+
+    iput v8, v0, Lkx3;->x:F
+
+    iput-object v5, v0, Lkx3;->y:Ljava/lang/String;
+
+    iput v4, v0, Lkx3;->z:I
+
+    iput v1, v0, Lkx3;->A:I
+
+    const/4 v5, 0x0
+
+    iput v5, v0, Lkx3;->B:F
+
+    iput v4, v0, Lkx3;->C:I
+
+    iput v4, v0, Lkx3;->D:I
+
+    iput v4, v0, Lkx3;->E:I
+
+    iput v1, v0, Lkx3;->F:I
+
+    iput v1, v0, Lkx3;->G:I
+
+    iput v1, v0, Lkx3;->H:I
+
+    iput v1, v0, Lkx3;->I:I
+
+    iput v1, v0, Lkx3;->J:I
+
+    iput v1, v0, Lkx3;->K:I
+
+    iput v1, v0, Lkx3;->L:I
+
+    const/high16 v8, -0x80000000
+
+    iput v8, v0, Lkx3;->M:I
+
+    iput v8, v0, Lkx3;->N:I
+
+    iput v8, v0, Lkx3;->O:I
+
+    iput v8, v0, Lkx3;->P:I
+
+    iput v8, v0, Lkx3;->Q:I
+
+    iput v8, v0, Lkx3;->R:I
+
+    iput v8, v0, Lkx3;->S:I
+
+    iput v6, v0, Lkx3;->T:F
+
+    iput v6, v0, Lkx3;->U:F
+
+    iput v1, v0, Lkx3;->V:I
+
+    iput v1, v0, Lkx3;->W:I
+
+    iput v1, v0, Lkx3;->X:I
+
+    iput v1, v0, Lkx3;->Y:I
+
+    iput v1, v0, Lkx3;->Z:I
+
+    iput v1, v0, Lkx3;->a0:I
+
+    iput v1, v0, Lkx3;->b0:I
+
+    iput v1, v0, Lkx3;->c0:I
+
+    iput v2, v0, Lkx3;->d0:F
+
+    iput v2, v0, Lkx3;->e0:F
+
+    iput v4, v0, Lkx3;->f0:I
+
+    iput v1, v0, Lkx3;->g0:I
+
+    iput v4, v0, Lkx3;->h0:I
+
+    iput-boolean v1, v0, Lkx3;->l0:Z
+
+    iput-boolean v1, v0, Lkx3;->m0:Z
+
+    iput-boolean v7, v0, Lkx3;->n0:Z
+
+    iput v1, v0, Lkx3;->o0:I
+
+    iput-object v0, p0, Ljx3;->d:Lkx3;
+
+    new-instance v0, Lnx3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput v5, v0, Lnx3;->a:F
+
+    iput v5, v0, Lnx3;->b:F
+
+    iput v5, v0, Lnx3;->c:F
+
+    iput v2, v0, Lnx3;->d:F
+
+    iput v2, v0, Lnx3;->e:F
+
+    iput v3, v0, Lnx3;->f:F
+
+    iput v3, v0, Lnx3;->g:F
+
+    iput v4, v0, Lnx3;->h:I
+
+    iput v5, v0, Lnx3;->i:F
+
+    iput v5, v0, Lnx3;->j:F
+
+    iput v5, v0, Lnx3;->k:F
+
+    iput-boolean v1, v0, Lnx3;->l:Z
+
+    iput v5, v0, Lnx3;->m:F
+
+    iput-object v0, p0, Ljx3;->e:Lnx3;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Ljx3;->f:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract b(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
-.end method
-
-.method public abstract c(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
-.end method
-
-.method public abstract d()V
-.end method
-
-.method public abstract e(Lzk1;Ljava/lang/String;)V
-.end method
-
-.method public abstract f()V
-.end method
-
-.method public abstract g()Lorg/webrtc/MediaSource;
-.end method
-
-.method public abstract h(Ljava/lang/String;Lorg/webrtc/MediaSource;)Lorg/webrtc/MediaStreamTrack;
-.end method
-
-.method public abstract i()Ljava/lang/Object;
-.end method
-
-.method public j()Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public abstract k(Lorg/webrtc/RtpReceiver;[Lorg/webrtc/MediaStream;)V
-.end method
-
-.method public l()V
-    .locals 4
-
-    iget-object v0, p0, Ljx3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lcgd;
-
-    iget-object v1, p0, Ljx3;->e:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/MediaStreamTrack;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0}, Ljx3;->j()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ": An attempt to create track, while got one, ignore"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Ljx3;->d:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/MediaSource;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Ljx3;->j()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ": An attempt to create source, while got one, ignore"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Ljx3;->g()Lorg/webrtc/MediaSource;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ljx3;->d:Ljava/lang/Object;
-
-    iget-object v1, p0, Ljx3;->a:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v0}, Ljx3;->h(Ljava/lang/String;Lorg/webrtc/MediaSource;)Lorg/webrtc/MediaStreamTrack;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ljx3;->e:Ljava/lang/Object;
-
-    iget-object v1, p0, Ljx3;->b:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/MediaStream;
-
-    invoke-virtual {p0, v1, v0}, Ljx3;->b(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
-
-    return-void
-.end method
-
-.method public m()V
-    .locals 7
-
-    iget-object v0, p0, Ljx3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lcgd;
-
-    iget-object v1, p0, Ljx3;->e:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/MediaStreamTrack;
-
-    if-eqz v1, :cond_0
-
-    iget-object v2, p0, Ljx3;->b:Ljava/lang/Object;
-
-    check-cast v2, Lorg/webrtc/MediaStream;
-
-    invoke-virtual {p0, v2, v1}, Ljx3;->c(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
-
-    :cond_0
-    iget-object v1, p0, Ljx3;->e:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/MediaStreamTrack;
-
-    const-string v2, " was disposed"
-
-    const-string v3, ": "
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lorg/webrtc/MediaStreamTrack;->dispose()V
-
-    invoke-virtual {p0}, Ljx3;->j()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v1}, Lx6a;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v4, v1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Ljx3;->e:Ljava/lang/Object;
-
-    iget-object v4, p0, Ljx3;->d:Ljava/lang/Object;
-
-    check-cast v4, Lorg/webrtc/MediaSource;
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4}, Lorg/webrtc/MediaSource;->dispose()V
-
-    invoke-virtual {p0}, Ljx3;->j()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4}, Lx6a;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v5, v2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    iput-object v1, p0, Ljx3;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public n(Lww3;)V
+.method public final a(Lfx3;)V
     .locals 2
 
-    iget-object v0, p0, Ljx3;->c:Ljava/lang/Object;
+    iget-object v0, p0, Ljx3;->d:Lkx3;
 
-    monitor-enter v0
+    iget v1, v0, Lkx3;->h:I
 
-    :try_start_0
-    iget-object v1, p0, Ljx3;->e:Ljava/lang/Object;
+    iput v1, p1, Lfx3;->e:I
 
-    check-cast v1, Ljava/util/LinkedHashSet;
+    iget v1, v0, Lkx3;->i:I
 
-    invoke-virtual {v1, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+    iput v1, p1, Lfx3;->f:I
 
-    move-result p1
+    iget v1, v0, Lkx3;->j:I
 
-    if-eqz p1, :cond_0
+    iput v1, p1, Lfx3;->g:I
 
-    iget-object p1, p0, Ljx3;->e:Ljava/lang/Object;
+    iget v1, v0, Lkx3;->k:I
 
-    check-cast p1, Ljava/util/LinkedHashSet;
+    iput v1, p1, Lfx3;->h:I
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+    iget v1, v0, Lkx3;->l:I
 
-    move-result p1
+    iput v1, p1, Lfx3;->i:I
 
-    if-eqz p1, :cond_0
+    iget v1, v0, Lkx3;->m:I
 
-    invoke-virtual {p0}, Ljx3;->s()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput v1, p1, Lfx3;->j:I
 
-    goto :goto_0
+    iget v1, v0, Lkx3;->n:I
 
-    :catchall_0
-    move-exception p1
+    iput v1, p1, Lfx3;->k:I
 
-    goto :goto_1
+    iget v1, v0, Lkx3;->o:I
 
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    iput v1, p1, Lfx3;->l:I
 
-    return-void
+    iget v1, v0, Lkx3;->p:I
 
-    :goto_1
-    monitor-exit v0
+    iput v1, p1, Lfx3;->m:I
 
-    throw p1
-.end method
+    iget v1, v0, Lkx3;->q:I
 
-.method public o(Z)V
-    .locals 1
+    iput v1, p1, Lfx3;->n:I
 
-    iget-object v0, p0, Ljx3;->e:Ljava/lang/Object;
+    iget v1, v0, Lkx3;->r:I
 
-    check-cast v0, Lorg/webrtc/MediaStreamTrack;
+    iput v1, p1, Lfx3;->o:I
 
-    if-eqz v0, :cond_0
+    iget v1, v0, Lkx3;->s:I
 
-    invoke-virtual {v0, p1}, Lorg/webrtc/MediaStreamTrack;->setEnabled(Z)Z
+    iput v1, p1, Lfx3;->s:I
 
-    :cond_0
-    return-void
-.end method
+    iget v1, v0, Lkx3;->t:I
 
-.method public abstract p(Ljava/lang/String;Lrv1;Ljava/util/List;)V
-.end method
+    iput v1, p1, Lfx3;->t:I
 
-.method public q(Ljava/lang/Object;)V
-    .locals 4
+    iget v1, v0, Lkx3;->u:I
 
-    iget-object v0, p0, Ljx3;->c:Ljava/lang/Object;
+    iput v1, p1, Lfx3;->u:I
 
-    monitor-enter v0
+    iget v1, v0, Lkx3;->v:I
 
-    :try_start_0
-    iget-object v1, p0, Ljx3;->d:Ljava/lang/Object;
+    iput v1, p1, Lfx3;->v:I
+
+    iget v1, v0, Lkx3;->F:I
+
+    iput v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iget v1, v0, Lkx3;->G:I
+
+    iput v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    iget v1, v0, Lkx3;->H:I
+
+    iput v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iget v1, v0, Lkx3;->I:I
+
+    iput v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    iget v1, v0, Lkx3;->R:I
+
+    iput v1, p1, Lfx3;->A:I
+
+    iget v1, v0, Lkx3;->Q:I
+
+    iput v1, p1, Lfx3;->B:I
+
+    iget v1, v0, Lkx3;->N:I
+
+    iput v1, p1, Lfx3;->x:I
+
+    iget v1, v0, Lkx3;->P:I
+
+    iput v1, p1, Lfx3;->z:I
+
+    iget v1, v0, Lkx3;->w:F
+
+    iput v1, p1, Lfx3;->E:F
+
+    iget v1, v0, Lkx3;->x:F
+
+    iput v1, p1, Lfx3;->F:F
+
+    iget v1, v0, Lkx3;->z:I
+
+    iput v1, p1, Lfx3;->p:I
+
+    iget v1, v0, Lkx3;->A:I
+
+    iput v1, p1, Lfx3;->q:I
+
+    iget v1, v0, Lkx3;->B:F
+
+    iput v1, p1, Lfx3;->r:F
+
+    iget-object v1, v0, Lkx3;->y:Ljava/lang/String;
+
+    iput-object v1, p1, Lfx3;->G:Ljava/lang/String;
+
+    iget v1, v0, Lkx3;->C:I
+
+    iput v1, p1, Lfx3;->T:I
+
+    iget v1, v0, Lkx3;->D:I
+
+    iput v1, p1, Lfx3;->U:I
+
+    iget v1, v0, Lkx3;->T:F
+
+    iput v1, p1, Lfx3;->I:F
+
+    iget v1, v0, Lkx3;->U:F
+
+    iput v1, p1, Lfx3;->H:F
+
+    iget v1, v0, Lkx3;->W:I
+
+    iput v1, p1, Lfx3;->K:I
+
+    iget v1, v0, Lkx3;->V:I
+
+    iput v1, p1, Lfx3;->J:I
+
+    iget-boolean v1, v0, Lkx3;->l0:Z
+
+    iput-boolean v1, p1, Lfx3;->W:Z
+
+    iget-boolean v1, v0, Lkx3;->m0:Z
+
+    iput-boolean v1, p1, Lfx3;->X:Z
+
+    iget v1, v0, Lkx3;->X:I
+
+    iput v1, p1, Lfx3;->L:I
+
+    iget v1, v0, Lkx3;->Y:I
+
+    iput v1, p1, Lfx3;->M:I
+
+    iget v1, v0, Lkx3;->Z:I
+
+    iput v1, p1, Lfx3;->P:I
+
+    iget v1, v0, Lkx3;->a0:I
+
+    iput v1, p1, Lfx3;->Q:I
+
+    iget v1, v0, Lkx3;->b0:I
+
+    iput v1, p1, Lfx3;->N:I
+
+    iget v1, v0, Lkx3;->c0:I
+
+    iput v1, p1, Lfx3;->O:I
+
+    iget v1, v0, Lkx3;->d0:F
+
+    iput v1, p1, Lfx3;->R:F
+
+    iget v1, v0, Lkx3;->e0:F
+
+    iput v1, p1, Lfx3;->S:F
+
+    iget v1, v0, Lkx3;->E:I
+
+    iput v1, p1, Lfx3;->V:I
+
+    iget v1, v0, Lkx3;->f:F
+
+    iput v1, p1, Lfx3;->c:F
+
+    iget v1, v0, Lkx3;->d:I
+
+    iput v1, p1, Lfx3;->a:I
+
+    iget v1, v0, Lkx3;->e:I
+
+    iput v1, p1, Lfx3;->b:I
+
+    iget v1, v0, Lkx3;->b:I
+
+    iput v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+
+    iget v1, v0, Lkx3;->c:I
+
+    iput v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    iget-object v1, v0, Lkx3;->k0:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iput-object v1, p1, Lfx3;->Y:Ljava/lang/String;
 
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_0
+    iget v1, v0, Lkx3;->o0:I
 
-    if-eqz v1, :cond_0
+    iput v1, p1, Lfx3;->Z:I
 
-    monitor-exit v0
+    iget v1, v0, Lkx3;->K:I
+
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    iget v0, v0, Lkx3;->J:I
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+
+    invoke-virtual {p1}, Lfx3;->a()V
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception p1
+.method public final clone()Ljava/lang/Object;
+    .locals 5
+
+    new-instance v0, Ljx3;
+
+    invoke-direct {v0}, Ljx3;-><init>()V
+
+    iget-object v1, v0, Ljx3;->d:Lkx3;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v2, p0, Ljx3;->d:Lkx3;
+
+    iget-boolean v3, v2, Lkx3;->a:Z
+
+    iput-boolean v3, v1, Lkx3;->a:Z
+
+    iget v3, v2, Lkx3;->b:I
+
+    iput v3, v1, Lkx3;->b:I
+
+    iget v3, v2, Lkx3;->c:I
+
+    iput v3, v1, Lkx3;->c:I
+
+    iget v3, v2, Lkx3;->d:I
+
+    iput v3, v1, Lkx3;->d:I
+
+    iget v3, v2, Lkx3;->e:I
+
+    iput v3, v1, Lkx3;->e:I
+
+    iget v3, v2, Lkx3;->f:F
+
+    iput v3, v1, Lkx3;->f:F
+
+    iget-boolean v3, v2, Lkx3;->g:Z
+
+    iput-boolean v3, v1, Lkx3;->g:Z
+
+    iget v3, v2, Lkx3;->h:I
+
+    iput v3, v1, Lkx3;->h:I
+
+    iget v3, v2, Lkx3;->i:I
+
+    iput v3, v1, Lkx3;->i:I
+
+    iget v3, v2, Lkx3;->j:I
+
+    iput v3, v1, Lkx3;->j:I
+
+    iget v3, v2, Lkx3;->k:I
+
+    iput v3, v1, Lkx3;->k:I
+
+    iget v3, v2, Lkx3;->l:I
+
+    iput v3, v1, Lkx3;->l:I
+
+    iget v3, v2, Lkx3;->m:I
+
+    iput v3, v1, Lkx3;->m:I
+
+    iget v3, v2, Lkx3;->n:I
+
+    iput v3, v1, Lkx3;->n:I
+
+    iget v3, v2, Lkx3;->o:I
+
+    iput v3, v1, Lkx3;->o:I
+
+    iget v3, v2, Lkx3;->p:I
+
+    iput v3, v1, Lkx3;->p:I
+
+    iget v3, v2, Lkx3;->q:I
+
+    iput v3, v1, Lkx3;->q:I
+
+    iget v3, v2, Lkx3;->r:I
+
+    iput v3, v1, Lkx3;->r:I
+
+    iget v3, v2, Lkx3;->s:I
+
+    iput v3, v1, Lkx3;->s:I
+
+    iget v3, v2, Lkx3;->t:I
+
+    iput v3, v1, Lkx3;->t:I
+
+    iget v3, v2, Lkx3;->u:I
+
+    iput v3, v1, Lkx3;->u:I
+
+    iget v3, v2, Lkx3;->v:I
+
+    iput v3, v1, Lkx3;->v:I
+
+    iget v3, v2, Lkx3;->w:F
+
+    iput v3, v1, Lkx3;->w:F
+
+    iget v3, v2, Lkx3;->x:F
+
+    iput v3, v1, Lkx3;->x:F
+
+    iget-object v3, v2, Lkx3;->y:Ljava/lang/String;
+
+    iput-object v3, v1, Lkx3;->y:Ljava/lang/String;
+
+    iget v3, v2, Lkx3;->z:I
+
+    iput v3, v1, Lkx3;->z:I
+
+    iget v3, v2, Lkx3;->A:I
+
+    iput v3, v1, Lkx3;->A:I
+
+    iget v3, v2, Lkx3;->B:F
+
+    iput v3, v1, Lkx3;->B:F
+
+    iget v3, v2, Lkx3;->C:I
+
+    iput v3, v1, Lkx3;->C:I
+
+    iget v3, v2, Lkx3;->D:I
+
+    iput v3, v1, Lkx3;->D:I
+
+    iget v3, v2, Lkx3;->E:I
+
+    iput v3, v1, Lkx3;->E:I
+
+    iget v3, v2, Lkx3;->F:I
+
+    iput v3, v1, Lkx3;->F:I
+
+    iget v3, v2, Lkx3;->G:I
+
+    iput v3, v1, Lkx3;->G:I
+
+    iget v3, v2, Lkx3;->H:I
+
+    iput v3, v1, Lkx3;->H:I
+
+    iget v3, v2, Lkx3;->I:I
+
+    iput v3, v1, Lkx3;->I:I
+
+    iget v3, v2, Lkx3;->J:I
+
+    iput v3, v1, Lkx3;->J:I
+
+    iget v3, v2, Lkx3;->K:I
+
+    iput v3, v1, Lkx3;->K:I
+
+    iget v3, v2, Lkx3;->L:I
+
+    iput v3, v1, Lkx3;->L:I
+
+    iget v3, v2, Lkx3;->M:I
+
+    iput v3, v1, Lkx3;->M:I
+
+    iget v3, v2, Lkx3;->N:I
+
+    iput v3, v1, Lkx3;->N:I
+
+    iget v3, v2, Lkx3;->O:I
+
+    iput v3, v1, Lkx3;->O:I
+
+    iget v3, v2, Lkx3;->P:I
+
+    iput v3, v1, Lkx3;->P:I
+
+    iget v3, v2, Lkx3;->Q:I
+
+    iput v3, v1, Lkx3;->Q:I
+
+    iget v3, v2, Lkx3;->R:I
+
+    iput v3, v1, Lkx3;->R:I
+
+    iget v3, v2, Lkx3;->S:I
+
+    iput v3, v1, Lkx3;->S:I
+
+    iget v3, v2, Lkx3;->T:F
+
+    iput v3, v1, Lkx3;->T:F
+
+    iget v3, v2, Lkx3;->U:F
+
+    iput v3, v1, Lkx3;->U:F
+
+    iget v3, v2, Lkx3;->V:I
+
+    iput v3, v1, Lkx3;->V:I
+
+    iget v3, v2, Lkx3;->W:I
+
+    iput v3, v1, Lkx3;->W:I
+
+    iget v3, v2, Lkx3;->X:I
+
+    iput v3, v1, Lkx3;->X:I
+
+    iget v3, v2, Lkx3;->Y:I
+
+    iput v3, v1, Lkx3;->Y:I
+
+    iget v3, v2, Lkx3;->Z:I
+
+    iput v3, v1, Lkx3;->Z:I
+
+    iget v3, v2, Lkx3;->a0:I
+
+    iput v3, v1, Lkx3;->a0:I
+
+    iget v3, v2, Lkx3;->b0:I
+
+    iput v3, v1, Lkx3;->b0:I
+
+    iget v3, v2, Lkx3;->c0:I
+
+    iput v3, v1, Lkx3;->c0:I
+
+    iget v3, v2, Lkx3;->d0:F
+
+    iput v3, v1, Lkx3;->d0:F
+
+    iget v3, v2, Lkx3;->e0:F
+
+    iput v3, v1, Lkx3;->e0:F
+
+    iget v3, v2, Lkx3;->f0:I
+
+    iput v3, v1, Lkx3;->f0:I
+
+    iget v3, v2, Lkx3;->g0:I
+
+    iput v3, v1, Lkx3;->g0:I
+
+    iget v3, v2, Lkx3;->h0:I
+
+    iput v3, v1, Lkx3;->h0:I
+
+    iget-object v3, v2, Lkx3;->k0:Ljava/lang/String;
+
+    iput-object v3, v1, Lkx3;->k0:Ljava/lang/String;
+
+    iget-object v3, v2, Lkx3;->i0:[I
+
+    if-eqz v3, :cond_0
+
+    iget-object v4, v2, Lkx3;->j0:Ljava/lang/String;
+
+    if-nez v4, :cond_0
+
+    array-length v4, v3
+
+    invoke-static {v3, v4}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object v3
+
+    iput-object v3, v1, Lkx3;->i0:[I
 
     goto :goto_0
 
     :cond_0
-    :try_start_1
-    iput-object p1, p0, Ljx3;->d:Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    iget-object p1, p0, Ljx3;->e:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/LinkedHashSet;
-
-    invoke-static {p1}, Lei3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object p1
-
-    iget-object v1, p0, Ljx3;->a:Ljava/lang/Object;
-
-    check-cast v1, Lf1c;
-
-    iget-object v1, v1, Lf1c;->c:Ljava/lang/Object;
-
-    check-cast v1, Ly30;
-
-    new-instance v2, Lp02;
-
-    const/16 v3, 0x10
-
-    invoke-direct {v2, p1, v3, p0}, Lp02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ly30;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit v0
-
-    return-void
+    iput-object v3, v1, Lkx3;->i0:[I
 
     :goto_0
-    monitor-exit v0
+    iget-object v3, v2, Lkx3;->j0:Ljava/lang/String;
 
-    throw p1
-.end method
+    iput-object v3, v1, Lkx3;->j0:Ljava/lang/String;
 
-.method public abstract r()V
-.end method
+    iget-boolean v3, v2, Lkx3;->l0:Z
 
-.method public abstract s()V
-.end method
+    iput-boolean v3, v1, Lkx3;->l0:Z
 
-.method public t(Lorg/webrtc/RtpSender;)V
-    .locals 7
+    iget-boolean v3, v2, Lkx3;->m0:Z
 
-    iget-object v0, p0, Ljx3;->e:Ljava/lang/Object;
+    iput-boolean v3, v1, Lkx3;->m0:Z
 
-    check-cast v0, Lorg/webrtc/MediaStreamTrack;
+    iget-boolean v3, v2, Lkx3;->n0:Z
 
-    if-eqz p1, :cond_0
+    iput-boolean v3, v1, Lkx3;->n0:Z
 
-    if-eqz v0, :cond_0
+    iget v2, v2, Lkx3;->o0:I
 
-    invoke-virtual {p1}, Lorg/webrtc/RtpSender;->track()Lorg/webrtc/MediaStreamTrack;
+    iput v2, v1, Lkx3;->o0:I
 
-    move-result-object v1
+    iget-object v1, v0, Ljx3;->c:Llx3;
 
-    if-eq v1, v0, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Ljx3;->c:Ljava/lang/Object;
+    iget-object v2, p0, Ljx3;->c:Llx3;
 
-    check-cast v1, Lcgd;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Ljx3;->j()Ljava/lang/String;
+    iget v3, v2, Llx3;->a:I
 
-    move-result-object v2
+    iput v3, v1, Llx3;->a:I
 
-    invoke-static {v0}, Lx6a;->c(Ljava/lang/Object;)Ljava/lang/String;
+    iget v3, v2, Llx3;->c:I
 
-    move-result-object v3
+    iput v3, v1, Llx3;->c:I
 
-    invoke-static {p1}, Lx6a;->c(Ljava/lang/Object;)Ljava/lang/String;
+    iget v3, v2, Llx3;->e:F
 
-    move-result-object v4
+    iput v3, v1, Llx3;->e:F
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    iget v2, v2, Llx3;->d:F
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    iput v2, v1, Llx3;->d:F
 
-    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Ljx3;->b:Lmx3;
 
-    const-string v6, ": bind "
+    iget v2, v1, Lmx3;->a:I
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, v0, Ljx3;->b:Lmx3;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput v2, v3, Lmx3;->a:I
 
-    const-string v3, " with "
+    iget v2, v1, Lmx3;->c:F
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput v2, v3, Lmx3;->c:F
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, v1, Lmx3;->d:F
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput v2, v3, Lmx3;->d:F
 
-    move-result-object v3
+    iget v1, v1, Lmx3;->b:I
 
-    invoke-interface {v1, v2, v3}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    iput v1, v3, Lmx3;->b:I
 
-    const/4 v1, 0x0
+    iget-object v1, v0, Ljx3;->e:Lnx3;
 
-    invoke-virtual {p1, v0, v1}, Lorg/webrtc/RtpSender;->setTrack(Lorg/webrtc/MediaStreamTrack;Z)Z
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_0
-    return-void
+    iget-object v2, p0, Ljx3;->e:Lnx3;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v3, v2, Lnx3;->a:F
+
+    iput v3, v1, Lnx3;->a:F
+
+    iget v3, v2, Lnx3;->b:F
+
+    iput v3, v1, Lnx3;->b:F
+
+    iget v3, v2, Lnx3;->c:F
+
+    iput v3, v1, Lnx3;->c:F
+
+    iget v3, v2, Lnx3;->d:F
+
+    iput v3, v1, Lnx3;->d:F
+
+    iget v3, v2, Lnx3;->e:F
+
+    iput v3, v1, Lnx3;->e:F
+
+    iget v3, v2, Lnx3;->f:F
+
+    iput v3, v1, Lnx3;->f:F
+
+    iget v3, v2, Lnx3;->g:F
+
+    iput v3, v1, Lnx3;->g:F
+
+    iget v3, v2, Lnx3;->h:I
+
+    iput v3, v1, Lnx3;->h:I
+
+    iget v3, v2, Lnx3;->i:F
+
+    iput v3, v1, Lnx3;->i:F
+
+    iget v3, v2, Lnx3;->j:F
+
+    iput v3, v1, Lnx3;->j:F
+
+    iget v3, v2, Lnx3;->k:F
+
+    iput v3, v1, Lnx3;->k:F
+
+    iget-boolean v3, v2, Lnx3;->l:Z
+
+    iput-boolean v3, v1, Lnx3;->l:Z
+
+    iget v2, v2, Lnx3;->m:F
+
+    iput v2, v1, Lnx3;->m:F
+
+    iget v1, p0, Ljx3;->a:I
+
+    iput v1, v0, Ljx3;->a:I
+
+    return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class public final Lq7a;
-.super Lvri;
+.super Ltsi;
 .source "SourceFile"
 
 
@@ -49,9 +49,9 @@
 
     invoke-direct {v8}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    new-instance v9, Lx30;
+    new-instance v9, Lu30;
 
-    invoke-direct {v9, v0}, Lx30;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+    invoke-direct {v9, v0}, Lu30;-><init>(Ljava/util/concurrent/ThreadFactory;)V
 
     const-wide/16 v5, 0x3c
 
@@ -116,11 +116,11 @@
     return-void
 
     :cond_2
-    new-instance v0, La7e;
+    new-instance v0, Lx7e;
 
     const/4 v1, 0x4
 
-    invoke-direct {v0, p1, v1}, La7e;-><init>(Ljava/lang/Runnable;I)V
+    invoke-direct {v0, p1, v1}, Lx7e;-><init>(Ljava/lang/Runnable;I)V
 
     iget-object p1, p0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 

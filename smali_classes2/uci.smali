@@ -1,38 +1,64 @@
 .class public final Luci;
-.super Ladf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Luz7;
 
-# instance fields
-.field public E0:Lrci;
+
+# static fields
+.field public static final a:Luci;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Luci;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Luci;->a:Luci;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final z(Lie8;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    instance-of v0, p1, Lqci;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
     :cond_0
-    move-object v0, p1
+    instance-of p1, p1, Luci;
 
-    check-cast v0, Lrci;
+    if-nez p1, :cond_1
 
-    iput-object v0, p0, Luci;->E0:Lrci;
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+    return p1
 
-    check-cast v0, Lpze;
+    :cond_1
+    return v0
+.end method
 
-    check-cast p1, Lqci;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p1, p1, Lqci;->a:Lrze;
+    const v0, 0x43d1be2
 
-    invoke-virtual {v0, p1}, Lpze;->setModelItem(Lfze;)V
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CloseScreen"
+
+    return-object v0
 .end method

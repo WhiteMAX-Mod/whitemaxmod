@@ -6,7 +6,7 @@
 # instance fields
 .field public final a:Ljava/lang/Object;
 
-.field public final b:Lxn5;
+.field public final b:Lbo5;
 
 .field public final c:I
 
@@ -18,11 +18,11 @@
 
 .field public final g:Landroid/graphics/Matrix;
 
-.field public final h:Lt22;
+.field public final h:Lk22;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lxn5;ILandroid/util/Size;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Lt22;)V
+.method public constructor <init>(Ljava/lang/Object;Lbo5;ILandroid/util/Size;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Lk22;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,7 +31,7 @@
 
     iput-object p1, p0, Lyb0;->a:Ljava/lang/Object;
 
-    iput-object p2, p0, Lyb0;->b:Lxn5;
+    iput-object p2, p0, Lyb0;->b:Lbo5;
 
     iput p3, p0, Lyb0;->c:I
 
@@ -49,7 +49,7 @@
 
     if-eqz p8, :cond_0
 
-    iput-object p8, p0, Lyb0;->h:Lt22;
+    iput-object p8, p0, Lyb0;->h:Lk22;
 
     return-void
 
@@ -112,7 +112,7 @@
 
     iget-object v1, p1, Lyb0;->a:Ljava/lang/Object;
 
-    iget-object v3, p1, Lyb0;->b:Lxn5;
+    iget-object v3, p1, Lyb0;->b:Lbo5;
 
     iget-object v4, p0, Lyb0;->a:Ljava/lang/Object;
 
@@ -122,7 +122,7 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lyb0;->b:Lxn5;
+    iget-object v1, p0, Lyb0;->b:Lbo5;
 
     if-nez v1, :cond_1
 
@@ -180,9 +180,9 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lyb0;->h:Lt22;
+    iget-object v1, p0, Lyb0;->h:Lk22;
 
-    iget-object p1, p1, Lyb0;->h:Lt22;
+    iget-object p1, p1, Lyb0;->h:Lk22;
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -211,7 +211,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lyb0;->b:Lxn5;
+    iget-object v2, p0, Lyb0;->b:Lbo5;
 
     if-nez v2, :cond_0
 
@@ -271,7 +271,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lyb0;->h:Lt22;
+    iget-object v1, p0, Lyb0;->h:Lk22;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -299,7 +299,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lyb0;->b:Lxn5;
+    iget-object v1, p0, Lyb0;->b:Lbo5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -347,7 +347,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lyb0;->h:Lt22;
+    iget-object v1, p0, Lyb0;->h:Lk22;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

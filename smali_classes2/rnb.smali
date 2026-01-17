@@ -1,157 +1,243 @@
-.class public final enum Lrnb;
-.super Ljava/lang/Enum;
+.class public final Lrnb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lrnb;
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-.field public static final enum Y:Lrnb;
+.field public final b:Ljava/lang/String;
 
-.field public static final enum Z:Lrnb;
+.field public final c:Ljava/util/Map;
 
-.field public static final enum a:Lrnb;
+.field public final d:J
 
-.field public static final enum b:Lrnb;
+.field public final e:J
 
-.field public static final enum c:Lrnb;
-
-.field public static final enum d:Lrnb;
-
-.field public static final enum o:Lrnb;
-
-.field public static final enum s0:Lrnb;
-
-.field public static final synthetic t0:[Lrnb;
+.field public final f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;Ljava/util/Map;JJI)V
+    .locals 0
 
-    new-instance v0, Lrnb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    iput-object p1, p0, Lrnb;->a:Landroid/net/Uri;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lrnb;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lrnb;->c:Ljava/util/Map;
 
-    sput-object v0, Lrnb;->a:Lrnb;
+    iput-wide p4, p0, Lrnb;->d:J
 
-    new-instance v1, Lrnb;
+    iput-wide p6, p0, Lrnb;->e:J
 
-    const-string v2, "MEDIA"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lrnb;->b:Lrnb;
-
-    new-instance v2, Lrnb;
-
-    const-string v3, "MEDIA_INITIALIZATION"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lrnb;->c:Lrnb;
-
-    new-instance v3, Lrnb;
-
-    const-string v4, "DRM"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lrnb;->d:Lrnb;
-
-    new-instance v4, Lrnb;
-
-    const-string v5, "MANIFEST"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lrnb;->o:Lrnb;
-
-    new-instance v5, Lrnb;
-
-    const-string v6, "TIME_SYNCHRONIZATION"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lrnb;->X:Lrnb;
-
-    new-instance v6, Lrnb;
-
-    const-string v7, "AD"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lrnb;->Y:Lrnb;
-
-    new-instance v7, Lrnb;
-
-    const-string v8, "MEDIA_PROGRESSIVE_LIVE"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lrnb;->Z:Lrnb;
-
-    new-instance v8, Lrnb;
-
-    const-string v9, "CUSTOM_BASE"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lrnb;->s0:Lrnb;
-
-    filled-new-array/range {v0 .. v8}, [Lrnb;
-
-    move-result-object v0
-
-    sput-object v0, Lrnb;->t0:[Lrnb;
+    iput p8, p0, Lrnb;->f:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrnb;
-    .locals 1
 
-    const-class v0, Lrnb;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Lrnb;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Lrnb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lrnb;
+
+    iget-object v1, p0, Lrnb;->a:Landroid/net/Uri;
+
+    iget-object v3, p1, Lrnb;->a:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lrnb;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lrnb;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lrnb;->c:Ljava/util/Map;
+
+    iget-object v3, p1, Lrnb;->c:Ljava/util/Map;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Lrnb;->d:J
+
+    iget-wide v5, p1, Lrnb;->d:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-wide v3, p0, Lrnb;->e:J
+
+    iget-wide v5, p1, Lrnb;->e:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget v1, p0, Lrnb;->f:I
+
+    iget p1, p1, Lrnb;->f:I
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
 .end method
 
-.method public static values()[Lrnb;
-    .locals 1
+.method public final hashCode()I
+    .locals 5
 
-    sget-object v0, Lrnb;->t0:[Lrnb;
+    iget-object v0, p0, Lrnb;->a:Landroid/net/Uri;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lrnb;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lrnb;->c:Ljava/util/Map;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-wide v3, p0, Lrnb;->d:J
+
+    invoke-static {v2, v1, v3, v4}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lrnb;->e:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget v1, p0, Lrnb;->f:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OneVideoDataSpec(uri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrnb;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", httpMethod="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrnb;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", httpRequestHeaders="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrnb;->c:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", position="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lrnb;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", length="
+
+    const-string v2, ", flags="
+
+    iget-wide v3, p0, Lrnb;->e:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ")"
+
+    iget v2, p0, Lrnb;->f:I
+
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lrnb;
 
     return-object v0
 .end method

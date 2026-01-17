@@ -20,7 +20,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;",
         "",
-        "Lv2h;",
+        "Lb3h;",
         "onOpen",
         "()V",
         "",

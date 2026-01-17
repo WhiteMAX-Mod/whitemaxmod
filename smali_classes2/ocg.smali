@@ -3,294 +3,222 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldr6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lpcg;
+.field public final synthetic b:Laji;
+
+.field public final synthetic c:Lvm;
+
+.field public final synthetic d:Lnbg;
+
+.field public final synthetic o:Ledg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpcg;I)V
-    .locals 0
+.method public synthetic constructor <init>(Laji;Ledg;Lvm;Lnbg;)V
+    .locals 1
 
-    iput p2, p0, Locg;->a:I
+    .line 2
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Locg;->b:Lpcg;
+    iput v0, p0, Locg;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Locg;->b:Laji;
+
+    iput-object p2, p0, Locg;->o:Ledg;
+
+    iput-object p3, p0, Locg;->c:Lvm;
+
+    iput-object p4, p0, Locg;->d:Lnbg;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Laji;Lvm;Lnbg;Ledg;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x1
+
+    iput v0, p0, Locg;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Locg;->b:Laji;
+
+    iput-object p2, p0, Locg;->c:Lvm;
+
+    iput-object p3, p0, Locg;->d:Lnbg;
+
+    iput-object p4, p0, Locg;->o:Ledg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final run()V
+    .locals 11
 
     iget v0, p0, Locg;->a:I
 
-    const v1, 0x7fffffff
-
-    const/4 v2, 0x1
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Locg;->b:Lpcg;
+    iget-object v0, p0, Locg;->b:Laji;
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v0, v0, Laji;->d:Ljava/lang/Object;
 
-    instance-of v1, p1, Lone/me/sdk/transfer/exceptions/HttpErrorException;
+    check-cast v0, Lrcg;
 
-    if-nez v1, :cond_0
+    iget-object v1, p0, Locg;->c:Lvm;
 
-    invoke-static {p1}, Lcxa;->f(Ljava/lang/Throwable;)Lfo3;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v1, p1, Lone/me/sdk/transfer/exceptions/HttpUrlExpiredException;
-
-    const-string v3, "rcg"
-
-    if-eqz v1, :cond_1
-
-    const-string v0, "retryWhenTamHttpError: skipped retry on TamHttpUrlExpiredException"
-
-    invoke-static {v3, v0}, Lm4j;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {p1}, Lcxa;->f(Ljava/lang/Throwable;)Lfo3;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_1
-    move-object v1, p1
-
-    check-cast v1, Lone/me/sdk/transfer/exceptions/HttpErrorException;
-
-    iget-object v4, v1, Lone/me/sdk/transfer/exceptions/HttpErrorException;->a:Lud7;
-
-    invoke-static {v4}, Lf6g;->e(Lud7;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "retryWhenTamHttpError: critical upload error="
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lm4j;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {p1}, Lcxa;->f(Ljava/lang/Throwable;)Lfo3;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p1, v0, Lpcg;->a:Ld68;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lute;
-
-    iget p1, p1, Lute;->l:I
-
-    invoke-static {p1}, Lpcg;->a(I)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    const-string p1, "retryWhenTamHttpError: no connection, await for connection available"
-
-    invoke-static {v3, p1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lpcg;->b()Lsza;
-
-    move-result-object p1
-
-    new-instance v0, Lsrf;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lsrf;-><init>(I)V
-
-    sget-object v1, Lz7f;->g:Laoa;
-
-    sget-object v2, Lz7f;->f:Ltr6;
-
-    new-instance v3, Lzxa;
-
-    invoke-direct {v3, p1, v0, v1, v2}, Lzxa;-><init>(Lcxa;Lux3;Lux3;Ln6;)V
-
-    move-object p1, v3
-
-    goto :goto_0
-
-    :cond_3
-    const-string p1, "retryWhenTamHttpError: http error"
-
-    invoke-static {v3, p1, v1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    int-to-long v0, v2
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {}, Lbbe;->a()Lqae;
+    invoke-virtual {v1}, Lvm;->q()Lj2;
 
     move-result-object v2
 
-    invoke-static {v0, v1, p1, v2}, Lcxa;->q(JLjava/util/concurrent/TimeUnit;Lqae;)Lzza;
+    iget-object v3, p0, Locg;->d:Lnbg;
 
-    move-result-object p1
+    if-eqz v2, :cond_1
 
-    :goto_0
-    return-object p1
+    iget-object v4, v0, Lrcg;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    sget-object v5, Lgcg;->d0:Ljava/util/List;
+
+    iget-object v6, v3, Lnbg;->b:Ljava/lang/String;
+
+    invoke-interface {v5, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lqcg;
+
+    if-nez v6, :cond_0
+
+    new-instance v6, Lqcg;
+
+    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
+
+    const/4 v7, 0x0
+
+    iput v7, v6, Lqcg;->a:I
+
+    :cond_0
+    iget v7, v6, Lqcg;->a:I
+
+    add-int/lit8 v7, v7, 0x1
+
+    iput v7, v6, Lqcg;->a:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v7
+
+    iput-wide v7, v6, Lqcg;->b:J
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v2}, Lj2;->S()S
+
+    move-result v2
+
+    sget-object v4, Lrcg;->A0:Ljava/lang/String;
+
+    sget-object v5, Lwob;->c:Lvqj;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Lvqj;->u(S)Ljava/lang/String;
+
+    move-result-object v5
+
+    const v7, 0xffff
+
+    and-int/2addr v2, v7
+
+    invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v7, "0x"
+
+    invoke-virtual {v7, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v7, v3, Lnbg;->b:Ljava/lang/String;
+
+    iget v8, v6, Lqcg;->a:I
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    iget-wide v9, v6, Lqcg;->b:J
+
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    filled-new-array {v5, v2, v7, v8, v6}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v5, "saveTaskFail, %s(%s), error=%s, totalErrors=%d, lastErrorTime=%d"
+
+    invoke-static {v4, v5, v2}, Lc5j;->g(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :cond_1
+    iget-object v2, p0, Locg;->o:Ledg;
+
+    invoke-interface {v2, v3}, Ledg;->k(Lnbg;)V
+
+    invoke-virtual {v0, v1, v3}, Lrcg;->f(Lvm;Lnbg;)V
+
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Locg;->b:Lpcg;
+    iget-object v0, p0, Locg;->o:Ledg;
 
-    check-cast p1, Lcxa;
-
-    new-instance v2, Locg;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v0, v3}, Locg;-><init>(Lpcg;I)V
-
-    invoke-virtual {p1, v2, v1}, Lcxa;->h(Ldr6;I)Lcxa;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Locg;->b:Lpcg;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lpcg;->d(Ljava/lang/Throwable;)Z
-
-    move-result v1
-
-    const-string v3, "pcg"
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v0, Lpcg;->a:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ledg;->b()Lddg;
 
     move-result-object v1
 
-    check-cast v1, Lute;
+    new-instance v2, Locg;
 
-    iget v1, v1, Lute;->l:I
+    iget-object v3, p0, Locg;->b:Laji;
 
-    invoke-static {v1}, Lpcg;->a(I)Z
+    iget-object v4, p0, Locg;->c:Lvm;
 
-    move-result v1
+    iget-object v5, p0, Locg;->d:Lnbg;
 
-    if-nez v1, :cond_4
+    invoke-direct {v2, v3, v4, v5, v0}, Locg;-><init>(Laji;Lvm;Lnbg;Ledg;)V
 
-    const-string p1, "retryWhenCommonErrorObs: no connection, await for connection available"
+    invoke-virtual {v1, v2}, Lddg;->a(Ljava/lang/Runnable;)V
 
-    invoke-static {v3, p1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lpcg;->b()Lsza;
-
-    move-result-object p1
-
-    new-instance v0, Lsrf;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Lsrf;-><init>(I)V
-
-    sget-object v1, Lz7f;->g:Laoa;
-
-    sget-object v2, Lz7f;->f:Ltr6;
-
-    new-instance v3, Lzxa;
-
-    invoke-direct {v3, p1, v0, v1, v2}, Lzxa;-><init>(Lcxa;Lux3;Lux3;Ln6;)V
-
-    goto :goto_1
-
-    :cond_4
-    invoke-static {p1}, Lpcg;->c(Ljava/lang/Throwable;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    const-string v0, "retryWhenCommonErrorObs: common error"
-
-    invoke-static {v3, v0, p1}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    int-to-long v0, v2
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {}, Lbbe;->a()Lqae;
-
-    move-result-object v2
-
-    invoke-static {v0, v1, p1, v2}, Lcxa;->q(JLjava/util/concurrent/TimeUnit;Lqae;)Lzza;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :cond_5
-    invoke-static {p1}, Lcxa;->f(Ljava/lang/Throwable;)Lfo3;
-
-    move-result-object v3
-
-    :goto_1
-    return-object v3
-
-    :pswitch_2
-    iget-object v0, p0, Locg;->b:Lpcg;
-
-    check-cast p1, Lcxa;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Locg;
-
-    invoke-direct {v3, v0, v2}, Locg;-><init>(Lpcg;I)V
-
-    invoke-virtual {p1, v3, v1}, Lcxa;->h(Ldr6;I)Lcxa;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

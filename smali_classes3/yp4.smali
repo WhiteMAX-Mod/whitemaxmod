@@ -1,94 +1,158 @@
-.class public final Lyp4;
+.class public final synthetic Lyp4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lin8;
+.implements Li6;
 
 
 # instance fields
-.field public final a:Ljp3;
-
-.field public final b:Laq4;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Laq4;)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lyp4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljp3;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lyp4;->a:Ljp3;
-
-    iput-object p1, p0, Lyp4;->b:Laq4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 4
+.method public final run()V
+    .locals 5
 
-    const-string v0, "yp4"
+    iget v0, p0, Lyp4;->a:I
 
-    const-string v1, "clear: "
+    const-string v1, "tv5"
 
-    invoke-static {v0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v2, "rrf"
 
-    iget-object v0, p0, Lyp4;->a:Ljp3;
+    const-string v3, "pnd"
 
-    invoke-virtual {v0}, Ljp3;->d()V
+    const-string v4, "clear: cleared repository"
 
-    iget-object v0, p0, Lyp4;->b:Laq4;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v0, Laq4;->a:Ldgb;
+    const-string v0, "dgh"
 
-    invoke-virtual {v0}, Ldgb;->B()Lgo3;
+    const-string v1, "clear: success"
 
-    move-result-object v0
-
-    new-instance v1, Lwp4;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2}, Lwp4;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lbdf;->h(Ldr6;)Ljdf;
-
-    move-result-object v0
-
-    new-instance v1, Lwp4;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v3}, Lwp4;-><init>(I)V
-
-    new-instance v3, Ltn3;
-
-    invoke-direct {v3, v0, v2, v1}, Ltn3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v3}, Lsn3;->h()Lcxa;
-
-    move-result-object v0
-
-    new-instance v1, Lwp4;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lwp4;-><init>(I)V
-
-    new-instance v3, Lxp4;
-
-    invoke-direct {v3, v2}, Lxp4;-><init>(I)V
-
-    sget-object v2, Lz7f;->g:Laoa;
-
-    invoke-static {v0, v2, v1, v3}, Lqcj;->b(Lcxa;Lux3;Lux3;Ln6;)V
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+
+    :pswitch_0
+    const-string v0, "Success update recents"
+
+    invoke-static {v2, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_1
+    invoke-static {v2, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_2
+    sget-object v0, Ld7e;->a:Lakj;
+
+    return-void
+
+    :pswitch_3
+    const-string v0, "Add to recents success"
+
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_4
+    const-string v0, "RECENT REMOVED update handle success"
+
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_5
+    const-string v0, "RECENT ADDED update handle success"
+
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_6
+    const-string v0, "end"
+
+    const-string v1, "clearRecentSearch: success"
+
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_7
+    const-string v0, "qw5"
+
+    invoke-static {v0, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_8
+    const-wide/16 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "lw5"
+
+    const-string v2, "assetsUpdate: queued on api, sync=%d"
+
+    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_9
+    const-string v0, "clear: cleared fav stickers repository"
+
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_a
+    const-string v0, "onAssetsUpdate: stored fav sticker sets"
+
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_b
+    const-string v0, "zp4"
+
+    invoke-static {v0, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,66 +3,62 @@
 
 
 # static fields
-.field public static oneme_settings_media_auto_play_video_always:I = 0x7f0a079d
+.field public static oneme_notifications_settings_chat_enable_notifications_button:I = 0x7f0a0729
 
-.field public static oneme_settings_media_auto_play_video_disable:I = 0x7f0a079e
+.field public static oneme_notifications_settings_chat_linearlayout:I = 0x7f0a072a
 
-.field public static oneme_settings_media_auto_play_video_wifi:I = 0x7f0a079f
+.field public static oneme_notifications_settings_chat_recycler_view:I = 0x7f0a072b
 
-.field public static oneme_settings_media_gif_always:I = 0x7f0a07a0
+.field public static oneme_notifications_settings_chat_settings_button:I = 0x7f0a072c
 
-.field public static oneme_settings_media_gif_dont_load:I = 0x7f0a07a1
+.field public static oneme_notifications_settings_chat_toolbar:I = 0x7f0a072d
 
-.field public static oneme_settings_media_gif_wifi:I = 0x7f0a07a2
+.field public static oneme_notifications_settings_chat_type_all_button:I = 0x7f0a072e
 
-.field public static oneme_settings_media_item_animoji_enabled:I = 0x7f0a07a3
+.field public static oneme_notifications_settings_chat_type_pin_reply_button:I = 0x7f0a072f
 
-.field public static oneme_settings_media_item_gif:I = 0x7f0a07a4
+.field public static oneme_notifications_settings_dialog_enable_notifications_button:I = 0x7f0a0730
 
-.field public static oneme_settings_media_item_gif_available:I = 0x7f0a07a5
+.field public static oneme_notifications_settings_dialog_linearlayout:I = 0x7f0a0731
 
-.field public static oneme_settings_media_item_load_in_roaming:I = 0x7f0a07a6
+.field public static oneme_notifications_settings_dialog_recycler_view:I = 0x7f0a0732
 
-.field public static oneme_settings_media_item_photo:I = 0x7f0a07a7
+.field public static oneme_notifications_settings_dialog_settings_button:I = 0x7f0a0733
 
-.field public static oneme_settings_media_item_playlist_enabled:I = 0x7f0a07a8
+.field public static oneme_notifications_settings_dialog_toolbar:I = 0x7f0a0734
 
-.field public static oneme_settings_media_item_video:I = 0x7f0a07a9
+.field public static oneme_notifications_settings_enable_all_notifications_button:I = 0x7f0a0735
 
-.field public static oneme_settings_media_item_video_caching:I = 0x7f0a07aa
+.field public static oneme_notifications_settings_header_vh:I = 0x7f0a0736
 
-.field public static oneme_settings_media_item_video_messages:I = 0x7f0a07ab
+.field public static oneme_notifications_settings_item_vh:I = 0x7f0a0737
 
-.field public static oneme_settings_media_item_video_quality:I = 0x7f0a07ac
+.field public static oneme_notifications_settings_linearlayout:I = 0x7f0a0738
 
-.field public static oneme_settings_media_photo_always:I = 0x7f0a07ad
+.field public static oneme_notifications_settings_open_settings_button:I = 0x7f0a0739
 
-.field public static oneme_settings_media_photo_dont_load:I = 0x7f0a07ae
+.field public static oneme_notifications_settings_open_settings_call_ringtone_title:I = 0x7f0a073a
 
-.field public static oneme_settings_media_photo_wifi:I = 0x7f0a07af
+.field public static oneme_notifications_settings_open_settings_calls_ringtone:I = 0x7f0a073b
 
-.field public static oneme_settings_media_quality_1080:I = 0x7f0a07b0
+.field public static oneme_notifications_settings_open_settings_calls_vibration:I = 0x7f0a073c
 
-.field public static oneme_settings_media_quality_480:I = 0x7f0a07b1
+.field public static oneme_notifications_settings_other_in_app_push_button:I = 0x7f0a073d
 
-.field public static oneme_settings_media_quality_720:I = 0x7f0a07b2
+.field public static oneme_notifications_settings_other_linearlayout:I = 0x7f0a073e
 
-.field public static oneme_settings_media_screen_autoloading_section_header:I = 0x7f0a07b3
+.field public static oneme_notifications_settings_other_new_user_button:I = 0x7f0a073f
 
-.field public static oneme_settings_media_screen_autoplaying_section_header:I = 0x7f0a07b4
+.field public static oneme_notifications_settings_other_recycler_view:I = 0x7f0a0740
 
-.field public static oneme_settings_media_screen_datapressing_section_header:I = 0x7f0a07b5
+.field public static oneme_notifications_settings_other_settings_button:I = 0x7f0a0741
 
-.field public static oneme_settings_media_screen_list:I = 0x7f0a07b6
+.field public static oneme_notifications_settings_other_toolbar:I = 0x7f0a0742
 
-.field public static oneme_settings_media_screen_settings_header_vh:I = 0x7f0a07b7
+.field public static oneme_notifications_settings_recycler_view:I = 0x7f0a0743
 
-.field public static oneme_settings_media_screen_settings_item_vh:I = 0x7f0a07b8
+.field public static oneme_notifications_settings_reset_default_button:I = 0x7f0a0744
 
-.field public static oneme_settings_media_screen_toolbar:I = 0x7f0a07b9
+.field public static oneme_notifications_settings_show_content_button:I = 0x7f0a0745
 
-.field public static oneme_settings_media_video_messages_always:I = 0x7f0a07ba
-
-.field public static oneme_settings_media_video_messages_dont_load:I = 0x7f0a07bb
-
-.field public static oneme_settings_media_video_messages_wifi:I = 0x7f0a07bc
+.field public static oneme_notifications_settings_toolbar:I = 0x7f0a0746

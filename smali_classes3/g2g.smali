@@ -1,115 +1,96 @@
-.class public final Lg2g;
-.super Lb5g;
+.class public final synthetic Lg2g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lnq6;
 
 
 # instance fields
-.field public final synthetic X:Lm2g;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final synthetic b:Lw3;
+
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lm2g;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lw3;Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lg2g;->X:Lm2g;
+    iput p3, p0, Lg2g;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lg2g;->b:Lw3;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lg2g;->c:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lac4;
+    iget v0, p0, Lg2g;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lg2g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lg2g;->c:Ljava/lang/String;
 
-    move-result-object p1
+    check-cast p1, Ley3;
 
-    check-cast p1, Lg2g;
+    iget-object v1, p0, Lg2g;->b:Lw3;
 
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lg2g;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Lw3;->j(Ley3;Ljava/lang/String;)Lf2g;
 
     move-result-object p1
 
     return-object p1
-.end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :pswitch_0
+    check-cast p1, Ley3;
 
-    new-instance p1, Lg2g;
+    iget-object v0, p0, Lg2g;->b:Lw3;
 
-    iget-object v0, p0, Lg2g;->X:Lm2g;
+    iget-object v0, v0, Lw3;->a:Ljava/lang/Object;
 
-    invoke-direct {p1, v0, p2}, Lg2g;-><init>(Lm2g;Lkotlin/coroutines/Continuation;)V
+    check-cast v0, Lpie;
 
-    return-object p1
-.end method
+    iget-object v1, p0, Lg2g;->c:Ljava/lang/String;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lg2g;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    new-instance p1, Lhrf;
-
-    const/4 v0, 0x2
-
-    iget-object v2, p0, Lg2g;->X:Lm2g;
-
-    invoke-direct {p1, v0, v2}, Lhrf;-><init>(ILjava/lang/Object;)V
-
-    iput v1, p0, Lg2g;->o:I
-
-    sget-object v0, Lwg5;->a:Lwg5;
-
-    invoke-static {v0, p1, p0}, Ls0j;->e(Lrb4;Lmq6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Lpie;->b(Ley3;Ljava/lang/String;)Luhe;
 
     move-result-object p1
 
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     return-object p1
+
+    :pswitch_1
+    check-cast p1, Ley3;
+
+    iget-object v0, p0, Lg2g;->b:Lw3;
+
+    iget-object v0, v0, Lw3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lpie;
+
+    iget-object v1, p0, Lg2g;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, p1, v1}, Lpie;->h(Ley3;Ljava/lang/String;)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,60 +1,49 @@
-.class public final synthetic Lh1e;
-.super Ljava/lang/Object;
+.class public final Lh1e;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic a:Lt1e;
+.field public final synthetic X:Ln1e;
 
-.field public final synthetic b:J
+.field public Y:I
 
-.field public final synthetic c:Lrl9;
+.field public d:Ln1e;
 
-.field public final synthetic d:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt1e;JLrl9;J)V
+.method public constructor <init>(Ln1e;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lh1e;->X:Ln1e;
 
-    iput-object p1, p0, Lh1e;->a:Lt1e;
-
-    iput-wide p2, p0, Lh1e;->b:J
-
-    iput-object p4, p0, Lh1e;->c:Lrl9;
-
-    iput-wide p5, p0, Lh1e;->d:J
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v3, p0, Lh1e;->d:J
+    iput-object p1, p0, Lh1e;->o:Ljava/lang/Object;
 
-    const/4 v6, 0x0
+    iget p1, p0, Lh1e;->Y:I
 
-    iget-object v0, p0, Lh1e;->a:Lt1e;
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lh1e;->b:J
+    or-int/2addr p1, v0
 
-    iget-object v5, p0, Lh1e;->c:Lrl9;
+    iput p1, p0, Lh1e;->Y:I
 
-    invoke-virtual/range {v0 .. v6}, Lt1e;->f(JJLrl9;Z)J
+    iget-object p1, p0, Lh1e;->X:Ln1e;
 
-    move-result-wide v0
+    invoke-static {p1, p0}, Ln1e;->b(Ln1e;Lo84;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object p1
 
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

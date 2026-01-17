@@ -1,87 +1,55 @@
 .class public final Ln9;
-.super Lb5g;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:Lo9;
+
+.field public Z:I
+
+.field public d:Ljava/lang/String;
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addmembers/AddChatMembersScreen;)V
+.method public constructor <init>(Lo9;Lo84;)V
     .locals 0
 
-    iput-object p2, p0, Ln9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+    iput-object p1, p0, Ln9;->Y:Lo9;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ln9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ln9;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Ln9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ln9;
-
-    iget-object v1, p0, Ln9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
-
-    invoke-direct {v0, p2, v1}, Ln9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addmembers/AddChatMembersScreen;)V
-
-    iput-object p1, v0, Ln9;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 3
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iput-object p1, p0, Ln9;->X:Ljava/lang/Object;
 
-    iget-object p1, p0, Ln9;->o:Ljava/lang/Object;
+    iget p1, p0, Ln9;->Z:I
 
-    check-cast p1, Ljja;
+    const/high16 v0, -0x80000000
 
-    instance-of p1, p1, Lpf3;
+    or-int/2addr p1, v0
 
-    if-eqz p1, :cond_0
+    iput p1, p0, Ln9;->Z:I
 
-    iget-object p1, p0, Ln9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Lx84;->getRouter()Lw3e;
+    const-wide/16 v0, 0x0
+
+    iget-object v2, p0, Ln9;->Y:Lo9;
+
+    invoke-virtual {v2, v0, v1, p0, p1}, Lo9;->A(JLo84;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
-
-    invoke-virtual {p1}, Lw3e;->C()Z
-
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

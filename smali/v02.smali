@@ -1,4 +1,4 @@
-.class public final synthetic Lv02;
+.class public final Lv02;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,40 +7,54 @@
 
 
 # instance fields
-.field public final synthetic X:Lpc0;
-
-.field public final synthetic Y:Ljava/util/List;
-
 .field public final synthetic a:I
 
-.field public final synthetic b:Lg12;
+.field public b:Z
 
-.field public final synthetic c:Ljava/lang/String;
+.field public final c:Ljava/lang/Object;
 
-.field public final synthetic d:Lmse;
-
-.field public final synthetic o:Lm9h;
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lg12;Ljava/lang/String;Lmse;Lm9h;Lpc0;Ljava/util/List;I)V
-    .locals 0
+.method public constructor <init>(Ll88;Ln78;)V
+    .locals 1
 
-    iput p7, p0, Lv02;->a:I
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lv02;->b:Lg12;
+    iput v0, p0, Lv02;->a:I
 
-    iput-object p2, p0, Lv02;->c:Ljava/lang/String;
-
-    iput-object p3, p0, Lv02;->d:Lmse;
-
-    iput-object p4, p0, Lv02;->o:Lm9h;
-
-    iput-object p5, p0, Lv02;->X:Lpc0;
-
-    iput-object p6, p0, Lv02;->Y:Ljava/util/List;
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lv02;->c:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Lv02;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lw02;Lwpe;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lv02;->a:I
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lv02;->d:Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    .line 5
+    iput-boolean p1, p0, Lv02;->b:Z
+
+    .line 6
+    iput-object p2, p0, Lv02;->c:Ljava/lang/Object;
 
     return-void
 .end method
@@ -48,177 +62,50 @@
 
 # virtual methods
 .method public final run()V
-    .locals 8
+    .locals 3
 
     iget v0, p0, Lv02;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lv02;->b:Lg12;
+    iget-boolean v0, p0, Lv02;->b:Z
 
-    iget-object v2, p0, Lv02;->c:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    iget-object v3, p0, Lv02;->d:Lmse;
+    iget-object v0, p0, Lv02;->c:Ljava/lang/Object;
 
-    iget-object v4, p0, Lv02;->o:Lm9h;
+    check-cast v0, Ll88;
 
-    iget-object v5, p0, Lv02;->X:Lpc0;
+    iget-object v1, p0, Lv02;->d:Ljava/lang/Object;
 
-    iget-object v6, p0, Lv02;->Y:Ljava/util/List;
+    check-cast v1, Ln78;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ll88;->d(Ln78;)V
 
-    const-string v7, "Use case "
+    const/4 v0, 0x1
 
-    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v7, " ACTIVE"
-
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v0, v1, v7}, Lg12;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v1, v0, Lg12;->a:La6e;
-
-    iget-object v1, v1, La6e;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lk9h;
-
-    if-nez v7, :cond_0
-
-    new-instance v7, Lk9h;
-
-    invoke-direct {v7, v3, v4, v5, v6}, Lk9h;-><init>(Lmse;Lm9h;Lpc0;Ljava/util/List;)V
-
-    invoke-interface {v1, v2, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-boolean v0, p0, Lv02;->b:Z
 
     :cond_0
-    const/4 v1, 0x1
-
-    iput-boolean v1, v7, Lk9h;->f:Z
-
-    iget-object v1, v0, Lg12;->a:La6e;
-
-    invoke-virtual/range {v1 .. v6}, La6e;->r(Ljava/lang/String;Lmse;Lm9h;Lpc0;Ljava/util/List;)V
-
-    invoke-virtual {v0}, Lg12;->K()V
-
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lv02;->b:Lg12;
+    iget-object v0, p0, Lv02;->c:Ljava/lang/Object;
 
-    iget-object v2, p0, Lv02;->c:Ljava/lang/String;
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    iget-object v3, p0, Lv02;->d:Lmse;
+    new-instance v1, Lp02;
 
-    iget-object v4, p0, Lv02;->o:Lm9h;
+    const/4 v2, 0x1
 
-    iget-object v5, p0, Lv02;->X:Lpc0;
+    invoke-direct {v1, v2, p0}, Lp02;-><init>(ILjava/lang/Object;)V
 
-    iget-object v6, p0, Lv02;->Y:Ljava/util/List;
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v7, "Use case "
-
-    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v7, " UPDATED"
-
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v0, v1, v7}, Lg12;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v1, v0, Lg12;->a:La6e;
-
-    invoke-virtual/range {v1 .. v6}, La6e;->r(Ljava/lang/String;Lmse;Lm9h;Lpc0;Ljava/util/List;)V
-
-    invoke-virtual {v0}, Lg12;->K()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lv02;->b:Lg12;
-
-    iget-object v2, p0, Lv02;->c:Ljava/lang/String;
-
-    iget-object v3, p0, Lv02;->d:Lmse;
-
-    iget-object v4, p0, Lv02;->o:Lm9h;
-
-    iget-object v5, p0, Lv02;->X:Lpc0;
-
-    iget-object v6, p0, Lv02;->Y:Ljava/util/List;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v7, "Use case "
-
-    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v7, " RESET"
-
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v0, v1, v7}, Lg12;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v1, v0, Lg12;->a:La6e;
-
-    invoke-virtual/range {v1 .. v6}, La6e;->r(Ljava/lang/String;Lmse;Lm9h;Lpc0;Ljava/util/List;)V
-
-    invoke-virtual {v0}, Lg12;->p()V
-
-    invoke-virtual {v0}, Lg12;->D()V
-
-    invoke-virtual {v0}, Lg12;->K()V
-
-    iget v1, v0, Lg12;->R0:I
-
-    const/16 v2, 0x9
-
-    if-ne v1, v2, :cond_1
-
-    invoke-virtual {v0}, Lg12;->B()V
-
-    :cond_1
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

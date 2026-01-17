@@ -1,133 +1,77 @@
 .class public final Lj99;
-.super Ljava/lang/Object;
+.super Ltsd;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final F0:Landroid/view/View;
 
-.field public final synthetic b:Landroidx/mediarouter/app/d;
+.field public final G0:Landroid/widget/ImageView;
+
+.field public final H0:Landroid/widget/ProgressBar;
+
+.field public final I0:Landroid/widget/TextView;
+
+.field public final J0:F
+
+.field public K0:Lba9;
+
+.field public final synthetic L0:Lm99;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/mediarouter/app/d;I)V
-    .locals 0
-
-    iput p2, p0, Lj99;->a:I
-
-    iput-object p1, p0, Lj99;->b:Landroidx/mediarouter/app/d;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public constructor <init>(Lm99;Landroid/view/View;)V
     .locals 2
 
-    iget p1, p0, Lj99;->a:I
+    iput-object p1, p0, Lj99;->L0:Lm99;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-direct {p0, p2}, Ltsd;-><init>(Landroid/view/View;)V
 
-    iget-object p1, p0, Lj99;->b:Landroidx/mediarouter/app/d;
+    iput-object p2, p0, Lj99;->F0:Landroid/view/View;
 
-    iget-boolean v0, p1, Landroidx/mediarouter/app/d;->n1:Z
+    sget v0, Lo7d;->mr_cast_group_icon:I
 
-    xor-int/lit8 v1, v0, 0x1
-
-    iput-boolean v1, p1, Landroidx/mediarouter/app/d;->n1:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p1, Landroidx/mediarouter/app/d;->N0:Landroidx/mediarouter/app/OverlayListView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    iget-boolean v0, p1, Landroidx/mediarouter/app/d;->n1:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p1, Landroidx/mediarouter/app/d;->u1:Landroid/view/animation/Interpolator;
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p1, Landroidx/mediarouter/app/d;->v1:Landroid/view/animation/Interpolator;
-
-    :goto_0
-    iput-object v0, p1, Landroidx/mediarouter/app/d;->t1:Landroid/view/animation/Interpolator;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->u(Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lj99;->b:Landroidx/mediarouter/app/d;
-
-    iget-object v0, p1, Landroidx/mediarouter/app/d;->b1:Landroid/support/v4/media/session/MediaControllerCompat;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaControllerCompat;->getSessionActivity()Landroid/app/PendingIntent;
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    check-cast v0, Landroid/widget/ImageView;
 
-    :try_start_0
-    invoke-virtual {v0}, Landroid/app/PendingIntent;->send()V
+    iput-object v0, p0, Lj99;->G0:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Llo;->dismiss()V
-    :try_end_0
-    .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
+    sget v0, Lo7d;->mr_cast_group_progress_bar:I
 
-    goto :goto_1
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    :catch_0
-    new-instance p1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    check-cast v0, Landroid/widget/ProgressBar;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lj99;->H0:Landroid/widget/ProgressBar;
 
-    const-string v0, " was not sent, it had been canceled."
+    sget v1, Lo7d;->mr_cast_group_name:I
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object p1
+    check-cast p2, Landroid/widget/TextView;
 
-    const-string v0, "MediaRouteCtrlDialog"
+    iput-object p2, p0, Lj99;->I0:Landroid/widget/TextView;
 
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    iget-object p1, p1, Lm99;->x0:Lo99;
 
-    :cond_2
-    :goto_1
+    iget-object p2, p1, Lo99;->y0:Landroid/content/Context;
+
+    invoke-static {p2}, Lia9;->c(Landroid/content/Context;)F
+
+    move-result p2
+
+    iput p2, p0, Lj99;->J0:F
+
+    iget-object p1, p1, Lo99;->y0:Landroid/content/Context;
+
+    invoke-static {p1, v0}, Lia9;->i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
+
     return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lj99;->b:Landroidx/mediarouter/app/d;
-
-    invoke-virtual {p1}, Llo;->dismiss()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

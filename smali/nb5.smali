@@ -1,205 +1,115 @@
 .class public final Lnb5;
-.super Leg0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic h:I
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Landroid/util/SparseArray;
+
+.field public final d:Landroid/util/SparseArray;
+
+.field public final e:Landroid/util/SparseArray;
+
+.field public final f:Landroid/util/SparseArray;
+
+.field public final g:Landroid/util/SparseArray;
+
+.field public h:Ljava/lang/Object;
+
+.field public i:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(III)V
     .locals 0
 
-    iput p1, p0, Lnb5;->h:I
+    packed-switch p3, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput p1, p0, Lnb5;->a:I
 
+    iput p2, p0, Lnb5;->b:I
 
-# virtual methods
-.method public final d(Ljava/lang/Object;)F
-    .locals 1
+    new-instance p1, Landroid/util/SparseArray;
 
-    iget v0, p0, Lnb5;->h:I
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    packed-switch v0, :pswitch_data_0
+    iput-object p1, p0, Lnb5;->c:Landroid/util/SparseArray;
 
-    check-cast p1, Landroid/view/View;
+    new-instance p1, Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Landroid/view/View;->getRotationY()F
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    move-result p1
+    iput-object p1, p0, Lnb5;->d:Landroid/util/SparseArray;
 
-    return p1
+    new-instance p1, Landroid/util/SparseArray;
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    invoke-virtual {p1}, Landroid/view/View;->getRotationX()F
+    iput-object p1, p0, Lnb5;->e:Landroid/util/SparseArray;
 
-    move-result p1
+    new-instance p1, Landroid/util/SparseArray;
 
-    return p1
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    :pswitch_1
-    check-cast p1, Landroid/view/View;
+    iput-object p1, p0, Lnb5;->f:Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Landroid/view/View;->getRotation()F
+    new-instance p1, Landroid/util/SparseArray;
 
-    move-result p1
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    return p1
-
-    :pswitch_2
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_3
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_4
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_5
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_6
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_7
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e(Ljava/lang/Object;F)V
-    .locals 1
-
-    iget v0, p0, Lnb5;->h:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationY(F)V
+    iput-object p1, p0, Lnb5;->g:Landroid/util/SparseArray;
 
     return-void
 
     :pswitch_0
-    check-cast p1, Landroid/view/View;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationX(F)V
+    iput p1, p0, Lnb5;->a:I
 
-    return-void
+    iput p2, p0, Lnb5;->b:I
 
-    :pswitch_1
-    check-cast p1, Landroid/view/View;
+    new-instance p1, Landroid/util/SparseArray;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    return-void
+    iput-object p1, p0, Lnb5;->c:Landroid/util/SparseArray;
 
-    :pswitch_2
-    check-cast p1, Landroid/view/View;
+    new-instance p1, Landroid/util/SparseArray;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    return-void
+    iput-object p1, p0, Lnb5;->d:Landroid/util/SparseArray;
 
-    :pswitch_3
-    check-cast p1, Landroid/view/View;
+    new-instance p1, Landroid/util/SparseArray;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    return-void
+    iput-object p1, p0, Lnb5;->e:Landroid/util/SparseArray;
 
-    :pswitch_4
-    check-cast p1, Landroid/view/View;
+    new-instance p1, Landroid/util/SparseArray;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    return-void
+    iput-object p1, p0, Lnb5;->f:Landroid/util/SparseArray;
 
-    :pswitch_5
-    check-cast p1, Landroid/view/View;
+    new-instance p1, Landroid/util/SparseArray;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    return-void
-
-    :pswitch_6
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_7
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setY(F)V
+    iput-object p1, p0, Lnb5;->g:Landroid/util/SparseArray;
 
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,36 +1,36 @@
 .class public final Lax;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lex;
+.field public final synthetic Y:Lbx;
 
-.field public final synthetic Z:Lud2;
+.field public final synthetic Z:Lnd2;
 
-.field public o:I
+.field public o:Lbx;
 
-.field public s0:Ldn9;
+.field public final synthetic t0:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lex;Lud2;)V
+.method public constructor <init>(Lbx;Lnd2;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lax;->X:Ljava/lang/Object;
+    iput-object p1, p0, Lax;->Y:Lbx;
 
-    iput-object p3, p0, Lax;->Y:Lex;
+    iput-object p2, p0, Lax;->Z:Lnd2;
 
-    iput-object p4, p0, Lax;->Z:Lud2;
+    iput-object p3, p0, Lax;->t0:Ljava/util/List;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -40,7 +40,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -50,7 +50,7 @@
 
     check-cast p1, Lax;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lax;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -64,23 +64,23 @@
 
     new-instance p1, Lax;
 
-    iget-object v0, p0, Lax;->Y:Lex;
+    iget-object v0, p0, Lax;->Z:Lnd2;
 
-    iget-object v1, p0, Lax;->Z:Lud2;
+    iget-object v1, p0, Lax;->t0:Ljava/util/List;
 
-    iget-object v2, p0, Lax;->X:Ljava/lang/Object;
+    iget-object v2, p0, Lax;->Y:Lbx;
 
-    invoke-direct {p1, v2, p2, v0, v1}, Lax;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lex;Lud2;)V
+    invoke-direct {p1, v2, v0, v1, p2}, Lax;-><init>(Lbx;Lnd2;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 6
 
-    iget v0, p0, Lax;->o:I
+    iget v0, p0, Lax;->X:I
 
-    iget-object v1, p0, Lax;->Y:Lex;
+    sget-object v1, Lb3h;->a:Lb3h;
 
     const/4 v2, 0x1
 
@@ -88,19 +88,25 @@
 
     if-ne v0, v2, :cond_0
 
-    iget-object v0, p0, Lax;->s0:Ldn9;
+    iget-object v0, p0, Lax;->o:Lbx;
 
     :try_start_0
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
     :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    return-object v1
 
     :catchall_0
     move-exception p1
 
     goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -112,82 +118,68 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lax;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lax;->Y:Lbx;
 
-    move-object v0, p1
+    iget-object p1, p0, Lax;->Z:Lnd2;
 
-    check-cast v0, Ldn9;
+    iget-object v3, p0, Lax;->t0:Ljava/util/List;
 
     :try_start_1
-    sget-object p1, Lex;->o:[Lp38;
+    iget-object v4, v0, Lbx;->u0:Lo58;
 
-    iget-object p1, v1, Lex;->g:Ld68;
+    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object p1
+    check-cast v4, Lqx6;
 
-    check-cast p1, Ly8b;
+    iput-object v0, p0, Lax;->o:Lbx;
 
-    iget-object v3, p0, Lax;->Z:Lud2;
+    iput v2, p0, Lax;->X:I
 
-    iput-object v0, p0, Lax;->s0:Ldn9;
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput v2, p0, Lax;->o:I
+    new-instance v2, Lox6;
 
-    invoke-static {p1, v0, v3, p0}, Ly8b;->k(Ly8b;Ldn9;Lud2;Ll84;)Ljava/lang/Object;
+    const/4 v5, 0x0
+
+    invoke-direct {v2, v3, p1, v4, v5}, Lox6;-><init>(Ljava/util/List;Lnd2;Lqx6;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v2, p0}, Lilj;->c(Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
     :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    sget-object v2, Lbc4;->a:Lbc4;
+    sget-object v0, Lac4;->a:Lac4;
 
-    if-ne p1, v2, :cond_2
+    if-ne p1, v0, :cond_2
 
-    return-object v2
+    goto :goto_0
 
     :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Lone/me/messages/list/loader/MessageModel;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-object p1, v1
 
-    return-object p1
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    return-object v1
 
     :goto_1
-    iget-object v1, v1, Lex;->i:Ld68;
+    iget-object v0, v0, Lbx;->o:Ljava/lang/String;
 
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    const-string v2, "fail to fetch reactions"
 
-    move-result-object v1
+    invoke-static {v0, v2, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast v1, Lum5;
+    return-object v1
 
-    new-instance v2, Ljava/lang/RuntimeException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Error during mapping message="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    check-cast v1, Liab;
-
-    invoke-virtual {v1, v2}, Liab;->a(Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    return-object p1
+    :goto_2
+    throw p1
 .end method

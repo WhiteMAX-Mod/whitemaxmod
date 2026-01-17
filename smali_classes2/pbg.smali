@@ -2,42 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsbg;
 
-# instance fields
-.field public final a:Landroid/content/Context;
 
-.field public final b:Ld68;
-
-.field public final c:Ld68;
-
-.field public final d:Ld68;
-
-.field public final e:Ld68;
-
-.field public final f:Ld68;
-
-.field public final g:Lz7g;
+# static fields
+.field public static final a:Lpbg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ld68;Ld68;Ld68;Ld68;Ld68;Lz7g;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpbg;
 
-    iput-object p1, p0, Lpbg;->a:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lpbg;->b:Ld68;
-
-    iput-object p3, p0, Lpbg;->c:Ld68;
-
-    iput-object p4, p0, Lpbg;->d:Ld68;
-
-    iput-object p5, p0, Lpbg;->e:Ld68;
-
-    iput-object p6, p0, Lpbg;->f:Ld68;
-
-    iput-object p7, p0, Lpbg;->g:Lz7g;
+    sput-object v0, Lpbg;->a:Lpbg;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lpbg;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x947bb45
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CommonNetworkError"
+
+    return-object v0
 .end method

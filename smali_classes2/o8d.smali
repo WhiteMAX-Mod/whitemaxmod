@@ -3,4 +3,4 @@
 
 
 # static fields
-.field public static swipe_fade:I = 0x7f0a0bf8
+.field public static oneme_complaint_action_cancel:I = 0x7f0a061a

@@ -1,9 +1,9 @@
 .class public final Lqx2;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lqx2;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lqx2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -62,40 +62,21 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Lqx2;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lqx2;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    check-cast p1, Ljja;
+    check-cast v0, Ljava/lang/Boolean;
 
-    instance-of v0, p1, Lpf3;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    if-eqz v0, :cond_0
+    move-result p1
 
-    iget-object p1, p0, Lqx2;->X:Lone/me/chatscreen/ChatScreen;
+    iget-object v0, p0, Lqx2;->X:Lone/me/chatscreen/ChatScreen;
 
-    invoke-virtual {p1}, Lx84;->getRouter()Lw3e;
+    iput-boolean p1, v0, Lone/me/chatscreen/ChatScreen;->D0:Z
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Lw3e;->C()Z
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lem4;
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Liy2;->c:Liy2;
-
-    check-cast p1, Lem4;
-
-    invoke-virtual {v0, p1}, Lf3;->s0(Lem4;)V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

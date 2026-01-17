@@ -1,127 +1,145 @@
-.class public final synthetic Lq11;
-.super Ljava/lang/Object;
+.class public final enum Lq11;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum X:Lq11;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum Y:Lq11;
 
-.field public final synthetic b:Ly11;
+.field public static final enum Z:Lq11;
 
-.field public final synthetic c:Ljava/lang/Runnable;
+.field public static final enum a:Lq11;
+
+.field public static final enum b:Lq11;
+
+.field public static final enum c:Lq11;
+
+.field public static final enum d:Lq11;
+
+.field public static final enum o:Lq11;
+
+.field public static final synthetic t0:[Lq11;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly11;Ljava/lang/Runnable;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    iput p3, p0, Lq11;->a:I
+    new-instance v0, Lq11;
 
-    iput-object p1, p0, Lq11;->b:Ly11;
+    const-string v1, "REQUIRE_AUTH_TO_JOIN"
 
-    iput-object p2, p0, Lq11;->c:Ljava/lang/Runnable;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lq11;->a:Lq11;
+
+    new-instance v1, Lq11;
+
+    const-string v2, "WAITING_HALL"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lq11;->b:Lq11;
+
+    new-instance v2, Lq11;
+
+    const-string v3, "RECURRING"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lq11;->c:Lq11;
+
+    new-instance v3, Lq11;
+
+    const-string v4, "FEEDBACK"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lq11;->d:Lq11;
+
+    new-instance v4, Lq11;
+
+    const-string v5, "AUDIENCE_MODE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lq11;->o:Lq11;
+
+    new-instance v5, Lq11;
+
+    const-string v6, "ASR"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lq11;->X:Lq11;
+
+    new-instance v6, Lq11;
+
+    const-string v7, "WAIT_FOR_ADMIN"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lq11;->Y:Lq11;
+
+    new-instance v7, Lq11;
+
+    const-string v8, "ADMIN_IS_HERE"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lq11;->Z:Lq11;
+
+    filled-new-array/range {v0 .. v7}, [Lq11;
+
+    move-result-object v0
+
+    sput-object v0, Lq11;->t0:[Lq11;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lq11;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 18
+    const-class v0, Lq11;
 
-    move-object/from16 v0, p0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget v1, v0, Lq11;->a:I
+    move-result-object p0
 
-    packed-switch v1, :pswitch_data_0
+    check-cast p0, Lq11;
 
-    iget-object v1, v0, Lq11;->b:Ly11;
+    return-object p0
+.end method
 
-    iget-object v2, v1, Ly11;->P:Lcgd;
+.method public static values()[Lq11;
+    .locals 1
 
-    const-string v3, "OKRTCCall"
+    sget-object v0, Lq11;->t0:[Lq11;
 
-    const-string v4, "disabling enhancer"
+    invoke-virtual {v0}, [Lq11;->clone()Ljava/lang/Object;
 
-    invoke-interface {v2, v3, v4}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-boolean v2, v1, Ly11;->u:Z
+    check-cast v0, [Lq11;
 
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, v1, Ly11;->U:Z
-
-    new-instance v3, Leoa;
-
-    const/16 v16, 0x0
-
-    const/16 v17, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x1
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    invoke-direct/range {v3 .. v17}, Leoa;-><init>(ZZZZLorg/webrtc/PeerConnectionFactory$EnhancerKind;Ljava/lang/String;IIIIIZLsj0;I)V
-
-    invoke-virtual {v1, v3}, Ly11;->H(Leoa;)V
-
-    iget-object v1, v0, Lq11;->c:Ljava/lang/Runnable;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v1, v0, Lq11;->b:Ly11;
-
-    iget-object v2, v1, Ly11;->l:Landroid/os/Handler;
-
-    new-instance v3, Lq11;
-
-    const/4 v4, 0x1
-
-    iget-object v5, v0, Lq11;->c:Ljava/lang/Runnable;
-
-    invoke-direct {v3, v1, v5, v4}, Lq11;-><init>(Ly11;Ljava/lang/Runnable;I)V
-
-    invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

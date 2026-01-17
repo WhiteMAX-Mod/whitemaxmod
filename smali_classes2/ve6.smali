@@ -1,24 +1,26 @@
 .class public final Lve6;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Lwe6;
+.field public final synthetic X:Lone/me/folders/picker/FolderMemberPickerScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwe6;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lve6;->o:Lwe6;
+    iput-object p2, p0, Lve6;->X:Lone/me/folders/picker/FolderMemberPickerScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lve6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,61 +38,77 @@
 
     check-cast p1, Lve6;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lve6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Lve6;
+    new-instance v0, Lve6;
 
-    iget-object v0, p0, Lve6;->o:Lwe6;
+    iget-object v1, p0, Lve6;->X:Lone/me/folders/picker/FolderMemberPickerScreen;
 
-    invoke-direct {p1, v0, p2}, Lve6;-><init>(Lwe6;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lve6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Lve6;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 4
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Lve6;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lve6;->o:Lwe6;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p1, Lwe6;->c:Ld68;
+    check-cast v0, Ljava/util/Set;
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lve6;->X:Lone/me/folders/picker/FolderMemberPickerScreen;
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lone/me/folders/picker/FolderMemberPickerScreen;->z0:[Lz28;
+
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Lymb;
+
+    move-result-object p1
+
+    new-instance v1, Limb;
+
+    new-instance v2, Li31;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v2, v3, v0}, Li31;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v1, v2}, Limb;-><init>(Lnq6;)V
+
+    invoke-virtual {p1, v1}, Lymb;->setRightActions(Lomb;)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lone/me/folders/picker/FolderMemberPickerScreen;->z0:[Lz28;
+
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Lymb;
 
     move-result-object p1
 
-    check-cast p1, Ltib;
+    sget-object v0, Ljmb;->a:Ljmb;
 
-    sget v0, Ll5e;->b2:I
+    invoke-virtual {p1, v0}, Lymb;->setRightActions(Lomb;)V
 
-    new-instance v1, Lbhg;
-
-    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Ltib;->g(Lghg;)V
-
-    sget v0, Ll5e;->a2:I
-
-    new-instance v1, Lbhg;
-
-    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Ltib;->a(Lghg;)V
-
-    invoke-virtual {p1}, Ltib;->i()Lsib;
-
-    move-result-object p1
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

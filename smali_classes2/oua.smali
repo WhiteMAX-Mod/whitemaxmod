@@ -1,27 +1,31 @@
 .class public final Loua;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:J
 
-.field public final synthetic Y:Lsua;
+.field public Y:Z
 
-.field public Z:I
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public d:Lud2;
+.field public d:Lnd2;
 
 .field public o:J
 
+.field public final synthetic t0:Ltua;
+
+.field public u0:I
+
 
 # direct methods
-.method public constructor <init>(Lsua;Ll84;)V
+.method public constructor <init>(Ltua;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Loua;->Y:Lsua;
+    iput-object p1, p0, Loua;->t0:Ltua;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -29,29 +33,25 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 3
 
-    iput-object p1, p0, Loua;->X:Ljava/lang/Object;
+    iput-object p1, p0, Loua;->Z:Ljava/lang/Object;
 
-    iget p1, p0, Loua;->Z:I
+    iget p1, p0, Loua;->u0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Loua;->Z:I
+    iput p1, p0, Loua;->u0:I
 
-    const-wide/16 v2, 0x0
+    const/4 p1, 0x0
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v0, 0x0
 
-    iget-object v0, p0, Loua;->Y:Lsua;
+    iget-object v2, p0, Loua;->t0:Ltua;
 
-    const/4 v1, 0x0
-
-    move-object v6, p0
-
-    invoke-virtual/range {v0 .. v6}, Lsua;->d(Lud2;JJLl84;)Ljava/lang/Object;
+    invoke-static {v2, p1, v0, v1, p0}, Ltua;->a(Ltua;Lnd2;JLo84;)Ljava/lang/Object;
 
     move-result-object p1
 

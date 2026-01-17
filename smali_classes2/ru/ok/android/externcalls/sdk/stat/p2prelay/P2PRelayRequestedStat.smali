@@ -12,16 +12,16 @@
         "Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestedStat;",
         "",
         "Lkotlin/Function0;",
-        "Lqa1;",
+        "Lia1;",
         "getEventualStatSender",
         "<init>",
-        "(Lmq6;)V",
+        "(Llq6;)V",
         "Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestReason;",
         "reason",
-        "Lv2h;",
+        "Lb3h;",
         "onP2PRelayRequested",
         "(Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestReason;)V",
-        "Lmq6;",
+        "Llq6;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -35,29 +35,29 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Lmq6;
+.field private final getEventualStatSender:Llq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmq6;"
+            "Llq6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lmq6;)V
+.method public constructor <init>(Llq6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmq6;",
+            "Llq6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestedStat;->getEventualStatSender:Lmq6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestedStat;->getEventualStatSender:Llq6;
 
     return-void
 .end method
@@ -67,13 +67,13 @@
 .method public final onP2PRelayRequested(Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestReason;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestedStat;->getEventualStatSender:Lmq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestedStat;->getEventualStatSender:Llq6;
 
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lqa1;
+    check-cast v0, Lia1;
 
     if-eqz v0, :cond_0
 
@@ -91,7 +91,7 @@
 
     const-string v3, "client_requested_p2p_relay"
 
-    invoke-static {v0, v3, p1, v1, v2}, Lqa1;->a(Lqa1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {v0, v3, p1, v1, v2}, Lia1;->a(Lia1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     :cond_0
     return-void

@@ -22,18 +22,12 @@
 
 
 # virtual methods
-.method public final a(Landroid/animation/AnimatorSet;)V
-    .locals 0
+.method public final a(Landroid/animation/AnimatorSet;)J
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->reverse()V
+    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
 
-    return-void
-.end method
+    move-result-wide v0
 
-.method public final b(Landroid/animation/AnimatorSet;J)V
-    .locals 0
-
-    invoke-virtual {p1, p2, p3}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
-
-    return-void
+    return-wide v0
 .end method

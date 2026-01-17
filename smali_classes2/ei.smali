@@ -1,3 +1,3 @@
 .class public abstract Lei;
-.super Ljava/lang/Object;
+.super Lp4j;
 .source "SourceFile"

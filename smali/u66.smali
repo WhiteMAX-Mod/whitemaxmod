@@ -1,152 +1,260 @@
 .class public final Lu66;
-.super Ljava/lang/Object;
+.super Loj0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final i:I
 
 
 # direct methods
-.method public synthetic constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/high16 v0, 0x7fc00000    # Float.NaN
 
-    iput-wide p1, p0, Lu66;->a:J
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    sput v0, Lu66;->i:I
 
     return-void
 .end method
 
-.method public static a(FF)J
-    .locals 4
 
-    invoke-static {p0}, Ljava/lang/Float;->floatToRawIntBits(F)I
+# virtual methods
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 9
 
-    move-result p0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    int-to-long v0, p0
+    move-result v0
 
-    invoke-static {p1}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    move-result p0
-
-    int-to-long p0, p0
-
-    const/16 v2, 0x20
-
-    shl-long/2addr v0, v2
-
-    const-wide v2, 0xffffffffL
-
-    and-long/2addr p0, v2
-
-    or-long/2addr p0, v0
-
-    return-wide p0
-.end method
-
-.method public static b(J)Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0x20
-
-    shr-long v1, p0, v1
-
-    long-to-int v1, v1
-
-    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    sub-int v2, v1, v0
 
-    const-string v1, ", "
+    iget-object v3, p0, Loj0;->b:Lx50;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v3, v3, Lx50;->c:I
 
-    const-wide v1, 0xffffffffL
+    const/high16 v4, 0x20000000
 
-    and-long/2addr p0, v1
+    const/4 v5, 0x0
 
-    long-to-int p0, p0
+    sget v6, Lu66;->i:I
 
-    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
+    const-wide v7, 0x3e00000000200000L    # 4.656612875245797E-10
 
-    move-result p0
+    if-eq v3, v4, :cond_2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    const/high16 v4, 0x30000000
 
-    const/16 p0, 0x29
+    if-ne v3, v4, :cond_1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v2}, Loj0;->j(I)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object p0
+    :goto_0
+    if-ge v0, v1, :cond_4
 
-    return-object p0
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int/lit8 v4, v0, 0x1
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x8
+
+    or-int/2addr v3, v4
+
+    add-int/lit8 v4, v0, 0x2
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x10
+
+    or-int/2addr v3, v4
+
+    add-int/lit8 v4, v0, 0x3
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x18
+
+    or-int/2addr v3, v4
+
+    int-to-double v3, v3
+
+    mul-double/2addr v3, v7
+
+    double-to-float v3, v3
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v3, v6, :cond_0
+
+    invoke-static {v5}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    :cond_0
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x4
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    div-int/lit8 v2, v2, 0x3
+
+    mul-int/lit8 v2, v2, 0x4
+
+    invoke-virtual {p0, v2}, Loj0;->j(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    :goto_1
+    if-ge v0, v1, :cond_4
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x8
+
+    add-int/lit8 v4, v0, 0x1
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x10
+
+    or-int/2addr v3, v4
+
+    add-int/lit8 v4, v0, 0x2
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x18
+
+    or-int/2addr v3, v4
+
+    int-to-double v3, v3
+
+    mul-double/2addr v3, v7
+
+    double-to-float v3, v3
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v3, v6, :cond_3
+
+    invoke-static {v5}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    :cond_3
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x3
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    return-void
 .end method
 
+.method public final f(Lx50;)Lx50;
+    .locals 3
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    iget v0, p1, Lx50;->c:I
 
-    instance-of v0, p1, Lu66;
+    const/high16 v1, 0x20000000
 
-    if-nez v0, :cond_0
+    const/4 v2, 0x4
+
+    if-eq v0, v1, :cond_1
+
+    const/high16 v1, 0x30000000
+
+    if-eq v0, v1, :cond_1
+
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    check-cast p1, Lu66;
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
 
-    iget-wide v0, p1, Lu66;->a:J
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lx50;)V
 
-    iget-wide v2, p0, Lu66;->a:J
-
-    cmp-long p1, v2, v0
-
-    if-eqz p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    throw v0
 
     :cond_1
-    const/4 p1, 0x1
+    :goto_0
+    if-eq v0, v2, :cond_2
 
-    return p1
-.end method
+    new-instance v0, Lx50;
 
-.method public final hashCode()I
-    .locals 2
+    iget v1, p1, Lx50;->a:I
 
-    iget-wide v0, p0, Lu66;->a:J
+    iget p1, p1, Lx50;->b:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget-wide v0, p0, Lu66;->a:J
-
-    invoke-static {v0, v1}, Lu66;->b(J)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1, p1, v2}, Lx50;-><init>(III)V
 
     return-object v0
+
+    :cond_2
+    sget-object p1, Lx50;->e:Lx50;
+
+    return-object p1
 .end method

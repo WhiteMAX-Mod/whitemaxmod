@@ -1,61 +1,44 @@
-.class public final Ldc8;
-.super Ll84;
+.class public final synthetic Ldc8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbc8;
 
 
 # instance fields
-.field public X:Landroid/net/Uri;
+.field public final synthetic a:Lic8;
 
-.field public Y:Lxd8;
-
-.field public Z:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Lhic;
-
-.field public s0:Ljava/lang/Throwable;
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Ljc8;
-
-.field public v0:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljc8;Ll84;)V
+.method public synthetic constructor <init>(Lic8;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Ldc8;->u0:Ljc8;
+    iput-object p1, p0, Ldc8;->a:Lic8;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ldc8;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public b(Landroid/view/View;Ljava/lang/String;)V
+    .locals 3
 
-    iput-object p1, p0, Ldc8;->t0:Ljava/lang/Object;
+    sget-object v0, Lkc8;->X:Lkc8;
 
-    iget p1, p0, Ldc8;->v0:I
+    iget-object v1, p0, Ldc8;->b:Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    check-cast v1, Landroid/text/style/ClickableSpan;
 
-    or-int/2addr p1, v0
+    iget-object v2, p0, Ldc8;->a:Lic8;
 
-    iput p1, p0, Ldc8;->v0:I
+    invoke-virtual {v2, p1, p2, v0, v1}, Lic8;->b(Landroid/view/View;Ljava/lang/String;Lkc8;Landroid/text/style/ClickableSpan;)V
 
-    iget-object p1, p0, Ldc8;->u0:Ljc8;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, v0, p0}, Ljc8;->a(Ljc8;Lhic;Landroid/net/Uri;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

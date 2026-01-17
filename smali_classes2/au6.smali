@@ -1,248 +1,95 @@
-.class public final Lau6;
+.class public final synthetic Lau6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewStub$OnInflateListener;
+
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:Loxd;
-
-.field public final g:Loxd;
+.field public final synthetic a:Lbu6;
 
 
 # direct methods
-.method public constructor <init>(IIIIILoxd;)V
+.method public synthetic constructor <init>(Lbu6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lau6;->a:I
-
-    iput p2, p0, Lau6;->b:I
-
-    iput p3, p0, Lau6;->c:I
-
-    iput p4, p0, Lau6;->d:I
-
-    iput p5, p0, Lau6;->e:I
-
-    iput-object p6, p0, Lau6;->f:Loxd;
-
-    if-gtz p5, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Loxd;
-
-    invoke-direct {p1, p5, p5}, Loxd;-><init>(II)V
-
-    :goto_0
-    iput-object p1, p0, Lau6;->g:Loxd;
+    iput-object p1, p0, Lau6;->a:Lbu6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onInflate(Landroid/view/ViewStub;Landroid/view/View;)V
+    .locals 8
 
-    const/4 v0, 0x1
+    sget p1, Lehb;->b:I
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return v0
+    move-result-object v6
 
-    :cond_0
-    instance-of v1, p1, Lau6;
+    sget p1, Lehb;->a:I
 
-    if-nez v1, :cond_1
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_1
-    check-cast p1, Lau6;
+    move-object v1, p1
 
-    iget v1, p0, Lau6;->a:I
+    check-cast v1, Lone/me/sdk/gallery/view/NumericCheckButton;
 
-    iget v2, p1, Lau6;->a:I
+    iget-object p1, p0, Lau6;->a:Lbu6;
 
-    if-eq v1, v2, :cond_2
+    iput-object v1, p1, Lbu6;->G0:Lone/me/sdk/gallery/view/NumericCheckButton;
 
-    goto :goto_0
+    iget-object p1, p1, Ltsd;->a:Landroid/view/View;
 
-    :cond_2
-    iget v1, p0, Lau6;->b:I
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget v2, p1, Lau6;->b:I
+    move-result-object p1
 
-    if-eq v1, v2, :cond_3
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_3
-    iget v1, p0, Lau6;->c:I
+    const/16 p2, 0xa
 
-    iget v2, p1, Lau6;->c:I
+    int-to-float p2, p2
 
-    if-eq v1, v2, :cond_4
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_4
-    iget v1, p0, Lau6;->d:I
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
 
-    iget v2, p1, Lau6;->d:I
+    mul-float/2addr p2, p1
 
-    if-eq v1, v2, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v1, p0, Lau6;->e:I
-
-    iget v2, p1, Lau6;->e:I
-
-    if-eq v1, v2, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v1, p0, Lau6;->f:Loxd;
-
-    iget-object p1, p1, Lau6;->f:Loxd;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lau6;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lau6;->b:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    iget v2, p0, Lau6;->c:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    iget v2, p0, Lau6;->d:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    iget v2, p0, Lau6;->e:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lau6;->f:Loxd;
-
-    invoke-virtual {v2}, Loxd;->hashCode()I
+    invoke-static {p2}, Lq7j;->c(F)I
 
     move-result v2
 
-    add-int/2addr v2, v0
+    if-nez v6, :cond_0
 
-    mul-int/2addr v2, v1
+    return-void
 
-    const/4 v0, 0x0
+    :cond_0
+    new-instance v0, Lfq3;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    const/4 v7, 0x1
 
-    move-result v0
+    move v3, v2
 
-    add-int/2addr v0, v2
+    move v4, v2
 
-    return v0
-.end method
+    move v5, v2
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    invoke-direct/range {v0 .. v7}, Lfq3;-><init>(Landroid/view/View;IIIILandroid/view/View;I)V
 
-    const-string v0, ", threshold="
+    invoke-virtual {v6, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    const-string v1, ", spanCount="
-
-    const-string v2, "GalleryUiOptions(cellSize="
-
-    iget v3, p0, Lau6;->a:I
-
-    iget v4, p0, Lau6;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", spanSpacing="
-
-    const-string v2, ", thumbnailSize="
-
-    iget v3, p0, Lau6;->c:I
-
-    iget v4, p0, Lau6;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget v1, p0, Lau6;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", albumsCoverResizeOptions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lau6;->f:Loxd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isItemAnimatorEnabled=false)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

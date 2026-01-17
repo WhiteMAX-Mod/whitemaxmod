@@ -1,5 +1,5 @@
 .class public final Lsqa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
@@ -8,11 +8,11 @@
 
 .field public d:J
 
-.field public o:Li10;
+.field public o:Le10;
 
 
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
+.method public final d(Lpq9;Ljava/lang/String;)V
     .locals 2
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -76,28 +76,28 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {p1}, Lgr9;->y()V
+    invoke-virtual {p1}, Lpq9;->B()V
 
     return-void
 
     :pswitch_0
-    invoke-static {p1}, Lisi;->p(Lgr9;)Ljava/lang/String;
+    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-static {p1}, Li10;->a(Ljava/lang/String;)Li10;
+    invoke-static {p1}, Le10;->a(Ljava/lang/String;)Le10;
 
     move-result-object p1
 
-    iput-object p1, p0, Lsqa;->o:Li10;
+    iput-object p1, p0, Lsqa;->o:Le10;
 
     :cond_3
     return-void
 
     :pswitch_1
-    invoke-virtual {p1}, Lgr9;->K0()J
+    invoke-virtual {p1}, Lpq9;->L0()J
 
     move-result-wide p1
 
@@ -106,7 +106,7 @@
     return-void
 
     :pswitch_2
-    invoke-virtual {p1}, Lgr9;->K0()J
+    invoke-virtual {p1}, Lpq9;->L0()J
 
     move-result-wide p1
 
@@ -136,13 +136,13 @@
 
     iget-wide v2, p0, Lsqa;->d:J
 
-    iget-object v4, p0, Lsqa;->o:Li10;
+    iget-object v4, p0, Lsqa;->o:Le10;
 
     const-string v5, "{chatId="
 
     const-string v6, ", userId="
 
-    invoke-static {v0, v1, v5, v6}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v5, v6}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(JLw77;I)Ljava/util/List;
+.method public abstract m(JLg77;I)Ljava/util/List;
 .end method

@@ -23,13 +23,13 @@
 
     iput v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->a:I
 
-    sget-object v1, Ltfd;->ViewStubCompat:[I
+    sget-object v1, Lrgd;->ViewStubCompat:[I
 
     invoke-virtual {p1, p2, v1, v0, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Ltfd;->ViewStubCompat_android_inflatedId:I
+    sget p2, Lrgd;->ViewStubCompat_android_inflatedId:I
 
     const/4 v1, -0x1
 
@@ -39,7 +39,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ViewStubCompat;->b:I
 
-    sget p2, Ltfd;->ViewStubCompat_android_layout:I
+    sget p2, Lrgd;->ViewStubCompat_android_layout:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -47,7 +47,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ViewStubCompat;->a:I
 
-    sget p2, Ltfd;->ViewStubCompat_android_id:I
+    sget p2, Lrgd;->ViewStubCompat_android_id:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -237,7 +237,7 @@
     return-void
 .end method
 
-.method public setOnInflateListener(Lbuh;)V
+.method public setOnInflateListener(Lxuh;)V
     .locals 0
 
     return-void

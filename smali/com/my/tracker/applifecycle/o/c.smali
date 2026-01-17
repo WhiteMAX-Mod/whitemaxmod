@@ -60,7 +60,7 @@
     if-lt v3, v4, :cond_0
 
     .line 4
-    invoke-static {v1}, Lzec;->e(Landroid/content/pm/PackageInfo;)J
+    invoke-static {v1}, Ltfc;->e(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v3
 
@@ -386,7 +386,7 @@
 
     move-result-object v0
 
-    new-instance v5, Lami;
+    new-instance v5, Lxmi;
 
     move-object v10, v6
 
@@ -396,7 +396,7 @@
 
     move v6, v4
 
-    invoke-direct/range {v5 .. v10}, Lami;-><init>(IJLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v5 .. v10}, Lxmi;-><init>(IJLjava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v0, v5}, Lcom/my/tracker/core/EnginePrefs;->setBlock(Lcom/my/tracker/core/utils/Consumer;)V
 

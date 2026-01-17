@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq94;
+.implements Lt94;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0xd8bf9f2
+    const v0, -0x5f6da2cd
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "StartSeekPlayerProgress"
+    const-string v0, "ClickForward"
 
     return-object v0
 .end method

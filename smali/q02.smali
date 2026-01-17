@@ -1,5 +1,5 @@
 .class public final Lq02;
-.super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+.super Landroid/hardware/camera2/CameraDevice$StateCallback;
 .source "SourceFile"
 
 
@@ -8,834 +8,536 @@
 
 .field public final b:Ljava/lang/Object;
 
-.field public c:Ljava/lang/Object;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
     .locals 1
 
-    iput p1, p0, Lq02;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    iput v0, p0, Lq02;->a:I
 
     .line 1
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
-
-    const/4 p1, 0x0
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
 
     .line 2
     iput-object p1, p0, Lq02;->c:Ljava/lang/Object;
 
     .line 3
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lq02;->b:Ljava/lang/Object;
+    iput-object p2, p0, Lq02;->b:Ljava/lang/Object;
 
     return-void
-
-    .line 4
-    :pswitch_0
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
-
-    .line 5
-    new-instance p1, La4a;
-
-    const/16 v0, 0x19
-
-    invoke-direct {p1, v0, p0}, La4a;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1}, Loaj;->b(Lzw1;)Lbx1;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lq02;->b:Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public constructor <init>(Luoe;)V
+.method public constructor <init>(Lx02;Lqw1;)V
     .locals 1
 
     const/4 v0, 0x0
 
     iput v0, p0, Lq02;->a:I
 
-    .line 9
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
-
-    .line 10
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lq02;->b:Ljava/lang/Object;
-
-    .line 11
+    .line 4
     iput-object p1, p0, Lq02;->c:Ljava/lang/Object;
 
-    return-void
-.end method
-
-.method public constructor <init>(Luoe;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lq02;->a:I
-
-    .line 6
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
-
-    .line 7
-    iput-object p1, p0, Lq02;->c:Ljava/lang/Object;
-
-    .line 8
     iput-object p2, p0, Lq02;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/hardware/camera2/CaptureRequest;Ljava/util/List;)V
-    .locals 5
-
-    iget-object v0, p0, Lq02;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    if-eqz v1, :cond_0
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    add-int/2addr v4, v3
-
-    invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v2, p2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    invoke-virtual {v0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 2
-
-    iget-object v0, p0, Lq02;->c:Ljava/lang/Object;
-
-    check-cast v0, Lyw1;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lyw1;->b(Ljava/lang/Object;)Z
-
-    iput-object v1, p0, Lq02;->c:Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public c(Landroid/hardware/camera2/CaptureRequest;)Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lq02;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    if-eqz p1, :cond_0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    return-object p1
-.end method
-
-.method public onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
-    .locals 8
-
-    iget v0, p0, Lq02;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super/range {p0 .. p5}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
-
-    move-object v2, p0
-
-    return-void
-
-    :pswitch_0
-    move-object v2, p0
-
-    iget-object v0, v2, Lq02;->c:Ljava/lang/Object;
-
-    check-cast v0, Luoe;
-
-    new-instance v1, Ly22;
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    move-wide v6, p4
-
-    invoke-direct/range {v1 .. v7}, Ly22;-><init>(Lq02;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
-
-    move-object p1, v2
-
-    invoke-virtual {v0, v1}, Luoe;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_1
-    move-object v1, p1
-
-    move-object p1, p0
-
-    invoke-virtual {p0, p2}, Lq02;->c(Landroid/hardware/camera2/CaptureRequest;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :goto_0
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-wide v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
-    .locals 7
-
-    iget v0, p0, Lq02;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Lq02;->b()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lq02;->c:Ljava/lang/Object;
-
-    check-cast v0, Luoe;
-
-    new-instance v1, Lw22;
-
-    const/4 v6, 0x0
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v6}, Lw22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Luoe;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_1
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-virtual {p0, v4}, Lq02;->c(Landroid/hardware/camera2/CaptureRequest;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    invoke-virtual {p2, v3, v4, v5}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_2
-    move-object v2, p0
-
-    move-object v5, p3
-
-    iget-object p1, v2, Lq02;->c:Ljava/lang/Object;
-
-    check-cast p1, Luoe;
-
-    new-instance p2, Lp02;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p0, p3, v5}, Lp02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p2}, Luoe;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
-    .locals 7
-
-    iget v0, p0, Lq02;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p0}, Lq02;->b()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lq02;->c:Ljava/lang/Object;
-
-    check-cast v0, Luoe;
-
-    new-instance v1, Lw22;
-
-    const/4 v6, 0x2
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v6}, Lw22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Luoe;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_2
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-virtual {p0, v4}, Lq02;->c(Landroid/hardware/camera2/CaptureRequest;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    invoke-virtual {p2, v3, v4, v5}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
-    .locals 7
-
-    iget v0, p0, Lq02;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lq02;->c:Ljava/lang/Object;
-
-    check-cast v0, Luoe;
-
-    new-instance v1, Lw22;
-
-    const/4 v6, 0x1
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v6}, Lw22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Luoe;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_1
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-virtual {p0, v4}, Lq02;->c(Landroid/hardware/camera2/CaptureRequest;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    invoke-virtual {p2, v3, v4, v5}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
+.method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
     .locals 3
 
     iget v0, p0, Lq02;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1, p2}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
+    iget-object v0, p0, Lq02;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/Executor;
+
+    new-instance v1, Lq32;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, p1, v2}, Lq32;-><init>(Lq02;Landroid/hardware/camera2/CameraDevice;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 
     :pswitch_0
-    invoke-virtual {p0}, Lq02;->b()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lq02;->c:Ljava/lang/Object;
-
-    check-cast v0, Luoe;
-
-    new-instance v1, Lpp1;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, p0, p1, p2, v2}, Lpp1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v0, v1}, Luoe;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lq02;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    invoke-virtual {v2, p1, p2}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
-
-    goto :goto_0
-
-    :cond_1
     iget-object p1, p0, Lq02;->c:Ljava/lang/Object;
 
-    check-cast p1, Lr72;
+    check-cast p1, Lx02;
 
-    if-eqz p1, :cond_2
+    const-string v0, "openCameraConfigAndClose camera closed"
 
-    invoke-virtual {p1}, Lr72;->a()V
+    const/4 v1, 0x0
 
-    :cond_2
+    invoke-virtual {p1, v0, v1}, Lx02;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lq02;->b:Ljava/lang/Object;
+
+    check-cast p1, Lqw1;
+
+    invoke-virtual {p1, v1}, Lqw1;->b(Ljava/lang/Object;)Z
+
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-    .locals 7
+.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 3
 
     iget v0, p0, Lq02;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p0}, Lq02;->b()V
-
-    return-void
-
-    :pswitch_1
     iget-object v0, p0, Lq02;->c:Ljava/lang/Object;
 
-    check-cast v0, Luoe;
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    new-instance v1, Lx22;
+    new-instance v1, Lq32;
 
-    move-object v2, p0
+    const/4 v2, 0x1
 
-    move-object v3, p1
+    invoke-direct {v1, p0, p1, v2}, Lq32;-><init>(Lq02;Landroid/hardware/camera2/CameraDevice;I)V
 
-    move v4, p2
-
-    move-wide v5, p3
-
-    invoke-direct/range {v1 .. v6}, Lx22;-><init>(Lq02;Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-
-    invoke-virtual {v0, v1}, Luoe;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 
-    :pswitch_2
-    move-object v2, p0
+    :pswitch_0
+    iget-object p1, p0, Lq02;->c:Ljava/lang/Object;
 
-    move-object v3, p1
+    check-cast p1, Lx02;
 
-    move v4, p2
+    const-string v0, "openCameraConfigAndClose camera disconnected"
 
-    move-wide v5, p3
+    const/4 v1, 0x0
 
-    iget-object p1, v2, Lq02;->b:Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Lx02;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast p1, Ljava/util/HashMap;
+    iget-object p1, p0, Lq02;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+    check-cast p1, Lqw1;
 
-    move-result-object p1
+    invoke-virtual {p1, v1}, Lqw1;->b(Ljava/lang/Object;)Z
 
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/util/List;
-
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_0
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    invoke-virtual {p3, v3, v4, v5, v6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, v2, Lq02;->c:Ljava/lang/Object;
-
-    check-cast p1, Lr72;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lr72;->a()V
-
-    :cond_2
     return-void
+
+    nop
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
-    .locals 9
+.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 3
 
     iget v0, p0, Lq02;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super/range {p0 .. p6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+    iget-object v0, p0, Lq02;->c:Ljava/lang/Object;
 
-    move-object v2, p0
+    check-cast v0, Ljava/util/concurrent/Executor;
+
+    new-instance v1, Lip1;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, p0, p1, p2, v2}, Lip1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 
     :pswitch_0
-    move-object v2, p0
+    iget-object p1, p0, Lq02;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lq02;->b()V
+    check-cast p1, Lx02;
 
-    return-void
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    move-object v2, p0
+    const-string v1, "openCameraConfigAndClose camera error "
 
-    iget-object v0, v2, Lq02;->c:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Luoe;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lv22;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-object v3, p1
+    move-result-object p2
 
-    move-object v4, p2
+    const/4 v0, 0x0
 
-    move-wide v5, p3
+    invoke-virtual {p1, p2, v0}, Lx02;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-wide v7, p5
+    iget-object p1, p0, Lq02;->b:Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v8}, Lv22;-><init>(Lq02;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+    check-cast p1, Lqw1;
 
-    move-object p1, v2
-
-    invoke-virtual {v0, v1}, Luoe;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lqw1;->b(Ljava/lang/Object;)Z
 
     return-void
 
-    :pswitch_2
-    move-object v1, p1
+    nop
 
-    move-object p1, p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p0, p2}, Lq02;->c(Landroid/hardware/camera2/CaptureRequest;)Ljava/util/List;
+.method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 26
 
-    move-result-object v0
+    move-object/from16 v0, p0
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-object/from16 v1, p1
 
-    move-result-object v7
+    iget v2, v0, Lq02;->a:I
+
+    const/4 v3, 0x2
+
+    iget-object v4, v0, Lq02;->c:Ljava/lang/Object;
+
+    packed-switch v2, :pswitch_data_0
+
+    check-cast v4, Ljava/util/concurrent/Executor;
+
+    new-instance v2, Lq32;
+
+    invoke-direct {v2, v0, v1, v3}, Lq32;-><init>(Lq02;Landroid/hardware/camera2/CameraDevice;I)V
+
+    invoke-interface {v4, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    check-cast v4, Lx02;
+
+    iget-object v2, v4, Lx02;->c:Lwpe;
+
+    const-string v5, "openCameraConfigAndClose camera opened"
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v4, v5, v6}, Lx02;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    new-instance v5, Ll72;
+
+    iget-object v7, v4, Lx02;->P0:Lt9b;
+
+    new-instance v8, Lrz6;
+
+    sget-object v9, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-direct {v8, v9}, Lrz6;-><init>(Ljava/util/List;)V
+
+    const/4 v9, 0x0
+
+    invoke-direct {v5, v7, v8, v9}, Ll72;-><init>(Lt9b;Lrz6;Z)V
+
+    new-instance v7, Landroid/graphics/SurfaceTexture;
+
+    invoke-direct {v7, v9}, Landroid/graphics/SurfaceTexture;-><init>(I)V
+
+    const/16 v8, 0x280
+
+    const/16 v10, 0x1e0
+
+    invoke-virtual {v7, v8, v10}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
+
+    new-instance v8, Landroid/view/Surface;
+
+    invoke-direct {v8, v7}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+
+    new-instance v10, Lnj7;
+
+    invoke-direct {v10, v8}, Lnj7;-><init>(Landroid/view/Surface;)V
+
+    iget-object v11, v10, Lwv4;->e:Ltw1;
+
+    invoke-static {v11}, Lnge;->h(Lie8;)Lie8;
+
+    move-result-object v11
+
+    new-instance v12, Li02;
+
+    invoke-direct {v12, v8, v3, v7}, Li02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {}, Lacj;->a()Lc15;
+
+    move-result-object v3
+
+    invoke-interface {v11, v12, v3}, Lie8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    new-instance v3, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v3}, Ljava/util/LinkedHashSet;-><init>()V
+
+    new-instance v7, Ljava/util/HashSet;
+
+    invoke-direct {v7}, Ljava/util/HashSet;-><init>()V
+
+    invoke-static {}, Lffa;->e()Lffa;
+
+    move-result-object v8
+
+    new-instance v11, Ljava/util/ArrayList;
+
+    invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Lnfa;->a()Lnfa;
+
+    move-result-object v12
+
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v14, Ljava/util/ArrayList;
+
+    invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v15, Ljava/util/ArrayList;
+
+    invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {v10}, Lmc0;->a(Lwv4;)Led6;
+
+    move-result-object v9
+
+    sget-object v6, Lwb5;->d:Lwb5;
+
+    iput-object v6, v9, Led6;->e:Ljava/lang/Object;
+
+    invoke-virtual {v9}, Led6;->d()Lmc0;
+
+    move-result-object v6
+
+    invoke-interface {v3, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    const-string v6, "Start configAndClose."
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v4, v6, v9}, Lx02;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    new-instance v16, Lpte;
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3, v13}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9, v14}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-direct {v13, v15}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v17, Ld72;
+
+    new-instance v14, Ljava/util/ArrayList;
+
+    invoke-direct {v14, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v8}, Lhqb;->b(Lmr3;)Lhqb;
+
+    move-result-object v19
+
+    new-instance v7, Ljava/util/ArrayList;
+
+    invoke-direct {v7, v11}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    sget-object v8, Lvag;->b:Lvag;
+
+    new-instance v8, Landroid/util/ArrayMap;
+
+    invoke-direct {v8}, Landroid/util/ArrayMap;-><init>()V
+
+    iget-object v11, v12, Lvag;->a:Landroid/util/ArrayMap;
+
+    invoke-virtual {v11}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
+
+    move-result-object v12
+
+    invoke-interface {v12}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v12
 
     :goto_0
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v15
 
-    if-eqz v0, :cond_0
+    if-eqz v15, :cond_0
 
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v15
+
+    check-cast v15, Ljava/lang/String;
+
+    invoke-virtual {v11, v15}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    invoke-virtual {v8, v15, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-object v2, p2
-
-    move-wide v3, p3
-
-    move-wide v5, p5
-
-    invoke-virtual/range {v0 .. v6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+    move-object/from16 v0, p0
 
     goto :goto_0
 
     :cond_0
+    new-instance v0, Lvag;
+
+    invoke-direct {v0, v8}, Lvag;-><init>(Landroid/util/ArrayMap;)V
+
+    const/16 v20, 0x1
+
+    const/16 v21, 0x0
+
+    const/16 v25, 0x0
+
+    move/from16 v23, v21
+
+    move-object/from16 v24, v0
+
+    move-object/from16 v22, v7
+
+    move-object/from16 v18, v14
+
+    invoke-direct/range {v17 .. v25}, Ld72;-><init>(Ljava/util/ArrayList;Lhqb;IZLjava/util/ArrayList;ZLvag;Lk22;)V
+
+    const/16 v22, 0x0
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x0
+
+    move-object/from16 v18, v3
+
+    move-object/from16 v19, v9
+
+    move-object/from16 v20, v13
+
+    move-object/from16 v21, v17
+
+    move-object/from16 v17, v6
+
+    invoke-direct/range {v16 .. v24}, Lpte;-><init>(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ld72;Lnte;Landroid/hardware/camera2/params/InputConfiguration;Lmc0;)V
+
+    move-object/from16 v0, v16
+
+    iget-object v3, v4, Lx02;->J0:Le40;
+
+    new-instance v16, Lm8g;
+
+    iget-object v4, v3, Le40;->e:Ljava/lang/Object;
+
+    move-object/from16 v18, v4
+
+    check-cast v18, Lrz6;
+
+    iget-object v4, v3, Le40;->f:Ljava/lang/Object;
+
+    move-object/from16 v19, v4
+
+    check-cast v19, Lrz6;
+
+    iget-object v4, v3, Le40;->d:Ljava/lang/Object;
+
+    move-object/from16 v17, v4
+
+    check-cast v17, Lkf6;
+
+    iget-object v4, v3, Le40;->b:Ljava/lang/Object;
+
+    move-object/from16 v21, v4
+
+    check-cast v21, Lwpe;
+
+    iget-object v4, v3, Le40;->c:Ljava/lang/Object;
+
+    move-object/from16 v20, v4
+
+    check-cast v20, Lw37;
+
+    iget-object v3, v3, Le40;->a:Ljava/lang/Object;
+
+    move-object/from16 v22, v3
+
+    check-cast v22, Landroid/os/Handler;
+
+    invoke-direct/range {v16 .. v22}, Lm8g;-><init>(Lkf6;Lrz6;Lrz6;Lw37;Lwpe;Landroid/os/Handler;)V
+
+    move-object/from16 v3, v16
+
+    invoke-virtual {v5, v0, v1, v3}, Ll72;->l(Lpte;Landroid/hardware/camera2/CameraDevice;Lm8g;)Lie8;
+
+    move-result-object v0
+
+    new-instance v3, Lfs6;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v0, v4}, Lfs6;-><init>(Lie8;I)V
+
+    invoke-static {v3}, Libj;->b(Lrw1;)Ltw1;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbs6;->a(Lie8;)Lbs6;
+
+    move-result-object v0
+
+    new-instance v3, Lwq;
+
+    const/16 v6, 0x9
+
+    invoke-direct {v3, v5, v6, v10}, Lwq;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, v3, v2}, Lnge;->l(Lie8;Lcv;Ljava/util/concurrent/Executor;)Ln92;
+
+    move-result-object v0
+
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Lp02;
+
+    invoke-direct {v3, v4, v1}, Lp02;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v3, v2}, Lbs6;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
     return-void
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

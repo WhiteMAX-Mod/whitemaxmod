@@ -1,5 +1,5 @@
 .class public final Lvg0;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
@@ -10,20 +10,20 @@
 
 .field public final synthetic Z:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-.field public d:Ljava/lang/Object;
+.field public d:I
 
 .field public o:Ljava/util/HashSet;
 
-.field public s0:I
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ll84;)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lo84;)V
     .locals 0
 
     iput-object p1, p0, Lvg0;->Z:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -35,17 +35,17 @@
 
     iput-object p1, p0, Lvg0;->Y:Ljava/lang/Object;
 
-    iget p1, p0, Lvg0;->s0:I
+    iget p1, p0, Lvg0;->t0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lvg0;->s0:I
+    iput p1, p0, Lvg0;->t0:I
 
     iget-object p1, p0, Lvg0;->Z:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-static {p1, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->m(Lru/ok/tamtam/workmanager/BacklogWorker;Ll84;)Ljava/lang/Object;
+    invoke-static {p1, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->m(Lru/ok/tamtam/workmanager/BacklogWorker;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -1,217 +1,184 @@
-.class public Lcaa;
-.super Lkm0;
+.class public final Lcaa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final i:Ljava/util/List;
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/List;Z)V
-    .locals 12
+.method public constructor <init>(ILjava/lang/String;II)V
+    .locals 0
 
-    const/4 v10, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v11, -0x1
+    iput-object p2, p0, Lcaa;->a:Ljava/lang/String;
 
-    const-wide/16 v6, 0x0
+    iput p1, p0, Lcaa;->b:I
 
-    const/4 v8, 0x0
+    iput p3, p0, Lcaa;->c:I
 
-    move-object v0, p0
+    iput p4, p0, Lcaa;->d:I
 
-    move-wide v2, p1
+    invoke-static {p2}, Lt3j;->m(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-wide v4, p3
+    move-result-object p1
 
-    move-object/from16 v1, p5
+    if-eqz p1, :cond_0
 
-    move/from16 v9, p6
-
-    .line 3
-    invoke-direct/range {v0 .. v11}, Lcaa;-><init>(Ljava/util/List;JJJLgz;ZII)V
+    iput-object p1, p0, Lcaa;->e:Landroid/net/Uri;
 
     return-void
-.end method
 
-.method public constructor <init>(Ljava/util/List;JJJLgz;ZII)V
-    .locals 12
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v5, 0x0
+    const-string p2, "Required value was null."
 
-    move-object v0, p0
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-wide v3, p2
-
-    move-wide/from16 v1, p4
-
-    move-wide/from16 v6, p6
-
-    move-object/from16 v8, p8
-
-    move/from16 v9, p9
-
-    move/from16 v10, p10
-
-    move/from16 v11, p11
-
-    .line 1
-    invoke-direct/range {v0 .. v11}, Lkm0;-><init>(JJZJLgz;ZII)V
-
-    .line 2
-    iput-object p1, p0, Lcaa;->i:Ljava/util/List;
-
-    return-void
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/net/Uri;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lcaa;->i:Ljava/util/List;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Laaa;
-
-    iget-object v0, v0, Laaa;->a:Ljava/lang/String;
-
-    invoke-static {v0}, Lb3j;->n(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
-    .locals 3
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of v1, p1, Lcaa;
 
-    if-eqz p1, :cond_3
+    const/4 v2, 0x0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v1, :cond_1
 
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    invoke-super {p0, p1}, Lkm0;->equals(Ljava/lang/Object;)Z
+    check-cast p1, Lcaa;
+
+    iget-object v1, p0, Lcaa;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lcaa;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    return v0
+    return v2
 
     :cond_2
-    check-cast p1, Lcaa;
+    iget v1, p0, Lcaa;->b:I
 
-    iget-object v0, p0, Lcaa;->i:Ljava/util/List;
+    iget v3, p1, Lcaa;->b:I
 
-    iget-object p1, p1, Lcaa;->i:Ljava/util/List;
+    if-eq v1, v3, :cond_3
 
-    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    return v2
 
     :cond_3
-    :goto_0
-    return v0
-.end method
+    iget v1, p0, Lcaa;->c:I
 
-.method public final getHeight()I
-    .locals 3
+    iget v3, p1, Lcaa;->c:I
 
-    iget-object v0, p0, Lcaa;->i:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
+    if-eq v1, v3, :cond_4
 
     return v2
 
-    :cond_0
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    :cond_4
+    iget v1, p0, Lcaa;->d:I
 
-    move-result-object v0
+    iget p1, p1, Lcaa;->d:I
 
-    check-cast v0, Laaa;
-
-    iget v0, v0, Laaa;->c:I
-
-    return v0
-.end method
-
-.method public final getWidth()I
-    .locals 3
-
-    iget-object v0, p0, Lcaa;->i:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
+    if-eq v1, p1, :cond_5
 
     return v2
 
-    :cond_0
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Laaa;
-
-    iget v0, v0, Laaa;->b:I
-
+    :cond_5
     return v0
 .end method
 
-.method public hashCode()I
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    invoke-super {p0}, Lkm0;->hashCode()I
+    iget-object v0, p0, Lcaa;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, Lcaa;->i:Ljava/util/List;
+    mul-int/2addr v0, v1
 
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+    iget v2, p0, Lcaa;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lcaa;->c:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v1, p0, Lcaa;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
     add-int/2addr v1, v0
 
     return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", width="
+
+    const-string v1, ", height="
+
+    iget v2, p0, Lcaa;->b:I
+
+    const-string v3, "Item(url="
+
+    iget-object v4, p0, Lcaa;->a:Ljava/lang/String;
+
+    invoke-static {v2, v3, v4, v0, v1}, Lpqb;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", bitrate="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lcaa;->c:I
+
+    iget v4, p0, Lcaa;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lhc0;->j(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

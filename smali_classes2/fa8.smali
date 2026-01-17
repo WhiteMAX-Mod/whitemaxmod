@@ -2,86 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxa8;
 
-# instance fields
-.field public final a:Lh6f;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfa8;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Lfa8;
 
 
 # direct methods
-.method public constructor <init>(Ljy0;Lbbg;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfa8;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lfa8;->a:Lfa8;
+
+    new-instance v0, Lj58;
 
     const/4 v1, 0x7
 
-    invoke-static {v0, v0, v1}, Li6f;->b(III)Lh6f;
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
 
-    move-result-object v0
-
-    iput-object v0, p0, Lfa8;->a:Lh6f;
-
-    check-cast p2, Lb9b;
-
-    invoke-virtual {p2}, Lb9b;->c()Llq8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lfa8;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Ljy0;->d(Ljava/lang/Object;)V
+    sput-object v0, Lfa8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lca8;)V
-    .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
+.method public final describeContents()I
+    .locals 1
 
-    .line 1
-    new-instance v0, Lda8;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lda8;-><init>(Lfa8;Lca8;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lfa8;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    return-void
+    return v0
 .end method
 
-.method public final onEvent(Ljk0;)V
-    .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    .line 2
-    new-instance v0, Lea8;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p0, p1, v1}, Lea8;-><init>(Lfa8;Ljk0;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    const/4 p1, 0x3
+    :cond_0
+    instance-of p1, p1, Lfa8;
 
-    iget-object v2, p0, Lfa8;->b:Lkotlinx/coroutines/internal/ContextScope;
+    if-nez p1, :cond_1
 
-    invoke-static {v2, v1, v1, v0, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x4dc7cdd3    # 4.1901936E8f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ErrorPrivateChannel"
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

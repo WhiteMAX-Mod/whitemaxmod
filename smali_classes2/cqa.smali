@@ -1,12 +1,14 @@
 .class public final Lcqa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lrl9;
+.field public final X:Lxk9;
 
 .field public final Y:[J
+
+.field public final Z:Ljava/lang/Long;
 
 .field public final c:J
 
@@ -16,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>(JJILrl9;[J)V
+.method public constructor <init>(JJILxk9;[JLjava/lang/Long;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,9 +29,11 @@
 
     iput p5, p0, Lcqa;->o:I
 
-    iput-object p6, p0, Lcqa;->X:Lrl9;
+    iput-object p6, p0, Lcqa;->X:Lxk9;
 
     iput-object p7, p0, Lcqa;->Y:[J
+
+    iput-object p8, p0, Lcqa;->Z:Ljava/lang/Long;
 
     return-void
 .end method
@@ -75,28 +79,41 @@
     goto :goto_0
 
     :cond_3
-    iget v0, p0, Lcqa;->o:I
+    iget-object v0, p0, Lcqa;->Z:Ljava/lang/Long;
 
-    iget v1, p1, Lcqa;->o:I
+    iget-object v1, p1, Lcqa;->Z:Ljava/lang/Long;
 
-    if-eq v0, v1, :cond_4
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
 
     goto :goto_0
 
     :cond_4
-    iget-object v0, p0, Lcqa;->X:Lrl9;
+    iget v0, p0, Lcqa;->o:I
 
-    iget-object v1, p1, Lcqa;->X:Lrl9;
+    iget v1, p1, Lcqa;->o:I
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
+    if-eq v0, v1, :cond_5
 
     goto :goto_0
 
     :cond_5
+    iget-object v0, p0, Lcqa;->X:Lxk9;
+
+    iget-object v1, p1, Lcqa;->X:Lxk9;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
     iget-object v0, p0, Lcqa;->Y:[J
 
     iget-object p1, p1, Lcqa;->Y:[J
@@ -105,14 +122,14 @@
 
     move-result p1
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_7
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_6
+    :cond_7
     :goto_1
     const/4 p1, 0x1
 
@@ -120,7 +137,7 @@
 .end method
 
 .method public final hashCode()I
-    .locals 4
+    .locals 5
 
     iget-wide v0, p0, Lcqa;->c:J
 
@@ -134,30 +151,49 @@
 
     iget-wide v2, p0, Lcqa;->d:J
 
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
     move-result v0
 
-    iget v2, p0, Lcqa;->o:I
+    const/4 v2, 0x0
 
-    invoke-static {v2, v0, v1}, Ln0c;->j(III)I
+    iget-object v3, p0, Lcqa;->Z:Ljava/lang/Long;
 
-    move-result v0
+    if-eqz v3, :cond_0
 
-    iget-object v2, p0, Lcqa;->X:Lrl9;
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
 
-    if-eqz v2, :cond_0
+    move-result-wide v3
 
-    invoke-virtual {v2}, Lrl9;->hashCode()I
+    invoke-static {v3, v4}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result v2
+    move-result v3
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    move v3, v2
 
     :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget v3, p0, Lcqa;->o:I
+
+    invoke-static {v3, v0, v1}, Lpqb;->i(III)I
+
+    move-result v0
+
+    iget-object v3, p0, Lcqa;->X:Lxk9;
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Lxk9;->hashCode()I
+
+    move-result v2
+
+    :cond_1
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
@@ -188,7 +224,7 @@
 
     iget-wide v3, p0, Lcqa;->c:J
 
-    invoke-static {v3, v4, v1, v2}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v4, v1, v2}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -256,7 +292,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcqa;->X:Lrl9;
+    iget-object v2, p0, Lcqa;->X:Lxk9;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -265,6 +301,14 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", lastDelayedUpdateTime="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lcqa;->Z:Ljava/lang/Long;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ")"
 

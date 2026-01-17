@@ -13,19 +13,19 @@
 .method public abstract D(JJ)J
 .end method
 
-.method public abstract b(J)J
+.method public abstract a(J)J
 .end method
 
-.method public abstract f(JJ)J
+.method public abstract d(JJ)J
 .end method
 
-.method public abstract i(JJ)J
+.method public abstract g(JJ)J
 .end method
 
 .method public abstract j(JJ)J
 .end method
 
-.method public abstract k(J)Lvgd;
+.method public abstract k(J)Lthd;
 .end method
 
 .method public abstract u(JJ)J

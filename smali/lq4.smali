@@ -2,69 +2,32 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljt5;
-
 
 # static fields
-.field public static final Z:[I
+.field public static final a:[I
 
-.field public static final s0:Lykc;
-
-.field public static final t0:Lykc;
-
-
-# instance fields
-.field public X:Lfca;
-
-.field public Y:I
-
-.field public a:Z
-
-.field public b:I
-
-.field public c:I
-
-.field public d:Lltd;
-
-.field public o:Z
+.field public static final b:Lxz0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    const/16 v0, 0x15
+    const/16 v0, 0xe
 
-    new-array v0, v0, [I
+    new-array v1, v0, [I
 
-    fill-array-data v0, :array_0
+    fill-array-data v1, :array_0
 
-    sput-object v0, Llq4;->Z:[I
+    sput-object v1, Llq4;->a:[I
 
-    new-instance v0, Lykc;
+    new-instance v1, Lxz0;
 
-    new-instance v1, Lwp4;
+    const/4 v2, 0x0
 
-    const/4 v2, 0x3
+    invoke-direct {v1, v0, v2}, Lxz0;-><init>(IB)V
 
-    invoke-direct {v1, v2}, Lwp4;-><init>(I)V
-
-    invoke-direct {v0, v1}, Lykc;-><init>(Lwp4;)V
-
-    sput-object v0, Llq4;->s0:Lykc;
-
-    new-instance v0, Lykc;
-
-    new-instance v1, Lwp4;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2}, Lwp4;-><init>(I)V
-
-    invoke-direct {v0, v1}, Lykc;-><init>(Lwp4;)V
-
-    sput-object v0, Llq4;->t0:Lykc;
+    sput-object v1, Llq4;->b:Lxz0;
 
     return-void
 
@@ -83,372 +46,353 @@
         0x0
         0x1
         0x7
-        0x10
-        0xf
         0xe
-        0x11
-        0x12
-        0x13
-        0x14
-        0x15
     .end array-data
 .end method
 
-.method public constructor <init>()V
-    .locals 2
+.method public static a(Ljava/util/ArrayList;I)V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Lfca;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lfca;-><init>(I)V
-
-    iput-object v0, p0, Llq4;->X:Lfca;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Llq4;->o:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/util/ArrayList;I)V
-    .locals 10
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    packed-switch p2, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
     :pswitch_0
-    goto :goto_0
+    goto/16 :goto_3
 
     :pswitch_1
-    new-instance p2, Ljf0;
+    new-instance p1, Lkz7;
 
-    invoke-direct {p2, v2}, Ljf0;-><init>(I)V
+    invoke-direct {p1}, Lkz7;-><init>()V
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_2
-    iget p2, p0, Llq4;->c:I
+    new-instance p1, Lvxh;
 
-    and-int/lit8 v1, p2, 0x2
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    if-nez v1, :cond_0
+    iput v2, p1, Lvxh;->c:I
 
-    and-int/lit8 p2, p2, 0x4
+    const-wide/16 v0, -0x1
 
-    if-nez p2, :cond_0
+    iput-wide v0, p1, Lvxh;->d:J
 
-    new-instance p2, Ljf0;
+    const/4 v2, -0x1
 
-    invoke-direct {p2, v0}, Ljf0;-><init>(I)V
+    iput v2, p1, Lvxh;->f:I
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iput-wide v0, p1, Lvxh;->g:J
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_3
-    new-instance p2, Lns0;
+    new-instance p1, Lyvg;
 
-    invoke-direct {p2, v2}, Lns0;-><init>(I)V
+    new-instance v0, Lxlg;
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-wide/16 v3, 0x0
+
+    invoke-direct {v0, v3, v4}, Lxlg;-><init>(J)V
+
+    new-instance v3, Lzu4;
+
+    sget-object v4, Lhk7;->b:Lac6;
+
+    sget-object v4, Lhud;->o:Lhud;
+
+    invoke-direct {v3, v4, v2, v2}, Lzu4;-><init>(Ljava/util/List;II)V
+
+    invoke-direct {p1, v1, v0, v3}, Lyvg;-><init>(ILxlg;Lzu4;)V
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_4
-    new-instance p2, Ljf0;
+    new-instance p1, Lyzc;
 
-    invoke-direct {p2, v1}, Ljf0;-><init>(I)V
+    invoke-direct {p1}, Lyzc;-><init>()V
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_5
-    new-instance p2, Lns0;
+    new-instance p1, Ln0b;
 
-    invoke-direct {p2, v0}, Lns0;-><init>(I)V
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_6
-    new-instance p2, Lgf0;
+    new-instance p1, Lrn6;
 
-    iget-boolean v1, p0, Llq4;->o:Z
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    xor-int/2addr v0, v1
+    invoke-direct {p1, v2, v0, v1, v0}, Lrn6;-><init>(ILxlg;Ljava/util/List;Lecc;)V
 
-    iget-object v1, p0, Llq4;->X:Lfca;
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p2, v0, v1}, Lgf0;-><init>(ILfca;)V
+    new-instance p1, Lv9a;
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {p1, v2}, Lv9a;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_7
-    sget-object p2, Llq4;->t0:Lykc;
+    new-instance p1, Lo9a;
 
-    new-array v0, v2, [Ljava/lang/Object;
+    invoke-direct {p1, v2}, Lo9a;-><init>(I)V
 
-    invoke-virtual {p2, v0}, Lykc;->l([Ljava/lang/Object;)Let5;
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    :goto_0
     return-void
 
     :pswitch_8
-    new-instance p2, Lcs4;
+    new-instance p1, Lyu8;
 
-    iget v0, p0, Llq4;->Y:I
+    invoke-direct {p1, v2}, Lyu8;-><init>(I)V
 
-    invoke-direct {p2, v0}, Lcs4;-><init>(I)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_9
-    new-instance p2, Lbxh;
+    new-instance p1, Lec6;
 
-    invoke-direct {p2}, Lbxh;-><init>()V
+    invoke-direct {p1}, Lec6;-><init>()V
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_a
-    iget-object p2, p0, Llq4;->d:Lltd;
+    sget-object p1, Llq4;->b:Lxz0;
 
-    if-nez p2, :cond_1
+    iget-object v3, p1, Lxz0;->c:Ljava/lang/Object;
 
-    sget-object p2, Lal7;->b:Lcc6;
+    check-cast v3, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    sget-object p2, Lltd;->o:Lltd;
+    monitor-enter v3
 
-    iput-object p2, p0, Llq4;->d:Lltd;
+    :try_start_0
+    iget-object v4, p1, Lxz0;->c:Ljava/lang/Object;
 
+    check-cast v4, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    iget-object p1, p1, Lxz0;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/reflect/Constructor;
+
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_4
+
+    :cond_0
+    :try_start_1
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    const-string v5, "com.google.android.exoplayer2.ext.flac.FlacLibrary"
+
+    invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v5
+
+    const-string v6, "isAvailable"
+
+    invoke-virtual {v5, v6, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v0, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "com.google.android.exoplayer2.ext.flac.FlacExtractor"
+
+    invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v4
+
+    const-class v5, Lft5;
+
+    invoke-virtual {v4, v5}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object v4
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    filled-new-array {v5}, [Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v4
+
+    iput-object v4, p1, Lxz0;->b:Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    :try_start_2
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "Error instantiating FLAC extension"
+
+    invoke-direct {p1, v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :catch_1
     :cond_1
-    new-instance v3, Lsvg;
+    :goto_0
+    iget-object v4, p1, Lxz0;->c:Ljava/lang/Object;
 
-    iget-boolean p2, p0, Llq4;->o:Z
+    check-cast v4, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    xor-int/lit8 v5, p2, 0x1
+    invoke-virtual {v4, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    iget-object v6, p0, Llq4;->X:Lfca;
+    iget-object p1, p1, Lxz0;->b:Ljava/lang/Object;
 
-    new-instance v7, Lnlg;
+    check-cast p1, Ljava/lang/reflect/Constructor;
 
-    const-wide/16 v8, 0x0
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    invoke-direct {v7, v8, v9}, Lnlg;-><init>(J)V
+    :goto_1
+    if-nez p1, :cond_2
 
-    new-instance v8, Lyu4;
+    goto :goto_2
 
-    iget-object p2, p0, Llq4;->d:Lltd;
+    :cond_2
+    :try_start_3
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v8, p2, v2, v0}, Lyu4;-><init>(Ljava/util/List;II)V
+    move-result-object v0
 
-    const/4 v4, 0x1
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    invoke-direct/range {v3 .. v8}, Lsvg;-><init>(IILf0g;Lnlg;Lyu4;)V
+    move-result-object v0
 
-    invoke-virtual {p1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
+    move-result-object p1
+
+    move-object v0, p1
+
+    check-cast v0, Lft5;
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    :goto_2
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_3
+    new-instance p1, Ly56;
+
+    invoke-direct {p1}, Ly56;-><init>()V
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_3
     return-void
 
+    :catch_2
+    move-exception p0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Unexpected error creating FLAC extractor"
+
+    invoke-direct {p1, v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :goto_4
+    :try_start_4
+    monitor-exit v3
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p0
+
     :pswitch_b
-    new-instance p2, Lxyc;
+    new-instance p1, Lbd;
 
-    invoke-direct {p2}, Lxyc;-><init>()V
+    invoke-direct {p1}, Lbd;-><init>()V
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_c
-    new-instance p2, Lm0b;
+    new-instance p1, Lcc;
 
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1, v2}, Lcc;-><init>(I)V
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_d
-    new-instance p2, Lvn6;
+    new-instance p1, Lo4;
 
-    iget-object v0, p0, Llq4;->X:Lfca;
+    invoke-direct {p1}, Lo4;-><init>()V
 
-    iget-boolean v1, p0, Llq4;->o:Z
-
-    if-eqz v1, :cond_2
-
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_2
-    const/16 v1, 0x20
-
-    :goto_1
-    invoke-direct {p2, v0, v1}, Lvn6;-><init>(Lf0g;I)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance p2, Lv9a;
-
-    iget-object v0, p0, Llq4;->X:Lfca;
-
-    iget v1, p0, Llq4;->c:I
-
-    iget-boolean v3, p0, Llq4;->o:Z
-
-    if-eqz v3, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    const/16 v2, 0x10
-
-    :goto_2
-    or-int/2addr v1, v2
-
-    invoke-direct {p2, v0, v1}, Lv9a;-><init>(Lf0g;I)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :pswitch_e
-    new-instance p2, Lo9a;
+    new-instance p1, Lk4;
 
-    iget-boolean v0, p0, Llq4;->a:Z
+    invoke-direct {p1}, Lk4;-><init>()V
 
-    invoke-direct {p2, v0}, Lo9a;-><init>(I)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_f
-    new-instance p2, Lyv8;
-
-    iget-object v0, p0, Llq4;->X:Lfca;
-
-    iget v3, p0, Llq4;->b:I
-
-    iget-boolean v4, p0, Llq4;->o:Z
-
-    if-eqz v4, :cond_4
-
-    move v1, v2
-
-    :cond_4
-    or-int/2addr v1, v3
-
-    invoke-direct {p2, v0, v1}, Lyv8;-><init>(Lf0g;I)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_10
-    new-instance p2, Lhc6;
-
-    invoke-direct {p2}, Lhc6;-><init>()V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_11
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    filled-new-array {p2}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    sget-object v0, Llq4;->s0:Lykc;
-
-    invoke-virtual {v0, p2}, Lykc;->l([Ljava/lang/Object;)Let5;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_5
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_5
-    new-instance p2, Lb66;
-
-    invoke-direct {p2}, Lb66;-><init>()V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_12
-    new-instance p2, Lfd;
-
-    iget-boolean v0, p0, Llq4;->a:Z
-
-    invoke-direct {p2, v0}, Lfd;-><init>(I)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_13
-    new-instance p2, Lgc;
-
-    iget-boolean v0, p0, Llq4;->a:Z
-
-    invoke-direct {p2, v0}, Lgc;-><init>(I)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_14
-    new-instance p2, Lr4;
-
-    invoke-direct {p2}, Lr4;-><init>()V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_15
-    new-instance p2, Ln4;
-
-    invoke-direct {p2}, Ln4;-><init>()V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
@@ -456,20 +400,12 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
         :pswitch_e
         :pswitch_d
         :pswitch_c
         :pswitch_b
         :pswitch_a
         :pswitch_9
-        :pswitch_0
         :pswitch_8
         :pswitch_7
         :pswitch_6
@@ -477,159 +413,7 @@
         :pswitch_4
         :pswitch_3
         :pswitch_2
+        :pswitch_0
         :pswitch_1
     .end packed-switch
-.end method
-
-.method public final declared-synchronized b()[Let5;
-    .locals 2
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {p0, v0, v1}, Llq4;->i(Landroid/net/Uri;Ljava/util/Map;)[Let5;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized i(Landroid/net/Uri;Ljava/util/Map;)[Let5;
-    .locals 6
-
-    monitor-enter p0
-
-    :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    sget-object v1, Llq4;->Z:[I
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v3, "Content-Type"
-
-    invoke-interface {p2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/util/List;
-
-    const/4 v3, 0x0
-
-    if-eqz p2, :cond_1
-
-    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p2, 0x0
-
-    :goto_1
-    invoke-static {p2}, Lwoj;->b(Ljava/lang/String;)I
-
-    move-result p2
-
-    const/4 v4, -0x1
-
-    if-eq p2, v4, :cond_2
-
-    invoke-virtual {p0, v0, p2}, Llq4;->a(Ljava/util/ArrayList;I)V
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_4
-
-    :cond_2
-    :goto_2
-    invoke-static {p1}, Lwoj;->c(Landroid/net/Uri;)I
-
-    move-result p1
-
-    if-eq p1, v4, :cond_3
-
-    if-eq p1, p2, :cond_3
-
-    invoke-virtual {p0, v0, p1}, Llq4;->a(Ljava/util/ArrayList;I)V
-
-    :cond_3
-    move v4, v3
-
-    :goto_3
-    if-ge v4, v2, :cond_5
-
-    aget v5, v1, v4
-
-    if-eq v5, p2, :cond_4
-
-    if-eq v5, p1, :cond_4
-
-    invoke-virtual {p0, v0, v5}, Llq4;->a(Ljava/util/ArrayList;I)V
-
-    :cond_4
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_3
-
-    :cond_5
-    new-array p1, v3, [Let5;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Let5;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object p1
-
-    :goto_4
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
 .end method

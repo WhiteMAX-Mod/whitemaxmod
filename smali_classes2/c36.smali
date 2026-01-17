@@ -1,95 +1,57 @@
 .class public final Lc36;
-.super Ldti;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public X:Lqfa;
+
+.field public Y:I
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Ldng;
+
+.field public o:Lr6h;
+
+.field public final synthetic t0:Ld36;
+
+.field public u0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ld36;Lo84;)V
     .locals 0
 
-    iput p1, p0, Lc36;->c:I
+    iput-object p1, p0, Lc36;->t0:Ld36;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final q(Llx0;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final r(Llx0;)V
-    .locals 0
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    iget v0, p0, Lc36;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-
-    :pswitch_0
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b()Lef9;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lc36;->c:I
+    iput-object p1, p0, Lc36;->Z:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lc36;->u0:I
 
-    sget-object v0, Lef9;->d:Ljava/util/regex/Pattern;
+    const/high16 v0, -0x80000000
 
-    const-string v0, "application/octet-stream"
+    or-int/2addr p1, v0
 
-    invoke-static {v0}, Ly8j;->c(Ljava/lang/String;)Lef9;
+    iput p1, p0, Lc36;->u0:I
 
-    move-result-object v0
+    iget-object p1, p0, Lc36;->t0:Ld36;
 
-    return-object v0
+    const/4 v0, 0x0
 
-    :pswitch_0
-    sget-object v0, Lg36;->e:Lef9;
+    invoke-virtual {p1, v0, v0, p0}, Ld36;->g(Ldng;Lr6h;Lo84;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final p(Llx0;)V
-    .locals 0
-
-    iget p1, p0, Lc36;->c:I
-
-    return-void
+    return-object p1
 .end method

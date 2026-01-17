@@ -7,13 +7,13 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    const-class v0, Lag4;
+    const-class v0, Lxf4;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    const-class v1, Lzf4;
+    const-class v1, Lwf4;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -27,7 +27,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lll7;->i(I[Ljava/lang/Object;)Lll7;
+    invoke-static {v2, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
 
     return-void
 .end method

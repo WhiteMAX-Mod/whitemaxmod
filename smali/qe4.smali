@@ -1,65 +1,157 @@
-.class public abstract Lqe4;
+.class public final Lqe4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Ljava/lang/CharSequence;
+
+.field public b:Landroid/graphics/Bitmap;
+
+.field public c:Landroid/text/Layout$Alignment;
+
+.field public d:Landroid/text/Layout$Alignment;
+
+.field public e:F
+
+.field public f:I
+
+.field public g:I
+
+.field public h:F
+
+.field public i:I
+
+.field public j:I
+
+.field public k:F
+
+.field public l:F
+
+.field public m:F
+
+.field public n:Z
+
+.field public o:I
+
+.field public p:I
+
+.field public q:F
+
+
 # direct methods
-.method public static a(Ljava/security/Signature;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljava/security/Signature;)V
+    const/4 v0, 0x0
 
-    return-object v0
+    iput-object v0, p0, Lqe4;->a:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lqe4;->b:Landroid/graphics/Bitmap;
+
+    iput-object v0, p0, Lqe4;->c:Landroid/text/Layout$Alignment;
+
+    iput-object v0, p0, Lqe4;->d:Landroid/text/Layout$Alignment;
+
+    const v0, -0x800001
+
+    iput v0, p0, Lqe4;->e:F
+
+    const/high16 v1, -0x80000000
+
+    iput v1, p0, Lqe4;->f:I
+
+    iput v1, p0, Lqe4;->g:I
+
+    iput v0, p0, Lqe4;->h:F
+
+    iput v1, p0, Lqe4;->i:I
+
+    iput v1, p0, Lqe4;->j:I
+
+    iput v0, p0, Lqe4;->k:F
+
+    iput v0, p0, Lqe4;->l:F
+
+    iput v0, p0, Lqe4;->m:F
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lqe4;->n:Z
+
+    const/high16 v0, -0x1000000
+
+    iput v0, p0, Lqe4;->o:I
+
+    iput v1, p0, Lqe4;->p:I
+
+    return-void
 .end method
 
-.method public static b(Ljavax/crypto/Cipher;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
 
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+# virtual methods
+.method public final a()Lse4;
+    .locals 20
 
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljavax/crypto/Cipher;)V
+    move-object/from16 v0, p0
 
-    return-object v0
-.end method
+    new-instance v1, Lse4;
 
-.method public static c(Ljavax/crypto/Mac;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
+    iget-object v2, v0, Lqe4;->a:Ljava/lang/CharSequence;
 
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+    iget-object v3, v0, Lqe4;->c:Landroid/text/Layout$Alignment;
 
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljavax/crypto/Mac;)V
+    iget-object v4, v0, Lqe4;->d:Landroid/text/Layout$Alignment;
 
-    return-object v0
-.end method
+    iget-object v5, v0, Lqe4;->b:Landroid/graphics/Bitmap;
 
-.method public static d(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Cipher;
-    .locals 0
+    iget v6, v0, Lqe4;->e:F
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getCipher()Ljavax/crypto/Cipher;
+    iget v7, v0, Lqe4;->f:I
 
-    move-result-object p0
+    iget v8, v0, Lqe4;->g:I
 
-    return-object p0
-.end method
+    iget v9, v0, Lqe4;->h:F
 
-.method public static e(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Mac;
-    .locals 0
+    iget v10, v0, Lqe4;->i:I
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getMac()Ljavax/crypto/Mac;
+    iget v11, v0, Lqe4;->j:I
 
-    move-result-object p0
+    iget v12, v0, Lqe4;->k:F
 
-    return-object p0
-.end method
+    iget v13, v0, Lqe4;->l:F
 
-.method public static f(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljava/security/Signature;
-    .locals 0
+    iget v14, v0, Lqe4;->m:F
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getSignature()Ljava/security/Signature;
+    iget-boolean v15, v0, Lqe4;->n:Z
 
-    move-result-object p0
+    move-object/from16 v16, v1
 
-    return-object p0
+    iget v1, v0, Lqe4;->o:I
+
+    move/from16 v17, v1
+
+    iget v1, v0, Lqe4;->p:I
+
+    move/from16 v18, v1
+
+    iget v1, v0, Lqe4;->q:F
+
+    move/from16 v19, v18
+
+    move/from16 v18, v1
+
+    move-object/from16 v1, v16
+
+    move/from16 v16, v17
+
+    move/from16 v17, v19
+
+    invoke-direct/range {v1 .. v18}, Lse4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
 .end method

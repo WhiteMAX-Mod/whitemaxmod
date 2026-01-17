@@ -1,105 +1,76 @@
-.class public final Loab;
-.super Ljava/lang/Object;
+.class public Loab;
+.super Landroid/widget/EditText;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final synthetic d:Lpab;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lpab;I)V
+.method public constructor <init>(Landroid/content/Context;I)V
     .locals 2
 
-    iput p2, p0, Loab;->a:I
+    const p2, 0x101006e
 
-    packed-switch p2, :pswitch_data_0
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Loab;->d:Lpab;
+    invoke-direct {p0, p1, v1, p2, v0}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    iget-object p1, p1, Lpab;->a:Lwa9;
+    sget-object p2, Lpc3;->t0:Lkme;
 
-    iget-wide v0, p1, Lwa9;->d:J
+    invoke-virtual {p2, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
 
-    iput-wide v0, p0, Loab;->b:J
+    move-result-object p1
 
-    iget-wide p1, p1, Lwa9;->c:J
+    invoke-virtual {p1}, Lpc3;->j()Lzlb;
 
-    iput-wide p1, p0, Loab;->c:J
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lgti;->b(Landroid/widget/TextView;Lzlb;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Loab;->a:Z
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLongClickable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCursorVisible(Z)V
+
+    const p1, 0x20001
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setInputType(I)V
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Loab;->d:Lpab;
-
-    iget-object p1, p1, Lpab;->a:Lwa9;
-
-    iget-wide v0, p1, Lwa9;->d:J
-
-    iput-wide v0, p0, Loab;->b:J
-
-    iget-wide p1, p1, Lwa9;->c:J
-
-    iput-wide p1, p0, Loab;->c:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;)V
+.method public final getDefaultEditable()Z
     .locals 1
 
-    iget v0, p0, Loab;->a:I
+    iget-boolean v0, p0, Loab;->a:Z
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Loab;->d:Lpab;
+.method public final setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+    .locals 1
 
-    iget-object v0, v0, Lpab;->a:Lwa9;
+    iget-boolean v0, p0, Loab;->a:Z
 
-    iget-object v0, v0, Lwa9;->o:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    check-cast v0, Loq6;
+    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    invoke-interface {v0, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
+    :cond_0
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Loab;->d:Lpab;
-
-    iget-object v0, v0, Lpab;->a:Lwa9;
-
-    iget-object v0, v0, Lwa9;->o:Ljava/lang/Object;
-
-    check-cast v0, Loq6;
-
-    invoke-interface {v0, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

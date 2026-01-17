@@ -1,80 +1,102 @@
-.class public final Lkv2;
-.super Lb5g;
+.class public final enum Lkv2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Luxb;
+
+
+# static fields
+.field public static final enum b:Lkv2;
+
+.field public static final enum c:Lkv2;
+
+.field public static final synthetic d:[Lkv2;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p2, p0, Lkv2;->X:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
+    new-instance v0, Lkv2;
 
-    const/4 p2, 0x2
+    const-string v1, "LEAVE_APP"
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lkv2;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lkv2;->b:Lkv2;
+
+    new-instance v1, Lkv2;
+
+    const-string v2, "LEAVE_SCREEN"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Lkv2;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lkv2;->c:Lkv2;
+
+    filled-new-array {v0, v1}, [Lkv2;
+
+    move-result-object v0
+
+    sput-object v0, Lkv2;->d:[Lkv2;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1, p2}, Lkv2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput p3, p0, Lkv2;->a:I
 
-    move-result-object p1
-
-    check-cast p1, Lkv2;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lkv2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lkv2;
+    .locals 1
 
-    new-instance v0, Lkv2;
+    const-class v0, Lkv2;
 
-    iget-object v1, p0, Lkv2;->X:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, p2, v1}, Lkv2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;)V
+    move-result-object p0
 
-    iput-object p1, v0, Lkv2;->o:Ljava/lang/Object;
+    check-cast p0, Lkv2;
+
+    return-object p0
+.end method
+
+.method public static values()[Lkv2;
+    .locals 1
+
+    sget-object v0, Lkv2;->d:[Lkv2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkv2;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+
+# virtual methods
+.method public final a()I
     .locals 1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget v0, p0, Lkv2;->a:I
 
-    iget-object p1, p0, Lkv2;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lkv2;->X:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
-
-    iget-object v0, v0, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;->c:Lhze;
-
-    invoke-virtual {v0, p1}, Lbe8;->E(Ljava/util/List;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return v0
 .end method

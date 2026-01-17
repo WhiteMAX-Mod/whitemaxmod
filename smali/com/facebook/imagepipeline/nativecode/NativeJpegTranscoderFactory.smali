@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyj7;
+.implements Lfj7;
 
 
 # annotations
-.annotation build Lb35;
+.annotation build Le35;
 .end annotation
 
 
@@ -22,7 +22,7 @@
 # direct methods
 .method public constructor <init>(IZZ)V
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 
 
 # virtual methods
-.method public createImageTranscoder(Lqi7;Z)Lxj7;
+.method public createImageTranscoder(Lxh7;Z)Lej7;
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
-    sget-object v0, Lir4;->a:Lqi7;
+    sget-object v0, Ljr4;->a:Lxh7;
 
     if-eq p1, v0, :cond_0
 
@@ -70,7 +70,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {}, Lqia;->b()V
+    invoke-static {}, Loia;->b()V
 
     :cond_1
     return-object p1

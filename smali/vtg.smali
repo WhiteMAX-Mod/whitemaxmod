@@ -2,30 +2,37 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrtg;
 
-# static fields
-.field public static final a:Z
 
+# virtual methods
+.method public a(Lstg;)V
+    .locals 0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    return-void
+.end method
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+.method public b()V
+    .locals 0
 
-    const/16 v1, 0x1c
+    return-void
+.end method
 
-    if-lt v0, v1, :cond_0
+.method public c(Lstg;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    goto :goto_0
+.method public f()V
+    .locals 0
 
-    :cond_0
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    :goto_0
-    sput-boolean v0, Lvtg;->a:Z
+.method public h(Lstg;)V
+    .locals 0
 
     return-void
 .end method

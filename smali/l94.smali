@@ -1,64 +1,23 @@
-.class public final Ll94;
+.class public interface abstract Ll94;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq94;
-
-
-# static fields
-.field public static final a:Ll94;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ll94;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll94;->a:Ll94;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ll94;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+.method public abstract b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x5f6da2cd
-
-    return v0
+.method public abstract d(Ljava/lang/String;Ljava/lang/Throwable;)V
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public abstract e(Ljava/lang/String;)V
+.end method
 
-    const-string v0, "ClickForward"
+.method public abstract g(Ljava/lang/String;)V
+.end method
 
-    return-object v0
+.method public abstract j(Ljava/lang/String;Ljava/lang/Throwable;)V
+.end method
+
+.method public abstract onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
 .end method

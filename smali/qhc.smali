@@ -1,124 +1,237 @@
 .class public final Lqhc;
-.super Lvg5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Lqhc;
+
+
 # instance fields
-.field final synthetic this$0:Lrhc;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lgbj;
+
+.field public final c:Lds5;
+
+.field public final d:Le61;
 
 
 # direct methods
-.method public constructor <init>(Lrhc;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lqhc;
+
+    sget-object v1, Lyr5;->a:Lyr5;
+
+    sget-object v2, Le61;->i:Le61;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v3, v1, v2}, Lqhc;-><init>(Ljava/lang/String;Lgbj;Lds5;Le61;)V
+
+    sput-object v0, Lqhc;->e:Lqhc;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Lgbj;Lds5;Le61;)V
     .locals 0
 
-    iput-object p1, p0, Lqhc;->this$0:Lrhc;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqhc;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lqhc;->b:Lgbj;
+
+    iput-object p3, p0, Lqhc;->c:Lds5;
+
+    iput-object p4, p0, Lqhc;->d:Le61;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 1
-
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x1d
-
-    if-ge p2, v0, :cond_0
-
-    sget p2, Lbwd;->b:I
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object p1
-
-    const-string p2, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
-
-    invoke-virtual {p1, p2}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
-
-    move-result-object p1
-
-    check-cast p1, Lbwd;
-
-    iget-object p2, p0, Lqhc;->this$0:Lrhc;
-
-    iget-object p2, p2, Lrhc;->Z:Lgud;
-
-    iput-object p2, p1, Lbwd;->a:Lgud;
-
-    :cond_0
-    return-void
-.end method
-
-.method public onActivityPaused(Landroid/app/Activity;)V
-    .locals 3
-
-    iget-object p1, p0, Lqhc;->this$0:Lrhc;
-
-    iget v0, p1, Lrhc;->b:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p1, Lrhc;->b:I
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p1, Lrhc;->o:Landroid/os/Handler;
-
-    iget-object p1, p1, Lrhc;->Y:Lc9b;
-
-    const-wide/16 v1, 0x2bc
-
-    invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public onActivityPreCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 1
-
-    new-instance p2, Lqhc$a;
-
-    iget-object v0, p0, Lqhc;->this$0:Lrhc;
-
-    invoke-direct {p2, v0}, Lqhc$a;-><init>(Lrhc;)V
-
-    invoke-static {p1, p2}, Lphc;->a(Landroid/app/Activity;Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    return-void
-.end method
-
-.method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 2
-
-    iget-object p1, p0, Lqhc;->this$0:Lrhc;
-
-    iget v0, p1, Lrhc;->a:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p1, Lrhc;->a:I
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p1, Lrhc;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lrhc;->X:Lc98;
-
-    sget-object v1, Lb88;->ON_STOP:Lb88;
-
-    invoke-virtual {v0, v1}, Lc98;->d(Lb88;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p1, Lrhc;->d:Z
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lqhc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqhc;
+
+    iget-object v1, p0, Lqhc;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lqhc;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lqhc;->b:Lgbj;
+
+    iget-object v3, p1, Lqhc;->b:Lgbj;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lqhc;->c:Lds5;
+
+    iget-object v3, p1, Lqhc;->c:Lds5;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lqhc;->d:Le61;
+
+    iget-object p1, p1, Lqhc;->d:Le61;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lqhc;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lqhc;->b:Lgbj;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lqhc;->c:Lds5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lqhc;->d:Le61;
+
+    invoke-virtual {v1}, Le61;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PreviousCallState(callId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqhc;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recallTarget="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqhc;->b:Lgbj;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", state="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqhc;->c:Lds5;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", chatInfo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqhc;->d:Le61;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

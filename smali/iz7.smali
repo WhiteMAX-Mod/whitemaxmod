@@ -1,46 +1,46 @@
-.class public final synthetic Liz7;
-.super Lrr6;
-.source "SourceFile"
-
-# interfaces
-.implements Ler6;
+.class public final Liz7;
+.super Lo84;
 
 
-# static fields
-.field public static final a:Liz7;
+# instance fields
+.field public final synthetic X:Ldr7;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Liz7;
+    iput-object p1, p0, Liz7;->X:Ldr7;
 
-    const-string v4, "onAwaitInternalProcessResFunc(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x3
-
-    const-class v2, Lkz7;
-
-    const-string v3, "onAwaitInternalProcessResFunc"
-
-    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Liz7;->a:Liz7;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lkz7;
+    iput-object p1, p0, Liz7;->d:Ljava/lang/Object;
 
-    invoke-static {p1, p2, p3}, Lkz7;->access$onAwaitInternalProcessResFunc(Lkz7;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget p1, p0, Liz7;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Liz7;->o:I
+
+    iget-object p1, p0, Liz7;->X:Ldr7;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ldr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

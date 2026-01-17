@@ -1,8 +1,25 @@
-.class public interface abstract Lath;
+.class public abstract Lath;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract i()Lzsh;
+# direct methods
+.method public static a(Landroid/view/ViewConfiguration;III)I
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity(III)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b(Landroid/view/ViewConfiguration;III)I
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity(III)I
+
+    move-result p0
+
+    return p0
 .end method

@@ -4,59 +4,63 @@
 
 
 # instance fields
-.field public final a:Lqg8;
+.field public a:J
 
-.field public final b:Ljava/lang/String;
+.field public b:Z
+
+.field public c:Ljava/lang/Object;
+
+.field public d:Ljava/io/Serializable;
+
+.field public e:Ljava/lang/Object;
 
 
-# direct methods
-.method public constructor <init>(Lqg8;)V
-    .locals 3
+# virtual methods
+.method public a()V
+    .locals 5
 
-    sget-object v0, Lp7;->d:Ljava/util/List;
+    iget-boolean v0, p0, Lo7;->b:Z
 
-    if-nez p1, :cond_0
-
-    const-string v0, "null"
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p1, Lqg8;->b:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v0, Ljava/lang/String;
+    iput-boolean v0, p0, Lo7;->b:Z
 
-    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    iget-object v0, p0, Lo7;->e:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    check-cast v0, Li7;
 
-    move-result-object v0
+    if-nez v0, :cond_1
 
-    sget-object v1, Lp7;->d:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p1, Lqg8;->a:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v2, ":"
-
-    invoke-static {v1, v2, v0}, Lzy4;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    :goto_0
+    return-void
 
     :cond_1
-    :goto_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-wide v1, p0, Lo7;->a:J
 
-    iput-object p1, p0, Lo7;->a:Lqg8;
+    iget-object v3, p0, Lo7;->c:Ljava/lang/Object;
 
-    iput-object v0, p0, Lo7;->b:Ljava/lang/String;
+    check-cast v3, Lxkg;
+
+    invoke-interface {v3}, Lxkg;->getMsSinceBoot()J
+
+    move-result-wide v3
+
+    sub-long/2addr v3, v1
+
+    iget-object v1, p0, Lo7;->d:Ljava/io/Serializable;
+
+    check-cast v1, Ldw9;
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Ldw9;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

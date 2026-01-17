@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public final a:Lhc5;
+.field public final a:Ljc5;
 
-.field public final b:Lhc5;
+.field public final b:Ljc5;
 
 .field public final c:I
 
@@ -14,14 +14,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lhc5;Lhc5;II)V
+.method public constructor <init>(Ljc5;Ljc5;II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcc0;->a:Lhc5;
+    iput-object p1, p0, Lcc0;->a:Ljc5;
 
-    iput-object p2, p0, Lcc0;->b:Lhc5;
+    iput-object p2, p0, Lcc0;->b:Ljc5;
 
     iput p3, p0, Lcc0;->c:I
 
@@ -50,9 +50,9 @@
 
     check-cast p1, Lcc0;
 
-    iget-object v1, p0, Lcc0;->a:Lhc5;
+    iget-object v1, p0, Lcc0;->a:Ljc5;
 
-    iget-object v3, p1, Lcc0;->a:Lhc5;
+    iget-object v3, p1, Lcc0;->a:Ljc5;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -60,9 +60,9 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcc0;->b:Lhc5;
+    iget-object v1, p0, Lcc0;->b:Ljc5;
 
-    iget-object v3, p1, Lcc0;->b:Lhc5;
+    iget-object v3, p1, Lcc0;->b:Ljc5;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -91,7 +91,7 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lcc0;->a:Lhc5;
+    iget-object v0, p0, Lcc0;->a:Ljc5;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -103,7 +103,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lcc0;->b:Lhc5;
+    iget-object v2, p0, Lcc0;->b:Ljc5;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -135,7 +135,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcc0;->a:Lhc5;
+    iget-object v1, p0, Lcc0;->a:Ljc5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -143,7 +143,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcc0;->b:Lhc5;
+    iget-object v1, p0, Lcc0;->b:Ljc5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -163,7 +163,7 @@
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

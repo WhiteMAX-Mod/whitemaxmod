@@ -1,105 +1,62 @@
-.class public final enum Ltt3;
-.super Ljava/lang/Enum;
+.class public final synthetic Ltt3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum b:Ltt3;
-
-.field public static final enum c:Ltt3;
-
-.field public static final enum d:Ltt3;
-
-.field public static final synthetic o:[Ltt3;
+# interfaces
+.implements Landroid/text/InputFilter;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Ltt3;
-
-    const/4 v1, 0x0
-
-    sget v2, Lx3d;->global_text_positive:I
-
-    const-string v3, "SUCCESS"
-
-    invoke-direct {v0, v3, v1, v2}, Ltt3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Ltt3;->b:Ltt3;
-
-    new-instance v1, Ltt3;
-
-    const/4 v2, 0x1
-
-    sget v3, Lx3d;->global_text_negative:I
-
-    const-string v4, "ERROR"
-
-    invoke-direct {v1, v4, v2, v3}, Ltt3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Ltt3;->c:Ltt3;
-
-    new-instance v2, Ltt3;
-
-    const/4 v3, 0x2
-
-    sget v4, Lx3d;->global_text_primary:I
-
-    const-string v5, "NORMAL"
-
-    invoke-direct {v2, v5, v3, v4}, Ltt3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Ltt3;->d:Ltt3;
-
-    filled-new-array {v0, v1, v2}, [Ltt3;
-
-    move-result-object v0
-
-    sput-object v0, Ltt3;->o:[Ltt3;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p1, p0, Ltt3;->a:I
 
-    iput p3, p0, Ltt3;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ltt3;
-    .locals 1
 
-    const-class v0, Ltt3;
+# virtual methods
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p2, p0, Ltt3;->a:I
 
-    move-result-object p0
+    const-string p3, ""
 
-    check-cast p0, Ltt3;
+    packed-switch p2, :pswitch_data_0
 
-    return-object p0
-.end method
+    sget-object p1, Leo9;->U0:[Lz28;
 
-.method public static values()[Ltt3;
-    .locals 1
+    return-object p3
 
-    sget-object v0, Ltt3;->o:[Ltt3;
+    :pswitch_0
+    sget-object p2, Lut3;->b:Lftd;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Lftd;->a(Ljava/lang/CharSequence;)Z
 
-    move-result-object v0
+    move-result p2
 
-    check-cast v0, [Ltt3;
+    if-eqz p2, :cond_0
 
-    return-object v0
+    goto :goto_0
+
+    :cond_0
+    move-object p1, p3
+
+    :goto_0
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

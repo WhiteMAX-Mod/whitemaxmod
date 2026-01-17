@@ -1,39 +1,50 @@
 .class public final Ltb6;
-.super Ly0;
+.super Lkef;
 .source "SourceFile"
+
+# interfaces
+.implements Lwr6;
 
 
 # instance fields
-.field public final c:Z
+.field public final a:Lx0;
 
 
 # direct methods
-.method public constructor <init>(Ly0;)V
+.method public constructor <init>(Lx0;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ly0;-><init>(Lra6;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Ltb6;->c:Z
+    iput-object p1, p0, Ltb6;->a:Lx0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lzb6;)V
+.method public final d()Lpa6;
     .locals 2
+
+    new-instance v0, Lrb6;
+
+    iget-object v1, p0, Ltb6;->a:Lx0;
+
+    invoke-direct {v0, v1}, Lrb6;-><init>(Lx0;)V
+
+    return-object v0
+.end method
+
+.method public final m(Ldff;)V
+    .locals 1
 
     new-instance v0, Lsb6;
 
-    iget-boolean v1, p0, Ltb6;->c:Z
+    invoke-direct {v0, p1}, Lsb6;-><init>(Ldff;)V
 
-    invoke-direct {v0, p1, v1}, Lsb6;-><init>(Lozf;Z)V
+    iget-object p1, p0, Ltb6;->a:Lx0;
 
-    iget-object p1, p0, Ly0;->b:Lra6;
-
-    invoke-virtual {p1, v0}, Lra6;->c(Lzb6;)V
+    invoke-virtual {p1, v0}, Lpa6;->c(Lxb6;)V
 
     return-void
 .end method

@@ -1,34 +1,20 @@
-.class public final synthetic Lrrb;
+.class public final Lrrb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrpf;
+.implements Lqrb;
 
 
 # instance fields
-.field public final synthetic a:Lfdf;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lfdf;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrrb;->a:Lfdf;
-
-    return-void
-.end method
+.field public a:Z
 
 
 # virtual methods
-.method public final a([Lorg/webrtc/StatsReport;[Lorg/webrtc/StatsReport;[Lcu0;Ljava/util/Map;Lgu1;)V
+.method public final setDependOnOutsideView(Z)V
     .locals 0
 
-    iget-object p2, p0, Lrrb;->a:Lfdf;
-
-    invoke-virtual {p2, p1}, Lfdf;->a(Ljava/lang/Object;)V
+    iput-boolean p1, p0, Lrrb;->a:Z
 
     return-void
 .end method

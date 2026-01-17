@@ -1,119 +1,144 @@
 .class public final Lcd2;
-.super Lwgc;
+.super Lad2;
 .source "SourceFile"
-
-
-# static fields
-.field public static final c:Lcd2;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lcd2;
 
-    sget-object v1, Lkd2;->a:Lkd2;
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lwgc;-><init>(Lq38;)V
+    const/4 v2, 0x0
 
-    sput-object v0, Lcd2;->c:Lcd2;
+    invoke-direct {v0, v1, v2}, Lad2;-><init>(CC)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h(Ljava/lang/Object;)I
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, [C
+    instance-of v0, p1, Lcd2;
 
-    array-length p1, p1
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Lcd2;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lcd2;
+
+    invoke-virtual {v0}, Lcd2;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    check-cast p1, Lcd2;
+
+    iget-char v0, p1, Lad2;->a:C
+
+    iget-char v1, p0, Lad2;->a:C
+
+    if-ne v1, v0, :cond_2
+
+    iget-char v0, p0, Lad2;->b:C
+
+    iget-char p1, p1, Lad2;->b:C
+
+    if-ne v0, p1, :cond_2
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public final j(Lip3;ILjava/lang/Object;)V
+.method public final hashCode()I
     .locals 2
 
-    check-cast p3, Lzc2;
+    invoke-virtual {p0}, Lcd2;->isEmpty()Z
 
-    iget-object v0, p0, Lwgc;->b:Lvgc;
+    move-result v0
 
-    invoke-interface {p1, v0, p2}, Lip3;->g(Lvgc;I)C
+    if-eqz v0, :cond_0
 
-    move-result p1
+    const/4 v0, -0x1
 
-    invoke-static {p3}, Lugc;->c(Lugc;)V
-
-    iget-object p2, p3, Lzc2;->a:[C
-
-    iget v0, p3, Lzc2;->b:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p3, Lzc2;->b:I
-
-    aput-char p1, p2, v0
-
-    return-void
-.end method
-
-.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [C
-
-    new-instance v0, Lzc2;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v0, Lzc2;->a:[C
-
-    array-length p1, p1
-
-    iput p1, v0, Lzc2;->b:I
-
-    const/16 p1, 0xa
-
-    invoke-virtual {v0, p1}, Lzc2;->b(I)V
-
-    return-object v0
-.end method
-
-.method public final n()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [C
-
-    return-object v0
-.end method
-
-.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
-    .locals 3
-
-    check-cast p2, [C
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p3, :cond_0
-
-    aget-char v1, p2, v0
-
-    iget-object v2, p0, Lwgc;->b:Lvgc;
-
-    invoke-virtual {p1, v2, v0}, Lkotlinx/serialization/json/internal/b;->g(Lvoe;I)V
-
-    invoke-virtual {p1, v1}, Lkotlinx/serialization/json/internal/b;->e(C)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    return-void
+    iget-char v0, p0, Lad2;->a:C
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-char v1, p0, Lad2;->b:C
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 2
+
+    iget-char v0, p0, Lad2;->a:C
+
+    iget-char v1, p0, Lad2;->b:C
+
+    invoke-static {v0, v1}, Le1j;->b(II)I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-char v1, p0, Lad2;->a:C
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string v1, ".."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-char v1, p0, Lad2;->b:C
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

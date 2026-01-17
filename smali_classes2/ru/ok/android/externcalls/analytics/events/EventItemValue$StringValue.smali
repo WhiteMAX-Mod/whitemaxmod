@@ -102,7 +102,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -119,7 +119,7 @@
 .method public static final equals-impl0(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    invoke-static {p0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leg3;
+.implements Log3;
 
 
 # static fields

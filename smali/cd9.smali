@@ -1,16 +1,9 @@
-.class public final synthetic Lcd9;
+.class public final Lcd9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmu3;
 
+# instance fields
+.field public a:Landroid/os/Handler;
 
-# virtual methods
-.method public final run()Lwe8;
-    .locals 1
-
-    sget-object v0, Lfk7;->b:Lfk7;
-
-    return-object v0
-.end method
+.field public b:Ljava/lang/Object;

@@ -3,24 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx3e;
+.implements Lx4e;
 
 
 # instance fields
-.field public final synthetic a:Lx84;
+.field public final synthetic a:La94;
 
-.field public final synthetic b:Landroid/content/Intent;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx84;Landroid/content/Intent;)V
+.method public synthetic constructor <init>(La94;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lt84;->a:Lx84;
+    iput-object p1, p0, Lt84;->a:La94;
 
-    iput-object p2, p0, Lt84;->b:Landroid/content/Intent;
+    iput p2, p0, Lt84;->b:I
 
     return-void
 .end method
@@ -28,15 +28,17 @@
 
 # virtual methods
 .method public final a()V
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lt84;->b:Landroid/content/Intent;
+    iget-object v0, p0, Lt84;->a:La94;
 
-    iget-object v1, p0, Lt84;->a:Lx84;
+    iget-object v1, v0, La94;->router:Lw4e;
 
-    iget-object v1, v1, Lx84;->router:Lw3e;
+    iget-object v0, v0, La94;->instanceId:Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Lw3e;->U(Landroid/content/Intent;)V
+    iget v2, p0, Lt84;->b:I
+
+    invoke-virtual {v1, v2, v0}, Lw4e;->K(ILjava/lang/String;)V
 
     return-void
 .end method

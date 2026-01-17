@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lux3;
+.implements Lay3;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lux3;"
+        "Lay3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "it",
-        "Lv2h;",
+        "Lb3h;",
         "accept",
         "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
         "<anonymous>"

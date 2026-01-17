@@ -1,105 +1,161 @@
-.class public final enum Ltz6;
-.super Ljava/lang/Enum;
+.class public final synthetic Ltz6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum b:Ltz6;
-
-.field public static final enum c:Ltz6;
-
-.field public static final enum d:Ltz6;
-
-.field public static final synthetic o:[Ltz6;
+# interfaces
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Lqe5;
+
+.field public final synthetic b:Ls3e;
+
+.field public final synthetic c:Lzue;
+
+.field public final synthetic d:Lf7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lqe5;Ls3e;Lzue;Lf7;)V
+    .locals 0
 
-    new-instance v0, Ltz6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Ltz6;->a:Lqe5;
 
-    const-string v2, "int_data"
+    iput-object p2, p0, Ltz6;->b:Ls3e;
 
-    const-string v3, "INTERNAL_DATA"
+    iput-object p3, p0, Ltz6;->c:Lzue;
 
-    invoke-direct {v0, v3, v1, v2}, Ltz6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    iput-object p4, p0, Ltz6;->d:Lf7;
 
-    sput-object v0, Ltz6;->b:Ltz6;
+    return-void
+.end method
 
-    new-instance v1, Ltz6;
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 8
+
+    iget-object v0, p0, Ltz6;->a:Lqe5;
+
+    iget-object v1, p0, Ltz6;->b:Ls3e;
+
+    iget-object v3, p0, Ltz6;->c:Lzue;
+
+    iget-object v7, p0, Ltz6;->d:Lf7;
+
+    move-object v4, p1
+
+    check-cast v4, Lij5;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    sget-object v2, Lij5;->b:Lij5;
+
+    if-eq v4, v2, :cond_0
+
+    invoke-virtual {v4}, Lij5;->a()Ljdc;
+
+    move-result-object v2
+
+    iget-object v1, v1, Ls3e;->b:Ljava/lang/Object;
+
+    check-cast v1, [Lw5;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    aget-object v1, v1, v2
+
+    :goto_0
+    move-object v6, v1
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v1, Lfwa;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2, v2}, Lw5;-><init>(Ljdc;Lxoe;)V
+
+    goto :goto_0
+
+    :goto_1
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     const/4 v2, 0x1
 
-    const-string v3, "ext_data"
+    if-eq v1, v2, :cond_1
 
-    const-string v4, "EXTERNAL_DATA"
+    const/4 v2, 0x3
 
-    invoke-direct {v1, v4, v2, v3}, Ltz6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    if-eq v1, v2, :cond_1
 
-    sput-object v1, Ltz6;->c:Ltz6;
+    iget-object v1, v0, Lqe5;->b:Ljava/lang/Object;
 
-    new-instance v2, Ltz6;
+    check-cast v1, [Lqsb;
 
-    const/4 v3, 0x2
+    new-instance v2, Lqsb;
 
-    const-string v4, "src_data"
+    iget-object v0, v0, Lqe5;->a:Ljava/lang/Object;
 
-    const-string v5, "SRC"
+    check-cast v0, [Lsoe;
 
-    invoke-direct {v2, v5, v3, v4}, Ltz6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    aget-object v0, v0, p1
 
-    sput-object v2, Ltz6;->d:Ltz6;
+    invoke-direct {v2, v3, v4, v0, v6}, Lqsb;-><init>(Lzue;Lij5;Lsoe;Lw5;)V
 
-    filled-new-array {v0, v1, v2}, [Ltz6;
-
-    move-result-object v0
-
-    sput-object v0, Ltz6;->o:[Ltz6;
+    aput-object v2, v1, p1
 
     return-void
-.end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+    :cond_1
+    iget-object v1, v0, Lqe5;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    check-cast v1, [Lqsb;
 
-    iput-object p3, p0, Ltz6;->a:Ljava/lang/String;
+    new-instance v2, Lqsb;
+
+    iget-object v0, v0, Lqe5;->a:Ljava/lang/Object;
+
+    check-cast v0, [Lsoe;
+
+    aget-object v5, v0, p1
+
+    invoke-direct/range {v2 .. v7}, Lqsb;-><init>(Lzue;Lij5;Lsoe;Lw5;Lf7;)V
+
+    aput-object v2, v1, p1
 
     return-void
-.end method
 
-.method public static valueOf(Ljava/lang/String;)Ltz6;
-    .locals 1
+    :cond_2
+    iget-object v1, v0, Lqe5;->b:Ljava/lang/Object;
 
-    const-class v0, Ltz6;
+    check-cast v1, [Lqsb;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v2, Lip7;
 
-    move-result-object p0
+    iget-object v0, v0, Lqe5;->a:Ljava/lang/Object;
 
-    check-cast p0, Ltz6;
+    check-cast v0, [Lsoe;
 
-    return-object p0
-.end method
+    aget-object v0, v0, p1
 
-.method public static values()[Ltz6;
-    .locals 1
+    sget-object v4, Lij5;->a:Lij5;
 
-    sget-object v0, Ltz6;->o:[Ltz6;
+    invoke-direct {v2, v3, v4, v0, v6}, Lqsb;-><init>(Lzue;Lij5;Lsoe;Lw5;)V
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    aput-object v2, v1, p1
 
-    move-result-object v0
-
-    check-cast v0, [Ltz6;
-
-    return-object v0
+    return-void
 .end method

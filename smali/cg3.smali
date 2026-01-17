@@ -1,76 +1,58 @@
-.class public abstract Lcg3;
+.class public final Lcg3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldg3;
 
-# static fields
-.field public static final a:Ljava/util/logging/Logger;
+
+# instance fields
+.field public final a:Landroid/util/CloseGuard;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    const-class v0, Lcg3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    new-instance v0, Landroid/util/CloseGuard;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/util/CloseGuard;-><init>()V
 
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
-
-    move-result-object v0
-
-    sput-object v0, Lcg3;->a:Ljava/util/logging/Logger;
+    iput-object v0, p0, Lcg3;->a:Landroid/util/CloseGuard;
 
     return-void
 .end method
 
-.method public static a(Ljava/io/Closeable;)V
-    .locals 3
 
-    if-nez p0, :cond_0
+# virtual methods
+.method public final close()V
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lcg3;->a:Landroid/util/CloseGuard;
 
-    :cond_0
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
-
-    const-string v1, "IOException thrown while closing Closeable."
-
-    sget-object v2, Lcg3;->a:Ljava/util/logging/Logger;
-
-    invoke-virtual {v2, v0, v1, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Landroid/util/CloseGuard;->close()V
 
     return-void
 .end method
 
-.method public static b(Ljava/io/InputStream;)V
+.method public final e(Ljava/lang/String;)V
     .locals 1
 
-    :try_start_0
-    invoke-static {p0}, Lcg3;->a(Ljava/io/Closeable;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lcg3;->a:Landroid/util/CloseGuard;
+
+    invoke-virtual {v0, p1}, Landroid/util/CloseGuard;->open(Ljava/lang/String;)V
 
     return-void
+.end method
 
-    :catch_0
-    move-exception p0
+.method public final g()V
+    .locals 1
 
-    new-instance v0, Ljava/lang/AssertionError;
+    iget-object v0, p0, Lcg3;->a:Landroid/util/CloseGuard;
 
-    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Landroid/util/CloseGuard;->warnIfOpen()V
 
-    throw v0
+    return-void
 .end method

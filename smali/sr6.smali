@@ -3,18 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls2g;
+.implements Li6;
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+.method public final run()V
+    .locals 0
 
-    new-instance v0, Ljava/util/ArrayList;
+    return-void
+.end method
 
-    const/16 v1, 0x10
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    const-string v0, "EmptyAction"
 
     return-object v0
 .end method

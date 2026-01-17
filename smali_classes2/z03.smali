@@ -1,162 +1,110 @@
 .class public final Lz03;
-.super Lum;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lucg;
-.implements Lgzb;
+.implements Lbr6;
 
 
 # instance fields
-.field public final d:J
+.field public final synthetic X:Le13;
 
-.field public final o:Z
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(JJZ)V
+.method public constructor <init>(Le13;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lum;-><init>(J)V
+    iput-object p1, p0, Lz03;->X:Le13;
 
-    iput-wide p3, p0, Lz03;->d:J
+    const/4 p1, 0x2
 
-    iput-boolean p5, p0, Lz03;->o:Z
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final d()V
-    .locals 3
-
-    invoke-virtual {p0}, Lum;->r()Lkeg;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lum;->a:J
-
-    invoke-virtual {v0, v1, v2}, Lkeg;->d(J)V
-
-    return-void
-.end method
-
-.method public final e(Lxbg;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lz03;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lz03;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lz03;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final f()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;-><init>()V
-
-    iget-wide v1, p0, Lum;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->requestId:J
-
-    iget-wide v1, p0, Lz03;->d:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->chatServerId:J
-
-    iget-boolean v1, p0, Lz03;->o:Z
-
-    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->subscribe:Z
-
-    invoke-static {v0}, Lsp9;->toByteArray(Lsp9;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final g()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const v0, 0xf4240
+    new-instance p1, Lz03;
 
-    return v0
+    iget-object v0, p0, Lz03;->X:Le13;
+
+    invoke-direct {p1, v0, p2}, Lz03;-><init>(Le13;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final getId()J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-wide v0, p0, Lum;->a:J
+    iget v0, p0, Lz03;->o:I
 
-    return-wide v0
-.end method
+    const/4 v1, 0x1
 
-.method public final getType()Lhzb;
-    .locals 1
+    if-eqz v0, :cond_1
 
-    sget-object v0, Lhzb;->C0:Lhzb;
+    if-ne v0, v1, :cond_0
 
-    return-object v0
-.end method
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.method public final h()Lk2;
-    .locals 4
-
-    new-instance v0, Lmj2;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v1, v2}, Lmj2;-><init>(Lmob;I)V
-
-    const-string v1, "chatId"
-
-    iget-wide v2, p0, Lz03;->d:J
-
-    invoke-virtual {v0, v2, v3, v1}, Lk2;->v(JLjava/lang/String;)V
-
-    const-string v1, "subscribe"
-
-    iget-boolean v2, p0, Lz03;->o:Z
-
-    invoke-virtual {v0, v1, v2}, Lk2;->j(Ljava/lang/String;Z)V
-
-    return-object v0
-.end method
-
-.method public final l(Lcbg;)V
-    .locals 4
-
-    invoke-virtual {p0}, Lum;->j()Ljy0;
-
-    move-result-object v0
-
-    new-instance v1, Ljk0;
-
-    iget-wide v2, p0, Lum;->a:J
-
-    invoke-direct {v1, v2, v3, p1}, Ljk0;-><init>(JLcbg;)V
-
-    invoke-virtual {v0, v1}, Ljy0;->c(Ljava/lang/Object;)V
-
-    iget-object p1, p1, Lcbg;->b:Ljava/lang/String;
-
-    invoke-static {p1}, Lcoj;->a(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lz03;->d()V
+    goto :goto_0
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lz03;->o:I
+
+    iget-object p1, p0, Lz03;->X:Le13;
+
+    invoke-virtual {p1, p0}, Le13;->c(Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

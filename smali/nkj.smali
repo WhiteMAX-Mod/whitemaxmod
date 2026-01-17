@@ -3,2078 +3,454 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static a:Ljava/lang/String;
+
+.field public static b:I
+
+
 # direct methods
-.method public static a()Ljava/util/HashMap;
-    .locals 7
+.method public static final a(Ljava/util/Collection;)Landroid/os/Bundle;
+    .locals 10
 
-    new-instance v0, Ljava/util/HashMap;
+    new-instance v0, Landroid/os/Bundle;
 
-    const/16 v1, 0x11e
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
 
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
+    move-result v1
 
-    new-instance v1, Ljava/util/ArrayList;
+    mul-int/lit8 v1, v1, 0x5
 
-    const/16 v2, 0x19
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v0, v1}, Landroid/os/Bundle;-><init>(I)V
 
-    const-string v2, "US"
+    const-string v1, "size"
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
 
-    const-string v2, "AG"
+    move-result v2
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    const-string v2, "AI"
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v1
 
-    const-string v2, "AS"
+    new-array v1, v1, [I
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
 
-    const-string v2, "BB"
+    move-result v2
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-array v2, v2, [Ljava/lang/Integer;
 
-    const-string v2, "BM"
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v3
 
-    const-string v2, "BS"
+    new-array v3, v3, [Ljava/lang/Integer;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
 
-    const-string v2, "CA"
+    move-result v4
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-array v4, v4, [Ljava/lang/Integer;
 
-    const-string v2, "DM"
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object p0
 
-    const-string v2, "DO"
+    const/4 v5, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v2, "GD"
+    move-result v6
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-eqz v6, :cond_1
 
-    const-string v2, "GU"
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v6
 
-    const-string v2, "JM"
+    add-int/lit8 v7, v5, 0x1
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-ltz v5, :cond_0
 
-    const-string v2, "KN"
+    check-cast v6, La84;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget v8, v6, La84;->a:I
 
-    const-string v2, "KY"
+    aput v8, v1, v5
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v8, "text_"
 
-    const-string v2, "LC"
+    invoke-static {v5, v8}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v8
 
-    const-string v2, "MP"
+    iget-object v9, v6, La84;->b:Lqhg;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v8, v9}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    const-string v2, "MS"
+    iget-object v8, v6, La84;->c:Ljava/lang/Integer;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    aput-object v8, v2, v5
 
-    const-string v2, "PR"
+    iget-object v8, v6, La84;->d:Ljava/lang/Integer;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    aput-object v8, v3, v5
 
-    const-string v2, "SX"
+    iget-object v6, v6, La84;->e:Ljava/lang/Integer;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    aput-object v6, v4, v5
 
-    const-string v2, "TC"
+    move v5, v7
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto :goto_0
 
-    const-string v2, "TT"
+    :cond_0
+    invoke-static {}, Lqi3;->m()V
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 p0, 0x0
 
-    const-string v2, "VC"
+    throw p0
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :cond_1
+    const-string p0, "ids"
 
-    const-string v2, "VG"
+    invoke-virtual {v0, p0, v1}, Landroid/os/BaseBundle;->putIntArray(Ljava/lang/String;[I)V
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string p0, "textColors"
 
-    const-string v2, "VI"
+    invoke-virtual {v0, p0, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string p0, "icons"
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, p0, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string p0, "iconColors"
 
-    move-result-object v3
-
-    invoke-virtual {v0, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "RU"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v4, "KZ"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/4 v4, 0x7
-
-    const-string v5, "EG"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x14
-
-    const-string v5, "ZA"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1b
-
-    const-string v5, "GR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1e
-
-    const-string v5, "NL"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1f
-
-    const-string v5, "BE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x20
-
-    const-string v5, "FR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x21
-
-    const-string v5, "ES"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x22
-
-    const-string v5, "HU"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x24
-
-    const-string v5, "IT"
-
-    invoke-static {v4, v0, v1, v3, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "VA"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x27
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "RO"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x28
-
-    const-string v5, "CH"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x29
-
-    const-string v5, "AT"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/4 v4, 0x4
-
-    const-string v5, "GB"
-
-    const/16 v6, 0x2b
-
-    invoke-static {v6, v0, v1, v4, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "GG"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v4, "IM"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v4, "JE"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x2c
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "DK"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x2d
-
-    const-string v5, "SE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x2e
-
-    const-string v5, "NO"
-
-    invoke-static {v4, v0, v1, v3, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "SJ"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x2f
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "PL"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x30
-
-    const-string v5, "DE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x31
-
-    const-string v5, "PE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x33
-
-    const-string v5, "MX"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x34
-
-    const-string v5, "CU"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x35
-
-    const-string v5, "AR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x36
-
-    const-string v5, "BR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x37
-
-    const-string v5, "CL"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x38
-
-    const-string v5, "CO"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x39
-
-    const-string v5, "VE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x3a
-
-    const-string v5, "MY"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "AU"
-
-    const/16 v5, 0x3c
-
-    const/4 v6, 0x3
-
-    invoke-static {v5, v0, v1, v6, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "CC"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v4, "CX"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x3d
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "ID"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x3e
-
-    const-string v5, "PH"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x3f
-
-    const-string v5, "NZ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x40
-
-    const-string v5, "SG"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x41
-
-    const-string v5, "TH"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x42
-
-    const-string v5, "JP"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x51
-
-    const-string v5, "KR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x52
-
-    const-string v5, "VN"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x54
-
-    const-string v5, "CN"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x56
-
-    const-string v5, "TR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x5a
-
-    const-string v5, "IN"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x5b
-
-    const-string v5, "PK"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x5c
-
-    const-string v5, "AF"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x5d
-
-    const-string v5, "LK"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x5e
-
-    const-string v5, "MM"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x5f
-
-    const-string v5, "IR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x62
-
-    const-string v5, "SS"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xd3
-
-    const-string v5, "MA"
-
-    invoke-static {v4, v0, v1, v3, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "EH"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0xd4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "DZ"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0xd5
-
-    const-string v5, "TN"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xd8
-
-    const-string v5, "LY"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xda
-
-    const-string v5, "GM"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xdc
-
-    const-string v5, "SN"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xdd
-
-    const-string v5, "MR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xde
-
-    const-string v5, "ML"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xdf
-
-    const-string v5, "GN"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe0
-
-    const-string v5, "CI"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe1
-
-    const-string v5, "BF"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe2
-
-    const-string v5, "NE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe3
-
-    const-string v5, "TG"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe4
-
-    const-string v5, "BJ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe5
-
-    const-string v5, "MU"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe6
-
-    const-string v5, "LR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe7
-
-    const-string v5, "SL"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe8
-
-    const-string v5, "GH"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xe9
-
-    const-string v5, "NG"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xea
-
-    const-string v5, "TD"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xeb
-
-    const-string v5, "CF"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xec
-
-    const-string v5, "CM"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xed
-
-    const-string v5, "CV"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xee
-
-    const-string v5, "ST"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xef
-
-    const-string v5, "GQ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf0
-
-    const-string v5, "GA"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf1
-
-    const-string v5, "CG"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf2
-
-    const-string v5, "CD"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf3
-
-    const-string v5, "AO"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf4
-
-    const-string v5, "GW"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf5
-
-    const-string v5, "IO"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf6
-
-    const-string v5, "AC"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf7
-
-    const-string v5, "SC"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf8
-
-    const-string v5, "SD"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xf9
-
-    const-string v5, "RW"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xfa
-
-    const-string v5, "ET"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xfb
-
-    const-string v5, "SO"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xfc
-
-    const-string v5, "DJ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xfd
-
-    const-string v5, "KE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xfe
-
-    const-string v5, "TZ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0xff
-
-    const-string v5, "UG"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x100
-
-    const-string v5, "BI"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x101
-
-    const-string v5, "MZ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x102
-
-    const-string v5, "ZM"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x104
-
-    const-string v5, "MG"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x105
-
-    const-string v5, "RE"
-
-    invoke-static {v4, v0, v1, v3, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "YT"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x106
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "ZW"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x107
-
-    const-string v5, "NA"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x108
-
-    const-string v5, "MW"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x109
-
-    const-string v5, "LS"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x10a
-
-    const-string v5, "BW"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x10b
-
-    const-string v5, "SZ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x10c
-
-    const-string v5, "KM"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x10d
-
-    const-string v5, "SH"
-
-    invoke-static {v4, v0, v1, v3, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "TA"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x122
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "ER"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x123
-
-    const-string v5, "AW"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x129
-
-    const-string v5, "FO"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x12a
-
-    const-string v5, "GL"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x12b
-
-    const-string v5, "GI"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x15e
-
-    const-string v5, "PT"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x15f
-
-    const-string v5, "LU"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x160
-
-    const-string v5, "IE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x161
-
-    const-string v5, "IS"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x162
-
-    const-string v5, "AL"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x163
-
-    const-string v5, "MT"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x164
-
-    const-string v5, "CY"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x165
-
-    const-string v5, "FI"
-
-    invoke-static {v4, v0, v1, v3, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "AX"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x166
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "BG"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x167
-
-    const-string v5, "LT"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x172
-
-    const-string v5, "LV"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x173
-
-    const-string v5, "EE"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x174
-
-    const-string v5, "MD"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x175
-
-    const-string v5, "AM"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x176
-
-    const-string v5, "BY"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x177
-
-    const-string v5, "AD"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x178
-
-    const-string v5, "MC"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x179
-
-    const-string v5, "SM"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x17a
-
-    const-string v5, "UA"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x17c
-
-    const-string v5, "RS"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x17d
-
-    const-string v5, "ME"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x17e
-
-    const-string v5, "XK"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x17f
-
-    const-string v5, "HR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x181
-
-    const-string v5, "SI"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x182
-
-    const-string v5, "BA"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x183
-
-    const-string v5, "MK"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x185
-
-    const-string v5, "CZ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1a4
-
-    const-string v5, "SK"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1a5
-
-    const-string v5, "LI"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1a7
-
-    const-string v5, "FK"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1f4
-
-    const-string v5, "BZ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1f5
-
-    const-string v5, "GT"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1f6
-
-    const-string v5, "SV"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1f7
-
-    const-string v5, "HN"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1f8
-
-    const-string v5, "NI"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1f9
-
-    const-string v5, "CR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1fa
-
-    const-string v5, "PA"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1fb
-
-    const-string v5, "PM"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1fc
-
-    const-string v5, "HT"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x1fd
-
-    const-string v5, "GP"
-
-    invoke-static {v4, v0, v1, v6, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v4, "BL"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v4, "MF"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x24e
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v4, "BO"
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v4, 0x24f
-
-    const-string v5, "GY"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x250
-
-    const-string v5, "EC"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x251
-
-    const-string v5, "GF"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x252
-
-    const-string v5, "PY"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x253
-
-    const-string v5, "MQ"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x254
-
-    const-string v5, "SR"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x255
-
-    const-string v5, "UY"
-
-    invoke-static {v4, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v4, 0x256
-
-    const-string v5, "CW"
-
-    invoke-static {v4, v0, v1, v3, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const-string v3, "BQ"
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v3, 0x257
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const-string v3, "TL"
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/16 v3, 0x29e
-
-    const-string v4, "NF"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a0
-
-    const-string v4, "BN"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a1
-
-    const-string v4, "NR"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a2
-
-    const-string v4, "PG"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a3
-
-    const-string v4, "TO"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a4
-
-    const-string v4, "SB"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a5
-
-    const-string v4, "VU"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a6
-
-    const-string v4, "FJ"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a7
-
-    const-string v4, "PW"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a8
-
-    const-string v4, "WF"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2a9
-
-    const-string v4, "CK"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2aa
-
-    const-string v4, "NU"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2ab
-
-    const-string v4, "WS"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2ad
-
-    const-string v4, "KI"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2ae
-
-    const-string v4, "NC"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2af
-
-    const-string v4, "TV"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2b0
-
-    const-string v4, "PF"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2b1
-
-    const-string v4, "TK"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2b2
-
-    const-string v4, "FM"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2b3
-
-    const-string v4, "MH"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x2b4
-
-    const-string v4, "001"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x320
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x328
-
-    const-string v5, "KP"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x352
-
-    const-string v5, "HK"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x354
-
-    const-string v5, "MO"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x355
-
-    const-string v5, "KH"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x357
-
-    const-string v5, "LA"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x358
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x366
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x36e
-
-    const-string v5, "BD"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x370
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x371
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x372
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x373
-
-    const-string v5, "TW"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x376
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x378
-
-    const-string v5, "MV"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c0
-
-    const-string v5, "LB"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c1
-
-    const-string v5, "JO"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c2
-
-    const-string v5, "SY"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c3
-
-    const-string v5, "IQ"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c4
-
-    const-string v5, "KW"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c5
-
-    const-string v5, "SA"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c6
-
-    const-string v5, "YE"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c7
-
-    const-string v5, "OM"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3c8
-
-    const-string v5, "PS"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3ca
-
-    const-string v5, "AE"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3cb
-
-    const-string v5, "IL"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3cc
-
-    const-string v5, "BH"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3cd
-
-    const-string v5, "QA"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3ce
-
-    const-string v5, "BT"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3cf
-
-    const-string v5, "MN"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3d0
-
-    const-string v5, "NP"
-
-    invoke-static {v3, v0, v1, v2, v5}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3d1
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3d3
-
-    const-string v4, "TJ"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3e0
-
-    const-string v4, "TM"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3e1
-
-    const-string v4, "AZ"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3e2
-
-    const-string v4, "GE"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3e3
-
-    const-string v4, "KG"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v3, 0x3e4
-
-    const-string v4, "UZ"
-
-    invoke-static {v3, v0, v1, v2, v4}, Lqi3;->c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    const/16 v2, 0x3e6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v4}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
     return-object v0
 .end method
 
-.method public static b(Landroid/content/Context;)V
-    .locals 4
+.method public static final b(Landroid/os/Bundle;)Ljava/util/List;
+    .locals 14
 
-    invoke-static {p0}, Lokj;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    :try_start_0
+    const-string v0, "size"
 
-    move-result-object v0
-
-    const-string v1, "proxy_notification_initialized"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    const-string v1, "ids"
 
-    goto :goto_1
-
-    :cond_0
-    const-string v0, "firebase_messaging_notification_delegation_enabled"
-
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0, v1}, Landroid/os/BaseBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/16 v3, 0x80
-
-    invoke-virtual {v2, v1, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v1
+    const-string v2, "Required value was null."
 
     if-eqz v1, :cond_1
 
-    iget-object v2, v1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+    :try_start_1
+    const-string v3, "textColors"
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p0, v3}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
-    invoke-virtual {v2, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+    move-result-object v3
 
-    move-result v2
+    check-cast v3, [Ljava/lang/Integer;
 
-    if-eqz v2, :cond_1
+    const-string v4, "icons"
 
-    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+    invoke-virtual {p0, v4}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
-    invoke-virtual {v1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    move-result-object v4
 
-    move-result v0
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast v4, [Ljava/lang/Integer;
+
+    const-string v5, "iconColors"
+
+    invoke-virtual {p0, v5}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+
+    move-result-object v5
+
+    check-cast v5, [Ljava/lang/Integer;
+
+    const/4 v6, 0x0
+
+    invoke-static {v6, v0}, Lamj;->i(II)Lus7;
+
+    move-result-object v0
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    const/16 v7, 0xa
+
+    invoke-static {v0, v7}, Lri3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v7
+
+    invoke-direct {v6, v7}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0}, Lss7;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    move-object v7, v0
+
+    check-cast v7, Lts7;
+
+    iget-boolean v7, v7, Lts7;->c:Z
+
+    if-eqz v7, :cond_2
+
+    move-object v7, v0
+
+    check-cast v7, Lts7;
+
+    invoke-virtual {v7}, Lts7;->nextInt()I
+
+    move-result v7
+
+    new-instance v8, La84;
+
+    aget v9, v1, v7
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "text_"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {p0, v10}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v10
+
+    if-eqz v10, :cond_0
+
+    check-cast v10, Lqhg;
+
+    aget-object v11, v3, v7
+
+    aget-object v12, v4, v7
+
+    aget-object v13, v5, v7
+
+    invoke-direct/range {v8 .. v13}, La84;-><init>(ILqhg;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+
+    invoke-virtual {v6, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :catch_0
-    :cond_1
-    const/4 v0, 0x1
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    :goto_0
+    invoke-direct {p0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v6, Lszd;
+
+    invoke-direct {v6, p0}, Lszd;-><init>(Ljava/lang/Throwable;)V
+
+    :cond_2
+    invoke-static {v6}, Luzd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_3
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :cond_3
+    instance-of p0, v6, Lszd;
+
+    if-eqz p0, :cond_4
+
+    const/4 v6, 0x0
+
+    :cond_4
+    check-cast v6, Ljava/util/List;
+
+    if-nez v6, :cond_5
+
+    sget-object v6, Ldh5;->a:Ldh5;
+
+    :cond_5
+    return-object v6
+.end method
+
+.method public static c()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "/proc/"
+
+    sget-object v1, Lnkj;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_3
+
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v2, 0x1d
+    const/16 v2, 0x1c
 
-    if-lt v1, v2, :cond_2
+    if-lt v1, v2, :cond_0
 
-    new-instance v1, Lydg;
+    invoke-static {}, Ltfc;->m()Ljava/lang/String;
 
-    invoke-direct {v1}, Lydg;-><init>()V
+    move-result-object v0
 
-    new-instance v2, Lcj;
+    sput-object v0, Lnkj;->a:Ljava/lang/String;
 
-    const/4 v3, 0x3
+    goto :goto_3
 
-    invoke-direct {v2, p0, v0, v1, v3}, Lcj;-><init>(Ljava/lang/Object;ZLjava/lang/Object;I)V
+    :cond_0
+    sget v1, Lnkj;->b:I
 
-    invoke-virtual {v2}, Lcj;->run()V
+    if-nez v1, :cond_1
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v1
+
+    sput v1, Lnkj;->b:I
+
+    :cond_1
+    const/4 v2, 0x0
+
+    if-gtz v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    :try_start_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "/cmdline"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    new-instance v3, Ljava/io/BufferedReader;
+
+    new-instance v4, Ljava/io/FileReader;
+
+    invoke-direct {v4, v0}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v3, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    :try_start_2
+    invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :try_start_3
+    invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ldkj;->g(Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v2
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :catch_0
+    :goto_0
+    invoke-static {v3}, Lcti;->a(Ljava/io/Closeable;)V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v3
 
     goto :goto_1
 
-    :cond_2
-    const/4 p0, 0x0
+    :catchall_1
+    move-exception v0
 
-    invoke-static {p0}, Lwki;->k(Ljava/lang/Object;)Ljpj;
+    goto :goto_1
+
+    :catchall_2
+    move-exception v0
+
+    :try_start_4
+    invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+
+    throw v0
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     :goto_1
-    return-void
+    invoke-static {v2}, Lcti;->a(Ljava/io/Closeable;)V
+
+    throw v0
+
+    :catch_1
+    move-object v3, v2
+
+    goto :goto_0
+
+    :goto_2
+    sput-object v2, Lnkj;->a:Ljava/lang/String;
+
+    :cond_3
+    :goto_3
+    sget-object v0, Lnkj;->a:Ljava/lang/String;
+
+    return-object v0
 .end method

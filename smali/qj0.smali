@@ -4,10 +4,10 @@
 
 
 # virtual methods
-.method public final f(Lp0;)V
+.method public final f(Lo0;)V
     .locals 1
 
-    invoke-virtual {p1}, Lp0;->g()Z
+    invoke-virtual {p1}, Lo0;->g()Z
 
     move-result v0
 
@@ -16,15 +16,15 @@
     return-void
 
     :cond_0
-    invoke-interface {p1}, Lpi4;->b()Ljava/lang/Object;
+    invoke-interface {p1}, Lpi4;->a()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lag3;
+    check-cast p1, Lkg3;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lag3;->n0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lkg3;->p0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -32,7 +32,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lag3;->n0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lkg3;->p0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -53,14 +53,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p1}, Lag3;->c0(Lag3;)V
+    invoke-static {p1}, Lkg3;->f0(Lkg3;)V
 
     return-void
 
     :catchall_0
     move-exception v0
 
-    invoke-static {p1}, Lag3;->c0(Lag3;)V
+    invoke-static {p1}, Lkg3;->f0(Lkg3;)V
 
     throw v0
 .end method

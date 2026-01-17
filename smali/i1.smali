@@ -1,65 +1,205 @@
 .class public final Li1;
-.super Ljava/lang/Object;
+.super Lw2j;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final a:Loue;
-
-.field public final b:Lwe8;
-
-
-# direct methods
-.method public constructor <init>(Loue;Lwe8;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Li1;->a:Loue;
-
-    iput-object p2, p0, Li1;->b:Lwe8;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Lt1;Lc1;Lc1;)Z
+    .locals 1
 
-    iget-object v0, p0, Li1;->a:Loue;
+    monitor-enter p1
 
-    iget-object v0, v0, Lv1;->a:Ljava/lang/Object;
+    :try_start_0
+    iget-object v0, p1, Lt1;->b:Lc1;
 
-    if-eq v0, p0, :cond_0
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lt1;->b:Lc1;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Li1;->b:Lwe8;
+    const/4 p2, 0x0
 
-    invoke-static {v0}, Lv1;->f(Lwe8;)Ljava/lang/Object;
+    monitor-exit p1
 
-    move-result-object v0
+    return p2
 
-    sget-object v1, Lv1;->X:Lg2j;
-
-    iget-object v2, p0, Li1;->a:Loue;
-
-    invoke-virtual {v1, v2, p0, v0}, Lg2j;->b(Lv1;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Li1;->a:Loue;
-
-    invoke-static {v0}, Lv1;->b(Lv1;)V
-
-    :cond_1
     :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final b(Lt1;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Lt1;->a:Ljava/lang/Object;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lt1;->a:Ljava/lang/Object;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final c(Lt1;Lr1;Lr1;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Lt1;->c:Lr1;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lt1;->c:Lr1;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final d(Lt1;)Lc1;
+    .locals 2
+
+    sget-object v0, Lc1;->d:Lc1;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v1, p1, Lt1;->b:Lc1;
+
+    if-eq v1, v0, :cond_0
+
+    iput-object v0, p1, Lt1;->b:Lc1;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p1
+
+    return-object v1
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public final e(Lt1;)Lr1;
+    .locals 2
+
+    sget-object v0, Lr1;->c:Lr1;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v1, p1, Lt1;->c:Lr1;
+
+    if-eq v1, v0, :cond_0
+
+    iput-object v0, p1, Lt1;->c:Lr1;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p1
+
+    return-object v1
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public final j(Lr1;Lr1;)V
+    .locals 0
+
+    iput-object p2, p1, Lr1;->b:Lr1;
+
+    return-void
+.end method
+
+.method public final k(Lr1;Ljava/lang/Thread;)V
+    .locals 0
+
+    iput-object p2, p1, Lr1;->a:Ljava/lang/Thread;
+
     return-void
 .end method

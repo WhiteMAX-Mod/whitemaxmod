@@ -192,11 +192,11 @@
 
     .line 15
     :try_start_0
-    new-instance v2, Lxd;
+    new-instance v2, Lud;
 
     const/4 v3, 0x5
 
-    invoke-direct {v2, p1, v3, v0}, Lxd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p1, v3, v0}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -263,7 +263,7 @@
 .method public handleReferrerAttribution(Ljava/lang/String;)V
     .locals 2
 
-    const-string v0, "https://0.0.0.0/?"
+    const-string v0, "https://tracker-api.vk-analytics.ru/?"
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 

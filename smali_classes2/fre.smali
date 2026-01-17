@@ -1,23 +1,11 @@
-.class public final Lfre;
-.super Ljre;
+.class public interface abstract Lfre;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public h:Lpj8;
-
-.field public i:F
-
-.field public j:J
-
-
 # virtual methods
-.method public final a()Lkre;
-    .locals 1
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    new-instance v0, Lgre;
-
-    invoke-direct {v0, p0}, Lgre;-><init>(Lfre;)V
-
-    return-object v0
+.method public abstract b(Ljava/util/List;Ljava/util/List;)V
 .end method

@@ -50,7 +50,7 @@
 
     iget-object p2, p0, Lcom/google/android/material/datepicker/a;->b:Lcom/google/android/material/datepicker/c;
 
-    iget-object p2, p2, Lcom/google/android/material/datepicker/c;->o:Ls2e;
+    iget-object p2, p2, Lcom/google/android/material/datepicker/c;->o:Lig5;
 
     invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->a()Li8a;
 
@@ -64,15 +64,15 @@
 
     move-result-wide p3
 
-    iget-object p1, p2, Ls2e;->b:Ljava/lang/Object;
+    iget-object p1, p2, Lig5;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    iget-object p1, p1, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:La11;
+    iget-object p1, p1, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
 
-    iget-object p1, p1, La11;->c:Luj4;
+    iget-object p1, p1, Lu01;->c:Lvj4;
 
-    iget-wide p1, p1, Luj4;->a:J
+    iget-wide p1, p1, Lvj4;->a:J
 
     cmp-long p1, p3, p1
 

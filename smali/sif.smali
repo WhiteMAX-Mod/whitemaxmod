@@ -1,31 +1,17 @@
-.class public final Lsif;
+.class public interface abstract Lsif;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# virtual methods
+.method public abstract a(Ljavax/net/ssl/SSLSocket;)Z
+.end method
 
-.field public final b:Ljava/util/ArrayList;
+.method public abstract b()Z
+.end method
 
+.method public abstract c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lsif;->a:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lsif;->b:Ljava/util/ArrayList;
-
-    return-void
+.method public abstract d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
 .end method

@@ -1,118 +1,47 @@
-.class public final synthetic Lxq3;
-.super Ljava/lang/Object;
+.class public final Lxq3;
+.super Lxk0;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/io/Serializable;
-
-
-# direct methods
-.method public synthetic constructor <init>(ILjava/io/Serializable;)V
+# virtual methods
+.method public final c(Lvc9;Lsm4;J)Lh69;
     .locals 0
 
-    iput p1, p0, Lxq3;->a:I
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iput-object p2, p0, Lxq3;->b:Ljava/io/Serializable;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    throw p1
+.end method
+
+.method public final i()Ld49;
+    .locals 1
+
+    sget-object v0, Ler3;->u:Ld49;
+
+    return-object v0
+.end method
+
+.method public final k()V
+    .locals 0
 
     return-void
 .end method
 
+.method public final m(Lysg;)V
+    .locals 0
 
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 4
+    return-void
+.end method
 
-    iget v0, p0, Lxq3;->a:I
+.method public final o(Lh69;)V
+    .locals 0
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
+.method public final q()V
+    .locals 0
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v1, Ljava/lang/Thread;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "tracer-io-"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/Thread;
-
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-object v1
-
-    :pswitch_1
-    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/Thread;
-
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-object v1
-
-    :pswitch_2
-    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/Thread;
-
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-object v1
-
-    :pswitch_3
-    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/Thread;
-
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    const/16 p1, 0xa
-
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

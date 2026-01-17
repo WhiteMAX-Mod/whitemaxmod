@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldr6;
+.implements Li6;
 
 
 # instance fields
@@ -11,18 +11,18 @@
 
 .field public final synthetic b:J
 
-.field public final synthetic c:J
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(IJJ)V
+.method public synthetic constructor <init>(IJZ)V
     .locals 0
 
     iput p1, p0, Lov5;->a:I
 
     iput-wide p2, p0, Lov5;->b:J
 
-    iput-wide p4, p0, Lov5;->c:J
+    iput-boolean p4, p0, Lov5;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,106 +31,62 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final run()V
+    .locals 4
 
     iget v0, p0, Lov5;->a:I
 
+    iget-boolean v1, p0, Lov5;->c:Z
+
+    iget-wide v2, p0, Lov5;->b:J
+
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-wide/16 v0, 0x0
+    move-result-object v0
 
-    iget-wide v2, p0, Lov5;->b:J
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    cmp-long v0, v2, v0
+    move-result-object v1
 
-    if-lez v0, :cond_0
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result-object v0
 
-    move-result-wide v0
+    const-string v1, "qw5"
 
-    iget-wide v4, p0, Lov5;->c:J
+    const-string v2, "markAsFavorite: complete for stickerId=%d favorite=%b"
 
-    sub-long/2addr v0, v4
+    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    new-instance v0, Lru/ok/tamtam/rx/TamTamObservables$TamObservableException;
-
-    const-string v1, "timeout reached"
-
-    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {v0}, Lcxa;->f(Ljava/lang/Throwable;)Lfo3;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Lcxa;->f(Ljava/lang/Throwable;)Lfo3;
-
-    move-result-object p1
-
-    :goto_0
-    return-object p1
+    return-void
 
     :pswitch_0
-    move-object v6, p1
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast v6, Liw5;
+    move-result-object v0
 
-    new-instance v0, Lez3;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v1, 0x1
+    move-result-object v1
 
-    iget-wide v2, p0, Lov5;->b:J
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    iget-wide v4, p0, Lov5;->c:J
+    move-result-object v0
 
-    invoke-direct/range {v0 .. v6}, Lez3;-><init>(IJJLjava/lang/Object;)V
+    const-string v1, "tv5"
 
-    new-instance p1, Lvn3;
+    const-string v2, "markAsFavorite: complete for setId=%d favorite=%b"
 
-    invoke-direct {p1, v1, v0}, Lvn3;-><init>(ILjava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Lvv5;
-
-    invoke-virtual {p1}, Lvv5;->a()Ljdf;
-
-    move-result-object p1
-
-    new-instance v0, Lov5;
-
-    const/4 v1, 0x1
-
-    iget-wide v2, p0, Lov5;->b:J
-
-    iget-wide v4, p0, Lov5;->c:J
-
-    invoke-direct/range {v0 .. v5}, Lov5;-><init>(IJJ)V
-
-    new-instance v1, Ltn3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, p1, v2, v0}, Ltn3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object v1
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,19 +1,23 @@
 .class public final Le9e;
-.super Lg9e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:J
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Le9e;->a:Ljava/lang/String;
+    iput-wide p1, p0, Le9e;->a:J
+
+    iput-wide p3, p0, Le9e;->b:J
 
     return-void
 .end method
@@ -21,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -41,44 +45,71 @@
     :cond_1
     check-cast p1, Le9e;
 
-    iget-object v1, p0, Le9e;->a:Ljava/lang/String;
+    iget-wide v3, p0, Le9e;->a:J
 
-    iget-object p1, p1, Le9e;->a:Ljava/lang/String;
+    iget-wide v5, p1, Le9e;->a:J
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-wide v3, p0, Le9e;->b:J
+
+    iget-wide v5, p1, Le9e;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 3
 
-    iget-object v0, p0, Le9e;->a:Ljava/lang/String;
+    iget-wide v0, p0, Le9e;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Le9e;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    const-string v0, "Success(text="
+    const-string v0, "SavedMessagesChatEntity(userId="
+
+    const-string v1, ", chatId="
+
+    iget-wide v2, p0, Le9e;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     const-string v1, ")"
 
-    iget-object v2, p0, Le9e;->a:Ljava/lang/String;
+    iget-wide v2, p0, Le9e;->b:J
 
-    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

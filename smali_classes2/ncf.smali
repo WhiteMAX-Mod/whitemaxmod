@@ -1,49 +1,32 @@
-.class public final Lncf;
-.super Ll84;
+.class public interface abstract Lncf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lwcf;
-
-.field public Y:I
-
-.field public d:Lwcf;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lwcf;Ll84;)V
-    .locals 0
-
-    iput-object p1, p0, Lncf;->X:Lwcf;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+# virtual methods
+.method public abstract onCommandSent(Lmcf;Ljava/lang/String;Z)V
 .end method
 
+.method public abstract onConnect(Lmcf;)V
+.end method
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract onConnected(Lmcf;)V
+.end method
 
-    iput-object p1, p0, Lncf;->o:Ljava/lang/Object;
+.method public abstract onDisconnectedSuccessfully(Lmcf;)V
+.end method
 
-    iget p1, p0, Lncf;->Y:I
+.method public abstract onFailedByException(Lmcf;Ljava/lang/Throwable;)V
+.end method
 
-    const/high16 v0, -0x80000000
+.method public abstract onFailedByPings(Lmcf;)V
+.end method
 
-    or-int/2addr p1, v0
+.method public abstract onMessageReceived(Lmcf;Ljava/lang/String;Z)V
+.end method
 
-    iput p1, p0, Lncf;->Y:I
+.method public abstract onRestart(Lmcf;)V
+.end method
 
-    iget-object p1, p0, Lncf;->X:Lwcf;
-
-    invoke-static {p1, p0}, Lwcf;->f(Lwcf;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract onTimeout(Lmcf;)V
 .end method

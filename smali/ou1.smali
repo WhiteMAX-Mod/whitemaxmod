@@ -1,75 +1,73 @@
-.class public final synthetic Lou1;
-.super Ljava/lang/Object;
+.class public final enum Lou1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Loq6;
 
+# static fields
+.field public static final enum a:Lou1;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lou1;
 
-.field public final synthetic b:Lzu1;
-
-.field public final synthetic c:Ljava/lang/CharSequence;
+.field public static final synthetic c:[Lou1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzu1;Ljava/lang/CharSequence;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p3, p0, Lou1;->a:I
+    new-instance v0, Lou1;
 
-    iput-object p1, p0, Lou1;->b:Lzu1;
+    const-string v1, "NEGATIVE_POSITIVE"
 
-    iput-object p2, p0, Lou1;->c:Ljava/lang/CharSequence;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lou1;->a:Lou1;
+
+    new-instance v1, Lou1;
+
+    const-string v2, "NEUTRAL_POSITIVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lou1;->b:Lou1;
+
+    filled-new-array {v0, v1}, [Lou1;
+
+    move-result-object v0
+
+    sput-object v0, Lou1;->c:[Lou1;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lou1;
     .locals 1
 
-    iget v0, p0, Lou1;->a:I
+    const-class v0, Lou1;
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    iget-object p1, p0, Lou1;->b:Lzu1;
+    check-cast p0, Lou1;
 
-    packed-switch v0, :pswitch_data_0
+    return-object p0
+.end method
 
-    iget-object v0, p0, Lou1;->c:Ljava/lang/CharSequence;
+.method public static values()[Lou1;
+    .locals 1
 
-    invoke-static {p1, v0}, Lzu1;->L(Lzu1;Ljava/lang/CharSequence;)V
+    sget-object v0, Lou1;->c:[Lou1;
 
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lou1;->c:Ljava/lang/CharSequence;
+    check-cast v0, [Lou1;
 
-    invoke-static {p1, v0}, Lzu1;->J(Lzu1;Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Lou1;->c:Ljava/lang/CharSequence;
-
-    invoke-static {p1, v0}, Lzu1;->D(Lzu1;Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

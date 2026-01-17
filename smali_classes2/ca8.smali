@@ -1,113 +1,100 @@
 .class public final Lca8;
-.super Lkk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxa8;
 
-# instance fields
-.field public final X:Lqeh;
 
-.field public final Y:Ljava/lang/Long;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lca8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final Z:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Long;
-
-.field public final c:J
-
-.field public final d:Lj44;
-
-.field public final o:Lq37;
+.field public static final a:Lca8;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Long;JLj44;Lq37;Lqeh;Ljava/lang/Long;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
+    new-instance v0, Lca8;
 
-    iput-object p3, p0, Lca8;->b:Ljava/lang/Long;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p4, p0, Lca8;->c:J
+    sput-object v0, Lca8;->a:Lca8;
 
-    iput-object p6, p0, Lca8;->d:Lj44;
+    new-instance v0, Lj58;
 
-    iput-object p7, p0, Lca8;->o:Lq37;
+    const/4 v1, 0x4
 
-    iput-object p8, p0, Lca8;->X:Lqeh;
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
 
-    iput-object p9, p0, Lca8;->Y:Ljava/lang/Long;
-
-    iput-object p10, p0, Lca8;->Z:Ljava/lang/String;
+    sput-object v0, Lca8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lca8;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x1269e0f3
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "LinkInfoEvent{chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lca8;->b:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lca8;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactSearchResult="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lca8;->d:Lj44;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", groupChatInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lca8;->o:Lq37;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoConference="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lca8;->X:Lqeh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stickerSetId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lca8;->Y:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", startPayload=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lca8;->Z:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Error"
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

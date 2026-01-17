@@ -1,244 +1,79 @@
 .class public final Lrl8;
-.super Lb5g;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lsl8;
+.field public final b:Z
 
-.field public final synthetic Y:Lul8;
+.field public final c:Z
 
-.field public o:I
+.field public final d:Z
+
+.field public final o:Lvea;
 
 
 # direct methods
-.method public constructor <init>(Lsl8;Lul8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JZZZLvea;)V
     .locals 0
 
-    iput-object p1, p0, Lrl8;->X:Lsl8;
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
 
-    iput-object p2, p0, Lrl8;->Y:Lul8;
+    iput-boolean p3, p0, Lrl8;->b:Z
 
-    const/4 p1, 0x2
+    iput-boolean p4, p0, Lrl8;->c:Z
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p5, p0, Lrl8;->d:Z
+
+    iput-object p6, p0, Lrl8;->o:Lvea;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    check-cast p1, Lac4;
+    iget-object v0, p0, Lrl8;->o:Lvea;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, v0, Lvea;->d:I
 
-    invoke-virtual {p0, p1, p2}, Lrl8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v1, "LoginEvent(requestId="
 
-    move-result-object p1
+    const-string v2, ", isFirstLogin="
 
-    check-cast p1, Lrl8;
+    iget-wide v3, p0, Lkk0;->a:J
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-boolean v5, p0, Lrl8;->b:Z
 
-    invoke-virtual {p1, p2}, Lrl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v4, v1, v2, v5}, Lhc0;->k(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    move-result-object v1
 
-    return-object p1
-.end method
+    const-string v2, ", hasNewMessages="
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const-string v3, ", videoChatHistory="
 
-    new-instance p1, Lrl8;
+    iget-boolean v4, p0, Lrl8;->c:Z
 
-    iget-object v0, p0, Lrl8;->X:Lsl8;
+    iget-boolean v5, p0, Lrl8;->d:Z
 
-    iget-object v1, p0, Lrl8;->Y:Lul8;
+    invoke-static {v2, v3, v1, v4, v5}, Lob3;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
-    invoke-direct {p1, v0, v1, p2}, Lrl8;-><init>(Lsl8;Lul8;Lkotlin/coroutines/Continuation;)V
+    const-string v2, ", chats="
 
-    return-object p1
-.end method
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    const-string v0, ")"
 
-    iget v1, p0, Lrl8;->o:I
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-object v10, p0
-
-    goto/16 :goto_5
-
-    :catchall_0
-    move-object v10, p0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    move-object v10, p0
-
-    goto :goto_4
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, p0, Lrl8;->X:Lsl8;
-
-    iget-object p1, p1, Lum;->c:Lvm;
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object p1, v2
-
-    :goto_0
-    iget-object p1, p1, Lvm;->k:Ld68;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v4, p1
-
-    check-cast v4, Lmm8;
-
-    iget-object p1, p0, Lrl8;->X:Lsl8;
-
-    iget-wide v5, p1, Lum;->a:J
-
-    iget-object v7, p0, Lrl8;->Y:Lul8;
-
-    iget-wide v8, p1, Lsl8;->o:J
-
-    iput v3, p0, Lrl8;->o:I
-    :try_end_1
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1 .. :try_end_1} :catch_2
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move-object v10, p0
-
-    :try_start_2
-    invoke-virtual/range {v4 .. v10}, Lmm8;->e(JLul8;JLl84;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_2
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    if-ne p1, v0, :cond_6
+    move-result-object v0
 
     return-object v0
-
-    :catch_1
-    move-exception v0
-
-    :goto_1
-    move-object p1, v0
-
-    goto :goto_4
-
-    :catch_2
-    move-exception v0
-
-    move-object v10, p0
-
-    goto :goto_1
-
-    :catchall_1
-    :goto_2
-    iget-object p1, v10, Lrl8;->X:Lsl8;
-
-    iget-object p1, p1, Lsl8;->x0:Ljava/lang/String;
-
-    sget-object v0, Lm4j;->a:Lvcb;
-
-    if-nez v0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    sget-object v1, Lxk8;->Y:Lxk8;
-
-    invoke-virtual {v0, v1}, Lvcb;->b(Lxk8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    const-string v3, "beans.loginLogic.onLogin fail"
-
-    invoke-virtual {v0, v1, p1, v3, v2}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_3
-    iget-object p1, v10, Lrl8;->X:Lsl8;
-
-    iget-object p1, p1, Lum;->c:Lvm;
-
-    if-eqz p1, :cond_5
-
-    move-object v2, p1
-
-    :cond_5
-    iget-object p1, v2, Lvm;->a:Lrm8;
-
-    sget-object v0, Lpm8;->Z:Lpm8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lrm8;->r(Lpm8;)V
-
-    goto :goto_5
-
-    :goto_4
-    iget-object v0, v10, Lrl8;->X:Lsl8;
-
-    iget-object p1, p1, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
-
-    invoke-virtual {v0, p1}, Lsl8;->l(Lcbg;)V
-
-    :cond_6
-    :goto_5
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
 .end method

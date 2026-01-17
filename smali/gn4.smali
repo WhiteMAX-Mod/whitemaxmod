@@ -3,34 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lef8;
+.implements Lqe8;
+.implements Lqb9;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:F
 
-.field public final synthetic b:Lld;
-
-.field public final synthetic c:I
-
-.field public final synthetic d:J
-
-.field public final synthetic o:J
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lld;IJJI)V
+.method public synthetic constructor <init>(Ljava/lang/Object;F)V
     .locals 0
 
-    iput p7, p0, Lgn4;->a:I
+    iput-object p1, p0, Lgn4;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Lgn4;->b:Lld;
-
-    iput p2, p0, Lgn4;->c:I
-
-    iput-wide p3, p0, Lgn4;->d:J
-
-    iput-wide p5, p0, Lgn4;->o:J
+    iput p2, p0, Lgn4;->a:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,52 +28,36 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 16
+.method public b(Lla9;)V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object p1, p0, Lgn4;->b:Ljava/lang/Object;
 
-    iget v1, v0, Lgn4;->a:I
+    check-cast p1, Lrb9;
 
-    packed-switch v1, :pswitch_data_0
+    iget-object p1, p1, Lrb9;->g:Lgb9;
 
-    iget-wide v7, v0, Lgn4;->o:J
+    iget-object p1, p1, Lgb9;->t:Lxcc;
 
-    move-object/from16 v2, p1
+    iget v0, p0, Lgn4;->a:F
 
-    check-cast v2, Lmd;
-
-    iget-object v3, v0, Lgn4;->b:Lld;
-
-    iget v4, v0, Lgn4;->c:I
-
-    iget-wide v5, v0, Lgn4;->d:J
-
-    invoke-interface/range {v2 .. v8}, Lmd;->z0(Lld;IJJ)V
+    invoke-virtual {p1, v0}, Lxcc;->i0(F)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-wide v14, v0, Lgn4;->o:J
+.method public invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    move-object/from16 v9, p1
+    iget-object v0, p0, Lgn4;->b:Ljava/lang/Object;
 
-    check-cast v9, Lmd;
+    check-cast v0, Lid;
 
-    iget-object v10, v0, Lgn4;->b:Lld;
+    iget v1, p0, Lgn4;->a:F
 
-    iget v11, v0, Lgn4;->c:I
+    check-cast p1, Ljd;
 
-    iget-wide v12, v0, Lgn4;->d:J
-
-    invoke-interface/range {v9 .. v15}, Lmd;->x0(Lld;IJJ)V
+    invoke-interface {p1, v0, v1}, Ljd;->w0(Lid;F)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

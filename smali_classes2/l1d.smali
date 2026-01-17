@@ -1,167 +1,132 @@
 .class public final Ll1d;
-.super Ljava/lang/Object;
+.super Ltff;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ll1d;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:Li1d;
+.field public static final b:Ll1d;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lnjb;
+    new-instance v0, Ll1d;
 
-    const/16 v1, 0x15
+    invoke-direct {v0}, Ltff;-><init>()V
 
-    invoke-direct {v0, v1}, Lnjb;-><init>(I)V
-
-    sput-object v0, Ll1d;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Li1d;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll1d;->a:Li1d;
+    sput-object v0, Ll1d;->b:Ll1d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final d(Landroid/os/Bundle;)Lnm4;
+    .locals 5
 
-    const/4 v0, 0x0
+    const-string v0, "can_select_file"
 
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ll1d;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ll1d;
-
-    iget-object v1, p0, Ll1d;->a:Li1d;
-
-    iget-object p1, p1, Ll1d;->a:Li1d;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ll1d;->a:Li1d;
-
-    invoke-virtual {v0}, Li1d;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "QualityParc(value="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ll1d;->a:Li1d;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p1}, Lomj;->d(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    return-object v0
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    const-string v2, "source_id"
+
+    invoke-static {v2, p1}, Lomj;->f(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+
+    move-result-object v2
+
+    const-string v3, "mode"
+
+    invoke-static {v3, p1}, Lomj;->e(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :cond_1
+    sget-object p1, Lm1d;->o:Lal5;
+
+    invoke-virtual {p1}, Le2;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_2
+    move-object v3, p1
+
+    check-cast v3, Lb2;
+
+    invoke-virtual {v3}, Lb2;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v3}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v4, v3
+
+    check-cast v4, Lm1d;
+
+    iget v4, v4, Lm1d;->a:I
+
+    if-ne v4, v1, :cond_2
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v3, 0x0
+
+    :goto_1
+    check-cast v3, Lm1d;
+
+    if-nez v3, :cond_4
+
+    sget-object v3, Lm1d;->b:Lm1d;
+
+    :cond_4
+    new-instance p1, Lk1d;
+
+    invoke-direct {p1, v0, v2, v3}, Lk1d;-><init>(ZLjava/lang/Long;Lm1d;)V
+
+    return-object p1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final e(Lsff;)V
+    .locals 4
 
-    iget-object p2, p0, Ll1d;->a:Li1d;
+    const/4 v0, 0x0
 
-    iget-object v0, p2, Li1d;->a:Lg1d;
+    new-array v0, v0, [Ljava/lang/String;
 
-    iget-object v0, v0, Lg1d;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    const/16 v2, 0xe
 
-    iget v0, p2, Li1d;->b:I
+    const-string v3, ":qr-scanner"
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p2, Li1d;->c:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p2, Li1d;->d:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-wide v0, p2, Li1d;->e:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    iget-boolean p2, p2, Li1d;->f:Z
-
-    int-to-byte p2, p2
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    invoke-static {p1, v3, v0, v1, v2}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     return-void
 .end method

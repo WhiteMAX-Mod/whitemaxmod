@@ -1,63 +1,53 @@
 .class public final Lvh2;
-.super Ljava/lang/Object;
+.super Lhk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/util/List;
-
-.field public final d:J
-
-.field public final e:Z
+.field public final b:Luh2;
 
 
 # direct methods
-.method public constructor <init>(Lr7;)V
-    .locals 2
+.method public constructor <init>(JLuh2;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lhk0;-><init>(J)V
 
-    iget-object v0, p1, Lr7;->c:Ljava/lang/Object;
+    iput-object p3, p0, Lvh2;->b:Luh2;
 
-    check-cast v0, Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object v0, p0, Lvh2;->a:Ljava/lang/String;
 
-    iget-object v0, p1, Lr7;->d:Ljava/io/Serializable;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast v0, Ljava/lang/String;
+    iget-wide v0, p0, Lhk0;->a:J
 
-    iput-object v0, p0, Lvh2;->b:Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    iget-object v0, p1, Lr7;->e:Ljava/lang/Object;
+    const-string v3, "ChatDb(id="
 
-    check-cast v0, Ljava/util/ArrayList;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    const-string v0, ", data="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lvh2;->b:Luh2;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_0
-    iput-object v0, p0, Lvh2;->c:Ljava/util/List;
-
-    iget-wide v0, p1, Lr7;->a:J
-
-    iput-wide v0, p0, Lvh2;->d:J
-
-    iget-boolean p1, p1, Lr7;->b:Z
-
-    iput-boolean p1, p0, Lvh2;->e:Z
-
-    return-void
+    return-object v0
 .end method

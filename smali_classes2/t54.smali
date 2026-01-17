@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Ls34;
+.field public final a:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Ls34;)V
+.method public constructor <init>(Ljava/lang/Integer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lt54;->a:Ls34;
+    iput-object p1, p0, Lt54;->a:Ljava/lang/Integer;
 
     return-void
 .end method
@@ -41,11 +41,11 @@
     :cond_1
     check-cast p1, Lt54;
 
-    iget-object v1, p0, Lt54;->a:Ls34;
+    iget-object v1, p0, Lt54;->a:Ljava/lang/Integer;
 
-    iget-object p1, p1, Lt54;->a:Ls34;
+    iget-object p1, p1, Lt54;->a:Ljava/lang/Integer;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -60,8 +60,15 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lt54;->a:Ls34;
+    iget-object v0, p0, Lt54;->a:Ljava/lang/Integer;
 
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
@@ -74,11 +81,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "OnResult(contactsResult="
+    const-string v1, "ButtonTitle(buttonTitleRes="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lt54;->a:Ls34;
+    iget-object v1, p0, Lt54;->a:Ljava/lang/Integer;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

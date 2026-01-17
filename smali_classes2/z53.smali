@@ -1,109 +1,47 @@
-.class public final enum Lz53;
-.super Ljava/lang/Enum;
+.class public final synthetic Lz53;
+.super Lt8;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lz53;
-
-.field public static final enum a:Lz53;
-
-.field public static final enum b:Lz53;
-
-.field public static final enum c:Lz53;
-
-.field public static final enum d:Lz53;
-
-.field public static final enum o:Lz53;
+# interfaces
+.implements Ldr6;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lz53;
-
-    const-string v1, "LOADING"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lz53;->a:Lz53;
-
-    new-instance v1, Lz53;
-
-    const-string v2, "LOADING_NEXT_PAGE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lz53;->b:Lz53;
-
-    new-instance v2, Lz53;
-
-    const-string v3, "IDLE_SEARCH"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lz53;->c:Lz53;
-
-    new-instance v3, Lz53;
-
-    const-string v4, "SEARCH_RESULT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lz53;->d:Lz53;
-
-    new-instance v4, Lz53;
-
-    const-string v5, "EMPTY_SEARCH_RESULT"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lz53;->o:Lz53;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lz53;
-
-    move-result-object v0
-
-    sput-object v0, Lz53;->X:[Lz53;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lz53;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lz53;
+    check-cast p1, Ljava/util/List;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lh63;
 
-    move-result-object p0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lz53;
+    iget-object p3, p0, Lt8;->a:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    check-cast p3, Lone/me/chats/search/ChatsListSearchScreen;
 
-.method public static values()[Lz53;
-    .locals 1
+    sget-object v0, Lone/me/chats/search/ChatsListSearchScreen;->J0:[Lz28;
 
-    sget-object v0, Lz53;->X:[Lz53;
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object p2, p2, Lh63;->a:Lg63;
 
-    move-result-object v0
+    sget-object p3, Ls53;->$EnumSwitchMapping$1:[I
 
-    check-cast v0, [Lz53;
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
-    return-object v0
+    move-result p2
+
+    aget p2, p3, p2
+
+    const/4 p3, 0x2
+
+    if-ne p2, p3, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Ldh5;->a:Ldh5;
+
+    return-object p1
 .end method

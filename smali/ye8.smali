@@ -1,57 +1,133 @@
 .class public final Lye8;
-.super Laf8;
+.super Ljava/util/AbstractList;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field public final a:Ljava/util/List;
+
+.field public final b:Lxq6;
+
+
+# direct methods
+.method public constructor <init>(Lxq6;Ljava/util/List;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Lye8;->a:Ljava/util/List;
+
+    iput-object p1, p0, Lye8;->b:Lxq6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lye8;->a:Ljava/util/List;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    const-class v1, Lye8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    if-ne v1, p1, :cond_1
+    iget-object v0, p0, Lye8;->b:Lxq6;
 
-    return v0
+    invoke-interface {v0, p1}, Lxq6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final isEmpty()Z
     .locals 1
 
-    const-class v0, Lye8;
+    iget-object v0, p0, Lye8;->a:Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    const-string v0, "Retry"
+    invoke-virtual {p0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
+
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 2
+
+    new-instance v0, Lxe8;
+
+    iget-object v1, p0, Lye8;->a:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lxe8;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
+
+    return-object v0
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lye8;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lye8;->b:Lxq6;
+
+    invoke-interface {v0, p1}, Lxq6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final removeRange(II)V
+    .locals 1
+
+    iget-object v0, p0, Lye8;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/List;->clear()V
+
+    return-void
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lye8;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
 .end method

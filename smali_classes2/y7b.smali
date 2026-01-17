@@ -1,429 +1,361 @@
-.class public final synthetic Ly7b;
+.class public abstract Ly7b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final B:I
 
-.field public final synthetic b:Landroid/content/Context;
+.field public static final C:I
 
-.field public final synthetic c:Lb8b;
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final P:I
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final S:I
+
+.field public static final T:I
+
+.field public static final U:I
+
+.field public static final V:I
+
+.field public static final W:I
+
+.field public static final X:I
+
+.field public static final Y:I
+
+.field public static final Z:I
+
+.field public static final a:I
+
+.field public static final a0:I
+
+.field public static final b:I
+
+.field public static final b0:I
+
+.field public static final c:I
+
+.field public static final c0:I
+
+.field public static final d:I
+
+.field public static final d0:I
+
+.field public static final e:I
+
+.field public static final e0:I
+
+.field public static final f:I
+
+.field public static final f0:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lb8b;I)V
-    .locals 0
-
-    .line 2
-    iput p3, p0, Ly7b;->a:I
-
-    iput-object p1, p0, Ly7b;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Ly7b;->c:Lb8b;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lb8b;Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x4
+    sget v0, Lg8d;->chat_item_view_type:I
 
-    iput v0, p0, Ly7b;->a:I
+    sput v0, Ly7b;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lg8d;->chat_item_view_type_pinned:I
 
-    iput-object p1, p0, Ly7b;->c:Lb8b;
+    sput v0, Ly7b;->b:I
 
-    iput-object p2, p0, Ly7b;->b:Landroid/content/Context;
+    sget v0, Lg8d;->chat_suggest_item_view_type:I
+
+    sput v0, Ly7b;->c:I
+
+    sget v0, Lg8d;->chat_suggest_stub_item_view_type:I
+
+    sput v0, Ly7b;->d:I
+
+    sget v0, Lg8d;->chats_list_folders_container:I
+
+    sput v0, Ly7b;->e:I
+
+    sget v0, Lg8d;->chats_list_folders_pager:I
+
+    sput v0, Ly7b;->f:I
+
+    sget v0, Lg8d;->chats_list_folders_tabs:I
+
+    sput v0, Ly7b;->g:I
+
+    sget v0, Lg8d;->chats_list_pinbars_view:I
+
+    sput v0, Ly7b;->h:I
+
+    sget v0, Lg8d;->chats_list_search_recycler_view:I
+
+    sput v0, Ly7b;->i:I
+
+    sget v0, Lg8d;->chats_list_search_root_view:I
+
+    sput v0, Ly7b;->j:I
+
+    sget v0, Lg8d;->chats_list_search_toolbar:I
+
+    sput v0, Ly7b;->k:I
+
+    sget v0, Lg8d;->chats_list_toolbar:I
+
+    sput v0, Ly7b;->l:I
+
+    sget v0, Lg8d;->chats_list_view:I
+
+    sput v0, Ly7b;->m:I
+
+    sget v0, Lg8d;->chats_search_chat_view_type:I
+
+    sput v0, Ly7b;->n:I
+
+    sget v0, Lg8d;->chats_search_contact_view_type:I
+
+    sput v0, Ly7b;->o:I
+
+    sget v0, Lg8d;->chats_search_empty_view_type:I
+
+    sput v0, Ly7b;->p:I
+
+    sget v0, Lg8d;->chats_search_global_chat_view_type:I
+
+    sput v0, Ly7b;->q:I
+
+    sget v0, Lg8d;->chats_search_global_contact_view_type:I
+
+    sput v0, Ly7b;->r:I
+
+    sget v0, Lg8d;->chats_search_loading_view_type:I
+
+    sput v0, Ly7b;->s:I
+
+    sget v0, Lg8d;->chats_search_message_view_type:I
+
+    sput v0, Ly7b;->t:I
+
+    sget v0, Lg8d;->chats_search_recent_header_view_type:I
+
+    sput v0, Ly7b;->u:I
+
+    sget v0, Lg8d;->chats_search_recent_view_type:I
+
+    sput v0, Ly7b;->v:I
+
+    sget v0, Lg8d;->fake_chat_contact_item_view_type:I
+
+    sput v0, Ly7b;->w:I
+
+    sget v0, Lg8d;->fake_chat_phone_item_view_type:I
+
+    sput v0, Ly7b;->x:I
+
+    sget v0, Lg8d;->oneme_chat_action_add_favorite:I
+
+    sput v0, Ly7b;->y:I
+
+    sget v0, Lg8d;->oneme_chat_action_add_to_folder:I
+
+    sput v0, Ly7b;->z:I
+
+    sget v0, Lg8d;->oneme_chat_action_block:I
+
+    sput v0, Ly7b;->A:I
+
+    sget v0, Lg8d;->oneme_chat_action_clear_chat_history:I
+
+    sput v0, Ly7b;->B:I
+
+    sget v0, Lg8d;->oneme_chat_action_clear_saved_messages:I
+
+    sput v0, Ly7b;->C:I
+
+    sget v0, Lg8d;->oneme_chat_action_close_channel:I
+
+    sput v0, Ly7b;->D:I
+
+    sget v0, Lg8d;->oneme_chat_action_close_chat:I
+
+    sput v0, Ly7b;->E:I
+
+    sget v0, Lg8d;->oneme_chat_action_delete_channel:I
+
+    sput v0, Ly7b;->F:I
+
+    sget v0, Lg8d;->oneme_chat_action_delete_chat:I
+
+    sput v0, Ly7b;->G:I
+
+    sget v0, Lg8d;->oneme_chat_action_leave:I
+
+    sput v0, Ly7b;->H:I
+
+    sget v0, Lg8d;->oneme_chat_action_mark_as_read:I
+
+    sput v0, Ly7b;->I:I
+
+    sget v0, Lg8d;->oneme_chat_action_mark_as_unread:I
+
+    sput v0, Ly7b;->J:I
+
+    sget v0, Lg8d;->oneme_chat_action_move_rights_and_leave:I
+
+    sput v0, Ly7b;->K:I
+
+    sget v0, Lg8d;->oneme_chat_action_mute:I
+
+    sput v0, Ly7b;->L:I
+
+    sget v0, Lg8d;->oneme_chat_action_remove_favorite:I
+
+    sput v0, Ly7b;->M:I
+
+    sget v0, Lg8d;->oneme_chat_action_remove_from_folder:I
+
+    sput v0, Ly7b;->N:I
+
+    sget v0, Lg8d;->oneme_chat_action_select:I
+
+    sput v0, Ly7b;->O:I
+
+    sget v0, Lg8d;->oneme_chat_action_suspend_and_delete_bot:I
+
+    sput v0, Ly7b;->P:I
+
+    sget v0, Lg8d;->oneme_chat_action_suspend_bot:I
+
+    sput v0, Ly7b;->Q:I
+
+    sget v0, Lg8d;->oneme_chat_action_unmute:I
+
+    sput v0, Ly7b;->R:I
+
+    sget v0, Lg8d;->oneme_confirm_block:I
+
+    sput v0, Ly7b;->S:I
+
+    sget v0, Lg8d;->oneme_confirm_cancel:I
+
+    sput v0, Ly7b;->T:I
+
+    sget v0, Lg8d;->oneme_confirm_delete:I
+
+    sput v0, Ly7b;->U:I
+
+    sget v0, Lg8d;->oneme_confirm_delete_for_all:I
+
+    sput v0, Ly7b;->V:I
+
+    sget v0, Lg8d;->oneme_confirm_leave:I
+
+    sput v0, Ly7b;->W:I
+
+    sget v0, Lg8d;->oneme_confirm_mute_1_day:I
+
+    sput v0, Ly7b;->X:I
+
+    sget v0, Lg8d;->oneme_confirm_mute_1_hour:I
+
+    sput v0, Ly7b;->Y:I
+
+    sget v0, Lg8d;->oneme_confirm_mute_4_hour:I
+
+    sput v0, Ly7b;->Z:I
+
+    sget v0, Lg8d;->oneme_confirm_mute_infinite:I
+
+    sput v0, Ly7b;->a0:I
+
+    sget v0, Lg8d;->oneme_contacts_picker_toolbar:I
+
+    sput v0, Ly7b;->b0:I
+
+    sget v0, Lg8d;->oneme_picker_chat_item_view_type:I
+
+    sput v0, Ly7b;->c0:I
+
+    sget v0, Lg8d;->oneme_picker_container_chats:I
+
+    sput v0, Ly7b;->d0:I
+
+    sget v0, Lg8d;->oneme_picker_main_container:I
+
+    sput v0, Ly7b;->e0:I
+
+    sget v0, Lg8d;->oneme_picker_members_list_view:I
+
+    sput v0, Ly7b;->f0:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Ly7b;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget v0, Lmgb;->r:I
-
-    iget-object v1, p0, Ly7b;->c:Lb8b;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    sget-object v1, Ldc3;->s0:Lole;
-
-    iget-object v2, p0, Ly7b;->b:Landroid/content/Context;
-
-    invoke-static {v1, v2}, La3e;->f(Lole;Landroid/content/Context;)Lsf7;
-
-    move-result-object v1
-
-    iget v1, v1, Lsf7;->f:I
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Landroid/widget/FrameLayout;
-
-    iget-object v1, p0, Ly7b;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    sget v1, Ly4e;->z:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Lzw3;
-
-    sget v2, Lb8b;->Y0:I
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Ln7j;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Ln7j;->c(F)I
-
-    move-result v2
-
-    invoke-direct {v1, v3, v2}, Lzw3;-><init>(II)V
-
-    const/4 v2, 0x0
-
-    iput v2, v1, Lzw3;->i:I
-
-    iput v2, v1, Lzw3;->v:I
-
-    iput v2, v1, Lzw3;->l:I
-
-    const/16 v2, 0x18
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Ln7j;->c(F)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v1, p0, Ly7b;->c:Lb8b;
-
-    iget-object v1, v1, Lb8b;->M0:Landroid/graphics/drawable/LayerDrawable;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Ly7b;->b:Landroid/content/Context;
-
-    iget-object v1, p0, Ly7b;->c:Lb8b;
-
-    invoke-static {v1, v0}, Lb8b;->v(Lb8b;Landroid/content/Context;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ly7b;->c:Lb8b;
-
-    iget-object v1, v0, Lb8b;->K0:Ljava/lang/Object;
-
-    iget v2, v0, Lb8b;->H0:I
-
-    new-instance v3, Landroid/widget/TextView;
-
-    iget-object v4, p0, Ly7b;->b:Landroid/content/Context;
-
-    invoke-direct {v3, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget v4, Ly4e;->A:I
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
-
-    new-instance v4, Lzw3;
-
-    const/4 v5, -0x2
-
-    const/4 v6, 0x0
-
-    invoke-direct {v4, v6, v5}, Lzw3;-><init>(II)V
-
-    iput v6, v4, Lzw3;->t:I
-
-    iget-object v5, v0, Lb8b;->I0:Ljava/lang/Object;
-
-    invoke-interface {v5}, Ld68;->e()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-interface {v5}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/widget/TextView;
-
-    invoke-virtual {v5}, Landroid/view/View;->getId()I
-
-    move-result v5
-
-    goto :goto_0
-
-    :cond_0
-    move v5, v6
-
-    :goto_0
-    iput v5, v4, Lzw3;->j:I
-
-    invoke-interface {v1}, Ld68;->e()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getId()I
-
-    move-result v1
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v6
-
-    :goto_1
-    iput v1, v4, Lzw3;->u:I
-
-    iput v6, v4, Lzw3;->l:I
-
-    invoke-virtual {v4, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    iget v0, v0, Lb8b;->F0:I
-
-    iput v0, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {v4, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
-
-    iput v2, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v0, 0x2
-
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setMaxLines(I)V
-
-    sget-object v0, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    sget-object v0, Lj1h;->l:Lhhg;
-
-    invoke-static {v0, v3}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
-
-    sget-object v0, Ldc3;->s0:Lole;
-
-    invoke-virtual {v0, v3}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lplb;->getText()Lifg;
-
-    const/4 v0, -0x1
-
-    const v1, 0x3f333333    # 0.7f
-
-    invoke-static {v0, v1}, Lgij;->b(IF)I
-
-    move-result v0
-
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v3
-
-    :pswitch_3
-    iget-object v0, p0, Ly7b;->c:Lb8b;
-
-    iget v1, v0, Lb8b;->H0:I
-
-    iget-object v2, v0, Lb8b;->J0:Ljava/lang/Object;
-
-    new-instance v3, Landroid/widget/TextView;
-
-    iget-object v4, p0, Ly7b;->b:Landroid/content/Context;
-
-    invoke-direct {v3, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget v4, Ly4e;->B:I
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
-
-    new-instance v4, Lzw3;
-
-    const/4 v5, -0x2
-
-    const/4 v6, 0x0
-
-    invoke-direct {v4, v6, v5}, Lzw3;-><init>(II)V
-
-    iput v6, v4, Lzw3;->t:I
-
-    iput v6, v4, Lzw3;->i:I
-
-    iget-object v0, v0, Lb8b;->K0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ld68;->e()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    goto :goto_2
-
-    :cond_2
-    move v0, v6
-
-    :goto_2
-    iput v0, v4, Lzw3;->u:I
-
-    invoke-interface {v2}, Ld68;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getId()I
-
-    move-result v6
-
-    :cond_3
-    iput v6, v4, Lzw3;->k:I
-
-    invoke-virtual {v4, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    iput v1, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {v4, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v0, 0x2
-
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setMaxLines(I)V
-
-    sget-object v0, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    sget-object v0, Lj1h;->x:Lhhg;
-
-    invoke-static {v0, v3}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
-
-    sget-object v0, Ldc3;->s0:Lole;
-
-    invoke-virtual {v0, v3}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lplb;->getText()Lifg;
-
-    const/4 v0, -0x1
-
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v3
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

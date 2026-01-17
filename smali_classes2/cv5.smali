@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln6;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lsw5;
-
-.field public final synthetic c:Ljava/util/List;
+.field public final synthetic b:Ltw5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsw5;Ljava/util/List;I)V
+.method public synthetic constructor <init>(Ltw5;I)V
     .locals 0
 
-    iput p3, p0, Lcv5;->a:I
+    iput p2, p0, Lcv5;->a:I
 
-    iput-object p1, p0, Lcv5;->b:Lsw5;
-
-    iput-object p2, p0, Lcv5;->c:Ljava/util/List;
+    iput-object p1, p0, Lcv5;->b:Ltw5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,43 +27,51 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Lcv5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lcv5;->b:Lsw5;
+    iget-object v0, p0, Lcv5;->b:Ltw5;
 
-    iget-object v1, v0, Lsw5;->a:Le1e;
+    invoke-virtual {v0}, Ltw5;->c()Ljava/util/List;
 
-    new-instance v2, Lqw5;
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lcv5;->b:Ltw5;
+
+    iget-object v0, v0, Ltw5;->a:Lb2e;
+
+    new-instance v1, Lm75;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v1, v2}, Lm75;-><init>(I)V
+
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcv5;->c:Ljava/util/List;
+    invoke-static {v0, v2, v3, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
 
-    invoke-direct {v2, v0, v4, v3}, Lqw5;-><init>(Lsw5;Ljava/util/List;I)V
+    move-result-object v0
 
-    const/4 v0, 0x0
+    check-cast v0, Ljava/lang/Number;
 
-    const/4 v3, 0x1
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    invoke-static {v1, v0, v3, v2}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
+    move-result-wide v0
 
-    return-void
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :pswitch_0
-    iget-object v0, p0, Lcv5;->b:Lsw5;
+    move-result-object v0
 
-    iget-object v1, p0, Lcv5;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lsw5;->a(Ljava/util/List;)V
-
-    return-void
-
-    nop
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

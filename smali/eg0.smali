@@ -144,111 +144,198 @@
     .end array-data
 .end method
 
-.method public static a(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;)Ljava/lang/String;
-    .locals 8
+.method public static a(Landroid/text/SpannableStringBuilder;Ljava/lang/Object;II)V
+    .locals 6
 
-    const-string v0, "host="
-
-    :try_start_0
-    invoke-virtual {p0}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljavax/net/ssl/SSLSession;->getPeerCertificates()[Ljava/security/cert/Certificate;
-
-    move-result-object p0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    array-length v2, p0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", certificates("
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ")=\n"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {p0, p2, p3, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
-    array-length v0, p0
+    move-result-object v0
+
+    array-length v1, v0
 
     const/4 v2, 0x0
 
-    move v3, v2
-
     :goto_0
-    if-ge v2, v0, :cond_0
+    const/16 v3, 0x21
 
-    aget-object v4, p0, v2
+    if-ge v2, v1, :cond_1
 
-    add-int/lit8 v5, v3, 0x1
+    aget-object v4, v0, v2
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v5
 
-    const-string v7, "#"
+    if-ne v5, p2, :cond_0
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v5
 
-    const-string v3, " "
+    if-ne v5, p3, :cond_0
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v5
 
-    const-string v3, "\n"
+    if-ne v5, v3, :cond_0
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p0, v4}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
+    :cond_0
     add-int/lit8 v2, v2, 0x1
-
-    move v3, v5
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_1
+    invoke-interface {p0, p1, p2, p3, v3}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
+
+    return-void
+.end method
+
+.method public static final b(Ld76;JLbr6;)Lnc3;
+    .locals 2
+
+    new-instance v0, Lo76;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, p2, p0, v1}, Lo76;-><init>(JLd76;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0}, Lgu0;->f(Lbr6;)Ltb2;
 
     move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
+    new-instance p1, Lpr0;
 
-    :catchall_0
-    const-string p0, "failed to retrieve certificates, host="
+    const/4 p2, 0x3
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p1, p0, p2}, Lpr0;-><init>(Ltb2;I)V
 
-    move-result-object p0
+    new-instance p0, Lnc3;
+
+    const/4 p2, 0x5
+
+    invoke-direct {p0, p1, p2, p3}, Lnc3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public static declared-synchronized b()Ljava/util/concurrent/Executor;
+.method public static c(Lkmd;I)Ljava/util/List;
+    .locals 3
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ne v1, p1, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-interface {p0}, Lkmd;->b()Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lkc2;
+
+    if-eqz v2, :cond_4
+
+    instance-of p0, v1, Ljc2;
+
+    const/4 p1, 0x0
+
+    if-eqz p0, :cond_1
+
+    check-cast v1, Ljc2;
+
+    goto :goto_1
+
+    :cond_1
+    move-object v1, p1
+
+    :goto_1
+    if-eqz v1, :cond_2
+
+    iget-object p1, v1, Ljc2;->a:Ljava/lang/Throwable;
+
+    :cond_2
+    if-nez p1, :cond_3
+
+    :goto_2
+    return-object v0
+
+    :cond_3
+    throw p1
+
+    :cond_4
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+.end method
+
+.method public static final d(Ld76;JLbr6;)Lt76;
+    .locals 1
+
+    new-instance v0, Lt76;
+
+    invoke-direct {v0, p0, p3}, Lt76;-><init>(Ld76;Lbr6;)V
+
+    new-instance p0, Lr83;
+
+    const/16 p3, 0x9
+
+    invoke-direct {p0, v0, p3}, Lr83;-><init>(Ld76;I)V
+
+    sget p3, Lta5;->d:I
+
+    sget-object p3, Lza5;->c:Lza5;
+
+    invoke-static {p1, p2, p3}, Laoj;->h(JLza5;)J
+
+    move-result-wide p1
+
+    new-instance p3, Lq86;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p3, p1, p2, p0, v0}, Lq86;-><init>(JLd76;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p0, Lu21;
+
+    invoke-direct {p0, p3}, Lu21;-><init>(Ldr6;)V
+
+    new-instance p1, Lu21;
+
+    const/16 p2, 0xa
+
+    invoke-direct {p1, p2, p0}, Lu21;-><init>(ILjava/lang/Object;)V
+
+    new-instance p0, Lnr2;
+
+    const/4 p2, 0x3
+
+    const/4 p3, 0x2
+
+    invoke-direct {p0, p2, v0, p3}, Lnr2;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    new-instance p2, Lt76;
+
+    invoke-direct {p2, p1, p0}, Lt76;-><init>(Ld76;Ldr6;)V
+
+    return-object p2
+.end method
+
+.method public static declared-synchronized e()Ljava/util/concurrent/Executor;
     .locals 4
 
     const-class v0, Leg0;
@@ -262,13 +349,13 @@
 
     const-string v1, "ExoPlayer:BackgroundExecutor"
 
-    sget-object v2, Lqah;->a:Ljava/lang/String;
+    sget-object v2, Lmbh;->a:Ljava/lang/String;
 
-    new-instance v2, Lxq3;
+    new-instance v2, Lfr3;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3, v1}, Lxq3;-><init>(ILjava/io/Serializable;)V
+    invoke-direct {v2, v3, v1}, Lfr3;-><init>(ILjava/io/Serializable;)V
 
     invoke-static {v2}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
@@ -302,7 +389,7 @@
     throw v1
 .end method
 
-.method public static c(II)I
+.method public static f(II)I
     .locals 2
 
     div-int/lit8 v0, p1, 0x2
@@ -367,10 +454,38 @@
     return p0
 .end method
 
+.method public static g(Ld76;Lzb4;)Lmmf;
+    .locals 3
 
-# virtual methods
-.method public abstract d(Ljava/lang/Object;)F
+    new-instance v0, Ly76;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Ly76;-><init>(Ld76;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p0, 0x1
+
+    sget-object v2, Lcc4;->a:Lcc4;
+
+    invoke-static {p1, v1, v2, v0, p0}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public abstract e(Ljava/lang/Object;F)V
+.method public static final h(Ld76;J)Ltb2;
+    .locals 2
+
+    new-instance v0, Le86;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, p2, p0, v1}, Le86;-><init>(JLd76;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0}, Lgu0;->f(Lbr6;)Ltb2;
+
+    move-result-object p0
+
+    return-object p0
 .end method

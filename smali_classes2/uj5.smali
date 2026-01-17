@@ -1,56 +1,104 @@
-.class public final Luj5;
-.super Llrd;
+.class public final synthetic Luj5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final a:Lqj5;
+.field public final synthetic a:I
 
-.field public b:I
-
-.field public c:Ltj5;
-
-.field public final synthetic d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.field public final synthetic b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lqj5;)V
+.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
     .locals 0
 
+    iput p2, p0, Luj5;->a:I
+
+    iput-object p1, p0, Luj5;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Luj5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    iput-object p2, p0, Luj5;->a:Lqj5;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Luj5;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget-object p1, p0, Luj5;->c:Ltj5;
+    iget v0, p0, Luj5;->a:I
 
-    iget-object v0, p0, Luj5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iget-object v1, p0, Luj5;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    if-eqz p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    sget-object v0, Lone/me/chats/picker/members/PickerMembersListWidget;->z0:[Lz28;
 
-    :cond_0
-    new-instance p1, Ltj5;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-direct {p1, p0, p2, p3}, Ltj5;-><init>(Luj5;II)V
+    move-result-object v0
 
-    iput-object p1, p0, Luj5;->c:Ltj5;
+    const/4 v1, 0x6
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-static {v0, v1}, Lfca;->j(Landroid/content/Context;I)Lwpf;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    sget v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->j2:I
+
+    const-class v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
+
+    move-result v1
+
+    invoke-virtual {v2, v1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "-"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "."
+
+    const-string v2, "_"
+
+    invoke-static {v0, v1, v2}, Lzzf;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

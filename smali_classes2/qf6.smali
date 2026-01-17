@@ -1,65 +1,51 @@
-.class public final Lqf6;
-.super Lhab;
+.class public abstract Lqf6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+# static fields
+.field public static final a:Lus7;
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+.field public static final b:Lus7;
 
-    move-result p2
+.field public static final c:Lus7;
 
-    const/16 v0, 0x8
 
-    int-to-float v0, v0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    new-instance v0, Lus7;
 
-    move-result-object v1
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/16 v2, 0x13f
 
-    move-result-object v1
+    const/4 v3, 0x1
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    invoke-direct {v0, v1, v2, v3}, Lss7;-><init>(III)V
 
-    const/4 v2, 0x2
+    sput-object v0, Lqf6;->a:Lus7;
 
-    invoke-static {v0, v1, v2, p2}, Lzy4;->d(FFII)I
+    new-instance v0, Lus7;
 
-    move-result p2
+    const/16 v1, 0x140
 
-    const/16 v0, 0x80
+    const/16 v2, 0x21b
 
-    int-to-float v0, v0
+    invoke-direct {v0, v1, v2, v3}, Lss7;-><init>(III)V
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    sput-object v0, Lqf6;->b:Lus7;
 
-    move-result-object v1
+    new-instance v0, Lus7;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/16 v1, 0x21c
 
-    move-result-object v1
+    const v2, 0x7fffffff
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    invoke-direct {v0, v1, v2, v3}, Lss7;-><init>(III)V
 
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Ln7j;->c(F)I
-
-    move-result v0
-
-    sub-int/2addr p2, v0
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    invoke-super {p0, p1, p2}, Lhab;->onMeasure(II)V
+    sput-object v0, Lqf6;->c:Lus7;
 
     return-void
 .end method

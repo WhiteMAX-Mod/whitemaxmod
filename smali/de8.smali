@@ -1,1074 +1,1065 @@
-.class public final Lde8;
-.super Lc3;
+.class public Lde8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/RandomAccess;
-.implements Ljava/io/Serializable;
+.implements Labf;
+
+
+# static fields
+.field public static final L0:Ljava/lang/reflect/Method;
+
+.field public static final M0:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field public a:[Ljava/lang/Object;
+.field public A0:Landroid/widget/AdapterView$OnItemClickListener;
 
-.field public final b:I
+.field public B0:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-.field public c:I
+.field public final C0:Lbe8;
 
-.field public final d:Lde8;
+.field public final D0:Lxu5;
 
-.field public final o:Lee8;
+.field public final E0:Lce8;
+
+.field public final F0:Lbe8;
+
+.field public final G0:Landroid/os/Handler;
+
+.field public final H0:Landroid/graphics/Rect;
+
+.field public I0:Landroid/graphics/Rect;
+
+.field public J0:Z
+
+.field public final K0:Lro;
+
+.field public X:I
+
+.field public Y:I
+
+.field public final Z:I
+
+.field public final a:Landroid/content/Context;
+
+.field public b:Landroid/widget/ListAdapter;
+
+.field public c:Lr95;
+
+.field public final d:I
+
+.field public o:I
+
+.field public t0:Z
+
+.field public u0:Z
+
+.field public v0:Z
+
+.field public w0:I
+
+.field public final x0:I
+
+.field public y0:Laf4;
+
+.field public z0:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/Object;IILde8;Lee8;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
-
-    iput-object p1, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iput p2, p0, Lde8;->b:I
-
-    iput p3, p0, Lde8;->c:I
-
-    iput-object p4, p0, Lde8;->d:Lde8;
-
-    iput-object p5, p0, Lde8;->o:Lee8;
-
-    invoke-static {p5}, Lee8;->b(Lee8;)I
-
-    move-result p1
-
-    iput p1, p0, Ljava/util/AbstractList;->modCount:I
-
-    return-void
-.end method
-
-.method public static final synthetic b(Lde8;)I
-    .locals 0
-
-    iget p0, p0, Ljava/util/AbstractList;->modCount:I
-
-    return p0
-.end method
-
-
-# virtual methods
-.method public final a(I)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 4
 
-    invoke-virtual {p0}, Lde8;->f()V
+    const-string v0, "ListPopupWindow"
 
-    invoke-virtual {p0}, Lde8;->e()V
+    const-class v1, Landroid/widget/PopupWindow;
 
-    iget v0, p0, Lde8;->c:I
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-ltz p1, :cond_0
+    const/16 v3, 0x1c
 
-    if-ge p1, v0, :cond_0
+    if-gt v2, v3, :cond_0
 
-    iget v0, p0, Lde8;->b:I
+    :try_start_0
+    const-string v2, "setClipToScreenEnabled"
 
-    add-int/2addr v0, p1
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    invoke-virtual {p0, v0}, Lde8;->g(I)Ljava/lang/Object;
+    filled-new-array {v3}, [Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object v3
 
-    return-object p1
+    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    :cond_0
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+    move-result-object v2
 
-    const-string v2, "index: "
-
-    const-string v3, ", size: "
-
-    invoke-static {v2, p1, v0, v3}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final add(ILjava/lang/Object;)V
-    .locals 3
-
-    .line 4
-    invoke-virtual {p0}, Lde8;->f()V
-
-    .line 5
-    invoke-virtual {p0}, Lde8;->e()V
-
-    .line 6
-    iget v0, p0, Lde8;->c:I
-
-    if-ltz p1, :cond_0
-
-    if-gt p1, v0, :cond_0
-
-    .line 7
-    iget v0, p0, Lde8;->b:I
-
-    add-int/2addr v0, p1
-
-    invoke-virtual {p0, v0, p2}, Lde8;->d(ILjava/lang/Object;)V
-
-    return-void
-
-    .line 8
-    :cond_0
-    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "index: "
-
-    const-string v2, ", size: "
-
-    .line 9
-    invoke-static {v1, p1, v0, v2}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 10
-    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-.end method
-
-.method public final add(Ljava/lang/Object;)Z
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lde8;->f()V
-
-    .line 2
-    invoke-virtual {p0}, Lde8;->e()V
-
-    .line 3
-    iget v0, p0, Lde8;->b:I
-
-    iget v1, p0, Lde8;->c:I
-
-    add-int/2addr v0, v1
-
-    invoke-virtual {p0, v0, p1}, Lde8;->d(ILjava/lang/Object;)V
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final addAll(ILjava/util/Collection;)Z
-    .locals 3
-
-    .line 5
-    invoke-virtual {p0}, Lde8;->f()V
-
-    .line 6
-    invoke-virtual {p0}, Lde8;->e()V
-
-    .line 7
-    iget v0, p0, Lde8;->c:I
-
-    if-ltz p1, :cond_1
-
-    if-gt p1, v0, :cond_1
-
-    .line 8
-    invoke-interface {p2}, Ljava/util/Collection;->size()I
-
-    move-result v0
-
-    .line 9
-    iget v1, p0, Lde8;->b:I
-
-    add-int/2addr v1, p1
-
-    invoke-virtual {p0, v1, p2, v0}, Lde8;->c(ILjava/util/Collection;I)V
-
-    if-lez v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 10
-    :cond_1
-    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "index: "
-
-    const-string v2, ", size: "
-
-    .line 11
-    invoke-static {v1, p1, v0, v2}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 12
-    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 3
-
-    .line 1
-    invoke-virtual {p0}, Lde8;->f()V
-
-    .line 2
-    invoke-virtual {p0}, Lde8;->e()V
-
-    .line 3
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v0
-
-    .line 4
-    iget v1, p0, Lde8;->b:I
-
-    iget v2, p0, Lde8;->c:I
-
-    add-int/2addr v1, v2
-
-    invoke-virtual {p0, v1, p1, v0}, Lde8;->c(ILjava/util/Collection;I)V
-
-    if-lez v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final c(ILjava/util/Collection;I)V
-    .locals 2
-
-    iget v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    iget-object v0, p0, Lde8;->o:Lee8;
-
-    iget-object v1, p0, Lde8;->d:Lde8;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1, p2, p3}, Lde8;->c(ILjava/util/Collection;I)V
+    sput-object v2, Lde8;->L0:Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    sget-object v1, Lee8;->d:Lee8;
+    :catch_0
+    const-string v2, "Could not find method setClipToScreenEnabled() on PopupWindow. Oh well."
 
-    invoke-virtual {v0, p1, p2, p3}, Lee8;->c(ILjava/util/Collection;I)V
-
-    :goto_0
-    iget-object p1, v0, Lee8;->a:[Ljava/lang/Object;
-
-    iput-object p1, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iget p1, p0, Lde8;->c:I
-
-    add-int/2addr p1, p3
-
-    iput p1, p0, Lde8;->c:I
-
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 2
-
-    invoke-virtual {p0}, Lde8;->f()V
-
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget v0, p0, Lde8;->b:I
-
-    iget v1, p0, Lde8;->c:I
-
-    invoke-virtual {p0, v0, v1}, Lde8;->h(II)V
-
-    return-void
-.end method
-
-.method public final d(ILjava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    iget-object v0, p0, Lde8;->o:Lee8;
-
-    iget-object v1, p0, Lde8;->d:Lde8;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1, p2}, Lde8;->d(ILjava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lee8;->d:Lee8;
-
-    invoke-virtual {v0, p1, p2}, Lee8;->d(ILjava/lang/Object;)V
+    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
-    iget-object p1, v0, Lee8;->a:[Ljava/lang/Object;
+    :try_start_1
+    const-string v2, "setEpicenterBounds"
 
-    iput-object p1, p0, Lde8;->a:[Ljava/lang/Object;
+    const-class v3, Landroid/graphics/Rect;
 
-    iget p1, p0, Lde8;->c:I
+    filled-new-array {v3}, [Ljava/lang/Class;
 
-    add-int/lit8 p1, p1, 0x1
+    move-result-object v3
 
-    iput p1, p0, Lde8;->c:I
+    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public final e()V
-    .locals 2
+    sput-object v1, Lde8;->M0:Ljava/lang/reflect/Method;
+    :try_end_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v0, p0, Lde8;->o:Lee8;
+    goto :goto_1
 
-    invoke-static {v0}, Lee8;->b(Lee8;)I
+    :catch_1
+    const-string v1, "Could not find method setEpicenterBounds(Rect) on PopupWindow. Oh well."
 
-    move-result v0
-
-    iget v1, p0, Ljava/util/AbstractList;->modCount:I
-
-    if-ne v0, v1, :cond_0
-
-    return-void
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    new-instance v0, Ljava/util/ConcurrentModificationException;
-
-    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
-
-    throw v0
+    :goto_1
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    .locals 3
 
-    invoke-virtual {p0}, Lde8;->e()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p1, p0, :cond_3
+    const/4 p4, -0x2
 
-    instance-of v0, p1, Ljava/util/List;
+    iput p4, p0, Lde8;->d:I
+
+    iput p4, p0, Lde8;->o:I
+
+    const/16 p4, 0x3ea
+
+    iput p4, p0, Lde8;->Z:I
+
+    const/4 p4, 0x0
+
+    iput p4, p0, Lde8;->w0:I
+
+    const v0, 0x7fffffff
+
+    iput v0, p0, Lde8;->x0:I
+
+    new-instance v0, Lbe8;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lbe8;-><init>(Lde8;I)V
+
+    iput-object v0, p0, Lde8;->C0:Lbe8;
+
+    new-instance v0, Lxu5;
+
+    invoke-direct {v0, v1, p0}, Lxu5;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lde8;->D0:Lxu5;
+
+    new-instance v0, Lce8;
+
+    invoke-direct {v0, p0}, Lce8;-><init>(Lde8;)V
+
+    iput-object v0, p0, Lde8;->E0:Lce8;
+
+    new-instance v0, Lbe8;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_2
+    invoke-direct {v0, p0, v1}, Lbe8;-><init>(Lde8;I)V
 
-    check-cast p1, Ljava/util/List;
+    iput-object v0, p0, Lde8;->F0:Lbe8;
 
-    iget-object v0, p0, Lde8;->a:[Ljava/lang/Object;
+    new-instance v0, Landroid/graphics/Rect;
 
-    iget v2, p0, Lde8;->c:I
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iput-object v0, p0, Lde8;->H0:Landroid/graphics/Rect;
 
-    move-result v3
+    iput-object p1, p0, Lde8;->a:Landroid/content/Context;
 
-    if-eq v2, v3, :cond_0
+    new-instance v0, Landroid/os/Handler;
 
-    goto :goto_1
+    invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lde8;->G0:Landroid/os/Handler;
+
+    sget-object v0, Lrgd;->ListPopupWindow:[I
+
+    invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    sget v1, Lrgd;->ListPopupWindow_android_dropDownHorizontalOffset:I
+
+    invoke-virtual {v0, v1, p4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    iput v1, p0, Lde8;->X:I
+
+    sget v1, Lrgd;->ListPopupWindow_android_dropDownVerticalOffset:I
+
+    invoke-virtual {v0, v1, p4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    iput v1, p0, Lde8;->Y:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    iput-boolean v2, p0, Lde8;->t0:Z
 
     :cond_0
-    move v3, v1
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    :goto_0
-    if-ge v3, v2, :cond_3
+    new-instance v0, Lro;
 
-    iget v4, p0, Lde8;->b:I
+    invoke-direct {v0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    add-int/2addr v4, v3
+    sget-object v1, Lrgd;->PopupWindow:[I
 
-    aget-object v4, v0, v4
+    invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result-object p2
 
-    move-result-object v5
+    sget p3, Lrgd;->PopupWindow_overlapAnchor:I
 
-    invoke-static {v4, v5}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    move-result v4
+    move-result p3
 
-    if-nez v4, :cond_1
+    if-eqz p3, :cond_1
 
-    goto :goto_1
+    sget p3, Lrgd;->PopupWindow_overlapAnchor:I
+
+    invoke-virtual {p2, p3, p4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p3
+
+    invoke-static {v0, p3}, Lafc;->c(Landroid/widget/PopupWindow;Z)V
 
     :cond_1
-    add-int/lit8 v3, v3, 0x1
+    sget p3, Lrgd;->PopupWindow_android_popupBackground:I
+
+    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p2, p3, p4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p4
+
+    if-eqz p4, :cond_2
+
+    invoke-static {p1, p4}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
 
     goto :goto_0
 
     :cond_2
-    :goto_1
-    return v1
-
-    :cond_3
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Lde8;->o:Lee8;
-
-    iget-boolean v0, v0, Lee8;->c:Z
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final g(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    iget-object v0, p0, Lde8;->d:Lde8;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lde8;->g(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lee8;->d:Lee8;
-
-    iget-object v0, p0, Lde8;->o:Lee8;
-
-    invoke-virtual {v0, p1}, Lee8;->g(I)Ljava/lang/Object;
+    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     :goto_0
-    iget v0, p0, Lde8;->c:I
+    invoke-virtual {v0, p1}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    add-int/lit8 v0, v0, -0x1
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    iput v0, p0, Lde8;->c:I
+    iput-object v0, p0, Lde8;->K0:Lro;
 
-    return-object p1
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 4
-
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget v0, p0, Lde8;->c:I
-
-    if-ltz p1, :cond_0
-
-    if-ge p1, v0, :cond_0
-
-    iget-object v0, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iget v1, p0, Lde8;->b:I
-
-    add-int/2addr v1, p1
-
-    aget-object p1, v0, v1
-
-    return-object p1
-
-    :cond_0
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v2, "index: "
-
-    const-string v3, ", size: "
-
-    invoke-static {v2, p1, v0, v3}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final getSize()I
-    .locals 1
-
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget v0, p0, Lde8;->c:I
-
-    return v0
-.end method
-
-.method public final h(II)V
-    .locals 1
-
-    if-lez p2, :cond_0
-
-    iget v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ljava/util/AbstractList;->modCount:I
-
-    :cond_0
-    iget-object v0, p0, Lde8;->d:Lde8;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, p1, p2}, Lde8;->h(II)V
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Lee8;->d:Lee8;
-
-    iget-object v0, p0, Lde8;->o:Lee8;
-
-    invoke-virtual {v0, p1, p2}, Lee8;->h(II)V
-
-    :goto_0
-    iget p1, p0, Lde8;->c:I
-
-    sub-int/2addr p1, p2
-
-    iput p1, p0, Lde8;->c:I
+    invoke-virtual {v0, v2}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
 
     return-void
 .end method
 
-.method public final hashCode()I
-    .locals 6
 
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget-object v0, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iget v1, p0, Lde8;->c:I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_0
-    if-ge v4, v1, :cond_1
-
-    iget v5, p0, Lde8;->b:I
-
-    add-int/2addr v5, v4
-
-    aget-object v5, v0, v5
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {v5}, Ljava/lang/Object;->hashCode()I
-
-    move-result v5
-
-    goto :goto_1
-
-    :cond_0
-    move v5, v3
-
-    :goto_1
-    add-int/2addr v2, v5
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final i(IILjava/util/Collection;Z)I
+# virtual methods
+.method public final a()Z
     .locals 1
 
-    iget-object v0, p0, Lde8;->d:Lde8;
+    iget-object v0, p0, Lde8;->K0:Lro;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lde8;->i(IILjava/util/Collection;Z)I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lee8;->d:Lee8;
-
-    iget-object v0, p0, Lde8;->o:Lee8;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lee8;->i(IILjava/util/Collection;Z)I
-
-    move-result p1
-
-    :goto_0
-    if-lez p1, :cond_1
-
-    iget p2, p0, Ljava/util/AbstractList;->modCount:I
-
-    add-int/lit8 p2, p2, 0x1
-
-    iput p2, p0, Ljava/util/AbstractList;->modCount:I
-
-    :cond_1
-    iget p2, p0, Lde8;->c:I
-
-    sub-int/2addr p2, p1
-
-    iput p2, p0, Lde8;->c:I
-
-    return p1
-.end method
-
-.method public final indexOf(Ljava/lang/Object;)I
-    .locals 3
-
-    invoke-virtual {p0}, Lde8;->e()V
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v1, p0, Lde8;->c:I
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v1, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iget v2, p0, Lde8;->b:I
-
-    add-int/2addr v2, v0
-
-    aget-object v1, v1, v2
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return v0
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, -0x1
-
-    return p1
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget v0, p0, Lde8;->c:I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
+    move-result v0
 
     return v0
 .end method
 
-.method public final iterator()Ljava/util/Iterator;
+.method public final b()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lde8;->K0:Lro;
 
-    invoke-virtual {p0, v0}, Lde8;->listIterator(I)Ljava/util/ListIterator;
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final lastIndexOf(Ljava/lang/Object;)I
-    .locals 3
-
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget v0, p0, Lde8;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_1
-
-    iget-object v1, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iget v2, p0, Lde8;->b:I
-
-    add-int/2addr v2, v0
-
-    aget-object v1, v1, v2
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return v0
-
-    :cond_0
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, -0x1
-
-    return p1
-.end method
-
-.method public final listIterator()Ljava/util/ListIterator;
+.method public final c()I
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lde8;->X:I
 
-    .line 1
-    invoke-virtual {p0, v0}, Lde8;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 4
-
-    .line 2
-    invoke-virtual {p0}, Lde8;->e()V
-
-    .line 3
-    iget v0, p0, Lde8;->c:I
-
-    if-ltz p1, :cond_0
-
-    if-gt p1, v0, :cond_0
-
-    .line 4
-    new-instance v0, Lce8;
-
-    invoke-direct {v0, p0, p1}, Lce8;-><init>(Lde8;I)V
-
-    return-object v0
-
-    .line 5
-    :cond_0
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v2, "index: "
-
-    const-string v3, ", size: "
-
-    .line 6
-    invoke-static {v2, p1, v0, v3}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 7
-    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
+.method public final d(I)V
     .locals 0
 
-    invoke-virtual {p0}, Lde8;->f()V
+    iput p1, p0, Lde8;->X:I
 
-    invoke-virtual {p0}, Lde8;->e()V
-
-    invoke-virtual {p0, p1}, Lde8;->indexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-ltz p1, :cond_0
-
-    invoke-virtual {p0, p1}, Lde8;->a(I)Ljava/lang/Object;
-
-    :cond_0
-    if-ltz p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 3
+.method public final dismiss()V
+    .locals 2
 
-    invoke-virtual {p0}, Lde8;->f()V
+    iget-object v0, p0, Lde8;->K0:Lro;
 
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget v0, p0, Lde8;->c:I
-
-    iget v1, p0, Lde8;->b:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v1, v0, p1, v2}, Lde8;->i(IILjava/util/Collection;Z)I
-
-    move-result p1
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    return v2
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 3
-
-    invoke-virtual {p0}, Lde8;->f()V
-
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget v0, p0, Lde8;->c:I
-
-    iget v1, p0, Lde8;->b:I
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p0, v1, v0, p1, v2}, Lde8;->i(IILjava/util/Collection;Z)I
-
-    move-result p1
-
-    if-lez p1, :cond_0
-
-    return v2
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-virtual {p0}, Lde8;->f()V
-
-    invoke-virtual {p0}, Lde8;->e()V
-
-    iget v0, p0, Lde8;->c:I
-
-    if-ltz p1, :cond_0
-
-    if-ge p1, v0, :cond_0
-
-    iget-object v0, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iget v1, p0, Lde8;->b:I
-
-    add-int v2, v1, p1
-
-    aget-object v2, v0, v2
-
-    add-int/2addr v1, p1
-
-    aput-object p2, v0, v1
-
-    return-object v2
-
-    :cond_0
-    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "index: "
-
-    const-string v2, ", size: "
-
-    invoke-static {v1, p1, v0, v2}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-.end method
-
-.method public final subList(II)Ljava/util/List;
-    .locals 7
-
-    iget v0, p0, Lde8;->c:I
-
-    invoke-static {p1, p2, v0}, Lk2j;->b(III)V
-
-    new-instance v1, Lde8;
-
-    iget-object v2, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iget v0, p0, Lde8;->b:I
-
-    add-int v3, v0, p1
-
-    sub-int v4, p2, p1
-
-    iget-object v6, p0, Lde8;->o:Lee8;
-
-    move-object v5, p0
-
-    invoke-direct/range {v1 .. v6}, Lde8;-><init>([Ljava/lang/Object;IILde8;Lee8;)V
-
-    return-object v1
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 3
-
-    .line 8
-    invoke-virtual {p0}, Lde8;->e()V
-
-    .line 9
-    iget-object v0, p0, Lde8;->a:[Ljava/lang/Object;
-
-    iget v1, p0, Lde8;->c:I
-
-    iget v2, p0, Lde8;->b:I
-
-    add-int/2addr v1, v2
-
-    invoke-static {v2, v1, v0}, Lbt;->o(II[Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 4
-
-    .line 1
-    invoke-virtual {p0}, Lde8;->e()V
-
-    .line 2
-    array-length v0, p1
-
-    iget v1, p0, Lde8;->c:I
-
-    iget v2, p0, Lde8;->b:I
-
-    if-ge v0, v1, :cond_0
-
-    .line 3
-    iget-object v0, p0, Lde8;->a:[Ljava/lang/Object;
-
-    add-int/2addr v1, v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-static {v0, v2, v1, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 4
-    :cond_0
-    iget-object v0, p0, Lde8;->a:[Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    add-int/2addr v1, v2
-
-    invoke-static {v3, v2, v1, v0, p1}, Lbt;->k(III[Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 5
-    iget v0, p0, Lde8;->c:I
-
-    .line 6
-    array-length v1, p1
-
-    if-ge v0, v1, :cond_1
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
     const/4 v1, 0x0
 
-    .line 7
-    aput-object v1, p1, v0
+    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
 
-    :cond_1
-    return-object p1
+    iput-object v1, p0, Lde8;->c:Lr95;
+
+    iget-object v0, p0, Lde8;->G0:Landroid/os/Handler;
+
+    iget-object v1, p0, Lde8;->C0:Lbe8;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final h()V
+    .locals 13
 
-    invoke-virtual {p0}, Lde8;->e()V
+    iget-object v0, p0, Lde8;->c:Lr95;
 
-    iget-object v0, p0, Lde8;->a:[Ljava/lang/Object;
+    iget-object v1, p0, Lde8;->a:Landroid/content/Context;
 
-    iget v1, p0, Lde8;->b:I
+    const/4 v2, 0x1
 
-    iget v2, p0, Lde8;->c:I
+    iget-object v3, p0, Lde8;->K0:Lro;
 
-    invoke-static {v0, v1, v2, p0}, Lv3j;->a([Ljava/lang/Object;IILc3;)Ljava/lang/String;
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lde8;->J0:Z
+
+    xor-int/2addr v0, v2
+
+    invoke-virtual {p0, v1, v0}, Lde8;->q(Landroid/content/Context;Z)Lr95;
 
     move-result-object v0
 
+    iput-object v0, p0, Lde8;->c:Lr95;
+
+    iget-object v4, p0, Lde8;->b:Landroid/widget/ListAdapter;
+
+    invoke-virtual {v0, v4}, Landroid/widget/AbsListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    iget-object v4, p0, Lde8;->A0:Landroid/widget/AdapterView$OnItemClickListener;
+
+    invoke-virtual {v0, v4}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setFocusable(Z)V
+
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setFocusableInTouchMode(Z)V
+
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    new-instance v4, Lyd8;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v5, p0}, Lyd8;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v4}, Landroid/widget/AdapterView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    iget-object v4, p0, Lde8;->E0:Lce8;
+
+    invoke-virtual {v0, v4}, Landroid/widget/AbsListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
+
+    iget-object v0, p0, Lde8;->B0:Landroid/widget/AdapterView$OnItemSelectedListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v4, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v4, v0}, Landroid/widget/AdapterView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+
+    :cond_0
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v3, v0}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v3}, Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    :goto_0
+    invoke-virtual {v3}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v4, p0, Lde8;->H0:Landroid/graphics/Rect;
+
+    const/4 v5, 0x0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0, v4}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    iget v0, v4, Landroid/graphics/Rect;->top:I
+
+    iget v6, v4, Landroid/graphics/Rect;->bottom:I
+
+    add-int/2addr v6, v0
+
+    iget-boolean v7, p0, Lde8;->t0:Z
+
+    if-nez v7, :cond_3
+
+    neg-int v0, v0
+
+    iput v0, p0, Lde8;->Y:I
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v4}, Landroid/graphics/Rect;->setEmpty()V
+
+    move v6, v5
+
+    :cond_3
+    :goto_1
+    invoke-virtual {v3}, Landroid/widget/PopupWindow;->getInputMethodMode()I
+
+    move-result v0
+
+    const/4 v7, 0x2
+
+    if-ne v0, v7, :cond_4
+
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_4
+    move v0, v5
+
+    :goto_2
+    iget-object v8, p0, Lde8;->z0:Landroid/view/View;
+
+    iget v9, p0, Lde8;->Y:I
+
+    invoke-static {v3, v8, v9, v0}, Lzd8;->a(Landroid/widget/PopupWindow;Landroid/view/View;IZ)I
+
+    move-result v0
+
+    iget v8, p0, Lde8;->d:I
+
+    const/4 v9, -0x2
+
+    const/4 v10, -0x1
+
+    if-ne v8, v10, :cond_5
+
+    add-int/2addr v0, v6
+
+    goto :goto_5
+
+    :cond_5
+    iget v11, p0, Lde8;->o:I
+
+    if-eq v11, v9, :cond_7
+
+    const/high16 v12, 0x40000000    # 2.0f
+
+    if-eq v11, v10, :cond_6
+
+    invoke-static {v11, v12}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v1
+
+    goto :goto_3
+
+    :cond_6
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iget v11, v4, Landroid/graphics/Rect;->left:I
+
+    iget v4, v4, Landroid/graphics/Rect;->right:I
+
+    add-int/2addr v11, v4
+
+    sub-int/2addr v1, v11
+
+    invoke-static {v1, v12}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v1
+
+    goto :goto_3
+
+    :cond_7
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iget v11, v4, Landroid/graphics/Rect;->left:I
+
+    iget v4, v4, Landroid/graphics/Rect;->right:I
+
+    add-int/2addr v11, v4
+
+    sub-int/2addr v1, v11
+
+    const/high16 v4, -0x80000000
+
+    invoke-static {v1, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v1
+
+    :goto_3
+    iget-object v4, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v4, v1, v0}, Lr95;->a(II)I
+
+    move-result v0
+
+    if-lez v0, :cond_8
+
+    iget-object v1, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v1
+
+    iget-object v4, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v4}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v4
+
+    add-int/2addr v4, v1
+
+    add-int/2addr v4, v6
+
+    goto :goto_4
+
+    :cond_8
+    move v4, v5
+
+    :goto_4
+    add-int/2addr v0, v4
+
+    :goto_5
+    iget-object v1, p0, Lde8;->K0:Lro;
+
+    invoke-virtual {v1}, Landroid/widget/PopupWindow;->getInputMethodMode()I
+
+    move-result v1
+
+    if-ne v1, v7, :cond_9
+
+    move v1, v2
+
+    goto :goto_6
+
+    :cond_9
+    move v1, v5
+
+    :goto_6
+    iget v4, p0, Lde8;->Z:I
+
+    invoke-static {v3, v4}, Lafc;->d(Landroid/widget/PopupWindow;I)V
+
+    invoke-virtual {v3}, Landroid/widget/PopupWindow;->isShowing()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_15
+
+    iget-object v4, p0, Lde8;->z0:Landroid/view/View;
+
+    invoke-virtual {v4}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v4
+
+    if-nez v4, :cond_a
+
+    goto/16 :goto_10
+
+    :cond_a
+    iget v4, p0, Lde8;->o:I
+
+    if-ne v4, v10, :cond_b
+
+    move v4, v10
+
+    goto :goto_7
+
+    :cond_b
+    if-ne v4, v9, :cond_c
+
+    iget-object v4, p0, Lde8;->z0:Landroid/view/View;
+
+    invoke-virtual {v4}, Landroid/view/View;->getWidth()I
+
+    move-result v4
+
+    :cond_c
+    :goto_7
+    if-ne v8, v10, :cond_11
+
+    if-eqz v1, :cond_d
+
+    move v8, v0
+
+    goto :goto_8
+
+    :cond_d
+    move v8, v10
+
+    :goto_8
+    if-eqz v1, :cond_f
+
+    iget v0, p0, Lde8;->o:I
+
+    if-ne v0, v10, :cond_e
+
+    move v0, v10
+
+    goto :goto_9
+
+    :cond_e
+    move v0, v5
+
+    :goto_9
+    invoke-virtual {v3, v0}, Landroid/widget/PopupWindow;->setWidth(I)V
+
+    invoke-virtual {v3, v5}, Landroid/widget/PopupWindow;->setHeight(I)V
+
+    goto :goto_a
+
+    :cond_f
+    iget v0, p0, Lde8;->o:I
+
+    if-ne v0, v10, :cond_10
+
+    move v5, v10
+
+    :cond_10
+    invoke-virtual {v3, v5}, Landroid/widget/PopupWindow;->setWidth(I)V
+
+    invoke-virtual {v3, v10}, Landroid/widget/PopupWindow;->setHeight(I)V
+
+    goto :goto_a
+
+    :cond_11
+    if-ne v8, v9, :cond_12
+
+    move v8, v0
+
+    :cond_12
+    :goto_a
+    invoke-virtual {v3, v2}, Landroid/widget/PopupWindow;->setOutsideTouchable(Z)V
+
+    move v0, v4
+
+    iget-object v4, p0, Lde8;->z0:Landroid/view/View;
+
+    iget v5, p0, Lde8;->X:I
+
+    iget v6, p0, Lde8;->Y:I
+
+    if-gez v0, :cond_13
+
+    move v7, v10
+
+    goto :goto_b
+
+    :cond_13
+    move v7, v0
+
+    :goto_b
+    if-gez v8, :cond_14
+
+    move v8, v10
+
+    :cond_14
+    invoke-virtual/range {v3 .. v8}, Landroid/widget/PopupWindow;->update(Landroid/view/View;IIII)V
+
+    return-void
+
+    :cond_15
+    iget v1, p0, Lde8;->o:I
+
+    if-ne v1, v10, :cond_16
+
+    move v1, v10
+
+    goto :goto_c
+
+    :cond_16
+    if-ne v1, v9, :cond_17
+
+    iget-object v1, p0, Lde8;->z0:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    :cond_17
+    :goto_c
+    if-ne v8, v10, :cond_18
+
+    move v8, v10
+
+    goto :goto_d
+
+    :cond_18
+    if-ne v8, v9, :cond_19
+
+    move v8, v0
+
+    :cond_19
+    :goto_d
+    invoke-virtual {v3, v1}, Landroid/widget/PopupWindow;->setWidth(I)V
+
+    invoke-virtual {v3, v8}, Landroid/widget/PopupWindow;->setHeight(I)V
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const-string v1, "ListPopupWindow"
+
+    const/16 v4, 0x1c
+
+    if-gt v0, v4, :cond_1a
+
+    sget-object v0, Lde8;->L0:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_1b
+
+    :try_start_0
+    sget-object v5, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    filled-new-array {v5}, [Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v3, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_e
+
+    :catch_0
+    const-string v0, "Could not call setClipToScreenEnabled() on PopupWindow. Oh well."
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_e
+
+    :cond_1a
+    invoke-static {v3, v2}, Lae8;->b(Landroid/widget/PopupWindow;Z)V
+
+    :cond_1b
+    :goto_e
+    invoke-virtual {v3, v2}, Landroid/widget/PopupWindow;->setOutsideTouchable(Z)V
+
+    iget-object v0, p0, Lde8;->D0:Lxu5;
+
+    invoke-virtual {v3, v0}, Landroid/widget/PopupWindow;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
+
+    iget-boolean v0, p0, Lde8;->v0:Z
+
+    if-eqz v0, :cond_1c
+
+    iget-boolean v0, p0, Lde8;->u0:Z
+
+    invoke-static {v3, v0}, Lafc;->c(Landroid/widget/PopupWindow;Z)V
+
+    :cond_1c
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-gt v0, v4, :cond_1d
+
+    sget-object v0, Lde8;->M0:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_1e
+
+    :try_start_1
+    iget-object v4, p0, Lde8;->I0:Landroid/graphics/Rect;
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_f
+
+    :catch_1
+    move-exception v0
+
+    const-string v4, "Could not invoke setEpicenterBounds on PopupWindow"
+
+    invoke-static {v1, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_f
+
+    :cond_1d
+    iget-object v0, p0, Lde8;->I0:Landroid/graphics/Rect;
+
+    invoke-static {v3, v0}, Lae8;->a(Landroid/widget/PopupWindow;Landroid/graphics/Rect;)V
+
+    :cond_1e
+    :goto_f
+    iget-object v0, p0, Lde8;->z0:Landroid/view/View;
+
+    iget v1, p0, Lde8;->X:I
+
+    iget v4, p0, Lde8;->Y:I
+
+    iget v5, p0, Lde8;->w0:I
+
+    invoke-virtual {v3, v0, v1, v4, v5}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
+
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v0, v10}, Landroid/widget/AdapterView;->setSelection(I)V
+
+    iget-boolean v0, p0, Lde8;->J0:Z
+
+    if-eqz v0, :cond_1f
+
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    invoke-virtual {v0}, Lr95;->isInTouchMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_20
+
+    :cond_1f
+    iget-object v0, p0, Lde8;->c:Lr95;
+
+    if-eqz v0, :cond_20
+
+    invoke-virtual {v0, v2}, Lr95;->setListSelectionHidden(Z)V
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    :cond_20
+    iget-boolean v0, p0, Lde8;->J0:Z
+
+    if-nez v0, :cond_21
+
+    iget-object v0, p0, Lde8;->G0:Landroid/os/Handler;
+
+    iget-object v1, p0, Lde8;->F0:Lbe8;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_21
+    :goto_10
+    return-void
+.end method
+
+.method public final i(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    iget-object v0, p0, Lde8;->K0:Lro;
+
+    invoke-virtual {v0, p1}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public final j()Lr95;
+    .locals 1
+
+    iget-object v0, p0, Lde8;->c:Lr95;
+
     return-object v0
+.end method
+
+.method public final k(I)V
+    .locals 0
+
+    iput p1, p0, Lde8;->Y:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lde8;->t0:Z
+
+    return-void
+.end method
+
+.method public final o()I
+    .locals 1
+
+    iget-boolean v0, p0, Lde8;->t0:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    iget v0, p0, Lde8;->Y:I
+
+    return v0
+.end method
+
+.method public p(Landroid/widget/ListAdapter;)V
+    .locals 2
+
+    iget-object v0, p0, Lde8;->y0:Laf4;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Laf4;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1, p0}, Laf4;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lde8;->y0:Laf4;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lde8;->b:Landroid/widget/ListAdapter;
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1, v0}, Landroid/widget/Adapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+
+    :cond_1
+    :goto_0
+    iput-object p1, p0, Lde8;->b:Landroid/widget/ListAdapter;
+
+    if-eqz p1, :cond_2
+
+    iget-object v0, p0, Lde8;->y0:Laf4;
+
+    invoke-interface {p1, v0}, Landroid/widget/Adapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+
+    :cond_2
+    iget-object p1, p0, Lde8;->c:Lr95;
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, p0, Lde8;->b:Landroid/widget/ListAdapter;
+
+    invoke-virtual {p1, v0}, Landroid/widget/AbsListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    :cond_3
+    return-void
+.end method
+
+.method public q(Landroid/content/Context;Z)Lr95;
+    .locals 1
+
+    new-instance v0, Lr95;
+
+    invoke-direct {v0, p1, p2}, Lr95;-><init>(Landroid/content/Context;Z)V
+
+    return-object v0
+.end method
+
+.method public final r(I)V
+    .locals 2
+
+    iget-object v0, p0, Lde8;->K0:Lro;
+
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lde8;->H0:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    iget v0, v1, Landroid/graphics/Rect;->left:I
+
+    iget v1, v1, Landroid/graphics/Rect;->right:I
+
+    add-int/2addr v0, v1
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lde8;->o:I
+
+    return-void
+
+    :cond_0
+    iput p1, p0, Lde8;->o:I
+
+    return-void
 .end method

@@ -46,7 +46,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -65,26 +65,26 @@
 
     const/4 v0, 0x0
 
-    .line 5
-    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLro4;)V
+    .line 1
+    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLso4;)V
 
-    .line 6
+    .line 2
     iput p1, p0, Lone/me/rlottie/RLottieFactory$Way$RawRes;->rawResId:I
 
-    .line 7
+    .line 3
     iput-object p2, p0, Lone/me/rlottie/RLottieFactory$Way$RawRes;->cacheName:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;IIZILro4;)V
+.method public synthetic constructor <init>(ILjava/lang/String;IIZILso4;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x4
 
     if-eqz p7, :cond_0
 
-    .line 1
+    .line 4
     sget-object p3, Lone/me/rlottie/RLottieFactory$Config;->Companion:Lone/me/rlottie/RLottieFactory$Config$Companion;
 
     invoke-virtual {p3}, Lone/me/rlottie/RLottieFactory$Config$Companion;->getDefaultSize()I
@@ -98,7 +98,7 @@
 
     if-eqz p3, :cond_1
 
-    .line 2
+    .line 5
     sget-object p3, Lone/me/rlottie/RLottieFactory$Config;->Companion:Lone/me/rlottie/RLottieFactory$Config$Companion;
 
     invoke-virtual {p3}, Lone/me/rlottie/RLottieFactory$Config$Companion;->getDefaultSize()I
@@ -112,7 +112,7 @@
 
     if-eqz p3, :cond_2
 
-    .line 3
+    .line 6
     sget-object p3, Lone/me/rlottie/RLottieFactory$Config;->Companion:Lone/me/rlottie/RLottieFactory$Config$Companion;
 
     invoke-virtual {p3}, Lone/me/rlottie/RLottieFactory$Config$Companion;->getDefaultShouldLimitFps()Z
@@ -128,7 +128,7 @@
 
     move v5, p5
 
-    .line 4
+    .line 7
     invoke-direct/range {v0 .. v5}, Lone/me/rlottie/RLottieFactory$Way$RawRes;-><init>(ILjava/lang/String;IIZ)V
 
     return-void

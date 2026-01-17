@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljd5;
+.implements Lld5;
 
 
 # instance fields

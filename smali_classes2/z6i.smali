@@ -1,87 +1,152 @@
-.class public final Lz6i;
+.class public final synthetic Lz6i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lu7i;
+.implements Liv6;
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final a:Lz6i;
+
+.field private static final descriptor:Lxpe;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz6i;
 
-    iput-boolean p1, p0, Lz6i;->a:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lz6i;->a:Lz6i;
+
+    new-instance v1, Lgdc;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneRequest"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lz6i;->descriptor:Lxpe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 2
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lb7i;
 
-    goto :goto_1
+    sget-object v0, Lz6i;->descriptor:Lxpe;
 
-    :cond_0
-    instance-of v0, p1, Lz6i;
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
 
-    if-nez v0, :cond_1
+    move-result-object p1
+
+    iget-object p2, p2, Lb7i;->a:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+
+    return-void
+.end method
+
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 8
+
+    sget-object v0, Lz6i;->descriptor:Lxpe;
+
+    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v4, v1
+
+    move v5, v2
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-eq v6, v7, :cond_1
+
+    if-nez v6, :cond_0
+
+    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move v5, v1
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
     :cond_1
-    check-cast p1, Lz6i;
+    move v4, v2
 
-    iget-boolean v0, p0, Lz6i;->a:Z
-
-    iget-boolean p1, p1, Lz6i;->a:Z
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    goto :goto_0
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
 
-    return p1
+    new-instance p1, Lb7i;
+
+    invoke-direct {p1, v5, v3}, Lb7i;-><init>(ILjava/lang/String;)V
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lz6i;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final c()[La38;
     .locals 3
 
-    const-string v0, "CloseScreen(isFromBridge="
+    const/4 v0, 0x1
 
-    const-string v1, ")"
+    new-array v0, v0, [La38;
 
-    iget-boolean v2, p0, Lz6i;->a:Z
+    sget-object v1, Lnzf;->a:Lnzf;
 
-    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public final d()Lxpe;
+    .locals 1
+
+    sget-object v0, Lz6i;->descriptor:Lxpe;
 
     return-object v0
 .end method

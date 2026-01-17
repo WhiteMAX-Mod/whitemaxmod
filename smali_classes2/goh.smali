@@ -3,56 +3,99 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqv1;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;ZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Lgoh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    iput-boolean p2, p0, Lgoh;->b:Z
 
-    iput-object v0, p0, Lgoh;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-boolean p3, p0, Lgoh;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h(Lpme;)V
-    .locals 2
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v0, p0, Lgoh;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 4
+
+    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0:[Lz28;
+
+    iget-object p1, p0, Lgoh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->F0()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-boolean v1, p0, Lgoh;->b:Z
 
-    move-result v1
+    const/16 v2, 0x8
+
+    const/4 v3, 0x0
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqv1;
-
-    invoke-interface {v1, p1}, Lqv1;->h(Lpme;)V
+    move v1, v3
 
     goto :goto_0
 
     :cond_0
+    move v1, v2
+
+    :goto_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->C0()Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->E0()Landroid/widget/TextView;
+
+    move-result-object p1
+
+    iget-boolean v0, p0, Lgoh;->c:Z
+
+    if-eqz v0, :cond_1
+
+    move v2, v3
+
+    :cond_1
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
     return-void
 .end method

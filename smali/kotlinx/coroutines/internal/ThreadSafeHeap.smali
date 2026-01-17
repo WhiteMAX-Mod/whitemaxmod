@@ -30,7 +30,7 @@
         "()V",
         "",
         "i",
-        "Lv2h;",
+        "Lb3h;",
         "siftUpFrom",
         "(I)V",
         "siftDownFrom",
@@ -44,7 +44,7 @@
         "",
         "predicate",
         "find",
-        "(Loq6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;",
+        "(Lnq6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;",
         "peek",
         "()Lkotlinx/coroutines/internal/ThreadSafeHeapNode;",
         "removeFirstOrNull",
@@ -54,7 +54,7 @@
         "(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)V",
         "cond",
         "addLastIf",
-        "(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;Loq6;)Z",
+        "(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;Lnq6;)Z",
         "remove",
         "(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)Z",
         "firstImpl",
@@ -78,7 +78,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -395,12 +395,12 @@
     throw p1
 .end method
 
-.method public final addLastIf(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;Loq6;)Z
+.method public final addLastIf(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;Lnq6;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
-            "Loq6;",
+            "Lnq6;",
             ")Z"
         }
     .end annotation
@@ -412,7 +412,7 @@
 
     move-result-object v0
 
-    invoke-interface {p2, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -451,12 +451,12 @@
     throw p1
 .end method
 
-.method public final find(Loq6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+.method public final find(Lnq6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loq6;",
+            "Lnq6;",
             ")TT;"
         }
     .end annotation
@@ -490,7 +490,7 @@
 
     :cond_0
     :goto_1
-    invoke-interface {p1, v2}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -736,12 +736,12 @@
     return-object p1
 .end method
 
-.method public final removeFirstIf(Loq6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+.method public final removeFirstIf(Lnq6;)Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loq6;",
+            "Lnq6;",
             ")TT;"
         }
     .end annotation
@@ -765,7 +765,7 @@
 
     :cond_0
     :try_start_1
-    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

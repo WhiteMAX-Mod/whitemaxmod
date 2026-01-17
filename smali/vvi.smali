@@ -1,23 +1,70 @@
 .class public final Lvvi;
-.super Ljava/lang/ref/PhantomReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final a:Ljava/util/Set;
 
-.field public final b:Lm6;
+# static fields
+.field public static final a:Lvvi;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmd3;Ljava/lang/ref/ReferenceQueue;Ljava/util/Set;Lm6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/ref/PhantomReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
+    new-instance v0, Lvvi;
 
-    iput-object p3, p0, Lvvi;->a:Ljava/util/Set;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lvvi;->b:Lm6;
+    sput-object v0, Lvvi;->a:Lvvi;
+
+    new-instance v0, Lbri;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+
+    const-class v1, Lpri;
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

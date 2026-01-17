@@ -1,121 +1,55 @@
-.class public final enum Lsj6;
-.super Ljava/lang/Enum;
+.class public final Lsj6;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lsj6;
+# instance fields
+.field public X:Loba;
 
-.field public static final synthetic Y:[Lsj6;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static final enum a:Lsj6;
+.field public final synthetic Z:Ltj6;
 
-.field public static final enum b:Lsj6;
+.field public d:Lek6;
 
-.field public static final enum c:Lsj6;
+.field public o:Ljava/util/List;
 
-.field public static final enum d:Lsj6;
-
-.field public static final enum o:Lsj6;
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Ltj6;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lsj6;
+    iput-object p1, p0, Lsj6;->Z:Ltj6;
 
-    const-string v1, "FORMAT_HANDLED"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lsj6;->a:Lsj6;
-
-    new-instance v1, Lsj6;
-
-    const-string v2, "FORMAT_EXCEEDS_CAPABILITIES"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lsj6;->b:Lsj6;
-
-    new-instance v2, Lsj6;
-
-    const-string v3, "FORMAT_UNSUPPORTED_DRM"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lsj6;->c:Lsj6;
-
-    new-instance v3, Lsj6;
-
-    const-string v4, "FORMAT_UNSUPPORTED_SUBTYPE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lsj6;->d:Lsj6;
-
-    new-instance v4, Lsj6;
-
-    const-string v5, "FORMAT_UNSUPPORTED_TYPE"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lsj6;->o:Lsj6;
-
-    new-instance v5, Lsj6;
-
-    const-string v6, "UNKNOWN"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lsj6;->X:Lsj6;
-
-    filled-new-array/range {v0 .. v5}, [Lsj6;
-
-    move-result-object v0
-
-    sput-object v0, Lsj6;->Y:[Lsj6;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lsj6;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lsj6;
+    iput-object p1, p0, Lsj6;->Y:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lsj6;->t0:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Lsj6;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lsj6;->t0:I
 
-.method public static values()[Lsj6;
-    .locals 1
+    iget-object p1, p0, Lsj6;->Z:Ltj6;
 
-    sget-object v0, Lsj6;->Y:[Lsj6;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, v0, v0, p0}, Ltj6;->a(Lek6;Ljava/util/List;Loba;Lo84;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Lsj6;
-
-    return-object v0
+    return-object p1
 .end method

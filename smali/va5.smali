@@ -1,53 +1,37 @@
-.class public final Lva5;
+.class public abstract Lva5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lxx1;
-
-.field public final b:Ld68;
-
-.field public c:Lglf;
-
-.field public final d:Lz7g;
-
-.field public final e:Lhof;
-
-.field public final f:Lhof;
+# static fields
+.field public static final a:[Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>(Lxx1;Ld68;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
-    iput-object p1, p0, Lva5;->a:Lxx1;
+    new-array v1, v0, [Ljava/lang/ThreadLocal;
 
-    iput-object p2, p0, Lva5;->b:Ld68;
+    const/4 v2, 0x0
 
-    new-instance p1, Lmy3;
+    :goto_0
+    if-ge v2, v0, :cond_0
 
-    const/16 p2, 0x16
+    new-instance v3, Ljava/lang/ThreadLocal;
 
-    invoke-direct {p1, p2}, Lmy3;-><init>(I)V
+    invoke-direct {v3}, Ljava/lang/ThreadLocal;-><init>()V
 
-    new-instance p2, Lz7g;
+    aput-object v3, v1, v2
 
-    invoke-direct {p2, p1}, Lz7g;-><init>(Lmq6;)V
+    add-int/lit8 v2, v2, 0x1
 
-    iput-object p2, p0, Lva5;->d:Lz7g;
+    goto :goto_0
 
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lva5;->e:Lhof;
-
-    iput-object p1, p0, Lva5;->f:Lhof;
+    :cond_0
+    sput-object v1, Lva5;->a:[Ljava/lang/ThreadLocal;
 
     return-void
 .end method

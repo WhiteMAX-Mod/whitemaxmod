@@ -1,50 +1,104 @@
 .class public final Lc77;
-.super Landroid/graphics/drawable/ColorDrawable;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ld77;
 
 
 # instance fields
-.field public final synthetic a:Lbsd;
+.field public final b:J
 
-.field public final synthetic b:Landroid/graphics/Path;
+.field public final c:J
+
+.field public final d:Ljava/util/List;
+
+.field public final e:Z
+
+.field public final f:J
 
 
 # direct methods
-.method public constructor <init>(Lbsd;Landroid/graphics/Path;I)V
-    .locals 0
+.method public constructor <init>(Ld77;)V
+    .locals 2
 
-    iput-object p1, p0, Lc77;->a:Lbsd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lc77;->b:Landroid/graphics/Path;
+    invoke-interface {p1}, Ld77;->g()J
 
-    invoke-direct {p0, p3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    move-result-wide v0
+
+    iput-wide v0, p0, Lc77;->b:J
+
+    invoke-interface {p1}, Ld77;->h()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lc77;->c:J
+
+    invoke-interface {p1}, Ld77;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lc77;->d:Ljava/util/List;
+
+    invoke-interface {p1}, Ld77;->b()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lc77;->e:Z
+
+    invoke-interface {p1}, Ld77;->i()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lc77;->f:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
+.method public final b()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lc77;->e:Z
+
+    return v0
+.end method
+
+.method public final g()J
     .locals 2
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    iget-wide v0, p0, Lc77;->b:J
 
-    move-result v0
+    return-wide v0
+.end method
 
-    iget-object v1, p0, Lc77;->a:Lbsd;
+.method public final h()J
+    .locals 2
 
-    iget-boolean v1, v1, Lbsd;->a:Z
+    iget-wide v0, p0, Lc77;->c:J
 
-    if-eqz v1, :cond_0
+    return-wide v0
+.end method
 
-    iget-object v1, p0, Lc77;->b:Landroid/graphics/Path;
+.method public final i()J
+    .locals 2
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipOutPath(Landroid/graphics/Path;)Z
+    iget-wide v0, p0, Lc77;->f:J
 
-    :cond_0
-    invoke-super {p0, p1}, Landroid/graphics/drawable/ColorDrawable;->draw(Landroid/graphics/Canvas;)V
+    return-wide v0
+.end method
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+.method public final j()Ljava/util/List;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lc77;->d:Ljava/util/List;
+
+    return-object v0
 .end method

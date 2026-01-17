@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Llq6;
 
 
 # instance fields
@@ -36,36 +36,36 @@
 
     iget-object v0, p0, Log0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lhbg;
 
     move-result-object v0
 
-    check-cast v0, Lefe;
+    check-cast v0, Lage;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v0
-
-    const/16 v1, 0xa6
-
-    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    check-cast v0, Laii;
+    const/16 v1, 0xa4
+
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxii;
 
     return-object v0
 
     :pswitch_0
     iget-object v0, p0, Log0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lhbg;
 
     move-result-object v0
 
-    check-cast v0, Lefe;
+    check-cast v0, Lage;
 
-    invoke-virtual {v0}, Lefe;->l()Lbbg;
+    invoke-virtual {v0}, Lage;->l()Lmbg;
 
     move-result-object v0
 

@@ -55,12 +55,12 @@
     return-void
 .end method
 
-.method public static execute(Lnl;Ljava/util/Collection;)V
+.method public static execute(Lol;Ljava/util/Collection;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnl;",
+            "Lol;",
             "Ljava/util/Collection<",
             "Lru/ok/android/onelog/OneLogItem;",
             ">;)V"
@@ -92,7 +92,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-static {p0, v0, p1}, Lru/ok/android/onelog/Uploader;->executeCollector(Lnl;Ljava/lang/String;Ljava/util/Collection;)V
+    invoke-static {p0, v0, p1}, Lru/ok/android/onelog/Uploader;->executeCollector(Lol;Ljava/lang/String;Ljava/util/Collection;)V
 
     return-void
 
@@ -193,7 +193,7 @@
     check-cast v0, Ljava/util/Collection;
 
     .line 15
-    invoke-static {p0, v1, v0}, Lru/ok/android/onelog/Uploader;->executeCollector(Lnl;Ljava/lang/String;Ljava/util/Collection;)V
+    invoke-static {p0, v1, v0}, Lru/ok/android/onelog/Uploader;->executeCollector(Lol;Ljava/lang/String;Ljava/util/Collection;)V
 
     goto :goto_2
 
@@ -201,7 +201,7 @@
     return-void
 .end method
 
-.method public static execute(Lnl;Lru/ok/android/onelog/OneLogItem;)V
+.method public static execute(Lol;Lru/ok/android/onelog/OneLogItem;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -219,17 +219,17 @@
 
     move-result-object p1
 
-    invoke-static {p0, v0, p1}, Lru/ok/android/onelog/Uploader;->executeCollector(Lnl;Ljava/lang/String;Ljava/util/Collection;)V
+    invoke-static {p0, v0, p1}, Lru/ok/android/onelog/Uploader;->executeCollector(Lol;Ljava/lang/String;Ljava/util/Collection;)V
 
     return-void
 .end method
 
-.method private static executeCollector(Lnl;Ljava/lang/String;Ljava/util/Collection;)V
+.method private static executeCollector(Lol;Ljava/lang/String;Ljava/util/Collection;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnl;",
+            "Lol;",
             "Ljava/lang/String;",
             "Ljava/util/Collection<",
             "Lru/ok/android/onelog/OneLogItem;",
@@ -249,12 +249,12 @@
 
     invoke-direct {v0, p2}, Lru/ok/android/onelog/SimpleOneLogItemsApiValue;-><init>(Ljava/lang/Iterable;)V
 
-    invoke-static {p0, p1, v0}, Lru/ok/android/onelog/Uploader;->executeCollector(Lnl;Ljava/lang/String;Lxu0;)V
+    invoke-static {p0, p1, v0}, Lru/ok/android/onelog/Uploader;->executeCollector(Lol;Ljava/lang/String;Lqu0;)V
 
     return-void
 .end method
 
-.method private static executeCollector(Lnl;Ljava/lang/String;Lxu0;)V
+.method private static executeCollector(Lol;Ljava/lang/String;Lqu0;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -276,10 +276,10 @@
     .line 4
     new-instance v2, Lru/ok/android/onelog/OneLogApiRequest;
 
-    invoke-direct {v2, p1, v0, v1, p2}, Lru/ok/android/onelog/OneLogApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxu0;)V
+    invoke-direct {v2, p1, v0, v1, p2}, Lru/ok/android/onelog/OneLogApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqu0;)V
 
     .line 5
-    invoke-interface {p0, v2}, Lnl;->a(Lzl;)Ljava/lang/Object;
+    invoke-interface {p0, v2}, Lol;->a(Lam;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -296,7 +296,7 @@
     :cond_0
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lu4j;->b()Landroid/app/Application;
+    invoke-static {}, Lm5j;->d()Landroid/app/Application;
 
     move-result-object v0
 
@@ -304,11 +304,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lu4j;->d()Ljava/lang/String;
+    invoke-static {}, Lm5j;->f()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lu4j;->c()I
+    invoke-static {}, Lm5j;->e()I
 
     move-result v2
 
@@ -349,7 +349,7 @@
     :cond_0
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lu4j;->b()Landroid/app/Application;
+    invoke-static {}, Lm5j;->d()Landroid/app/Application;
 
     move-result-object v0
 
@@ -379,7 +379,7 @@
 
     const-string v2, ":"
 
-    invoke-static {v1, v0, v2}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0, v2}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -524,7 +524,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lnl;
+    invoke-virtual {v0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lol;
 
     move-result-object v0
     :try_end_0
@@ -573,7 +573,7 @@
 
     invoke-direct {v3, v1}, Lru/ok/android/onelog/StreamingOneLogItemsApiValue;-><init>(Ljava/io/File;)V
 
-    invoke-static {v0, v2, v3}, Lru/ok/android/onelog/Uploader;->executeCollector(Lnl;Ljava/lang/String;Lxu0;)V
+    invoke-static {v0, v2, v3}, Lru/ok/android/onelog/Uploader;->executeCollector(Lol;Ljava/lang/String;Lqu0;)V
     :try_end_2
     .catch Lru/ok/android/api/core/ApiInvocationException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Lru/ok/android/api/core/ApiRequestException; {:try_start_2 .. :try_end_2} :catch_0

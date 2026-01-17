@@ -41,7 +41,7 @@
         "(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;)Z",
         "render",
         "(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Lorg/webrtc/VideoSink;)Z",
-        "Lv2h;",
+        "Lb3h;",
         "addDelegate",
         "(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Lorg/webrtc/VideoSink;)V",
         "removeDelegate",
@@ -96,7 +96,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/video/VideoRender$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/video/VideoRender$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/video/VideoRender;->Companion:Lru/ok/android/externcalls/sdk/video/VideoRender$Companion;
 

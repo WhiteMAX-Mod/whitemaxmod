@@ -20,15 +20,15 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;",
         "Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;",
-        "Lcgd;",
+        "Lahd;",
         "log",
         "<init>",
-        "(Lcgd;)V",
+        "(Lahd;)V",
         "Lru/ok/android/externcalls/sdk/log/LogItem;",
         "item",
-        "Lv2h;",
+        "Lb3h;",
         "(Lru/ok/android/externcalls/sdk/log/LogItem;)V",
-        "Lcgd;",
+        "Lahd;",
         "Companion",
         "calls-sdk_release"
     }
@@ -49,7 +49,7 @@
 
 
 # instance fields
-.field private final log:Lcgd;
+.field private final log:Lahd;
 
 
 # direct methods
@@ -60,19 +60,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;->Companion:Lru/ok/android/externcalls/sdk/log/OneLogItemLogger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcgd;)V
+.method public constructor <init>(Lahd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;->log:Lcgd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;->log:Lahd;
 
     return-void
 .end method
@@ -116,13 +116,13 @@
     return-void
 
     :goto_1
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;->log:Lcgd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;->log:Lahd;
 
     const-string v1, "OneLogItemLogger"
 
     const-string v2, "Can\'t log"
 
-    invoke-interface {v0, v1, v2, p1}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -1,101 +1,141 @@
 .class public final Lek;
-.super Landroid/view/ViewOutlineProvider;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Z
+
+.field public final synthetic o:Lfk;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lfk;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lek;->a:I
+    iput-object p1, p0, Lek;->o:Lfk;
 
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    iput-boolean p2, p0, Lek;->X:Z
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lek;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p0, p1, p2}, Lek;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v4
+    move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    check-cast p1, Lek;
 
-    move-result v5
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p1, p2}, Lek;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    return-object p2
+.end method
 
-    int-to-float v0, v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/high16 v1, 0x40000000    # 2.0f
+    new-instance p1, Lek;
 
-    div-float v6, v0, v1
+    iget-object v0, p0, Lek;->o:Lfk;
 
-    const/4 v2, 0x0
+    iget-boolean v1, p0, Lek;->X:Z
 
-    const/4 v3, 0x0
+    invoke-direct {p1, v0, v1, p2}, Lek;-><init>(Lfk;ZLkotlin/coroutines/Continuation;)V
 
-    move-object v1, p2
+    return-object p1
+.end method
 
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 p2, 0x1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    iget-object p1, p0, Lek;->o:Lfk;
 
-    return-void
+    iget-object v0, p1, Lfk;->d:Lo58;
 
-    :pswitch_0
-    move-object v0, p2
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    move-result-object v0
 
-    move-result v3
+    check-cast v0, Lol2;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    iget-object v1, v0, Lol2;->B:Lll2;
 
-    move-result v4
+    const/4 v2, -0x1
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v1, v2}, Lzo8;->i(I)V
 
-    move-result p2
+    iget-object v0, v0, Lol2;->D:Lnl2;
 
-    int-to-float p2, p2
+    invoke-virtual {v0, v2}, Lzo8;->i(I)V
 
-    const/high16 v1, 0x40000000    # 2.0f
+    iget-object v0, p1, Lfk;->b:Lo58;
 
-    div-float v5, p2, v1
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    const/4 v2, 0x0
+    check-cast v0, Llfc;
 
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    invoke-virtual {v0}, Llfc;->a()V
 
-    const/4 p2, 0x1
+    iget-object v0, p1, Lfk;->c:Lo58;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
 
-    nop
+    check-cast v0, Lla3;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Lla3;->t()V
+
+    iget-object v0, p1, Lfk;->e:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwj0;
+
+    sget-object v1, Lv33;->a:Lv33;
+
+    invoke-virtual {v0, v1}, Lwj0;->a(Lw33;)V
+
+    iget-boolean v0, p0, Lek;->X:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lfk;->f:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltj;
+
+    invoke-virtual {p1}, Ltj;->m()V
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

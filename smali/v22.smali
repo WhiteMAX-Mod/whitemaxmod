@@ -1,64 +1,47 @@
-.class public final synthetic Lv22;
-.super Ljava/lang/Object;
+.class public final Lv22;
+.super Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:Lq02;
-
-.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
-
-.field public final synthetic c:Landroid/hardware/camera2/CaptureRequest;
-
-.field public final synthetic d:J
-
-.field public final synthetic o:J
-
-
-# direct methods
-.method public synthetic constructor <init>(Lq02;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+# virtual methods
+.method public final onActive(Landroid/hardware/camera2/CameraCaptureSession;)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lv22;->a:Lq02;
-
-    iput-object p2, p0, Lv22;->b:Landroid/hardware/camera2/CameraCaptureSession;
-
-    iput-object p3, p0, Lv22;->c:Landroid/hardware/camera2/CaptureRequest;
-
-    iput-wide p4, p0, Lv22;->d:J
-
-    iput-wide p6, p0, Lv22;->o:J
 
     return-void
 .end method
 
+.method public final onCaptureQueueEmpty(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 8
+    return-void
+.end method
 
-    iget-object v0, p0, Lv22;->a:Lq02;
+.method public final onClosed(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 0
 
-    iget-object v0, v0, Lq02;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    move-object v1, v0
+.method public final onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 0
 
-    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    return-void
+.end method
 
-    iget-object v2, p0, Lv22;->b:Landroid/hardware/camera2/CameraCaptureSession;
+.method public final onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 0
 
-    iget-object v3, p0, Lv22;->c:Landroid/hardware/camera2/CaptureRequest;
+    return-void
+.end method
 
-    iget-wide v4, p0, Lv22;->d:J
+.method public final onReady(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 0
 
-    iget-wide v6, p0, Lv22;->o:J
+    return-void
+.end method
 
-    invoke-virtual/range {v1 .. v7}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+.method public final onSurfacePrepared(Landroid/hardware/camera2/CameraCaptureSession;Landroid/view/Surface;)V
+    .locals 0
 
     return-void
 .end method

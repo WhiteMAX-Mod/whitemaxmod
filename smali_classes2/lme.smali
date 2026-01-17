@@ -1,94 +1,48 @@
-.class public final synthetic Llme;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final Llme;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lg4a;
 
-.field public final synthetic b:Lmme;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmme;I)V
+.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Llme;->a:I
+    iput-object p1, p0, Llme;->X:Lg4a;
 
-    iput-object p1, p0, Llme;->b:Lmme;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Llme;->a:I
+    iput-object p1, p0, Llme;->d:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    iget p1, p0, Llme;->o:I
 
-    iget-object p1, p0, Llme;->b:Lmme;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p1, Lmme;->H0:Ljme;
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Llme;->o:I
 
-    iget-object p1, p1, Lmme;->E0:Lbz8;
+    iget-object p1, p0, Llme;->X:Lg4a;
 
-    iget-object p1, p1, Lbz8;->v0:Lfx0;
+    const/4 v0, 0x0
 
-    new-instance v1, Lqx8;
+    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-direct {v1, v0}, Lqx8;-><init>(Ljme;)V
+    move-result-object p1
 
-    invoke-interface {p1, v1}, Lhne;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Llme;->b:Lmme;
-
-    iget-object v0, p1, Lmme;->H0:Ljme;
-
-    if-eqz v0, :cond_1
-
-    iget-object p1, p1, Lmme;->E0:Lbz8;
-
-    iget-object v1, p1, Lbz8;->z0:Lhof;
-
-    invoke-virtual {v1}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
-
-    move-result v1
-
-    iget-object p1, p1, Lbz8;->v0:Lfx0;
-
-    new-instance v2, Lux8;
-
-    invoke-direct {v2, v0, v1}, Lux8;-><init>(Ljme;I)V
-
-    invoke-interface {p1, v2}, Lhne;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

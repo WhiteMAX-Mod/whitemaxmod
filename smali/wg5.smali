@@ -1,69 +1,50 @@
-.class public final Lwg5;
+.class public abstract Lwg5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrb4;
-.implements Ljava/io/Serializable;
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
-# static fields
-.field public static final a:Lwg5;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lwg5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwg5;->a:Lwg5;
+# virtual methods
+.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
+.method public onActivityDestroyed(Landroid/app/Activity;)V
     .locals 0
 
-    return-object p1
+    return-void
 .end method
 
-.method public final get(Lqb4;)Lpb4;
+.method public onActivityPaused(Landroid/app/Activity;)V
     .locals 0
 
-    const/4 p1, 0x0
-
-    return-object p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final minusKey(Lqb4;)Lrb4;
+.method public onActivityResumed(Landroid/app/Activity;)V
     .locals 0
 
-    return-object p0
+    return-void
 .end method
 
-.method public final plus(Lrb4;)Lrb4;
+.method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
-    return-object p1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public onActivityStarted(Landroid/app/Activity;)V
+    .locals 0
 
-    const-string v0, "EmptyCoroutineContext"
+    return-void
+.end method
 
-    return-object v0
+.method public onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
 .end method

@@ -1,14 +1,23 @@
-.class public interface abstract Lar0;
+.class public final Lar0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract getNextFrame(Landroid/graphics/Bitmap;)I
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract prepareForGenerateCache()V
-.end method
+.field public b:I
 
-.method public abstract releaseForGenerateCache()V
+.field public c:I
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lar0;->a:I
+
+    return-void
 .end method

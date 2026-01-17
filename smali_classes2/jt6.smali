@@ -1,6 +1,9 @@
 .class public final Ljt6;
-.super Lkt6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmt6;
 
 
 # static fields
@@ -47,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x36203517
+    const v0, -0x6ebc12d1
 
     return v0
 .end method
@@ -55,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "CameraPermission"
+    const-string v0, "ClearSelectionAndScrollUp"
 
     return-object v0
 .end method

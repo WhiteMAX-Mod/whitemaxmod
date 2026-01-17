@@ -1,129 +1,169 @@
-.class public final enum Lcpg;
-.super Ljava/lang/Enum;
+.class public final Lcpg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lcpg;
-
-.field public static final enum b:Lcpg;
-
-.field public static final enum c:Lcpg;
-
-.field public static final enum d:Lcpg;
-
-.field public static final enum o:Lcpg;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Lcpg;
-
-    const/4 v1, 0x0
-
-    const-string v2, "no_connection_timeout"
-
-    const-string v3, "NO_CONNECTION_TIMEOUT"
-
-    invoke-direct {v0, v3, v1, v2}, Lcpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcpg;->b:Lcpg;
-
-    new-instance v1, Lcpg;
-
-    const/4 v2, 0x1
-
-    const-string v3, "no_data_timeout"
-
-    const-string v4, "NO_DATA_TIMEOUT"
-
-    invoke-direct {v1, v4, v2, v3}, Lcpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcpg;->c:Lcpg;
-
-    new-instance v2, Lcpg;
-
-    const/4 v3, 0x2
-
-    const-string v4, "connection_failed"
-
-    const-string v5, "CONNECTION_FAILED"
-
-    invoke-direct {v2, v5, v3, v4}, Lcpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v3, Lcpg;
-
-    const/4 v4, 0x3
-
-    const-string v5, "success_audio"
-
-    const-string v6, "SUCCESS_AUDIO"
-
-    invoke-direct {v3, v6, v4, v5}, Lcpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lcpg;->d:Lcpg;
-
-    new-instance v4, Lcpg;
-
-    const/4 v5, 0x4
-
-    const-string v6, "success_connection"
-
-    const-string v7, "SUCCESS_CONNECTION"
-
-    invoke-direct {v4, v7, v5, v6}, Lcpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lcpg;->o:Lcpg;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lcpg;
-
-    move-result-object v0
-
-    sput-object v0, Lcpg;->X:[Lcpg;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(IIII)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lcpg;->a:Ljava/lang/String;
+    iput p1, p0, Lcpg;->a:I
+
+    iput p2, p0, Lcpg;->b:I
+
+    iput p3, p0, Lcpg;->c:I
+
+    iput p4, p0, Lcpg;->d:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcpg;
-    .locals 1
 
-    const-class v0, Lcpg;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    goto :goto_1
 
-    check-cast p0, Lcpg;
+    :cond_0
+    instance-of v0, p1, Lcpg;
 
-    return-object p0
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lcpg;
+
+    iget v0, p0, Lcpg;->a:I
+
+    iget v1, p1, Lcpg;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lcpg;->b:I
+
+    iget v1, p1, Lcpg;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lcpg;->c:I
+
+    iget v1, p1, Lcpg;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lcpg;->d:I
+
+    iget p1, p1, Lcpg;->d:I
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static values()[Lcpg;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    sget-object v0, Lcpg;->X:[Lcpg;
+    iget v0, p0, Lcpg;->a:I
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, -0x1
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lcpg;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lcpg;->c:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v1, p0, Lcpg;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", contrastStatic=-1, primary="
+
+    const-string v1, ", secondary="
+
+    const-string v2, "TopbarTextDefaultColors(contrast="
+
+    iget v3, p0, Lcpg;->a:I
+
+    iget v4, p0, Lcpg;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Lcpg;
+    const-string v1, ", themed="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lcpg;->c:I
+
+    iget v4, p0, Lcpg;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lhc0;->j(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,63 +1,136 @@
-.class public final Lfjj;
+.class public abstract Lfjj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Long;
-
-.field public final b:Ljava/lang/Long;
-
-.field public final c:Ljava/lang/Long;
-
-.field public final d:Ljava/lang/Long;
-
-.field public final e:Ljava/lang/Long;
-
-.field public final f:Ljava/lang/Long;
-
-
 # direct methods
-.method public synthetic constructor <init>(Lvd3;)V
-    .locals 1
+.method public static a(I)I
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p0, :cond_3
 
-    iget-object v0, p1, Lvd3;->a:Ljava/lang/Object;
+    const/16 v0, 0x5a
 
-    check-cast v0, Ljava/lang/Long;
+    if-eq p0, v0, :cond_2
 
-    iput-object v0, p0, Lfjj;->a:Ljava/lang/Long;
+    const/16 v0, 0xb4
 
-    iget-object v0, p1, Lvd3;->b:Ljava/lang/Object;
+    if-eq p0, v0, :cond_1
 
-    check-cast v0, Ljava/lang/Long;
+    const/16 v0, 0x10e
 
-    iput-object v0, p0, Lfjj;->b:Ljava/lang/Long;
+    if-ne p0, v0, :cond_0
 
-    iget-object v0, p1, Lvd3;->c:Ljava/lang/Object;
+    const/4 p0, 0x3
 
-    check-cast v0, Ljava/lang/Long;
+    return p0
 
-    iput-object v0, p0, Lfjj;->c:Ljava/lang/Long;
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget-object v0, p1, Lvd3;->d:Ljava/lang/Object;
+    const-string v1, "Invalid rotation: "
 
-    check-cast v0, Ljava/lang/Long;
+    invoke-static {p0, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
-    iput-object v0, p0, Lfjj;->d:Ljava/lang/Long;
+    move-result-object p0
 
-    iget-object v0, p1, Lvd3;->o:Ljava/lang/Object;
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Ljava/lang/Long;
+    throw v0
 
-    iput-object v0, p0, Lfjj;->e:Ljava/lang/Long;
+    :cond_1
+    const/4 p0, 0x2
 
-    iget-object p1, p1, Lvd3;->X:Ljava/lang/Object;
+    return p0
 
-    check-cast p1, Ljava/lang/Long;
+    :cond_2
+    const/4 p0, 0x1
 
-    iput-object p1, p0, Lfjj;->f:Ljava/lang/Long;
+    return p0
 
-    return-void
+    :cond_3
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final b(I)I
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1f
+
+    if-lt v0, v1, :cond_0
+
+    const/high16 v0, 0x4000000
+
+    and-int/2addr v0, p0
+
+    if-nez v0, :cond_0
+
+    const/high16 v0, 0x2000000
+
+    or-int/2addr p0, v0
+
+    :cond_0
+    return p0
+.end method
+
+.method public static c(Landroid/content/Intent;I)I
+    .locals 3
+
+    const/high16 v0, 0x2000000
+
+    and-int/2addr v0, p1
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x22
+
+    if-lt v1, v2, :cond_3
+
+    invoke-virtual {p0}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object p0
+
+    if-nez p0, :cond_3
+
+    :cond_2
+    :goto_1
+    if-eqz v0, :cond_3
+
+    const/high16 p0, 0x1000000
+
+    or-int/2addr p0, p1
+
+    return p0
+
+    :cond_3
+    return p1
 .end method

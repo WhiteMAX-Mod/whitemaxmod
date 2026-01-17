@@ -3,16 +3,32 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()[Let5;
+# static fields
+.field public static final t:Ldgj;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ldgj;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Ldgj;-><init>(I)V
+
+    sput-object v0, Ljt5;->t:Ldgj;
+
+    return-void
 .end method
 
-.method public i(Landroid/net/Uri;Ljava/util/Map;)[Let5;
-    .locals 0
 
-    invoke-interface {p0}, Ljt5;->b()[Let5;
+# virtual methods
+.method public abstract A(II)Lqrg;
+.end method
 
-    move-result-object p1
+.method public abstract N(Lhke;)V
+.end method
 
-    return-object p1
+.method public abstract v()V
 .end method

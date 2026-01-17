@@ -16,9 +16,11 @@
 
 .field public final f:I
 
+.field public final g:F
+
 
 # direct methods
-.method public constructor <init>(IZII[II)V
+.method public constructor <init>(IZII[IIIIF)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,6 +36,8 @@
     iput-object p5, p0, Lfia;->e:[I
 
     iput p6, p0, Lfia;->f:I
+
+    iput p9, p0, Lfia;->g:F
 
     return-void
 .end method

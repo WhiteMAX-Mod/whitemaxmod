@@ -1,69 +1,99 @@
-.class public abstract Lio4;
+.class public final Lio4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li4g;
+
 
 # static fields
-.field public static final a:Landroid/util/SparseIntArray;
+.field public static final b:J
+
+
+# instance fields
+.field public final a:Landroid/app/ActivityManager;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    const/4 v1, 0x0
+    const-wide/16 v1, 0x5
 
-    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    sput-object v0, Lio4;->a:Landroid/util/SparseIntArray;
+    move-result-wide v0
+
+    sput-wide v0, Lio4;->b:J
 
     return-void
 .end method
 
-.method public static final a()Lcdc;
-    .locals 5
+.method public constructor <init>(Landroid/app/ActivityManager;)V
+    .locals 0
 
-    new-instance v0, Lcdc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    iput-object p1, p0, Lio4;->a:Landroid/app/ActivityManager;
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Runtime;->maxMemory()J
 
-    move-result-wide v1
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 7
 
-    const-wide/32 v3, 0x7fffffff
+    new-instance v0, Lcj9;
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
+    iget-object v1, p0, Lio4;->a:Landroid/app/ActivityManager;
 
-    move-result-wide v1
+    invoke-virtual {v1}, Landroid/app/ActivityManager;->getMemoryClass()I
 
-    long-to-int v1, v1
+    move-result v1
 
-    const/high16 v2, 0x1000000
+    const/high16 v2, 0x100000
 
-    if-le v1, v2, :cond_0
+    mul-int/2addr v1, v2
 
-    div-int/lit8 v1, v1, 0x4
+    const v2, 0x7fffffff
 
-    mul-int/lit8 v1, v1, 0x3
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    const/high16 v2, 0x2000000
+
+    if-ge v1, v2, :cond_0
+
+    const/high16 v1, 0x400000
 
     goto :goto_0
 
     :cond_0
-    div-int/lit8 v1, v1, 0x2
+    const/high16 v2, 0x4000000
+
+    if-ge v1, v2, :cond_1
+
+    const/high16 v1, 0x600000
+
+    goto :goto_0
+
+    :cond_1
+    div-int/lit8 v1, v1, 0x4
 
     :goto_0
-    sget-object v2, Lio4;->a:Landroid/util/SparseIntArray;
+    const v6, 0x7fffffff
 
-    const/4 v3, -0x1
+    sget-wide v4, Lio4;->b:J
 
-    const/4 v4, 0x0
+    const/16 v2, 0x100
 
-    invoke-direct {v0, v4, v1, v2, v3}, Lcdc;-><init>(IILandroid/util/SparseIntArray;I)V
+    const v3, 0x7fffffff
+
+    invoke-direct/range {v0 .. v6}, Lcj9;-><init>(IIIJI)V
 
     return-object v0
 .end method

@@ -1,72 +1,81 @@
 .class public final Lz3b;
-.super Ljava/lang/Object;
+.super Lc4b;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:Lz3b;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:La4b;
-
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic d:Ljava/lang/Runnable;
+.field public static final b:Ls4e;
 
 
 # direct methods
-.method public synthetic constructor <init>(La4b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p4, p0, Lz3b;->a:I
+    new-instance v0, Lz3b;
 
-    iput-object p1, p0, Lz3b;->b:La4b;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lz3b;->c:Landroid/graphics/drawable/Drawable;
+    sput-object v0, Lz3b;->a:Lz3b;
 
-    iput-object p3, p0, Lz3b;->d:Ljava/lang/Runnable;
+    invoke-static {}, Ls4e;->a()Ls4e;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    iput v1, v0, Ls4e;->a:I
+
+    sput-object v0, Lz3b;->b:Ls4e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a()Ls4e;
+    .locals 1
 
-    iget v0, p0, Lz3b;->a:I
+    sget-object v0, Lz3b;->b:Ls4e;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lz3b;->c:Landroid/graphics/drawable/Drawable;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v1, p0, Lz3b;->d:Ljava/lang/Runnable;
+    const/4 v0, 0x1
 
-    iget-object v2, p0, Lz3b;->b:La4b;
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v2, v0, v1}, La4b;->e(La4b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    return v0
 
-    return-void
+    :cond_0
+    instance-of p1, p1, Lz3b;
 
-    :pswitch_0
-    iget-object v0, p0, Lz3b;->c:Landroid/graphics/drawable/Drawable;
+    if-nez p1, :cond_1
 
-    iget-object v1, p0, Lz3b;->d:Ljava/lang/Runnable;
+    const/4 p1, 0x0
 
-    iget-object v2, p0, Lz3b;->b:La4b;
+    return p1
 
-    invoke-static {v2, v0, v1}, La4b;->e(La4b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    :cond_1
+    return v0
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 1
 
-    nop
+    const v0, 0x21b20048
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Circle"
+
+    return-object v0
 .end method

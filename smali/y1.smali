@@ -1,167 +1,124 @@
 .class public abstract Ly1;
-.super Lz3h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/ListIterator;
+.implements Ljava/util/Iterator;
+.implements Lo28;
 
 
 # instance fields
-.field public final b:I
+.field public a:I
 
-.field public c:I
-
-
-# direct methods
-.method public constructor <init>(II)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lz3h;-><init>(I)V
-
-    invoke-static {p2, p1}, Lljj;->f(II)V
-
-    iput p1, p0, Ly1;->b:I
-
-    iput p2, p0, Ly1;->c:I
-
-    return-void
-.end method
+.field public b:Ljava/lang/Object;
 
 
 # virtual methods
-.method public abstract a(I)Ljava/lang/Object;
-.end method
-
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+.method public abstract a()V
 .end method
 
 .method public final hasNext()Z
-    .locals 2
+    .locals 3
 
-    iget v0, p0, Ly1;->c:I
+    iget v0, p0, Ly1;->a:I
 
-    iget v1, p0, Ly1;->b:I
+    const/4 v1, 0x0
 
-    if-ge v0, v1, :cond_0
+    const/4 v2, 0x1
 
-    const/4 v0, 0x1
+    if-eqz v0, :cond_2
 
-    return v0
+    if-eq v0, v2, :cond_1
 
-    :cond_0
-    const/4 v0, 0x0
+    const/4 v2, 0x2
 
-    return v0
-.end method
+    if-ne v0, v2, :cond_0
 
-.method public final hasPrevious()Z
-    .locals 1
-
-    iget v0, p0, Ly1;->c:I
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    return v1
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    return v0
+    const-string v1, "hasNext called when the iterator is in the FAILED state."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    return v2
+
+    :cond_2
+    const/4 v0, 0x3
+
+    iput v0, p0, Ly1;->a:I
+
+    invoke-virtual {p0}, Ly1;->a()V
+
+    iget v0, p0, Ly1;->a:I
+
+    if-ne v0, v2, :cond_3
+
+    return v2
+
+    :cond_3
+    return v1
 .end method
 
 .method public final next()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Ly1;->a:I
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    iput v1, p0, Ly1;->a:I
+
+    iget-object v0, p0, Ly1;->b:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_1
+
+    const/4 v0, 0x3
+
+    iput v0, p0, Ly1;->a:I
+
+    invoke-virtual {p0}, Ly1;->a()V
+
+    iget v0, p0, Ly1;->a:I
+
+    if-ne v0, v2, :cond_1
+
+    iput v1, p0, Ly1;->a:I
+
+    iget-object v0, p0, Ly1;->b:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final remove()V
     .locals 2
 
-    invoke-virtual {p0}, Ly1;->hasNext()Z
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    move-result v0
+    const-string v1, "Operation is not supported for read-only collection"
 
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ly1;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Ly1;->c:I
-
-    invoke-virtual {p0, v0}, Ly1;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    iget v0, p0, Ly1;->c:I
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Ly1;->hasPrevious()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ly1;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Ly1;->c:I
-
-    invoke-virtual {p0, v0}, Ly1;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget v0, p0, Ly1;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
 .end method

@@ -1,5 +1,5 @@
 .class public final Lwpa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
@@ -8,21 +8,21 @@
 
 .field public d:Ljava/lang/String;
 
-.field public o:Lqj8;
+.field public o:Ldj8;
 
 
 # direct methods
-.method public constructor <init>(Lgr9;)V
+.method public constructor <init>(Lpq9;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
+    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
+.method public final d(Lpq9;Ljava/lang/String;)V
     .locals 2
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -86,21 +86,21 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {p1}, Lgr9;->y()V
+    invoke-virtual {p1}, Lpq9;->B()V
 
     return-void
 
     :pswitch_0
-    invoke-static {p1}, Lqj8;->a(Lgr9;)Lqj8;
+    invoke-static {p1}, Ldj8;->a(Lpq9;)Ldj8;
 
     move-result-object p1
 
-    iput-object p1, p0, Lwpa;->o:Lqj8;
+    iput-object p1, p0, Lwpa;->o:Ldj8;
 
     return-void
 
     :pswitch_1
-    invoke-static {p1}, Lisi;->p(Lgr9;)Ljava/lang/String;
+    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -111,7 +111,7 @@
     :pswitch_2
     const-wide/16 v0, 0x0
 
-    invoke-static {p1, v0, v1}, Lisi;->m(Lgr9;J)J
+    invoke-static {p1, v0, v1}, Lcti;->n(Lpq9;J)J
 
     move-result-wide p1
 
@@ -141,13 +141,13 @@
 
     iget-object v2, p0, Lwpa;->d:Ljava/lang/String;
 
-    iget-object v3, p0, Lwpa;->o:Lqj8;
+    iget-object v3, p0, Lwpa;->o:Ldj8;
 
     const-string v4, "Response{userId="
 
     const-string v5, ", deviceId=\'"
 
-    invoke-static {v4, v0, v1, v5, v2}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v0, v1, v5, v2}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

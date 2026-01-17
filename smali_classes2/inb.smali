@@ -1,64 +1,91 @@
-.class public final synthetic Linb;
+.class public abstract Linb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Llnb;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Llnb;I)V
-    .locals 0
-
-    iput p2, p0, Linb;->a:I
-
-    iput-object p1, p0, Linb;->b:Llnb;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Linb;->a:I
+    sget v0, Lcfd;->web_app_root_biometry_open_settings_dialog_title:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Linb;->a:I
 
-    iget-object v0, p0, Linb;->b:Llnb;
+    sget v0, Lcfd;->web_app_root_biometry_request_dialog_accept:I
 
-    iget-object v0, v0, Llnb;->D:Lch5;
+    sput v0, Linb;->b:I
 
-    return-object v0
+    sget v0, Lcfd;->web_app_root_biometry_request_dialog_decline:I
 
-    :pswitch_0
-    iget-object v0, p0, Linb;->b:Llnb;
+    sput v0, Linb;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Lcfd;->web_app_root_biometry_request_dialog_default_reason:I
 
-    const/4 v0, 0x0
+    sput v0, Linb;->d:I
 
-    return-object v0
+    sget v0, Lcfd;->web_app_root_biometry_request_dialog_title:I
 
-    :pswitch_1
-    iget-object v0, p0, Linb;->b:Llnb;
+    sput v0, Linb;->e:I
 
-    iget-object v0, v0, Lpm0;->s:Ld9;
+    sget v0, Lcfd;->web_app_root_biometry_setting:I
 
-    return-object v0
+    sput v0, Linb;->f:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    sget v0, Lcfd;->web_app_root_choose_media_bottomsheet_gallery:I
+
+    sput v0, Linb;->g:I
+
+    sget v0, Lcfd;->web_app_root_choose_media_bottomsheet_title:I
+
+    sput v0, Linb;->h:I
+
+    sget v0, Lcfd;->web_app_root_max_share_quote_title:I
+
+    sput v0, Linb;->i:I
+
+    sget v0, Lcfd;->web_app_root_setting_open_webapp:I
+
+    sput v0, Linb;->j:I
+
+    sget v0, Lcfd;->web_app_root_settings_header_subtitle:I
+
+    sput v0, Linb;->k:I
+
+    sget v0, Lcfd;->web_app_root_settings_header_title:I
+
+    sput v0, Linb;->l:I
+
+    sget v0, Lcfd;->web_app_root_settings_webapps:I
+
+    sput v0, Linb;->m:I
+
+    return-void
 .end method

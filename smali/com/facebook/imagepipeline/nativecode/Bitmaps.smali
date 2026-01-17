@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lb35;
+.annotation build Le35;
 .end annotation
 
 
@@ -16,11 +16,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Llj7;->a:I
+    sget v0, Lsi7;->a:I
 
     const-string v0, "imagepipeline"
 
-    invoke-static {v0}, Luia;->c(Ljava/lang/String;)Z
+    invoke-static {v0}, Lsia;->d(Ljava/lang/String;)Z
 
     return-void
 .end method
@@ -35,7 +35,7 @@
 
 .method public static copyBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
     .locals 4
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lhjj;->a(Ljava/lang/Boolean;)V
+    invoke-static {v0}, Lbkj;->b(Ljava/lang/Boolean;)V
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isMutable()Z
 
@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lhjj;->a(Ljava/lang/Boolean;)V
+    invoke-static {v0}, Lbkj;->b(Ljava/lang/Boolean;)V
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lhjj;->a(Ljava/lang/Boolean;)V
+    invoke-static {v0}, Lbkj;->b(Ljava/lang/Boolean;)V
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lhjj;->a(Ljava/lang/Boolean;)V
+    invoke-static {v0}, Lbkj;->b(Ljava/lang/Boolean;)V
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getRowBytes()I
 
@@ -137,6 +137,6 @@
 .end method
 
 .method private static native nativeCopyBitmap(Landroid/graphics/Bitmap;ILandroid/graphics/Bitmap;II)V
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 .end method

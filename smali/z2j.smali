@@ -1,70 +1,70 @@
-.class public abstract Lz2j;
+.class public final Lz2j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltja;
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lz2j;
 
 
 # direct methods
-.method public static final a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-static {p0}, Lz2j;->b(Ljava/lang/String;)Z
+    new-instance v0, Lz2j;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    sput-object v0, Lz2j;->a:Lz2j;
 
-    const-string v0, "mailto:"
+    new-instance v0, Lbri;
 
-    invoke-static {p0, v0}, Liyf;->N(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    return-object p0
+    const-class v1, Lpri;
 
-    :cond_0
-    invoke-static {p0}, Lz2j;->c(Ljava/lang/String;)Z
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x2
 
-    const-string v0, "tel:"
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    invoke-static {p0, v0}, Liyf;->N(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    :cond_1
-    return-object p0
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static final b(Ljava/lang/String;)Z
-    .locals 2
 
-    const-string v0, "mailto:"
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-static {p0, v0, v1}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
+    move-result-object p1
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static final c(Ljava/lang/String;)Z
-    .locals 2
-
-    const-string v0, "tel:"
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    return p0
+    throw p1
 .end method

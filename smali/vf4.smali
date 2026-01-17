@@ -1,133 +1,105 @@
-.class public abstract Lvf4;
-.super Ljava/lang/Object;
+.class public final Lvf4;
+.super Lou8;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final synthetic K0:I
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public J0:Luf4;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Comparable;)V
-    .locals 0
+# virtual methods
+.method public final f(Landroid/graphics/Canvas;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lvf4;->J0:Luf4;
 
-    iput-object p1, p0, Lvf4;->a:Ljava/lang/Object;
+    iget-object v0, v0, Luf4;->r:Landroid/graphics/RectF;
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1}, Lou8;->f(Landroid/graphics/Canvas;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    iget-object v0, p0, Lvf4;->J0:Luf4;
+
+    iget-object v0, v0, Luf4;->r:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipOutRect(Landroid/graphics/RectF;)Z
+
+    invoke-super {p0, p1}, Lou8;->f(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Lvf4;)I
+.method public final mutate()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    sget-object v0, Ltf4;->d:Ltf4;
+    new-instance v0, Luf4;
 
-    if-ne p1, v0, :cond_0
+    iget-object v1, p0, Lvf4;->J0:Luf4;
 
-    const/4 p1, 0x1
+    invoke-direct {v0, v1}, Luf4;-><init>(Luf4;)V
 
-    return p1
+    iput-object v0, p0, Lvf4;->J0:Luf4;
+
+    return-object p0
+.end method
+
+.method public final q(FFFF)V
+    .locals 2
+
+    iget-object v0, p0, Lvf4;->J0:Luf4;
+
+    iget-object v0, v0, Luf4;->r:Landroid/graphics/RectF;
+
+    iget v1, v0, Landroid/graphics/RectF;->left:F
+
+    cmpl-float v1, p1, v1
+
+    if-nez v1, :cond_1
+
+    iget v1, v0, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v1, p2, v1
+
+    if-nez v1, :cond_1
+
+    iget v1, v0, Landroid/graphics/RectF;->right:F
+
+    cmpl-float v1, p3, v1
+
+    if-nez v1, :cond_1
+
+    iget v1, v0, Landroid/graphics/RectF;->bottom:F
+
+    cmpl-float v1, p4, v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Ltf4;->c:Ltf4;
-
-    if-ne p1, v0, :cond_1
-
-    const/4 p1, -0x1
-
-    return p1
+    return-void
 
     :cond_1
-    iget-object v0, p1, Lvf4;->a:Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    sget v1, Lsgd;->c:I
+    invoke-virtual {p0}, Lou8;->invalidateSelf()V
 
-    iget-object v1, p0, Lvf4;->a:Ljava/lang/Object;
-
-    invoke-interface {v1, v0}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    return v0
-
-    :cond_2
-    instance-of v0, p0, Luf4;
-
-    instance-of p1, p1, Luf4;
-
-    invoke-static {v0, p1}, Ljava/lang/Boolean;->compare(ZZ)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public abstract c(Ljava/lang/StringBuilder;)V
-.end method
-
-.method public bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Lvf4;
-
-    invoke-virtual {p0, p1}, Lvf4;->a(Lvf4;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public abstract d(Ljava/lang/StringBuilder;)V
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Lvf4;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lvf4;
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Lvf4;->a(Lvf4;)I
-
-    move-result p1
-    :try_end_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :catch_0
-    :cond_0
-    return v1
-.end method
-
-.method public f()Ljava/lang/Comparable;
-    .locals 1
-
-    iget-object v0, p0, Lvf4;->a:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public abstract g(Ljava/lang/Comparable;)Z
-.end method
-
-.method public abstract hashCode()I
+    return-void
 .end method

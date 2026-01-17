@@ -1,60 +1,121 @@
-.class public final synthetic Lpcb;
-.super Lw8;
+.class public abstract Lpcb;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ler6;
 
 
 # static fields
-.field public static final Z:Lpcb;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lpcb;
-
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lysb;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lw8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lpcb;->Z:Lpcb;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_animals_and_plants:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    sput v0, Lpcb;->a:I
 
-    move-result p1
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_classic:I
 
-    check-cast p2, Ljava/lang/Boolean;
+    sput v0, Lpcb;->b:I
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_flags:I
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    sput v0, Lpcb;->c:I
 
-    new-instance p3, Lysb;
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_food_and_drink:I
 
-    new-instance v0, Ljava/lang/Integer;
+    sput v0, Lpcb;->d:I
 
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_gestures_and_people:I
 
-    invoke-direct {p3, v0, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    sput v0, Lpcb;->e:I
 
-    return-object p3
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_objects:I
+
+    sput v0, Lpcb;->f:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_sport_and_activity:I
+
+    sput v0, Lpcb;->g:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_symbols:I
+
+    sput v0, Lpcb;->h:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_emoji_travels_and_transport:I
+
+    sput v0, Lpcb;->i:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_favorite:I
+
+    sput v0, Lpcb;->j:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_popular:I
+
+    sput v0, Lpcb;->k:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_recent:I
+
+    sput v0, Lpcb;->l:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_recent_clear_action:I
+
+    sput v0, Lpcb;->m:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_recent_clear_cancel:I
+
+    sput v0, Lpcb;->n:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_recent_clear_title:I
+
+    sput v0, Lpcb;->o:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_tab_emoji:I
+
+    sput v0, Lpcb;->p:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_tab_gifs:I
+
+    sput v0, Lpcb;->q:I
+
+    sget v0, Lsdd;->oneme_media_keyboard_tab_stickers:I
+
+    sput v0, Lpcb;->r:I
+
+    return-void
 .end method

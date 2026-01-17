@@ -4,216 +4,105 @@
 
 
 # direct methods
-.method public static final a(Lw3e;Ljava/lang/String;Lone/me/sdk/arch/Widget;)Lone/me/sdk/arch/Widget;
-    .locals 3
+.method public static a(Ljxd;Ljava/lang/String;Lthd;I)Laj4;
+    .locals 15
 
-    iget-object p0, p0, Lw3e;->a:Lch0;
+    move-object/from16 v0, p2
 
-    invoke-virtual {p0}, Lch0;->iterator()Ljava/util/Iterator;
+    sget-object v1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    move-result-object p0
+    iget-object v1, v0, Lthd;->c:Ljava/lang/String;
 
-    :cond_0
-    move-object v0, p0
+    move-object/from16 v2, p1
 
-    check-cast v0, Lc2;
+    invoke-static {v2, v1}, Ld4j;->g(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-virtual {v0}, Lc2;->hasNext()Z
+    move-result-object v3
 
-    move-result v1
+    iget-wide v9, v0, Lthd;->a:J
 
-    const/4 v2, 0x0
+    iget-wide v11, v0, Lthd;->b:J
 
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v0}, Lc2;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lz3e;
-
-    iget-object v0, v0, Lz3e;->a:Lx84;
-
-    instance-of v1, v0, Lone/me/sdk/arch/Widget;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lone/me/sdk/arch/Widget;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v0, v2
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, p1, p2}, Lone/me/sdk/arch/Widget;->findWidget-qk3jasM$arch_release(Ljava/lang/String;Lone/me/sdk/arch/Widget;)Lone/me/sdk/arch/Widget;
-
-    move-result-object v2
-
-    :cond_2
-    if-eqz v2, :cond_0
-
-    if-eq v2, p2, :cond_0
-
-    :cond_3
-    return-object v2
-.end method
-
-.method public static final b(Lw3e;)Lx84;
-    .locals 0
-
-    iget-object p0, p0, Lw3e;->a:Lch0;
-
-    invoke-virtual {p0}, Lch0;->a()Lz3e;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Lz3e;->a:Lx84;
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static c(Ljava/lang/CharSequence;Lone/me/sdk/arch/Widget;)V
-    .locals 11
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lp38;
-
-    sget v0, Lpbb;->a:I
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    new-instance v1, Ldhg;
-
-    invoke-static {p0}, Lbt;->C([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v1, v0, p0}, Ldhg;-><init>(ILjava/util/List;)V
-
-    const/4 p0, 0x6
-
-    const/4 v0, 0x0
-
-    invoke-static {v1, v0, v0, p0}, Ltij;->a(Lghg;Landroid/os/Bundle;Lmbe;I)Lyt3;
-
-    move-result-object p0
-
-    sget v1, Lpbb;->e:I
-
-    new-instance v2, Lbhg;
-
-    invoke-direct {v2, v1}, Lbhg;-><init>(I)V
-
-    invoke-virtual {p0, v2}, Lyt3;->f(Lghg;)V
-
-    sget v1, Lnbb;->c:I
-
-    sget v2, Lpbb;->d:I
-
-    new-instance v3, Lbhg;
-
-    invoke-direct {v3, v2}, Lbhg;-><init>(I)V
-
-    invoke-virtual {p0, v1, v3}, Lyt3;->b(ILghg;)V
-
-    sget v1, Lnbb;->b:I
-
-    sget v2, Ll5e;->q:I
-
-    new-instance v3, Lbhg;
-
-    invoke-direct {v3, v2}, Lbhg;-><init>(I)V
-
-    invoke-virtual {p0, v1, v3}, Lyt3;->d(ILghg;)V
-
-    iget-object v1, p0, Lyt3;->a:Landroid/os/Bundle;
-
-    const-string v2, "memorize_keyboard"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    invoke-virtual {p0}, Lyt3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v5
-
-    invoke-virtual {v5, p1}, Lone/me/sdk/arch/Widget;->setTargetController(Lx84;)V
-
-    move-object p0, p1
-
-    :goto_0
-    invoke-virtual {p0}, Lx84;->getParentController()Lx84;
+    invoke-virtual {p0}, Ljxd;->b()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lx84;->getParentController()Lx84;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v1, p0, Lc4e;
-
-    if-eqz v1, :cond_1
-
-    check-cast p0, Lc4e;
+    :goto_0
+    move-object v13, v1
 
     goto :goto_1
 
-    :cond_1
-    move-object p0, v0
+    :cond_0
+    iget-object p0, p0, Ljxd;->b:Lhk7;
+
+    const/4 v1, 0x0
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljm0;
+
+    iget-object p0, p0, Ljm0;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lthd;->c:Ljava/lang/String;
+
+    invoke-static {p0, v0}, Ld4j;->g(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
 
     :goto_1
-    if-eqz p0, :cond_2
+    const-string p0, "The uri must be set."
 
-    check-cast p0, Lone/me/android/root/RootController;
+    invoke-static {v3, p0}, Lh6j;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->F0()Lw3e;
+    new-instance v2, Laj4;
 
-    move-result-object v0
+    const-wide/16 v4, 0x0
 
-    :cond_2
-    invoke-virtual {v5, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->O0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v0, :cond_3
-
-    new-instance v4, Lz3e;
-
-    const/4 v9, 0x0
-
-    const/4 v10, -0x1
-
-    const/4 v6, 0x0
+    const/4 v6, 0x1
 
     const/4 v7, 0x0
 
-    const/4 v8, 0x0
+    sget-object v8, Lmud;->Y:Lmud;
 
-    invoke-direct/range {v4 .. v10}, Lz3e;-><init>(Lx84;Ljava/lang/String;Lc94;Lc94;ZI)V
+    move/from16 v14, p3
 
-    const/4 p0, 0x1
+    invoke-direct/range {v2 .. v14}, Laj4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
 
-    const-string p1, "BottomSheetWidget"
+    return-object v2
+.end method
 
-    invoke-static {v3, v4, p0, p1}, Lc12;->v(ZLz3e;ZLjava/lang/String;)V
+.method public static final b(Lr4h;)V
+    .locals 2
 
-    invoke-virtual {v0, v4}, Lw3e;->H(Lz3e;)V
+    new-instance v0, Lr4b;
 
-    :cond_3
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1}, Lr4b;-><init>(I)V
+
+    const/16 v1, 0x197
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+
+    new-instance v0, Lr4b;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Lr4b;-><init>(I)V
+
+    const/16 v1, 0x1e6
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+
     return-void
 .end method

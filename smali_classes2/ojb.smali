@@ -1,9 +1,6 @@
 .class public final Lojb;
-.super Ljava/lang/Object;
+.super Lpjb;
 .source "SourceFile"
-
-# interfaces
-.implements Lrjb;
 
 
 # static fields
@@ -17,24 +14,26 @@
     .end annotation
 .end field
 
-.field public static final a:Lojb;
+.field public static final b:Lojb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lojb;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v1, 0x1388
 
-    sput-object v0, Lojb;->a:Lojb;
+    invoke-direct {v0, v1, v2}, Lpjb;-><init>(J)V
 
-    new-instance v0, Lnjb;
+    sput-object v0, Lojb;->b:Lojb;
 
-    const/4 v1, 0x0
+    new-instance v0, Lhu8;
 
-    invoke-direct {v0, v1}, Lnjb;-><init>(I)V
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
 
     sput-object v0, Lojb;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -76,7 +75,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x61724f48
+    const v0, -0x38a300d4
 
     return v0
 .end method
@@ -84,7 +83,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Chevron"
+    const-string v0, "Timer"
 
     return-object v0
 .end method

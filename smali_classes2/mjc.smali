@@ -1,102 +1,105 @@
-.class public final synthetic Lmjc;
+.class public abstract Lmjc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
-    .locals 0
+.method public static a([B)Lnjc;
+    .locals 14
 
-    iput p2, p0, Lmjc;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
 
-    iput-object p1, p0, Lmjc;->b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
 
-    return-void
-.end method
+    move-result-object p0
 
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
 
-    iget v0, p0, Lmjc;->a:I
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lmjc;->b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+    new-instance v1, Lz10;
 
-    packed-switch v0, :pswitch_data_0
+    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
 
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lp38;
+    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireResources()Landroid/content/res/Resources;
+    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
 
-    move-result-object v0
+    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
 
-    sget v1, Lhed;->tt_of:I
+    const/4 v6, 0x2
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-direct/range {v1 .. v6}, Lz10;-><init>(FFFFI)V
 
-    move-result-object v0
+    :goto_0
+    move-object v10, v1
 
-    return-object v0
+    goto :goto_1
 
-    :pswitch_0
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lp38;
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireActivity()Lnn;
+    goto :goto_0
 
-    move-result-object v0
+    :goto_1
+    new-instance v2, Lnjc;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
 
-    move-result-object v1
+    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
 
-    move-result-object v0
+    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
 
-    move-result-object v0
+    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
 
-    new-instance v2, Ldhi;
+    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
 
-    invoke-direct {v2, v1, v0}, Ldhi;-><init>(Landroid/view/Window;Landroid/view/View;)V
+    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
+
+    const-string v0, "PRESET_AVATAR"
+
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x1
+
+    :goto_2
+    move v13, p0
+
+    goto :goto_3
+
+    :cond_1
+    const/4 p0, 0x2
+
+    goto :goto_2
+
+    :goto_3
+    invoke-direct/range {v2 .. v13}, Lnjc;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLz10;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-object v2
 
-    :pswitch_1
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lp38;
+    :catch_0
+    move-exception v0
 
-    sget-object v0, Ldc3;->s0:Lole;
+    move-object p0, v0
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
 
-    move-result-object v1
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, v1}, Lole;->o(Landroid/content/Context;)Lrbb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lrbb;->c:Lplb;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

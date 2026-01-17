@@ -1,1362 +1,212 @@
-.class public final Lqa3;
+.class public final synthetic Lqa3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
+
 
 # instance fields
-.field public final a:Laab;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chats/tab/ChatsTabWidget;
 
 
 # direct methods
-.method public constructor <init>(Laab;)V
+.method public synthetic constructor <init>(Lone/me/chats/tab/ChatsTabWidget;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lqa3;->a:I
 
-    iput-object p1, p0, Lqa3;->a:Laab;
+    iput-object p1, p0, Lqa3;->b:Lone/me/chats/tab/ChatsTabWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Integer;)I
-    .locals 2
-
-    const/4 v0, 0x1
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    return v0
-
-    :cond_1
-    :goto_0
-    if-nez p0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    if-ne p0, v0, :cond_3
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static b(I)Ljava/lang/Integer;
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    const/4 p0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lpa3;->$EnumSwitchMapping$0:[I
-
-    invoke-static {p0}, Lc12;->w(I)I
-
-    move-result p0
-
-    aget p0, v0, p0
-
-    :goto_0
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_1
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_1
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final c([B)Lzh2;
-    .locals 21
+.method public final invoke()Ljava/lang/Object;
+    .locals 10
 
-    sget-object v0, Lru/ok/tamtam/nano/a;->a:[B
+    iget v0, p0, Lqa3;->a:I
 
-    new-instance v0, Lru/ok/tamtam/nano/Protos$Chat;
+    const/4 v1, 0x0
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat;-><init>()V
+    const/4 v2, 0x1
 
-    move-object/from16 v1, p1
+    iget-object v3, p0, Lqa3;->b:Lone/me/chats/tab/ChatsTabWidget;
 
-    :try_start_0
-    invoke-static {v0, v1}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->I0:[Lz28;
+
+    :goto_0
+    invoke-virtual {v3}, La94;->getParentController()La94;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/tamtam/nano/Protos$Chat;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_0
 
-    new-instance v1, Lhh2;
+    invoke-virtual {v3}, La94;->getParentController()La94;
 
-    invoke-direct {v1}, Lhh2;-><init>()V
-
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->serverId:J
-
-    iput-wide v2, v1, Lhh2;->a:J
-
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->type:I
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x2
-
-    if-eqz v2, :cond_2
-
-    sget-object v6, Lxh2;->b:Lxh2;
-
-    if-eq v2, v4, :cond_3
-
-    if-eq v2, v5, :cond_1
-
-    if-eq v2, v3, :cond_0
+    move-result-object v3
 
     goto :goto_0
 
     :cond_0
-    sget-object v6, Lxh2;->d:Lxh2;
+    instance-of v0, v3, Lc5e;
 
-    goto :goto_0
+    if-eqz v0, :cond_1
+
+    check-cast v3, Lc5e;
+
+    goto :goto_1
 
     :cond_1
-    sget-object v6, Lxh2;->c:Lxh2;
-
-    goto :goto_0
-
-    :cond_2
-    sget-object v6, Lxh2;->a:Lxh2;
-
-    :cond_3
-    :goto_0
-    iput-object v6, v1, Lhh2;->b:Lxh2;
-
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->status:I
-
-    packed-switch v2, :pswitch_data_0
-
-    sget-object v2, Lwh2;->a:Lwh2;
-
-    goto :goto_1
-
-    :pswitch_0
-    sget-object v2, Lwh2;->Y:Lwh2;
-
-    goto :goto_1
-
-    :pswitch_1
-    sget-object v2, Lwh2;->X:Lwh2;
-
-    goto :goto_1
-
-    :pswitch_2
-    sget-object v2, Lwh2;->o:Lwh2;
-
-    goto :goto_1
-
-    :pswitch_3
-    sget-object v2, Lwh2;->d:Lwh2;
-
-    goto :goto_1
-
-    :pswitch_4
-    sget-object v2, Lwh2;->c:Lwh2;
-
-    goto :goto_1
-
-    :pswitch_5
-    sget-object v2, Lwh2;->b:Lwh2;
+    move-object v3, v1
 
     :goto_1
-    iput-object v2, v1, Lhh2;->c:Lwh2;
+    if-eqz v3, :cond_2
 
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Protos$Chat;->owner:J
+    check-cast v3, Lone/me/android/root/RootController;
 
-    iput-wide v6, v1, Lhh2;->d:J
+    invoke-virtual {v3}, Lone/me/android/root/RootController;->F0()Lw4e;
 
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->participants:Ljava/util/Map;
+    move-result-object v1
 
-    iput-object v2, v1, Lhh2;->e:Ljava/util/Map;
+    :cond_2
+    if-eqz v1, :cond_3
 
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Protos$Chat;->created:J
+    invoke-virtual {v1}, Lw4e;->n()Z
 
-    iput-wide v6, v1, Lhh2;->f:J
+    move-result v0
 
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->title:Ljava/lang/String;
-
-    iput-object v2, v1, Lhh2;->g:Ljava/lang/String;
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->baseIconUrl:Ljava/lang/String;
-
-    iput-object v2, v1, Lhh2;->h:Ljava/lang/String;
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->baseRawIconUrl:Ljava/lang/String;
-
-    iput-object v2, v1, Lhh2;->i:Ljava/lang/String;
-
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastMessageId:J
-
-    iput-wide v6, v1, Lhh2;->j:J
-
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastEventTime:J
-
-    iput-wide v6, v1, Lhh2;->k:J
-
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Protos$Chat;->joinTime:J
-
-    iput-wide v6, v1, Lhh2;->Q:J
-
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Protos$Chat;->cid:J
-
-    iput-wide v6, v1, Lhh2;->l:J
-
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->newMessages:I
-
-    iput v2, v1, Lhh2;->m:I
-
-    iget-boolean v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->markedAsUnread:Z
-
-    iput-boolean v2, v1, Lhh2;->j0:Z
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->chunk:[Lru/ok/tamtam/nano/Protos$Chat$Chunk;
-
-    if-eqz v2, :cond_4
-
-    array-length v7, v2
-
-    if-lez v7, :cond_4
-
-    array-length v7, v2
-
-    const/4 v8, 0x0
-
-    :goto_2
-    if-ge v8, v7, :cond_4
-
-    aget-object v9, v2, v8
-
-    iget-object v10, v1, Lhh2;->n:Lsh2;
-
-    invoke-static {v9}, Lru/ok/tamtam/nano/a;->i(Lru/ok/tamtam/nano/Protos$Chat$Chunk;)Lrh2;
-
-    move-result-object v9
-
-    sget-object v11, Llw4;->o:Llw4;
-
-    invoke-virtual {v10, v9, v11}, Lsh2;->a(Lrh2;Llw4;)V
-
-    add-int/lit8 v8, v8, 0x1
+    if-ne v0, v2, :cond_3
 
     goto :goto_2
 
-    :cond_4
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->delayedChunk:[Lru/ok/tamtam/nano/Protos$Chat$Chunk;
-
-    if-eqz v2, :cond_5
-
-    array-length v7, v2
-
-    if-lez v7, :cond_5
-
-    array-length v7, v2
-
-    const/4 v8, 0x0
-
-    :goto_3
-    if-ge v8, v7, :cond_5
-
-    aget-object v9, v2, v8
-
-    iget-object v10, v1, Lhh2;->n:Lsh2;
-
-    invoke-static {v9}, Lru/ok/tamtam/nano/a;->i(Lru/ok/tamtam/nano/Protos$Chat$Chunk;)Lrh2;
-
-    move-result-object v9
-
-    sget-object v11, Llw4;->X:Llw4;
-
-    invoke-virtual {v10, v9, v11}, Lsh2;->a(Lrh2;Llw4;)V
-
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_3
-
-    :cond_5
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->chatSettings:Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
-
-    if-eqz v2, :cond_a
-
-    new-instance v7, Loh2;
-
-    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->lastNotifMark:J
-
-    iput-wide v8, v7, Loh2;->c:J
-
-    iget-wide v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->lastNotifMessageId:J
-
-    iput-wide v8, v7, Loh2;->d:J
-
-    iget-wide v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->dontDisturbUntil:J
-
-    iput-wide v8, v7, Loh2;->a:J
-
-    iget-object v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->options:[I
-
-    if-eqz v8, :cond_9
-
-    array-length v9, v8
-
-    if-lez v9, :cond_9
-
-    array-length v9, v8
-
-    const/4 v10, 0x0
-
-    :goto_4
-    if-ge v10, v9, :cond_9
-
-    aget v11, v8, v10
-
-    if-eqz v11, :cond_8
-
-    if-eq v11, v4, :cond_7
-
-    if-eq v11, v5, :cond_6
-
-    goto :goto_5
-
-    :cond_6
-    sget-object v11, Llh2;->c:Llh2;
-
-    invoke-virtual {v7, v11}, Loh2;->a(Llh2;)V
-
-    goto :goto_5
-
-    :cond_7
-    sget-object v11, Llh2;->b:Llh2;
-
-    invoke-virtual {v7, v11}, Loh2;->a(Llh2;)V
-
-    goto :goto_5
-
-    :cond_8
-    sget-object v11, Llh2;->a:Llh2;
-
-    invoke-virtual {v7, v11}, Loh2;->a(Llh2;)V
-
-    :goto_5
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_4
-
-    :cond_9
-    iget-wide v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->favoriteIndex:J
-
-    iput-wide v8, v7, Loh2;->e:J
-
-    iget-wide v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->hideMyLiveLocationPanelBeforeTime:J
-
-    iput-wide v8, v7, Loh2;->f:J
-
-    iget-wide v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->hideLiveLocationPanelBeforeTime:J
-
-    iput-wide v8, v7, Loh2;->g:J
-
-    new-instance v2, Lph2;
-
-    invoke-direct {v2, v7}, Lph2;-><init>(Loh2;)V
-
-    iput-object v2, v1, Lhh2;->o:Lph2;
-
-    :cond_a
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->chatReactionsSettings:Lru/ok/tamtam/nano/Protos$Chat$ChatReactionsSettings;
-
-    if-eqz v2, :cond_c
-
-    iget-boolean v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatReactionsSettings;->isActive:Z
-
-    iget v9, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatReactionsSettings;->count:I
-
-    iget-wide v10, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatReactionsSettings;->updateTime:J
-
-    iget-boolean v12, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatReactionsSettings;->included:Z
-
-    iget-boolean v13, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatReactionsSettings;->isFull:Z
-
-    if-eqz v13, :cond_b
-
-    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatReactionsSettings;->reactionIds:[Ljava/lang/String;
-
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    goto :goto_6
-
-    :cond_b
+    :cond_3
     const/4 v2, 0x0
 
-    :goto_6
-    new-instance v13, Lnh2;
+    :goto_2
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-direct {v13}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean v8, v13, Lnh2;->a:Z
-
-    iput v9, v13, Lnh2;->b:I
-
-    iput-wide v10, v13, Lnh2;->c:J
-
-    iput-boolean v12, v13, Lnh2;->d:Z
-
-    iput-object v2, v13, Lnh2;->e:Ljava/util/List;
-
-    iput-object v13, v1, Lhh2;->p:Lnh2;
-
-    :cond_c
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->mediaAll:Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
-
-    if-eqz v2, :cond_d
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lkh2;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->q:Lkh2;
-
-    :cond_d
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->mediaPhotoVideo:Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
-
-    if-eqz v2, :cond_e
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lkh2;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->r:Lkh2;
-
-    :cond_e
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->mediaMusic:Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
-
-    if-eqz v2, :cond_f
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lkh2;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->t:Lkh2;
-
-    :cond_f
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->mediaAudio:Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
-
-    if-eqz v2, :cond_10
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lkh2;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->u:Lkh2;
-
-    :cond_10
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->mediaAudioVideoMsg:Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
-
-    if-eqz v2, :cond_11
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lkh2;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->v:Lkh2;
-
-    :cond_11
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->mediaFiles:Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
-
-    if-eqz v2, :cond_12
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lkh2;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->w:Lkh2;
-
-    :cond_12
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->mediaLocations:Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
-
-    if-eqz v2, :cond_13
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lkh2;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->x:Lkh2;
-
-    :cond_13
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->mediaShare:Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
-
-    if-eqz v2, :cond_14
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lkh2;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->s:Lkh2;
-
-    :cond_14
-    iget-wide v8, v0, Lru/ok/tamtam/nano/Protos$Chat;->firstMessageId:J
-
-    iput-wide v8, v1, Lhh2;->y:J
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->sections:[Lru/ok/tamtam/nano/Protos$Chat$Section;
-
-    if-eqz v2, :cond_17
-
-    array-length v8, v2
-
-    if-lez v8, :cond_17
-
-    array-length v8, v2
-
-    const/4 v9, 0x0
-
-    :goto_7
-    if-ge v9, v8, :cond_17
-
-    aget-object v10, v2, v9
-
-    new-instance v11, Lr7;
-
-    invoke-direct {v11}, Ljava/lang/Object;-><init>()V
-
-    iget-object v12, v10, Lru/ok/tamtam/nano/Protos$Chat$Section;->id:Ljava/lang/String;
-
-    iput-object v12, v11, Lr7;->c:Ljava/lang/Object;
-
-    iget-object v12, v10, Lru/ok/tamtam/nano/Protos$Chat$Section;->title:Ljava/lang/String;
-
-    iput-object v12, v11, Lr7;->d:Ljava/io/Serializable;
-
-    iget-object v12, v10, Lru/ok/tamtam/nano/Protos$Chat$Section;->stickers:[J
-
-    if-eqz v12, :cond_15
-
-    invoke-static {v12}, Lz3j;->d([J)Ljava/util/ArrayList;
-
-    move-result-object v12
-
-    iput-object v12, v11, Lr7;->e:Ljava/lang/Object;
-
-    :cond_15
-    iget-wide v12, v10, Lru/ok/tamtam/nano/Protos$Chat$Section;->marker:J
-
-    iput-wide v12, v11, Lr7;->a:J
-
-    iget-boolean v10, v10, Lru/ok/tamtam/nano/Protos$Chat$Section;->collapsed:Z
-
-    iput-boolean v10, v11, Lr7;->b:Z
-
-    new-instance v10, Lvh2;
-
-    invoke-direct {v10, v11}, Lvh2;-><init>(Lr7;)V
-
-    iget-object v11, v1, Lhh2;->z:Ljava/util/ArrayList;
-
-    if-nez v11, :cond_16
-
-    new-instance v11, Ljava/util/ArrayList;
-
-    invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v11, v1, Lhh2;->z:Ljava/util/ArrayList;
-
-    :cond_16
-    iget-object v11, v1, Lhh2;->z:Ljava/util/ArrayList;
-
-    invoke-virtual {v11, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_7
-
-    :cond_17
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->stickersOrder:[Ljava/lang/String;
-
-    if-eqz v2, :cond_18
-
-    array-length v8, v2
-
-    if-lez v8, :cond_18
-
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->A:Ljava/util/List;
-
-    :cond_18
-    iget-wide v8, v0, Lru/ok/tamtam/nano/Protos$Chat;->stickersSyncTime:J
-
-    iput-wide v8, v1, Lhh2;->B:J
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->localChanges:[I
-
-    if-eqz v2, :cond_1d
-
-    array-length v8, v2
-
-    if-lez v8, :cond_1d
-
-    array-length v8, v2
-
-    const/4 v9, 0x0
-
-    :goto_8
-    if-ge v9, v8, :cond_1d
-
-    aget v10, v2, v9
-
-    if-eqz v10, :cond_1c
-
-    if-eq v10, v4, :cond_1b
-
-    if-eq v10, v5, :cond_1a
-
-    if-eq v10, v3, :cond_19
-
-    goto :goto_9
-
-    :cond_19
-    sget-object v10, Lih2;->d:Lih2;
-
-    invoke-virtual {v1, v10}, Lhh2;->a(Lih2;)V
-
-    goto :goto_9
-
-    :cond_1a
-    sget-object v10, Lih2;->c:Lih2;
-
-    invoke-virtual {v1, v10}, Lhh2;->a(Lih2;)V
-
-    goto :goto_9
-
-    :cond_1b
-    sget-object v10, Lih2;->b:Lih2;
-
-    invoke-virtual {v1, v10}, Lhh2;->a(Lih2;)V
-
-    goto :goto_9
-
-    :cond_1c
-    sget-object v10, Lih2;->a:Lih2;
-
-    invoke-virtual {v1, v10}, Lhh2;->a(Lih2;)V
-
-    :goto_9
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_8
-
-    :cond_1d
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->chatSubject:Lru/ok/tamtam/nano/Protos$Chat$ChatSubject;
-
-    if-eqz v2, :cond_1e
-
-    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatSubject;->organizationIds:[J
-
-    array-length v8, v2
-
-    if-lez v8, :cond_1e
-
-    new-instance v8, Lqh2;
-
-    invoke-direct {v8, v2}, Lqh2;-><init>([J)V
-
-    iput-object v8, v1, Lhh2;->E:Lqh2;
-
-    :cond_1e
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->channelInfo:Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;
-
-    if-eqz v2, :cond_1f
-
-    iget v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->membersCount:I
-
-    iput v8, v0, Lru/ok/tamtam/nano/Protos$Chat;->participantsCount:I
-
-    iget-object v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->description:Ljava/lang/String;
-
-    iput-object v8, v0, Lru/ok/tamtam/nano/Protos$Chat;->description:Ljava/lang/String;
-
-    iget-object v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->admins:[J
-
-    iput-object v8, v0, Lru/ok/tamtam/nano/Protos$Chat;->admins:[J
-
-    iget-boolean v2, v2, Lru/ok/tamtam/nano/Protos$Chat$ChannelInfo;->signAdmin:Z
-
-    if-eqz v2, :cond_1f
-
-    new-instance v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
-
-    invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;-><init>()V
-
-    iput-boolean v4, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->signAdmin:Z
-
-    iput-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->chatOptions:Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
-
-    :cond_1f
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->participantsCount:I
-
-    if-nez v2, :cond_20
-
-    invoke-virtual {v1}, Lhh2;->c()Ljava/util/Map;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Map;->size()I
-
-    move-result v2
-
-    if-lez v2, :cond_20
-
-    invoke-virtual {v1}, Lhh2;->c()Ljava/util/Map;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Map;->size()I
-
-    move-result v2
-
-    iput v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->participantsCount:I
-
-    :cond_20
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->participantsCount:I
-
-    iput v2, v1, Lhh2;->H:I
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->description:Ljava/lang/String;
-
-    iput-object v2, v1, Lhh2;->I:Ljava/lang/String;
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->admins:[J
-
-    invoke-static {v2}, Lz3j;->d([J)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->J:Ljava/util/List;
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->admins:[J
-
-    if-eqz v2, :cond_25
-
-    iget-object v8, v0, Lru/ok/tamtam/nano/Protos$Chat;->adminParticipants:Ljava/util/Map;
-
-    if-eqz v8, :cond_21
-
-    array-length v2, v2
-
-    invoke-interface {v8}, Ljava/util/Map;->size()I
-
-    move-result v8
-
-    if-le v2, v8, :cond_25
-
-    :cond_21
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    iget-object v8, v0, Lru/ok/tamtam/nano/Protos$Chat;->adminParticipants:Ljava/util/Map;
-
-    if-eqz v8, :cond_22
-
-    invoke-static {v8}, Lru/ok/tamtam/nano/a;->a(Ljava/util/Map;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    invoke-virtual {v2, v8}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
-
-    :cond_22
-    iget-object v8, v0, Lru/ok/tamtam/nano/Protos$Chat;->admins:[J
-
-    array-length v9, v8
-
-    const/4 v10, 0x0
-
-    :goto_a
-    if-ge v10, v9, :cond_24
-
-    aget-wide v11, v8, v10
-
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v13
-
-    invoke-virtual {v2, v13}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_23
-
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v13
-
-    new-instance v14, Lfh2;
-
-    invoke-direct {v14}, Ljava/lang/Object;-><init>()V
-
-    iput-wide v11, v14, Lfh2;->b:J
-
-    const/16 v11, 0xffb
-
-    iput v11, v14, Lfh2;->a:I
-
-    new-instance v11, Lgh2;
-
-    invoke-direct {v11, v14}, Lgh2;-><init>(Lfh2;)V
-
-    invoke-virtual {v2, v13, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_23
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_a
-
-    :cond_24
-    invoke-virtual {v1, v2}, Lhh2;->d(Ljava/util/Map;)V
-
-    goto :goto_b
-
-    :cond_25
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->adminParticipants:Ljava/util/Map;
-
-    invoke-static {v2}, Lru/ok/tamtam/nano/a;->a(Ljava/util/Map;)Ljava/util/HashMap;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lhh2;->d(Ljava/util/Map;)V
-
-    :goto_b
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->blockedParticipantsCount:I
-
-    iput v2, v1, Lhh2;->K:I
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->chatOptions:Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;
-
-    if-eqz v2, :cond_27
-
-    iget-object v8, v1, Lhh2;->L:Lmh2;
-
-    if-nez v8, :cond_26
-
-    sget-object v8, Lmh2;->l:Lmh2;
-
-    iput-object v8, v1, Lhh2;->L:Lmh2;
-
-    :cond_26
-    iget-object v8, v1, Lhh2;->L:Lmh2;
-
-    iget-boolean v8, v8, Lmh2;->a:Z
-
-    iget-boolean v11, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->onlyOwnerCanChangeIconTitle:Z
-
-    iget-boolean v10, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->signAdmin:Z
-
-    iget-boolean v12, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->official:Z
-
-    iget-boolean v14, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->allCanPinMessage:Z
-
-    iget-boolean v13, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->onlyAdminCanAddMember:Z
-
-    iget-boolean v15, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->onlyAdminCanCall:Z
-
-    iget-boolean v8, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->sentByPhone:Z
-
-    iget-boolean v9, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->serviceChat:Z
-
-    iget-boolean v3, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->membersCanSeePrivateLink:Z
-
-    iget-boolean v6, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->contentLevelChat:Z
-
-    iget-boolean v2, v2, Lru/ok/tamtam/nano/Protos$Chat$ChatOptions;->aPlusChannel:Z
-
-    move/from16 v17, v9
-
-    new-instance v9, Lmh2;
-
-    move/from16 v20, v2
-
-    move/from16 v18, v3
-
-    move/from16 v19, v6
-
-    move/from16 v16, v8
-
-    invoke-direct/range {v9 .. v20}, Lmh2;-><init>(ZZZZZZZZZZZ)V
-
-    iput-object v9, v1, Lhh2;->L:Lmh2;
-
-    :cond_27
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->accessType:I
-
-    if-eqz v2, :cond_29
-
-    if-eq v2, v4, :cond_28
-
-    goto :goto_c
-
-    :cond_28
-    iput v5, v1, Lhh2;->q0:I
-
-    goto :goto_c
-
-    :cond_29
-    iput v4, v1, Lhh2;->q0:I
-
-    :goto_c
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->link:Ljava/lang/String;
-
-    iput-object v2, v1, Lhh2;->F:Ljava/lang/String;
-
-    new-instance v2, Lt56;
-
-    iget v3, v0, Lru/ok/tamtam/nano/Protos$Chat;->restrictions:I
-
-    invoke-direct {v2, v3, v5}, Lt56;-><init>(II)V
-
-    iput-object v2, v1, Lhh2;->G:Lt56;
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->groupChatInfo:Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;
-
-    if-eqz v2, :cond_2d
-
-    iget-wide v9, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->groupId:J
-
-    iget-boolean v11, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->isAnswered:Z
-
-    iget-boolean v12, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->isModerator:Z
-
-    iget-boolean v13, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->isImportant:Z
-
-    iget-object v14, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->name:Ljava/lang/String;
-
-    iget-object v15, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->baseIconUrl:Ljava/lang/String;
-
-    iget-boolean v3, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->isCustomTitle:Z
-
-    iget-boolean v6, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->isMember:Z
-
-    iget-object v8, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->groupOptions:Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo$GroupOptions;
-
-    if-nez v8, :cond_2a
-
-    sget-object v8, Lr37;->b:Lr37;
-
-    move-object/from16 v19, v8
-
-    goto :goto_d
-
-    :cond_2a
-    new-instance v7, Lr37;
-
-    iget-boolean v8, v8, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo$GroupOptions;->groupPremium:Z
-
-    invoke-direct {v7, v8}, Lr37;-><init>(Z)V
-
-    move-object/from16 v19, v7
-
-    :goto_d
-    iget v2, v2, Lru/ok/tamtam/nano/Protos$Chat$GroupChatInfo;->messagingPermissions:I
-
-    if-eq v2, v4, :cond_2c
-
-    if-eq v2, v5, :cond_2b
-
-    move/from16 v18, v4
-
-    goto :goto_e
-
-    :cond_2b
-    const/16 v18, 0x3
-
-    goto :goto_e
-
-    :cond_2c
-    move/from16 v18, v5
-
-    :goto_e
-    new-instance v8, Lth2;
-
-    move/from16 v16, v3
-
-    move/from16 v17, v6
-
-    invoke-direct/range {v8 .. v19}, Lth2;-><init>(JZZZLjava/lang/String;Ljava/lang/String;ZZILr37;)V
-
-    iput-object v8, v1, Lhh2;->D:Lth2;
-
-    :cond_2d
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->pinnedMessageId:J
-
-    iput-wide v2, v1, Lhh2;->M:J
-
-    iget-boolean v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->hidePinnedMessage:Z
-
-    iput-boolean v2, v1, Lhh2;->N:Z
-
-    iget-boolean v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->unreadReply:Z
-
-    iput-boolean v2, v1, Lhh2;->O:Z
-
-    iget-boolean v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->unreadPin:Z
-
-    iput-boolean v2, v1, Lhh2;->P:Z
-
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->messagesTtlSec:I
-
-    iput v2, v1, Lhh2;->R:I
-
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->flagsSettings:I
-
-    iput v2, v1, Lhh2;->T:I
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->videoConversation:Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;
-
-    if-eqz v2, :cond_35
-
-    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;->previewParticipantIds:[J
-
-    if-eqz v2, :cond_2e
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    array-length v6, v2
-
-    invoke-direct {v3, v6}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v6, 0x0
-
-    :goto_f
-    array-length v7, v2
-
-    if-ge v6, v7, :cond_2f
-
-    aget-wide v7, v2, v6
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_f
-
-    :cond_2e
-    const/4 v3, 0x0
-
-    :cond_2f
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->videoConversation:Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;
-
-    iget v6, v2, Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;->type:I
-
-    if-eq v6, v4, :cond_31
-
-    if-eq v6, v5, :cond_30
-
-    move v6, v4
-
-    goto :goto_10
-
-    :cond_30
-    const/4 v6, 0x3
-
-    goto :goto_10
-
-    :cond_31
-    move v6, v5
-
-    :goto_10
-    iget-object v7, v2, Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;->mediaCallType:Ljava/lang/String;
-
-    if-nez v7, :cond_32
-
-    goto :goto_11
-
-    :cond_32
-    const-string v8, "AUDIO"
-
-    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_34
-
-    const-string v4, "VIDEO"
-
-    invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_33
-
-    :goto_11
-    const/4 v4, 0x3
-
-    goto :goto_12
-
-    :cond_33
-    move v4, v5
-
-    :cond_34
-    :goto_12
-    new-instance v5, Lyh2;
-
-    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
-
-    iget-object v7, v2, Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;->conversationId:Ljava/lang/String;
-
-    iput-object v7, v5, Lyh2;->a:Ljava/lang/String;
-
-    iget-wide v7, v2, Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;->startedAt:J
-
-    iput-wide v7, v5, Lyh2;->b:J
-
-    iget-object v7, v2, Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;->joinLink:Ljava/lang/String;
-
-    iput-object v7, v5, Lyh2;->c:Ljava/lang/String;
-
-    iget v2, v2, Lru/ok/tamtam/nano/Protos$Chat$VideoConversation;->approxParticipantCount:I
-
-    iput v2, v5, Lyh2;->d:I
-
-    iput-object v3, v5, Lyh2;->e:Ljava/util/List;
-
-    iput v6, v5, Lyh2;->f:I
-
-    iput v4, v5, Lyh2;->g:I
-
-    new-instance v2, Lyh2;
-
-    invoke-direct {v2, v5}, Lyh2;-><init>(Lyh2;)V
-
-    iput-object v2, v1, Lhh2;->U:Lyh2;
-
-    :cond_35
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastOpenPositionTime:J
-
-    iput-wide v2, v1, Lhh2;->V:J
-
-    iget v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastOpenPositionOffset:I
-
-    iput v2, v1, Lhh2;->W:I
-
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastOpenReadMark:J
-
-    iput-wide v2, v1, Lhh2;->X:J
-
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastOpenNewMessages:J
-
-    long-to-int v2, v2
-
-    iput v2, v1, Lhh2;->Y:I
-
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastSearchClickTime:J
-
-    iput-wide v2, v1, Lhh2;->Z:J
-
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastWriteTime:J
-
-    iput-wide v2, v1, Lhh2;->a0:J
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->draft:[B
-
-    move-object/from16 v3, p0
-
-    iget-object v4, v3, Lqa3;->a:Laab;
-
-    iget-object v4, v4, Laab;->b:Ld68;
-
-    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lum5;
-
-    invoke-static {v2, v4}, Lz65;->a([BLum5;)Lz9b;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lhh2;->d0:Lz9b;
-
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Protos$Chat;->draftUpdateTime:J
-
-    iput-wide v4, v1, Lhh2;->e0:J
-
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Protos$Chat;->draftUpdateTimeForSyncLogic:J
-
-    iput-wide v4, v1, Lhh2;->f0:J
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->botsInfo:Lru/ok/tamtam/nano/Protos$Chat$BotsInfo;
-
-    if-nez v2, :cond_36
-
-    sget-object v2, Lqt0;->c:Lqt0;
-
-    goto :goto_13
-
-    :cond_36
-    new-instance v4, Lqt0;
-
-    iget-boolean v5, v2, Lru/ok/tamtam/nano/Protos$Chat$BotsInfo;->hasBots:Z
-
-    iget-boolean v2, v2, Lru/ok/tamtam/nano/Protos$Chat$BotsInfo;->suspendedBot:Z
-
-    invoke-direct {v4, v5, v2}, Lqt0;-><init>(ZZ)V
-
-    move-object v2, v4
-
-    :goto_13
-    iput-object v2, v1, Lhh2;->b0:Lqt0;
-
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Protos$Chat;->modified:J
-
-    iput-wide v4, v1, Lhh2;->c0:J
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->liveLocationMessageIds:Ljava/util/Map;
-
-    iput-object v2, v1, Lhh2;->h0:Ljava/util/Map;
-
-    iget-boolean v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->subscribedToUpdates:Z
-
-    iput-boolean v2, v1, Lhh2;->g0:Z
-
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastMentionMessageId:J
-
-    iput-wide v4, v1, Lhh2;->i0:J
-
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastReactedMessageId:J
-
-    iput-wide v4, v1, Lhh2;->l0:J
-
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastReaction:Ljava/lang/String;
-
-    invoke-static {v2}, Ltri;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_37
-
-    const/4 v4, 0x0
-
-    iput-object v4, v1, Lhh2;->m0:Ljava/lang/String;
-
-    goto :goto_14
-
-    :cond_37
-    iput-object v2, v1, Lhh2;->m0:Ljava/lang/String;
-
-    :goto_14
-    iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastPushMessage:Lru/ok/tamtam/nano/Protos$Chat$PushMessage;
-
-    if-eqz v2, :cond_38
-
-    iget-wide v8, v2, Lru/ok/tamtam/nano/Protos$Chat$PushMessage;->id:J
-
-    iget-object v5, v2, Lru/ok/tamtam/nano/Protos$Chat$PushMessage;->text:Ljava/lang/String;
-
-    iget-wide v6, v2, Lru/ok/tamtam/nano/Protos$Chat$PushMessage;->time:J
-
-    new-instance v4, Luh2;
-
-    invoke-direct/range {v4 .. v9}, Luh2;-><init>(Ljava/lang/String;JJ)V
-
-    iput-object v4, v1, Lhh2;->k0:Luh2;
-
-    :cond_38
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastFireDelayedErrorTime:J
-
-    iput-wide v4, v1, Lhh2;->o0:J
-
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Protos$Chat;->lastDelayedUpdateTime:J
-
-    iput-wide v4, v1, Lhh2;->n0:J
-
-    iget v0, v0, Lru/ok/tamtam/nano/Protos$Chat;->participantSettings:I
-
-    iput v0, v1, Lhh2;->p0:I
-
-    new-instance v0, Lzh2;
-
-    invoke-direct {v0, v1}, Lzh2;-><init>(Lhh2;)V
+    move-result-object v0
 
     return-object v0
 
-    :catch_0
-    move-exception v0
+    :pswitch_0
+    new-instance v0, Ludc;
 
-    move-object/from16 v3, p0
+    iget v2, v3, Lone/me/chats/tab/ChatsTabWidget;->E0:I
 
-    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+    iget v4, v3, Lone/me/chats/tab/ChatsTabWidget;->F0:I
 
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0}, Landroidx/recyclerview/widget/b;-><init>()V
 
-    throw v1
+    sget v5, Lx23;->a:I
+
+    mul-int v6, v2, v4
+
+    invoke-virtual {v0, v5, v6}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v5, Lx23;->b:I
+
+    mul-int/lit8 v4, v4, 0x5
+
+    invoke-virtual {v0, v5, v4}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v4, Ly7b;->w:I
+
+    int-to-double v5, v2
+
+    const-wide/high16 v7, 0x3ff8000000000000L    # 1.5
+
+    mul-double/2addr v5, v7
+
+    invoke-static {v5, v6}, Lq7j;->b(D)I
+
+    move-result v2
+
+    invoke-virtual {v0, v4, v2}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v2, Ly7b;->x:I
+
+    invoke-static {v5, v6}, Lq7j;->b(D)I
+
+    move-result v4
+
+    invoke-virtual {v0, v2, v4}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v2, Lkcb;->c:I
+
+    const/4 v4, 0x3
+
+    invoke-virtual {v0, v2, v4}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    new-instance v2, Lnea;
+
+    invoke-direct {v2}, Lnea;-><init>()V
+
+    new-instance v2, Lxg6;
+
+    const/16 v4, 0x8
+
+    invoke-direct {v2, v3, v0, v1, v4}, Lxg6;-><init>(La94;Landroidx/recyclerview/widget/b;Lgha;I)V
+
+    return-object v2
+
+    :pswitch_1
+    iget-object v0, v3, Lone/me/chats/tab/ChatsTabWidget;->t0:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lll1;
+
+    iget-object v9, v3, La94;->lifecycleOwner:Lj88;
+
+    new-instance v7, Ljgi;
+
+    invoke-direct {v7, v3, v2}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    new-instance v8, Lqa3;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v8, v3, v1}, Lqa3;-><init>(Lone/me/chats/tab/ChatsTabWidget;I)V
+
+    new-instance v4, Lhz1;
+
+    iget-object v5, v0, Lll1;->a:Lyzb;
+
+    sget-object v0, Lez1;->a:Lez1;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0x83
+
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Lmzb;
+
+    invoke-direct/range {v4 .. v9}, Lhz1;-><init>(Lyzb;Lmzb;Ljgi;Llq6;Lj88;)V
+
+    return-object v4
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
+    .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch

@@ -1,33 +1,103 @@
-.class public abstract Ldo9;
-.super Ljava/lang/Object;
+.class public final Ldo9;
+.super Ld3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final synthetic c:I
 
-.field public static final synthetic b:I
+.field public final synthetic d:Leo9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Leo9;I)V
+    .locals 0
 
-    const/4 v0, -0x1
+    iput p2, p0, Ldo9;->c:I
 
-    int-to-long v0, v0
+    packed-switch p2, :pswitch_data_0
 
-    const/16 v2, 0x20
+    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    shl-long v2, v0, v2
+    iput-object p1, p0, Ldo9;->d:Leo9;
 
-    const-wide v4, 0xffffffffL
+    const/16 p1, 0xd
 
-    and-long/2addr v0, v4
-
-    or-long/2addr v0, v2
-
-    sput-wide v0, Ldo9;->a:J
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    iput-object p1, p0, Ldo9;->d:Leo9;
+
+    const/16 p1, 0xd
+
+    sget-object p2, Lqn9;->a:Lqn9;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Ldo9;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    check-cast p2, Lqn9;
+
+    check-cast p1, Lqn9;
+
+    iget-object p1, p0, Ldo9;->d:Leo9;
+
+    invoke-virtual {p1, p2}, Leo9;->h(Lqn9;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p0, Ldo9;->d:Leo9;
+
+    invoke-static {p1, p2}, Leo9;->d(Leo9;Z)V
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

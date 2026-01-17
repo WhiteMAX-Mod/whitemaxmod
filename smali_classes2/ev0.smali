@@ -4,24 +4,28 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:[I
 
 .field public final b:I
 
 .field public final c:I
 
+.field public final d:I
+
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(III[I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lev0;->a:I
+    iput-object p4, p0, Lev0;->a:[I
 
-    iput p2, p0, Lev0;->b:I
+    iput p1, p0, Lev0;->b:I
 
-    iput p3, p0, Lev0;->c:I
+    iput p2, p0, Lev0;->c:I
+
+    iput p3, p0, Lev0;->d:I
 
     return-void
 .end method
@@ -45,11 +49,15 @@
     :cond_1
     check-cast p1, Lev0;
 
-    iget v0, p0, Lev0;->a:I
+    iget-object v0, p0, Lev0;->a:[I
 
-    iget v1, p1, Lev0;->a:I
+    iget-object v1, p1, Lev0;->a:[I
 
-    if-eq v0, v1, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
 
     goto :goto_0
 
@@ -65,16 +73,25 @@
     :cond_3
     iget v0, p0, Lev0;->c:I
 
-    iget p1, p1, Lev0;->c:I
+    iget v1, p1, Lev0;->c:I
 
-    if-eq v0, p1, :cond_4
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lev0;->d:I
+
+    iget p1, p1, Lev0;->d:I
+
+    if-eq v0, p1, :cond_5
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_4
+    :cond_5
     :goto_1
     const/4 p1, 0x1
 
@@ -84,9 +101,9 @@
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lev0;->a:I
+    iget-object v0, p0, Lev0;->a:[I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
 
@@ -96,11 +113,17 @@
 
     iget v2, p0, Lev0;->b:I
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
     move-result v0
 
-    iget v1, p0, Lev0;->c:I
+    iget v2, p0, Lev0;->c:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v1, p0, Lev0;->d:I
 
     invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -114,25 +137,33 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", loading="
+    iget-object v0, p0, Lev0;->a:[I
 
-    const-string v1, ", pressed="
-
-    const-string v2, "BubbleBackgroundBotButtonColors(default="
-
-    iget v3, p0, Lev0;->a:I
-
-    iget v4, p0, Lev0;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ")"
+    const-string v1, ", strokeStep1="
 
-    iget v2, p0, Lev0;->c:I
+    const-string v2, ", strokeStep2="
 
-    invoke-static {v0, v2, v1}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    iget v3, p0, Lev0;->b:I
+
+    const-string v4, "BubbleBackgroundSystemAssetGradientColors(gradient="
+
+    invoke-static {v3, v4, v0, v1, v2}, Lpqb;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", strokeStep3="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lev0;->c:I
+
+    iget v4, p0, Lev0;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lhc0;->j(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

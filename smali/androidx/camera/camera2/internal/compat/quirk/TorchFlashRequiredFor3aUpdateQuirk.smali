@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld3d;
+.implements Ld4d;
 
 
 # static fields
@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final a:Lk32;
+.field public final a:Lb32;
 
 
 # direct methods
@@ -45,12 +45,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Lk32;)V
+.method public constructor <init>(Lb32;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/compat/quirk/TorchFlashRequiredFor3aUpdateQuirk;->a:Lk32;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/compat/quirk/TorchFlashRequiredFor3aUpdateQuirk;->a:Lb32;
 
     return-void
 .end method

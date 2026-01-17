@@ -1,115 +1,114 @@
-.class public abstract Ltg;
+.class public final synthetic Ltg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final a:Landroid/view/animation/LinearInterpolator;
 
-.field public static final b:Luu5;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:Ltu5;
+.field public final synthetic b:Landroid/view/View;
 
-.field public static final d:Ltu5;
-
-.field public static final e:Landroid/view/animation/DecelerateInterpolator;
+.field public final synthetic c:Lmg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Landroid/view/View;Lmg;I)V
+    .locals 0
 
-    new-instance v0, Landroid/view/animation/LinearInterpolator;
+    iput p3, p0, Ltg;->a:I
 
-    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
+    iput-object p1, p0, Ltg;->b:Landroid/view/View;
 
-    sput-object v0, Ltg;->a:Landroid/view/animation/LinearInterpolator;
+    iput-object p2, p0, Ltg;->c:Lmg;
 
-    new-instance v0, Luu5;
-
-    invoke-direct {v0}, Luu5;-><init>()V
-
-    sput-object v0, Ltg;->b:Luu5;
-
-    new-instance v0, Ltu5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ltu5;-><init>(I)V
-
-    sput-object v0, Ltg;->c:Ltu5;
-
-    new-instance v0, Ltu5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltu5;-><init>(I)V
-
-    sput-object v0, Ltg;->d:Ltu5;
-
-    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
-
-    sput-object v0, Ltg;->e:Landroid/view/animation/DecelerateInterpolator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(FFF)F
-    .locals 0
 
-    invoke-static {p1, p0, p2, p0}, Ln0c;->h(FFFF)F
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 6
 
-    move-result p0
+    iget p1, p0, Ltg;->a:I
 
-    return p0
-.end method
+    iget-object v0, p0, Ltg;->c:Lmg;
 
-.method public static b(FFFFF)F
-    .locals 1
+    iget-object v1, p0, Ltg;->b:Landroid/view/View;
 
-    cmpg-float v0, p4, p2
+    packed-switch p1, :pswitch_data_0
 
-    if-gtz v0, :cond_0
+    sget p1, Lgs1;->x0:I
 
-    return p0
+    new-instance p1, Landroid/graphics/Rect;
 
-    :cond_0
-    cmpl-float v0, p4, p3
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    if-ltz v0, :cond_1
+    move-result-object v2
 
-    return p1
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_1
-    sub-float/2addr p4, p2
+    move-result-object v2
 
-    sub-float/2addr p3, p2
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    div-float/2addr p4, p3
+    const/high16 v3, 0x41800000    # 16.0f
 
-    invoke-static {p0, p1, p4}, Ltg;->a(FFF)F
+    mul-float/2addr v2, v3
 
-    move-result p0
+    float-to-int v2, v2
 
-    return p0
-.end method
+    neg-int v2, v2
 
-.method public static c(IFI)I
-    .locals 0
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
 
-    sub-int/2addr p2, p0
+    move-result v4
 
-    int-to-float p2, p2
+    iget v0, v0, Lmg;->a:I
 
-    mul-float/2addr p1, p2
+    const/4 v5, 0x0
 
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+    invoke-direct {p1, v5, v2, v4, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    move-result p1
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    add-int/2addr p1, p0
+    move-result-object v0
 
-    return p1
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v3
+
+    invoke-static {v1, p1, v0}, Lcth;->c(Landroid/view/View;Landroid/graphics/Rect;F)V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iget v0, v0, Lmg;->a:I
+
+    iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

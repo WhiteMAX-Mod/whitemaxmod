@@ -1,109 +1,137 @@
-.class public final enum Lr22;
-.super Ljava/lang/Enum;
+.class public final Lr22;
+.super Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lr22;
+# instance fields
+.field public final a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
-.field public static final enum a:Lr22;
-
-.field public static final enum b:Lr22;
-
-.field public static final enum c:Lr22;
-
-.field public static final enum d:Lr22;
-
-.field public static final enum o:Lr22;
+.field public final b:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)V
+    .locals 0
 
-    new-instance v0, Lr22;
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    iput-object p1, p0, Lr22;->b:Ljava/util/concurrent/Executor;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lr22;->a:Lr22;
-
-    new-instance v1, Lr22;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lr22;->b:Lr22;
-
-    new-instance v2, Lr22;
-
-    const-string v3, "METERING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lr22;->c:Lr22;
-
-    new-instance v3, Lr22;
-
-    const-string v4, "CONVERGED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lr22;->d:Lr22;
-
-    new-instance v4, Lr22;
-
-    const-string v5, "LOCKED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lr22;->o:Lr22;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lr22;
-
-    move-result-object v0
-
-    sput-object v0, Lr22;->X:[Lr22;
+    iput-object p2, p0, Lr22;->a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lr22;
-    .locals 1
 
-    const-class v0, Lr22;
+# virtual methods
+.method public final onActive(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lq22;
 
-    move-result-object p0
+    const/4 v1, 0x0
 
-    check-cast p0, Lr22;
+    invoke-direct {v0, p0, p1, v1}, Lq22;-><init>(Lr22;Landroid/hardware/camera2/CameraCaptureSession;I)V
 
-    return-object p0
+    iget-object p1, p0, Lr22;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method
 
-.method public static values()[Lr22;
-    .locals 1
+.method public final onCaptureQueueEmpty(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
 
-    sget-object v0, Lr22;->X:[Lr22;
+    new-instance v0, Lq22;
 
-    invoke-virtual {v0}, [Lr22;->clone()Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    move-result-object v0
+    invoke-direct {v0, p0, p1, v1}, Lq22;-><init>(Lr22;Landroid/hardware/camera2/CameraCaptureSession;I)V
 
-    check-cast v0, [Lr22;
+    iget-object p1, p0, Lr22;->b:Ljava/util/concurrent/Executor;
 
-    return-object v0
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final onClosed(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
+
+    new-instance v0, Lq22;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Lq22;-><init>(Lr22;Landroid/hardware/camera2/CameraCaptureSession;I)V
+
+    iget-object p1, p0, Lr22;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
+
+    new-instance v0, Lq22;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p0, p1, v1}, Lq22;-><init>(Lr22;Landroid/hardware/camera2/CameraCaptureSession;I)V
+
+    iget-object p1, p0, Lr22;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
+
+    new-instance v0, Lq22;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p0, p1, v1}, Lq22;-><init>(Lr22;Landroid/hardware/camera2/CameraCaptureSession;I)V
+
+    iget-object p1, p0, Lr22;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final onReady(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
+
+    new-instance v0, Lq22;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, p0, p1, v1}, Lq22;-><init>(Lr22;Landroid/hardware/camera2/CameraCaptureSession;I)V
+
+    iget-object p1, p0, Lr22;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final onSurfacePrepared(Landroid/hardware/camera2/CameraCaptureSession;Landroid/view/Surface;)V
+    .locals 2
+
+    new-instance v0, Lzi;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-object p1, p0, Lr22;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

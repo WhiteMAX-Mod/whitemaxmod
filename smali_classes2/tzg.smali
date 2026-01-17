@@ -1,131 +1,88 @@
 .class public final Ltzg;
-.super Lb5g;
+.super Ljef;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lyzg;
-
-.field public o:I
+.field public final synthetic F0:I
 
 
 # direct methods
-.method public constructor <init>(Lyzg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    iput-object p1, p0, Ltzg;->X:Lyzg;
+    iput p2, p0, Ltzg;->F0:I
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method private final D(Lud8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final F(Lud8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final G(Lud8;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final y(Lud8;)V
+    .locals 2
 
-    check-cast p1, Lac4;
+    iget v0, p0, Ltzg;->F0:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ltzg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :pswitch_0
+    return-void
 
-    move-result-object p1
+    :pswitch_1
+    instance-of v0, p1, Lqzg;
 
-    check-cast p1, Ltzg;
+    if-nez v0, :cond_0
 
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Ltzg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ltzg;
-
-    iget-object v0, p0, Ltzg;->X:Lyzg;
-
-    invoke-direct {p1, v0, p2}, Ltzg;-><init>(Lyzg;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Ltzg;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lqzg;
 
-    throw p1
+    iget-object p1, p1, Lqzg;->a:Llhg;
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sget-object p1, Lyzg;->x0:[Lp38;
+    move-result-object v1
 
-    iget-object p1, p0, Ltzg;->X:Lyzg;
-
-    iget-object v0, p1, Lyzg;->X:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lztc;
-
-    iget-object p1, p1, Lyzg;->o:Ld68;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    check-cast p1, Lte3;
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    check-cast p1, Lcfe;
+    :goto_0
+    return-void
 
-    invoke-virtual {p1}, Lcfe;->s()J
+    nop
 
-    move-result-wide v2
-
-    iput v1, p0, Ltzg;->o:I
-
-    invoke-virtual {v0, v2, v3, p0}, Lztc;->a(JLl84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

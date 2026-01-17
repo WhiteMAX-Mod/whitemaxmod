@@ -1,452 +1,386 @@
 .class public final Lmvg;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:[B
+.field public X:I
 
-.field public b:Z
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public c:I
+.field public final synthetic Z:Lnvg;
 
-.field public d:J
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
+.field public o:Ljava/util/concurrent/locks/ReentrantLock;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lnvg;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    packed-switch p1, :pswitch_data_0
+    iput-object p1, p0, Lmvg;->Z:Lnvg;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    const/16 p1, 0xa
-
-    new-array p1, p1, [B
-
-    iput-object p1, p0, Lmvg;->a:[B
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 p1, 0xa
-
-    new-array p1, p1, [B
-
-    iput-object p1, p0, Lmvg;->a:[B
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a(Lhrg;Lfrg;)V
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lmvg;->c:I
+    check-cast p1, Ltsg;
 
-    if-lez v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-wide v2, p0, Lmvg;->d:J
+    invoke-virtual {p0, p1, p2}, Lmvg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget v4, p0, Lmvg;->e:I
+    move-result-object p1
 
-    iget v5, p0, Lmvg;->f:I
+    check-cast p1, Lmvg;
 
-    iget v6, p0, Lmvg;->g:I
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-object v1, p1
+    invoke-virtual {p1, p2}, Lmvg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-object v7, p2
+    move-result-object p1
 
-    invoke-interface/range {v1 .. v7}, Lhrg;->b(JIIILfrg;)V
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lmvg;->c:I
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public b(Lirg;Lgrg;)V
-    .locals 8
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lmvg;->c:I
+    new-instance v0, Lmvg;
 
-    if-lez v0, :cond_0
+    iget-object v1, p0, Lmvg;->Z:Lnvg;
 
-    iget-wide v2, p0, Lmvg;->d:J
+    invoke-direct {v0, v1, p2}, Lmvg;-><init>(Lnvg;Lkotlin/coroutines/Continuation;)V
 
-    iget v4, p0, Lmvg;->e:I
+    iput-object p1, v0, Lmvg;->Y:Ljava/lang/Object;
 
-    iget v5, p0, Lmvg;->f:I
-
-    iget v6, p0, Lmvg;->g:I
-
-    move-object v1, p1
-
-    move-object v7, p2
-
-    invoke-interface/range {v1 .. v7}, Lirg;->a(JIIILgrg;)V
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lmvg;->c:I
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public c(Lhrg;JIIILfrg;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 20
 
-    iget v0, p0, Lmvg;->g:I
+    move-object/from16 v1, p0
 
-    add-int v1, p5, p6
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    const/4 v2, 0x0
+    sget-object v2, Lac4;->a:Lac4;
 
-    if-gt v0, v1, :cond_0
+    iget v3, v1, Lmvg;->X:I
 
-    const/4 v0, 0x1
+    const/4 v4, 0x2
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    if-eqz v3, :cond_2
+
+    if-eq v3, v6, :cond_1
+
+    if-ne v3, v4, :cond_0
+
+    iget-object v2, v1, Lmvg;->o:Ljava/util/concurrent/locks/ReentrantLock;
+
+    iget-object v3, v1, Lmvg;->Y:Ljava/lang/Object;
+
+    check-cast v3, Lc0b;
+
+    :try_start_0
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto/16 :goto_7
+
+    :catchall_0
+    move-exception v0
+
+    move v4, v5
+
+    goto/16 :goto_9
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    iget-object v3, v1, Lmvg;->Y:Ljava/lang/Object;
+
+    check-cast v3, Ltsg;
+
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    move-object/from16 v7, p1
 
     goto :goto_0
 
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    if-eqz v0, :cond_4
-
-    iget-boolean v0, p0, Lmvg;->b:Z
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget v0, p0, Lmvg;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lmvg;->c:I
-
-    if-nez v0, :cond_2
-
-    iput-wide p2, p0, Lmvg;->d:J
-
-    iput p4, p0, Lmvg;->e:I
-
-    iput v2, p0, Lmvg;->f:I
-
     :cond_2
-    iget p2, p0, Lmvg;->f:I
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    add-int/2addr p2, p5
+    iget-object v3, v1, Lmvg;->Y:Ljava/lang/Object;
 
-    iput p2, p0, Lmvg;->f:I
+    check-cast v3, Ltsg;
 
-    iput p6, p0, Lmvg;->g:I
+    iput-object v3, v1, Lmvg;->Y:Ljava/lang/Object;
 
-    const/16 p2, 0x10
+    iput v6, v1, Lmvg;->X:I
 
-    if-lt v1, p2, :cond_3
+    invoke-interface {v3, v1}, Ltsg;->b(Lkotlin/coroutines/Continuation;)Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1, p7}, Lmvg;->a(Lhrg;Lfrg;)V
+    move-result-object v7
+
+    if-ne v7, v2, :cond_3
+
+    goto/16 :goto_6
 
     :cond_3
-    :goto_1
-    return-void
+    :goto_0
+    check-cast v7, Ljava/lang/Boolean;
+
+    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    return-object v0
 
     :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v7, v1, Lmvg;->Z:Lnvg;
 
-    const-string p2, "TrueHD chunk samples must be contiguous in the sample queue."
+    iget-object v8, v7, Lnvg;->h:Ljava/lang/Object;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast v8, Lc0b;
 
-    throw p1
-.end method
+    iget-object v9, v8, Lc0b;->e:Ljava/util/concurrent/locks/ReentrantLock;
 
-.method public d(Lirg;JIIILgrg;)V
-    .locals 3
+    invoke-virtual {v9}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    iget v0, p0, Lmvg;->g:I
+    :try_start_1
+    iput-boolean v6, v8, Lc0b;->f:Z
 
-    add-int v1, p5, p6
+    iget-object v10, v8, Lc0b;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    const/4 v2, 0x0
+    invoke-virtual {v10}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    if-gt v0, v1, :cond_0
+    :try_start_2
+    iget-boolean v11, v8, Lc0b;->d:Z
 
-    const/4 v0, 0x1
+    const/4 v12, 0x0
 
-    goto :goto_0
+    if-nez v11, :cond_6
 
-    :cond_0
-    move v0, v2
+    :cond_5
+    move-object v13, v12
 
-    :goto_0
-    const-string v1, "TrueHD chunk samples must be contiguous in the sample queue."
+    goto :goto_5
 
-    invoke-static {v1, v0}, Lp5j;->f(Ljava/lang/Object;Z)V
+    :cond_6
+    iput-boolean v5, v8, Lc0b;->d:Z
 
-    iget-boolean v0, p0, Lmvg;->b:Z
+    iget-object v11, v8, Lc0b;->b:[J
 
-    if-nez v0, :cond_1
+    array-length v11, v11
 
-    goto :goto_1
+    new-array v13, v11, [Lb0b;
 
-    :cond_1
-    iget v0, p0, Lmvg;->c:I
+    move v14, v5
 
-    add-int/lit8 v1, v0, 0x1
+    move v15, v14
 
-    iput v1, p0, Lmvg;->c:I
-
-    if-nez v0, :cond_2
-
-    iput-wide p2, p0, Lmvg;->d:J
-
-    iput p4, p0, Lmvg;->e:I
-
-    iput v2, p0, Lmvg;->f:I
-
-    :cond_2
-    iget p2, p0, Lmvg;->f:I
-
-    add-int/2addr p2, p5
-
-    iput p2, p0, Lmvg;->f:I
-
-    iput p6, p0, Lmvg;->g:I
-
-    const/16 p2, 0x10
-
-    if-lt v1, p2, :cond_3
-
-    invoke-virtual {p0, p1, p7}, Lmvg;->b(Lirg;Lgrg;)V
-
-    :cond_3
     :goto_1
-    return-void
-.end method
+    if-ge v14, v11, :cond_a
 
-.method public e(Lft5;)V
-    .locals 7
+    iget-object v6, v8, Lc0b;->b:[J
 
-    iget-boolean v0, p0, Lmvg;->b:Z
+    aget-wide v16, v6, v14
 
-    if-eqz v0, :cond_0
+    const-wide/16 v18, 0x0
+
+    cmp-long v6, v16, v18
+
+    if-lez v6, :cond_7
+
+    const/4 v6, 0x1
 
     goto :goto_2
 
-    :cond_0
-    const/16 v0, 0xa
+    :cond_7
+    move v6, v5
 
-    const/4 v1, 0x0
+    :goto_2
+    iget-object v5, v8, Lc0b;->c:[Z
 
-    iget-object v2, p0, Lmvg;->a:[B
+    aget-boolean v4, v5, v14
 
-    invoke-interface {p1, v1, v2, v0}, Lft5;->d(I[BI)V
+    if-eq v6, v4, :cond_9
 
-    invoke-interface {p1}, Lft5;->x()V
+    aput-boolean v6, v5, v14
 
-    const/4 p1, 0x4
+    if-eqz v6, :cond_8
 
-    aget-byte v0, v2, p1
+    sget-object v4, Lb0b;->b:Lb0b;
 
-    const/4 v3, -0x8
+    :goto_3
+    const/4 v15, 0x1
 
-    const/4 v4, 0x1
+    goto :goto_4
 
-    if-ne v0, v3, :cond_4
+    :catchall_1
+    move-exception v0
 
-    const/4 v0, 0x5
+    goto :goto_b
 
-    aget-byte v0, v2, v0
+    :cond_8
+    sget-object v4, Lb0b;->c:Lb0b;
 
-    const/16 v3, 0x72
+    goto :goto_3
 
-    if-ne v0, v3, :cond_4
+    :cond_9
+    sget-object v4, Lb0b;->a:Lb0b;
 
-    const/4 v0, 0x6
+    :goto_4
+    aput-object v4, v13, v14
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    aget-byte v0, v2, v0
+    add-int/lit8 v14, v14, 0x1
 
-    const/16 v3, 0x6f
+    const/4 v4, 0x2
 
-    if-ne v0, v3, :cond_4
+    const/4 v5, 0x0
 
-    const/4 v0, 0x7
-
-    aget-byte v3, v2, v0
-
-    and-int/lit16 v5, v3, 0xfe
-
-    const/16 v6, 0xba
-
-    if-eq v5, v6, :cond_1
+    const/4 v6, 0x1
 
     goto :goto_1
 
-    :cond_1
-    and-int/lit16 v3, v3, 0xff
+    :cond_a
+    if-eqz v15, :cond_5
 
-    const/16 v5, 0xbb
+    :goto_5
+    :try_start_3
+    invoke-virtual {v10}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
-    if-ne v3, v5, :cond_2
+    if-eqz v13, :cond_d
 
-    move v1, v4
+    :try_start_4
+    array-length v4, v13
 
-    :cond_2
-    if-eqz v1, :cond_3
+    if-nez v4, :cond_b
 
-    const/16 v1, 0x9
+    goto :goto_8
 
-    goto :goto_0
+    :cond_b
+    sget-object v4, Lssg;->b:Lssg;
 
-    :cond_3
-    const/16 v1, 0x8
+    new-instance v5, Llvg;
 
-    :goto_0
-    aget-byte v1, v2, v1
+    invoke-direct {v5, v13, v7, v3, v12}, Llvg;-><init>([Lb0b;Lnvg;Ltsg;Lkotlin/coroutines/Continuation;)V
 
-    shr-int/lit8 p1, v1, 0x4
+    iput-object v8, v1, Lmvg;->Y:Ljava/lang/Object;
 
-    and-int/2addr p1, v0
+    iput-object v9, v1, Lmvg;->o:Ljava/util/concurrent/locks/ReentrantLock;
 
-    const/16 v0, 0x28
+    const/4 v6, 0x2
 
-    shl-int v1, v0, p1
+    iput v6, v1, Lmvg;->X:I
 
-    :cond_4
-    :goto_1
-    if-nez v1, :cond_5
+    invoke-interface {v3, v4, v5, v1}, Ltsg;->d(Lssg;Lbr6;Lp6g;)Ljava/lang/Object;
 
-    :goto_2
-    return-void
+    move-result-object v3
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    :cond_5
-    iput-boolean v4, p0, Lmvg;->b:Z
+    if-ne v3, v2, :cond_c
 
-    return-void
-.end method
+    :goto_6
+    return-object v2
 
-.method public f(Lgt5;)V
-    .locals 7
+    :cond_c
+    move-object v3, v8
 
-    iget-boolean v0, p0, Lmvg;->b:Z
+    move-object v2, v9
 
-    if-eqz v0, :cond_0
+    :goto_7
+    move-object v9, v2
 
-    goto :goto_2
+    move-object v8, v3
 
-    :cond_0
-    const/16 v0, 0xa
+    :cond_d
+    :goto_8
+    const/4 v4, 0x0
 
-    const/4 v1, 0x0
+    goto :goto_a
 
-    iget-object v2, p0, Lmvg;->a:[B
+    :catchall_2
+    move-exception v0
 
-    invoke-interface {p1, v1, v2, v0}, Lgt5;->d(I[BI)V
+    move-object v3, v8
 
-    invoke-interface {p1}, Lgt5;->x()V
+    move-object v2, v9
 
-    const/4 p1, 0x4
+    const/4 v4, 0x0
 
-    aget-byte v0, v2, p1
+    :goto_9
+    :try_start_5
+    iput-boolean v4, v3, Lc0b;->f:Z
 
-    const/4 v3, -0x8
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    const/4 v4, 0x1
+    :catchall_3
+    move-exception v0
 
-    if-ne v0, v3, :cond_4
+    move-object v9, v2
 
-    const/4 v0, 0x5
+    goto :goto_c
 
-    aget-byte v0, v2, v0
+    :goto_a
+    :try_start_6
+    iput-boolean v4, v8, Lc0b;->f:Z
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    const/16 v3, 0x72
+    invoke-virtual {v9}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    if-ne v0, v3, :cond_4
+    return-object v0
 
-    const/4 v0, 0x6
+    :catchall_4
+    move-exception v0
 
-    aget-byte v0, v2, v0
+    goto :goto_c
 
-    const/16 v3, 0x6f
+    :goto_b
+    :try_start_7
+    invoke-virtual {v10}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    if-ne v0, v3, :cond_4
+    throw v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    const/4 v0, 0x7
+    :goto_c
+    invoke-virtual {v9}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    aget-byte v3, v2, v0
-
-    and-int/lit16 v5, v3, 0xfe
-
-    const/16 v6, 0xba
-
-    if-eq v5, v6, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    and-int/lit16 v3, v3, 0xff
-
-    const/16 v5, 0xbb
-
-    if-ne v3, v5, :cond_2
-
-    move v1, v4
-
-    :cond_2
-    if-eqz v1, :cond_3
-
-    const/16 v1, 0x9
-
-    goto :goto_0
-
-    :cond_3
-    const/16 v1, 0x8
-
-    :goto_0
-    aget-byte v1, v2, v1
-
-    shr-int/lit8 p1, v1, 0x4
-
-    and-int/2addr p1, v0
-
-    const/16 v0, 0x28
-
-    shl-int v1, v0, p1
-
-    :cond_4
-    :goto_1
-    if-nez v1, :cond_5
-
-    :goto_2
-    return-void
-
-    :cond_5
-    iput-boolean v4, p0, Lmvg;->b:Z
-
-    return-void
+    throw v0
 .end method

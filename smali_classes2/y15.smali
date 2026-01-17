@@ -1,186 +1,188 @@
 .class public final Ly15;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
 
 # static fields
-.field public static j:Ljava/util/ArrayList;
-
-.field public static k:Ly15;
-
-.field public static final l:Ljava/util/ArrayList;
-
-.field public static final m:Lm6;
+.field public static X:I
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public volatile a:Landroid/os/Handler;
 
-.field public final b:Landroid/util/SparseIntArray;
+.field public final b:Ljava/util/concurrent/CountDownLatch;
 
-.field public final c:Ljava/util/ArrayList;
+.field public c:J
 
 .field public final d:I
 
-.field public e:I
-
-.field public final f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public final i:Lxe;
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Ly15;->l:Ljava/util/ArrayList;
+    iput-object v0, p0, Ly15;->a:Landroid/os/Handler;
 
-    new-instance v0, Lm6;
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lm6;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    sput-object v0, Ly15;->m:Lm6;
+    iput-object v0, p0, Ly15;->b:Ljava/util/concurrent/CountDownLatch;
 
-    return-void
-.end method
+    sget v0, Ly15;->X:I
 
-.method public constructor <init>(I)V
-    .locals 2
+    add-int/lit8 v1, v0, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v1, Ly15;->X:I
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput v0, p0, Ly15;->d:I
 
-    const/16 v1, 0xa
+    const/16 v0, -0x3e8
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    iput v0, p0, Ly15;->o:I
 
-    iput-object v0, p0, Ly15;->a:Ljava/util/ArrayList;
+    invoke-virtual {p0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    new-instance v0, Landroid/util/SparseIntArray;
-
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
-
-    iput-object v0, p0, Ly15;->b:Landroid/util/SparseIntArray;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Ly15;->c:Ljava/util/ArrayList;
-
-    new-instance v0, Lxe;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, p0}, Lxe;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Ly15;->i:Lxe;
-
-    iput p1, p0, Ly15;->d:I
-
-    sget-object p1, Lx15;->j:Ljava/security/SecureRandom;
-
-    invoke-virtual {p1}, Ljava/util/Random;->nextInt()I
-
-    move-result p1
-
-    iput p1, p0, Ly15;->f:I
+    invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Runnable;Z)V
-    .locals 3
 
-    invoke-static {}, Lle;->b()Z
+# virtual methods
+.method public final a(Ljava/lang/Runnable;)V
+    .locals 1
 
-    move-result v0
+    :try_start_0
+    iget-object v0, p0, Ly15;->b:Ljava/util/concurrent/CountDownLatch;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lyia;
+    iget-object v0, p0, Ly15;->a:Landroid/os/Handler;
 
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string v0, "wrong thread"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p0, p1}, Lyia;->r(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :cond_0
-    sget-object v0, Ly15;->j:Ljava/util/ArrayList;
+    :catch_0
+    move-exception p1
 
-    sget-object v1, Ly15;->m:Lm6;
-
-    if-nez v0, :cond_2
-
-    sget-object v0, Ly15;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwia;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/ArrayList;
+    invoke-interface {v0, p1}, Lwia;->o(Ljava/lang/Throwable;)V
 
-    sput-object v0, Ly15;->j:Ljava/util/ArrayList;
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Runnable;)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ly15;->c:J
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p0, p1, v0, v1}, Ly15;->c(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public final c(Ljava/lang/Runnable;J)Z
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Ly15;->b:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
+    :catch_0
+    move-exception v0
 
-    const/16 v2, 0x64
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwia;
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
+    move-result-object v1
 
-    sput-object v0, Ly15;->j:Ljava/util/ArrayList;
+    invoke-interface {v1, v0}, Lwia;->o(Ljava/lang/Throwable;)V
 
     :goto_0
-    if-nez p1, :cond_2
+    const-wide/16 v0, 0x0
 
-    invoke-static {v1}, Lle;->d(Ljava/lang/Runnable;)V
+    cmp-long v0, p2, v0
 
-    :cond_2
-    sget-object v0, Ly15;->j:Ljava/util/ArrayList;
+    if-gtz v0, :cond_0
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object p2, p0, Ly15;->a:Landroid/os/Handler;
 
-    if-eqz p1, :cond_3
+    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget-object p0, Lle;->a:Landroid/os/Handler;
+    move-result p1
 
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    return p1
 
-    invoke-virtual {v1}, Lm6;->run()V
+    :cond_0
+    iget-object v0, p0, Ly15;->a:Landroid/os/Handler;
 
-    :cond_3
+    invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final run()V
+    .locals 4
+
+    invoke-static {}, Landroid/os/Looper;->prepare()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    new-instance v2, Lvq3;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, p0}, Lvq3;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    iput-object v0, p0, Ly15;->a:Landroid/os/Handler;
+
+    iget-object v0, p0, Ly15;->b:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    iget v0, p0, Ly15;->o:I
+
+    const/16 v1, -0x3e8
+
+    if-eq v0, v1, :cond_0
+
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    :cond_0
+    invoke-static {}, Landroid/os/Looper;->loop()V
+
     return-void
 .end method

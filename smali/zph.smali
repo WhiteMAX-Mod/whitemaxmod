@@ -1,120 +1,282 @@
-.class public final synthetic Lzph;
+.class public final Lzph;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lb27;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lgih;
 
-.field public final synthetic b:Lb2e;
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:Ljava/util/concurrent/atomic/AtomicLong;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb2e;I)V
+.method public constructor <init>(Lgih;IJ)V
     .locals 0
 
-    iput p2, p0, Lzph;->a:I
-
-    iput-object p1, p0, Lzph;->b:Lb2e;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzph;->a:Lgih;
+
+    iput p2, p0, Lzph;->b:I
+
+    iput-wide p3, p0, Lzph;->c:J
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object p1, p0, Lzph;->d:Ljava/util/concurrent/atomic/AtomicLong;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(Lhd5;JLpj6;Z)V
+    .locals 10
 
-    iget v0, p0, Lzph;->a:I
+    iget-object p5, p1, Lhd5;->a:Ld49;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p5, p5, Ld49;->b:Lt39;
 
-    iget-object v0, p0, Lzph;->b:Lb2e;
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lb2e;->c:Ljava/lang/Object;
+    if-nez p5, :cond_0
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    :goto_0
+    move p5, v0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+    goto :goto_1
 
-    move-result v0
+    :cond_0
+    iget-object p5, p5, Lt39;->a:Landroid/net/Uri;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {p5}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-    const-string v2, "incrementUsage: mVideoUsage = "
+    move-result-object p5
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "VideoUsageControl"
-
-    invoke-static {v1, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lzph;->b:Lb2e;
-
-    iget-object v0, v0, Lb2e;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    const-string v1, "decrementUsage: mVideoUsage = "
-
-    const-string v2, "VideoUsageControl"
-
-    if-gez v0, :cond_0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", which is less than 0!"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lw4j;->g(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez p5, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    :cond_1
+    const-string v1, "transformer_surface_asset"
 
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result p5
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_1
+    invoke-virtual {p1, p2, p3}, Lhd5;->b(J)J
+
+    move-result-wide p2
+
+    iget-object v1, p0, Lzph;->d:Ljava/util/concurrent/atomic/AtomicLong;
+
+    if-eqz p4, :cond_7
+
+    iget v2, p4, Lpj6;->z:I
+
+    rem-int/lit16 v2, v2, 0xb4
+
+    if-nez v2, :cond_2
+
+    :goto_2
+    move-object v6, p4
+
+    goto :goto_3
+
+    :cond_2
+    invoke-virtual {p4}, Lpj6;->a()Lnj6;
+
+    move-result-object v2
+
+    iget v3, p4, Lpj6;->v:I
+
+    iput v3, v2, Lnj6;->t:I
+
+    iget p4, p4, Lpj6;->u:I
+
+    iput p4, v2, Lnj6;->u:I
+
+    iput v0, v2, Lnj6;->y:I
+
+    new-instance p4, Lpj6;
+
+    invoke-direct {p4, v2}, Lpj6;-><init>(Lnj6;)V
+
+    goto :goto_2
+
+    :goto_3
+    if-eqz p5, :cond_3
+
+    const/4 p4, 0x4
+
+    :goto_4
+    move v5, p4
+
+    goto :goto_5
+
+    :cond_3
+    iget-object p4, v6, Lpj6;->n:Ljava/lang/String;
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p4}, Lw5a;->k(Ljava/lang/String;)Z
+
+    move-result p5
+
+    if-eqz p5, :cond_4
+
+    const/4 p4, 0x2
+
+    goto :goto_4
+
+    :cond_4
+    const-string p5, "video/raw"
+
+    invoke-virtual {p4, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p5
+
+    if-eqz p5, :cond_5
+
+    const/4 p4, 0x3
+
+    goto :goto_4
+
+    :cond_5
+    invoke-static {p4}, Lw5a;->m(Ljava/lang/String;)Z
+
+    move-result p5
+
+    if-eqz p5, :cond_6
+
+    const/4 p4, 0x1
+
+    goto :goto_4
+
+    :goto_5
+    iget-object p1, p1, Lhd5;->f:Lud5;
+
+    iget-object v7, p1, Lud5;->b:Lhk7;
+
+    iget-wide p4, p0, Lzph;->c:J
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v2
+
+    add-long v8, v2, p4
+
+    iget-object v3, p0, Lzph;->a:Lgih;
+
+    iget v4, p0, Lzph;->b:I
+
+    invoke-interface/range {v3 .. v9}, Lgih;->l(IILpj6;Ljava/util/List;J)V
+
+    goto :goto_6
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "MIME type not supported "
+
+    invoke-virtual {p2, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    :goto_6
+    invoke-virtual {v1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    return-void
+.end method
+
+.method public final b()Landroid/view/Surface;
+    .locals 2
+
+    iget-object v0, p0, Lzph;->a:Lgih;
+
+    iget v1, p0, Lzph;->b:I
+
+    invoke-interface {v0, v1}, Lgih;->j(I)Landroid/view/Surface;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    :goto_0
+.method public final c()I
+    .locals 2
+
+    iget-object v0, p0, Lzph;->a:Lgih;
+
+    iget v1, p0, Lzph;->b:I
+
+    invoke-interface {v0, v1}, Lgih;->g(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final d(Landroid/graphics/Bitmap;Lxw3;)I
+    .locals 2
+
+    iget-object v0, p0, Lzph;->a:Lgih;
+
+    iget v1, p0, Lzph;->b:I
+
+    invoke-interface {v0, v1, p1, p2}, Lgih;->n(ILandroid/graphics/Bitmap;Lxw3;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public final f()V
+    .locals 2
+
+    iget-object v0, p0, Lzph;->a:Lgih;
+
+    iget v1, p0, Lzph;->b:I
+
+    invoke-interface {v0, v1}, Lgih;->q(I)V
+
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final h(J)Z
+    .locals 0
+
+    iget-object p1, p0, Lzph;->a:Lgih;
+
+    iget p2, p0, Lzph;->b:I
+
+    invoke-interface {p1, p2}, Lgih;->f(I)Z
+
+    move-result p1
+
+    return p1
 .end method

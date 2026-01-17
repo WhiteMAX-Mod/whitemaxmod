@@ -1,102 +1,127 @@
 .class public final Lkl2;
-.super Lsn2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final F(Ljg9;Loq6;Lcr6;)V
+# instance fields
+.field public final a:J
+
+.field public final b:Luea;
+
+
+# direct methods
+.method public constructor <init>(JLuea;)V
     .locals 0
 
-    check-cast p1, Lfg9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Lkl2;->G(Lfg9;)V
+    iput-wide p1, p0, Lkl2;->a:J
 
-    invoke-super {p0, p1, p2, p3}, Lsn2;->F(Ljg9;Loq6;Lcr6;)V
+    iput-object p3, p0, Lkl2;->b:Luea;
 
     return-void
 .end method
 
-.method public final G(Lfg9;)V
-    .locals 5
 
-    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast v0, Lqn2;
+    const/4 v0, 0x1
 
-    iget-wide v1, p1, Lfg9;->a:J
+    if-ne p0, p1, :cond_0
 
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    iget-object v1, v0, Lqn2;->J0:La4b;
-
-    iget-object v2, p1, Lfg9;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lqn2;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v2, p1, Lfg9;->Y:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v2}, Lqn2;->setLink(Ljava/lang/CharSequence;)V
-
-    iget-object v2, p1, Lfg9;->X:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v2}, Lqn2;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v2, p1, Lfg9;->Z:Z
-
-    if-eqz v2, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-object p1, v1, La4b;->K0:Ljava/util/List;
-
-    iget-object v2, v1, La4b;->b:Ll85;
-
-    invoke-virtual {v2, p1}, Ll85;->i(Lh85;)V
-
-    iget-object p1, v0, Lqn2;->F0:Ljava/lang/Object;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/drawable/Drawable;
-
-    new-instance v2, Ljh1;
-
-    const/16 v3, 0x14
-
-    invoke-direct {v2, v3}, Ljh1;-><init>(I)V
-
-    new-instance v3, Ljh1;
-
-    const/16 v4, 0x15
-
-    invoke-direct {v3, v4}, Ljh1;-><init>(I)V
-
-    const/4 v4, 0x6
-
-    invoke-static {v1, p1, v2, v3, v4}, La4b;->q(La4b;Landroid/graphics/drawable/Drawable;Loq6;Loq6;I)V
-
-    invoke-virtual {v0}, Lqn2;->v()V
-
-    return-void
+    return v0
 
     :cond_0
-    iget-object p1, p1, Lfg9;->d:Ljava/lang/String;
+    instance-of v1, p1, Lkl2;
 
-    invoke-virtual {v0, p1}, Lqn2;->setLinkPhoto(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lkl2;
+
+    iget-wide v3, p0, Lkl2;->a:J
+
+    iget-wide v5, p1, Lkl2;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lkl2;->b:Luea;
+
+    iget-object p1, p1, Lkl2;->b:Luea;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final bridge synthetic z(Lie8;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    check-cast p1, Lfg9;
+    iget-wide v0, p0, Lkl2;->a:J
 
-    invoke-virtual {p0, p1}, Lkl2;->G(Lfg9;)V
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    return-void
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lkl2;->b:Luea;
+
+    invoke-virtual {v1}, Luea;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TypingCacheKey(chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lkl2;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", notifs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lkl2;->b:Luea;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

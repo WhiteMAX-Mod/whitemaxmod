@@ -1,88 +1,78 @@
-.class public final Lmjh;
-.super Lb5g;
+.class public final synthetic Lmjh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic X:Lojh;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lthh;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lpjh;
 
 
 # direct methods
-.method public constructor <init>(Lojh;Lthh;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lpjh;I)V
     .locals 0
 
-    iput-object p1, p0, Lmjh;->X:Lojh;
+    iput p2, p0, Lmjh;->a:I
 
-    iput-object p2, p0, Lmjh;->Y:Lthh;
+    iput-object p1, p0, Lmjh;->b:Lpjh;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 1
 
-    check-cast p1, Lrlh;
+    iget v0, p0, Lmjh;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lmjh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lmjh;
+    check-cast p1, Ljava/lang/Float;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {p1, p2}, Lmjh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    return-object p2
-.end method
+    iget-object v0, p0, Lmjh;->b:Lpjh;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    iput p1, v0, Lpjh;->B0:F
 
-    new-instance v0, Lmjh;
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    iget-object v1, p0, Lmjh;->X:Lojh;
+    return-void
 
-    iget-object v2, p0, Lmjh;->Y:Lthh;
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2, p2}, Lmjh;-><init>(Lojh;Lthh;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    iput-object p1, v0, Lmjh;->o:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Float;
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    move-result p1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Lmjh;->b:Lpjh;
 
-    iget-object p1, p0, Lmjh;->o:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lpjh;->setProgressForced(F)V
 
-    check-cast p1, Lrlh;
+    return-void
 
-    iget-object v0, p0, Lmjh;->X:Lojh;
+    nop
 
-    iget-object v1, p0, Lmjh;->Y:Lthh;
-
-    invoke-static {v0, v1, p1}, Lojh;->q(Lojh;Lthh;Lrlh;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

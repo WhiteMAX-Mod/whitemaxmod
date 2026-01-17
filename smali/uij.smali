@@ -1,225 +1,105 @@
-.class public abstract Luij;
-.super Ljava/lang/Object;
+.class public final Luij;
+.super Lg4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Luij;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public X:Ljava/lang/String;
+
+.field public Y:Ljava/lang/String;
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public o:Ljava/lang/String;
+
+
 # direct methods
-.method public static final a()Lqyg;
-    .locals 10
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget v0, Lwdd;->oneme_settings_twofa_restore_delete_user_confirmation_title:I
+    new-instance v0, Lfph;
 
-    new-instance v1, Lbhg;
+    const/16 v1, 0x19
 
-    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
+    invoke-direct {v0, v1}, Lfph;-><init>(I)V
 
-    sget v0, Lwdd;->oneme_settings_twofa_restore_delete_user_confirmation_description:I
+    sput-object v0, Luij;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    new-instance v2, Lbhg;
-
-    invoke-direct {v2, v0}, Lbhg;-><init>(I)V
-
-    new-instance v3, Lzt3;
-
-    sget v4, Lh9d;->oneme_settings_twofa_delete_user_confirmation_action:I
-
-    sget v0, Lwdd;->oneme_settings_twofa_restore_delete_user_confirmation_action:I
-
-    new-instance v5, Lbhg;
-
-    invoke-direct {v5, v0}, Lbhg;-><init>(I)V
-
-    const/4 v8, 0x3
-
-    const/4 v9, 0x1
-
-    const/4 v6, 0x3
-
-    const/4 v7, 0x1
-
-    invoke-direct/range {v3 .. v9}, Lzt3;-><init>(ILghg;IZII)V
-
-    new-instance v0, Lzt3;
-
-    sget v4, Lh9d;->oneme_settings_twofa_delete_user_confirmation_skip:I
-
-    sget v5, Ll5e;->q:I
-
-    new-instance v6, Lbhg;
-
-    invoke-direct {v6, v5}, Lbhg;-><init>(I)V
-
-    const/4 v5, 0x2
-
-    const/16 v7, 0x20
-
-    invoke-direct {v0, v4, v6, v5, v7}, Lzt3;-><init>(ILghg;II)V
-
-    filled-new-array {v3, v0}, [Lzt3;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    new-instance v3, Lqyg;
-
-    sget-object v4, Lmbe;->X1:Lmbe;
-
-    invoke-direct {v3, v1, v2, v0, v4}, Lqyg;-><init>(Lbhg;Lbhg;Ljava/util/List;Lmbe;)V
-
-    return-object v3
+    return-void
 .end method
 
-.method public static final b(Lm4h;)V
-    .locals 3
 
-    new-instance v0, Lk4b;
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    const/16 v1, 0x10
+    const/16 p2, 0x4f45
 
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
+    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
 
-    const/16 v1, 0x83
+    move-result p2
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    const/4 v0, 0x2
 
-    new-instance v0, Lk4b;
+    iget-object v1, p0, Luij;->a:Ljava/lang/String;
 
-    const/16 v1, 0x11
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
+    const/4 v0, 0x3
 
-    const/16 v1, 0x84
+    iget-object v1, p0, Luij;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    new-instance v0, Lk4b;
+    const/4 v0, 0x4
 
-    const/16 v1, 0x12
+    iget-object v1, p0, Luij;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    const/16 v1, 0x85
+    const/4 v0, 0x5
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    iget-object v1, p0, Luij;->d:Ljava/lang/String;
 
-    new-instance v0, Lk4b;
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    const/16 v1, 0x13
+    const/4 v0, 0x6
 
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
+    iget-object v1, p0, Luij;->o:Ljava/lang/String;
 
-    const/16 v1, 0x86
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    const/4 v0, 0x7
 
-    new-instance v0, Lh4b;
+    iget-object v1, p0, Luij;->X:Ljava/lang/String;
 
-    const/16 v1, 0x16
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lh4b;-><init>(I)V
+    const/16 v0, 0x8
 
-    const/16 v1, 0x87
+    iget-object v1, p0, Luij;->Y:Ljava/lang/String;
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    new-instance v0, Lk4b;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
-
-    const/16 v1, 0x88
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Lk4b;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
-
-    const/16 v1, 0x89
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Lk4b;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
-
-    const/16 v1, 0x8a
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Li4b;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Li4b;-><init>(I)V
-
-    const/16 v1, 0x8b
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Lk4b;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
-
-    const/16 v1, 0x8c
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Lk4b;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
-
-    const/16 v1, 0x8d
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Lk4b;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Lk4b;-><init>(I)V
-
-    const/16 v1, 0x8e
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Lh4b;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lh4b;-><init>(I)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
-
-    new-instance v0, Lh4b;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v0, v2}, Lh4b;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
-
-    new-instance v0, Lh4b;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v2}, Lh4b;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
+    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

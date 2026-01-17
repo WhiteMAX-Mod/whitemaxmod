@@ -16,7 +16,7 @@
         "",
         "",
         "token",
-        "Lv2h;",
+        "Lb3h;",
         "onPushTokenGenerated",
         "(Ljava/lang/String;)V",
         "vendor_release"
@@ -24,7 +24,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30

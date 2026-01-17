@@ -1,127 +1,106 @@
 .class public final Lxy4;
-.super Ljava/lang/Object;
+.super Ljf4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public final F(Lw4e;I)V
+    .locals 7
 
-.field public final b:Ljava/lang/String;
+    invoke-virtual {p1}, Lw4e;->n()Z
 
+    move-result v0
 
-# direct methods
-.method public constructor <init>(ILjava/lang/String;)V
-    .locals 0
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
 
-    iput p1, p0, Lxy4;->a:I
+    :cond_0
+    sget-object v0, Laz4;->a:Ljava/util/List;
 
-    iput-object p2, p0, Lxy4;->b:Ljava/lang/String;
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lzy4;
+
+    iget v1, v1, Lzy4;->a:I
+
+    if-eqz v1, :cond_2
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_1
+
+    new-instance p2, Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+
+    invoke-direct {p2}, Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;-><init>()V
+
+    :goto_0
+    move-object v1, p2
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lzy4;
+
+    iget p2, p2, Lzy4;->a:I
+
+    const-string v0, "Unknown tab id: "
+
+    invoke-static {p2, v0}, Lmrf;->h(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p2, Lone/me/devmenu/DevMenuGeneralPageScreen;
+
+    invoke-direct {p2}, Lone/me/devmenu/DevMenuGeneralPageScreen;-><init>()V
+
+    goto :goto_0
+
+    :goto_1
+    sget-object p2, Lz84;->b:Lz84;
+
+    invoke-virtual {v1, p2}, La94;->setRetainViewMode(Lz84;)V
+
+    new-instance v0, Lz4e;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+
+    invoke-virtual {p1, v0}, Lw4e;->S(Lz4e;)V
 
     return-void
 .end method
 
+.method public final j()I
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    sget-object v0, Laz4;->a:Ljava/util/List;
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lxy4;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lxy4;
-
-    iget v0, p0, Lxy4;->a:I
-
-    iget v1, p1, Lxy4;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lxy4;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lxy4;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lxy4;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lxy4;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DevMenuTab(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lxy4;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", name="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lxy4;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

@@ -1,215 +1,152 @@
-.class public final Ll47;
-.super Ljava/lang/Object;
+.class public final enum Ll47;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/RunnableScheduledFuture;
+.implements Ln47;
+
+
+# static fields
+.field public static final enum X:Ll47;
+
+.field public static final synthetic Y:[Ll47;
+
+.field public static final enum b:Ll47;
+
+.field public static final enum c:Ll47;
+
+.field public static final enum d:Ll47;
+
+.field public static final enum o:Ll47;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/Callable;
-
-.field public final d:Lbx1;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;JLjava/util/concurrent/Callable;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ll47;
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    const-string v1, "KEYBOARD_PRESS"
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    const/4 v3, 0x3
 
-    iput-object v0, p0, Ll47;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {v0, v1, v2, v3}, Ll47;-><init>(Ljava/lang/String;II)V
 
-    iput-wide p2, p0, Ll47;->b:J
+    new-instance v1, Ll47;
 
-    iput-object p4, p0, Ll47;->c:Ljava/util/concurrent/Callable;
+    const-string v2, "VIRTUAL_KEY"
 
-    new-instance p2, Lf1c;
+    const/4 v4, 0x1
 
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1, v2, v4, v4}, Ll47;-><init>(Ljava/lang/String;II)V
 
-    iput-object p0, p2, Lf1c;->c:Ljava/lang/Object;
+    sput-object v1, Ll47;->b:Ll47;
 
-    iput-object p1, p2, Lf1c;->a:Ljava/lang/Object;
+    new-instance v2, Ll47;
 
-    iput-object p4, p2, Lf1c;->b:Ljava/lang/Object;
+    const-string v4, "KEYBOARD_TAP"
 
-    invoke-static {p2}, Loaj;->b(Lzw1;)Lbx1;
+    const/4 v5, 0x2
 
-    move-result-object p1
+    invoke-direct {v2, v4, v5, v3}, Ll47;-><init>(Ljava/lang/String;II)V
 
-    iput-object p1, p0, Ll47;->d:Lbx1;
+    sput-object v2, Ll47;->c:Ll47;
+
+    move v4, v3
+
+    new-instance v3, Ll47;
+
+    const-string v5, "CONTEXT_CLICK"
+
+    const/4 v6, 0x6
+
+    invoke-direct {v3, v5, v4, v6}, Ll47;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Ll47;->d:Ll47;
+
+    new-instance v4, Ll47;
+
+    const/4 v5, 0x4
+
+    const/16 v6, 0xc
+
+    const-string v7, "GESTURE_START"
+
+    invoke-direct {v4, v7, v5, v6}, Ll47;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Ll47;->o:Ll47;
+
+    new-instance v5, Ll47;
+
+    const/4 v6, 0x5
+
+    const/16 v7, 0x10
+
+    const-string v8, "CONFIRM"
+
+    invoke-direct {v5, v8, v6, v7}, Ll47;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Ll47;->X:Ll47;
+
+    filled-new-array/range {v0 .. v5}, [Ll47;
+
+    move-result-object v0
+
+    sput-object v0, Ll47;->Y:[Ll47;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final cancel(Z)Z
-    .locals 1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Ll47;->d:Lbx1;
+    iput p3, p0, Ll47;->a:I
 
-    invoke-virtual {v0, p1}, Lbx1;->cancel(Z)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 5
-
-    check-cast p1, Ljava/util/concurrent/Delayed;
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p0, v0}, Ll47;->getDelay(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v1
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v3
-
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Long;->compare(JJ)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get()Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Ll47;
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Ll47;->d:Lbx1;
+    const-class v0, Ll47;
 
-    .line 2
-    iget-object v0, v0, Lbx1;->b:Lax1;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 3
-    invoke-virtual {v0}, Lh4;->get()Ljava/lang/Object;
+    move-result-object p0
+
+    check-cast p0, Ll47;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll47;
+    .locals 1
+
+    sget-object v0, Ll47;->Y:[Ll47;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Ll47;
 
     return-object v0
 .end method
 
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+# virtual methods
+.method public final a()I
     .locals 1
 
-    .line 4
-    iget-object v0, p0, Ll47;->d:Lbx1;
-
-    .line 5
-    iget-object v0, v0, Lbx1;->b:Lax1;
-
-    .line 6
-    invoke-virtual {v0, p1, p2, p3}, Lh4;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 4
-
-    iget-wide v0, p0, Ll47;->b:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p1, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    iget-object v0, p0, Ll47;->d:Lbx1;
-
-    invoke-virtual {v0}, Lbx1;->isCancelled()Z
-
-    move-result v0
+    iget v0, p0, Ll47;->a:I
 
     return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    iget-object v0, p0, Ll47;->d:Lbx1;
-
-    iget-object v0, v0, Lbx1;->b:Lax1;
-
-    invoke-virtual {v0}, Lh4;->isDone()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isPeriodic()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final run()V
-    .locals 2
-
-    iget-object v0, p0, Ll47;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lyw1;
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    iget-object v1, p0, Ll47;->c:Ljava/util/concurrent/Callable;
-
-    invoke-interface {v1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lyw1;->b(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v1
-
-    invoke-virtual {v0, v1}, Lyw1;->d(Ljava/lang/Throwable;)Z
-
-    :cond_0
-    return-void
 .end method

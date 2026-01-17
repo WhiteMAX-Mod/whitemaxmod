@@ -1,102 +1,82 @@
 .class public final Ldf4;
-.super Landroid/database/DataSetObserver;
+.super Ls62;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final d:Lxp0;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final o:F
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lxp0;F)V
+    .locals 2
 
-    iput p1, p0, Ldf4;->a:I
+    const-string v0, "bitmapDescriptor must not be null"
 
-    iput-object p2, p0, Ldf4;->b:Ljava/lang/Object;
+    invoke-static {p1, v0}, Ldkj;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    const/4 v0, 0x0
+
+    cmpg-float v0, p2, v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x3
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, p1, v1}, Ls62;-><init>(ILxp0;Ljava/lang/Float;)V
+
+    iput-object p1, p0, Ldf4;->d:Lxp0;
+
+    iput p2, p0, Ldf4;->o:F
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "refWidth must be positive"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final onChanged()V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Ldf4;->a:I
+    iget-object v0, p0, Ldf4;->d:Lxp0;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    iget-object v0, p0, Ldf4;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lre8;
+    const-string v1, "[CustomCap: bitmapDescriptor="
 
-    iget-object v1, v0, Lre8;->J0:Lqo;
+    const-string v2, " refWidth="
 
-    invoke-virtual {v1}, Landroid/widget/PopupWindow;->isShowing()Z
+    invoke-static {v1, v0, v2}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    iget v1, p0, Ldf4;->o:F
 
-    invoke-virtual {v0}, Lre8;->g()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
+    const-string v1, "]"
 
-    :pswitch_0
-    iget-object v0, p0, Ldf4;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lt1g;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    iput-boolean v1, v0, Lef4;->a:Z
-
-    invoke-virtual {v0}, Lt1g;->notifyDataSetChanged()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onInvalidated()V
-    .locals 2
-
-    iget v0, p0, Ldf4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ldf4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lre8;
-
-    invoke-virtual {v0}, Lre8;->dismiss()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ldf4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lt1g;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lef4;->a:Z
-
-    invoke-virtual {v0}, Lt1g;->notifyDataSetInvalidated()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

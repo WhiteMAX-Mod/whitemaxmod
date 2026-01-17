@@ -1,233 +1,87 @@
-.class public final synthetic Lky3;
-.super Ljava/lang/Object;
+.class public final Lky3;
+.super Ljz;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic b:Lly3;
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:J
+
+.field public final t0:Ljava/lang/String;
+
+.field public final u0:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lly3;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .locals 1
 
-    iput p2, p0, Lky3;->a:I
+    sget-object v0, Le10;->w0:Le10;
 
-    iput-object p1, p0, Lky3;->b:Lly3;
+    invoke-direct {p0, v0, p9, p10}, Ljz;-><init>(Le10;ZZ)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lky3;->d:Ljava/lang/String;
+
+    iput-wide p2, p0, Lky3;->o:J
+
+    iput-object p4, p0, Lky3;->X:Ljava/lang/String;
+
+    iput-object p7, p0, Lky3;->t0:Ljava/lang/String;
+
+    iput-object p8, p0, Lky3;->u0:Ljava/lang/String;
+
+    iput-object p5, p0, Lky3;->Y:Ljava/lang/String;
+
+    iput-object p6, p0, Lky3;->Z:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a()Ljava/util/HashMap;
     .locals 5
 
-    iget p1, p0, Lky3;->a:I
+    invoke-super {p0}, Ljz;->a()Ljava/util/HashMap;
 
-    iget-object v0, p0, Lky3;->b:Lly3;
+    move-result-object v0
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v1, p0, Lky3;->d:Ljava/lang/String;
 
-    iget-object p1, v0, Lly3;->O0:Lclf;
+    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
 
-    if-eqz p1, :cond_0
+    move-result v2
 
-    iget-wide v0, v0, Lly3;->Q0:J
+    if-nez v2, :cond_0
 
-    const/4 v2, 0x0
+    const-string v2, "vcfBody"
 
-    invoke-virtual {p1, v0, v1, v2}, Lclf;->y(JZ)V
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    return-void
+    const-wide/16 v1, 0x0
 
-    :pswitch_0
-    iget-object p1, v0, Lly3;->O0:Lclf;
+    iget-wide v3, p0, Lky3;->o:J
 
-    if-eqz p1, :cond_1
+    cmp-long v1, v3, v1
 
-    iget-wide v0, v0, Lly3;->Q0:J
+    if-eqz v1, :cond_1
 
-    const/4 v2, 0x1
+    const-string v1, "contactId"
 
-    invoke-virtual {p1, v0, v1, v2}, Lclf;->y(JZ)V
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    return-void
-
-    :pswitch_1
-    iget-object p1, v0, Lly3;->O0:Lclf;
-
-    if-eqz p1, :cond_9
-
-    iget-wide v0, v0, Lly3;->Q0:J
-
-    iget-object p1, p1, Lclf;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    sget-object v2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lxna;
-
-    invoke-virtual {p1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lfd1;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lfd1;->X:Lhof;
-
-    invoke-virtual {v2}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ldd1;
-
-    iget-boolean v2, v2, Ldd1;->a:Z
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {p1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0, v1}, Lvc1;->s(J)Lb87;
-
-    move-result-object v2
-
-    if-nez v2, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lfd1;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v1, v2}, Lfd1;->s(JLb87;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v1}, Lvc1;->s(J)Lb87;
-
-    move-result-object p1
-
-    if-nez p1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    instance-of v0, p1, Lz77;
-
-    if-eqz v0, :cond_5
-
-    sget-object v0, Lic1;->c:Lic1;
-
-    check-cast p1, Lz77;
-
-    iget-wide v1, p1, Lz77;->b:J
-
-    iget-object p1, p1, Lz77;->c:Ljava/util/ArrayList;
-
-    invoke-static {p1}, Lei3;->D(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lic1;->M0(JJ)V
-
-    goto :goto_0
-
-    :cond_5
-    instance-of v0, p1, Lx77;
-
-    if-eqz v0, :cond_6
-
-    sget-object v0, Lic1;->c:Lic1;
-
-    check-cast p1, Lx77;
-
-    iget-wide v1, p1, Lx77;->b:J
-
-    iget-object p1, p1, Lx77;->d:Ljava/util/ArrayList;
-
-    invoke-static {p1}, Lei3;->D(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lic1;->M0(JJ)V
-
-    goto :goto_0
-
-    :cond_6
-    instance-of v0, p1, Ly77;
-
-    if-eqz v0, :cond_7
-
-    sget-object v0, Lic1;->c:Lic1;
-
-    check-cast p1, Ly77;
-
-    iget-wide v1, p1, Ly77;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iget-object v2, p1, Ly77;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Ly77;->d:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1, v2, p1}, Lic1;->L0(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :cond_7
-    sget-object v0, La87;->a:La87;
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_9
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

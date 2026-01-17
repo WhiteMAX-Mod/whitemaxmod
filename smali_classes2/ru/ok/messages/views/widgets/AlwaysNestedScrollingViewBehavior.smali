@@ -22,7 +22,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final t()Z
+.method public final p()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -48,7 +48,7 @@
     return v0
 .end method
 
-.method public final u(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
+.method public final q(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
     .locals 0
 
     const/4 p1, 0x1

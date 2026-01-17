@@ -1,96 +1,27 @@
-.class public interface abstract Lteh;
+.class public final Lteh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Landroid/net/Uri;
-.end method
+# instance fields
+.field public final a:J
 
-.method public abstract b()J
-.end method
+.field public final b:J
 
-.method public abstract c()J
-.end method
+.field public final c:J
 
-.method public d()Z
-    .locals 2
 
-    invoke-interface {p0}, Lteh;->a()Landroid/net/Uri;
-
-    move-result-object v0
-
-    sget-object v1, Lqah;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const-string v1, "file"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public e(J)Lteh;
+# direct methods
+.method public constructor <init>(JJJ)V
     .locals 0
 
-    return-object p0
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public f()Lgz;
-    .locals 1
+    iput-wide p1, p0, Lteh;->a:J
 
-    const/4 v0, 0x0
+    iput-wide p3, p0, Lteh;->b:J
 
-    return-object v0
-.end method
+    iput-wide p5, p0, Lteh;->c:J
 
-.method public abstract g()Z
-.end method
-
-.method public abstract getContentType()Ljava/lang/String;
-.end method
-
-.method public abstract getDuration()J
-.end method
-
-.method public abstract getHeight()I
-.end method
-
-.method public abstract getType()I
-.end method
-
-.method public abstract getWidth()I
-.end method
-
-.method public abstract h()Ljava/lang/String;
-.end method
-
-.method public abstract i()J
-.end method
-
-.method public abstract j()J
+    return-void
 .end method

@@ -1,57 +1,97 @@
-.class public abstract Ltyd;
-.super Lqyd;
+.class public final Ltyd;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpr6;
 
 
 # instance fields
-.field public final b:I
+.field public final a:Landroid/content/res/Resources;
+
+.field public final b:Landroid/content/res/Resources$Theme;
 
 
 # direct methods
-.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lqyd;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ltyd;->b:I
+    iput-object p1, p0, Ltyd;->a:Landroid/content/res/Resources;
+
+    iput-object p2, p0, Ltyd;->b:Landroid/content/res/Resources$Theme;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getArity()I
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Ltyd;->b:I
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lak0;->a:Lkotlin/coroutines/Continuation;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lfsd;->a:Lgsd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p0}, Lgsd;->a(Lpr6;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 
     :cond_0
-    invoke-super {p0}, Lak0;->toString()Ljava/lang/String;
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Ltyd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ltyd;
+
+    iget-object v2, p0, Ltyd;->a:Landroid/content/res/Resources;
+
+    iget-object v3, p1, Ltyd;->a:Landroid/content/res/Resources;
+
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Ltyd;->b:Landroid/content/res/Resources$Theme;
+
+    iget-object p1, p1, Ltyd;->b:Landroid/content/res/Resources$Theme;
+
+    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ltyd;->a:Landroid/content/res/Resources;
+
+    iget-object v1, p0, Ltyd;->b:Landroid/content/res/Resources$Theme;
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

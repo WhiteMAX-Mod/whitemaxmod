@@ -9,9 +9,9 @@
 
     const-string v0, "unsupported application protocol"
 
-    sget-object v1, Lwmg;->v0:Lwmg;
+    sget-object v1, Lhng;->w0:Lhng;
 
-    invoke-direct {p0, v0, v1}, Ltech/kwik/agent15/alert/ErrorAlert;-><init>(Ljava/lang/String;Lwmg;)V
+    invoke-direct {p0, v0, v1}, Ltech/kwik/agent15/alert/ErrorAlert;-><init>(Ljava/lang/String;Lhng;)V
 
     return-void
 .end method

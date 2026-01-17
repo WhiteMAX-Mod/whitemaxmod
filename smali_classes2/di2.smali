@@ -1,57 +1,62 @@
 .class public final Ldi2;
-.super Lkm4;
+.super Ljef;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ldi2;
+# virtual methods
+.method public final D(Lei2;)V
+    .locals 7
 
-.field public static final c:Lgm4;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-.field public static final d:Lgm4;
+    check-cast v0, Lci2;
 
+    iget-object v1, p1, Lei2;->a:Lqhg;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+    invoke-virtual {v0, v1}, Lci2;->setTitle(Lqhg;)V
 
-    new-instance v0, Ldi2;
+    iget-object v1, p1, Lei2;->b:Lqhg;
 
-    invoke-direct {v0}, Lkm4;-><init>()V
+    invoke-virtual {v0, v1}, Lci2;->setSubtitle(Lqhg;)V
 
-    sput-object v0, Ldi2;->b:Ldi2;
+    iget-object v1, p1, Lei2;->c:Ljava/lang/String;
 
-    const-string v1, "id"
+    iget-object v2, p1, Lei2;->d:Ljava/lang/CharSequence;
 
-    const-string v2, "type"
+    iget-wide v3, p1, Lei2;->o:J
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+    iget-object v5, p1, Lei2;->X:Lxe0;
 
-    move-result-object v1
+    iget-object v6, v0, Lci2;->a:Lj4b;
 
-    const-string v2, ":chats"
+    invoke-virtual {v6, v5}, Lj4b;->setCustomOverlay(Lxe0;)V
 
-    const/4 v3, 0x0
+    iget-object v5, v0, Lci2;->a:Lj4b;
 
-    const/16 v4, 0xe
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v0, v2, v1, v3, v4}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    move-result-object v3
 
-    move-result-object v1
+    if-nez v2, :cond_0
 
-    sput-object v1, Ldi2;->c:Lgm4;
+    const-string v2, ""
 
-    const/4 v1, 0x0
+    :cond_0
+    invoke-static {v5, v1, v3, v2}, Lj4b;->o(Lj4b;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
 
-    new-array v1, v1, [Ljava/lang/String;
+    iget-object p1, p1, Lei2;->Y:Ljava/util/List;
 
-    const-string v2, ":saved-messages"
+    invoke-virtual {v0, p1}, Lci2;->setDescriptions(Ljava/util/List;)V
 
-    invoke-static {v0, v2, v1, v3, v4}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final bridge synthetic y(Lud8;)V
+    .locals 0
 
-    sput-object v0, Ldi2;->d:Lgm4;
+    check-cast p1, Lei2;
+
+    invoke-virtual {p0, p1}, Ldi2;->D(Lei2;)V
 
     return-void
 .end method

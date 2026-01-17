@@ -1,130 +1,338 @@
-.class public Lcs6;
-.super Ljava/lang/Object;
+.class public final Lcs6;
+.super Ljava/util/concurrent/CountDownLatch;
 .source "SourceFile"
 
 # interfaces
-.implements Lwe8;
+.implements Lrv8;
+.implements Ldff;
+.implements Lko3;
+.implements Ljava/util/concurrent/Future;
+.implements Lo25;
 
 
 # instance fields
-.field public final a:Lwe8;
+.field public a:Ljava/lang/Object;
 
-.field public b:Lyw1;
+.field public b:Ljava/lang/Throwable;
+
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    new-instance v0, Lgud;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1, p0}, Lgud;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0}, Loaj;->b(Lzw1;)Lbx1;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcs6;->a:Lwe8;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lwe8;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 3
-    iput-object p1, p0, Lcs6;->a:Lwe8;
-
-    return-void
-.end method
-
-.method public static a(Lwe8;)Lcs6;
     .locals 1
 
-    instance-of v0, p0, Lcs6;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    invoke-direct {p0, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    check-cast p0, Lcs6;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    return-object p0
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    :cond_0
-    new-instance v0, Lcs6;
+    iput-object v0, p0, Lcs6;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-direct {v0, p0}, Lcs6;-><init>(Lwe8;)V
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public cancel(Z)Z
-    .locals 1
+.method public final a(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v0, p0, Lcs6;->a:Lwe8;
+    iget-object v0, p0, Lcs6;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lo25;
+
+    sget-object v2, Ls25;->a:Ls25;
+
+    if-ne v1, v2, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Lcs6;->a:Ljava/lang/Object;
+
+    :cond_1
+    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
-.end method
+    if-eqz p1, :cond_2
 
-.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-    .locals 1
+    goto :goto_0
 
-    iget-object v0, p0, Lcs6;->a:Lwe8;
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    invoke-interface {v0, p1, p2}, Lwe8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    move-result-object p1
+
+    if-eq p1, v1, :cond_1
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
 .end method
 
-.method public get()Ljava/lang/Object;
+.method public final b()V
+    .locals 3
+
+    iget-object v0, p0, Lcs6;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lo25;
+
+    sget-object v2, Ls25;->a:Ls25;
+
+    if-ne v1, v2, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eq v2, v1, :cond_0
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    return-void
+.end method
+
+.method public final c(Lo25;)V
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcs6;->a:Lwe8;
+    iget-object v0, p0, Lcs6;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+    invoke-static {v0, p1}, Ls25;->g(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
+
+    return-void
+.end method
+
+.method public final cancel(Z)Z
+    .locals 3
+
+    :goto_0
+    iget-object p1, p0, Lcs6;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lo25;
+
+    if-eq v0, p0, :cond_3
+
+    sget-object v1, Ls25;->a:Ls25;
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eq v2, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+.method public final dispose()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final e()Z
     .locals 1
 
-    .line 2
-    iget-object v0, p0, Lcs6;->a:Lwe8;
+    invoke-virtual {p0}, Lcs6;->isDone()Z
 
-    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    move-result v0
+
+    return v0
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 4
+
+    .line 1
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Lcs6;->isCancelled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 4
+    iget-object v0, p0, Lcs6;->b:Ljava/lang/Throwable;
+
+    if-nez v0, :cond_1
+
+    .line 5
+    iget-object v0, p0, Lcs6;->a:Ljava/lang/Object;
+
+    return-object v0
+
+    .line 6
+    :cond_1
+    new-instance v1, Ljava/util/concurrent/ExecutionException;
+
+    invoke-direct {v1, v0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    .line 7
+    :cond_2
+    new-instance v0, Ljava/util/concurrent/CancellationException;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 4
+
+    .line 8
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_1
+
+    .line 9
+    invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 10
+    :cond_0
+    new-instance v0, Ljava/util/concurrent/TimeoutException;
+
+    invoke-static {p1, p2, p3}, Lan5;->c(JLjava/util/concurrent/TimeUnit;)Ljava/lang/String;
 
     move-result-object p1
 
+    invoke-direct {v0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 11
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lcs6;->isCancelled()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    .line 12
+    iget-object p1, p0, Lcs6;->b:Ljava/lang/Throwable;
+
+    if-nez p1, :cond_2
+
+    .line 13
+    iget-object p1, p0, Lcs6;->a:Ljava/lang/Object;
+
     return-object p1
+
+    .line 14
+    :cond_2
+    new-instance p2, Ljava/util/concurrent/ExecutionException;
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+
+    .line 15
+    :cond_3
+    new-instance p1, Ljava/util/concurrent/CancellationException;
+
+    invoke-direct {p1}, Ljava/util/concurrent/CancellationException;-><init>()V
+
+    throw p1
 .end method
 
 .method public final isCancelled()Z
     .locals 1
 
-    iget-object v0, p0, Lcs6;->a:Lwe8;
+    iget-object v0, p0, Lcs6;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->isCancelled()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lo25;
+
+    invoke-static {v0}, Ls25;->b(Lo25;)Z
 
     move-result v0
 
@@ -132,13 +340,68 @@
 .end method
 
 .method public final isDone()Z
-    .locals 1
+    .locals 4
 
-    iget-object v0, p0, Lcs6;->a:Lwe8;
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
 
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+    move-result-wide v0
 
-    move-result v0
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 3
+
+    :goto_0
+    iget-object v0, p0, Lcs6;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lo25;
+
+    sget-object v2, Ls25;->a:Ls25;
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Lcs6;->b:Ljava/lang/Throwable;
+
+    :cond_1
+    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    return-void
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eq v2, v1, :cond_1
+
+    goto :goto_0
 .end method

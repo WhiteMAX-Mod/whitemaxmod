@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lm5a;
+.implements Ll5a;
 
 
 # instance fields
@@ -11,7 +11,7 @@
 
 .field private isActive:Z
 
-.field private final noise:Lxei;
+.field private final noise:Ltfi;
 
 .field private final reporter:Ljava/lang/Runnable;
 
@@ -24,15 +24,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lxei;
+    new-instance v0, Ltfi;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v1, 0x7fc00000    # Float.NaN
 
-    iput v1, v0, Lxei;->a:F
+    iput v1, v0, Ltfi;->a:F
 
-    iput-object v0, p0, Lru/ok/android/externcalls/sdk/AudioLevelListener;->noise:Lxei;
+    iput-object v0, p0, Lru/ok/android/externcalls/sdk/AudioLevelListener;->noise:Ltfi;
 
     const/4 v1, 0x1
 
@@ -44,7 +44,7 @@
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/AudioLevelListener;->handler:Landroid/os/Handler;
 
-    iget p1, v0, Lxei;->a:F
+    iget p1, v0, Ltfi;->a:F
 
     invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -57,7 +57,7 @@
     goto :goto_0
 
     :cond_0
-    iget p1, v0, Lxei;->a:F
+    iget p1, v0, Ltfi;->a:F
 
     const p3, 0x3f733333    # 0.95f
 
@@ -66,7 +66,7 @@
     add-float/2addr p2, p3
 
     :goto_0
-    iput p2, v0, Lxei;->a:F
+    iput p2, v0, Ltfi;->a:F
 
     return-void
 .end method
@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public onSample(IIILxrb;)V
+.method public onSample(IIILjsb;)V
     .locals 3
 
     iget-boolean p1, p0, Lru/ok/android/externcalls/sdk/AudioLevelListener;->isActive:Z
@@ -107,11 +107,11 @@
     const/4 p2, 0x0
 
     :goto_0
-    iget p3, p4, Lxrb;->a:I
+    iget p3, p4, Ljsb;->a:I
 
     if-ge p2, p3, :cond_5
 
-    invoke-virtual {p4, p2}, Lxrb;->a(I)S
+    invoke-virtual {p4, p2}, Ljsb;->a(I)S
 
     move-result p3
 
@@ -143,9 +143,9 @@
     add-float/2addr p1, v0
 
     :goto_1
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/AudioLevelListener;->noise:Lxei;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/AudioLevelListener;->noise:Ltfi;
 
-    iget v1, v0, Lxei;->a:F
+    iget v1, v0, Ltfi;->a:F
 
     invoke-static {v1}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -156,7 +156,7 @@
     goto :goto_2
 
     :cond_3
-    iget v1, v0, Lxei;->a:F
+    iget v1, v0, Ltfi;->a:F
 
     const v2, 0x3f733333    # 0.95f
 
@@ -169,11 +169,11 @@
     add-float/2addr p3, v2
 
     :goto_2
-    iput p3, v0, Lxei;->a:F
+    iput p3, v0, Ltfi;->a:F
 
-    iget-object p3, p0, Lru/ok/android/externcalls/sdk/AudioLevelListener;->noise:Lxei;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/AudioLevelListener;->noise:Ltfi;
 
-    iget p3, p3, Lxei;->a:F
+    iget p3, p3, Ltfi;->a:F
 
     sub-float p3, p1, p3
 

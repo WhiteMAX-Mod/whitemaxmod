@@ -1,48 +1,30 @@
 .class public final Ltta;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:J
+.field public final synthetic X:Lru/ok/tamtam/android/services/NotificationTamService;
 
 .field public final synthetic Y:J
 
-.field public final synthetic Z:J
-
-.field public final synthetic o:Lru/ok/tamtam/android/services/NotificationTamService;
-
-.field public final synthetic s0:Z
-
-.field public final synthetic t0:J
-
-.field public final synthetic u0:Ljava/lang/String;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ltta;->o:Lru/ok/tamtam/android/services/NotificationTamService;
+    iput-object p1, p0, Ltta;->X:Lru/ok/tamtam/android/services/NotificationTamService;
 
-    iput-wide p2, p0, Ltta;->X:J
-
-    iput-wide p4, p0, Ltta;->Y:J
-
-    iput-wide p6, p0, Ltta;->Z:J
-
-    iput-boolean p8, p0, Ltta;->s0:Z
-
-    iput-wide p9, p0, Ltta;->t0:J
-
-    iput-object p11, p0, Ltta;->u0:Ljava/lang/String;
+    iput-wide p2, p0, Ltta;->Y:J
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p12}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -52,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -62,187 +44,103 @@
 
     check-cast p1, Ltta;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Ltta;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 13
+    .locals 3
 
-    new-instance v0, Ltta;
+    new-instance p1, Ltta;
 
-    iget-wide v9, p0, Ltta;->t0:J
+    iget-object v0, p0, Ltta;->X:Lru/ok/tamtam/android/services/NotificationTamService;
 
-    iget-object v11, p0, Ltta;->u0:Ljava/lang/String;
+    iget-wide v1, p0, Ltta;->Y:J
 
-    iget-object v1, p0, Ltta;->o:Lru/ok/tamtam/android/services/NotificationTamService;
+    invoke-direct {p1, v0, v1, v2, p2}, Ltta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLkotlin/coroutines/Continuation;)V
 
-    iget-wide v2, p0, Ltta;->X:J
-
-    iget-wide v4, p0, Ltta;->Y:J
-
-    iget-wide v6, p0, Ltta;->Z:J
-
-    iget-boolean v8, p0, Ltta;->s0:Z
-
-    move-object v12, p2
-
-    invoke-direct/range {v0 .. v12}, Ltta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    .locals 9
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget v0, p0, Ltta;->o:I
 
-    iget-object p1, p0, Ltta;->o:Lru/ok/tamtam/android/services/NotificationTamService;
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    iget-object v0, p1, Lru/ok/tamtam/android/services/NotificationTamService;->Z:Lz7g;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
+    if-ne v0, v2, :cond_0
 
-    move-object v1, v0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    check-cast v1, Likd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v9, 0x0
-
-    const/16 v11, 0x58
-
-    iget-wide v2, p0, Ltta;->X:J
-
-    iget-wide v4, p0, Ltta;->Y:J
-
-    iget-wide v6, p0, Ltta;->Z:J
-
-    const/4 v8, 0x0
-
-    iget-boolean v10, p0, Ltta;->s0:Z
-
-    invoke-static/range {v1 .. v11}, Likd;->e(Likd;JJJZZZI)J
-
-    iget-object v0, v1, Likd;->b:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkeb;
-
-    invoke-virtual {v0, v2, v3}, Lkeb;->a(J)V
-
-    iget-object p1, p1, Lru/ok/tamtam/android/services/NotificationTamService;->s0:Lz7g;
-
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lxva;
-
-    invoke-virtual {p1}, Lxva;->e()Lyva;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lyva;->d:Ljava/lang/String;
-
-    const-string v0, "onNotificationMarkAsRead: pushId="
-
-    const-string v2, ", eventKey="
-
-    iget-wide v3, p0, Ltta;->t0:J
-
-    iget-object v5, p0, Ltta;->u0:Ljava/lang/String;
-
-    invoke-static {v0, v3, v4, v2, v5}, Lxfh;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-nez v5, :cond_0
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    :try_start_0
-    invoke-virtual {p1}, Lyva;->b()Lgd;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const-string v2, "Action"
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v6, "trid"
+    throw p1
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object v3
+    iget-object p1, p0, Ltta;->X:Lru/ok/tamtam/android/services/NotificationTamService;
 
-    new-instance v4, Lysb;
+    iget-object p1, p1, Lru/ok/tamtam/android/services/NotificationTamService;->u0:Ln8g;
 
-    invoke-direct {v4, v6, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v3, "eKey"
-
-    new-instance v6, Lysb;
-
-    invoke-direct {v6, v3, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v3, "p_op"
-
-    const-string v5, "m_as_read"
-
-    new-instance v7, Lysb;
-
-    invoke-direct {v7, v3, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v4, v6, v7}, [Lysb;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lw4j;->a([Lysb;)Lxs;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v2, v3}, Lgd;->b(Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v2, "onNotificationMarkAsRead: failed"
-
-    invoke-static {v1, v2, v0}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1}, Lyva;->c()Lum5;
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v1, Lfp4;
+    check-cast p1, Lg1a;
 
-    const-string v2, "failed to log mark as read"
+    iput v2, p0, Ltta;->o:I
 
-    invoke-direct {v1, v2, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-object v4, p1
 
-    check-cast p1, Liab;
+    check-cast v4, Le2a;
 
-    invoke-virtual {p1, v1}, Liab;->a(Ljava/lang/Throwable;)V
+    iget-object p1, v4, Le2a;->o:Lyw0;
+
+    new-instance v3, Lr1a;
+
+    iget-wide v5, p0, Ltta;->Y:J
+
+    const-wide/16 v7, -0x1
+
+    invoke-direct/range {v3 .. v8}, Lr1a;-><init>(Le2a;JJ)V
+
+    invoke-interface {p1, v3, p0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v1
 
     :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    if-ne p1, v0, :cond_3
 
-    return-object p1
+    return-object v0
+
+    :cond_3
+    :goto_1
+    return-object v1
 .end method

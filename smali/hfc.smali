@@ -4,5 +4,11 @@
 
 
 # virtual methods
-.method public abstract h(Landroidx/preference/Preference;)Ljava/lang/CharSequence;
+.method public abstract a(Landroid/graphics/Bitmap;Loac;)Lkg3;
+.end method
+
+.method public abstract b()Lb01;
+.end method
+
+.method public abstract getName()Ljava/lang/String;
 .end method

@@ -2,146 +2,346 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmg8;
-
 
 # instance fields
-.field public volatile X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final a:J
-
-.field public final b:Lyi4;
+.field public final b:I
 
 .field public final c:I
 
-.field public final d:Llpf;
+.field public final d:I
 
-.field public final o:Lmtb;
+.field public final e:I
+
+.field public f:Z
+
+.field public g:I
+
+.field public h:I
+
+.field public i:[F
 
 
 # direct methods
-.method public constructor <init>(Lqi4;Landroid/net/Uri;ILmtb;)V
-    .locals 13
-
-    sget-object v6, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    if-eqz p2, :cond_0
-
-    new-instance v0, Lyi4;
-
-    const-wide/16 v2, 0x0
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    const-wide/16 v7, 0x0
-
-    const-wide/16 v9, -0x1
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x1
-
-    move-object v1, p2
-
-    invoke-direct/range {v0 .. v12}, Lyi4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
+.method public constructor <init>(II)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p2, Llpf;
+    invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
-    invoke-direct {p2, p1}, Llpf;-><init>(Lqi4;)V
+    move-result v0
 
-    iput-object p2, p0, Lotb;->d:Llpf;
+    iput v0, p0, Lotb;->a:I
 
-    iput-object v0, p0, Lotb;->b:Lyi4;
+    invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
-    move/from16 p1, p3
+    move-result v0
 
-    iput p1, p0, Lotb;->c:I
+    iput v0, p0, Lotb;->b:I
 
-    move-object/from16 p1, p4
+    invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
-    iput-object p1, p0, Lotb;->o:Lmtb;
+    move-result v0
 
-    sget-object p1, Ldg8;->h:Ljava/util/concurrent/atomic/AtomicLong;
+    iput v0, p0, Lotb;->c:I
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
+    iput p1, p0, Lotb;->d:I
 
-    move-result-wide p1
-
-    iput-wide p1, p0, Lotb;->a:J
+    iput p2, p0, Lotb;->e:I
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "The uri must be set."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
 .method public final a()V
-    .locals 0
+    .locals 8
 
+    iget-boolean v0, p0, Lotb;->f:Z
+
+    if-nez v0, :cond_4
+
+    const/4 v0, -0x1
+
+    const/high16 v1, 0x40900000    # 4.5f
+
+    iget v2, p0, Lotb;->d:I
+
+    invoke-static {v0, v1, v2}, Ljj3;->f(IFI)I
+
+    move-result v3
+
+    const/high16 v4, 0x40400000    # 3.0f
+
+    invoke-static {v0, v4, v2}, Ljj3;->f(IFI)I
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    if-eq v3, v0, :cond_0
+
+    if-eq v5, v0, :cond_0
+
+    invoke-static {v0, v3}, Ljj3;->i(II)I
+
+    move-result v1
+
+    iput v1, p0, Lotb;->h:I
+
+    invoke-static {v0, v5}, Ljj3;->i(II)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->g:I
+
+    iput-boolean v6, p0, Lotb;->f:Z
+
+    return-void
+
+    :cond_0
+    const/high16 v7, -0x1000000
+
+    invoke-static {v7, v1, v2}, Ljj3;->f(IFI)I
+
+    move-result v1
+
+    invoke-static {v7, v4, v2}, Ljj3;->f(IFI)I
+
+    move-result v2
+
+    if-eq v1, v0, :cond_1
+
+    if-eq v2, v0, :cond_1
+
+    invoke-static {v7, v1}, Ljj3;->i(II)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->h:I
+
+    invoke-static {v7, v2}, Ljj3;->i(II)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->g:I
+
+    iput-boolean v6, p0, Lotb;->f:Z
+
+    return-void
+
+    :cond_1
+    if-eq v3, v0, :cond_2
+
+    invoke-static {v0, v3}, Ljj3;->i(II)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v7, v1}, Ljj3;->i(II)I
+
+    move-result v1
+
+    :goto_0
+    iput v1, p0, Lotb;->h:I
+
+    if-eq v5, v0, :cond_3
+
+    invoke-static {v0, v5}, Ljj3;->i(II)I
+
+    move-result v0
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {v7, v2}, Ljj3;->i(II)I
+
+    move-result v0
+
+    :goto_1
+    iput v0, p0, Lotb;->g:I
+
+    iput-boolean v6, p0, Lotb;->f:Z
+
+    :cond_4
     return-void
 .end method
 
-.method public final load()V
-    .locals 3
+.method public final b()[F
+    .locals 4
 
-    iget-object v0, p0, Lotb;->d:Llpf;
+    iget-object v0, p0, Lotb;->i:[F
 
-    const-wide/16 v1, 0x0
+    if-nez v0, :cond_0
 
-    iput-wide v1, v0, Llpf;->b:J
+    const/4 v0, 0x3
 
-    new-instance v0, Lvi4;
+    new-array v0, v0, [F
 
-    iget-object v1, p0, Lotb;->d:Llpf;
+    iput-object v0, p0, Lotb;->i:[F
 
-    iget-object v2, p0, Lotb;->b:Lyi4;
+    :cond_0
+    iget v0, p0, Lotb;->c:I
 
-    invoke-direct {v0, v1, v2}, Lvi4;-><init>(Lqi4;Lyi4;)V
+    iget-object v1, p0, Lotb;->i:[F
 
-    :try_start_0
-    invoke-virtual {v0}, Lvi4;->l()V
+    iget v2, p0, Lotb;->a:I
 
-    iget-object v1, p0, Lotb;->d:Llpf;
+    iget v3, p0, Lotb;->b:I
 
-    iget-object v1, v1, Llpf;->a:Lqi4;
+    invoke-static {v2, v3, v0, v1}, Ljj3;->a(III[F)V
 
-    invoke-interface {v1}, Lqi4;->getUri()Landroid/net/Uri;
+    iget-object v0, p0, Lotb;->i:[F
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lotb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lotb;
+
+    iget v2, p0, Lotb;->e:I
+
+    iget v3, p1, Lotb;->e:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lotb;->d:I
+
+    iget p1, p1, Lotb;->d:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lotb;->d:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lotb;->e:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-class v1, Lotb;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lotb;->o:Lmtb;
+    const-string v1, " [RGB: #"
 
-    invoke-interface {v2, v1, v0}, Lmtb;->s(Landroid/net/Uri;Lvi4;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lotb;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lotb;->X:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Loah;->g(Ljava/io/Closeable;)V
+    const-string v1, "] [HSL: "
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :catchall_0
-    move-exception v1
+    invoke-virtual {p0}, Lotb;->b()[F
 
-    invoke-static {v0}, Loah;->g(Ljava/io/Closeable;)V
+    move-result-object v1
 
-    throw v1
+    invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "] [Population: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lotb;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "] [Title Text: #"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lotb;->a()V
+
+    iget v1, p0, Lotb;->g:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "] [Body Text: #"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lotb;->a()V
+
+    iget v1, p0, Lotb;->h:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

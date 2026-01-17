@@ -1,48 +1,84 @@
 .class public final Lxya;
-.super Lcxa;
+.super Ldxa;
 .source "SourceFile"
-
-# interfaces
-.implements Lv8e;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lpbe;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(JJLjava/util/concurrent/TimeUnit;Lpbe;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxya;->a:Ljava/lang/Object;
+    iput-wide p1, p0, Lxya;->b:J
+
+    iput-wide p3, p0, Lxya;->c:J
+
+    iput-object p5, p0, Lxya;->d:Ljava/util/concurrent/TimeUnit;
+
+    iput-object p6, p0, Lxya;->a:Lpbe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final k(Le0b;)V
+    .locals 7
 
-    iget-object v0, p0, Lxya;->a:Ljava/lang/Object;
+    new-instance v1, Lwya;
 
-    return-object v0
-.end method
+    invoke-direct {v1, p1}, Lwya;-><init>(Le0b;)V
 
-.method public final n(Lc0b;)V
-    .locals 2
+    invoke-interface {p1, v1}, Le0b;->c(Lo25;)V
 
-    new-instance v0, Lqza;
+    iget-object v0, p0, Lxya;->a:Lpbe;
 
-    iget-object v1, p0, Lxya;->a:Ljava/lang/Object;
+    instance-of p1, v0, Lqsg;
 
-    invoke-direct {v0, p1, v1}, Lqza;-><init>(Lc0b;Ljava/lang/Object;)V
+    if-eqz p1, :cond_0
 
-    invoke-interface {p1, v0}, Lc0b;->c(Ll25;)V
+    check-cast v0, Lqsg;
 
-    invoke-virtual {v0}, Lqza;->run()V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lpsg;
+
+    invoke-direct {v0}, Lpsg;-><init>()V
+
+    invoke-static {v1, v0}, Ls25;->g(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
+
+    iget-wide v4, p0, Lxya;->c:J
+
+    iget-object v6, p0, Lxya;->d:Ljava/util/concurrent/TimeUnit;
+
+    iget-wide v2, p0, Lxya;->b:J
+
+    invoke-virtual/range {v0 .. v6}, Lnbe;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lo25;
+
+    return-void
+
+    :cond_0
+    iget-wide v4, p0, Lxya;->c:J
+
+    iget-object v6, p0, Lxya;->d:Ljava/util/concurrent/TimeUnit;
+
+    iget-wide v2, p0, Lxya;->b:J
+
+    invoke-virtual/range {v0 .. v6}, Lpbe;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lo25;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Ls25;->g(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
 
     return-void
 .end method

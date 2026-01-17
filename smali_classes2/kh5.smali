@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lie8;
+.implements Lud8;
 
 
 # static fields
@@ -22,7 +22,7 @@
 
     sput-object v0, Lkh5;->a:Lkh5;
 
-    sget v0, Ls7b;->n:I
+    sget v0, Lsdb;->b:I
 
     sput v0, Lkh5;->b:I
 

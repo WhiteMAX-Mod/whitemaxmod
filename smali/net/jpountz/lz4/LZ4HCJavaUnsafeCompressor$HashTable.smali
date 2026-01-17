@@ -120,7 +120,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p2, p1}, Ln4h;->c(I[B)I
+    invoke-static {p2, p1}, Ls4h;->b(I[B)I
 
     move-result p1
 
@@ -166,7 +166,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p2, p1}, Ln4h;->c(I[B)I
+    invoke-static {p2, p1}, Ls4h;->b(I[B)I
 
     move-result p1
 
@@ -651,7 +651,7 @@
     .line 20
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor$HashTable;->hashTable:[I
 
-    invoke-static {p2, p1}, Ln4h;->c(I[B)I
+    invoke-static {p2, p1}, Ls4h;->b(I[B)I
 
     move-result v4
 

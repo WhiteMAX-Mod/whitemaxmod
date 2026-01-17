@@ -1,69 +1,91 @@
-.class public final Lhc8;
-.super Ll84;
+.class public final synthetic Lhc8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnr6;
 
 
 # instance fields
-.field public X:Landroid/net/Uri;
-
-.field public Y:Ljava/lang/String;
-
-.field public Z:Lhic;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Lhic;
-
-.field public s0:J
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Ljc8;
-
-.field public v0:I
+.field public final synthetic a:Lic8;
 
 
 # direct methods
-.method public constructor <init>(Ljc8;Ll84;)V
+.method public constructor <init>(Lic8;)V
     .locals 0
 
-    iput-object p1, p0, Lhc8;->u0:Ljc8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lhc8;->a:Lic8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lhc8;->t0:Ljava/lang/Object;
+    instance-of v0, p1, Lhc8;
 
-    iget p1, p0, Lhc8;->v0:I
+    if-eqz v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    if-eqz p1, :cond_0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0}, Lhc8;->getFunctionDelegate()Lgr6;
 
-    iput p1, p0, Lhc8;->v0:I
+    move-result-object v0
 
-    const-wide/16 v3, 0x0
+    check-cast p1, Lnr6;
 
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lhc8;->u0:Ljc8;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v6, p0
-
-    invoke-virtual/range {v0 .. v6}, Ljc8;->m(Lhic;Landroid/net/Uri;JLjava/lang/String;Ll84;)Ljava/lang/Object;
+    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Lgr6;
+    .locals 7
+
+    new-instance v0, Lqr6;
+
+    const-string v6, "onMessageElementClick(Landroid/view/View;Lru/ok/tamtam/models/MessageElementData;)V"
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x2
+
+    const-class v3, Lic8;
+
+    iget-object v4, p0, Lhc8;->a:Lic8;
+
+    const-string v5, "onMessageElementClick"
+
+    invoke-direct/range {v0 .. v6}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lhc8;->getFunctionDelegate()Lgr6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

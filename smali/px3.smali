@@ -1,266 +1,548 @@
-.class public final Lpx3;
+.class public abstract Lpx3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final i:Lpx3;
+# interfaces
+.implements Lfub;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/Object;
 
-.field public final b:Z
+.field public final b:Ljava/lang/Object;
 
-.field public final c:Z
+.field public final c:Ljava/lang/Object;
 
-.field public final d:Z
+.field public d:Ljava/lang/Object;
 
-.field public final e:Z
-
-.field public final f:J
-
-.field public final g:J
-
-.field public final h:Ljava/util/Set;
+.field public e:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Landroid/content/Context;Lbg8;)V
+    .locals 0
 
-    new-instance v0, Lpx3;
+    .line 11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v8, -0x1
+    .line 12
+    iput-object p2, p0, Lpx3;->a:Ljava/lang/Object;
 
-    sget-object v10, Lmh5;->a:Lmh5;
+    .line 13
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    const/4 v2, 0x0
+    iput-object p1, p0, Lpx3;->b:Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    .line 14
+    new-instance p1, Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    const/4 v5, 0x0
+    iput-object p1, p0, Lpx3;->c:Ljava/lang/Object;
 
-    const-wide/16 v6, -0x1
+    .line 15
+    new-instance p1, Ljava/util/LinkedHashSet;
 
-    invoke-direct/range {v0 .. v10}, Lpx3;-><init>(IZZZZJJLjava/util/Set;)V
+    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    sput-object v0, Lpx3;->i:Lpx3;
+    iput-object p1, p0, Lpx3;->e:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>(IZZZZJJLjava/util/Set;)V
+.method public constructor <init>(Ljava/lang/String;Lorg/webrtc/MediaStream;Lahd;)V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lpx3;->a:I
+    .line 8
+    iput-object p1, p0, Lpx3;->a:Ljava/lang/Object;
 
-    iput-boolean p2, p0, Lpx3;->b:Z
+    .line 9
+    iput-object p2, p0, Lpx3;->b:Ljava/lang/Object;
 
-    iput-boolean p3, p0, Lpx3;->c:Z
+    .line 10
+    iput-object p3, p0, Lpx3;->c:Ljava/lang/Object;
 
-    iput-boolean p4, p0, Lpx3;->d:Z
+    return-void
+.end method
 
-    iput-boolean p5, p0, Lpx3;->e:Z
+.method public constructor <init>(Luff;Lahd;Lywb;Lakj;)V
+    .locals 0
 
-    iput-wide p6, p0, Lpx3;->f:J
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p8, p0, Lpx3;->g:J
+    .line 2
+    iput-object p1, p0, Lpx3;->a:Ljava/lang/Object;
 
-    iput-object p10, p0, Lpx3;->h:Ljava/util/Set;
+    .line 3
+    iput-object p2, p0, Lpx3;->b:Ljava/lang/Object;
+
+    .line 4
+    iput-object p3, p0, Lpx3;->d:Ljava/lang/Object;
+
+    .line 5
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Lpx3;->c:Ljava/lang/Object;
+
+    .line 6
+    iput-object p4, p0, Lpx3;->e:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public abstract b(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+.end method
+
+.method public abstract c(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e(Lsk1;Ljava/lang/String;)V
+.end method
+
+.method public abstract f()V
+.end method
+
+.method public abstract g()Lorg/webrtc/MediaSource;
+.end method
+
+.method public abstract h(Ljava/lang/String;Lorg/webrtc/MediaSource;)Lorg/webrtc/MediaStreamTrack;
+.end method
+
+.method public abstract i()Ljava/lang/Object;
+.end method
+
+.method public j()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public abstract k(Lorg/webrtc/RtpReceiver;[Lorg/webrtc/MediaStream;)V
+.end method
+
+.method public l()V
     .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lpx3;->c:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    check-cast v0, Lahd;
 
-    return p1
+    iget-object v1, p0, Lpx3;->e:Ljava/lang/Object;
 
-    :cond_0
-    if-eqz p1, :cond_9
+    check-cast v1, Lorg/webrtc/MediaStreamTrack;
 
-    const-class v0, Lpx3;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Lpx3;->j()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-nez v0, :cond_1
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v3, ": An attempt to create track, while got one, ignore"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    iget-object v1, p0, Lpx3;->d:Ljava/lang/Object;
+
+    check-cast v1, Lorg/webrtc/MediaSource;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Lpx3;->j()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ": An attempt to create source, while got one, ignore"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 
     :cond_1
-    check-cast p1, Lpx3;
+    invoke-virtual {p0}, Lpx3;->g()Lorg/webrtc/MediaSource;
 
-    iget-boolean v0, p0, Lpx3;->b:Z
+    move-result-object v0
 
-    iget-boolean v1, p1, Lpx3;->b:Z
+    iput-object v0, p0, Lpx3;->d:Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_2
+    iget-object v1, p0, Lpx3;->a:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {p0, v1, v0}, Lpx3;->h(Ljava/lang/String;Lorg/webrtc/MediaSource;)Lorg/webrtc/MediaStreamTrack;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lpx3;->e:Ljava/lang/Object;
+
+    iget-object v1, p0, Lpx3;->b:Ljava/lang/Object;
+
+    check-cast v1, Lorg/webrtc/MediaStream;
+
+    invoke-virtual {p0, v1, v0}, Lpx3;->b(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+
+    return-void
+.end method
+
+.method public m()V
+    .locals 7
+
+    iget-object v0, p0, Lpx3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lahd;
+
+    iget-object v1, p0, Lpx3;->e:Ljava/lang/Object;
+
+    check-cast v1, Lorg/webrtc/MediaStreamTrack;
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lpx3;->b:Ljava/lang/Object;
+
+    check-cast v2, Lorg/webrtc/MediaStream;
+
+    invoke-virtual {p0, v2, v1}, Lpx3;->c(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+
+    :cond_0
+    iget-object v1, p0, Lpx3;->e:Ljava/lang/Object;
+
+    check-cast v1, Lorg/webrtc/MediaStreamTrack;
+
+    const-string v2, " was disposed"
+
+    const-string v3, ": "
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lorg/webrtc/MediaStreamTrack;->dispose()V
+
+    invoke-virtual {p0}, Lpx3;->j()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v1}, Lw6a;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v4, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lpx3;->e:Ljava/lang/Object;
+
+    iget-object v4, p0, Lpx3;->d:Ljava/lang/Object;
+
+    check-cast v4, Lorg/webrtc/MediaSource;
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4}, Lorg/webrtc/MediaSource;->dispose()V
+
+    invoke-virtual {p0}, Lpx3;->j()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4}, Lw6a;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v5, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    iget-boolean v0, p0, Lpx3;->c:Z
+    iput-object v1, p0, Lpx3;->d:Ljava/lang/Object;
 
-    iget-boolean v1, p1, Lpx3;->c:Z
+    return-void
+.end method
 
-    if-eq v0, v1, :cond_3
+.method public n(Lcx3;)V
+    .locals 2
 
-    goto :goto_0
+    iget-object v0, p0, Lpx3;->c:Ljava/lang/Object;
 
-    :cond_3
-    iget-boolean v0, p0, Lpx3;->d:Z
+    monitor-enter v0
 
-    iget-boolean v1, p1, Lpx3;->d:Z
+    :try_start_0
+    iget-object v1, p0, Lpx3;->e:Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_4
+    check-cast v1, Ljava/util/LinkedHashSet;
 
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lpx3;->e:Z
-
-    iget-boolean v1, p1, Lpx3;->e:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-wide v0, p0, Lpx3;->f:J
-
-    iget-wide v2, p1, Lpx3;->f:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-wide v0, p0, Lpx3;->g:J
-
-    iget-wide v2, p1, Lpx3;->g:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lpx3;->a:I
-
-    iget v1, p1, Lpx3;->a:I
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget-object v0, p0, Lpx3;->h:Ljava/util/Set;
-
-    iget-object p1, p1, Lpx3;->h:Ljava/util/Set;
-
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-eqz p1, :cond_0
 
-    :cond_9
+    iget-object p1, p0, Lpx3;->e:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/LinkedHashSet;
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lpx3;->s()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
     :goto_0
-    const/4 p1, 0x0
+    monitor-exit v0
 
-    return p1
+    return-void
+
+    :goto_1
+    monitor-exit v0
+
+    throw p1
 .end method
 
-.method public final hashCode()I
-    .locals 6
+.method public o(Z)V
+    .locals 1
 
-    iget v0, p0, Lpx3;->a:I
+    iget-object v0, p0, Lpx3;->e:Ljava/lang/Object;
 
-    invoke-static {v0}, Lc12;->w(I)I
+    check-cast v0, Lorg/webrtc/MediaStreamTrack;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0, p1}, Lorg/webrtc/MediaStreamTrack;->setEnabled(Z)Z
 
-    iget-boolean v1, p0, Lpx3;->b:Z
+    :cond_0
+    return-void
+.end method
 
-    add-int/2addr v0, v1
+.method public abstract p(Ljava/lang/String;Lkv1;Ljava/util/List;)V
+.end method
 
-    mul-int/lit8 v0, v0, 0x1f
+.method public q(Ljava/lang/Object;)V
+    .locals 4
 
-    iget-boolean v1, p0, Lpx3;->c:Z
+    iget-object v0, p0, Lpx3;->c:Ljava/lang/Object;
 
-    add-int/2addr v0, v1
+    monitor-enter v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    :try_start_0
+    iget-object v1, p0, Lpx3;->d:Ljava/lang/Object;
 
-    iget-boolean v1, p0, Lpx3;->d:Z
+    if-eqz v1, :cond_0
 
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lpx3;->e:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lpx3;->f:J
-
-    const/16 v3, 0x20
-
-    ushr-long v4, v1, v3
-
-    xor-long/2addr v1, v4
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lpx3;->g:J
-
-    ushr-long v3, v1, v3
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lpx3;->h:Ljava/util/Set;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_0
 
-    return v1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    iput-object p1, p0, Lpx3;->d:Ljava/lang/Object;
+
+    iget-object p1, p0, Lpx3;->e:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/LinkedHashSet;
+
+    invoke-static {p1}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lpx3;->a:Ljava/lang/Object;
+
+    check-cast v1, Lbg8;
+
+    iget-object v1, v1, Lbg8;->c:Ljava/lang/Object;
+
+    check-cast v1, Lv30;
+
+    new-instance v2, Li02;
+
+    const/16 v3, 0x10
+
+    invoke-direct {v2, p1, v3, p0}, Li02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Lv30;->execute(Ljava/lang/Runnable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_0
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public abstract r()V
+.end method
+
+.method public abstract s()V
+.end method
+
+.method public t(Lorg/webrtc/RtpSender;)V
+    .locals 7
+
+    iget-object v0, p0, Lpx3;->e:Ljava/lang/Object;
+
+    check-cast v0, Lorg/webrtc/MediaStreamTrack;
+
+    if-eqz p1, :cond_0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lorg/webrtc/RtpSender;->track()Lorg/webrtc/MediaStreamTrack;
+
+    move-result-object v1
+
+    if-eq v1, v0, :cond_0
+
+    iget-object v1, p0, Lpx3;->c:Ljava/lang/Object;
+
+    check-cast v1, Lahd;
+
+    invoke-virtual {p0}, Lpx3;->j()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0}, Lw6a;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p1}, Lw6a;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v6, ": bind "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " with "
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v1, v2, v3}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lorg/webrtc/RtpSender;->setTrack(Lorg/webrtc/MediaStreamTrack;Z)Z
+
+    :cond_0
+    return-void
 .end method

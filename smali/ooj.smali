@@ -4,88 +4,76 @@
 
 
 # direct methods
-.method public static final a(Landroid/graphics/Bitmap;)Ljava/lang/String;
-    .locals 7
+.method public static final c(Lple;I)I
+    .locals 4
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    iget-object v0, p0, Lple;->X:[I
 
-    move-result v0
+    add-int/lit8 p1, p1, 0x1
 
-    const-string v1, "@"
+    iget-object p0, p0, Lple;->o:[[B
 
-    invoke-static {v0, v1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    array-length p0, p0
 
-    move-result-object v0
+    add-int/lit8 p0, p0, -0x1
 
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
+    const/4 v1, 0x0
 
-    move-result v1
+    :goto_0
+    if-gt v1, p0, :cond_1
 
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
+    add-int v2, v1, p0
 
-    move-result v2
+    ushr-int/lit8 v2, v2, 0x1
 
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
+    aget v3, v0, v2
 
-    move-result v3
+    if-ge v3, p1, :cond_0
 
-    if-eqz v3, :cond_0
+    add-int/lit8 v2, v2, 0x1
 
-    const-string v3, "|recycled"
+    move v1, v2
 
     goto :goto_0
 
     :cond_0
-    const-string v3, ""
+    if-le v3, p1, :cond_2
 
-    :goto_0
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getGenerationId()I
+    add-int/lit8 v2, v2, -0x1
 
-    move-result p0
+    move p0, v2
 
-    const-string v4, "("
+    goto :goto_0
 
-    const-string v5, "x"
+    :cond_1
+    neg-int p0, v1
 
-    const-string v6, "Bitmap"
+    add-int/lit8 v2, p0, -0x1
 
-    invoke-static {v1, v6, v0, v4, v5}, Ln0c;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    if-ltz v2, :cond_3
 
-    move-result-object v0
+    return v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_3
+    not-int p0, v2
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "|genId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return p0
 .end method
 
-.method public static final b(Lm4h;)V
-    .locals 2
 
-    new-instance v0, Lj0f;
+# virtual methods
+.method public abstract a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+.end method
 
-    const/4 v1, 0x5
+.method public abstract b()Z
+.end method
 
-    invoke-direct {v0, v1}, Lj0f;-><init>(I)V
+.method public abstract d(Z)V
+.end method
 
-    const/4 v1, 0x1
+.method public abstract e(Z)V
+.end method
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
-
-    return-void
+.method public abstract f(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
 .end method

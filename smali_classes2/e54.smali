@@ -1,145 +1,186 @@
-.class public final synthetic Le54;
-.super Ljava/lang/Object;
+.class public final Le54;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lq6c;
 
-.field public final synthetic b:I
+.field public final synthetic Y:J
 
-.field public final synthetic c:I
-
-.field public final synthetic d:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(JIII)V
+.method public constructor <init>(Lq6c;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p5, p0, Le54;->a:I
+    iput-object p1, p0, Le54;->X:Lq6c;
 
-    iput p3, p0, Le54;->b:I
+    iput-wide p2, p0, Le54;->Y:J
 
-    iput p4, p0, Le54;->c:I
+    const/4 p1, 0x2
 
-    iput-wide p1, p0, Le54;->d:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Le54;->a:I
+    check-cast p1, Lj14;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget v0, p0, Le54;->b:I
-
-    iget v1, p0, Le54;->c:I
-
-    iget-wide v2, p0, Le54;->d:J
-
-    check-cast p1, Lj6e;
-
-    const-string v4, "UPDATE messages SET channel_views = ?, channel_forwards = ? WHERE server_id = ?"
-
-    invoke-interface {p1, v4}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
+    invoke-virtual {p0, p1, p2}, Le54;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 v4, 0x1
+    check-cast p1, Le54;
 
-    int-to-long v5, v0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :try_start_0
-    invoke-interface {p1, v4, v5, v6}, Lo6e;->b(IJ)V
+    invoke-virtual {p1, p2}, Le54;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x2
-
-    int-to-long v4, v1
-
-    invoke-interface {p1, v0, v4, v5}, Lo6e;->b(IJ)V
-
-    const/4 v0, 0x3
-
-    invoke-interface {p1, v0, v2, v3}, Lo6e;->b(IJ)V
-
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    :goto_0
-    const/4 p1, 0x0
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    new-instance v0, Le54;
 
-    throw v0
+    iget-object v1, p0, Le54;->X:Lq6c;
 
-    :pswitch_0
-    iget v0, p0, Le54;->b:I
+    iget-wide v2, p0, Le54;->Y:J
 
-    iget v1, p0, Le54;->c:I
+    invoke-direct {v0, v1, v2, v3, p2}, Le54;-><init>(Lq6c;JLkotlin/coroutines/Continuation;)V
 
-    iget-wide v2, p0, Le54;->d:J
+    iput-object p1, v0, Le54;->o:Ljava/lang/Object;
 
-    check-cast p1, Lj6e;
+    return-object v0
+.end method
 
-    const-string v4, "UPDATE contacts SET presence = ?, presence_type = ? WHERE server_id = ?"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-interface {p1, v4}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
+    iget-object v0, p0, Le54;->o:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Lj14;
 
-    const/4 v4, 0x1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    int-to-long v5, v0
+    iget-object p1, p0, Le54;->X:Lq6c;
 
-    :try_start_1
-    invoke-interface {p1, v4, v5, v6}, Lo6e;->b(IJ)V
+    iget p1, p1, Lq6c;->c:I
 
-    const/4 v0, 0x2
+    invoke-static {p1}, Lt02;->t(I)I
 
-    int-to-long v4, v1
+    move-result p1
 
-    invoke-interface {p1, v0, v4, v5}, Lo6e;->b(IJ)V
+    const/4 v1, 0x1
 
-    const/4 v0, 0x3
+    iget-wide v2, p0, Le54;->Y:J
 
-    invoke-interface {p1, v0, v2, v3}, Lo6e;->b(IJ)V
+    const/4 v4, 0x0
 
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    if-eq p1, v1, :cond_3
 
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    const/4 v1, 0x2
+
+    if-eq p1, v1, :cond_0
+
+    const/4 v1, 0x3
+
+    if-eq p1, v1, :cond_3
+
+    const/4 v1, 0x4
+
+    if-eq p1, v1, :cond_3
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v0
+    :cond_0
+    iget-object p1, v0, Lj14;->c:Ljava/util/List;
 
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    if-eqz p1, :cond_6
 
-    throw v0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ls14;
+
+    iget-wide v5, v1, Ls14;->a:J
+
+    cmp-long v1, v5, v2
+
+    if-nez v1, :cond_1
+
+    move-object v4, v0
+
+    :cond_2
+    check-cast v4, Ls14;
+
+    return-object v4
+
+    :cond_3
+    iget-object p1, v0, Lj14;->a:Ljava/util/List;
+
+    if-eqz p1, :cond_6
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ls14;
+
+    iget-wide v5, v1, Ls14;->a:J
+
+    cmp-long v1, v5, v2
+
+    if-nez v1, :cond_4
+
+    move-object v4, v0
+
+    :cond_5
+    check-cast v4, Ls14;
+
+    :cond_6
+    :goto_0
+    return-object v4
 .end method

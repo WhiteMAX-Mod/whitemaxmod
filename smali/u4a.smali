@@ -4,241 +4,126 @@
 
 
 # instance fields
-.field public final a:[Ls4a;
+.field public final a:Lws8;
 
-.field public final b:J
+.field public final b:Lkd4;
+
+.field public final c:Ljava/util/HashMap;
 
 
 # direct methods
-.method public varargs constructor <init>(J[Ls4a;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lkd4;)V
+    .locals 3
 
-    .line 2
+    new-instance v0, Lws8;
+
+    const/16 v1, 0x1b
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p1, v2}, Lws8;-><init>(ILjava/lang/Object;Z)V
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-wide p1, p0, Lu4a;->b:J
+    new-instance p1, Ljava/util/HashMap;
 
-    .line 4
-    iput-object p3, p0, Lu4a;->a:[Ls4a;
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lu4a;->c:Ljava/util/HashMap;
 
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
+    iput-object v0, p0, Lu4a;->a:Lws8;
 
-    const/4 v0, 0x0
-
-    .line 5
-    new-array v0, v0, [Ls4a;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Ls4a;
-
-    invoke-direct {p0, p1}, Lu4a;-><init>([Ls4a;)V
-
-    return-void
-.end method
-
-.method public varargs constructor <init>([Ls4a;)V
-    .locals 2
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    .line 1
-    invoke-direct {p0, v0, v1, p1}, Lu4a;-><init>(J[Ls4a;)V
+    iput-object p2, p0, Lu4a;->b:Lkd4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final varargs a([Ls4a;)Lu4a;
+.method public final declared-synchronized a(Ljava/lang/String;)Lgug;
     .locals 5
 
-    array-length v0, p1
+    monitor-enter p0
 
-    if-nez v0, :cond_0
+    :try_start_0
+    iget-object v0, p0, Lu4a;->c:Ljava/util/HashMap;
 
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lu4a;
-
-    sget-object v1, Lqah;->a:Ljava/lang/String;
-
-    iget-object v1, p0, Lu4a;->a:[Ls4a;
-
-    array-length v2, v1
-
-    array-length v3, p1
-
-    add-int/2addr v2, v3
-
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v2
-
-    array-length v1, v1
-
-    array-length v3, p1
-
-    const/4 v4, 0x0
-
-    invoke-static {p1, v4, v2, v1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    check-cast v2, [Ls4a;
-
-    iget-wide v3, p0, Lu4a;->b:J
-
-    invoke-direct {v0, v3, v4, v2}, Lu4a;-><init>(J[Ls4a;)V
-
-    return-object v0
-.end method
-
-.method public final b(Lu4a;)Lu4a;
-    .locals 0
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    iget-object p1, p1, Lu4a;->a:[Ls4a;
-
-    invoke-virtual {p0, p1}, Lu4a;->a([Ls4a;)Lu4a;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lu4a;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lu4a;
-
-    iget-object v2, p0, Lu4a;->a:[Ls4a;
-
-    iget-object v3, p1, Lu4a;->a:[Ls4a;
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-wide v2, p0, Lu4a;->b:J
-
-    iget-wide v4, p1, Lu4a;->b:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lu4a;->a:[Ls4a;
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_0
 
-    iget-wide v1, p0, Lu4a;->b:J
+    iget-object v0, p0, Lu4a;->c:Ljava/util/HashMap;
 
-    invoke-static {v1, v2}, Lv5j;->c(J)I
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    add-int/2addr v1, v0
+    check-cast p1, Lgug;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return v1
-.end method
+    monitor-exit p0
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    return-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "entries="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lu4a;->a:[Ls4a;
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    iget-wide v3, p0, Lu4a;->b:J
-
-    cmp-long v1, v3, v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, ""
+    :catchall_0
+    move-exception p1
 
     goto :goto_0
 
     :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    :try_start_1
+    iget-object v0, p0, Lu4a;->a:Lws8;
 
-    const-string v2, ", presentationTimeUs="
+    invoke-virtual {v0, p1}, Lws8;->w(Ljava/lang/String;)Lcom/google/android/datatransport/cct/CctBackendFactory;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    monitor-exit p0
 
-    move-result-object v1
+    const/4 p1, 0x0
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_1
+    :try_start_2
+    iget-object v1, p0, Lu4a;->b:Lkd4;
+
+    iget-object v2, v1, Lkd4;->a:Landroid/content/Context;
+
+    iget-object v3, v1, Lkd4;->b:Lxf3;
+
+    iget-object v1, v1, Lkd4;->c:Lxf3;
+
+    new-instance v4, Lua0;
+
+    invoke-direct {v4, v2, v3, v1, p1}, Lua0;-><init>(Landroid/content/Context;Lxf3;Lxf3;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Lcom/google/android/datatransport/cct/CctBackendFactory;->create(Ljd4;)Lgug;
 
     move-result-object v0
 
+    iget-object v1, p0, Lu4a;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p0
+
     return-object v0
+
+    :goto_0
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
 .end method

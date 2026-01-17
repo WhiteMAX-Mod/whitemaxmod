@@ -1,114 +1,116 @@
 .class public final Lnd1;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lod1;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lrd1;
 
-.field public final b:Z
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method public constructor <init>(Lrd1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnd1;->X:Lrd1;
 
-    iput-boolean p1, p0, Lnd1;->a:Z
+    const/4 p1, 0x2
 
-    iput-boolean p2, p0, Lnd1;->b:Z
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lzb4;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lnd1;
+    invoke-virtual {p0, p1, p2}, Lnd1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lnd1;
 
-    iget-boolean v0, p0, Lnd1;->a:Z
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-boolean v1, p1, Lnd1;->a:Z
+    invoke-virtual {p1, p2}, Lnd1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_2
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lnd1;
+
+    iget-object v0, p0, Lnd1;->X:Lrd1;
+
+    invoke-direct {p1, v0, p2}, Lnd1;-><init>(Lrd1;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lnd1;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_2
-    iget-boolean v0, p0, Lnd1;->b:Z
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-boolean p1, p1, Lnd1;->b:Z
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    if-eq v0, p1, :cond_3
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    const/4 p1, 0x0
+    throw p1
 
-    return p1
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    iput v1, p0, Lnd1;->o:I
 
-    return p1
-.end method
+    const-wide/16 v0, 0x1388
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {v0, v1, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lnd1;->a:Z
+    move-result-object p1
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    sget-object v0, Lac4;->a:Lac4;
 
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lnd1;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", goToActiveBeforeEnd="
-
-    const-string v1, ")"
-
-    const-string v2, "End(isCallAccepted="
-
-    iget-boolean v3, p0, Lnd1;->a:Z
-
-    iget-boolean v4, p0, Lnd1;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lxd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    iget-object p1, p0, Lnd1;->X:Lrd1;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lrd1;->h(Z)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

@@ -13,11 +13,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lm4d;->abc_action_bar_embed_tabs:I
+    sget v0, Ll5d;->abc_action_bar_embed_tabs:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$bool;->abc_action_bar_embed_tabs:I
 
-    sget v0, Lm4d;->abc_config_actionMenuItemAllCaps:I
+    sget v0, Ll5d;->abc_config_actionMenuItemAllCaps:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$bool;->abc_config_actionMenuItemAllCaps:I
 

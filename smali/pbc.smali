@@ -2,107 +2,61 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lux0;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final X:J
 
-.field public final b:Luz6;
+.field public final Y:J
 
-.field public final c:Ljava/lang/Object;
+.field public final Z:I
+
+.field public final a:Ljava/lang/Object;
+
+.field public final b:I
+
+.field public final c:Lb49;
+
+.field public final d:Ljava/lang/Object;
+
+.field public final o:I
+
+.field public final t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lpbc;
-
-    const-string v1, ""
-
-    invoke-direct {v0, v1}, Lpbc;-><init>(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Object;ILb49;Ljava/lang/Object;IJJII)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpbc;->a:Ljava/lang/String;
+    iput-object p1, p0, Lpbc;->a:Ljava/lang/Object;
 
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput p2, p0, Lpbc;->b:I
 
-    const/16 v0, 0x1f
+    iput-object p3, p0, Lpbc;->c:Lb49;
 
-    if-lt p1, v0, :cond_0
+    iput-object p4, p0, Lpbc;->d:Ljava/lang/Object;
 
-    new-instance p1, Luz6;
+    iput p5, p0, Lpbc;->o:I
 
-    const/16 v0, 0x1b
+    iput-wide p6, p0, Lpbc;->X:J
 
-    const/4 v1, 0x0
+    iput-wide p8, p0, Lpbc;->Y:J
 
-    invoke-direct {p1, v0, v1}, Luz6;-><init>(IZ)V
+    iput p10, p0, Lpbc;->Z:I
 
-    invoke-static {}, Lk69;->f()Landroid/media/metrics/LogSessionId;
-
-    move-result-object v0
-
-    iput-object v0, p1, Luz6;->b:Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-object p1, p0, Lpbc;->b:Luz6;
-
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpbc;->c:Ljava/lang/Object;
+    iput p11, p0, Lpbc;->t0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a()Landroid/media/metrics/LogSessionId;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lpbc;->b:Luz6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Luz6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/media/metrics/LogSessionId;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 6
 
     const/4 v0, 0x1
 
@@ -111,42 +65,88 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lpbc;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    if-eqz p1, :cond_2
 
-    if-nez v1, :cond_1
+    const-class v2, Lpbc;
 
-    return v2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lpbc;
 
-    iget-object v1, p0, Lpbc;->a:Ljava/lang/String;
+    iget v2, p0, Lpbc;->b:I
 
-    iget-object v3, p1, Lpbc;->a:Ljava/lang/String;
+    iget v3, p1, Lpbc;->b:I
 
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne v2, v3, :cond_2
 
-    move-result v1
+    iget v2, p0, Lpbc;->o:I
 
-    if-eqz v1, :cond_2
+    iget v3, p1, Lpbc;->o:I
 
-    iget-object v1, p0, Lpbc;->b:Luz6;
+    if-ne v2, v3, :cond_2
 
-    iget-object v3, p1, Lpbc;->b:Luz6;
+    iget-wide v2, p0, Lpbc;->X:J
 
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-wide v4, p1, Lpbc;->X:J
 
-    move-result v1
+    cmp-long v2, v2, v4
 
-    if-eqz v1, :cond_2
+    if-nez v2, :cond_2
 
-    iget-object v1, p0, Lpbc;->c:Ljava/lang/Object;
+    iget-wide v2, p0, Lpbc;->Y:J
 
-    iget-object p1, p1, Lpbc;->c:Ljava/lang/Object;
+    iget-wide v4, p1, Lpbc;->Y:J
 
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Lpbc;->Z:I
+
+    iget v3, p1, Lpbc;->Z:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lpbc;->t0:I
+
+    iget v3, p1, Lpbc;->t0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lpbc;->a:Ljava/lang/Object;
+
+    iget-object v3, p1, Lpbc;->a:Ljava/lang/Object;
+
+    invoke-static {v2, v3}, Lfdj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lpbc;->d:Ljava/lang/Object;
+
+    iget-object v3, p1, Lpbc;->d:Ljava/lang/Object;
+
+    invoke-static {v2, v3}, Lfdj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lpbc;->c:Lb49;
+
+    iget-object p1, p1, Lpbc;->c:Lb49;
+
+    invoke-static {v2, p1}, Lfdj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -155,23 +155,60 @@
     return v0
 
     :cond_2
-    return v2
+    :goto_0
+    return v1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 10
 
-    iget-object v0, p0, Lpbc;->b:Luz6;
+    iget v0, p0, Lpbc;->b:I
 
-    iget-object v1, p0, Lpbc;->c:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v2, p0, Lpbc;->a:Ljava/lang/String;
+    move-result-object v2
 
-    filled-new-array {v2, v0, v1}, [Ljava/lang/Object;
+    iget v0, p0, Lpbc;->o:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    iget-wide v0, p0, Lpbc;->X:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    iget-wide v0, p0, Lpbc;->Y:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    iget v0, p0, Lpbc;->Z:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    iget v0, p0, Lpbc;->t0:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    iget-object v1, p0, Lpbc;->a:Ljava/lang/Object;
+
+    iget-object v3, p0, Lpbc;->c:Lb49;
+
+    iget-object v4, p0, Lpbc;->d:Ljava/lang/Object;
+
+    filled-new-array/range {v1 .. v9}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 

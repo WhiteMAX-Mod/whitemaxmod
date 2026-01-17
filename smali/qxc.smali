@@ -1,77 +1,204 @@
-.class public final enum Lqxc;
-.super Ljava/lang/Enum;
+.class public final Lqxc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lm8e;
 
-# static fields
-.field public static final enum a:Lqxc;
 
-.field public static final synthetic b:[Lqxc;
+# instance fields
+.field public final a:I
+
+.field public final synthetic b:Luxc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Luxc;I)V
+    .locals 0
 
-    new-instance v0, Lqxc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "DEFAULT"
+    iput-object p1, p0, Lqxc;->b:Luxc;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lqxc;->a:Lqxc;
-
-    new-instance v1, Lqxc;
-
-    const-string v2, "SIGNED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lqxc;
-
-    const-string v3, "FIXED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2}, [Lqxc;
-
-    move-result-object v0
-
-    sput-object v0, Lqxc;->b:[Lqxc;
+    iput p2, p0, Lqxc;->a:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lqxc;
-    .locals 1
 
-    const-class v0, Lqxc;
+# virtual methods
+.method public final b()V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lqxc;->a:I
 
-    move-result-object p0
+    iget-object v1, p0, Lqxc;->b:Luxc;
 
-    check-cast p0, Lqxc;
+    iget-object v2, v1, Luxc;->C0:[Lk8e;
 
-    return-object p0
+    aget-object v0, v2, v0
+
+    invoke-virtual {v0}, Lk8e;->t()V
+
+    iget-object v0, v1, Luxc;->u0:Lbg8;
+
+    iget-object v2, v1, Luxc;->d:Lko4;
+
+    iget v1, v1, Luxc;->L0:I
+
+    invoke-virtual {v2, v1}, Lko4;->H(I)I
+
+    move-result v1
+
+    iget-object v2, v0, Lbg8;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/io/IOException;
+
+    if-nez v2, :cond_3
+
+    iget-object v0, v0, Lbg8;->b:Ljava/lang/Object;
+
+    check-cast v0, Lvf8;
+
+    if-eqz v0, :cond_2
+
+    const/high16 v2, -0x80000000
+
+    if-ne v1, v2, :cond_0
+
+    iget v1, v0, Lvf8;->b:I
+
+    :cond_0
+    iget-object v2, v0, Lvf8;->d:Ljava/io/IOException;
+
+    if-eqz v2, :cond_2
+
+    iget v0, v0, Lvf8;->o:I
+
+    if-gt v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    throw v2
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :cond_3
+    throw v2
 .end method
 
-.method public static values()[Lqxc;
-    .locals 1
+.method public final e()Z
+    .locals 3
 
-    sget-object v0, Lqxc;->b:[Lqxc;
+    iget-object v0, p0, Lqxc;->b:Luxc;
 
-    invoke-virtual {v0}, [Lqxc;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Luxc;->D()Z
 
-    move-result-object v0
+    move-result v1
 
-    check-cast v0, [Lqxc;
+    if-nez v1, :cond_0
 
-    return-object v0
+    iget-object v1, v0, Luxc;->C0:[Lk8e;
+
+    iget v2, p0, Lqxc;->a:I
+
+    aget-object v1, v1, v2
+
+    iget-boolean v0, v0, Luxc;->U0:Z
+
+    invoke-virtual {v1, v0}, Lk8e;->r(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final g(J)I
+    .locals 4
+
+    iget-object v0, p0, Lqxc;->b:Luxc;
+
+    invoke-virtual {v0}, Luxc;->D()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget v1, p0, Lqxc;->a:I
+
+    invoke-virtual {v0, v1}, Luxc;->s(I)V
+
+    iget-object v2, v0, Luxc;->C0:[Lk8e;
+
+    aget-object v2, v2, v1
+
+    iget-boolean v3, v0, Luxc;->U0:Z
+
+    invoke-virtual {v2, p1, p2, v3}, Lk8e;->p(JZ)I
+
+    move-result p1
+
+    invoke-virtual {v2, p1}, Lk8e;->z(I)V
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v0, v1}, Luxc;->z(I)V
+
+    :cond_1
+    return p1
+.end method
+
+.method public final o(Lzii;Lnl4;I)I
+    .locals 5
+
+    iget-object v0, p0, Lqxc;->b:Luxc;
+
+    invoke-virtual {v0}, Luxc;->D()Z
+
+    move-result v1
+
+    const/4 v2, -0x3
+
+    if-eqz v1, :cond_0
+
+    return v2
+
+    :cond_0
+    iget v1, p0, Lqxc;->a:I
+
+    invoke-virtual {v0, v1}, Luxc;->s(I)V
+
+    iget-object v3, v0, Luxc;->C0:[Lk8e;
+
+    aget-object v3, v3, v1
+
+    iget-boolean v4, v0, Luxc;->U0:Z
+
+    invoke-virtual {v3, p1, p2, p3, v4}, Lk8e;->w(Lzii;Lnl4;IZ)I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_1
+
+    invoke-virtual {v0, v1}, Luxc;->z(I)V
+
+    :cond_1
+    return p1
 .end method

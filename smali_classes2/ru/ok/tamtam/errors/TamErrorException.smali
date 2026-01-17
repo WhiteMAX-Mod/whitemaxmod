@@ -4,18 +4,18 @@
 
 
 # instance fields
-.field public final a:Lcbg;
+.field public final a:Lnbg;
 
 
 # direct methods
-.method public constructor <init>(Lcbg;)V
+.method public constructor <init>(Lnbg;)V
     .locals 1
 
-    iget-object v0, p1, Lcbg;->b:Ljava/lang/String;
+    iget-object v0, p1, Lnbg;->b:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
+    iput-object p1, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lnbg;
 
     return-void
 .end method

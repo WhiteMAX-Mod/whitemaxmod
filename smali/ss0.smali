@@ -1,117 +1,74 @@
 .class public final Lss0;
-.super Lwgc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La38;
 
 
 # static fields
-.field public static final c:Lss0;
+.field public static final a:Lss0;
+
+.field public static final b:Lxhc;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lss0;
 
-    sget-object v1, Lts0;->a:Lts0;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lwgc;-><init>(Lq38;)V
+    sput-object v0, Lss0;->a:Lss0;
 
-    sput-object v0, Lss0;->c:Lss0;
+    new-instance v0, Lxhc;
+
+    const-string v1, "kotlin.Boolean"
+
+    sget-object v2, Lvhc;->b:Lvhc;
+
+    invoke-direct {v0, v1, v2}, Lxhc;-><init>(Ljava/lang/String;Lwhc;)V
+
+    sput-object v0, Lss0;->b:Lxhc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h(Ljava/lang/Object;)I
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, [Z
+    check-cast p2, Ljava/lang/Boolean;
 
-    array-length p1, p1
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return p1
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->b(Z)V
+
+    return-void
 .end method
 
-.method public final j(Lip3;ILjava/lang/Object;)V
-    .locals 2
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p3, Lrs0;
-
-    iget-object v0, p0, Lwgc;->b:Lvgc;
-
-    invoke-interface {p1, v0, p2}, Lip3;->y(Lvoe;I)Z
+    invoke-interface {p1}, Lkl4;->b()Z
 
     move-result p1
 
-    invoke-static {p3}, Lugc;->c(Lugc;)V
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object p2, p3, Lrs0;->a:[Z
+    move-result-object p1
 
-    iget v0, p3, Lrs0;->b:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p3, Lrs0;->b:I
-
-    aput-boolean p1, p2, v0
-
-    return-void
+    return-object p1
 .end method
 
-.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d()Lxpe;
     .locals 1
 
-    check-cast p1, [Z
-
-    new-instance v0, Lrs0;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v0, Lrs0;->a:[Z
-
-    array-length p1, p1
-
-    iput p1, v0, Lrs0;->b:I
-
-    const/16 p1, 0xa
-
-    invoke-virtual {v0, p1}, Lrs0;->b(I)V
+    sget-object v0, Lss0;->b:Lxhc;
 
     return-object v0
-.end method
-
-.method public final n()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Z
-
-    return-object v0
-.end method
-
-.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
-    .locals 3
-
-    check-cast p2, [Z
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p3, :cond_0
-
-    aget-boolean v1, p2, v0
-
-    iget-object v2, p0, Lwgc;->b:Lvgc;
-
-    invoke-virtual {p1, v2, v0, v1}, Lkotlinx/serialization/json/internal/b;->c(Lvoe;IZ)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
 .end method

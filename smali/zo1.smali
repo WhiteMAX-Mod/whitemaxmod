@@ -1,19 +1,19 @@
 .class public final Lzo1;
-.super Ljp1;
+.super Lcp1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final D:Ljava/lang/CharSequence;
+.field public final D:Lf71;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
+.method public constructor <init>(Lf71;)V
     .locals 0
 
-    invoke-direct {p0}, Ljp1;-><init>()V
+    invoke-direct {p0}, Lcp1;-><init>()V
 
-    iput-object p1, p0, Lzo1;->D:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lzo1;->D:Lf71;
 
     return-void
 .end method
@@ -41,11 +41,11 @@
     :cond_1
     check-cast p1, Lzo1;
 
-    iget-object v1, p0, Lzo1;->D:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lzo1;->D:Lf71;
 
-    iget-object p1, p1, Lzo1;->D:Ljava/lang/CharSequence;
+    iget-object p1, p1, Lzo1;->D:Lf71;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -60,9 +60,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lzo1;->D:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lzo1;->D:Lf71;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Lf71;->hashCode()I
 
     move-result v0
 
@@ -74,11 +74,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "RecordStart(name="
+    const-string v1, "ShowOpponentInfo(contextInfo="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lzo1;->D:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lzo1;->D:Lf71;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

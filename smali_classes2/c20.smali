@@ -1,85 +1,107 @@
-.class public final enum Lc20;
-.super Ljava/lang/Enum;
+.class public final Lc20;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lc20;
+# instance fields
+.field public a:J
 
-.field public static final enum b:Lc20;
+.field public b:I
 
-.field public static final enum c:Lc20;
+.field public c:I
 
-.field public static final synthetic d:[Lc20;
+.field public d:Ljava/lang/String;
+
+.field public e:J
+
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/lang/String;
+
+.field public h:Ljava/lang/String;
+
+.field public i:Ljava/util/List;
+
+.field public j:I
+
+.field public k:J
+
+.field public l:Ljava/lang/String;
+
+.field public m:Z
+
+.field public n:I
+
+.field public o:Ljava/lang/String;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+# virtual methods
+.method public a()Ld20;
+    .locals 2
 
-    new-instance v0, Lc20;
+    iget-object v0, p0, Lc20;->i:Ljava/util/List;
 
-    const-string v1, "DEFAULT"
+    if-nez v0, :cond_0
 
-    const/4 v2, 0x0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object v0, p0, Lc20;->i:Ljava/util/List;
 
-    sput-object v0, Lc20;->a:Lc20;
+    :cond_0
+    iget v0, p0, Lc20;->j:I
 
-    new-instance v1, Lc20;
+    const/4 v1, 0x1
 
-    const-string v2, "PROCESSING"
+    if-nez v0, :cond_1
 
-    const/4 v3, 0x1
+    iput v1, p0, Lc20;->j:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :cond_1
+    iget v0, p0, Lc20;->n:I
 
-    sput-object v1, Lc20;->b:Lc20;
+    if-nez v0, :cond_2
 
-    new-instance v2, Lc20;
+    iput v1, p0, Lc20;->n:I
 
-    const-string v3, "PROCESSED"
+    :cond_2
+    new-instance v0, Ld20;
 
-    const/4 v4, 0x2
+    invoke-direct {v0, p0}, Ld20;-><init>(Lc20;)V
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lc20;->c:Lc20;
-
-    filled-new-array {v0, v1, v2}, [Lc20;
-
-    move-result-object v0
-
-    sput-object v0, Lc20;->d:[Lc20;
-
-    return-void
+    return-object v0
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lc20;
-    .locals 1
+.method public b()Lhrf;
+    .locals 2
 
-    const-class v0, Lc20;
+    iget-object v0, p0, Lc20;->i:Ljava/util/List;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-nez v0, :cond_0
 
-    move-result-object p0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    check-cast p0, Lc20;
+    iput-object v0, p0, Lc20;->i:Ljava/util/List;
 
-    return-object p0
-.end method
+    :cond_0
+    iget v0, p0, Lc20;->j:I
 
-.method public static values()[Lc20;
-    .locals 1
+    const/4 v1, 0x1
 
-    sget-object v0, Lc20;->d:[Lc20;
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0}, [Lc20;->clone()Ljava/lang/Object;
+    iput v1, p0, Lc20;->j:I
 
-    move-result-object v0
+    :cond_1
+    iget v0, p0, Lc20;->n:I
 
-    check-cast v0, [Lc20;
+    if-nez v0, :cond_2
+
+    iput v1, p0, Lc20;->n:I
+
+    :cond_2
+    new-instance v0, Lhrf;
+
+    invoke-direct {v0, p0}, Lhrf;-><init>(Lc20;)V
 
     return-object v0
 .end method

@@ -12,35 +12,35 @@
         "Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;",
         "",
         "",
-        "Lr69;",
-        "Ls69;",
+        "Ly59;",
+        "Lz59;",
         "statesToUpdate",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
-        "Lkte;",
+        "Lnue;",
         "roomId",
         "Lkotlin/Function0;",
-        "Lv2h;",
+        "Lb3h;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "updateMediaOptionsForParticipant",
-        "(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lmq6;Loq6;)V",
+        "(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Llq6;Lnq6;)V",
         "updateMediaOptionsForAll",
-        "(Ljava/util/Map;Lkte;Lmq6;Loq6;)V",
+        "(Ljava/util/Map;Lnue;Llq6;Lnq6;)V",
         "",
         "mediaOptions",
         "requestToEnableMediaForParticipant",
-        "(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lmq6;Loq6;)V",
+        "(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Llq6;Lnq6;)V",
         "requestToEnableMediaForAll",
-        "(Ljava/util/Set;Lkte;Lmq6;Loq6;)V",
-        "Lt69;",
+        "(Ljava/util/Set;Lnue;Llq6;Lnq6;)V",
+        "La69;",
         "getMediaOptionsForCall",
-        "(Lkte;)Lt69;",
+        "(Lnue;)La69;",
         "getMediaOptionsForCurrentUser",
-        "()Lt69;",
+        "()La69;",
         "",
         "mute",
         "setAudioPlayoutMuted",
@@ -58,40 +58,40 @@
 
 
 # virtual methods
-.method public abstract getMediaOptionsForCall(Lkte;)Lt69;
+.method public abstract getMediaOptionsForCall(Lnue;)La69;
 .end method
 
-.method public abstract getMediaOptionsForCurrentUser()Lt69;
+.method public abstract getMediaOptionsForCurrentUser()La69;
 .end method
 
-.method public abstract requestToEnableMediaForAll(Ljava/util/Set;Lkte;Lmq6;Loq6;)V
+.method public abstract requestToEnableMediaForAll(Ljava/util/Set;Lnue;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lr69;",
+            "Ly59;",
             ">;",
-            "Lkte;",
-            "Lmq6;",
-            "Loq6;",
+            "Lnue;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lmq6;Loq6;)V
+.method public abstract requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lr69;",
+            "Ly59;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lkte;",
-            "Lmq6;",
-            "Loq6;",
+            "Lnue;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -100,36 +100,36 @@
 .method public abstract setAudioPlayoutMuted(Z)V
 .end method
 
-.method public abstract updateMediaOptionsForAll(Ljava/util/Map;Lkte;Lmq6;Loq6;)V
+.method public abstract updateMediaOptionsForAll(Ljava/util/Map;Lnue;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lr69;",
+            "Ly59;",
             "+",
-            "Ls69;",
+            "Lz59;",
             ">;",
-            "Lkte;",
-            "Lmq6;",
-            "Loq6;",
+            "Lnue;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lmq6;Loq6;)V
+.method public abstract updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lr69;",
+            "Ly59;",
             "+",
-            "Ls69;",
+            "Lz59;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lkte;",
-            "Lmq6;",
-            "Loq6;",
+            "Lnue;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation

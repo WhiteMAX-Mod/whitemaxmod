@@ -1,85 +1,21 @@
-.class public interface abstract Lvq5;
-.super Ljava/lang/Object;
+.class public final Lvq5;
+.super Lj2;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Lzqg;
-.end method
+# instance fields
+.field public final d:Ljava/io/File;
 
-.method public abstract b()I
-.end method
 
-.method public c(Z)V
-    .locals 0
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
+    .locals 1
 
-    return-void
-.end method
+    const/16 v0, 0xe
 
-.method public abstract d(I)Lqj6;
-.end method
+    invoke-direct {p0, p1, v0, p3}, Lj2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.method public abstract e()V
-.end method
-
-.method public abstract f(I)I
-.end method
-
-.method public abstract g(JLjava/util/List;)I
-.end method
-
-.method public abstract h()V
-.end method
-
-.method public abstract i()I
-.end method
-
-.method public abstract j()Lqj6;
-.end method
-
-.method public abstract k()I
-.end method
-
-.method public abstract l(F)V
-.end method
-
-.method public abstract length()I
-.end method
-
-.method public abstract m()Ljava/lang/Object;
-.end method
-
-.method public n()V
-    .locals 0
+    iput-object p2, p0, Lvq5;->d:Ljava/io/File;
 
     return-void
-.end method
-
-.method public o()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract p(I)I
-.end method
-
-.method public abstract q(Lqj6;)I
-.end method
-
-.method public abstract r(IJ)Z
-.end method
-
-.method public abstract s(IJ)Z
-.end method
-
-.method public abstract t(JJJLjava/util/List;[Lq09;)V
-.end method
-
-.method public u(JLec3;Ljava/util/List;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
 .end method

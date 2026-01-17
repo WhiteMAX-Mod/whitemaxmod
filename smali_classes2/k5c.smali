@@ -1,293 +1,48 @@
-.class public final synthetic Lk5c;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Loq6;
+.class public final Lk5c;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lj5c;
 
-.field public final synthetic b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;I)V
+.method public constructor <init>(Lj5c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lk5c;->a:I
+    iput-object p1, p0, Lk5c;->X:Lj5c;
 
-    iput-object p1, p0, Lk5c;->b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lk5c;->a:I
+    iput-object p1, p0, Lk5c;->d:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Integer;
+    iget p1, p0, Lk5c;->o:I
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    const/high16 v0, -0x80000000
 
-    move-result p1
+    or-int/2addr p1, v0
 
-    packed-switch v0, :pswitch_data_0
+    iput p1, p0, Lk5c;->o:I
 
-    iget-object v0, p0, Lk5c;->b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+    iget-object p1, p0, Lk5c;->X:Lj5c;
 
-    iget-object v1, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->Z:Lbj0;
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Lbe8;->j()I
-
-    move-result v1
-
-    iget-object v2, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->X:Lz3c;
-
-    invoke-virtual {v2}, Lbe8;->j()I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->A0()Lf4c;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lf4c;->t0:Lpkd;
-
-    iget-object v4, v4, Lpkd;->a:Laof;
-
-    invoke-interface {v4}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/CharSequence;
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->Y:Lz3c;
-
-    invoke-virtual {v1, p1}, Lvbf;->G(I)Lie8;
-
-    move-result-object p1
-
-    check-cast p1, Lb4c;
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v4, 0x0
-
-    if-ge p1, v1, :cond_3
-
-    :cond_2
-    move-object p1, v4
-
-    goto :goto_1
-
-    :cond_3
-    if-ge p1, v3, :cond_2
-
-    sub-int/2addr p1, v1
-
-    invoke-virtual {v2, p1}, Lvbf;->G(I)Lie8;
-
-    move-result-object p1
-
-    check-cast p1, Lb4c;
-
-    :goto_1
-    if-eqz p1, :cond_4
-
-    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->A0()Lf4c;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lf4c;->Y:Lpkd;
-
-    iget-object v0, v0, Lpkd;->a:Laof;
-
-    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Set;
-
-    iget-wide v1, p1, Lb4c;->a:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    goto :goto_2
-
-    :cond_4
-    const/4 p1, 0x0
-
-    :goto_2
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, v0, p0}, Lj5c;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lk5c;->b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
-
-    iget-object v1, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->Z:Lbj0;
-
-    invoke-virtual {v1}, Lbe8;->j()I
-
-    move-result v1
-
-    iget-object v2, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->X:Lz3c;
-
-    invoke-virtual {v2}, Lbe8;->j()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->A0()Lf4c;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lf4c;->t0:Lpkd;
-
-    iget-object v0, v0, Lpkd;->a:Laof;
-
-    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    :cond_5
-    if-ge p1, v1, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    if-ge p1, v2, :cond_8
-
-    :cond_7
-    const/4 p1, 0x1
-
-    goto :goto_4
-
-    :cond_8
-    :goto_3
-    const/4 p1, 0x0
-
-    :goto_4
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Lk5c;->b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
-
-    iget-object v1, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->Z:Lbj0;
-
-    invoke-virtual {v1}, Lbe8;->j()I
-
-    move-result v1
-
-    iget-object v2, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->X:Lz3c;
-
-    invoke-virtual {v2}, Lbe8;->j()I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->A0()Lf4c;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lf4c;->t0:Lpkd;
-
-    iget-object v0, v0, Lpkd;->a:Laof;
-
-    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    if-eqz v0, :cond_9
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    :cond_9
-    if-ge p1, v1, :cond_a
-
-    goto :goto_5
-
-    :cond_a
-    if-ge p1, v3, :cond_b
-
-    sub-int/2addr p1, v1
-
-    invoke-virtual {v2, p1}, Lvbf;->G(I)Lie8;
-
-    move-result-object p1
-
-    check-cast p1, Lb4c;
-
-    if-eqz p1, :cond_b
-
-    iget-object p1, p1, Lb4c;->c:Ljava/lang/CharSequence;
-
-    goto :goto_6
-
-    :cond_b
-    :goto_5
-    const/4 p1, 0x0
-
-    :goto_6
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

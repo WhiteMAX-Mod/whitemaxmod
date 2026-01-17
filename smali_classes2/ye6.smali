@@ -1,182 +1,238 @@
 .class public final Lye6;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/folders/picker/FolderMemberPickerScreen;
+.field public final a:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final d:Lhc4;
+
+.field public final e:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Lhc4;Ljava/util/Set;)V
     .locals 0
 
-    iput-object p2, p0, Lye6;->X:Lone/me/folders/picker/FolderMemberPickerScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lye6;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lye6;->b:Ljava/lang/CharSequence;
+
+    iput-object p3, p0, Lye6;->c:Ljava/lang/CharSequence;
+
+    iput-object p4, p0, Lye6;->d:Lhc4;
+
+    iput-object p5, p0, Lye6;->e:Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lte6;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lye6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lye6;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lye6;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-object v1, p0, Lye6;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lye6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lye6;->a:Ljava/lang/String;
 
-    return-object p2
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lye6;->b:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lye6;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lye6;->c:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lye6;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lye6;->d:Lhc4;
+
+    iget-object v3, p1, Lye6;->d:Lhc4;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lye6;->e:Ljava/util/Set;
+
+    iget-object p1, p1, Lye6;->e:Ljava/util/Set;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v0, Lye6;
+    iget-object v0, p0, Lye6;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lye6;->X:Lone/me/folders/picker/FolderMemberPickerScreen;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v0, p2, v1}, Lye6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
+    move-result v0
 
-    iput-object p1, v0, Lye6;->o:Ljava/lang/Object;
+    const/16 v1, 0x1f
 
-    return-object v0
-.end method
+    mul-int/2addr v0, v1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    iget-object v2, p0, Lye6;->b:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Lye6;->X:Lone/me/folders/picker/FolderMemberPickerScreen;
+    invoke-static {v2, v0, v1}, Lj27;->d(Ljava/lang/CharSequence;II)I
 
-    iget-object v1, v0, Lone/me/folders/picker/FolderMemberPickerScreen;->x0:Lks;
+    move-result v0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v2, p0, Lye6;->c:Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Lye6;->o:Ljava/lang/Object;
+    if-nez v2, :cond_0
 
-    check-cast p1, Lte6;
-
-    if-eqz p1, :cond_2
-
-    sget-object v2, Lone/me/folders/picker/FolderMemberPickerScreen;->y0:[Lp38;
-
-    const/4 v3, 0x1
-
-    aget-object v4, v2, v3
-
-    invoke-virtual {v1, v0}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    invoke-static {v4}, Liyf;->G(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {v0}, Lx84;->getRouter()Lw3e;
-
-    move-result-object v4
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v0}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v4, v1}, Lw3e;->g(Ljava/lang/String;)Lx84;
-
-    move-result-object v1
-
-    instance-of v2, v1, Ldf6;
-
-    const/4 v4, 0x0
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Ldf6;
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_0
-    move-object v1, v4
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
 
     :goto_0
-    if-eqz v1, :cond_1
+    add-int/2addr v0, v2
 
-    iget-object p1, p1, Lte6;->a:Ljava/util/Set;
+    mul-int/2addr v0, v1
 
-    check-cast v1, Lone/me/folders/edit/FolderEditScreen;
+    iget-object v2, p0, Lye6;->d:Lhc4;
 
-    invoke-virtual {v1}, Lone/me/folders/edit/FolderEditScreen;->A0()Lme6;
+    iget v2, v2, Lhc4;->a:I
 
-    move-result-object v1
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    iget-object v2, v1, Lme6;->d:Lbbg;
+    move-result v0
 
-    check-cast v2, Lb9b;
+    iget-object v1, p0, Lye6;->e:Ljava/util/Set;
 
-    invoke-virtual {v2}, Lb9b;->b()Ltb4;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object v2
+    move-result v1
 
-    new-instance v5, Lde6;
+    add-int/2addr v1, v0
 
-    invoke-direct {v5, p1, v1, v4}, Lde6;-><init>(Ljava/util/Set;Lme6;Lkotlin/coroutines/Continuation;)V
+    return v1
+.end method
 
-    iget-object p1, v1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object v4, Ldc4;->b:Ldc4;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v2, v4, v5}, Ly8j;->d(Lac4;Lrb4;Ldc4;Lcr6;)Lglf;
+    const-string v1, "FolderModel(id="
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, v1, Lme6;->G0:Le7;
+    iget-object v1, p0, Lye6;->a:Ljava/lang/String;
 
-    sget-object v4, Lme6;->H0:[Lp38;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object v3, v4, v3
+    const-string v1, ", name="
 
-    invoke-virtual {v2, v1, v3, p1}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    invoke-virtual {v0}, Lx84;->getRouter()Lw3e;
+    iget-object v1, p0, Lye6;->b:Ljava/lang/CharSequence;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lw3e;->C()Z
+    const-string v1, ", emoji="
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    iget-object v1, p0, Lye6;->c:Ljava/lang/CharSequence;
 
-    :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const-string v1, ", counter="
 
-    throw p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lye6;->d:Lhc4;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", options="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lye6;->e:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

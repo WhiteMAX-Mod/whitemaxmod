@@ -3,50 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lxl6;
 
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Z
+.field public final synthetic c:Lgob;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luz9;ZLone/me/messages/list/loader/MessageModel;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x2
-
-    iput v0, p0, Ltl6;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltl6;->b:Ljava/lang/Object;
-
-    iput-boolean p2, p0, Ltl6;->d:Z
-
-    iput-object p3, p0, Ltl6;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lzl6;Lwnb;ZI)V
+.method public synthetic constructor <init>(Lxl6;Lgob;I)V
     .locals 0
 
-    .line 1
-    iput p4, p0, Ltl6;->a:I
+    iput p3, p0, Ltl6;->a:I
 
-    iput-object p1, p0, Ltl6;->b:Ljava/lang/Object;
+    iput-object p1, p0, Ltl6;->b:Lxl6;
 
-    iput-object p2, p0, Ltl6;->c:Ljava/lang/Object;
-
-    iput-boolean p3, p0, Ltl6;->d:Z
+    iput-object p2, p0, Ltl6;->c:Lgob;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,211 +32,352 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 18
+    .locals 3
 
-    move-object/from16 v0, p0
+    iget v0, p0, Ltl6;->a:I
 
-    iget v1, v0, Ltl6;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    packed-switch v1, :pswitch_data_0
+    iget-object v0, p0, Ltl6;->b:Lxl6;
 
-    iget-object v1, v0, Ltl6;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    check-cast v1, Luz9;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    iget-boolean v2, v0, Ltl6;->d:Z
+    move-result-object v0
 
-    iget-object v3, v0, Ltl6;->c:Ljava/lang/Object;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    check-cast v3, Lone/me/messages/list/loader/MessageModel;
+    move-result v1
 
-    invoke-virtual {v1}, Luz9;->E()Lk4h;
+    if-eqz v1, :cond_0
 
-    move-result-object v4
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v4, v4, Lk4h;->f:Lyl5;
+    move-result-object v1
 
-    iget-object v4, v4, Lyl5;->b:Lh6f;
+    check-cast v1, Leob;
 
-    invoke-virtual {v4}, Lh6f;->b()Ljava/util/List;
+    iget-object v2, p0, Ltl6;->c:Lgob;
 
-    move-result-object v4
-
-    invoke-static {v4}, Lei3;->F(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    instance-of v5, v4, Lg4h;
-
-    const/4 v6, 0x0
-
-    if-eqz v5, :cond_0
-
-    check-cast v4, Lg4h;
+    invoke-interface {v1, v2}, Leob;->f(Lgob;)V
 
     goto :goto_0
 
     :cond_0
-    move-object v4, v6
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    :goto_0
-    if-eqz v2, :cond_4
+    return-object v0
 
-    if-eqz v4, :cond_4
+    :pswitch_0
+    iget-object v0, p0, Ltl6;->b:Lxl6;
 
-    iget-wide v7, v4, Lg4h;->a:J
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    const-wide/16 v9, 0x0
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    cmp-long v2, v7, v9
+    move-result-object v0
 
-    if-eqz v2, :cond_4
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v2, v1, Luz9;->C0:Ljava/lang/String;
+    move-result v1
 
-    sget-object v5, Lm4j;->a:Lvcb;
+    if-eqz v1, :cond_1
 
-    if-nez v5, :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leob;
+
+    iget-object v2, p0, Ltl6;->c:Lgob;
+
+    invoke-interface {v1, v2}, Leob;->l(Lgob;)V
 
     goto :goto_1
 
     :cond_1
-    sget-object v7, Lxk8;->d:Lxk8;
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v5, v7}, Lvcb;->b(Lxk8;)Z
+    return-object v0
 
-    move-result v8
+    :pswitch_1
+    iget-object v0, p0, Ltl6;->b:Lxl6;
 
-    if-eqz v8, :cond_2
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-wide v11, v4, Lg4h;->a:J
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    const-string v8, "Try scroll to unread marker, mark: "
-
-    invoke-static {v11, v12, v8}, Lgg9;->e(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v7, v2, v8, v6}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    iget-wide v13, v4, Lg4h;->a:J
-
-    if-eqz v3, :cond_3
-
-    iget-wide v9, v3, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    :cond_3
-    move-wide v15, v9
-
-    invoke-virtual {v1}, Luz9;->D()Lh3a;
-
-    move-result-object v12
-
-    iget-object v1, v12, Lh3a;->c:Lac4;
-
-    iget-object v2, v12, Lh3a;->b:Ltb4;
-
-    sget-object v3, Ldc4;->b:Ldc4;
-
-    new-instance v11, Ld3a;
-
-    const/16 v17, 0x0
-
-    invoke-direct/range {v11 .. v17}, Ld3a;-><init>(Lh3a;JJLkotlin/coroutines/Continuation;)V
-
-    invoke-static {v1, v2, v3, v11}, Ly8j;->d(Lac4;Lrb4;Ldc4;Lcr6;)Lglf;
-
-    move-result-object v1
-
-    invoke-virtual {v12, v1}, Lh3a;->f(Lglf;)V
-
-    :cond_4
-    sget-object v1, Lv2h;->a:Lv2h;
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v1, v0, Ltl6;->b:Ljava/lang/Object;
-
-    check-cast v1, Lzl6;
-
-    iget-object v2, v0, Ltl6;->c:Ljava/lang/Object;
-
-    check-cast v2, Lwnb;
-
-    iget-boolean v3, v0, Ltl6;->d:Z
-
-    iget-object v1, v1, Lzl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    move-result-object v0
 
     :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v1
 
-    if-eqz v4, :cond_5
+    if-eqz v1, :cond_2
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v1
 
-    check-cast v4, Ltnb;
+    check-cast v1, Leob;
 
-    invoke-interface {v4, v2, v3}, Ltnb;->n(Lwnb;Z)V
+    iget-object v2, p0, Ltl6;->c:Lgob;
+
+    invoke-interface {v1, v2}, Leob;->i(Lgob;)V
 
     goto :goto_2
 
-    :cond_5
-    sget-object v1, Lv2h;->a:Lv2h;
+    :cond_2
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    return-object v1
+    return-object v0
 
-    :pswitch_1
-    iget-object v1, v0, Ltl6;->b:Ljava/lang/Object;
+    :pswitch_2
+    iget-object v0, p0, Ltl6;->b:Lxl6;
 
-    check-cast v1, Lzl6;
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v2, v0, Ltl6;->c:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    check-cast v2, Lwnb;
+    move-result-object v0
 
-    iget-boolean v3, v0, Ltl6;->d:Z
+    :goto_3
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v1, v1, Lzl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    move-result v1
 
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v1, Leob;
 
-    move-result v4
+    iget-object v2, p0, Ltl6;->c:Lgob;
 
-    if-eqz v4, :cond_6
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ltnb;
-
-    invoke-interface {v4, v2, v3}, Ltnb;->w(Lwnb;Z)V
+    invoke-interface {v1, v2}, Leob;->r(Lgob;)V
 
     goto :goto_3
 
-    :cond_6
-    sget-object v1, Lv2h;->a:Lv2h;
+    :cond_3
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    return-object v1
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Ltl6;->b:Lxl6;
+
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leob;
+
+    iget-object v2, p0, Ltl6;->c:Lgob;
+
+    invoke-interface {v1, v2}, Leob;->b(Lgob;)V
+
+    goto :goto_4
+
+    :cond_4
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Ltl6;->b:Lxl6;
+
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_5
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leob;
+
+    iget-object v2, p0, Ltl6;->c:Lgob;
+
+    invoke-interface {v1, v2}, Leob;->u(Lgob;)V
+
+    goto :goto_5
+
+    :cond_5
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Ltl6;->b:Lxl6;
+
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_6
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leob;
+
+    iget-object v2, p0, Ltl6;->c:Lgob;
+
+    invoke-interface {v1, v2}, Leob;->a(Lgob;)V
+
+    goto :goto_6
+
+    :cond_6
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Ltl6;->b:Lxl6;
+
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_7
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leob;
+
+    iget-object v2, p0, Ltl6;->c:Lgob;
+
+    invoke-interface {v1, v2}, Leob;->v(Lgob;)V
+
+    goto :goto_7
+
+    :cond_7
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_7
+    iget-object v0, p0, Ltl6;->b:Lxl6;
+
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_8
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leob;
+
+    iget-object v2, p0, Ltl6;->c:Lgob;
+
+    invoke-interface {v1, v2}, Leob;->p(Lgob;)V
+
+    goto :goto_8
+
+    :cond_8
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, p0, Ltl6;->b:Lxl6;
+
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_9
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leob;
+
+    iget-object v2, p0, Ltl6;->c:Lgob;
+
+    invoke-interface {v1, v2}, Leob;->j(Lgob;)V
+
+    goto :goto_9
+
+    :cond_9
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln6;
+.implements Li6;
 
 
 # instance fields
@@ -11,18 +11,14 @@
 
 .field public final synthetic b:J
 
-.field public final synthetic c:Z
-
 
 # direct methods
-.method public synthetic constructor <init>(IJZ)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    iput p1, p0, Lnv5;->a:I
+    iput p3, p0, Lnv5;->a:I
 
-    iput-wide p2, p0, Lnv5;->b:J
-
-    iput-boolean p4, p0, Lnv5;->c:Z
+    iput-wide p1, p0, Lnv5;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,54 +28,89 @@
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 6
 
     iget v0, p0, Lnv5;->a:I
 
-    iget-boolean v1, p0, Lnv5;->c:Z
+    const-string v1, "tv5"
 
-    iget-wide v2, p0, Lnv5;->b:J
+    const-string v2, "loadFromMarker: success marker=d"
+
+    const-string v3, "qw5"
+
+    iget-wide v4, p0, Lnv5;->b:J
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "pw5"
-
-    const-string v2, "markAsFavorite: complete for stickerId=%d favorite=%b"
-
-    invoke-static {v1, v2, v0}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
     :pswitch_0
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "rv5"
+    const-string v1, "onNotifAdded: added sticker %d to cache"
 
-    const-string v2, "markAsFavorite: complete for setId=%d favorite=%b"
+    invoke-static {v3, v1, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v1, v2, v0}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    return-void
+
+    :pswitch_1
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "ew5"
+
+    const-string v2, "assetsUpdate: queued on api, sync=%d"
+
+    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_2
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_3
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v2, "onNotifAdded: added sticker set %d to cache"
+
+    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
@@ -87,6 +118,9 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

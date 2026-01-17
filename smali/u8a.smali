@@ -26,7 +26,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Ltg;->b:Luu5;
+    sget-object v0, Lrg;->b:Lvu5;
 
     return-object v0
 .end method
@@ -248,7 +248,7 @@
 
     const-string v2, "}\n"
 
-    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

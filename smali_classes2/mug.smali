@@ -1,131 +1,72 @@
 .class public final Lmug;
-.super Liug;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loug;
 
-# instance fields
-.field public b:Z
 
-.field public c:Ljava/util/Iterator;
-
-.field public final synthetic d:Li26;
+# static fields
+.field public static final a:Lmug;
 
 
 # direct methods
-.method public constructor <init>(Li26;Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lmug;->d:Li26;
+    new-instance v0, Lmug;
 
-    invoke-direct {p0, p2}, Lnug;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lmug;->a:Lmug;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lmug;->d:Li26;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Li26;->o:Leoe;
+    if-ne p0, p1, :cond_0
 
-    check-cast v0, Lj66;
-
-    iget-boolean v1, p0, Lmug;->b:Z
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lnug;->a:Ljava/lang/Object;
-
-    if-nez v1, :cond_1
-
-    iget-object v0, v0, Lj66;->d:Ljava/lang/Object;
-
-    check-cast v0, Loq6;
-
-    invoke-interface {v0, v4}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-object v3
+    return v0
 
     :cond_0
-    iput-boolean v2, p0, Lmug;->b:Z
+    instance-of p1, p1, Lmug;
 
-    return-object v4
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    iget-object v1, p0, Lmug;->c:Ljava/util/Iterator;
+    return v0
+.end method
 
-    if-eqz v1, :cond_2
+.method public final getKey()Ljava/lang/String;
+    .locals 1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const-string v0, "WS"
 
-    move-result v1
+    return-object v0
+.end method
 
-    if-nez v1, :cond_2
+.method public final hashCode()I
+    .locals 1
 
-    return-object v3
+    const v0, 0x7ef04c4a
 
-    :cond_2
-    iget-object v1, p0, Lmug;->c:Ljava/util/Iterator;
+    return v0
+.end method
 
-    if-nez v1, :cond_5
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, v0, Lj66;->c:Loq6;
-
-    invoke-interface {v0, v4}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Leoe;
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v0}, Leoe;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_3
-    move-object v0, v3
-
-    :goto_0
-    iput-object v0, p0, Lmug;->c:Ljava/util/Iterator;
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-ne v0, v2, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    return-object v3
-
-    :cond_5
-    :goto_1
-    iget-object v0, p0, Lmug;->c:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
+    const-string v0, "WS"
 
     return-object v0
 .end method

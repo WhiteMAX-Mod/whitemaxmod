@@ -1,97 +1,176 @@
-.class public abstract Lg15;
+.class public final Lg15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lizb;
+# instance fields
+.field public final a:Lo58;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lo58;)V
+    .locals 0
 
-    new-instance v0, Lysb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lg15;->a:Lo58;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
+.end method
 
-    move-result-object v1
 
-    sget-object v2, Lsnb;->a:Lsnb;
+# virtual methods
+.method public final a(Ljava/lang/Long;Ljava/lang/Long;J)V
+    .locals 7
 
-    invoke-direct {v0, v1, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Lysb;
+    const-string v1, "execute: chatId="
 
-    const/4 v2, 0x1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    const-string v1, ", contactId="
 
-    sget-object v3, Lsnb;->b:Lsnb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    new-instance v2, Lysb;
+    const-string v1, ", serverTime="
 
-    const/4 v3, 0x2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v3
-
-    sget-object v4, Lsnb;->c:Lsnb;
-
-    invoke-direct {v2, v3, v4}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v3, Lysb;
-
-    const/4 v4, 0x3
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    sget-object v5, Lsnb;->d:Lsnb;
-
-    invoke-direct {v3, v4, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v4, Lysb;
-
-    const/4 v5, 0x4
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    sget-object v6, Lsnb;->o:Lsnb;
-
-    invoke-direct {v4, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v5, Lysb;
-
-    const/4 v6, 0x5
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    sget-object v7, Lsnb;->X:Lsnb;
-
-    invoke-direct {v5, v6, v7}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array/range {v0 .. v5}, [Lysb;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lpoj;->b([Lysb;)Lizb;
+    const-string v1, "g15"
 
-    move-result-object v0
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lg15;->a:Lizb;
+    iget-object v0, p0, Lg15;->a:Lo58;
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    cmp-long v5, v5, v2
+
+    if-eqz v5, :cond_0
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lxg2;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {p2, v5, v6}, Lxg2;->K(J)Lnd2;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    cmp-long p1, v5, v2
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxg2;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {p1, v5, v6}, Lxg2;->Q(J)Lnd2;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_1
+    move-object p1, v4
+
+    :goto_0
+    if-nez p1, :cond_2
+
+    const-string p1, "Chat is null. Ignore"
+
+    invoke-static {v1, p1}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_2
+    iget-object p2, p1, Lnd2;->b:Luh2;
+
+    iget-object p2, p2, Luh2;->d0:Lgab;
+
+    if-nez p2, :cond_3
+
+    const-string p1, "draft is null, ignore"
+
+    invoke-static {v1, p1, v4}, Lc5j;->i(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p2}, Lgab;->a()Ljava/lang/Long;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_4
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    :cond_4
+    cmp-long p2, v2, p3
+
+    if-lez p2, :cond_5
+
+    const-string p1, "try to rewrite draft by old, ignore it!"
+
+    invoke-static {v1, p1}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_5
+    const-string p2, "Discard server draft"
+
+    invoke-static {v1, p2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lxg2;
+
+    iget-wide p3, p1, Lnd2;->a:J
+
+    invoke-virtual {p2, p3, p4}, Lxg2;->A(J)V
 
     return-void
 .end method

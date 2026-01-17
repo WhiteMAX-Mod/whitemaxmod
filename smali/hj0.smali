@@ -7,14 +7,14 @@
 .method public abstract b()I
 .end method
 
-.method public abstract e()Landroid/graphics/Rect;
+.method public abstract c()Landroid/graphics/Rect;
 .end method
 
-.method public abstract f()Ljava/lang/String;
-.end method
-
-.method public abstract g()[Landroid/graphics/Point;
+.method public abstract g()Ljava/lang/String;
 .end method
 
 .method public abstract getFormat()I
+.end method
+
+.method public abstract k()[Landroid/graphics/Point;
 .end method

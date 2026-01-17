@@ -1,81 +1,129 @@
 .class public final Lep8;
-.super Ljava/lang/Object;
+.super Lzcf;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/util/Set;
+.field public final o:Lqs9;
 
 
-# virtual methods
-.method public final a()V
-    .locals 2
+# direct methods
+.method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;Lqs9;)V
+    .locals 0
 
-    iget-object v0, p0, Lep8;->a:Ljava/util/Set;
+    invoke-direct {p0, p1}, Lzcf;-><init>(Ljava/util/concurrent/Executor;)V
 
-    if-nez v0, :cond_0
+    iput-object p2, p0, Lep8;->o:Lqs9;
 
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ldp8;
-
-    invoke-interface {v1}, Ldp8;->c()V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
     return-void
 .end method
 
-.method public final b()V
-    .locals 2
 
-    iget-object v0, p0, Lep8;->a:Ljava/util/Set;
+# virtual methods
+.method public final u(Landroid/view/ViewGroup;I)Ltsd;
+    .locals 5
 
-    if-nez v0, :cond_0
+    new-instance p2, Lco0;
 
-    goto :goto_1
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    move-result-object p1
 
-    move-result-object v0
+    new-instance v0, Landroid/widget/TextView;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    move-result v1
+    invoke-direct {p2, v0}, Lco0;-><init>(Landroid/view/View;)V
 
-    if-eqz v1, :cond_1
+    const/4 p1, 0x6
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    check-cast v1, Ldp8;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-interface {v1}, Ldp8;->f()V
+    move-result-object v1
 
-    goto :goto_0
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_1
-    :goto_1
-    return-void
+    mul-float/2addr p1, v1
+
+    invoke-static {p1}, Lq7j;->c(F)I
+
+    move-result p1
+
+    const/16 v1, 0x8
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    new-instance v2, Lesd;
+
+    const/4 v3, -0x2
+
+    const/4 v4, -0x1
+
+    invoke-direct {v2, v3, v4}, Lesd;-><init>(II)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v0, v1, p1, v1, p1}, Landroid/widget/TextView;->setPaddingRelative(IIII)V
+
+    sget-object p1, Lr1h;->H:Lrhg;
+
+    invoke-static {p1, v0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+
+    new-instance p1, Ltk6;
+
+    const/16 v1, 0x9
+
+    iget-object v2, p0, Lep8;->o:Lqs9;
+
+    invoke-direct {p1, p2, v1, v2}, Ltk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v0, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    const/16 p1, 0x10
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setGravity(I)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setMaxLines(I)V
+
+    sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    new-instance p1, Lu9;
+
+    const/4 v1, 0x3
+
+    const/16 v2, 0x19
+
+    const/4 v3, 0x0
+
+    invoke-direct {p1, v1, v3, v2}, Lu9;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p1, v0}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+
+    return-object p2
 .end method

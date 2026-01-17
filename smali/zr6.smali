@@ -2,10 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lf76;
-
 
 # virtual methods
-.method public abstract f(Lrb4;II)Lf76;
+.method public abstract a(Ljava/lang/Object;)V
+.end method
+
+.method public abstract onFailure(Ljava/lang/Throwable;)V
 .end method

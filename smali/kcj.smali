@@ -1,78 +1,130 @@
-.class public abstract Lkcj;
+.class public final Lkcj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lkcj;
+
 
 # direct methods
-.method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Lkcj;
 
-    if-eq p0, p1, :cond_1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    sput-object v0, Lkcj;->a:Lkcj;
 
-    if-eqz p0, :cond_0
+    new-instance v0, Lvzi;
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 v1, 0x1
 
-    move-result p0
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    if-eqz p0, :cond_0
+    const-class v1, Ln0j;
 
-    return v0
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    :cond_0
-    return v1
+    move-result-object v0
 
-    :cond_1
-    return v0
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x9
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static final b(Lrb4;Ljava/lang/Object;Ljava/lang/Object;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 1
 
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Lrb4;Ljava/lang/Object;)Ljava/lang/Object;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-object p2
-
-    :try_start_0
-    new-instance v0, Lxkf;
-
-    invoke-direct {v0, p0, p4}, Lxkf;-><init>(Lrb4;Lkotlin/coroutines/Continuation;)V
-
-    if-nez p3, :cond_0
-
-    invoke-static {p3, p1, v0}, Lv0j;->i(Lcr6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p4, 0x2
-
-    invoke-static {p4, p3}, La1h;->f(ILjava/lang/Object;)V
-
-    invoke-interface {p3, p1, v0}, Lcr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lrb4;Ljava/lang/Object;)V
-
-    return-object p1
-
-    :goto_1
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lrb4;Ljava/lang/Object;)V
 
     throw p1
 .end method

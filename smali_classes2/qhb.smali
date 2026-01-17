@@ -1,35 +1,19 @@
-.class public interface abstract Lqhb;
+.class public abstract Lqhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public L(Ljava/lang/CharSequence;)V
-    .locals 0
+# static fields
+.field public static final a:I
 
-    return-void
-.end method
 
-.method public c0()V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    return-void
-.end method
+    sget v0, Lmed;->oneme_snackbar_cancel_btn_title:I
 
-.method public f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o()V
-    .locals 0
+    sput v0, Lqhb;->a:I
 
     return-void
 .end method

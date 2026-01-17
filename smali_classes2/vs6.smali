@@ -1,5 +1,5 @@
 .class public final Lvs6;
-.super Lys6;
+.super Lws6;
 .source "SourceFile"
 
 
@@ -24,20 +24,16 @@
 
 .field public static final n:Ljava/lang/String;
 
-.field public static final o:Ljava/lang/String;
-
-.field public static final p:Ljava/lang/String;
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     new-instance v0, Lvs6;
 
-    const-string v1, "\n              _size > 0\n              AND\n              (\n                media_type = 1\n                OR\n                media_type = 3\n              )\n            "
+    const-string v1, "_size > 0"
 
-    invoke-direct {v0, v1}, Lys6;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lws6;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lvs6;->e:Lvs6;
 
@@ -45,11 +41,11 @@
 
     const/16 v1, 0x1d
 
-    const-string v2, "external"
-
     if-lt v0, v1, :cond_1
 
-    invoke-static {v2}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+    const-string v0, "external"
+
+    invoke-static {v0}, Landroid/provider/MediaStore$Video$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -60,16 +56,14 @@
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "no content uri for MediaStore.Files"
+    const-string v1, "no content uri for MediaStore.Video.Media"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_1
-    invoke-static {v2}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
+    sget-object v0, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     :goto_0
     sput-object v0, Lvs6;->f:Landroid/net/Uri;
@@ -98,21 +92,13 @@
 
     sput-object v0, Lvs6;->l:Ljava/lang/String;
 
-    const-string v0, "orientation"
+    const-string v0, "duration"
 
     sput-object v0, Lvs6;->m:Ljava/lang/String;
 
-    const-string v0, "duration"
+    const-string v0, "video/mp4"
 
     sput-object v0, Lvs6;->n:Ljava/lang/String;
-
-    const-string v0, "media_type"
-
-    sput-object v0, Lvs6;->o:Ljava/lang/String;
-
-    const-string v0, "unknown"
-
-    sput-object v0, Lvs6;->p:Ljava/lang/String;
 
     return-void
 .end method
@@ -154,7 +140,7 @@
 .method public final e()Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lvs6;->n:Ljava/lang/String;
+    sget-object v0, Lvs6;->m:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -167,26 +153,10 @@
     return-object v0
 .end method
 
-.method public final g()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lvs6;->o:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public final h()Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lvs6;->l:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final i()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lvs6;->m:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -202,7 +172,7 @@
 .method public final k()Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lvs6;->p:Ljava/lang/String;
+    sget-object v0, Lvs6;->n:Ljava/lang/String;
 
     return-object v0
 .end method

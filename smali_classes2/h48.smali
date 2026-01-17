@@ -1,183 +1,137 @@
-.class public final Lh48;
-.super Lb5g;
+.class public final enum Lh48;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
+
+# static fields
+.field public static final enum X:Lh48;
+
+.field public static final enum Y:Lh48;
+
+.field public static final enum Z:Lh48;
+
+.field public static final d:Ltna;
+
+.field public static final o:Ljava/util/List;
+
+.field public static final synthetic t0:[Lh48;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
+.field public final a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p2, p0, Lh48;->X:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
+    new-instance v0, Lh48;
 
-    const/4 p2, 0x2
+    sget v1, Lpcb;->r:I
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    const-string v3, "STICKERS"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, v2, v3, v1, v4}, Lh48;-><init>(ILjava/lang/String;II)V
+
+    sput-object v0, Lh48;->X:Lh48;
+
+    new-instance v1, Lh48;
+
+    sget v2, Lpcb;->p:I
+
+    const-string v3, "EMOJI"
+
+    const/4 v5, 0x2
+
+    invoke-direct {v1, v4, v3, v2, v5}, Lh48;-><init>(ILjava/lang/String;II)V
+
+    sput-object v1, Lh48;->Y:Lh48;
+
+    new-instance v2, Lh48;
+
+    sget v3, Lpcb;->q:I
+
+    const/4 v4, 0x3
+
+    const-string v6, "GIFS"
+
+    invoke-direct {v2, v5, v6, v3, v4}, Lh48;-><init>(ILjava/lang/String;II)V
+
+    sput-object v2, Lh48;->Z:Lh48;
+
+    filled-new-array {v0, v1, v2}, [Lh48;
+
+    move-result-object v2
+
+    sput-object v2, Lh48;->t0:[Lh48;
+
+    new-instance v2, Ltna;
+
+    const/16 v3, 0x17
+
+    invoke-direct {v2, v3}, Ltna;-><init>(I)V
+
+    sput-object v2, Lh48;->d:Ltna;
+
+    filled-new-array {v0, v1}, [Lh48;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lh48;->o:Ljava/util/List;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(ILjava/lang/String;II)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0, p2, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1, p2}, Lh48;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput p3, p0, Lh48;->a:I
 
-    move-result-object p1
+    iput p4, p0, Lh48;->b:I
 
-    check-cast p1, Lh48;
+    iput p3, p0, Lh48;->c:I
 
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lh48;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lh48;
+    .locals 1
 
-    new-instance v0, Lh48;
+    const-class v0, Lh48;
 
-    iget-object v1, p0, Lh48;->X:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, p2, v1}, Lh48;-><init>(Lkotlin/coroutines/Continuation;Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;)V
+    move-result-object p0
 
-    iput-object p1, v0, Lh48;->o:Ljava/lang/Object;
+    check-cast p0, Lh48;
+
+    return-object p0
+.end method
+
+.method public static values()[Lh48;
+    .locals 1
+
+    sget-object v0, Lh48;->t0:[Lh48;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lh48;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lh48;->o:Ljava/lang/Object;
-
-    check-cast p1, Li59;
-
-    instance-of v0, p1, Lf59;
-
-    iget-object v1, p0, Lh48;->X:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
-
-    if-eqz v0, :cond_3
-
-    sget-object p1, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->s0:[Lp38;
-
-    invoke-virtual {v1}, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->C0()Lqg5;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lqg5;->u0:Lhof;
-
-    invoke-virtual {p1}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lng5;
-
-    iget-object v1, v0, Lng5;->a:Ljava/util/List;
-
-    iget-object v0, v0, Lng5;->b:Ljava/util/List;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    const/16 v3, 0xa
-
-    invoke-static {v0, v3}, Lgi3;->n(Ljava/lang/Iterable;I)I
-
-    move-result v3
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lie8;
-
-    instance-of v5, v3, Llf5;
-
-    if-eqz v5, :cond_0
-
-    move-object v4, v3
-
-    check-cast v4, Llf5;
-
-    :cond_0
-    if-eqz v4, :cond_1
-
-    const/4 v3, 0x1
-
-    const/16 v5, 0x3f
-
-    const/4 v6, 0x0
-
-    invoke-static {v4, v6, v6, v3, v5}, Llf5;->l(Llf5;IIZI)Llf5;
-
-    move-result-object v3
-
-    :cond_1
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v0, Lng5;
-
-    invoke-direct {v0, v1, v2}, Lng5;-><init>(Ljava/util/List;Ljava/util/List;)V
-
-    invoke-virtual {p1, v4, v0}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_3
-    instance-of v0, p1, Ld59;
-
-    if-eqz v0, :cond_4
-
-    sget-object v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->s0:[Lp38;
-
-    invoke-virtual {v1}, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->C0()Lqg5;
-
-    move-result-object v0
-
-    check-cast p1, Ld59;
-
-    iget-object p1, p1, Ld59;->a:Ljava/lang/CharSequence;
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, p1, v1}, Lqg5;->t(Ljava/lang/CharSequence;Ljava/lang/Boolean;)V
-
-    :cond_4
-    :goto_1
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
 .end method

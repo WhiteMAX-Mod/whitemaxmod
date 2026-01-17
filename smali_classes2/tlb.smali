@@ -1,92 +1,85 @@
-.class public final Ltlb;
-.super Ljava/lang/Object;
+.class public final enum Ltlb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
+# static fields
+.field public static final enum a:Ltlb;
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final enum b:Ltlb;
 
-.field public final b:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public static final enum c:Ltlb;
 
-.field public final c:I
-
-.field public final d:Ljjg;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static final synthetic d:[Ltlb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Thread$UncaughtExceptionHandler;ILjjg;Lrxf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltlb;
 
-    iput-object p1, p0, Ltlb;->a:Ljava/lang/String;
+    const-string v1, "ERROR"
 
-    iput-object p2, p0, Ltlb;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+    const/4 v2, 0x0
 
-    iput p3, p0, Ltlb;->c:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p4, p0, Ltlb;->d:Ljjg;
+    sput-object v0, Ltlb;->a:Ltlb;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v1, Ltlb;
 
-    const/4 p2, 0x1
+    const-string v2, "HINT"
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    const/4 v3, 0x1
 
-    iput-object p1, p0, Ltlb;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, La9b;
+    sput-object v1, Ltlb;->b:Ltlb;
 
-    const/4 p2, 0x3
+    new-instance v2, Ltlb;
 
-    invoke-direct {p1, p2}, La9b;-><init>(I)V
+    const-string v3, "DESCRIPTION"
 
-    new-instance p2, Lz7g;
+    const/4 v4, 0x2
 
-    invoke-direct {p2, p1}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ltlb;->c:Ltlb;
+
+    filled-new-array {v0, v1, v2}, [Ltlb;
+
+    move-result-object v0
+
+    sput-object v0, Ltlb;->d:[Ltlb;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ltlb;
+    .locals 1
 
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
+    const-class v0, Ltlb;
 
-    iget-object v0, p0, Ltlb;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    move-result-object p0
 
-    move-result v0
+    check-cast p0, Ltlb;
 
-    const-string v1, "-"
+    return-object p0
+.end method
 
-    iget-object v2, p0, Ltlb;->a:Ljava/lang/String;
+.method public static values()[Ltlb;
+    .locals 1
 
-    invoke-static {v0, v2, v1}, Lxd0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sget-object v0, Ltlb;->d:[Ltlb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Lslb;
+    check-cast v0, [Ltlb;
 
-    invoke-direct {v1, p1, v0}, Lslb;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    iget-object p1, p0, Ltlb;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
-
-    iget p1, p0, Ltlb;->c:I
-
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
-
-    iget-object p1, p0, Ltlb;->d:Ljjg;
-
-    iput-object p1, v1, Lslb;->b:Ljava/lang/Object;
-
-    return-object v1
+    return-object v0
 .end method

@@ -1,141 +1,234 @@
 .class public final Lg2c;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Ljava/io/Externalizable;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+.field public X:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public a:Z
+
+.field public b:Ljava/lang/String;
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p2, p0, Lg2c;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    const-string v0, ""
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lg2c;->b:Ljava/lang/String;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lg2c;->c:Ljava/util/ArrayList;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lg2c;->d:Ljava/util/ArrayList;
+
+    iput-object v0, p0, Lg2c;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final readExternal(Ljava/io/ObjectInput;)V
+    .locals 6
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
 
-    invoke-virtual {p0, p1, p2}, Lg2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    const/4 v1, 0x1
 
-    check-cast p1, Lg2c;
+    if-eqz v0, :cond_0
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lg2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    return-object p2
-.end method
+    iput-boolean v1, p0, Lg2c;->a:Z
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iput-object v0, p0, Lg2c;->b:Ljava/lang/String;
 
-    new-instance v0, Lg2c;
+    :cond_0
+    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
 
-    iget-object v1, p0, Lg2c;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+    move-result v0
 
-    invoke-direct {v0, p2, v1}, Lg2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+    const/4 v2, 0x0
 
-    iput-object p1, v0, Lg2c;->o:Ljava/lang/Object;
+    move v3, v2
 
-    return-object v0
-.end method
+    :goto_0
+    if-ge v3, v0, :cond_1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    move-result v4
 
-    iget-object p1, p0, Lg2c;->o:Ljava/lang/Object;
-
-    check-cast p1, Llr2;
-
-    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->o:[Lp38;
-
-    iget v0, p1, Llr2;->a:I
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lg2c;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->C0()Lat2;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Ljava/lang/String;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-virtual {v1, v2, v3, v4}, Lat2;->E(JLjava/lang/String;)Ly49;
+    iget-object v5, p0, Lg2c;->c:Ljava/util/ArrayList;
 
-    move-result-object v1
+    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    instance-of v2, v1, Lq49;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Lq49;
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x0
+    :cond_1
+    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
 
-    :goto_0
-    if-nez v1, :cond_1
+    move-result v0
+
+    :goto_1
+    if-ge v2, v0, :cond_2
+
+    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lg2c;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
+    :cond_2
+    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-boolean v1, p0, Lg2c;->o:Z
+
+    iput-object p1, p0, Lg2c;->X:Ljava/lang/String;
+
+    :cond_3
+    return-void
+.end method
+
+.method public final writeExternal(Ljava/io/ObjectOutput;)V
+    .locals 4
+
+    iget-boolean v0, p0, Lg2c;->a:Z
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+
+    iget-boolean v0, p0, Lg2c;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lg2c;->b:Ljava/lang/String;
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Lg2c;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    iget-object v3, p0, Lg2c;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-interface {p1, v3}, Ljava/io/DataOutput;->writeInt(I)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
     :cond_1
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Ld2c;
+    iget-object v0, p0, Lg2c;->d:Ljava/util/ArrayList;
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    iget p1, p1, Llr2;->b:F
+    move-result v2
 
-    invoke-virtual {v2, p1}, Ld2c;->setImageRotation(F)V
+    invoke-interface {p1, v2}, Ljava/io/DataOutput;->writeInt(I)V
 
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Ld2c;
+    :goto_1
+    if-ge v1, v2, :cond_2
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    iget-object v1, v1, Lq49;->d:Lsh7;
+    move-result-object v3
 
-    const/4 v2, 0x1
+    check-cast v3, Ljava/lang/Integer;
 
-    invoke-virtual {p1, v1, v2}, Ld2c;->k(Lsh7;Z)V
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Ld2c;
+    move-result v3
 
-    move-result-object p1
+    invoke-interface {p1, v3}, Ljava/io/DataOutput;->writeInt(I)V
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
 
     :cond_2
-    :goto_1
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget-boolean v0, p0, Lg2c;->o:Z
 
-    return-object p1
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+
+    iget-boolean v0, p0, Lg2c;->o:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lg2c;->X:Ljava/lang/String;
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+
+    :cond_3
+    return-void
 .end method

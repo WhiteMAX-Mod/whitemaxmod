@@ -1,51 +1,23 @@
-.class public final Lx0;
-.super Ll84;
+.class public abstract Lx0;
+.super Lpa6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lt6e;
-
-.field public Y:I
-
-.field public d:Lp6e;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lpa6;
 
 
 # direct methods
-.method public constructor <init>(Lt6e;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lx0;->X:Lt6e;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lpa6;)V
     .locals 1
 
-    iput-object p1, p0, Lx0;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lx0;->Y:I
+    const-string v0, "source is null"
 
-    const/high16 v0, -0x80000000
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    iput-object p1, p0, Lx0;->b:Lpa6;
 
-    iput p1, p0, Lx0;->Y:I
-
-    iget-object p1, p0, Lx0;->X:Lt6e;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lt6e;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

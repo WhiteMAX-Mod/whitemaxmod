@@ -1,73 +1,354 @@
-.class public final enum Lcnd;
-.super Ljava/lang/Enum;
+.class public final Lcnd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lcnd;
+# instance fields
+.field public final a:I
 
-.field public static final enum b:Lcnd;
+.field public final b:J
 
-.field public static final synthetic c:[Lcnd;
+.field public final c:J
+
+.field public final d:Ll2c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lah2;)V
+    .locals 2
 
-    new-instance v0, Lcnd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "VIDEO_MSG"
+    iget v0, p1, Lah2;->a:I
 
-    const/4 v2, 0x0
+    iput v0, p0, Lcnd;->a:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-wide v0, p1, Lah2;->b:J
 
-    sput-object v0, Lcnd;->a:Lcnd;
+    iput-wide v0, p0, Lcnd;->b:J
 
-    new-instance v1, Lcnd;
+    iget-wide v0, p1, Lah2;->c:J
 
-    const-string v2, "AUDIO_MSG"
+    iput-wide v0, p0, Lcnd;->c:J
 
-    const/4 v3, 0x1
+    iget-object p1, p1, Lah2;->d:Ljava/io/Serializable;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    check-cast p1, Ll2c;
 
-    sput-object v1, Lcnd;->b:Lcnd;
-
-    filled-new-array {v0, v1}, [Lcnd;
-
-    move-result-object v0
-
-    sput-object v0, Lcnd;->c:[Lcnd;
+    iput-object p1, p0, Lcnd;->d:Ll2c;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcnd;
-    .locals 1
+.method public static a(Lpq9;)Lcnd;
+    .locals 14
 
-    const-class v0, Lcnd;
+    invoke-static {p0}, Lcti;->o(Lpq9;)I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-result v0
 
-    move-result-object p0
+    const/4 v1, 0x0
 
-    check-cast p0, Lcnd;
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    new-instance v2, Lah2;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_0
+    if-ge v4, v0, :cond_a
+
+    invoke-virtual {p0}, Lpq9;->O0()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
+
+    move-result v6
+
+    const/4 v7, 0x2
+
+    const/4 v8, 0x3
+
+    const/4 v9, 0x1
+
+    const/4 v10, -0x1
+
+    sparse-switch v6, :sswitch_data_0
+
+    goto :goto_1
+
+    :sswitch_0
+    const-string v6, "stickerId"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v10, v8
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v6, "type"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v10, v7
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v6, "gif"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move v10, v9
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v6, "id"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    move v10, v3
+
+    :goto_1
+    packed-switch v10, :pswitch_data_0
+
+    invoke-virtual {p0}, Lpq9;->B()V
+
+    goto :goto_5
+
+    :pswitch_0
+    const-wide/16 v5, 0x0
+
+    invoke-static {p0, v5, v6}, Lcti;->n(Lpq9;J)J
+
+    move-result-wide v5
+
+    iput-wide v5, v2, Lah2;->c:J
+
+    goto :goto_5
+
+    :pswitch_1
+    invoke-static {p0}, Lcti;->q(Lpq9;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v8}, Lt02;->w(I)[I
+
+    move-result-object v6
+
+    array-length v10, v6
+
+    move v11, v3
+
+    :goto_2
+    if-ge v11, v10, :cond_9
+
+    aget v12, v6, v11
+
+    if-eq v12, v9, :cond_7
+
+    if-eq v12, v7, :cond_6
+
+    if-ne v12, v8, :cond_5
+
+    const-string v13, "GIF"
+
+    goto :goto_3
+
+    :cond_5
+    throw v1
+
+    :cond_6
+    const-string v13, "STICKER"
+
+    goto :goto_3
+
+    :cond_7
+    const-string v13, "UNKNOWN"
+
+    :goto_3
+    invoke-virtual {v13, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_8
+
+    move v9, v12
+
+    goto :goto_4
+
+    :cond_8
+    add-int/lit8 v11, v11, 0x1
+
+    goto :goto_2
+
+    :cond_9
+    :goto_4
+    iput v9, v2, Lah2;->a:I
+
+    goto :goto_5
+
+    :pswitch_2
+    invoke-static {p0}, Ljz;->b(Lpq9;)Ljz;
+
+    move-result-object v5
+
+    check-cast v5, Ll2c;
+
+    iput-object v5, v2, Lah2;->d:Ljava/io/Serializable;
+
+    goto :goto_5
+
+    :pswitch_3
+    invoke-virtual {p0}, Lpq9;->L0()J
+
+    move-result-wide v5
+
+    iput-wide v5, v2, Lah2;->b:J
+
+    :goto_5
+    add-int/lit8 v4, v4, 0x1
+
+    goto/16 :goto_0
+
+    :cond_a
+    new-instance p0, Lcnd;
+
+    invoke-direct {p0, v2}, Lcnd;-><init>(Lah2;)V
 
     return-object p0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0xd1b -> :sswitch_3
+        0x18fc4 -> :sswitch_2
+        0x368f3a -> :sswitch_1
+        0xe37b738 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Lcnd;
-    .locals 1
 
-    sget-object v0, Lcnd;->c:[Lcnd;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RecentItem{type="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lcnd;->a:I
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "GIF"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "STICKER"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "UNKNOWN"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", id="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcnd;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", stickerId="
+
+    const-string v2, ", gif="
+
+    iget-wide v3, p0, Lcnd;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Lcnd;->d:Ll2c;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lcnd;
 
     return-object v0
 .end method

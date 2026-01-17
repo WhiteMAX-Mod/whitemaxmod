@@ -1,27 +1,21 @@
 .class public final Lawa;
-.super Lbwa;
+.super Lcwa;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:Z
+.field public final d:Ly95;
 
 
 # direct methods
-.method public constructor <init>(JJZJ)V
-    .locals 7
+.method public constructor <init>(JJJLy95;)V
+    .locals 0
 
-    move-object v0, p0
+    invoke-direct/range {p0 .. p6}, Lcwa;-><init>(JJJ)V
 
-    move-wide v1, p1
+    move-object p1, p0
 
-    move-wide v3, p3
-
-    move-wide v5, p6
-
-    invoke-direct/range {v0 .. v6}, Lbwa;-><init>(JJJ)V
-
-    iput-boolean p5, v0, Lawa;->d:Z
+    iput-object p7, p1, Lawa;->d:Ly95;
 
     return-void
 .end method

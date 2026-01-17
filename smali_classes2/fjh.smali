@@ -1,60 +1,71 @@
-.class public final synthetic Lfjh;
-.super Ljava/lang/Object;
+.class public final Lfjh;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lmq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lmw4;
 
-.field public final synthetic b:Lojh;
+.field public Y:Ljava/lang/String;
+
+.field public Z:Lpoh;
+
+.field public d:J
+
+.field public o:J
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lhjh;
+
+.field public v0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lojh;I)V
+.method public constructor <init>(Lhjh;Lo84;)V
     .locals 0
 
-    iput p2, p0, Lfjh;->a:I
+    iput-object p1, p0, Lfjh;->u0:Lhjh;
 
-    iput-object p1, p0, Lfjh;->b:Lojh;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    iget v0, p0, Lfjh;->a:I
+    iput-object p1, p0, Lfjh;->t0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lfjh;->v0:I
 
-    iget-object v0, p0, Lfjh;->b:Lojh;
+    const/high16 v0, -0x80000000
 
-    invoke-static {v0}, Lojh;->a(Lojh;)Lgjh;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lfjh;->v0:I
 
-    return-object v0
+    const/4 v7, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lfjh;->b:Lojh;
+    const/4 v8, 0x0
 
-    invoke-static {v0}, Lojh;->e(Lojh;)Lgjh;
+    iget-object v0, p0, Lfjh;->u0:Lhjh;
 
-    move-result-object v0
+    const-wide/16 v1, 0x0
 
-    return-object v0
+    const-wide/16 v3, 0x0
 
-    nop
+    const/4 v5, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 v6, 0x0
+
+    move-object v9, p0
+
+    invoke-virtual/range {v0 .. v9}, Lhjh;->b(JJLmw4;Ljava/lang/String;Llmh;Lpoh;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

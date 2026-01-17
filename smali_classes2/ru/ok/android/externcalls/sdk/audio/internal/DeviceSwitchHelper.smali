@@ -28,10 +28,10 @@
         "",
         "logTag",
         "Lkotlin/Function1;",
-        "Lv2h;",
+        "Lb3h;",
         "applyDevice",
         "<init>",
-        "(ZLru/ok/android/externcalls/sdk/audio/Logger;Ljava/lang/String;Loq6;)V",
+        "(ZLru/ok/android/externcalls/sdk/audio/Logger;Ljava/lang/String;Lnq6;)V",
         "device",
         "onDeviceSwitchRequested",
         "(Ljava/lang/Object;)V",
@@ -40,7 +40,7 @@
         "Z",
         "Lru/ok/android/externcalls/sdk/audio/Logger;",
         "Ljava/lang/String;",
-        "Loq6;",
+        "Lnq6;",
         "pendingAudioDevice",
         "Ljava/lang/Object;",
         "ongoingAudioDevice",
@@ -57,10 +57,10 @@
 
 
 # instance fields
-.field private final applyDevice:Loq6;
+.field private final applyDevice:Lnq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loq6;"
+            "Lnq6;"
         }
     .end annotation
 .end field
@@ -89,14 +89,14 @@
 
 
 # direct methods
-.method public constructor <init>(ZLru/ok/android/externcalls/sdk/audio/Logger;Ljava/lang/String;Loq6;)V
+.method public constructor <init>(ZLru/ok/android/externcalls/sdk/audio/Logger;Ljava/lang/String;Lnq6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
             "Lru/ok/android/externcalls/sdk/audio/Logger;",
             "Ljava/lang/String;",
-            "Loq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -109,7 +109,7 @@
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/audio/internal/DeviceSwitchHelper;->logTag:Ljava/lang/String;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/audio/internal/DeviceSwitchHelper;->applyDevice:Loq6;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/audio/internal/DeviceSwitchHelper;->applyDevice:Lnq6;
 
     return-void
 .end method
@@ -128,9 +128,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/DeviceSwitchHelper;->applyDevice:Loq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/DeviceSwitchHelper;->applyDevice:Lnq6;
 
-    invoke-interface {v0, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -338,9 +338,9 @@
 
     iput-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/DeviceSwitchHelper;->ongoingAudioDevice:Ljava/lang/Object;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/DeviceSwitchHelper;->applyDevice:Loq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/DeviceSwitchHelper;->applyDevice:Lnq6;
 
-    invoke-interface {v0, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

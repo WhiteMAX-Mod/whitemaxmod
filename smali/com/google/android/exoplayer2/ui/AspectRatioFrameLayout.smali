@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field public final a:Lmt;
+.field public final a:Lnt;
 
 .field public b:F
 
@@ -31,14 +31,14 @@
 
     move-result-object p1
 
-    sget-object v1, Lcfd;->AspectRatioFrameLayout:[I
+    sget-object v1, Lagd;->AspectRatioFrameLayout:[I
 
     invoke-virtual {p1, p2, v1, v0, v0}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     :try_start_0
-    sget p2, Lcfd;->AspectRatioFrameLayout_resize_mode:I
+    sget p2, Lagd;->AspectRatioFrameLayout_resize_mode:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -61,11 +61,11 @@
 
     :cond_0
     :goto_0
-    new-instance p1, Lmt;
+    new-instance p1, Lnt;
 
-    invoke-direct {p1, p0}, Lmt;-><init>(Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;)V
+    invoke-direct {p1, p0}, Lnt;-><init>(Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;)V
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->a:Lmt;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->a:Lnt;
 
     return-void
 .end method
@@ -128,17 +128,17 @@
 
     const/4 v5, 0x1
 
-    iget-object v6, p0, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->a:Lmt;
+    iget-object v6, p0, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->a:Lnt;
 
     if-gtz v3, :cond_2
 
-    iget-boolean p1, v6, Lmt;->b:Z
+    iget-boolean p1, v6, Lnt;->b:Z
 
     if-nez p1, :cond_1
 
-    iput-boolean v5, v6, Lmt;->b:Z
+    iput-boolean v5, v6, Lnt;->b:Z
 
-    iget-object p1, v6, Lmt;->c:Ljava/lang/Object;
+    iget-object p1, v6, Lnt;->c:Ljava/lang/Object;
 
     check-cast p1, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
@@ -214,13 +214,13 @@
     goto :goto_1
 
     :goto_3
-    iget-boolean p2, v6, Lmt;->b:Z
+    iget-boolean p2, v6, Lnt;->b:Z
 
     if-nez p2, :cond_9
 
-    iput-boolean v5, v6, Lmt;->b:Z
+    iput-boolean v5, v6, Lnt;->b:Z
 
-    iget-object p2, v6, Lmt;->c:Ljava/lang/Object;
+    iget-object p2, v6, Lnt;->c:Ljava/lang/Object;
 
     check-cast p2, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
@@ -259,7 +259,7 @@
     return-void
 .end method
 
-.method public setAspectRatioListener(Llt;)V
+.method public setAspectRatioListener(Lmt;)V
     .locals 0
 
     return-void

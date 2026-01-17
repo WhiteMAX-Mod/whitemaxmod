@@ -1,86 +1,94 @@
 .class public final Lnf8;
-.super Ljava/util/AbstractSequentialList;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final h:Ljava/util/concurrent/atomic/AtomicLong;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final a:J
 
-.field public final b:Lyq6;
+.field public final b:Lzi4;
+
+.field public final c:Landroid/net/Uri;
+
+.field public final d:Ljava/util/Map;
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:J
 
 
 # direct methods
-.method public constructor <init>(Lyq6;Ljava/util/List;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    sput-object v0, Lnf8;->h:Ljava/util/concurrent/atomic/AtomicLong;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLzi4;J)V
+    .locals 12
+
+    .line 1
+    iget-object v4, p3, Lzi4;->a:Landroid/net/Uri;
+
+    .line 2
+    sget-object v5, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    const-wide/16 v8, 0x0
+
+    const-wide/16 v10, 0x0
+
+    move-object v0, p0
+
+    move-wide v1, p1
+
+    move-object v3, p3
+
+    move-wide/from16 v6, p4
+
+    .line 3
+    invoke-direct/range {v0 .. v11}, Lnf8;-><init>(JLzi4;Landroid/net/Uri;Ljava/util/Map;JJJ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JLzi4;Landroid/net/Uri;Ljava/util/Map;JJJ)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractSequentialList;-><init>()V
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 5
+    iput-wide p1, p0, Lnf8;->a:J
 
-    iput-object p2, p0, Lnf8;->a:Ljava/util/List;
+    .line 6
+    iput-object p3, p0, Lnf8;->b:Lzi4;
 
-    iput-object p1, p0, Lnf8;->b:Lyq6;
+    .line 7
+    iput-object p4, p0, Lnf8;->c:Landroid/net/Uri;
 
-    return-void
-.end method
+    .line 8
+    iput-object p5, p0, Lnf8;->d:Ljava/util/Map;
 
+    .line 9
+    iput-wide p6, p0, Lnf8;->e:J
 
-# virtual methods
-.method public final isEmpty()Z
-    .locals 1
+    .line 10
+    iput-wide p8, p0, Lnf8;->f:J
 
-    iget-object v0, p0, Lnf8;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 2
-
-    new-instance v0, Llf8;
-
-    iget-object v1, p0, Lnf8;->a:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, p1, v1}, Llf8;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
-
-    return-object v0
-.end method
-
-.method public final removeRange(II)V
-    .locals 1
-
-    iget-object v0, p0, Lnf8;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->clear()V
+    .line 11
+    iput-wide p10, p0, Lnf8;->g:J
 
     return-void
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Lnf8;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
 .end method

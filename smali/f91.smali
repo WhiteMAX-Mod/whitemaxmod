@@ -1,24 +1,28 @@
 .class public final Lf91;
-.super Ljava/lang/Object;
+.super Llwh;
 .source "SourceFile"
 
 # interfaces
-.implements Ll91;
+.implements Lh91;
 
 
 # static fields
-.field public static final a:Lf91;
+.field public static final c:Lf91;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     new-instance v0, Lf91;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget v1, Ledd;->call_screen_bad_connection:I
 
-    sput-object v0, Lf91;->a:Lf91;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Llwh;-><init>(Ljava/lang/Long;I)V
+
+    sput-object v0, Lf91;->c:Lf91;
 
     return-void
 .end method
@@ -50,7 +54,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x6cbb84b4
+    const v0, 0x13d36bde
 
     return v0
 .end method
@@ -58,7 +62,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Failed"
+    const-string v0, "Degraded"
 
     return-object v0
 .end method

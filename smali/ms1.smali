@@ -1,29 +1,28 @@
-.class public interface abstract Lms1;
+.class public final Lms1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lls1;
 
-# virtual methods
-.method public e()V
-    .locals 0
 
-    return-void
-.end method
+# instance fields
+.field public final a:Ljava/util/LinkedHashSet;
 
-.method public k()V
-    .locals 0
+.field public b:Lgbh;
 
-    return-void
-.end method
 
-.method public l()V
-    .locals 0
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public onCallAccepted()V
-    .locals 0
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iput-object v0, p0, Lms1;->a:Ljava/util/LinkedHashSet;
 
     return-void
 .end method

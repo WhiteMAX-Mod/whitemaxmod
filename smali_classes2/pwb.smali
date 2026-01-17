@@ -1,216 +1,229 @@
-.class public final Lpwb;
+.class public final synthetic Lpwb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashMap;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lfxb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/LinkedHashMap;)V
+.method public synthetic constructor <init>(Lfxb;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lpwb;->a:I
 
-    iput-object p1, p0, Lpwb;->a:Ljava/util/LinkedHashMap;
+    iput-object p1, p0, Lpwb;->b:Lfxb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(Lorg/json/JSONObject;)Lpwb;
-    .locals 14
-
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    invoke-virtual {p0}, Lorg/json/JSONObject;->names()Lorg/json/JSONArray;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lorg/json/JSONArray;
-
-    invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
-
-    :cond_0
-    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_0
-    if-ge v4, v2, :cond_3
-
-    invoke-virtual {v1, v4}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v5}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v6
-
-    new-instance v7, Ljava/util/ArrayList;
-
-    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v6}, Lorg/json/JSONArray;->length()I
-
-    move-result v8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v8, :cond_2
-
-    invoke-virtual {v6, v9}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v10
-
-    const-string v11, "dimension"
-
-    invoke-virtual {v10, v11}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_1
-
-    const-string v12, "bitrate"
-
-    invoke-virtual {v10, v12}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_1
-
-    new-instance v13, Lowb;
-
-    invoke-virtual {v10, v11}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v11
-
-    invoke-virtual {v10, v12}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v10
-
-    invoke-direct {v13, v11, v10}, Lowb;-><init>(II)V
-
-    invoke-virtual {v7, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v6, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v5
-
-    new-instance v6, Lfx6;
-
-    const/16 v8, 0x10
-
-    invoke-direct {v6, v8}, Lfx6;-><init>(I)V
-
-    invoke-static {v7, v6}, Lei3;->U(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
-
-    move-result-object v6
-
-    invoke-interface {v0, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p0, Lpwb;
-
-    invoke-direct {p0, v0}, Lpwb;-><init>(Ljava/util/LinkedHashMap;)V
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lpwb;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lpwb;
+    iget-object v0, p0, Lpwb;->b:Lfxb;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0}, Lfxb;->r()V
+
+    iget-object v1, v0, Lfxb;->l:Lxj;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lxj;->d()V
+
+    iget-object v2, v1, Lxj;->a:Lzh;
+
+    iget-boolean v3, v2, Lzh;->i:Z
+
+    if-nez v3, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    iget-object v2, v2, Lzh;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
+
     :cond_1
-    check-cast p1, Lpwb;
-
-    iget-object v0, p0, Lpwb;->a:Ljava/util/LinkedHashMap;
-
-    iget-object p1, p1, Lpwb;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
     :goto_0
-    const/4 p1, 0x0
+    iget-object v1, v0, Lfxb;->n:Lwi;
 
-    return p1
+    if-eqz v1, :cond_3
+
+    iget-object v2, v1, Lwi;->c:Lai4;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v1}, Lai4;->c(Lr5e;)V
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    const/4 v2, 0x0
 
-    return p1
-.end method
+    iput-object v2, v1, Lwi;->c:Lai4;
 
-.method public final hashCode()I
-    .locals 1
+    :cond_3
+    iget-object v1, v0, Lfxb;->C:Lahd;
 
-    iget-object v0, p0, Lpwb;->a:Ljava/util/LinkedHashMap;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    const-string v3, ": "
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PeerVideoSettingsBitrateTable(bitrateTables="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpwb;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lw6a;->c(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " was released"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "PCRTCClient"
+
+    invoke-interface {v1, v2, v0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    iget-object v1, v0, Lfxb;->S:Ljava/lang/Object;
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1, v0}, Lexb;->o(Lfxb;)V
+
+    :cond_4
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    iget-object v1, v0, Lfxb;->C:Lahd;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "createPeerConnectionFactoryInternal, "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "PCRTCClient"
+
+    invoke-interface {v1, v3, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lfxb;->P:Z
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    iget-object v1, v0, Lfxb;->S:Ljava/lang/Object;
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v1, v0}, Lexb;->b(Lfxb;)V
+
+    :cond_5
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lfxb;->P:Z
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lfxb;->d0:Z
+
+    iget-object v1, v0, Lfxb;->S:Ljava/lang/Object;
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1, v0}, Lexb;->c(Lfxb;)V
+
+    :cond_6
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    invoke-virtual {v0}, Lfxb;->r()V
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    iget-object v0, v0, Lfxb;->T:Ljava/lang/ref/WeakReference;
+
+    if-nez v0, :cond_7
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_7
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr11;
+
+    :goto_1
+    if-eqz v0, :cond_8
+
+    invoke-interface {v0}, Lr11;->onIceRestart()V
+
+    :cond_8
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

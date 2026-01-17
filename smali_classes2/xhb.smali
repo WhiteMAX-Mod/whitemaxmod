@@ -1,61 +1,45 @@
-.class public abstract Lxhb;
+.class public final synthetic Lxhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
-# static fields
-.field public static final a:J
 
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
+# instance fields
+.field public final synthetic a:Loab;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Loab;)V
+    .locals 0
 
-    sget v0, Lc9d;->oneme_settings_media_item_gif:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lxhb;->a:J
-
-    sget v0, Lc9d;->oneme_settings_media_item_load_in_roaming:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lxhb;->b:J
-
-    sget v0, Lc9d;->oneme_settings_media_item_photo:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lxhb;->c:J
-
-    sget v0, Lc9d;->oneme_settings_media_item_playlist_enabled:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lxhb;->d:J
-
-    sget v0, Lc9d;->oneme_settings_media_item_video_messages:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lxhb;->e:J
-
-    sget v0, Lc9d;->oneme_settings_media_screen_autoloading_section_header:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lxhb;->f:J
+    iput-object p1, p0, Lxhb;->a:Loab;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 0
+
+    const/4 p1, 0x3
+
+    if-ne p2, p1, :cond_0
+
+    iget-object p1, p0, Lxhb;->a:Loab;
+
+    invoke-static {p1}, Lg3j;->f(Landroid/view/View;)V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

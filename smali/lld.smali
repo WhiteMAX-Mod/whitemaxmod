@@ -2,19 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljld;
+
 
 # virtual methods
-.method public abstract a()Lmle;
-.end method
-
-.method public abstract b()Ljava/lang/Object;
-.end method
-
-.method public abstract cancel(Ljava/util/concurrent/CancellationException;)V
-.end method
-
-.method public abstract i(Lfj3;)Ljava/lang/Object;
-.end method
-
-.method public abstract iterator()Lzw0;
+.method public abstract O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
 .end method

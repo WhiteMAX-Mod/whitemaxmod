@@ -1,78 +1,105 @@
-.class public abstract Lwrh;
-.super Ljava/lang/Object;
+.class public final Lwrh;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a(Landroid/view/View;)[Ljava/lang/String;
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/VideoWebViewScreen;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->getReceiveContentMimeTypes()[Ljava/lang/String;
+    iput-object p2, p0, Lwrh;->X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
 
-    move-result-object p0
+    const/4 p2, 0x2
 
-    return-object p0
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
 .end method
 
-.method public static b(Landroid/view/View;Lb74;)Lb74;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lwrh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lwrh;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lwrh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lwrh;
+
+    iget-object v1, p0, Lwrh;->X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+
+    invoke-direct {v0, p2, v1}, Lwrh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/VideoWebViewScreen;)V
+
+    iput-object p1, v0, Lwrh;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p1, Lb74;->a:La74;
+    iget-object v0, p0, Lwrh;->o:Ljava/lang/Object;
 
-    invoke-interface {v0}, La74;->m()Landroid/view/ContentInfo;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object v0
+    check-cast v0, Lhja;
 
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p1, Lag3;->b:Lag3;
 
-    invoke-static {v0}, Lg30;->k(Ljava/lang/Object;)Landroid/view/ContentInfo;
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p1
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->performReceiveContent(Landroid/view/ContentInfo;)Landroid/view/ContentInfo;
+    if-eqz p1, :cond_0
 
-    move-result-object p0
+    sget-object p1, Lkq2;->c:Lkq2;
 
-    if-nez p0, :cond_0
+    invoke-virtual {p1}, Ld3;->p0()Ljm4;
 
-    const/4 p0, 0x0
+    move-result-object p1
 
-    return-object p0
+    invoke-virtual {p1}, Ljm4;->d()Z
+
+    goto :goto_0
 
     :cond_0
-    if-ne p0, v0, :cond_1
+    instance-of p1, v0, Lfm4;
 
-    return-object p1
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lkq2;->c:Lkq2;
+
+    check-cast v0, Lfm4;
+
+    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
 
     :cond_1
-    new-instance p1, Lb74;
-
-    new-instance v0, Ll9b;
-
-    invoke-direct {v0, p0}, Ll9b;-><init>(Landroid/view/ContentInfo;)V
-
-    invoke-direct {p1, v0}, Lb74;-><init>(La74;)V
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
-.end method
-
-.method public static c(Landroid/view/View;[Ljava/lang/String;Lb2b;)V
-    .locals 1
-
-    if-nez p2, :cond_0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setOnReceiveContentListener([Ljava/lang/String;Landroid/view/OnReceiveContentListener;)V
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lxrh;
-
-    invoke-direct {v0, p2}, Lxrh;-><init>(Lb2b;)V
-
-    invoke-virtual {p0, p1, v0}, Landroid/view/View;->setOnReceiveContentListener([Ljava/lang/String;Landroid/view/OnReceiveContentListener;)V
-
-    return-void
 .end method

@@ -68,7 +68,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;ZILro4;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;ZILso4;)V
 
     return-void
 .end method
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ZILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ZILso4;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1
@@ -215,7 +215,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;->url:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -228,7 +228,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;->checksum:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -288,7 +288,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;->checksum:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
     move-result v0
 
@@ -318,13 +318,13 @@
 
     const-string v5, "MLFeatureConfig(url="
 
-    invoke-static {v5, v0, v3, v1, v4}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v0, v3, v1, v4}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, ")"
 
-    invoke-static {v0, v2, v1}, Lc12;->l(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

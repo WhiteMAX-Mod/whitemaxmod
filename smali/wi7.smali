@@ -1,77 +1,35 @@
-.class public abstract synthetic Lwi7;
+.class public interface abstract Lwi7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# virtual methods
+.method public abstract b()Lui7;
+.end method
 
+.method public abstract close()V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public abstract d()I
+.end method
 
-    invoke-static {}, Lxi7;->values()[Lxi7;
+.method public abstract f()V
+.end method
 
-    move-result-object v0
+.method public abstract getHeight()I
+.end method
 
-    array-length v0, v0
+.method public abstract getSurface()Landroid/view/Surface;
+.end method
 
-    new-array v0, v0, [I
+.method public abstract getWidth()I
+.end method
 
-    :try_start_0
-    sget-object v1, Lxi7;->a:[Lxi7;
+.method public abstract i(Lvi7;Ljava/util/concurrent/Executor;)V
+.end method
 
-    const/4 v1, 0x1
+.method public abstract m()I
+.end method
 
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x2
-
-    const/4 v2, 0x3
-
-    :try_start_1
-    sget-object v3, Lxi7;->a:[Lxi7;
-
-    aput v1, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v3, Lxi7;->a:[Lxi7;
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v1, Lxi7;->a:[Lxi7;
-
-    const/4 v1, 0x4
-
-    aput v1, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v1, Lxi7;->a:[Lxi7;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Lwi7;->$EnumSwitchMapping$0:[I
-
-    return-void
+.method public abstract o()Lui7;
 .end method

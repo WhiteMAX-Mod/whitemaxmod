@@ -1,31 +1,27 @@
-.class public abstract Lnpi;
+.class public final Lnpi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Lhqi;
+
+.field public final b:I
+
+.field public final c:Lb07;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lhqi;ILb07;)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x1f
+    iput-object p1, p0, Lnpi;->a:Lhqi;
 
-    if-lt v0, v1, :cond_0
+    iput p2, p0, Lnpi;->b:I
 
-    const/high16 v0, 0x2000000
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    sput v0, Lnpi;->a:I
+    iput-object p3, p0, Lnpi;->c:Lb07;
 
     return-void
 .end method

@@ -1,45 +1,64 @@
-.class public abstract Lye9;
+.class public final Lye9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldf9;
 
-# instance fields
-.field public final a:J
 
-.field public final b:J
-
-.field public final c:Lre9;
-
-.field public final d:Lze9;
-
-.field public final e:Landroid/net/Uri;
+# static fields
+.field public static final a:Lye9;
 
 
 # direct methods
-.method public constructor <init>(JJLre9;Lze9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lye9;
 
-    iput-wide p1, p0, Lye9;->a:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Lye9;->b:J
-
-    iput-object p5, p0, Lye9;->c:Lre9;
-
-    iput-object p6, p0, Lye9;->d:Lze9;
-
-    new-instance p1, Ljava/io/File;
-
-    iget-object p2, p5, Lre9;->c:Ljava/lang/String;
-
-    invoke-direct {p1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lye9;->e:Landroid/net/Uri;
+    sput-object v0, Lye9;->a:Lye9;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lye9;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x48bb79d3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Contact"
+
+    return-object v0
 .end method

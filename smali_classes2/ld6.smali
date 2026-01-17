@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lod6;
+.implements Lmd6;
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lld6;->a:Z
+    iput-object p1, p0, Lld6;->a:Ljava/util/List;
 
     return-void
 .end method
@@ -24,46 +24,48 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lld6;
+    instance-of v1, p1, Lld6;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lld6;
 
-    iget-boolean v0, p0, Lld6;->a:Z
+    iget-object v1, p0, Lld6;->a:Ljava/util/List;
 
-    iget-boolean p1, p1, Lld6;->a:Z
+    iget-object p1, p1, Lld6;->a:Ljava/util/List;
 
-    if-eq v0, p1, :cond_2
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_0
-    const/4 p1, 0x0
+    move-result p1
 
-    return p1
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-boolean v0, p0, Lld6;->a:Z
+    iget-object v0, p0, Lld6;->a:Ljava/util/List;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
@@ -71,15 +73,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "Close(afterCreate="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenPicker(includes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lld6;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-boolean v2, p0, Lld6;->a:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

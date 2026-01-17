@@ -1,156 +1,86 @@
 .class public final Lr13;
-.super Lb5g;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Ler6;
 
 
 # instance fields
-.field public synthetic X:Lmlb;
-
-.field public synthetic Y:Lplb;
-
-.field public final synthetic o:I
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput p3, p0, Lr13;->o:I
+    const/4 v0, 0x5
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+
+    iput-wide p1, p0, Lr13;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lr13;->o:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lmlb;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lplb;
+    return v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lr13;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, p3, v2}, Lr13;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lr13;->X:Lmlb;
-
-    iput-object p2, v0, Lr13;->Y:Lplb;
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    invoke-virtual {v0, p1}, Lr13;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lr13;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lr13;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lr13;->X:Lmlb;
-
-    iput-object p2, v0, Lr13;->Y:Lplb;
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    invoke-virtual {v0, p1}, Lr13;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance v0, Lr13;
-
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lr13;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p3, v2}, Lr13;-><init>(ILkotlin/coroutines/Continuation;I)V
+    if-nez v1, :cond_1
 
-    iput-object p1, v0, Lr13;->X:Lmlb;
+    return v2
 
-    iput-object p2, v0, Lr13;->Y:Lplb;
+    :cond_1
+    check-cast p1, Lr13;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget-wide v3, p0, Lr13;->b:J
 
-    invoke-virtual {v0, p1}, Lr13;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v5, p1, Lr13;->b:J
 
-    return-object p1
+    cmp-long p1, v3, v5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Lr13;->o:I
+    iget-wide v0, p0, Lr13;->b:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    move-result v0
 
-    iget-object p1, p0, Lr13;->X:Lmlb;
+    return v0
+.end method
 
-    iget-object v0, p0, Lr13;->Y:Lplb;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {p1, v0}, Lmlb;->onThemeChanged(Lplb;)V
+    const-string v0, "OpenChatAndUpdateBackstack(chatId="
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    const-string v1, ")"
 
-    return-object p1
+    iget-wide v2, p0, Lr13;->b:J
 
-    :pswitch_0
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object p1, p0, Lr13;->X:Lmlb;
+    move-result-object v0
 
-    iget-object v0, p0, Lr13;->Y:Lplb;
-
-    invoke-virtual {p1, v0}, Lmlb;->onThemeChanged(Lplb;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lr13;->X:Lmlb;
-
-    iget-object v0, p0, Lr13;->Y:Lplb;
-
-    invoke-virtual {p1, v0}, Lmlb;->onThemeChanged(Lplb;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

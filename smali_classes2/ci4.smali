@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public X:Lxj;
+.field public X:Lvj;
 
 .field public Y:I
 
 .field public final Z:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public final a:Ldc3;
+.field public final a:Lpc3;
 
 .field public final b:I
 
@@ -20,20 +20,20 @@
 
 .field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final s0:Ljava/util/concurrent/locks/Condition;
+.field public final t0:Ljava/util/concurrent/locks/Condition;
 
-.field public final t0:Ljava/util/concurrent/locks/ReentrantLock;
+.field public final u0:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public volatile u0:Z
+.field public volatile v0:Z
 
 
 # direct methods
-.method public constructor <init>(Lai4;Ldc3;)V
+.method public constructor <init>(Lai4;Lpc3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    iput-object p2, p0, Lci4;->a:Ldc3;
+    iput-object p2, p0, Lci4;->a:Lpc3;
 
     const/16 p2, 0x1e
 
@@ -65,13 +65,13 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lci4;->s0:Ljava/util/concurrent/locks/Condition;
+    iput-object p1, p0, Lci4;->t0:Ljava/util/concurrent/locks/Condition;
 
     new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    iput-object p1, p0, Lci4;->t0:Ljava/util/concurrent/locks/ReentrantLock;
+    iput-object p1, p0, Lci4;->u0:Ljava/util/concurrent/locks/ReentrantLock;
 
     return-void
 .end method
@@ -83,13 +83,13 @@
 
     :cond_0
     :goto_0
-    iget-boolean v0, p0, Lci4;->u0:Z
+    iget-boolean v0, p0, Lci4;->v0:Z
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_1b
 
-    iget-object v0, p0, Lci4;->t0:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lci4;->u0:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
@@ -133,7 +133,7 @@
     if-nez v5, :cond_1b
 
     :cond_3
-    iget-boolean v0, p0, Lci4;->u0:Z
+    iget-boolean v0, p0, Lci4;->v0:Z
 
     if-nez v0, :cond_7
 
@@ -143,7 +143,7 @@
 
     if-gez v0, :cond_4
 
-    iget-object v0, p0, Lci4;->X:Lxj;
+    iget-object v0, p0, Lci4;->X:Lvj;
 
     if-nez v0, :cond_7
 
@@ -164,7 +164,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     :try_start_2
-    iget-object v2, p0, Lci4;->s0:Ljava/util/concurrent/locks/Condition;
+    iget-object v2, p0, Lci4;->t0:Ljava/util/concurrent/locks/Condition;
 
     sget-object v10, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -177,7 +177,7 @@
     :try_start_3
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    iget-object v0, p0, Lci4;->t0:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lci4;->u0:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
     :try_end_3
@@ -240,14 +240,14 @@
     goto/16 :goto_f
 
     :cond_7
-    iget-boolean v0, p0, Lci4;->u0:Z
+    iget-boolean v0, p0, Lci4;->v0:Z
 
     if-eqz v0, :cond_8
 
     goto/16 :goto_f
 
     :cond_8
-    iget-object v0, p0, Lci4;->X:Lxj;
+    iget-object v0, p0, Lci4;->X:Lvj;
 
     if-nez v0, :cond_a
 
@@ -257,9 +257,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lxj;
+    check-cast v0, Lvj;
 
-    iput-object v0, p0, Lci4;->X:Lxj;
+    iput-object v0, p0, Lci4;->X:Lvj;
 
     if-nez v0, :cond_9
 
@@ -271,7 +271,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
     :cond_a
-    iget-object v0, p0, Lci4;->X:Lxj;
+    iget-object v0, p0, Lci4;->X:Lvj;
 
     if-eqz v0, :cond_0
 
@@ -281,25 +281,25 @@
 
     iput v5, p0, Lci4;->Y:I
 
-    iget v5, v0, Lxj;->b:I
+    iget v5, v0, Lvj;->b:I
 
-    iget-object v6, v0, Lxj;->c:Lgi;
+    iget-object v6, v0, Lvj;->c:Lei;
 
-    iget v0, v0, Lxj;->a:I
+    iget v0, v0, Lvj;->a:I
 
     const/4 v7, 0x2
 
     if-ne v0, v4, :cond_f
 
-    instance-of v0, v6, Lii;
+    instance-of v0, v6, Lgi;
 
-    instance-of v8, v6, Lfi;
+    instance-of v8, v6, Ldi;
 
     if-eqz v8, :cond_b
 
-    check-cast v6, Lfi;
+    check-cast v6, Ldi;
 
-    iget-object v6, v6, Lfi;->a:[F
+    iget-object v6, v6, Ldi;->a:[F
 
     goto :goto_6
 
@@ -363,7 +363,7 @@
     goto :goto_8
 
     :cond_d
-    instance-of v0, v6, Lhi;
+    instance-of v0, v6, Lfi;
 
     if-eqz v0, :cond_e
 
@@ -383,22 +383,22 @@
     throw v0
 
     :cond_f
-    instance-of v0, v6, Lfi;
+    instance-of v0, v6, Ldi;
 
     if-eqz v0, :cond_10
 
     move-object v8, v6
 
-    check-cast v8, Lfi;
+    check-cast v8, Ldi;
 
-    iget-object v8, v8, Lfi;->a:[F
+    iget-object v8, v8, Ldi;->a:[F
 
     array-length v8, v8
 
     goto :goto_9
 
     :cond_10
-    instance-of v8, v6, Lhi;
+    instance-of v8, v6, Lfi;
 
     if-eqz v8, :cond_11
 
@@ -407,7 +407,7 @@
     goto :goto_9
 
     :cond_11
-    instance-of v8, v6, Lii;
+    instance-of v8, v6, Lgi;
 
     if-eqz v8, :cond_1a
 
@@ -429,7 +429,7 @@
     goto :goto_a
 
     :cond_12
-    instance-of v10, v6, Lhi;
+    instance-of v10, v6, Lfi;
 
     if-eqz v10, :cond_13
 
@@ -438,7 +438,7 @@
     goto :goto_a
 
     :cond_13
-    instance-of v10, v6, Lii;
+    instance-of v10, v6, Lgi;
 
     if-eqz v10, :cond_19
 
@@ -465,9 +465,9 @@
 
     if-eqz v0, :cond_14
 
-    check-cast v6, Lfi;
+    check-cast v6, Ldi;
 
-    iget-object v0, v6, Lfi;->a:[F
+    iget-object v0, v6, Ldi;->a:[F
 
     array-length v2, v0
 
@@ -493,13 +493,13 @@
     goto :goto_b
 
     :cond_14
-    instance-of v0, v6, Lhi;
+    instance-of v0, v6, Lfi;
 
     if-eqz v0, :cond_15
 
-    check-cast v6, Lhi;
+    check-cast v6, Lfi;
 
-    iget v0, v6, Lhi;->a:I
+    iget v0, v6, Lfi;->a:I
 
     invoke-static {v0}, Landroid/graphics/Color;->red(I)I
 
@@ -507,7 +507,7 @@
 
     int-to-byte v0, v0
 
-    iget v2, v6, Lhi;->a:I
+    iget v2, v6, Lfi;->a:I
 
     invoke-static {v2}, Landroid/graphics/Color;->green(I)I
 
@@ -515,7 +515,7 @@
 
     int-to-byte v2, v2
 
-    iget v5, v6, Lhi;->a:I
+    iget v5, v6, Lfi;->a:I
 
     invoke-static {v5}, Landroid/graphics/Color;->blue(I)I
 
@@ -532,13 +532,13 @@
     goto :goto_c
 
     :cond_15
-    sget-object v0, Lii;->a:Lii;
+    sget-object v0, Lgi;->a:Lgi;
 
     invoke-virtual {v6, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     :cond_16
     :goto_c
-    iget-object v0, p0, Lci4;->t0:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lci4;->u0:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
@@ -550,11 +550,11 @@
     move v3, v4
 
     :cond_17
-    iget-object v2, p0, Lci4;->a:Ldc3;
+    iget-object v2, p0, Lci4;->a:Lpc3;
 
     array-length v4, v8
 
-    iget-object v2, v2, Ldc3;->a:Ljava/lang/Object;
+    iget-object v2, v2, Lpc3;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -575,15 +575,15 @@
 
     :cond_18
     :goto_d
-    iget-object v2, p0, Lci4;->a:Ldc3;
+    iget-object v2, p0, Lci4;->a:Lpc3;
 
-    iget-object v2, v2, Ldc3;->b:Ljava/lang/Object;
+    iget-object v2, v2, Lpc3;->b:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    iput-object v1, p0, Lci4;->X:Lxj;
+    iput-object v1, p0, Lci4;->X:Lvj;
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
@@ -621,7 +621,7 @@
 
     :cond_1b
     :goto_f
-    iput-object v1, p0, Lci4;->X:Lxj;
+    iput-object v1, p0, Lci4;->X:Lvj;
 
     iget-object v0, p0, Lci4;->d:Ljava/util/concurrent/ConcurrentLinkedQueue;
 

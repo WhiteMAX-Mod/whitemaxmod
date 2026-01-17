@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzl;
+.implements Lam;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lzl;"
+        "Lam;"
     }
 .end annotation
 
@@ -24,7 +24,7 @@
 
 .field private final collector:Ljava/lang/String;
 
-.field private final items:Lxu0;
+.field private final items:Lqu0;
 
 .field private final platform:Ljava/lang/String;
 
@@ -35,7 +35,7 @@
 
     const-string v0, "log.externalLog"
 
-    invoke-static {v0}, Lym;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lzm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxu0;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqu0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +55,7 @@
 
     iput-object p3, p0, Lru/ok/android/onelog/OneLogApiRequest;->platform:Ljava/lang/String;
 
-    iput-object p4, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lxu0;
+    iput-object p4, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lqu0;
 
     return-void
 .end method
@@ -65,41 +65,41 @@
 .method public canRepeat()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lxu0;
+    iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lqu0;
 
-    invoke-virtual {v0}, Lxu0;->canRepeat()Z
+    invoke-virtual {v0}, Lqu0;->canRepeat()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public bridge synthetic getConfigExtractor()Lvl;
+.method public bridge synthetic getConfigExtractor()Lwl;
     .locals 1
 
-    sget-object v0, Lvl;->f:Ly0j;
+    sget-object v0, Lwl;->f:Lv1j;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getFailParser()Lf28;
+.method public bridge synthetic getFailParser()Lq18;
     .locals 1
 
-    sget-object v0, Lxna;->c:Lxna;
+    sget-object v0, Lvna;->c:Lvna;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lf28;
+.method public getOkParser()Lq18;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lf28;"
+            "Lq18;"
         }
     .end annotation
 
-    sget-object v0, Li28;->a:Luna;
+    sget-object v0, Lt18;->a:Lsna;
 
     return-object v0
 .end method
@@ -112,18 +112,18 @@
     return v0
 .end method
 
-.method public getScope()Lpm;
+.method public getScope()Lqm;
     .locals 1
 
-    sget-object v0, Lpm;->c:Lpm;
+    sget-object v0, Lqm;->c:Lqm;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lqm;
+.method public bridge synthetic getScopeAfter()Lrm;
     .locals 1
 
-    sget-object v0, Lqm;->a:Lqm;
+    sget-object v0, Lrm;->a:Lrm;
 
     return-object v0
 .end method
@@ -176,7 +176,7 @@
     return v0
 .end method
 
-.method public writeParams(Lx28;)V
+.method public writeParams(Li28;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -187,48 +187,48 @@
 
     const-string v0, "collector"
 
-    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
     iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->collector:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lx28;->j(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Li28;->j(Ljava/lang/String;)V
 
     const-string v0, "data"
 
-    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    invoke-interface {p1}, Lx28;->p()V
+    invoke-interface {p1}, Li28;->q()V
 
     const-string v0, "application"
 
-    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
     iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->application:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lx28;->j(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Li28;->j(Ljava/lang/String;)V
 
     const-string v0, "platform"
 
-    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
     iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->platform:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lx28;->j(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Li28;->j(Ljava/lang/String;)V
 
     const-string v0, "items"
 
-    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lxu0;
+    iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lqu0;
 
-    invoke-virtual {v0, p1}, Lxu0;->write(Lx28;)V
+    invoke-virtual {v0, p1}, Lqu0;->write(Li28;)V
 
-    invoke-interface {p1}, Lx28;->n()V
+    invoke-interface {p1}, Li28;->n()V
 
     return-void
 .end method
 
-.method public bridge synthetic writeSupplyParams(Lx28;)V
+.method public bridge synthetic writeSupplyParams(Li28;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

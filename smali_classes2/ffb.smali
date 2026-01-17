@@ -4,90 +4,88 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
-.field public static final b:J
+.field public static final b:I
 
-.field public static final c:J
+.field public static final c:I
 
-.field public static final d:J
+.field public static final d:I
 
-.field public static final e:J
+.field public static final e:I
 
-.field public static final f:J
+.field public static final f:I
 
-.field public static final g:J
+.field public static final g:I
 
-.field public static final h:J
+.field public static final h:I
 
-.field public static final i:J
+.field public static final i:I
 
-.field public static final j:J
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lj8d;->profile_edit_admin_move_rights:I
+    sget v0, Ld9d;->pinbars_block_user_confirmation_sheet_cancel:I
 
-    int-to-long v0, v0
+    sput v0, Lffb;->a:I
 
-    sput-wide v0, Lffb;->a:J
+    sget v0, Ld9d;->pinbars_block_user_confirmation_sheet_confirm:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_change_chat_info:I
+    sput v0, Lffb;->b:I
 
-    int-to-long v0, v0
+    sget v0, Ld9d;->pinbars_group_call_bar:I
 
-    sput-wide v0, Lffb;->b:J
+    sput v0, Lffb;->c:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_control_admin:I
+    sget v0, Ld9d;->pinbars_group_call_bar_button:I
 
-    int-to-long v0, v0
+    sput v0, Lffb;->d:I
 
-    sput-wide v0, Lffb;->c:J
+    sget v0, Ld9d;->pinbars_group_call_bar_divider:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_delete_messages:I
+    sput v0, Lffb;->e:I
 
-    int-to-long v0, v0
+    sget v0, Ld9d;->pinbars_group_call_bar_stack:I
 
-    sput-wide v0, Lffb;->d:J
+    sput v0, Lffb;->f:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_edit_chat_link:I
+    sget v0, Ld9d;->pinbars_group_call_bar_subtitle:I
 
-    int-to-long v0, v0
+    sput v0, Lffb;->g:I
 
-    sput-wide v0, Lffb;->e:J
+    sget v0, Ld9d;->pinbars_group_call_bar_title:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_edit_chat_members:I
+    sput v0, Lffb;->h:I
 
-    int-to-long v0, v0
+    sget v0, Ld9d;->pinbars_informer:I
 
-    sput-wide v0, Lffb;->f:J
+    sput v0, Lffb;->i:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_edit_messages:I
+    sget v0, Ld9d;->pinbars_message:I
 
-    int-to-long v0, v0
+    sput v0, Lffb;->j:I
 
-    sput-wide v0, Lffb;->g:J
+    sget v0, Ld9d;->pinbars_miniplayer:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_pin_messages:I
+    sput v0, Lffb;->k:I
 
-    int-to-long v0, v0
+    sget v0, Ld9d;->pinbars_root:I
 
-    sput-wide v0, Lffb;->h:J
+    sput v0, Lffb;->l:I
 
-    sget v0, Lj8d;->profile_edit_admin_permissions_send_messages:I
+    sget v0, Ld9d;->unknown_contact:I
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lffb;->i:J
-
-    sget v0, Lj8d;->profile_edit_admin_view_stats:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lffb;->j:J
+    sput v0, Lffb;->m:I
 
     return-void
 .end method

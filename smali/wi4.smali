@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq2g;
+.implements Li4g;
 
 
 # instance fields
@@ -40,9 +40,9 @@
     return-object v0
 
     :pswitch_1
-    sget-object v0, Lw0;->k:Ljava/lang/NullPointerException;
+    sget-object v0, Lv0;->k:Ljava/lang/NullPointerException;
 
-    invoke-static {v0}, Lilj;->a(Ljava/lang/Exception;)Lecf;
+    invoke-static {v0}, Lemj;->a(Ljava/lang/Exception;)Lidf;
 
     move-result-object v0
 

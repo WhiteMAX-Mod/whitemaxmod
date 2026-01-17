@@ -1,228 +1,106 @@
 .class public final Li27;
-.super Lz7f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic i:I
+.field public final a:Landroidx/viewpager2/widget/ViewPager2;
+
+.field public final b:Ln27;
+
+.field public c:Z
+
+.field public d:Lwrd;
+
+.field public e:Lh27;
+
+.field public f:Lgh5;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Ln27;)V
     .locals 0
 
-    iput p1, p0, Li27;->i:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lz7f;-><init>()V
+    iput-object p1, p0, Li27;->a:Landroidx/viewpager2/widget/ViewPager2;
+
+    iput-object p2, p0, Li27;->b:Ln27;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;II)I
-    .locals 0
+.method public final a()V
+    .locals 5
 
-    iget p3, p0, Li27;->i:I
+    iget-object v0, p0, Li27;->d:Lwrd;
 
-    packed-switch p3, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    const/high16 p1, -0x80000000
+    return-void
 
-    return p1
+    :cond_0
+    :try_start_0
+    invoke-virtual {v0}, Lwrd;->j()I
 
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+    move-result v0
 
-    move-result p2
+    if-nez v0, :cond_1
 
-    const/16 p3, 0x8
-
-    if-ne p2, p3, :cond_0
-
-    const/4 p1, 0x0
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getBaseline()I
-
-    move-result p1
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_1
-
-    const/high16 p1, -0x80000000
-
     :cond_1
+    iget-object v1, p0, Li27;->a:Landroidx/viewpager2/widget/ViewPager2;
+
+    invoke-virtual {v1}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
+
+    move-result v1
+
+    add-int/lit8 v2, v0, -0x1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
     :goto_0
-    return p1
+    iget-object v2, p0, Li27;->b:Ln27;
 
-    :pswitch_1
-    shr-int/lit8 p1, p2, 0x1
+    invoke-virtual {v2, v0, v1}, Ln27;->b(II)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p1
+    return-void
 
-    :pswitch_2
-    return p2
+    :catch_0
+    move-exception v0
 
-    :pswitch_3
-    const/4 p1, 0x0
+    const-class v1, Li27;
 
-    return p1
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    :pswitch_4
-    const/high16 p1, -0x80000000
+    move-result-object v1
 
-    return p1
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    nop
+    move-result-object v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    new-instance v3, Ljava/lang/StringBuilder;
 
-.method public b()Lo27;
-    .locals 1
+    const-string v4, "updatePagesNumber error: "
 
-    iget v0, p0, Li27;->i:I
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-super {p0}, Lz7f;->b()Lo27;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    return-object v0
+    invoke-static {v1, v2, v0}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :pswitch_0
-    new-instance v0, Lk27;
-
-    invoke-direct {v0}, Lo27;-><init>()V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c()Ljava/lang/String;
-    .locals 1
-
-    iget v0, p0, Li27;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const-string v0, "FILL"
-
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "BASELINE"
-
-    return-object v0
-
-    :pswitch_1
-    const-string v0, "CENTER"
-
-    return-object v0
-
-    :pswitch_2
-    const-string v0, "TRAILING"
-
-    return-object v0
-
-    :pswitch_3
-    const-string v0, "LEADING"
-
-    return-object v0
-
-    :pswitch_4
-    const-string v0, "UNDEFINED"
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e(Landroid/view/View;I)I
-    .locals 0
-
-    iget p1, p0, Li27;->i:I
-
-    packed-switch p1, :pswitch_data_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :pswitch_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :pswitch_1
-    shr-int/lit8 p1, p2, 0x1
-
-    return p1
-
-    :pswitch_2
-    return p2
-
-    :pswitch_3
-    const/4 p1, 0x0
-
-    return p1
-
-    :pswitch_4
-    const/high16 p1, -0x80000000
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public h(II)I
-    .locals 1
-
-    iget v0, p0, Li27;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return p1
-
-    :pswitch_0
-    return p2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

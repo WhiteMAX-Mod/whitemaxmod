@@ -4,115 +4,32 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lkcc;
 
-.field public b:Lg66;
+.field public final b:J
 
-.field public c:Z
+.field public final c:F
 
-.field public d:Z
+.field public final d:Z
+
+.field public final e:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(Lkcc;Lrlg;Lvc9;JJFZJ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lif8;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lif8;->a:Lkcc;
 
-    new-instance p1, Lg66;
+    iput-wide p6, p0, Lif8;->b:J
 
-    const/4 v0, 0x1
+    iput p8, p0, Lif8;->c:F
 
-    invoke-direct {p1, v0}, Lg66;-><init>(I)V
+    iput-boolean p9, p0, Lif8;->d:Z
 
-    iput-object p1, p0, Lif8;->b:Lg66;
+    iput-wide p10, p0, Lif8;->e:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lgf8;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lif8;->d:Z
-
-    iget-boolean v0, p0, Lif8;->c:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lif8;->c:Z
-
-    iget-object v0, p0, Lif8;->b:Lg66;
-
-    invoke-virtual {v0}, Lg66;->e()Li66;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lif8;->a:Ljava/lang/Object;
-
-    invoke-interface {p1, v1, v0}, Lgf8;->e(Ljava/lang/Object;Li66;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Lif8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lif8;
-
-    iget-object p1, p1, Lif8;->a:Ljava/lang/Object;
-
-    iget-object v0, p0, Lif8;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lif8;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
 .end method

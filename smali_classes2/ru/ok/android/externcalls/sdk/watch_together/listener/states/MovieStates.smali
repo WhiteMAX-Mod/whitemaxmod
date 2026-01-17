@@ -159,7 +159,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;->states:Ljava/util/Map;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -1,27 +1,25 @@
-.class public final Ltkb;
+.class public abstract Ltkb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lukd;
+# static fields
+.field public static final a:I
 
-.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lukd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ljad;->oneme_stickers_search_stickers_list:I
 
-    iput-object p1, p0, Ltkb;->a:Lukd;
+    sput v0, Ltkb;->a:I
 
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
+    sget v0, Ljad;->oneme_stickers_search_toolbar:I
 
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object p1, p0, Ltkb;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sput v0, Ltkb;->b:I
 
     return-void
 .end method

@@ -1,177 +1,316 @@
-.class public final Liw0;
+.class public abstract Liw0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzh5;
 
-
-# instance fields
-.field public final a:Ljava/nio/ByteBuffer;
-
-.field public final b:Landroid/media/MediaCodec$BufferInfo;
-
-.field public final c:Lyw1;
+# static fields
+.field public static final a:[B
 
 
 # direct methods
-.method public constructor <init>(Lzh5;)V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "0123456789abcdef"
 
-    invoke-interface {p1}, Lzh5;->F()Landroid/media/MediaCodec$BufferInfo;
+    sget-object v1, Ljd2;->a:Ljava/nio/charset/Charset;
 
-    move-result-object v0
-
-    new-instance v1, Landroid/media/MediaCodec$BufferInfo;
-
-    invoke-direct {v1}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
-
-    iget v3, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
-
-    iget-wide v4, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
-
-    iget v6, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
-
-    iput-object v1, p0, Liw0;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    invoke-interface {p1}, Lzh5;->o()Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object v0
 
-    invoke-interface {p1}, Lzh5;->F()Landroid/media/MediaCodec$BufferInfo;
-
-    move-result-object p1
-
-    iget v1, p1, Landroid/media/MediaCodec$BufferInfo;->offset:I
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    iget v1, p1, Landroid/media/MediaCodec$BufferInfo;->offset:I
-
-    iget v2, p1, Landroid/media/MediaCodec$BufferInfo;->size:I
-
-    add-int/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    iget p1, p1, Landroid/media/MediaCodec$BufferInfo;->size:I
-
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    iput-object p1, p0, Liw0;->a:Ljava/nio/ByteBuffer;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    new-instance v0, Lhw0;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lhw0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
-
-    invoke-static {v0}, Loaj;->b(Lzw1;)Lbx1;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyw1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Liw0;->c:Lyw1;
+    sput-object v0, Liw0;->a:[B
 
     return-void
 .end method
 
+.method public static final a(Lxv0;J)Ljava/lang/String;
+    .locals 6
 
-# virtual methods
-.method public final F()Landroid/media/MediaCodec$BufferInfo;
-    .locals 1
+    const-wide/16 v0, 0x0
 
-    iget-object v0, p0, Liw0;->b:Landroid/media/MediaCodec$BufferInfo;
+    cmp-long v0, p1, v0
 
-    return-object v0
-.end method
+    const-wide/16 v1, 0x1
 
-.method public final N()Z
-    .locals 2
+    if-lez v0, :cond_0
 
-    iget-object v0, p0, Liw0;->b:Landroid/media/MediaCodec$BufferInfo;
+    sub-long v3, p1, v1
 
-    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
+    invoke-virtual {p0, v3, v4}, Lxv0;->f0(J)B
 
-    const/4 v1, 0x1
+    move-result v0
 
-    and-int/2addr v0, v1
+    const/16 v5, 0xd
 
-    if-eqz v0, :cond_0
+    int-to-byte v5, v5
 
-    return v1
+    if-ne v0, v5, :cond_0
+
+    sget-object p1, Ljd2;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, v3, v4, p1}, Lxv0;->A0(JLjava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-wide/16 v0, 0x2
+
+    invoke-virtual {p0, v0, v1}, Lxv0;->skip(J)V
+
+    return-object p1
 
     :cond_0
-    const/4 v0, 0x0
+    sget-object v0, Ljd2;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, p1, p2, v0}, Lxv0;->A0(JLjava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v1, v2}, Lxv0;->skip(J)V
+
+    return-object p1
+.end method
+
+.method public static final b(Lxv0;Lgqb;Z)I
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lxv0;->a:Lwke;
+
+    const/4 v1, -0x1
+
+    if-eqz v0, :cond_f
+
+    iget-object v2, v0, Lwke;->a:[B
+
+    iget v3, v0, Lwke;->b:I
+
+    iget v4, v0, Lwke;->c:I
+
+    move-object/from16 v5, p1
+
+    iget-object v5, v5, Lgqb;->b:[I
+
+    const/4 v6, 0x0
+
+    move-object v8, v0
+
+    move v9, v1
+
+    move v7, v6
+
+    :goto_0
+    add-int/lit8 v10, v7, 0x1
+
+    aget v11, v5, v7
+
+    add-int/lit8 v7, v7, 0x2
+
+    aget v10, v5, v10
+
+    if-eq v10, v1, :cond_0
+
+    move v9, v10
+
+    :cond_0
+    if-nez v8, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    const/4 v10, 0x0
+
+    if-gez v11, :cond_8
+
+    mul-int/lit8 v11, v11, -0x1
+
+    add-int v12, v11, v7
+
+    :goto_1
+    add-int/lit8 v11, v3, 0x1
+
+    aget-byte v3, v2, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int/lit8 v13, v7, 0x1
+
+    aget v7, v5, v7
+
+    if-eq v3, v7, :cond_2
+
+    goto :goto_6
+
+    :cond_2
+    if-ne v13, v12, :cond_3
+
+    const/4 v3, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    move v3, v6
+
+    :goto_2
+    if-ne v11, v4, :cond_6
+
+    iget-object v2, v8, Lwke;->f:Lwke;
+
+    iget v4, v2, Lwke;->b:I
+
+    iget-object v7, v2, Lwke;->a:[B
+
+    iget v8, v2, Lwke;->c:I
+
+    if-ne v2, v0, :cond_5
+
+    if-nez v3, :cond_4
+
+    :goto_3
+    if-eqz p2, :cond_9
+
+    goto/16 :goto_8
+
+    :cond_4
+    move-object v2, v7
+
+    move-object v7, v10
+
+    goto :goto_4
+
+    :cond_5
+    move-object v15, v7
+
+    move-object v7, v2
+
+    move-object v2, v15
+
+    goto :goto_4
+
+    :cond_6
+    move-object v7, v8
+
+    move v8, v4
+
+    move v4, v11
+
+    :goto_4
+    if-eqz v3, :cond_7
+
+    aget v3, v5, v13
+
+    move v15, v8
+
+    move-object v8, v7
+
+    move v7, v15
+
+    goto :goto_7
+
+    :cond_7
+    move v3, v4
+
+    move v4, v8
+
+    move-object v8, v7
+
+    move v7, v13
+
+    goto :goto_1
+
+    :cond_8
+    add-int/lit8 v12, v3, 0x1
+
+    aget-byte v3, v2, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int v13, v7, v11
+
+    :goto_5
+    if-ne v7, v13, :cond_a
+
+    :cond_9
+    :goto_6
+    return v9
+
+    :cond_a
+    aget v14, v5, v7
+
+    if-ne v3, v14, :cond_e
+
+    add-int/2addr v7, v11
+
+    aget v3, v5, v7
+
+    if-ne v12, v4, :cond_c
+
+    iget-object v8, v8, Lwke;->f:Lwke;
+
+    iget v2, v8, Lwke;->b:I
+
+    iget-object v4, v8, Lwke;->a:[B
+
+    iget v7, v8, Lwke;->c:I
+
+    if-ne v8, v0, :cond_b
+
+    move-object v8, v4
+
+    move v4, v2
+
+    move-object v2, v8
+
+    move-object v8, v10
+
+    goto :goto_7
+
+    :cond_b
+    move-object v15, v4
+
+    move v4, v2
+
+    move-object v2, v15
+
+    goto :goto_7
+
+    :cond_c
+    move v7, v4
+
+    move v4, v12
+
+    :goto_7
+    if-ltz v3, :cond_d
+
+    return v3
+
+    :cond_d
+    neg-int v3, v3
+
+    move v15, v7
+
+    move v7, v3
+
+    move v3, v4
+
+    move v4, v15
+
+    goto/16 :goto_0
+
+    :cond_e
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_5
+
+    :cond_f
+    if-eqz p2, :cond_10
+
+    :goto_8
+    const/4 v0, -0x2
 
     return v0
-.end method
 
-.method public final close()V
-    .locals 2
-
-    iget-object v0, p0, Liw0;->c:Lyw1;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lyw1;->b(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final g0()J
-    .locals 2
-
-    iget-object v0, p0, Liw0;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    iget-wide v0, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
-
-    return-wide v0
-.end method
-
-.method public final o()Ljava/nio/ByteBuffer;
-    .locals 1
-
-    iget-object v0, p0, Liw0;->a:Ljava/nio/ByteBuffer;
-
-    return-object v0
-.end method
-
-.method public final size()J
-    .locals 2
-
-    iget-object v0, p0, Liw0;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
-
-    int-to-long v0, v0
-
-    return-wide v0
+    :cond_10
+    return v1
 .end method

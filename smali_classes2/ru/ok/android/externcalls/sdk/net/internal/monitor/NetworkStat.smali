@@ -80,7 +80,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;-><init>(Ljava/lang/Integer;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;ILro4;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;-><init>(Ljava/lang/Integer;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;ILso4;)V
 
     return-void
 .end method
@@ -106,7 +106,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Integer;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;ILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/Integer;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;ILso4;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x1
@@ -252,7 +252,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;->rttMs:Ljava/lang/Integer;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -265,7 +265,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;->audioLoss:Ljava/lang/Float;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -278,7 +278,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;->videoLoss:Ljava/lang/Float;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -291,7 +291,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;->activeCandidateType:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

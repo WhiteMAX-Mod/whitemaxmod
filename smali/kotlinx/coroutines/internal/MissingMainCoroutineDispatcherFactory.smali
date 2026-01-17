@@ -18,9 +18,9 @@
         "()V",
         "",
         "allFactories",
-        "Llq8;",
+        "Lzp8;",
         "createDispatcher",
-        "(Ljava/util/List;)Llq8;",
+        "(Ljava/util/List;)Lzp8;",
         "",
         "getLoadPriority",
         "()I",
@@ -30,7 +30,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -64,7 +64,7 @@
 
 
 # virtual methods
-.method public createDispatcher(Ljava/util/List;)Llq8;
+.method public createDispatcher(Ljava/util/List;)Lzp8;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -73,7 +73,7 @@
             "+",
             "Lkotlinx/coroutines/internal/MainDispatcherFactory;",
             ">;)",
-            "Llq8;"
+            "Lzp8;"
         }
     .end annotation
 
@@ -83,7 +83,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p1, v0, v0, v1, v0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;-><init>(Ljava/lang/Throwable;Ljava/lang/String;ILro4;)V
+    invoke-direct {p1, v0, v0, v1, v0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;-><init>(Ljava/lang/Throwable;Ljava/lang/String;ILso4;)V
 
     return-object p1
 .end method

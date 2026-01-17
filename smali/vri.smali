@@ -1,235 +1,41 @@
-.class public abstract Lvri;
-.super Ljava/lang/Object;
+.class public final Lvri;
+.super Lwoi;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/ExecutorService;
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 1
+.method public final Y(Laxa;Ldsi;)[Ljoj;
+    .locals 2
 
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/ThreadPoolExecutor;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
-    .locals 1
-
-    .line 1
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    .line 2
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    .line 3
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-    .locals 1
-
-    .line 4
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    .line 5
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    .line 6
-    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    .line 2
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    .line 3
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
-
-    .line 4
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    .line 5
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    .line 6
-    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final isShutdown()Z
-    .locals 1
-
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isTerminated()Z
-    .locals 1
-
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->isTerminated()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final shutdown()V
-    .locals 1
-
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
-
-    return-void
-.end method
-
-.method public final shutdownNow()Ljava/util/List;
-    .locals 1
-
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdownNow()Ljava/util/List;
+    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    sget v1, Lwui;->a:I
 
-.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-    .locals 1
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 1
-    move-object v0, p0
+    const/4 p1, 0x1
 
-    check-cast v0, Lq7a;
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+    const/4 v1, 0x0
 
-    .line 3
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    invoke-virtual {p2, v0, v1}, Ldsi;->writeToParcel(Landroid/os/Parcel;I)V
+
+    invoke-virtual {p0, v0, p1}, Lwoi;->W(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    sget-object p2, Ljoj;->CREATOR:Landroid/os/Parcelable$Creator;
 
-.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-    .locals 1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
 
-    .line 4
-    move-object v0, p0
+    move-result-object p2
 
-    check-cast v0, Lq7a;
+    check-cast p2, [Ljoj;
 
-    .line 5
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    .line 6
-    invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-    .locals 1
-
-    .line 7
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    .line 8
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    .line 9
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    move-object v0, p0
-
-    check-cast v0, Lq7a;
-
-    iget-object v0, v0, Lq7a;->a:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p2
 .end method

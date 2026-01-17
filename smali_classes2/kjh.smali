@@ -3,166 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lljh;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lojh;
+.field public final a:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lojh;I)V
+.method public constructor <init>(F)V
     .locals 0
-
-    iput p2, p0, Lkjh;->a:I
-
-    iput-object p1, p0, Lkjh;->b:Lojh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
+    iput p1, p0, Lkjh;->a:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lkjh;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lkjh;
+
+    iget v1, p0, Lkjh;->a:F
+
+    iget p1, p1, Lkjh;->a:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iget p1, p0, Lkjh;->a:I
+    iget v0, p0, Lkjh;->a:F
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
 
-    iget-object p1, p0, Lkjh;->b:Lojh;
+    move-result v0
 
-    invoke-static {p1}, Lojh;->i(Lojh;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lkjh;->b:Lojh;
-
-    iget-object p1, p1, Lojh;->o:Lnfh;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lnfh;->c(Z)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lkjh;->b:Lojh;
-
-    iget-object p1, p1, Lojh;->o:Lnfh;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lnfh;->c(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget p1, p0, Lkjh;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch p1, :pswitch_data_0
+    const-string v1, "SeekStart(progress="
 
-    iget-object p1, p0, Lkjh;->b:Lojh;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lojh;->i(Lojh;)V
+    iget v1, p0, Lkjh;->a:F
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object p1, p0, Lkjh;->b:Lojh;
+    const-string v1, ")"
 
-    iget-object p1, p1, Lojh;->o:Lnfh;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lnfh;->c(Z)V
+    move-result-object v0
 
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lkjh;->b:Lojh;
-
-    iget-object p1, p1, Lojh;->o:Lnfh;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lnfh;->c(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lkjh;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lkjh;->a:I
-
-    return-void
+    return-object v0
 .end method

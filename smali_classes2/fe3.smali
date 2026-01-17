@@ -1,306 +1,311 @@
 .class public final Lfe3;
-.super Landroid/text/method/LinkMovementMethod;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final m:Ljava/lang/String;
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lee3;
+.field public final synthetic X:Lge3;
 
-.field public final b:Landroid/graphics/RectF;
+.field public final synthetic Y:J
 
-.field public c:Ljava/lang/String;
-
-.field public d:Lrb9;
-
-.field public e:Landroid/text/Spannable;
-
-.field public f:Landroid/text/style/ClickableSpan;
-
-.field public g:Z
-
-.field public h:Lmq6;
-
-.field public i:Z
-
-.field public j:Ljava/lang/Runnable;
-
-.field public final k:Laz0;
-
-.field public final l:Landroid/view/GestureDetector;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lge3;JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-class v0, Lfe3;
+    iput-object p1, p0, Lfe3;->X:Lge3;
 
-    invoke-static {v0}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+    iput-wide p2, p0, Lfe3;->Y:J
 
-    move-result-object v0
+    const/4 p1, 0x2
 
-    invoke-virtual {v0}, Lgd3;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lfe3;->m:Ljava/lang/String;
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lee3;)V
-    .locals 1
-
-    invoke-direct {p0}, Landroid/text/method/LinkMovementMethod;-><init>()V
-
-    iput-object p2, p0, Lfe3;->a:Lee3;
-
-    new-instance p2, Landroid/graphics/RectF;
-
-    invoke-direct {p2}, Landroid/graphics/RectF;-><init>()V
-
-    iput-object p2, p0, Lfe3;->b:Landroid/graphics/RectF;
-
-    new-instance p2, Laz0;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p2, v0, p0}, Laz0;-><init>(ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lfe3;->k:Laz0;
-
-    new-instance v0, Landroid/view/GestureDetector;
-
-    invoke-direct {v0, p1, p2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-
-    iput-object v0, p0, Lfe3;->l:Landroid/view/GestureDetector;
-
-    return-void
-.end method
-
-.method public static final a(Lfe3;Lrb9;Landroid/text/Spannable;Landroid/view/MotionEvent;)Landroid/text/style/ClickableSpan;
-    .locals 6
-
-    iget-object p0, p0, Lfe3;->b:Landroid/graphics/RectF;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_5
-
-    iget-object v1, p1, Lrb9;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/View;
-
-    if-nez v1, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    iget-object p1, p1, Lrb9;->c:Ljava/lang/Object;
-
-    check-cast p1, Landroid/text/Layout;
-
-    if-nez p1, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v2
-
-    float-to-int v2, v2
-
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
-
-    move-result p3
-
-    float-to-int p3, p3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    sub-int/2addr p3, v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getScrollX()I
-
-    move-result v3
-
-    add-int/2addr v3, v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getScrollY()I
-
-    move-result v1
-
-    add-int/2addr v1, p3
-
-    invoke-virtual {p1, v1}, Landroid/text/Layout;->getLineForVertical(I)I
-
-    move-result p3
-
-    int-to-float v2, v3
-
-    :try_start_0
-    invoke-virtual {p1, p3, v2}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
-
-    move-result v3
-
-    invoke-virtual {p1, p3}, Landroid/text/Layout;->getLineLeft(I)F
-
-    move-result v4
-
-    iput v4, p0, Landroid/graphics/RectF;->left:F
-
-    invoke-virtual {p1, p3}, Landroid/text/Layout;->getLineTop(I)I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    iput v4, p0, Landroid/graphics/RectF;->top:F
-
-    invoke-virtual {p1, p3}, Landroid/text/Layout;->getLineMax(I)F
-
-    move-result v4
-
-    iget v5, p0, Landroid/graphics/RectF;->left:F
-
-    add-float/2addr v4, v5
-
-    iput v4, p0, Landroid/graphics/RectF;->right:F
-
-    invoke-virtual {p1, p3}, Landroid/text/Layout;->getLineBottom(I)I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    iput p1, p0, Landroid/graphics/RectF;->bottom:F
-
-    int-to-float p1, v1
-
-    invoke-virtual {p0, v2, p1}, Landroid/graphics/RectF;->contains(FF)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    const-class p0, Landroid/text/style/ClickableSpan;
-
-    invoke-interface {p2, v3, v3, p0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lbt;->v([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/text/style/ClickableSpan;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_0
-
-    :cond_2
-    move-object p0, v0
-
-    goto :goto_1
-
-    :goto_0
-    new-instance p1, Lyyd;
-
-    invoke-direct {p1, p0}, Lyyd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p0, p1
-
-    :goto_1
-    invoke-static {p0}, Lazd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    sget-object p2, Lfe3;->m:Ljava/lang/String;
-
-    const-string p3, "findClickableSpanUnderTouch failed:"
-
-    invoke-static {p2, p3, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    instance-of p1, p0, Lyyd;
-
-    if-eqz p1, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    move-object v0, p0
-
-    :goto_2
-    check-cast v0, Landroid/text/style/ClickableSpan;
-
-    :cond_5
-    :goto_3
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
+    check-cast p1, Lzb4;
 
-    move-result v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Lrb9;
-
-    new-instance v1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+    invoke-virtual {p0, p1, p2}, Lfe3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/16 v2, 0xa
+    check-cast p1, Lfe3;
 
-    invoke-direct {v0, v1, v2, p1}, Lrb9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iput-object v0, p0, Lfe3;->d:Lrb9;
+    invoke-virtual {p1, p2}, Lfe3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p2, p0, Lfe3;->e:Landroid/text/Spannable;
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lfe3;
+
+    iget-object v0, p0, Lfe3;->X:Lge3;
+
+    iget-wide v1, p0, Lfe3;->Y:J
+
+    invoke-direct {p1, v0, v1, v2, p2}, Lfe3;-><init>(Lge3;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    iget v2, p0, Lfe3;->o:I
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v0
 
     :cond_0
-    iget-object p1, p0, Lfe3;->l:Landroid/view/GestureDetector;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1, p3}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result p1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return p1
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfe3;->X:Lge3;
+
+    iget-object p1, p1, Lge3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iget-wide v4, p0, Lfe3;->Y:J
+
+    sget-object v2, Lc5j;->a:Ledb;
+
+    const/4 v6, 0x0
+
+    if-nez v2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v7, Lkk8;->d:Lkk8;
+
+    invoke-virtual {v2, v7}, Ledb;->b(Lkk8;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    const-string v8, "start clear draft for chatId:"
+
+    invoke-static {v4, v5, v8}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v7, p1, v4, v6}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_0
+    iget-object p1, p0, Lfe3;->X:Lge3;
+
+    iget-object p1, p1, Lge3;->c:Ljava/lang/Object;
+
+    check-cast p1, Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lla3;
+
+    iget-wide v4, p0, Lfe3;->Y:J
+
+    invoke-virtual {p1, v4, v5}, Lla3;->k(J)Lpld;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lpld;->a:Llpf;
+
+    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnd2;
+
+    if-nez p1, :cond_4
+
+    iget-object p1, p0, Lfe3;->X:Lge3;
+
+    iget-object p1, p1, Lge3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    const-string v1, "can\'t clear draft because chat is null"
+
+    invoke-static {p1, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :cond_4
+    iget-object v2, p1, Lnd2;->b:Luh2;
+
+    iget-object v2, v2, Luh2;->d0:Lgab;
+
+    instance-of v4, v2, Lgab;
+
+    if-eqz v4, :cond_5
+
+    move-object v6, v2
+
+    :cond_5
+    if-nez v6, :cond_6
+
+    iget-object p1, p0, Lfe3;->X:Lge3;
+
+    iget-object p1, p1, Lge3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    const-string v1, "Draft empty in chat don\'t need clear"
+
+    invoke-static {p1, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :cond_6
+    iget-object v2, p0, Lfe3;->X:Lge3;
+
+    iget-object v2, v2, Lge3;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/String;
+
+    const-string v4, "Clear local draft"
+
+    invoke-static {v2, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lfe3;->X:Lge3;
+
+    iput v3, p0, Lfe3;->o:I
+
+    iget-object v3, v2, Lge3;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/String;
+
+    iget-wide v4, p1, Lnd2;->a:J
+
+    const-string v7, "dropAllDrafts "
+
+    invoke-static {v4, v5, v7, v3}, Lob3;->g(JLjava/lang/String;Ljava/lang/String;)V
+
+    iget-object v3, p1, Lnd2;->b:Luh2;
+
+    iget-object v4, v3, Luh2;->d0:Lgab;
+
+    if-eqz v4, :cond_9
+
+    iget-object v4, v6, Lgab;->e:Ljava/lang/Long;
+
+    if-eqz v4, :cond_7
+
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    goto :goto_1
+
+    :cond_7
+    iget-wide v3, v3, Luh2;->e0:J
+
+    :goto_1
+    iget-object v5, v2, Lge3;->f:Ljava/lang/Object;
+
+    check-cast v5, Lo58;
+
+    invoke-interface {v5}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lgre;
+
+    check-cast v5, Lidc;
+
+    invoke-virtual {v5}, Lidc;->s()Z
+
+    move-result v5
+
+    if-nez v5, :cond_8
+
+    const-wide/16 v3, 0x0
+
+    :cond_8
+    move-wide v10, v3
+
+    iget-object v3, v2, Lge3;->c:Ljava/lang/Object;
+
+    check-cast v3, Lo58;
+
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lla3;
+
+    iget-wide v8, p1, Lnd2;->a:J
+
+    invoke-virtual {v3}, Lla3;->j()Lxg2;
+
+    move-result-object v7
+
+    const/4 v12, 0x0
+
+    invoke-virtual/range {v7 .. v12}, Lxg2;->v(JJLgab;)V
+
+    :cond_9
+    iget-wide v3, p1, Lnd2;->a:J
+
+    invoke-virtual {v2, v3, v4, v6, p0}, Lge3;->b(JLgab;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_a
+
+    goto :goto_2
+
+    :cond_a
+    move-object p1, v0
+
+    :goto_2
+    if-ne p1, v1, :cond_b
+
+    return-object v1
+
+    :cond_b
+    return-object v0
 .end method

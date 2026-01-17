@@ -13,12 +13,12 @@
         "Landroid/app/Activity;",
         "<init>",
         "()V",
-        "oneme_playGoogleRelease"
+        "oneme_googleRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -47,9 +47,9 @@
 
     if-lt p1, v0, :cond_0
 
-    invoke-static {p0}, Lht;->j(Lone/me/android/calls/CallNotifierFixActivity;)V
+    invoke-static {p0}, Ljt;->j(Lone/me/android/calls/CallNotifierFixActivity;)V
 
-    invoke-static {p0}, Lht;->m(Lone/me/android/calls/CallNotifierFixActivity;)V
+    invoke-static {p0}, Ljt;->m(Lone/me/android/calls/CallNotifierFixActivity;)V
 
     goto :goto_0
 
@@ -63,19 +63,19 @@
     invoke-virtual {p1, v0}, Landroid/view/Window;->addFlags(I)V
 
     :goto_0
-    sget-object p1, Ld8b;->a:Ld8b;
+    sget-object p1, Lj8b;->a:Lj8b;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lu5;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
 
     const/16 v0, 0x280
 
-    invoke-virtual {p1, v0}, Lu5;->c(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lc21;
+    check-cast p1, Lw11;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -83,7 +83,7 @@
 
     const-string v1, "CallNotifierFixActivity"
 
-    invoke-virtual {p1, p0, v0, v1}, Lc21;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+    invoke-virtual {p1, p0, v0, v1}, Lw11;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 

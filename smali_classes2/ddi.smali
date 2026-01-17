@@ -1,81 +1,49 @@
 .class public final Lddi;
-.super Lru/ok/tamtam/exception/IssueKeyException;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public X:I
 
-.field public final c:Ljava/lang/Throwable;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lfdi;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Throwable;I)V
+.method public constructor <init>(Lfdi;Lo84;)V
     .locals 0
 
-    iput p4, p0, Lddi;->b:I
+    iput-object p1, p0, Lddi;->o:Lfdi;
 
-    packed-switch p4, :pswitch_data_0
-
-    const-string p4, "Fail decryption, botId:"
-
-    invoke-static {p1, p2, p4}, Lgg9;->e(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "ONEME-31137"
-
-    invoke-direct {p0, p2, p1, p3}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iput-object p3, p0, Lddi;->c:Ljava/lang/Throwable;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_0
-    const-string p4, "Fail encryption, botId:"
-
-    invoke-static {p1, p2, p4}, Lgg9;->e(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "ONEME-31137"
-
-    invoke-direct {p0, p2, p1, p3}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iput-object p3, p0, Lddi;->c:Ljava/lang/Throwable;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final getCause()Ljava/lang/Throwable;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lddi;->b:I
+    iput-object p1, p0, Lddi;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lddi;->X:I
 
-    iget-object v0, p0, Lddi;->c:Ljava/lang/Throwable;
+    const/high16 v0, -0x80000000
 
-    return-object v0
+    or-int/2addr p1, v0
 
-    :pswitch_0
-    iget-object v0, p0, Lddi;->c:Ljava/lang/Throwable;
+    iput p1, p0, Lddi;->X:I
 
-    return-object v0
+    iget-object p1, p0, Lddi;->o:Lfdi;
 
-    nop
+    const/4 v0, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1, v0, p0}, Lfdi;->f(Ljava/lang/String;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

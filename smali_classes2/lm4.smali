@@ -1,172 +1,199 @@
-.class public final Llm4;
+.class public abstract Llm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Llm4;
-
-
 # instance fields
-.field public final a:Lmq6;
-
-.field public final b:Lmq6;
+.field public final a:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Llm4;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Llm4;-><init>(Luxf;I)V
-
-    sput-object v0, Llm4;->c:Llm4;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lmq6;Lmq6;)V
-    .locals 0
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Llm4;->a:Lmq6;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    .line 3
-    iput-object p2, p0, Llm4;->b:Lmq6;
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/LinkedHashSet;-><init>(I)V
+
+    iput-object v0, p0, Llm4;->a:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Luxf;I)V
-    .locals 1
+.method public static b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
+    .locals 7
 
-    .line 4
-    sget-object v0, Lf94;->c:Lf94;
+    and-int/lit8 p4, p4, 0x8
 
-    and-int/lit8 p2, p2, 0x2
+    const/4 v0, 0x1
 
-    if-eqz p2, :cond_0
+    if-eqz p4, :cond_0
 
-    .line 5
-    sget-object p1, Lf94;->d:Lf94;
+    move v6, v0
 
-    .line 6
+    goto :goto_0
+
     :cond_0
-    invoke-direct {p0, v0, p1}, Llm4;-><init>(Lmq6;Lmq6;)V
+    const/4 p4, 0x0
 
-    return-void
+    move v6, p4
+
+    :goto_0
+    array-length p4, p2
+
+    invoke-static {p2, p4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    move-object v3, p2
+
+    check-cast v3, [Ljava/lang/String;
+
+    sget-object p2, Lfae;->a:Lkfa;
+
+    new-instance v5, Lkfa;
+
+    invoke-direct {v5, v0}, Lkfa;-><init>(I)V
+
+    invoke-virtual {v5, p3}, Lkfa;->d(Ljava/lang/Object;)I
+
+    move-result p2
+
+    iget-object p4, v5, Lkfa;->b:[Ljava/lang/Object;
+
+    aput-object p3, p4, p2
+
+    const/4 v4, 0x0
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    invoke-virtual/range {v1 .. v6}, Llm4;->a(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;Lkfa;Z)Lhm4;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    .locals 6
+
+    and-int/lit8 p4, p4, 0x2
+
+    if-eqz p4, :cond_0
+
+    const/4 p3, 0x0
+
+    :cond_0
+    move-object v3, p3
+
+    sget-object v4, Lfae;->a:Lkfa;
+
+    const/4 v5, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-virtual/range {v0 .. v5}, Llm4;->a(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;Lkfa;Z)Lhm4;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;Lkfa;Z)Lhm4;
+    .locals 9
 
-    const/4 v0, 0x1
+    const/16 v0, 0x3a
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llm4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Llm4;
-
-    iget-object v1, p0, Llm4;->a:Lmq6;
-
-    iget-object v3, p1, Llm4;->a:Lmq6;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Llm4;->b:Lmq6;
-
-    iget-object p1, p1, Llm4;->b:Lmq6;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Llm4;->a:Lmq6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {p1, v0}, Lrzf;->W(Ljava/lang/String;C)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Llm4;->b:Lmq6;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    array-length v1, p2
 
-    move-result v1
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    add-int/2addr v1, v0
+    array-length v1, p2
 
-    return v1
-.end method
+    const/4 v2, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    :goto_0
+    if-ge v2, v1, :cond_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    aget-object v3, p2, v2
 
-    const-string v1, "Animations(push="
+    sget-object v4, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    iget-object v1, p0, Llm4;->a:Lmq6;
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string v1, ", pop="
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    iget-object v1, p0, Llm4;->b:Lmq6;
+    :cond_0
+    new-instance v6, Ljava/util/LinkedHashSet;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v6, v0}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
 
-    const-string v1, ")"
+    sget-object p2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-static {p1}, Lqmj;->a(Ljava/lang/String;)Landroid/net/Uri;
 
-    return-object v0
+    move-result-object v4
+
+    new-instance v3, Lhm4;
+
+    move-object v8, p3
+
+    move-object v5, p4
+
+    move v7, p5
+
+    invoke-direct/range {v3 .. v8}, Lhm4;-><init>(Landroid/net/Uri;Lkfa;Ljava/util/LinkedHashSet;ZLjava/util/Set;)V
+
+    iget-object p1, p0, Llm4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {p1, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    return-object v3
+
+    :cond_1
+    const-string p2, "invalid route "
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method

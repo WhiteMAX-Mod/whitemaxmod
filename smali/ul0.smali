@@ -1,19 +1,19 @@
 .class public final Lul0;
-.super Lgr5;
+.super Lkr5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final q:Lkff;
+.field public final q:Ltgf;
 
 .field public final r:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public constructor <init>(Lkff;)V
+.method public constructor <init>(Ltgf;)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lgr5;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lkr5;-><init>(Landroid/view/View;)V
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -21,7 +21,7 @@
 
     iput-object v0, p0, Lul0;->r:Landroid/graphics/Rect;
 
-    iput-object p1, p0, Lul0;->q:Lkff;
+    iput-object p1, p0, Lul0;->q:Ltgf;
 
     return-void
 .end method
@@ -34,7 +34,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lul0;->q:Lkff;
+    iget-object v1, p0, Lul0;->q:Ltgf;
 
     invoke-virtual {v1}, Lwl0;->getValues()Ljava/util/List;
 
@@ -79,7 +79,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lul0;->q:Lkff;
+    iget-object v1, p0, Lul0;->q:Ltgf;
 
     invoke-virtual {v1}, Lwl0;->getValues()Ljava/util/List;
 
@@ -108,7 +108,7 @@
 .method public final s(IILandroid/os/Bundle;)Z
     .locals 6
 
-    iget-object v0, p0, Lul0;->q:Lkff;
+    iget-object v0, p0, Lul0;->q:Ltgf;
 
     invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
 
@@ -163,12 +163,12 @@
 
     invoke-virtual {v0}, Landroid/view/View;->postInvalidate()V
 
-    invoke-virtual {p0, p1}, Lgr5;->p(I)V
+    invoke-virtual {p0, p1}, Lkr5;->p(I)V
 
     return v2
 
     :cond_3
-    iget p3, v0, Lwl0;->i1:F
+    iget p3, v0, Lwl0;->j1:F
 
     const/4 v1, 0x0
 
@@ -179,9 +179,9 @@
     const/high16 p3, 0x3f800000    # 1.0f
 
     :cond_4
-    iget v1, v0, Lwl0;->e1:F
+    iget v1, v0, Lwl0;->f1:F
 
-    iget v4, v0, Lwl0;->d1:F
+    iget v4, v0, Lwl0;->e1:F
 
     sub-float/2addr v1, v4
 
@@ -239,15 +239,15 @@
 
     add-float/2addr p2, p3
 
-    invoke-virtual {v0}, Lkff;->getValueFrom()F
+    invoke-virtual {v0}, Ltgf;->getValueFrom()F
 
     move-result p3
 
-    invoke-virtual {v0}, Lkff;->getValueTo()F
+    invoke-virtual {v0}, Ltgf;->getValueTo()F
 
     move-result v1
 
-    invoke-static {p2, p3, v1}, Lt7j;->c(FFF)F
+    invoke-static {p2, p3, v1}, Lj8j;->a(FFF)F
 
     move-result p2
 
@@ -261,7 +261,7 @@
 
     invoke-virtual {v0}, Landroid/view/View;->postInvalidate()V
 
-    invoke-virtual {p0, p1}, Lgr5;->p(I)V
+    invoke-virtual {p0, p1}, Lkr5;->p(I)V
 
     return v2
 
@@ -272,16 +272,16 @@
     return p1
 .end method
 
-.method public final u(ILj5;)V
+.method public final u(ILg5;)V
     .locals 8
 
-    iget-object v0, p2, Lj5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+    iget-object v0, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    sget-object v1, Ld5;->m:Ld5;
+    sget-object v1, Lb5;->m:Lb5;
 
-    invoke-virtual {p2, v1}, Lj5;->b(Ld5;)V
+    invoke-virtual {p2, v1}, Lg5;->b(Lb5;)V
 
-    iget-object v1, p0, Lul0;->q:Lkff;
+    iget-object v1, p0, Lul0;->q:Ltgf;
 
     invoke-virtual {v1}, Lwl0;->getValues()Ljava/util/List;
 
@@ -297,11 +297,11 @@
 
     move-result v4
 
-    invoke-virtual {v1}, Lkff;->getValueFrom()F
+    invoke-virtual {v1}, Ltgf;->getValueFrom()F
 
     move-result v5
 
-    invoke-virtual {v1}, Lkff;->getValueTo()F
+    invoke-virtual {v1}, Ltgf;->getValueTo()F
 
     move-result v6
 
@@ -317,7 +317,7 @@
 
     const/16 v7, 0x2000
 
-    invoke-virtual {p2, v7}, Lj5;->a(I)V
+    invoke-virtual {p2, v7}, Lg5;->a(I)V
 
     :cond_0
     cmpg-float v7, v4, v6
@@ -326,7 +326,7 @@
 
     const/16 v7, 0x1000
 
-    invoke-virtual {p2, v7}, Lj5;->a(I)V
+    invoke-virtual {p2, v7}, Lg5;->a(I)V
 
     :cond_1
     const/4 v7, 0x1
@@ -343,7 +343,7 @@
 
     move-result-object v5
 
-    invoke-virtual {p2, v5}, Lj5;->h(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v5}, Lg5;->h(Ljava/lang/CharSequence;)V
 
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -394,7 +394,7 @@
 
     move-result-object v4
 
-    sget v5, Lvbd;->material_slider_value:I
+    sget v5, Ltcd;->material_slider_value:I
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -422,7 +422,7 @@
 
     move-result-object v2
 
-    sget v4, Lvbd;->material_slider_range_end:I
+    sget v4, Ltcd;->material_slider_range_end:I
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -440,7 +440,7 @@
 
     move-result-object v2
 
-    sget v4, Lvbd;->material_slider_range_start:I
+    sget v4, Ltcd;->material_slider_range_start:I
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

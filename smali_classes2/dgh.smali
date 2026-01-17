@@ -1,59 +1,126 @@
 .class public final Ldgh;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lmdb;
 
-.field public final synthetic Y:Ljgh;
+.field public final b:Lfgh;
 
-.field public Z:I
+.field public final c:Lb26;
 
-.field public d:Ljgh;
+.field public final d:Ldd;
 
-.field public o:Ll20;
+.field public final e:Lube;
+
+.field public final f:Lpbe;
+
+.field public final g:Ltbe;
+
+.field public final h:Lgyh;
+
+.field public final i:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Ljgh;Ll84;)V
-    .locals 0
+.method public constructor <init>(Lmdb;Lfgh;Lb26;Ldd;Lube;Lpbe;Ltbe;)V
+    .locals 1
 
-    iput-object p1, p0, Ldgh;->Y:Ljgh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Lgyh;
+
+    invoke-direct {v0}, Lgyh;-><init>()V
+
+    iput-object v0, p0, Ldgh;->h:Lgyh;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Ldgh;->i:Ljava/util/HashMap;
+
+    iput-object p1, p0, Ldgh;->a:Lmdb;
+
+    iput-object p2, p0, Ldgh;->b:Lfgh;
+
+    iput-object p3, p0, Ldgh;->c:Lb26;
+
+    iput-object p4, p0, Ldgh;->d:Ldd;
+
+    iput-object p5, p0, Ldgh;->e:Lube;
+
+    iput-object p6, p0, Ldgh;->f:Lpbe;
+
+    iput-object p7, p0, Ldgh;->g:Ltbe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final declared-synchronized a(Lvfh;)V
+    .locals 5
 
-    iput-object p1, p0, Ldgh;->X:Ljava/lang/Object;
+    monitor-enter p0
 
-    iget p1, p0, Ldgh;->Z:I
+    :try_start_0
+    iget-object v0, p0, Ldgh;->i:Ljava/util/HashMap;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Ldgh;->b:Lfgh;
 
-    iput p1, p0, Ldgh;->Z:I
+    invoke-virtual {v0}, Lfgh;->a()Lsef;
 
-    const-wide/16 v2, 0x0
+    move-result-object v0
 
-    const-wide/16 v4, 0x0
+    new-instance v1, Lagh;
 
-    iget-object v0, p0, Ldgh;->Y:Ljgh;
+    const/4 v2, 0x2
 
-    const/4 v1, 0x0
+    invoke-direct {v1, p1, v2}, Lagh;-><init>(Lvfh;I)V
 
-    move-object v6, p0
+    new-instance v2, Lco3;
 
-    invoke-virtual/range {v0 .. v6}, Ljgh;->b(Lm20;JJLl84;)Ljava/lang/Object;
+    const/4 v3, 0x2
 
-    move-result-object p1
+    invoke-direct {v2, v0, v3, v1}, Lco3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    return-object p1
+    invoke-virtual {v2}, Lbo3;->i()Ldxa;
+
+    move-result-object v0
+
+    sget-object v1, Lhbe;->d:Lkme;
+
+    new-instance v2, Lagh;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, v3}, Lagh;-><init>(Lvfh;I)V
+
+    new-instance v3, Lbl0;
+
+    const/16 v4, 0xd
+
+    invoke-direct {v3, v4, p1}, Lbl0;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, v2, v3}, Ljdj;->b(Ldxa;Lay3;Lay3;Li6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

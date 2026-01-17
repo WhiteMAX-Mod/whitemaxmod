@@ -1,17 +1,41 @@
 .class public final Lrob;
-.super Lie0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lyz5;
+
+
+# instance fields
+.field public final a:Lsob;
+
+.field public final b:I
+
+
 # direct methods
-.method public constructor <init>(J)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lyz5;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lyz5;-><init>(I)V
+
+    sput-object v0, Lrob;->c:Lyz5;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lsob;I)V
     .locals 0
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iput-object p1, p0, Lrob;->a:Lsob;
 
-    invoke-direct {p0, p1}, Ljja;-><init>(Ljava/lang/Object;)V
+    iput p2, p0, Lrob;->b:I
 
     return-void
 .end method

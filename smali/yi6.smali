@@ -1,228 +1,153 @@
 .class public final Lyi6;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ler6;
 
 
 # instance fields
-.field public synthetic X:Lplb;
+.field public final a:I
 
-.field public final synthetic Y:Landroid/widget/TextView;
+.field public final b:I
 
-.field public final synthetic Z:Landroid/widget/TextView;
-
-.field public final synthetic o:I
+.field public final c:Landroid/app/Notification;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/widget/TextView;Landroid/widget/TextView;Lkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(ILandroid/app/Notification;I)V
     .locals 0
 
-    iput p4, p0, Lyi6;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyi6;->Y:Landroid/widget/TextView;
+    iput p1, p0, Lyi6;->a:I
 
-    iput-object p2, p0, Lyi6;->Z:Landroid/widget/TextView;
+    iput-object p2, p0, Lyi6;->c:Landroid/app/Notification;
 
-    const/4 p1, 0x3
-
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Lyi6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Lyi6;->o:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x1
 
-    check-cast p1, Landroid/widget/LinearLayout;
+    return p1
 
-    check-cast p2, Lplb;
+    :cond_0
+    const/4 v0, 0x0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_4
 
-    new-instance p1, Lyi6;
+    const-class v1, Lyi6;
 
-    iget-object v0, p0, Lyi6;->Z:Landroid/widget/TextView;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v1, 0x2
+    move-result-object v2
 
-    iget-object v2, p0, Lyi6;->Y:Landroid/widget/TextView;
+    if-eq v1, v2, :cond_1
 
-    invoke-direct {p1, v2, v0, p3, v1}, Lyi6;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Lkotlin/coroutines/Continuation;I)V
+    goto :goto_0
 
-    iput-object p2, p1, Lyi6;->X:Lplb;
+    :cond_1
+    check-cast p1, Lyi6;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget v1, p0, Lyi6;->a:I
 
-    invoke-virtual {p1, p2}, Lyi6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v2, p1, Lyi6;->a:I
 
-    return-object p2
+    if-eq v1, v2, :cond_2
 
-    :pswitch_0
-    check-cast p1, Landroid/widget/LinearLayout;
+    return v0
 
-    check-cast p2, Lplb;
+    :cond_2
+    iget v1, p0, Lyi6;->b:I
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iget v2, p1, Lyi6;->b:I
 
-    new-instance p1, Lyi6;
+    if-eq v1, v2, :cond_3
 
-    iget-object v0, p0, Lyi6;->Z:Landroid/widget/TextView;
+    return v0
 
-    const/4 v1, 0x1
+    :cond_3
+    iget-object v0, p0, Lyi6;->c:Landroid/app/Notification;
 
-    iget-object v2, p0, Lyi6;->Y:Landroid/widget/TextView;
+    iget-object p1, p1, Lyi6;->c:Landroid/app/Notification;
 
-    invoke-direct {p1, v2, v0, p3, v1}, Lyi6;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Lkotlin/coroutines/Continuation;I)V
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iput-object p2, p1, Lyi6;->X:Lplb;
+    move-result p1
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    return p1
 
-    invoke-virtual {p1, p2}, Lyi6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_1
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    check-cast p2, Lplb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lyi6;
-
-    iget-object v0, p0, Lyi6;->Z:Landroid/widget/TextView;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lyi6;->Y:Landroid/widget/TextView;
-
-    invoke-direct {p1, v2, v0, p3, v1}, Lyi6;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lyi6;->X:Lplb;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lyi6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_4
+    :goto_0
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lyi6;->o:I
+    iget v0, p0, Lyi6;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget v1, p0, Lyi6;->b:I
 
-    iget-object p1, p0, Lyi6;->X:Lplb;
+    add-int/2addr v0, v1
 
-    invoke-interface {p1}, Lplb;->getText()Lifg;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object v0
+    iget-object v1, p0, Lyi6;->c:Landroid/app/Notification;
 
-    iget v0, v0, Lifg;->e:I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v1, p0, Lyi6;->Y:Landroid/widget/TextView;
+    move-result v1
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    add-int/2addr v1, v0
 
-    invoke-interface {p1}, Lplb;->getText()Lifg;
+    return v1
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget p1, p1, Lifg;->i:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lyi6;->Z:Landroid/widget/TextView;
+    const-string v1, "ForegroundInfo{mNotificationId="
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget v1, p0, Lyi6;->a:I
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const-string v1, ", mForegroundServiceType="
 
-    iget-object p1, p0, Lyi6;->X:Lplb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lplb;->getText()Lifg;
+    iget v1, p0, Lyi6;->b:I
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget v0, v0, Lifg;->e:I
+    const-string v1, ", mNotification="
 
-    iget-object v1, p0, Lyi6;->Y:Landroid/widget/TextView;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    iget-object v1, p0, Lyi6;->c:Landroid/app/Notification;
 
-    invoke-interface {p1}, Lplb;->getText()Lifg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const/16 v1, 0x7d
 
-    iget p1, p1, Lifg;->g:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lyi6;->Z:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyi6;->X:Lplb;
-
-    invoke-interface {p1}, Lplb;->getText()Lifg;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v0, v0, Lifg;->e:I
-
-    iget-object v1, p0, Lyi6;->Y:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {p1}, Lplb;->getText()Lifg;
-
-    move-result-object p1
-
-    iget p1, p1, Lifg;->e:I
-
-    iget-object v0, p0, Lyi6;->Z:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

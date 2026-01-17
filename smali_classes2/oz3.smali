@@ -8,16 +8,20 @@
 
 .field public static final enum b:Loz3;
 
-.field public static final synthetic c:[Loz3;
+.field public static final enum c:Loz3;
+
+.field public static final enum d:Loz3;
+
+.field public static final synthetic o:[Loz3;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 6
 
     new-instance v0, Loz3;
 
-    const-string v1, "BLOCKED"
+    const-string v1, "CUSTOM"
 
     const/4 v2, 0x0
 
@@ -27,7 +31,7 @@
 
     new-instance v1, Loz3;
 
-    const-string v2, "REMOVED"
+    const-string v2, "DEVICE"
 
     const/4 v3, 0x1
 
@@ -35,11 +39,31 @@
 
     sput-object v1, Loz3;->b:Loz3;
 
-    filled-new-array {v0, v1}, [Loz3;
+    new-instance v2, Loz3;
+
+    const-string v3, "ONEME"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Loz3;->c:Loz3;
+
+    new-instance v3, Loz3;
+
+    const-string v4, "UNKNOWN"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Loz3;->d:Loz3;
+
+    filled-new-array {v0, v1, v2, v3}, [Loz3;
 
     move-result-object v0
 
-    sput-object v0, Loz3;->c:[Loz3;
+    sput-object v0, Loz3;->o:[Loz3;
 
     return-void
 .end method
@@ -61,7 +85,7 @@
 .method public static values()[Loz3;
     .locals 1
 
-    sget-object v0, Loz3;->c:[Loz3;
+    sget-object v0, Loz3;->o:[Loz3;
 
     invoke-virtual {v0}, [Loz3;->clone()Ljava/lang/Object;
 

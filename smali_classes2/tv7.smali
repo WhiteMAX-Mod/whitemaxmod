@@ -1,110 +1,51 @@
 .class public final Ltv7;
-.super Lvvf;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Ljig;
 
 
 # instance fields
-.field public final d:Landroidx/appcompat/widget/AppCompatTextView;
+.field public final synthetic X:Lzv7;
+
+.field public Y:I
+
+.field public d:Llhg;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
-    .locals 3
+.method public constructor <init>(Lzv7;Lo84;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lvvf;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Ltv7;->X:Lzv7;
 
-    iput-object p1, p0, Ltv7;->d:Landroidx/appcompat/widget/AppCompatTextView;
-
-    new-instance v0, Lhrd;
-
-    const/4 v1, -0x1
-
-    const/4 v2, -0x2
-
-    invoke-direct {v0, v1, v2}, Lhrd;-><init>(II)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 v0, 0xc
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Ln7j;->c(F)I
-
-    move-result v1
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Ln7j;->c(F)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v2, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    sget-object v0, Ldc3;->s0:Lole;
-
-    invoke-virtual {v0, p1}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ltv7;->onThemeChanged(Lplb;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lplb;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v0, Lj1h;->k:Lhhg;
+    iput-object p1, p0, Ltv7;->o:Ljava/lang/Object;
 
-    iget-object v1, p0, Ltv7;->d:Landroidx/appcompat/widget/AppCompatTextView;
+    iget p1, p0, Ltv7;->Y:I
 
-    invoke-static {v0, v1}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p1}, Lplb;->getText()Lifg;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Ltv7;->Y:I
 
-    iget v0, v0, Lifg;->i:I
+    iget-object p1, p0, Ltv7;->X:Lzv7;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    const/4 v0, 0x0
 
-    invoke-interface {p1}, Lplb;->b()Lxf0;
+    invoke-static {p1, v0, v0, p0}, Lzv7;->s(Lzv7;Ljava/lang/String;Ljava/lang/String;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget p1, p1, Lxf0;->l:I
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    return-void
+    return-object p1
 .end method

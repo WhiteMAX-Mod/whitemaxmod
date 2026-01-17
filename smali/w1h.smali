@@ -1,65 +1,84 @@
 .class public final Lw1h;
-.super Lugc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:[J
-
-.field public b:I
+# interfaces
+.implements La38;
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
+# static fields
+.field public static final a:Lw1h;
+
+.field public static final b:Lop7;
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 2
 
-    iget-object v0, p0, Lw1h;->a:[J
+    new-instance v0, Lw1h;
 
-    iget v1, p0, Lw1h;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([JI)[J
+    sput-object v0, Lw1h;->a:Lw1h;
+
+    const-string v0, "kotlin.UByte"
+
+    sget-object v1, Lcz0;->a:Lcz0;
+
+    invoke-static {v1, v0}, Leui;->a(La38;Ljava/lang/String;)Lop7;
 
     move-result-object v0
 
-    new-instance v1, Lv1h;
+    sput-object v0, Lw1h;->b:Lop7;
 
-    invoke-direct {v1, v0}, Lv1h;-><init>([J)V
-
-    return-object v1
-.end method
-
-.method public final b(I)V
-    .locals 2
-
-    iget-object v0, p0, Lw1h;->a:[J
-
-    array-length v1, v0
-
-    if-ge v1, p1, :cond_1
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([JI)[J
-
-    move-result-object p1
-
-    iput-object p1, p0, Lw1h;->a:[J
-
-    :cond_1
     return-void
 .end method
 
-.method public final d()I
+
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
     .locals 1
 
-    iget v0, p0, Lw1h;->b:I
+    check-cast p2, Ls1h;
 
-    return v0
+    iget-byte p2, p2, Ls1h;->a:B
+
+    sget-object v0, Lw1h;->b:Lop7;
+
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->i(Lxpe;)Lkotlinx/serialization/json/internal/b;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->d(B)V
+
+    return-void
+.end method
+
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 1
+
+    sget-object v0, Lw1h;->b:Lop7;
+
+    invoke-interface {p1, v0}, Lkl4;->o(Lxpe;)Lkl4;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lkl4;->z()B
+
+    move-result p1
+
+    new-instance v0, Ls1h;
+
+    invoke-direct {v0, p1}, Ls1h;-><init>(B)V
+
+    return-object v0
+.end method
+
+.method public final d()Lxpe;
+    .locals 1
+
+    sget-object v0, Lw1h;->b:Lop7;
+
+    return-object v0
 .end method

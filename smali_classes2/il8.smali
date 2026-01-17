@@ -1,42 +1,39 @@
-.class public final synthetic Lil8;
-.super Ljava/lang/Object;
+.class public final Lil8;
+.super Laq;
 .source "SourceFile"
 
-# interfaces
-.implements Loq6;
 
-
-# instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:Z
+# static fields
+.field public static final a:Lil8;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lil8;
 
-    iput-boolean p1, p0, Lil8;->a:Z
+    invoke-direct {v0}, Laq;-><init>()V
 
-    iput-boolean p2, p0, Lil8;->b:Z
+    sput-object v0, Lil8;->a:Lil8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Lo58;
     .locals 2
 
-    iget-boolean v0, p0, Lil8;->a:Z
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    iget-boolean v1, p0, Lil8;->b:Z
+    move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lu4j;->g(Ljava/lang/Object;ZZ)Ljava/lang/String;
+    const/16 v1, 0x20a
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

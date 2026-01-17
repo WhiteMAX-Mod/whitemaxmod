@@ -1,58 +1,90 @@
-.class public abstract Lgij;
+.class public final Lgij;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lgij;
+
 
 # direct methods
-.method public static final a(Landroid/content/pm/PackageInfo;)J
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lgij;
 
-    const/16 v1, 0x1c
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-lt v0, v1, :cond_0
+    sput-object v0, Lgij;->a:Lgij;
 
-    invoke-static {p0}, Lzec;->e(Landroid/content/pm/PackageInfo;)J
+    new-instance v0, Lvzi;
 
-    move-result-wide v0
+    const/4 v1, 0x1
 
-    return-wide v0
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    :cond_0
-    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
+    const-class v1, Ln0j;
 
-    int-to-long v0, p0
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    return-wide v0
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static final b(IF)I
-    .locals 2
 
-    const/high16 v0, 0x437f0000    # 255.0f
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    mul-float/2addr p1, v0
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-static {p1}, Ln7j;->c(F)I
+    move-result-object p1
 
-    move-result p1
-
-    invoke-static {p0}, Landroid/graphics/Color;->red(I)I
-
-    move-result v0
-
-    invoke-static {p0}, Landroid/graphics/Color;->green(I)I
-
-    move-result v1
-
-    invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
-
-    move-result p0
-
-    invoke-static {p1, v0, v1, p0}, Landroid/graphics/Color;->argb(IIII)I
-
-    move-result p0
-
-    return p0
+    throw p1
 .end method

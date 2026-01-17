@@ -1,126 +1,100 @@
 .class public final Lwjb;
-.super Lf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbkb;
 
-# instance fields
-.field public final synthetic c:I
 
-.field public final synthetic d:Lxjb;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lwjb;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Lwjb;
 
 
 # direct methods
-.method public constructor <init>(Lxjb;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lwjb;->c:I
+    new-instance v0, Lwjb;
 
-    iput-object p1, p0, Lwjb;->d:Lxjb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/16 p1, 0xb
+    sput-object v0, Lwjb;->a:Lwjb;
 
-    packed-switch p2, :pswitch_data_0
+    new-instance v0, Lhu8;
 
-    sget-object p2, Lijb;->a:Lijb;
+    const/16 v1, 0x1d
 
-    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
 
-    return-void
-
-    :pswitch_0
-    sget-object p2, Lsjb;->a:Lsjb;
-
-    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
+    sput-object v0, Lwjb;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
-
-    :pswitch_1
-    sget-object p2, Lpjb;->a:Lpjb;
-
-    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Lwjb;->c:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    move-result v0
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lsjb;
-
-    check-cast p1, Lsjb;
-
-    iget-object p1, p0, Lwjb;->d:Lxjb;
-
-    invoke-static {p1, p2}, Lxjb;->y(Lxjb;Lsjb;)V
-
-    invoke-virtual {p1}, Lxjb;->z()V
+    return v0
 
     :cond_0
-    return-void
+    instance-of p1, p1, Lwjb;
 
-    :pswitch_0
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-nez p1, :cond_1
 
-    move-result v0
+    const/4 p1, 0x0
 
-    if-nez v0, :cond_1
-
-    check-cast p2, Lrjb;
-
-    check-cast p1, Lrjb;
-
-    iget-object p1, p0, Lwjb;->d:Lxjb;
-
-    invoke-static {p1, p2}, Lxjb;->x(Lxjb;Lrjb;)V
-
-    invoke-virtual {p1}, Lxjb;->z()V
+    return p1
 
     :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x4e19c0b1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CancelBtn"
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
     return-void
-
-    :pswitch_1
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    check-cast p2, Lljb;
-
-    check-cast p1, Lljb;
-
-    iget-object p1, p0, Lwjb;->d:Lxjb;
-
-    invoke-static {p1, p2}, Lxjb;->w(Lxjb;Lljb;)V
-
-    invoke-virtual {p1}, Lxjb;->z()V
-
-    :cond_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

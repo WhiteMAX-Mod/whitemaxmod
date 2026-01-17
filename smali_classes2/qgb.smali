@@ -1,163 +1,100 @@
-.class public abstract Lqgb;
+.class public final synthetic Lqgb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
+.field public final synthetic b:Lrgb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lrgb;I)V
+    .locals 0
 
-    sget v0, Lx5d;->emoji_sprite_0:I
+    iput p2, p0, Lqgb;->a:I
 
-    sput v0, Lqgb;->a:I
+    iput-object p1, p0, Lqgb;->b:Lrgb;
 
-    sget v0, Lx5d;->emoji_sprite_1:I
-
-    sput v0, Lqgb;->b:I
-
-    sget v0, Lx5d;->emoji_sprite_10:I
-
-    sput v0, Lqgb;->c:I
-
-    sget v0, Lx5d;->emoji_sprite_11:I
-
-    sput v0, Lqgb;->d:I
-
-    sget v0, Lx5d;->emoji_sprite_12:I
-
-    sput v0, Lqgb;->e:I
-
-    sget v0, Lx5d;->emoji_sprite_13:I
-
-    sput v0, Lqgb;->f:I
-
-    sget v0, Lx5d;->emoji_sprite_14:I
-
-    sput v0, Lqgb;->g:I
-
-    sget v0, Lx5d;->emoji_sprite_15:I
-
-    sput v0, Lqgb;->h:I
-
-    sget v0, Lx5d;->emoji_sprite_16:I
-
-    sput v0, Lqgb;->i:I
-
-    sget v0, Lx5d;->emoji_sprite_17:I
-
-    sput v0, Lqgb;->j:I
-
-    sget v0, Lx5d;->emoji_sprite_18:I
-
-    sput v0, Lqgb;->k:I
-
-    sget v0, Lx5d;->emoji_sprite_19:I
-
-    sput v0, Lqgb;->l:I
-
-    sget v0, Lx5d;->emoji_sprite_2:I
-
-    sput v0, Lqgb;->m:I
-
-    sget v0, Lx5d;->emoji_sprite_20:I
-
-    sput v0, Lqgb;->n:I
-
-    sget v0, Lx5d;->emoji_sprite_21:I
-
-    sput v0, Lqgb;->o:I
-
-    sget v0, Lx5d;->emoji_sprite_22:I
-
-    sput v0, Lqgb;->p:I
-
-    sget v0, Lx5d;->emoji_sprite_23:I
-
-    sput v0, Lqgb;->q:I
-
-    sget v0, Lx5d;->emoji_sprite_24:I
-
-    sput v0, Lqgb;->r:I
-
-    sget v0, Lx5d;->emoji_sprite_3:I
-
-    sput v0, Lqgb;->s:I
-
-    sget v0, Lx5d;->emoji_sprite_4:I
-
-    sput v0, Lqgb;->t:I
-
-    sget v0, Lx5d;->emoji_sprite_5:I
-
-    sput v0, Lqgb;->u:I
-
-    sget v0, Lx5d;->emoji_sprite_6:I
-
-    sput v0, Lqgb;->v:I
-
-    sget v0, Lx5d;->emoji_sprite_7:I
-
-    sput v0, Lqgb;->w:I
-
-    sget v0, Lx5d;->emoji_sprite_8:I
-
-    sput v0, Lqgb;->x:I
-
-    sget v0, Lx5d;->emoji_sprite_9:I
-
-    sput v0, Lqgb;->y:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 5
+
+    iget v0, p0, Lqgb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lqgb;->b:Lrgb;
+
+    iget-object v1, v0, Lrgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v0, Lrgb;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v2, Lri;
+
+    const/16 v3, 0xa
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, v0, v4}, Lri;-><init>(ILjava/lang/Object;Z)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqgb;->b:Lrgb;
+
+    iget-object v1, v0, Lrgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, v0, Lrgb;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v2, Lri;
+
+    const/16 v3, 0xa
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, v3, v0, v4}, Lri;-><init>(ILjava/lang/Object;Z)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

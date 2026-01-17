@@ -1,40 +1,26 @@
-.class public abstract Lc56;
+.class public final Lc56;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La56;
+.implements Ly46;
 
 
 # instance fields
-.field public final a:Lnkg;
+.field public final a:Ljava/util/List;
 
-.field public final b:Lqa1;
-
-.field public final c:Lcgd;
-
-.field public d:Z
-
-.field public e:I
-
-.field public f:Ljava/lang/Long;
+.field public final b:Le1b;
 
 
 # direct methods
-.method public constructor <init>(Lnkg;Lqa1;Lcgd;)V
+.method public constructor <init>(Ljava/util/List;Le1b;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc56;->a:Lnkg;
+    iput-object p1, p0, Lc56;->a:Ljava/util/List;
 
-    iput-object p2, p0, Lc56;->b:Lqa1;
-
-    iput-object p3, p0, Lc56;->c:Lcgd;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lc56;->e:I
+    iput-object p2, p0, Lc56;->b:Le1b;
 
     return-void
 .end method
@@ -42,167 +28,331 @@
 
 # virtual methods
 .method public final a()Z
-    .locals 1
+    .locals 2
 
-    iget-boolean v0, p0, Lc56;->d:Z
+    iget-object v0, p0, Lc56;->a:Ljava/util/List;
 
-    return v0
-.end method
-
-.method public d(Lipf;)V
-    .locals 4
-
-    iget-boolean p1, p0, Lc56;->d:Z
-
-    if-eqz p1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object p1, p0, Lc56;->f:Ljava/lang/Long;
-
-    if-nez p1, :cond_1
-
-    invoke-virtual {p0}, Lc56;->g()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "Data is received but accept event wasn\'t triggered"
-
-    iget-object v1, p0, Lc56;->c:Lcgd;
-
-    invoke-interface {v1, p1, v0}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lc56;->a:Lnkg;
-
-    invoke-interface {v0}, Lnkg;->getMsSinceBoot()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    invoke-static {v0, v1}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(J)Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-    move-result-object p1
-
-    new-instance v0, Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    invoke-virtual {p0}, Lc56;->f()I
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v1
 
-    packed-switch v1, :pswitch_data_0
-
-    const/4 p1, 0x0
-
-    throw p1
-
-    :pswitch_0
-    const-string v1, "direct_join"
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
-    :pswitch_1
-    const-string v1, "server_change_topology"
+    :cond_0
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    goto :goto_0
+    move-result-object v0
 
-    :pswitch_2
-    const-string v1, "server_join_server"
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    goto :goto_0
+    move-result v1
 
-    :pswitch_3
-    const-string v1, "server_incoming"
+    if-eqz v1, :cond_2
 
-    goto :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :pswitch_4
-    const-string v1, "direct_incoming"
+    move-result-object v1
 
-    goto :goto_0
+    check-cast v1, Ly46;
 
-    :pswitch_5
-    const-string v1, "direct_outgoing"
+    invoke-interface {v1}, Ly46;->a()Z
 
-    goto :goto_0
+    move-result v1
 
-    :pswitch_6
-    const-string v1, ""
+    if-eqz v1, :cond_1
 
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_2
     :goto_0
-    invoke-static {v1}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-    move-result-object v1
-
-    const-string v2, "call_type"
-
-    invoke-static {v2, v1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>(Ljava/util/Map;)V
-
-    const-string v1, "first_media_received"
-
-    iget-object v2, p0, Lc56;->b:Lqa1;
-
-    check-cast v2, Lra1;
-
-    invoke-virtual {v2, v1, p1, v0}, Lra1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lc56;->d:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public f()I
-    .locals 1
-
-    iget v0, p0, Lc56;->e:I
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public abstract g()Ljava/lang/String;
-.end method
-
-.method public final h()V
+.method public final b()V
     .locals 2
 
-    iget-object v0, p0, Lc56;->a:Lnkg;
+    invoke-virtual {p0}, Lc56;->a()Z
 
-    invoke-interface {v0}, Lnkg;->getMsSinceBoot()J
+    move-result v0
 
-    move-result-wide v0
+    if-eqz v0, :cond_0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lc56;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    iput-object v0, p0, Lc56;->f:Ljava/lang/Long;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly46;
+
+    invoke-interface {v1}, Ly46;->b()V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public final c()V
+    .locals 2
+
+    invoke-virtual {p0}, Lc56;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lc56;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly46;
+
+    invoke-interface {v1}, Ly46;->c()V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public final d(Ltqf;)V
+    .locals 6
+
+    iget-object v0, p0, Lc56;->b:Le1b;
+
+    invoke-virtual {v0, p1}, Le1b;->v(Ltqf;)Lchd;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lchd;->c()Lp62;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    goto/16 :goto_4
+
+    :cond_0
+    iget-object v0, v0, Lchd;->c:Ljava/util/List;
+
+    invoke-static {v0, v1}, Ljx0;->i(Ljava/util/List;Lp62;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljx0;->h(Ljava/util/List;)Le9g;
+
+    move-result-object v0
+
+    iget-object v1, v0, Le9g;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lslf;
+
+    iget-object v2, v2, Lulf;->j:Ljava/math/BigInteger;
+
+    if-eqz v2, :cond_2
+
+    sget-object v5, Ljava/math/BigInteger;->ZERO:Ljava/math/BigInteger;
+
+    invoke-virtual {v2, v5}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v2
+
+    if-lez v2, :cond_2
+
+    move v1, v4
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    move v1, v3
+
+    :goto_1
+    iget-object v0, v0, Le9g;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_5
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwlf;
+
+    iget-object v2, v2, Lulf;->j:Ljava/math/BigInteger;
+
+    if-eqz v2, :cond_5
+
+    sget-object v5, Ljava/math/BigInteger;->ZERO:Ljava/math/BigInteger;
+
+    invoke-virtual {v2, v5}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v2
+
+    if-lez v2, :cond_5
+
+    move v3, v4
+
+    :cond_6
+    :goto_2
+    if-nez v1, :cond_7
+
+    if-eqz v3, :cond_8
+
+    :cond_7
+    iget-object v0, p0, Lc56;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_3
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly46;
+
+    invoke-interface {v1, p1}, Ly46;->d(Ltqf;)V
+
+    goto :goto_3
+
+    :cond_8
+    :goto_4
+    return-void
+.end method
+
+.method public final e()V
+    .locals 2
+
+    invoke-virtual {p0}, Lc56;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lc56;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly46;
+
+    invoke-interface {v1}, Ly46;->e()V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
     return-void
 .end method

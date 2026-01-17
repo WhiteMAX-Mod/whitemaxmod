@@ -3,20 +3,16 @@
 
 
 # static fields
-.field public static add_8:I = 0x7f0802cf
+.field public static led_1:I = 0x7f0600b7
 
-.field public static apple_outline_24:I = 0x7f0802d8
+.field public static led_2:I = 0x7f0600b8
 
-.field public static ball_outline_24:I = 0x7f0802e5
+.field public static led_3:I = 0x7f0600b9
 
-.field public static car_outline_24:I = 0x7f080309
+.field public static led_4:I = 0x7f0600ba
 
-.field public static flags_outline_24:I = 0x7f0804dc
+.field public static led_5:I = 0x7f0600bb
 
-.field public static lamp_outline_24:I = 0x7f080812
+.field public static led_6:I = 0x7f0600bc
 
-.field public static paw_outline_24:I = 0x7f0808fd
-
-.field public static remove_outline_24:I = 0x7f080928
-
-.field public static symbols_outline_24:I = 0x7f080966
+.field public static led_7:I = 0x7f0600bd

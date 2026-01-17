@@ -61,7 +61,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterConfig;-><init>(Ljava/lang/Long;ILro4;)V
+    invoke-direct {p0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterConfig;-><init>(Ljava/lang/Long;ILso4;)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Long;ILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/Long;ILso4;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -156,7 +156,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterConfig;->turnOffInMs:Ljava/lang/Long;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

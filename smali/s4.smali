@@ -1,19 +1,53 @@
 .class public final Ls4;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final a:I
 
-.field public b:I
+.field public final b:Lg5;
 
-.field public c:I
+.field public final c:I
 
-.field public d:Z
 
-.field public e:I
+# direct methods
+.method public constructor <init>(ILg5;I)V
+    .locals 0
 
-.field public f:I
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-.field public g:I
+    iput p1, p0, Ls4;->a:I
+
+    iput-object p2, p0, Ls4;->b:Lg5;
+
+    iput p3, p0, Ls4;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
+
+    new-instance p1, Landroid/os/Bundle;
+
+    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v0, "ACCESSIBILITY_CLICKABLE_SPAN_ID"
+
+    iget v1, p0, Ls4;->a:I
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    iget v0, p0, Ls4;->c:I
+
+    iget-object v1, p0, Ls4;->b:Lg5;
+
+    iget-object v1, v1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v1, v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->performAction(ILandroid/os/Bundle;)Z
+
+    return-void
+.end method

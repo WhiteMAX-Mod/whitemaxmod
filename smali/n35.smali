@@ -1,72 +1,74 @@
-.class public final synthetic Ln35;
+.class public final Ln35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements La38;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ln35;
 
-.field public final synthetic b:Lp35;
-
-.field public final synthetic c:Landroid/content/Context;
+.field public static final b:Lxhc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp35;Landroid/content/Context;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Ln35;->a:I
+    new-instance v0, Ln35;
 
-    iput-object p1, p0, Ln35;->b:Lp35;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ln35;->c:Landroid/content/Context;
+    sput-object v0, Ln35;->a:Ln35;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxhc;
+
+    const-string v1, "kotlin.Double"
+
+    sget-object v2, Lvhc;->e:Lvhc;
+
+    invoke-direct {v0, v1, v2}, Lxhc;-><init>(Ljava/lang/String;Lwhc;)V
+
+    sput-object v0, Ln35;->b:Lxhc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 2
 
-    iget v0, p0, Ln35;->a:I
+    check-cast p2, Ljava/lang/Number;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2}, Ljava/lang/Number;->doubleValue()D
 
-    iget-object v0, p0, Ln35;->c:Landroid/content/Context;
+    move-result-wide v0
 
-    const/4 v1, 0x0
+    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->f(D)V
 
-    iget-object v2, p0, Ln35;->b:Lp35;
+    return-void
+.end method
 
-    invoke-virtual {v2, v0, v1}, Lp35;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 2
 
-    move-result-object v0
+    invoke-interface {p1}, Lkl4;->C()D
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d()Lxpe;
+    .locals 1
+
+    sget-object v0, Ln35;->b:Lxhc;
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ln35;->c:Landroid/content/Context;
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Ln35;->b:Lp35;
-
-    invoke-virtual {v2, v0, v1}, Lp35;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

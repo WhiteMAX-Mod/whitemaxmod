@@ -1,37 +1,82 @@
-.class public abstract Lsa5;
+.class public final Lsa5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq0;
 
-# static fields
-.field public static final a:[Ljava/lang/ThreadLocal;
+
+# instance fields
+.field public final a:Ljava/util/Set;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 1
 
-    const/4 v0, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v1, v0, [Ljava/lang/ThreadLocal;
+    new-instance v0, Ljava/util/IdentityHashMap;
 
-    const/4 v2, 0x0
+    invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
-    new-instance v3, Ljava/lang/ThreadLocal;
+    move-result-object v0
 
-    invoke-direct {v3}, Ljava/lang/ThreadLocal;-><init>()V
-
-    aput-object v3, v1, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v1, Lsa5;->a:[Ljava/lang/ThreadLocal;
+    iput-object v0, p0, Lsa5;->a:Ljava/util/Set;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lhj9;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
+
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    iget-object v0, p0, Lsa5;->a:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+
+    return-void
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 4
+
+    int-to-double v0, p1
+
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+
+    div-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v0
+
+    double-to-int p1, v0
+
+    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lsa5;->a:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-object p1
 .end method

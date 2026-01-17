@@ -100,7 +100,7 @@
 
     const-string p6, "Silence provider initialized, sampleRate="
 
-    invoke-static {p6, p2, p3, p4, p5}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p6, p2, p3, p4, p5}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 

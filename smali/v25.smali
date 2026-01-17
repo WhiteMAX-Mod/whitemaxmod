@@ -1,79 +1,131 @@
 .class public final Lv25;
-.super Lz1;
+.super Lgy7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Ljava/util/Iterator;
+.field public final synthetic b:I
 
-.field public final d:Lj75;
-
-.field public final o:Ljava/util/HashSet;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;Lj75;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lv25;->b:I
 
-    iput-object p1, p0, Lv25;->c:Ljava/util/Iterator;
+    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
-    iput-object p2, p0, Lv25;->d:Lj75;
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p1, p0, Lv25;->o:Ljava/util/HashSet;
+    iput-object p2, p0, Lv25;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final c()Z
+    .locals 1
+
+    iget v0, p0, Lv25;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_1
+    const/4 v0, 0x0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget v0, p0, Lv25;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Lv25;->c:Ljava/lang/Object;
+
+    check-cast p1, Lny7;
+
+    iget-object v0, p0, Lgy7;->a:Lvy7;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lv25;->c:Ljava/util/Iterator;
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {v0}, Lvy7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lv25;->d:Lj75;
+    instance-of v1, v0, Lso3;
 
-    invoke-virtual {v1, v0}, Lj75;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    move-result-object v1
+    check-cast v0, Lso3;
 
-    iget-object v2, p0, Lv25;->o:Ljava/util/HashSet;
+    iget-object v0, v0, Lso3;->a:Ljava/lang/Throwable;
 
-    invoke-virtual {v2, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    new-instance v1, Lszd;
 
-    move-result v1
+    invoke-direct {v1, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p1, v1}, Lg62;->resumeWith(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lz1;->b:Ljava/lang/Object;
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lz1;->a:I
-
-    return-void
+    goto :goto_1
 
     :cond_1
-    const/4 v0, 0x2
+    invoke-static {v0}, Lwy7;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput v0, p0, Lz1;->a:I
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lg62;->resumeWith(Ljava/lang/Object;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lv25;->c:Ljava/lang/Object;
+
+    check-cast v0, Lnq6;
+
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lv25;->c:Ljava/lang/Object;
+
+    check-cast p1, Lr25;
+
+    invoke-interface {p1}, Lr25;->dispose()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

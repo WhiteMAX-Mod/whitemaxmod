@@ -2,141 +2,61 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic b:I
+# interfaces
+.implements Ledg;
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final synthetic a:Loef;
 
 
 # direct methods
-.method public constructor <init>(Ld68;)V
+.method public constructor <init>(Loef;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpcg;->a:Ld68;
+    iput-object p1, p0, Lpcg;->a:Loef;
 
     return-void
 .end method
 
-.method public static a(I)Z
-    .locals 1
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static c(Ljava/lang/Throwable;)Z
-    .locals 1
-
-    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
-
-    iget-object p0, p0, Lcbg;->b:Ljava/lang/String;
-
-    invoke-static {p0}, Lcoj;->a(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static d(Ljava/lang/Throwable;)Z
-    .locals 1
-
-    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
-
-    iget-object p0, p0, Lcbg;->b:Ljava/lang/String;
-
-    const-string v0, "io.exception"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
 
 # virtual methods
-.method public final b()Lsza;
-    .locals 3
+.method public final g(Licg;)V
+    .locals 2
 
-    iget-object v0, p0, Lpcg;->a:Ld68;
+    iget-object v0, p0, Lpcg;->a:Loef;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Loef;->e()Z
 
-    move-result-object v0
+    move-result v1
 
-    check-cast v0, Lute;
+    if-nez v1, :cond_0
 
-    iget-object v0, v0, Lute;->h:Lmn0;
+    invoke-virtual {v0, p1}, Loef;->a(Ljava/lang/Object;)V
 
-    new-instance v1, Lsrf;
+    :cond_0
+    return-void
+.end method
 
-    const/16 v2, 0xc
+.method public final k(Lnbg;)V
+    .locals 2
 
-    invoke-direct {v1, v2}, Lsrf;-><init>(I)V
+    iget-object v0, p0, Lpcg;->a:Loef;
 
-    invoke-virtual {v0, v1}, Lcxa;->g(Ldfc;)Lfxa;
+    invoke-virtual {v0}, Loef;->e()Z
 
-    move-result-object v0
+    move-result v1
 
-    const-wide/16 v1, 0x1
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Lcxa;->p(J)Lsza;
+    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
 
-    move-result-object v0
+    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lnbg;)V
 
-    return-object v0
+    invoke-virtual {v0, v1}, Loef;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
 .end method

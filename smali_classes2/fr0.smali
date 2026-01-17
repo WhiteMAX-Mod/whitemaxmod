@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lir0;
+.implements Lhr0;
 
 
 # instance fields
-.field public final a:Ll14;
+.field public final a:Lu64;
 
 
 # direct methods
-.method public constructor <init>(Ll14;)V
+.method public constructor <init>(Lu64;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfr0;->a:Ll14;
+    iput-object p1, p0, Lfr0;->a:Lu64;
 
     return-void
 .end method
@@ -44,11 +44,11 @@
     :cond_1
     check-cast p1, Lfr0;
 
-    iget-object v1, p0, Lfr0;->a:Ll14;
+    iget-object v1, p0, Lfr0;->a:Lu64;
 
-    iget-object p1, p1, Lfr0;->a:Ll14;
+    iget-object p1, p1, Lfr0;->a:Lu64;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -63,7 +63,7 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lfr0;->a:Ll14;
+    iget-object v0, p0, Lfr0;->a:Lu64;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -77,11 +77,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ContactList(event="
+    const-string v1, "ContactsUpdate(event="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lfr0;->a:Ll14;
+    iget-object v1, p0, Lfr0;->a:Lu64;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

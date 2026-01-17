@@ -1,213 +1,131 @@
-.class public final synthetic Lpg3;
-.super Ljava/lang/Object;
+.class public final Lpg3;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Landroid/text/style/UpdateAppearance;
+.implements Landroid/os/Parcelable;
+.implements Ldt8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lpg3;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Landroid/view/ViewGroup;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/ViewGroup;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lz7;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+
+    sput-object v0, Lpg3;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    const/high16 v0, -0x10000
+
+    .line 4
+    invoke-direct {p0, v0}, Lpg3;-><init>(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lpg3;->a:I
+    .line 1
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    iput-object p1, p0, Lpg3;->b:Landroid/view/ViewGroup;
+    .line 2
+    iput p1, p0, Lpg3;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 p1, 0x9
+
+    .line 3
+    iput p1, p0, Lpg3;->b:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 0
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    invoke-direct {p0, p1}, Lpg3;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final copy()Ldb4;
+    .locals 1
+
+    new-instance v0, Lpg3;
+
+    invoke-direct {v0}, Lpg3;-><init>()V
+
+    return-object v0
+.end method
+
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lpg3;->b:I
+
+    return v0
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
     iget v0, p0, Lpg3;->a:I
 
-    iget-object v1, p0, Lpg3;->b:Landroid/view/ViewGroup;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    new-instance v0, Ly9c;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget p2, p0, Lpg3;->a:I
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-direct {v0, v1}, Ly9c;-><init>(Landroid/content/Context;)V
-
-    return-object v0
-
-    :pswitch_0
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v2, Lx4e;->s0:I
-
-    invoke-static {v0, v2}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_0
-
-    const/16 v3, 0x14
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Ln7j;->c(F)I
-
-    move-result v4
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Ln7j;->c(F)I
-
-    move-result v3
-
-    invoke-virtual {v0, v2, v2, v4, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    new-instance v3, Lh10;
-
-    invoke-direct {v3}, Lh10;-><init>()V
-
-    if-eqz v0, :cond_1
-
-    iput-object v0, v3, Lh10;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_1
-    const/16 v0, 0x3c
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v4
-
-    invoke-static {v0}, Ln7j;->c(F)I
-
-    move-result v0
-
-    iput v0, v3, Lh10;->c:I
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, v3, Lh10;->b:Z
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    iput-boolean v0, v3, Lh10;->e:Z
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    sget-object v0, Ldc3;->s0:Lole;
-
-    invoke-virtual {v0, v1}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Lplb;->a()Li13;
-
-    const/4 v4, -0x1
-
-    invoke-virtual {v3, v4}, Lh10;->setTint(I)V
-
-    invoke-virtual {v0, v1}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Lplb;->a()Li13;
-
-    invoke-virtual {v3, v4}, Lh10;->b(I)V
-
-    invoke-virtual {v0, v1}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lplb;->a()Li13;
-
-    const/high16 v0, 0x5c000000
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iput-object v0, v3, Lh10;->q:Ljava/lang/Integer;
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    invoke-virtual {v3, v2}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
-
-    return-object v3
-
-    :pswitch_1
-    new-instance v0, Ly9c;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ly9c;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lx4e;->a:I
-
-    invoke-virtual {v0}, Ly9c;->a()V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

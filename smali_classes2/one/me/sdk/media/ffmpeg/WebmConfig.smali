@@ -21,7 +21,7 @@
         "()V",
         "Lone/me/sdk/media/ffmpeg/WebmConfig$Config;",
         "config",
-        "Lv2h;",
+        "Lb3h;",
         "init",
         "(Lone/me/sdk/media/ffmpeg/WebmConfig$Config;)V",
         "Lone/me/sdk/media/ffmpeg/WebmConfig$Config;",
@@ -29,9 +29,9 @@
         "()Lone/me/sdk/media/ffmpeg/WebmConfig$Config;",
         "setConfig",
         "getConfig$annotations",
-        "Lyia;",
+        "Lwia;",
         "getLogger",
-        "()Lyia;",
+        "()Lwia;",
         "getLogger$annotations",
         "logger",
         "Config",
@@ -40,7 +40,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -95,14 +95,14 @@
     return-void
 .end method
 
-.method public static final getLogger()Lyia;
+.method public static final getLogger()Lwia;
     .locals 1
 
     invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getConfig()Lone/me/sdk/media/ffmpeg/WebmConfig$Config;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->getLogger()Lyia;
+    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->getLogger()Lwia;
 
     move-result-object v0
 

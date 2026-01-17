@@ -60,7 +60,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;-><init>(Ljava/lang/Long;IILro4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;-><init>(Ljava/lang/Long;IILso4;)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Long;IILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/Long;IILso4;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -180,7 +180,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;->rttMs:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 

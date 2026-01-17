@@ -1,79 +1,143 @@
-.class public final synthetic Luu1;
-.super Ljava/lang/Object;
+.class public final Luu1;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lxu1;
 
-.field public final synthetic b:Lzu1;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzu1;I)V
+.method public constructor <init>(Lxu1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Luu1;->a:I
+    iput-object p1, p0, Luu1;->X:Lxu1;
 
-    iput-object p1, p0, Luu1;->b:Lzu1;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Luu1;->a:I
+    check-cast p1, Lzb4;
 
-    check-cast p1, Lplb;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    sget-object p1, Ldc3;->s0:Lole;
-
-    iget-object v0, p0, Luu1;->b:Lzu1;
-
-    invoke-virtual {p1, v0}, Lole;->n(Landroid/view/View;)Lplb;
+    invoke-virtual {p0, p1, p2}, Luu1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lplb;->b()Lxf0;
+    check-cast p1, Luu1;
 
-    const/4 p1, 0x0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p1, p2}, Luu1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
+.end method
 
-    :pswitch_0
-    sget-object p1, Ldc3;->s0:Lole;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Luu1;->b:Lzu1;
+    new-instance p1, Luu1;
 
-    invoke-virtual {p1, v0}, Lole;->n(Landroid/view/View;)Lplb;
+    iget-object v0, p0, Luu1;->X:Lxu1;
 
-    move-result-object p1
+    invoke-direct {p1, v0, p2}, Luu1;-><init>(Lxu1;Lkotlin/coroutines/Continuation;)V
 
-    invoke-interface {p1}, Lplb;->getIcon()Lsf7;
+    return-object p1
+.end method
 
-    const/4 p1, -0x1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Luu1;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    nop
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Luu1;->o:I
+
+    iget-object p1, p0, Luu1;->X:Lxu1;
+
+    invoke-static {p1, p0}, Lxu1;->a(Lxu1;Lo84;)Ljava/lang/Comparable;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ley3;
+
+    invoke-virtual {p1}, Ley3;->r()J
+
+    move-result-wide v1
+
+    invoke-virtual {p1}, Ley3;->f()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, ""
+
+    :cond_3
+    move-object v3, v0
+
+    invoke-virtual {p1}, Ley3;->p()Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    sget-object v0, Lgm0;->d:Lgm0;
+
+    invoke-virtual {p1, v0}, Ley3;->v(Lgm0;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {p1}, Ley3;->E()Z
+
+    move-result v5
+
+    new-instance v0, Lvah;
+
+    invoke-direct/range {v0 .. v6}, Lvah;-><init>(JLjava/lang/String;Ljava/lang/CharSequence;ZLjava/lang/String;)V
+
+    return-object v0
 .end method

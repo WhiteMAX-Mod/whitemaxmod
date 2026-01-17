@@ -4,154 +4,65 @@
 
 
 # instance fields
-.field public a:Ll85;
+.field public a:Lo85;
 
-.field public b:Landroid/graphics/drawable/Drawable;
+.field public b:Lee0;
 
-.field public c:Lee0;
+.field public c:Lydb;
 
-.field public d:Lodb;
+.field public d:Lxg2;
 
-.field public o:Lch2;
+.field public o:Lye0;
 
-.field public s0:Lye0;
-
-.field public t0:Ldj8;
-
-.field public u0:Lufc;
-
-.field public v0:Z
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x42200000    # 40.0f
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    return-void
-.end method
+.field public t0:Lqi8;
 
 
 # virtual methods
-.method public final a(Lyx3;)V
-    .locals 6
+.method public final a(Ley3;)V
+    .locals 5
 
-    iget-object v0, p0, Lbf0;->t0:Ldj8;
+    iget-object v0, p0, Lbf0;->t0:Lqi8;
 
-    iget-object v1, p0, Lbf0;->u0:Lufc;
+    new-instance v1, Lee0;
 
-    invoke-virtual {p1}, Lyx3;->p()J
+    iget-object v2, p0, Lbf0;->c:Lydb;
 
-    move-result-wide v2
+    iget-object v3, p0, Lbf0;->d:Lxg2;
 
-    invoke-virtual {v1, v2, v3}, Lufc;->a(J)Lrfc;
+    iget-object v4, p0, Lbf0;->o:Lye0;
 
-    move-result-object v1
+    invoke-direct {v1, v2, v3, v4, p1}, Lee0;-><init>(Lydb;Lxg2;Lye0;Ley3;)V
 
-    iget v1, v1, Lrfc;->a:I
+    iput-object v1, p0, Lbf0;->b:Lee0;
 
-    const/16 v2, 0x28
+    iget-object p1, p0, Lbf0;->a:Lo85;
 
-    if-eq v1, v2, :cond_0
+    const/4 v2, 0x1
 
-    const/4 v1, 0x0
+    if-eqz p1, :cond_0
 
-    goto :goto_0
+    iget-object p1, p1, Lo85;->d:Ln85;
 
-    :cond_0
-    move-object v1, p0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lru/ok/messages/views/widgets/TamAvatarView;
+    check-cast p1, Lov6;
 
-    iget-boolean v1, v1, Lbf0;->v0:Z
-
-    if-eqz v1, :cond_1
-
-    sget v1, Lh5e;->q1:I
-
-    goto :goto_0
-
-    :cond_1
-    sget v1, Lh5e;->p1:I
-
-    :goto_0
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    move-object v1, v2
-
-    goto :goto_1
-
-    :cond_2
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v3}, Lee0;->c(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lbf0;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v1, v2}, Lov6;->i(Landroid/graphics/drawable/Drawable;I)V
 
-    :goto_1
-    iput-object v1, p0, Lbf0;->b:Landroid/graphics/drawable/Drawable;
+    :cond_0
+    iget-object p1, p0, Lbf0;->a:Lo85;
 
-    new-instance v1, Lee0;
+    iget-object v1, p0, Lbf0;->b:Lee0;
 
-    iget-object v3, p0, Lbf0;->d:Lodb;
-
-    iget-object v4, p0, Lbf0;->o:Lch2;
-
-    iget-object v5, p0, Lbf0;->s0:Lye0;
-
-    invoke-direct {v1, v3, v4, v5, p1}, Lee0;-><init>(Lodb;Lch2;Lye0;Lyx3;)V
-
-    iput-object v1, p0, Lbf0;->c:Lee0;
-
-    iget-object p1, p0, Lbf0;->a:Ll85;
-
-    const/4 v3, 0x1
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, p1, Ll85;->d:Lk85;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast p1, Lqv6;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Lee0;->c(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v3}, Lqv6;->i(Landroid/graphics/drawable/Drawable;I)V
-
-    :cond_3
-    iget-object p1, p0, Lbf0;->a:Ll85;
-
-    iget-object v1, p0, Lbf0;->c:Lee0;
-
-    invoke-virtual {v0}, Lcfe;->n()Ljava/lang/String;
+    invoke-virtual {v0}, Lyfe;->n()Ljava/lang/String;
 
     move-result-object v0
 
@@ -159,108 +70,89 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-static {v1}, Ltri;->e(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Lzsi;->e(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v3
 
-    if-nez v1, :cond_4
+    if-nez v3, :cond_1
 
-    invoke-static {v0}, Lwj7;->d(Landroid/net/Uri;)Lwj7;
-
-    move-result-object v0
-
-    sget-object v1, Ltj7;->a:Ltj7;
-
-    iput-object v1, v0, Lwj7;->g:Ltj7;
-
-    invoke-virtual {p0}, Lbf0;->getPostprocessor()Lnec;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lwj7;->k:Lnec;
-
-    invoke-virtual {v0}, Lwj7;->a()Lvj7;
+    invoke-static {v0}, Ldj7;->d(Landroid/net/Uri;)Ldj7;
 
     move-result-object v0
 
-    invoke-static {}, Lkp6;->j()Lhj7;
+    sget-object v3, Laj7;->a:Laj7;
 
-    move-result-object v1
+    iput-object v3, v0, Ldj7;->g:Laj7;
 
-    invoke-virtual {v1, v0, v2}, Lhj7;->e(Lvj7;Lc6a;)Lp0;
+    invoke-virtual {p0}, Lbf0;->getPostprocessor()Lhfc;
 
-    goto :goto_2
+    move-result-object v3
 
-    :cond_4
-    move-object v0, v2
+    iput-object v3, v0, Ldj7;->k:Lhfc;
 
-    :goto_2
-    sget-object v1, Lkp6;->a:Lgj7;
+    invoke-virtual {v0}, Ldj7;->a()Lcj7;
 
-    invoke-virtual {v1}, Lgj7;->a()Le9c;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-static {}, Lhp6;->i()Loi7;
 
-    iget-object v4, p1, Ll85;->e:Lh85;
+    move-result-object v3
 
-    iput-object v4, v1, Lw0;->i:Lh85;
+    invoke-virtual {v3, v0, v1}, Loi7;->e(Lcj7;Lb6a;)Lo0;
 
-    iput-boolean v3, v1, Lw0;->h:Z
+    goto :goto_0
 
-    if-eqz v0, :cond_5
+    :cond_1
+    move-object v0, v1
 
-    iput-object v0, v1, Lw0;->b:Lvj7;
+    :goto_0
+    sget-object v3, Lhp6;->a:Lni7;
 
-    :cond_5
-    if-nez v0, :cond_6
+    invoke-virtual {v3}, Lni7;->a()Ly9c;
 
-    invoke-virtual {p1, v2}, Ll85;->i(Lh85;)V
+    move-result-object v3
+
+    iget-object v4, p1, Lo85;->e:Lk85;
+
+    iput-object v4, v3, Lv0;->i:Lk85;
+
+    iput-boolean v2, v3, Lv0;->h:Z
+
+    if-eqz v0, :cond_2
+
+    iput-object v0, v3, Lv0;->b:Lcj7;
+
+    :cond_2
+    if-nez v0, :cond_3
+
+    invoke-virtual {p1, v1}, Lo85;->i(Lk85;)V
 
     return-void
 
-    :cond_6
-    invoke-virtual {v1}, Lw0;->a()Ld9c;
+    :cond_3
+    invoke-virtual {v3}, Lv0;->a()Lx9c;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ll85;->i(Lh85;)V
+    invoke-virtual {p1, v0}, Lo85;->i(Lk85;)V
 
     return-void
 .end method
 
-.method public abstract b(Landroid/graphics/drawable/Drawable;)V
-.end method
-
-.method public getDraweeHolder()Ll85;
+.method public getPostprocessor()Lhfc;
     .locals 1
 
-    iget-object v0, p0, Lbf0;->a:Ll85;
+    new-instance v0, Ltrb;
 
-    return-object v0
-.end method
-
-.method public getForegroundCompat()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/View;->getForeground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getPostprocessor()Lnec;
-    .locals 1
-
-    new-instance v0, Lhrb;
-
-    invoke-direct {v0}, Lhrb;-><init>()V
+    invoke-direct {v0}, Ltrb;-><init>()V
 
     return-object v0
 .end method
@@ -270,11 +162,11 @@
 
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    iget-object v0, p0, Lbf0;->a:Ll85;
+    iget-object v0, p0, Lbf0;->a:Lo85;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ll85;->f()V
+    invoke-virtual {v0}, Lo85;->f()V
 
     :cond_0
     return-void
@@ -285,11 +177,11 @@
 
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object v0, p0, Lbf0;->a:Ll85;
+    iget-object v0, p0, Lbf0;->a:Lo85;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ll85;->g()V
+    invoke-virtual {v0}, Lo85;->g()V
 
     :cond_0
     return-void
@@ -317,9 +209,9 @@
 
     move-result v1
 
-    iget-object v2, p0, Lbf0;->a:Ll85;
+    iget-object v2, p0, Lbf0;->a:Lo85;
 
-    invoke-virtual {v2}, Ll85;->d()Lo2e;
+    invoke-virtual {v2}, Lo85;->d()Lo3e;
 
     move-result-object v2
 
@@ -328,7 +220,7 @@
     :try_start_0
     invoke-virtual {v2, v3, v3, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    invoke-virtual {v2, p1}, Lo2e;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v2, p1}, Lo3e;->draw(Landroid/graphics/Canvas;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -341,7 +233,7 @@
 
     const-string v2, "failure to onDraw"
 
-    invoke-static {v1, v2, v0}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -401,11 +293,11 @@
 
     invoke-super {p0}, Landroid/view/View;->onFinishTemporaryDetach()V
 
-    iget-object v0, p0, Lbf0;->a:Ll85;
+    iget-object v0, p0, Lbf0;->a:Lo85;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ll85;->f()V
+    invoke-virtual {v0}, Lo85;->f()V
 
     :cond_0
     return-void
@@ -416,40 +308,24 @@
 
     invoke-super {p0}, Landroid/view/View;->onStartTemporaryDetach()V
 
-    iget-object v0, p0, Lbf0;->a:Ll85;
+    iget-object v0, p0, Lbf0;->a:Lo85;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ll85;->g()V
+    invoke-virtual {v0}, Lo85;->g()V
 
     :cond_0
-    return-void
-.end method
-
-.method public setForegroundCompat(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public setSmallOnlineImage(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lbf0;->v0:Z
-
     return-void
 .end method
 
 .method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
-    iget-object v0, p0, Lbf0;->a:Ll85;
+    iget-object v0, p0, Lbf0;->a:Lo85;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ll85;->d()Lo2e;
+    invoke-virtual {v0}, Lo85;->d()Lo3e;
 
     move-result-object v0
 

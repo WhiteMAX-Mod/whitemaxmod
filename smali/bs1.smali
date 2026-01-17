@@ -1,64 +1,95 @@
 .class public final Lbs1;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcs1;
+.implements Lbr6;
 
 
-# static fields
-.field public static final a:Lbs1;
+# instance fields
+.field public final synthetic X:Lone/me/calls/share/CallSharePickerScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
+    .locals 0
 
-    new-instance v0, Lbs1;
+    iput-object p2, p0, Lbs1;->X:Lone/me/calls/share/CallSharePickerScreen;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lbs1;->a:Lbs1;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lbs1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of p1, p1, Lbs1;
+    check-cast p1, Lbs1;
 
-    if-nez p1, :cond_1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Lbs1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, -0x42ba2470
+    new-instance v0, Lbs1;
 
-    return v0
-.end method
+    iget-object v1, p0, Lbs1;->X:Lone/me/calls/share/CallSharePickerScreen;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lbs1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
 
-    const-string v0, "Show"
+    iput-object p1, v0, Lbs1;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lbs1;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lone/me/calls/share/CallSharePickerScreen;->z0:Les7;
+
+    iget-object p1, p0, Lbs1;->X:Lone/me/calls/share/CallSharePickerScreen;
+
+    invoke-virtual {p1}, Lone/me/chats/picker/AbstractPickerScreen;->J0()Lb5c;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lb5c;->c:La7c;
+
+    check-cast p1, Lzr1;
+
+    invoke-virtual {p1}, Lzr1;->f()V
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

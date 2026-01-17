@@ -46,13 +46,13 @@
 
     move-result p1
 
-    check-cast v1, Lojh;
+    check-cast v1, Ljkh;
 
-    iget v0, v1, Lojh;->L0:I
+    iget v0, v1, Ljkh;->M0:I
 
     if-eq v0, p1, :cond_0
 
-    iput p1, v1, Lojh;->L0:I
+    iput p1, v1, Ljkh;->M0:I
 
     invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
 
@@ -62,7 +62,7 @@
     :pswitch_0
     check-cast v1, Lcom/google/android/material/textfield/TextInputLayout;
 
-    iget-object v0, v1, Lcom/google/android/material/textfield/TextInputLayout;->F1:Lxh3;
+    iget-object v0, v1, Lcom/google/android/material/textfield/TextInputLayout;->G1:Lii3;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -74,7 +74,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lxh3;->p(F)V
+    invoke-virtual {v0, p1}, Lii3;->p(F)V
 
     return-void
 
@@ -98,13 +98,13 @@
     return-void
 
     :pswitch_2
-    check-cast v1, Lpx7;
+    check-cast v1, Lzw7;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result p1
 
-    iput p1, v1, Lpx7;->m:F
+    iput p1, v1, Lzw7;->m:F
 
     return-void
 
@@ -125,17 +125,17 @@
 
     float-to-int p1, p1
 
-    check-cast v1, Lxu5;
+    check-cast v1, Lyu5;
 
-    iget-object v0, v1, Lxu5;->c:Landroid/graphics/drawable/StateListDrawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    iget-object v0, v1, Lxu5;->d:Landroid/graphics/drawable/Drawable;
+    iget-object v0, v1, Lyu5;->c:Landroid/graphics/drawable/StateListDrawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    iget-object p1, v1, Lxu5;->C0:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, v1, Lyu5;->d:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    iget-object p1, v1, Lyu5;->D0:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
@@ -152,14 +152,14 @@
 
     move-result p1
 
-    check-cast v1, Ly8e;
+    check-cast v1, Lv9e;
 
-    iput p1, v1, Ly8e;->h:F
+    iput p1, v1, Lv9e;->h:F
 
     return-void
 
     :pswitch_5
-    check-cast v1, Lbi3;
+    check-cast v1, Lmi3;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -171,7 +171,7 @@
 
     move-result p1
 
-    invoke-virtual {v1, p1}, Lbi3;->setScrimAlpha(I)V
+    invoke-virtual {v1, p1}, Lmi3;->setScrimAlpha(I)V
 
     return-void
 
@@ -188,25 +188,25 @@
 
     check-cast v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget-object v0, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->i:Llv8;
+    iget-object v0, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->i:Lou8;
 
     if-eqz v0, :cond_1
 
-    iget-object v1, v0, Llv8;->a:Lkv8;
+    iget-object v1, v0, Lou8;->a:Lnu8;
 
-    iget v2, v1, Lkv8;->i:F
+    iget v2, v1, Lnu8;->i:F
 
     cmpl-float v2, v2, p1
 
     if-eqz v2, :cond_1
 
-    iput p1, v1, Lkv8;->i:F
+    iput p1, v1, Lnu8;->i:F
 
     const/4 p1, 0x1
 
-    iput-boolean p1, v0, Llv8;->o:Z
+    iput-boolean p1, v0, Lou8;->o:Z
 
-    invoke-virtual {v0}, Llv8;->invalidateSelf()V
+    invoke-virtual {v0}, Lou8;->invalidateSelf()V
 
     :cond_1
     return-void
@@ -224,7 +224,7 @@
 
     check-cast v1, Lwl0;
 
-    iget-object v0, v1, Lwl0;->y0:Ljava/util/ArrayList;
+    iget-object v0, v1, Lwl0;->z0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -241,15 +241,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lyng;
+    check-cast v2, Lhog;
 
     const v3, 0x3f99999a    # 1.2f
 
-    iput v3, v2, Lyng;->X0:F
+    iput v3, v2, Lhog;->Y0:F
 
-    iput p1, v2, Lyng;->V0:F
+    iput p1, v2, Lhog;->W0:F
 
-    iput p1, v2, Lyng;->W0:F
+    iput p1, v2, Lhog;->X0:F
 
     const/high16 v3, 0x3f800000    # 1.0f
 
@@ -257,18 +257,18 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v5, v3, v4, v3, p1}, Ltg;->b(FFFFF)F
+    invoke-static {v5, v3, v4, v3, p1}, Lrg;->b(FFFFF)F
 
     move-result v3
 
-    iput v3, v2, Lyng;->Y0:F
+    iput v3, v2, Lhog;->Z0:F
 
-    invoke-virtual {v2}, Llv8;->invalidateSelf()V
+    invoke-virtual {v2}, Lou8;->invalidateSelf()V
 
     goto :goto_0
 
     :cond_2
-    sget-object p1, Lash;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lxsh;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {v1}, Landroid/view/View;->postInvalidateOnAnimation()V
 

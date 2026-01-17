@@ -1,80 +1,110 @@
-.class public final Lccj;
+.class public abstract Lccj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwwa;
-
 
 # static fields
-.field public static final a:Lccj;
+.field public static a:Luia;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static final a(Lkotlin/coroutines/Continuation;)Lg62;
+    .locals 4
 
-    new-instance v0, Lccj;
+    instance-of v0, p0, Lkotlinx/coroutines/internal/DispatchedContinuation;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-nez v0, :cond_0
 
-    sput-object v0, Lccj;->a:Lccj;
-
-    new-instance v0, Lyyi;
+    new-instance v0, Lg62;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+    invoke-direct {v0, v1, p0}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const-class v1, Lqzi;
+    return-object v0
 
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    :cond_0
+    move-object v0, p0
 
-    move-result-object v0
+    check-cast v0, Lkotlinx/coroutines/internal/DispatchedContinuation;
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    invoke-virtual {v0}, Lkotlinx/coroutines/internal/DispatchedContinuation;->claimReusableCancellableContinuation$kotlinx_coroutines_core()Lg62;
 
     move-result-object v0
 
-    const/4 v2, 0x3
+    if-eqz v0, :cond_3
 
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+    sget-object v1, Lg62;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    move-result-object v2
 
-    move-result-object v0
+    instance-of v3, v2, Lqo3;
 
-    const/4 v2, 0x4
+    if-eqz v3, :cond_1
 
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+    check-cast v2, Lqo3;
 
-    move-result-object v0
+    iget-object v2, v2, Lqo3;->d:Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    if-eqz v2, :cond_1
 
-    move-result-object v0
+    invoke-virtual {v0}, Lg62;->i()V
 
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    const/4 v0, 0x0
 
-    return-void
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Lg62;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    const v3, 0x1fffffff
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->set(Ljava/lang/Object;I)V
+
+    sget-object v2, Lh7;->a:Lh7;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :goto_0
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    return-object v0
+
+    :cond_3
+    :goto_1
+    new-instance v0, Lg62;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p0}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object v0
 .end method
 
+.method public static final b(Lf62;Lt52;)V
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    instance-of v0, p0, Lg62;
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    check-cast p0, Lg62;
 
-    throw p1
+    invoke-virtual {p0, p1}, Lg62;->q(Lroa;)V
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "third-party implementation of CancellableContinuation is not supported"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

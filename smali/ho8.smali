@@ -1,61 +1,102 @@
-.class public final Lho8;
-.super Lugc;
+.class public abstract Lho8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/animation/Interpolator;
 
 
 # instance fields
-.field public a:[J
+.field public final a:[F
 
-.field public b:I
+.field public final b:F
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method public constructor <init>([F)V
+    .locals 1
 
-    iget-object v0, p0, Lho8;->a:[J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v1, p0, Lho8;->b:I
+    iput-object p1, p0, Lho8;->a:[F
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([JI)[J
+    array-length p1, p1
 
-    move-result-object v0
+    add-int/lit8 p1, p1, -0x1
 
-    return-object v0
-.end method
+    int-to-float p1, p1
 
-.method public final b(I)V
-    .locals 2
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    iget-object v0, p0, Lho8;->a:[J
+    div-float/2addr v0, p1
 
-    array-length v1, v0
+    iput v0, p0, Lho8;->b:F
 
-    if-ge v1, p1, :cond_1
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([JI)[J
-
-    move-result-object p1
-
-    iput-object p1, p0, Lho8;->a:[J
-
-    :cond_1
     return-void
 .end method
 
-.method public final d()I
-    .locals 1
 
-    iget v0, p0, Lho8;->b:I
+# virtual methods
+.method public final getInterpolation(F)F
+    .locals 4
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpl-float v1, p1, v0
+
+    if-ltz v1, :cond_0
 
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    cmpg-float v1, p1, v0
+
+    if-gtz v1, :cond_1
+
+    return v0
+
+    :cond_1
+    iget-object v0, p0, Lho8;->a:[F
+
+    array-length v1, v0
+
+    add-int/lit8 v1, v1, -0x1
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, p1
+
+    float-to-int v1, v1
+
+    array-length v2, v0
+
+    add-int/lit8 v2, v2, -0x2
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    int-to-float v2, v1
+
+    iget v3, p0, Lho8;->b:F
+
+    mul-float/2addr v2, v3
+
+    sub-float/2addr p1, v2
+
+    div-float/2addr p1, v3
+
+    aget v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    aget v0, v0, v1
+
+    invoke-static {v0, v2, p1, v2}, Lpqb;->g(FFFF)F
+
+    move-result p1
+
+    return p1
 .end method

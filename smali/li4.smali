@@ -10,20 +10,20 @@
 
 .field public Z:I
 
-.field public o:Lyi4;
+.field public o:Lzi4;
 
 
 # virtual methods
-.method public final R(Lyi4;)J
+.method public final R(Lzi4;)J
     .locals 9
 
-    invoke-virtual {p0}, Ldk0;->e()V
+    invoke-virtual {p0}, Ldk0;->c()V
 
-    iput-object p1, p0, Lli4;->o:Lyi4;
+    iput-object p1, p0, Lli4;->o:Lzi4;
 
-    iget-object v0, p1, Lyi4;->a:Landroid/net/Uri;
+    iget-object v0, p1, Lzi4;->a:Landroid/net/Uri;
 
-    iget-wide v1, p1, Lyi4;->g:J
+    iget-wide v1, p1, Lzi4;->g:J
 
     invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -59,13 +59,13 @@
     invoke-direct {v3, v6}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     :goto_0
-    invoke-static {v3, v4}, Ln5j;->a(Ljava/lang/String;Z)V
+    invoke-static {v3, v4}, Ly5j;->a(Ljava/lang/String;Z)V
 
     invoke-virtual {v0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v3
 
-    sget v4, Loah;->a:I
+    sget v4, Lkbh;->a:I
 
     const/4 v4, -0x1
 
@@ -144,7 +144,7 @@
     throw v1
 
     :cond_2
-    sget-object v3, Lrd2;->a:Ljava/nio/charset/Charset;
+    sget-object v3, Lkd2;->a:Ljava/nio/charset/Charset;
 
     invoke-virtual {v3}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
 
@@ -154,7 +154,7 @@
 
     move-result-object v0
 
-    sget-object v3, Lrd2;->c:Ljava/nio/charset/Charset;
+    sget-object v3, Lkd2;->c:Ljava/nio/charset/Charset;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -163,7 +163,7 @@
     iput-object v0, p0, Lli4;->X:[B
 
     :goto_2
-    iget-wide v3, p1, Lyi4;->f:J
+    iget-wide v3, p1, Lzi4;->f:J
 
     iget-object v0, p0, Lli4;->X:[B
 
@@ -202,7 +202,7 @@
     iput v0, p0, Lli4;->Z:I
 
     :cond_3
-    invoke-virtual {p0, p1}, Ldk0;->f(Lyi4;)V
+    invoke-virtual {p0, p1}, Ldk0;->d(Lzi4;)V
 
     if-eqz v3, :cond_4
 
@@ -269,10 +269,10 @@
 
     iput-object v1, p0, Lli4;->X:[B
 
-    invoke-virtual {p0}, Ldk0;->c()V
+    invoke-virtual {p0}, Ldk0;->b()V
 
     :cond_0
-    iput-object v1, p0, Lli4;->o:Lyi4;
+    iput-object v1, p0, Lli4;->o:Lzi4;
 
     return-void
 .end method
@@ -280,11 +280,11 @@
 .method public final getUri()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lli4;->o:Lyi4;
+    iget-object v0, p0, Lli4;->o:Lzi4;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lyi4;->a:Landroid/net/Uri;
+    iget-object v0, v0, Lzi4;->a:Landroid/net/Uri;
 
     return-object v0
 
@@ -319,7 +319,7 @@
 
     iget-object v0, p0, Lli4;->X:[B
 
-    sget v1, Loah;->a:I
+    sget v1, Lkbh;->a:I
 
     iget v1, p0, Lli4;->Y:I
 
@@ -337,7 +337,7 @@
 
     iput p1, p0, Lli4;->Z:I
 
-    invoke-virtual {p0, p3}, Ldk0;->b(I)V
+    invoke-virtual {p0, p3}, Ldk0;->a(I)V
 
     return p3
 .end method

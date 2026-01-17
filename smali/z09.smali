@@ -1,61 +1,47 @@
-.class public interface abstract Lz09;
+.class public final Lz09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(ILoe4;JI)V
-.end method
+# instance fields
+.field public final a:Landroid/content/Context;
 
-.method public abstract d(JIII)V
-.end method
+.field public b:Z
 
-.method public abstract e(IJ)V
-.end method
+.field public c:Ln09;
 
-.method public abstract f()I
-.end method
+.field public d:Lb09;
 
-.method public abstract flush()V
-.end method
+.field public e:J
 
-.method public abstract getInputBuffer(I)Ljava/nio/ByteBuffer;
-.end method
+.field public f:Z
 
-.method public abstract getOutputBuffer(I)Ljava/nio/ByteBuffer;
-.end method
+.field public g:Landroid/os/Handler;
 
-.method public abstract getOutputFormat()Landroid/media/MediaFormat;
-.end method
+.field public h:Lxp5;
 
-.method public abstract i(Landroid/media/MediaCodec$BufferInfo;)I
-.end method
+.field public i:I
 
-.method public abstract j(I)V
-.end method
 
-.method public abstract k(Landroid/view/Surface;)V
-.end method
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-.method public abstract l(I)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract n()V
-.end method
+    iput-object p1, p0, Lz09;->a:Landroid/content/Context;
 
-.method public p(Le7;)Z
-    .locals 0
+    sget-object v0, Ln09;->P:Leh8;
 
-    const/4 p1, 0x0
+    iput-object v0, p0, Lz09;->c:Ln09;
 
-    return p1
-.end method
+    new-instance v0, Lyi;
 
-.method public abstract q(Lw19;Landroid/os/Handler;)V
-.end method
+    const/4 v1, 0x7
 
-.method public abstract release()V
-.end method
+    invoke-direct {v0, v1, p1}, Lyi;-><init>(ILjava/lang/Object;)V
 
-.method public abstract setParameters(Landroid/os/Bundle;)V
+    iput-object v0, p0, Lz09;->d:Lb09;
+
+    return-void
 .end method

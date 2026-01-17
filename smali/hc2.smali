@@ -1,128 +1,136 @@
 .class public final Lhc2;
-.super Lb5g;
+.super Lpj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lkc2;
-
-.field public final synthetic Y:Lh76;
-
-.field public final synthetic Z:Ljava/lang/Object;
-
-.field public o:I
+.field public final i:Landroid/util/SparseArray;
 
 
 # direct methods
-.method public constructor <init>(Lkc2;Lh76;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lhc2;->X:Lkc2;
+    invoke-direct {p0}, Lpj0;-><init>()V
 
-    iput-object p2, p0, Lhc2;->Y:Lh76;
+    new-instance v0, Landroid/util/SparseArray;
 
-    iput-object p3, p0, Lhc2;->Z:Ljava/lang/Object;
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lhc2;->i:Landroid/util/SparseArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 8
 
-    check-cast p1, Lac4;
+    iget-object v0, p0, Lpj0;->b:Ly50;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, v0, Ly50;->b:I
 
-    invoke-virtual {p0, p1, p2}, Lhc2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lhc2;->i:Landroid/util/SparseArray;
 
-    move-result-object p1
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    check-cast p1, Lhc2;
+    move-result-object v0
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    move-object v5, v0
 
-    invoke-virtual {p1, p2}, Lhc2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v5, Lic2;
 
-    move-result-object p1
+    invoke-static {v5}, Lh6j;->h(Ljava/lang/Object;)V
 
-    return-object p1
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v0
+
+    iget-object v1, p0, Lpj0;->b:Ly50;
+
+    iget v1, v1, Ly50;->d:I
+
+    div-int v6, v0, v1
+
+    iget-object v0, p0, Lpj0;->c:Ly50;
+
+    iget v0, v0, Ly50;->d:I
+
+    mul-int/2addr v0, v6
+
+    invoke-virtual {p0, v0}, Lpj0;->k(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    iget-object v2, p0, Lpj0;->b:Ly50;
+
+    iget-object v4, p0, Lpj0;->c:Ly50;
+
+    const/4 v7, 0x0
+
+    move-object v1, p1
+
+    invoke-static/range {v1 .. v7}, Lss8;->j(Ljava/nio/ByteBuffer;Ly50;Ljava/nio/ByteBuffer;Ly50;Lic2;IZ)V
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final g(Ly50;)Ly50;
     .locals 3
 
-    new-instance p1, Lhc2;
+    iget v0, p1, Ly50;->c:I
 
-    iget-object v0, p0, Lhc2;->Y:Lh76;
+    const/4 v1, 0x2
 
-    iget-object v1, p0, Lhc2;->Z:Ljava/lang/Object;
+    if-ne v0, v1, :cond_2
 
-    iget-object v2, p0, Lhc2;->X:Lkc2;
+    iget-object v0, p0, Lhc2;->i:Landroid/util/SparseArray;
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lhc2;-><init>(Lkc2;Lh76;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+    iget v2, p1, Ly50;->b:I
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    move-result-object v0
 
-    iget v0, p0, Lhc2;->o:I
-
-    const/4 v1, 0x1
+    check-cast v0, Lic2;
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    iget-boolean v2, v0, Lic2;->e:Z
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    if-eqz v2, :cond_0
 
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhc2;->X:Lkc2;
-
-    iget-object p1, p1, Lkc2;->o:Lb5g;
-
-    iput v1, p0, Lhc2;->o:I
-
-    iget-object v0, p0, Lhc2;->Y:Lh76;
-
-    iget-object v1, p0, Lhc2;->Z:Ljava/lang/Object;
-
-    invoke-interface {p1, v0, v1, p0}, Ler6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Ly50;->e:Ly50;
 
     return-object p1
+
+    :cond_0
+    new-instance v2, Ly50;
+
+    iget p1, p1, Ly50;->a:I
+
+    iget v0, v0, Lic2;->b:I
+
+    invoke-direct {v2, p1, v0, v1}, Ly50;-><init>(III)V
+
+    return-object v2
+
+    :cond_1
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    const-string v1, "No mixing matrix for input channel count"
+
+    invoke-direct {v0, v1, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Ly50;)V
+
+    throw v0
+
+    :cond_2
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ly50;)V
+
+    throw v0
 .end method

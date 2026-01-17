@@ -3,67 +3,60 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loi4;
+.implements Lni4;
 
 
 # instance fields
-.field public final a:Lcii;
+.field public final a:Lxz0;
 
-.field public b:Lqsg;
+.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+.field public final c:I
 
-.field public d:I
-
-.field public e:I
+.field public final d:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcii;
+    new-instance v0, Lxz0;
 
-    const/16 v1, 0x12
+    const/16 v1, 0x14
 
-    invoke-direct {v0, v1}, Lcii;-><init>(I)V
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lbr4;->a:Lcii;
+    invoke-direct {v0, v1, v2}, Lxz0;-><init>(IB)V
+
+    iput-object v0, p0, Lbr4;->a:Lxz0;
 
     const/16 v0, 0x1f40
 
-    iput v0, p0, Lbr4;->d:I
+    iput v0, p0, Lbr4;->c:I
 
-    iput v0, p0, Lbr4;->e:I
+    iput v0, p0, Lbr4;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lsi4;
+.method public final a()Lqi4;
     .locals 5
 
     new-instance v0, Lfr4;
 
-    iget-object v1, p0, Lbr4;->c:Ljava/lang/String;
+    iget-object v1, p0, Lbr4;->b:Ljava/lang/String;
 
     iget v2, p0, Lbr4;->d:I
 
-    iget v3, p0, Lbr4;->e:I
+    iget-object v3, p0, Lbr4;->a:Lxz0;
 
-    iget-object v4, p0, Lbr4;->a:Lcii;
+    iget v4, p0, Lbr4;->c:I
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lfr4;-><init>(Ljava/lang/String;IILcii;)V
+    invoke-direct {v0, v1, v4, v2, v3}, Lfr4;-><init>(Ljava/lang/String;IILxz0;)V
 
-    iget-object v1, p0, Lbr4;->b:Lqsg;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v1}, Lek0;->H(Lqsg;)V
-
-    :cond_0
     return-object v0
 .end method

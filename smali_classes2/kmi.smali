@@ -1,121 +1,142 @@
-.class public abstract synthetic Lkmi;
+.class public final Lkmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public final a:[Z
 
-.field public static final synthetic b:[I
+.field public b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lkmi;->b:I
+
+    invoke-static {}, Leh0;->values()[Leh0;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [Z
+
+    iput-object v0, p0, Lkmi;->a:[Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Leh0;Z)Z
+    .locals 2
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    iget-object v1, p0, Lkmi;->a:[Z
+
+    aget-boolean v0, v1, v0
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    aput-boolean p2, v1, p1
+
+    if-eq v0, p2, :cond_1
+
+    iget p1, p0, Lkmi;->b:I
+
+    const/4 v0, 0x1
+
+    if-eqz p2, :cond_0
+
+    move p2, v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, -0x1
+
+    :goto_0
+    add-int/2addr p1, p2
+
+    iput p1, p0, Lkmi;->b:I
+
+    return v0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lc12;->z(I)[I
+    if-ne p0, p1, :cond_0
 
-    move-result-object v1
+    return v0
 
-    array-length v1, v1
+    :cond_0
+    const/4 v1, 0x0
 
-    new-array v1, v1, [I
+    if-eqz p1, :cond_2
 
-    sput-object v1, Lkmi;->b:[I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x1
+    move-result-object v2
 
-    const/4 v3, 0x0
+    const-class v3, Lkmi;
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-eq v3, v2, :cond_1
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Lkmi;->b:[I
+    goto :goto_0
 
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :cond_1
+    check-cast p1, Lkmi;
 
-    :catch_1
-    invoke-static {}, Lw11;->values()[Lw11;
+    iget v2, p0, Lkmi;->b:I
 
-    move-result-object v1
+    iget v3, p1, Lkmi;->b:I
 
-    array-length v1, v1
+    if-ne v2, v3, :cond_2
 
-    new-array v1, v1, [I
+    iget-object v2, p0, Lkmi;->a:[Z
 
-    sput-object v1, Lkmi;->a:[I
+    iget-object p1, p1, Lkmi;->a:[Z
 
-    :try_start_2
-    aput v2, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Z[Z)Z
 
-    :catch_2
-    :try_start_3
-    sget-object v1, Lkmi;->a:[I
+    move-result p1
 
-    aput v0, v1, v0
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    if-eqz p1, :cond_2
 
-    :catch_3
-    :try_start_4
-    sget-object v0, Lkmi;->a:[I
+    return v0
 
-    const/4 v1, 0x3
+    :cond_2
+    :goto_0
+    return v1
+.end method
 
-    aput v1, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+.method public final hashCode()I
+    .locals 1
 
-    :catch_4
-    const/4 v0, 0x5
+    iget-object v0, p0, Lkmi;->a:[Z
 
-    :try_start_5
-    sget-object v1, Lkmi;->a:[I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Z)I
 
-    const/4 v3, 0x4
+    move-result v0
 
-    aput v3, v1, v0
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v1, Lkmi;->a:[I
-
-    aput v0, v1, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    sget-object v0, Lkmi;->a:[I
-
-    const/4 v1, 0x6
-
-    aput v1, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    :try_start_8
-    sget-object v0, Lkmi;->a:[I
-
-    const/4 v1, 0x7
-
-    aput v1, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    return-void
+    return v0
 .end method

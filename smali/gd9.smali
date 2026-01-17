@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract i(Lccc;Leb9;)V
+.method public abstract a()Lrlg;
+.end method
+
+.method public abstract getUid()Ljava/lang/Object;
 .end method

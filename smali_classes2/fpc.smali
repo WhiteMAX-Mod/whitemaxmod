@@ -1,120 +1,123 @@
-.class public final Lfpc;
-.super Lb5g;
+.class public final synthetic Lfpc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lgpc;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lepc;
-
-.field public o:I
+.field public final synthetic b:Lrdi;
 
 
 # direct methods
-.method public constructor <init>(Lgpc;Lepc;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lrdi;I)V
     .locals 0
 
-    iput-object p1, p0, Lfpc;->X:Lgpc;
+    iput p2, p0, Lfpc;->a:I
 
-    iput-object p2, p0, Lfpc;->Y:Lepc;
+    iput-object p1, p0, Lfpc;->b:Lrdi;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfpc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfpc;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lfpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    new-instance p1, Lfpc;
+    iget v0, p0, Lfpc;->a:I
 
-    iget-object v0, p0, Lfpc;->X:Lgpc;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lfpc;->Y:Lepc;
+    iget-object v0, p0, Lfpc;->b:Lrdi;
 
-    invoke-direct {p1, v0, v1, p2}, Lfpc;-><init>(Lgpc;Lepc;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
 
-    return-object p1
-.end method
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Lvpc;
 
-    iget v0, p0, Lfpc;->o:I
+    move-result-object v0
 
-    const/4 v1, 0x1
+    iget-object v0, v0, Lvpc;->b:Lcd5;
 
-    if-eqz v0, :cond_1
+    const/16 v1, 0x200
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0, v1}, Lcd5;->a(I)V
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfpc;->X:Lgpc;
-
-    iget-object p1, p1, Lgpc;->b:Lh6f;
-
-    iput v1, p0, Lfpc;->o:I
-
-    iget-object v0, p0, Lfpc;->Y:Lepc;
-
-    invoke-virtual {p1, v0, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
+    :goto_0
+    sget-object v0, Lb3h;->a:Lb3h;
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    :pswitch_0
+    iget-object v0, p0, Lfpc;->b:Lrdi;
 
-    return-object p1
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Lvpc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lvpc;->b:Lcd5;
+
+    const/16 v1, 0x100
+
+    invoke-virtual {v0, v1}, Lcd5;->a(I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Lfpc;->b:Lrdi;
+
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Lvpc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lvpc;->b:Lcd5;
+
+    const/16 v1, 0x80
+
+    invoke-virtual {v0, v1}, Lcd5;->a(I)V
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, Lfpc;->b:Lrdi;
+
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Lvpc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lvpc;->b:Lcd5;
+
+    const/16 v1, 0x40
+
+    invoke-virtual {v0, v1}, Lcd5;->a(I)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -6,7 +6,7 @@
 # instance fields
 .field public final a:Lorg/webrtc/DataChannel;
 
-.field public final b:Lcgd;
+.field public final b:Lahd;
 
 .field public final c:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -16,8 +16,8 @@
 
 
 # direct methods
-.method public constructor <init>(Lorg/webrtc/DataChannel;Lcgd;)V
-    .locals 2
+.method public constructor <init>(Lorg/webrtc/DataChannel;Lahd;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,15 +41,13 @@
 
     iput-object p1, p0, Lai4;->a:Lorg/webrtc/DataChannel;
 
-    iput-object p2, p0, Lai4;->b:Lcgd;
+    iput-object p2, p0, Lai4;->b:Lahd;
 
-    new-instance p2, Ljfc;
+    new-instance p2, Lzii;
 
-    const/16 v0, 0xc
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    invoke-direct {p2, p0, p1, v1, v0}, Ljfc;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    invoke-direct {p2, p0, p1, v0}, Lzii;-><init>(Ljava/lang/Object;Ljava/lang/Object;Z)V
 
     invoke-virtual {p1, p2}, Lorg/webrtc/DataChannel;->registerObserver(Lorg/webrtc/DataChannel$Observer;)V
 
@@ -58,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lt4e;)V
+.method public final a(Lr5e;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -102,7 +100,7 @@
     return v0
 .end method
 
-.method public final c(Lt4e;)V
+.method public final c(Lr5e;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -143,7 +141,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lt4e;
+    check-cast v1, Lr5e;
 
     :try_start_0
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -163,9 +161,9 @@
 
     const-string v3, "rtc.datachannel.listen.send"
 
-    iget-object v4, p0, Lai4;->b:Lcgd;
+    iget-object v4, p0, Lai4;->b:Lahd;
 
-    invoke-interface {v4, v1, v3, v2}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v4, v1, v3, v2}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -201,7 +199,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lt4e;
+    check-cast v1, Lr5e;
 
     :try_start_0
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -223,9 +221,9 @@
 
     const-string v3, "rtc.datachannel.listen.send"
 
-    iget-object v4, p0, Lai4;->b:Lcgd;
+    iget-object v4, p0, Lai4;->b:Lahd;
 
-    invoke-interface {v4, v1, v3, v2}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v4, v1, v3, v2}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 

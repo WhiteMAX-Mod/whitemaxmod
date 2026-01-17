@@ -3,333 +3,252 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
+
+.field public static final i:Ljava/lang/String;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
+
+
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public b:Z
+.field public final b:I
 
-.field public c:Z
+.field public final c:Ljava/lang/String;
 
-.field public final d:Ljava/util/List;
+.field public final d:I
+
+.field public final e:Landroid/os/Bundle;
+
+.field public final f:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lmbh;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lxv3;->d:Ljava/util/List;
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxv3;->g:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxv3;->h:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxv3;->i:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxv3;->j:Ljava/lang/String;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxv3;->k:Ljava/lang/String;
+
+    const/4 v0, 0x5
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxv3;->l:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(IILjava/lang/String;ILandroid/os/Bundle;I)V
+    .locals 0
 
-# virtual methods
-.method public final a(Ljavax/net/ssl/SSLSocket;)Lwv3;
-    .locals 17
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v0, p0
+    .line 3
+    iput p1, p0, Lxv3;->a:I
 
-    move-object/from16 v1, p1
+    .line 4
+    iput p2, p0, Lxv3;->b:I
 
-    iget v2, v0, Lxv3;->a:I
+    .line 5
+    iput-object p3, p0, Lxv3;->c:Ljava/lang/String;
 
-    iget-object v3, v0, Lxv3;->d:Ljava/util/List;
+    .line 6
+    iput p4, p0, Lxv3;->d:I
 
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    .line 7
+    iput-object p5, p0, Lxv3;->e:Landroid/os/Bundle;
+
+    .line 8
+    iput p6, p0, Lxv3;->f:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILandroid/os/Bundle;)V
+    .locals 7
+
+    .line 1
+    new-instance v5, Landroid/os/Bundle;
+
+    invoke-direct {v5, p3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    const v1, 0x3c14dd2c
+
+    const/4 v2, 0x7
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    move-object v3, p1
+
+    move v4, p2
+
+    invoke-direct/range {v0 .. v6}, Lxv3;-><init>(IILjava/lang/String;ILandroid/os/Bundle;I)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/os/Bundle;)Lxv3;
+    .locals 9
+
+    sget-object v0, Lxv3;->g:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v3
+
+    sget-object v0, Lxv3;->k:Ljava/lang/String;
+
+    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    :goto_0
-    const/4 v5, 0x1
+    sget-object v0, Lxv3;->h:Ljava/lang/String;
 
-    if-ge v2, v4, :cond_1
-
-    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lwv3;
-
-    invoke-virtual {v6, v1}, Lwv3;->b(Ljavax/net/ssl/SSLSocket;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    add-int/2addr v2, v5
-
-    iput v2, v0, Lxv3;->a:I
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v6, 0x0
-
-    :goto_1
-    if-eqz v6, :cond_b
-
-    iget-object v2, v6, Lwv3;->c:[Ljava/lang/String;
-
-    iget-object v4, v6, Lwv3;->d:[Ljava/lang/String;
-
-    iget v7, v0, Lxv3;->a:I
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v8
-
-    :goto_2
-    const/4 v9, 0x0
-
-    if-ge v7, v8, :cond_3
-
-    invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Lwv3;
-
-    invoke-virtual {v10, v1}, Lwv3;->b(Ljavax/net/ssl/SSLSocket;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_2
-
-    move v3, v5
-
-    goto :goto_3
-
-    :cond_2
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    move v3, v9
-
-    :goto_3
-    iput-boolean v3, v0, Lxv3;->b:Z
-
-    iget-boolean v3, v0, Lxv3;->c:Z
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v1}, Ljavax/net/ssl/SSLSocket;->getEnabledCipherSuites()[Ljava/lang/String;
-
-    move-result-object v7
-
-    sget-object v8, Ltc3;->b:Lq95;
-
-    invoke-static {v7, v2, v8}, Lpah;->o([Ljava/lang/String;[Ljava/lang/String;Ljava/util/Comparator;)[Ljava/lang/String;
-
-    move-result-object v7
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v1}, Ljavax/net/ssl/SSLSocket;->getEnabledCipherSuites()[Ljava/lang/String;
-
-    move-result-object v7
-
-    :goto_4
-    if-eqz v4, :cond_5
-
-    invoke-virtual {v1}, Ljavax/net/ssl/SSLSocket;->getEnabledProtocols()[Ljava/lang/String;
-
-    move-result-object v8
-
-    sget-object v10, Leja;->b:Leja;
-
-    invoke-static {v8, v4, v10}, Lpah;->o([Ljava/lang/String;[Ljava/lang/String;Ljava/util/Comparator;)[Ljava/lang/String;
-
-    move-result-object v8
-
-    goto :goto_5
-
-    :cond_5
-    invoke-virtual {v1}, Ljavax/net/ssl/SSLSocket;->getEnabledProtocols()[Ljava/lang/String;
-
-    move-result-object v8
-
-    :goto_5
-    invoke-virtual {v1}, Ljavax/net/ssl/SSLSocket;->getSupportedCipherSuites()[Ljava/lang/String;
-
-    move-result-object v10
-
-    sget-object v11, Ltc3;->b:Lq95;
-
-    sget-object v12, Lpah;->a:[B
-
-    array-length v12, v10
-
-    move v13, v9
-
-    :goto_6
-    const/4 v14, -0x1
-
-    if-ge v13, v12, :cond_7
-
-    aget-object v15, v10, v13
-
-    move/from16 v16, v5
-
-    const-string v5, "TLS_FALLBACK_SCSV"
-
-    invoke-virtual {v11, v15, v5}, Lq95;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v5
-
-    if-nez v5, :cond_6
-
-    goto :goto_7
-
-    :cond_6
-    add-int/lit8 v13, v13, 0x1
-
-    move/from16 v5, v16
-
-    goto :goto_6
-
-    :cond_7
-    move/from16 v16, v5
-
-    move v13, v14
-
-    :goto_7
-    if-eqz v3, :cond_8
-
-    if-eq v13, v14, :cond_8
-
-    aget-object v3, v10, v13
-
-    array-length v5, v7
-
-    add-int/lit8 v5, v5, 0x1
-
-    invoke-static {v7, v5}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    move-object v7, v5
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v7, [Ljava/lang/String;
+    sget-object v0, Lxv3;->i:Ljava/lang/String;
 
-    array-length v5, v7
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
-    add-int/lit8 v5, v5, -0x1
+    move-result v2
 
-    aput-object v3, v7, v5
+    invoke-static {v2}, Lh6j;->b(Z)V
 
-    :cond_8
-    new-instance v3, Lw31;
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
-    invoke-direct {v3, v9}, Lw31;-><init>(Z)V
+    move-result v6
 
-    iget-boolean v5, v6, Lwv3;->a:Z
+    sget-object v0, Lxv3;->j:Ljava/lang/String;
 
-    iput-boolean v5, v3, Lw31;->b:Z
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
-    iput-object v2, v3, Lw31;->d:Ljava/lang/Object;
+    move-result-object v0
 
-    iput-object v4, v3, Lw31;->e:Ljava/lang/Object;
+    sget-object v2, Lxv3;->l:Ljava/lang/String;
 
-    iget-boolean v2, v6, Lwv3;->b:Z
+    invoke-virtual {p0, v2, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    iput-boolean v2, v3, Lw31;->c:Z
+    move-result v8
 
-    array-length v2, v7
+    new-instance v2, Lxv3;
 
-    invoke-static {v7, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    move-result-object v2
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    check-cast v2, [Ljava/lang/String;
+    :cond_0
+    move-object v7, v0
 
-    invoke-virtual {v3, v2}, Lw31;->c([Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v8}, Lxv3;-><init>(IILjava/lang/String;ILandroid/os/Bundle;I)V
 
-    array-length v2, v8
+    return-object v2
+.end method
 
-    invoke-static {v8, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    move-result-object v2
+# virtual methods
+.method public final b()Landroid/os/Bundle;
+    .locals 3
 
-    check-cast v2, [Ljava/lang/String;
+    new-instance v0, Landroid/os/Bundle;
 
-    invoke-virtual {v3, v2}, Lw31;->e([Ljava/lang/String;)V
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {v3}, Lw31;->a()Lwv3;
+    sget-object v1, Lxv3;->g:Ljava/lang/String;
 
-    move-result-object v2
+    iget v2, p0, Lxv3;->a:I
 
-    invoke-virtual {v2}, Lwv3;->c()Ljava/util/List;
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    move-result-object v3
+    sget-object v1, Lxv3;->h:Ljava/lang/String;
 
-    if-eqz v3, :cond_9
+    iget-object v2, p0, Lxv3;->c:Ljava/lang/String;
 
-    iget-object v3, v2, Lwv3;->d:[Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Ljavax/net/ssl/SSLSocket;->setEnabledProtocols([Ljava/lang/String;)V
+    sget-object v1, Lxv3;->i:Ljava/lang/String;
 
-    :cond_9
-    invoke-virtual {v2}, Lwv3;->a()Ljava/util/List;
+    iget v2, p0, Lxv3;->d:I
 
-    move-result-object v3
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    if-eqz v3, :cond_a
+    sget-object v1, Lxv3;->j:Ljava/lang/String;
 
-    iget-object v2, v2, Lwv3;->c:[Ljava/lang/String;
+    iget-object v2, p0, Lxv3;->e:Landroid/os/Bundle;
 
-    invoke-virtual {v1, v2}, Ljavax/net/ssl/SSLSocket;->setEnabledCipherSuites([Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    :cond_a
-    return-object v6
+    sget-object v1, Lxv3;->k:Ljava/lang/String;
 
-    :cond_b
-    new-instance v2, Ljava/net/UnknownServiceException;
+    iget v2, p0, Lxv3;->b:I
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    const-string v5, "Unable to find acceptable protocols. isFallback="
+    sget-object v1, Lxv3;->l:Ljava/lang/String;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v2, p0, Lxv3;->f:I
 
-    iget-boolean v5, v0, Lxv3;->c:Z
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v5, ", modes="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", supported protocols="
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljavax/net/ssl/SSLSocket;->getEnabledProtocols()[Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v2, v1}, Ljava/net/UnknownServiceException;-><init>(Ljava/lang/String;)V
-
-    throw v2
+    return-object v0
 .end method

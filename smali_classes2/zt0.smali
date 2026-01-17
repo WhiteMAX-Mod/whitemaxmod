@@ -1,137 +1,182 @@
 .class public final Lzt0;
-.super Landroid/view/ViewOutlineProvider;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public b:F
+.field public final b:I
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(F)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lzt0;->a:I
-
-    iput p1, p0, Lzt0;->b:F
-
-    .line 2
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(IF)V
+.method public constructor <init>(IIZ)V
     .locals 0
 
-    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     iput p1, p0, Lzt0;->a:I
 
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    iput p2, p0, Lzt0;->b:I
 
-    iput p2, p0, Lzt0;->b:F
+    iput-boolean p3, p0, Lzt0;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 13
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lzt0;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lzt0;
 
     iget v0, p0, Lzt0;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p1, Lzt0;->a:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    if-eq v0, v1, :cond_2
 
-    move-result v4
+    goto :goto_0
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    :cond_2
+    iget v0, p0, Lzt0;->b:I
 
-    move-result v5
+    iget v1, p1, Lzt0;->b:I
 
-    iget v6, p0, Lzt0;->b:F
+    if-eq v0, v1, :cond_3
 
-    const/4 v2, 0x0
+    goto :goto_0
 
-    const/4 v3, 0x0
+    :cond_3
+    iget-boolean v0, p0, Lzt0;->c:Z
 
-    move-object v1, p2
+    iget-boolean p1, p1, Lzt0;->c:Z
 
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    if-eq v0, p1, :cond_4
 
-    return-void
+    :goto_0
+    const/4 p1, 0x0
 
-    :pswitch_0
-    move-object v7, p2
+    return p1
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
 
-    move-result v10
+    return p1
+.end method
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+.method public final hashCode()I
+    .locals 3
 
-    move-result p2
+    iget v0, p0, Lzt0;->a:I
 
-    iget v12, p0, Lzt0;->b:F
+    invoke-static {v0}, Lt02;->t(I)I
 
-    float-to-int v0, v12
+    move-result v0
 
-    add-int v11, p2, v0
+    const/16 v1, 0x1f
 
-    const/4 v8, 0x0
+    mul-int/2addr v0, v1
 
-    const/4 v9, 0x0
+    iget v2, p0, Lzt0;->b:I
 
-    invoke-virtual/range {v7 .. v12}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    invoke-static {v2, v0, v1}, Lpqb;->i(III)I
 
-    const/4 p2, 0x1
+    move-result v0
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    iget-boolean v1, p0, Lzt0;->c:Z
 
-    return-void
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    :pswitch_1
-    move-object v7, p2
+    move-result v1
 
-    iget p2, p0, Lzt0;->b:F
+    add-int/2addr v1, v0
 
-    invoke-static {p2}, Ln7j;->c(F)I
+    return v1
+.end method
 
-    move-result p2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    neg-int v9, p2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    const-string v1, "BottomInsetConfig(persistentType="
 
-    move-result v10
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    iget v1, p0, Lzt0;->a:I
 
-    move-result v11
+    invoke-static {v1}, Lpqb;->r(I)Ljava/lang/String;
 
-    iget v12, p0, Lzt0;->b:F
+    move-result-object v1
 
-    const/4 v8, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v7 .. v12}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    const-string v1, ", imeInsetChange="
 
-    const/4 p2, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    const/4 v1, 0x1
 
-    return-void
+    iget v2, p0, Lzt0;->b:I
 
-    nop
+    if-eq v2, v1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "Immediate"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "Animated"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "None"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", applyDeviceRoundCorners="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lzt0;->c:Z
+
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -22,14 +22,14 @@
 
 
 # virtual methods
-.method public final b(Lwrg;)V
+.method public final b(Lfsg;)V
     .locals 2
 
     iget v0, p0, Lrra;->e:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p1, Lwrg;->o:Ljava/lang/Object;
+    iget-object p1, p1, Lfsg;->o:Ljava/lang/Object;
 
     check-cast p1, Landroid/app/Notification$Builder;
 
@@ -85,7 +85,7 @@
     return-void
 
     :pswitch_0
-    iget-object p1, p1, Lwrg;->o:Ljava/lang/Object;
+    iget-object p1, p1, Lfsg;->o:Ljava/lang/Object;
 
     check-cast p1, Landroid/app/Notification$Builder;
 

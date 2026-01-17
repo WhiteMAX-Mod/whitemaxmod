@@ -18,7 +18,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -28,7 +28,7 @@
 # instance fields
 .field public o1:Landroid/widget/FrameLayout;
 
-.field public p1:Lnpg;
+.field public p1:Lwpg;
 
 
 # direct methods
@@ -42,18 +42,10 @@
 
 
 # virtual methods
-.method public final B()Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->o1:Landroid/widget/FrameLayout;
-
-    return-object v0
-.end method
-
-.method public final O(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.method public final M(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/gms/maps/SupportMapFragment;->O(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/gms/maps/SupportMapFragment;->M(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p1
 
@@ -61,9 +53,9 @@
 
     iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->o1:Landroid/widget/FrameLayout;
 
-    new-instance p1, Lnpg;
+    new-instance p1, Lwpg;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->r()Landroidx/fragment/app/b;
 
     move-result-object p2
 
@@ -73,7 +65,15 @@
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->p1:Lnpg;
+    iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->p1:Lwpg;
 
     return-object p1
+.end method
+
+.method public final z()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->o1:Landroid/widget/FrameLayout;
+
+    return-object v0
 .end method

@@ -1,29 +1,32 @@
-.class public final Ldz5;
+.class public final synthetic Ldz5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic a:Ldz5;
-
-.field public static final b:Lcz5;
+# interfaces
+.implements Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final load(Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, Ldz5;
+    :try_start_0
+    const-string p1, "ffmpg"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput-object v0, Ldz5;->a:Ldz5;
+    return-void
 
-    new-instance v0, Lcz5;
+    :catchall_0
+    move-exception p1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getLogger()Lwia;
 
-    sput-object v0, Ldz5;->b:Lcz5;
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lwia;->o(Ljava/lang/Throwable;)V
 
     return-void
 .end method

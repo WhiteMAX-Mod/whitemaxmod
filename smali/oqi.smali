@@ -1,5 +1,5 @@
 .class public final Loqi;
-.super Li4;
+.super Lg4;
 .source "SourceFile"
 
 
@@ -16,22 +16,46 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public b:Z
+.field public final b:Landroid/os/IBinder;
+
+.field public final c:Lyv3;
+
+.field public final d:Z
+
+.field public final o:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lgqi;
+    new-instance v0, Lfph;
 
-    const/4 v1, 0x7
+    const/16 v1, 0x12
 
-    invoke-direct {v0, v1}, Lgqi;-><init>(I)V
+    invoke-direct {v0, v1}, Lfph;-><init>(I)V
 
     sput-object v0, Loqi;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILandroid/os/IBinder;Lyv3;ZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Loqi;->a:I
+
+    iput-object p2, p0, Loqi;->b:Landroid/os/IBinder;
+
+    iput-object p3, p0, Loqi;->c:Lyv3;
+
+    iput-boolean p4, p0, Loqi;->d:Z
+
+    iput-boolean p5, p0, Loqi;->o:Z
 
     return-void
 .end method
@@ -39,110 +63,163 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 6
 
-    const/4 v0, 0x1
+    if-nez p1, :cond_0
 
-    if-ne p1, p0, :cond_0
-
-    return v0
+    goto :goto_3
 
     :cond_0
-    instance-of v1, p1, Loqi;
+    if-ne p0, p1, :cond_1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_2
 
     :cond_1
-    check-cast p1, Loqi;
+    instance-of v0, p1, Loqi;
 
-    iget v1, p0, Loqi;->a:I
+    if-nez v0, :cond_2
 
-    iget v3, p1, Loqi;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Loqi;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iget-boolean p1, p1, Loqi;->b:Z
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lkcj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
+    goto :goto_3
 
     :cond_2
-    return v2
-.end method
+    check-cast p1, Loqi;
 
-.method public final hashCode()I
-    .locals 2
+    iget-object v0, p0, Loqi;->c:Lyv3;
 
-    iget v0, p0, Loqi;->a:I
+    iget-object v1, p1, Loqi;->c:Lyv3;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Loqi;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-virtual {v0, v1}, Lyv3;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_7
+
+    const/4 v0, 0x2
+
+    const-string v1, "com.google.android.gms.common.internal.IAccountAccessor"
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Loqi;->b:Landroid/os/IBinder;
+
+    if-nez v3, :cond_3
+
+    move-object v4, v2
+
+    goto :goto_0
+
+    :cond_3
+    sget v4, Ls5;->d:I
+
+    invoke-interface {v3, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v4
+
+    instance-of v5, v4, Lae7;
+
+    if-eqz v5, :cond_4
+
+    check-cast v4, Lae7;
+
+    goto :goto_0
+
+    :cond_4
+    new-instance v4, Leqj;
+
+    invoke-direct {v4, v3, v1, v0}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    :goto_0
+    iget-object p1, p1, Loqi;->b:Landroid/os/IBinder;
+
+    if-nez p1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    sget v2, Ls5;->d:I
+
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lae7;
+
+    if-eqz v3, :cond_6
+
+    check-cast v2, Lae7;
+
+    goto :goto_1
+
+    :cond_6
+    new-instance v2, Leqj;
+
+    invoke-direct {v2, p1, v1, v0}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    :goto_1
+    invoke-static {v4, v2}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    :goto_2
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_7
+    :goto_3
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+    .locals 4
 
-    const/16 p2, 0x4f45
+    const/16 v0, 0x4f45
 
-    invoke-static {p1, p2}, Lwmj;->k(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, Lsnj;->k(Landroid/os/Parcel;I)I
 
-    move-result p2
+    move-result v0
 
-    iget v0, p0, Loqi;->a:I
-
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
     const/4 v2, 0x4
 
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget v1, p0, Loqi;->a:I
 
-    iget-boolean v0, p0, Loqi;->b:Z
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x2
+
+    iget-object v3, p0, Loqi;->b:Landroid/os/IBinder;
+
+    invoke-static {p1, v1, v3}, Lsnj;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
     const/4 v1, 0x3
 
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+    iget-object v3, p0, Loqi;->c:Lyv3;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {p1, v1, v3, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-static {p1, p2}, Lwmj;->l(Landroid/os/Parcel;I)V
+    invoke-static {p1, v2, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
+
+    iget-boolean p2, p0, Loqi;->d:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 p2, 0x5
+
+    invoke-static {p1, p2, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
+
+    iget-boolean p2, p0, Loqi;->o:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p1, v0}, Lsnj;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

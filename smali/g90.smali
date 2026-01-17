@@ -7,5 +7,5 @@
 .method public abstract a(ILjava/lang/CharSequence;)V
 .end method
 
-.method public abstract b(Lgp0;)V
+.method public abstract b(Lfp0;)V
 .end method

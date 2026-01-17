@@ -3,70 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgw1;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lcw1;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ls7g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ls7g;Ls7g;I)V
+    .locals 0
 
-    new-instance v0, Lcw1;
+    iput p3, p0, Lcw1;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcw1;->b:Ls7g;
 
-    sput-object v0, Lcw1;->a:Lcw1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcw1;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lcw1;->b:Ls7g;
 
-    :cond_0
-    instance-of p1, p1, Lcw1;
+    invoke-virtual {v0}, Ls7g;->d()V
 
-    if-nez p1, :cond_1
+    return-void
 
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lcw1;->b:Ls7g;
 
-    return p1
+    invoke-virtual {v0}, Ls7g;->d()V
 
-    :cond_1
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 1
+    :pswitch_1
+    iget-object v0, p0, Lcw1;->b:Ls7g;
 
-    const v0, -0x53d7451
+    invoke-virtual {v0}, Ls7g;->d()V
 
-    return v0
-.end method
+    return-void
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    nop
 
-    const-string v0, "Init"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

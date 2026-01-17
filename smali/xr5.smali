@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzr5;
+.implements Lds5;
 
 
 # static fields

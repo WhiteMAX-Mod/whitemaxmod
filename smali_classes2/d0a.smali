@@ -1,249 +1,384 @@
 .class public final Ld0a;
-.super Llrd;
+.super Lisd;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/Boolean;
+.field public b:I
 
-.field public c:Z
+.field public c:I
 
-.field public d:Z
-
-.field public final synthetic e:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final synthetic d:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    .locals 0
+
+    iput p2, p0, Ld0a;->a:I
+
+    iput-object p1, p0, Ld0a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ld0a;->b:I
+
+    iput p1, p0, Ld0a;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ld0a;->e:Lone/me/messages/list/ui/MessagesListWidget;
-
-    const/16 p1, 0x50
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v0
-
-    invoke-static {p1}, Ln7j;->c(F)I
-
-    move-result p1
-
-    iput p1, p0, Ld0a;->a:I
-
     return-void
-.end method
-
-.method public static c(Landroidx/recyclerview/widget/RecyclerView;)Z
-    .locals 2
-
-    invoke-static {p0}, Lmlj;->e(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lzqd;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Lzqd;->j()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    if-lez p0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    const/4 v1, 0x1
-
-    sub-int/2addr p0, v1
-
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->s(I)Landroid/view/View;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    return v1
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
-
-    if-eqz p2, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-boolean p1, p0, Ld0a;->c:Z
-
-    return-void
-.end method
-
 .method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 4
+    .locals 11
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
+    iget p2, p0, Ld0a;->a:I
+
+    const-string p3, "Only linear layout manger supported"
+
+    const/4 v0, 0x1
+
+    const/4 v1, -0x1
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-static {p1}, Lgmj;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_a
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
 
     move-result p2
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
-
-    move-result p3
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
-
-    move-result v0
-
-    iget-boolean v1, p0, Ld0a;->d:Z
-
-    iget v2, p0, Ld0a;->a:I
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    add-int/2addr v1, v2
-
-    if-ge p3, v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Ld0a;->d:Z
-
-    invoke-static {p1}, Ld0a;->c(Landroidx/recyclerview/widget/RecyclerView;)Z
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->a1()I
 
     move-result p1
 
-    iget-object v3, p0, Ld0a;->e:Lone/me/messages/list/ui/MessagesListWidget;
+    if-eq p2, v1, :cond_9
 
-    if-eqz p1, :cond_3
+    if-ne p1, v1, :cond_0
 
-    if-ltz p2, :cond_1
+    goto/16 :goto_3
 
-    add-int/2addr p2, v0
+    :cond_0
+    iget p3, p0, Ld0a;->b:I
 
-    sub-int/2addr p3, p2
+    if-ne p2, p3, :cond_1
 
-    if-lt p3, v2, :cond_1
+    iget p3, p0, Ld0a;->c:I
+
+    if-eq p1, p3, :cond_9
+
+    :cond_1
+    iput p2, p0, Ld0a;->b:I
+
+    iput p1, p0, Ld0a;->c:I
+
+    iget-object p3, p0, Ld0a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lz28;
+
+    invoke-virtual {p3}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lsz9;
+
+    move-result-object v1
+
+    iget-object p3, p3, Lone/me/messages/list/ui/MessagesListWidget;->H0:Lew9;
+
+    iget-object v2, p3, Lnd8;->d:Lgv;
+
+    iget-object v2, v2, Lgv;->f:Ljava/util/List;
+
+    invoke-static {p2, v2}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lud8;
+
+    instance-of v3, v2, Lone/me/messages/list/loader/MessageModel;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_2
+
+    check-cast v2, Lone/me/messages/list/loader/MessageModel;
 
     goto :goto_0
 
-    :cond_1
-    iget-object p1, p0, Ld0a;->b:Ljava/lang/Boolean;
-
-    if-eqz p1, :cond_2
-
-    sget-object p2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
     :cond_2
-    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
+    instance-of v2, v2, Lei2;
 
-    invoke-virtual {v3}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Luz9;
+    if-eqz v2, :cond_3
+
+    add-int/2addr p2, v0
+
+    invoke-virtual {p3, p2}, Lew9;->N(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_3
+    move-object v2, v4
+
+    :goto_0
+    invoke-virtual {p3, p1}, Lew9;->N(I)Lone/me/messages/list/loader/MessageModel;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Luz9;->Q(Z)V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    if-eqz v2, :cond_9
 
-    iput-object p1, p0, Ld0a;->b:Ljava/lang/Boolean;
+    if-nez p1, :cond_4
 
-    return-void
+    goto :goto_3
 
-    :cond_3
-    :goto_0
-    iget-object p1, p0, Ld0a;->b:Ljava/lang/Boolean;
+    :cond_4
+    invoke-virtual {v1}, Lsz9;->D()Lh3a;
 
-    if-eqz p1, :cond_5
+    move-result-object p2
 
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iget-wide v2, v2, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-wide v5, p1, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    move-result p1
+    iget-object p1, p2, Lh3a;->o:Lspf;
 
-    if-eqz p1, :cond_4
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ltee;
+
+    iget-object p2, p2, Ltee;->d:Lsee;
+
+    if-nez p2, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    iget-wide p2, p2, Lsee;->b:J
+
+    cmp-long v0, v2, p2
+
+    if-gtz v0, :cond_6
+
+    cmp-long p2, p2, v5
+
+    if-gtz p2, :cond_6
+
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ltee;
+
+    iget-object p2, p2, Ltee;->d:Lsee;
+
+    if-eqz p2, :cond_7
+
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    move-object v5, p3
+
+    check-cast v5, Ltee;
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x7
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v5 .. v10}, Ltee;->a(Ltee;IZZLsee;I)Ltee;
+
+    move-result-object p3
+
+    invoke-virtual {p1, v4, p3}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    :cond_4
+    :cond_6
     :goto_1
+    move-object p2, v4
+
+    :cond_7
+    :goto_2
+    if-nez p2, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    iget-object p1, v1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object p3, v1, Lsz9;->Y:Lmbg;
+
+    check-cast p3, Lj9b;
+
+    invoke-virtual {p3}, Lj9b;->b()Lsb4;
+
+    move-result-object p3
+
+    new-instance v0, Lgy9;
+
+    invoke-direct {v0, v1, p2, v4}, Lgy9;-><init>(Lsz9;Lsee;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p2, 0x2
+
+    invoke-static {p1, p3, v4, v0, p2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    :cond_9
+    :goto_3
     return-void
 
-    :cond_5
-    :goto_2
-    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
+    :cond_a
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v3}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Luz9;
+    invoke-direct {p1, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    invoke-static {p1}, Lgmj;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
 
     move-result-object p1
 
-    const/4 p2, 0x1
+    if-nez p1, :cond_b
 
-    invoke-virtual {p1, p2}, Luz9;->Q(Z)V
+    const-class p1, Ld0a;
 
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iput-object p1, p0, Ld0a;->b:Ljava/lang/Boolean;
+    move-result-object p1
 
+    invoke-static {p1, p3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_b
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Z0()I
+
+    move-result p1
+
+    if-eq p2, v1, :cond_11
+
+    if-ne p1, v1, :cond_c
+
+    goto :goto_6
+
+    :cond_c
+    iget p3, p0, Ld0a;->b:I
+
+    if-ne p2, p3, :cond_d
+
+    iget p3, p0, Ld0a;->c:I
+
+    if-eq p1, p3, :cond_11
+
+    :cond_d
+    iput p2, p0, Ld0a;->b:I
+
+    iput p1, p0, Ld0a;->c:I
+
+    iget-object p3, p0, Ld0a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lz28;
+
+    invoke-virtual {p3}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lsz9;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Lsz9;->A()Lpjf;
+
+    move-result-object v5
+
+    if-nez v5, :cond_e
+
+    goto :goto_6
+
+    :cond_e
+    if-gt p2, p1, :cond_11
+
+    :goto_4
+    iget-object p3, p0, Ld0a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p3, p3, Lone/me/messages/list/ui/MessagesListWidget;->H0:Lew9;
+
+    invoke-virtual {p3, p2}, Lzcf;->l(I)I
+
+    move-result p3
+
+    const v1, -0x7f000001
+
+    and-int/2addr p3, v1
+
+    const v1, -0x7ffffff2
+
+    if-ne p3, v1, :cond_10
+
+    iget-object p3, p0, Ld0a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p3, p3, Lone/me/messages/list/ui/MessagesListWidget;->H0:Lew9;
+
+    invoke-virtual {p3, p2}, Lew9;->N(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_10
+
+    iget-wide v2, p3, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object p3, p0, Ld0a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-virtual {p3}, Lone/me/messages/list/ui/MessagesListWidget;->D0()Ltl9;
+
+    move-result-object v1
+
+    iget-boolean p3, v1, Ltl9;->c:Z
+
+    if-eqz p3, :cond_f
+
+    goto :goto_5
+
+    :cond_f
+    iput-boolean v0, v1, Ltl9;->c:Z
+
+    const/4 v4, 0x5
+
+    const/4 v6, 0x6
+
+    invoke-virtual/range {v1 .. v6}, Ltl9;->a(JILpjf;I)V
+
+    :cond_10
+    :goto_5
+    if-eq p2, p1, :cond_11
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_4
+
+    :cond_11
+    :goto_6
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwwa;
+.implements Lvwa;
 
 
 # static fields
 .field public static final a:Li90;
 
-.field public static final b:Lez5;
+.field public static final b:Lfz5;
 
 
 # direct methods
@@ -24,11 +24,11 @@
 
     const-string v0, "logRequest"
 
-    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
 
     move-result-object v0
 
-    sput-object v0, Li90;->b:Lez5;
+    sput-object v0, Li90;->b:Lfz5;
 
     return-void
 .end method
@@ -40,15 +40,15 @@
 
     check-cast p1, Lfn0;
 
-    check-cast p2, Lxwa;
+    check-cast p2, Lwwa;
 
     check-cast p1, Lla0;
 
     iget-object p1, p1, Lla0;->a:Ljava/util/ArrayList;
 
-    sget-object v0, Li90;->b:Lez5;
+    sget-object v0, Li90;->b:Lfz5;
 
-    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
     return-void
 .end method

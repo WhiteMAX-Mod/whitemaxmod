@@ -18,7 +18,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -26,33 +26,33 @@
 
 
 # static fields
-.field public static final synthetic w0:I
+.field public static final synthetic x0:I
 
 
 # instance fields
-.field public final X:Lz7g;
+.field public final X:Ln8g;
 
-.field public final Y:Lz7g;
+.field public final Y:Ln8g;
 
-.field public final Z:Lz7g;
+.field public final Z:Ln8g;
 
-.field public a:Lefe;
+.field public a:Lage;
 
-.field public final b:Lz7g;
+.field public final b:Ln8g;
 
-.field public final c:Lz7g;
+.field public final c:Ln8g;
 
-.field public final d:Lz7g;
+.field public final d:Ln8g;
 
-.field public final o:Lz7g;
+.field public final o:Ln8g;
 
-.field public final s0:Lz7g;
+.field public final t0:Ln8g;
 
-.field public final t0:Lz7g;
+.field public final u0:Ln8g;
 
-.field public final u0:Lz7g;
+.field public final v0:Ln8g;
 
-.field public final v0:Lz7g;
+.field public final w0:Ln8g;
 
 
 # direct methods
@@ -67,11 +67,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->b:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->b:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -79,11 +79,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->c:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->c:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -91,11 +91,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->d:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->d:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -103,11 +103,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->o:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->o:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -115,11 +115,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->X:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->X:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -127,11 +127,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->Y:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->Y:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -139,11 +139,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->Z:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->Z:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -151,11 +151,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->s0:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->t0:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -163,11 +163,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->t0:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->u0:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -175,11 +175,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->u0:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->v0:Ln8g;
 
     new-instance v0, Lpta;
 
@@ -187,11 +187,11 @@
 
     invoke-direct {v0, p0, v1}, Lpta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->v0:Lz7g;
+    iput-object v1, p0, Lru/ok/tamtam/android/services/NotificationTamService;->w0:Ln8g;
 
     return-void
 .end method
@@ -199,7 +199,7 @@
 .method public static final a(JLru/ok/tamtam/android/services/NotificationTamService;Ljava/lang/CharSequence;J)V
     .locals 8
 
-    iget-object v0, p2, Lru/ok/tamtam/android/services/NotificationTamService;->d:Lz7g;
+    iget-object v0, p2, Lru/ok/tamtam/android/services/NotificationTamService;->d:Ln8g;
 
     const-wide/16 v1, 0x0
 
@@ -219,30 +219,30 @@
 
     const-string p4, "directReply: failed to send message, no chat in cache for chatServerId=%d"
 
-    invoke-static {p3, p4, p2}, Lm4j;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p3, p4, p2}, Lc5j;->g(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lkeb;
+    check-cast p2, Lteb;
 
-    invoke-virtual {p2, p0, p1}, Lkeb;->a(J)V
+    invoke-virtual {p2, p0, p1}, Lteb;->a(J)V
 
     return-void
 
     :cond_0
-    iget-object v1, p2, Lru/ok/tamtam/android/services/NotificationTamService;->v0:Lz7g;
+    iget-object v1, p2, Lru/ok/tamtam/android/services/NotificationTamService;->w0:Ln8g;
 
-    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lpba;
 
-    sget-object v2, Loba;->Z:Loba;
+    const/4 v2, 0x7
 
-    invoke-virtual {v1, v2}, Lpba;->t(Loba;)Lnba;
+    invoke-virtual {v1, v2}, Lpba;->u(I)Loba;
 
     move-result-object v1
 
@@ -250,50 +250,50 @@
 
     move-result-object v5
 
-    new-instance v2, Lnre;
+    new-instance v2, Lrse;
 
-    sget-object v7, Lch5;->a:Lch5;
+    sget-object v7, Ldh5;->a:Ldh5;
 
     const/4 v6, 0x1
 
     move-wide v3, p4
 
-    invoke-direct/range {v2 .. v7}, Lnre;-><init>(JLjava/lang/String;ZLjava/util/List;)V
+    invoke-direct/range {v2 .. v7}, Lrse;-><init>(JLjava/lang/String;ZLjava/util/List;)V
 
-    iput-object v1, v2, Ljre;->g:Lnba;
+    iput-object v1, v2, Lnse;->g:Loba;
 
-    new-instance p3, Lpre;
+    new-instance p3, Ltse;
 
-    invoke-direct {p3, v2}, Lpre;-><init>(Lnre;)V
+    invoke-direct {p3, v2}, Ltse;-><init>(Lrse;)V
 
-    iget-object p2, p2, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lefe;
+    iget-object p2, p2, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lage;
 
     if-nez p2, :cond_1
 
     const/4 p2, 0x0
 
     :cond_1
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lu5;
+    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p2
 
-    const/16 p4, 0xb7
+    const/16 p4, 0xb5
 
-    invoke-virtual {p2, p4}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lwii;
-
-    invoke-virtual {p2, p3}, Lwii;->b(Llqe;)V
-
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2, p4}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lkeb;
+    check-cast p2, Ltji;
 
-    invoke-virtual {p2, p0, p1}, Lkeb;->a(J)V
+    invoke-virtual {p2, p3}, Ltji;->b(Lore;)V
+
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lteb;
+
+    invoke-virtual {p2, p0, p1}, Lteb;->a(J)V
 
     return-void
 .end method
@@ -317,11 +317,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lsfe;->b(Landroid/content/Context;)Lefe;
+    invoke-static {v0}, Lnef;->c(Landroid/content/Context;)Lage;
 
     move-result-object v0
 
-    iput-object v0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lefe;
+    iput-object v0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lage;
 
     return-void
 .end method
@@ -335,7 +335,7 @@
 
     const-string v1, "onDestroy"
 
-    invoke-static {v0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -427,15 +427,15 @@
 
     move-result-wide v4
 
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->o:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->o:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lch2;
+    check-cast v0, Lxg2;
 
-    invoke-virtual {v0, v7, v8}, Lch2;->J(J)Lud2;
+    invoke-virtual {v0, v7, v8}, Lxg2;->K(J)Lnd2;
 
     move-result-object v0
 
@@ -449,15 +449,15 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v6, v1, Lru/ok/tamtam/android/services/NotificationTamService;->c:Lz7g;
+    iget-object v6, v1, Lru/ok/tamtam/android/services/NotificationTamService;->c:Ln8g;
 
-    invoke-virtual {v6}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v6}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v6
 
     move-object v14, v6
 
-    check-cast v14, Lac4;
+    check-cast v14, Lzb4;
 
     move-wide v9, v2
 
@@ -465,7 +465,7 @@
 
     move v8, v0
 
-    new-instance v0, Ltta;
+    new-instance v0, Luta;
 
     move-wide v6, v4
 
@@ -473,7 +473,7 @@
 
     const/4 v12, 0x0
 
-    invoke-direct/range {v0 .. v12}, Ltta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v0 .. v12}, Luta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
 
     move-wide v7, v2
 
@@ -481,21 +481,21 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v14, v3, v3, v0, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    invoke-static {v14, v3, v3, v0, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->Y:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->Y:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ldah;
+    check-cast v0, Lyah;
 
-    new-instance v4, Lsta;
+    new-instance v4, Ltta;
 
-    invoke-direct {v4, v1, v7, v8, v3}, Lsta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLkotlin/coroutines/Continuation;)V
+    invoke-direct {v4, v1, v7, v8, v3}, Ltta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLkotlin/coroutines/Continuation;)V
 
-    invoke-static {v0, v3, v3, v4, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    invoke-static {v0, v3, v3, v4, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
     goto/16 :goto_9
 
@@ -508,19 +508,19 @@
 
     if-eqz v0, :cond_f
 
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->b:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->b:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lpfc;
+    check-cast v0, Llgc;
 
-    iget-object v0, v0, Lpfc;->a:Ldj8;
+    iget-object v0, v0, Llgc;->a:Lqi8;
 
-    iget-object v2, v0, Lcfe;->B:Lkqe;
+    iget-object v2, v0, Lyfe;->B:Lnre;
 
-    sget-object v3, Lcfe;->l0:[Lp38;
+    sget-object v3, Lyfe;->f0:[Lz28;
 
     const/16 v4, 0x13
 
@@ -528,30 +528,30 @@
 
     sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-virtual {v2, v0, v3, v4}, Lkqe;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
+    invoke-virtual {v2, v0, v3, v4}, Lnre;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
 
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->s0:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->t0:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lxva;
+    check-cast v0, Lyva;
 
-    invoke-virtual {v0}, Lxva;->e()Lyva;
+    invoke-virtual {v0}, Lyva;->e()Lzva;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v3, Lyva;->d:Ljava/lang/String;
+    sget-object v3, Lzva;->d:Ljava/lang/String;
 
     const-string v0, "onNotificationCancelled"
 
-    invoke-static {v3, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    invoke-virtual {v2}, Lyva;->b()Lgd;
+    invoke-virtual {v2}, Lzva;->b()Ldd;
 
     move-result-object v0
 
@@ -561,7 +561,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v13, v4}, Lgd;->b(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v0, v13, v4}, Ldd;->b(Ljava/lang/String;Ljava/util/Map;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -572,40 +572,40 @@
 
     const-string v4, "onNotificationMarkAsRead: failed"
 
-    invoke-static {v3, v4, v0}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v0}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v2}, Lyva;->c()Lum5;
+    invoke-virtual {v2}, Lzva;->c()Lym5;
 
     move-result-object v2
 
-    new-instance v3, Lfp4;
+    new-instance v3, Lgp4;
 
     const-string v4, "failed to log mark as read"
 
     invoke-direct {v3, v4, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast v2, Liab;
+    check-cast v2, Lqab;
 
-    invoke-virtual {v2, v3}, Liab;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3}, Lqab;->a(Ljava/lang/Throwable;)V
 
     :goto_1
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->Y:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->Y:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ldah;
+    check-cast v0, Lyah;
 
-    new-instance v2, Lqta;
+    new-instance v2, Lrta;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v1, v7, v8, v3}, Lqta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLkotlin/coroutines/Continuation;)V
+    invoke-direct {v2, v1, v7, v8, v3}, Lrta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLkotlin/coroutines/Continuation;)V
 
     const/4 v4, 0x3
 
-    invoke-static {v0, v3, v3, v2, v4}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    invoke-static {v0, v3, v3, v2, v4}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
     goto/16 :goto_9
 
@@ -643,15 +643,15 @@
 
     move-result-object v0
 
-    iget-object v2, v1, Lru/ok/tamtam/android/services/NotificationTamService;->u0:Lz7g;
+    iget-object v2, v1, Lru/ok/tamtam/android/services/NotificationTamService;->v0:Ln8g;
 
-    invoke-virtual {v2}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lsua;
+    check-cast v2, Ltua;
 
-    sget-object v14, Lm4j;->a:Lvcb;
+    sget-object v14, Lc5j;->a:Ledb;
 
     if-nez v14, :cond_4
 
@@ -669,9 +669,9 @@
 
     move-object/from16 v16, v3
 
-    sget-object v3, Lxk8;->d:Lxk8;
+    sget-object v3, Lkk8;->d:Lkk8;
 
-    invoke-virtual {v14, v3}, Lvcb;->b(Lxk8;)Z
+    invoke-virtual {v14, v3}, Ledb;->b(Lkk8;)Z
 
     move-result v17
 
@@ -683,7 +683,7 @@
 
     const-string v5, ", mark="
 
-    invoke-static {v7, v8, v4, v5}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v7, v8, v4, v5}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -693,16 +693,16 @@
 
     move-result-object v4
 
-    const-string v5, "sua"
+    const-string v5, "tua"
 
     const/4 v6, 0x0
 
-    invoke-virtual {v14, v3, v5, v4, v6}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v14, v3, v5, v4, v6}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_2
-    iget-object v3, v2, Lsua;->X:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v3, v2, Ltua;->X:Lkotlinx/coroutines/internal/ContextScope;
 
-    new-instance v5, Lpua;
+    new-instance v5, Lqua;
 
     move-object v4, v11
 
@@ -722,35 +722,35 @@
 
     move-wide/from16 v13, v17
 
-    invoke-direct/range {v5 .. v11}, Lpua;-><init>(Lsua;JJLkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v5 .. v11}, Lqua;-><init>(Ltua;JJLkotlin/coroutines/Continuation;)V
 
     const/4 v6, 0x3
 
-    invoke-static {v3, v2, v2, v5, v6}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    invoke-static {v3, v2, v2, v5, v6}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    iget-object v2, v1, Lru/ok/tamtam/android/services/NotificationTamService;->s0:Lz7g;
+    iget-object v2, v1, Lru/ok/tamtam/android/services/NotificationTamService;->t0:Ln8g;
 
-    invoke-virtual {v2}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lxva;
+    check-cast v2, Lyva;
 
-    invoke-virtual {v2}, Lxva;->e()Lyva;
+    invoke-virtual {v2}, Lyva;->e()Lzva;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v3, Lyva;->d:Ljava/lang/String;
+    sget-object v3, Lzva;->d:Ljava/lang/String;
 
     const-string v5, "onNotificationCancelledBundledChat: pushId="
 
-    invoke-static {v5, v13, v14, v4, v0}, Lxfh;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v13, v14, v4, v0}, Lcbh;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez v0, :cond_5
 
@@ -758,7 +758,7 @@
 
     :cond_5
     :try_start_1
-    invoke-virtual {v2}, Lyva;->b()Lgd;
+    invoke-virtual {v2}, Lzva;->b()Ldd;
 
     move-result-object v4
 
@@ -766,33 +766,33 @@
 
     move-result-object v5
 
-    new-instance v6, Lysb;
+    new-instance v6, Lktb;
 
-    invoke-direct {v6, v15, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v6, v15, v5}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v5, Lysb;
+    new-instance v5, Lktb;
 
-    invoke-direct {v5, v12, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v5, v12, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const-string v0, "n_canceled_ch"
 
-    new-instance v9, Lysb;
+    new-instance v9, Lktb;
 
     move-object/from16 v10, v21
 
-    invoke-direct {v9, v10, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v9, v10, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {v6, v5, v9}, [Lysb;
+    filled-new-array {v6, v5, v9}, [Lktb;
 
     move-result-object v0
 
-    invoke-static {v0}, Lw4j;->a([Lysb;)Lxs;
+    invoke-static {v0}, Lo5j;->a([Lktb;)Lys;
 
     move-result-object v0
 
     move-object/from16 v11, v20
 
-    invoke-virtual {v4, v11, v0}, Lgd;->b(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v4, v11, v0}, Ldd;->b(Ljava/lang/String;Ljava/util/Map;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -803,34 +803,34 @@
 
     const-string v4, "onNotificationCancelledBundledChat: failed"
 
-    invoke-static {v3, v4, v0}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v0}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v2}, Lyva;->c()Lum5;
+    invoke-virtual {v2}, Lzva;->c()Lym5;
 
     move-result-object v2
 
-    new-instance v3, Lfp4;
+    new-instance v3, Lgp4;
 
     const-string v4, "failed to log mark as read chat"
 
     invoke-direct {v3, v4, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast v2, Liab;
+    check-cast v2, Lqab;
 
-    invoke-virtual {v2, v3}, Liab;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3}, Lqab;->a(Ljava/lang/Throwable;)V
 
     :goto_3
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->Y:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->Y:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v6, v0
 
-    check-cast v6, Ldah;
+    check-cast v6, Lyah;
 
-    new-instance v0, Lrta;
+    new-instance v0, Lsta;
 
     const/4 v5, 0x0
 
@@ -838,13 +838,13 @@
 
     move-wide v2, v7
 
-    invoke-direct/range {v0 .. v5}, Lrta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLandroid/content/Intent;Lkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v0 .. v5}, Lsta;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JLandroid/content/Intent;Lkotlin/coroutines/Continuation;)V
 
     const/4 v2, 0x3
 
     const/4 v3, 0x0
 
-    invoke-static {v6, v3, v3, v0, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    invoke-static {v6, v3, v3, v0, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
     goto/16 :goto_9
 
@@ -910,7 +910,7 @@
     :goto_4
     if-eqz v3, :cond_8
 
-    invoke-static {v3}, Liyf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v3}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -934,33 +934,33 @@
     goto/16 :goto_8
 
     :cond_a
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->o:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->o:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lch2;
+    check-cast v0, Lxg2;
 
-    iget-boolean v0, v0, Lch2;->k:Z
+    iget-boolean v0, v0, Lxg2;->k:Z
 
     if-nez v0, :cond_b
 
-    invoke-static {}, Lbbe;->b()Lqae;
+    invoke-static {}, Lace;->b()Lpbe;
 
     move-result-object v6
 
-    new-instance v0, Lyj2;
+    new-instance v0, Lqta;
 
-    const/4 v5, 0x2
+    const/4 v5, 0x0
 
     move-object v4, v3
 
     move-wide/from16 v2, v18
 
-    invoke-direct/range {v0 .. v5}, Lyj2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
+    invoke-direct/range {v0 .. v5}, Lqta;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
 
-    invoke-virtual {v6, v0}, Lqae;->b(Ljava/lang/Runnable;)Ll25;
+    invoke-virtual {v6, v0}, Lpbe;->b(Ljava/lang/Runnable;)Lo25;
 
     goto :goto_7
 
@@ -969,21 +969,21 @@
 
     move-wide/from16 v2, v18
 
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->o:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->o:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lch2;
+    check-cast v0, Lxg2;
 
-    invoke-virtual {v0, v2, v3}, Lch2;->J(J)Lud2;
+    invoke-virtual {v0, v2, v3}, Lxg2;->K(J)Lnd2;
 
     move-result-object v0
 
     if-eqz v0, :cond_c
 
-    iget-wide v5, v0, Lud2;->a:J
+    iget-wide v5, v0, Lnd2;->a:J
 
     move-wide/from16 v22, v2
 
@@ -1008,31 +1008,31 @@
     move-object v1, v3
 
     :goto_7
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->s0:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->t0:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lxva;
+    check-cast v0, Lyva;
 
-    invoke-virtual {v0}, Lxva;->e()Lyva;
+    invoke-virtual {v0}, Lyva;->e()Lzva;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v3, Lyva;->d:Ljava/lang/String;
+    sget-object v3, Lzva;->d:Ljava/lang/String;
 
     const-string v0, "onNotificationQuickReplied: chatServerId="
 
     const-string v4, ", lastMessage="
 
-    invoke-static {v0, v7, v8, v4, v13}, Lxfh;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v7, v8, v4, v13}, Lcbh;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez v13, :cond_d
 
@@ -1040,7 +1040,7 @@
 
     :cond_d
     :try_start_2
-    invoke-virtual {v2}, Lyva;->b()Lgd;
+    invoke-virtual {v2}, Lzva;->b()Ldd;
 
     move-result-object v0
 
@@ -1048,29 +1048,29 @@
 
     move-result-object v4
 
-    new-instance v5, Lysb;
+    new-instance v5, Lktb;
 
-    invoke-direct {v5, v15, v4}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v5, v15, v4}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v4, Lysb;
+    new-instance v4, Lktb;
 
-    invoke-direct {v4, v12, v13}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v4, v12, v13}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const-string v6, "n_q_rep"
 
-    new-instance v7, Lysb;
+    new-instance v7, Lktb;
 
-    invoke-direct {v7, v10, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v7, v10, v6}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {v5, v4, v7}, [Lysb;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lw4j;->a([Lysb;)Lxs;
+    filled-new-array {v5, v4, v7}, [Lktb;
 
     move-result-object v4
 
-    invoke-virtual {v0, v11, v4}, Lgd;->b(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v4}, Lo5j;->a([Lktb;)Lys;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v11, v4}, Ldd;->b(Ljava/lang/String;Ljava/util/Map;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -1081,60 +1081,60 @@
 
     const-string v4, "onNotificationQuickReplied: failed"
 
-    invoke-static {v3, v4, v0}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v0}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v2}, Lyva;->c()Lum5;
+    invoke-virtual {v2}, Lzva;->c()Lym5;
 
     move-result-object v2
 
-    new-instance v3, Lfp4;
+    new-instance v3, Lgp4;
 
     const-string v4, "failed to log quick replied for chat"
 
     invoke-direct {v3, v4, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast v2, Liab;
+    check-cast v2, Lqab;
 
-    invoke-virtual {v2, v3}, Liab;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3}, Lqab;->a(Ljava/lang/Throwable;)V
 
     goto :goto_9
 
     :goto_8
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->d:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->d:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkeb;
+    check-cast v0, Lteb;
 
     const/4 v6, 0x0
 
-    invoke-virtual {v0, v2, v3, v6}, Lkeb;->e(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v6}, Lteb;->e(JLjava/lang/String;)V
 
-    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->s0:Lz7g;
+    iget-object v0, v1, Lru/ok/tamtam/android/services/NotificationTamService;->t0:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lxva;
+    check-cast v0, Lyva;
 
-    invoke-virtual {v0}, Lxva;->e()Lyva;
+    invoke-virtual {v0}, Lyva;->e()Lzva;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v3, Lyva;->d:Ljava/lang/String;
+    sget-object v3, Lzva;->d:Ljava/lang/String;
 
     const-string v0, "onNotificationQuickRepliedWithEmptyText: pushId="
 
-    invoke-static {v0, v7, v8, v4, v13}, Lxfh;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v7, v8, v4, v13}, Lcbh;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez v13, :cond_e
 
@@ -1142,7 +1142,7 @@
 
     :cond_e
     :try_start_3
-    invoke-virtual {v2}, Lyva;->b()Lgd;
+    invoke-virtual {v2}, Lzva;->b()Ldd;
 
     move-result-object v0
 
@@ -1150,29 +1150,29 @@
 
     move-result-object v4
 
-    new-instance v5, Lysb;
+    new-instance v5, Lktb;
 
-    invoke-direct {v5, v15, v4}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v5, v15, v4}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v4, Lysb;
+    new-instance v4, Lktb;
 
-    invoke-direct {v4, v12, v13}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v4, v12, v13}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const-string v6, "n_q_rep_empty"
 
-    new-instance v7, Lysb;
+    new-instance v7, Lktb;
 
-    invoke-direct {v7, v10, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v7, v10, v6}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {v5, v4, v7}, [Lysb;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lw4j;->a([Lysb;)Lxs;
+    filled-new-array {v5, v4, v7}, [Lktb;
 
     move-result-object v4
 
-    invoke-virtual {v0, v11, v4}, Lgd;->b(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v4}, Lo5j;->a([Lktb;)Lys;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v11, v4}, Ldd;->b(Ljava/lang/String;Ljava/util/Map;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
@@ -1183,21 +1183,21 @@
 
     const-string v4, "onNotificationQuickRepliedWithEmptyText: failed"
 
-    invoke-static {v3, v4, v0}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v0}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v2}, Lyva;->c()Lum5;
+    invoke-virtual {v2}, Lzva;->c()Lym5;
 
     move-result-object v2
 
-    new-instance v3, Lfp4;
+    new-instance v3, Lgp4;
 
     const-string v4, "failed log quick reply empty text"
 
     invoke-direct {v3, v4, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast v2, Liab;
+    check-cast v2, Lqab;
 
-    invoke-virtual {v2, v3}, Liab;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3}, Lqab;->a(Ljava/lang/Throwable;)V
 
     :cond_f
     :goto_9

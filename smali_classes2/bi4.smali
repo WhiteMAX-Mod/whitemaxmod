@@ -1,5 +1,5 @@
 .class public final Lbi4;
-.super Luce;
+.super Lsde;
 .source "SourceFile"
 
 
@@ -13,13 +13,13 @@
 .method public constructor <init>(IJZZZZLjava/nio/ByteBuffer;)V
     .locals 0
 
-    invoke-direct {p0}, Luce;-><init>()V
+    invoke-direct {p0}, Lsde;-><init>()V
 
     iput p1, p0, Lbi4;->b:I
 
     iput-wide p2, p0, Lbi4;->c:J
 
-    iget-byte p1, p0, Luce;->a:B
+    iget-byte p1, p0, Lsde;->a:B
 
     if-eqz p4, :cond_0
 
@@ -27,7 +27,7 @@
 
     int-to-byte p1, p1
 
-    iput-byte p1, p0, Luce;->a:B
+    iput-byte p1, p0, Lsde;->a:B
 
     goto :goto_0
 
@@ -36,10 +36,10 @@
 
     int-to-byte p1, p1
 
-    iput-byte p1, p0, Luce;->a:B
+    iput-byte p1, p0, Lsde;->a:B
 
     :goto_0
-    iget-byte p1, p0, Luce;->a:B
+    iget-byte p1, p0, Lsde;->a:B
 
     if-eqz p5, :cond_1
 
@@ -47,7 +47,7 @@
 
     int-to-byte p1, p1
 
-    iput-byte p1, p0, Luce;->a:B
+    iput-byte p1, p0, Lsde;->a:B
 
     goto :goto_1
 
@@ -56,10 +56,10 @@
 
     int-to-byte p1, p1
 
-    iput-byte p1, p0, Luce;->a:B
+    iput-byte p1, p0, Lsde;->a:B
 
     :goto_1
-    iget-byte p1, p0, Luce;->a:B
+    iget-byte p1, p0, Lsde;->a:B
 
     if-eqz p6, :cond_2
 
@@ -67,7 +67,7 @@
 
     int-to-byte p1, p1
 
-    iput-byte p1, p0, Luce;->a:B
+    iput-byte p1, p0, Lsde;->a:B
 
     goto :goto_2
 
@@ -76,10 +76,10 @@
 
     int-to-byte p1, p1
 
-    iput-byte p1, p0, Luce;->a:B
+    iput-byte p1, p0, Lsde;->a:B
 
     :goto_2
-    iget-byte p1, p0, Luce;->a:B
+    iget-byte p1, p0, Lsde;->a:B
 
     if-eqz p7, :cond_3
 
@@ -87,7 +87,7 @@
 
     int-to-byte p1, p1
 
-    iput-byte p1, p0, Luce;->a:B
+    iput-byte p1, p0, Lsde;->a:B
 
     return-void
 
@@ -96,7 +96,7 @@
 
     int-to-byte p1, p1
 
-    iput-byte p1, p0, Luce;->a:B
+    iput-byte p1, p0, Lsde;->a:B
 
     return-void
 .end method
@@ -136,7 +136,7 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    iget-byte v1, p0, Luce;->a:B
+    iget-byte v1, p0, Lsde;->a:B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 

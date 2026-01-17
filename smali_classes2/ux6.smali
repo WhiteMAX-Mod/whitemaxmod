@@ -1,59 +1,55 @@
 .class public final Lux6;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lvx6;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Ljava/lang/String;
-
-.field public s0:I
+.field public final a:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Lvx6;Ll84;)V
+.method public constructor <init>(Lo58;)V
     .locals 0
 
-    iput-object p1, p0, Lux6;->Z:Lvx6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lux6;->a:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a(Lp6g;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lux6;->Y:Ljava/lang/Object;
+    new-instance v0, Lg62;
 
-    iget p1, p0, Lux6;->s0:I
+    invoke-static {p1}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
+    move-result-object p1
 
-    or-int/2addr p1, v0
+    const/4 v1, 0x1
 
-    iput p1, p0, Lux6;->s0:I
+    invoke-direct {v0, v1, p1}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, Lg62;->o()V
 
-    const/4 v4, 0x0
+    iget-object p1, p0, Lux6;->a:Lo58;
 
-    iget-object v0, p0, Lux6;->Z:Lvx6;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    const-wide/16 v1, 0x0
+    move-result-object p1
 
-    move-object v5, p0
+    check-cast p1, Loj8;
 
-    invoke-virtual/range {v0 .. v5}, Lvx6;->a(JLjava/lang/Long;Ljava/lang/String;Ll84;)Ljava/lang/Object;
+    new-instance v1, Ltx6;
+
+    invoke-direct {v1, v0}, Ltx6;-><init>(Lg62;)V
+
+    invoke-virtual {p1, v1}, Loj8;->a(Lmj8;)V
+
+    invoke-virtual {v0}, Lg62;->n()Ljava/lang/Object;
 
     move-result-object p1
 

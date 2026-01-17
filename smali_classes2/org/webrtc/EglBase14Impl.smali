@@ -207,7 +207,7 @@
 
     const-string p3, "Failed to create EGL context: 0x"
 
-    invoke-static {p3, p2}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p2}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -307,7 +307,7 @@
 
     const-string v2, "Failed to create window surface: 0x"
 
-    invoke-static {v2, v1}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -399,7 +399,7 @@
 
     const-string v1, "eglChooseConfig failed: 0x"
 
-    invoke-static {v1, v0}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -452,7 +452,7 @@
 
     const-string v3, "Unable to initialize EGL14: 0x"
 
-    invoke-static {v3, v2}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -477,7 +477,7 @@
 
     const-string v3, "Unable to get EGL14 display: 0x"
 
-    invoke-static {v3, v2}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -566,7 +566,7 @@
 
     const-string v5, "Failed to create pixel buffer surface with size "
 
-    invoke-static {v5, p1, v3, p2, v4}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, p1, v3, p2, v4}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 

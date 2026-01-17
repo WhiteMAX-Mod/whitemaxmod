@@ -1,38 +1,33 @@
-.class public final synthetic Lzo6;
-.super Ljava/lang/Object;
+.class public final Lzo6;
+.super Ljava/lang/RuntimeException;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/database/sqlite/SQLiteDatabase$CursorFactory;
 
 
 # instance fields
-.field public final synthetic a:Lyo6;
+.field public final a:I
+
+.field public final b:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyo6;)V
+.method public constructor <init>(ILjava/lang/Throwable;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    iput-object p1, p0, Lzo6;->a:Lyo6;
+    iput p1, p0, Lzo6;->a:I
+
+    iput-object p2, p0, Lzo6;->b:Ljava/lang/Throwable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newCursor(Landroid/database/sqlite/SQLiteDatabase;Landroid/database/sqlite/SQLiteCursorDriver;Ljava/lang/String;Landroid/database/sqlite/SQLiteQuery;)Landroid/database/Cursor;
+.method public final getCause()Ljava/lang/Throwable;
     .locals 1
 
-    iget-object v0, p0, Lzo6;->a:Lyo6;
+    iget-object v0, p0, Lzo6;->b:Ljava/lang/Throwable;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lyo6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/database/Cursor;
-
-    return-object p1
+    return-object v0
 .end method

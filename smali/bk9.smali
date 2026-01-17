@@ -1,171 +1,279 @@
-.class public final enum Lbk9;
-.super Ljava/lang/Enum;
+.class public final Lbk9;
+.super Lr95;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lbk9;
-
-.field public static final enum b:Lbk9;
-
-.field public static final enum c:Lbk9;
-
-.field public static final enum d:Lbk9;
-
-.field public static final enum o:Lbk9;
-
-
 # instance fields
-.field public final a:D
+.field public final A0:I
+
+.field public final B0:I
+
+.field public C0:Lqj9;
+
+.field public D0:Lrj9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
+.method public constructor <init>(Landroid/content/Context;Z)V
+    .locals 2
 
-    new-instance v0, Lbk9;
+    invoke-direct {p0, p1, p2}, Lr95;-><init>(Landroid/content/Context;Z)V
 
-    const-string v1, "OnCloseToDalvikHeapLimit"
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    const-wide/high16 v3, 0x3fe0000000000000L    # 0.5
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lbk9;-><init>(Ljava/lang/String;ID)V
+    move-result-object p1
 
-    sput-object v0, Lbk9;->b:Lbk9;
+    const/4 p2, 0x1
 
-    new-instance v1, Lbk9;
+    invoke-virtual {p1}, Landroid/content/res/Configuration;->getLayoutDirection()I
 
-    const-string v2, "OnSystemMemoryCriticallyLowWhileAppInForeground"
+    move-result p1
 
-    const/4 v5, 0x1
+    const/16 v0, 0x16
 
-    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
+    const/16 v1, 0x15
 
-    invoke-direct {v1, v2, v5, v6, v7}, Lbk9;-><init>(Ljava/lang/String;ID)V
+    if-ne p2, p1, :cond_0
 
-    new-instance v2, Lbk9;
+    iput v1, p0, Lbk9;->A0:I
 
-    const-string v5, "OnSystemLowMemoryWhileAppInForeground"
+    iput v0, p0, Lbk9;->B0:I
 
-    const/4 v8, 0x2
+    return-void
 
-    invoke-direct {v2, v5, v8, v3, v4}, Lbk9;-><init>(Ljava/lang/String;ID)V
+    :cond_0
+    iput v0, p0, Lbk9;->A0:I
 
-    sput-object v2, Lbk9;->c:Lbk9;
-
-    move-wide v4, v3
-
-    new-instance v3, Lbk9;
-
-    const-string v8, "OnSystemLowMemoryWhileAppInBackgroundLowSeverity"
-
-    const/4 v9, 0x3
-
-    invoke-direct {v3, v8, v9, v6, v7}, Lbk9;-><init>(Ljava/lang/String;ID)V
-
-    sput-object v3, Lbk9;->d:Lbk9;
-
-    move-wide v8, v4
-
-    new-instance v4, Lbk9;
-
-    const-string v5, "OnSystemModerateMemory"
-
-    const/4 v10, 0x4
-
-    invoke-direct {v4, v5, v10, v8, v9}, Lbk9;-><init>(Ljava/lang/String;ID)V
-
-    new-instance v5, Lbk9;
-
-    const-string v10, "OnAppBackgrounded"
-
-    const/4 v11, 0x5
-
-    invoke-direct {v5, v10, v11, v6, v7}, Lbk9;-><init>(Ljava/lang/String;ID)V
-
-    sput-object v5, Lbk9;->o:Lbk9;
-
-    move-wide v10, v6
-
-    new-instance v6, Lbk9;
-
-    const-string v7, "OnJavaMemoryRed"
-
-    const/4 v12, 0x6
-
-    invoke-direct {v6, v7, v12, v10, v11}, Lbk9;-><init>(Ljava/lang/String;ID)V
-
-    new-instance v7, Lbk9;
-
-    const-string v12, "OnJavaMemoryYellow"
-
-    const/4 v13, 0x7
-
-    invoke-direct {v7, v12, v13, v8, v9}, Lbk9;-><init>(Ljava/lang/String;ID)V
-
-    move-wide v12, v8
-
-    new-instance v8, Lbk9;
-
-    const-string v9, "OnSystemMemoryRed"
-
-    const/16 v14, 0x8
-
-    invoke-direct {v8, v9, v14, v10, v11}, Lbk9;-><init>(Ljava/lang/String;ID)V
-
-    new-instance v9, Lbk9;
-
-    const-string v10, "OnSystemMemoryYellow"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11, v12, v13}, Lbk9;-><init>(Ljava/lang/String;ID)V
-
-    filled-new-array/range {v0 .. v9}, [Lbk9;
-
-    move-result-object v0
-
-    sput-object v0, Lbk9;->X:[Lbk9;
+    iput v1, p0, Lbk9;->B0:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ID)V
+
+# virtual methods
+.method public final onHoverEvent(Landroid/view/MotionEvent;)Z
+    .locals 4
+
+    iget-object v0, p0, Lbk9;->C0:Lqj9;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/widget/HeaderViewListAdapter;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/widget/HeaderViewListAdapter;
+
+    invoke-virtual {v0}, Landroid/widget/HeaderViewListAdapter;->getHeadersCount()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/widget/HeaderViewListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v0
+
+    check-cast v0, Lkj9;
+
+    goto :goto_0
+
+    :cond_0
+    check-cast v0, Lkj9;
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v2
+
+    const/16 v3, 0xa
+
+    if-eq v2, v3, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v2
+
+    float-to-int v2, v2
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v3
+
+    float-to-int v3, v3
+
+    invoke-virtual {p0, v2, v3}, Landroid/widget/AbsListView;->pointToPosition(II)I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_1
+
+    sub-int/2addr v2, v1
+
+    if-ltz v2, :cond_1
+
+    invoke-virtual {v0}, Lkj9;->getCount()I
+
+    move-result v1
+
+    if-ge v2, v1, :cond_1
+
+    invoke-virtual {v0, v2}, Lkj9;->b(I)Lrj9;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_1
+    iget-object v2, p0, Lbk9;->D0:Lrj9;
+
+    if-eq v2, v1, :cond_3
+
+    iget-object v0, v0, Lkj9;->a:Lnj9;
+
+    if-eqz v2, :cond_2
+
+    iget-object v3, p0, Lbk9;->C0:Lqj9;
+
+    invoke-interface {v3, v0, v2}, Lqj9;->f(Lnj9;Landroid/view/MenuItem;)V
+
+    :cond_2
+    iput-object v1, p0, Lbk9;->D0:Lrj9;
+
+    if-eqz v1, :cond_3
+
+    iget-object v2, p0, Lbk9;->C0:Lqj9;
+
+    invoke-interface {v2, v0, v1}, Lqj9;->m(Lnj9;Lrj9;)V
+
+    :cond_3
+    invoke-super {p0, p1}, Lr95;->onHoverEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final onKeyDown(ILandroid/view/KeyEvent;)Z
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedView()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/view/menu/ListMenuItemView;
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    iget v2, p0, Lbk9;->A0:I
+
+    if-ne p1, v2, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Landroidx/appcompat/view/menu/ListMenuItemView;->getItemData()Lrj9;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lrj9;->hasSubMenu()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemId()J
+
+    move-result-wide v2
+
+    invoke-virtual {p0, v0, p1, v2, v3}, Landroid/widget/AdapterView;->performItemClick(Landroid/view/View;IJ)Z
+
+    :cond_0
+    return v1
+
+    :cond_1
+    if-eqz v0, :cond_3
+
+    iget v0, p0, Lbk9;->B0:I
+
+    if-ne p1, v0, :cond_3
+
+    const/4 p1, -0x1
+
+    invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->setSelection(I)V
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object p1
+
+    instance-of p2, p1, Landroid/widget/HeaderViewListAdapter;
+
+    if-eqz p2, :cond_2
+
+    check-cast p1, Landroid/widget/HeaderViewListAdapter;
+
+    invoke-virtual {p1}, Landroid/widget/HeaderViewListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object p1
+
+    check-cast p1, Lkj9;
+
+    goto :goto_0
+
+    :cond_2
+    check-cast p1, Lkj9;
+
+    :goto_0
+    iget-object p1, p1, Lkj9;->a:Lnj9;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lnj9;->c(Z)V
+
+    return v1
+
+    :cond_3
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setHoverListener(Lqj9;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-wide p3, p0, Lbk9;->a:D
+    iput-object p1, p0, Lbk9;->C0:Lqj9;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lbk9;
-    .locals 1
+.method public bridge synthetic setSelector(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    const-class v0, Lbk9;
+    invoke-super {p0, p1}, Lr95;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lbk9;
-
-    return-object p0
-.end method
-
-.method public static values()[Lbk9;
-    .locals 1
-
-    sget-object v0, Lbk9;->X:[Lbk9;
-
-    invoke-virtual {v0}, [Lbk9;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lbk9;
-
-    return-object v0
+    return-void
 .end method

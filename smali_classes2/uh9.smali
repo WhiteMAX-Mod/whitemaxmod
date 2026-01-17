@@ -1,64 +1,94 @@
-.class public final Luh9;
+.class public final synthetic Luh9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvh9;
+.implements Lnq6;
 
 
-# static fields
-.field public static final a:Luh9;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ly07;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ly07;I)V
+    .locals 0
 
-    new-instance v0, Luh9;
+    iput p2, p0, Luh9;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luh9;->b:Ly07;
 
-    sput-object v0, Luh9;->a:Luh9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Luh9;->a:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    iget-object v2, p0, Luh9;->b:Ly07;
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/members/list/MembersListWidget;->D0:[Lz28;
+
+    invoke-virtual {v2, p1}, Ly07;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbg9;
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Luh9;
+    iget-boolean v1, p1, Lbg9;->v0:Z
+
+    :goto_0
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    sget-object v0, Lone/me/members/list/MembersListWidget;->D0:[Lz28;
+
+    invoke-virtual {v2, p1}, Ly07;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbg9;
 
     if-nez p1, :cond_1
 
-    const/4 p1, 0x0
-
-    return p1
+    goto :goto_1
 
     :cond_1
-    return v0
-.end method
+    const/4 v1, 0x1
 
-.method public final hashCode()I
-    .locals 1
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const v0, -0x62c3c567
+    move-result-object p1
 
-    return v0
-.end method
+    return-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "LocalRestoreMembers"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,97 +1,65 @@
 .class public final Lhn3;
-.super Lkef;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lhn3;
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lo58;
+
+.field public final c:Ln8g;
+
+.field public final d:Lo58;
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ltb4;Lo58;Lo58;Lo58;Lmbg;)V
     .locals 1
 
-    new-instance v0, Lhn3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lkef;-><init>()V
+    const-class v0, Lhn3;
 
-    sput-object v0, Lhn3;->b:Lhn3;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final c()Llm4;
-    .locals 4
-
-    new-instance v0, Llm4;
-
-    new-instance v1, Lrw2;
-
-    const/16 v2, 0x11
-
-    invoke-direct {v1, v2}, Lrw2;-><init>(I)V
-
-    new-instance v2, Lrw2;
-
-    const/16 v3, 0x12
-
-    invoke-direct {v2, v3}, Lrw2;-><init>(I)V
-
-    invoke-direct {v0, v1, v2}, Llm4;-><init>(Lmq6;Lmq6;)V
-
-    return-object v0
-.end method
-
-.method public final d(Landroid/os/Bundle;)Lmm4;
-    .locals 4
-
-    const-string v0, "parent_id"
-
-    invoke-static {v0, p1}, Lulj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "ids"
+    iput-object v0, p0, Lhn3;->a:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lulj;->d(Ljava/lang/String;Landroid/os/Bundle;)[J
+    iput-object p2, p0, Lhn3;->b:Lo58;
 
-    move-result-object v1
+    new-instance p2, Lzz;
 
-    const-string v2, "type"
+    const/16 v0, 0xe
 
-    invoke-virtual {p1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p2, p3, v0}, Lzz;-><init>(Lo58;I)V
 
-    move-result-object v2
+    new-instance p3, Ln8g;
 
-    const-string v3, "source_screen"
+    invoke-direct {p3, p2}, Ln8g;-><init>(Llq6;)V
 
-    invoke-static {v3, p1}, Lulj;->b(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Integer;
+    iput-object p3, p0, Lhn3;->c:Ln8g;
+
+    iput-object p4, p0, Lhn3;->d:Lo58;
+
+    check-cast p5, Lj9b;
+
+    invoke-virtual {p5}, Lj9b;->b()Lsb4;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Lm0;->plus(Lqb4;)Lqb4;
 
     move-result-object p1
 
-    new-instance v3, Lgn3;
+    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-direct {v3, v0, v1, v2, p1}, Lgn3;-><init>(Ljava/lang/Long;[JLjava/lang/String;Ljava/lang/Integer;)V
+    move-result-object p1
 
-    return-object v3
-.end method
-
-.method public final e(Ljef;)V
-    .locals 4
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0xe
-
-    const-string v3, ":complaint"
-
-    invoke-static {p1, v3, v0, v1, v2}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    iput-object p1, p0, Lhn3;->e:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method

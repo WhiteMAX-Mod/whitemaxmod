@@ -3,132 +3,183 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lm80;
-
-
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lo58;
 
-.field public b:I
-
-.field public c:I
-
-.field public d:I
+.field public final b:Lo58;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lm80;
-
-    const v1, 0x7fffffff
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v3, v1, v1, v2}, Lm80;-><init>(IIII)V
-
-    sput-object v0, Lm80;->e:Lm80;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    iput v0, p0, Lm80;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lm80;->b:I
-
-    iput v0, p0, Lm80;->c:I
-
-    iput v0, p0, Lm80;->d:I
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lo58;Lo58;)V
     .locals 0
 
-    .line 2
-    iput p1, p0, Lm80;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lm80;->a:Lo58;
 
-.method public synthetic constructor <init>(IIII)V
-    .locals 0
-
-    .line 3
-    iput p4, p0, Lm80;->a:I
-
-    iput p1, p0, Lm80;->b:I
-
-    iput p2, p0, Lm80;->c:I
-
-    iput p3, p0, Lm80;->d:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lm80;->b:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 6
+.method public final a(Ljava/lang/String;Ljava/lang/String;Lo84;)Ljava/lang/Object;
+    .locals 4
 
-    iget v0, p0, Lm80;->a:I
+    instance-of v0, p3, Ll80;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-object v0, p3
 
-    move-result-object v0
+    check-cast v0, Ll80;
 
-    return-object v0
+    iget v1, v0, Ll80;->X:I
 
-    :pswitch_0
-    iget v0, p0, Lm80;->b:I
+    const/high16 v2, -0x80000000
 
-    iget v1, p0, Lm80;->c:I
+    and-int v3, v1, v2
 
-    iget v2, p0, Lm80;->d:I
+    if-eqz v3, :cond_0
 
-    const-string v3, ",pml="
+    sub-int/2addr v1, v2
 
-    const-string v4, ",hml="
+    iput v1, v0, Ll80;->X:I
 
-    const-string v5, "Config(pminl="
+    goto :goto_0
 
-    invoke-static {v5, v0, v3, v1, v4}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance v0, Ll80;
 
-    move-result-object v0
+    invoke-direct {v0, p0, p3}, Ll80;-><init>(Lm80;Lo84;)V
 
-    const-string v1, ")"
+    :goto_0
+    iget-object p3, v0, Ll80;->d:Ljava/lang/Object;
 
-    invoke-static {v0, v2, v1}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    iget v1, v0, Ll80;->X:I
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    return-object v0
+    if-eqz v1, :cond_2
 
-    nop
+    if-ne v1, v2, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p3}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p3}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p3, p0, Lm80;->b:Lo58;
+
+    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lu3b;
+
+    iput v2, v0, Ll80;->X:I
+
+    iget-object p3, p3, Lu3b;->a:Lo58;
+
+    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lhdg;
+
+    new-instance v1, Li1b;
+
+    sget-object v2, Lwob;->x0:Lwob;
+
+    const/16 v3, 0xa
+
+    invoke-direct {v1, v2, v3}, Li1b;-><init>(Lwob;I)V
+
+    if-eqz p2, :cond_5
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    const-string v2, "token"
+
+    invoke-virtual {v1, v2, p2}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    const-string p2, "verifyCode"
+
+    invoke-virtual {v1, p2, p1}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p1, "authTokenType"
+
+    const-string p2, "CHECK_CODE"
+
+    invoke-virtual {v1, p1, p2}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p3, v1, v0}, Lhdg;->d(Lj2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    sget-object p1, Lac4;->a:Lac4;
+
+    if-ne p3, p1, :cond_3
+
+    return-object p1
+
+    :cond_3
+    :goto_1
+    check-cast p3, La80;
+
+    iget-object p1, p0, Lm80;->a:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldd;
+
+    const-string p2, "CONFIRM_PHONE_SUCCESS"
+
+    invoke-virtual {p1, p2}, Ldd;->e(Ljava/lang/String;)V
+
+    return-object p3
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "AuthCmd param \'verifyCode\' can\'t be null when param \'authTokenType\' is \'PHONE\' or \'PHONE_CONFIRM\'"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "AuthCmd param \'token\' can\'t be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

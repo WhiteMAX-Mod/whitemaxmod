@@ -2,128 +2,103 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls4a;
 
-
-# instance fields
-.field public final a:[B
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static final a:Lsg7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[B)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/util/Size;
 
-    iput-object p3, p0, Llg7;->a:[B
+    const/16 v1, 0x280
 
-    iput-object p1, p0, Llg7;->b:Ljava/lang/String;
+    const/16 v2, 0x1e0
 
-    iput-object p2, p0, Llg7;->c:Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
 
-    return-void
-.end method
+    sget-object v1, Lr56;->c:Lr56;
 
+    new-instance v2, Llyd;
 
-# virtual methods
-.method public final a(Lf69;)V
-    .locals 1
+    sget-object v3, Lmgf;->c:Landroid/util/Size;
 
-    iget-object v0, p0, Llg7;->b:Ljava/lang/String;
+    invoke-direct {v2, v3}, Llyd;-><init>(Landroid/util/Size;)V
 
-    if-eqz v0, :cond_0
+    new-instance v3, Lkyd;
 
-    iput-object v0, p1, Lf69;->a:Ljava/lang/CharSequence;
+    const/4 v4, 0x0
 
-    :cond_0
-    return-void
-.end method
+    invoke-direct {v3, v1, v2, v4}, Lkyd;-><init>(Lr56;Llyd;Lgg7;)V
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    new-instance v1, Lkg7;
 
-    if-ne p0, p1, :cond_0
+    const/4 v2, 0x0
 
-    const/4 p1, 0x1
+    invoke-direct {v1, v2}, Lkg7;-><init>(I)V
 
-    return p1
+    sget-object v2, Lmi7;->F:Lta0;
 
-    :cond_0
-    if-eqz p1, :cond_2
+    iget-object v1, v1, Lkg7;->b:Lffa;
 
-    const-class v0, Llg7;
+    invoke-virtual {v1, v2, v0}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v0, Lhah;->m0:Lta0;
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    if-eq v0, v1, :cond_1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    goto :goto_0
+    move-result-object v2
 
-    :cond_1
-    check-cast p1, Llg7;
+    invoke-virtual {v1, v0, v2}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    iget-object v0, p0, Llg7;->a:[B
+    sget-object v0, Lmi7;->A:Lta0;
 
-    iget-object p1, p1, Llg7;->a:[B
+    const/4 v2, 0x0
 
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result p1
+    move-result-object v2
 
-    return p1
+    invoke-virtual {v1, v0, v2}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    sget-object v0, Lmi7;->I:Lta0;
 
-    return p1
-.end method
+    invoke-virtual {v1, v0, v3}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 1
+    sget-object v0, Lwb5;->d:Lwb5;
 
-    iget-object v0, p0, Llg7;->a:[B
+    invoke-virtual {v0, v0}, Lwb5;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+    move-result v2
 
-    move-result v0
+    if-eqz v2, :cond_0
 
-    return v0
-.end method
+    sget-object v2, Lci7;->z:Lta0;
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+    invoke-virtual {v1, v2, v0}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    iget-object v0, p0, Llg7;->a:[B
+    new-instance v0, Lsg7;
 
-    array-length v0, v0
-
-    const-string v1, "\", url=\""
-
-    const-string v2, "\", rawMetadata.length=\""
-
-    const-string v3, "ICY: title=\""
-
-    iget-object v4, p0, Llg7;->b:Ljava/lang/String;
-
-    iget-object v5, p0, Llg7;->c:Ljava/lang/String;
-
-    invoke-static {v3, v4, v1, v5, v2}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lhqb;->b(Lmr3;)Lhqb;
 
     move-result-object v1
 
-    const-string v2, "\""
+    invoke-direct {v0, v1}, Lsg7;-><init>(Lhqb;)V
 
-    invoke-static {v1, v0, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    sput-object v0, Llg7;->a:Lsg7;
 
-    move-result-object v0
+    return-void
 
-    return-object v0
+    :cond_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "ImageAnalysis currently only supports SDR"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

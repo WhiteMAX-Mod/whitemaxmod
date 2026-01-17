@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llb4;
+.implements Lkb4;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/CancellationException;",
-        "Llb4;"
+        "Lkb4;"
     }
 .end annotation
 
@@ -22,13 +22,13 @@
         "Lkotlinx/coroutines/JobCancellationException;",
         "Ljava/util/concurrent/CancellationException;",
         "Lkotlinx/coroutines/CancellationException;",
-        "Llb4;",
+        "Lkb4;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -36,16 +36,16 @@
 
 
 # instance fields
-.field public final transient a:Liy7;
+.field public final transient a:Lsx7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Liy7;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Lsx7;)V
     .locals 0
 
     invoke-direct {p0, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
-    iput-object p3, p0, Lkotlinx/coroutines/JobCancellationException;->a:Liy7;
+    iput-object p3, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lsx7;
 
     if-eqz p2, :cond_0
 
@@ -68,11 +68,11 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    if-eq p1, p0, :cond_1
+    if-eq p1, p0, :cond_3
 
     instance-of v0, p1, Lkotlinx/coroutines/JobCancellationException;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     check-cast p1, Lkotlinx/coroutines/JobCancellationException;
 
@@ -84,21 +84,31 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
-    iget-object v0, p1, Lkotlinx/coroutines/JobCancellationException;->a:Liy7;
+    iget-object v0, p1, Lkotlinx/coroutines/JobCancellationException;->a:Lsx7;
 
-    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Liy7;
+    if-nez v0, :cond_0
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v0, Lgoa;->a:Lgoa;
+
+    :cond_0
+    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lsx7;
+
+    if-nez v1, :cond_1
+
+    sget-object v1, Lgoa;->a:Lgoa;
+
+    :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -108,20 +118,20 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
     const/4 p1, 0x0
 
     return p1
 
-    :cond_1
+    :cond_3
     :goto_0
     const/4 p1, 0x1
 
@@ -153,8 +163,13 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Liy7;
+    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lsx7;
 
+    if-nez v1, :cond_0
+
+    sget-object v1, Lgoa;->a:Lgoa;
+
+    :cond_0
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
@@ -167,7 +182,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -175,7 +190,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
     :goto_0
@@ -201,8 +216,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Liy7;
+    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lsx7;
 
+    if-nez v1, :cond_0
+
+    sget-object v1, Lgoa;->a:Lgoa;
+
+    :cond_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

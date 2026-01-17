@@ -3,75 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsci;
+.implements Luz7;
 
 
-# instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppsSettingScreen;
+# static fields
+.field public static final a:Lyci;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppsSettingScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyci;
 
-    iput-object p1, p0, Lyci;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lyci;->a:Lyci;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lrci;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->o:[Lp38;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lyci;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, Lone/me/webapp/settings/WebAppsSettingScreen;->b:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbdi;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    instance-of v1, p1, Lpci;
-
-    if-nez v1, :cond_2
-
-    instance-of v1, p1, Loci;
-
-    if-eqz v1, :cond_0
-
-    return-void
+    return v0
 
     :cond_0
-    instance-of v1, p1, Lqci;
+    instance-of p1, p1, Lyci;
 
-    if-eqz v1, :cond_1
+    if-nez p1, :cond_1
 
-    iget-object v0, v0, Lbdi;->Y:Lyl5;
+    const/4 p1, 0x0
 
-    check-cast p1, Lqci;
-
-    iget-object p1, p1, Lqci;->b:Lem4;
-
-    invoke-static {v0, p1}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    return-void
+    return p1
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    return v0
+.end method
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+.method public final hashCode()I
+    .locals 1
 
-    throw p1
+    const v0, -0x62efdd2c
 
-    :cond_2
-    return-void
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "WebAppReady"
+
+    return-object v0
 .end method

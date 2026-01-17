@@ -2,318 +2,275 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld77;
+
 
 # instance fields
-.field public final synthetic a:Lu5;
+.field public final b:J
+
+.field public final c:Lo58;
+
+.field public final d:Lo58;
+
+.field public final e:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Lu5;)V
+.method public constructor <init>(JLjava/util/Set;Lo58;Lo58;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcm2;->a:Lu5;
+    iput-wide p1, p0, Lcm2;->b:J
+
+    iput-object p4, p0, Lcm2;->c:Lo58;
+
+    iput-object p5, p0, Lcm2;->d:Lo58;
+
+    invoke-static {p3}, Lxdj;->a(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcm2;->e:Ljava/util/Set;
 
     return-void
 .end method
 
-.method public static a(Lcm2;JJJLjava/util/Set;Lc69;Ljava/lang/String;Lcu0;I)Luw;
-    .locals 20
 
-    move/from16 v0, p11
+# virtual methods
+.method public final g()J
+    .locals 11
 
-    and-int/lit8 v1, v0, 0x20
+    iget-object v0, p0, Lcm2;->d:Lo58;
 
-    if-eqz v1, :cond_0
-
-    const/16 v1, 0x28
-
-    :goto_0
-    move/from16 v16, v1
-
-    goto :goto_1
-
-    :cond_0
-    const/16 v1, 0x14
-
-    goto :goto_0
-
-    :goto_1
-    and-int/lit8 v1, v0, 0x40
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "MediaLoader"
-
-    move-object v9, v1
-
-    goto :goto_2
-
-    :cond_1
-    move-object/from16 v9, p9
-
-    :goto_2
-    and-int/lit16 v0, v0, 0x80
-
-    if-eqz v0, :cond_2
-
-    sget-object v0, Lgfj;->u0:Lcu0;
-
-    move-object v10, v0
-
-    :goto_3
-    move-object/from16 v0, p0
-
-    goto :goto_4
-
-    :cond_2
-    move-object/from16 v10, p10
-
-    goto :goto_3
-
-    :goto_4
-    iget-object v11, v0, Lcm2;->a:Lu5;
-
-    const/16 v0, 0x10
-
-    invoke-virtual {v11, v0}, Lu5;->c(I)Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v12, v0
+    check-cast v0, Lm2a;
 
-    check-cast v12, Landroid/content/Context;
+    iget-object v0, v0, Lm2a;->a:Lu2e;
 
-    const/16 v0, 0xb
-
-    invoke-virtual {v11, v0}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v13, v0
-
-    check-cast v13, Lbbg;
-
-    const/16 v0, 0x75
-
-    invoke-virtual {v11, v0}, Lu5;->d(I)Lz7g;
+    invoke-virtual {v0}, Lu2e;->d()Lku9;
 
     move-result-object v1
 
-    const/16 v0, 0x90
+    move-object v6, v1
 
-    invoke-virtual {v11, v0}, Lu5;->d(I)Lz7g;
+    check-cast v6, Liv9;
 
-    move-result-object v14
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v0, 0xcf
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v0}, Lu5;->d(I)Lz7g;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v15
+    const-string v2, "SELECT * FROM messages WHERE chat_id = ? AND inserted_from_msg_link = 0 AND status <> ? AND media_type in ("
 
-    const/16 v0, 0x91
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v0}, Lu5;->d(I)Lz7g;
+    iget-object v8, p0, Lcm2;->e:Ljava/util/Set;
 
-    move-result-object v0
+    invoke-interface {v8}, Ljava/util/Set;->size()I
 
-    move-object v2, v0
+    move-result v9
 
-    new-instance v0, Ly60;
+    invoke-static {v1, v9}, Leca;->a(Ljava/lang/StringBuilder;I)V
 
-    move-wide/from16 v3, p3
+    const-string v2, ") AND delayed_attrs_time_to_fire IS NOT NULL AND delayed_attrs_notify_sender IS NOT NULL ORDER BY delayed_attrs_time_to_fire ASC LIMIT "
 
-    move-wide/from16 v5, p5
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v8, p7
+    const-string v2, "?"
 
-    move-object v7, v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 p9, v10
-
-    move-object v10, v2
-
-    move-wide/from16 v1, p1
-
-    invoke-direct/range {v0 .. v8}, Ly60;-><init>(JJJLd68;Ljava/util/Set;)V
-
-    move-wide/from16 v18, v1
-
-    move-object v1, v7
-
-    move-wide/from16 v6, v18
-
-    move-object/from16 v17, v0
-
-    new-instance v0, Lclf;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, "#"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/16 v3, 0x11
-
-    invoke-direct {v0, v3, v2}, Lclf;-><init>(ILjava/lang/Object;)V
-
-    move-object v2, v0
-
-    new-instance v0, Lgo2;
-
-    const/16 v3, 0x21b
-
-    invoke-virtual {v11, v3}, Lu5;->d(I)Lz7g;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    const/16 v4, 0xc
+    iget-object v1, v6, Liv9;->a:Lb2e;
 
-    invoke-virtual {v11, v4}, Lu5;->d(I)Lz7g;
+    new-instance v2, Lyu9;
 
-    move-result-object v4
+    const/4 v10, 0x0
 
-    move-object/from16 v9, p9
+    iget-wide v4, p0, Lcm2;->b:J
 
-    move-object v5, v13
+    const/4 v7, 0x2
 
-    move-object v13, v2
-
-    move-object v2, v3
-
-    move-object v3, v4
-
-    move-object v4, v14
-
-    invoke-direct/range {v0 .. v9}, Lgo2;-><init>(Ld68;Ld68;Ld68;Ld68;Lbbg;JLjava/util/Set;Lcu0;)V
-
-    new-instance v14, Lq10;
-
-    const/16 v2, 0x4b
-
-    invoke-virtual {v11, v2}, Lu5;->d(I)Lz7g;
-
-    move-result-object v2
-
-    invoke-direct {v14}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, v14, Lq10;->c:Ljava/lang/Object;
-
-    iput-wide v6, v14, Lq10;->b:J
-
-    iput-object v8, v14, Lq10;->d:Ljava/lang/Object;
-
-    move-object/from16 v3, p8
-
-    iput-object v3, v14, Lq10;->e:Ljava/lang/Object;
-
-    const-string v3, "ChatMediaRemoteDataSource#"
-
-    invoke-static {v6, v7, v3}, Lgg9;->e(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v14, Lq10;->a:Ljava/lang/String;
-
-    iput-object v1, v14, Lq10;->f:Ljava/lang/Object;
-
-    iput-object v4, v14, Lq10;->g:Ljava/lang/Object;
-
-    iput-object v2, v14, Lq10;->h:Ljava/lang/Object;
-
-    new-instance v2, Lbm2;
+    invoke-direct/range {v2 .. v10}, Lyu9;-><init>(Ljava/lang/String;JLiv9;ILjava/util/Set;II)V
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v12, v11, v3}, Lbm2;-><init>(Landroid/content/Context;Lu5;I)V
+    const/4 v4, 0x0
 
-    new-instance v8, Lz7g;
+    invoke-static {v1, v3, v4, v2}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
 
-    invoke-direct {v8, v2}, Lz7g;-><init>(Lmq6;)V
+    move-result-object v1
 
-    new-instance v2, Lbm2;
+    check-cast v1, Ljava/util/List;
 
-    const/4 v3, 0x0
+    invoke-static {v1}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
 
-    invoke-direct {v2, v12, v11, v3}, Lbm2;-><init>(Landroid/content/Context;Lu5;I)V
+    move-result-object v1
 
-    new-instance v9, Lz7g;
+    check-cast v1, Lxm9;
 
-    invoke-direct {v9, v2}, Lz7g;-><init>(Lmq6;)V
+    if-eqz v1, :cond_0
 
-    const/16 v2, 0x36
+    invoke-virtual {v0, v1}, Lu2e;->b(Lxm9;)Ljm9;
 
-    invoke-virtual {v11, v2}, Lu5;->c(I)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v2
+    goto :goto_0
 
-    check-cast v2, Ljy0;
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {v5, v2, v6, v7}, Lcaj;->a(Lbbg;Ljy0;J)Ltv9;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    move-result-object v2
+    iget-wide v0, v0, Lhk0;->a:J
 
-    const/16 v3, 0xd
+    return-wide v0
 
-    invoke-virtual {v11, v3}, Lu5;->c(I)Ljava/lang/Object;
+    :cond_1
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final h()J
+    .locals 11
+
+    iget-object v0, p0, Lcm2;->d:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm2a;
+
+    iget-object v0, v0, Lm2a;->a:Lu2e;
+
+    invoke-virtual {v0}, Lu2e;->d()Lku9;
+
+    move-result-object v1
+
+    move-object v6, v1
+
+    check-cast v6, Liv9;
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "SELECT * FROM messages WHERE chat_id = ? AND inserted_from_msg_link = 0 AND status <> ? AND media_type in ("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v8, p0, Lcm2;->e:Ljava/util/Set;
+
+    invoke-interface {v8}, Ljava/util/Set;->size()I
+
+    move-result v9
+
+    invoke-static {v1, v9}, Leca;->a(Ljava/lang/StringBuilder;I)V
+
+    const-string v2, ") AND delayed_attrs_time_to_fire IS NOT NULL AND delayed_attrs_notify_sender IS NOT NULL ORDER BY delayed_attrs_time_to_fire DESC LIMIT "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "?"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    check-cast v3, Lub4;
+    iget-object v1, v6, Liv9;->a:Lb2e;
 
-    new-instance v4, Lp8b;
+    new-instance v2, Lyu9;
 
-    invoke-direct {v4, v8, v9, v15, v10}, Lp8b;-><init>(Lz7g;Lz7g;Ld68;Ld68;)V
+    const/4 v10, 0x1
 
-    const/16 v10, 0x186
+    iget-wide v4, p0, Lcm2;->b:J
 
-    invoke-virtual {v11, v10}, Lu5;->d(I)Lz7g;
+    const/4 v7, 0x2
 
-    move-result-object v10
+    invoke-direct/range {v2 .. v10}, Lyu9;-><init>(Ljava/lang/String;JLiv9;ILjava/util/Set;II)V
 
-    const/16 v12, 0x1f0
+    const/4 v3, 0x1
 
-    invoke-virtual {v11, v12}, Lu5;->c(I)Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    move-result-object v11
+    invoke-static {v1, v3, v4, v2}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
 
-    move-object v15, v11
+    move-result-object v1
 
-    check-cast v15, Lcs3;
+    check-cast v1, Ljava/util/List;
 
-    move-object v6, v13
+    invoke-static {v1}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
 
-    move-object v13, v0
+    move-result-object v1
 
-    new-instance v0, Luw;
+    check-cast v1, Lxm9;
 
-    move-object/from16 v12, v17
+    if-eqz v1, :cond_0
 
-    move/from16 v17, v16
+    invoke-virtual {v0, v1}, Lu2e;->b(Lxm9;)Ljm9;
 
-    move-object v7, v2
+    move-result-object v0
 
-    move-object v11, v4
+    goto :goto_0
 
-    move-object v2, v10
+    :cond_0
+    const/4 v0, 0x0
 
-    move-object v10, v3
+    :goto_0
+    if-eqz v0, :cond_1
 
-    move-wide/from16 v3, p1
+    iget-wide v0, v0, Lhk0;->a:J
 
-    invoke-direct/range {v0 .. v17}, Luw;-><init>(Ld68;Ld68;JLbbg;Lclf;Ltv9;Lz7g;Lz7g;Lub4;Lp8b;Lu77;Lzu;Lvtd;Lcs3;II)V
+    return-wide v0
+
+    :cond_1
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final j()Ljava/util/List;
+    .locals 2
+
+    new-instance v0, Lbm2;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lbm2;-><init>(Lcm2;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v1, Lxg5;->a:Lxg5;
+
+    invoke-static {v1, v0}, Ls9j;->h(Lqb4;Lbr6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnd2;
+
+    iget-object v0, v0, Lnd2;->b:Luh2;
+
+    iget-object v0, v0, Luh2;->n:Lnh2;
+
+    sget-object v1, Lmw4;->X:Lmw4;
+
+    invoke-virtual {v0, v1}, Lnh2;->d(Lmw4;)Ljava/util/ArrayList;
+
+    move-result-object v0
 
     return-object v0
 .end method

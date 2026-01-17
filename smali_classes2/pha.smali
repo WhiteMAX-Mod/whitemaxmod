@@ -1,216 +1,124 @@
-.class public final Lpha;
-.super Lg3;
+.class public final synthetic Lpha;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lob3;
-.implements Lbjg;
-
-
-# static fields
-.field public static final t0:I
+.implements Li6;
 
 
 # instance fields
-.field public X:Landroid/widget/TextView;
+.field public final synthetic a:I
 
-.field public Y:Landroid/widget/ImageButton;
-
-.field public Z:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-.field public final d:Z
-
-.field public o:Landroidx/constraintlayout/widget/Group;
-
-.field public s0:Lxj8;
+.field public final synthetic b:Lqha;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Lqad;->layout_send_location:I
-
-    sput v0, Lpha;->t0:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Z)V
+.method public synthetic constructor <init>(Lqha;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Landroid/content/Context;)V
+    iput p2, p0, Lpha;->a:I
 
-    iput-boolean p2, p0, Lpha;->d:Z
+    iput-object p1, p0, Lpha;->b:Lqha;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 4
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+    iget v0, p0, Lpha;->a:I
 
-    check-cast v0, Landroid/view/View;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    new-instance v0, Lhha;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lhha;-><init>(I)V
+
+    iget-object v1, p0, Lpha;->b:Lqha;
+
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lhha;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lhha;-><init>(I)V
+
+    iget-object v1, p0, Lpha;->b:Lqha;
+
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
 
     return-void
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    :pswitch_1
+    new-instance v0, Lhha;
 
-    move-result-object v0
+    const/4 v1, 0x4
 
-    sget-object v1, Lbdg;->a0:Lz7g;
+    invoke-direct {v0, v1}, Lhha;-><init>(I)V
 
-    invoke-static {v0}, Ldpf;->t(Landroid/content/Context;)Lbdg;
+    iget-object v1, p0, Lpha;->b:Lqha;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lpha;->X:Landroid/widget/TextView;
-
-    iget v2, v0, Lbdg;->J:I
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v1, p0, Lpha;->Y:Landroid/widget/ImageButton;
-
-    iget v2, v0, Lbdg;->J:I
-
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-virtual {v1, v2, v3}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
-
-    iget-object v1, p0, Lpha;->Y:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0}, Lbdg;->a()Landroid/graphics/drawable/RippleDrawable;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
 
     return-void
-.end method
 
-.method public final i()V
-    .locals 5
+    :pswitch_2
+    new-instance v0, Lhha;
 
-    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+    const/4 v1, 0x5
 
-    check-cast v0, Landroid/view/View;
+    invoke-direct {v0, v1}, Lhha;-><init>(I)V
 
-    sget v1, Lt9d;->layout_send_location__live_group:I
+    iget-object v1, p0, Lpha;->b:Lqha;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/constraintlayout/widget/Group;
-
-    iput-object v0, p0, Lpha;->o:Landroidx/constraintlayout/widget/Group;
-
-    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    sget v1, Lt9d;->layout_send_location__tv_pick_duration:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lpha;->X:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    sget v1, Lt9d;->layout_send_location__cancel_button:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageButton;
-
-    iput-object v0, p0, Lpha;->Y:Landroid/widget/ImageButton;
-
-    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    sget v1, Lt9d;->layout_send_location__send_button:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    iput-object v0, p0, Lpha;->Z:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    iget-object v1, p0, Lg3;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/content/Context;
-
-    sget v2, Ll5e;->L1:I
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    sget v3, Ll5e;->T1:I
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v2, v4}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lpha;->Z:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    new-instance v2, Lij6;
-
-    const/16 v4, 0x13
-
-    invoke-direct {v2, v4, p0}, Lij6;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v2}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p0}, Lpha;->b()V
-
-    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    new-instance v2, Loha;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    iget-boolean v0, p0, Lpha;->d:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget v3, Ll5e;->H1:I
-
-    :goto_0
-    iget-object v0, p0, Lpha;->Z:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
 
     return-void
+
+    :pswitch_3
+    new-instance v0, Lhha;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lhha;-><init>(I)V
+
+    iget-object v1, p0, Lpha;->b:Lqha;
+
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
+
+    return-void
+
+    :pswitch_4
+    new-instance v0, Lhha;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lhha;-><init>(I)V
+
+    iget-object v1, p0, Lpha;->b:Lqha;
+
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

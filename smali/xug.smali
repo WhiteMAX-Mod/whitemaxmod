@@ -1,51 +1,76 @@
-.class public final Lxug;
-.super Ll84;
+.class public abstract Lxug;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Iterator;
+.implements Lo28;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:[Ljava/lang/Object;
 
-.field public final synthetic Y:Lgvg;
+.field public b:I
 
-.field public Z:I
-
-.field public d:Lgvg;
-
-.field public o:Ldii;
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Lgvg;Ll84;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lxug;->Y:Lgvg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Lwug;->e:Lwug;
+
+    iget-object v0, v0, Lwug;->d:[Ljava/lang/Object;
+
+    iput-object v0, p0, Lxug;->a:[Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(II[Ljava/lang/Object;)V
+    .locals 0
 
-    iput-object p1, p0, Lxug;->X:Ljava/lang/Object;
+    iput-object p3, p0, Lxug;->a:[Ljava/lang/Object;
 
-    iget p1, p0, Lxug;->Z:I
+    iput p1, p0, Lxug;->b:I
 
-    const/high16 v0, -0x80000000
+    iput p2, p0, Lxug;->c:I
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Lxug;->Z:I
+.method public final hasNext()Z
+    .locals 2
 
-    iget-object p1, p0, Lxug;->Y:Lgvg;
+    iget v0, p0, Lxug;->c:I
 
-    invoke-static {p1, p0}, Lgvg;->b(Lgvg;Ll84;)Ljava/lang/Object;
+    iget v1, p0, Lxug;->b:I
 
-    move-result-object p1
+    if-ge v0, v1, :cond_0
 
-    return-object p1
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

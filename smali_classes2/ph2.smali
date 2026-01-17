@@ -3,259 +3,182 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final h:Lph2;
-
-
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/util/List;
+.field public final b:J
 
 .field public final c:J
 
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:J
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    sget-object v0, Llh2;->b:Llh2;
-
-    sget-object v1, Llh2;->c:Llh2;
-
-    sget-object v2, Llh2;->a:Llh2;
-
-    filled-new-array {v2, v0, v1}, [Llh2;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    new-instance v1, Loh2;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, v1, Loh2;->a:J
-
-    iput-wide v2, v1, Loh2;->c:J
-
-    iput-wide v2, v1, Loh2;->d:J
-
-    iput-object v0, v1, Loh2;->b:Ljava/util/List;
-
-    iput-wide v2, v1, Loh2;->f:J
-
-    iput-wide v2, v1, Loh2;->g:J
-
-    new-instance v0, Lph2;
-
-    invoke-direct {v0, v1}, Lph2;-><init>(Loh2;)V
-
-    sput-object v0, Lph2;->h:Lph2;
-
-    return-void
-.end method
-
-.method public constructor <init>(Loh2;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;JJ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p1, Loh2;->a:J
+    iput-object p1, p0, Lph2;->a:Ljava/lang/String;
 
-    iput-wide v0, p0, Lph2;->a:J
+    iput-wide p2, p0, Lph2;->b:J
 
-    iget-object v0, p1, Loh2;->b:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_0
-    iput-object v0, p0, Lph2;->b:Ljava/util/List;
-
-    iget-wide v0, p1, Loh2;->c:J
-
-    iput-wide v0, p0, Lph2;->c:J
-
-    iget-wide v0, p1, Loh2;->d:J
-
-    iput-wide v0, p0, Lph2;->d:J
-
-    iget-wide v0, p1, Loh2;->e:J
-
-    iput-wide v0, p0, Lph2;->e:J
-
-    iget-wide v0, p1, Loh2;->f:J
-
-    iput-wide v0, p0, Lph2;->f:J
-
-    iget-wide v0, p1, Loh2;->g:J
-
-    iput-wide v0, p0, Lph2;->g:J
+    iput-wide p4, p0, Lph2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Loh2;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    new-instance v0, Loh2;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    iget-wide v1, p0, Lph2;->a:J
+    return v0
 
-    iput-wide v1, v0, Loh2;->a:J
+    :cond_0
+    const/4 v1, 0x0
 
-    new-instance v1, Ljava/util/ArrayList;
+    if-eqz p1, :cond_5
 
-    iget-object v2, p0, Lph2;->b:Ljava/util/List;
+    const-class v2, Lph2;
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v1, v0, Loh2;->b:Ljava/util/List;
+    move-result-object v3
 
-    iget-wide v1, p0, Lph2;->c:J
+    if-eq v2, v3, :cond_1
 
-    iput-wide v1, v0, Loh2;->c:J
+    goto :goto_0
 
-    iget-wide v1, p0, Lph2;->d:J
+    :cond_1
+    check-cast p1, Lph2;
 
-    iput-wide v1, v0, Loh2;->d:J
+    iget-object v2, p1, Lph2;->a:Ljava/lang/String;
 
-    iget-wide v1, p0, Lph2;->e:J
+    iget-wide v3, p0, Lph2;->b:J
 
-    iput-wide v1, v0, Loh2;->e:J
+    iget-wide v5, p1, Lph2;->b:J
 
-    iget-wide v1, p0, Lph2;->f:J
+    cmp-long v3, v3, v5
 
-    iput-wide v1, v0, Loh2;->f:J
+    if-eqz v3, :cond_2
 
-    iget-wide v1, p0, Lph2;->g:J
+    return v1
 
-    iput-wide v1, v0, Loh2;->g:J
+    :cond_2
+    iget-wide v3, p0, Lph2;->c:J
 
-    return-object v0
+    iget-wide v5, p1, Lph2;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-object p1, p0, Lph2;->a:Ljava/lang/String;
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_4
+    if-nez v2, :cond_5
+
+    return v0
+
+    :cond_5
+    :goto_0
+    return v1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 10
+.method public final hashCode()I
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lph2;->a:Ljava/lang/String;
 
-    const-string v1, "ChatSettings{dontDisturbUntil="
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    iget-wide v1, p0, Lph2;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", options="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lph2;->b:Ljava/util/List;
-
-    if-nez v2, :cond_0
-
-    const-string v1, "[]"
+    move-result v0
 
     goto :goto_0
 
     :cond_0
-    new-instance v9, Ldr7;
+    const/4 v0, 0x0
 
-    const/16 v1, 0xc
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {v9, v1}, Ldr7;-><init>(I)V
+    iget-wide v1, p0, Lph2;->b:J
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const/16 v3, 0x20
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    ushr-long v4, v1, v3
 
-    const-string v4, ","
+    xor-long/2addr v1, v4
 
-    const-string v5, "["
+    long-to-int v1, v1
 
-    const-string v6, "]"
+    add-int/2addr v0, v1
 
-    const/4 v7, -0x1
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string v8, "..."
+    iget-wide v1, p0, Lph2;->c:J
 
-    invoke-static/range {v2 .. v9}, Lei3;->I(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/String;Loq6;)V
+    ushr-long v3, v1, v3
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PushMessage{text=\'"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lph2;->a:Ljava/lang/String;
+
+    invoke-static {v1}, Lbti;->d(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", lastNotifMark="
+    const-string v1, "\', time="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lph2;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", id="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lph2;->c:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lastNotifMessageId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph2;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", favoriteIndex="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph2;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hideMyLiveLocationPanelBeforeTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph2;->f:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hideLiveLocationPanelBeforeTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph2;->g:J
-
     const/16 v3, 0x7d
 
-    invoke-static {v0, v1, v2, v3}, Ln0c;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
 

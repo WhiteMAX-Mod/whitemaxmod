@@ -1,146 +1,61 @@
 .class public final Lh35;
-.super Ljava/lang/Object;
+.super Lshc;
 .source "SourceFile"
-
-# interfaces
-.implements Ljavax/inject/Provider;
-
-
-# static fields
-.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field public volatile a:Lmt5;
+.field public a:[D
 
-.field public volatile b:Ljava/lang/Object;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lh35;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public static a(Lmt5;)Ljavax/inject/Provider;
-    .locals 2
-
-    instance-of v0, p0, Lh35;
-
-    if-eqz v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lh35;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v1, Lh35;->c:Ljava/lang/Object;
-
-    iput-object v1, v0, Lh35;->b:Ljava/lang/Object;
-
-    iput-object p0, v0, Lh35;->a:Lmt5;
-
-    return-object v0
-.end method
+.field public b:I
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 5
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lh35;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lh35;->a:[D
 
-    sget-object v1, Lh35;->c:Ljava/lang/Object;
+    iget v1, p0, Lh35;->b:I
 
-    if-ne v0, v1, :cond_3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lh35;->b:Ljava/lang/Object;
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lh35;->a:Lmt5;
-
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([DI)[D
 
     move-result-object v0
 
-    iget-object v2, p0, Lh35;->b:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    if-eq v2, v1, :cond_1
+.method public final b(I)V
+    .locals 2
 
-    if-ne v2, v0, :cond_0
+    iget-object v0, p0, Lh35;->a:[D
 
-    goto :goto_0
+    array-length v1, v0
+
+    if-ge v1, p1, :cond_1
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    if-ge p1, v1, :cond_0
+
+    move p1, v1
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([DI)[D
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v4, "Scoped provider was invoked recursively returning different results: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " & "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". This is likely due to a circular dependency."
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    iput-object p1, p0, Lh35;->a:[D
 
     :cond_1
-    :goto_0
-    iput-object v0, p0, Lh35;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public final d()I
+    .locals 1
 
-    iput-object v1, p0, Lh35;->a:Lmt5;
+    iget v0, p0, Lh35;->b:I
 
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_3
-    return-object v0
+    return v0
 .end method

@@ -1,84 +1,81 @@
 .class public final Lsud;
-.super Lxbg;
+.super Lqj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic a:Lhv8;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lhv8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lsud;->c:J
+    iput-object p1, p0, Lsud;->a:Lhv8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lsud;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lsud;
-
-    iget-wide v3, p0, Lsud;->c:J
-
-    iget-wide v5, p1, Lsud;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final e(Lpi4;)V
     .locals 2
 
-    iget-wide v0, p0, Lsud;->c:J
+    iget-object v0, p0, Lsud;->a:Lhv8;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Lhv8;->e()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    check-cast p1, Lo0;
+
+    invoke-virtual {p1}, Lo0;->d()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lhv8;->d(Ljava/lang/Throwable;)Z
 
     move-result v0
 
-    return v0
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final g(Landroid/graphics/Bitmap;)V
+    .locals 2
 
-    const-string v0, "Response(timestampRemoveProfile="
+    iget-object v0, p0, Lsud;->a:Lhv8;
 
-    const-string v1, ")"
+    invoke-virtual {v0}, Lhv8;->e()Z
 
-    iget-wide v2, p0, Lsud;->c:J
+    move-result v1
 
-    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v1, :cond_1
 
-    move-result-object v0
+    if-eqz p1, :cond_0
 
-    return-object v0
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    if-nez p1, :cond_2
+
+    invoke-virtual {v0}, Lhv8;->b()V
+
+    return-void
+
+    :cond_2
+    invoke-virtual {v0, p1}, Lhv8;->a(Ljava/lang/Object;)V
+
+    return-void
 .end method

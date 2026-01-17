@@ -206,7 +206,7 @@
 
     const-string v13, "\' from classloader "
 
-    invoke-static {v0, v2, v13}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v13}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -597,7 +597,7 @@
 
     const-string v3, "\' is unable to initialize itself when loaded via classloader "
 
-    invoke-static {v5, v2, v3}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v2, v3}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -640,7 +640,7 @@
 
     const-string v3, "\' is missing dependencies when loaded via classloader "
 
-    invoke-static {v5, v2, v3}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v2, v3}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -713,7 +713,7 @@
 
     const-string v3, "[INFO] \'"
 
-    invoke-static {v3, v2, v13}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v2, v13}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -736,7 +736,7 @@
     :goto_c
     const-string v3, "Log adapter \'"
 
-    invoke-static {v3, v2, v13}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v2, v13}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1465,7 +1465,7 @@
 
     const-string v0, "\' -- "
 
-    invoke-static {p2, p1, v0}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p2, p1, v0}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 

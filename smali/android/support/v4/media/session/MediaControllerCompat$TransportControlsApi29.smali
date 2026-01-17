@@ -36,7 +36,7 @@
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsFwk:Landroid/media/session/MediaController$TransportControls;
 
-    invoke-static {v0, p1}, Lx75;->r(Landroid/media/session/MediaController$TransportControls;F)V
+    invoke-static {v0, p1}, La85;->r(Landroid/media/session/MediaController$TransportControls;F)V
 
     return-void
 

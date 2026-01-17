@@ -4,46 +4,118 @@
 
 
 # instance fields
-.field public final a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+.field public a:Ljava/lang/String;
 
-.field public final b:Landroid/animation/AnimatorSet;
+.field public b:Ljava/lang/String;
 
-.field public final c:Z
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:Ljava/lang/String;
+
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/lang/Long;
+
+.field public h:Ljava/lang/String;
+
+.field public i:I
+
+.field public j:Ljava/lang/String;
+
+.field public k:Ljava/lang/Integer;
+
+.field public l:Ljava/lang/String;
+
+.field public m:Ljava/lang/String;
+
+.field public n:Ljava/lang/String;
+
+.field public o:Ljava/util/Locale;
+
+.field public p:Ljava/lang/String;
 
 
-# direct methods
-.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;Landroid/animation/AnimatorSet;)V
-    .locals 2
+# virtual methods
+.method public final a()Lak5;
+    .locals 20
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p0
 
-    iput-object p1, p0, Lzj5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    iget-object v1, v0, Lzj5;->a:Ljava/lang/String;
 
-    invoke-virtual {p2}, Landroid/animation/AnimatorSet;->clone()Landroid/animation/AnimatorSet;
+    const-string v2, "conversation id must not be null"
 
-    move-result-object p1
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lzj5;->b:Landroid/animation/AnimatorSet;
+    iget-object v1, v0, Lzj5;->e:Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
+    const-string v2, "endpointBaseUrl must not be null"
 
-    move-result-wide p1
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    const-wide/16 v0, -0x1
+    iget-object v1, v0, Lzj5;->f:Ljava/lang/String;
 
-    cmp-long p1, p1, v0
+    const-string v2, "appVersion must not be null"
 
-    if-nez p1, :cond_0
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    iget-object v1, v0, Lzj5;->h:Ljava/lang/String;
 
-    goto :goto_0
+    const-string v2, "clientType must not be null"
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    :goto_0
-    iput-boolean p1, p0, Lzj5;->c:Z
+    iget-object v1, v0, Lzj5;->j:Ljava/lang/String;
 
-    return-void
+    const-string v2, "capabilities must not be null"
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v3, Lak5;
+
+    iget-object v4, v0, Lzj5;->a:Ljava/lang/String;
+
+    iget-object v5, v0, Lzj5;->b:Ljava/lang/String;
+
+    iget-object v6, v0, Lzj5;->c:Ljava/lang/String;
+
+    iget v7, v0, Lzj5;->d:I
+
+    iget-object v8, v0, Lzj5;->e:Ljava/lang/String;
+
+    iget-object v9, v0, Lzj5;->f:Ljava/lang/String;
+
+    iget-object v10, v0, Lzj5;->g:Ljava/lang/Long;
+
+    iget-object v11, v0, Lzj5;->h:Ljava/lang/String;
+
+    iget v12, v0, Lzj5;->i:I
+
+    iget-object v13, v0, Lzj5;->j:Ljava/lang/String;
+
+    iget-object v14, v0, Lzj5;->k:Ljava/lang/Integer;
+
+    iget-object v15, v0, Lzj5;->l:Ljava/lang/String;
+
+    iget-object v1, v0, Lzj5;->m:Ljava/lang/String;
+
+    iget-object v2, v0, Lzj5;->n:Ljava/lang/String;
+
+    move-object/from16 v16, v1
+
+    iget-object v1, v0, Lzj5;->o:Ljava/util/Locale;
+
+    move-object/from16 v18, v1
+
+    iget-object v1, v0, Lzj5;->p:Ljava/lang/String;
+
+    move-object/from16 v19, v1
+
+    move-object/from16 v17, v2
+
+    invoke-direct/range {v3 .. v19}, Lak5;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;Ljava/lang/String;)V
+
+    return-object v3
 .end method

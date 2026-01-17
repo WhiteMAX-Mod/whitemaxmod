@@ -1,45 +1,37 @@
-.class public final Laab;
+.class public abstract Laab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final a:I
 
-.field public final b:Ld68;
+.field public static final b:I
 
-.field public final c:Ld68;
+.field public static final c:I
 
-.field public final d:Ld68;
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Ld68;Ld68;Ld68;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lmdd;->oneme_file_download_warning_confirm_btn:I
 
-    const-class v0, Laab;
+    sput v0, Laab;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget v0, Lmdd;->oneme_file_download_warning_deny_btn:I
 
-    move-result-object v0
+    sput v0, Laab;->b:I
 
-    iput-object v0, p0, Laab;->a:Ljava/lang/String;
+    sget v0, Lmdd;->oneme_file_download_warning_description:I
 
-    iput-object p1, p0, Laab;->b:Ld68;
+    sput v0, Laab;->c:I
 
-    iput-object p2, p0, Laab;->c:Ld68;
+    sget v0, Lmdd;->oneme_file_download_warning_title:I
 
-    iput-object p3, p0, Laab;->d:Ld68;
+    sput v0, Laab;->d:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lz9b;)Lz9b;
-    .locals 0
-
-    return-object p1
 .end method

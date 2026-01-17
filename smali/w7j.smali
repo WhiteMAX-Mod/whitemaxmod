@@ -3,11 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwwa;
+.implements Lvwa;
 
 
 # static fields
 .field public static final a:Lw7j;
+
+.field public static final b:Lfz5;
 
 
 # direct methods
@@ -20,51 +22,47 @@
 
     sput-object v0, Lw7j;->a:Lw7j;
 
-    new-instance v0, Lyyi;
+    new-instance v0, Lvzi;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    const-class v1, Lqzi;
+    const-class v1, Ln0j;
 
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    new-instance v1, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    const/4 v2, 0x3
+    const-string v2, "format"
 
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+    invoke-direct {v1, v2, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    sput-object v1, Lw7j;->b:Lfz5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lcqj;
 
-    move-result-object p1
+    check-cast p2, Lwwa;
 
-    throw p1
+    sget-object v0, Lw7j;->b:Lfz5;
+
+    iget-object p1, p1, Lcqj;->a:Llxi;
+
+    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    return-void
 .end method

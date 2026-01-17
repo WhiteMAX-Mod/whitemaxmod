@@ -1,182 +1,128 @@
-.class public final Lk47;
-.super Ljava/lang/Object;
+.class public final enum Lk47;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Ln47;
+
+
+# static fields
+.field public static final enum b:Lk47;
+
+.field public static final synthetic c:[Lk47;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput p1, p0, Lk47;->a:I
+    new-instance v0, Lk47;
 
-    iput-object p2, p0, Lk47;->b:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x7
+
+    const-string v3, "KEYBOARD_RELEASE"
+
+    invoke-direct {v0, v3, v1, v2}, Lk47;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lk47;
+
+    const/4 v2, 0x1
+
+    const/16 v3, 0x8
+
+    const-string v4, "VIRTUAL_KEY_RELEASE"
+
+    invoke-direct {v1, v4, v2, v3}, Lk47;-><init>(Ljava/lang/String;II)V
+
+    new-instance v2, Lk47;
+
+    const-string v3, "CLOCK_TICK"
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x4
+
+    invoke-direct {v2, v3, v4, v5}, Lk47;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lk47;->b:Lk47;
+
+    new-instance v3, Lk47;
+
+    const/4 v4, 0x3
+
+    const/16 v6, 0x9
+
+    const-string v7, "TEXT_HANDLE_MOVE"
+
+    invoke-direct {v3, v7, v4, v6}, Lk47;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lk47;
+
+    const-string v6, "GESTURE_END"
+
+    const/16 v7, 0xd
+
+    invoke-direct {v4, v6, v5, v7}, Lk47;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lk47;
+
+    move-result-object v0
+
+    sput-object v0, Lk47;->c:[Lk47;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lk47;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lk47;
+    .locals 1
+
+    const-class v0, Lk47;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lk47;
+
+    return-object p0
+.end method
+
+.method public static values()[Lk47;
+    .locals 1
+
+    sget-object v0, Lk47;->c:[Lk47;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lk47;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 6
+.method public final a()I
+    .locals 1
 
     iget v0, p0, Lk47;->a:I
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lk47;->b:Ljava/lang/Object;
-
-    check-cast v0, Lqpj;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Ly78;->c:Ly78;
-
-    iget-object v0, v0, Lqpj;->g:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ly78;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lk47;->b:Ljava/lang/Object;
-
-    check-cast v0, Lllj;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Ly78;->c:Ly78;
-
-    iget-object v0, v0, Lllj;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ly78;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lk47;->b:Ljava/lang/Object;
-
-    check-cast v0, Lnej;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Ly78;->c:Ly78;
-
-    iget-object v0, v0, Lnej;->g:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ly78;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lk47;->b:Ljava/lang/Object;
-
-    check-cast v0, Liy;
-
-    iget-object v1, v0, Liy;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iget-object v2, v0, Liy;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    const/16 v2, 0xa
-
-    const/4 v4, 0x0
-
-    :try_start_0
-    invoke-static {v2}, Landroid/os/Process;->setThreadPriority(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    iget-object v2, v0, Liy;->Y:Lwvi;
-
-    invoke-virtual {v2}, Lwvi;->c()V
-    :try_end_1
-    .catch Landroidx/core/os/OperationCanceledException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v2
-
-    :try_start_2
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    :goto_0
-    invoke-static {}, Landroid/os/Binder;->flushPendingCommands()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v0, v4}, Liy;->a(Ljava/lang/Object;)V
-
-    return-object v4
-
-    :catchall_0
-    move-exception v2
-
-    goto :goto_1
-
-    :cond_0
-    :try_start_3
-    throw v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_1
-    :try_start_4
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    throw v2
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    :catchall_1
-    move-exception v1
-
-    invoke-virtual {v0, v4}, Liy;->a(Ljava/lang/Object;)V
-
-    throw v1
-
-    :pswitch_3
-    iget-object v0, p0, Lk47;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

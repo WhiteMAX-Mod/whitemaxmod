@@ -142,7 +142,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lit8;->j(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v1}, Lss8;->o(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v1
 

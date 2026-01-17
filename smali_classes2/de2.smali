@@ -1,152 +1,146 @@
-.class public final synthetic Lde2;
-.super Ljava/lang/Object;
+.class public final Lde2;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/profile/screens/members/ChatAdminsScreen;
+.field public final synthetic Y:Lpld;
+
+.field public final synthetic Z:Lge2;
+
+.field public o:I
+
+.field public final synthetic t0:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatAdminsScreen;I)V
+.method public constructor <init>(Lpld;Lkotlin/coroutines/Continuation;Lge2;J)V
     .locals 0
 
-    iput p2, p0, Lde2;->a:I
+    iput-object p1, p0, Lde2;->Y:Lpld;
 
-    iput-object p1, p0, Lde2;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
+    iput-object p3, p0, Lde2;->Z:Lge2;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p4, p0, Lde2;->t0:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 13
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lde2;->a:I
+    check-cast p1, Lf76;
 
-    iget-object v1, p0, Lde2;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lde2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->u0:[Lp38;
+    move-result-object p1
 
-    new-instance v2, Lzy0;
+    check-cast p1, Lde2;
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->z0()Lne2;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-result-object v4
+    invoke-virtual {p1, p2}, Lde2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v8, 0x0
+    move-result-object p1
 
-    const/4 v9, 0x3
+    return-object p1
+.end method
 
-    const/4 v3, 0x1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    const-class v5, Lne2;
+    new-instance v0, Lde2;
 
-    const-string v6, "getContextMenuActions"
+    iget-object v3, p0, Lde2;->Z:Lge2;
 
-    const-string v7, "getContextMenuActions(J)Ljava/util/List;"
+    iget-wide v4, p0, Lde2;->t0:J
 
-    invoke-direct/range {v2 .. v9}, Lzy0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    iget-object v1, p0, Lde2;->Y:Lpld;
 
-    new-instance v3, Lub1;
+    move-object v2, p2
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->z0()Lne2;
+    invoke-direct/range {v0 .. v5}, Lde2;-><init>(Lpld;Lkotlin/coroutines/Continuation;Lge2;J)V
 
-    move-result-object v5
+    iput-object p1, v0, Lde2;->X:Ljava/lang/Object;
 
-    const/4 v9, 0x0
+    return-object v0
+.end method
 
-    const/16 v10, 0x8
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Lde2;->X:Ljava/lang/Object;
 
-    const-class v6, Lne2;
+    check-cast v0, Lf76;
 
-    const-string v7, "getButtonActions"
+    iget v1, p0, Lde2;->o:I
 
-    const-string v8, "getButtonActions()Lkotlinx/coroutines/flow/Flow;"
+    const/4 v2, 0x1
 
-    invoke-direct/range {v3 .. v10}, Lub1;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    if-eqz v1, :cond_1
 
-    new-instance v4, Lce2;
+    if-ne v1, v2, :cond_0
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->A0()J
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-wide v5
+    goto :goto_0
 
-    sget-object v0, Lvkc;->a:Lvkc;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0}, Lvkc;->a()Ld68;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v7
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lvkc;->c()Ld68;
+    throw p1
 
-    move-result-object v8
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    new-instance p1, Lce2;
 
-    move-result-object v1
+    iget-object v1, p0, Lde2;->Z:Lge2;
 
-    const/16 v9, 0xcb
+    iget-wide v3, p0, Lde2;->t0:J
 
-    invoke-virtual {v1, v9}, Lu5;->d(I)Lz7g;
+    invoke-direct {p1, v0, v1, v3, v4}, Lce2;-><init>(Lf76;Lge2;J)V
 
-    move-result-object v9
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lvkc;->b()Ld68;
+    iput-object v0, p0, Lde2;->X:Ljava/lang/Object;
 
-    move-result-object v10
+    iput v2, p0, Lde2;->o:I
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    iget-object v0, p0, Lde2;->Y:Lpld;
 
-    move-result-object v1
+    iget-object v0, v0, Lpld;->a:Llpf;
 
-    const/16 v11, 0xcd
+    invoke-interface {v0, p1, p0}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v11}, Lu5;->d(I)Lz7g;
+    move-result-object p1
 
-    move-result-object v11
+    sget-object v0, Lac4;->a:Lac4;
 
-    invoke-virtual {v0}, Lvkc;->e()Ld68;
-
-    move-result-object v12
-
-    invoke-direct/range {v4 .. v12}, Lce2;-><init>(JLd68;Ld68;Ld68;Ld68;Ld68;Ld68;)V
-
-    new-instance v0, Lei9;
-
-    invoke-direct {v0, v2, v4, v3}, Lei9;-><init>(Loq6;Les4;Lmq6;)V
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
-    :pswitch_0
-    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->u0:[Lp38;
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    new-instance v0, Lne2;
-
-    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->A0()J
-
-    move-result-wide v1
-
-    invoke-direct {v0, v1, v2}, Lne2;-><init>(J)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

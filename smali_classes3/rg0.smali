@@ -1,5 +1,5 @@
 .class public final Lrg0;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
@@ -8,18 +8,18 @@
 
 .field public Y:I
 
-.field public d:Lesd;
+.field public d:Lbtd;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ll84;)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lo84;)V
     .locals 0
 
     iput-object p1, p0, Lrg0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     iget-object p1, p0, Lrg0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->o(Ll84;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->o(Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

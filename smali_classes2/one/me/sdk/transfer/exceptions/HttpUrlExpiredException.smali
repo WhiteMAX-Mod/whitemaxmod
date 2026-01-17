@@ -16,7 +16,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -32,12 +32,12 @@
 
     const/4 v1, 0x7
 
-    invoke-direct {p0, v0, v0, v0, v1}, Lone/me/sdk/transfer/exceptions/HttpUrlExpiredException;-><init>(Ljava/lang/String;Lud7;Ljava/lang/String;I)V
+    invoke-direct {p0, v0, v0, v0, v1}, Lone/me/sdk/transfer/exceptions/HttpUrlExpiredException;-><init>(Ljava/lang/String;Ldd7;Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lud7;Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;Ldd7;Ljava/lang/String;I)V
     .locals 2
 
     and-int/lit8 v0, p4, 0x1
@@ -70,7 +70,7 @@
 
     .line 3
     :cond_3
-    invoke-direct {p0, p1, p2, p3}, Lone/me/sdk/transfer/exceptions/HttpErrorException;-><init>(Ljava/lang/String;Lud7;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, p3}, Lone/me/sdk/transfer/exceptions/HttpErrorException;-><init>(Ljava/lang/String;Ldd7;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -69,7 +69,7 @@
 
     iget-object v3, p1, Lhm0;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lmcj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfdj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -79,7 +79,7 @@
 
     iget-object p1, p1, Lhm0;->b:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lmcj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lfdj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

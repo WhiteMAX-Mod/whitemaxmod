@@ -15,7 +15,7 @@
         "Lkotlin/Function0;",
         "action",
         "withLock",
-        "(Ljava/util/concurrent/locks/ReentrantLock;Lmq6;)Ljava/lang/Object;",
+        "(Ljava/util/concurrent/locks/ReentrantLock;Llq6;)Ljava/lang/Object;",
         "E",
         "",
         "expectedSize",
@@ -38,7 +38,7 @@
     k = 0x2
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -77,18 +77,6 @@
 
     :goto_0
     sput-object v0, Lkotlinx/coroutines/internal/ConcurrentKt;->REMOVE_FUTURE_ON_CANCEL:Ljava/lang/reflect/Method;
-
-    return-void
-.end method
-
-.method public static synthetic ReentrantLock$annotations()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public static synthetic WorkaroundAtomicReference$annotations()V
-    .locals 0
 
     return-void
 .end method
@@ -164,7 +152,7 @@
     return v0
 .end method
 
-.method public static final withLock(Ljava/util/concurrent/locks/ReentrantLock;Lmq6;)Ljava/lang/Object;
+.method public static final withLock(Ljava/util/concurrent/locks/ReentrantLock;Llq6;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -172,7 +160,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/util/concurrent/locks/ReentrantLock;",
-            "Lmq6;",
+            "Llq6;",
             ")TT;"
         }
     .end annotation
@@ -180,7 +168,7 @@
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     :try_start_0
-    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0

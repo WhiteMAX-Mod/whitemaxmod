@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    sget-object v0, Ltg;->a:Landroid/view/animation/LinearInterpolator;
+    sget-object v0, Lrg;->a:Landroid/view/animation/LinearInterpolator;
 
     new-instance v0, Landroid/os/Handler;
 

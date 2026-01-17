@@ -1,21 +1,11 @@
-.class public final Lii;
-.super Lgi;
+.class public interface abstract Lii;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lii;
+# virtual methods
+.method public abstract e()Ljava/lang/String;
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lii;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lii;->a:Lii;
-
-    return-void
+.method public abstract g(Llq6;)V
 .end method

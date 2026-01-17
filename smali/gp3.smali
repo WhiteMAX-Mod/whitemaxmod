@@ -1,38 +1,76 @@
-.class public final Lgp3;
-.super Lcu0;
+.class public interface abstract Lgp3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Z
-
-
-# direct methods
-.method public constructor <init>(Laj;Z)V
+# virtual methods
+.method public a(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcu0;-><init>(Laj;)V
+    invoke-static {p1}, Lg2d;->a(Ljava/lang/Class;)Lg2d;
 
-    iput-boolean p2, p0, Lgp3;->c:Z
+    move-result-object p1
 
-    return-void
+    invoke-interface {p0, p1}, Lgp3;->g(Lg2d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
+.method public b(Lg2d;)Ljava/util/Set;
+    .locals 0
 
-# virtual methods
-.method public final w(Ljava/lang/String;)V
-    .locals 1
+    invoke-interface {p0, p1}, Lgp3;->d(Lg2d;)Llzc;
 
-    iget-boolean v0, p0, Lgp3;->c:Z
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    invoke-interface {p1}, Llzc;->get()Ljava/lang/Object;
 
-    invoke-super {p0, p1}, Lcu0;->w(Ljava/lang/String;)V
+    move-result-object p1
 
-    return-void
+    check-cast p1, Ljava/util/Set;
+
+    return-object p1
+.end method
+
+.method public c(Ljava/lang/Class;)Llzc;
+    .locals 0
+
+    invoke-static {p1}, Lg2d;->a(Ljava/lang/Class;)Lg2d;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1}, Lgp3;->e(Lg2d;)Llzc;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract d(Lg2d;)Llzc;
+.end method
+
+.method public abstract e(Lg2d;)Llzc;
+.end method
+
+.method public g(Lg2d;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-interface {p0, p1}, Lgp3;->e(Lg2d;)Llzc;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
 
     :cond_0
-    invoke-virtual {p0, p1}, Lcu0;->u(Ljava/lang/String;)V
+    invoke-interface {p1}, Llzc;->get()Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

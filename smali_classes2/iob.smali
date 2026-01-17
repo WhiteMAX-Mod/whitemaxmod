@@ -1,31 +1,83 @@
 .class public final Liob;
-.super Ljava/lang/Object;
+.super Lzs4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/util/Set;
+.field public final e:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lzs4;-><init>(Landroid/content/Context;)V
 
-    iput p2, p0, Liob;->b:I
+    iput-object p2, p0, Liob;->e:Ljava/util/ArrayList;
 
-    iput-object p1, p0, Liob;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p3, p0, Liob;->c:Ljava/lang/String;
 
-    iput-object p4, p0, Liob;->d:Ljava/util/Set;
+# virtual methods
+.method public final c(Landroid/content/Context;)Lao4;
+    .locals 3
+
+    new-instance v0, Lv40;
+
+    invoke-direct {v0, p1}, Lv40;-><init>(Landroid/content/Context;)V
+
+    new-instance p1, Latc;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lb60;
+
+    iget-object v2, p0, Liob;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lb60;
+
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lb60;
+
+    invoke-direct {p1, v1}, Latc;-><init>([Lb60;)V
+
+    iput-object p1, v0, Lv40;->e:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lv40;->b()Lao4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d(Lxp5;Landroid/os/Looper;Ljava/util/ArrayList;)V
+    .locals 3
+
+    new-instance v0, Lfhg;
+
+    new-instance v1, Limf;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v1, v2}, Limf;-><init>(I)V
+
+    invoke-direct {v0, p1, p2, v1}, Lfhg;-><init>(Lxp5;Landroid/os/Looper;Lj1g;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, Lfhg;->W0:Z
+
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

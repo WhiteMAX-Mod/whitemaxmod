@@ -1,158 +1,67 @@
 .class public final Lyu2;
-.super Lb5g;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lgv2;
+.field public X:Lqu2;
 
-.field public final synthetic Y:Luu2;
+.field public Y:Luea;
 
-.field public final synthetic Z:Lwv4;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public o:I
+.field public d:Ljava/util/Set;
 
-.field public final synthetic s0:Luu2;
+.field public o:Lqu2;
+
+.field public final synthetic t0:Lcv2;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Lgv2;Luu2;Lwv4;Luu2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lcv2;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lyu2;->X:Lgv2;
+    iput-object p1, p0, Lyu2;->t0:Lcv2;
 
-    iput-object p2, p0, Lyu2;->Y:Luu2;
-
-    iput-object p3, p0, Lyu2;->Z:Lwv4;
-
-    iput-object p4, p0, Lyu2;->s0:Luu2;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyu2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyu2;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lyu2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Lyu2;
-
-    iget-object v3, p0, Lyu2;->Z:Lwv4;
-
-    iget-object v4, p0, Lyu2;->s0:Luu2;
-
-    iget-object v1, p0, Lyu2;->X:Lgv2;
-
-    iget-object v2, p0, Lyu2;->Y:Luu2;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lyu2;-><init>(Lgv2;Luu2;Lwv4;Luu2;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 7
 
-    iget v0, p0, Lyu2;->o:I
+    iput-object p1, p0, Lyu2;->Z:Ljava/lang/Object;
 
-    iget-object v1, p0, Lyu2;->X:Lgv2;
+    iget p1, p0, Lyu2;->u0:I
 
-    const/4 v2, 0x2
+    const/high16 v0, -0x80000000
 
-    const/4 v3, 0x1
+    or-int/2addr p1, v0
 
-    sget-object v4, Lbc4;->a:Lbc4;
+    iput p1, p0, Lyu2;->u0:I
 
-    if-eqz v0, :cond_2
+    const/4 v4, 0x0
 
-    if-eq v0, v3, :cond_1
+    const/4 v5, 0x0
 
-    if-ne v0, v2, :cond_0
+    iget-object v0, p0, Lyu2;->t0:Lcv2;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    goto :goto_2
+    const/4 v2, 0x0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v3, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-object v6, p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iput v3, p0, Lyu2;->o:I
-
-    iget-object p1, p0, Lyu2;->Y:Luu2;
-
-    iget-object v0, p0, Lyu2;->Z:Lwv4;
-
-    invoke-static {v1, p1, v0, p0}, Lgv2;->b(Lgv2;Luu2;Lwv4;Ll84;)Ljava/lang/Object;
+    invoke-virtual/range {v0 .. v6}, Lcv2;->g(Ljava/util/Set;Lqu2;Lqu2;Lxv4;Luea;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
-
-    if-ne p1, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    iput v2, p0, Lyu2;->o:I
-
-    iget-object p1, p0, Lyu2;->s0:Luu2;
-
-    invoke-static {v1, p1, p0}, Lgv2;->a(Lgv2;Luu2;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_4
-
-    :goto_1
-    return-object v4
-
-    :cond_4
-    :goto_2
-    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

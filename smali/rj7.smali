@@ -1,41 +1,49 @@
-.class public final Lrj7;
-.super Ljava/lang/Object;
+.class public abstract Lrj7;
+.super Llk7;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lrj7;
+# virtual methods
+.method public final d()Lyj7;
+    .locals 2
 
+    new-instance v0, Ljava/lang/AssertionError;
 
-# instance fields
-.field public final a:J
+    const-string v1, "should never be called"
 
-.field public final b:J
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lrj7;
-
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct {v0, v1, v2, v1, v2}, Lrj7;-><init>(JJ)V
-
-    sput-object v0, Lrj7;->c:Lrj7;
-
-    return-void
+    throw v0
 .end method
 
-.method public constructor <init>(JJ)V
-    .locals 0
+.method public final h()Lyj7;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v0, p0
 
-    iput-wide p1, p0, Lrj7;->a:J
+    check-cast v0, Lgud;
 
-    iput-wide p3, p0, Lrj7;->b:J
+    iget-object v0, v0, Lgud;->Z:Lgud;
 
-    return-void
+    invoke-virtual {v0}, Llk7;->g()Lsk7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final values()Ljava/util/Collection;
+    .locals 1
+
+    move-object v0, p0
+
+    check-cast v0, Lgud;
+
+    iget-object v0, v0, Lgud;->Z:Lgud;
+
+    invoke-virtual {v0}, Llk7;->g()Lsk7;
+
+    move-result-object v0
+
+    return-object v0
 .end method

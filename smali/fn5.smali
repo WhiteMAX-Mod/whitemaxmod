@@ -1,27 +1,32 @@
-.class public abstract Lfn5;
-.super Ltb4;
+.class public interface abstract Lfn5;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Closeable;
-.implements Ljava/lang/AutoCloseable;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Ltb4;->Key:Lsb4;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lsb4;->b:Lqb4;
-
-    :cond_0
-    return-void
-.end method
 
 
 # virtual methods
-.method public abstract E()Ljava/util/concurrent/Executor;
+.method public abstract a(Lyyd;)Lhjf;
+.end method
+
+.method public abstract b()V
+.end method
+
+.method public abstract c(Lz8b;J)Lkgf;
+.end method
+
+.method public abstract cancel()V
+.end method
+
+.method public abstract d(Lyyd;)J
+.end method
+
+.method public abstract e(Z)Lxyd;
+.end method
+
+.method public abstract f()Lyld;
+.end method
+
+.method public abstract g(Lz8b;)V
+.end method
+
+.method public abstract h()V
 .end method

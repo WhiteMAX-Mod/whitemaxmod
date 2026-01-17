@@ -1,37 +1,38 @@
-.class public abstract Lc5e;
+.class public interface abstract Lc5e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public y()La94;
     .locals 1
 
-    sget v0, Lg6d;->ic_file_24:I
+    move-object v0, p0
 
-    sput v0, Lc5e;->a:I
+    check-cast v0, Lone/me/android/root/RootController;
 
-    sget v0, Lg6d;->ic_geolocation_24:I
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->H0()Lw4e;
 
-    sput v0, Lc5e;->b:I
+    move-result-object v0
 
-    sget v0, Lg6d;->ic_microphone_24:I
+    invoke-virtual {v0}, Lw4e;->e()Ljava/util/ArrayList;
 
-    sput v0, Lc5e;->c:I
+    move-result-object v0
 
-    sget v0, Lg6d;->picture_plus_outline_24:I
+    invoke-static {v0}, Lpi3;->N(Ljava/util/List;)Ljava/lang/Object;
 
-    sput v0, Lc5e;->d:I
+    move-result-object v0
 
-    return-void
+    check-cast v0, Lz4e;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lz4e;->a:La94;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

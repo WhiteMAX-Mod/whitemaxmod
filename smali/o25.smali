@@ -6,3 +6,6 @@
 # virtual methods
 .method public abstract dispose()V
 .end method
+
+.method public abstract e()Z
+.end method

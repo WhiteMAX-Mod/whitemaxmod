@@ -1,103 +1,80 @@
 .class public final Lclb;
-.super Lf3;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic X:Lone/me/geo/view/OneMeSupportMapFragment;
 
-.field public final synthetic d:Ldlb;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ldlb;)V
-    .locals 1
+.method public constructor <init>(Lone/me/geo/view/OneMeSupportMapFragment;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lclb;->X:Lone/me/geo/view/OneMeSupportMapFragment;
 
-    iput v0, p0, Lclb;->c:I
+    const/4 p1, 0x2
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lclb;->d:Ldlb;
-
-    const/16 p1, 0xb
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lg4b;Ldlb;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lclb;->c:I
-
-    iput-object p2, p0, Lclb;->d:Ldlb;
-
-    const/16 p2, 0xb
-
-    .line 1
-    invoke-direct {p0, p2, p1}, Lf3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzlb;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lclb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lclb;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lclb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lclb;
+
+    iget-object v1, p0, Lclb;->X:Lone/me/geo/view/OneMeSupportMapFragment;
+
+    invoke-direct {v0, v1, p2}, Lclb;-><init>(Lone/me/geo/view/OneMeSupportMapFragment;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lclb;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lclb;->c:I
+    iget-object v0, p0, Lclb;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lzlb;
 
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result v0
+    iget-object p1, p0, Lclb;->X:Lone/me/geo/view/OneMeSupportMapFragment;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1, v0}, Lone/me/geo/view/OneMeSupportMapFragment;->p0(Lzlb;)V
 
-    check-cast p2, Ljava/lang/Boolean;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p0, Lclb;->d:Ldlb;
-
-    invoke-static {p1}, Ldlb;->a(Ldlb;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    check-cast p2, Lg4b;
-
-    check-cast p1, Lg4b;
-
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lclb;->d:Ldlb;
-
-    invoke-static {p1}, Ldlb;->a(Ldlb;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,51 +1,21 @@
 .class public final Lz89;
-.super Landroid/media/MediaRouter2$RouteCallback;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lb99;
+# static fields
+.field public static final a:Lz89;
 
 
 # direct methods
-.method public constructor <init>(Lb99;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lz89;->a:Lb99;
+    new-instance v0, Lz89;
 
-    invoke-direct {p0}, Landroid/media/MediaRouter2$RouteCallback;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onRoutesAdded(Ljava/util/List;)V
-    .locals 0
-
-    iget-object p1, p0, Lz89;->a:Lb99;
-
-    invoke-virtual {p1}, Lb99;->j()V
-
-    return-void
-.end method
-
-.method public final onRoutesChanged(Ljava/util/List;)V
-    .locals 0
-
-    iget-object p1, p0, Lz89;->a:Lb99;
-
-    invoke-virtual {p1}, Lb99;->j()V
-
-    return-void
-.end method
-
-.method public final onRoutesRemoved(Ljava/util/List;)V
-    .locals 0
-
-    iget-object p1, p0, Lz89;->a:Lb99;
-
-    invoke-virtual {p1}, Lb99;->j()V
+    sput-object v0, Lz89;->a:Lz89;
 
     return-void
 .end method

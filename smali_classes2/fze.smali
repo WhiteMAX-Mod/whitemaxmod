@@ -1,252 +1,145 @@
-.class public interface abstract Lfze;
-.super Ljava/lang/Object;
+.class public final Lfze;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lie8;
+.implements Lbr6;
 
 
-# static fields
-.field public static final W:Lrye;
+# instance fields
+.field public final synthetic X:Lone/me/settings/devices/SettingsDevicesScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/devices/SettingsDevicesScreen;)V
+    .locals 0
 
-    sget-object v0, Lrye;->a:Lrye;
+    iput-object p2, p0, Lfze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
 
-    sput-object v0, Lfze;->W:Lrye;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract b()Lghg;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfze;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfze;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lfze;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public abstract c()Luye;
-.end method
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.method public abstract d()Lghg;
-.end method
+    new-instance v0, Lfze;
 
-.method public abstract e()Lcze;
-.end method
+    iget-object v1, p0, Lfze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
 
-.method public abstract f()Ln68;
-.end method
+    invoke-direct {v0, p2, v1}, Lfze;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/devices/SettingsDevicesScreen;)V
 
-.method public abstract getTitle()Lghg;
-.end method
-
-.method public getType()Leze;
-    .locals 1
-
-    sget-object v0, Leze;->b:Leze;
+    iput-object p1, v0, Lfze;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public h(Lie8;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-interface {p0}, Lie8;->getItemId()J
+    iget-object v0, p0, Lfze;->o:Ljava/lang/Object;
 
-    move-result-wide v0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-interface {p1}, Lie8;->getItemId()J
+    check-cast v0, Lhja;
 
-    move-result-wide v2
+    instance-of p1, v0, Lppb;
 
-    cmp-long p1, v0, v2
+    iget-object v1, p0, Lfze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p1, 0x1
+    sget-object p1, Lbt7;->a:Ljava/lang/String;
 
-    return p1
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    :cond_0
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return p1
-.end method
-
-.method public k(Lie8;)Ljava/lang/Object;
-    .locals 6
-
-    instance-of v0, p1, Lrze;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lrze;
+    invoke-static {p1}, Lbt7;->e(Landroid/content/Context;)V
 
     goto :goto_0
 
     :cond_0
-    move-object p1, v1
+    instance-of p1, v0, Lag3;
 
-    :goto_0
-    if-nez p1, :cond_1
+    if-eqz p1, :cond_1
 
-    return-object v1
+    sget-object p1, Laze;->c:Laze;
+
+    invoke-virtual {p1}, Ld3;->p0()Ljm4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljm4;->d()Z
+
+    goto :goto_0
 
     :cond_1
-    new-instance v0, Ldze;
+    instance-of p1, v0, Lfm4;
 
-    const/16 v1, 0x8
+    if-eqz p1, :cond_3
 
-    invoke-direct {v0, v1}, Lf3;-><init>(I)V
+    invoke-virtual {v1}, Lone/me/settings/devices/SettingsDevicesScreen;->z0()Lmze;
 
-    iget-object v1, v0, Lf3;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v1, Ljava/util/BitSet;
+    iget-object v1, p1, Lmze;->z0:Lcjb;
 
-    invoke-interface {p0}, Lfze;->t()I
+    if-eqz v1, :cond_2
 
-    move-result v2
+    iget-object v1, v1, Lcjb;->a:Lv40;
 
-    iget v3, p1, Lrze;->b:I
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v4, 0x0
+    sget-object v2, Ljjb;->a:Landroid/os/Handler;
 
-    const/4 v5, 0x1
+    iget-object v1, v1, Lv40;->h:Ljava/lang/Object;
 
-    if-eq v2, v3, :cond_2
+    check-cast v1, Lgjb;
 
-    move v2, v5
+    sget-object v2, Lfjb;->d:Lfjb;
 
-    goto :goto_1
+    invoke-static {v1, v2}, Ljjb;->b(Lgjb;Lfjb;)V
 
     :cond_2
-    move v2, v4
+    const/4 v1, 0x0
 
-    :goto_1
-    invoke-virtual {v1, v4, v2}, Ljava/util/BitSet;->set(IZ)V
+    iput-object v1, p1, Lmze;->z0:Lcjb;
 
-    invoke-interface {p0}, Lfze;->getTitle()Lghg;
+    sget-object p1, Laze;->c:Laze;
 
-    move-result-object v2
+    check-cast v0, Lfm4;
 
-    iget-object v3, p1, Lrze;->c:Lghg;
-
-    invoke-static {v2, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    invoke-virtual {v1, v5, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lfze;->getType()Leze;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lrze;->d:Leze;
-
-    if-eq v2, v3, :cond_3
-
-    move v4, v5
+    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
 
     :cond_3
-    const/4 v2, 0x2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v1, v2, v4}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lfze;->b()Lghg;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lrze;->o:Lghg;
-
-    invoke-static {v2, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x3
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lfze;->e()Lcze;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lrze;->Y:Lcze;
-
-    invoke-static {v2, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x4
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lfze;->c()Luye;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lrze;->Z:Luye;
-
-    invoke-static {v2, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x5
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lfze;->d()Lghg;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lrze;->s0:Lghg;
-
-    invoke-static {v2, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x6
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lfze;->f()Ln68;
-
-    move-result-object v2
-
-    iget-object p1, p1, Lrze;->X:Ln68;
-
-    invoke-static {v2, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    xor-int/2addr p1, v5
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v1, v2, p1}, Ljava/util/BitSet;->set(IZ)V
-
-    return-object v0
-.end method
-
-.method public m()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract t()I
+    return-object p1
 .end method

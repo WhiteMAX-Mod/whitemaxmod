@@ -1,229 +1,236 @@
 .class public final Lgx7;
-.super Loae;
+.super Le4h;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljp3;
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public final b:Lfx7;
+.field public b:I
 
-.field public final c:Lhx7;
+.field public c:Ljava/lang/Object;
 
-.field public final d:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic d:I
+
+.field public final o:Ljava/util/Iterator;
 
 
 # direct methods
-.method public constructor <init>(Lfx7;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 1
+    invoke-direct {p0, v0}, Le4h;-><init>(I)V
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object v0, p0, Lgx7;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 2
+    iput v0, p0, Lgx7;->b:I
 
-    iput-object p1, p0, Lgx7;->b:Lfx7;
+    return-void
+.end method
 
-    new-instance v0, Ljp3;
+.method public constructor <init>(Ljava/util/Iterator;Lwfc;)V
+    .locals 1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Lgx7;->a:Ljp3;
+    iput v0, p0, Lgx7;->d:I
 
-    iget-object v0, p1, Lfx7;->c:Ljp3;
+    .line 3
+    iput-object p1, p0, Lgx7;->o:Ljava/util/Iterator;
 
-    iget-boolean v0, v0, Ljp3;->b:Z
+    iput-object p2, p0, Lgx7;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    invoke-direct {p0}, Lgx7;-><init>()V
 
-    sget-object p1, Lix7;->h:Lhx7;
+    return-void
+.end method
 
-    goto :goto_1
+.method public constructor <init>(Llve;)V
+    .locals 1
 
-    :cond_0
-    iget-object v0, p1, Lfx7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
+    iput v0, p0, Lgx7;->d:I
 
-    move-result v0
+    .line 4
+    iput-object p1, p0, Lgx7;->X:Ljava/lang/Object;
 
-    if-nez v0, :cond_1
+    invoke-direct {p0}, Lgx7;-><init>()V
 
-    iget-object v0, p1, Lfx7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
+    .line 5
+    iget-object p1, p1, Llve;->a:Ljava/util/Set;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lhx7;
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    move-object p1, v0
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Lhx7;
-
-    iget-object v1, p1, Lfx7;->X:Ljava/util/concurrent/ThreadFactory;
-
-    invoke-direct {v0, v1}, Lhx7;-><init>(Ljava/util/concurrent/ThreadFactory;)V
-
-    iget-object p1, p1, Lfx7;->c:Ljp3;
-
-    invoke-virtual {p1, v0}, Ljp3;->a(Ll25;)Z
-
-    goto :goto_0
-
-    :goto_1
-    iput-object p1, p0, Lgx7;->c:Lhx7;
+    iput-object p1, p0, Lgx7;->o:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ll25;
-    .locals 6
+.method public final hasNext()Z
+    .locals 4
 
-    iget-object v0, p0, Lgx7;->a:Ljp3;
+    iget v0, p0, Lgx7;->b:I
 
-    iget-boolean v0, v0, Ljp3;->b:Z
+    const/4 v1, 0x4
 
-    if-eqz v0, :cond_0
+    if-eq v0, v1, :cond_6
 
-    sget-object p1, Lxg5;->a:Lxg5;
-
-    return-object p1
-
-    :cond_0
-    iget-object v0, p0, Lgx7;->c:Lhx7;
-
-    iget-object v5, p0, Lgx7;->a:Ljp3;
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Lina;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lm25;)Lu9e;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final dispose()V
-    .locals 7
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lgx7;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-static {v0}, Lt02;->t(I)I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x1
 
-    iget-object v0, p0, Lgx7;->a:Ljp3;
+    if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Ljp3;->dispose()V
+    const/4 v3, 0x2
 
-    sget-boolean v0, Lix7;->i:Z
+    if-eq v0, v3, :cond_4
 
-    if-eqz v0, :cond_0
+    iput v1, p0, Lgx7;->b:I
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    iget v0, p0, Lgx7;->d:I
 
-    const/4 v6, 0x0
-
-    iget-object v1, p0, Lgx7;->c:Lhx7;
-
-    const-wide/16 v3, 0x0
-
-    move-object v2, p0
-
-    invoke-virtual/range {v1 .. v6}, Lina;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lm25;)Lu9e;
-
-    return-void
+    packed-switch v0, :pswitch_data_0
 
     :cond_0
-    move-object v2, p0
+    iget-object v0, p0, Lgx7;->o:Ljava/util/Iterator;
 
-    iget-object v0, v2, Lgx7;->b:Lfx7;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v1
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    if-eqz v1, :cond_1
 
-    move-result-wide v3
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-wide v5, v0, Lfx7;->a:J
+    move-result-object v0
 
-    add-long/2addr v3, v5
+    iget-object v1, p0, Lgx7;->X:Ljava/lang/Object;
 
-    iget-object v1, v2, Lgx7;->c:Lhx7;
+    check-cast v1, Llve;
 
-    iput-wide v3, v1, Lhx7;->c:J
+    iget-object v1, v1, Llve;->b:Ljava/util/Set;
 
-    iget-object v0, v0, Lfx7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
+    invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
+    move-result v1
 
-    return-void
+    if-eqz v1, :cond_0
+
+    goto :goto_1
 
     :cond_1
-    move-object v2, p0
+    const/4 v0, 0x3
 
-    return-void
+    iput v0, p0, Lgx7;->b:I
+
+    :goto_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    :pswitch_0
+    iget-object v0, p0, Lgx7;->o:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lgx7;->X:Ljava/lang/Object;
+
+    check-cast v1, Lwfc;
+
+    invoke-interface {v1, v0}, Lwfc;->apply(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v0, 0x3
+
+    iput v0, p0, Lgx7;->b:I
+
+    goto :goto_0
+
+    :goto_1
+    iput-object v0, p0, Lgx7;->c:Ljava/lang/Object;
+
+    iget v0, p0, Lgx7;->b:I
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_4
+
+    iput v2, p0, Lgx7;->b:I
+
+    return v2
+
+    :cond_4
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_5
+    return v2
+
+    :cond_6
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final f()Z
-    .locals 1
+.method public final next()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lgx7;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-virtual {p0}, Lgx7;->hasNext()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final run()V
-    .locals 5
+    const/4 v0, 0x2
 
-    iget-object v0, p0, Lgx7;->b:Lfx7;
+    iput v0, p0, Lgx7;->b:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lgx7;->c:Ljava/lang/Object;
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    const/4 v1, 0x0
 
-    move-result-wide v1
+    iput-object v1, p0, Lgx7;->c:Ljava/lang/Object;
 
-    iget-wide v3, v0, Lfx7;->a:J
+    return-object v0
 
-    add-long/2addr v1, v3
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    iget-object v3, p0, Lgx7;->c:Lhx7;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    iput-wide v1, v3, Lhx7;->c:J
-
-    iget-object v0, v0, Lfx7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
-
-    return-void
+    throw v0
 .end method

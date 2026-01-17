@@ -1,68 +1,48 @@
 .class public final Ll9c;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lsi4;
+.super Lo84;
 
 
-# static fields
-.field public static final a:Ll9c;
+# instance fields
+.field public final synthetic X:Lg4a;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ll9c;
+    iput-object p1, p0, Ll9c;->X:Lg4a;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll9c;->a:Ll9c;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(Lzi4;)J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance p1, Ljava/io/IOException;
+    iput-object p1, p0, Ll9c;->d:Ljava/lang/Object;
 
-    const-string v0, "PlaceholderDataSource cannot be opened"
+    iget p1, p0, Ll9c;->o:I
 
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    throw p1
-.end method
+    or-int/2addr p1, v0
 
-.method public final H(Lqsg;)V
-    .locals 0
+    iput p1, p0, Ll9c;->o:I
 
-    return-void
-.end method
-
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
+    iget-object p1, p0, Ll9c;->X:Lg4a;
 
     const/4 v0, 0x0
 
-    return-object v0
-.end method
+    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final read([BII)I
-    .locals 0
+    move-result-object p1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-object p1
 .end method

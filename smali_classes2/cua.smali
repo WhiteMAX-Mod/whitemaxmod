@@ -1,182 +1,249 @@
 .class public final Lcua;
-.super Ljava/lang/Object;
+.super Luoj;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Le1e;
-
-.field public final b:Lci;
-
-.field public final c:Lbua;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lcua;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcua;->a:Le1e;
-
-    new-instance p1, Lci;
-
-    const/16 v0, 0xb
-
-    invoke-direct {p1, v0}, Lci;-><init>(I)V
-
-    iput-object p1, p0, Lcua;->b:Lci;
-
-    new-instance p1, Lbua;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lbua;-><init>(I)V
-
-    iput-object p1, p0, Lcua;->c:Lbua;
 
     return-void
 .end method
 
-.method public static a(Lcua;Ljava/util/List;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 8
 
-    instance-of v0, p3, Lzta;
+# virtual methods
+.method public final a(Lk7e;Ljava/lang/Object;)V
+    .locals 6
 
-    if-eqz v0, :cond_0
+    iget v0, p0, Lcua;->b:I
 
-    move-object v0, p3
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Lzta;
+    check-cast p2, Lj0i;
 
-    iget v1, v0, Lzta;->Z:I
+    iget-wide v0, p2, Lj0i;->a:J
 
-    const/high16 v2, -0x80000000
+    const/4 v2, 0x1
 
-    and-int v3, v1, v2
+    invoke-interface {p1, v2, v0, v1}, Lk7e;->b(IJ)V
 
-    if-eqz v3, :cond_0
+    const/4 v2, 0x2
 
-    sub-int/2addr v1, v2
+    iget-wide v3, p2, Lj0i;->b:J
 
-    iput v1, v0, Lzta;->Z:I
+    invoke-interface {p1, v2, v3, v4}, Lk7e;->b(IJ)V
+
+    const/4 v2, 0x3
+
+    iget-wide v3, p2, Lj0i;->c:J
+
+    invoke-interface {p1, v2, v3, v4}, Lk7e;->b(IJ)V
+
+    iget-object v2, p2, Lj0i;->d:Ljava/lang/String;
+
+    const/4 v3, 0x4
+
+    if-nez v2, :cond_0
+
+    invoke-interface {p1, v3}, Lk7e;->e(I)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lzta;
-
-    invoke-direct {v0, p0, p3}, Lzta;-><init>(Lcua;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {p1, v3, v2}, Lk7e;->G(ILjava/lang/String;)V
 
     :goto_0
-    iget-object p3, v0, Lzta;->X:Ljava/lang/Object;
+    iget-boolean v2, p2, Lj0i;->e:Z
 
-    iget v1, v0, Lzta;->Z:I
+    const/4 v3, 0x5
 
-    sget-object v2, Lv2h;->a:Lv2h;
+    int-to-long v4, v2
 
-    const/4 v3, 0x0
+    invoke-interface {p1, v3, v4, v5}, Lk7e;->b(IJ)V
 
-    const/4 v4, 0x2
+    iget-boolean p2, p2, Lj0i;->f:Z
 
-    const/4 v5, 0x1
+    const/4 v2, 0x6
 
-    sget-object v6, Lbc4;->a:Lbc4;
+    int-to-long v3, p2
 
-    if-eqz v1, :cond_3
+    invoke-interface {p1, v2, v3, v4}, Lk7e;->b(IJ)V
 
-    if-eq v1, v5, :cond_2
+    const/4 p2, 0x7
 
-    if-ne v1, v4, :cond_1
+    invoke-interface {p1, p2, v0, v1}, Lk7e;->b(IJ)V
 
-    invoke-static {p3}, Lulj;->k(Ljava/lang/Object;)V
+    return-void
 
-    return-object v2
+    :pswitch_0
+    check-cast p2, Lymd;
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x1
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-wide v1, p2, Lymd;->a:J
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1, v2}, Lk7e;->b(IJ)V
 
-    throw p0
+    return-void
 
-    :cond_2
-    iget-object p2, v0, Lzta;->o:Ljava/util/List;
+    :pswitch_1
+    check-cast p2, Lh1c;
 
-    iget-object p0, v0, Lzta;->d:Lcua;
+    iget-wide v0, p2, Lh1c;->a:J
 
-    invoke-static {p3}, Lulj;->k(Ljava/lang/Object;)V
+    const/4 v2, 0x1
+
+    invoke-interface {p1, v2, v0, v1}, Lk7e;->b(IJ)V
+
+    const/4 v2, 0x2
+
+    iget-wide v3, p2, Lh1c;->b:J
+
+    invoke-interface {p1, v2, v3, v4}, Lk7e;->b(IJ)V
+
+    iget v2, p2, Lh1c;->c:I
+
+    int-to-long v2, v2
+
+    const/4 v4, 0x3
+
+    invoke-interface {p1, v4, v2, v3}, Lk7e;->b(IJ)V
+
+    const/4 v2, 0x4
+
+    iget-object v3, p2, Lh1c;->d:Ljava/lang/String;
+
+    invoke-interface {p1, v2, v3}, Lk7e;->G(ILjava/lang/String;)V
+
+    const/4 v2, 0x5
+
+    iget-wide v3, p2, Lh1c;->e:J
+
+    invoke-interface {p1, v2, v3, v4}, Lk7e;->b(IJ)V
+
+    iget-object v2, p2, Lh1c;->f:Ljava/lang/String;
+
+    const/4 v3, 0x6
+
+    if-nez v2, :cond_1
+
+    invoke-interface {p1, v3}, Lk7e;->e(I)V
 
     goto :goto_1
 
-    :cond_3
-    invoke-static {p3}, Lulj;->k(Ljava/lang/Object;)V
+    :cond_1
+    invoke-interface {p1, v3, v2}, Lk7e;->G(ILjava/lang/String;)V
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    :goto_1
+    const/4 v2, 0x7
 
-    move-result p3
+    iget-object v3, p2, Lh1c;->g:Ljava/lang/String;
 
-    if-nez p3, :cond_4
+    invoke-interface {p1, v2, v3}, Lk7e;->G(ILjava/lang/String;)V
 
-    iput-object p0, v0, Lzta;->d:Lcua;
+    iget-object v2, p2, Lh1c;->h:Ljava/lang/String;
 
-    iput-object p2, v0, Lzta;->o:Ljava/util/List;
+    const/16 v3, 0x8
 
-    iput v5, v0, Lzta;->Z:I
+    if-nez v2, :cond_2
 
-    iget-object p3, p0, Lcua;->a:Le1e;
-
-    new-instance v1, Laua;
-
-    const/4 v7, 0x1
-
-    invoke-direct {v1, p0, p1, v7}, Laua;-><init>(Lcua;Ljava/util/List;I)V
-
-    invoke-static {v1, p3, v0, v3, v5}, Lykj;->f(Loq6;Le1e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_4
+    invoke-interface {p1, v3}, Lk7e;->e(I)V
 
     goto :goto_2
 
-    :cond_4
-    :goto_1
-    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    const/4 p1, 0x0
-
-    iput-object p1, v0, Lzta;->d:Lcua;
-
-    iput-object p1, v0, Lzta;->o:Ljava/util/List;
-
-    iput v4, v0, Lzta;->Z:I
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p0, Lcua;->a:Le1e;
-
-    new-instance p3, Laua;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p3, p0, p2, v1}, Laua;-><init>(Lcua;Ljava/util/List;I)V
-
-    invoke-static {p3, p1, v0, v3, v5}, Lykj;->f(Loq6;Le1e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v6, :cond_5
+    :cond_2
+    invoke-interface {p1, v3, v2}, Lk7e;->G(ILjava/lang/String;)V
 
     :goto_2
-    return-object v6
+    iget-object v2, p2, Lh1c;->i:Ljava/lang/String;
 
-    :cond_5
-    return-object v2
+    const/16 v3, 0x9
+
+    if-nez v2, :cond_3
+
+    invoke-interface {p1, v3}, Lk7e;->e(I)V
+
+    goto :goto_3
+
+    :cond_3
+    invoke-interface {p1, v3, v2}, Lk7e;->G(ILjava/lang/String;)V
+
+    :goto_3
+    iget p2, p2, Lh1c;->j:I
+
+    invoke-static {p2}, Lt02;->t(I)I
+
+    move-result p2
+
+    const/16 v2, 0xa
+
+    int-to-long v3, p2
+
+    invoke-interface {p1, v2, v3, v4}, Lk7e;->b(IJ)V
+
+    const/16 p2, 0xb
+
+    invoke-interface {p1, p2, v0, v1}, Lk7e;->b(IJ)V
+
+    return-void
+
+    :pswitch_2
+    invoke-static {p2}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lcua;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "UPDATE OR REPLACE `webapp_biometry` SET `id` = ?,`user_id` = ?,`bot_id` = ?,`token` = ?,`access_requested` = ?,`access_granted` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "DELETE FROM `recent` WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_1
+    const-string v0, "UPDATE OR ABORT `phones` SET `id` = ?,`phonebook_id` = ?,`contact_id` = ?,`phone` = ?,`server_phone` = ?,`email` = ?,`first_name` = ?,`last_name` = ?,`avatar_path` = ?,`type` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_2
+    const-string v0, "DELETE FROM `fcm_notifications` WHERE `chat_id` = ? AND `message_id` = ?"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

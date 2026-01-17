@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llf1;
+.implements Ldf1;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x1d91a224
+    const v0, 0x4f5ee731
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ChangeMicrophoneStateCall"
+    const-string v0, "Unknown"
 
     return-object v0
 .end method

@@ -2,33 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgn6;
-
 
 # instance fields
-.field public final synthetic a:Landroidx/fragment/app/a;
+.field public final a:Ll88;
+
+.field public final b:Lq9h;
+
+.field public final c:Lvm6;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/a;)V
+.method public constructor <init>(Ll88;Lq9h;Lvm6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lym6;->a:Landroidx/fragment/app/a;
+    iput-object p1, p0, Lym6;->a:Ll88;
 
-    return-void
-.end method
+    iput-object p2, p0, Lym6;->b:Lq9h;
 
-
-# virtual methods
-.method public final a(Landroidx/fragment/app/a;)V
-    .locals 0
-
-    iget-object p1, p0, Lym6;->a:Landroidx/fragment/app/a;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p3, p0, Lym6;->c:Lvm6;
 
     return-void
 .end method

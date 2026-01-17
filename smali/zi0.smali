@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final a:Lo58;
 
-.field public final b:Ld68;
+.field public final b:Lo58;
 
-.field public final c:Ld68;
+.field public final c:Lo58;
 
-.field public final d:Ld68;
+.field public final d:Lo58;
 
 .field public e:Z
 
@@ -20,18 +20,18 @@
 
 
 # direct methods
-.method public constructor <init>(Ld68;Ld68;Ld68;Ld68;)V
+.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzi0;->a:Ld68;
+    iput-object p1, p0, Lzi0;->a:Lo58;
 
-    iput-object p2, p0, Lzi0;->b:Ld68;
+    iput-object p2, p0, Lzi0;->b:Lo58;
 
-    iput-object p3, p0, Lzi0;->c:Ld68;
+    iput-object p3, p0, Lzi0;->c:Lo58;
 
-    iput-object p4, p0, Lzi0;->d:Ld68;
+    iput-object p4, p0, Lzi0;->d:Lo58;
 
     return-void
 .end method

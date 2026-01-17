@@ -2,21 +2,73 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu7i;
+
+# static fields
+.field public static final Companion:Ld7i;
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
+    new-instance v0, Ld7i;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Le7i;->Companion:Ld7i;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x3
+
+    const/4 v1, 0x3
+
+    if-ne v1, v0, :cond_0
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Le7i;->a:Z
+    iput-object p2, p0, Le7i;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Le7i;->b:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Lc7i;->a:Lc7i;
+
+    invoke-virtual {p2}, Lc7i;->d()Lxpe;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lqjj;->b(IILxpe;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Le7i;->a:Ljava/lang/String;
+
+    .line 4
+    iput-object p2, p0, Le7i;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -24,7 +76,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -44,40 +96,71 @@
     :cond_1
     check-cast p1, Le7i;
 
-    iget-boolean v1, p0, Le7i;->a:Z
+    iget-object v1, p0, Le7i;->a:Ljava/lang/String;
 
-    iget-boolean p1, p1, Le7i;->a:Z
+    iget-object v3, p1, Le7i;->a:Ljava/lang/String;
 
-    if-eq v1, p1, :cond_2
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-object v1, p0, Le7i;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Le7i;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-boolean v0, p0, Le7i;->a:Z
+    iget-object v0, p0, Le7i;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Le7i;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 5
 
-    const-string v0, "OpenQrScanner(fileSelect="
+    const-string v0, ", phone="
 
     const-string v1, ")"
 
-    iget-boolean v2, p0, Le7i;->a:Z
+    const-string v2, "WebAppRequestPhoneResponse(requestId="
 
-    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    iget-object v3, p0, Le7i;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Le7i;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

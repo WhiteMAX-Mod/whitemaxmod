@@ -93,17 +93,17 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", themed="
+    const-string v0, ", secondary="
 
     const-string v1, ")"
 
-    const-string v2, "CommonStatesIconDisabledColors(negative="
+    const-string v2, "CommonShadowsElevation2Colors(primary="
 
     iget v3, p0, Ltl3;->a:I
 
     iget v4, p0, Ltl3;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

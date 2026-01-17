@@ -1,19 +1,23 @@
 .class public final Lmfh;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Llfh;
+.field public a:Lc14;
 
+.field public b:Ljava/lang/String;
 
-# virtual methods
-.method public final setPlayer(Lwnb;)V
-    .locals 1
+.field public c:Ljava/lang/String;
 
-    iget-object v0, p0, Lmfh;->a:Llfh;
+.field public d:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Llfh;->setPlayer(Lwnb;)V
+.field public e:I
 
-    return-void
-.end method
+.field public f:J
+
+.field public g:Ljava/util/List;
+
+.field public h:B
+
+.field public i:J

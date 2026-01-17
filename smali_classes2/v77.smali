@@ -1,32 +1,52 @@
-.class public final Lv77;
-.super Ljava/lang/Object;
+.class public final synthetic Lv77;
+.super Lqr6;
 .source "SourceFile"
 
 # interfaces
-.implements Lw77;
+.implements Lnq6;
+
+
+# static fields
+.field public static final a:Lv77;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lv77;
+
+    const-string v4, "getTime()J"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lg77;
+
+    const-string v3, "getTime"
+
+    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lv77;->a:Lv77;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final getId()J
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    const-wide/16 v0, 0x0
+    check-cast p1, Lg77;
 
-    return-wide v0
-.end method
+    invoke-interface {p1}, Lg77;->getTime()J
 
-.method public final getTime()J
-    .locals 2
+    move-result-wide v0
 
-    const-wide/16 v0, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-wide v0
-.end method
+    move-result-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "HistoryGap"
-
-    return-object v0
+    return-object p1
 .end method

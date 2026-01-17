@@ -1,96 +1,42 @@
-.class public final Ln13;
-.super Lie0;
+.class public interface abstract Ln13;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Landroid/content/Intent;
-
-
-# direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
-
-    const/4 v0, 0x5
-
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
-
-    iput-object p1, p0, Ln13;->b:Landroid/content/Intent;
-
-    return-void
+# virtual methods
+.method public abstract C()Lkl3;
 .end method
 
+.method public abstract f(I)I
+.end method
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public h(Z)Lfv0;
+    .locals 0
 
-    const/4 v0, 0x1
+    if-eqz p1, :cond_0
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {p0}, Ln13;->i()Lfv0;
 
-    return v0
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    instance-of v1, p1, Ln13;
+    invoke-interface {p0}, Ln13;->q()Lfv0;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ln13;
-
-    iget-object v1, p0, Ln13;->b:Landroid/content/Intent;
-
-    iget-object p1, p1, Ln13;->b:Landroid/content/Intent;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ln13;->b:Landroid/content/Intent;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+.method public abstract i()Lfv0;
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public abstract k()Lmki;
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public abstract q()Lfv0;
+.end method
 
-    const-string v1, "PickPhotoFromCamera(data="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ln13;->b:Landroid/content/Intent;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract t()Luog;
 .end method

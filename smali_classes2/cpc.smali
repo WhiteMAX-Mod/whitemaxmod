@@ -1,104 +1,138 @@
 .class public final Lcpc;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lepc;
+.implements Ldr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public synthetic X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+.field public synthetic Y:Lzlb;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lcpc;->o:I
 
-    iput-object p1, p0, Lcpc;->a:Ljava/lang/Long;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcpc;->o:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    return v0
+    check-cast p2, Lzlb;
 
-    :cond_0
-    instance-of v1, p1, Lcpc;
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lcpc;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Lcpc;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lcpc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iput-object p2, v0, Lcpc;->Y:Lzlb;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Lcpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lcpc;
+
+    const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, p3, v2}, Lcpc;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return v2
+    iput-object p1, v0, Lcpc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    :cond_1
-    check-cast p1, Lcpc;
+    iput-object p2, v0, Lcpc;->Y:Lzlb;
 
-    iget-object v1, p0, Lcpc;->a:Ljava/lang/Long;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-object p1, p1, Lcpc;->a:Ljava/lang/Long;
+    invoke-virtual {v0, p1}, Lcpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object p1
 
-    move-result p1
+    nop
 
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lcpc;->a:Ljava/lang/Long;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lcpc;->o:I
 
-    const-string v1, "UpdateSuccess(requestId="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lcpc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    iget-object v1, p0, Lcpc;->a:Ljava/lang/Long;
+    iget-object v1, p0, Lcpc;->Y:Lzlb;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget p1, p1, Lxf0;->k:I
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    return-object v0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lcpc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v1, p0, Lcpc;->Y:Lzlb;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->k:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -24,16 +24,16 @@
         "context",
         "",
         "isObsoleteStatisticsEnabled",
-        "Lcgd;",
+        "Lahd;",
         "log",
         "<init>",
-        "(Landroid/content/Context;ZLcgd;)V",
+        "(Landroid/content/Context;ZLahd;)V",
         "Lru/ok/android/externcalls/sdk/log/LogItem;",
         "item",
-        "Lv2h;",
+        "Lb3h;",
         "(Lru/ok/android/externcalls/sdk/log/LogItem;)V",
         "Z",
-        "Lcgd;",
+        "Lahd;",
         "",
         "application",
         "Ljava/lang/String;",
@@ -66,7 +66,7 @@
 
 .field private final isObsoleteStatisticsEnabled:Z
 
-.field private final log:Lcgd;
+.field private final log:Lahd;
 
 .field private final platform:Ljava/lang/String;
 
@@ -79,21 +79,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;->Companion:Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ZLcgd;)V
+.method public constructor <init>(Landroid/content/Context;ZLahd;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;->isObsoleteStatisticsEnabled:Z
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;->log:Lcgd;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;->log:Lahd;
 
     const-string p3, ""
 
@@ -226,13 +226,13 @@
     return-void
 
     :goto_2
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;->log:Lcgd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;->log:Lahd;
 
     const-string v1, "ProductStatItemLogger"
 
     const-string v2, "Can\'t log"
 
-    invoke-interface {v0, v1, v2, p1}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

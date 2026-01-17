@@ -1,21 +1,33 @@
 .class public final Lvph;
-.super Luph;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lorg/webrtc/VideoSink;
 
 
 # instance fields
-.field public final d:Lcii;
+.field public volatile a:Lorg/webrtc/VideoSink;
 
 
-# direct methods
-.method public constructor <init>(Lcii;Ljava/lang/String;Lmgh;)V
+# virtual methods
+.method public final a(Lorg/webrtc/VideoFrame;)V
     .locals 1
 
-    const/16 v0, 0xd
+    iget-object v0, p0, Lvph;->a:Lorg/webrtc/VideoSink;
 
-    invoke-direct {p0, p2, v0, p3}, Lk2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lvph;->d:Lcii;
+    invoke-interface {v0, p1}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onFrame(Lorg/webrtc/VideoFrame;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lvph;->a(Lorg/webrtc/VideoFrame;)V
 
     return-void
 .end method

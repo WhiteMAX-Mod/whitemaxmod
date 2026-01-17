@@ -1,85 +1,51 @@
-.class public final enum Ljlb;
-.super Ljava/lang/Enum;
+.class public final Ljlb;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Ljlb;
+# instance fields
+.field public final synthetic X:Lklb;
 
-.field public static final enum b:Ljlb;
+.field public Y:I
 
-.field public static final enum c:Ljlb;
+.field public d:Ljava/util/Iterator;
 
-.field public static final synthetic d:[Ljlb;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lklb;Lo84;)V
+    .locals 0
 
-    new-instance v0, Ljlb;
+    iput-object p1, p0, Ljlb;->X:Lklb;
 
-    const-string v1, "ERROR"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ljlb;->a:Ljlb;
-
-    new-instance v1, Ljlb;
-
-    const-string v2, "HINT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ljlb;->b:Ljlb;
-
-    new-instance v2, Ljlb;
-
-    const-string v3, "DESCRIPTION"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ljlb;->c:Ljlb;
-
-    filled-new-array {v0, v1, v2}, [Ljlb;
-
-    move-result-object v0
-
-    sput-object v0, Ljlb;->d:[Ljlb;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljlb;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Ljlb;
+    iput-object p1, p0, Ljlb;->o:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Ljlb;->Y:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Ljlb;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Ljlb;->Y:I
 
-.method public static values()[Ljlb;
-    .locals 1
+    iget-object p1, p0, Ljlb;->X:Lklb;
 
-    sget-object v0, Ljlb;->d:[Ljlb;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, v0, p0}, Lklb;->m(Ldlb;Ljava/io/File;Lo84;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Ljlb;
-
-    return-object v0
+    return-object p1
 .end method

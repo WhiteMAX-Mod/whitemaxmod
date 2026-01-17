@@ -21,7 +21,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public final createDispatcher(Ljava/util/List;)Llq8;
+.method public final createDispatcher(Ljava/util/List;)Lzp8;
     .locals 5
 
     new-instance v0, Ljava/util/ArrayList;
@@ -148,21 +148,15 @@
     sget-object p1, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;->INSTANCE:Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;
 
     :cond_6
-    invoke-static {p1, v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->tryCreateDispatcher(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/List;)Llq8;
+    new-instance v1, Lkfg;
 
-    move-result-object p1
+    new-instance v2, Lade;
 
-    new-instance v0, Lbfg;
+    invoke-direct {v2, p1, v0, p0}, Lade;-><init>(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/ArrayList;Lkotlinx/coroutines/test/internal/TestMainDispatcherFactory;)V
 
-    invoke-direct {v0}, Ltb4;-><init>()V
+    invoke-direct {v1, v2}, Lkfg;-><init>(Lade;)V
 
-    new-instance v1, Lafg;
-
-    invoke-direct {v1, p1}, Lafg;-><init>(Llq8;)V
-
-    iput-object v1, v0, Lbfg;->a:Lafg;
-
-    return-object v0
+    return-object v1
 .end method
 
 .method public final getLoadPriority()I

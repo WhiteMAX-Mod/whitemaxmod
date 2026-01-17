@@ -1,192 +1,233 @@
 .class public final Lnt5;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lktg;
+.implements Ldl8;
+
+
+# static fields
+.field public static final b:Lnt5;
 
 
 # instance fields
-.field public final a:Landroid/view/View;
-
-.field public b:Z
+.field public a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lnt5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x5
+
+    iput v1, v0, Lnt5;->a:I
+
+    sput-object v0, Lnt5;->b:Lnt5;
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
     .locals 1
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const-string v0, "unknown:"
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    iput-boolean v0, p0, Lnt5;->b:Z
+    move-result-object p0
 
-    iput-object p1, p0, Lnt5;->a:Landroid/view/View;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 p3, 0xa
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p0, p1}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lltg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final b()V
+.method public final a(Ljava/io/IOException;)V
     .locals 3
 
-    iget-object v0, p0, Lnt5;->a:Landroid/view/View;
+    const-string v0, "Failed reading Heif Exif orientation -> ignoring"
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    const/4 v1, 0x3
 
-    move-result v1
+    const-string v2, "HeifExifUtil"
 
-    if-nez v1, :cond_0
-
-    sget-object v1, Louh;->a:Lvuh;
-
-    invoke-virtual {v1, v0}, Lt5j;->d(Landroid/view/View;)F
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    sget v2, Lu6d;->transition_pause_alpha:I
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    invoke-static {v2, p1, v1, v0}, Lnt5;->b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
 
     return-void
 .end method
 
-.method public final c(Lltg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final d(Lltg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    sget v0, Lu6d;->transition_pause_alpha:I
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lnt5;->a:Landroid/view/View;
-
-    invoke-virtual {v2, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final h(Lltg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    sget-object v0, Louh;->a:Lvuh;
-
-    iget-object v1, p0, Lnt5;->a:Landroid/view/View;
-
-    invoke-virtual {v0, v1, p1}, Lt5j;->f(Landroid/view/View;F)V
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final c(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    const/4 v0, 0x0
+    const-string v0, "unknown:"
 
-    .line 1
-    invoke-virtual {p0, p1, v0}, Lnt5;->onAnimationEnd(Landroid/animation/Animator;Z)V
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x6
+
+    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
-    .locals 2
+.method public final d(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    const-string v0, "unknown:"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final e(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .line 2
-    iget-boolean p1, p0, Lnt5;->b:Z
+    const-string v0, "unknown:"
 
-    iget-object v0, p0, Lnt5;->a:Landroid/view/View;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    move-result-object p1
 
-    const/4 p1, 0x0
-
-    const/4 v1, 0x0
+    const/4 v0, 0x6
 
     .line 3
-    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    if-nez p2, :cond_1
-
-    .line 4
-    sget-object p1, Louh;->a:Lvuh;
-
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0, p2}, Lt5j;->f(Landroid/view/View;F)V
-
-    .line 5
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_1
     return-void
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
+.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    const/4 v0, 0x6
+
+    .line 1
+    invoke-static {p1, p3, v0, p2}, Lnt5;->b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final f(Ljava/lang/Exception;Ljava/lang/String;)V
     .locals 2
 
-    iget-object p1, p0, Lnt5;->a:Landroid/view/View;
+    const-string v0, "unhandled exception"
 
-    invoke-virtual {p1}, Landroid/view/View;->hasOverlappingRendering()Z
+    const/4 v1, 0x6
 
-    move-result v0
+    invoke-static {p2, p1, v1, v0}, Lnt5;->b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayerType()I
+.method public final h(I)Z
+    .locals 1
 
-    move-result v0
+    iget v0, p0, Lnt5;->a:I
 
-    if-nez v0, :cond_0
+    if-gt v0, p1, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p1, 0x1
 
-    iput-boolean v0, p0, Lnt5;->b:Z
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final i(I)V
+    .locals 0
+
+    iput p1, p0, Lnt5;->a:I
+
+    return-void
+.end method
+
+.method public final v(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    const-string v0, "unknown:"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
 
     const/4 v0, 0x2
 
-    const/4 v1, 0x0
+    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    return-void
+.end method
 
-    :cond_0
+.method public final w(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 2
+    const-string v0, "unknown:"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x5
+
+    .line 3
+    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    const/4 v0, 0x5
+
+    .line 1
+    invoke-static {p1, p3, v0, p2}, Lnt5;->b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
+
     return-void
 .end method

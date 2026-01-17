@@ -1,125 +1,56 @@
-.class public abstract Lv84;
+.class public final synthetic Lv84;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lx4e;
+
+
+# instance fields
+.field public final synthetic a:La94;
+
+.field public final synthetic b:Landroid/content/Intent;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Landroid/os/Bundle;
+
+
+# direct methods
+.method public synthetic constructor <init>(La94;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lv84;->a:La94;
+
+    iput-object p2, p0, Lv84;->b:Landroid/content/Intent;
+
+    iput p3, p0, Lv84;->c:I
+
+    iput-object p4, p0, Lv84;->d:Landroid/os/Bundle;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a(Lx84;Lc94;Ld94;)V
-    .locals 0
+.method public final a()V
+    .locals 5
 
-    return-void
-.end method
+    iget-object v0, p0, Lv84;->a:La94;
 
-.method public b(Lx84;Lc94;Ld94;)V
-    .locals 0
+    iget-object v1, v0, La94;->router:Lw4e;
 
-    return-void
-.end method
+    iget-object v0, v0, La94;->instanceId:Ljava/lang/String;
 
-.method public c(Lx84;Landroid/os/Bundle;)V
-    .locals 0
+    iget-object v2, p0, Lv84;->b:Landroid/content/Intent;
 
-    return-void
-.end method
+    iget v3, p0, Lv84;->c:I
 
-.method public d(Lx84;)V
-    .locals 0
+    iget-object v4, p0, Lv84;->d:Landroid/os/Bundle;
 
-    return-void
-.end method
-
-.method public e(Lx84;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public h(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public j(Lx84;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public k(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public l(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(Lx84;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r(Lx84;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(Lx84;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(Lx84;)V
-    .locals 0
+    invoke-virtual {v1, v0, v2, v3, v4}, Lw4e;->W(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
     return-void
 .end method

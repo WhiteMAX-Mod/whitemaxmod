@@ -1,379 +1,314 @@
-.class public final Lh52;
+.class public abstract Lh52;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/util/LinkedHashMap;
+# static fields
+.field public static final a:Ly42;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    packed-switch p1, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lh52;->a:Ljava/lang/Object;
-
-    new-instance p1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object p1, p0, Lh52;->b:Ljava/util/LinkedHashMap;
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lh52;->a:Ljava/lang/Object;
-
-    new-instance p1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object p1, p0, Lh52;->b:Ljava/util/LinkedHashMap;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public a()Ljava/util/LinkedHashSet;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget-object v0, p0, Lh52;->a:Ljava/lang/Object;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    monitor-enter v0
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    :try_start_0
-    new-instance v1, Ljava/util/LinkedHashSet;
+    new-instance v1, Lb78;
 
-    iget-object v2, p0, Lh52;->b:Ljava/util/LinkedHashMap;
+    const/4 v2, 0x2
 
-    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+    invoke-direct {v1, v2}, Lb78;-><init>(I)V
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v1, v2}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+    new-instance v1, Ly42;
 
-    monitor-exit v0
+    invoke-direct {v1, v0}, Ly42;-><init>(Ljava/util/LinkedHashSet;)V
 
-    return-object v1
+    sput-object v1, Lh52;->a:Ly42;
 
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-void
 .end method
 
-.method public b(Lt02;)V
-    .locals 6
+.method public static a(Landroid/content/Context;Ldgc;Ly42;)V
+    .locals 7
 
-    iget-object v0, p0, Lh52;->a:Ljava/lang/Object;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    monitor-enter v0
+    const/16 v1, 0x22
 
-    :try_start_0
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    new-instance v1, Ljava/util/LinkedHashSet;
+    const/4 v3, 0x0
 
-    iget-object v2, p1, Lt02;->f:Ljava/util/ArrayList;
+    const-string v4, "CameraValidator"
 
-    invoke-direct {v1, v2}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+    if-lt v0, v1, :cond_1
 
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-static {p0}, Ltp0;->b(Landroid/content/Context;)I
 
-    move-result-object v1
+    move-result v0
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_1
 
-    move-result v2
+    invoke-virtual {p1}, Ldgc;->t()Ljava/util/LinkedHashSet;
 
-    if-eqz v2, :cond_0
+    move-result-object p1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
-    move-result-object v2
+    move-result p2
 
-    check-cast v2, Ljava/lang/String;
+    if-nez p2, :cond_0
 
-    const-string v3, "CameraRepository"
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    const-string v0, "Virtual device with ID: "
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v5, "Added camera: "
+    invoke-static {p0}, Ltp0;->b(Landroid/content/Context;)I
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p0
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string p0, " has "
 
-    move-result-object v4
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v4}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    iget-object v3, p0, Lh52;->b:Ljava/util/LinkedHashMap;
+    move-result p0
 
-    invoke-virtual {p1, v2}, Lt02;->a(Ljava/lang/String;)Lg12;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    const-string p0, " cameras. Skipping validation."
 
-    invoke-interface {v3, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :catchall_0
-    move-exception p1
+    move-result-object p0
 
-    goto :goto_2
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :try_start_1
-    monitor-exit v0
+    invoke-static {v4, p0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    :goto_1
-    new-instance v1, Landroidx/camera/core/InitializationException;
-
-    invoke-direct {v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :goto_2
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public c(Lphi;)Lmnf;
-    .locals 2
-
-    iget-object v0, p0, Lh52;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lh52;->b:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmnf;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public d(Ljava/lang/String;)Ljava/util/List;
-    .locals 5
-
-    iget-object v0, p0, Lh52;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lh52;->b:Ljava/util/LinkedHashMap;
-
-    new-instance v2, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
-
-    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
     :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    new-instance p0, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
 
-    move-result v3
+    const-string p1, "No cameras available"
 
-    if-eqz v3, :cond_1
+    invoke-direct {p0, p1, v2, v3}, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;-><init>(Ljava/lang/String;ILjava/lang/IllegalArgumentException;)V
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Map$Entry;
-
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lphi;
-
-    iget-object v4, v4, Lphi;->a:Ljava/lang/String;
-
-    invoke-static {v4, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
+    throw p0
 
     :cond_1
-    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+    if-eqz p2, :cond_2
 
-    move-result-object p1
+    :try_start_0
+    invoke-virtual {p2}, Ly42;->b()Ljava/lang/Integer;
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    move-result-object v0
 
-    move-result-object p1
+    if-nez v0, :cond_3
 
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    const-string p0, "No lens facing info in the availableCamerasSelector, don\'t verify the camera lens facing."
+
+    invoke-static {v4, p0}, Lm5j;->n(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "Cannot get lens facing from the availableCamerasSelector don\'t verify the camera lens facing."
+
+    invoke-static {v4, p1, p0}, Lm5j;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_2
+    move-object v0, v3
+
+    :cond_3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v5, "Verifying camera lens facing on "
+
+    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v5, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", lensFacingInteger: "
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    :try_start_1
+    const-string v1, "android.hardware.camera"
+
+    invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_5
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    if-eqz p2, :cond_4
 
-    check-cast v1, Lphi;
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    iget-object v3, p0, Lh52;->b:Ljava/util/LinkedHashMap;
+    move-result v5
 
-    invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lei3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object p1
-
-    :goto_2
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public e(Lphi;)Lmnf;
-    .locals 3
-
-    iget-object v0, p0, Lh52;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lh52;->b:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Lmnf;
-
-    invoke-direct {v2, p1}, Lmnf;-><init>(Lphi;)V
-
-    invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne v5, v1, :cond_5
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :catch_1
+    move-exception v1
+
+    move-object v3, v1
 
     goto :goto_1
 
-    :cond_0
+    :cond_4
     :goto_0
-    check-cast v2, Lmnf;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object v5, Ly42;->c:Ly42;
 
-    monitor-exit v0
+    invoke-virtual {p1}, Ldgc;->t()Ljava/util/LinkedHashSet;
 
-    return-object v2
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ly42;->c(Ljava/util/LinkedHashSet;)Lg42;
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move v2, v1
+
+    goto :goto_2
 
     :goto_1
-    monitor-exit v0
+    const-string v1, "Camera LENS_FACING_BACK verification failed"
 
-    throw p1
+    invoke-static {v4, v1, v3}, Lm5j;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_2
+    :try_start_2
+    const-string v1, "android.hardware.camera.front"
+
+    invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_7
+
+    if-eqz p2, :cond_6
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    if-nez p0, :cond_7
+
+    goto :goto_3
+
+    :catch_2
+    move-exception p0
+
+    move-object v3, p0
+
+    goto :goto_4
+
+    :cond_6
+    :goto_3
+    sget-object p0, Ly42;->b:Ly42;
+
+    invoke-virtual {p1}, Ldgc;->t()Ljava/util/LinkedHashSet;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Ly42;->c(Ljava/util/LinkedHashSet;)Lg42;
+    :try_end_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_5
+
+    :goto_4
+    const-string p0, "Camera LENS_FACING_FRONT verification failed"
+
+    invoke-static {v4, p0, v3}, Lm5j;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_5
+    :try_start_3
+    sget-object p0, Lh52;->a:Ly42;
+
+    invoke-virtual {p1}, Ldgc;->t()Ljava/util/LinkedHashSet;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Ly42;->c(Ljava/util/LinkedHashSet;)Lg42;
+
+    const-string p0, "Found a LENS_FACING_EXTERNAL camera"
+
+    invoke-static {v4, p0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_3
+
+    add-int/lit8 v2, v2, 0x1
+
+    :catch_3
+    if-nez v3, :cond_8
+
+    return-void
+
+    :cond_8
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string p2, "Camera LensFacing verification failed, existing cameras: "
+
+    invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ldgc;->t()Ljava/util/LinkedHashSet;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v4, p0}, Lm5j;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance p0, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
+
+    const-string p1, "Expected camera missing from device."
+
+    invoke-direct {p0, p1, v2, v3}, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;-><init>(Ljava/lang/String;ILjava/lang/IllegalArgumentException;)V
+
+    throw p0
 .end method

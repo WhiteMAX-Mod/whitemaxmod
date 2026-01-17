@@ -1,57 +1,67 @@
-.class public abstract Lhd2;
+.class public final Lhd2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Iterable;
-.implements Ld38;
-
 
 # instance fields
-.field public final a:C
+.field public final a:I
 
-.field public final b:C
+.field public final b:I
 
-.field public final c:I
+.field public final c:[Ljava/lang/String;
+
+.field public final d:[Lgd2;
 
 
 # direct methods
-.method public constructor <init>(CC)V
+.method public constructor <init>(Lid2;)V
     .locals 1
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-char p1, p0, Lhd2;->a:C
+    .line 7
+    iget v0, p1, Lid2;->h:I
 
-    const/4 v0, 0x1
+    iput v0, p0, Lhd2;->a:I
 
-    invoke-static {p1, p2, v0}, Llkj;->a(III)I
+    .line 8
+    iget v0, p1, Lid2;->k:I
 
-    move-result p1
+    iput v0, p0, Lhd2;->b:I
 
-    int-to-char p1, p1
+    .line 9
+    iget-object v0, p1, Lid2;->f:[Ljava/lang/String;
 
-    iput-char p1, p0, Lhd2;->b:C
+    iput-object v0, p0, Lhd2;->c:[Ljava/lang/String;
 
-    iput v0, p0, Lhd2;->c:I
+    .line 10
+    iget-object p1, p1, Lid2;->g:[Lgd2;
+
+    iput-object p1, p0, Lhd2;->d:[Lgd2;
 
     return-void
 .end method
 
+.method public constructor <init>([Ljava/lang/String;[Lgd2;)V
+    .locals 1
 
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 4
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lid2;
+    const/4 v0, 0x0
 
-    iget-char v1, p0, Lhd2;->b:C
+    .line 2
+    iput v0, p0, Lhd2;->a:I
 
-    iget v2, p0, Lhd2;->c:I
+    .line 3
+    iput v0, p0, Lhd2;->b:I
 
-    iget-char v3, p0, Lhd2;->a:C
+    .line 4
+    iput-object p1, p0, Lhd2;->c:[Ljava/lang/String;
 
-    invoke-direct {v0, v3, v1, v2}, Lid2;-><init>(CCI)V
+    .line 5
+    iput-object p2, p0, Lhd2;->d:[Lgd2;
 
-    return-object v0
+    return-void
 .end method

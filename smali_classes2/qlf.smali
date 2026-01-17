@@ -1,27 +1,52 @@
 .class public final Lqlf;
-.super Lie0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public volatile a:J
 
-.field public final c:Z
+.field public volatile b:J
+
+.field public volatile c:I
+
+.field public volatile d:J
+
+.field public volatile e:J
+
+.field public volatile f:I
+
+.field public volatile g:J
+
+.field public volatile h:J
+
+.field public volatile i:I
 
 
-# direct methods
-.method public constructor <init>(JZ)V
-    .locals 1
+# virtual methods
+.method public final a(J)V
+    .locals 2
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    cmp-long v0, p1, v0
 
-    invoke-direct {p0, v0}, Ljja;-><init>(Ljava/lang/Object;)V
+    if-ltz v0, :cond_0
 
-    iput-wide p1, p0, Lqlf;->b:J
+    iput-wide p1, p0, Lqlf;->d:J
 
-    iput-boolean p3, p0, Lqlf;->c:Z
+    iget-wide v0, p0, Lqlf;->e:J
 
+    add-long/2addr v0, p1
+
+    iput-wide v0, p0, Lqlf;->e:J
+
+    iget p1, p0, Lqlf;->f:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lqlf;->f:I
+
+    :cond_0
     return-void
 .end method

@@ -1,141 +1,145 @@
 .class public final Lvme;
-.super Lb5g;
+.super Ljef;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
+
+# static fields
+.field public static final synthetic J0:I
 
 
 # instance fields
-.field public final synthetic X:Lh2b;
+.field public final F0:Lgha;
 
-.field public final synthetic Y:Lw5c;
+.field public final G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public o:I
+.field public final H0:Landroidx/appcompat/widget/AppCompatTextView;
+
+.field public I0:Let6;
 
 
 # direct methods
-.method public constructor <init>(Lh2b;Lw5c;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lgha;Lone/me/sdk/uikit/common/views/OneMeDraweeView;Landroidx/appcompat/widget/AppCompatTextView;Landroid/widget/LinearLayout;)V
     .locals 0
 
-    iput-object p1, p0, Lvme;->X:Lh2b;
+    invoke-direct {p0, p4}, Ltsd;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lvme;->Y:Lw5c;
+    iput-object p1, p0, Lvme;->F0:Lgha;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lvme;->G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lvme;->H0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    new-instance p1, Lblc;
+
+    const/16 p2, 0xa
+
+    invoke-direct {p1, p2, p0}, Lblc;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p4, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final D(Let6;)V
+    .locals 3
 
-    check-cast p1, Lac4;
+    iput-object p1, p0, Lvme;->I0:Let6;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Let6;->a:Ldt6;
 
-    invoke-virtual {p0, p1, p2}, Lvme;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Ldt6;->a:Lct6;
 
-    move-result-object p1
-
-    check-cast p1, Lvme;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lvme;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lvme;
-
-    iget-object v0, p0, Lvme;->X:Lh2b;
-
-    iget-object v1, p0, Lvme;->Y:Lw5c;
-
-    invoke-direct {p1, v0, v1, p2}, Lvme;-><init>(Lh2b;Lw5c;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lvme;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvme;->X:Lh2b;
-
-    iget-object p1, p1, Lh2b;->b:Ljava/lang/Object;
-
-    check-cast p1, Ld68;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lca3;
-
-    iget-object v0, p0, Lvme;->Y:Lw5c;
-
-    iget-wide v2, v0, Lw5c;->a:J
-
-    iput v1, p0, Lvme;->o:I
-
-    iget-object v0, p1, Lca3;->c:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lct6;->c()Lg4;
 
     move-result-object v0
 
-    check-cast v0, Ltee;
+    instance-of v1, v0, Lrs6;
 
-    invoke-virtual {v0}, Ltee;->a()J
+    iget-object v2, p0, Lvme;->H0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    move-result-wide v0
+    if-eqz v1, :cond_0
 
-    xor-long/2addr v0, v2
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1, v0, v1, p0}, Lca3;->r(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v1
+
+    check-cast v0, Lrs6;
+
+    iget v0, v0, Lrs6;->a:I
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v1, v0, Lss6;
+
+    if-eqz v1, :cond_2
+
+    check-cast v0, Lss6;
+
+    iget-object v0, v0, Lss6;->a:Ljava/lang/String;
+
+    :goto_0
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Loqd;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, p0, v1}, Loqd;-><init>(Let6;Lvme;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v2}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+
+    iget-object p1, p1, Let6;->b:Landroid/net/Uri;
+
+    iget-object v0, p0, Lvme;->G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    if-eqz p1, :cond_1
+
+    invoke-static {p1}, Ldj7;->d(Landroid/net/Uri;)Ldj7;
 
     move-result-object p1
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    const/4 v2, 0x1
 
-    if-ne p1, v0, :cond_2
+    iput-boolean v2, p1, Ldj7;->h:Z
 
-    return-object v0
+    invoke-virtual {p1}, Ldj7;->a()Lcj7;
+
+    move-result-object p1
+
+    sget v2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->C0:I
+
+    invoke-virtual {v0, p1, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->j(Lcj7;Lcj7;)V
+
+    return-void
+
+    :cond_1
+    sget p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->C0:I
+
+    invoke-virtual {v0, v1, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->j(Lcj7;Lcj7;)V
+
+    return-void
 
     :cond_2
-    return-object p1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final bridge synthetic y(Lud8;)V
+    .locals 0
+
+    check-cast p1, Let6;
+
+    invoke-virtual {p0, p1}, Lvme;->D(Let6;)V
+
+    return-void
 .end method

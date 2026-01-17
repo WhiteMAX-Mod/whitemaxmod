@@ -1,110 +1,88 @@
 .class public final Lgs5;
-.super Ljava/lang/Object;
+.super Lhja;
 .source "SourceFile"
 
-# interfaces
-.implements Ldm4;
 
-
-# static fields
-.field public static final a:Lgs5;
-
-.field public static final b:Lhs5;
+# instance fields
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, Lgs5;
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
 
-    sput-object v0, Lgs5;->a:Lgs5;
-
-    sget-object v0, Lhs5;->b:Lhs5;
-
-    sput-object v0, Lgs5;->b:Lhs5;
+    iput-object p1, p0, Lgs5;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkm4;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    sget-object v0, Lgs5;->b:Lhs5;
+    const/4 v0, 0x1
 
-    return-object v0
-.end method
+    if-ne p0, p1, :cond_0
 
-.method public final b(Ljava/lang/String;Lgm4;Landroid/os/Bundle;)Lnm4;
-    .locals 9
-
-    sget-object v0, Lgs5;->b:Lhs5;
-
-    iget-object v0, v0, Lkm4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    return v0
 
     :cond_0
-    sget-object v0, Lhs5;->b:Lhs5;
+    instance-of v1, p1, Lgs5;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    sget-object v0, Lhs5;->c:Lgm4;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p2, v0}, Lgm4;->equals(Ljava/lang/Object;)Z
+    return v2
+
+    :cond_1
+    check-cast p1, Lgs5;
+
+    iget-object v1, p0, Lgs5;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lgs5;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lgs5;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    new-instance v7, Lqr1;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v0, 0x3
+    const-string v0, "ExternalCallback(params="
 
-    invoke-direct {v7, p3, v0}, Lqr1;-><init>(Landroid/os/Bundle;I)V
+    const-string v1, ")"
 
-    new-instance v1, Lnm4;
+    iget-object v2, p0, Lgs5;->b:Ljava/lang/String;
 
-    const/16 v8, 0x18
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v5, 0x0
+    move-result-object v0
 
-    const/4 v6, 0x0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v1 .. v8}, Lnm4;-><init>(Ljava/lang/String;Lgm4;Landroid/os/Bundle;ILlm4;Lmm4;I)V
-
-    return-object v1
-
-    :cond_1
-    move-object v3, p2
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "unknown screen "
-
-    invoke-static {p2, v3}, Lc12;->i(Ljava/lang/String;Lgm4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

@@ -1,81 +1,69 @@
 .class public final Lsm5;
-.super Ln0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lub4;
 
+# instance fields
+.field public final a:[Lmm5;
 
-# static fields
-.field public static final a:Lsm5;
+.field public final b:[J
 
-.field public static final b:Ljava/lang/Object;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Lmm5;)V
+    .locals 0
 
-    new-instance v0, Lsm5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lqf3;->u0:Lqf3;
+    iput-object p1, p0, Lsm5;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ln0;-><init>(Lqb4;)V
+    iput-object p2, p0, Lsm5;->d:Ljava/lang/String;
 
-    sput-object v0, Lsm5;->a:Lsm5;
+    iput-object p3, p0, Lsm5;->b:[J
 
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lsm5;->b:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object p4, p0, Lsm5;->a:[Lmm5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lrb4;Ljava/lang/Throwable;)V
-    .locals 0
+.method public final a()Ljava/lang/String;
+    .locals 4
 
-    sget-object p1, Lsm5;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    monitor-enter p1
+    iget-object v1, p0, Lsm5;->c:Ljava/lang/String;
 
-    monitor-exit p1
+    invoke-static {v0, v1}, Lxi4;->f(ILjava/lang/String;)I
 
-    return-void
-.end method
+    move-result v0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v2, p0, Lsm5;->d:Ljava/lang/String;
 
-    instance-of v0, p1, Lsm5;
+    invoke-static {v0, v2}, Lxi4;->f(ILjava/lang/String;)I
 
-    if-nez v0, :cond_1
+    move-result v0
 
-    instance-of p1, p1, Ltm5;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_0
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    goto :goto_0
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 p1, 0x0
+    const-string v0, "/"
 
-    return p1
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p1
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

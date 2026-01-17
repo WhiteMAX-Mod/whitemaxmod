@@ -1,88 +1,143 @@
-.class public final synthetic Lxm5;
+.class public final Lxm5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Ltb4;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/reflect/Constructor;
+.field public final synthetic a:Lwm5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/reflect/Constructor;I)V
-    .locals 0
-
-    iput p2, p0, Lxm5;->a:I
-
-    iput-object p1, p0, Lxm5;->b:Ljava/lang/reflect/Constructor;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v0, Lwm5;->a:Lwm5;
+
+    iput-object v0, p0, Lxm5;->a:Lwm5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final E(Lqb4;Ljava/lang/Throwable;)V
+    .locals 0
+
+    iget-object p1, p0, Lxm5;->a:Lwm5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lwm5;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    monitor-exit p1
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lxm5;->a:I
+    instance-of v0, p1, Lxm5;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lxm5;->b:Ljava/lang/reflect/Constructor;
+    instance-of p1, p1, Lwm5;
 
-    check-cast p1, Ljava/lang/Throwable;
+    if-eqz p1, :cond_0
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->a(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    const/4 p1, 0x0
 
-    return-object p1
+    return p1
 
-    :pswitch_0
-    iget-object v0, p0, Lxm5;->b:Ljava/lang/reflect/Constructor;
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    check-cast p1, Ljava/lang/Throwable;
+    return p1
+.end method
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->c(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+.method public final fold(Ljava/lang/Object;Lbr6;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, Lxm5;->a:Lwm5;
 
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Lxm5;->b:Ljava/lang/reflect/Constructor;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->d(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p1, p2}, Lm0;->fold(Ljava/lang/Object;Lbr6;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
+.end method
 
-    :pswitch_2
-    iget-object v0, p0, Lxm5;->b:Ljava/lang/reflect/Constructor;
+.method public final get(Lpb4;)Lob4;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v0, p0, Lxm5;->a:Lwm5;
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->e(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Lukj;->a(Lob4;Lpb4;)Lob4;
 
     move-result-object p1
 
     return-object p1
+.end method
 
-    nop
+.method public final getKey()Lpb4;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lxm5;->a:Lwm5;
+
+    invoke-virtual {v0}, Lm0;->getKey()Lpb4;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    sget-object v0, Lwm5;->a:Lwm5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final minusKey(Lpb4;)Lqb4;
+    .locals 1
+
+    iget-object v0, p0, Lxm5;->a:Lwm5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Lukj;->b(Lob4;Lpb4;)Lqb4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final plus(Lqb4;)Lqb4;
+    .locals 1
+
+    iget-object v0, p0, Lxm5;->a:Lwm5;
+
+    invoke-virtual {v0, p1}, Lm0;->plus(Lqb4;)Lqb4;
+
+    move-result-object p1
+
+    return-object p1
 .end method

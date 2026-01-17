@@ -3,13 +3,15 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llxc;
+.implements Lnyc;
 
 
 # static fields
 .field public static final enum b:Lm4a;
 
-.field public static final synthetic c:[Lm4a;
+.field public static final enum c:Lm4a;
+
+.field public static final synthetic d:[Lm4a;
 
 
 # instance fields
@@ -18,11 +20,11 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
     new-instance v0, Lm4a;
 
-    const-string v1, "UNKNOWN_EVENT"
+    const-string v1, "UNKNOWN"
 
     const/4 v2, 0x0
 
@@ -30,7 +32,7 @@
 
     new-instance v1, Lm4a;
 
-    const-string v2, "MESSAGE_DELIVERED"
+    const-string v2, "DATA_MESSAGE"
 
     const/4 v3, 0x1
 
@@ -40,17 +42,27 @@
 
     new-instance v2, Lm4a;
 
-    const-string v3, "MESSAGE_OPEN"
+    const-string v3, "TOPIC"
 
     const/4 v4, 0x2
 
     invoke-direct {v2, v3, v4, v4}, Lm4a;-><init>(Ljava/lang/String;II)V
 
-    filled-new-array {v0, v1, v2}, [Lm4a;
+    new-instance v3, Lm4a;
+
+    const-string v4, "DISPLAY_NOTIFICATION"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v5}, Lm4a;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lm4a;->c:Lm4a;
+
+    filled-new-array {v0, v1, v2, v3}, [Lm4a;
 
     move-result-object v0
 
-    sput-object v0, Lm4a;->c:[Lm4a;
+    sput-object v0, Lm4a;->d:[Lm4a;
 
     return-void
 .end method
@@ -82,7 +94,7 @@
 .method public static values()[Lm4a;
     .locals 1
 
-    sget-object v0, Lm4a;->c:[Lm4a;
+    sget-object v0, Lm4a;->d:[Lm4a;
 
     invoke-virtual {v0}, [Lm4a;->clone()Ljava/lang/Object;
 

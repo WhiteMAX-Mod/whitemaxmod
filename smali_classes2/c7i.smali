@@ -1,144 +1,179 @@
-.class public final Lc7i;
+.class public final synthetic Lc7i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lu7i;
+.implements Liv6;
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:Lc7i;
 
-.field public final b:[Ljava/lang/String;
+.field private static final descriptor:Lxpe;
 
 
 # direct methods
-.method public constructor <init>(I[Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lc7i;
 
-    iput p1, p0, Lc7i;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lc7i;->b:[Ljava/lang/String;
+    sput-object v0, Lc7i;->a:Lc7i;
+
+    new-instance v1, Lgdc;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneResponse"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "phone"
+
+    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lc7i;->descriptor:Lxpe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    check-cast p2, Le7i;
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lc7i;->descriptor:Lxpe;
 
-    return v0
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
 
-    :cond_0
-    if-eqz p1, :cond_1
+    move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    const-class v2, Lc7i;
-
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
+    iget-object v1, p2, Le7i;->a:Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_2
+    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
 
-    return v2
+    const/4 v1, 0x1
+
+    iget-object p2, p2, Le7i;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+
+    return-void
+.end method
+
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 9
+
+    sget-object v0, Lc7i;->descriptor:Lxpe;
+
+    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v5, v1
+
+    move v6, v2
+
+    move-object v4, v3
+
+    :goto_0
+    if-eqz v5, :cond_3
+
+    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
+
+    move-result v7
+
+    const/4 v8, -0x1
+
+    if-eq v7, v8, :cond_2
+
+    if-eqz v7, :cond_1
+
+    if-ne v7, v1, :cond_0
+
+    invoke-interface {p1, v0, v1}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    or-int/lit8 v6, v6, 0x2
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
 
     :cond_2
-    check-cast p1, Lc7i;
+    move v5, v2
 
-    iget v1, p0, Lc7i;->a:I
-
-    iget v3, p1, Lc7i;->a:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
+    goto :goto_0
 
     :cond_3
-    iget-object v1, p0, Lc7i;->b:[Ljava/lang/String;
+    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
 
-    iget-object p1, p1, Lc7i;->b:[Ljava/lang/String;
+    new-instance p1, Le7i;
 
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+    invoke-direct {p1, v6, v3, v4}, Le7i;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lc7i;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lc7i;->b:[Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final c()[La38;
     .locals 3
 
-    iget-object v0, p0, Lc7i;->b:[Ljava/lang/String;
+    const/4 v0, 0x2
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+    new-array v0, v0, [La38;
 
-    move-result-object v0
+    sget-object v1, Lnzf;->a:Lnzf;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    const-string v2, "OpenGallery(mode="
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    iget v2, p0, Lc7i;->a:I
+    aput-object v1, v0, v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    const-string v2, ", mimeTypes="
+.method public final d()Lxpe;
+    .locals 1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lc7i;->descriptor:Lxpe;
 
     return-object v0
 .end method

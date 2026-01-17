@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Lwmg;
+.field public final a:Lhng;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lwmg;)V
+.method public constructor <init>(Ljava/lang/String;Lhng;)V
     .locals 0
 
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Ltech/kwik/agent15/alert/ErrorAlert;->a:Lwmg;
+    iput-object p2, p0, Ltech/kwik/agent15/alert/ErrorAlert;->a:Lhng;
 
     return-void
 .end method

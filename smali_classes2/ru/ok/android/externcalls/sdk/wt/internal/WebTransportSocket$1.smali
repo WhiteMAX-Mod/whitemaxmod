@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$1;
-.super Ln58;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;-><init>(Ljava/lang/String;Lcgd;Lgd7;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    value = Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;-><init>(Ljava/lang/String;Lahd;Lqc7;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ln58;",
-        "Lcr6;"
+        "Ly48;",
+        "Lbr6;"
     }
 .end annotation
 
@@ -28,12 +28,12 @@
         "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0010\u0006\u001a\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0003\u001a\u00020\u0002H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
     }
     d2 = {
-        "Lv2h;",
+        "Lb3h;",
         "<anonymous parameter 0>",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;",
         "listener",
         "invoke",
-        "(Lv2h;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
+        "(Lb3h;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
         "<anonymous>"
     }
     k = 0x3
@@ -57,7 +57,7 @@
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1}, Ln58;-><init>(I)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
@@ -68,18 +68,18 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lv2h;
+    check-cast p1, Lb3h;
 
     check-cast p2, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;
 
-    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$1;->invoke(Lv2h;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$1;->invoke(Lb3h;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method
 
-.method public final invoke(Lv2h;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method public final invoke(Lb3h;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 0
 
     .line 2

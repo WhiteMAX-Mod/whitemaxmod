@@ -1,151 +1,114 @@
-.class public final synthetic Lf05;
-.super Ljava/lang/Object;
+.class public final Lf05;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lj4e;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lg05;
 
-.field public final synthetic b:Lg05;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lg05;I)V
+.method public constructor <init>(Lg05;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lf05;->a:I
+    iput-object p1, p0, Lf05;->X:Lg05;
 
-    iput-object p1, p0, Lf05;->b:Lg05;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Le4e;Lq4e;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lf05;->a:I
+    check-cast p1, Lzb4;
 
-    check-cast p1, Lk5h;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Lm5h;
+    invoke-virtual {p0, p1, p2}, Lf05;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object p1, p0, Lf05;->b:Lg05;
+    check-cast p1, Lf05;
 
-    iget-object p1, p1, Lg05;->a:Lcgd;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lf05;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "Stop stream on participant removed response: "
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v0, "DisplayLayouts"
-
-    invoke-interface {p1, v0, p2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p2, Lm5h;->a:Ljava/util/Map;
-
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lf05;->b:Lg05;
-
-    iget-object p2, p1, Lg05;->a:Lcgd;
-
-    const-string v0, "DisplayLayouts"
-
-    const-string v1, "Resend next time after response with errors"
-
-    invoke-interface {p2, v0, v1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p2, 0x1
-
-    iput-boolean p2, p1, Lg05;->e:Z
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public b(Le4e;Ljava/lang/Throwable;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lf05;
+
+    iget-object v0, p0, Lf05;->X:Lg05;
+
+    invoke-direct {p1, v0, p2}, Lf05;-><init>(Lg05;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lf05;->a:I
+    iget v0, p0, Lf05;->o:I
 
-    check-cast p1, Lk5h;
+    const/4 v1, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_1
 
-    iget-object p1, p0, Lf05;->b:Lg05;
+    if-ne v0, v1, :cond_0
 
-    iget-object p1, p1, Lg05;->a:Lcgd;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string v1, "Stop stream on participant removed error: "
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object p2
+    throw p1
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, Lf05;->X:Lg05;
 
-    move-result-object p2
+    iget-object p1, p1, Lg05;->d:Li7f;
 
-    const-string v0, "DisplayLayouts"
+    iput v1, p0, Lf05;->o:I
 
-    invoke-interface {p1, v0, p2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    sget-object v0, Le05;->a:Le05;
 
-    return-void
+    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object p1, p0, Lf05;->b:Lg05;
+    move-result-object p1
 
-    iget-object p2, p1, Lg05;->a:Lcgd;
+    sget-object v0, Lac4;->a:Lac4;
 
-    const-string v0, "DisplayLayouts"
+    if-ne p1, v0, :cond_2
 
-    const-string v1, "Resend next time after error"
+    return-object v0
 
-    invoke-interface {p2, v0, v1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    const/4 p2, 0x1
-
-    iput-boolean p2, p1, Lg05;->e:Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

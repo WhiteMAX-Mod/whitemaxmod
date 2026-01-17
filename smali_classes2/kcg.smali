@@ -3,123 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lis0;
+.implements Ljcg;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public final a:Lo58;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Ln8g;
+
+.field public final c:Ln8g;
+
+.field public final d:Ln8g;
+
+.field public final e:Ln8g;
+
+.field public final f:Ln8g;
+
+.field public final g:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Lo58;Ln8g;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/graphics/Paint;
+    iput-object p1, p0, Lkcg;->a:Lo58;
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+    iput-object p2, p0, Lkcg;->f:Ln8g;
 
-    const/4 v1, 0x1
+    new-instance p2, Lhld;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
+    const/4 v0, 0x5
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
 
-    iput-object v0, p0, Lkcg;->a:Landroid/graphics/Paint;
+    new-instance v0, Ln8g;
 
-    new-instance v0, Lmdf;
+    invoke-direct {v0, p2}, Ln8g;-><init>(Llq6;)V
 
-    const/16 v1, 0xa
+    iput-object v0, p0, Lkcg;->c:Ln8g;
 
-    invoke-direct {v0, p1, v1}, Lmdf;-><init>(Landroid/content/Context;I)V
+    new-instance p2, Lhld;
 
-    const/4 p1, 0x2
+    const/4 v0, 0x6
 
-    invoke-static {p1, v0}, Lv2j;->c(ILmq6;)Ld68;
+    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
 
-    move-result-object p1
+    new-instance v0, Ln8g;
 
-    iput-object p1, p0, Lkcg;->b:Ljava/lang/Object;
+    invoke-direct {v0, p2}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v0, p0, Lkcg;->d:Ln8g;
+
+    new-instance p2, Lhld;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
+
+    new-instance v0, Ln8g;
+
+    invoke-direct {v0, p2}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v0, p0, Lkcg;->b:Ln8g;
+
+    new-instance p2, Lhld;
+
+    const/16 v0, 0x8
+
+    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
+
+    new-instance v0, Ln8g;
+
+    invoke-direct {v0, p2}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v0, p0, Lkcg;->e:Ln8g;
+
+    new-instance p2, Lhld;
+
+    const/16 v0, 0x9
+
+    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
+
+    new-instance p1, Ln8g;
+
+    invoke-direct {p1, p2}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p1, p0, Lkcg;->g:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    iget-object v0, p0, Lkcg;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lei7;
-
-    iget-object v0, v0, Lei7;->a:Lz7g;
-
-    invoke-virtual {v0}, Lz7g;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/renderscript/RenderScript;
-
-    invoke-virtual {v0}, Landroid/renderscript/RenderScript;->destroy()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(I)V
+.method public final a()Lpbe;
     .locals 1
 
-    iget-object v0, p0, Lkcg;->a:Landroid/graphics/Paint;
+    iget-object v0, p0, Lkcg;->b:Ln8g;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    return-void
-.end method
-
-.method public final d(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lkcg;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p2, v0, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method public final e(Landroid/graphics/Bitmap;F)V
-    .locals 2
-
-    iget-object v0, p0, Lkcg;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lei7;
+    check-cast v0, Lpbe;
 
-    invoke-static {p2}, Ln7j;->c(F)I
+    return-object v0
+.end method
 
-    move-result p2
+.method public final b()Lpbe;
+    .locals 1
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lkcg;->f:Ln8g;
 
-    invoke-virtual {v0, p1, p2, v1}, Lei7;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, Lpbe;
+
+    return-object v0
 .end method

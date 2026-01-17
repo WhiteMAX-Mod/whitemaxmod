@@ -3,54 +3,90 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final synthetic a:I
 
 .field public final synthetic b:J
 
+.field public final synthetic c:J
+
 
 # direct methods
-.method public synthetic constructor <init>(JJ)V
+.method public synthetic constructor <init>(IJJ)V
     .locals 0
 
+    iput p1, p0, Lpv5;->a:I
+
+    iput-wide p2, p0, Lpv5;->b:J
+
+    iput-wide p4, p0, Lpv5;->c:J
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lpv5;->a:J
-
-    iput-wide p3, p0, Lpv5;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget-wide v0, p0, Lpv5;->a:J
+    iget v0, p0, Lpv5;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    move-object v7, p1
 
-    iget-wide v1, p0, Lpv5;->b:J
+    check-cast v7, Ljw5;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance v1, Ljz3;
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    iget-wide v3, p0, Lpv5;->b:J
 
-    move-result-object v0
+    iget-wide v5, p0, Lpv5;->c:J
 
-    const-string v1, "rv5"
+    invoke-direct/range {v1 .. v7}, Ljz3;-><init>(IJJLjava/lang/Object;)V
 
-    const-string v2, "setFavoriteStickerSetMoved: success move stickerSetId=%d, to position of stickerSetId=%d"
+    new-instance p1, Leo3;
 
-    invoke-static {v1, v2, v0}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v0, 0x2
 
-    return-void
+    invoke-direct {p1, v0, v1}, Leo3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lxv5;
+
+    invoke-virtual {p1}, Lxv5;->a()Lsef;
+
+    move-result-object p1
+
+    new-instance v0, Lpv5;
+
+    const/4 v1, 0x1
+
+    iget-wide v2, p0, Lpv5;->b:J
+
+    iget-wide v4, p0, Lpv5;->c:J
+
+    invoke-direct/range {v0 .. v5}, Lpv5;-><init>(IJJ)V
+
+    new-instance v1, Lco3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p1, v2, v0}, Lco3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

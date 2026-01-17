@@ -1,13 +1,15 @@
-.class public final Lsii;
-.super Ltii;
+.class public abstract Lsii;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lbf8;
+# direct methods
+.method public static a(Landroid/content/Context;)Z
     .locals 0
 
-    const/4 p1, 0x0
+    invoke-virtual {p0}, Landroid/content/Context;->isDeviceProtectedStorage()Z
 
-    return-object p1
+    move-result p0
+
+    return p0
 .end method

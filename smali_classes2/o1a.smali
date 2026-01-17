@@ -1,48 +1,65 @@
-.class public final synthetic Lo1a;
-.super Lrr6;
+.class public final Lo1a;
+.super Lo84;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
 
+# instance fields
+.field public A0:I
 
-# static fields
-.field public static final a:Lo1a;
+.field public X:[J
+
+.field public Y:I
+
+.field public Z:I
+
+.field public d:Le2a;
+
+.field public o:[J
+
+.field public t0:I
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:I
+
+.field public x0:J
+
+.field public synthetic y0:Ljava/lang/Object;
+
+.field public final synthetic z0:Ln1a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ln1a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lo1a;
+    iput-object p1, p0, Lo1a;->z0:Ln1a;
 
-    const-string v4, "handle(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x2
-
-    const-class v2, Lr1a;
-
-    const-string v3, "handle"
-
-    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lo1a;->a:Lo1a;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lr1a;
+    iput-object p1, p0, Lo1a;->y0:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lo1a;->A0:I
 
-    invoke-interface {p1, p2}, Lr1a;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lo1a;->A0:I
+
+    iget-object p1, p0, Lo1a;->z0:Ln1a;
+
+    invoke-virtual {p1, p0}, Ln1a;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

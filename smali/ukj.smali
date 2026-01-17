@@ -1,47 +1,59 @@
-.class public final Lukj;
+.class public abstract Lukj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# direct methods
+.method public static a(Lob4;Lpb4;)Lob4;
+    .locals 1
 
-    const/4 v0, 0x1
+    invoke-interface {p0}, Lob4;->getKey()Lpb4;
 
-    if-ne p1, p0, :cond_0
+    move-result-object v0
 
-    return v0
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-object p0
 
     :cond_0
-    instance-of v1, p1, Lukj;
+    const/4 p0, 0x0
 
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lukj;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
+.method public static b(Lob4;Lpb4;)Lqb4;
     .locals 1
 
-    const v0, -0xd9a5b9c
+    invoke-interface {p0}, Lob4;->getKey()Lpb4;
 
-    return v0
+    move-result-object v0
+
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p0, Lxg5;->a:Lxg5;
+
+    :cond_0
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public static c(I)Ljava/lang/String;
+    .locals 2
 
-    const-string v0, "MLKitLoggingOptions{libraryName=common, enableFirelog=true, firelogEventType=1}"
+    const-string v0, "ProfileItemId(value="
 
-    return-object v0
+    const-string v1, ")"
+
+    invoke-static {p0, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

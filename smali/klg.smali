@@ -1,37 +1,59 @@
 .class public final Lklg;
-.super Ll84;
+.super Lrlg;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public d:Lesd;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final b(Ljava/lang/Object;)I
+    .locals 0
 
-    iput-object p1, p0, Lklg;->o:Ljava/lang/Object;
+    const/4 p1, -0x1
 
-    iget p1, p0, Lklg;->X:I
+    return p1
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final f(ILmlg;Z)Lmlg;
+    .locals 0
 
-    or-int/2addr p1, v0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    iput p1, p0, Lklg;->X:I
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    const-wide/16 v0, 0x0
+    throw p1
+.end method
 
-    const/4 p1, 0x0
+.method public final h()I
+    .locals 1
 
-    invoke-static {v0, v1, p1, p0}, Lati;->d(JLcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    return v0
+.end method
 
-    return-object p1
+.method public final l(I)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final m(ILplg;J)Lplg;
+    .locals 0
+
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final o()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

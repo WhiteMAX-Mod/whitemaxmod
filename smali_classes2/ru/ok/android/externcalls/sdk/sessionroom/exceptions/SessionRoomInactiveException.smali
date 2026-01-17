@@ -34,7 +34,7 @@
 
     const-string v2, "Room inactive"
 
-    invoke-direct {p0, v2, v0, v1, v0}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILro4;)V
+    invoke-direct {p0, v2, v0, v1, v0}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILso4;)V
 
     return-void
 .end method

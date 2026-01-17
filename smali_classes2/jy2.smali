@@ -1,119 +1,90 @@
-.class public final synthetic Ljy2;
-.super Ljava/lang/Object;
+.class public final Ljy2;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lm03;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:Ljava/lang/String;
+.field public final synthetic o:Ll03;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm03;JLjava/lang/String;I)V
+.method public constructor <init>(Ll03;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p5, p0, Ljy2;->a:I
+    iput-object p1, p0, Ljy2;->o:Ll03;
 
-    iput-object p1, p0, Ljy2;->b:Lm03;
+    const/4 p1, 0x2
 
-    iput-wide p2, p0, Ljy2;->c:J
-
-    iput-object p4, p0, Ljy2;->d:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ljy2;->a:I
+    check-cast p1, Lc26;
 
-    check-cast p1, Landroid/view/View;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Ljy2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Ljy2;->b:Lm03;
+    move-result-object p1
 
-    iget-object p1, p1, Lm03;->f1:Lyl5;
+    check-cast p1, Ljy2;
 
-    new-instance v0, Lvy2;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {p1, p2}, Ljy2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v1, 0x9
+    return-object p2
+.end method
 
-    iget-wide v4, p0, Ljy2;->c:J
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v6, p0, Ljy2;->d:Ljava/lang/String;
+    new-instance p1, Ljy2;
 
-    invoke-direct/range {v0 .. v6}, Lvy2;-><init>(IJJLjava/lang/String;)V
+    iget-object v0, p0, Ljy2;->o:Ll03;
 
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-direct {p1, v0, p2}, Ljy2;-><init>(Ll03;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Ljy2;->b:Lm03;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object p1, p1, Lm03;->f1:Lyl5;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    new-instance v0, Lvy2;
+    iget-object p1, p0, Ljy2;->o:Ll03;
 
-    const-wide/16 v2, 0x0
+    iget-object p1, p1, Ll03;->h1:Lcm5;
 
-    const/4 v1, 0x1
+    new-instance v0, Lty2;
 
-    iget-wide v4, p0, Ljy2;->c:J
+    sget v1, Ld8b;->n:I
 
-    iget-object v6, p0, Ljy2;->d:Ljava/lang/String;
+    sget v2, Ld8b;->m:I
 
-    invoke-direct/range {v0 .. v6}, Lvy2;-><init>(IJJLjava/lang/String;)V
+    new-instance v3, Ljava/lang/Integer;
 
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    invoke-direct {v3, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :pswitch_1
-    iget-object p1, p0, Ljy2;->b:Lm03;
+    const/4 v4, 0x4
 
-    iget-object p1, p1, Lm03;->f1:Lyl5;
+    invoke-direct {v0, v1, v3, v2, v4}, Lty2;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;I)V
 
-    new-instance v0, Lvy2;
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
-    const-wide/16 v2, 0x0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    const/16 v1, 0x9
-
-    iget-wide v4, p0, Ljy2;->c:J
-
-    iget-object v6, p0, Ljy2;->d:Ljava/lang/String;
-
-    invoke-direct/range {v0 .. v6}, Lvy2;-><init>(IJJLjava/lang/String;)V
-
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

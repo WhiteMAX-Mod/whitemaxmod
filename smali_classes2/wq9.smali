@@ -1,117 +1,93 @@
-.class public final enum Lwq9;
-.super Ljava/lang/Enum;
+.class public final Lwq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lwq9;
-
-.field public static final enum b:Lwq9;
-
-.field public static final enum c:Lwq9;
-
-.field public static final enum d:Lwq9;
-
-.field public static final enum o:Lwq9;
-
-
 # instance fields
-.field public final a:I
+.field public a:Llgb;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
+# virtual methods
+.method public final a()Lmv8;
+    .locals 4
 
-    new-instance v0, Lwq9;
-
-    const-string v1, "ACTIVE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lwq9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lwq9;->b:Lwq9;
-
-    new-instance v1, Lwq9;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0xa
-
-    const-string v4, "DELETED"
-
-    invoke-direct {v1, v4, v2, v3}, Lwq9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lwq9;->c:Lwq9;
-
-    new-instance v2, Lwq9;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x14
-
-    const-string v5, "EDITED"
-
-    invoke-direct {v2, v5, v3, v4}, Lwq9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lwq9;->d:Lwq9;
-
-    new-instance v3, Lwq9;
-
-    const/4 v4, 0x3
-
-    const/16 v5, 0x1e
-
-    const-string v6, "DELAYED_FIRE_ERROR"
-
-    invoke-direct {v3, v6, v4, v5}, Lwq9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lwq9;->o:Lwq9;
-
-    filled-new-array {v0, v1, v2, v3}, [Lwq9;
+    invoke-virtual {p0}, Lwq9;->b()Lsef;
 
     move-result-object v0
 
-    sput-object v0, Lwq9;->X:[Lwq9;
+    new-instance v1, Lmc9;
 
-    return-void
-.end method
+    const/4 v2, 0x7
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+    invoke-direct {v1, v2}, Lmc9;-><init>(I)V
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v2, Lmv8;
 
-    iput p3, p0, Lwq9;->a:I
+    const/4 v3, 0x1
 
-    return-void
-.end method
+    invoke-direct {v2, v0, v1, v3}, Lmv8;-><init>(Ljava/lang/Object;Lcr6;I)V
 
-.method public static valueOf(Ljava/lang/String;)Lwq9;
-    .locals 1
+    new-instance v0, Letf;
 
-    const-class v0, Lwq9;
+    const/4 v1, 0x4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-direct {v0, v1}, Letf;-><init>(I)V
 
-    move-result-object p0
+    new-instance v1, Llv8;
 
-    check-cast p0, Lwq9;
+    const/4 v3, 0x0
 
-    return-object p0
-.end method
+    invoke-direct {v1, v2, v0, v3}, Llv8;-><init>(Ljava/lang/Object;Lcr6;I)V
 
-.method public static values()[Lwq9;
-    .locals 1
+    new-instance v0, Lmc9;
 
-    sget-object v0, Lwq9;->X:[Lwq9;
+    const/16 v2, 0x8
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-direct {v0, v2}, Lmc9;-><init>(I)V
+
+    new-instance v2, Lvxa;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v1, v0, v3}, Lvxa;-><init>(Ldxa;Lcr6;I)V
+
+    invoke-virtual {v2}, Ldxa;->o()Lhxa;
 
     move-result-object v0
 
-    check-cast v0, [Lwq9;
+    new-instance v1, Lmc9;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, v2}, Lmc9;-><init>(I)V
+
+    new-instance v2, Lmv8;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v1, v3}, Lmv8;-><init>(Ljava/lang/Object;Lcr6;I)V
+
+    return-object v2
+.end method
+
+.method public final b()Lsef;
+    .locals 3
+
+    iget-object v0, p0, Lwq9;->a:Llgb;
+
+    invoke-virtual {v0}, Llgb;->E()Lrza;
+
+    move-result-object v0
+
+    new-instance v1, Lmc9;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, v2}, Lmc9;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lkef;->h(Lcr6;)Lsef;
+
+    move-result-object v0
 
     return-object v0
 .end method

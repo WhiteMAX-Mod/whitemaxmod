@@ -39,7 +39,7 @@
         "Landroid/os/Parcel;",
         "dest",
         "flags",
-        "Lv2h;",
+        "Lb3h;",
         "writeToParcel",
         "(Landroid/os/Parcel;I)V",
         "component1",
@@ -114,7 +114,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->Companion:Lru/ok/android/externcalls/analytics/internal/event/EventChannel$Companion;
 
@@ -159,7 +159,7 @@
     const-string p4, "_c_"
 
     .line 8
-    invoke-static {p3, p1, p4, p2}, Lx02;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1, p4, p2}, Lkz1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -169,7 +169,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILso4;)V
     .locals 1
 
     and-int/lit8 p7, p6, 0x2
@@ -372,7 +372,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->apiMethod:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -385,7 +385,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->collector:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -398,7 +398,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->application:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -411,7 +411,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->platform:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -565,7 +565,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->apiMethod:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -577,7 +577,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->collector:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -612,7 +612,7 @@
 
     const-string v7, "EventChannel(apiMethod="
 
-    invoke-static {v7, v0, v5, v1, v6}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v7, v0, v5, v1, v6}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -620,11 +620,11 @@
 
     const-string v5, ", isExternal="
 
-    invoke-static {v0, v2, v1, v3, v5}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2, v1, v3, v5}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, ")"
 
-    invoke-static {v0, v4, v1}, Lc12;->l(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v4, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

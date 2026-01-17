@@ -1,111 +1,156 @@
 .class public final Lw13;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Ldr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+.field public synthetic X:Lwlb;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic Y:Lzlb;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput-object p2, p0, Lw13;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    iput p3, p0, Lw13;->o:I
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lx13;
+    iget v0, p0, Lw13;->o:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lwlb;
 
-    invoke-virtual {p0, p1, p2}, Lw13;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p2, Lzlb;
 
-    move-result-object p1
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lw13;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lw13;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    packed-switch v0, :pswitch_data_0
 
     new-instance v0, Lw13;
 
-    iget-object v1, p0, Lw13;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    const/4 v1, 0x3
 
-    invoke-direct {v0, p2, v1}, Lw13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+    const/4 v2, 0x2
 
-    iput-object p1, v0, Lw13;->o:Ljava/lang/Object;
+    invoke-direct {v0, v1, p3, v2}, Lw13;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return-object v0
+    iput-object p1, v0, Lw13;->X:Lwlb;
+
+    iput-object p2, v0, Lw13;->Y:Lzlb;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Lw13;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lw13;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Lw13;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lw13;->X:Lwlb;
+
+    iput-object p2, v0, Lw13;->Y:Lzlb;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Lw13;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Lw13;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2}, Lw13;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lw13;->X:Lwlb;
+
+    iput-object p2, v0, Lw13;->Y:Lzlb;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Lw13;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget v0, p0, Lw13;->o:I
 
-    iget-object p1, p0, Lw13;->o:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lx13;
+    iget-object v0, p0, Lw13;->X:Lwlb;
 
-    sget-object v0, Lx13;->a:Lx13;
+    iget-object v1, p0, Lw13;->Y:Lzlb;
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result p1
+    invoke-virtual {v0, v1}, Lwlb;->onThemeChanged(Lzlb;)V
 
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lp38;
-
-    iget-object p1, p0, Lw13;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
-
-    invoke-virtual {p1}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->B0()Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
-
-    new-instance v0, Ltib;
-
-    invoke-direct {v0, p1}, Ltib;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    sget p1, Lfkb;->b:I
-
-    new-instance v1, Lbhg;
-
-    invoke-direct {v1, p1}, Lbhg;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Ltib;->g(Lghg;)V
-
-    invoke-virtual {v0}, Ltib;->i()Lsib;
-
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lw13;->X:Lwlb;
+
+    iget-object v1, p0, Lw13;->Y:Lzlb;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lwlb;->onThemeChanged(Lzlb;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lw13;->X:Lwlb;
+
+    iget-object v1, p0, Lw13;->Y:Lzlb;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lwlb;->onThemeChanged(Lzlb;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

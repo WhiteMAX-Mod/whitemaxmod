@@ -24,68 +24,50 @@
 
 .field public static final j:I
 
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lt5d;->contact_icon_corner:I
+    sget v0, Lwdd;->media_picker_default_toolbar_title:I
 
     sput v0, Lrdb;->a:I
 
-    sget v0, Lt5d;->geo_icon_corner:I
+    sget v0, Lwdd;->media_picker_default_toolbar_title_only_photo:I
 
     sput v0, Lrdb;->b:I
 
-    sget v0, Lt5d;->ic_call_incoming_audio_24:I
+    sget v0, Lwdd;->media_picker_empty_media_data:I
 
     sput v0, Lrdb;->c:I
 
-    sget v0, Lt5d;->ic_call_incoming_audio_missed_24:I
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__button:I
 
     sput v0, Lrdb;->d:I
 
-    sget v0, Lt5d;->ic_call_incoming_video_missed_24:I
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
 
     sput v0, Lrdb;->e:I
 
-    sget v0, Lt5d;->ic_call_incomnig_video_24:I
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_camera_title:I
 
     sput v0, Lrdb;->f:I
 
-    sget v0, Lt5d;->ic_call_outgoing_audio_24:I
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_subtitle:I
 
     sput v0, Lrdb;->g:I
 
-    sget v0, Lt5d;->ic_call_outgoing_video_24:I
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_title:I
 
     sput v0, Lrdb;->h:I
 
-    sget v0, Lt5d;->ic_chat_16:I
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__subtitle:I
 
     sput v0, Lrdb;->i:I
 
-    sget v0, Lt5d;->ic_contact_16:I
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__title:I
 
     sput v0, Lrdb;->j:I
-
-    sget v0, Lt5d;->ic_geolocation_filled_28:I
-
-    sput v0, Lrdb;->k:I
-
-    sget v0, Lt5d;->link_icon_corner:I
-
-    sput v0, Lrdb;->l:I
-
-    sget v0, Lt5d;->miniapp_icon_corner:I
-
-    sput v0, Lrdb;->m:I
 
     return-void
 .end method

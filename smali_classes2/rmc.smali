@@ -1,140 +1,123 @@
-.class public final synthetic Lrmc;
+.class public final Lrmc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmm4;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:J
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lrmc;->a:I
+.method public constructor <init>(ZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lrmc;->b:J
+    iput-boolean p1, p0, Lrmc;->a:Z
 
-    iput-wide p3, p0, Lrmc;->d:J
-
-    iput-object p5, p0, Lrmc;->c:Ljava/lang/String;
+    iput-boolean p2, p0, Lrmc;->b:Z
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(JLjava/lang/String;J)V
+.method public static a(Lrmc;Z)Lrmc;
     .locals 1
 
-    .line 2
-    const/4 v0, 0x1
+    iget-boolean v0, p0, Lrmc;->b:Z
 
-    iput v0, p0, Lrmc;->a:I
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p0, Lrmc;
 
-    iput-wide p1, p0, Lrmc;->b:J
+    invoke-direct {p0, p1, v0}, Lrmc;-><init>(ZZ)V
 
-    iput-object p3, p0, Lrmc;->c:Ljava/lang/String;
-
-    iput-wide p4, p0, Lrmc;->d:J
-
-    return-void
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lrmc;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Lone/me/chatmedia/viewer/VideoWebViewScreen;
-
-    iget-wide v2, p0, Lrmc;->b:J
-
-    iget-object v4, p0, Lrmc;->c:Ljava/lang/String;
-
-    iget-wide v5, p0, Lrmc;->d:J
-
-    invoke-direct/range {v1 .. v6}, Lone/me/chatmedia/viewer/VideoWebViewScreen;-><init>(JLjava/lang/String;J)V
-
-    return-object v1
-
-    :pswitch_0
-    new-instance v2, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    sget-object v0, Lxlc;->o:Lwk5;
-
-    invoke-virtual {v0}, Lf2;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
+    return v0
 
     :cond_0
-    move-object v1, v0
+    instance-of v1, p1, Lrmc;
 
-    check-cast v1, Lc2;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1}, Lc2;->hasNext()Z
+    if-nez v1, :cond_1
 
-    move-result v3
+    return v2
 
-    if-eqz v3, :cond_1
+    :cond_1
+    check-cast p1, Lrmc;
 
-    invoke-virtual {v1}, Lc2;->next()Ljava/lang/Object;
+    iget-boolean v1, p0, Lrmc;->a:Z
 
-    move-result-object v1
+    iget-boolean v3, p1, Lrmc;->a:Z
 
-    move-object v7, v1
+    if-eq v1, v3, :cond_2
 
-    check-cast v7, Lxlc;
+    return v2
 
-    iget-object v1, v7, Lxlc;->a:Ljava/lang/String;
+    :cond_2
+    iget-boolean v1, p0, Lrmc;->b:Z
 
-    iget-object v3, p0, Lrmc;->c:Ljava/lang/String;
+    iget-boolean p1, p1, Lrmc;->b:Z
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Lrmc;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lrmc;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    add-int/2addr v1, v0
 
-    iget-wide v3, p0, Lrmc;->b:J
+    return v1
+.end method
 
-    iget-wide v5, p0, Lrmc;->d:J
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-direct/range {v2 .. v7}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;-><init>(JJLxlc;)V
+    const-string v0, ", isEnabled="
 
-    return-object v2
+    const-string v1, ")"
 
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
+    const-string v2, "State(isChecked="
 
-    const-string v1, "Collection contains no element matching the predicate."
+    iget-boolean v3, p0, Lrmc;->a:Z
 
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    iget-boolean v4, p0, Lrmc;->b:Z
 
-    throw v0
+    invoke-static {v2, v3, v0, v4, v1}, Lhc0;->h(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

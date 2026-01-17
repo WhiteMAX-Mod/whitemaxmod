@@ -4,159 +4,109 @@
 
 
 # static fields
-.field public static final a:[J
+.field public static final a:Ljava/lang/String;
+
+.field public static final b:Ljava/lang/String;
+
+.field public static final c:Ljava/lang/String;
+
+.field public static final d:Ljava/lang/String;
+
+.field public static final e:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
+
+    sget-object v0, Lmbh;->a:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    new-array v0, v0, [J
+    const/16 v1, 0x24
 
-    sput-object v0, Lkf4;->a:[J
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lkf4;->a:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lkf4;->b:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lkf4;->c:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lkf4;->d:Ljava/lang/String;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lkf4;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final a(Le1e;[Ljava/lang/String;Loq6;)La71;
-    .locals 5
+.method public static a(Landroid/text/Spanned;Ljava/lang/Object;ILandroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 3
 
-    iget-object v0, p0, Le1e;->f:Ljv7;
+    new-instance v0, Landroid/os/Bundle;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    if-nez v0, :cond_0
+    sget-object v1, Lkf4;->a:Ljava/lang/String;
 
-    move-object v0, v1
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
 
-    :cond_0
-    array-length v2, p1
+    move-result v2
 
-    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    move-result-object p1
+    sget-object v1, Lkf4;->b:Ljava/lang/String;
 
-    check-cast p1, [Ljava/lang/String;
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
 
-    iget-object v2, v0, Ljv7;->c:Lgvg;
+    move-result v2
 
-    invoke-virtual {v2, p1}, Lgvg;->h([Ljava/lang/String;)Lysb;
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    move-result-object p1
+    sget-object v1, Lkf4;->c:Ljava/lang/String;
 
-    iget-object v3, p1, Lysb;->a:Ljava/lang/Object;
-
-    check-cast v3, [Ljava/lang/String;
-
-    iget-object p1, p1, Lysb;->b:Ljava/lang/Object;
-
-    check-cast p1, [I
-
-    new-instance v4, Lwug;
-
-    invoke-direct {v4, v2, p1, v3, v1}, Lwug;-><init>(Lgvg;[I[Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p1, Lt6e;
-
-    invoke-direct {p1, v4}, Lt6e;-><init>(Lcr6;)V
-
-    iget-object v0, v0, Ljv7;->j:Li78;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Li78;->h:Ljava/lang/Object;
-
-    check-cast v0, Lh6f;
-
-    new-instance v1, Lbc3;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, v0, v2, v3}, Lbc3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    :cond_1
-    const/4 v0, 0x2
-
-    if-eqz v1, :cond_2
-
-    new-array v2, v0, [Lf76;
-
-    const/4 v3, 0x0
-
-    aput-object p1, v2, v3
-
-    const/4 p1, 0x1
-
-    aput-object v1, v2, p1
-
-    invoke-static {v2}, Lqx0;->y([Lf76;)Lac2;
-
-    move-result-object p1
-
-    :cond_2
-    const/4 v1, -0x1
-
-    invoke-static {p1, v1, v0}, Lqx0;->b(Lf76;II)Lf76;
-
-    move-result-object p1
-
-    new-instance v0, La71;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p1, p0, p2, v1}, La71;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/String;)Ljava/util/ArrayList;
-    .locals 5
-
-    :try_start_0
-    new-instance v0, Lorg/json/JSONArray;
-
-    invoke-direct {v0, p0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
 
     move-result p0
 
-    new-instance v1, Ljava/util/ArrayList;
+    invoke-virtual {v0, v1, p0}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(I)V
+    sget-object p0, Lkf4;->d:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, p0, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    :goto_0
-    if-ge v2, p0, :cond_0
+    if-eqz p3, :cond_0
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONArray;->getLong(I)J
+    sget-object p0, Lkf4;->e:Ljava/lang/String;
 
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
+    invoke-virtual {v0, p0, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_0
-    return-object v1
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object v0
 .end method

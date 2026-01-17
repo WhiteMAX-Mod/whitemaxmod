@@ -1,100 +1,76 @@
 .class public final Lshg;
-.super Lb5g;
+.super Lj2;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lvhg;
-
-.field public synthetic o:F
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Lvhg;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lcgg;)V
+    .locals 3
 
-    iput-object p1, p0, Lshg;->X:Lvhg;
+    const/16 v0, 0xd
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1, v0, p2}, Lj2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object p1, p2, Lcgg;->a:Ljava/lang/String;
+
+    const/4 p2, 0x0
+
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_0
+
+    const-string v1, "auto"
+
+    const/4 v2, 0x6
+
+    invoke-static {p1, v1, p2, p2, v2}, Lrzf;->F(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result p1
+
+    const/4 v1, -0x1
+
+    if-ne p1, v1, :cond_0
+
+    move p2, v0
+
+    :cond_0
+    xor-int/lit8 p1, p2, 0x1
+
+    iput-boolean p1, p0, Lshg;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Ljava/lang/Number;
+    iget-object v0, p0, Lj2;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+    check-cast v0, Lq29;
 
-    move-result p1
+    check-cast v0, Lcgg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    const-string v2, "TextTrack(format: "
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, p2}, Lshg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v0, ")"
 
-    check-cast p1, Lshg;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lshg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lshg;
-
-    iget-object v1, p0, Lshg;->X:Lvhg;
-
-    invoke-direct {v0, v1, p2}, Lshg;-><init>(Lvhg;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
-
-    move-result p1
-
-    iput p1, v0, Lshg;->o:F
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget p1, p0, Lshg;->o:F
-
-    iget-object v0, p0, Lshg;->X:Lvhg;
-
-    iget-object v1, v0, Lvhg;->b:Landroid/widget/TextView;
-
-    iget v0, v0, Lvhg;->d:F
-
-    add-float/2addr v0, p1
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1, v0}, Landroid/widget/TextView;->setTextSize(IF)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
 .end method

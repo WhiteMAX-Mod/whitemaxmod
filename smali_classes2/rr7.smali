@@ -1,308 +1,262 @@
 .class public final Lrr7;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Lh76;
 
 
 # instance fields
-.field public final synthetic a:Lh76;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lac4;
-
-.field public final synthetic c:Lxr7;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lh76;Lac4;Lxr7;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lrr7;->a:I
 
-    iput-object p1, p0, Lrr7;->a:Lh76;
+    iput-object p2, p0, Lrr7;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Lrr7;->b:Lac4;
-
-    iput-object p3, p0, Lrr7;->c:Lxr7;
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 11
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    instance-of v0, p2, Lqr7;
+    iget p1, p0, Lrr7;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lrr7;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfr5;
+
+    iget-boolean v0, p1, Lfr5;->y0:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_3
+
+    iget-boolean v0, p1, Lfr5;->z0:Z
 
     if-eqz v0, :cond_0
-
-    move-object v0, p2
-
-    check-cast v0, Lqr7;
-
-    iget v1, v0, Lqr7;->o:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lqr7;->o:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lqr7;
+    iget-object v0, p1, Lfr5;->w0:Landroid/text/Layout;
 
-    invoke-direct {v0, p0, p2}, Lqr7;-><init>(Lrr7;Lkotlin/coroutines/Continuation;)V
+    if-nez v0, :cond_1
 
-    :goto_0
-    iget-object p2, v0, Lqr7;->d:Ljava/lang/Object;
-
-    iget v1, v0, Lqr7;->o:I
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    sget-object v6, Lbc4;->a:Lbc4;
-
-    if-eqz v1, :cond_4
-
-    if-eq v1, v4, :cond_3
-
-    if-eq v1, v3, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    invoke-static {p2}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto/16 :goto_5
+    goto :goto_0
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v2, p1, Lfr5;->v0:Landroid/text/Layout;
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez v2, :cond_2
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_0
 
     :cond_2
-    iget-object p1, v0, Lqr7;->s0:Landroid/os/Parcelable;
+    iput-boolean v1, p1, Lfr5;->z0:Z
 
-    check-cast p1, Lghg;
+    invoke-virtual {v2}, Landroid/text/Layout;->getHeight()I
 
-    iget-object v1, v0, Lqr7;->Z:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v1, Lj9b;
+    invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
 
-    iget-object v3, v0, Lqr7;->X:Lh76;
+    move-result v2
 
-    invoke-static {p2}, Lulj;->k(Ljava/lang/Object;)V
+    filled-new-array {v1, v2}, [I
 
-    goto/16 :goto_3
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    new-instance v2, Lvu5;
+
+    invoke-direct {v2}, Lvu5;-><init>()V
+
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    const-wide/16 v2, 0xc8
+
+    invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v2, Lc10;
+
+    const/16 v3, 0xc
+
+    invoke-direct {v2, v3, p1}, Lc10;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance v2, Lqf;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p1, v3, v0}, Lqf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance v0, Lre;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2, p1}, Lre;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
+
+    goto :goto_0
 
     :cond_3
-    iget-object p1, v0, Lqr7;->s0:Landroid/os/Parcelable;
+    iput-boolean v1, p1, Lfr5;->z0:Z
 
-    check-cast p1, Lj9b;
+    iget-object v0, p1, Lfr5;->w0:Landroid/text/Layout;
 
-    iget-object v1, v0, Lqr7;->Z:Ljava/lang/Object;
+    iput-object v0, p1, Lfr5;->u0:Landroid/text/Layout;
 
-    check-cast v1, Lh76;
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
-    iget-object v4, v0, Lqr7;->X:Lh76;
+    :goto_0
+    return-void
 
-    check-cast v4, Lrr7;
+    :pswitch_0
+    iget-object p1, p0, Lrr7;->b:Ljava/lang/Object;
 
-    invoke-static {p2}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast p1, Lone/me/login/inputphone/InputPhoneScreen;
 
-    goto :goto_1
+    iget-object v0, p1, Lone/me/login/inputphone/InputPhoneScreen;->Y:Lo58;
 
-    :cond_4
-    invoke-static {p2}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Lj9b;
+    move-result-object v0
 
-    iget-object p2, p1, Lj9b;->X:Lghg;
+    check-cast v0, Ldd;
 
-    iget-object v1, p0, Lrr7;->a:Lh76;
+    const-string v1, "MESSAGE_LINK_OPEN"
 
-    if-nez p2, :cond_6
+    const-string v2, "text"
 
-    sget-object p2, Lxr7;->j:[Lp38;
+    invoke-virtual {v0, v1, v2}, Ldd;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p2, p0, Lrr7;->c:Lxr7;
+    sget v0, Lj6e;->Y0:I
 
-    iget-object v7, p2, Lxr7;->c:Ld68;
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-interface {v7}, Ld68;->getValue()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v7
+    invoke-static {v1, v0}, Lu7;->e(Landroid/content/Context;I)Ljava/lang/String;
 
-    check-cast v7, Lbbg;
+    move-result-object v0
 
-    check-cast v7, Lb9b;
+    invoke-static {p1, v0}, Lone/me/login/inputphone/InputPhoneScreen;->z0(Lone/me/login/inputphone/InputPhoneScreen;Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lb9b;->a()Ltb4;
+    return-void
 
-    move-result-object v7
+    :pswitch_1
+    iget-object p1, p0, Lrr7;->b:Ljava/lang/Object;
 
-    new-instance v8, Lsr7;
+    check-cast p1, Lone/me/login/inputphone/InputPhoneScreen;
 
-    invoke-direct {v8, p2, p1, v5}, Lsr7;-><init>(Lxr7;Lj9b;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p1, Lone/me/login/inputphone/InputPhoneScreen;->Y:Lo58;
 
-    iget-object p2, p0, Lrr7;->b:Lac4;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-static {p2, v7, v8, v3}, Ly8j;->b(Lac4;Ltb4;Lcr6;I)Lxv4;
+    move-result-object v0
 
-    move-result-object p2
+    check-cast v0, Ldd;
 
-    iput-object p0, v0, Lqr7;->X:Lh76;
+    const-string v1, "MESSAGE_LINK_OPEN"
 
-    iput-object v1, v0, Lqr7;->Z:Ljava/lang/Object;
+    const-string v2, "text"
 
-    iput-object p1, v0, Lqr7;->s0:Landroid/os/Parcelable;
+    invoke-virtual {v0, v1, v2}, Ldd;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v4, v0, Lqr7;->o:I
+    sget v0, Lj6e;->X0:I
 
-    invoke-virtual {p2, v0}, Lkz7;->awaitInternal(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p2
+    move-result-object v1
 
-    if-ne p2, v6, :cond_5
+    invoke-static {v1, v0}, Lu7;->e(Landroid/content/Context;I)Ljava/lang/String;
 
-    goto/16 :goto_4
+    move-result-object v0
 
-    :cond_5
-    move-object v4, p0
+    invoke-static {p1, v0}, Lone/me/login/inputphone/InputPhoneScreen;->z0(Lone/me/login/inputphone/InputPhoneScreen;Ljava/lang/String;)V
 
-    :goto_1
-    check-cast p2, Lghg;
+    return-void
 
-    move-object v10, v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-object v1, p1
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 2
 
-    move-object p1, p2
+    iget v0, p0, Lrr7;->a:I
 
-    move-object p2, v10
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_2
+    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    :cond_6
-    move-object v4, v1
+    const/4 v0, 0x0
 
-    move-object v1, p1
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    move-object p1, p2
+    sget-object v0, Lpc3;->t0:Lkme;
 
-    move-object p2, v4
+    iget-object v1, p0, Lrr7;->b:Ljava/lang/Object;
 
-    move-object v4, p0
+    check-cast v1, Lfr5;
 
-    :goto_2
-    iget-object v7, v1, Lj9b;->o:Ljava/lang/Integer;
+    invoke-virtual {v0, v1}, Lkme;->p(Landroid/view/View;)Lzlb;
 
-    if-nez v7, :cond_8
+    move-result-object v0
 
-    iget-object v7, v4, Lrr7;->b:Lac4;
+    invoke-interface {v0}, Lzlb;->getText()Lrfg;
 
-    iget-object v4, v4, Lrr7;->c:Lxr7;
+    move-result-object v0
 
-    sget-object v8, Lxr7;->j:[Lp38;
+    iget v0, v0, Lrfg;->j:I
 
-    iget-object v8, v4, Lxr7;->c:Ld68;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-interface {v8}, Ld68;->getValue()Ljava/lang/Object;
+    return-void
 
-    move-result-object v8
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    check-cast v8, Lbbg;
+    const/4 v0, 0x0
 
-    check-cast v8, Lb9b;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    invoke-virtual {v8}, Lb9b;->a()Ltb4;
+    return-void
 
-    move-result-object v8
+    :pswitch_1
+    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    new-instance v9, Ltr7;
+    const/4 v0, 0x0
 
-    invoke-direct {v9, v4, v1, v5}, Ltr7;-><init>(Lxr7;Lj9b;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    invoke-static {v7, v8, v9, v3}, Ly8j;->b(Lac4;Ltb4;Lcr6;I)Lxv4;
+    return-void
 
-    move-result-object v4
-
-    iput-object p2, v0, Lqr7;->X:Lh76;
-
-    iput-object v1, v0, Lqr7;->Z:Ljava/lang/Object;
-
-    iput-object p1, v0, Lqr7;->s0:Landroid/os/Parcelable;
-
-    iput v3, v0, Lqr7;->o:I
-
-    invoke-virtual {v4, v0}, Lkz7;->awaitInternal(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-ne v3, v6, :cond_7
-
-    goto :goto_4
-
-    :cond_7
-    move-object v10, v3
-
-    move-object v3, p2
-
-    move-object p2, v10
-
-    :goto_3
-    move-object v7, p2
-
-    check-cast v7, Ljava/lang/Integer;
-
-    move-object p2, v3
-
-    :cond_8
-    new-instance v3, Loc4;
-
-    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    invoke-direct {v3, v1, v4, p1}, Loc4;-><init>(Lj9b;ILghg;)V
-
-    iput-object v5, v0, Lqr7;->X:Lh76;
-
-    iput-object v5, v0, Lqr7;->Z:Ljava/lang/Object;
-
-    iput-object v5, v0, Lqr7;->s0:Landroid/os/Parcelable;
-
-    iput v2, v0, Lqr7;->o:I
-
-    invoke-interface {p2, v3, v0}, Lh76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_9
-
-    :goto_4
-    return-object v6
-
-    :cond_9
-    :goto_5
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

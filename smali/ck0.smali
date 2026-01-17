@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li94;
+.implements Ll94;
 
 
 # static fields

@@ -1,572 +1,152 @@
-.class public Ltrg;
+.class public final Ltrg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lby0;
-
 
 # instance fields
-.field public final A0:I
-
-.field public final B0:Lal7;
-
-.field public final C0:Lal7;
-
-.field public final D0:I
-
-.field public final E0:Z
-
-.field public final F0:Z
-
-.field public final G0:Z
-
-.field public final H0:Lprg;
-
-.field public final I0:Lll7;
-
-.field public final X:I
-
-.field public final Y:I
-
-.field public final Z:I
-
-.field public final a:I
+.field public final a:Ldrg;
 
 .field public final b:I
 
-.field public final c:I
+.field public final c:[J
 
-.field public final d:I
+.field public final d:[I
 
-.field public final o:I
+.field public final e:I
 
-.field public final s0:I
+.field public final f:[J
 
-.field public final t0:I
+.field public final g:[I
 
-.field public final u0:Z
-
-.field public final v0:Lal7;
-
-.field public final w0:I
-
-.field public final x0:Lal7;
-
-.field public final y0:I
-
-.field public final z0:I
+.field public final h:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lrrg;
-
-    invoke-direct {v0}, Lrrg;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lrrg;)V
-    .locals 1
+.method public constructor <init>(Ldrg;[J[II[J[IJ)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p1, Lrrg;->a:I
+    array-length v0, p3
 
-    iput v0, p0, Ltrg;->a:I
+    array-length v1, p5
 
-    iget v0, p1, Lrrg;->b:I
+    const/4 v2, 0x0
 
-    iput v0, p0, Ltrg;->b:I
+    const/4 v3, 0x1
 
-    iget v0, p1, Lrrg;->c:I
+    if-ne v0, v1, :cond_0
 
-    iput v0, p0, Ltrg;->c:I
+    move v0, v3
 
-    iget v0, p1, Lrrg;->d:I
+    goto :goto_0
 
-    iput v0, p0, Ltrg;->d:I
+    :cond_0
+    move v0, v2
 
-    iget v0, p1, Lrrg;->e:I
+    :goto_0
+    invoke-static {v0}, Lh6j;->b(Z)V
 
-    iput v0, p0, Ltrg;->o:I
+    array-length v0, p2
 
-    iget v0, p1, Lrrg;->f:I
+    array-length v1, p5
 
-    iput v0, p0, Ltrg;->X:I
+    if-ne v0, v1, :cond_1
 
-    iget v0, p1, Lrrg;->g:I
+    move v0, v3
 
-    iput v0, p0, Ltrg;->Y:I
+    goto :goto_1
 
-    iget v0, p1, Lrrg;->h:I
+    :cond_1
+    move v0, v2
 
-    iput v0, p0, Ltrg;->Z:I
+    :goto_1
+    invoke-static {v0}, Lh6j;->b(Z)V
 
-    iget v0, p1, Lrrg;->i:I
+    array-length v0, p6
 
-    iput v0, p0, Ltrg;->s0:I
+    array-length v1, p5
 
-    iget v0, p1, Lrrg;->j:I
+    if-ne v0, v1, :cond_2
 
-    iput v0, p0, Ltrg;->t0:I
+    move v2, v3
 
-    iget-boolean v0, p1, Lrrg;->k:Z
+    :cond_2
+    invoke-static {v2}, Lh6j;->b(Z)V
 
-    iput-boolean v0, p0, Ltrg;->u0:Z
+    iput-object p1, p0, Ltrg;->a:Ldrg;
 
-    iget-object v0, p1, Lrrg;->l:Lal7;
+    iput-object p2, p0, Ltrg;->c:[J
 
-    iput-object v0, p0, Ltrg;->v0:Lal7;
+    iput-object p3, p0, Ltrg;->d:[I
 
-    iget v0, p1, Lrrg;->m:I
+    iput p4, p0, Ltrg;->e:I
 
-    iput v0, p0, Ltrg;->w0:I
+    iput-object p5, p0, Ltrg;->f:[J
 
-    iget-object v0, p1, Lrrg;->n:Lal7;
+    iput-object p6, p0, Ltrg;->g:[I
 
-    iput-object v0, p0, Ltrg;->x0:Lal7;
+    iput-wide p7, p0, Ltrg;->h:J
 
-    iget v0, p1, Lrrg;->o:I
+    array-length p1, p2
 
-    iput v0, p0, Ltrg;->y0:I
+    iput p1, p0, Ltrg;->b:I
 
-    iget v0, p1, Lrrg;->p:I
+    array-length p1, p6
 
-    iput v0, p0, Ltrg;->z0:I
+    if-lez p1, :cond_3
 
-    iget v0, p1, Lrrg;->q:I
+    array-length p1, p6
 
-    iput v0, p0, Ltrg;->A0:I
+    sub-int/2addr p1, v3
 
-    iget-object v0, p1, Lrrg;->r:Lal7;
+    aget p2, p6, p1
 
-    iput-object v0, p0, Ltrg;->B0:Lal7;
+    const/high16 p3, 0x20000000
 
-    iget-object v0, p1, Lrrg;->s:Lal7;
+    or-int/2addr p2, p3
 
-    iput-object v0, p0, Ltrg;->C0:Lal7;
+    aput p2, p6, p1
 
-    iget v0, p1, Lrrg;->t:I
-
-    iput v0, p0, Ltrg;->D0:I
-
-    iget-boolean v0, p1, Lrrg;->u:Z
-
-    iput-boolean v0, p0, Ltrg;->E0:Z
-
-    iget-boolean v0, p1, Lrrg;->v:Z
-
-    iput-boolean v0, p0, Ltrg;->F0:Z
-
-    iget-boolean v0, p1, Lrrg;->w:Z
-
-    iput-boolean v0, p0, Ltrg;->G0:Z
-
-    iget-object v0, p1, Lrrg;->x:Lprg;
-
-    iput-object v0, p0, Ltrg;->H0:Lprg;
-
-    iget-object p1, p1, Lrrg;->y:Lll7;
-
-    iput-object p1, p0, Ltrg;->I0:Lll7;
-
+    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(J)I
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ltrg;->f:[J
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x1
 
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    check-cast p1, Ltrg;
-
-    iget v2, p0, Ltrg;->a:I
-
-    iget v3, p1, Ltrg;->a:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->b:I
-
-    iget v3, p1, Ltrg;->b:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->c:I
-
-    iget v3, p1, Ltrg;->c:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->d:I
-
-    iget v3, p1, Ltrg;->d:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->o:I
-
-    iget v3, p1, Ltrg;->o:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->X:I
-
-    iget v3, p1, Ltrg;->X:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->Y:I
-
-    iget v3, p1, Ltrg;->Y:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->Z:I
-
-    iget v3, p1, Ltrg;->Z:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Ltrg;->u0:Z
-
-    iget-boolean v3, p1, Ltrg;->u0:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->s0:I
-
-    iget v3, p1, Ltrg;->s0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->t0:I
-
-    iget v3, p1, Ltrg;->t0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Ltrg;->v0:Lal7;
-
-    iget-object v3, p1, Ltrg;->v0:Lal7;
-
-    invoke-virtual {v2, v3}, Lal7;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Ltrg;->w0:I
-
-    iget v3, p1, Ltrg;->w0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Ltrg;->x0:Lal7;
-
-    iget-object v3, p1, Ltrg;->x0:Lal7;
-
-    invoke-virtual {v2, v3}, Lal7;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Ltrg;->y0:I
-
-    iget v3, p1, Ltrg;->y0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->z0:I
-
-    iget v3, p1, Ltrg;->z0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ltrg;->A0:I
-
-    iget v3, p1, Ltrg;->A0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Ltrg;->B0:Lal7;
-
-    iget-object v3, p1, Ltrg;->B0:Lal7;
-
-    invoke-virtual {v2, v3}, Lal7;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ltrg;->C0:Lal7;
-
-    iget-object v3, p1, Ltrg;->C0:Lal7;
-
-    invoke-virtual {v2, v3}, Lal7;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Ltrg;->D0:I
-
-    iget v3, p1, Ltrg;->D0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Ltrg;->E0:Z
-
-    iget-boolean v3, p1, Ltrg;->E0:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Ltrg;->F0:Z
-
-    iget-boolean v3, p1, Ltrg;->F0:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Ltrg;->G0:Z
-
-    iget-boolean v3, p1, Ltrg;->G0:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Ltrg;->H0:Lprg;
-
-    iget-object v3, p1, Ltrg;->H0:Lprg;
-
-    invoke-virtual {v2, v3}, Lprg;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ltrg;->I0:Lll7;
-
-    iget-object p1, p1, Ltrg;->I0:Lll7;
-
-    invoke-virtual {v2, p1}, Lll7;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, p1, p2, v1}, Lmbh;->a([JJZ)I
 
     move-result p1
 
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
     :goto_0
-    return v1
-.end method
+    array-length p2, v0
 
-.method public hashCode()I
-    .locals 3
+    if-ge p1, p2, :cond_1
 
-    iget v0, p0, Ltrg;->a:I
+    iget-object p2, p0, Ltrg;->g:[I
 
-    const/16 v1, 0x1f
+    aget p2, p2, p1
 
-    add-int/2addr v0, v1
+    and-int/2addr p2, v1
 
-    mul-int/2addr v0, v1
+    if-eqz p2, :cond_0
 
-    iget v2, p0, Ltrg;->b:I
+    return p1
 
-    add-int/2addr v0, v2
+    :cond_0
+    add-int/lit8 p1, p1, 0x1
 
-    mul-int/2addr v0, v1
+    goto :goto_0
 
-    iget v2, p0, Ltrg;->c:I
+    :cond_1
+    const/4 p1, -0x1
 
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->d:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->o:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->X:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->Y:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->Z:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Ltrg;->u0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->s0:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->t0:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ltrg;->v0:Lal7;
-
-    invoke-virtual {v2}, Lal7;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget v0, p0, Ltrg;->w0:I
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Ltrg;->x0:Lal7;
-
-    invoke-virtual {v0}, Lal7;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->y0:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->z0:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->A0:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ltrg;->B0:Lal7;
-
-    invoke-virtual {v2}, Lal7;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Ltrg;->C0:Lal7;
-
-    invoke-virtual {v0}, Lal7;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltrg;->D0:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Ltrg;->E0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Ltrg;->F0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Ltrg;->G0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ltrg;->H0:Lprg;
-
-    iget-object v2, v2, Lprg;->a:Lel7;
-
-    invoke-virtual {v2}, Lel7;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Ltrg;->I0:Lll7;
-
-    invoke-virtual {v0}, Lll7;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    return v0
+    return p1
 .end method

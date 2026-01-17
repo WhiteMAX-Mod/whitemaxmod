@@ -1,37 +1,35 @@
 .class public final Lv96;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lt96;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public Y:I
 
-.field public Z:I
+.field public d:Lbtd;
 
-.field public d:Lb5g;
-
-.field public o:Lesd;
+.field public o:Lp96;
 
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lv96;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lv96;->X:Ljava/lang/Object;
 
-    iget p1, p0, Lv96;->Z:I
+    iget p1, p0, Lv96;->Y:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lv96;->Z:I
+    iput p1, p0, Lv96;->Y:I
 
     const/4 p1, 0x0
 
-    invoke-static {p1, p1, p0}, Lqx0;->o(Lf76;Lcr6;Ll84;)Ljava/lang/Object;
+    invoke-static {p1, p0}, Lgu0;->r(Ld76;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

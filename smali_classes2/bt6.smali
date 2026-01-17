@@ -1,75 +1,34 @@
-.class public final Lbt6;
-.super Ldt6;
+.class public abstract Lbt6;
+.super Lct6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lbt6;
+# virtual methods
+.method public abstract f()Lrs6;
+.end method
 
-.field public static final b:Ljava/util/List;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-.field public static final c:Lts6;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lbt6;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lbt6;->a:Lbt6;
-
-    sget-object v0, Lvs6;->e:Lvs6;
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {p0}, Lbt6;->f()Lrs6;
 
     move-result-object v0
 
-    sput-object v0, Lbt6;->b:Ljava/util/List;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v0, Lts6;
+    const-string v2, "Virtual(name="
 
-    sget v1, Lygb;->c:I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lts6;-><init>(I)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sput-object v0, Lbt6;->c:Lts6;
+    const-string v0, ")"
 
-    return-void
-.end method
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-# virtual methods
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ru.ok.tamtam.ALL_MEDIA"
-
-    return-object v0
-.end method
-
-.method public final c()Li4;
-    .locals 1
-
-    sget-object v0, Lbt6;->c:Lts6;
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/util/List;
-    .locals 1
-
-    sget-object v0, Lbt6;->b:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final f()Lts6;
-    .locals 1
-
-    sget-object v0, Lbt6;->c:Lts6;
+    move-result-object v0
 
     return-object v0
 .end method

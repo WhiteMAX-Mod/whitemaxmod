@@ -1,143 +1,178 @@
 .class public final Lgu8;
-.super Lhm6;
+.super Lisd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final h:Ljava/lang/Object;
-
-
 # instance fields
-.field public final f:Ljava/lang/Object;
+.field public final synthetic a:Lcom/google/android/material/datepicker/c;
 
-.field public final g:Ljava/lang/Object;
+.field public final synthetic b:Lcom/google/android/material/button/MaterialButton;
+
+.field public final synthetic c:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lgu8;->h:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lglg;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;Lcom/google/android/material/button/MaterialButton;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lhm6;-><init>(Lglg;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lgu8;->f:Ljava/lang/Object;
+    iput-object p1, p0, Lgu8;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    iput-object p3, p0, Lgu8;->g:Ljava/lang/Object;
+    iput-object p2, p0, Lgu8;->a:Lcom/google/android/material/datepicker/c;
+
+    iput-object p3, p0, Lgu8;->b:Lcom/google/android/material/button/MaterialButton;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)I
-    .locals 1
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
+    .locals 0
 
-    sget-object v0, Lgu8;->h:Ljava/lang/Object;
+    if-nez p2, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object p2, p0, Lgu8;->b:Lcom/google/android/material/button/MaterialButton;
 
-    move-result v0
+    invoke-virtual {p2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_0
+    move-result-object p2
 
-    iget-object v0, p0, Lgu8;->g:Ljava/lang/Object;
-
-    if-eqz v0, :cond_0
-
-    move-object p1, v0
+    invoke-virtual {p1, p2}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
     :cond_0
-    iget-object v0, p0, Lhm6;->e:Lglg;
-
-    invoke-virtual {v0, p1}, Lglg;->b(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
+    return-void
 .end method
 
-.method public final f(ILblg;Z)Lblg;
-    .locals 1
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 3
 
-    iget-object v0, p0, Lhm6;->e:Lglg;
+    iget-object p1, p0, Lgu8;->a:Lcom/google/android/material/datepicker/c;
 
-    invoke-virtual {v0, p1, p2, p3}, Lglg;->f(ILblg;Z)Lblg;
+    iget-object p1, p1, Lcom/google/android/material/datepicker/c;->d:Lu01;
 
-    iget-object p1, p2, Lblg;->b:Ljava/lang/Object;
+    iget-object p3, p0, Lgu8;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    iget-object v0, p0, Lgu8;->g:Ljava/lang/Object;
+    if-gez p2, :cond_0
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result p1
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    if-eqz p1, :cond_0
+    move-result-object p2
 
-    if-eqz p3, :cond_0
+    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    sget-object p1, Lgu8;->h:Ljava/lang/Object;
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
 
-    iput-object p1, p2, Lblg;->b:Ljava/lang/Object;
+    move-result p2
+
+    goto :goto_0
 
     :cond_0
-    return-object p2
-.end method
+    iget-object p2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
 
-.method public final l(I)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    iget-object v0, p0, Lhm6;->e:Lglg;
+    move-result-object p2
 
-    invoke-virtual {v0, p1}, Lglg;->l(I)Ljava/lang/Object;
+    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->a1()I
+
+    move-result p2
+
+    :goto_0
+    iget-object v0, p1, Lu01;->a:Lh8a;
+
+    iget-object v0, v0, Lh8a;->a:Ljava/util/Calendar;
+
+    invoke-static {v0}, Libh;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1, p2}, Ljava/util/Calendar;->add(II)V
+
+    new-instance v2, Lh8a;
+
+    invoke-direct {v2, v0}, Lh8a;-><init>(Ljava/util/Calendar;)V
+
+    iput-object v2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
+
+    iget-object p1, p1, Lu01;->a:Lh8a;
+
+    iget-object p1, p1, Lh8a;->a:Ljava/util/Calendar;
+
+    invoke-static {p1}, Libh;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
 
     move-result-object p1
 
-    iget-object v0, p0, Lgu8;->g:Ljava/lang/Object;
+    invoke-virtual {p1, v1, p2}, Ljava/util/Calendar;->add(II)V
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 p2, 0x5
 
-    move-result v0
+    const/4 p3, 0x1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2, p3}, Ljava/util/Calendar;->set(II)V
 
-    sget-object p1, Lgu8;->h:Ljava/lang/Object;
+    invoke-static {p1}, Libh;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
 
-    :cond_0
-    return-object p1
-.end method
+    move-result-object p1
 
-.method public final m(ILelg;J)Lelg;
-    .locals 1
+    invoke-virtual {p1, v1}, Ljava/util/Calendar;->get(I)I
 
-    iget-object v0, p0, Lhm6;->e:Lglg;
+    invoke-virtual {p1, p3}, Ljava/util/Calendar;->get(I)I
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lglg;->m(ILelg;J)Lelg;
+    const/4 p3, 0x7
 
-    iget-object p1, p2, Lelg;->a:Ljava/lang/Object;
+    invoke-virtual {p1, p3}, Ljava/util/Calendar;->getMaximum(I)I
 
-    iget-object p3, p0, Lgu8;->f:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Ljava/util/Calendar;->getActualMaximum(I)I
 
-    invoke-static {p1, p3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result p1
+    invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    if-eqz p1, :cond_0
+    move-result-wide p1
 
-    sget-object p1, Lelg;->q:Ljava/lang/Object;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
-    iput-object p1, p2, Lelg;->a:Ljava/lang/Object;
+    move-result-object p3
 
-    :cond_0
-    return-object p2
+    sget-object v0, Libh;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const-string v0, "yMMMM"
+
+    invoke-static {v0, p3}, Landroid/icu/text/DateFormat;->getInstanceForSkeleton(Ljava/lang/String;Ljava/util/Locale;)Landroid/icu/text/DateFormat;
+
+    move-result-object p3
+
+    const-string v0, "UTC"
+
+    invoke-static {v0}, Landroid/icu/util/TimeZone;->getTimeZone(Ljava/lang/String;)Landroid/icu/util/TimeZone;
+
+    move-result-object v0
+
+    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->setTimeZone(Landroid/icu/util/TimeZone;)V
+
+    sget-object v0, Landroid/icu/text/DisplayContext;->CAPITALIZATION_FOR_STANDALONE:Landroid/icu/text/DisplayContext;
+
+    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->setContext(Landroid/icu/text/DisplayContext;)V
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lgu8;->b:Lcom/google/android/material/button/MaterialButton;
+
+    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

@@ -1,61 +1,65 @@
 .class public final Ljxa;
-.super Lbdf;
+.super Lf3;
 .source "SourceFile"
-
-# interfaces
-.implements Lyr6;
 
 
 # instance fields
-.field public final a:Lkw8;
+.field public final synthetic b:I
 
-.field public final b:Lur6;
+.field public final c:Ljava/lang/Object;
 
-.field public final c:Lh6e;
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkw8;Lur6;Lh6e;)V
+.method public synthetic constructor <init>(Ldxa;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Ljxa;->b:I
 
-    iput-object p1, p0, Ljxa;->a:Lkw8;
+    invoke-direct {p0, p1}, Lf3;-><init>(Lsza;)V
 
-    iput-object p2, p0, Ljxa;->b:Lur6;
+    iput-object p2, p0, Ljxa;->c:Ljava/lang/Object;
 
-    iput-object p3, p0, Ljxa;->c:Lh6e;
+    iput-object p3, p0, Ljxa;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lcxa;
-    .locals 5
-
-    new-instance v0, Lixa;
-
-    iget-object v1, p0, Ljxa;->c:Lh6e;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Ljxa;->a:Lkw8;
-
-    iget-object v4, p0, Ljxa;->b:Lur6;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lixa;-><init>(Lcxa;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    return-object v0
-.end method
-
-.method public final m(Ludf;)V
+.method public final k(Le0b;)V
     .locals 4
 
-    :try_start_0
-    iget-object v0, p0, Ljxa;->b:Lur6;
+    iget v0, p0, Ljxa;->b:I
 
-    iget-object v0, v0, Lur6;->a:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lt25;
+
+    iget-object v1, p0, Ljxa;->c:Ljava/lang/Object;
+
+    check-cast v1, Lay3;
+
+    iget-object v2, p0, Ljxa;->d:Ljava/lang/Object;
+
+    check-cast v2, Li6;
+
+    invoke-direct {v0, p1, v1, v2}, Lt25;-><init>(Le0b;Lay3;Li6;)V
+
+    iget-object p1, p0, Lf3;->a:Lsza;
+
+    invoke-interface {p1, v0}, Lsza;->a(Le0b;)V
+
+    return-void
+
+    :pswitch_0
+    :try_start_0
+    iget-object v0, p0, Ljxa;->c:Ljava/lang/Object;
+
+    check-cast v0, Ltr6;
+
+    iget-object v0, v0, Ltr6;->a:Ljava/lang/Object;
 
     const-string v1, "The initialSupplier returned a null value"
 
@@ -63,26 +67,36 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance v1, Lhxa;
+    new-instance v1, Lixa;
 
-    iget-object v2, p0, Ljxa;->c:Lh6e;
+    iget-object v2, p0, Ljxa;->d:Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    check-cast v2, Le7e;
 
-    invoke-direct {v1, p1, v0, v2, v3}, Lhxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lh6e;I)V
+    const/4 v3, 0x0
 
-    iget-object p1, p0, Ljxa;->a:Lkw8;
+    invoke-direct {v1, p1, v0, v2, v3}, Lixa;-><init>(Ljava/lang/Object;Ljava/lang/Object;Le7e;I)V
 
-    invoke-virtual {p1, v1}, Lcxa;->a(Lc0b;)V
+    iget-object p1, p0, Lf3;->a:Lsza;
 
-    return-void
+    invoke-interface {p1, v1}, Lsza;->a(Le0b;)V
+
+    goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    invoke-static {v0}, Ldoj;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
 
-    invoke-static {v0, p1}, Lxg5;->d(Ljava/lang/Throwable;Ludf;)V
+    invoke-static {v0, p1}, Lyg5;->b(Ljava/lang/Throwable;Le0b;)V
 
+    :goto_0
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

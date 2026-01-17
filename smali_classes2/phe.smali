@@ -1,131 +1,375 @@
 .class public final Lphe;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lqhe;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:[Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lch2;
+.field public final synthetic Y:Ljava/lang/String;
 
-.field public final c:Luhe;
+.field public final synthetic Z:Lshe;
+
+.field public o:I
+
+.field public final synthetic t0:I
+
+.field public final synthetic u0:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/String;Lch2;Luhe;)V
+.method public constructor <init>(ILshe;Ljava/lang/Long;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lphe;->Y:Ljava/lang/String;
 
-    iput-object p1, p0, Lphe;->a:[Ljava/lang/String;
+    iput-object p2, p0, Lphe;->Z:Lshe;
 
-    iput-object p2, p0, Lphe;->b:Lch2;
+    iput p1, p0, Lphe;->t0:I
 
-    iput-object p3, p0, Lphe;->c:Luhe;
+    iput-object p3, p0, Lphe;->u0:Ljava/lang/Long;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/util/List;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lphe;->c:Luhe;
+    check-cast p1, Lf76;
 
-    iget-object v1, p0, Lphe;->b:Lch2;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1}, Lch2;->S()Lhof;
+    invoke-virtual {p0, p1, p2}, Lphe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-virtual {v1}, Lhof;->getValue()Ljava/lang/Object;
+    check-cast p1, Lphe;
 
-    move-result-object v1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    check-cast v1, Lud2;
+    invoke-virtual {p1, p2}, Lphe;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v2, Lch5;->a:Lch5;
+    move-result-object p1
 
-    if-nez v1, :cond_0
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
+
+    new-instance v0, Lphe;
+
+    iget v1, p0, Lphe;->t0:I
+
+    iget-object v3, p0, Lphe;->u0:Ljava/lang/Long;
+
+    iget-object v2, p0, Lphe;->Z:Lshe;
+
+    iget-object v4, p0, Lphe;->Y:Ljava/lang/String;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lphe;-><init>(ILshe;Ljava/lang/Long;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lphe;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 18
+
+    move-object/from16 v0, p0
+
+    sget-object v1, Lb3h;->a:Lb3h;
+
+    sget-object v2, Lkk8;->d:Lkk8;
+
+    iget-object v3, v0, Lphe;->X:Ljava/lang/Object;
+
+    check-cast v3, Lf76;
+
+    sget-object v4, Lac4;->a:Lac4;
+
+    iget v5, v0, Lphe;->o:I
+
+    const/4 v6, 0x3
+
+    const/4 v7, 0x2
+
+    const/4 v8, 0x1
+
+    const/4 v9, 0x0
+
+    if-eqz v5, :cond_3
+
+    if-eq v5, v8, :cond_2
+
+    if-eq v5, v7, :cond_1
+
+    if-ne v5, v6, :cond_0
+
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    move-object/from16 v5, p1
 
     goto :goto_1
 
-    :cond_0
-    :try_start_0
-    invoke-virtual {v0, v1, p1}, Luhe;->g(Lud2;Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v0, v1, p1}, Luhe;->a(Lud2;Ljava/lang/String;)Lzge;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_1
-    iget-object v3, p0, Lphe;->a:[Ljava/lang/String;
-
-    array-length v4, v3
-
-    const/4 v5, 0x0
-
-    :goto_0
-    if-ge v5, v4, :cond_3
-
-    aget-object v6, v3, v5
-
-    invoke-virtual {v0, v6, p1}, Luhe;->i(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_2
-
-    invoke-virtual {v0, v1, v6}, Luhe;->a(Lud2;Ljava/lang/String;)Lzge;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object p1
-
     :cond_2
-    add-int/lit8 v5, v5, 0x1
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_3
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    sget-object v10, Lc5j;->a:Ledb;
+
+    if-nez v10, :cond_4
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
+    invoke-virtual {v10, v2}, Ledb;->b(Lkk8;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_5
+
+    const-string v11, "[search][chats] public search started"
+
+    invoke-virtual {v10, v2, v5, v11, v9}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_0
+    iget-object v5, v0, Lphe;->Y:Ljava/lang/String;
+
+    if-eqz v5, :cond_b
+
+    invoke-static {v5}, Lrzf;->H(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    goto/16 :goto_4
+
+    :cond_6
+    sget-wide v10, Lthe;->a:J
+
+    new-instance v12, Lohe;
+
+    iget-object v14, v0, Lphe;->Z:Lshe;
+
+    iget-object v5, v0, Lphe;->Y:Ljava/lang/String;
+
+    iget v13, v0, Lphe;->t0:I
+
+    iget-object v15, v0, Lphe;->u0:Ljava/lang/Long;
+
+    const/16 v17, 0x0
+
+    move-object/from16 v16, v5
+
+    invoke-direct/range {v12 .. v17}, Lohe;-><init>(ILshe;Ljava/lang/Long;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    iput-object v3, v0, Lphe;->X:Ljava/lang/Object;
+
+    iput v7, v0, Lphe;->o:I
+
+    invoke-static {v10, v11}, Lumj;->j(J)J
+
+    move-result-wide v7
+
+    invoke-static {v7, v8, v12, v0}, Ldui;->f(JLbr6;Lo84;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-ne v5, v4, :cond_7
+
+    goto/16 :goto_5
+
+    :cond_7
     :goto_1
-    return-object v2
+    check-cast v5, Lb0d;
 
+    iget-object v7, v5, Lb0d;->c:Ljava/util/List;
+
+    iget-object v8, v0, Lphe;->Y:Ljava/lang/String;
+
+    iget v10, v0, Lphe;->t0:I
+
+    iget-object v11, v0, Lphe;->u0:Ljava/lang/Long;
+
+    sget-object v12, Lc5j;->a:Ledb;
+
+    if-nez v12, :cond_8
+
+    goto :goto_2
+
+    :cond_8
+    invoke-virtual {v12, v2}, Ledb;->b(Lkk8;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_9
+
+    iget-object v13, v5, Lb0d;->c:Ljava/util/List;
+
+    invoke-interface {v13}, Ljava/util/List;->size()I
+
+    move-result v13
+
+    new-instance v14, Ljava/lang/StringBuilder;
+
+    const-string v15, "[search][chats] search public done: "
+
+    invoke-direct {v14, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v14, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v13, " results for "
+
+    invoke-virtual {v14, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v8, ", "
+
+    invoke-virtual {v14, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string v10, "she"
+
+    invoke-virtual {v12, v2, v10, v8, v9}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_9
     :goto_2
-    const-class v0, Lphe;
+    iget-object v2, v5, Lb0d;->o:Ljava/lang/Long;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    if-eqz v2, :cond_a
 
-    move-result-object v0
+    const-wide/16 v10, 0x0
 
-    const-string v1, "fail to search saved messages chat"
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    invoke-static {v0, v1, p1}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-wide v12
 
-    return-object v2
+    cmp-long v2, v12, v10
+
+    if-nez v2, :cond_a
+
+    iget-object v2, v0, Lphe;->Z:Lshe;
+
+    iget-object v2, v2, Lshe;->b:Lo58;
+
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwc4;
+
+    new-instance v8, Lone/me/search/usecase/InvalidSearchResultMarkerException;
+
+    iget-object v10, v5, Lb0d;->o:Ljava/lang/Long;
+
+    invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-direct {v8, v10}, Lone/me/search/usecase/InvalidSearchResultMarkerException;-><init>(Ljava/lang/String;)V
+
+    const-string v10, "ONEME-21055"
+
+    invoke-virtual {v2, v10, v8}, Lwc4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    move-object v2, v9
+
+    goto :goto_3
+
+    :cond_a
+    iget-object v2, v5, Lb0d;->o:Ljava/lang/Long;
+
+    :goto_3
+    new-instance v8, Lyhe;
+
+    iget-object v5, v5, Lb0d;->X:Ljava/lang/String;
+
+    invoke-direct {v8, v7, v2, v5}, Lyhe;-><init>(Ljava/util/List;Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object v9, v0, Lphe;->X:Ljava/lang/Object;
+
+    iput v6, v0, Lphe;->o:I
+
+    invoke-interface {v3, v8, v0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-ne v2, v4, :cond_c
+
+    goto :goto_5
+
+    :cond_b
+    :goto_4
+    new-instance v2, Lyhe;
+
+    sget-object v5, Ldh5;->a:Ldh5;
+
+    invoke-direct {v2, v5, v9, v9}, Lyhe;-><init>(Ljava/util/List;Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object v9, v0, Lphe;->X:Ljava/lang/Object;
+
+    iput v8, v0, Lphe;->o:I
+
+    invoke-interface {v3, v2, v0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-ne v2, v4, :cond_c
+
+    :goto_5
+    return-object v4
+
+    :cond_c
+    return-object v1
 .end method

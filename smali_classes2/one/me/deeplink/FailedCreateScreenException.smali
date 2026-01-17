@@ -17,7 +17,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -25,7 +25,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;Lgm4;Ljava/util/Map;Landroid/os/Bundle;Ljava/lang/Throwable;)V
+.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;Lhm4;Ljava/util/Map;Landroid/os/Bundle;Ljava/lang/Throwable;)V
     .locals 2
 
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;

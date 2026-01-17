@@ -1,77 +1,124 @@
 .class public final Lhqj;
-.super Li4;
+.super Lzlj;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhqj;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final transient c:Lwxi;
 
-.field public final b:Ljava/lang/String;
+.field public final transient d:[Ljava/lang/Object;
+
+.field public final transient o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwgj;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lwgj;-><init>(I)V
-
-    sput-object v0, Lhqj;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lwxi;[Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    iput-object p1, p0, Lhqj;->a:Ljava/lang/String;
+    iput-object p1, p0, Lhqj;->c:Lwxi;
 
-    iput-object p2, p0, Lhqj;->b:Ljava/lang/String;
+    iput-object p2, p0, Lhqj;->d:[Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lhqj;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final a([Ljava/lang/Object;)I
+    .locals 1
+
+    iget-object v0, p0, Lzlj;->b:Lvij;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lhpj;
+
+    invoke-direct {v0, p0}, Lhpj;-><init>(Lhqj;)V
+
+    iput-object v0, p0, Lzlj;->b:Lvij;
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lvij;->a([Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Ljava/util/Map$Entry;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object v2, p0, Lhqj;->c:Lwxi;
+
+    invoke-virtual {v2, v0}, Lwxi;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
     .locals 2
 
-    const/16 p2, 0x4f45
+    iget-object v0, p0, Lzlj;->b:Lvij;
 
-    invoke-static {p1, p2}, Lwmj;->k(Landroid/os/Parcel;I)I
+    if-nez v0, :cond_0
 
-    move-result p2
+    new-instance v0, Lhpj;
 
-    const/4 v0, 0x1
+    invoke-direct {v0, p0}, Lhpj;-><init>(Lhqj;)V
 
-    iget-object v1, p0, Lhqj;->a:Ljava/lang/String;
+    iput-object v0, p0, Lzlj;->b:Lvij;
 
-    invoke-static {p1, v0, v1}, Lwmj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x2
+    invoke-virtual {v0, v1}, Lvij;->f(I)Logj;
 
-    iget-object v1, p0, Lhqj;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lwmj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    return-object v0
+.end method
 
-    invoke-static {p1, p2}, Lwmj;->l(Landroid/os/Parcel;I)V
+.method public final size()I
+    .locals 1
 
-    return-void
+    iget v0, p0, Lhqj;->o:I
+
+    return v0
 .end method

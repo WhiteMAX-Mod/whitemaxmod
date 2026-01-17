@@ -1,118 +1,67 @@
-.class public final Lncb;
-.super Lb5g;
+.class public abstract Lncb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic X:Ldl4;
+.field public static final b:I
 
-.field public o:I
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
-.method public constructor <init>(Ldl4;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lncb;->X:Ldl4;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lncb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lncb;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lncb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance p1, Lncb;
+    sget v0, Ln6d;->add_8:I
 
-    iget-object v0, p0, Lncb;->X:Ldl4;
+    sput v0, Lncb;->a:I
 
-    invoke-direct {p1, v0, p2}, Lncb;-><init>(Ldl4;Lkotlin/coroutines/Continuation;)V
+    sget v0, Ln6d;->apple_outline_24:I
 
-    return-object p1
-.end method
+    sput v0, Lncb;->b:I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    sget v0, Ln6d;->ball_outline_24:I
 
-    iget v0, p0, Lncb;->o:I
+    sput v0, Lncb;->c:I
 
-    const/4 v1, 0x1
+    sget v0, Ln6d;->car_outline_24:I
 
-    if-eqz v0, :cond_1
+    sput v0, Lncb;->d:I
 
-    if-ne v0, v1, :cond_0
+    sget v0, Ln6d;->flags_outline_24:I
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    sput v0, Lncb;->e:I
 
-    goto :goto_0
+    sget v0, Ln6d;->lamp_outline_24:I
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sput v0, Lncb;->f:I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    sget v0, Ln6d;->paw_outline_24:I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sput v0, Lncb;->g:I
 
-    throw p1
+    sget v0, Ln6d;->remove_outline_24:I
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    sput v0, Lncb;->h:I
 
-    iput v1, p0, Lncb;->o:I
+    sget v0, Ln6d;->symbols_outline_24:I
 
-    new-instance p1, Ldbb;
+    sput v0, Lncb;->i:I
 
-    const/4 v0, 0x0
-
-    const/4 v2, 0x1
-
-    invoke-direct {p1, v1, v0, v2}, Ldbb;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iget-object v0, p0, Lncb;->X:Ldl4;
-
-    invoke-virtual {v0, p1, p0}, Ldl4;->d(Loq6;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-void
 .end method

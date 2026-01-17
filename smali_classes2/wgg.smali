@@ -1,34 +1,80 @@
-.class public final Lwgg;
+.class public final synthetic Lwgg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Ljava/util/function/Function;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lnq6;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILnq6;)V
+    .locals 0
+
+    iput p1, p0, Lwgg;->a:I
+
+    iput-object p2, p0, Lwgg;->b:Lnq6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lxgg;
+    iget v0, p0, Lwgg;->a:I
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v1
+    iget-object v0, p0, Lwgg;->b:Lnq6;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    check-cast v0, Lk1e;
 
-    move-result p1
+    invoke-virtual {v0, p1}, Lk1e;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p1}, Lxgg;-><init>(II)V
+    move-result-object p1
 
-    return-object v0
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p1, p1, [Lxgg;
+    check-cast p1, Landroid/os/VibrationEffect;
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lwgg;->b:Lnq6;
+
+    check-cast v0, Ll0g;
+
+    invoke-virtual {v0, p1}, Ll0g;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lly4;
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lwgg;->b:Lnq6;
+
+    check-cast v0, Lk1e;
+
+    invoke-virtual {v0, p1}, Lk1e;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/text/TextPaint;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

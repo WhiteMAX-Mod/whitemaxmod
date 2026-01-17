@@ -1,67 +1,90 @@
-.class public abstract synthetic Ln48;
+.class public final Ln48;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsr4;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Landroid/view/View;
+
+.field public final b:Lm48;
+
+.field public c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/view/View;Lru/ok/messages/media/mediabar/ActLocalMedias;)V
     .locals 3
 
-    invoke-static {}, Lw48;->values()[Lw48;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    array-length v0, v0
+    iput v0, p0, Ln48;->c:I
 
-    new-array v0, v0, [I
+    iput-object p1, p0, Ln48;->a:Landroid/view/View;
 
-    :try_start_0
-    sget-object v1, Lw48;->X:Lw48;
+    new-instance v0, Lm48;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    new-instance v1, Lkg2;
 
-    const/4 v2, 0x1
+    const/4 v2, 0x5
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v1, v2, p1}, Lkg2;-><init>(ILjava/lang/Object;)V
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Lw48;->Y:Lw48;
+    invoke-direct {v0, p2, v1}, Lm48;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Lkg2;)V
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iput-object v0, p0, Ln48;->b:Lm48;
 
-    move-result v1
+    return-void
+.end method
 
-    const/4 v2, 0x2
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+# virtual methods
+.method public final onPause(Lj88;)V
+    .locals 1
 
-    :catch_1
-    :try_start_2
-    sget-object v1, Lw48;->Z:Lw48;
+    const-string p1, "n48"
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const-string v0, "onPause: unregisterGlobalLayoutListener"
 
-    move-result v1
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v2, 0x3
+    iget-object p1, p0, Ln48;->a:Landroid/view/View;
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    :catch_2
-    sput-object v0, Ln48;->$EnumSwitchMapping$0:[I
+    move-result-object p1
+
+    iget-object v0, p0, Ln48;->b:Lm48;
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    return-void
+.end method
+
+.method public final onResume(Lj88;)V
+    .locals 1
+
+    const-string p1, "n48"
+
+    const-string v0, "onResume: registerGlobalLayoutListener"
+
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Ln48;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ln48;->b:Lm48;
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     return-void
 .end method

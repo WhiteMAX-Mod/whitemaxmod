@@ -1,136 +1,220 @@
 .class public final Lrx7;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.super Lmac;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
-
-.field public final synthetic b:Ltx7;
+# static fields
+.field public static final c:Z
 
 
 # direct methods
-.method public constructor <init>(Ltx7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lrx7;->b:Ltx7;
+    const-string v0, "java.specification.version"
 
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 p1, 0x1
+    move-result-object v0
 
-    iput-boolean p1, p0, Lrx7;->a:Z
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lyzf;->k(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    const/16 v1, 0x9
+
+    if-lt v0, v1, :cond_2
+
+    :goto_1
+    move v2, v3
+
+    goto :goto_2
+
+    :cond_1
+    :try_start_0
+    const-class v0, Ljavax/net/ssl/SSLSocket;
+
+    const-string v4, "getApplicationProtocol"
+
+    invoke-virtual {v0, v4, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    :cond_2
+    :goto_2
+    sput-boolean v2, Lrx7;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDown(Landroid/view/MotionEvent;)Z
-    .locals 0
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 4
 
-    const/4 p1, 0x1
+    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSSLParameters()Ljavax/net/ssl/SSLParameters;
 
-    return p1
-.end method
+    move-result-object p2
 
-.method public final onLongPress(Landroid/view/MotionEvent;)V
-    .locals 5
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-boolean v0, p0, Lrx7;->a:Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    if-nez v0, :cond_0
+    invoke-interface {p3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p3
+
+    :cond_0
+    :goto_0
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lyyc;
+
+    sget-object v3, Lyyc;->b:Lyyc;
+
+    if-eq v2, v3, :cond_0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    :cond_1
+    new-instance p3, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Lri3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {p3, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lyyc;
+
+    iget-object v1, v1, Lyyc;->a:Ljava/lang/String;
+
+    invoke-virtual {p3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_3
+
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-static {p2, p3}, La85;->t(Ljavax/net/ssl/SSLParameters;[Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
+
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final f(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
+
+    :try_start_0
+    invoke-static {p1}, La85;->l(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
     :cond_0
-    iget-object v0, p0, Lrx7;->b:Ltx7;
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {v0, p1}, Ltx7;->o(Landroid/view/MotionEvent;)Landroid/view/View;
+    move-result v0
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    if-eqz v1, :cond_1
-
-    iget-object v2, v0, Ltx7;->B0:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lwrd;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Ltx7;->w0:Lsx7;
-
-    iget-object v2, v0, Ltx7;->B0:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget v3, v1, Lsx7;->c:I
-
-    iget v1, v1, Lsx7;->b:I
-
-    or-int v4, v1, v3
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v1, v4
-
-    shl-int/lit8 v3, v3, 0x10
-
-    or-int/2addr v1, v3
-
-    sget-object v3, Lash;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutDirection()I
-
-    move-result v2
-
-    invoke-static {v1, v2}, Lsx7;->b(II)I
-
-    move-result v1
-
-    const/high16 v2, 0xff0000
-
-    and-int/2addr v1, v2
-
-    if-eqz v1, :cond_1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v1
-
-    iget v2, v0, Ltx7;->v0:I
-
-    if-ne v1, v2, :cond_1
-
-    invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getX(I)F
-
-    move-result v2
-
-    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result p1
-
-    iput v2, v0, Ltx7;->d:F
-
-    iput p1, v0, Ltx7;->o:F
-
-    const/4 p1, 0x0
-
-    iput p1, v0, Ltx7;->s0:F
-
-    iput p1, v0, Ltx7;->Z:F
-
-    iget-object p1, v0, Ltx7;->w0:Lsx7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_0
 
     :cond_1
+    const-string v0, ""
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
     :goto_0
-    return-void
+    return-object p1
+
+    :catch_0
+    :goto_1
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

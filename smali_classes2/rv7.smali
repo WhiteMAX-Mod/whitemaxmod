@@ -1,63 +1,99 @@
 .class public final Lrv7;
-.super Lkm4;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final b:Lrv7;
 
-.field public static final c:Lgm4;
+# instance fields
+.field public final synthetic X:Lzv7;
 
-.field public static final d:Lgm4;
-
-.field public static final e:Lgm4;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lzv7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lrv7;->X:Lzv7;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ltq7;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lrv7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lrv7;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lrv7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lrv7;
 
-    invoke-direct {v0}, Lkm4;-><init>()V
+    iget-object v1, p0, Lrv7;->X:Lzv7;
 
-    sput-object v0, Lrv7;->b:Lrv7;
+    invoke-direct {v0, v1, p2}, Lrv7;-><init>(Lzv7;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v1, 0x0
+    iput-object p1, v0, Lrv7;->o:Ljava/lang/Object;
 
-    new-array v2, v1, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    const-string v3, ":invite/phone"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Lrv7;->o:Ljava/lang/Object;
 
-    const/16 v5, 0xe
+    check-cast v0, Ltq7;
 
-    invoke-static {v0, v3, v2, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object v2
+    sget-object p1, Ltq7;->a:Ltq7;
 
-    sput-object v2, Lrv7;->c:Lgm4;
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v2, ":invite/qr"
+    move-result p1
 
-    new-array v3, v1, [Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    invoke-static {v0, v2, v3, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    iget-object p1, p0, Lrv7;->X:Lzv7;
 
-    move-result-object v2
+    iget-object p1, p1, Lzv7;->w0:Lcm5;
 
-    sput-object v2, Lrv7;->d:Lgm4;
+    sget-object v0, Lhv7;->a:Lhv7;
 
-    const-string v2, ":invite/friends_to_max_bottom_sheet"
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
-    new-array v1, v1, [Ljava/lang/String;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-static {v0, v2, v1, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    return-object p1
 
-    move-result-object v0
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    sput-object v0, Lrv7;->e:Lgm4;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    return-void
+    throw p1
 .end method

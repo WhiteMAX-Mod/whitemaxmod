@@ -3,281 +3,173 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Map;
-.implements Ld38;
+.implements Ln9e;
 
 
 # instance fields
-.field public final synthetic a:Llfa;
+.field public final a:Lsn;
+
+.field public b:Z
+
+.field public c:Landroid/os/Bundle;
+
+.field public final d:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(Llfa;)V
-    .locals 0
+.method public constructor <init>(Lsn;Lvth;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll9e;->a:Llfa;
+    iput-object p1, p0, Ll9e;->a:Lsn;
+
+    new-instance p1, Lje;
+
+    const/4 v0, 0x5
+
+    invoke-direct {p1, v0, p2}, Lje;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Ll9e;->d:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
-    .locals 2
+.method public final a()Landroid/os/Bundle;
+    .locals 5
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Landroid/os/Bundle;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Ll9e;->c:Landroid/os/Bundle;
 
-    throw v0
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+
+    :cond_0
+    iget-object v1, p0, Ll9e;->d:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/lifecycle/SavedStateHandlesVM;
+
+    iget-object v1, v1, Landroidx/lifecycle/SavedStateHandlesVM;->b:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_1
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Li9e;
+
+    iget-object v2, v2, Li9e;->e:Ln9e;
+
+    invoke-interface {v2}, Ln9e;->a()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    sget-object v4, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    invoke-static {v2, v4}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Ll9e;->b:Z
+
+    return-object v0
 .end method
 
-.method public final compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final computeIfPresent(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final containsKey(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Ll9e;->a:Llfa;
-
-    invoke-virtual {v0, p1}, Llfa;->b(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final containsValue(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Ll9e;->a:Llfa;
-
-    invoke-virtual {v0, p1}, Llfa;->c(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final entrySet()Ljava/util/Set;
+.method public final b()V
     .locals 3
 
-    new-instance v0, Li9e;
+    iget-boolean v0, p0, Ll9e;->b:Z
 
-    iget-object v1, p0, Ll9e;->a:Llfa;
+    if-nez v0, :cond_2
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Ll9e;->a:Lsn;
 
-    invoke-direct {v0, v1, v2}, Li9e;-><init>(Llfa;I)V
+    const-string v1, "androidx.lifecycle.internal.SavedStateHandlesProvider"
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1}, Lsn;->c(Ljava/lang/String;)Landroid/os/Bundle;
 
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Ll9e;->a:Llfa;
+    new-instance v1, Landroid/os/Bundle;
 
-    invoke-virtual {v0, p1}, Llfa;->f(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    move-result-object p1
+    iget-object v2, p0, Ll9e;->c:Landroid/os/Bundle;
 
-    return-object p1
-.end method
+    if-eqz v2, :cond_0
 
-.method public final isEmpty()Z
-    .locals 1
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Ll9e;->a:Llfa;
+    :cond_0
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Llfa;->h()Z
+    invoke-virtual {v1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    move-result v0
+    :cond_1
+    iput-object v1, p0, Ll9e;->c:Landroid/os/Bundle;
 
-    return v0
-.end method
+    const/4 v0, 0x1
 
-.method public final keySet()Ljava/util/Set;
-    .locals 3
+    iput-boolean v0, p0, Ll9e;->b:Z
 
-    new-instance v0, Li9e;
+    iget-object v0, p0, Ll9e;->d:Ln8g;
 
-    iget-object v1, p0, Ll9e;->a:Llfa;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Li9e;-><init>(Llfa;I)V
+    check-cast v0, Landroidx/lifecycle/SavedStateHandlesVM;
 
-    return-object v0
-.end method
-
-.method public final merge(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final putAll(Ljava/util/Map;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final replace(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final replaceAll(Ljava/util/function/BiFunction;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Ll9e;->a:Llfa;
-
-    iget v0, v0, Llfa;->e:I
-
-    return v0
-.end method
-
-.method public final values()Ljava/util/Collection;
-    .locals 2
-
-    new-instance v0, Lmj6;
-
-    iget-object v1, p0, Ll9e;->a:Llfa;
-
-    invoke-direct {v0, v1}, Lmj6;-><init>(Llfa;)V
-
-    return-object v0
+    :cond_2
+    return-void
 .end method

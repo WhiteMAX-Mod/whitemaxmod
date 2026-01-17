@@ -1,64 +1,14 @@
-.class public final Lfbg;
+.class public interface abstract Lfbg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhbg;
-
-
-# static fields
-.field public static final a:Lfbg;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lfbg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfbg;->a:Lfbg;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lfbg;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+.method public abstract g(Licg;)V
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0xd579494
-
-    return v0
+.method public abstract k(Lnbg;)V
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CommonServiceError"
-
-    return-object v0
+.method public abstract x()J
 .end method

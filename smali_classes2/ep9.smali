@@ -2,50 +2,46 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:J
-
-.field public final c:Lql9;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:I
-
-.field public final h:J
-
-.field public final i:J
+# interfaces
+.implements Ljava/lang/Cloneable;
 
 
-# direct methods
-.method public constructor <init>(IJLql9;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJ)V
-    .locals 0
+# virtual methods
+.method public final clone()Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lep9;
 
-    iput p1, p0, Lep9;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lep9;->b:J
+    return-object v0
+.end method
 
-    iput-object p4, p0, Lep9;->c:Lql9;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p5, p0, Lep9;->d:Ljava/lang/String;
+    instance-of v0, p1, Lep9;
 
-    iput-object p6, p0, Lep9;->e:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    iput-object p7, p0, Lep9;->f:Ljava/lang/String;
+    const/4 p1, 0x0
 
-    iput p8, p0, Lep9;->g:I
+    return p1
 
-    iput-wide p9, p0, Lep9;->h:J
+    :cond_0
+    check-cast p1, Lep9;
 
-    iput-wide p11, p0, Lep9;->i:J
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x164be01
+
+    return v0
 .end method

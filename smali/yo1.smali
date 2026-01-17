@@ -1,19 +1,21 @@
 .class public final Lyo1;
-.super Ljp1;
+.super Lcp1;
 .source "SourceFile"
 
 
-# instance fields
-.field public final D:Lfl1;
+# static fields
+.field public static final D:Lyo1;
 
 
 # direct methods
-.method public constructor <init>(Lfl1;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljp1;-><init>()V
+    new-instance v0, Lyo1;
 
-    iput-object p1, p0, Lyo1;->D:Lfl1;
+    invoke-direct {v0}, Lcp1;-><init>()V
+
+    sput-object v0, Lyo1;->D:Lyo1;
 
     return-void
 .end method
@@ -21,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -30,65 +32,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lyo1;
+    instance-of p1, p1, Lyo1;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Lyo1;
-
-    iget-object v1, p0, Lyo1;->D:Lfl1;
-
-    iget-object p1, p1, Lyo1;->D:Lfl1;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lyo1;->D:Lfl1;
-
-    invoke-virtual {v0}, Lfl1;->hashCode()I
-
-    move-result v0
+    const v0, -0x5c3a39ad
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "RaiseHandDialog(participantId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyo1;->D:Lfl1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "ShowMembersInCall"
 
     return-object v0
 .end method

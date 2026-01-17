@@ -43,10 +43,10 @@
         "isOpusDREDEnabledServer",
         "isAudioPipelineOffOnMuteEnabled",
         "isSharedSocketDisabledForICE",
-        "Lcgd;",
+        "Lahd;",
         "logger",
         "<init>",
-        "(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLcgd;)V",
+        "(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLahd;)V",
         "Ljava/lang/String;",
         "getBonusFieldTrials",
         "()Ljava/lang/String;",
@@ -60,9 +60,9 @@
         "Lorg/webrtc/NativeLibraryLoader;",
         "getLibraryLoader",
         "()Lorg/webrtc/NativeLibraryLoader;",
-        "Lcgd;",
+        "Lahd;",
         "getLogger",
-        "()Lcgd;",
+        "()Lahd;",
         "Builder",
         "calls-sdk_release"
     }
@@ -97,7 +97,7 @@
 
 .field private final libraryLoader:Lorg/webrtc/NativeLibraryLoader;
 
-.field private final logger:Lcgd;
+.field private final logger:Lahd;
 
 .field private final rttMultCapMs:Ljava/lang/Integer;
 
@@ -107,7 +107,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLcgd;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLahd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -138,7 +138,7 @@
 
     iput-boolean p13, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->isSharedSocketDisabledForICE:Z
 
-    iput-object p14, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Lcgd;
+    iput-object p14, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Lahd;
 
     return-void
 .end method
@@ -161,10 +161,10 @@
     return-object v0
 .end method
 
-.method public final getLogger()Lcgd;
+.method public final getLogger()Lahd;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Lcgd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Lahd;
 
     return-object v0
 .end method

@@ -1,112 +1,77 @@
-.class public final Lc67;
-.super Lb5g;
+.class public abstract Lc67;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
 
-
-# instance fields
-.field public final synthetic X:Ljava/io/File;
-
-.field public final synthetic o:Le67;
+# static fields
+.field public static final a:[B
 
 
 # direct methods
-.method public constructor <init>(Le67;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lc67;->o:Le67;
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
-    iput-object p2, p0, Lc67;->X:Ljava/io/File;
+    const-string v1, "0123456789ABCDEF"
 
-    const/4 p1, 0x2
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    sput-object v0, Lc67;->a:[B
 
     return-void
 .end method
 
+.method public static a([B)Ljava/lang/String;
+    .locals 6
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    array-length v0, p0
 
-    check-cast p1, Lac4;
+    mul-int/lit8 v0, v0, 0x2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-array v0, v0, [B
 
-    invoke-virtual {p0, p1, p2}, Lc67;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    :goto_0
+    array-length v2, p0
 
-    check-cast p1, Lc67;
+    if-ge v1, v2, :cond_0
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    aget-byte v2, p0, v1
 
-    invoke-virtual {p1, p2}, Lc67;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    and-int/lit16 v3, v2, 0xff
 
-    move-result-object p1
+    mul-int/lit8 v4, v1, 0x2
 
-    return-object p1
-.end method
+    ushr-int/lit8 v3, v3, 0x4
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    sget-object v5, Lc67;->a:[B
 
-    new-instance p1, Lc67;
+    aget-byte v3, v5, v3
 
-    iget-object v0, p0, Lc67;->o:Le67;
+    aput-byte v3, v0, v4
 
-    iget-object v1, p0, Lc67;->X:Ljava/io/File;
+    add-int/lit8 v4, v4, 0x1
 
-    invoke-direct {p1, v0, v1, p2}, Lc67;-><init>(Le67;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+    and-int/lit8 v2, v2, 0xf
 
-    return-object p1
-.end method
+    aget-byte v2, v5, v2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    aput-byte v2, v0, v4
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    add-int/lit8 v1, v1, 0x1
 
-    iget-object p1, p0, Lc67;->o:Le67;
+    goto :goto_0
 
-    iget-object p1, p1, Le67;->d:Ld68;
+    :cond_0
+    new-instance p0, Ljava/lang/String;
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    move-result-object p1
+    invoke-direct {p0, v0, v1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    check-cast p1, Ltib;
-
-    const-string v0, "\u0414\u0430\u043c\u043f \u043f\u0430\u043c\u044f\u0442\u0438 \u0437\u0430\u043a\u043e\u043d\u0447\u0438\u043b\u0441\u044f"
-
-    invoke-virtual {p1, v0}, Ltib;->h(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lc67;->X:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "\u0415\u0441\u043b\u0438 \u0447\u0442\u043e \u0444\u0430\u0439\u043b \u043c\u043e\u0436\u043d\u043e \u0431\u0443\u0434\u0435\u0442 \u043d\u0430\u0439\u0442\u0438 \u043f\u043e \u044d\u0442\u043e\u043c\u0443 \u043f\u0443\u0442\u0438: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ltib;->b(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1}, Ltib;->i()Lsib;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

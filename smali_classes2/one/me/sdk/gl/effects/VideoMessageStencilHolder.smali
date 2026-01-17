@@ -18,15 +18,15 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lgni;->c:Lz7g;
+    sget-object v0, Ldoi;->c:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lgni;
+    check-cast v0, Ldoi;
 
-    iget-object v0, v0, Lgni;->b:Ljava/lang/Throwable;
+    iget-object v0, v0, Ldoi;->b:Ljava/lang/Throwable;
 
     return-void
 .end method
@@ -36,15 +36,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lgni;->c:Lz7g;
+    sget-object v0, Ldoi;->c:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lgni;
+    check-cast v1, Ldoi;
 
-    iget-object v1, v1, Lgni;->b:Ljava/lang/Throwable;
+    iget-object v1, v1, Ldoi;->b:Ljava/lang/Throwable;
 
     if-nez v1, :cond_0
 
@@ -61,13 +61,13 @@
     :cond_0
     new-instance p1, Lone/me/sdk/gl/effects/loader/GlEffectsLibraryLoadException;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lgni;
+    check-cast p2, Ldoi;
 
-    iget-object p2, p2, Lgni;->b:Ljava/lang/Throwable;
+    iget-object p2, p2, Ldoi;->b:Ljava/lang/Throwable;
 
     const-string v0, "VideoMessageStencilHolder failed to init"
 
@@ -259,7 +259,7 @@
 
     const-string p1, "glDeleteTextures"
 
-    invoke-static {p1}, Ln8j;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Ls9j;->b(Ljava/lang/String;)V
 
     return-void
 

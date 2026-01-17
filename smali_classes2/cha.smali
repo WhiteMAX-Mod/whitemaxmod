@@ -1,132 +1,98 @@
-.class public final Lcha;
-.super Lg3;
+.class public final synthetic Lcha;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lq35;
+.implements Li6;
 
 
 # instance fields
-.field public X:Ll35;
+.field public final synthetic a:I
 
-.field public final d:Lbh;
-
-.field public o:Ll35;
+.field public final synthetic b:Ldha;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lru/ok/messages/video/widgets/doubleTap/DoubleTapVideoViewWrapper;Lbh;)V
+.method public synthetic constructor <init>(Ldha;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Landroid/content/Context;)V
+    iput p2, p0, Lcha;->a:I
 
-    iput-object p3, p0, Lcha;->d:Lbh;
+    iput-object p1, p0, Lcha;->b:Ldha;
 
-    iput-object p2, p0, Lg3;->c:Ljava/lang/Object;
-
-    invoke-virtual {p0}, Lcha;->i()V
-
-    invoke-virtual {p2, p0}, Lru/ok/messages/video/widgets/doubleTap/DoubleTapVideoViewWrapper;->setTouchEventListener(Lq35;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i()V
+.method public final run()V
     .locals 2
 
-    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+    iget v0, p0, Lcha;->a:I
 
-    check-cast v0, Landroid/view/View;
+    packed-switch v0, :pswitch_data_0
 
-    sget v1, Lt9d;->double_tap_video_view_wrapper__arrows_view_left:I
+    iget-object v0, p0, Lcha;->b:Ldha;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v0, v0, Le3;->a:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Ll35;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iput-object v0, p0, Lcha;->o:Ll35;
+    move-result v1
 
-    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    check-cast v0, Landroid/view/View;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    sget v1, Lt9d;->double_tap_video_view_wrapper__arrows_view_right:I
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    check-cast v1, Lnga;
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Ll35;
-
-    iput-object v0, p0, Lcha;->X:Ll35;
-
-    iget-object v0, p0, Lcha;->o:Ll35;
-
-    iget-object v1, p0, Lcha;->d:Lbh;
-
-    invoke-virtual {v0, v1}, Ll35;->setAnimations(Lbh;)V
-
-    iget-object v0, p0, Lcha;->X:Ll35;
-
-    invoke-virtual {v0, v1}, Ll35;->setAnimations(Lbh;)V
-
-    return-void
-.end method
-
-.method public final z(Lbha;)V
-    .locals 2
-
-    iget-boolean v0, p1, Lbha;->c:Z
-
-    iget v1, p1, Lbha;->a:I
-
-    if-nez v0, :cond_0
-
-    iget-object p1, p0, Lcha;->o:Ll35;
-
-    invoke-virtual {p1}, Ll35;->a()V
-
-    iget-object p1, p0, Lcha;->X:Ll35;
-
-    invoke-virtual {p1}, Ll35;->a()V
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    iget-boolean p1, p1, Lbha;->b:Z
+    return-void
 
-    if-eqz p1, :cond_1
+    :pswitch_0
+    new-instance v0, Lyk0;
 
-    iget-object p1, p0, Lcha;->o:Ll35;
+    const/16 v1, 0x17
 
-    invoke-virtual {p1}, Ll35;->a()V
+    invoke-direct {v0, v1}, Lyk0;-><init>(I)V
 
-    iget-object p1, p0, Lcha;->X:Ll35;
+    iget-object v1, p0, Lcha;->b:Ldha;
 
-    invoke-virtual {p1}, Ll35;->b()V
-
-    iget-object p1, p0, Lcha;->X:Ll35;
-
-    invoke-virtual {p1, v1}, Ll35;->c(I)V
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
 
     return-void
 
-    :cond_1
-    iget-object p1, p0, Lcha;->o:Ll35;
+    :pswitch_1
+    new-instance v0, Lyk0;
 
-    invoke-virtual {p1}, Ll35;->b()V
+    const/16 v1, 0x18
 
-    iget-object p1, p0, Lcha;->o:Ll35;
+    invoke-direct {v0, v1}, Lyk0;-><init>(I)V
 
-    invoke-virtual {p1, v1}, Ll35;->c(I)V
+    iget-object v1, p0, Lcha;->b:Ldha;
 
-    iget-object p1, p0, Lcha;->X:Ll35;
-
-    invoke-virtual {p1}, Ll35;->a()V
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -4,83 +4,152 @@
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final a:Lhm9;
 
-.field public final b:Ld68;
+.field public final b:Lxg2;
 
-.field public final c:Ld68;
+.field public final c:Llfc;
 
-.field public final d:Ld68;
+.field public final d:Lcy0;
+
+.field public final e:Lef3;
 
 
 # direct methods
-.method public constructor <init>(Ld68;Ld68;Ld68;Ld68;)V
+.method public constructor <init>(Lhm9;Lxg2;Llfc;Lcy0;Lef3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxc5;->a:Ld68;
+    iput-object p1, p0, Lxc5;->a:Lhm9;
 
-    iput-object p2, p0, Lxc5;->b:Ld68;
+    iput-object p2, p0, Lxc5;->b:Lxg2;
 
-    iput-object p3, p0, Lxc5;->c:Ld68;
+    iput-object p3, p0, Lxc5;->c:Llfc;
 
-    iput-object p4, p0, Lxc5;->d:Ld68;
+    iput-object p4, p0, Lxc5;->d:Lcy0;
+
+    iput-object p5, p0, Lxc5;->e:Lef3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JJLjava/lang/CharSequence;Ljava/util/List;ZLb5g;)Ljava/lang/Object;
-    .locals 11
+.method public final a(JJLjava/lang/String;Ljava/util/List;ILjava/util/List;Z)V
+    .locals 13
 
-    iget-object v0, p0, Lxc5;->c:Ld68;
+    move-wide/from16 v11, p3
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lxc5;->c:Llfc;
 
-    move-result-object v0
+    invoke-virtual {v0, p1, p2}, Llfc;->d(J)V
 
-    check-cast v0, Lbbg;
+    iget-object v0, p0, Lxc5;->e:Lef3;
 
-    check-cast v0, Lb9b;
+    check-cast v0, Lyfe;
 
-    invoke-virtual {v0}, Lb9b;->b()Ltb4;
+    invoke-virtual {v0}, Lyfe;->j()J
 
-    move-result-object v0
+    move-result-wide v4
 
-    new-instance v1, Lwc5;
+    new-instance v0, Lwc5;
 
-    const/4 v10, 0x0
+    move-object v1, p0
 
-    move-object v2, p0
+    move-wide v2, p1
 
-    move-wide v3, p1
-
-    move-wide v5, p3
-
-    move-object/from16 v7, p5
+    move-object/from16 v8, p5
 
     move-object/from16 v9, p6
 
-    move/from16 v8, p7
+    move/from16 v10, p7
 
-    invoke-direct/range {v1 .. v10}, Lwc5;-><init>(Lxc5;JJLjava/lang/CharSequence;ZLjava/util/List;Lkotlin/coroutines/Continuation;)V
+    move-object/from16 v7, p8
 
-    move-object/from16 p1, p8
+    move/from16 v6, p9
 
-    invoke-static {v0, v1, p1}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct/range {v0 .. v10}, Lwc5;-><init>(Lxc5;JJZLjava/util/List;Ljava/lang/String;Ljava/util/List;I)V
 
-    move-result-object p1
+    iget-object v1, p0, Lxc5;->a:Lhm9;
 
-    sget-object p2, Lbc4;->a:Lbc4;
+    iget-object v4, v1, Lhm9;->a:Lii4;
 
-    if-ne p1, p2, :cond_0
+    iget-object v4, v4, Lii4;->c:Lu2e;
 
-    return-object p1
+    iget-object v4, v4, Lu2e;->a:Llgb;
+
+    invoke-virtual {v4}, Llgb;->l()Lb2e;
+
+    move-result-object v4
+
+    check-cast v4, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    new-instance v5, Lq1e;
+
+    const/4 v7, 0x1
+
+    invoke-direct {v5, v7, v0}, Lq1e;-><init>(ILlq6;)V
+
+    invoke-virtual {v4, v5}, Lb2e;->u(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lxc5;->b:Lxg2;
+
+    invoke-virtual {v0, v11, v12}, Lxg2;->N(J)Lnd2;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    iget-object v5, v4, Lnd2;->b:Luh2;
+
+    iget-wide v7, v5, Luh2;->j:J
+
+    cmp-long v5, v7, p1
+
+    if-nez v5, :cond_0
+
+    invoke-virtual {v1, p1, p2}, Lhm9;->m(J)Ljm9;
+
+    move-result-object v5
+
+    const/4 v7, 0x1
+
+    invoke-virtual {v0, v11, v12, v5, v7}, Lxg2;->p0(JLjm9;Z)Lnd2;
 
     :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    if-eqz v4, :cond_1
 
-    return-object p1
+    iget-object v4, v4, Lnd2;->b:Luh2;
+
+    iget-wide v4, v4, Luh2;->M:J
+
+    cmp-long v4, v4, p1
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {v1, p1, p2}, Lhm9;->m(J)Ljm9;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0, v11, v12}, Lxg2;->t0(J)V
+
+    :cond_1
+    new-instance v0, Le6h;
+
+    const/4 v5, 0x0
+
+    move-wide v3, p1
+
+    move-wide v1, v11
+
+    invoke-direct/range {v0 .. v5}, Le6h;-><init>(JJZ)V
+
+    iget-object v1, p0, Lxc5;->d:Lcy0;
+
+    invoke-virtual {v1, v0}, Lcy0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

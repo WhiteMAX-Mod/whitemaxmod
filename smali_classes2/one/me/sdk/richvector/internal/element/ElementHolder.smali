@@ -16,7 +16,7 @@
         "",
         "Lone/me/sdk/richvector/internal/element/GroupElement;",
         "element",
-        "Lv2h;",
+        "Lb3h;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",
@@ -54,7 +54,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30

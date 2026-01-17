@@ -1,101 +1,119 @@
-.class public final Lhy2;
-.super Landroid/widget/FrameLayout;
+.class public final synthetic Lhy2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnq6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ll03;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:Ljava/lang/String;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll03;JLjava/lang/String;I)V
+    .locals 0
+
+    iput p5, p0, Lhy2;->a:I
+
+    iput-object p1, p0, Lhy2;->b:Ll03;
+
+    iput-wide p2, p0, Lhy2;->c:J
+
+    iput-object p4, p0, Lhy2;->d:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final measureChildWithMargins(Landroid/view/View;IIII)V
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
-    if-eqz p1, :cond_2
+    iget v0, p0, Lhy2;->a:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
+    check-cast p1, Landroid/view/View;
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    sget v1, Lw7b;->b:I
+    iget-object p1, p0, Lhy2;->b:Ll03;
 
-    if-ne v0, v1, :cond_2
+    iget-object p1, p1, Ll03;->h1:Lcm5;
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Luy2;
 
-    invoke-static {p4, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    const-wide/16 v2, 0x0
 
-    move-result v5
+    const/16 v1, 0x9
 
-    sget p4, Lw7b;->o:I
+    iget-wide v4, p0, Lhy2;->c:J
 
-    invoke-virtual {p0, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v6, p0, Lhy2;->d:Ljava/lang/String;
 
-    move-result-object p4
+    invoke-direct/range {v0 .. v6}, Luy2;-><init>(IJJLjava/lang/String;)V
 
-    invoke-virtual {p4}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
-    move-result p4
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    sget v0, Lw7b;->l:I
+    return-object p1
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    :pswitch_0
+    iget-object p1, p0, Lhy2;->b:Ll03;
 
-    move-result-object v0
+    iget-object p1, p1, Ll03;->h1:Lcm5;
 
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    new-instance v0, Luy2;
 
-    move-result v0
+    const-wide/16 v2, 0x0
 
-    invoke-static {p0}, Lo4j;->h(Landroid/view/View;)Ljava/lang/Integer;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    iget-wide v4, p0, Lhy2;->c:J
 
-    const/4 v2, 0x0
+    iget-object v6, p0, Lhy2;->d:Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    invoke-direct/range {v0 .. v6}, Luy2;-><init>(IJJLjava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    move v1, v2
+    :pswitch_1
+    iget-object p1, p0, Lhy2;->b:Ll03;
 
-    :goto_0
-    invoke-static {p0}, Lo4j;->l(Landroid/view/View;)Ljava/lang/Integer;
+    iget-object p1, p1, Ll03;->h1:Lcm5;
 
-    move-result-object v3
+    new-instance v0, Luy2;
 
-    if-eqz v3, :cond_1
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+    const/16 v1, 0x9
 
-    move-result v2
+    iget-wide v4, p0, Lhy2;->c:J
 
-    :cond_1
-    add-int/2addr v1, v2
+    iget-object v6, p0, Lhy2;->d:Ljava/lang/String;
 
-    add-int/2addr p4, v0
+    invoke-direct/range {v0 .. v6}, Luy2;-><init>(IJJLjava/lang/String;)V
 
-    add-int/2addr p4, v1
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
-    invoke-static {p5, p4}, Ljava/lang/Math;->max(II)I
+    goto :goto_0
 
-    move-result v6
+    nop
 
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    invoke-super/range {v1 .. v6}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
-
-    return-void
-
-    :cond_2
-    invoke-super/range {p0 .. p5}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

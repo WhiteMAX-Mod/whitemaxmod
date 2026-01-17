@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lkff;
+.field public final synthetic a:Ltgf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkff;)V
+.method public synthetic constructor <init>(Ltgf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrl0;->a:Lkff;
+    iput-object p1, p0, Lrl0;->a:Ltgf;
 
     return-void
 .end method
@@ -26,7 +26,7 @@
 .method public final onScrollChanged()V
     .locals 1
 
-    iget-object v0, p0, Lrl0;->a:Lkff;
+    iget-object v0, p0, Lrl0;->a:Ltgf;
 
     invoke-virtual {v0}, Lwl0;->w()V
 

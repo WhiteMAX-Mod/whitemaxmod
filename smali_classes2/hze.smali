@@ -1,240 +1,167 @@
 .class public final Lhze;
-.super Lvbf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lize;
+.implements Lj0f;
 
 
 # instance fields
-.field public final o:Lgze;
+.field public final X:Li0f;
+
+.field public final Y:I
+
+.field public final a:Lqhg;
+
+.field public final b:J
+
+.field public final c:I
+
+.field public final d:Lqhg;
+
+.field public final o:Lg0f;
 
 
 # direct methods
-.method public constructor <init>(Lgze;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.method public constructor <init>(Lqhg;JILphg;Lf0f;I)V
+    .locals 2
 
-    invoke-direct {p0, p2}, Lvbf;-><init>(Ljava/util/concurrent/Executor;)V
+    and-int/lit8 v0, p7, 0x10
 
-    iput-object p1, p0, Lhze;->o:Lgze;
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move-object p5, v1
+
+    :cond_0
+    and-int/lit8 v0, p7, 0x20
+
+    if-eqz v0, :cond_1
+
+    move-object p6, v1
+
+    :cond_1
+    and-int/lit8 p7, p7, 0x40
+
+    if-eqz p7, :cond_2
+
+    sget-object p7, Li0f;->b:Li0f;
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p7, Li0f;->d:Li0f;
+
+    :goto_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhze;->a:Lqhg;
+
+    iput-wide p2, p0, Lhze;->b:J
+
+    iput p4, p0, Lhze;->c:I
+
+    iput-object p5, p0, Lhze;->d:Lqhg;
+
+    iput-object p6, p0, Lhze;->o:Lg0f;
+
+    iput-object p7, p0, Lhze;->X:Li0f;
+
+    sget p1, Leib;->f:I
+
+    iput p1, p0, Lhze;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Ladf;I)V
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    check-cast p1, Lsze;
+    iget v0, p0, Lhze;->c:I
 
-    invoke-virtual {p0, p1, p2}, Lhze;->J(Lsze;I)V
-
-    return-void
+    return v0
 .end method
 
-.method public final J(Lsze;I)V
-    .locals 4
+.method public final b()Lqhg;
+    .locals 1
 
-    instance-of v0, p1, Lqze;
+    iget-object v0, p0, Lhze;->d:Lqhg;
 
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lqze;
-
-    iget-object v0, p1, Lwrd;->a:Landroid/view/View;
-
-    invoke-virtual {p0, p2}, Lbe8;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lie8;
-
-    check-cast p2, Lfze;
-
-    move-object v1, v0
-
-    check-cast v1, Lpze;
-
-    invoke-virtual {v1, p2}, Lpze;->setModelItem(Lfze;)V
-
-    iget-object v1, p0, Lhze;->o:Lgze;
-
-    iput-object v1, p1, Lqze;->E0:Lgze;
-
-    invoke-interface {p2}, Lfze;->e()Lcze;
-
-    move-result-object p1
-
-    instance-of p1, p1, Laze;
-
-    if-eqz p1, :cond_0
-
-    move-object p1, v0
-
-    check-cast p1, Lpze;
-
-    new-instance v2, Lrk;
-
-    const/16 v3, 0x13
-
-    invoke-direct {v2, v3, v1}, Lrk;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v2}, Lpze;->setOnSwitchCheckedListener(Lcr6;)V
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v0
-
-    check-cast p1, Lpze;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v2}, Lpze;->setOnSwitchListener(Llze;)V
-
-    :goto_0
-    new-instance p1, Lfid;
-
-    const/4 v2, 0x7
-
-    invoke-direct {p1, v1, v2, p2}, Lfid;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, p1}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-void
-
-    :cond_1
-    instance-of v0, p1, Lr2f;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0, p2}, Lbe8;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lie8;
-
-    invoke-virtual {p1, p2}, Ladf;->z(Lie8;)V
-
-    :cond_2
-    return-void
+    return-object v0
 .end method
 
-.method public final bridge synthetic r(Lwrd;I)V
-    .locals 0
+.method public final c()Lyze;
+    .locals 1
 
-    check-cast p1, Lsze;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lhze;->J(Lsze;I)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final s(Lwrd;ILjava/util/List;)V
-    .locals 3
+.method public final d()Lqhg;
+    .locals 1
 
-    check-cast p1, Lsze;
+    const/4 v0, 0x0
 
-    invoke-interface {p3}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    new-instance v0, Ldze;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lf3;-><init>(I)V
-
-    invoke-interface {p3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p3
-
-    :cond_0
-    :goto_0
-    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v2, v1, Ldze;
-
-    if-eqz v2, :cond_1
-
-    check-cast v1, Ldze;
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_1
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v1}, Lf3;->c0(Lf3;)V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p3, p0, Lbe8;->d:Lfv;
-
-    iget-object p3, p3, Lfv;->f:Ljava/util/List;
-
-    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lie8;
-
-    invoke-virtual {p1, p2, v0}, Ladf;->A(Lie8;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p0, p1, p2}, Lhze;->J(Lsze;I)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final t(Landroid/view/ViewGroup;I)Lwrd;
+.method public final e()Lg0f;
+    .locals 1
+
+    iget-object v0, p0, Lhze;->o:Lg0f;
+
+    return-object v0
+.end method
+
+.method public final f()Ly58;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getItemId()J
     .locals 2
 
-    sget v0, Lehb;->g:I
+    iget-wide v0, p0, Lhze;->b:J
 
-    if-ne p2, v0, :cond_0
+    return-wide v0
+.end method
 
-    new-instance p2, Lr2f;
+.method public final getTitle()Lqhg;
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object v0, p0, Lhze;->a:Lqhg;
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    new-instance v0, Lq2f;
+.method public final getType()Li0f;
+    .locals 1
 
-    invoke-direct {v0, p1}, Lq2f;-><init>(Landroid/content/Context;)V
+    iget-object v0, p0, Lhze;->X:Li0f;
 
-    invoke-direct {p2, v0}, Lwrd;-><init>(Landroid/view/View;)V
+    return-object v0
+.end method
 
-    return-object p2
+.method public final m()I
+    .locals 1
 
-    :cond_0
-    new-instance p2, Lqze;
+    iget v0, p0, Lhze;->Y:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final t()I
+    .locals 1
 
-    new-instance v0, Lpze;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lpze;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p2, v0}, Lwrd;-><init>(Landroid/view/View;)V
-
-    return-object p2
+    return v0
 .end method

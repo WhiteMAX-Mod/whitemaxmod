@@ -13,12 +13,12 @@
         "Landroid/content/BroadcastReceiver;",
         "<init>",
         "()V",
-        "oneme_playGoogleRelease"
+        "oneme_googleRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -39,23 +39,23 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    sget-object v0, Ld8b;->a:Ld8b;
+    sget-object v0, Lj8b;->a:Lj8b;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
     const/16 v1, 0x280
 
-    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lc21;
+    check-cast v0, Lw11;
 
     const-string v1, "CallNotifierBroadcastReceiver"
 
-    invoke-virtual {v0, p1, p2, v1}, Lc21;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+    invoke-virtual {v0, p1, p2, v1}, Lw11;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
 
     return-void
 .end method

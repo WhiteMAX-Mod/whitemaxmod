@@ -1,44 +1,49 @@
 .class public final Lyk3;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
-# interfaces
-.implements Lal3;
 
+# instance fields
+.field public final synthetic X:Lbl3;
 
-# static fields
-.field public static final a:Lyk3;
+.field public Y:I
 
-.field public static final b:J
+.field public d:Ln03;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lbl3;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lyk3;
+    iput-object p1, p0, Lyk3;->X:Lbl3;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lyk3;->a:Lyk3;
-
-    const-class v0, Lyk3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    const-wide/16 v0, 0x1
-
-    sput-wide v0, Lyk3;->b:J
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getId()J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-wide v0, Lyk3;->b:J
+    iput-object p1, p0, Lyk3;->o:Ljava/lang/Object;
 
-    return-wide v0
+    iget p1, p0, Lyk3;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lyk3;->Y:I
+
+    iget-object p1, p0, Lyk3;->X:Lbl3;
+
+    invoke-static {p1, p0}, Lbl3;->b(Lbl3;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,276 +1,323 @@
-.class public abstract Lwei;
+.class public final Lwei;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/reflect/Field;
+.field public static final c:Ljava/util/regex/Pattern;
 
-.field public static final b:Ljava/lang/reflect/Method;
+.field public static final d:Ljava/util/regex/Pattern;
 
-.field public static final c:Ljava/lang/reflect/Constructor;
 
-.field public static final d:Lso8;
+# instance fields
+.field public final a:Ldch;
 
-.field public static final e:Ljava/lang/Object;
+.field public final b:Ljava/lang/StringBuilder;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
-    const-class v0, Landroid/graphics/Typeface;
+    const-string v0, "\\[voice=\"([^\"]*)\"\\]"
 
-    :try_start_0
-    const-string v1, "native_instance"
-
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v1
-
-    const-string v2, "nativeCreateFromTypefaceWithExactStyle"
-
-    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    sget-object v5, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v3, v4, v5}, [Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v2
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v2, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    filled-new-array {v3}, [Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v0, Lwei;->c:Ljava/util/regex/Pattern;
 
-    goto :goto_0
+    const-string v0, "^((?:[0-9]*\\.)?[0-9]+)(px|em|%)$"
 
-    :catch_0
-    move-exception v0
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "WeightTypeface"
-
-    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    const/4 v1, 0x0
-
-    move-object v0, v1
-
-    move-object v2, v0
-
-    :goto_0
-    sput-object v1, Lwei;->a:Ljava/lang/reflect/Field;
-
-    sput-object v2, Lwei;->b:Ljava/lang/reflect/Method;
-
-    sput-object v0, Lwei;->c:Ljava/lang/reflect/Constructor;
-
-    new-instance v0, Lso8;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lso8;-><init>(I)V
-
-    sput-object v0, Lwei;->d:Lso8;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwei;->e:Ljava/lang/Object;
+    sput-object v0, Lwei;->d:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-.method public static a(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-    .locals 7
+.method public constructor <init>()V
+    .locals 3
 
-    sget-object v0, Lwei;->a:Ljava/lang/reflect/Field;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    new-instance v0, Ldch;
 
-    if-eqz v0, :cond_2
+    const/4 v1, 0x2
 
-    shl-int/lit8 v2, p1, 0x1
+    const/4 v2, 0x0
 
-    sget-object v3, Lwei;->e:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Ldch;-><init>(IZ)V
 
-    monitor-enter v3
+    iput-object v0, p0, Lwei;->a:Ldch;
 
-    :try_start_0
-    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getLong(Ljava/lang/Object;)J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-wide v4
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    :try_start_1
-    sget-object p0, Lwei;->d:Lso8;
+    iput-object v0, p0, Lwei;->b:Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v4, v5}, Lso8;->b(J)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public static a(Ldch;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .locals 5
 
-    check-cast v0, Landroid/util/SparseArray;
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    new-instance v0, Landroid/util/SparseArray;
+    iget v1, p0, Ldch;->b:I
 
-    const/4 v6, 0x4
+    iget v2, p0, Ldch;->c:I
 
-    invoke-direct {v0, v6}, Landroid/util/SparseArray;-><init>(I)V
+    :goto_0
+    if-ge v1, v2, :cond_5
 
-    invoke-virtual {p0, v4, v5, v0}, Lso8;->e(JLjava/lang/Object;)V
+    if-nez v0, :cond_5
 
-    goto :goto_0
+    iget-object v3, p0, Ldch;->a:[B
 
-    :catchall_0
-    move-exception p0
+    aget-byte v3, v3, v1
 
-    goto :goto_3
+    int-to-char v3, v3
+
+    const/16 v4, 0x41
+
+    if-lt v3, v4, :cond_0
+
+    const/16 v4, 0x5a
+
+    if-le v3, v4, :cond_4
 
     :cond_0
-    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    const/16 v4, 0x61
 
-    move-result-object p0
+    if-lt v3, v4, :cond_1
 
-    check-cast p0, Landroid/graphics/Typeface;
+    const/16 v4, 0x7a
 
-    if-eqz p0, :cond_1
-
-    monitor-exit v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    return-object p0
+    if-le v3, v4, :cond_4
 
     :cond_1
-    :goto_0
-    :try_start_2
-    sget-object p0, Lwei;->b:Ljava/lang/reflect/Method;
+    const/16 v4, 0x30
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-lt v3, v4, :cond_2
 
-    move-result-object v4
+    const/16 v4, 0x39
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-le v3, v4, :cond_4
 
-    move-result-object p1
+    :cond_2
+    const/16 v4, 0x23
 
-    sget-object v5, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    if-eq v3, v4, :cond_4
 
-    filled-new-array {v4, p1, v5}, [Ljava/lang/Object;
+    const/16 v4, 0x2d
 
-    move-result-object p1
+    if-eq v3, v4, :cond_4
 
-    invoke-virtual {p0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v4, 0x2e
 
-    move-result-object p0
+    if-eq v3, v4, :cond_4
 
-    check-cast p0, Ljava/lang/Long;
+    const/16 v4, 0x5f
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :try_start_3
-    sget-object p1, Lwei;->c:Ljava/lang/reflect/Constructor;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/graphics/Typeface;
-    :try_end_3
-    .catch Ljava/lang/IllegalAccessException; {:try_start_3 .. :try_end_3} :catch_0
-    .catch Ljava/lang/InstantiationException; {:try_start_3 .. :try_end_3} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    move-object v1, p0
-
-    :catch_0
-    :try_start_4
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    monitor-exit v3
-
-    return-object v1
-
-    :catch_1
-    move-exception p0
+    if-ne v3, v4, :cond_3
 
     goto :goto_1
 
-    :catch_2
-    move-exception p0
+    :cond_3
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Ldch;->b:I
+
+    sub-int/2addr v1, v0
+
+    invoke-virtual {p0, v1}, Ldch;->F(I)V
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Ldch;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p0}, Lwei;->c(Ldch;)V
+
+    invoke-virtual {p0}, Ldch;->c()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {p0, p1}, Lwei;->a(Ldch;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, ""
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return-object p1
+
+    :cond_1
+    invoke-virtual {p0}, Ldch;->s()I
+
+    move-result p0
+
+    int-to-char p0, p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Ldch;)V
+    .locals 8
+
+    const/4 v0, 0x1
+
+    :goto_0
+    move v1, v0
+
+    :goto_1
+    invoke-virtual {p0}, Ldch;->c()I
+
+    move-result v2
+
+    if-lez v2, :cond_4
+
+    if-eqz v1, :cond_4
+
+    iget v1, p0, Ldch;->b:I
+
+    iget-object v2, p0, Ldch;->a:[B
+
+    aget-byte v3, v2, v1
+
+    int-to-char v4, v3
+
+    const/16 v5, 0x9
+
+    if-eq v4, v5, :cond_3
+
+    const/16 v5, 0xa
+
+    if-eq v4, v5, :cond_3
+
+    const/16 v5, 0xc
+
+    if-eq v4, v5, :cond_3
+
+    const/16 v5, 0xd
+
+    if-eq v4, v5, :cond_3
+
+    const/16 v5, 0x20
+
+    if-eq v4, v5, :cond_3
+
+    iget v4, p0, Ldch;->c:I
+
+    add-int/lit8 v5, v1, 0x2
+
+    if-gt v5, v4, :cond_2
+
+    add-int/lit8 v1, v1, 0x1
+
+    const/16 v6, 0x2f
+
+    if-ne v3, v6, :cond_2
+
+    aget-byte v1, v2, v1
+
+    const/16 v3, 0x2a
+
+    if-ne v1, v3, :cond_2
+
+    :goto_2
+    add-int/lit8 v1, v5, 0x1
+
+    if-ge v1, v4, :cond_1
+
+    aget-byte v7, v2, v5
+
+    int-to-char v7, v7
+
+    if-ne v7, v3, :cond_0
+
+    aget-byte v7, v2, v1
+
+    int-to-char v7, v7
+
+    if-ne v7, v6, :cond_0
+
+    add-int/lit8 v5, v5, 0x2
+
+    move v4, v5
 
     goto :goto_2
 
-    :goto_1
-    new-instance p1, Ljava/lang/RuntimeException;
+    :cond_0
+    move v5, v1
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    goto :goto_2
 
-    throw p1
+    :cond_1
+    iget v1, p0, Ldch;->b:I
 
-    :goto_2
-    new-instance p1, Ljava/lang/RuntimeException;
+    sub-int/2addr v4, v1
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    invoke-virtual {p0, v4}, Ldch;->F(I)V
 
-    throw p1
-
-    :catch_3
-    move-exception p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :goto_3
-    monitor-exit v3
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw p0
+    goto :goto_0
 
     :cond_2
-    return-object v1
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p0, v0}, Ldch;->F(I)V
+
+    goto :goto_0
+
+    :cond_4
+    return-void
 .end method

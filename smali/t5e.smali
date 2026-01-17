@@ -1,213 +1,128 @@
 .class public final Lt5e;
-.super Ljava/lang/Object;
+.super Lek0;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ltfi;
+# static fields
+.field public static final synthetic Y:I
 
-.field public b:Ljava/util/ArrayList;
+
+# instance fields
+.field public X:Landroid/net/Uri;
+
+.field public o:Lio/antmedia/rtmp_client/RtmpClient;
 
 
 # direct methods
-.method public static a(Ltx4;J)J
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget-object v0, p0, Ltx4;->d:Ltfi;
+    const-string v0, "media3.datasource.rtmp"
 
-    iget-object v1, p0, Ltx4;->k:Ljava/util/ArrayList;
+    invoke-static {v0}, Lc59;->a(Ljava/lang/String;)V
 
-    instance-of v2, v0, Lo67;
-
-    if-eqz v2, :cond_0
-
-    return-wide p1
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    move-wide v4, p1
-
-    :goto_0
-    if-ge v3, v2, :cond_3
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lpx4;
-
-    instance-of v7, v6, Ltx4;
-
-    if-eqz v7, :cond_2
-
-    check-cast v6, Ltx4;
-
-    iget-object v7, v6, Ltx4;->d:Ltfi;
-
-    if-ne v7, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget v7, v6, Ltx4;->f:I
-
-    int-to-long v7, v7
-
-    add-long/2addr v7, p1
-
-    invoke-static {v6, v7, v8}, Lt5e;->a(Ltx4;J)J
-
-    move-result-wide v6
-
-    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v4
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v1, v0, Ltfi;->i:Ltx4;
-
-    iget-object v2, v0, Ltfi;->h:Ltx4;
-
-    if-ne p0, v1, :cond_4
-
-    invoke-virtual {v0}, Ltfi;->j()J
-
-    move-result-wide v0
-
-    sub-long/2addr p1, v0
-
-    invoke-static {v2, p1, p2}, Lt5e;->a(Ltx4;J)J
-
-    move-result-wide v0
-
-    invoke-static {v4, v5, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    iget p0, v2, Ltx4;->f:I
-
-    int-to-long v2, p0
-
-    sub-long/2addr p1, v2
-
-    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_4
-    return-wide v4
+    return-void
 .end method
 
-.method public static b(Ltx4;J)J
-    .locals 9
+.method public constructor <init>()V
+    .locals 1
 
-    iget-object v0, p0, Ltx4;->d:Ltfi;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Ltx4;->k:Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lek0;-><init>(Z)V
 
-    instance-of v2, v0, Lo67;
+    return-void
+.end method
 
-    if-eqz v2, :cond_0
 
-    return-wide p1
+# virtual methods
+.method public final G(Laj4;)J
+    .locals 3
+
+    invoke-virtual {p0, p1}, Lek0;->c(Laj4;)V
+
+    new-instance v0, Lio/antmedia/rtmp_client/RtmpClient;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, v0, Lio/antmedia/rtmp_client/RtmpClient;->a:J
+
+    iput-object v0, p0, Lt5e;->o:Lio/antmedia/rtmp_client/RtmpClient;
+
+    iget-object v1, p1, Laj4;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lio/antmedia/rtmp_client/RtmpClient;->b(Ljava/lang/String;)V
+
+    iget-object v0, p1, Laj4;->a:Landroid/net/Uri;
+
+    iput-object v0, p0, Lt5e;->X:Landroid/net/Uri;
+
+    invoke-virtual {p0, p1}, Lek0;->d(Laj4;)V
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-object v0, p0, Lt5e;->X:Landroid/net/Uri;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iput-object v1, p0, Lt5e;->X:Landroid/net/Uri;
+
+    invoke-virtual {p0}, Lek0;->b()V
 
     :cond_0
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    iget-object v0, p0, Lt5e;->o:Lio/antmedia/rtmp_client/RtmpClient;
 
-    move-result v2
+    if-eqz v0, :cond_1
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, Lio/antmedia/rtmp_client/RtmpClient;->a()V
 
-    move-wide v4, p1
-
-    :goto_0
-    if-ge v3, v2, :cond_3
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lpx4;
-
-    instance-of v7, v6, Ltx4;
-
-    if-eqz v7, :cond_2
-
-    check-cast v6, Ltx4;
-
-    iget-object v7, v6, Ltx4;->d:Ltfi;
-
-    if-ne v7, v0, :cond_1
-
-    goto :goto_1
+    iput-object v1, p0, Lt5e;->o:Lio/antmedia/rtmp_client/RtmpClient;
 
     :cond_1
-    iget v7, v6, Ltx4;->f:I
+    return-void
+.end method
 
-    int-to-long v7, v7
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
 
-    add-long/2addr v7, p1
+    iget-object v0, p0, Lt5e;->X:Landroid/net/Uri;
 
-    invoke-static {v6, v7, v8}, Lt5e;->b(Ltx4;J)J
+    return-object v0
+.end method
 
-    move-result-wide v6
+.method public final read([BII)I
+    .locals 2
 
-    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
+    iget-object v0, p0, Lt5e;->o:Lio/antmedia/rtmp_client/RtmpClient;
 
-    move-result-wide v4
+    sget-object v1, Lmbh;->a:Ljava/lang/String;
 
-    :cond_2
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {v0, p1, p2, p3}, Lio/antmedia/rtmp_client/RtmpClient;->c([BII)I
 
-    goto :goto_0
+    move-result p1
 
-    :cond_3
-    iget-object v1, v0, Ltfi;->h:Ltx4;
+    const/4 p2, -0x1
 
-    iget-object v2, v0, Ltfi;->i:Ltx4;
+    if-ne p1, p2, :cond_0
 
-    if-ne p0, v1, :cond_4
+    return p2
 
-    invoke-virtual {v0}, Ltfi;->j()J
+    :cond_0
+    invoke-virtual {p0, p1}, Lek0;->a(I)V
 
-    move-result-wide v0
-
-    add-long/2addr v0, p1
-
-    invoke-static {v2, v0, v1}, Lt5e;->b(Ltx4;J)J
-
-    move-result-wide p0
-
-    invoke-static {v4, v5, p0, p1}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p0
-
-    iget p2, v2, Ltx4;->f:I
-
-    int-to-long v2, p2
-
-    sub-long/2addr v0, v2
-
-    invoke-static {p0, p1, v0, v1}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_4
-    return-wide v4
+    return p1
 .end method

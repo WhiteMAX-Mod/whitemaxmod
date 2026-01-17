@@ -1,25 +1,12 @@
-.class public final Ldki;
-.super Ln0;
+.class public abstract Ldki;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Lexf;
-
-
-# instance fields
-.field public a:Z
+# interfaces
+.implements Landroid/graphics/drawable/Drawable$Callback;
+.implements Lcki;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lexf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ldki;->b:Lexf;
-
-    return-void
+# virtual methods
+.method public abstract a(Landroid/graphics/drawable/Drawable;)V
 .end method

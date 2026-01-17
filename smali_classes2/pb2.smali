@@ -1,86 +1,135 @@
 .class public final Lpb2;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
-
-
-# instance fields
-.field public final synthetic o:Lqb2;
+.implements Lkw9;
 
 
 # direct methods
-.method public constructor <init>(Lqb2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static b(Lqhg;Llhg;Lnd2;)Ljava/util/List;
+    .locals 7
 
-    iput-object p1, p0, Lpb2;->o:Lqb2;
+    new-instance v0, Lei2;
 
-    const/4 p1, 0x2
+    sget-object v1, Lgm0;->b:Lgm0;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget-object v2, Ldm0;->a:Ldm0;
 
-    return-void
+    invoke-virtual {p2, v1, v2}, Lnd2;->k(Lgm0;Ldm0;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p2}, Lnd2;->t0()V
+
+    iget-object v4, p2, Lnd2;->x0:Ljava/lang/CharSequence;
+
+    invoke-virtual {p2}, Lnd2;->g()J
+
+    move-result-wide v5
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    invoke-direct/range {v0 .. v6}, Lei2;-><init>(Lqhg;Llhg;Ljava/lang/String;Ljava/lang/CharSequence;J)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lnd2;)Ljava/util/List;
+    .locals 3
 
-    check-cast p1, Lac4;
+    if-eqz p1, :cond_2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Lnd2;->P()Z
 
-    invoke-virtual {p0, p1, p2}, Lpb2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_2
+
+    invoke-virtual {p1}, Lnd2;->j0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Leeb;->J0:I
+
+    new-instance v1, Llhg;
+
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+
+    sget v0, Leeb;->I0:I
+
+    new-instance v2, Llhg;
+
+    invoke-direct {v2, v0}, Llhg;-><init>(I)V
+
+    invoke-static {v1, v2, p1}, Lpb2;->b(Lqhg;Llhg;Lnd2;)Ljava/util/List;
 
     move-result-object p1
 
-    check-cast p1, Lpb2;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lpb2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lpb2;
-
-    iget-object v0, p0, Lpb2;->o:Lqb2;
-
-    invoke-direct {p1, v0, p2}, Lpb2;-><init>(Lqb2;Lkotlin/coroutines/Continuation;)V
-
     return-object p1
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :cond_0
+    invoke-virtual {p1}, Lnd2;->h0()Z
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    move-result v0
 
-    iget-object p1, p0, Lpb2;->o:Lqb2;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p1, Lqb2;->d:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lnd2;->v()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lca3;
+    new-instance v1, Lphg;
 
-    iget-wide v1, p1, Lqb2;->b:J
+    invoke-direct {v1, v0}, Lphg;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0}, Lca3;->j()Lch2;
+    sget v0, Leeb;->K0:I
+
+    new-instance v2, Llhg;
+
+    invoke-direct {v2, v0}, Llhg;-><init>(I)V
+
+    invoke-static {v1, v2, p1}, Lpb2;->b(Lqhg;Llhg;Lnd2;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1, v2}, Lch2;->X(J)V
+    return-object p1
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    :cond_1
+    invoke-virtual {p1}, Lnd2;->v()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lphg;
+
+    invoke-direct {v1, v0}, Lphg;-><init>(Ljava/lang/CharSequence;)V
+
+    sget v0, Leeb;->L0:I
+
+    new-instance v2, Llhg;
+
+    invoke-direct {v2, v0}, Llhg;-><init>(I)V
+
+    invoke-static {v1, v2, p1}, Lpb2;->b(Lqhg;Llhg;Lnd2;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    sget-object p1, Ldh5;->a:Ldh5;
 
     return-object p1
 .end method

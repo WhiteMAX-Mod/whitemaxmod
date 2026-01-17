@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Llq6;
 
 
 # instance fields
@@ -44,15 +44,17 @@
 
     iget-object v0, p0, Liv;->d:Ljava/lang/Object;
 
-    check-cast v0, Ldl2;
+    check-cast v0, Lla3;
 
     iget-boolean v1, p0, Liv;->c:Z
 
-    check-cast v0, Lch2;
+    invoke-virtual {v0}, Lla3;->j()Lxg2;
+
+    move-result-object v0
 
     iget-wide v2, p0, Liv;->b:J
 
-    invoke-virtual {v0, v2, v3, v1}, Lch2;->n0(JZ)Lud2;
+    invoke-virtual {v0, v2, v3, v1}, Lxg2;->g0(JZ)Lnd2;
 
     move-result-object v0
 
@@ -61,25 +63,42 @@
     :pswitch_0
     iget-object v0, p0, Liv;->d:Ljava/lang/Object;
 
-    check-cast v0, Ljava/util/List;
+    check-cast v0, Lwk2;
 
-    invoke-static {v0}, Lei3;->F(Ljava/util/List;)Ljava/lang/Object;
+    iget-boolean v1, p0, Liv;->c:Z
 
-    move-result-object v1
+    check-cast v0, Lxg2;
 
-    check-cast v1, Lgc3;
+    iget-wide v2, p0, Liv;->b:J
 
-    invoke-static {v0}, Lei3;->N(Ljava/util/List;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3, v1}, Lxg2;->n0(JZ)Lnd2;
 
     move-result-object v0
 
-    check-cast v0, Lgc3;
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Liv;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-static {v0}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lsc3;
+
+    invoke-static {v0}, Lpi3;->N(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsc3;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lgc3;->a()J
+    invoke-interface {v1}, Lsc3;->a()J
 
     move-result-wide v3
 
@@ -95,7 +114,7 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    invoke-interface {v1}, Lgc3;->c()J
+    invoke-interface {v1}, Lsc3;->c()J
 
     move-result-wide v4
 
@@ -111,7 +130,7 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lgc3;->a()J
+    invoke-interface {v0}, Lsc3;->a()J
 
     move-result-wide v4
 
@@ -127,7 +146,7 @@
     :goto_2
     if-eqz v0, :cond_3
 
-    invoke-interface {v0}, Lgc3;->c()J
+    invoke-interface {v0}, Lsc3;->c()J
 
     move-result-wide v5
 
@@ -144,7 +163,7 @@
 
     iget-boolean v8, p0, Liv;->c:Z
 
-    invoke-static {v6, v7, v0, v5, v8}, Lxd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-static {v6, v7, v0, v5, v8}, Lhc0;->k(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -178,16 +197,15 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ljyf;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lszf;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

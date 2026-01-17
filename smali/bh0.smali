@@ -15,13 +15,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    sget v0, Lqa5;->d:I
+    sget v0, Lta5;->d:I
 
     const/16 v0, 0xc8
 
-    sget-object v1, Lwa5;->c:Lwa5;
+    sget-object v1, Lza5;->c:Lza5;
 
-    invoke-static {v0, v1}, Lfnj;->h(ILwa5;)J
+    invoke-static {v0, v1}, Laoj;->g(ILza5;)J
 
     move-result-wide v0
 
@@ -29,9 +29,9 @@
 
     const/16 v0, 0x1e
 
-    sget-object v1, Lwa5;->d:Lwa5;
+    sget-object v1, Lza5;->d:Lza5;
 
-    invoke-static {v0, v1}, Lfnj;->h(ILwa5;)J
+    invoke-static {v0, v1}, Laoj;->g(ILza5;)J
 
     move-result-wide v0
 
@@ -39,13 +39,13 @@
 
     new-instance v0, Lj;
 
-    const/16 v1, 0x12
+    const/16 v1, 0x15
 
     invoke-direct {v0, v1}, Lj;-><init>(I)V
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 .method public static final a(IJJ)J
     .locals 11
 
-    invoke-static {p3, p4, p1, p2}, Lqa5;->d(JJ)I
+    invoke-static {p3, p4, p1, p2}, Lta5;->d(JJ)I
 
     move-result v0
 
@@ -65,23 +65,23 @@
 
     const-wide/16 v0, 0x0
 
-    invoke-static {p1, p2, v0, v1}, Lqa5;->d(JJ)I
+    invoke-static {p1, p2, v0, v1}, Lta5;->d(JJ)I
 
     move-result v2
 
     if-ltz v2, :cond_3
 
-    invoke-static {p3, p4, v0, v1}, Lqa5;->d(JJ)I
+    invoke-static {p3, p4, v0, v1}, Lta5;->d(JJ)I
 
     move-result v0
 
     if-lez v0, :cond_2
 
-    invoke-static {p3, p4}, Lqa5;->g(J)J
+    invoke-static {p3, p4}, Lta5;->f(J)J
 
     move-result-wide p3
 
-    invoke-static {p1, p2}, Lqa5;->g(J)J
+    invoke-static {p1, p2}, Lta5;->f(J)J
 
     move-result-wide p1
 
@@ -97,7 +97,7 @@
 
     mul-double/2addr v0, p1
 
-    invoke-static {v0, v1}, Ln7j;->d(D)J
+    invoke-static {v0, v1}, Lq7j;->d(D)J
 
     move-result-wide p0
 
@@ -113,15 +113,15 @@
 
     sget-object p4, Lbh0;->c:Ljava/lang/Object;
 
-    invoke-interface {p4}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-interface {p4}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p4
 
-    check-cast p4, Lngd;
+    check-cast p4, Llhd;
 
     invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p4, Logd;->b:Lq3;
+    sget-object p4, Lmhd;->b:Lo3;
 
     invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -137,31 +137,25 @@
 
     if-eqz v2, :cond_0
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->isInfinite(D)Z
+    invoke-static {v3, v4}, Ljava/lang/Math;->abs(D)D
 
-    move-result v2
+    move-result-wide v7
 
-    if-nez v2, :cond_0
+    const-wide v9, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->isNaN(D)Z
+    cmpg-double v2, v7, v9
 
-    move-result v2
+    if-gtz v2, :cond_0
 
-    if-nez v2, :cond_0
+    invoke-static {v5, v6}, Ljava/lang/Math;->abs(D)D
 
-    invoke-static {v5, v6}, Ljava/lang/Double;->isInfinite(D)Z
+    move-result-wide v7
 
-    move-result v2
+    cmpg-double v2, v7, v9
 
-    if-nez v2, :cond_0
+    if-gtz v2, :cond_0
 
-    invoke-static {v5, v6}, Ljava/lang/Double;->isNaN(D)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p4}, Lq3;->i()D
+    invoke-virtual {p4}, Lo3;->i()D
 
     move-result-wide v0
 
@@ -184,7 +178,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p4}, Lq3;->i()D
+    invoke-virtual {p4}, Lo3;->i()D
 
     move-result-wide v7
 
@@ -208,9 +202,9 @@
 
     mul-double/2addr v3, p0
 
-    sget-object p0, Lwa5;->c:Lwa5;
+    sget-object p0, Lza5;->c:Lza5;
 
-    invoke-static {v3, v4, p0}, Lfnj;->g(DLwa5;)J
+    invoke-static {v3, v4, p0}, Laoj;->f(DLza5;)J
 
     move-result-wide p0
 
@@ -235,11 +229,11 @@
     throw p0
 
     :cond_4
-    invoke-static {p3, p4}, Lqa5;->p(J)Ljava/lang/String;
+    invoke-static {p3, p4}, Lta5;->p(J)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p1, p2}, Lqa5;->p(J)Ljava/lang/String;
+    invoke-static {p1, p2}, Lta5;->p(J)Ljava/lang/String;
 
     move-result-object p1
 
@@ -249,7 +243,7 @@
 
     const-string p4, "maxBackoffDelay("
 
-    invoke-static {p4, p0, p2, p1, p3}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, p0, p2, p1, p3}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

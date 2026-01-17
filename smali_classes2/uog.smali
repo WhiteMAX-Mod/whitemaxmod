@@ -4,32 +4,28 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lrog;
 
-.field public final b:I
+.field public final b:Lvog;
 
-.field public final c:I
+.field public final c:Lyog;
 
-.field public final d:I
-
-.field public final e:I
+.field public final d:Lbpg;
 
 
 # direct methods
-.method public constructor <init>(IIIII)V
+.method public constructor <init>(Lrog;Lvog;Lyog;Lbpg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Luog;->a:I
+    iput-object p1, p0, Luog;->a:Lrog;
 
-    iput p2, p0, Luog;->b:I
+    iput-object p2, p0, Luog;->b:Lvog;
 
-    iput p3, p0, Luog;->c:I
+    iput-object p3, p0, Luog;->c:Lyog;
 
-    iput p4, p0, Luog;->d:I
-
-    iput p5, p0, Luog;->e:I
+    iput-object p4, p0, Luog;->d:Lbpg;
 
     return-void
 .end method
@@ -37,110 +33,115 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Luog;
+    instance-of v1, p1, Luog;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Luog;
 
-    iget v0, p0, Luog;->a:I
+    iget-object v1, p0, Luog;->a:Lrog;
 
-    iget v1, p1, Luog;->a:I
+    iget-object v3, p1, Luog;->a:Lrog;
 
-    if-eq v0, v1, :cond_2
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    iget v0, p0, Luog;->b:I
+    iget-object v1, p0, Luog;->b:Lvog;
 
-    iget v1, p1, Luog;->b:I
+    iget-object v3, p1, Luog;->b:Lvog;
 
-    if-eq v0, v1, :cond_3
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
 
     :cond_3
-    iget v0, p0, Luog;->c:I
+    iget-object v1, p0, Luog;->c:Lyog;
 
-    iget v1, p1, Luog;->c:I
+    iget-object v3, p1, Luog;->c:Lyog;
 
-    if-eq v0, v1, :cond_4
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
 
     :cond_4
-    iget v0, p0, Luog;->d:I
+    iget-object v1, p0, Luog;->d:Lbpg;
 
-    iget v1, p1, Luog;->d:I
+    iget-object p1, p1, Luog;->d:Lbpg;
 
-    if-eq v0, v1, :cond_5
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
 
     :cond_5
-    iget v0, p0, Luog;->e:I
-
-    iget p1, p1, Luog;->e:I
-
-    if-eq v0, p1, :cond_6
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_6
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Luog;->a:I
+    iget-object v0, p0, Luog;->a:Lrog;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Luog;->b:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    invoke-virtual {v0}, Lrog;->hashCode()I
 
     move-result v0
 
-    iget v2, p0, Luog;->c:I
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    iget-object v1, p0, Luog;->b:Lvog;
+
+    invoke-virtual {v1}, Lvog;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Luog;->c:Lyog;
+
+    invoke-virtual {v0}, Lyog;->hashCode()I
 
     move-result v0
 
-    iget v2, p0, Luog;->d:I
+    add-int/2addr v0, v1
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result v0
+    iget-object v1, p0, Luog;->d:Lbpg;
 
-    iget v1, p0, Luog;->e:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v1}, Lbpg;->hashCode()I
 
     move-result v1
 
@@ -150,37 +151,47 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
-    const-string v0, ", contrastStatic="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", primary="
+    const-string v1, "TopbarColors(background="
 
-    const-string v2, "TopbarTextDisabledColors(contrast="
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Luog;->a:I
+    iget-object v1, p0, Luog;->a:Lrog;
 
-    iget v4, p0, Luog;->b:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ", icon="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", secondary="
+    iget-object v1, p0, Luog;->b:Lvog;
 
-    const-string v2, ", themed="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Luog;->c:I
+    const-string v1, ", stroke="
 
-    iget v4, p0, Luog;->d:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    iget-object v1, p0, Luog;->c:Lyog;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luog;->d:Lbpg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget v2, p0, Luog;->e:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v1}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -19,19 +19,13 @@
     return-void
 .end method
 
-.method public onActivityPaused(Landroid/app/Activity;)V
+.method public final onActivityPaused(Landroid/app/Activity;)V
     .locals 0
 
     return-void
 .end method
 
-.method public onActivityResumed(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
     return-void

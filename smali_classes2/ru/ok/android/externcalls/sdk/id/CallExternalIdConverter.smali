@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public static convert(Lsa1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+.method public static convert(Lka1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
     .locals 3
 
     if-nez p0, :cond_0
@@ -22,7 +22,7 @@
     return-object p0
 
     :cond_0
-    iget v0, p0, Lsa1;->b:I
+    iget v0, p0, Lka1;->b:I
 
     const/4 v1, 0x3
 
@@ -38,9 +38,9 @@
     :goto_0
     new-instance v1, Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-object v2, p0, Lsa1;->a:Ljava/lang/String;
+    iget-object v2, p0, Lka1;->a:Ljava/lang/String;
 
-    iget p0, p0, Lsa1;->c:I
+    iget p0, p0, Lka1;->c:I
 
     invoke-direct {v1, v2, v0, p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;-><init>(Ljava/lang/String;ZI)V
 

@@ -4,191 +4,312 @@
 
 
 # instance fields
-.field public final a:Ljy0;
+.field public final a:[I
 
-.field public final b:Lbbg;
+.field public final b:I
 
-.field public final c:Lh6f;
+.field public final c:I
 
-.field public final d:Ld68;
+.field public final d:I
 
-.field public final e:Lkotlinx/coroutines/internal/ContextScope;
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:I
 
 
 # direct methods
-.method public constructor <init>(Ljy0;Lbbg;Ld68;)V
-    .locals 2
+.method public constructor <init>([IIIIIIIIII)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkk3;->a:Ljy0;
+    iput-object p1, p0, Lkk3;->a:[I
 
-    iput-object p2, p0, Lkk3;->b:Lbbg;
+    iput p2, p0, Lkk3;->b:I
 
-    const/4 v0, 0x0
+    iput p3, p0, Lkk3;->c:I
 
-    const/4 v1, 0x7
+    iput p4, p0, Lkk3;->d:I
 
-    invoke-static {v0, v0, v1}, Li6f;->b(III)Lh6f;
+    iput p5, p0, Lkk3;->e:I
 
-    move-result-object v0
+    iput p6, p0, Lkk3;->f:I
 
-    iput-object v0, p0, Lkk3;->c:Lh6f;
+    iput p7, p0, Lkk3;->g:I
 
-    iput-object p3, p0, Lkk3;->d:Ld68;
+    iput p8, p0, Lkk3;->h:I
 
-    check-cast p2, Lb9b;
+    iput p9, p0, Lkk3;->i:I
 
-    invoke-virtual {p2}, Lb9b;->a()Ltb4;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lkk3;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Ljy0;->d(Ljava/lang/Object;)V
+    iput p10, p0, Lkk3;->j:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfk3;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    new-instance v0, Lgk3;
+    if-ne p0, p1, :cond_0
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lgk3;-><init>(Lkk3;Lfk3;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lkk3;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    return-void
-.end method
-
-.method public final onAddChatEvent(Li9;)V
-    .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
-
-    new-instance v0, Ldk3;
-
-    iget-wide v1, p1, Li9;->b:J
-
-    invoke-direct {v0, v1, v2}, Ldk3;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lkk3;->a(Lfk3;)V
-
-    return-void
-.end method
-
-.method public final onChatMembersUpdateEvent(Lrt2;)V
-    .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
-
-    iget-wide v0, p1, Lrt2;->d:J
-
-    iget p1, p1, Lrt2;->o:I
-
-    invoke-static {p1}, Lc12;->w(I)I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 v2, 0x1
-
-    if-ne p1, v2, :cond_0
-
-    new-instance p1, Lek3;
-
-    invoke-direct {p1, v0, v1}, Lek3;-><init>(J)V
-
-    invoke-virtual {p0, p1}, Lkk3;->a(Lfk3;)V
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    instance-of v0, p1, Lkk3;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    if-nez v0, :cond_1
 
-    throw p1
+    goto :goto_0
 
     :cond_1
-    new-instance p1, Ldk3;
+    check-cast p1, Lkk3;
 
-    invoke-direct {p1, v0, v1}, Ldk3;-><init>(J)V
+    iget-object v0, p0, Lkk3;->a:[I
 
-    invoke-virtual {p0, p1}, Lkk3;->a(Lfk3;)V
+    iget-object v1, p1, Lkk3;->a:[I
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lkk3;->b:I
+
+    iget v1, p1, Lkk3;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lkk3;->c:I
+
+    iget v1, p1, Lkk3;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lkk3;->d:I
+
+    iget v1, p1, Lkk3;->d:I
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Lkk3;->e:I
+
+    iget v1, p1, Lkk3;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Lkk3;->f:I
+
+    iget v1, p1, Lkk3;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Lkk3;->g:I
+
+    iget v1, p1, Lkk3;->g:I
+
+    if-eq v0, v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget v0, p0, Lkk3;->h:I
+
+    iget v1, p1, Lkk3;->h:I
+
+    if-eq v0, v1, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget v0, p0, Lkk3;->i:I
+
+    iget v1, p1, Lkk3;->i:I
+
+    if-eq v0, v1, :cond_a
+
+    goto :goto_0
+
+    :cond_a
+    iget v0, p0, Lkk3;->j:I
+
+    iget p1, p1, Lkk3;->j:I
+
+    if-eq v0, p1, :cond_b
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_b
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final onIncomingMessageEvent(Lkn7;)V
+.method public final hashCode()I
     .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
 
-    iget-boolean v0, p1, Lkn7;->X:Z
+    iget-object v0, p0, Lkk3;->a:[I
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
-    return-void
+    move-result v0
 
-    :cond_0
-    new-instance v0, Ljk3;
+    const/16 v1, 0x1f
 
-    const/4 v1, 0x0
+    mul-int/2addr v0, v1
 
-    invoke-direct {v0, p0, p1, v1}, Ljk3;-><init>(Lkk3;Lkn7;Lkotlin/coroutines/Continuation;)V
+    iget v2, p0, Lkk3;->b:I
 
-    const/4 p1, 0x3
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    iget-object v2, p0, Lkk3;->e:Lkotlinx/coroutines/internal/ContextScope;
+    move-result v0
 
-    invoke-static {v2, v1, v1, v0, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    iget v2, p0, Lkk3;->c:I
 
-    return-void
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lkk3;->d:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lkk3;->e:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lkk3;->f:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lkk3;->g:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lkk3;->h:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lkk3;->i:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v1, p0, Lkk3;->j:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final onLeaveChatEvent(Lgl2;)V
-    .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    new-instance v0, Lek3;
+    iget-object v0, p0, Lkk3;->a:[I
 
-    iget-wide v1, p1, Lgl2;->b:J
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lek3;-><init>(J)V
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lkk3;->a(Lfk3;)V
+    const-string v1, ", qRBackground="
 
-    return-void
-.end method
+    const-string v2, ", qRStep1="
 
-.method public final onRemoveChatEvent(Lhud;)V
-    .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
+    iget v3, p0, Lkk3;->b:I
 
-    new-instance v0, Lek3;
+    const-string v4, "CommonBackgroundSystemBubbleGradientColors(gradient="
 
-    iget-wide v1, p1, Lhud;->b:J
+    invoke-static {v3, v4, v0, v1, v2}, Lpqb;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1, v2}, Lek3;-><init>(J)V
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lkk3;->a(Lfk3;)V
+    const-string v1, ", qRStep2="
 
-    return-void
+    const-string v2, ", qRStep3="
+
+    iget v3, p0, Lkk3;->c:I
+
+    iget v4, p0, Lkk3;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", qRStep4="
+
+    const-string v2, ", strokeFadeStep1="
+
+    iget v3, p0, Lkk3;->e:I
+
+    iget v4, p0, Lkk3;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", strokeFadeStep2="
+
+    const-string v2, ", strokeStep1="
+
+    iget v3, p0, Lkk3;->g:I
+
+    iget v4, p0, Lkk3;->h:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", strokeStep2="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lkk3;->i:I
+
+    iget v4, p0, Lkk3;->j:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lhc0;->j(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

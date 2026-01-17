@@ -1,43 +1,104 @@
-.class public final Lgv5;
+.class public final synthetic Lgv5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li6;
+
 
 # instance fields
-.field public final a:Ldgb;
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ldgb;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JII)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p5, p0, Lgv5;->a:I
 
-    iput-object p1, p0, Lgv5;->a:Ldgb;
+    iput-object p1, p0, Lgv5;->d:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lgv5;->b:J
+
+    iput p4, p0, Lgv5;->c:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljdf;
-    .locals 3
+.method public final run()V
+    .locals 7
 
-    iget-object v0, p0, Lgv5;->a:Ldgb;
+    iget v0, p0, Lgv5;->a:I
 
-    invoke-virtual {v0}, Ldgb;->B()Lgo3;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lgv5;->d:Ljava/lang/Object;
 
-    new-instance v1, Lwp4;
+    move-object v2, v0
 
-    const/16 v2, 0x1c
+    check-cast v2, Ljw5;
 
-    invoke-direct {v1, v2}, Lwp4;-><init>(I)V
+    iget-object v0, v2, Ljw5;->a:Lb2e;
 
-    invoke-virtual {v0, v1}, Lbdf;->h(Ldr6;)Ljdf;
+    new-instance v1, Lm54;
 
-    move-result-object v0
+    const/4 v6, 0x1
 
-    return-object v0
+    iget-wide v3, p0, Lgv5;->b:J
+
+    iget v5, p0, Lgv5;->c:I
+
+    invoke-direct/range {v1 .. v6}, Lm54;-><init>(Ljava/lang/Object;JII)V
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v3, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lgv5;->d:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Ltw5;
+
+    iget-object v0, v2, Ltw5;->a:Lb2e;
+
+    new-instance v1, Lm54;
+
+    const/4 v6, 0x2
+
+    iget-wide v3, p0, Lgv5;->b:J
+
+    iget v5, p0, Lgv5;->c:I
+
+    invoke-direct/range {v1 .. v6}, Lm54;-><init>(Ljava/lang/Object;JII)V
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v3, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

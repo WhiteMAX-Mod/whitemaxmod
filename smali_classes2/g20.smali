@@ -4,104 +4,90 @@
 
 
 # instance fields
-.field public a:J
+.field public a:F
 
-.field public b:I
+.field public b:F
 
-.field public c:I
+.field public c:Lh2d;
 
-.field public d:Ljava/lang/String;
-
-.field public e:J
-
-.field public f:Ljava/lang/String;
-
-.field public g:Ljava/lang/String;
-
-.field public h:Ljava/lang/String;
-
-.field public i:Ljava/util/List;
-
-.field public j:I
-
-.field public k:J
-
-.field public l:Ljava/lang/String;
-
-.field public m:Z
-
-.field public n:I
-
-.field public o:Ljava/lang/String;
+.field public d:Z
 
 
-# virtual methods
-.method public a()Lh20;
-    .locals 2
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
 
-    iget-object v0, p0, Lg20;->i:Ljava/util/List;
+    packed-switch p1, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    .line 7
+    sget-object p1, Lh2d;->X:Lh2d;
 
-    iput-object v0, p0, Lg20;->i:Ljava/util/List;
+    iput-object p1, p0, Lg20;->c:Lh2d;
 
-    :cond_0
-    iget v0, p0, Lg20;->j:I
+    return-void
 
-    const/4 v1, 0x1
+    .line 8
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_1
+    .line 9
+    sget-object p1, Lh2d;->X:Lh2d;
 
-    iput v1, p0, Lg20;->j:I
+    iput-object p1, p0, Lg20;->c:Lh2d;
 
-    :cond_1
-    iget v0, p0, Lg20;->n:I
+    const/4 p1, 0x0
 
-    if-nez v0, :cond_2
+    .line 10
+    iput p1, p0, Lg20;->a:F
 
-    iput v1, p0, Lg20;->n:I
+    const/high16 p1, 0x3f800000    # 1.0f
 
-    :cond_2
-    new-instance v0, Lh20;
+    .line 11
+    iput p1, p0, Lg20;->b:F
 
-    invoke-direct {v0, p0}, Lh20;-><init>(Lg20;)V
+    const/4 p1, 0x0
 
-    return-object v0
+    .line 12
+    iput-boolean p1, p0, Lg20;->d:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public b()Lwpf;
-    .locals 2
+.method public constructor <init>(Lg20;)V
+    .locals 1
 
-    iget-object v0, p0, Lg20;->i:Ljava/util/List;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_0
+    .line 2
+    iget v0, p1, Lg20;->a:F
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    iput v0, p0, Lg20;->a:F
 
-    iput-object v0, p0, Lg20;->i:Ljava/util/List;
+    .line 3
+    iget v0, p1, Lg20;->b:F
 
-    :cond_0
-    iget v0, p0, Lg20;->j:I
+    iput v0, p0, Lg20;->b:F
 
-    const/4 v1, 0x1
+    .line 4
+    iget-object v0, p1, Lg20;->c:Lh2d;
 
-    if-nez v0, :cond_1
+    iput-object v0, p0, Lg20;->c:Lh2d;
 
-    iput v1, p0, Lg20;->j:I
+    .line 5
+    iget-boolean p1, p1, Lg20;->d:Z
 
-    :cond_1
-    iget v0, p0, Lg20;->n:I
+    iput-boolean p1, p0, Lg20;->d:Z
 
-    if-nez v0, :cond_2
-
-    iput v1, p0, Lg20;->n:I
-
-    :cond_2
-    new-instance v0, Lwpf;
-
-    invoke-direct {v0, p0}, Lwpf;-><init>(Lg20;)V
-
-    return-object v0
+    return-void
 .end method

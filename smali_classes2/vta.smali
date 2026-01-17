@@ -1,47 +1,35 @@
 .class public final Lvta;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lydb;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Lj35;
 
-.field public final synthetic o:Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;
+.field public final c:Lj35;
+
+.field public final d:Lj35;
+
+.field public final e:Lj35;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;Ll84;)V
+.method public constructor <init>(Lydb;Lj35;Lj35;Lj35;Lj35;)V
     .locals 0
 
-    iput-object p1, p0, Lvta;->o:Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvta;->a:Lydb;
+
+    iput-object p2, p0, Lvta;->b:Lj35;
+
+    iput-object p3, p0, Lvta;->c:Lj35;
+
+    iput-object p4, p0, Lvta;->d:Lj35;
+
+    iput-object p5, p0, Lvta;->e:Lj35;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lvta;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lvta;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvta;->X:I
-
-    iget-object p1, p0, Lvta;->o:Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;->g(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

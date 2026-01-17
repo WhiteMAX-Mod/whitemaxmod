@@ -174,7 +174,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled$UpdatedModel;->file:Ljava/io/File;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -187,7 +187,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled$UpdatedModel;->version:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -249,7 +249,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled$UpdatedModel;->version:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
     move-result v0
 
@@ -293,7 +293,7 @@
 
     const-string v0, ")"
 
-    invoke-static {v4, v2, v3, v0}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v2, v3, v0}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

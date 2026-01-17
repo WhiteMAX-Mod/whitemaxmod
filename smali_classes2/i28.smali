@@ -1,31 +1,33 @@
-.class public abstract Li28;
+.class public interface abstract Li28;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Luna;
-
-.field public static final b:Lh28;
+# interfaces
+.implements Ljava/io/Flushable;
+.implements Ljava/io/Closeable;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# virtual methods
+.method public abstract T(Ljava/io/InputStreamReader;)V
+.end method
 
-    new-instance v0, Luna;
+.method public abstract j(Ljava/lang/String;)V
+.end method
 
-    const/16 v1, 0x17
+.method public abstract n()V
+.end method
 
-    invoke-direct {v0, v1}, Luna;-><init>(I)V
+.method public abstract n0()V
+.end method
 
-    sput-object v0, Li28;->a:Luna;
+.method public abstract q()V
+.end method
 
-    new-instance v0, Lh28;
+.method public abstract r()V
+.end method
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.method public abstract r0(Ljava/lang/String;)Li28;
+.end method
 
-    sput-object v0, Li28;->b:Lh28;
-
-    return-void
+.method public abstract t()V
 .end method

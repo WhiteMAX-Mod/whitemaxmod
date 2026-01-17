@@ -3,52 +3,50 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls4a;
+.implements Lr4a;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:J
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-wide p1, p0, Lz9a;->a:J
+    if-eqz p1, :cond_1
 
-    .line 3
-    iput-wide p3, p0, Lz9a;->b:J
+    const/16 v0, 0x5a
 
-    const-wide/16 p1, -0x1
+    if-eq p1, v0, :cond_1
 
-    .line 4
-    iput-wide p1, p0, Lz9a;->c:J
+    const/16 v0, 0xb4
 
-    return-void
-.end method
+    if-eq p1, v0, :cond_1
 
-.method public constructor <init>(JJJ)V
-    .locals 0
+    const/16 v0, 0x10e
 
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-ne p1, v0, :cond_0
 
-    .line 6
-    iput-wide p1, p0, Lz9a;->a:J
+    goto :goto_0
 
-    .line 7
-    iput-wide p3, p0, Lz9a;->b:J
+    :cond_0
+    const/4 v0, 0x0
 
-    .line 8
-    iput-wide p5, p0, Lz9a;->c:J
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    const-string v1, "Unsupported orientation"
+
+    invoke-static {v1, v0}, Lh6j;->a(Ljava/lang/Object;Z)V
+
+    iput p1, p0, Lz9a;->a:I
 
     return-void
 .end method
@@ -56,7 +54,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -76,29 +74,11 @@
     :cond_1
     check-cast p1, Lz9a;
 
-    iget-wide v3, p0, Lz9a;->a:J
+    iget v1, p0, Lz9a;->a:I
 
-    iget-wide v5, p1, Lz9a;->a:J
+    iget p1, p1, Lz9a;->a:I
 
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-wide v3, p0, Lz9a;->b:J
-
-    iget-wide v5, p1, Lz9a;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-wide v3, p0, Lz9a;->c:J
-
-    iget-wide v5, p1, Lz9a;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_2
+    if-ne v1, p1, :cond_2
 
     return v0
 
@@ -107,67 +87,31 @@
 .end method
 
 .method public final hashCode()I
-    .locals 4
+    .locals 1
 
-    iget-wide v0, p0, Lz9a;->a:J
+    iget v0, p0, Lz9a;->a:I
 
-    invoke-static {v0, v1}, Lv5j;->c(J)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
     add-int/lit16 v0, v0, 0x20f
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lz9a;->b:J
-
-    invoke-static {v1, v2}, Lv5j;->c(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lz9a;->c:J
-
-    invoke-static {v2, v3}, Lv5j;->c(J)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Mp4Timestamp: creation time="
+    const-string v1, "Orientation= "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lz9a;->a:J
+    iget v1, p0, Lz9a;->a:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", modification time="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lz9a;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", timescale="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lz9a;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

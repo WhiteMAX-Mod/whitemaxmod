@@ -7,10 +7,10 @@
 
 
 # virtual methods
-.method public abstract G(Lzi4;)J
+.method public abstract G(Laj4;)J
 .end method
 
-.method public abstract H(Lqsg;)V
+.method public abstract H(Lysg;)V
 .end method
 
 .method public abstract close()V

@@ -1,150 +1,135 @@
-.class public final Llib;
-.super Landroidx/appcompat/widget/AppCompatImageView;
+.class public abstract Llib;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public d:F
+# static fields
+.field public static final a:J
 
-.field public o:Landroid/graphics/Path;
+.field public static final b:J
 
-.field public s0:I
+.field public static final c:J
 
-.field public final t0:Landroid/graphics/Paint;
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final f:J
+
+.field public static final g:J
+
+.field public static final h:J
+
+.field public static final i:J
+
+.field public static final j:J
+
+.field public static final k:J
+
+.field public static final l:J
+
+.field public static final m:J
+
+.field public static final n:J
+
+.field public static final o:J
+
+.field public static final synthetic p:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x0
+    sget v0, Lcad;->oneme_settings_privacy_content_level_access:I
 
-    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    int-to-long v0, v0
 
-    sget-object p1, Ldc3;->s0:Lole;
+    sput-wide v0, Llib;->a:J
 
-    invoke-virtual {p1, p0}, Lole;->n(Landroid/view/View;)Lplb;
+    sget v0, Lcad;->oneme_settings_privacy_family_protection:I
 
-    move-result-object p1
+    int-to-long v0, v0
 
-    invoke-interface {p1}, Lplb;->g()Lbdh;
+    sput-wide v0, Llib;->b:J
 
-    const/high16 p1, 0x29000000
+    sget v0, Lcad;->oneme_settings_privacy_info_header:I
 
-    iput p1, p0, Llib;->s0:I
+    int-to-long v0, v0
 
-    new-instance p1, Landroid/graphics/Paint;
+    sput-wide v0, Llib;->c:J
 
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+    sget v0, Lcad;->oneme_settings_privacy_screen_add_me_to_chat:I
 
-    const/4 v1, 0x0
+    int-to-long v0, v0
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
+    sput-wide v0, Llib;->d:J
 
-    iput-object p1, p0, Llib;->t0:Landroid/graphics/Paint;
+    sget v0, Lcad;->oneme_settings_privacy_screen_black_list:I
 
-    new-instance p1, Lb4a;
+    int-to-long v0, v0
 
-    const/4 v1, 0x3
+    sput-wide v0, Llib;->e:J
 
-    const/4 v2, 0x5
+    sget v0, Lcad;->oneme_settings_privacy_screen_call_me:I
 
-    invoke-direct {p1, v1, v0, v2}, Lb4a;-><init>(ILkotlin/coroutines/Continuation;I)V
+    int-to-long v0, v0
 
-    invoke-static {p1, p0}, Ll5j;->c(Ler6;Landroid/view/View;)V
+    sput-wide v0, Llib;->f:J
 
-    return-void
-.end method
+    sget v0, Lcad;->oneme_settings_privacy_screen_finished_sessions:I
 
+    int-to-long v0, v0
 
-# virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 6
+    sput-wide v0, Llib;->g:J
 
-    iget-object v0, p0, Llib;->o:Landroid/graphics/Path;
+    sget v0, Lcad;->oneme_settings_privacy_screen_how_session:I
 
-    if-eqz v0, :cond_0
+    int-to-long v0, v0
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    sput-wide v0, Llib;->h:J
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    sget v0, Lcad;->oneme_settings_privacy_screen_safe_mode:I
 
-    move-result v1
+    int-to-long v0, v0
 
-    int-to-float v1, v1
+    sput-wide v0, Llib;->i:J
 
-    iget v2, p0, Llib;->d:F
+    sget v0, Lcad;->oneme_settings_privacy_screen_search_by_phone:I
 
-    div-float/2addr v1, v2
+    int-to-long v0, v0
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    sput-wide v0, Llib;->j:J
 
-    move-result-object v2
+    sget v0, Lcad;->oneme_settings_privacy_screen_see_online_state:I
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    int-to-long v0, v0
 
-    move-result-object v2
+    sput-wide v0, Llib;->k:J
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    sget v0, Lcad;->oneme_settings_privacy_screen_twofa:I
 
-    mul-float/2addr v1, v2
+    int-to-long v0, v0
 
-    invoke-virtual {p1, v1, v1}, Landroid/graphics/Canvas;->scale(FF)V
+    sput-wide v0, Llib;->l:J
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    sget v0, Lcad;->oneme_settings_privacy_screen_twofa_profile_delete:I
 
-    move-result-object v1
+    int-to-long v0, v0
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    sput-wide v0, Llib;->m:J
 
-    move-result-object v1
+    sget v0, Lcad;->oneme_settings_privacy_screen_twofa_warning_item:I
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    int-to-long v0, v0
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    sput-wide v0, Llib;->n:J
 
-    mul-float/2addr v1, v2
+    sget v0, Lcad;->oneme_settings_privacy_screen_web_apps:I
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    int-to-long v0, v0
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    const/4 v3, 0x0
-
-    mul-float/2addr v2, v3
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    iget v3, p0, Llib;->s0:I
-
-    iget-object v5, p0, Llib;->t0:Landroid/graphics/Paint;
-
-    invoke-virtual {v5, v1, v2, v4, v3}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
-
-    invoke-virtual {p1, v0, v5}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    invoke-virtual {v5}, Landroid/graphics/Paint;->clearShadowLayer()V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    sput-wide v0, Llib;->o:J
 
     return-void
 .end method

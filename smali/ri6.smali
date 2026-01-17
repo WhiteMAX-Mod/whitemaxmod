@@ -1,15 +1,22 @@
-.class public abstract Lri6;
+.class public final Lri6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqi6;
+
+
+# instance fields
+.field public final a:[Lsi6;
+
 
 # direct methods
-.method public static a(Landroid/content/res/TypedArray;I)I
+.method public constructor <init>([Lsi6;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getType(I)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-object p1, p0, Lri6;->a:[Lsi6;
 
-    return p0
+    return-void
 .end method

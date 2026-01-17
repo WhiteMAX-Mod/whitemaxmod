@@ -8,7 +8,7 @@
 
 .field public b:Landroidx/core/graphics/drawable/IconCompat;
 
-.field public final c:[Lbud;
+.field public final c:[Lxud;
 
 .field public final d:Z
 
@@ -81,12 +81,12 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v11}, Lfra;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lbud;[Lbud;ZIZZZ)V
+    invoke-direct/range {v0 .. v11}, Lfra;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lxud;[Lxud;ZIZZZ)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lbud;[Lbud;ZIZZZ)V
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lxud;[Lxud;ZIZZZ)V
     .locals 1
 
     .line 3
@@ -112,7 +112,7 @@
     .line 7
     iget-object p6, p1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    invoke-static {p6}, Ltf7;->d(Ljava/lang/Object;)I
+    invoke-static {p6}, Lxe7;->d(Ljava/lang/Object;)I
 
     move-result p6
 
@@ -153,7 +153,7 @@
     iput-object p4, p0, Lfra;->a:Landroid/os/Bundle;
 
     .line 12
-    iput-object p5, p0, Lfra;->c:[Lbud;
+    iput-object p5, p0, Lfra;->c:[Lxud;
 
     .line 13
     iput-boolean p7, p0, Lfra;->d:Z

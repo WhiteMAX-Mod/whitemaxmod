@@ -28,7 +28,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/widget/FrameLayout;Lkgc;)V
+.method public constructor <init>(Landroid/widget/FrameLayout;Ljhc;)V
     .locals 1
 
     .line 1
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public abstract b(Lwrg;)V
+.method public abstract b(Lfsg;)V
 .end method
 
 .method public c()Ljava/lang/String;
@@ -114,7 +114,7 @@
 .method public abstract g()V
 .end method
 
-.method public abstract h(Lj4g;Lol;)V
+.method public abstract h(Ly5g;Lpl;)V
 .end method
 
 .method public i()V
@@ -139,7 +139,7 @@
     :cond_0
     iget-object v2, p0, Lhsa;->d:Ljava/lang/Object;
 
-    check-cast v2, Lkgc;
+    check-cast v2, Ljhc;
 
     new-instance v3, Landroid/util/Size;
 
@@ -176,7 +176,7 @@
     goto/16 :goto_3
 
     :cond_1
-    invoke-virtual {v2}, Lkgc;->f()Z
+    invoke-virtual {v2}, Ljhc;->f()Z
 
     move-result v4
 
@@ -193,7 +193,7 @@
 
     check-cast v4, Landroid/view/TextureView;
 
-    invoke-virtual {v2}, Lkgc;->d()Landroid/graphics/Matrix;
+    invoke-virtual {v2}, Ljhc;->d()Landroid/graphics/Matrix;
 
     move-result-object v5
 
@@ -206,7 +206,7 @@
 
     move-result-object v4
 
-    iget-boolean v6, v2, Lkgc;->g:Z
+    iget-boolean v6, v2, Ljhc;->g:Z
 
     const/4 v7, 0x0
 
@@ -220,7 +220,7 @@
 
     move-result v4
 
-    iget v6, v2, Lkgc;->e:I
+    iget v6, v2, Ljhc;->e:I
 
     if-eq v4, v6, :cond_4
 
@@ -232,20 +232,20 @@
     move v4, v7
 
     :goto_0
-    iget-boolean v6, v2, Lkgc;->g:Z
+    iget-boolean v6, v2, Ljhc;->g:Z
 
     if-nez v6, :cond_6
 
     if-nez v6, :cond_5
 
-    iget v6, v2, Lkgc;->c:I
+    iget v6, v2, Ljhc;->c:I
 
     goto :goto_1
 
     :cond_5
-    iget v6, v2, Lkgc;->e:I
+    iget v6, v2, Ljhc;->e:I
 
-    invoke-static {v6}, Lyaj;->b(I)I
+    invoke-static {v6}, Lsbj;->b(I)I
 
     move-result v6
 
@@ -264,11 +264,11 @@
     :cond_7
     const-string v4, "Custom rotation not supported with SurfaceView/PERFORMANCE mode."
 
-    invoke-static {v5, v4}, Lw4j;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lm5j;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_8
     :goto_2
-    invoke-virtual {v2, v3, v0}, Lkgc;->e(Landroid/util/Size;I)Landroid/graphics/RectF;
+    invoke-virtual {v2, v3, v0}, Ljhc;->e(Landroid/util/Size;I)Landroid/graphics/RectF;
 
     move-result-object v0
 
@@ -282,7 +282,7 @@
 
     move-result v3
 
-    iget-object v4, v2, Lkgc;->a:Landroid/util/Size;
+    iget-object v4, v2, Ljhc;->a:Landroid/util/Size;
 
     invoke-virtual {v4}, Landroid/util/Size;->getWidth()I
 
@@ -298,7 +298,7 @@
 
     move-result v3
 
-    iget-object v2, v2, Lkgc;->a:Landroid/util/Size;
+    iget-object v2, v2, Ljhc;->a:Landroid/util/Size;
 
     invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
 
@@ -350,12 +350,12 @@
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Lw4j;->g(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lm5j;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_a
     :goto_4
     return-void
 .end method
 
-.method public abstract j()Lwe8;
+.method public abstract j()Lie8;
 .end method

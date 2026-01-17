@@ -1,37 +1,27 @@
 .class public final Lu8b;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:La00;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Z
+.field public final synthetic Y:Lz8b;
 
-.field public Z:Z
+.field public Z:I
 
-.field public d:Ly8b;
+.field public d:Lfs8;
 
-.field public o:Ldn9;
-
-.field public s0:Z
-
-.field public t0:Z
-
-.field public synthetic u0:Ljava/lang/Object;
-
-.field public final synthetic v0:Ly8b;
-
-.field public w0:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ly8b;Ll84;)V
+.method public constructor <init>(Lz8b;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lu8b;->v0:Ly8b;
+    iput-object p1, p0, Lu8b;->Y:Lz8b;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -39,35 +29,31 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 6
 
-    iput-object p1, p0, Lu8b;->u0:Ljava/lang/Object;
+    iput-object p1, p0, Lu8b;->X:Ljava/lang/Object;
 
-    iget p1, p0, Lu8b;->w0:I
+    iget p1, p0, Lu8b;->Z:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lu8b;->w0:I
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    iget-object v0, p0, Lu8b;->v0:Ly8b;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
+    iput p1, p0, Lu8b;->Z:I
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    move-object v7, p0
+    iget-object v0, p0, Lu8b;->Y:Lz8b;
 
-    invoke-virtual/range {v0 .. v7}, Ly8b;->f(Ldn9;La00;ZZZZLl84;)Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lz8b;->f(Lfs8;IIILo84;)Ljava/lang/Object;
 
     move-result-object p1
 

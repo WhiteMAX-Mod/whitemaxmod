@@ -1,108 +1,100 @@
-.class public final synthetic Lujb;
+.class public final Lujb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lvjb;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lujb;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:Lxjb;
+.field public static final a:Lujb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxjb;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lujb;->a:I
+    new-instance v0, Lujb;
 
-    iput-object p1, p0, Lujb;->b:Lxjb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lujb;->a:Lujb;
+
+    new-instance v0, Lhu8;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
+
+    sput-object v0, Lujb;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final describeContents()I
+    .locals 1
 
-    iget v0, p0, Lujb;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lujb;->b:Lxjb;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sget-object v1, Lb57;->X:Lb57;
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1}, La1h;->m(Landroid/view/View;Ld57;)Z
+    if-ne p0, p1, :cond_0
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    return v0
 
-    return-object v0
+    :cond_0
+    instance-of p1, p1, Lujb;
 
-    :pswitch_0
-    sget-object v0, Ldc3;->s0:Lole;
+    if-nez p1, :cond_1
 
-    iget-object v1, p0, Lujb;->b:Lxjb;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Lole;->n(Landroid/view/View;)Lplb;
+    return p1
 
-    move-result-object v0
+    :cond_1
+    return v0
+.end method
 
-    invoke-interface {v0}, Lplb;->b()Lxf0;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object v0
+    const v0, -0x77b9f821
 
-    iget v0, v0, Lxf0;->e:I
+    return v0
+.end method
 
-    const-wide v2, 0xff6813ffL
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    long-to-int v2, v2
-
-    filled-new-array {v0, v2}, [I
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofArgb([I)Landroid/animation/ValueAnimator;
-
-    move-result-object v0
-
-    new-instance v2, Lg10;
-
-    const/16 v3, 0x13
-
-    invoke-direct {v2, v3, v1}, Lg10;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    const-wide/16 v1, 0x28a
-
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    const-wide/16 v1, 0x320
-
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
+    const-string v0, "Timer"
 
     return-object v0
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lujb;->b:Lxjb;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-static {v0}, Lxjb;->v(Lxjb;)Landroid/animation/AnimatorSet;
+    const/4 p2, 0x1
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

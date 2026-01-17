@@ -1,165 +1,289 @@
 .class public final Lbqf;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lhg5;
+.field public final a:I
 
-.field public b:Lbsf;
+.field public final b:I
 
-.field public c:Lrqf;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(IIIIIIIII)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput p1, p0, Lbqf;->a:I
 
-    new-instance v0, Lhg5;
+    iput p2, p0, Lbqf;->b:I
 
-    invoke-direct {v0, p1}, Lhg5;-><init>(Landroid/content/Context;)V
+    iput p3, p0, Lbqf;->c:I
 
-    iput-object v0, p0, Lbqf;->a:Lhg5;
+    iput p4, p0, Lbqf;->d:I
 
-    const/4 p1, 0x0
+    iput p5, p0, Lbqf;->e:I
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
+    iput p6, p0, Lbqf;->f:I
 
-    iget-object p1, v0, Lhg5;->b:Ljava/lang/Object;
+    iput p7, p0, Lbqf;->g:I
 
-    check-cast p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    iput p8, p0, Lbqf;->h:I
 
-    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    iput p9, p0, Lbqf;->i:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lrqf;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Lbqf;->c:Lrqf;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x1
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget v3, v0, Lrqf;->Y:I
+    instance-of v1, p1, Lbqf;
 
-    iget v4, p1, Lrqf;->Y:I
-
-    if-ne v3, v4, :cond_2
-
-    iget v0, v0, Lrqf;->Z:I
-
-    iget v3, p1, Lrqf;->Z:I
-
-    if-eq v0, v3, :cond_1
+    if-nez v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move v2, v1
+    check-cast p1, Lbqf;
+
+    iget v1, p0, Lbqf;->a:I
+
+    iget v2, p1, Lbqf;->a:I
+
+    if-eq v1, v2, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    :goto_0
-    iput-object p1, p0, Lbqf;->c:Lrqf;
+    iget v1, p0, Lbqf;->b:I
 
-    iget-object v0, p0, Lbqf;->b:Lbsf;
+    iget v2, p1, Lbqf;->b:I
 
-    if-eqz v0, :cond_3
+    if-eq v1, v2, :cond_3
 
-    invoke-virtual {v0, p1}, Lbsf;->b(Lrqf;)V
+    goto :goto_0
 
     :cond_3
-    iget-object p1, p1, Lrqf;->d:Ljava/lang/String;
+    iget v1, p0, Lbqf;->c:I
 
-    iget-object v0, p0, Lbqf;->a:Lhg5;
+    iget v2, p1, Lbqf;->c:I
 
-    iget-object v0, v0, Lhg5;->b:Ljava/lang/Object;
+    if-eq v1, v2, :cond_4
 
-    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-static {p1}, Lvj7;->b(Ljava/lang/String;)Lvj7;
-
-    move-result-object p1
-
-    sget v3, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->B0:I
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, p1, v3}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->i(Lvj7;Lvj7;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    goto :goto_0
 
     :cond_4
-    return-void
+    iget v1, p0, Lbqf;->d:I
+
+    iget v2, p1, Lbqf;->d:I
+
+    if-eq v1, v2, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v1, p0, Lbqf;->e:I
+
+    iget v2, p1, Lbqf;->e:I
+
+    if-eq v1, v2, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v1, p0, Lbqf;->f:I
+
+    iget v2, p1, Lbqf;->f:I
+
+    if-eq v1, v2, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v1, p0, Lbqf;->g:I
+
+    iget v2, p1, Lbqf;->g:I
+
+    if-eq v1, v2, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget v1, p0, Lbqf;->h:I
+
+    iget v2, p1, Lbqf;->h:I
+
+    if-eq v1, v2, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget v1, p0, Lbqf;->i:I
+
+    iget p1, p1, Lbqf;->i:I
+
+    if-eq v1, p1, :cond_a
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_a
+    return v0
 .end method
 
-.method public final getSizeConfigurator()Lbsf;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lbqf;->b:Lbsf;
+    iget v0, p0, Lbqf;->a:I
 
-    return-object v0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lbqf;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lbqf;->c:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lbqf;->d:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lbqf;->e:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lbqf;->f:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lbqf;->g:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lbqf;->h:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lbqf;->i:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    const v1, 0x4dffffff    # 5.3687088E8f
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final onMeasure(II)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object v0, p0, Lbqf;->b:Lbsf;
+    const-string v0, ", contrastStatic="
 
-    if-eqz v0, :cond_0
+    const-string v1, ", negative="
 
-    invoke-virtual {v0, p1, p2}, Lbsf;->a(II)Lnt;
+    const-string v2, "StatesBackgroundActiveColors(card="
+
+    iget v3, p0, Lbqf;->a:I
+
+    iget v4, p0, Lbqf;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    goto :goto_0
+    const-string v1, ", neutral="
 
-    :cond_0
-    const/4 v0, 0x0
+    const-string v2, ", neutralFade="
 
-    :goto_0
-    if-eqz v0, :cond_1
+    iget v3, p0, Lbqf;->c:I
 
-    iget p1, v0, Lnt;->b:I
+    iget v4, p0, Lbqf;->d:I
 
-    :cond_1
-    if-eqz v0, :cond_2
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    iget p2, v0, Lnt;->c:I
+    const-string v1, ", neutralThemed="
 
-    :cond_2
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
+    const-string v2, ", overlayStatic="
 
-    return-void
-.end method
+    iget v3, p0, Lbqf;->e:I
 
-.method public final setSizeConfigurator(Lbsf;)V
-    .locals 0
+    iget v4, p0, Lbqf;->f:I
 
-    iput-object p1, p0, Lbqf;->b:Lbsf;
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    return-void
+    const-string v1, ", themed="
+
+    const-string v2, ", transparent="
+
+    iget v3, p0, Lbqf;->g:I
+
+    iget v4, p0, Lbqf;->h:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", transparentSecondaryStatic=1308622847)"
+
+    iget v2, p0, Lbqf;->i:I
+
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

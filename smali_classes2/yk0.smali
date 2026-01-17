@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxx3;
+.implements Ldy3;
 
 
 # instance fields
@@ -24,9 +24,9 @@
 .method private final a(Ljava/lang/Object;)V
     .locals 13
 
-    check-cast p1, Le3d;
+    check-cast p1, Le4d;
 
-    new-instance v0, Lxp8;
+    new-instance v0, Lrz6;
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -66,7 +66,7 @@
     :goto_0
     const-class v7, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
 
-    invoke-virtual {p1, v7, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v7, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
@@ -85,7 +85,7 @@
 
     move-result v7
 
-    invoke-virtual {p1, v2, v7}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v2, v7}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
@@ -108,7 +108,7 @@
 
     const-class v7, Landroidx/camera/camera2/internal/compat/quirk/Nexus4AndroidLTargetAspectRatioQuirk;
 
-    invoke-virtual {p1, v7, v6}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v7, v6}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v7
 
@@ -226,7 +226,7 @@
     :goto_2
     const-class v8, Landroidx/camera/camera2/internal/compat/quirk/ExcludedSupportedSizesQuirk;
 
-    invoke-virtual {p1, v8, v7}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v8, v7}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v7
 
@@ -253,7 +253,7 @@
 
     const-class v9, Landroidx/camera/camera2/internal/compat/quirk/CrashWhenTakingPhotoWithAutoFlashAEModeQuirk;
 
-    invoke-virtual {p1, v9, v7}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v9, v7}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v7
 
@@ -304,7 +304,7 @@
     :goto_3
     const-class v9, Landroidx/camera/camera2/internal/compat/quirk/PreviewPixelHDRnetQuirk;
 
-    invoke-virtual {p1, v9, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v9, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -351,7 +351,7 @@
     :goto_4
     const-class v9, Landroidx/camera/camera2/internal/compat/quirk/StillCaptureFlashStopRepeatingQuirk;
 
-    invoke-virtual {p1, v9, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v9, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -364,7 +364,7 @@
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_e
-    sget-object v4, Landroidx/camera/camera2/internal/compat/quirk/ExtraSupportedSurfaceCombinationsQuirk;->a:Lt3g;
+    sget-object v4, Landroidx/camera/camera2/internal/compat/quirk/ExtraSupportedSurfaceCombinationsQuirk;->a:Li5g;
 
     sget-object v4, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
@@ -433,7 +433,7 @@
     :goto_7
     const-class v9, Landroidx/camera/camera2/internal/compat/quirk/ExtraSupportedSurfaceCombinationsQuirk;
 
-    invoke-virtual {p1, v9, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v9, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -466,7 +466,7 @@
 
     const-class v7, Landroidx/camera/camera2/internal/compat/quirk/FlashAvailabilityBufferUnderflowQuirk;
 
-    invoke-virtual {p1, v7, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v7, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -505,7 +505,7 @@
     :goto_8
     const-class v7, Landroidx/camera/camera2/internal/compat/quirk/RepeatingStreamConstraintForVideoRecordingQuirk;
 
-    invoke-virtual {p1, v7, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v7, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -520,7 +520,7 @@
     :cond_16
     const-class v4, Landroidx/camera/camera2/internal/compat/quirk/TextureViewIsClosedQuirk;
 
-    invoke-virtual {p1, v4, v6}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v4, v6}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -535,7 +535,7 @@
     :cond_17
     const-class v4, Landroidx/camera/camera2/internal/compat/quirk/CaptureSessionOnClosedNotCalledQuirk;
 
-    invoke-virtual {p1, v4, v6}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v4, v6}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -560,7 +560,7 @@
 
     const-class v7, Landroidx/camera/camera2/internal/compat/quirk/TorchIsClosedAfterImageCapturingQuirk;
 
-    invoke-virtual {p1, v7, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v7, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -621,7 +621,7 @@
     :goto_a
     const-class v11, Landroidx/camera/camera2/internal/compat/quirk/ZslDisablerQuirk;
 
-    invoke-virtual {p1, v11, v7}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v11, v7}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v7
 
@@ -660,7 +660,7 @@
     :goto_b
     const-class v11, Landroidx/camera/camera2/internal/compat/quirk/ExtraSupportedOutputSizeQuirk;
 
-    invoke-virtual {p1, v11, v7}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v11, v7}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v7
 
@@ -854,7 +854,7 @@
     :goto_f
     const-class v7, Landroidx/camera/camera2/internal/compat/quirk/InvalidVideoProfilesQuirk;
 
-    invoke-virtual {p1, v7, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v7, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -877,7 +877,7 @@
 
     const-class v7, Landroidx/camera/camera2/internal/compat/quirk/Preview3AThreadCrashQuirk;
 
-    invoke-virtual {p1, v7, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v7, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
@@ -902,7 +902,7 @@
 
     const-class v4, Landroidx/camera/camera2/internal/compat/quirk/SmallDisplaySizeQuirk;
 
-    invoke-virtual {p1, v4, v3}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v4, v3}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v3
 
@@ -935,7 +935,7 @@
     :goto_10
     const-class v2, Landroidx/camera/camera2/internal/compat/quirk/CaptureSessionShouldUseMrirQuirk;
 
-    invoke-virtual {p1, v2, v5}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {p1, v2, v5}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result p1
 
@@ -948,9 +948,9 @@
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2c
-    invoke-direct {v0, v1}, Lxp8;-><init>(Ljava/util/List;)V
+    invoke-direct {v0, v1}, Lrz6;-><init>(Ljava/util/List;)V
 
-    sput-object v0, Lmz4;->a:Lxp8;
+    sput-object v0, Loz4;->a:Lrz6;
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -958,9 +958,9 @@
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v0, Lmz4;->a:Lxp8;
+    sget-object v0, Loz4;->a:Lrz6;
 
-    invoke-static {v0}, Lxp8;->P(Lxp8;)Ljava/lang/String;
+    invoke-static {v0}, Lrz6;->U(Lrz6;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -972,15 +972,192 @@
 
     const-string v0, "DeviceQuirks"
 
-    invoke-static {v0, p1}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    return-void
+.end method
+
+.method private final b(Ljava/lang/Object;)V
+    .locals 8
+
+    check-cast p1, Ljga;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "onCropButtonClicked()"
+
+    const-string v1, "jga"
+
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p1, Ljga;->o:Lqh8;
+
+    if-eqz v0, :cond_a
+
+    iget v2, v0, Lz2;->a:I
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_a
+
+    invoke-virtual {v0}, Lqh8;->d()Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    iget-object v0, p1, Ljga;->v0:Ldd;
+
+    const-string v2, "LOCAL_MEDIA_CROP"
+
+    invoke-virtual {v0, v2}, Ldd;->e(Ljava/lang/String;)V
+
+    iget-object v0, p1, Ljga;->x0:Lb26;
+
+    const-string v2, "jpg"
+
+    invoke-interface {v0, v2}, Lb26;->a(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    iget-object v2, p1, Ljga;->o:Lqh8;
+
+    invoke-virtual {v2}, Lqh8;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v4, p1, Ljga;->u0:Lq2c;
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_0
+
+    iget-object v6, v4, Lq2c;->b:Landroid/net/Uri;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v6, v5
+
+    :goto_0
+    if-eqz v4, :cond_1
+
+    iget-object v4, v4, Lq2c;->a:Landroid/net/Uri;
+
+    goto :goto_1
+
+    :cond_1
+    move-object v4, v5
+
+    :goto_1
+    if-eqz v4, :cond_2
+
+    if-nez v6, :cond_2
+
+    invoke-virtual {v4}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_2
+    iget-object v4, p1, Ljga;->u0:Lq2c;
+
+    if-eqz v4, :cond_3
+
+    iget-object v7, v4, Lq2c;->c:Lpd4;
+
+    goto :goto_2
+
+    :cond_3
+    move-object v7, v5
+
+    :goto_2
+    if-eqz v4, :cond_4
+
+    iget-object v4, v4, Lq2c;->d:Lmd5;
+
+    goto :goto_3
+
+    :cond_4
+    move-object v4, v5
+
+    :goto_3
+    if-nez v7, :cond_5
+
+    if-nez v6, :cond_6
+
+    :cond_5
+    if-eqz v7, :cond_7
+
+    if-eqz v4, :cond_7
+
+    :cond_6
+    invoke-virtual {v6}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_7
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    const-string v4, "startCrop()"
+
+    invoke-static {v1, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v4, p1, Ljga;->u0:Lq2c;
+
+    if-eqz v4, :cond_8
+
+    iget-object v5, v4, Lq2c;->o:Landroid/net/Uri;
+
+    :cond_8
+    if-eqz v5, :cond_9
+
+    const-string v4, "startCrop() media has overlay, processing"
+
+    invoke-static {v1, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p1, Ljga;->y0:La4a;
+
+    new-instance v4, Lpl;
+
+    const/16 v6, 0x14
+
+    invoke-direct {v4, v1, v2, v5, v6}, Lpl;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance v1, Lrza;
+
+    invoke-direct {v1, v3, v4}, Lrza;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Lvz9;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, p1, v3, v0}, Lvz9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Lfga;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, p1, v3}, Lfga;-><init>(Ljga;I)V
+
+    invoke-virtual {v1, v2, v0}, Lkef;->k(Lay3;Lay3;)Lnw1;
+
+    return-void
+
+    :cond_9
+    iget-object p1, p1, Ljga;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    invoke-virtual {p1, v2, v0, v7}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y(Landroid/net/Uri;Ljava/io/File;Lpd4;)V
+
+    :cond_a
     return-void
 .end method
 
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 23
+    .locals 21
 
     move-object/from16 v0, p0
 
@@ -998,280 +1175,219 @@
 
     const-wide/16 v7, -0x1
 
-    const-string v9, "mga"
+    const-string v9, "jga"
 
-    const/4 v10, 0x0
+    const/4 v10, 0x2
 
-    const/4 v11, 0x2
+    const/4 v11, 0x0
 
-    const/4 v12, 0x0
-
-    const/4 v13, 0x1
+    const/4 v12, 0x1
 
     packed-switch v1, :pswitch_data_0
 
     move-object/from16 v1, p1
 
-    check-cast v1, Lmga;
+    check-cast v1, Ljga;
 
-    invoke-virtual {v1}, Lmga;->M0()V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    const-string v2, "onTrimButtonClicked"
+
+    invoke-static {v9, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, v1, Ljga;->o:Lqh8;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Lz2;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v1, Ljga;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object v3, v1, Ljga;->o:Lqh8;
+
+    iget-object v3, v3, Lqh8;->c:Ljava/lang/String;
+
+    iget-object v4, v1, Ljga;->t0:Lzfh;
+
+    iget v5, v4, Lzfh;->b:F
+
+    iget-wide v6, v1, Ljga;->Z:J
+
+    long-to-float v1, v6
+
+    mul-float/2addr v5, v1
+
+    float-to-long v5, v5
+
+    iget v7, v4, Lzfh;->c:F
+
+    mul-float/2addr v7, v1
+
+    float-to-long v7, v7
+
+    iget-boolean v1, v4, Lzfh;->d:Z
+
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    new-instance v4, Landroid/content/Intent;
+
+    const-class v9, Lru/ok/messages/media/trim/ActTrimVideo;
+
+    invoke-direct {v4, v2, v9}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v9, "ru.ok.tamtam.extra.VIDEO_URI"
+
+    invoke-virtual {v4, v9, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v3, "ru.ok.tamtam.extra.START_POSITION"
+
+    invoke-virtual {v4, v3, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    const-string v3, "ru.ok.tamtam.extra.END_POSITION"
+
+    invoke-virtual {v4, v3, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    const-string v3, "ru.ok.tamtam.extra.MUTE"
+
+    invoke-virtual {v4, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    invoke-virtual {v2, v4, v12}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    :cond_0
     return-void
 
     :pswitch_0
     move-object/from16 v1, p1
 
-    check-cast v1, Lmga;
+    check-cast v1, Ljga;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljga;->M0()V
 
-    const-string v2, "onCropButtonClicked()"
-
-    invoke-static {v9, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, v1, Lmga;->o:Ldi8;
-
-    if-eqz v2, :cond_a
-
-    iget v3, v2, La3;->a:I
-
-    if-ne v3, v13, :cond_a
-
-    invoke-virtual {v2}, Ldi8;->d()Z
-
-    move-result v2
-
-    if-nez v2, :cond_a
-
-    iget-object v2, v1, Lmga;->u0:Lgd;
-
-    const-string v3, "LOCAL_MEDIA_CROP"
-
-    invoke-virtual {v2, v3}, Lgd;->e(Ljava/lang/String;)V
-
-    iget-object v2, v1, Lmga;->w0:Ly16;
-
-    const-string v3, "jpg"
-
-    invoke-interface {v2, v3}, Ly16;->a(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lmga;->o:Ldi8;
-
-    invoke-virtual {v3}, Ldi8;->a()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, v1, Lmga;->t0:Lv1c;
-
-    if-eqz v4, :cond_0
-
-    iget-object v5, v4, Lv1c;->b:Landroid/net/Uri;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v5, v10
-
-    :goto_0
-    if-eqz v4, :cond_1
-
-    iget-object v4, v4, Lv1c;->a:Landroid/net/Uri;
-
-    goto :goto_1
-
-    :cond_1
-    move-object v4, v10
-
-    :goto_1
-    if-eqz v4, :cond_2
-
-    if-nez v5, :cond_2
-
-    invoke-virtual {v4}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object v3
-
-    :cond_2
-    iget-object v4, v1, Lmga;->t0:Lv1c;
-
-    if-eqz v4, :cond_3
-
-    iget-object v6, v4, Lv1c;->c:Lsd4;
-
-    goto :goto_2
-
-    :cond_3
-    move-object v6, v10
-
-    :goto_2
-    if-eqz v4, :cond_4
-
-    iget-object v4, v4, Lv1c;->d:Lkd5;
-
-    goto :goto_3
-
-    :cond_4
-    move-object v4, v10
-
-    :goto_3
-    if-nez v6, :cond_5
-
-    if-nez v5, :cond_6
-
-    :cond_5
-    if-eqz v6, :cond_7
-
-    if-eqz v4, :cond_7
-
-    :cond_6
-    invoke-virtual {v5}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object v3
-
-    :cond_7
-    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v3
-
-    const-string v4, "startCrop()"
-
-    invoke-static {v9, v4}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v4, v1, Lmga;->t0:Lv1c;
-
-    if-eqz v4, :cond_8
-
-    iget-object v10, v4, Lv1c;->o:Landroid/net/Uri;
-
-    :cond_8
-    if-eqz v10, :cond_9
-
-    const-string v4, "startCrop() media has overlay, processing"
-
-    invoke-static {v9, v4}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v4, v1, Lmga;->x0:Lclf;
-
-    new-instance v5, Lol;
-
-    const/16 v6, 0x14
-
-    invoke-direct {v5, v4, v3, v10, v6}, Lol;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance v3, Lgo3;
-
-    invoke-direct {v3, v11, v5}, Lgo3;-><init>(ILjava/lang/Object;)V
-
-    new-instance v4, Lhga;
-
-    invoke-direct {v4, v1, v12, v2}, Lhga;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v2, Liga;
-
-    invoke-direct {v2, v1, v12}, Liga;-><init>(Lmga;I)V
-
-    invoke-virtual {v3, v4, v2}, Lbdf;->k(Lux3;Lux3;)Lvw1;
-
-    goto :goto_4
-
-    :cond_9
-    iget-object v1, v1, Lmga;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    invoke-virtual {v1, v3, v2, v6}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y(Landroid/net/Uri;Ljava/io/File;Lsd4;)V
-
-    :cond_a
-    :goto_4
     return-void
 
     :pswitch_1
-    move-object/from16 v1, p1
-
-    check-cast v1, Lmga;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v2, "onApplyClicked"
-
-    invoke-static {v9, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v1, Lmga;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()V
+    invoke-direct/range {p0 .. p1}, Lyk0;->b(Ljava/lang/Object;)V
 
     return-void
 
     :pswitch_2
     move-object/from16 v1, p1
 
-    check-cast v1, Lmga;
+    check-cast v1, Ljga;
 
-    iget-object v2, v1, Lmga;->y0:Lum5;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "onApplyClicked"
+
+    invoke-static {v9, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, v1, Ljga;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object v2, v1, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Ln8g;
+
+    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ldu2;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    if-eq v2, v12, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->U()V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->U()V
+
+    :goto_0
+    return-void
+
+    :pswitch_3
+    move-object/from16 v1, p1
+
+    check-cast v1, Ljga;
+
+    iget-object v2, v1, Ljga;->z0:Lym5;
 
     const-string v3, "onQualityButtonClicked"
 
-    invoke-static {v9, v3}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, v1, Lmga;->o:Ldi8;
+    iget-object v3, v1, Ljga;->o:Lqh8;
 
-    if-nez v3, :cond_b
+    if-nez v3, :cond_3
 
     const-string v1, "localMedia == null -> return"
 
-    invoke-static {v9, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_7
+    goto/16 :goto_3
 
-    :cond_b
-    invoke-virtual {v3}, La3;->b()Z
+    :cond_3
+    invoke-virtual {v3}, Lz2;->b()Z
 
     move-result v3
 
-    if-nez v3, :cond_c
+    if-nez v3, :cond_4
 
     const-string v1, "localMedia is NOT video -> return"
 
-    invoke-static {v9, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_7
+    goto/16 :goto_3
 
-    :cond_c
-    iget-object v3, v1, Lmga;->d:Laj8;
+    :cond_4
+    iget-object v3, v1, Ljga;->d:Lni8;
 
-    iget-boolean v3, v3, Laj8;->a:Z
+    iget-boolean v3, v3, Lni8;->a:Z
 
-    if-nez v3, :cond_d
+    if-nez v3, :cond_5
 
     const-string v1, "qualityButtonEnable == false -> return"
 
-    invoke-static {v9, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_7
+    goto/16 :goto_3
 
-    :cond_d
-    iget-object v3, v1, Lmga;->B0:Lvw1;
+    :cond_5
+    iget-object v3, v1, Ljga;->C0:Lo25;
 
-    invoke-static {v3}, Li6e;->c(Ll25;)Z
+    invoke-static {v3}, Ld7e;->c(Lo25;)Z
 
     move-result v3
 
-    if-nez v3, :cond_e
+    if-nez v3, :cond_6
 
     const-string v1, "initVideoLocalMediaDisposable is NOT disposed-> return"
 
-    invoke-static {v9, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_7
+    goto/16 :goto_3
 
-    :cond_e
-    iget-object v3, v1, Lmga;->s0:Lcfh;
+    :cond_6
+    iget-object v3, v1, Ljga;->t0:Lzfh;
 
-    if-nez v3, :cond_f
+    if-nez v3, :cond_7
 
     const-string v1, "videoConvertOptions == null -> return"
 
-    invoke-static {v9, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1279,20 +1395,20 @@
 
     invoke-direct {v1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast v2, Liab;
+    check-cast v2, Lqab;
 
-    invoke-virtual {v2, v1}, Liab;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v1}, Lqab;->a(Ljava/lang/Throwable;)V
 
-    goto/16 :goto_7
+    goto/16 :goto_3
 
-    :cond_f
-    iget-object v3, v1, Lmga;->Y:Ljava/lang/Object;
+    :cond_7
+    iget-object v3, v1, Ljga;->Y:Ljava/lang/Object;
 
-    if-nez v3, :cond_10
+    if-nez v3, :cond_8
 
     const-string v1, "allowedQualities == null -> return"
 
-    invoke-static {v9, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1300,318 +1416,378 @@
 
     invoke-direct {v1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast v2, Liab;
+    check-cast v2, Lqab;
 
-    invoke-virtual {v2, v1}, Liab;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v1}, Lqab;->a(Ljava/lang/Throwable;)V
 
-    goto/16 :goto_7
+    goto/16 :goto_3
 
-    :cond_10
+    :cond_8
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v3, v1, Lmga;->s0:Lcfh;
+    iget-object v3, v1, Ljga;->t0:Lzfh;
 
-    iget v4, v3, Lcfh;->c:F
+    iget v4, v3, Lzfh;->c:F
 
-    iget v3, v3, Lcfh;->b:F
+    iget v3, v3, Lzfh;->b:F
 
     sub-float/2addr v4, v3
 
-    iget-object v3, v1, Lmga;->Y:Ljava/lang/Object;
+    iget-object v3, v1, Ljga;->Y:Ljava/lang/Object;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    :goto_5
+    :goto_1
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
 
-    if-eqz v5, :cond_11
+    if-eqz v5, :cond_9
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Li1d;
+    check-cast v5, Lj2d;
 
-    new-instance v13, Li1d;
+    new-instance v12, Lj2d;
 
-    iget-object v14, v5, Li1d;->a:Lg1d;
+    iget-object v13, v5, Lj2d;->a:Lh2d;
 
-    iget v15, v5, Li1d;->b:I
+    iget v14, v5, Lj2d;->b:I
 
-    iget v6, v5, Li1d;->c:I
+    iget v15, v5, Lj2d;->c:I
 
-    iget v7, v5, Li1d;->d:I
+    iget v6, v5, Lj2d;->d:I
 
-    iget-wide v8, v5, Li1d;->e:J
+    iget-wide v7, v5, Lj2d;->e:J
 
-    long-to-float v8, v8
+    long-to-float v7, v7
 
-    mul-float/2addr v8, v4
+    mul-float/2addr v7, v4
 
-    float-to-long v8, v8
+    float-to-long v7, v7
 
-    iget-boolean v5, v5, Li1d;->f:Z
+    iget-boolean v5, v5, Lj2d;->f:Z
 
-    move/from16 v20, v5
+    move/from16 v19, v5
 
     move/from16 v16, v6
 
-    move/from16 v17, v7
+    move-wide/from16 v17, v7
 
-    move-wide/from16 v18, v8
+    invoke-direct/range {v12 .. v19}, Lj2d;-><init>(Lh2d;IIIJZ)V
 
-    invoke-direct/range {v13 .. v20}, Li1d;-><init>(Lg1d;IIIJZ)V
+    invoke-virtual {v2, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto :goto_1
 
-    goto :goto_5
+    :cond_9
+    iget-object v3, v1, Ljga;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    :cond_11
-    iget-object v3, v1, Lmga;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    iget-object v1, v1, Ljga;->t0:Lzfh;
 
-    iget-object v1, v1, Lmga;->s0:Lcfh;
-
-    iget-object v1, v1, Lcfh;->a:Lg1d;
+    iget-object v1, v1, Lzfh;->a:Lh2d;
 
     new-instance v4, Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
 
     invoke-direct {v4}, Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;-><init>()V
 
-    sget-object v5, Li1d;->g:Lwz5;
+    sget-object v5, Lj2d;->g:Lyz5;
 
-    invoke-static {v5, v2}, Lji3;->p(Ljava/util/Comparator;Ljava/util/List;)V
+    invoke-static {v5, v2}, Lui3;->p(Ljava/util/Comparator;Ljava/util/List;)V
 
     new-instance v5, Ljava/util/ArrayList;
 
     const/16 v6, 0xa
 
-    invoke-static {v2, v6}, Lgi3;->n(Ljava/lang/Iterable;I)I
+    invoke-static {v2, v6}, Lri3;->n(Ljava/lang/Iterable;I)I
 
-    move-result v7
+    move-result v6
 
-    invoke-direct {v5, v7}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v5, v6}, Ljava/util/ArrayList;-><init>(I)V
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    :goto_6
+    :goto_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v7
+    move-result v6
 
-    if-eqz v7, :cond_12
+    if-eqz v6, :cond_a
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v6
 
-    check-cast v7, Li1d;
+    check-cast v6, Lj2d;
 
-    new-instance v8, Ll1d;
+    new-instance v7, Lm2d;
 
-    invoke-direct {v8, v7}, Ll1d;-><init>(Li1d;)V
+    invoke-direct {v7, v6}, Lm2d;-><init>(Lj2d;)V
 
-    invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_6
+    goto :goto_2
 
-    :cond_12
-    new-instance v2, Lysb;
+    :cond_a
+    new-instance v2, Lktb;
 
-    const-string v7, "ru.ok.tamtam.extra.QUALITIES"
+    const-string v6, "ru.ok.tamtam.extra.QUALITIES"
 
-    invoke-direct {v2, v7, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v2, v6, v5}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v5, Lysb;
+    new-instance v5, Lktb;
 
-    const-string v7, "ru.ok.tamtam.extra.CURRENT_QUALITY"
+    const-string v6, "ru.ok.tamtam.extra.CURRENT_QUALITY"
 
-    invoke-direct {v5, v7, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v5, v6, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    new-instance v7, Lysb;
+    new-instance v6, Lktb;
 
-    const-string v8, "ru.ok.tamtam.extra.SHOW_SIZE"
+    const-string v7, "ru.ok.tamtam.extra.SHOW_SIZE"
 
-    invoke-direct {v7, v8, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v6, v7, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {v2, v5, v7}, [Lysb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
+    filled-new-array {v2, v5, v6}, [Lktb;
 
     move-result-object v1
 
-    invoke-virtual {v4, v1}, Landroidx/fragment/app/a;->n0(Landroid/os/Bundle;)V
+    invoke-static {v1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
 
-    invoke-virtual {v3}, Landroidx/fragment/app/b;->z()Len6;
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Landroidx/fragment/app/a;->k0(Landroid/os/Bundle;)V
+
+    invoke-virtual {v3}, Landroidx/fragment/app/b;->A()Lcn6;
 
     move-result-object v1
 
     const-string v2, "ru.ok.messages.media.mediabar.ActLocalMedias"
 
-    invoke-virtual {v4, v1, v2}, Landroidx/fragment/app/DialogFragment;->w0(Landroidx/fragment/app/c;Ljava/lang/String;)V
+    invoke-virtual {v4, v1, v2}, Landroidx/fragment/app/DialogFragment;->r0(Landroidx/fragment/app/c;Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Landroidx/fragment/app/b;->z()Len6;
+    invoke-virtual {v3}, Landroidx/fragment/app/b;->A()Lcn6;
 
     move-result-object v1
 
-    invoke-virtual {v3}, Lru/ok/messages/media/mediabar/ActLocalMedias;->O()Lru/ok/messages/media/mediabar/FrgLocalMedia;
+    invoke-virtual {v3}, Lru/ok/messages/media/mediabar/ActLocalMedias;->P()Lru/ok/messages/media/mediabar/FrgLocalMedia;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroidx/fragment/app/a;->C()La98;
+    invoke-virtual {v2}, Landroidx/fragment/app/a;->A()Lj88;
 
     move-result-object v2
 
-    new-instance v4, Ll6;
+    new-instance v4, Lg6;
 
-    invoke-direct {v4, v3}, Ll6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+    invoke-direct {v4, v3}, Lg6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
 
-    new-instance v3, Lm6;
+    new-instance v3, Lh6;
 
-    invoke-direct {v3, v12}, Lm6;-><init>(I)V
+    invoke-direct {v3, v11}, Lh6;-><init>(I)V
 
-    new-instance v5, Lr6h;
+    new-instance v5, Lq9h;
 
-    invoke-direct {v5, v3, v6, v4}, Lr6h;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/4 v6, 0x6
 
-    const-string v3, "VideoQualityPickerDialog:result:request"
+    invoke-direct {v5, v3, v6, v4}, Lq9h;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v1, v3, v2, v5}, Landroidx/fragment/app/c;->d0(Ljava/lang/String;La98;Lhn6;)V
+    check-cast v2, Lkn6;
 
-    :goto_7
-    return-void
+    invoke-virtual {v2}, Lkn6;->b()V
 
-    :pswitch_3
-    move-object/from16 v1, p1
+    iget-object v2, v2, Lkn6;->d:Ll88;
 
-    check-cast v1, Lqga;
+    iget-object v3, v2, Ll88;->d:Lo78;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v4, Lo78;->a:Lo78;
 
-    const-string v2, "qga"
+    if-ne v3, v4, :cond_b
 
-    const-string v3, "onPlayClick"
+    goto :goto_3
 
-    invoke-static {v2, v3}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_b
+    new-instance v3, Lvm6;
 
-    iget-object v2, v1, Lqga;->c:Lli8;
+    invoke-direct {v3, v1, v5, v2}, Lvm6;-><init>(Lcn6;Lq9h;Ll88;)V
 
-    iget-object v3, v2, Lli8;->f:Lseh;
+    iget-object v1, v1, Landroidx/fragment/app/c;->m:Ljava/util/Map;
 
-    if-nez v3, :cond_13
+    new-instance v4, Lym6;
 
-    goto :goto_8
+    invoke-direct {v4, v2, v5, v3}, Lym6;-><init>(Ll88;Lq9h;Lvm6;)V
 
-    :cond_13
-    iget-object v3, v2, Lli8;->a:Lg89;
+    const-string v6, "VideoQualityPickerDialog:result:request"
 
-    filled-new-array {v3}, [Ljava/lang/Object;
+    invoke-interface {v1, v6, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v1
 
-    const-string v4, "li8"
+    check-cast v1, Lym6;
 
-    const-string v5, "Play %s"
+    if-eqz v1, :cond_c
 
-    invoke-static {v4, v5, v3}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v4, v1, Lym6;->a:Ll88;
 
-    iput-boolean v13, v2, Lli8;->j:Z
+    iget-object v1, v1, Lym6;->c:Lvm6;
 
-    iget-object v3, v2, Lli8;->b:Lap5;
+    invoke-virtual {v4, v1}, Ll88;->f(Lg88;)V
 
-    invoke-virtual {v3}, Lap5;->play()V
+    :cond_c
+    invoke-static {v10}, Landroidx/fragment/app/c;->K(I)Z
 
-    :goto_8
-    iget-object v3, v1, Lqga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+    move-result v1
 
-    if-eqz v3, :cond_14
+    if-eqz v1, :cond_d
 
-    invoke-virtual {v3, v13}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->F0(Z)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :cond_14
-    invoke-virtual {v2}, Lli8;->c()Z
+    const-string v4, "Setting FragmentResultListener with key VideoQualityPickerDialog:result:request lifecycleOwner "
 
-    move-result v2
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v2, :cond_15
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lqga;->M0()V
+    const-string v4, " and listener "
 
-    invoke-virtual {v1}, Lqga;->L0()V
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_15
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, "FragmentManager"
+
+    invoke-static {v4, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_d
+    invoke-virtual {v2, v3}, Ll88;->a(Lg88;)V
+
+    :goto_3
     return-void
 
     :pswitch_4
     move-object/from16 v1, p1
 
-    check-cast v1, Lqga;
+    check-cast v1, Lnga;
 
-    iget-object v2, v1, Lqga;->c:Lli8;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2}, Lli8;->f()V
+    const-string v2, "nga"
 
-    iget-object v1, v1, Lqga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+    const-string v3, "onPlayClick"
 
-    if-eqz v1, :cond_16
+    invoke-static {v2, v3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v13}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->F0(Z)V
+    iget-object v2, v1, Lnga;->c:Lyh8;
 
-    :cond_16
+    iget-object v3, v2, Lyh8;->f:Lpfh;
+
+    if-nez v3, :cond_e
+
+    goto :goto_4
+
+    :cond_e
+    iget-object v3, v2, Lyh8;->a:Ln79;
+
+    filled-new-array {v3}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    const-string v4, "yh8"
+
+    const-string v5, "Play %s"
+
+    invoke-static {v4, v5, v3}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iput-boolean v12, v2, Lyh8;->j:Z
+
+    iget-object v3, v2, Lyh8;->b:Lep5;
+
+    invoke-virtual {v3}, Lep5;->play()V
+
+    :goto_4
+    iget-object v3, v1, Lnga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-eqz v3, :cond_f
+
+    invoke-virtual {v3, v12}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->C0(Z)V
+
+    :cond_f
+    invoke-virtual {v2}, Lyh8;->c()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_10
+
+    invoke-virtual {v1}, Lnga;->M0()V
+
+    invoke-virtual {v1}, Lnga;->L0()V
+
+    :cond_10
     return-void
 
     :pswitch_5
     move-object/from16 v1, p1
 
-    check-cast v1, Lqga;
+    check-cast v1, Lnga;
 
-    invoke-virtual {v1}, Lqga;->O0()V
+    iget-object v2, v1, Lnga;->c:Lyh8;
 
-    invoke-virtual {v1}, Lqga;->N0()V
+    invoke-virtual {v2}, Lyh8;->f()V
 
+    iget-object v1, v1, Lnga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-eqz v1, :cond_11
+
+    invoke-virtual {v1, v12}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->C0(Z)V
+
+    :cond_11
     return-void
 
     :pswitch_6
     move-object/from16 v1, p1
 
-    check-cast v1, Lfga;
+    check-cast v1, Lnga;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Lnga;->O0()V
 
-    throw v10
+    invoke-virtual {v1}, Lnga;->N0()V
+
+    return-void
 
     :pswitch_7
     move-object/from16 v1, p1
 
-    check-cast v1, Ldga;
+    check-cast v1, Lbga;
 
-    iget-object v1, v1, Ldga;->d:Lnha;
+    iget-object v1, v1, Lbga;->d:Llha;
 
     new-instance v2, Lyk0;
 
     invoke-direct {v2, v5}, Lyk0;-><init>(I)V
 
-    invoke-virtual {v1, v2}, Lg3;->j(Lxx3;)V
+    invoke-virtual {v1, v2}, Le3;->k(Ldy3;)V
 
     return-void
 
     :pswitch_8
     move-object/from16 v1, p1
 
-    check-cast v1, Ldga;
+    check-cast v1, Lbga;
 
-    iget-object v1, v1, Ldga;->d:Lnha;
+    iget-object v1, v1, Lbga;->d:Llha;
 
     new-instance v2, Lyk0;
 
@@ -1619,86 +1795,88 @@
 
     invoke-direct {v2, v3}, Lyk0;-><init>(I)V
 
-    invoke-virtual {v1, v2}, Lg3;->j(Lxx3;)V
+    invoke-virtual {v1, v2}, Le3;->k(Ldy3;)V
 
     return-void
 
     :pswitch_9
     move-object/from16 v1, p1
 
-    check-cast v1, Lwj8;
+    check-cast v1, Ljj8;
 
-    iput-wide v7, v1, Lwj8;->l:J
+    iput-wide v7, v1, Ljj8;->l:J
 
     return-void
 
     :pswitch_a
     move-object/from16 v1, p1
 
-    check-cast v1, Lboh;
+    check-cast v1, Lxoh;
 
-    iput-boolean v13, v1, Lboh;->c:Z
+    iput-boolean v12, v1, Lxoh;->c:Z
 
     return-void
 
     :pswitch_b
     move-object/from16 v1, p1
 
-    check-cast v1, Lboh;
+    check-cast v1, Lxoh;
 
-    iput-boolean v12, v1, Lboh;->b:Z
+    iput-boolean v11, v1, Lxoh;->b:Z
 
-    iput-boolean v12, v1, Lboh;->c:Z
+    iput-boolean v11, v1, Lxoh;->c:Z
 
-    iput-boolean v13, v1, Lboh;->a:Z
+    iput-boolean v12, v1, Lxoh;->a:Z
 
     return-void
 
     :pswitch_c
     move-object/from16 v1, p1
 
-    check-cast v1, Lboh;
+    check-cast v1, Lxoh;
 
-    iput-boolean v12, v1, Lboh;->b:Z
+    iput-boolean v11, v1, Lxoh;->b:Z
 
-    iput-boolean v12, v1, Lboh;->c:Z
+    iput-boolean v11, v1, Lxoh;->c:Z
 
     return-void
 
     :pswitch_d
     move-object/from16 v1, p1
 
-    check-cast v1, Lboh;
+    check-cast v1, Lxoh;
 
-    iput-boolean v12, v1, Lboh;->b:Z
+    iput-boolean v11, v1, Lxoh;->b:Z
 
-    iput-boolean v12, v1, Lboh;->c:Z
+    iput-boolean v11, v1, Lxoh;->c:Z
 
-    iput-boolean v13, v1, Lboh;->a:Z
+    iput-boolean v12, v1, Lxoh;->a:Z
 
     return-void
 
     :pswitch_e
     move-object/from16 v1, p1
 
-    check-cast v1, Lboh;
+    check-cast v1, Lxoh;
 
-    iput-boolean v12, v1, Lboh;->a:Z
+    iput-boolean v11, v1, Lxoh;->a:Z
 
     return-void
 
     :pswitch_f
     move-object/from16 v1, p1
 
-    check-cast v1, Lboh;
+    check-cast v1, Lxoh;
 
-    iput-boolean v13, v1, Lboh;->c:Z
+    iput-boolean v12, v1, Lxoh;->c:Z
 
-    iput-boolean v13, v1, Lboh;->d:Z
+    iput-boolean v12, v1, Lxoh;->d:Z
 
-    iput-object v10, v1, Lboh;->h:Lseh;
+    const/4 v2, 0x0
 
-    iput-boolean v13, v1, Lboh;->i:Z
+    iput-object v2, v1, Lxoh;->h:Lpfh;
+
+    iput-boolean v12, v1, Lxoh;->i:Z
 
     return-void
 
@@ -1710,9 +1888,9 @@
     :pswitch_11
     move-object/from16 v1, p1
 
-    check-cast v1, Le3d;
+    check-cast v1, Le4d;
 
-    new-instance v2, Lxp8;
+    new-instance v2, Lrz6;
 
     new-instance v3, Ljava/util/ArrayList;
 
@@ -1722,7 +1900,7 @@
 
     const/16 v7, 0x21
 
-    if-ge v5, v7, :cond_1a
+    if-ge v5, v7, :cond_15
 
     sget-object v5, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
@@ -1730,7 +1908,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_17
+    if-eqz v4, :cond_12
 
     sget-object v4, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
@@ -1740,7 +1918,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_19
+    if-nez v7, :cond_14
 
     const-string v7, "Q2Q"
 
@@ -1748,18 +1926,18 @@
 
     move-result v4
 
-    if-eqz v4, :cond_17
+    if-eqz v4, :cond_12
 
-    goto :goto_9
+    goto :goto_5
 
-    :cond_17
+    :cond_12
     const-string v4, "OPPO"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_18
+    if-eqz v4, :cond_13
 
     const-string v4, "OP4E75L1"
 
@@ -1769,18 +1947,18 @@
 
     move-result v4
 
-    if-eqz v4, :cond_18
+    if-eqz v4, :cond_13
 
-    goto :goto_9
+    goto :goto_5
 
-    :cond_18
+    :cond_13
     const-string v4, "LENOVO"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_1a
+    if-eqz v4, :cond_15
 
     const-string v4, "Q706F"
 
@@ -1790,25 +1968,25 @@
 
     move-result v4
 
-    if-eqz v4, :cond_1a
+    if-eqz v4, :cond_15
 
-    :cond_19
-    :goto_9
-    move v4, v13
-
-    goto :goto_a
-
-    :cond_1a
+    :cond_14
+    :goto_5
     move v4, v12
 
-    :goto_a
+    goto :goto_6
+
+    :cond_15
+    move v4, v11
+
+    :goto_6
     const-class v5, Landroidx/camera/view/internal/compat/quirk/SurfaceViewStretchedQuirk;
 
-    invoke-virtual {v1, v5, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v5, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
-    if-eqz v4, :cond_1b
+    if-eqz v4, :cond_16
 
     new-instance v4, Landroidx/camera/view/internal/compat/quirk/SurfaceViewStretchedQuirk;
 
@@ -1816,7 +1994,7 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_1b
+    :cond_16
     const-string v4, "XIAOMI"
 
     sget-object v5, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
@@ -1825,7 +2003,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_1c
+    if-eqz v4, :cond_17
 
     const-string v4, "M2101K7AG"
 
@@ -1835,18 +2013,18 @@
 
     move-result v4
 
-    if-eqz v4, :cond_1c
+    if-eqz v4, :cond_17
 
-    move v12, v13
+    move v11, v12
 
-    :cond_1c
+    :cond_17
     const-class v4, Landroidx/camera/view/internal/compat/quirk/SurfaceViewNotCroppedByParentQuirk;
 
-    invoke-virtual {v1, v4, v12}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v4, v11}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1d
+    if-eqz v1, :cond_18
 
     new-instance v1, Landroidx/camera/view/internal/compat/quirk/SurfaceViewNotCroppedByParentQuirk;
 
@@ -1854,10 +2032,10 @@
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_1d
-    invoke-direct {v2, v3}, Lxp8;-><init>(Ljava/util/List;)V
+    :cond_18
+    invoke-direct {v2, v3}, Lrz6;-><init>(Ljava/util/List;)V
 
-    sput-object v2, Llz4;->a:Lxp8;
+    sput-object v2, Lnz4;->a:Lrz6;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1865,9 +2043,9 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Llz4;->a:Lxp8;
+    sget-object v2, Lnz4;->a:Lrz6;
 
-    invoke-static {v2}, Lxp8;->P(Lxp8;)Ljava/lang/String;
+    invoke-static {v2}, Lrz6;->U(Lrz6;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1877,16 +2055,16 @@
 
     move-result-object v1
 
-    invoke-static {v6, v1}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :pswitch_12
     move-object/from16 v1, p1
 
-    check-cast v1, Le3d;
+    check-cast v1, Le4d;
 
-    new-instance v5, Lxp8;
+    new-instance v5, Lrz6;
 
     new-instance v7, Ljava/util/ArrayList;
 
@@ -1894,11 +2072,11 @@
 
     const-class v8, Landroidx/camera/video/internal/compat/quirk/MediaFormatMustNotUseFrameRateToFindEncoderQuirk;
 
-    invoke-virtual {v1, v8, v12}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v8, v11}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v8
 
-    if-eqz v8, :cond_1e
+    if-eqz v8, :cond_19
 
     new-instance v8, Landroidx/camera/video/internal/compat/quirk/MediaFormatMustNotUseFrameRateToFindEncoderQuirk;
 
@@ -1906,7 +2084,7 @@
 
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_1e
+    :cond_19
     sget-object v8, Landroidx/camera/video/internal/compat/quirk/MediaCodecInfoReportIncorrectInfoQuirk;->a:Ljava/util/List;
 
     sget-object v8, Landroid/os/Build;->BRAND:Ljava/lang/String;
@@ -1917,37 +2095,37 @@
 
     move-result v10
 
-    const-string v11, "twist 2 pro"
+    const-string v13, "twist 2 pro"
 
     const-string v14, "positivo"
 
     const-string v15, "moto c"
 
-    const-string v13, "Nokia 1"
+    const-string v12, "Nokia 1"
 
-    const-string v12, "motorola"
+    const-string v11, "motorola"
 
-    if-eqz v10, :cond_1f
+    if-eqz v10, :cond_1a
 
     sget-object v10, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-virtual {v13, v10}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v12, v10}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_1f
+    if-eqz v10, :cond_1a
 
-    :goto_b
+    :goto_7
     move-object/from16 v18, v6
 
-    goto/16 :goto_c
+    goto/16 :goto_8
 
-    :cond_1f
-    invoke-virtual {v12, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    :cond_1a
+    invoke-virtual {v11, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_20
+    if-eqz v10, :cond_1b
 
     sget-object v10, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -1955,18 +2133,18 @@
 
     move-result v10
 
-    if-eqz v10, :cond_20
+    if-eqz v10, :cond_1b
 
-    goto :goto_b
+    goto :goto_7
 
-    :cond_20
+    :cond_1b
     const-string v10, "infinix"
 
     invoke-virtual {v10, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_21
+    if-eqz v10, :cond_1c
 
     const-string v10, "infinix x650"
 
@@ -1976,18 +2154,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_1c
 
-    goto :goto_b
+    goto :goto_7
 
-    :cond_21
+    :cond_1c
     const-string v0, "LGE"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_22
+    if-eqz v0, :cond_1d
 
     const-string v0, "LG-X230"
 
@@ -1997,18 +2175,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_22
+    if-eqz v0, :cond_1d
 
-    goto :goto_b
+    goto :goto_7
 
-    :cond_22
+    :cond_1d
     const-string v0, "Huawei"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_23
+    if-eqz v0, :cond_1e
 
     const-string v0, "mha-l29"
 
@@ -2018,18 +2196,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_23
+    if-eqz v0, :cond_1e
 
-    goto :goto_b
+    goto :goto_7
 
-    :cond_23
+    :cond_1e
     const-string v0, "Redmi"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_24
+    if-eqz v0, :cond_1f
 
     const-string v0, "Redmi Note 8 Pro"
 
@@ -2039,28 +2217,28 @@
 
     move-result v0
 
-    if-eqz v0, :cond_24
+    if-eqz v0, :cond_1f
 
-    goto :goto_b
+    goto :goto_7
 
-    :cond_24
+    :cond_1f
     invoke-virtual {v14, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_25
+    if-eqz v0, :cond_20
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-virtual {v11, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v13, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_25
+    if-eqz v0, :cond_20
 
-    goto :goto_b
+    goto :goto_7
 
-    :cond_25
+    :cond_20
     sget-object v0, Landroidx/camera/video/internal/compat/quirk/MediaCodecInfoReportIncorrectInfoQuirk;->a:Ljava/util/List;
 
     sget-object v10, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -2077,24 +2255,24 @@
 
     move-result v0
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_21
 
-    :goto_c
+    :goto_8
     const/4 v0, 0x1
 
-    goto :goto_d
+    goto :goto_9
 
-    :cond_26
+    :cond_21
     const/4 v0, 0x0
 
-    :goto_d
+    :goto_9
     const-class v6, Landroidx/camera/video/internal/compat/quirk/MediaCodecInfoReportIncorrectInfoQuirk;
 
-    invoke-virtual {v1, v6, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v6, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_27
+    if-eqz v0, :cond_22
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/MediaCodecInfoReportIncorrectInfoQuirk;
 
@@ -2102,16 +2280,16 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_27
+    :cond_22
     const-class v0, Landroidx/camera/video/internal/compat/quirk/DeactivateEncoderSurfaceBeforeStopEncoderQuirk;
 
     const/4 v6, 0x0
 
-    invoke-virtual {v1, v0, v6}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v0, v6}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_28
+    if-eqz v0, :cond_23
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/DeactivateEncoderSurfaceBeforeStopEncoderQuirk;
 
@@ -2119,16 +2297,16 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_28
+    :cond_23
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v6, 0x1f
 
-    if-lt v0, v6, :cond_29
+    if-lt v0, v6, :cond_24
 
     sget-object v6, Landroidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk;->b:Ljava/util/HashSet;
 
-    invoke-static {}, Lg30;->m()Ljava/lang/String;
+    invoke-static {}, Ld30;->m()Ljava/lang/String;
 
     move-result-object v10
 
@@ -2140,19 +2318,19 @@
 
     move-result v6
 
-    if-eqz v6, :cond_2a
+    if-eqz v6, :cond_25
 
-    goto :goto_e
+    goto :goto_a
 
-    :cond_29
+    :cond_24
     sget-object v6, Landroidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk;->a:Ljava/util/HashSet;
 
-    :cond_2a
+    :cond_25
     invoke-virtual {v4, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_2b
+    if-eqz v4, :cond_26
 
     sget-object v4, Landroidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk;->a:Ljava/util/HashSet;
 
@@ -2166,11 +2344,11 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2b
+    if-eqz v4, :cond_26
 
-    goto :goto_e
+    goto :goto_a
 
-    :cond_2b
+    :cond_26
     sget-object v4, Landroidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk;->c:Ljava/util/HashSet;
 
     sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -2183,24 +2361,24 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2c
+    if-eqz v4, :cond_27
 
-    :goto_e
+    :goto_a
     const/4 v4, 0x1
 
-    goto :goto_f
+    goto :goto_b
 
-    :cond_2c
+    :cond_27
     const/4 v4, 0x0
 
-    :goto_f
+    :goto_b
     const-class v6, Landroidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk;
 
-    invoke-virtual {v1, v6, v4}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v6, v4}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v4
 
-    if-eqz v4, :cond_2d
+    if-eqz v4, :cond_28
 
     new-instance v4, Landroidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk;
 
@@ -2208,26 +2386,26 @@
 
     invoke-virtual {v7, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_2d
+    :cond_28
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;->e()Z
 
     move-result v4
 
     const-string v6, "vivo 1820"
 
-    if-nez v4, :cond_30
+    if-nez v4, :cond_2b
 
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;->f()Z
 
     move-result v4
 
-    if-nez v4, :cond_30
+    if-nez v4, :cond_2b
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_2e
+    if-eqz v2, :cond_29
 
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -2235,42 +2413,42 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2e
+    if-eqz v2, :cond_29
 
-    goto :goto_10
+    goto :goto_c
 
-    :cond_2e
+    :cond_29
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;->g()Z
 
     move-result v2
 
-    if-nez v2, :cond_30
+    if-nez v2, :cond_2b
 
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;->h()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2f
+    if-eqz v2, :cond_2a
 
-    goto :goto_10
+    goto :goto_c
 
-    :cond_2f
+    :cond_2a
     const/4 v2, 0x0
 
-    goto :goto_11
+    goto :goto_d
 
-    :cond_30
-    :goto_10
+    :cond_2b
+    :goto_c
     const/4 v2, 0x1
 
-    :goto_11
+    :goto_d
     const-class v4, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;
 
-    invoke-virtual {v1, v4, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v4, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_31
+    if-eqz v2, :cond_2c
 
     new-instance v2, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;
 
@@ -2278,7 +2456,7 @@
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_31
+    :cond_2c
     sget-object v2, Landroidx/camera/video/internal/compat/quirk/EncoderNotUsePersistentInputSurfaceQuirk;->a:Ljava/util/List;
 
     sget-object v4, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -2293,11 +2471,11 @@
 
     const-class v10, Landroidx/camera/video/internal/compat/quirk/EncoderNotUsePersistentInputSurfaceQuirk;
 
-    invoke-virtual {v1, v10, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v10, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_32
+    if-eqz v2, :cond_2d
 
     new-instance v2, Landroidx/camera/video/internal/compat/quirk/EncoderNotUsePersistentInputSurfaceQuirk;
 
@@ -2305,34 +2483,34 @@
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_32
+    :cond_2d
     invoke-virtual {v14, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_33
+    if-eqz v2, :cond_2e
 
-    invoke-virtual {v11, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v13, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_33
+    if-eqz v2, :cond_2e
 
     const/4 v2, 0x1
 
-    goto :goto_12
+    goto :goto_e
 
-    :cond_33
+    :cond_2e
     const/4 v2, 0x0
 
-    :goto_12
+    :goto_e
     const-class v10, Landroidx/camera/video/internal/compat/quirk/VideoEncoderCrashQuirk;
 
-    invoke-virtual {v1, v10, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v10, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_34
+    if-eqz v2, :cond_2f
 
     new-instance v2, Landroidx/camera/video/internal/compat/quirk/VideoEncoderCrashQuirk;
 
@@ -2340,12 +2518,12 @@
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_34
+    :cond_2f
     invoke-virtual {v3, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_35
+    if-eqz v2, :cond_30
 
     const-string v2, "SM-J260F"
 
@@ -2353,16 +2531,16 @@
 
     move-result v2
 
-    if-eqz v2, :cond_35
+    if-eqz v2, :cond_30
 
-    goto :goto_13
+    goto :goto_f
 
-    :cond_35
+    :cond_30
     invoke-virtual {v3, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_36
+    if-eqz v2, :cond_31
 
     const-string v2, "SM-J400G"
 
@@ -2370,16 +2548,16 @@
 
     move-result v2
 
-    if-eqz v2, :cond_36
+    if-eqz v2, :cond_31
 
-    goto :goto_13
+    goto :goto_f
 
-    :cond_36
+    :cond_31
     invoke-virtual {v3, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_37
+    if-eqz v2, :cond_32
 
     const-string v2, "SM-J530F"
 
@@ -2387,16 +2565,16 @@
 
     move-result v2
 
-    if-eqz v2, :cond_37
+    if-eqz v2, :cond_32
 
-    goto :goto_13
+    goto :goto_f
 
-    :cond_37
+    :cond_32
     invoke-virtual {v3, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_38
+    if-eqz v2, :cond_33
 
     const-string v2, "sm-j600g"
 
@@ -2404,16 +2582,16 @@
 
     move-result v2
 
-    if-eqz v2, :cond_38
+    if-eqz v2, :cond_33
 
-    goto :goto_13
+    goto :goto_f
 
-    :cond_38
+    :cond_33
     invoke-virtual {v3, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_39
+    if-eqz v2, :cond_34
 
     const-string v2, "SM-J701F"
 
@@ -2421,42 +2599,42 @@
 
     move-result v2
 
-    if-eqz v2, :cond_39
+    if-eqz v2, :cond_34
 
-    goto :goto_13
+    goto :goto_f
 
-    :cond_39
+    :cond_34
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ExcludeStretchedVideoQualityQuirk;->f()Z
 
     move-result v2
 
-    if-nez v2, :cond_3b
+    if-nez v2, :cond_36
 
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ExcludeStretchedVideoQualityQuirk;->e()Z
 
     move-result v2
 
-    if-eqz v2, :cond_3a
+    if-eqz v2, :cond_35
 
-    goto :goto_13
+    goto :goto_f
 
-    :cond_3a
+    :cond_35
     const/4 v2, 0x0
 
-    goto :goto_14
+    goto :goto_10
 
-    :cond_3b
-    :goto_13
+    :cond_36
+    :goto_f
     const/4 v2, 0x1
 
-    :goto_14
+    :goto_10
     const-class v10, Landroidx/camera/video/internal/compat/quirk/ExcludeStretchedVideoQualityQuirk;
 
-    invoke-virtual {v1, v10, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v10, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3c
+    if-eqz v2, :cond_37
 
     new-instance v2, Landroidx/camera/video/internal/compat/quirk/ExcludeStretchedVideoQualityQuirk;
 
@@ -2464,29 +2642,29 @@
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_3c
+    :cond_37
     invoke-virtual {v14, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3d
+    if-eqz v2, :cond_38
 
-    invoke-virtual {v11, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v13, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3d
+    if-eqz v2, :cond_38
 
-    goto :goto_15
+    goto :goto_11
 
-    :cond_3d
+    :cond_38
     const-string v2, "itel"
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3e
+    if-eqz v2, :cond_39
 
     const-string v2, "itel w6004"
 
@@ -2494,24 +2672,24 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3e
+    if-eqz v2, :cond_39
 
-    :goto_15
+    :goto_11
     const/4 v2, 0x1
 
-    goto :goto_16
+    goto :goto_12
 
-    :cond_3e
+    :cond_39
     const/4 v2, 0x0
 
-    :goto_16
+    :goto_12
     const-class v10, Landroidx/camera/video/internal/compat/quirk/MediaStoreVideoCannotWrite;
 
-    invoke-virtual {v1, v10, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v10, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3f
+    if-eqz v2, :cond_3a
 
     new-instance v2, Landroidx/camera/video/internal/compat/quirk/MediaStoreVideoCannotWrite;
 
@@ -2519,14 +2697,14 @@
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_3f
+    :cond_3a
     const-string v2, "Sony"
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_40
+    if-eqz v2, :cond_3b
 
     const-string v2, "G3125"
 
@@ -2534,23 +2712,23 @@
 
     move-result v2
 
-    if-eqz v2, :cond_40
+    if-eqz v2, :cond_3b
 
     const/4 v2, 0x1
 
-    goto :goto_17
+    goto :goto_13
 
-    :cond_40
+    :cond_3b
     const/4 v2, 0x0
 
-    :goto_17
+    :goto_13
     const-class v10, Landroidx/camera/video/internal/compat/quirk/AudioEncoderIgnoresInputTimestampQuirk;
 
-    invoke-virtual {v1, v10, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v10, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_41
+    if-eqz v2, :cond_3c
 
     new-instance v2, Landroidx/camera/video/internal/compat/quirk/AudioEncoderIgnoresInputTimestampQuirk;
 
@@ -2558,32 +2736,32 @@
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_41
+    :cond_3c
     invoke-virtual {v3, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_42
+    if-eqz v2, :cond_3d
 
     const/16 v2, 0x1d
 
-    if-ge v0, v2, :cond_42
+    if-ge v0, v2, :cond_3d
 
     const/4 v2, 0x1
 
-    goto :goto_18
+    goto :goto_14
 
-    :cond_42
+    :cond_3d
     const/4 v2, 0x0
 
-    :goto_18
+    :goto_14
     const-class v3, Landroidx/camera/video/internal/compat/quirk/VideoEncoderSuspendDoesNotIncludeSuspendTimeQuirk;
 
-    invoke-virtual {v1, v3, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v3, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_43
+    if-eqz v2, :cond_3e
 
     new-instance v2, Landroidx/camera/video/internal/compat/quirk/VideoEncoderSuspendDoesNotIncludeSuspendTimeQuirk;
 
@@ -2591,26 +2769,26 @@
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_43
+    :cond_3e
     const/16 v2, 0x22
 
-    if-ge v0, v2, :cond_44
+    if-ge v0, v2, :cond_3f
 
     const/4 v0, 0x1
 
-    goto :goto_19
+    goto :goto_15
 
-    :cond_44
+    :cond_3f
     const/4 v0, 0x0
 
-    :goto_19
+    :goto_15
     const-class v2, Landroidx/camera/video/internal/compat/quirk/NegativeLatLongSavesIncorrectlyQuirk;
 
-    invoke-virtual {v1, v2, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v2, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_45
+    if-eqz v0, :cond_40
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/NegativeLatLongSavesIncorrectlyQuirk;
 
@@ -2618,7 +2796,7 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_45
+    :cond_40
     sget-object v0, Landroidx/camera/video/internal/compat/quirk/AudioTimestampFramePositionIncorrectQuirk;->a:Ljava/util/List;
 
     const-string v0, "oppo"
@@ -2627,7 +2805,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_46
+    if-eqz v0, :cond_41
 
     sget-object v0, Landroidx/camera/video/internal/compat/quirk/AudioTimestampFramePositionIncorrectQuirk;->a:Ljava/util/List;
 
@@ -2641,18 +2819,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_46
+    if-eqz v0, :cond_41
 
-    goto :goto_1a
+    goto :goto_16
 
-    :cond_46
+    :cond_41
     const-string v0, "lge"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_47
+    if-eqz v0, :cond_42
 
     const-string v0, "lg-m250"
 
@@ -2660,33 +2838,33 @@
 
     move-result v0
 
-    if-eqz v0, :cond_47
+    if-eqz v0, :cond_42
 
-    goto :goto_1a
+    goto :goto_16
 
-    :cond_47
-    invoke-virtual {v12, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    :cond_42
+    invoke-virtual {v11, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_48
+    if-eqz v0, :cond_43
 
     invoke-virtual {v15, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_48
+    if-eqz v0, :cond_43
 
-    goto :goto_1a
+    goto :goto_16
 
-    :cond_48
+    :cond_43
     const-string v0, "realme"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_49
+    if-eqz v0, :cond_44
 
     const-string v0, "rmx1941"
 
@@ -2694,18 +2872,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_49
+    if-eqz v0, :cond_44
 
-    goto :goto_1a
+    goto :goto_16
 
-    :cond_49
+    :cond_44
     const-string v0, "Xiaomi"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4a
+    if-eqz v0, :cond_45
 
     const-string v0, "Redmi 6A"
 
@@ -2713,33 +2891,33 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4a
+    if-eqz v0, :cond_45
 
-    goto :goto_1a
+    goto :goto_16
 
-    :cond_4a
+    :cond_45
     const-string v0, "vivo"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4b
+    if-eqz v2, :cond_46
 
     invoke-virtual {v6, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4b
+    if-eqz v2, :cond_46
 
-    goto :goto_1a
+    goto :goto_16
 
-    :cond_4b
+    :cond_46
     invoke-virtual {v0, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4c
+    if-eqz v0, :cond_47
 
     const-string v0, "VIVO Y17"
 
@@ -2747,24 +2925,24 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4c
+    if-eqz v0, :cond_47
 
-    :goto_1a
+    :goto_16
     const/4 v0, 0x1
 
-    goto :goto_1b
+    goto :goto_17
 
-    :cond_4c
+    :cond_47
     const/4 v0, 0x0
 
-    :goto_1b
+    :goto_17
     const-class v2, Landroidx/camera/video/internal/compat/quirk/AudioTimestampFramePositionIncorrectQuirk;
 
-    invoke-virtual {v1, v2, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v2, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4d
+    if-eqz v0, :cond_48
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/AudioTimestampFramePositionIncorrectQuirk;
 
@@ -2772,36 +2950,36 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_4d
-    invoke-virtual {v12, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    :cond_48
+    invoke-virtual {v11, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     const-string v2, "moto e5 play"
 
-    if-eqz v0, :cond_4e
+    if-eqz v0, :cond_49
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4e
+    if-eqz v0, :cond_49
 
     const/4 v0, 0x1
 
-    goto :goto_1c
+    goto :goto_18
 
-    :cond_4e
+    :cond_49
     const/4 v0, 0x0
 
-    :goto_1c
+    :goto_18
     const-class v3, Landroidx/camera/video/internal/compat/quirk/ExtraSupportedResolutionQuirk;
 
-    invoke-virtual {v1, v3, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v3, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4f
+    if-eqz v0, :cond_4a
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/ExtraSupportedResolutionQuirk;
 
@@ -2809,34 +2987,34 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_4f
-    invoke-virtual {v12, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    :cond_4a
+    invoke-virtual {v11, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_50
+    if-eqz v0, :cond_4b
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_50
+    if-eqz v0, :cond_4b
 
     const/4 v0, 0x1
 
-    goto :goto_1d
+    goto :goto_19
 
-    :cond_50
+    :cond_4b
     const/4 v0, 0x0
 
-    :goto_1d
+    :goto_19
     const-class v2, Landroidx/camera/video/internal/compat/quirk/StretchedVideoResolutionQuirk;
 
-    invoke-virtual {v1, v2, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v2, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_51
+    if-eqz v0, :cond_4c
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/StretchedVideoResolutionQuirk;
 
@@ -2844,34 +3022,34 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_51
+    :cond_4c
     invoke-virtual {v9, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_52
+    if-eqz v0, :cond_4d
 
-    invoke-virtual {v13, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v12, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_52
+    if-eqz v0, :cond_4d
 
     const/4 v0, 0x1
 
-    goto :goto_1e
+    goto :goto_1a
 
-    :cond_52
+    :cond_4d
     const/4 v0, 0x0
 
-    :goto_1e
+    :goto_1a
     const-class v2, Landroidx/camera/video/internal/compat/quirk/CodecStuckOnFlushQuirk;
 
-    invoke-virtual {v1, v2, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v2, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_53
+    if-eqz v0, :cond_4e
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/CodecStuckOnFlushQuirk;
 
@@ -2879,34 +3057,34 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_53
-    invoke-virtual {v12, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    :cond_4e
+    invoke-virtual {v11, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_54
+    if-eqz v0, :cond_4f
 
     invoke-virtual {v15, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_54
+    if-eqz v0, :cond_4f
 
     const/4 v0, 0x1
 
-    goto :goto_1f
+    goto :goto_1b
 
-    :cond_54
+    :cond_4f
     const/4 v0, 0x0
 
-    :goto_1f
+    :goto_1b
     const-class v2, Landroidx/camera/video/internal/compat/quirk/StopCodecAfterSurfaceRemovalCrashMediaServerQuirk;
 
-    invoke-virtual {v1, v2, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v2, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_55
+    if-eqz v0, :cond_50
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/StopCodecAfterSurfaceRemovalCrashMediaServerQuirk;
 
@@ -2914,34 +3092,34 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_55
-    invoke-virtual {v12, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    :cond_50
+    invoke-virtual {v11, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_56
+    if-eqz v0, :cond_51
 
     invoke-virtual {v15, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_56
+    if-eqz v0, :cond_51
 
     const/4 v0, 0x1
 
-    goto :goto_20
+    goto :goto_1c
 
-    :cond_56
+    :cond_51
     const/4 v0, 0x0
 
-    :goto_20
+    :goto_1c
     const-class v2, Landroidx/camera/video/internal/compat/quirk/ExtraSupportedQualityQuirk;
 
-    invoke-virtual {v1, v2, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v2, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_57
+    if-eqz v0, :cond_52
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/ExtraSupportedQualityQuirk;
 
@@ -2949,34 +3127,34 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_57
+    :cond_52
     invoke-virtual {v9, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_58
+    if-eqz v0, :cond_53
 
-    invoke-virtual {v13, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v12, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_58
+    if-eqz v0, :cond_53
 
     const/4 v0, 0x1
 
-    goto :goto_21
+    goto :goto_1d
 
-    :cond_58
+    :cond_53
     const/4 v0, 0x0
 
-    :goto_21
+    :goto_1d
     const-class v2, Landroidx/camera/video/internal/compat/quirk/SignalEosOutputBufferNotComeQuirk;
 
-    invoke-virtual {v1, v2, v0}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v2, v0}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_59
+    if-eqz v0, :cond_54
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/SignalEosOutputBufferNotComeQuirk;
 
@@ -2984,34 +3162,34 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_59
-    invoke-virtual {v12, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    :cond_54
+    invoke-virtual {v11, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5a
+    if-eqz v0, :cond_55
 
     invoke-virtual {v15, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5a
+    if-eqz v0, :cond_55
 
-    const/4 v12, 0x1
+    const/4 v11, 0x1
 
-    goto :goto_22
+    goto :goto_1e
 
-    :cond_5a
-    const/4 v12, 0x0
+    :cond_55
+    const/4 v11, 0x0
 
-    :goto_22
+    :goto_1e
     const-class v0, Landroidx/camera/video/internal/compat/quirk/SizeCannotEncodeVideoQuirk;
 
-    invoke-virtual {v1, v0, v12}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v1, v0, v11}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5b
+    if-eqz v0, :cond_56
 
     new-instance v0, Landroidx/camera/video/internal/compat/quirk/SizeCannotEncodeVideoQuirk;
 
@@ -3019,10 +3197,10 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_5b
-    invoke-direct {v5, v7}, Lxp8;-><init>(Ljava/util/List;)V
+    :cond_56
+    invoke-direct {v5, v7}, Lrz6;-><init>(Ljava/util/List;)V
 
-    sput-object v5, Lkz4;->a:Lxp8;
+    sput-object v5, Lmz4;->a:Lrz6;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3030,9 +3208,9 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lkz4;->a:Lxp8;
+    sget-object v1, Lmz4;->a:Lrz6;
 
-    invoke-static {v1}, Lxp8;->P(Lxp8;)Ljava/lang/String;
+    invoke-static {v1}, Lrz6;->U(Lrz6;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3044,7 +3222,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v1, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -3053,9 +3231,9 @@
 
     move-object/from16 v0, p1
 
-    check-cast v0, Le3d;
+    check-cast v0, Le4d;
 
-    new-instance v4, Lxp8;
+    new-instance v4, Lrz6;
 
     new-instance v5, Ljava/util/ArrayList;
 
@@ -3069,7 +3247,7 @@
 
     move-result v7
 
-    if-eqz v7, :cond_5c
+    if-eqz v7, :cond_57
 
     const-string v7, "SNE-LX1"
 
@@ -3079,18 +3257,18 @@
 
     move-result v7
 
-    if-eqz v7, :cond_5c
+    if-eqz v7, :cond_57
 
-    goto :goto_23
+    goto :goto_1f
 
-    :cond_5c
+    :cond_57
     const-string v7, "HONOR"
 
     invoke-virtual {v7, v6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_5d
+    if-eqz v7, :cond_58
 
     const-string v7, "STK-LX1"
 
@@ -3100,14 +3278,14 @@
 
     move-result v7
 
-    if-eqz v7, :cond_5d
+    if-eqz v7, :cond_58
 
-    :goto_23
+    :goto_1f
     const/4 v7, 0x1
 
-    goto :goto_24
+    goto :goto_20
 
-    :cond_5d
+    :cond_58
     sget-object v7, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
     const-string v8, "generic"
@@ -3116,7 +3294,7 @@
 
     move-result v9
 
-    if-nez v9, :cond_5f
+    if-nez v9, :cond_5a
 
     const-string v9, "unknown"
 
@@ -3124,7 +3302,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_5f
+    if-nez v7, :cond_5a
 
     sget-object v7, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -3134,7 +3312,7 @@
 
     move-result v10
 
-    if-nez v10, :cond_5f
+    if-nez v10, :cond_5a
 
     const-string v10, "Emulator"
 
@@ -3142,7 +3320,7 @@
 
     move-result v10
 
-    if-nez v10, :cond_5f
+    if-nez v10, :cond_5a
 
     const-string v10, "Cuttlefish"
 
@@ -3150,7 +3328,7 @@
 
     move-result v10
 
-    if-nez v10, :cond_5f
+    if-nez v10, :cond_5a
 
     const-string v10, "Android SDK built for x86"
 
@@ -3158,7 +3336,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_5f
+    if-nez v7, :cond_5a
 
     sget-object v7, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
@@ -3168,13 +3346,13 @@
 
     move-result v7
 
-    if-nez v7, :cond_5f
+    if-nez v7, :cond_5a
 
     invoke-virtual {v6, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_5e
+    if-eqz v7, :cond_59
 
     sget-object v7, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
@@ -3182,16 +3360,16 @@
 
     move-result v7
 
-    if-nez v7, :cond_5f
+    if-nez v7, :cond_5a
 
-    :cond_5e
+    :cond_59
     sget-object v7, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
 
     invoke-virtual {v7, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
-    if-nez v7, :cond_5f
+    if-nez v7, :cond_5a
 
     sget-object v7, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 
@@ -3199,17 +3377,17 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    :cond_5f
+    :cond_5a
     const/4 v7, 0x0
 
-    :goto_24
+    :goto_20
     const-class v8, Landroidx/camera/core/internal/compat/quirk/ImageCaptureRotationOptionQuirk;
 
-    invoke-virtual {v0, v8, v7}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v0, v8, v7}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v7
 
-    if-eqz v7, :cond_60
+    if-eqz v7, :cond_5b
 
     new-instance v7, Landroidx/camera/core/internal/compat/quirk/ImageCaptureRotationOptionQuirk;
 
@@ -3217,16 +3395,16 @@
 
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_60
+    :cond_5b
     const-class v7, Landroidx/camera/core/internal/compat/quirk/SurfaceOrderQuirk;
 
     const/4 v8, 0x1
 
-    invoke-virtual {v0, v7, v8}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v0, v7, v8}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v7
 
-    if-eqz v7, :cond_61
+    if-eqz v7, :cond_5c
 
     new-instance v7, Landroidx/camera/core/internal/compat/quirk/SurfaceOrderQuirk;
 
@@ -3234,7 +3412,7 @@
 
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_61
+    :cond_5c
     sget-object v7, Landroidx/camera/core/internal/compat/quirk/CaptureFailedRetryQuirk;->a:Ljava/util/HashSet;
 
     sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -3261,11 +3439,11 @@
 
     const-class v10, Landroidx/camera/core/internal/compat/quirk/CaptureFailedRetryQuirk;
 
-    invoke-virtual {v0, v10, v8}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v0, v10, v8}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v8
 
-    if-eqz v8, :cond_62
+    if-eqz v8, :cond_5d
 
     new-instance v8, Landroidx/camera/core/internal/compat/quirk/CaptureFailedRetryQuirk;
 
@@ -3273,7 +3451,7 @@
 
     invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_62
+    :cond_5d
     sget-object v8, Landroidx/camera/core/internal/compat/quirk/LowMemoryQuirk;->a:Ljava/util/HashSet;
 
     invoke-virtual {v9, v7}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -3286,11 +3464,11 @@
 
     const-class v10, Landroidx/camera/core/internal/compat/quirk/LowMemoryQuirk;
 
-    invoke-virtual {v0, v10, v8}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v0, v10, v8}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v8
 
-    if-eqz v8, :cond_63
+    if-eqz v8, :cond_5e
 
     new-instance v8, Landroidx/camera/core/internal/compat/quirk/LowMemoryQuirk;
 
@@ -3298,20 +3476,20 @@
 
     invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_63
+    :cond_5e
     sget-object v8, Landroidx/camera/core/internal/compat/quirk/LargeJpegImageQuirk;->a:Ljava/util/HashSet;
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v8
 
-    if-nez v8, :cond_65
+    if-nez v8, :cond_60
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_64
+    if-eqz v2, :cond_5f
 
     sget-object v2, Landroidx/camera/core/internal/compat/quirk/LargeJpegImageQuirk;->a:Ljava/util/HashSet;
 
@@ -3323,27 +3501,27 @@
 
     move-result v2
 
-    if-eqz v2, :cond_64
+    if-eqz v2, :cond_5f
 
-    goto :goto_25
+    goto :goto_21
 
-    :cond_64
+    :cond_5f
     const/4 v2, 0x0
 
-    goto :goto_26
+    goto :goto_22
 
-    :cond_65
-    :goto_25
+    :cond_60
+    :goto_21
     const/4 v2, 0x1
 
-    :goto_26
+    :goto_22
     const-class v8, Landroidx/camera/core/internal/compat/quirk/LargeJpegImageQuirk;
 
-    invoke-virtual {v0, v8, v2}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v0, v8, v2}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_66
+    if-eqz v2, :cond_61
 
     new-instance v2, Landroidx/camera/core/internal/compat/quirk/LargeJpegImageQuirk;
 
@@ -3351,14 +3529,14 @@
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_66
+    :cond_61
     sget-object v2, Landroidx/camera/core/internal/compat/quirk/IncorrectJpegMetadataQuirk;->a:Ljava/util/HashSet;
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_67
+    if-eqz v2, :cond_62
 
     sget-object v2, Landroidx/camera/core/internal/compat/quirk/IncorrectJpegMetadataQuirk;->a:Ljava/util/HashSet;
 
@@ -3372,23 +3550,23 @@
 
     move-result v2
 
-    if-eqz v2, :cond_67
+    if-eqz v2, :cond_62
 
-    const/4 v12, 0x1
+    const/4 v11, 0x1
 
-    goto :goto_27
+    goto :goto_23
 
-    :cond_67
-    const/4 v12, 0x0
+    :cond_62
+    const/4 v11, 0x0
 
-    :goto_27
+    :goto_23
     const-class v2, Landroidx/camera/core/internal/compat/quirk/IncorrectJpegMetadataQuirk;
 
-    invoke-virtual {v0, v2, v12}, Le3d;->a(Ljava/lang/Class;Z)Z
+    invoke-virtual {v0, v2, v11}, Le4d;->a(Ljava/lang/Class;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_68
+    if-eqz v0, :cond_63
 
     new-instance v0, Landroidx/camera/core/internal/compat/quirk/IncorrectJpegMetadataQuirk;
 
@@ -3396,10 +3574,10 @@
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_68
-    invoke-direct {v4, v5}, Lxp8;-><init>(Ljava/util/List;)V
+    :cond_63
+    invoke-direct {v4, v5}, Lrz6;-><init>(Ljava/util/List;)V
 
-    sput-object v4, Ljz4;->a:Lxp8;
+    sput-object v4, Llz4;->a:Lrz6;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3407,9 +3585,9 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Ljz4;->a:Lxp8;
+    sget-object v2, Llz4;->a:Lrz6;
 
-    invoke-static {v2}, Lxp8;->P(Lxp8;)Ljava/lang/String;
+    invoke-static {v2}, Lrz6;->U(Lrz6;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -3419,95 +3597,95 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :pswitch_14
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_69
+    if-eqz v0, :cond_64
 
-    invoke-virtual {v0, v5}, Ltga;->L0(I)V
+    invoke-virtual {v0, v5}, Lqga;->L0(I)V
 
-    :cond_69
+    :cond_64
     return-void
 
     :pswitch_15
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_6b
+    if-eqz v0, :cond_66
 
-    iget-object v0, v0, Ltga;->t0:Lru/ok/messages/location/FrgLocationMap;
+    iget-object v0, v0, Lqga;->u0:Lru/ok/messages/location/FrgLocationMap;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->r()Landroidx/fragment/app/b;
 
     move-result-object v1
 
     instance-of v2, v1, Lru/ok/messages/location/ActLocationMap;
 
-    if-eqz v2, :cond_6a
+    if-eqz v2, :cond_65
 
-    invoke-virtual {v0}, Lru/ok/messages/views/fragments/base/FrgBase;->s0()V
+    invoke-virtual {v0}, Lru/ok/messages/views/fragments/base/FrgBase;->p0()V
 
-    goto :goto_28
+    goto :goto_24
 
-    :cond_6a
-    invoke-virtual {v1}, Lxo3;->onBackPressed()V
+    :cond_65
+    invoke-virtual {v1}, Lfp3;->onBackPressed()V
 
-    :cond_6b
-    :goto_28
+    :cond_66
+    :goto_24
     return-void
 
     :pswitch_16
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_67
 
     const/4 v8, 0x1
 
-    invoke-virtual {v0, v8}, Ltga;->L0(I)V
+    invoke-virtual {v0, v8}, Lqga;->L0(I)V
 
-    :cond_6c
+    :cond_67
     return-void
 
     :pswitch_17
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_6d
+    if-eqz v0, :cond_68
 
-    invoke-virtual {v0, v11}, Ltga;->L0(I)V
+    invoke-virtual {v0, v10}, Lqga;->L0(I)V
 
-    :cond_6d
+    :cond_68
     return-void
 
     :pswitch_18
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_6f
+    if-eqz v0, :cond_6a
 
-    iget-object v1, v0, Ltga;->u0:Lxj8;
+    iget-object v1, v0, Lqga;->v0:Lkj8;
 
-    iget-wide v1, v1, Lxj8;->e:J
+    iget-wide v1, v1, Lkj8;->e:J
 
     cmp-long v3, v1, v7
 
-    if-nez v3, :cond_6e
+    if-nez v3, :cond_69
 
-    goto :goto_29
+    goto :goto_25
 
-    :cond_6e
-    iget-object v3, v0, Ltga;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    :cond_69
+    iget-object v3, v0, Lqga;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -3517,63 +3695,63 @@
 
     move-result-object v1
 
-    check-cast v1, Lzt8;
+    check-cast v1, Lit8;
 
-    if-eqz v1, :cond_6f
+    if-eqz v1, :cond_6a
 
-    iget-object v2, v0, Ltga;->t0:Lru/ok/messages/location/FrgLocationMap;
+    iget-object v2, v0, Lqga;->u0:Lru/ok/messages/location/FrgLocationMap;
 
-    if-eqz v2, :cond_6f
+    if-eqz v2, :cond_6a
 
-    iget-object v2, v0, Lf3;->b:Ljava/lang/Object;
+    iget-object v2, v0, Ld3;->b:Ljava/lang/Object;
 
-    check-cast v2, Lwga;
+    check-cast v2, Ltga;
 
     move-object v3, v2
 
-    check-cast v3, Lnha;
+    check-cast v3, Llha;
 
-    iget-object v1, v1, Lzt8;->a:Lpj8;
+    iget-object v1, v1, Lit8;->a:Lcj8;
 
-    iget-wide v4, v1, Lpj8;->a:D
+    iget-wide v4, v1, Lcj8;->a:D
 
-    iget-wide v6, v1, Lpj8;->b:D
+    iget-wide v6, v1, Lcj8;->b:D
 
     const/4 v8, 0x0
 
-    invoke-virtual/range {v3 .. v8}, Lnha;->A(DDZ)V
+    invoke-virtual/range {v3 .. v8}, Llha;->B(DDZ)V
 
     const/4 v8, 0x1
 
-    iput-boolean v8, v0, Ltga;->x0:Z
+    iput-boolean v8, v0, Lqga;->y0:Z
 
-    :cond_6f
-    :goto_29
+    :cond_6a
+    :goto_25
     return-void
 
     :pswitch_19
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_74
+    if-eqz v0, :cond_6f
 
-    iget-object v1, v0, Ltga;->t0:Lru/ok/messages/location/FrgLocationMap;
+    iget-object v1, v0, Lqga;->u0:Lru/ok/messages/location/FrgLocationMap;
 
-    iget-object v2, v0, Ltga;->u0:Lxj8;
+    iget-object v2, v0, Lqga;->v0:Lkj8;
 
-    iget-wide v2, v2, Lxj8;->e:J
+    iget-wide v2, v2, Lkj8;->e:J
 
     cmp-long v4, v2, v7
 
-    if-eqz v4, :cond_74
+    if-eqz v4, :cond_6f
 
-    if-nez v1, :cond_70
+    if-nez v1, :cond_6b
 
-    goto :goto_2a
+    goto :goto_26
 
-    :cond_70
-    iget-object v4, v0, Ltga;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    :cond_6b
+    iget-object v4, v0, Lqga;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -3583,24 +3761,24 @@
 
     move-result-object v2
 
-    check-cast v2, Lzt8;
+    check-cast v2, Lit8;
 
-    if-nez v2, :cond_71
+    if-nez v2, :cond_6c
 
-    goto :goto_2a
+    goto :goto_26
 
-    :cond_71
-    iget-object v3, v0, Ltga;->u0:Lxj8;
+    :cond_6c
+    iget-object v3, v0, Lqga;->v0:Lkj8;
 
-    iget-wide v3, v3, Lxj8;->l:J
+    iget-wide v3, v3, Lkj8;->l:J
 
     cmp-long v3, v3, v7
 
-    if-eqz v3, :cond_73
+    if-eqz v3, :cond_6e
 
-    iget-object v3, v0, Ltga;->d:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v3, v0, Lqga;->d:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-wide v4, v2, Lzt8;->c:J
+    iget-wide v4, v2, Lit8;->c:J
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -3612,96 +3790,96 @@
 
     check-cast v3, Ljava/util/List;
 
-    if-eqz v3, :cond_73
+    if-eqz v3, :cond_6e
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    :cond_72
+    :cond_6d
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    if-eqz v4, :cond_73
+    if-eqz v4, :cond_6e
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lzt8;
+    check-cast v4, Lit8;
 
-    iget-wide v5, v4, Lzt8;->j:J
+    iget-wide v5, v4, Lit8;->j:J
 
-    iget-object v7, v0, Ltga;->u0:Lxj8;
+    iget-object v7, v0, Lqga;->v0:Lkj8;
 
-    iget-wide v7, v7, Lxj8;->l:J
+    iget-wide v7, v7, Lkj8;->l:J
 
     cmp-long v5, v5, v7
 
-    if-nez v5, :cond_72
+    if-nez v5, :cond_6d
 
-    invoke-virtual {v1, v4}, Lru/ok/messages/location/FrgLocationMap;->B0(Lzt8;)V
+    invoke-virtual {v1, v4}, Lru/ok/messages/location/FrgLocationMap;->y0(Lit8;)V
 
-    goto :goto_2a
+    goto :goto_26
 
-    :cond_73
-    invoke-virtual {v1, v2}, Lru/ok/messages/location/FrgLocationMap;->B0(Lzt8;)V
+    :cond_6e
+    invoke-virtual {v1, v2}, Lru/ok/messages/location/FrgLocationMap;->y0(Lit8;)V
 
-    :cond_74
-    :goto_2a
+    :cond_6f
+    :goto_26
     return-void
 
     :pswitch_1a
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_7c
+    if-eqz v0, :cond_77
 
-    iget-object v1, v0, Lf3;->b:Ljava/lang/Object;
+    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
 
-    check-cast v1, Lwga;
+    check-cast v1, Ltga;
 
-    iget-object v2, v0, Ltga;->t0:Lru/ok/messages/location/FrgLocationMap;
+    iget-object v2, v0, Lqga;->u0:Lru/ok/messages/location/FrgLocationMap;
 
-    if-nez v2, :cond_75
+    if-nez v2, :cond_70
 
-    goto/16 :goto_2b
+    goto/16 :goto_27
 
-    :cond_75
-    check-cast v1, Lnha;
+    :cond_70
+    check-cast v1, Llha;
 
-    invoke-virtual {v1}, Lnha;->C()Lfs8;
+    invoke-virtual {v1}, Llha;->D()Lor8;
 
     move-result-object v3
 
-    if-nez v3, :cond_76
+    if-nez v3, :cond_71
 
-    goto/16 :goto_2b
+    goto/16 :goto_27
 
-    :cond_76
-    iget-object v4, v0, Ltga;->w0:Lzt8;
+    :cond_71
+    iget-object v4, v0, Lqga;->x0:Lit8;
 
-    iget-object v4, v4, Lzt8;->a:Lpj8;
+    iget-object v4, v4, Lit8;->a:Lcj8;
 
-    invoke-virtual {v4}, Lpj8;->a()Z
+    invoke-virtual {v4}, Lcj8;->a()Z
 
     move-result v4
 
-    if-nez v4, :cond_77
+    if-nez v4, :cond_72
 
-    invoke-virtual {v1}, Lnha;->B()[D
+    invoke-virtual {v1}, Llha;->C()[D
 
     move-result-object v1
 
-    iget-object v4, v0, Ltga;->w0:Lzt8;
+    iget-object v4, v0, Lqga;->x0:Lit8;
 
-    invoke-virtual {v4}, Lzt8;->a()Lyt8;
+    invoke-virtual {v4}, Lit8;->a()Lht8;
 
     move-result-object v4
 
-    new-instance v5, Lpj8;
+    new-instance v5, Lcj8;
 
     const/16 v17, 0x0
 
@@ -3711,41 +3889,41 @@
 
     aget-wide v8, v1, v16
 
-    invoke-direct {v5, v6, v7, v8, v9}, Lpj8;-><init>(DD)V
+    invoke-direct {v5, v6, v7, v8, v9}, Lcj8;-><init>(DD)V
 
-    iput-object v5, v4, Lyt8;->a:Lpj8;
+    iput-object v5, v4, Lht8;->a:Lcj8;
 
-    new-instance v1, Lzt8;
+    new-instance v1, Lit8;
 
-    invoke-direct {v1, v4}, Lzt8;-><init>(Lyt8;)V
+    invoke-direct {v1, v4}, Lit8;-><init>(Lht8;)V
 
-    iput-object v1, v0, Ltga;->w0:Lzt8;
+    iput-object v1, v0, Lqga;->x0:Lit8;
 
-    :cond_77
-    iget-object v0, v0, Ltga;->w0:Lzt8;
+    :cond_72
+    iget-object v0, v0, Lqga;->x0:Lit8;
 
-    iget-object v0, v0, Lzt8;->a:Lpj8;
+    iget-object v0, v0, Lit8;->a:Lcj8;
 
-    iget v1, v3, Lfs8;->g:F
+    iget v1, v3, Lor8;->g:F
 
-    invoke-virtual {v2}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lb6;
+    invoke-virtual {v2}, Lru/ok/messages/views/fragments/base/FrgBase;->r0()Ly5;
 
     move-result-object v3
 
-    if-nez v3, :cond_78
+    if-nez v3, :cond_73
 
-    goto :goto_2b
+    goto :goto_27
 
-    :cond_78
-    iget-object v4, v2, Lru/ok/messages/location/FrgLocationMap;->u1:Lon6;
+    :cond_73
+    iget-object v4, v2, Lru/ok/messages/location/FrgLocationMap;->u1:Lln6;
 
     const/4 v5, -0x1
 
-    if-eqz v4, :cond_79
+    if-eqz v4, :cond_74
 
     iget v4, v2, Lru/ok/messages/location/FrgLocationMap;->A1:I
 
-    if-eqz v4, :cond_79
+    if-eqz v4, :cond_74
 
     new-instance v4, Landroid/content/Intent;
 
@@ -3759,58 +3937,58 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;F)Landroid/content/Intent;
 
-    iget-object v0, v2, Lru/ok/messages/location/FrgLocationMap;->u1:Lon6;
+    iget-object v0, v2, Lru/ok/messages/location/FrgLocationMap;->u1:Lln6;
 
     iget v1, v2, Lru/ok/messages/location/FrgLocationMap;->A1:I
 
-    invoke-interface {v0, v1, v5, v4}, Lon6;->Z(IILandroid/content/Intent;)V
+    invoke-interface {v0, v1, v5, v4}, Lln6;->a0(IILandroid/content/Intent;)V
 
-    invoke-virtual {v3}, Lb6;->onBackPressed()V
+    invoke-virtual {v3}, Ly5;->onBackPressed()V
 
-    goto :goto_2b
+    goto :goto_27
 
-    :cond_79
-    iget-object v4, v2, Lru/ok/messages/location/FrgLocationMap;->v1:Ltga;
+    :cond_74
+    iget-object v4, v2, Lru/ok/messages/location/FrgLocationMap;->v1:Lqga;
 
-    iget-object v6, v4, Ltga;->u0:Lxj8;
+    iget-object v6, v4, Lqga;->v0:Lkj8;
 
-    iget-object v6, v4, Lf3;->b:Ljava/lang/Object;
+    iget-object v6, v4, Ld3;->b:Ljava/lang/Object;
 
-    check-cast v6, Lwga;
+    check-cast v6, Ltga;
 
-    check-cast v6, Lnha;
+    check-cast v6, Llha;
 
-    invoke-virtual {v6}, Lnha;->C()Lfs8;
+    invoke-virtual {v6}, Llha;->D()Lor8;
 
-    iget-object v4, v4, Ltga;->v0:Lpj8;
+    iget-object v4, v4, Lqga;->w0:Lcj8;
 
-    iget-object v6, v2, Lru/ok/messages/location/FrgLocationMap;->x1:Lkbg;
+    iget-object v6, v2, Lru/ok/messages/location/FrgLocationMap;->x1:Lvbg;
 
-    iget-wide v7, v0, Lpj8;->a:D
+    iget-wide v7, v0, Lcj8;->a:D
 
-    iget-wide v9, v0, Lpj8;->b:D
+    iget-wide v9, v0, Lcj8;->b:D
 
-    iget-wide v11, v4, Lpj8;->a:D
+    iget-wide v11, v4, Lcj8;->a:D
 
-    iget-wide v13, v4, Lpj8;->b:D
+    iget-wide v13, v4, Lcj8;->b:D
 
-    invoke-interface/range {v6 .. v14}, Lkbg;->c(DDDD)Z
+    invoke-interface/range {v6 .. v14}, Lvbg;->c(DDDD)Z
 
     move-result v4
 
-    if-nez v4, :cond_7a
+    if-nez v4, :cond_75
 
-    iget-object v4, v2, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lefe;
+    iget-object v4, v2, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lage;
 
-    invoke-virtual {v4}, Lefe;->a()Lgd;
+    invoke-virtual {v4}, Lage;->a()Ldd;
 
     move-result-object v4
 
     const-string v6, "LOCATION_SEND_DIFFERENT_LOCATION"
 
-    invoke-virtual {v4, v6}, Lgd;->e(Ljava/lang/String;)V
+    invoke-virtual {v4, v6}, Ldd;->e(Ljava/lang/String;)V
 
-    :cond_7a
+    :cond_75
     new-instance v4, Landroid/content/Intent;
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
@@ -3825,7 +4003,7 @@
 
     iget-object v0, v2, Landroidx/fragment/app/a;->X:Landroid/os/Bundle;
 
-    if-eqz v0, :cond_7b
+    if-eqz v0, :cond_76
 
     const-wide/16 v1, 0x0
 
@@ -3837,199 +4015,195 @@
 
     invoke-virtual {v4, v6, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    :cond_7b
+    :cond_76
     invoke-virtual {v3, v5, v4}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    invoke-virtual {v3}, Lb6;->finish()V
+    invoke-virtual {v3}, Ly5;->finish()V
 
-    :cond_7c
-    :goto_2b
+    :cond_77
+    :goto_27
     return-void
 
     :pswitch_1b
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_80
+    if-eqz v0, :cond_7b
 
-    iget-object v1, v0, Lf3;->b:Ljava/lang/Object;
+    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
 
-    check-cast v1, Lwga;
+    check-cast v1, Ltga;
 
-    iget-object v2, v0, Ltga;->Z:Lke5;
+    iget-object v2, v0, Lqga;->Z:Laji;
 
-    invoke-virtual {v2}, Lke5;->k()V
+    invoke-virtual {v2}, Laji;->w()V
 
-    iget-object v2, v0, Ltga;->v0:Lpj8;
+    iget-object v2, v0, Lqga;->w0:Lcj8;
 
-    invoke-virtual {v2}, Lpj8;->a()Z
+    invoke-virtual {v2}, Lcj8;->a()Z
 
     move-result v2
 
-    if-nez v2, :cond_7d
+    if-nez v2, :cond_78
 
-    goto/16 :goto_2e
+    goto/16 :goto_2a
 
-    :cond_7d
-    iget-object v2, v0, Ltga;->u0:Lxj8;
+    :cond_78
+    iget-object v2, v0, Lqga;->v0:Lkj8;
 
-    iget v2, v2, Lxj8;->b:I
+    iget v2, v2, Lkj8;->b:I
 
     const/4 v8, 0x1
 
-    if-eq v2, v8, :cond_7e
+    if-eq v2, v8, :cond_79
 
-    const/4 v12, 0x1
+    const/4 v11, 0x1
 
-    goto :goto_2c
+    goto :goto_28
 
-    :cond_7e
-    const/4 v12, 0x0
+    :cond_79
+    const/4 v11, 0x0
 
-    :goto_2c
-    iput-boolean v12, v0, Ltga;->x0:Z
+    :goto_28
+    iput-boolean v11, v0, Lqga;->y0:Z
 
-    iget-object v2, v0, Ltga;->Y:Lkbg;
+    iget-object v12, v0, Lqga;->Y:Lvbg;
 
-    iget-object v3, v0, Ltga;->w0:Lzt8;
+    iget-object v2, v0, Lqga;->x0:Lit8;
 
-    iget-object v3, v3, Lzt8;->a:Lpj8;
+    iget-object v2, v2, Lit8;->a:Lcj8;
 
-    iget-wide v4, v3, Lpj8;->a:D
+    iget-wide v13, v2, Lcj8;->a:D
 
-    iget-wide v6, v3, Lpj8;->b:D
+    iget-wide v2, v2, Lcj8;->b:D
 
-    iget-object v3, v0, Ltga;->v0:Lpj8;
+    iget-object v4, v0, Lqga;->w0:Lcj8;
 
-    move-wide v9, v4
+    iget-wide v5, v4, Lcj8;->a:D
 
-    move-wide v5, v6
+    iget-wide v7, v4, Lcj8;->b:D
 
-    iget-wide v7, v3, Lpj8;->a:D
+    move-wide v15, v2
 
-    iget-wide v3, v3, Lpj8;->b:D
+    move-wide/from16 v17, v5
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v19, v7
 
-    move-wide v9, v3
-
-    move-wide/from16 v3, v21
-
-    invoke-interface/range {v2 .. v10}, Lkbg;->c(DDDD)Z
+    invoke-interface/range {v12 .. v20}, Lvbg;->c(DDDD)Z
 
     move-result v2
 
-    if-nez v2, :cond_7f
+    if-nez v2, :cond_7a
 
-    iget-object v2, v0, Ltga;->u0:Lxj8;
+    iget-object v2, v0, Lqga;->v0:Lkj8;
 
-    iget v2, v2, Lxj8;->b:I
+    iget v2, v2, Lkj8;->b:I
 
-    if-ne v2, v11, :cond_7f
+    if-ne v2, v10, :cond_7a
 
-    iget-object v2, v0, Ltga;->w0:Lzt8;
+    iget-object v2, v0, Lqga;->x0:Lit8;
 
-    invoke-virtual {v2}, Lzt8;->a()Lyt8;
-
-    move-result-object v2
-
-    new-instance v3, Lpj8;
-
-    iget-object v4, v0, Ltga;->v0:Lpj8;
-
-    iget-wide v5, v4, Lpj8;->a:D
-
-    iget-wide v7, v4, Lpj8;->b:D
-
-    invoke-direct {v3, v5, v6, v7, v8}, Lpj8;-><init>(DD)V
-
-    iput-object v3, v2, Lyt8;->a:Lpj8;
-
-    new-instance v3, Lzt8;
-
-    invoke-direct {v3, v2}, Lzt8;-><init>(Lyt8;)V
-
-    iput-object v3, v0, Ltga;->w0:Lzt8;
-
-    invoke-virtual {v0}, Ltga;->O0()V
-
-    goto :goto_2d
-
-    :cond_7f
-    iget-object v2, v0, Ltga;->w0:Lzt8;
-
-    invoke-virtual {v2}, Lzt8;->a()Lyt8;
+    invoke-virtual {v2}, Lit8;->a()Lht8;
 
     move-result-object v2
 
-    new-instance v3, Lpj8;
+    new-instance v3, Lcj8;
 
-    iget-object v4, v0, Ltga;->v0:Lpj8;
+    iget-object v4, v0, Lqga;->w0:Lcj8;
 
-    iget-wide v5, v4, Lpj8;->a:D
+    iget-wide v5, v4, Lcj8;->a:D
 
-    iget-wide v7, v4, Lpj8;->b:D
+    iget-wide v7, v4, Lcj8;->b:D
 
-    invoke-direct {v3, v5, v6, v7, v8}, Lpj8;-><init>(DD)V
+    invoke-direct {v3, v5, v6, v7, v8}, Lcj8;-><init>(DD)V
 
-    iput-object v3, v2, Lyt8;->a:Lpj8;
+    iput-object v3, v2, Lht8;->a:Lcj8;
 
-    new-instance v3, Lzt8;
+    new-instance v3, Lit8;
 
-    invoke-direct {v3, v2}, Lzt8;-><init>(Lyt8;)V
+    invoke-direct {v3, v2}, Lit8;-><init>(Lht8;)V
 
-    iput-object v3, v0, Ltga;->w0:Lzt8;
+    iput-object v3, v0, Lqga;->x0:Lit8;
+
+    invoke-virtual {v0}, Lqga;->O0()V
+
+    goto :goto_29
+
+    :cond_7a
+    iget-object v2, v0, Lqga;->x0:Lit8;
+
+    invoke-virtual {v2}, Lit8;->a()Lht8;
+
+    move-result-object v2
+
+    new-instance v3, Lcj8;
+
+    iget-object v4, v0, Lqga;->w0:Lcj8;
+
+    iget-wide v5, v4, Lcj8;->a:D
+
+    iget-wide v7, v4, Lcj8;->b:D
+
+    invoke-direct {v3, v5, v6, v7, v8}, Lcj8;-><init>(DD)V
+
+    iput-object v3, v2, Lht8;->a:Lcj8;
+
+    new-instance v3, Lit8;
+
+    invoke-direct {v3, v2}, Lit8;-><init>(Lht8;)V
+
+    iput-object v3, v0, Lqga;->x0:Lit8;
 
     move-object v2, v1
 
-    check-cast v2, Lnha;
+    check-cast v2, Llha;
 
-    invoke-virtual {v2}, Lnha;->D()V
+    invoke-virtual {v2}, Llha;->E()V
 
-    :goto_2d
+    :goto_29
     move-object v3, v1
 
-    check-cast v3, Lnha;
+    check-cast v3, Llha;
 
-    iget-object v0, v0, Ltga;->v0:Lpj8;
+    iget-object v0, v0, Lqga;->w0:Lcj8;
 
-    iget-wide v4, v0, Lpj8;->a:D
+    iget-wide v4, v0, Lcj8;->a:D
 
-    iget-wide v6, v0, Lpj8;->b:D
+    iget-wide v6, v0, Lcj8;->b:D
 
     const/4 v8, 0x1
 
-    invoke-virtual/range {v3 .. v8}, Lnha;->A(DDZ)V
+    invoke-virtual/range {v3 .. v8}, Llha;->B(DDZ)V
 
-    :cond_80
-    :goto_2e
+    :cond_7b
+    :goto_2a
     return-void
 
     :pswitch_1c
     move-object/from16 v0, p1
 
-    check-cast v0, Ltga;
+    check-cast v0, Lqga;
 
-    if-eqz v0, :cond_81
+    if-eqz v0, :cond_7c
 
-    iget-object v1, v0, Lf3;->b:Ljava/lang/Object;
+    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
 
-    check-cast v1, Lwga;
+    check-cast v1, Ltga;
 
-    check-cast v1, Lnha;
+    check-cast v1, Llha;
 
-    invoke-virtual {v1}, Lnha;->B()[D
+    invoke-virtual {v1}, Llha;->C()[D
 
     move-result-object v1
 
-    iget-object v2, v0, Ltga;->w0:Lzt8;
+    iget-object v2, v0, Lqga;->x0:Lit8;
 
-    invoke-virtual {v2}, Lzt8;->a()Lyt8;
+    invoke-virtual {v2}, Lit8;->a()Lht8;
 
     move-result-object v2
 
-    new-instance v3, Lpj8;
+    new-instance v3, Lcj8;
 
     const/16 v17, 0x0
 
@@ -4039,26 +4213,28 @@
 
     aget-wide v6, v1, v16
 
-    invoke-direct {v3, v4, v5, v6, v7}, Lpj8;-><init>(DD)V
+    invoke-direct {v3, v4, v5, v6, v7}, Lcj8;-><init>(DD)V
 
-    iput-object v3, v2, Lyt8;->a:Lpj8;
+    iput-object v3, v2, Lht8;->a:Lcj8;
 
-    new-instance v1, Lzt8;
+    new-instance v1, Lit8;
 
-    invoke-direct {v1, v2}, Lzt8;-><init>(Lyt8;)V
+    invoke-direct {v1, v2}, Lit8;-><init>(Lht8;)V
 
-    iput-object v1, v0, Ltga;->w0:Lzt8;
+    iput-object v1, v0, Lqga;->x0:Lit8;
 
-    iget-object v1, v0, Ltga;->u0:Lxj8;
+    iget-object v1, v0, Lqga;->v0:Lkj8;
 
-    iget v1, v1, Lxj8;->b:I
+    iget v1, v1, Lkj8;->b:I
 
-    if-ne v1, v11, :cond_81
+    if-ne v1, v10, :cond_7c
 
-    invoke-virtual {v0}, Ltga;->O0()V
+    invoke-virtual {v0}, Lqga;->O0()V
 
-    :cond_81
+    :cond_7c
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

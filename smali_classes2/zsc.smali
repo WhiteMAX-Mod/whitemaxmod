@@ -1,64 +1,47 @@
 .class public final Lzsc;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
-# interfaces
-.implements Ldtc;
 
+# instance fields
+.field public X:I
 
-# static fields
-.field public static final a:Lzsc;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Latc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Latc;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lzsc;
+    iput-object p1, p0, Lzsc;->o:Latc;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzsc;->a:Lzsc;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lzsc;->d:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lzsc;->X:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lzsc;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lzsc;->X:I
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lzsc;->o:Latc;
 
-    return p1
+    invoke-virtual {p1, p0}, Latc;->m(Lo84;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x2ee36094
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "FetchReactionsError"
-
-    return-object v0
+    return-object p1
 .end method

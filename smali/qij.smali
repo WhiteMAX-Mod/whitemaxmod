@@ -1,122 +1,70 @@
-.class public abstract Lqij;
+.class public final Lqij;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lqij;
+
 
 # direct methods
-.method public static final a(Lase;Ljava/lang/String;)Z
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget-object p0, p0, Lase;->c:Ljava/lang/Object;
+    new-instance v0, Lqij;
 
-    check-cast p0, Lz7g;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Lz7g;->getValue()Ljava/lang/Object;
+    sput-object v0, Lqij;->a:Lqij;
 
-    move-result-object p0
+    new-instance v0, Lvzi;
 
-    check-cast p0, Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    move-result-object p0
+    const-class v1, Ln0j;
 
-    check-cast p0, Ljava/util/Map;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x2
 
-    check-cast p0, Ljava/lang/Long;
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    if-nez p0, :cond_0
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result-object v0
 
-    move-result-wide v0
+    const/4 v2, 0x3
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    move-result-wide p0
+    move-result-object v0
 
-    cmp-long p0, v0, p0
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    if-gez p0, :cond_1
+    move-result-object v0
 
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final b(Lcs8;Ljava/lang/String;Ljava/lang/Long;)V
-    .locals 4
-
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-gtz v0, :cond_0
-
-    const/4 p2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    add-long/2addr v2, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-virtual {p0, p1, p2}, Lcs8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static final c(Lm4h;)V
-    .locals 2
 
-    new-instance v0, Li4b;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/16 v1, 0xf
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-direct {v0, v1}, Li4b;-><init>(I)V
+    move-result-object p1
 
-    const/16 v1, 0x1e3
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    new-instance v0, Lh4b;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lh4b;-><init>(I)V
-
-    const/16 v1, 0x1e4
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
-
-    return-void
+    throw p1
 .end method

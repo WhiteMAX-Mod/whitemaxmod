@@ -72,7 +72,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/DefaultAudioDeviceSelector$Companion;
 
@@ -157,7 +157,7 @@
 
     const-string v3, "selecting the best device: bt: "
 
-    invoke-static {v3, p2, v1, p3, v2}, Lqf7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, p2, v1, p3, v2}, Lj27;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 

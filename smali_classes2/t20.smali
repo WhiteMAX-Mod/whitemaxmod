@@ -1,244 +1,190 @@
 .class public final Lt20;
-.super Ljava/lang/Object;
+.super Ltz;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic d:I
-
-
 # instance fields
-.field public final a:Lg35;
+.field public final c:Lmz5;
 
-.field public final b:Ljy0;
+.field public final d:Lcy0;
 
-.field public final c:Lg35;
+.field public e:Ley;
+
+.field public volatile f:J
 
 
 # direct methods
-.method public constructor <init>(Lg35;Ljy0;Lg35;)V
+.method public constructor <init>(Li20;Lmz5;Lcy0;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ltz;-><init>(Li20;)V
 
-    iput-object p1, p0, Lt20;->a:Lg35;
+    iput-object p2, p0, Lt20;->c:Lmz5;
 
-    iput-object p2, p0, Lt20;->b:Ljy0;
-
-    iput-object p3, p0, Lt20;->c:Lg35;
+    iput-object p3, p0, Lt20;->d:Lcy0;
 
     return-void
-.end method
-
-.method public static a(Lcf9;)Z
-    .locals 8
-
-    const/4 v0, 0x1
-
-    if-nez p0, :cond_0
-
-    return v0
-
-    :cond_0
-    iget-object p0, p0, Lcf9;->a:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lm20;
-
-    iget-object v2, v1, Lm20;->a:Li20;
-
-    sget-object v3, Li20;->c:Li20;
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, v1, Lm20;->b:La20;
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, v2, La20;->Y:Ljava/lang/String;
-
-    invoke-static {v2}, Ltri;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v2, v1, Lm20;->a:Li20;
-
-    sget-object v3, Li20;->d:Li20;
-
-    const-wide/16 v4, 0x0
-
-    if-ne v2, v3, :cond_3
-
-    iget-object v3, v1, Lm20;->d:Ll20;
-
-    if-eqz v3, :cond_3
-
-    iget-wide v6, v3, Ll20;->a:J
-
-    cmp-long v3, v6, v4
-
-    if-nez v3, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    sget-object v3, Li20;->o:Li20;
-
-    if-ne v2, v3, :cond_4
-
-    iget-object v3, v1, Lm20;->e:Lm10;
-
-    if-eqz v3, :cond_4
-
-    iget-wide v6, v3, Lm10;->a:J
-
-    cmp-long v3, v6, v4
-
-    if-nez v3, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    sget-object v3, Li20;->t0:Li20;
-
-    if-ne v2, v3, :cond_5
-
-    iget-object v3, v1, Lm20;->j:Lv10;
-
-    if-eqz v3, :cond_5
-
-    iget-wide v6, v3, Lv10;->a:J
-
-    cmp-long v3, v6, v4
-
-    if-nez v3, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    sget-object v3, Li20;->X:Li20;
-
-    if-ne v2, v3, :cond_6
-
-    iget-object v2, v1, Lm20;->f:Lh20;
-
-    if-eqz v2, :cond_6
-
-    iget-wide v2, v2, Lh20;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v1, v1, Lm20;->x:Lc20;
-
-    sget-object v2, Lc20;->b:Lc20;
-
-    if-ne v1, v2, :cond_1
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_7
-    return v0
 .end method
 
 
 # virtual methods
-.method public final b(Ldn9;)V
-    .locals 5
+.method public final b()Ldxa;
+    .locals 23
 
-    invoke-virtual {p1}, Ldn9;->t()Z
+    move-object/from16 v0, p0
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p1, Ldn9;->x0:Lcf9;
-
-    iget-object v0, v0, Lcf9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-super {v0}, Ltz;->b()Ldxa;
 
     move-result-object v1
 
-    check-cast v1, Lm20;
+    if-eqz v1, :cond_0
 
-    iget-wide v2, p1, Lhk0;->a:J
+    return-object v1
 
-    iget-object v1, v1, Lm20;->r:Ljava/lang/String;
+    :cond_0
+    iget-object v1, v0, Lt20;->e:Ley;
 
-    sget-object v4, Lc20;->b:Lc20;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p0, v2, v3, v1, v4}, Lt20;->c(JLjava/lang/String;Lc20;)V
-
-    goto :goto_0
+    return-object v1
 
     :cond_1
-    :goto_1
+    new-instance v1, Ley;
+
+    invoke-direct {v1}, Ley;-><init>()V
+
+    iput-object v1, v0, Lt20;->e:Ley;
+
+    iget-object v1, v0, Lt20;->d:Lcy0;
+
+    invoke-virtual {v1, v0}, Lcy0;->d(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Ltz;->a:Li20;
+
+    iget-object v5, v1, Li20;->r:Ljava/lang/String;
+
+    iget-object v1, v1, Li20;->e:Li10;
+
+    iget-wide v8, v1, Li10;->a:J
+
+    iget-object v14, v1, Li10;->b:Ljava/lang/String;
+
+    new-instance v2, Lheg;
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v6, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
+
+    const/4 v15, 0x1
+
+    const/16 v16, 0x0
+
+    const-wide/16 v17, 0x0
+
+    const-string v19, ""
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    const/16 v22, 0x0
+
+    invoke-direct/range {v2 .. v22}, Lheg;-><init>(JLjava/lang/String;JJJJLjava/lang/String;ZZJLjava/lang/String;IZZ)V
+
+    iget-wide v3, v2, Lheg;->o:J
+
+    iput-wide v3, v0, Lt20;->f:J
+
+    iget-object v1, v0, Lt20;->c:Lmz5;
+
+    invoke-virtual {v1, v2}, Lmz5;->a(Lheg;)Lr83;
+
+    iget-object v1, v0, Lt20;->e:Ley;
+
+    return-object v1
+.end method
+
+.method public onEvent(Lo45;)V
+    .locals 4
+    .annotation runtime Lu0g;
+    .end annotation
+
+    .line 4
+    iget-wide v0, p0, Lt20;->f:J
+
+    iget-wide v2, p1, Lkk0;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    .line 5
+    iget-object v0, p0, Lt20;->e:Ley;
+
+    new-instance v1, Ljava/io/File;
+
+    iget-object p1, p1, Lo45;->c:Ljava/lang/String;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ley;->r(Ljava/lang/Object;)V
+
+    .line 6
+    iget-object p1, p0, Lt20;->e:Ley;
+
+    invoke-virtual {p1}, Ley;->b()V
+
+    .line 7
+    :try_start_0
+    iget-object p1, p0, Lt20;->d:Lcy0;
+
+    invoke-virtual {p1, p0}, Lcy0;->f(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :cond_0
     return-void
 .end method
 
-.method public final c(JLjava/lang/String;Lc20;)V
-    .locals 3
+.method public onEvent(Lq45;)V
+    .locals 4
+    .annotation runtime Lu0g;
+    .end annotation
 
-    iget-object v0, p0, Lt20;->a:Lg35;
+    .line 1
+    iget-wide v0, p0, Lt20;->f:J
 
-    invoke-virtual {v0}, Lg35;->get()Ljava/lang/Object;
+    iget-wide v2, p1, Lkk0;->a:J
 
-    move-result-object v0
+    cmp-long p1, v0, v2
 
-    check-cast v0, Lbn9;
+    if-nez p1, :cond_0
 
-    new-instance v1, Lv3e;
+    .line 2
+    iget-object p1, p0, Lt20;->e:Ley;
 
-    const/4 v2, 0x6
+    new-instance v0, Ljava/lang/Exception;
 
-    invoke-direct {v1, v2, p4}, Lv3e;-><init>(ILjava/lang/Object;)V
+    const-string v1, "DownloadErrorEvent"
 
-    invoke-virtual {v0, p1, p2, p3, v1}, Lbn9;->p(JLjava/lang/String;Lux3;)V
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
+    invoke-virtual {p0, p1, v0}, Ltz;->a(Ley;Ljava/lang/Throwable;)V
+
+    .line 3
+    :try_start_0
+    iget-object p1, p0, Lt20;->d:Lcy0;
+
+    invoke-virtual {p1, p0}, Lcy0;->f(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :cond_0
     return-void
 .end method

@@ -11,7 +11,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/ml/MLFeaturesManager;",
         "",
-        "Lv2h;",
+        "Lb3h;",
         "start",
         "()V",
         "dispose",

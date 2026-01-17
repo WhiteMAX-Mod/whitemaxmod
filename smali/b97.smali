@@ -1,23 +1,35 @@
-.class public interface abstract Lb97;
+.class public final Lb97;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final v:Lfca;
+# instance fields
+.field public final a:J
+
+.field public final b:Z
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(JZJJZ)V
+    .locals 0
 
-    new-instance v0, Lfca;
+    iput-wide p1, p0, Lb97;->a:J
 
-    const/4 v1, 0x5
+    iput-boolean p3, p0, Lb97;->b:Z
 
-    invoke-direct {v0, v1}, Lfca;-><init>(I)V
+    iput-wide p4, p0, Lb97;->c:J
 
-    sput-object v0, Lb97;->v:Lfca;
+    iput-wide p6, p0, Lb97;->d:J
+
+    iput-boolean p8, p0, Lb97;->e:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

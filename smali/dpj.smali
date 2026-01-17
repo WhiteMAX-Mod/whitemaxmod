@@ -1,73 +1,205 @@
-.class public final Ldpj;
+.class public abstract Ldpj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lowi;
+# static fields
+.field public static a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkif;)V
-    .locals 0
+.method public static a(Ls8;Lksg;JJ)Lcr5;
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p1, Lksg;->a:Lhk7;
 
-    iget-object p1, p1, Lkif;->a:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast p1, Lowi;
+    invoke-virtual {p1, v0}, Lhk7;->l(I)Lac6;
 
-    iput-object p1, p0, Ldpj;->a:Lowi;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p1, p0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    move-result-object p1
 
     :cond_0
-    instance-of v0, p1, Ldpj;
+    invoke-virtual {p1}, Lx1;->hasNext()Z
 
-    if-nez v0, :cond_1
+    move-result v1
 
-    const/4 p1, 0x0
+    if-eqz v1, :cond_1
 
-    return p1
+    invoke-virtual {p1}, Lx1;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljsg;
+
+    iget-object v2, v1, Ljsg;->b:Lkrg;
+
+    iget v2, v2, Lkrg;->c:I
+
+    iget v3, p0, Ls8;->b:I
+
+    if-ne v2, v3, :cond_0
+
+    invoke-virtual {v1}, Ljsg;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Ldpj;
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Ldpj;->a:Lowi;
+    :goto_0
+    if-eqz v1, :cond_8
 
-    iget-object p1, p1, Ldpj;->a:Lowi;
+    iget-object p1, v1, Ljsg;->b:Lkrg;
 
-    invoke-static {v0, p1}, Lkcj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p0, p0, Ls8;->c:Ljava/util/List;
 
-    move-result p1
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    return p1
+    move-result-object p0
+
+    :cond_2
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljxd;
+
+    iget-object v3, v2, Ljxd;->a:Lpj6;
+
+    iget v4, p1, Lkrg;->a:I
+
+    move v5, v0
+
+    :goto_1
+    const/4 v6, -0x1
+
+    if-ge v5, v4, :cond_4
+
+    iget-object v7, p1, Lkrg;->d:[Lpj6;
+
+    aget-object v7, v7, v5
+
+    invoke-static {v3, v7}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    move v5, v6
+
+    :goto_2
+    if-eq v6, v5, :cond_2
+
+    iget-object v3, v1, Ljsg;->e:[Z
+
+    aget-boolean v3, v3, v5
+
+    if-eqz v3, :cond_2
+
+    invoke-static {p4, p5}, Lmbh;->U(J)J
+
+    move-result-wide p0
+
+    instance-of p4, v2, Lfxd;
+
+    if-eqz p4, :cond_5
+
+    check-cast v2, Lfxd;
+
+    iget-object p4, v2, Lfxd;->X:Lyke;
+
+    invoke-static {p2, p3}, Lmbh;->U(J)J
+
+    move-result-wide p2
+
+    invoke-virtual {p4, p2, p3, p0, p1}, Lyke;->g(JJ)J
+
+    move-result-wide p2
+
+    new-instance p5, Lcr5;
+
+    invoke-virtual {p4, p2, p3, p0, p1}, Lyke;->f(JJ)J
+
+    move-result-wide p0
+
+    invoke-direct {p5, p2, p3, p0, p1}, Lcr5;-><init>(JJ)V
+
+    return-object p5
+
+    :cond_5
+    instance-of p2, v2, Lhxd;
+
+    if-eqz p2, :cond_7
+
+    check-cast v2, Lhxd;
+
+    iget-object p2, v2, Lhxd;->Y:Ld0e;
+
+    if-eqz p2, :cond_6
+
+    new-instance p2, Lcr5;
+
+    const-wide/16 p3, 0x0
+
+    invoke-direct {p2, p3, p4, p0, p1}, Lcr5;-><init>(JJ)V
+
+    return-object p2
+
+    :cond_6
+    new-instance p2, Lcr5;
+
+    const-wide/16 p3, 0x1
+
+    invoke-direct {p2, p3, p4, p0, p1}, Lcr5;-><init>(JJ)V
+
+    return-object p2
+
+    :cond_7
+    new-instance p0, Lcr5;
+
+    invoke-direct {p0}, Lcr5;-><init>()V
+
+    return-object p0
+
+    :cond_8
+    new-instance p0, Lcr5;
+
+    invoke-direct {p0}, Lcr5;-><init>()V
+
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public static final b(Lr4h;)V
+    .locals 2
 
-    iget-object v0, p0, Ldpj;->a:Lowi;
+    new-instance v0, Lffe;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    const/4 v1, 0x7
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lffe;-><init>(I)V
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    const/4 v1, 0x1
 
-    move-result v0
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
 
-    return v0
+    return-void
 .end method

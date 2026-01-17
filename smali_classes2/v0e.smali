@@ -1,51 +1,87 @@
 .class public final Lv0e;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ly0e;
 
 
 # instance fields
-.field public final synthetic X:Lw0e;
-
-.field public Y:I
-
-.field public d:Lw0e;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lw0e;Ll84;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lv0e;->X:Lw0e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lv0e;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lv0e;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lv0e;
+
+    iget-object v1, p0, Lv0e;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lv0e;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lv0e;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iput-object p1, p0, Lv0e;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lv0e;->a:Ljava/lang/String;
 
-    iget p1, p0, Lv0e;->Y:I
+    const-string v1, "custom_"
 
-    const/high16 v0, -0x80000000
+    invoke-static {v1, v0}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lv0e;->Y:I
-
-    iget-object p1, p0, Lv0e;->X:Lw0e;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lw0e;->e(JLl84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

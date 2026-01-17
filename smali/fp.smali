@@ -1,44 +1,51 @@
-.class public interface abstract Lfp;
-.super Ljava/lang/Object;
+.class public final Lfp;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfp;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public a:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lz7;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+
+    sput-object v0, Lfp;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()Z
-.end method
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-.method public abstract b()Landroid/graphics/drawable/Drawable;
-.end method
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-.method public abstract c()I
-.end method
+    iget-boolean p2, p0, Lfp;->a:Z
 
-.method public abstract dismiss()V
-.end method
+    int-to-byte p2, p2
 
-.method public abstract e(I)V
-.end method
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-.method public abstract f()Ljava/lang/CharSequence;
-.end method
-
-.method public abstract h(Ljava/lang/CharSequence;)V
-.end method
-
-.method public abstract i(Landroid/graphics/drawable/Drawable;)V
-.end method
-
-.method public abstract k(I)V
-.end method
-
-.method public abstract l(I)V
-.end method
-
-.method public abstract n(II)V
-.end method
-
-.method public abstract o()I
-.end method
-
-.method public abstract p(Landroid/widget/ListAdapter;)V
+    return-void
 .end method

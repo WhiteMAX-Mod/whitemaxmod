@@ -1,145 +1,157 @@
-.class public Lhrd;
-.super Landroid/view/ViewGroup$MarginLayoutParams;
+.class public final enum Lhrd;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lwrd;
+# static fields
+.field public static final enum X:Lhrd;
 
-.field public final b:Landroid/graphics/Rect;
+.field public static final enum Y:Lhrd;
 
-.field public c:Z
+.field public static final enum Z:Lhrd;
 
-.field public d:Z
+.field public static final enum a:Lhrd;
+
+.field public static final enum b:Lhrd;
+
+.field public static final enum c:Lhrd;
+
+.field public static final enum d:Lhrd;
+
+.field public static final enum o:Lhrd;
+
+.field public static final enum t0:Lhrd;
+
+.field public static final synthetic u0:[Lhrd;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    .line 5
-    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+    new-instance v0, Lhrd;
 
-    .line 6
-    new-instance p1, Landroid/graphics/Rect;
+    const-string v1, "CONFIGURING"
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lhrd;->b:Landroid/graphics/Rect;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p1, 0x1
+    sput-object v0, Lhrd;->a:Lhrd;
 
-    .line 7
-    iput-boolean p1, p0, Lhrd;->c:Z
+    new-instance v1, Lhrd;
 
-    const/4 p1, 0x0
+    const-string v2, "PENDING_RECORDING"
 
-    .line 8
-    iput-boolean p1, p0, Lhrd;->d:Z
+    const/4 v3, 0x1
 
-    return-void
-.end method
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
+    sput-object v1, Lhrd;->b:Lhrd;
 
-    .line 1
-    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    new-instance v2, Lhrd;
 
-    .line 2
-    new-instance p1, Landroid/graphics/Rect;
+    const-string v3, "PENDING_PAUSED"
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+    const/4 v4, 0x2
 
-    iput-object p1, p0, Lhrd;->b:Landroid/graphics/Rect;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p1, 0x1
+    sput-object v2, Lhrd;->c:Lhrd;
 
-    .line 3
-    iput-boolean p1, p0, Lhrd;->c:Z
+    new-instance v3, Lhrd;
 
-    const/4 p1, 0x0
+    const-string v4, "IDLING"
 
-    .line 4
-    iput-boolean p1, p0, Lhrd;->d:Z
+    const/4 v5, 0x3
 
-    return-void
-.end method
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 0
+    sput-object v3, Lhrd;->d:Lhrd;
 
-    .line 13
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    new-instance v4, Lhrd;
 
-    .line 14
-    new-instance p1, Landroid/graphics/Rect;
+    const-string v5, "RECORDING"
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+    const/4 v6, 0x4
 
-    iput-object p1, p0, Lhrd;->b:Landroid/graphics/Rect;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p1, 0x1
+    sput-object v4, Lhrd;->o:Lhrd;
 
-    .line 15
-    iput-boolean p1, p0, Lhrd;->c:Z
+    new-instance v5, Lhrd;
 
-    const/4 p1, 0x0
+    const-string v6, "PAUSED"
 
-    .line 16
-    iput-boolean p1, p0, Lhrd;->d:Z
+    const/4 v7, 0x5
 
-    return-void
-.end method
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-    .locals 0
+    sput-object v5, Lhrd;->X:Lhrd;
 
-    .line 9
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    new-instance v6, Lhrd;
 
-    .line 10
-    new-instance p1, Landroid/graphics/Rect;
+    const-string v7, "STOPPING"
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+    const/4 v8, 0x6
 
-    iput-object p1, p0, Lhrd;->b:Landroid/graphics/Rect;
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p1, 0x1
+    sput-object v6, Lhrd;->Y:Lhrd;
 
-    .line 11
-    iput-boolean p1, p0, Lhrd;->c:Z
+    new-instance v7, Lhrd;
 
-    const/4 p1, 0x0
+    const-string v8, "RESETTING"
 
-    .line 12
-    iput-boolean p1, p0, Lhrd;->d:Z
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lhrd;->Z:Lhrd;
+
+    new-instance v8, Lhrd;
+
+    const-string v9, "ERROR"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lhrd;->t0:Lhrd;
+
+    filled-new-array/range {v0 .. v8}, [Lhrd;
+
+    move-result-object v0
+
+    sput-object v0, Lhrd;->u0:[Lhrd;
 
     return-void
 .end method
 
-.method public constructor <init>(Lhrd;)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Lhrd;
+    .locals 1
 
-    .line 17
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    const-class v0, Lhrd;
 
-    .line 18
-    new-instance p1, Landroid/graphics/Rect;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+    move-result-object p0
 
-    iput-object p1, p0, Lhrd;->b:Landroid/graphics/Rect;
+    check-cast p0, Lhrd;
 
-    const/4 p1, 0x1
+    return-object p0
+.end method
 
-    .line 19
-    iput-boolean p1, p0, Lhrd;->c:Z
+.method public static values()[Lhrd;
+    .locals 1
 
-    const/4 p1, 0x0
+    sget-object v0, Lhrd;->u0:[Lhrd;
 
-    .line 20
-    iput-boolean p1, p0, Lhrd;->d:Z
+    invoke-virtual {v0}, [Lhrd;->clone()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, [Lhrd;
+
+    return-object v0
 .end method

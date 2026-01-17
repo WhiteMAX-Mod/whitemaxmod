@@ -1,97 +1,100 @@
 .class public final Lgp7;
-.super Ljava/lang/Object;
+.super Lbp9;
 .source "SourceFile"
-
-# interfaces
-.implements Lhp7;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
-    iput-object p1, p0, Lgp7;->a:Landroid/net/Uri;
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgp7;->a:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final computeSerializedSize()I
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lgp7;->a:I
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    const/4 v1, 0x1
 
-    :cond_0
-    instance-of v1, p1, Lgp7;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lgp7;
-
-    iget-object v1, p0, Lgp7;->a:Landroid/net/Uri;
-
-    iget-object p1, p1, Lgp7;->a:Landroid/net/Uri;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lgp7;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+    invoke-static {v1, v0}, Lwg3;->n(II)I
 
     move-result v0
 
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final mergeFrom(Lvg3;)Lbp9;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lvg3;->s()I
 
-    const-string v1, "OpenLink(url="
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lgp7;->a:Landroid/net/Uri;
+    const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eq v0, v1, :cond_1
 
-    const-string v1, ")"
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object v0
+    goto :goto_1
 
-    return-object v0
+    :cond_1
+    invoke-virtual {p1}, Lvg3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lgp7;->a:I
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lwg3;)V
+    .locals 2
+
+    iget v0, p0, Lgp7;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lwg3;->G(II)V
+
+    :cond_0
+    return-void
 .end method

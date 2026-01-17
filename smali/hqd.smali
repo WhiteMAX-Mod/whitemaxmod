@@ -1,36 +1,89 @@
 .class public final Lhqd;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Liqd;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Lhc0;
+.field public final synthetic X:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lhc0;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lhqd;->X:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
 
-    iput-object p1, p0, Lhqd;->a:Lhc0;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lga0;Ljava/util/concurrent/Executor;)Ls60;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lhqd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lhqd;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lhqd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ls60;
+    new-instance v0, Lhqd;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lhqd;->X:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
 
-    invoke-direct {v0, p1, p2, v1}, Ls60;-><init>(Lga0;Ljava/util/concurrent/Executor;Landroid/content/Context;)V
+    invoke-direct {v0, p2, v1}, Lhqd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;)V
+
+    iput-object p1, v0, Lhqd;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lhqd;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lhja;
+
+    sget-object p1, Lho1;->D:Lho1;
+
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lhqd;->X:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

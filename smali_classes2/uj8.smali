@@ -1,188 +1,347 @@
 .class public final Luj8;
-.super Ljava/lang/Object;
+.super Lvm;
 .source "SourceFile"
 
 # interfaces
-.implements Ldm4;
+.implements Lb0c;
+.implements Ledg;
 
 
-# static fields
-.field public static final a:Luj8;
+# instance fields
+.field public final X:Ljava/lang/String;
 
-.field public static final b:Lvj8;
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJJ)V
+    .locals 0
 
-    new-instance v0, Luj8;
+    invoke-direct {p0, p1, p2}, Lvm;-><init>(J)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p3, p0, Luj8;->d:J
 
-    sput-object v0, Luj8;->a:Luj8;
+    iput-wide p5, p0, Luj8;->o:J
 
-    sget-object v0, Lvj8;->b:Lvj8;
+    const-class p1, Luj8;
 
-    sput-object v0, Luj8;->b:Lvj8;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Luj8;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkm4;
-    .locals 1
+.method public final c()I
+    .locals 6
 
-    sget-object v0, Luj8;->b:Lvj8;
+    const-string v0, "onPreExecute: serverChatId = "
 
-    return-object v0
-.end method
+    const-string v1, ", serverMessageId = "
 
-.method public final b(Ljava/lang/String;Lgm4;Landroid/os/Bundle;)Lnm4;
-    .locals 12
+    iget-wide v2, p0, Luj8;->d:J
 
-    sget-object v0, Luj8;->b:Lvj8;
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lkm4;->a:Ljava/util/LinkedHashSet;
+    move-result-object v0
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    iget-wide v4, p0, Luj8;->o:J
 
-    move-result v0
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Luj8;->X:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lvm;->l()Lxg2;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Lxg2;->K(J)Lnd2;
+
+    move-result-object v0
 
     if-nez v0, :cond_0
 
-    return-object v1
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Lvj8;->b:Lvj8;
+    invoke-virtual {p0}, Lvm;->n()Lhm9;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    sget-object v0, Lvj8;->c:Lgm4;
+    iget-wide v2, v0, Lnd2;->a:J
 
-    invoke-virtual {p2, v0}, Lgm4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const-string v2, "chat_id"
-
-    if-eqz v0, :cond_1
-
-    invoke-static {v2, p3}, Lulj;->h(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v0
-
-    const-string v2, "request_code"
-
-    invoke-static {v2, p3}, Lulj;->g(Ljava/lang/String;Landroid/os/Bundle;)I
-
-    move-result v2
-
-    new-instance v3, Lb78;
-
-    invoke-direct {v3, v0, v1, v2}, Lb78;-><init>(JI)V
-
-    :goto_0
-    move-object v10, v3
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v0, Lvj8;->d:Lgm4;
-
-    invoke-virtual {p2, v0}, Lgm4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-static {v2, p3}, Lulj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
-
-    move-result-object v4
-
-    const-string v0, "sender_id"
-
-    invoke-static {v0, p3}, Lulj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
-
-    move-result-object v5
-
-    const-string v0, "msg_id"
-
-    invoke-static {v0, p3}, Lulj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
-
-    move-result-object v6
-
-    const-string v0, "lat"
-
-    invoke-static {v0, p3}, Lulj;->f(Ljava/lang/String;Landroid/os/Bundle;)D
-
-    move-result-wide v7
-
-    const-string v0, "lon"
-
-    invoke-static {v0, p3}, Lulj;->f(Ljava/lang/String;Landroid/os/Bundle;)D
-
-    move-result-wide v9
-
-    const-string v0, "z"
-
-    invoke-virtual {p3, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3, v4, v5}, Lhm9;->h(JJ)Ljm9;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+    iget v0, v0, Ljm9;->S0:I
 
-    move-result v0
+    const/4 v1, 0x2
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    :cond_2
-    move-object v11, v1
-
-    new-instance v3, Ltj8;
-
-    invoke-direct/range {v3 .. v11}, Ltj8;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
+    if-ne v0, v1, :cond_1
 
     goto :goto_0
 
-    :goto_1
-    new-instance v4, Lnm4;
+    :cond_1
+    const/4 v0, 0x1
 
-    const/4 v9, 0x0
+    return v0
 
-    const/16 v11, 0x10
+    :cond_2
+    :goto_0
+    const/4 v0, 0x3
 
-    const/4 v8, 0x1
+    return v0
+.end method
 
-    move-object v5, p1
+.method public final d()V
+    .locals 7
 
-    move-object v6, p2
+    iget-object v2, p0, Luj8;->X:Ljava/lang/String;
 
-    move-object v7, p3
+    sget-object v0, Lc5j;->a:Ledb;
 
-    invoke-direct/range {v4 .. v11}, Lnm4;-><init>(Ljava/lang/String;Lgm4;Landroid/os/Bundle;ILlm4;Lmm4;I)V
+    if-eqz v0, :cond_0
 
-    return-object v4
+    sget-object v1, Lkk8;->Y:Lkk8;
 
-    :cond_3
-    move-object v6, p2
+    const/4 v5, 0x0
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/16 v6, 0x8
 
-    const-string p2, "invalid route "
+    const-string v3, "onMaxFailCount"
 
-    invoke-static {p2, v6}, Lc12;->i(Ljava/lang/String;Lgm4;)Ljava/lang/String;
+    const/4 v4, 0x0
 
-    move-result-object p2
+    invoke-static/range {v0 .. v6}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :cond_0
+    invoke-virtual {p0}, Lvm;->r()Lteg;
 
-    throw p1
+    move-result-object v0
+
+    iget-wide v1, p0, Lvm;->a:J
+
+    invoke-virtual {v0, v1, v2}, Lteg;->d(J)V
+
+    return-void
+.end method
+
+.method public final e()[B
+    .locals 3
+
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$LocationStop;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$LocationStop;-><init>()V
+
+    iget-wide v1, p0, Lvm;->a:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$LocationStop;->requestId:J
+
+    iget-wide v1, p0, Luj8;->d:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$LocationStop;->chatId:J
+
+    iget-wide v1, p0, Luj8;->o:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$LocationStop;->messageId:J
+
+    invoke-static {v0}, Lbp9;->toByteArray(Lbp9;)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final f()I
+    .locals 1
+
+    const v0, 0xf4240
+
+    return v0
+.end method
+
+.method public final g(Licg;)V
+    .locals 13
+
+    check-cast p1, Lvj8;
+
+    invoke-virtual {p0}, Lvm;->l()Lxg2;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Luj8;->d:J
+
+    invoke-virtual {v0, v1, v2}, Lxg2;->K(J)Lnd2;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lvm;->n()Lhm9;
+
+    move-result-object v1
+
+    iget-wide v2, v0, Lnd2;->a:J
+
+    iget-object v6, p1, Lvj8;->c:Lxk9;
+
+    invoke-virtual {p0}, Lvm;->p()Llgc;
+
+    move-result-object v4
+
+    iget-object v4, v4, Llgc;->a:Lqi8;
+
+    invoke-virtual {v4}, Lyfe;->s()J
+
+    move-result-wide v4
+
+    invoke-virtual/range {v1 .. v6}, Lhm9;->f(JJLxk9;)J
+
+    move-result-wide v10
+
+    const-wide/16 v1, 0x0
+
+    cmp-long v1, v10, v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Lvm;->j()Lcy0;
+
+    move-result-object p1
+
+    new-instance v7, Le6h;
+
+    iget-wide v8, v0, Lnd2;->a:J
+
+    const/4 v12, 0x0
+
+    invoke-direct/range {v7 .. v12}, Le6h;-><init>(JJZ)V
+
+    invoke-virtual {p1, v7}, Lcy0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    iget-object v2, p0, Luj8;->X:Ljava/lang/String;
+
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const/4 v1, 0x1
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v1, "Can\'t insert message: response = %s"
+
+    invoke-static {v0, v1, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    sget-object v0, Lc5j;->a:Ledb;
+
+    if-eqz v0, :cond_1
+
+    sget-object v1, Lkk8;->Y:Lkk8;
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x8
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v6}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lvm;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Lc0c;
+    .locals 1
+
+    sget-object v0, Lc0c;->P0:Lc0c;
+
+    return-object v0
+.end method
+
+.method public final h()Lj2;
+    .locals 4
+
+    new-instance v0, Lk06;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lk06;-><init>(Lwob;I)V
+
+    const-string v1, "chatId"
+
+    iget-wide v2, p0, Luj8;->d:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lj2;->y(JLjava/lang/String;)V
+
+    const-string v1, "messageId"
+
+    iget-wide v2, p0, Luj8;->o:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lj2;->y(JLjava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final k(Lnbg;)V
+    .locals 4
+
+    invoke-virtual {p0}, Lvm;->j()Lcy0;
+
+    move-result-object v0
+
+    new-instance v1, Ljk0;
+
+    iget-wide v2, p0, Lvm;->a:J
+
+    invoke-direct {v1, v2, v3, p1}, Ljk0;-><init>(JLnbg;)V
+
+    invoke-virtual {v0, v1}, Lcy0;->c(Ljava/lang/Object;)V
+
+    iget-object p1, p1, Lnbg;->b:Ljava/lang/String;
+
+    invoke-static {p1}, Lwoj;->a(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Luj8;->d()V
+
+    :cond_0
+    return-void
 .end method

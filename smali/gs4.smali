@@ -2,75 +2,96 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxfa;
-
 
 # instance fields
-.field public final a:Lfca;
+.field public final a:Lc5a;
+
+.field public final b:Ls16;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgs4;
 
-    new-instance v0, Lfca;
+    new-instance v1, Lqd3;
 
-    const/16 v1, 0x15
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lfca;-><init>(I)V
-
-    iput-object v0, p0, Lgs4;->a:Lfca;
+    invoke-direct {v0, v1}, Lgs4;-><init>(Lb5a;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Lb5a;)V
+    .locals 2
 
-# virtual methods
-.method public final b(I)Lltd;
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lgs4;->a:Lfca;
+    new-instance p1, Lc5a;
 
-    invoke-virtual {v0, p1}, Lfca;->b(I)Lltd;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iput-object p1, p0, Lgs4;->a:Lc5a;
 
-    return-object p1
-.end method
+    new-instance p1, Ls16;
 
-.method public final e(Ljava/lang/String;)Laga;
-    .locals 3
+    const-string v0, "/io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto"
 
-    new-instance v0, Lhs4;
+    const/4 v1, 0x1
 
-    :try_start_0
-    new-instance v1, Landroid/media/MediaMuxer;
+    invoke-direct {p1, v0, v1}, Ls16;-><init>(Ljava/lang/String;I)V
 
-    const/4 v2, 0x0
+    iput-object p1, p0, Lgs4;->b:Ls16;
 
-    invoke-direct {v1, p1, v2}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    const-string p1, "/io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto"
 
-    new-instance p1, Lxo6;
+    const-string v0, "_"
 
-    invoke-direct {p1, v1}, Lxo6;-><init>(Landroid/media/MediaMuxer;)V
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Lhs4;-><init>(Lxo6;)V
+    const-string p1, "/io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto"
 
-    return-object v0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    :catch_0
-    move-exception p1
+    new-instance p1, Lzii;
 
-    new-instance v0, Landroidx/media3/muxer/MuxerException;
+    new-instance v0, Lsna;
 
-    const-string v1, "Error creating muxer"
+    const/16 v1, 0x18
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, v1}, Lsna;-><init>(I)V
 
-    throw v0
+    invoke-direct {p1, v0}, Lzii;-><init>(Lhr8;)V
+
+    new-instance p1, Lzii;
+
+    new-instance v0, Lfca;
+
+    invoke-direct {v0, v1}, Lfca;-><init>(I)V
+
+    invoke-direct {p1, v0}, Lzii;-><init>(Lhr8;)V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    return-void
 .end method

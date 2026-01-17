@@ -1,142 +1,112 @@
 .class public final Lf48;
-.super Lk2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic d:I
-
-.field public final o:Ljava/lang/Object;
+.field public final synthetic b:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/GridLayoutManager;Lzqd;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/os/Bundle;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput p2, p0, Lf48;->a:I
 
-    iput v0, p0, Lf48;->d:I
+    iput-object p1, p0, Lf48;->b:Landroid/os/Bundle;
 
-    .line 1
-    invoke-direct {p0}, Lk2;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lf48;->o:Ljava/lang/Object;
-
-    .line 3
-    iput-object p2, p0, Lf48;->X:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lf48;->d:I
-
-    iput-object p1, p0, Lf48;->o:Ljava/lang/Object;
-
-    iput-object p2, p0, Lf48;->X:Ljava/lang/Object;
-
-    .line 4
-    invoke-direct {p0}, Lk2;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final W(I)I
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iget v0, p0, Lf48;->d:I
+    iget v0, p0, Lf48;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lf48;->X:Ljava/lang/Object;
+    const-string v0, "default"
 
-    check-cast v0, Lzqd;
+    iget-object v1, p0, Lf48;->b:Landroid/os/Bundle;
 
-    invoke-virtual {v0}, Lzqd;->j()I
+    if-eqz v1, :cond_2
 
-    move-result v1
+    const-string v2, "arg_key_scope_id"
 
-    if-ge p1, v1, :cond_1
+    invoke-virtual {v1, v2}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
-    invoke-virtual {v0, p1}, Lzqd;->l(I)I
+    move-result v3
 
-    move-result p1
+    if-nez v3, :cond_0
 
-    sget v0, Lihb;->k:I
-
-    if-eq p1, v0, :cond_0
-
-    sget v0, Lihb;->l:I
-
-    if-eq p1, v0, :cond_0
-
-    sget v0, Lgcb;->s:I
-
-    if-ne p1, v0, :cond_1
+    goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lf48;->o:Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
-    check-cast p1, Landroidx/recyclerview/widget/GridLayoutManager;
+    move-result-object v1
 
-    iget p1, p1, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
+    instance-of v2, v1, Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    move-object v0, v1
+
+    check-cast v0, Ljava/lang/String;
 
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x1
+    instance-of v2, v1, Lhce;
 
-    :goto_0
-    return p1
+    if-eqz v2, :cond_2
 
-    :pswitch_0
-    iget-object v0, p0, Lf48;->o:Ljava/lang/Object;
+    check-cast v1, Lhce;
 
-    check-cast v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
-
-    iget-object v1, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lje5;
-
-    invoke-virtual {v1}, Lbe8;->j()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ge p1, v1, :cond_2
-
-    iget-object v0, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lje5;
-
-    invoke-virtual {v0, p1}, Lje5;->l(I)I
-
-    move-result p1
-
-    sget v0, Lgcb;->r:I
-
-    if-ne p1, v0, :cond_2
-
-    iget-object p1, p0, Lf48;->X:Ljava/lang/Object;
-
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-static {p1}, Lmlj;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget v2, p1, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
+    iget-object v0, v1, Lhce;->a:Ljava/lang/String;
 
     :cond_2
-    return v2
+    :goto_0
+    new-instance v1, Lhce;
+
+    invoke-direct {v1, v0}, Lhce;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Lf48;->b:Landroid/os/Bundle;
+
+    const-string v1, "arg_key_scope_id"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    new-instance v1, Lhce;
+
+    invoke-direct {v1, v0}, Lhce;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :pswitch_data_0
     .packed-switch 0x0

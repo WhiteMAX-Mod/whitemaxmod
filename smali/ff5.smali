@@ -1,150 +1,194 @@
 .class public final Lff5;
-.super Lse5;
+.super Landroid/view/inputmethod/InputConnectionWrapper;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public final a:Landroid/widget/EditText;
 
-.field public final b:Ljava/lang/ref/WeakReference;
+.field public final b:Lfca;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lhf5;)V
-    .locals 1
+.method public constructor <init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfca;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    const/16 v1, 0x14
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lfca;-><init>(I)V
 
-    iput-object v0, p0, Lff5;->a:Ljava/lang/ref/WeakReference;
+    const/4 v1, 0x0
 
-    new-instance p1, Ljava/lang/ref/WeakReference;
+    invoke-direct {p0, p2, v1}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
 
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iput-object p1, p0, Lff5;->a:Landroid/widget/EditText;
 
-    iput-object p1, p0, Lff5;->b:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lff5;->b:Lfca;
 
+    sget-object p1, Lve5;->k:Lve5;
+
+    if-eqz p1, :cond_3
+
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lve5;->b()I
+
+    move-result p2
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_3
+
+    if-nez p3, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    if-nez p2, :cond_1
+
+    new-instance p2, Landroid/os/Bundle;
+
+    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
+
+    iput-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    :cond_1
+    iget-object p1, p1, Lve5;->e:Lqe5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    iget-object p1, p1, Lqe5;->c:Ljava/lang/Object;
+
+    check-cast p1, Lloe;
+
+    iget-object p1, p1, Lloe;->a:Ljava/lang/Object;
+
+    check-cast p1, La5a;
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p1, v0}, Lkr8;->a(I)I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v2, p1, Lkr8;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/nio/ByteBuffer;
+
+    iget p1, p1, Lkr8;->a:I
+
+    add-int/2addr v0, p1
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_2
+    move p1, v1
+
+    :goto_0
+    const-string v0, "android.support.text.emoji.emojiCompat_metadataVersion"
+
+    invoke-virtual {p2, v0, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    iget-object p1, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    const-string p2, "android.support.text.emoji.emojiCompat_replaceAll"
+
+    invoke-virtual {p1, p2, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final deleteSurroundingText(II)Z
+    .locals 2
 
-    iget-object v0, p0, Lff5;->a:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lff5;->a:Landroid/widget/EditText;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    iget-object v1, p0, Lff5;->b:Lfca;
 
-    iget-object v1, p0, Lff5;->b:Ljava/lang/ref/WeakReference;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    invoke-static {p0, v0, p1, p2, v1}, Lfca;->u(Lff5;Landroid/text/Editable;IIZ)Z
 
-    check-cast v1, Landroid/text/InputFilter;
+    move-result v0
 
-    if-eqz v1, :cond_6
+    if-nez v0, :cond_1
 
-    if-nez v0, :cond_0
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingText(II)Z
 
-    goto :goto_1
+    move-result p1
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v3, 0x0
-
-    :goto_0
-    array-length v4, v2
-
-    if-ge v3, v4, :cond_6
-
-    aget-object v4, v2, v3
-
-    if-ne v4, v1, :cond_5
-
-    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-static {}, Lue5;->a()Lue5;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lue5;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    if-ne v1, v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
-
-    move-result v1
-
-    invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
-
-    move-result v3
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    instance-of v0, v2, Landroid/text/Spannable;
-
-    if-eqz v0, :cond_6
-
-    check-cast v2, Landroid/text/Spannable;
-
-    if-ltz v1, :cond_3
-
-    if-ltz v3, :cond_3
-
-    invoke-static {v2, v1, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
-
-    return-void
-
-    :cond_3
-    if-ltz v1, :cond_4
-
-    invoke-static {v2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    return-void
-
-    :cond_4
-    if-ltz v3, :cond_6
-
-    invoke-static {v2, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    return-void
-
-    :cond_5
-    add-int/lit8 v3, v3, 0x1
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
-    :cond_6
-    :goto_1
-    return-void
+    :cond_0
+    return v1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final deleteSurroundingTextInCodePoints(II)Z
+    .locals 2
+
+    iget-object v0, p0, Lff5;->a:Landroid/widget/EditText;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lff5;->b:Lfca;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, p1, p2, v1}, Lfca;->u(Lff5;Landroid/text/Editable;IIZ)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingTextInCodePoints(II)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    return v1
 .end method

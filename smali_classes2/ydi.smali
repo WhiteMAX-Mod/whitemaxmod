@@ -1,325 +1,231 @@
 .class public final Lydi;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfei;
 
 
 # instance fields
-.field public final a:Lhg5;
+.field public final a:J
 
-.field public final b:Lxdi;
+.field public final b:J
 
-.field public c:Z
+.field public final c:Landroid/content/Context;
 
-.field public d:Z
-
-.field public o:Lbsf;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public constructor <init>(JJLandroid/content/Context;Lgre;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-wide p1, p0, Lydi;->a:J
 
-    new-instance v0, Lhg5;
+    iput-wide p3, p0, Lydi;->b:J
 
-    invoke-direct {v0, p1}, Lhg5;-><init>(Landroid/content/Context;)V
+    iput-object p5, p0, Lydi;->c:Landroid/content/Context;
 
-    iput-object v0, p0, Lydi;->a:Lhg5;
+    check-cast p6, Lidc;
 
-    new-instance v1, Lxdi;
+    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ds-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    invoke-direct {v1, p1}, Lxdi;-><init>(Landroid/content/Context;)V
+    const/16 p2, 0x64
 
-    sget p1, Lihb;->g:I
+    int-to-long p2, p2
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p6, p1, p2, p3}, Lidc;->m(Ljava/lang/Enum;J)J
 
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+    move-result-wide p1
 
-    const/4 v2, -0x1
+    long-to-int p1, p1
 
-    invoke-direct {p1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iput-object v1, p0, Lydi;->b:Lxdi;
-
-    iget-object p1, v0, Lhg5;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    iput p1, p0, Lydi;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lrqf;I)V
-    .locals 7
+.method public final a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
+    .locals 3
 
-    iget-object v0, p0, Lydi;->o:Lbsf;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lbsf;->b(Lrqf;)V
-
-    :cond_0
-    iget-object v0, p1, Lrqf;->X:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lydi;->a:Lhg5;
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lydi;->b:Lxdi;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    new-instance v5, Lr6h;
-
-    const/16 v6, 0xf
-
-    invoke-direct {v5, v6, p0}, Lr6h;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v4, v5}, Lxdi;->setOnFirstFrameListener(Lwdi;)V
-
-    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iput-boolean v3, p0, Lydi;->c:Z
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    invoke-virtual {v4}, Lxdi;->f()V
-
-    :goto_0
-    move p2, v3
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v5, v4, Lxdi;->a:Ljava/lang/String;
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {v5, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    move p2, v1
-
-    goto :goto_1
-
-    :cond_3
-    iput-boolean v3, v4, Lxdi;->b:Z
-
-    iput-object v0, v4, Lxdi;->a:Ljava/lang/String;
-
-    new-instance v5, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;
-
-    invoke-direct {v5}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;-><init>()V
-
-    invoke-virtual {v5, v3}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->setAutoStart(Z)Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v3}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->setAutoRepeat(Z)Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;
-
-    move-result-object v5
-
-    new-instance v6, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;
-
-    invoke-direct {v6}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;-><init>()V
-
-    invoke-virtual {v6, v0}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;->setUrl(Ljava/lang/String;)Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;
+    invoke-virtual {p0}, Lydi;->b()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2, p2}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Builder;->setSize(II)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
-    move-result-object p2
+    move-result v1
 
-    check-cast p2, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p2, v3}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;->setNetworkFetchEnabled(Z)Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;->build()Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url;
-
-    move-result-object p2
-
-    invoke-virtual {v5, p2}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->setWay(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;)Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->build()Lone/me/sdk/media/ffmpeg/WebmFactory$Config;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lone/me/sdk/media/ffmpeg/WebmFactory;->create(Lone/me/sdk/media/ffmpeg/WebmFactory$Config;)Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    move-result-object p2
-
-    invoke-virtual {p2, v4}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->addOnNextFrameRenderedListener(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable$OnNextFrameRenderedListener;)V
-
-    invoke-virtual {v4, p2}, Lxdi;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :goto_1
-    iput-boolean v1, p0, Lydi;->c:Z
-
-    if-eqz p2, :cond_4
-
-    iget-boolean p2, p0, Lydi;->d:Z
-
-    if-nez p2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    move v3, v1
-
-    :goto_2
-    iput-boolean v1, p0, Lydi;->d:Z
-
-    goto :goto_4
-
-    :cond_5
-    :goto_3
-    invoke-virtual {v4}, Lxdi;->f()V
-
-    const/16 p2, 0x8
-
-    invoke-virtual {v4, p2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p2, v2, Lhg5;->b:Ljava/lang/Object;
-
-    check-cast p2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_4
-    if-eqz v3, :cond_6
-
-    iget-object p1, p1, Lrqf;->d:Ljava/lang/String;
-
-    iget-object p2, v2, Lhg5;->b:Ljava/lang/Object;
-
-    check-cast p2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-static {p1}, Lvj7;->b(Ljava/lang/String;)Lvj7;
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
 
-    sget v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->B0:I
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    const/4 v0, 0x0
+    goto :goto_0
 
-    invoke-virtual {p2, p1, v0}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->i(Lvj7;Lvj7;)V
+    :cond_0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v1
 
-    :cond_6
-    return-void
-.end method
+    invoke-interface {v1}, Ljava/util/Map;->size()I
 
-.method public final b(Lep8;)V
-    .locals 1
+    move-result v1
 
-    iget-object v0, p1, Lep8;->a:Ljava/util/Set;
+    iget v2, p0, Lydi;->d:I
 
-    if-nez v0, :cond_0
+    if-ne v1, v2, :cond_1
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    return-object p1
 
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+    :cond_1
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    iput-object v0, p1, Lep8;->a:Ljava/util/Set;
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    :cond_0
-    iget-object p1, p1, Lep8;->a:Ljava/util/Set;
+    move-result-object p1
 
-    if-eqz p1, :cond_1
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    iget-object v0, p0, Lydi;->b:Lxdi;
+    :goto_0
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    return-void
+    return-object p1
 .end method
 
-.method public final getSizeConfigurator()Lbsf;
-    .locals 1
+.method public final b()Landroid/content/SharedPreferences;
+    .locals 4
 
-    iget-object v0, p0, Lydi;->o:Lbsf;
+    const-string v0, "webapp_ds_"
+
+    const-string v1, "_"
+
+    iget-wide v2, p0, Lydi;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lydi;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lydi;->c:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final onMeasure(II)V
-    .locals 1
+.method public final clear()Ljava/lang/Boolean;
+    .locals 2
 
-    iget-object v0, p0, Lydi;->o:Lbsf;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lbsf;->a(II)Lnt;
+    invoke-virtual {p0}, Lydi;->b()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    goto :goto_0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object v0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget p1, v0, Lnt;->b:I
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
-    :cond_1
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    iget p2, v0, Lnt;->c:I
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    :cond_2
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    return-void
+    return-object v0
 .end method
 
-.method public final setSizeConfigurator(Lbsf;)V
-    .locals 0
+.method public final get(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lydi;->o:Lbsf;
+    invoke-virtual {p0}, Lydi;->b()Landroid/content/SharedPreferences;
 
-    return-void
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final remove(Ljava/lang/String;)Ljava/lang/Boolean;
+    .locals 2
+
+    invoke-virtual {p0}, Lydi;->b()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object p1
+
+    :cond_0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    return-object p1
 .end method

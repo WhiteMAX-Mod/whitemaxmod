@@ -1,37 +1,29 @@
 .class public final Lgg6;
-.super Ljava/lang/Object;
+.super Lj2;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lgg6;
-
-
 # instance fields
-.field public final a:Llfa;
+.field public final d:Lkfa;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lkfa;)V
     .locals 2
 
-    new-instance v0, Lgg6;
+    sget-object v0, Lwob;->P2:Lwob;
 
-    sget-object v1, Lm9e;->b:Llfa;
+    invoke-direct {p0, v0}, Lj2;-><init>(Lwob;)V
 
-    invoke-direct {v0, v1}, Lgg6;-><init>(Llfa;)V
+    iput-object p1, p0, Lgg6;->d:Lkfa;
 
-    sput-object v0, Lgg6;->b:Lgg6;
+    iget-object v0, p0, Lj2;->b:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Lys;
 
-.method public constructor <init>(Llfa;)V
-    .locals 0
+    const-string v1, "folderIds"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgg6;->a:Llfa;
+    invoke-virtual {v0, v1, p1}, Ladf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -59,11 +51,11 @@
     :cond_1
     check-cast p1, Lgg6;
 
-    iget-object v1, p0, Lgg6;->a:Llfa;
+    iget-object v1, p0, Lgg6;->d:Lkfa;
 
-    iget-object p1, p1, Lgg6;->a:Llfa;
+    iget-object p1, p1, Lgg6;->d:Lkfa;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -78,35 +70,11 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lgg6;->a:Llfa;
+    iget-object v0, p0, Lgg6;->d:Lkfa;
 
-    invoke-virtual {v0}, Llfa;->hashCode()I
+    invoke-virtual {v0}, Lkfa;->hashCode()I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "FoldersCounters(counters="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lgg6;->a:Llfa;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

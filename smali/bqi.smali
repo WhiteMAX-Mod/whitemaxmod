@@ -1,84 +1,109 @@
 .class public final Lbqi;
-.super Ljava/lang/Object;
+.super Lg4;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/IInterface;
+.implements Lwzd;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbqi;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final c:Landroid/os/IBinder;
+.field public final a:Ljava/util/List;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lfph;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lfph;-><init>(I)V
+
+    sput-object v0, Lbqi;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbqi;->c:Landroid/os/IBinder;
+    iput-object p2, p0, Lbqi;->a:Ljava/util/List;
+
+    iput-object p1, p0, Lbqi;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final asBinder()Landroid/os/IBinder;
+.method public final a()Lcom/google/android/gms/common/api/Status;
     .locals 1
 
-    iget-object v0, p0, Lbqi;->c:Landroid/os/IBinder;
+    iget-object v0, p0, Lbqi;->b:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/google/android/gms/common/api/Status;->o:Lcom/google/android/gms/common/api/Status;
+
+    return-object v0
+
+    :cond_0
+    sget-object v0, Lcom/google/android/gms/common/api/Status;->t0:Lcom/google/android/gms/common/api/Status;
 
     return-object v0
 .end method
 
-.method public final i(Lyvi;Lmy6;)V
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    const/16 p2, 0x4f45
 
-    move-result-object v0
+    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    move-result p2
 
-    move-result-object v1
+    iget-object v0, p0, Lbqi;->a:Ljava/util/List;
 
-    :try_start_0
-    const-string v2, "com.google.android.gms.common.internal.IGmsServiceBroker"
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    goto :goto_0
 
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    :cond_0
+    const/4 v1, 0x1
 
-    const/4 p1, 0x1
+    invoke-static {p1, v1}, Lsnj;->k(Landroid/os/Parcel;I)I
 
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v1
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    invoke-static {p2, v0, p1}, Lgqi;->a(Lmy6;Landroid/os/Parcel;I)V
+    invoke-static {p1, v1}, Lsnj;->l(Landroid/os/Parcel;I)V
 
-    iget-object p2, p0, Lbqi;->c:Landroid/os/IBinder;
+    :goto_0
+    const/4 v0, 0x2
 
-    const/16 v2, 0x2e
+    iget-object v1, p0, Lbqi;->b:Ljava/lang/String;
 
-    invoke-interface {p2, v2, v0, v1, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p1
 .end method

@@ -1,104 +1,73 @@
-.class public final Lmcb;
-.super Lb5g;
+.class public abstract Lmcb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic X:Ldl4;
+.field public static final b:I
 
-.field public o:I
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
-.method public constructor <init>(Ldl4;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lmcb;->X:Ldl4;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmcb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmcb;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lmcb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p1, Lbc4;->a:Lbc4;
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance p1, Lmcb;
+    sget v0, Lrdd;->oneme_contact_not_found_bottom_sheet_negative_button:I
 
-    iget-object v0, p0, Lmcb;->X:Ldl4;
+    sput v0, Lmcb;->a:I
 
-    invoke-direct {p1, v0, p2}, Lmcb;-><init>(Ldl4;Lkotlin/coroutines/Continuation;)V
+    sget v0, Lrdd;->oneme_contact_not_found_bottom_sheet_subtitle:I
 
-    return-object p1
-.end method
+    sput v0, Lmcb;->b:I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    sget v0, Lrdd;->oneme_contact_not_found_bottom_sheet_title:I
 
-    iget v0, p0, Lmcb;->o:I
+    sput v0, Lmcb;->c:I
 
-    const/4 v1, 0x1
+    sget v0, Lrdd;->oneme_found_contact_is_self_error:I
 
-    if-eqz v0, :cond_1
+    sput v0, Lmcb;->d:I
 
-    if-eq v0, v1, :cond_0
+    sget v0, Lrdd;->oneme_invite_by_link_action:I
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sput v0, Lmcb;->e:I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    sget v0, Lrdd;->oneme_invite_by_phone_action:I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sput v0, Lmcb;->f:I
 
-    throw p1
+    sget v0, Lrdd;->oneme_invite_by_phone_continue_button:I
 
-    :cond_0
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    sput v0, Lmcb;->g:I
 
-    new-instance p1, Lkotlin/KotlinNothingValueException;
+    sget v0, Lrdd;->oneme_invite_by_phone_description:I
 
-    invoke-direct {p1}, Lkotlin/KotlinNothingValueException;-><init>()V
+    sput v0, Lmcb;->h:I
 
-    throw p1
+    sget v0, Lrdd;->oneme_invite_by_phone_title:I
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    sput v0, Lmcb;->i:I
 
-    iput v1, p0, Lmcb;->o:I
+    sget v0, Lrdd;->oneme_invite_friends_to_max_bottom_sheet_title:I
 
-    iget-object p1, p0, Lmcb;->X:Ldl4;
+    sput v0, Lmcb;->j:I
 
-    invoke-static {p1, p0}, Ldl4;->a(Ldl4;Ll84;)V
-
-    sget-object p1, Lbc4;->a:Lbc4;
-
-    return-object p1
+    return-void
 .end method

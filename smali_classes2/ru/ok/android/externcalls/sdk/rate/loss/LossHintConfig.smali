@@ -84,7 +84,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;->Companion:Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig$Companion;
 
@@ -109,7 +109,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;-><init>(Ljava/lang/Long;Ljava/lang/Long;IIILro4;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;-><init>(Ljava/lang/Long;Ljava/lang/Long;IIILso4;)V
 
     return-void
 .end method
@@ -135,7 +135,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/Long;IIILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/Long;IIILso4;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x1
@@ -283,7 +283,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;->audioLoss:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -296,7 +296,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;->videoLoss:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -399,7 +399,7 @@
 
     iget v1, p0, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;->audioLossCount:I
 
-    invoke-static {v1, v0, v2}, Lq3g;->k(III)I
+    invoke-static {v1, v0, v2}, Lmrf;->d(III)I
 
     move-result v0
 
@@ -472,7 +472,7 @@
 
     const-string v1, ")"
 
-    invoke-static {v4, v2, v0, v3, v1}, Lxd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v2, v0, v3, v1}, Lhc0;->j(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

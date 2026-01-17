@@ -1,114 +1,50 @@
-.class public abstract Lg0j;
+.class public final Lg0j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
 
 # static fields
-.field public static final a:Ljava/lang/Object;
+.field public static final a:Lg0j;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Ljava/lang/Object;
+    new-instance v0, Lg0j;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lg0j;->a:Ljava/lang/Object;
+    sput-object v0, Lg0j;->a:Lg0j;
+
+    new-instance v0, Lbri;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+
+    const-class v1, Lpri;
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static final a(Lgdc;Ljava/lang/String;Ll84;)Ljava/lang/Object;
-    .locals 2
 
-    new-instance v0, Lb1g;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/16 v1, 0xd
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-direct {v0, v1}, Lb1g;-><init>(I)V
+    move-result-object p1
 
-    invoke-interface {p0, p1, v0, p2}, Lgdc;->a(Ljava/lang/String;Loq6;Ll84;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lbc4;->a:Lbc4;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lv2h;->a:Lv2h;
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x22
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {p0, p1, p2}, Lrt7;->c(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return-object p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x22
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {p0, p1, p2}, Lrt7;->d(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return-object p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
+    throw p1
 .end method

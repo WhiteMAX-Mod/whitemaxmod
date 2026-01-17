@@ -1,61 +1,21 @@
-.class public final Le35;
-.super Lugc;
+.class public interface abstract annotation Le35;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:[D
-
-.field public b:I
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
-    iget-object v0, p0, Le35;->a:[D
-
-    iget v1, p0, Le35;->b:I
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([DI)[D
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b(I)V
-    .locals 2
-
-    iget-object v0, p0, Le35;->a:[D
-
-    array-length v1, v0
-
-    if-ge v1, p1, :cond_1
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([DI)[D
-
-    move-result-object p1
-
-    iput-object p1, p0, Le35;->a:[D
-
-    :cond_1
-    return-void
-.end method
-
-.method public final d()I
-    .locals 1
-
-    iget v0, p0, Le35;->b:I
-
-    return v0
-.end method
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;
+    }
+.end annotation

@@ -1,82 +1,82 @@
-.class public final Ly5c;
-.super Lb5g;
+.class public final synthetic Ly5c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/members/PickerMembersListWidget;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Ly5c;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    iput p2, p0, Ly5c;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ly5c;->b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    iget v0, p0, Ly5c;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Ly5c;->b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
-    invoke-virtual {p0, p1, p2}, Ly5c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->y0:[Lz28;
 
-    check-cast p1, Ly5c;
+    new-instance v0, Landroidx/viewpager2/widget/ViewPager2;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1, p2}, Ly5c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    return-object p2
-.end method
+    invoke-direct {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;-><init>(Landroid/content/Context;)V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    sget v1, Ly7b;->f:I
 
-    new-instance v0, Ly5c;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    iget-object v1, p0, Ly5c;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
-
-    invoke-direct {v0, v1, p2}, Ly5c;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ly5c;->o:Ljava/lang/Object;
+    invoke-static {v0}, Lh6j;->j(Landroidx/viewpager2/widget/ViewPager2;)V
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    :pswitch_0
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->y0:[Lz28;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    new-instance v0, Lolb;
 
-    iget-object p1, p0, Ly5c;->o:Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    check-cast p1, Ljava/util/List;
+    move-result-object v1
 
-    iget-object v0, p0, Ly5c;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    const/4 v2, 0x0
 
-    iget-object v0, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->Z:Lz3c;
+    invoke-direct {v0, v1, v2}, Lolb;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v0, p1}, Lbe8;->E(Ljava/util/List;)V
+    sget v1, Ly7b;->g:I
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    return-object p1
+    invoke-virtual {v0, v2}, Lcom/google/android/material/tabs/TabLayout;->setTabMode(I)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

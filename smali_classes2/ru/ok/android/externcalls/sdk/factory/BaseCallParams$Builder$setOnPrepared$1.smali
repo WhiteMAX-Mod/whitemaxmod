@@ -1,14 +1,14 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder$setOnPrepared$1;
-.super Lrr6;
+.super Lqr6;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lnq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lvx3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    value = Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lby3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lrr6;",
-        "Loq6;"
+        "Lqr6;",
+        "Lnq6;"
     }
 .end annotation
 
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x1
 
-    const-class v3, Lvx3;
+    const-class v3, Lby3;
 
     const-string v5, "accept"
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder$setOnPrepared$1;->invoke(Lru/ok/android/externcalls/sdk/Conversation;)V
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method
@@ -76,11 +76,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lsw1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lkw1;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lvx3;
+    check-cast v0, Lby3;
 
-    invoke-interface {v0, p1}, Lvx3;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lby3;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

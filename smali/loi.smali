@@ -1,52 +1,55 @@
-.class public final Lloi;
+.class public abstract synthetic Lloi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfpi;
 
-
-# instance fields
-.field public final synthetic a:Landroid/os/Bundle;
-
-.field public final synthetic b:Lnk0;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Lnk0;Landroid/os/Bundle;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lsqh;->values()[Lsqh;
 
-    iput-object p1, p0, Lloi;->b:Lnk0;
+    move-result-object v0
 
-    iput-object p2, p0, Lloi;->a:Landroid/os/Bundle;
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
+    sput-object v0, Lloi;->a:[I
 
-# virtual methods
-.method public final a()I
-    .locals 1
+    const/4 v1, 0x1
 
-    const/4 v0, 0x1
+    const/4 v2, 0x0
 
-    return v0
-.end method
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public final b()V
-    .locals 2
+    :catch_0
+    const/4 v0, 0x2
 
-    iget-object v0, p0, Lloi;->b:Lnk0;
+    :try_start_1
+    sget-object v2, Lloi;->a:[I
 
-    iget-object v0, v0, Lnk0;->a:Ljava/lang/Object;
+    aput v0, v2, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    check-cast v0, Lp88;
+    :catch_1
+    :try_start_2
+    sget-object v1, Lloi;->a:[I
 
-    iget-object v1, p0, Lloi;->a:Landroid/os/Bundle;
+    const/4 v2, 0x3
 
-    invoke-interface {v0, v1}, Lp88;->r(Landroid/os/Bundle;)V
+    aput v2, v1, v0
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
+    :catch_2
     return-void
 .end method

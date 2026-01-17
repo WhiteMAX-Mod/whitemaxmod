@@ -3,28 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln6;
+.implements Li6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:J
 
 .field public final synthetic b:J
 
-.field public final synthetic c:I
-
 
 # direct methods
-.method public synthetic constructor <init>(IIJ)V
+.method public synthetic constructor <init>(JJ)V
     .locals 0
 
-    iput p2, p0, Lqv5;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lqv5;->a:J
 
     iput-wide p3, p0, Lqv5;->b:J
-
-    iput p1, p0, Lqv5;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -32,59 +28,29 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 3
 
-    iget v0, p0, Lqv5;->a:I
+    iget-wide v0, p0, Lqv5;->a:J
 
-    const-string v1, "onNotifMoved: success move id=%d to position=%d"
-
-    iget v2, p0, Lqv5;->c:I
-
-    iget-wide v3, p0, Lqv5;->b:J
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-wide v1, p0, Lqv5;->b:J
 
-    move-result-object v2
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    filled-new-array {v0, v2}, [Ljava/lang/Object;
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v2, "pw5"
+    const-string v1, "tv5"
 
-    invoke-static {v2, v1, v0}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string v2, "setFavoriteStickerSetMoved: success move stickerSetId=%d, to position of stickerSetId=%d"
+
+    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
-
-    :pswitch_0
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    filled-new-array {v0, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v2, "rv5"
-
-    invoke-static {v2, v1, v0}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

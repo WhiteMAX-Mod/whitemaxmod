@@ -1,79 +1,78 @@
-.class public final Lam9;
+.class public final synthetic Lam9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnq6;
+
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:I
-
-.field public c:I
-
-.field public d:I
+.field public final synthetic b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+    .locals 0
+
+    iput p2, p0, Lam9;->a:I
+
+    iput-object p1, p0, Lam9;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lam9;->a:I
-
-    iput v0, p0, Lam9;->b:I
-
-    iput v0, p0, Lam9;->c:I
-
-    iput v0, p0, Lam9;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lam9;->a:I
 
-    const-string v1, "MeasureResult{layoutWidth="
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Lam9;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    iget v1, p0, Lam9;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    check-cast p1, La84;
 
-    const-string v1, ", layoutHeight="
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->e1:[Lz28;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget p1, p1, La84;->a:I
 
-    iget v1, p0, Lam9;->b:I
+    invoke-virtual {v2, p1}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-object v1
 
-    const-string v1, ", imageWidth="
+    :pswitch_0
+    check-cast p1, La84;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->e1:[Lz28;
 
-    iget v1, p0, Lam9;->c:I
+    iget p1, p1, La84;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0(I)V
 
-    const-string v1, ", imageHeight="
+    return-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
 
-    iget v1, p0, Lam9;->d:I
+    sget-object p1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->e1:[Lz28;
 
-    const/16 v2, 0x7d
+    const/4 p1, 0x1
 
-    invoke-static {v0, v1, v2}, Lxd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
 
-    move-result-object v0
+    return-object v1
 
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,64 +1,85 @@
-.class public final Lx62;
-.super Ljo3;
+.class public final enum Lx62;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+.field public static final enum a:Lx62;
 
+.field public static final enum b:Lx62;
 
-# instance fields
-.field private volatile synthetic _resumed$volatile:I
+.field public static final enum c:Lx62;
+
+.field public static final synthetic d:[Lx62;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    const-class v0, Lx62;
+    new-instance v0, Lx62;
 
-    const-string v1, "_resumed$volatile"
+    const-string v1, "COLLAPSED"
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lx62;->a:Lx62;
+
+    new-instance v1, Lx62;
+
+    const-string v2, "EXPANDED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lx62;->b:Lx62;
+
+    new-instance v2, Lx62;
+
+    const-string v3, "MAX_EXPANDED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lx62;->c:Lx62;
+
+    filled-new-array {v0, v1, v2}, [Lx62;
 
     move-result-object v0
 
-    sput-object v0, Lx62;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    sput-object v0, Lx62;->d:[Lx62;
 
     return-void
 .end method
 
-.method public constructor <init>(Lp62;Ljava/lang/Throwable;Z)V
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lx62;
+    .locals 1
 
-    if-nez p2, :cond_0
+    const-class v0, Lx62;
 
-    new-instance p2, Ljava/util/concurrent/CancellationException;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object p0
 
-    const-string v1, "Continuation "
+    check-cast p0, Lx62;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object p0
+.end method
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public static values()[Lx62;
+    .locals 1
 
-    const-string p1, " was cancelled normally"
+    sget-object v0, Lx62;->d:[Lx62;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, [Lx62;
 
-    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    :cond_0
-    invoke-direct {p0, p2, p3}, Ljo3;-><init>(Ljava/lang/Throwable;Z)V
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lx62;->_resumed$volatile:I
-
-    return-void
+    return-object v0
 .end method

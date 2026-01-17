@@ -1,176 +1,178 @@
 .class public final Low0;
-.super Lg2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:I
 
-.field public final d:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:Ljava/nio/ByteBuffer;
+
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(II[Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(Ljava/nio/ByteBuffer;Lja0;II)V
+    .locals 2
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Low0;->c:I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 1
-    invoke-direct {p0, p1, p2}, Lg2;-><init>(II)V
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    .line 2
-    iput-object p3, p0, Low0;->d:Ljava/lang/Object;
+    move-result v0
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    iget v1, p2, Lja0;->a:I
+
+    if-ne v0, v1, :cond_0
+
+    iput p3, p0, Low0;->a:I
+
+    iput p4, p0, Low0;->b:I
+
+    iput-object p1, p0, Low0;->c:Ljava/nio/ByteBuffer;
+
+    iget-wide p1, p2, Lja0;->b:J
+
+    iput-wide p1, p0, Low0;->d:J
 
     return-void
-.end method
 
-.method public constructor <init>(ILjava/lang/Object;)V
-    .locals 1
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v0, 0x1
+    const-string p3, "Byte buffer size is not match with packet info: "
 
-    iput v0, p0, Low0;->c:I
+    const-string p4, " != "
 
-    .line 3
-    invoke-direct {p0, p1, v0}, Lg2;-><init>(II)V
+    invoke-static {v0, p3, p4}, Lj27;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p2, p0, Low0;->d:Ljava/lang/Object;
+    move-result-object p3
 
-    return-void
+    iget p2, p2, Lja0;->a:I
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 3
+.method public final a(Ljava/nio/ByteBuffer;)Lja0;
+    .locals 10
 
-    iget v0, p0, Low0;->c:I
+    iget-wide v0, p0, Low0;->d:J
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v2, p0, Low0;->c:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Lg2;->hasNext()Z
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
-    move-result v0
+    move-result v3
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    iget v0, p0, Lg2;->a:I
+    move-result v4
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
 
-    iput v0, p0, Lg2;->a:I
+    move-result v5
 
-    iget-object v0, p0, Low0;->d:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
-    return-object v0
+    move-result v6
 
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    if-le v5, v6, :cond_0
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
-    throw v0
+    move-result v5
 
-    :pswitch_0
-    invoke-virtual {p0}, Lg2;->hasNext()Z
+    int-to-long v6, v5
 
-    move-result v0
+    iget v8, p0, Low0;->a:I
 
-    if-eqz v0, :cond_1
+    invoke-static {v8, v6, v7}, Ly6j;->m(IJ)J
 
-    iget-object v0, p0, Low0;->d:Ljava/lang/Object;
+    move-result-wide v6
 
-    check-cast v0, [Ljava/lang/Object;
+    iget v8, p0, Low0;->b:I
 
-    iget v1, p0, Lg2;->a:I
+    invoke-static {v8, v6, v7}, Ly6j;->b(IJ)J
 
-    add-int/lit8 v2, v1, 0x1
+    move-result-wide v6
 
-    iput v2, p0, Lg2;->a:I
+    iget-wide v8, p0, Low0;->d:J
 
-    aget-object v0, v0, v1
+    add-long/2addr v8, v6
 
-    return-object v0
+    iput-wide v8, p0, Low0;->d:J
 
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    move-result-object v6
 
-    throw v0
+    invoke-virtual {v6, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    nop
+    move-result-object v7
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    add-int v8, v3, v5
 
-.method public final previous()Ljava/lang/Object;
-    .locals 2
+    invoke-virtual {v7, v8}, Ljava/nio/Buffer;->limit(I)Ljava/nio/Buffer;
 
-    iget v0, p0, Low0;->c:I
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    invoke-virtual {p0}, Lg2;->hasPrevious()Z
+    add-int v6, v4, v5
 
-    move-result v0
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    iget v0, p0, Lg2;->a:I
+    invoke-virtual {p1, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lg2;->a:I
-
-    iget-object v0, p0, Low0;->d:Ljava/lang/Object;
-
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    move-result v5
 
-    throw v0
+    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    :pswitch_0
-    invoke-virtual {p0}, Lg2;->hasPrevious()Z
+    move-result-object p1
 
-    move-result v0
+    add-int v6, v4, v5
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    iget-object v0, p0, Low0;->d:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, [Ljava/lang/Object;
+    invoke-virtual {p1, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
-    iget v1, p0, Lg2;->a:I
+    :goto_0
+    add-int/2addr v3, v5
 
-    add-int/lit8 v1, v1, -0x1
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    iput v1, p0, Lg2;->a:I
+    new-instance p1, Lja0;
 
-    aget-object v0, v0, v1
+    invoke-direct {p1, v5, v0, v1}, Lja0;-><init>(IJ)V
 
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -3,24 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lob;
+.implements Llb;
 
 
 # instance fields
-.field public final a:Lfl1;
-
-.field public final b:Z
+.field public final a:Lyk1;
 
 
 # direct methods
-.method public constructor <init>(Lfl1;Z)V
+.method public constructor <init>(Lyk1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkb;->a:Lfl1;
-
-    iput-boolean p2, p0, Lkb;->b:Z
+    iput-object p1, p0, Lkb;->a:Lyk1;
 
     return-void
 .end method
@@ -30,63 +26,53 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
+    const/4 v0, 0x1
+
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lkb;
+    instance-of v1, p1, Lkb;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
     goto :goto_0
 
     :cond_1
     check-cast p1, Lkb;
 
-    iget-object v0, p0, Lkb;->a:Lfl1;
+    iget-object v1, p0, Lkb;->a:Lyk1;
 
-    iget-object v1, p1, Lkb;->a:Lfl1;
+    iget-object p1, p1, Lkb;->a:Lyk1;
 
-    invoke-virtual {v0, v1}, Lfl1;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Lyk1;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lkb;->b:Z
-
-    iget-boolean p1, p1, Lkb;->b:Z
-
-    if-eq v0, p1, :cond_3
+    if-nez p1, :cond_2
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    :cond_2
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lkb;->a:Lfl1;
+    iget-object v0, p0, Lkb;->a:Lyk1;
 
-    invoke-virtual {v0}, Lfl1;->hashCode()I
+    invoke-virtual {v0}, Lyk1;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-boolean v1, p0, Lkb;->b:Z
+    const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
@@ -102,23 +88,15 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "DisableMicForParticipant(id="
+    const-string v1, "DisableScreenSharingForParticipant(id="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lkb;->a:Lfl1;
+    iget-object v1, p0, Lkb;->a:Lyk1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", isSuccess="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lkb;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
+    const-string v1, ", isSuccess=true)"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

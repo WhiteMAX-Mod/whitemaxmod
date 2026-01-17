@@ -1,82 +1,157 @@
 .class public final Ld0f;
-.super Lb5g;
+.super Lg0f;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ld0f;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/SettingsListScreen;
+.field public final a:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lhne;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lhne;-><init>(I)V
+
+    sput-object v0, Ld0f;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput-object p2, p0, Ld0f;->X:Lone/me/settings/SettingsListScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-boolean p1, p0, Ld0f;->a:Z
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Ld0f;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Ljava/util/List;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ld0f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ld0f;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Ld0f;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ld0f;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ld0f;
+
+    iget-boolean v1, p0, Ld0f;->a:Z
+
+    iget-boolean v3, p1, Ld0f;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Ld0f;->b:Z
+
+    iget-boolean p1, p1, Ld0f;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Ld0f;
+    iget-boolean v0, p0, Ld0f;->a:Z
 
-    iget-object v1, p0, Ld0f;->X:Lone/me/settings/SettingsListScreen;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-direct {v0, p2, v1}, Ld0f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+    move-result v0
 
-    iput-object p1, v0, Ld0f;->o:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Ld0f;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", isEnabled="
+
+    const-string v1, ")"
+
+    const-string v2, "Radio(isChecked="
+
+    iget-boolean v3, p0, Ld0f;->a:Z
+
+    iget-boolean v4, p0, Ld0f;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lhc0;->h(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-boolean p2, p0, Ld0f;->a:Z
 
-    iget-object p1, p0, Ld0f;->o:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    check-cast p1, Ljava/util/List;
+    iget-boolean p2, p0, Ld0f;->b:Z
 
-    iget-object v0, p0, Ld0f;->X:Lone/me/settings/SettingsListScreen;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v0, v0, Lone/me/settings/SettingsListScreen;->y0:Lhze;
-
-    invoke-virtual {v0, p1}, Lbe8;->E(Ljava/util/List;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-void
 .end method

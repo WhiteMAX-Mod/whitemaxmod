@@ -1,145 +1,241 @@
-.class public final Lxn;
+.class public abstract Lxn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static X:Z
 
-# instance fields
-.field public final synthetic a:I
+.field public static final Y:Lbt;
 
-.field public final synthetic b:Ljo;
+.field public static final Z:Ljava/lang/Object;
+
+.field public static final a:Lwn;
+
+.field public static final b:I
+
+.field public static c:Lxi8;
+
+.field public static d:Lxi8;
+
+.field public static o:Ljava/lang/Boolean;
+
+.field public static final t0:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljo;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lxn;->a:I
+    new-instance v0, Lwn;
 
-    iput-object p1, p0, Lxn;->b:Ljo;
+    new-instance v1, Lc15;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2}, Lc15;-><init>(I)V
+
+    invoke-direct {v0, v1}, Lwn;-><init>(Lc15;)V
+
+    sput-object v0, Lxn;->a:Lwn;
+
+    const/16 v0, -0x64
+
+    sput v0, Lxn;->b:I
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lxn;->c:Lxi8;
+
+    sput-object v0, Lxn;->d:Lxi8;
+
+    sput-object v0, Lxn;->o:Ljava/lang/Boolean;
+
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lxn;->X:Z
+
+    new-instance v1, Lbt;
+
+    invoke-direct {v1, v0}, Lbt;-><init>(I)V
+
+    sput-object v1, Lxn;->Y:Lbt;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lxn;->Z:Ljava/lang/Object;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lxn;->t0:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static c(Landroid/content/Context;)Z
+    .locals 4
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    sget-object v0, Lxn;->o:Ljava/lang/Boolean;
 
-    iget v0, p0, Lxn;->a:I
+    if-nez v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    sget v0, Lgq;->a:I
 
-    iget-object v0, p0, Lxn;->b:Ljo;
+    invoke-static {}, Lfq;->a()I
 
-    iget-object v1, v0, Ljo;->G0:Landroid/widget/PopupWindow;
+    move-result v0
 
-    iget-object v2, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    or-int/lit16 v0, v0, 0x80
 
-    const/16 v3, 0x37
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v3, v4, v4}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
-
-    iget-object v1, v0, Ljo;->I0:Lxth;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lxth;->b()V
-
-    :cond_0
-    iget-boolean v1, v0, Ljo;->J0:Z
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Ljo;->K0:Landroid/view/ViewGroup;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    iget-object v1, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-static {v1}, Lash;->a(Landroid/view/View;)Lxth;
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Lxth;->a(F)V
+    new-instance v2, Landroid/content/ComponentName;
 
-    iput-object v1, v0, Ljo;->I0:Lxth;
+    const-class v3, Lgq;
 
-    new-instance v0, Lyn;
+    invoke-direct {v2, p0, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const/4 v2, 0x0
+    invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getServiceInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;
 
-    invoke-direct {v0, v2, p0}, Lyn;-><init>(ILjava/lang/Object;)V
+    move-result-object p0
 
-    invoke-virtual {v1, v0}, Lxth;->d(Lyth;)V
+    iget-object p0, p0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
+
+    if-eqz p0, :cond_0
+
+    const-string v0, "autoStoreLocales"
+
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    sput-object p0, Lxn;->o:Ljava/lang/Boolean;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    iget-object v1, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    :catch_0
+    const-string p0, "AppCompatDelegate"
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+    const-string v0, "Checking for metadata for AppLocalesMetadataHolderService : Service not found"
 
-    iget-object v0, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0, v4}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
+    sput-object p0, Lxn;->o:Ljava/lang/Boolean;
+
+    :cond_0
     :goto_0
-    return-void
+    sget-object p0, Lxn;->o:Ljava/lang/Boolean;
 
-    :pswitch_0
-    iget-object v0, p0, Lxn;->b:Ljo;
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget v1, v0, Ljo;->j1:I
+    move-result p0
 
-    and-int/lit8 v1, v1, 0x1
+    return p0
+.end method
 
-    const/4 v2, 0x0
+.method public static f(Lko;)V
+    .locals 3
+
+    sget-object v0, Lxn;->Z:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lxn;->Y:Lbt;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lus;
+
+    invoke-direct {v2, v1}, Lus;-><init>(Lbt;)V
+
+    :cond_0
+    :goto_0
+    invoke-virtual {v2}, Lus;->hasNext()Z
+
+    move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v0, v2}, Ljo;->v(I)V
+    invoke-virtual {v2}, Lus;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lxn;
+
+    if-eq v1, p0, :cond_1
+
+    if-nez v1, :cond_0
+
+    :cond_1
+    invoke-virtual {v2}, Lus;->remove()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
 
     :cond_2
-    iget v1, v0, Ljo;->j1:I
-
-    and-int/lit16 v1, v1, 0x1000
-
-    if-eqz v1, :cond_3
-
-    const/16 v1, 0x6c
-
-    invoke-virtual {v0, v1}, Ljo;->v(I)V
-
-    :cond_3
-    iput-boolean v2, v0, Ljo;->i1:Z
-
-    iput v2, v0, Ljo;->j1:I
+    monitor-exit v0
 
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract b()V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e()V
+.end method
+
+.method public abstract h(I)Z
+.end method
+
+.method public abstract i(I)V
+.end method
+
+.method public abstract j(Landroid/view/View;)V
+.end method
+
+.method public abstract k(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+.end method
+
+.method public abstract l(Ljava/lang/CharSequence;)V
 .end method

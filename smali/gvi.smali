@@ -1,199 +1,85 @@
-.class public final Lgvi;
-.super Lz3h;
+.class public abstract Lgvi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/ListIterator;
 
-
-# instance fields
-.field public final b:I
-
-.field public c:I
-
-.field public final d:Lkvi;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lkvi;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+    const-class v0, Lgvi;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    return-void
+.end method
+
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    const/4 v1, 0x3
+    if-nez v0, :cond_0
 
-    invoke-direct {p0, v1}, Lz3h;-><init>(I)V
+    const/4 p0, 0x0
 
-    if-ltz p2, :cond_0
+    return-object p0
 
-    if-gt p2, v0, :cond_0
+    :cond_0
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    iput v0, p0, Lgvi;->b:I
+    move-result-object p0
 
-    iput p2, p0, Lgvi;->c:I
+    check-cast p0, Landroid/os/Parcelable;
 
-    iput-object p1, p0, Lgvi;->d:Lkvi;
+    return-object p0
+.end method
+
+.method public static b(Landroid/os/Parcel;)V
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
+
+    move-result p0
+
+    if-gtz p0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    new-instance v0, Landroid/os/BadParcelableException;
 
-    const-string v1, "index"
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    invoke-static {p2, v0, v1}, Le9j;->f(IILjava/lang/String;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object p2
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    throw p1
-.end method
+    new-instance v2, Ljava/lang/StringBuilder;
 
+    add-int/lit8 v1, v1, 0x2d
 
-# virtual methods
-.method public final a(I)Ljava/lang/Object;
-    .locals 1
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iget-object v0, p0, Lgvi;->d:Lkvi;
+    const-string v1, "Parcel data not fully consumed, unread size: "
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
+    move-result-object p0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final hasNext()Z
-    .locals 2
-
-    iget v0, p0, Lgvi;->c:I
-
-    iget v1, p0, Lgvi;->b:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasPrevious()Z
-    .locals 1
-
-    iget v0, p0, Lgvi;->c:I
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    invoke-virtual {p0}, Lgvi;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lgvi;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lgvi;->c:I
-
-    invoke-virtual {p0, v0}, Lgvi;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
 
     throw v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    iget v0, p0, Lgvi;->c:I
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lgvi;->hasPrevious()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lgvi;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lgvi;->c:I
-
-    invoke-virtual {p0, v0}, Lgvi;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget v0, p0, Lgvi;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
 .end method

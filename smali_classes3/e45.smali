@@ -1,38 +1,32 @@
 .class public final Le45;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public X:I
 
-.field public final synthetic Y:Lm20;
+.field public final synthetic Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-.field public final synthetic Z:Lm20;
+.field public final synthetic Z:Li20;
 
-.field public o:I
-
-.field public final synthetic s0:Ldn9;
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lm20;Lm20;Ldn9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Li20;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Le45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iput-object p1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    iput-object p2, p0, Le45;->Y:Lm20;
-
-    iput-object p3, p0, Le45;->Z:Lm20;
-
-    iput-object p4, p0, Le45;->s0:Ldn9;
+    iput-object p2, p0, Le45;->Z:Li20;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p5}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -42,7 +36,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -52,7 +46,7 @@
 
     check-cast p1, Le45;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Le45;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -62,45 +56,45 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+    .locals 2
 
-    new-instance v0, Le45;
+    new-instance p1, Le45;
 
-    iget-object v3, p0, Le45;->Z:Lm20;
+    iget-object v0, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    iget-object v4, p0, Le45;->s0:Ldn9;
+    iget-object v1, p0, Le45;->Z:Li20;
 
-    iget-object v1, p0, Le45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-direct {p1, v0, v1, p2}, Le45;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Li20;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v2, p0, Le45;->Y:Lm20;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Le45;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lm20;Lm20;Ldn9;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    .locals 5
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    sget-object v0, Lac4;->a:Lac4;
 
-    iget v1, p0, Le45;->o:I
+    iget v1, p0, Le45;->X:I
 
-    const/4 v2, 0x2
+    const/4 v2, 0x3
 
-    const/4 v3, 0x1
+    const/4 v3, 0x2
 
-    if-eqz v1, :cond_2
+    const/4 v4, 0x1
+
+    if-eqz v1, :cond_3
+
+    if-eq v1, v4, :cond_2
 
     if-eq v1, v3, :cond_1
 
     if-ne v1, v2, :cond_0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-boolean v0, p0, Le45;->o:Z
 
-    return-object p1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_3
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -112,85 +106,95 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :cond_3
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Le45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iget-object p1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    iget p1, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->Q0:I
+    iget p1, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->R0:I
 
-    iget-object v1, p0, Le45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iget-object v1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    add-int/2addr p1, v3
+    add-int/2addr p1, v4
 
-    iput p1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->Q0:I
+    iput p1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->R0:I
 
-    iget-object p1, p0, Le45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iget-object p1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    iput v3, p0, Le45;->o:I
+    iput v4, p0, Le45;->X:I
 
     invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->q(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    if-ne p1, v0, :cond_3
+    if-ne p1, v0, :cond_4
 
     goto :goto_2
 
-    :cond_3
-    :goto_0
-    iget-object p1, p0, Le45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v1, p0, Le45;->Y:Lm20;
-
-    iget-object v3, p0, Le45;->Z:Lm20;
-
-    iget-object v4, p0, Le45;->s0:Ldn9;
-
-    iput v2, p0, Le45;->o:I
-
-    iget-object v2, v1, Lm20;->d:Ll20;
-
-    if-nez v2, :cond_4
-
-    invoke-static {}, Laf8;->a()Lxe8;
-
-    move-result-object p1
-
-    goto :goto_1
-
     :cond_4
-    iget-wide v5, v2, Ll20;->a:J
+    :goto_0
+    iget-object p1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    const-wide/16 v7, 0x0
+    iget-object v1, p0, Le45;->Z:Li20;
 
-    cmp-long v2, v5, v7
+    iput v3, p0, Le45;->X:I
 
-    if-nez v2, :cond_5
-
-    if-eqz v3, :cond_5
-
-    invoke-virtual {p1, v3, v4, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->u(Lm20;Ldn9;Ll84;)Ljava/lang/Object;
+    invoke-static {p1, v1, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->r(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Li20;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 
-    goto :goto_1
+    if-ne p1, v0, :cond_5
+
+    goto :goto_2
 
     :cond_5
-    invoke-virtual {p1, v1, v4, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->t(Lm20;Ldn9;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
     :goto_1
-    if-ne p1, v0, :cond_6
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iget-object v1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    iput-boolean p1, p0, Le45;->o:Z
+
+    iput v2, p0, Le45;->X:I
+
+    invoke-virtual {v1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->q(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v0, :cond_6
 
     :goto_2
     return-object v0
 
     :cond_6
+    move v0, p1
+
+    :goto_3
+    if-eqz v0, :cond_7
+
+    new-instance p1, Lle8;
+
+    invoke-direct {p1}, Lle8;-><init>()V
+
+    return-object p1
+
+    :cond_7
+    invoke-static {}, Lme8;->a()Lje8;
+
+    move-result-object p1
+
     return-object p1
 .end method

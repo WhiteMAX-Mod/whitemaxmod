@@ -9,9 +9,9 @@
 
     const-string v0, "missing extension"
 
-    sget-object v1, Lwmg;->t0:Lwmg;
+    sget-object v1, Lhng;->u0:Lhng;
 
-    invoke-direct {p0, v0, v1}, Ltech/kwik/agent15/alert/ErrorAlert;-><init>(Ljava/lang/String;Lwmg;)V
+    invoke-direct {p0, v0, v1}, Ltech/kwik/agent15/alert/ErrorAlert;-><init>(Ljava/lang/String;Lhng;)V
 
     return-void
 .end method

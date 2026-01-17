@@ -1,14 +1,19 @@
-.class public interface abstract Lsci;
+.class public final Lsci;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a(Lrci;)V
-.end method
+.method public final serializer()La38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "La38;"
+        }
+    .end annotation
 
-.method public b(Lpci;Z)V
-    .locals 0
+    sget-object v0, Lrci;->a:Lrci;
 
-    return-void
+    return-object v0
 .end method

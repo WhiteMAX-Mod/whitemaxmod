@@ -244,7 +244,7 @@
         value = 0x1d
     .end annotation
 
-    invoke-static {p0}, Lx75;->A(Landroid/media/MediaCodecInfo;)Z
+    invoke-static {p0}, La85;->A(Landroid/media/MediaCodecInfo;)Z
 
     move-result p0
 
@@ -309,7 +309,7 @@
         value = 0x1d
     .end annotation
 
-    invoke-static {p0}, Lx75;->v(Landroid/media/MediaCodecInfo;)Z
+    invoke-static {p0}, La85;->v(Landroid/media/MediaCodecInfo;)Z
 
     move-result p0
 

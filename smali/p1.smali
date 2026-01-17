@@ -1,31 +1,77 @@
-.class public abstract synthetic Lp1;
+.class public final Lp1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/security/PrivilegedExceptionAction;
+
 
 # direct methods
-.method public static synthetic a(Lsun/misc/Unsafe;Lu1;JLjava/lang/Object;Ljava/lang/Object;)Z
-    .locals 1
+.method public static a()Lsun/misc/Unsafe;
+    .locals 6
 
-    :cond_0
-    invoke-virtual/range {p0 .. p5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+    const-class v0, Lsun/misc/Unsafe;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    const/4 p0, 0x1
+    array-length v2, v1
 
-    return p0
+    const/4 v3, 0x0
 
-    :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    aget-object v4, v1, v3
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v4, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v0, v4}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eq v0, p4, :cond_0
+    check-cast v0, Lsun/misc/Unsafe;
 
-    const/4 p0, 0x0
+    return-object v0
 
-    return p0
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/lang/NoSuchFieldError;
+
+    const-string v1, "the Unsafe"
+
+    invoke-direct {v0, v1}, Ljava/lang/NoSuchFieldError;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic run()Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {}, Lp1;->a()Lsun/misc/Unsafe;
+
+    move-result-object v0
+
+    return-object v0
 .end method

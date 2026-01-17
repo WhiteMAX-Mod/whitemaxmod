@@ -1,201 +1,240 @@
-.class public final Lgci;
-.super Lb5g;
+.class public final enum Lgci;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lf6i;
+
+
+# static fields
+.field public static final enum X:Lgci;
+
+.field public static final enum Y:Lgci;
+
+.field public static final enum Z:Lgci;
+
+.field public static final enum d:Lgci;
+
+.field public static final enum o:Lgci;
+
+.field public static final enum t0:Lgci;
+
+.field public static final synthetic u0:[Lgci;
+
+.field public static final synthetic v0:Lal5;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lp9i;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic Z:Ljci;
-
-.field public o:I
-
-.field public final synthetic s0:Ldci;
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lp9i;Ljci;Ldci;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    iput-object p1, p0, Lgci;->Y:Lp9i;
+    new-instance v0, Lgci;
 
-    iput-object p2, p0, Lgci;->Z:Ljci;
+    const/4 v1, 0x1
 
-    iput-object p3, p0, Lgci;->s0:Ldci;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 p1, 0x2
+    move-result-object v5
 
-    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v1, "SECURE_SAVE_KEY"
+
+    const/4 v2, 0x0
+
+    const-string v3, "WebAppSecureStorageSaveKey"
+
+    const-string v4, "secure_storage_save_key"
+
+    invoke-direct/range {v0 .. v5}, Lgci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v0, Lgci;->d:Lgci;
+
+    new-instance v1, Lgci;
+
+    const/4 v2, 0x2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const-string v2, "SECURE_GET_KEY"
+
+    const/4 v3, 0x1
+
+    const-string v4, "WebAppSecureStorageGetKey"
+
+    const-string v5, "secure_storage_get_key"
+
+    invoke-direct/range {v1 .. v6}, Lgci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v1, Lgci;->o:Lgci;
+
+    new-instance v2, Lgci;
+
+    const/4 v3, 0x4
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    const-string v3, "SECURE_CLEAR_KEYS"
+
+    const/4 v4, 0x2
+
+    const-string v5, "WebAppSecureStorageClear"
+
+    const-string v6, "secure_storage_clear"
+
+    invoke-direct/range {v2 .. v7}, Lgci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v2, Lgci;->X:Lgci;
+
+    new-instance v3, Lgci;
+
+    const/4 v4, 0x5
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    const-string v4, "SAVE_KEY"
+
+    const/4 v5, 0x3
+
+    const-string v6, "WebAppDeviceStorageSaveKey"
+
+    const-string v7, "device_storage_save_key"
+
+    invoke-direct/range {v3 .. v8}, Lgci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v3, Lgci;->Y:Lgci;
+
+    new-instance v4, Lgci;
+
+    const/4 v5, 0x6
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    const-string v5, "GET_KEY"
+
+    const/4 v6, 0x4
+
+    const-string v7, "WebAppDeviceStorageGetKey"
+
+    const-string v8, "device_storage_get_key"
+
+    invoke-direct/range {v4 .. v9}, Lgci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v4, Lgci;->Z:Lgci;
+
+    new-instance v5, Lgci;
+
+    const/4 v6, 0x7
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    const-string v6, "CLEAR_KEYS"
+
+    const/4 v7, 0x5
+
+    const-string v8, "WebAppDeviceStorageClear"
+
+    const-string v9, "device_storage_clear"
+
+    invoke-direct/range {v5 .. v10}, Lgci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v5, Lgci;->t0:Lgci;
+
+    filled-new-array/range {v0 .. v5}, [Lgci;
+
+    move-result-object v0
+
+    sput-object v0, Lgci;->u0:[Lgci;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lgci;->v0:Lal5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 0
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    iput-object p3, p0, Lgci;->a:Ljava/lang/String;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p4, p0, Lgci;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lgci;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p5, p0, Lgci;->c:Ljava/lang/Integer;
 
-    move-result-object p1
-
-    check-cast p1, Lgci;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lgci;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Lgci;
+    .locals 1
 
-    new-instance v0, Lgci;
+    const-class v0, Lgci;
 
-    iget-object v1, p0, Lgci;->Z:Ljci;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v2, p0, Lgci;->s0:Ldci;
+    move-result-object p0
 
-    iget-object v3, p0, Lgci;->Y:Lp9i;
+    check-cast p0, Lgci;
 
-    invoke-direct {v0, v3, v1, v2, p2}, Lgci;-><init>(Lp9i;Ljci;Ldci;Lkotlin/coroutines/Continuation;)V
+    return-object p0
+.end method
 
-    check-cast p1, Ljava/lang/Boolean;
+.method public static values()[Lgci;
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    sget-object v0, Lgci;->u0:[Lgci;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iput-boolean p1, v0, Lgci;->X:Z
+    move-result-object v0
+
+    check-cast v0, [Lgci;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
 
-    iget v0, p0, Lgci;->o:I
+# virtual methods
+.method public final a()Ljava/lang/Integer;
+    .locals 1
 
-    iget-object v1, p0, Lgci;->s0:Ldci;
-
-    iget-object v2, p0, Lgci;->Z:Ljci;
-
-    const/4 v3, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v3, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lgci;->X:Z
-
-    new-instance v0, Ls9i;
-
-    iget-object v4, p0, Lgci;->Y:Lp9i;
-
-    iget-object v4, v4, Lp9i;->a:Ljava/lang/String;
-
-    invoke-direct {v0, v4, p1}, Ls9i;-><init>(Ljava/lang/String;Z)V
-
-    iget-object p1, v2, Ljci;->e:Lfx0;
-
-    new-instance v4, Li08;
-
-    iget-object v5, v1, Ldci;->a:Ljava/lang/String;
-
-    iget-object v6, v2, Ljci;->a:Lv08;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v7, Ls9i;->Companion:Lr9i;
-
-    invoke-virtual {v7}, Lr9i;->serializer()Lq38;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v7, v0}, Lv08;->b(Lq38;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v4, v5, v0}, Li08;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v3, p0, Lgci;->o:I
-
-    invoke-interface {p1, v4, p0}, Lhne;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
+    iget-object v0, p0, Lgci;->c:Ljava/lang/Integer;
 
     return-object v0
+.end method
 
-    :cond_2
-    :goto_0
-    iget-object v4, v1, Ldci;->a:Ljava/lang/String;
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    iget-object p1, v2, Ljci;->f:Lwxh;
+    iget-object v0, p0, Lgci;->a:Ljava/lang/String;
 
-    if-eqz p1, :cond_3
+    return-object v0
+.end method
 
-    iget-object v0, v2, Ljci;->b:Ld68;
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lgci;->b:Ljava/lang/String;
 
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Lh1i;
-
-    iget-wide v5, p1, Lwxh;->a:J
-
-    iget-object v7, p1, Lwxh;->b:Ljava/lang/String;
-
-    const/4 v11, 0x0
-
-    const/16 v12, 0xf0
-
-    const/4 v8, 0x1
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    invoke-static/range {v3 .. v12}, Lh1i;->a(Lh1i;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Integer;Ljava/lang/Integer;I)V
-
-    :cond_3
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-object v0
 .end method

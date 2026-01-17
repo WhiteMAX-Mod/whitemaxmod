@@ -1,100 +1,88 @@
-.class public final Lcn5;
+.class public final synthetic Lcn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lxna;
-
-.field public static final d:Ljava/util/LinkedHashMap;
+# interfaces
+.implements Lnq6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/locks/ReentrantLock;
+.field public final synthetic a:I
 
-.field public final b:Lykc;
+.field public final synthetic b:Ljava/lang/reflect/Constructor;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/reflect/Constructor;I)V
+    .locals 0
 
-    new-instance v0, Lxna;
+    iput p2, p0, Lcn5;->a:I
 
-    const/16 v1, 0x14
+    iput-object p1, p0, Lcn5;->b:Ljava/lang/reflect/Constructor;
 
-    invoke-direct {v0, v1}, Lxna;-><init>(I)V
-
-    sput-object v0, Lcn5;->c:Lxna;
-
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    sput-object v0, Lcn5;->d:Ljava/util/LinkedHashMap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v0, Lcn5;->c:Lxna;
+    iget v0, p0, Lcn5;->a:I
 
-    monitor-enter v0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    sget-object v1, Lcn5;->d:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcn5;->b:Ljava/lang/reflect/Constructor;
 
-    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result-object v2
+    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->a(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    if-nez v2, :cond_0
+    move-result-object p1
 
-    new-instance v2, Ljava/util/concurrent/locks/ReentrantLock;
+    return-object p1
 
-    invoke-direct {v2}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    :pswitch_0
+    iget-object v0, p0, Lcn5;->b:Ljava/lang/reflect/Constructor;
 
-    invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Throwable;
 
-    goto :goto_0
+    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->c(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    :catchall_0
-    move-exception p1
+    move-result-object p1
 
-    goto :goto_2
+    return-object p1
 
-    :cond_0
-    :goto_0
-    check-cast v2, Ljava/util/concurrent/locks/ReentrantLock;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :pswitch_1
+    iget-object v0, p0, Lcn5;->b:Ljava/lang/reflect/Constructor;
 
-    monitor-exit v0
+    check-cast p1, Ljava/lang/Throwable;
 
-    iput-object v2, p0, Lcn5;->a:Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->d(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    if-eqz p2, :cond_1
+    move-result-object p1
 
-    new-instance p2, Lykc;
+    return-object p1
 
-    invoke-direct {p2, p1}, Lykc;-><init>(Ljava/lang/String;)V
+    :pswitch_2
+    iget-object v0, p0, Lcn5;->b:Ljava/lang/reflect/Constructor;
 
-    goto :goto_1
+    check-cast p1, Ljava/lang/Throwable;
 
-    :cond_1
-    const/4 p2, 0x0
+    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->e(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    :goto_1
-    iput-object p2, p0, Lcn5;->b:Lykc;
+    move-result-object p1
 
-    return-void
+    return-object p1
 
-    :goto_2
-    monitor-exit v0
+    nop
 
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,73 +1,263 @@
-.class public final synthetic Ljyh;
-.super Ljava/lang/Object;
+.class public final enum Ljyh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Loq6;
+
+# static fields
+.field public static final enum X:Ljyh;
+
+.field public static final enum Y:Ljyh;
+
+.field public static final enum Z:Ljyh;
+
+.field public static final enum c:Ljyh;
+
+.field public static final enum d:Ljyh;
+
+.field public static final enum o:Ljyh;
+
+.field public static final enum t0:Ljyh;
+
+.field public static final enum u0:Ljyh;
+
+.field public static final synthetic v0:[Ljyh;
+
+.field public static final synthetic w0:Lal5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lkyh;
-
-.field public final synthetic c:Lozh;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkyh;Lozh;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 18
 
-    iput p3, p0, Ljyh;->a:I
+    new-instance v0, Ljyh;
 
-    iput-object p1, p0, Ljyh;->b:Lkyh;
+    const-string v1, "MONEY_BUTTON"
 
-    iput-object p2, p0, Ljyh;->c:Lozh;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v3, 0x1
+
+    const-string v4, "money_button"
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v1, Ljyh;
+
+    const-string v2, "START_BUTTON"
+
+    const/4 v4, 0x2
+
+    const-string v5, "start_button"
+
+    invoke-direct {v1, v2, v3, v4, v5}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v2, Ljyh;
+
+    const-string v3, "URL"
+
+    const/4 v5, 0x3
+
+    const-string v6, "url"
+
+    invoke-direct {v2, v3, v4, v5, v6}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v2, Ljyh;->c:Ljyh;
+
+    new-instance v3, Ljyh;
+
+    const-string v4, "FOLDER"
+
+    const/4 v6, 0x4
+
+    const-string v7, "folder"
+
+    invoke-direct {v3, v4, v5, v6, v7}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v3, Ljyh;->d:Ljyh;
+
+    new-instance v4, Ljyh;
+
+    const-string v5, "INLINE_BUTTON"
+
+    const/4 v7, 0x5
+
+    const-string v8, "inline_button"
+
+    invoke-direct {v4, v5, v6, v7, v8}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v4, Ljyh;->o:Ljyh;
+
+    new-instance v5, Ljyh;
+
+    const-string v6, "WEB_APP"
+
+    const/4 v8, 0x6
+
+    const-string v9, "web_app"
+
+    invoke-direct {v5, v6, v7, v8, v9}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v5, Ljyh;->X:Ljyh;
+
+    new-instance v6, Ljyh;
+
+    const-string v7, "SETTINGS"
+
+    const/4 v9, 0x7
+
+    const-string v10, "settings"
+
+    invoke-direct {v6, v7, v8, v9, v10}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v7, Ljyh;
+
+    const-string v8, "EXTERNAL_CALLBACK"
+
+    const/16 v10, 0x8
+
+    const-string v11, "external_callback"
+
+    invoke-direct {v7, v8, v9, v10, v11}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v7, Ljyh;->Y:Ljyh;
+
+    new-instance v8, Ljyh;
+
+    const-string v9, "SETTINGS_PRIVACY"
+
+    const/16 v11, 0x9
+
+    const-string v12, "settings_privacy"
+
+    invoke-direct {v8, v9, v10, v11, v12}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v9, Ljyh;
+
+    const-string v10, "CHAT_PROFILE"
+
+    const/16 v12, 0xb
+
+    const-string v13, "chat_profile"
+
+    invoke-direct {v9, v10, v11, v12, v13}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v10, Ljyh;
+
+    const-string v11, "PUSH"
+
+    const/16 v13, 0xa
+
+    const/16 v14, 0xc
+
+    const-string v15, "push"
+
+    invoke-direct {v10, v11, v13, v14, v15}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v10, Ljyh;->Z:Ljyh;
+
+    new-instance v11, Ljyh;
+
+    const-string v15, "support_from_privacy"
+
+    const/16 v13, 0x3e8
+
+    const-string v14, "SUPPORT_FROM_PRIVACY"
+
+    invoke-direct {v11, v14, v12, v13, v15}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v12, Ljyh;
+
+    const-string v13, "from_notification"
+
+    const/16 v14, 0x3e9
+
+    const-string v15, "FROM_NOTIFICATION"
+
+    move-object/from16 v17, v0
+
+    const/16 v0, 0xc
+
+    invoke-direct {v12, v15, v0, v14, v13}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v12, Ljyh;->t0:Ljyh;
+
+    new-instance v13, Ljyh;
+
+    const/16 v0, 0xd
+
+    const-string v14, "from_search"
+
+    const-string v15, "FROM_SEARCH"
+
+    move-object/from16 v16, v1
+
+    const/16 v1, 0xa
+
+    invoke-direct {v13, v15, v0, v1, v14}, Ljyh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v13, Ljyh;->u0:Ljyh;
+
+    move-object/from16 v1, v16
+
+    move-object/from16 v0, v17
+
+    filled-new-array/range {v0 .. v13}, [Ljyh;
+
+    move-result-object v0
+
+    sput-object v0, Ljyh;->v0:[Ljyh;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Ljyh;->w0:Lal5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Ljyh;->a:I
+    iput-object p4, p0, Ljyh;->a:Ljava/lang/String;
 
-    check-cast p1, Lj6e;
+    iput p3, p0, Ljyh;->b:I
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Ljyh;->b:Lkyh;
+.method public static valueOf(Ljava/lang/String;)Ljyh;
+    .locals 1
 
-    iget-object v0, v0, Lkyh;->c:Lbua;
+    const-class v0, Ljyh;
 
-    iget-object v1, p0, Ljyh;->c:Lozh;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {v0, p1, v1}, Lxnj;->c(Lj6e;Ljava/lang/Object;)I
+    move-result-object p0
 
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    check-cast p0, Ljyh;
 
-    return-object p1
+    return-object p0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ljyh;->b:Lkyh;
+.method public static values()[Ljyh;
+    .locals 1
 
-    iget-object v0, v0, Lkyh;->b:Lci;
+    sget-object v0, Ljyh;->v0:[Ljyh;
 
-    iget-object v1, p0, Ljyh;->c:Lozh;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, v1}, Lsk5;->d(Lj6e;Ljava/lang/Object;)V
+    move-result-object v0
 
-    goto :goto_0
+    check-cast v0, [Ljyh;
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

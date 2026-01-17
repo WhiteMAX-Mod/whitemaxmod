@@ -1,114 +1,156 @@
-.class public final synthetic Log1;
+.class public final Log1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Le3e;
+.implements Lpg1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Log1;
 
-.field public final synthetic b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public static final b:J
+
+.field public static final c:Llhg;
+
+.field public static final d:Lw58;
+
+.field public static final o:Li0f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Log1;->a:I
+    new-instance v0, Log1;
 
-    iput-object p1, p0, Log1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Log1;->a:Log1;
+
+    sget-wide v0, Lo6b;->e:J
+
+    sput-wide v0, Log1;->b:J
+
+    sget v0, Lq6b;->j:I
+
+    new-instance v1, Llhg;
+
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+
+    sput-object v1, Log1;->c:Llhg;
+
+    new-instance v0, Lw58;
+
+    sget v1, Lm6b;->j:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    invoke-direct {v0, v1, v2, v3}, Lw58;-><init>(III)V
+
+    sput-object v0, Log1;->d:Lw58;
+
+    sget-object v0, Li0f;->a:Li0f;
+
+    sput-object v0, Log1;->o:Li0f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Log1;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    sget-object v2, Lbx8;->b:Lbx8;
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Log1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lp38;
-
-    invoke-virtual {v4}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Llg1;
-
-    move-result-object v0
-
-    invoke-virtual {v4}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Llg1;
-
-    move-result-object v4
-
-    iget-object v4, v4, Llg1;->x0:Lhof;
-
-    invoke-virtual {v4}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lfg1;
-
-    iget-object v4, v4, Lfg1;->c:Lbx8;
-
-    if-ne v4, v2, :cond_0
-
-    move v1, v3
+    return v0
 
     :cond_0
-    xor-int/2addr v1, v3
+    instance-of p1, p1, Log1;
 
-    invoke-virtual {v0, v1}, Llg1;->u(Z)V
+    if-nez p1, :cond_1
 
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lp38;
-
-    invoke-virtual {v4}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Llg1;
-
-    move-result-object v0
-
-    invoke-virtual {v4}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Llg1;
-
-    move-result-object v4
-
-    iget-object v4, v4, Llg1;->x0:Lhof;
-
-    invoke-virtual {v4}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lfg1;
-
-    iget-object v4, v4, Lfg1;->b:Lbx8;
-
-    if-ne v4, v2, :cond_1
-
-    move v1, v3
+    return p1
 
     :cond_1
-    xor-int/2addr v1, v3
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Llg1;->t(Z)V
+.method public final f()Ly58;
+    .locals 1
 
-    return-void
+    sget-object v0, Log1;->d:Lw58;
 
-    nop
+    return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Log1;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lqhg;
+    .locals 1
+
+    sget-object v0, Log1;->c:Llhg;
+
+    return-object v0
+.end method
+
+.method public final getType()Li0f;
+    .locals 1
+
+    sget-object v0, Log1;->o:Li0f;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x1553d49d
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Ln6b;->m:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ShareLink"
+
+    return-object v0
+.end method
+
+.method public final u()I
+    .locals 1
+
+    const/4 v0, 0x3
+
+    return v0
 .end method

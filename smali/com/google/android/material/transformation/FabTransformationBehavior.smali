@@ -59,7 +59,7 @@
 
 
 # virtual methods
-.method public final f(Landroid/view/View;Landroid/view/View;)Z
+.method public final b(Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
@@ -84,16 +84,16 @@
     throw p1
 .end method
 
-.method public final g(Lxa4;)V
+.method public final c(Lab4;)V
     .locals 1
 
-    iget v0, p1, Lxa4;->h:I
+    iget v0, p1, Lab4;->h:I
 
     if-nez v0, :cond_0
 
     const/16 v0, 0x50
 
-    iput v0, p1, Lxa4;->h:I
+    iput v0, p1, Lab4;->h:I
 
     :cond_0
     return-void

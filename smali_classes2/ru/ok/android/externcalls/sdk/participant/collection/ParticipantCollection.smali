@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Collection;
-.implements Ld38;
+.implements Lo28;
 
 
 # annotations
@@ -14,7 +14,7 @@
         "Ljava/util/Collection<",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         ">;",
-        "Ld38;"
+        "Lo28;"
     }
 .end annotation
 
@@ -30,10 +30,10 @@
         "externalId",
         "getByExternal",
         "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
-        "Lzk1;",
+        "Lsk1;",
         "internalId",
         "getByInternal",
-        "(Lzk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
+        "(Lsk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "",
         "hasOtherParticipants",
         "()Z",
@@ -216,7 +216,7 @@
     return-object p1
 .end method
 
-.method public abstract getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+.method public abstract getByInternal(Lsk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 .end method
 
 .method public abstract getMe()Lru/ok/android/externcalls/sdk/ConversationParticipant;

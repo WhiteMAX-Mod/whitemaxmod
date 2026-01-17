@@ -4,25 +4,25 @@
 
 
 # static fields
-.field public static final E0:Ljava/util/regex/Pattern;
+.field public static final F0:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public A0:F
+.field public A0:I
 
 .field public B0:F
 
-.field public C0:Ljava/util/regex/Pattern;
+.field public C0:F
 
-.field public D0:Z
+.field public D0:Ljava/util/regex/Pattern;
 
-.field public w0:Z
+.field public E0:Z
 
 .field public x0:Z
 
-.field public y0:Ljava/lang/CharSequence;
+.field public y0:Z
 
-.field public z0:I
+.field public z0:Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -37,7 +37,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->E0:Ljava/util/regex/Pattern;
+    sput-object v0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->F0:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -51,11 +51,11 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    iput v1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->A0:F
+    iput v1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->B0:F
 
     const/4 v1, 0x0
 
-    iput v1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->B0:F
+    iput v1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->C0:F
 
     const/4 v1, 0x0
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    sget-object p1, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->E0:Ljava/util/regex/Pattern;
+    sget-object p1, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->F0:Ljava/util/regex/Pattern;
 
     invoke-virtual {p0, p1}, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->setEndPunctuationPattern(Ljava/util/regex/Pattern;)V
 
@@ -151,7 +151,7 @@
         }
     .end annotation
 
-    iget v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:I
+    iget v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->A0:I
 
     return v0
 .end method
@@ -232,9 +232,9 @@
 
     sget-object v8, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
-    iget v9, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->A0:F
+    iget v9, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->B0:F
 
-    iget v10, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->B0:F
+    iget v10, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->C0:F
 
     const/4 v11, 0x0
 
@@ -248,11 +248,11 @@
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 8
 
-    iget-boolean v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->w0:Z
+    iget-boolean v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
 
     if-eqz v0, :cond_6
 
-    iget-boolean v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->D0:Z
+    iget-boolean v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->E0:Z
 
     const/4 v1, 0x2
 
@@ -264,7 +264,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -272,7 +272,7 @@
 
     sub-int/2addr v5, v2
 
-    iget-object v6, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iget-object v6, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     invoke-interface {v6}, Ljava/lang/CharSequence;->length()I
 
@@ -293,7 +293,7 @@
     move-result-object v4
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     invoke-virtual {p0, v0}, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->k(Ljava/lang/CharSequence;)Landroid/text/StaticLayout;
 
@@ -319,7 +319,7 @@
 
     add-int/2addr v0, v2
 
-    iget-object v5, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iget-object v5, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
 
@@ -327,7 +327,7 @@
 
     if-lt v0, v5, :cond_1
 
-    iget-object v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -336,7 +336,7 @@
     sub-int/2addr v0, v2
 
     :cond_1
-    iget-object v5, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iget-object v5, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     invoke-interface {v5, v3, v0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -382,7 +382,7 @@
 
     invoke-direct {v0, v5}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->C0:Ljava/util/regex/Pattern;
+    iget-object v1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->D0:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, v5}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -409,7 +409,7 @@
     goto :goto_1
 
     :cond_3
-    iget-object v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->C0:Ljava/util/regex/Pattern;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->D0:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, v5}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -443,27 +443,27 @@
 
     if-nez v1, :cond_5
 
-    iput-boolean v2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
+    iput-boolean v2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Z
 
     :try_start_0
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iput-boolean v3, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
+    iput-boolean v3, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Z
 
     goto :goto_2
 
     :catchall_0
     move-exception p1
 
-    iput-boolean v3, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
+    iput-boolean v3, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Z
 
     throw p1
 
     :cond_5
     :goto_2
-    iput-boolean v3, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->w0:Z
+    iput-boolean v3, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
 
     :cond_6
     invoke-super {p0, p1}, Lru/ok/tamtam/animoji/views/AnimojiTextView;->onDraw(Landroid/graphics/Canvas;)V
@@ -478,7 +478,7 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->w0:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
 
     return-void
 .end method
@@ -488,16 +488,16 @@
 
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/AppCompatTextView;->onTextChanged(Ljava/lang/CharSequence;III)V
 
-    iget-boolean p2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
+    iget-boolean p2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Z
 
     if-nez p2, :cond_0
 
-    iget-object p2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iget-object p2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     if-eqz p2, :cond_1
 
     :cond_0
-    iget-object p2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iget-object p2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -506,11 +506,11 @@
     if-nez p2, :cond_2
 
     :cond_1
-    iput-object p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->y0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:Ljava/lang/CharSequence;
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->w0:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
 
     :cond_2
     return-void
@@ -519,7 +519,7 @@
 .method public setEndPunctuationPattern(Ljava/util/regex/Pattern;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->C0:Ljava/util/regex/Pattern;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->D0:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -527,9 +527,9 @@
 .method public final setLineSpacing(FF)V
     .locals 0
 
-    iput p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->B0:F
+    iput p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->C0:F
 
-    iput p2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->A0:F
+    iput p2, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->B0:F
 
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setLineSpacing(FF)V
 
@@ -541,11 +541,11 @@
 
     invoke-super {p0, p1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    iput p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->z0:I
+    iput p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->A0:I
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->w0:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
 
     return-void
 .end method
@@ -557,7 +557,7 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->w0:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->x0:Z
 
     return-void
 .end method
@@ -565,7 +565,7 @@
 .method public setSaveLastCharPosition(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->D0:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;->E0:Z
 
     return-void
 .end method

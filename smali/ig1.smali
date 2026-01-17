@@ -1,120 +1,113 @@
 .class public final Lig1;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
-.field public final synthetic b:[Lf76;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>([Lf76;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;)V
     .locals 0
 
-    iput p2, p0, Lig1;->a:I
+    iput-object p2, p0, Lig1;->X:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    iput-object p1, p0, Lig1;->b:[Lf76;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lig1;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lig1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lig1;->b:[Lf76;
+    move-result-object p1
 
-    array-length v0, v0
+    check-cast p1, Lig1;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-object v0
+    invoke-virtual {p1, p2}, Lig1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lig1;->b:[Lf76;
+    return-object p2
+.end method
 
-    array-length v0, v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-array v0, v0, [Lh5c;
+    new-instance v0, Lig1;
 
-    return-object v0
+    iget-object v1, p0, Lig1;->X:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    :pswitch_1
-    iget-object v0, p0, Lig1;->b:[Lf76;
+    invoke-direct {v0, p2, v1}, Lig1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;)V
 
-    array-length v0, v0
-
-    new-array v0, v0, [Ljbb;
+    iput-object p1, v0, Lig1;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_2
-    iget-object v0, p0, Lig1;->b:[Lf76;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    array-length v0, v0
+    iget-object v0, p0, Lig1;->o:Ljava/lang/Object;
 
-    new-array v0, v0, [Lyx3;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    check-cast v0, Lhja;
 
-    :pswitch_3
-    iget-object v0, p0, Lig1;->b:[Lf76;
+    instance-of p1, v0, Lme1;
 
-    array-length v0, v0
+    if-eqz p1, :cond_0
 
-    new-array v0, v0, [Ljava/lang/Object;
+    sget-object p1, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->B0:[Lz28;
 
-    return-object v0
+    iget-object p1, p0, Lig1;->X:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    :pswitch_4
-    iget-object v0, p0, Lig1;->b:[Lf76;
+    iget-object p1, p1, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->c:Ljava/lang/Object;
 
-    array-length v0, v0
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/util/List;
+    move-result-object p1
 
-    return-object v0
+    move-object v1, p1
 
-    :pswitch_5
-    iget-object v0, p0, Lig1;->b:[Lf76;
+    check-cast v1, Ljl1;
 
-    array-length v0, v0
+    move-object p1, v0
 
-    new-array v0, v0, [Loc6;
+    check-cast p1, Lme1;
 
-    return-object v0
+    iget-object v2, p1, Lme1;->b:Ljava/lang/String;
 
-    :pswitch_6
-    iget-object v0, p0, Lig1;->b:[Lf76;
+    new-instance v6, Lkg1;
 
-    array-length v0, v0
+    const/4 p1, 0x0
 
-    new-array v0, v0, [Lyx3;
+    invoke-direct {v6, v0, p1}, Lkg1;-><init>(Lhja;I)V
 
-    return-object v0
+    const/4 v3, 0x1
 
-    nop
+    const/4 v4, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const/4 v5, 0x1
+
+    invoke-virtual/range {v1 .. v6}, Ljl1;->j(Ljava/lang/String;ZZZLlq6;)V
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

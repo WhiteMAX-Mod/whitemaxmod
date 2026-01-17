@@ -16,14 +16,14 @@
         "Lkotlin/Function0;",
         "block",
         "synchronizedImpl",
-        "(Ljava/lang/Object;Lmq6;)Ljava/lang/Object;",
+        "(Ljava/lang/Object;Llq6;)Ljava/lang/Object;",
         "SynchronizedObject",
         "kotlinx-coroutines-core"
     }
     k = 0x2
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method public static final synchronizedImpl(Ljava/lang/Object;Lmq6;)Ljava/lang/Object;
+.method public static final synchronizedImpl(Ljava/lang/Object;Llq6;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -45,7 +45,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/lang/Object;",
-            "Lmq6;",
+            "Llq6;",
             ")TT;"
         }
     .end annotation
@@ -53,7 +53,7 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0

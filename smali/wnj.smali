@@ -2,194 +2,102 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw9e;
+
 
 # direct methods
-.method public static final a(Landroid/content/res/XmlResourceParser;)Ljava/util/LinkedHashMap;
-    .locals 5
+.method public static b(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
+    .locals 2
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    instance-of v0, p0, Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0}, Landroid/util/AttributeSet;->getAttributeCount()I
+    check-cast p0, Landroid/graphics/drawable/ColorDrawable;
 
-    move-result v1
+    invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
 
-    const/4 v2, 0x0
+    move-result p0
 
-    :goto_0
-    if-ge v2, v1, :cond_0
+    invoke-static {p0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object p0
 
-    move-result-object v3
-
-    invoke-interface {p0, v2}, Landroid/util/AttributeSet;->getAttributeName(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    return-object v0
-.end method
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-.method public static final b(Ljava/lang/String;)I
-    .locals 6
+    const/16 v1, 0x1d
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    if-lt v0, v1, :cond_1
+
+    invoke-static {p0}, Lx4;->t(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
-    const-string v1, "#"
+    if-eqz v0, :cond_1
 
-    const/4 v2, 0x0
+    invoke-static {p0}, La85;->e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/ColorStateListDrawable;
 
-    const/4 v3, 0x1
+    move-result-object p0
 
-    const/4 v4, 0x2
+    invoke-static {p0}, La85;->b(Landroid/graphics/drawable/ColorStateListDrawable;)Landroid/content/res/ColorStateList;
 
-    if-eq v0, v4, :cond_3
+    move-result-object p0
 
-    const/4 v5, 0x4
-
-    if-eq v0, v5, :cond_2
-
-    const/4 v1, 0x7
-
-    if-eq v0, v1, :cond_1
-
-    const/16 v1, 0x9
-
-    if-eq v0, v1, :cond_0
-
-    return v2
-
-    :cond_0
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
+    return-object p0
 
     :cond_1
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    const/4 p0, 0x0
 
-    move-result p0
-
-    return p0
-
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-
-    :cond_3
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    const/16 v1, 0x8
-
-    if-ge v2, v1, :cond_4
-
-    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
+    return-object p0
 .end method
 
-.method public static final c(Lm4h;)V
-    .locals 2
 
-    new-instance v0, Lhee;
+# virtual methods
+.method public a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+    .locals 10
 
-    const/16 v1, 0x19
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
-    invoke-direct {v0, v1}, Lhee;-><init>(I)V
+    move-result v0
 
-    const/16 v1, 0x271
+    int-to-float v0, v0
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    int-to-float v1, p3
 
-    new-instance v0, Lhee;
+    div-float v8, v0, v1
 
-    const/16 v1, 0x1a
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
-    invoke-direct {v0, v1}, Lhee;-><init>(I)V
+    move-result v0
 
-    const/16 v1, 0x272
+    int-to-float v0, v0
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    int-to-float v1, p4
 
-    return-void
+    div-float v9, v0, v1
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    move v6, p5
+
+    move/from16 v7, p6
+
+    invoke-virtual/range {v1 .. v9}, Lwnj;->c(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
+
+    return-object p1
+.end method
+
+.method public abstract c(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
 .end method

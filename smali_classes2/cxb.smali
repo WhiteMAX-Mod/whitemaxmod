@@ -1,140 +1,127 @@
 .class public final Lcxb;
-.super Ljava/lang/Object;
+.super Lhoj;
 .source "SourceFile"
-
-# interfaces
-.implements Lhxb;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Llfa;
+.field public final synthetic b:Lfxb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Llfa;)V
+.method public synthetic constructor <init>(Lfxb;I)V
     .locals 0
 
+    iput p2, p0, Lcxb;->a:I
+
+    iput-object p1, p0, Lcxb;->b:Lfxb;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcxb;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lcxb;->b:Llfa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final onCreateFailure(Ljava/lang/String;)V
+    .locals 5
 
-    iget-object v0, p0, Lcxb;->a:Ljava/lang/String;
+    iget v0, p0, Lcxb;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b()Llfa;
-    .locals 1
+    iget-object v0, p0, Lcxb;->b:Lfxb;
 
-    iget-object v0, p0, Lcxb;->b:Llfa;
+    iget-object v1, v0, Lfxb;->E:Lpk1;
 
-    return-object v0
-.end method
+    iget-boolean v1, v1, Lpk1;->z:Z
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x1
+    new-instance v1, Loja;
 
-    if-ne p0, p1, :cond_0
+    sget-object v2, Lnja;->b:Lnja;
 
-    return v0
+    iget-object v3, v0, Lfxb;->O:Lorg/webrtc/PeerConnection;
+
+    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getRemoteDescription()Lorg/webrtc/SessionDescription;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, p1, v4, v3}, Loja;-><init>(Lnja;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, v1}, Lfxb;->h(Loja;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lcxb;
+    invoke-virtual {v0, p1}, Lfxb;->j(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
+    :goto_0
+    return-void
 
-    if-nez v1, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Lcxb;->b:Lfxb;
 
-    return v2
+    iget-object v1, v0, Lfxb;->E:Lpk1;
+
+    iget-boolean v1, v1, Lpk1;->z:Z
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Loja;
+
+    sget-object v2, Lnja;->a:Lnja;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, p1, v3, v3}, Loja;-><init>(Lnja;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, v1}, Lfxb;->h(Loja;)V
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lcxb;
+    invoke-virtual {v0, p1}, Lfxb;->j(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcxb;->a:Ljava/lang/String;
+    :goto_1
+    return-void
 
-    iget-object v3, p1, Lcxb;->a:Ljava/lang/String;
+    nop
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lcxb;->b:Llfa;
-
-    iget-object p1, p1, Lcxb;->b:Llfa;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final onCreateSuccess(Lorg/webrtc/SessionDescription;)V
+    .locals 1
 
-    iget-object v0, p0, Lcxb;->a:Ljava/lang/String;
+    iget v0, p0, Lcxb;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lcxb;->b:Lfxb;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0, p1}, Lfxb;->n(Lorg/webrtc/SessionDescription;)V
 
-    iget-object v1, p0, Lcxb;->b:Llfa;
+    return-void
 
-    invoke-virtual {v1}, Llfa;->hashCode()I
+    :pswitch_0
+    iget-object v0, p0, Lcxb;->b:Lfxb;
 
-    move-result v1
+    invoke-virtual {v0, p1}, Lfxb;->n(Lorg/webrtc/SessionDescription;)V
 
-    add-int/2addr v1, v0
+    return-void
 
-    return v1
-.end method
+    nop
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CancelMetric(props="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcxb;->b:Llfa;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,48 +1,69 @@
 .class public final synthetic Lxwb;
-.super Lrr6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lby3;
 
 
-# static fields
-.field public static final a:Lxwb;
+# instance fields
+.field public final synthetic a:Lfxb;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Lorg/webrtc/SessionDescription;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lfxb;ZLorg/webrtc/SessionDescription;)V
+    .locals 0
 
-    new-instance v0, Lxwb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v4, "<init>(Ljava/lang/Throwable;)V"
+    iput-object p1, p0, Lxwb;->a:Lfxb;
 
-    const/4 v5, 0x0
+    iput-boolean p2, p0, Lxwb;->b:Z
 
-    const/4 v1, 0x1
-
-    const-class v2, Lwwb;
-
-    const-string v3, "<init>"
-
-    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lxwb;->a:Lxwb;
+    iput-object p3, p0, Lxwb;->c:Lorg/webrtc/SessionDescription;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    check-cast p1, Ljava/lang/Throwable;
+    check-cast p1, Lorg/webrtc/PeerConnection;
 
-    new-instance v0, Lwwb;
+    iget-object p1, p0, Lxwb;->a:Lfxb;
 
-    invoke-direct {v0, p1}, Lwwb;-><init>(Ljava/lang/Throwable;)V
+    iget-object v0, p1, Lfxb;->v:Landroid/os/Handler;
 
-    return-object v0
+    iget-boolean v1, p0, Lxwb;->b:Z
+
+    iget-object v2, p0, Lxwb;->c:Lorg/webrtc/SessionDescription;
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Laxb;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, p1, v2, v3}, Laxb;-><init>(Lfxb;Lorg/webrtc/SessionDescription;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_0
+    new-instance v1, Laxb;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, p1, v2, v3}, Laxb;-><init>(Lfxb;Lorg/webrtc/SessionDescription;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

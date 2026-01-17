@@ -19,7 +19,7 @@
 
     const-string v0, "Data"
 
-    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -33,7 +33,7 @@
 
     invoke-direct {v1, v0}, Lyh4;-><init>(Ljava/util/HashMap;)V
 
-    invoke-static {v1}, Lyh4;->f(Lyh4;)[B
+    invoke-static {v1}, Lyh4;->e(Lyh4;)[B
 
     sput-object v1, Lyh4;->c:Lyh4;
 
@@ -273,7 +273,7 @@
     throw p0
 .end method
 
-.method public static f(Lyh4;)[B
+.method public static e(Lyh4;)[B
     .locals 6
 
     const-string v0, "Error in Data#toByteArray: "
@@ -518,34 +518,7 @@
     return p2
 .end method
 
-.method public final c(Ljava/lang/String;)F
-    .locals 1
-
-    iget-object v0, p0, Lyh4;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of v0, p1, Ljava/lang/Float;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final d(Ljava/lang/String;J)J
+.method public final c(Ljava/lang/String;J)J
     .locals 1
 
     iget-object v0, p0, Lyh4;->a:Ljava/util/HashMap;
@@ -570,7 +543,7 @@
     return-wide p2
 .end method
 
-.method public final e(Ljava/lang/String;)Ljava/lang/String;
+.method public final d(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lyh4;->a:Ljava/util/HashMap;

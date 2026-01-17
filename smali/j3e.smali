@@ -1,85 +1,124 @@
-.class public abstract Lj3e;
-.super Landroid/graphics/drawable/Drawable;
+.class public final synthetic Lj3e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
 
-# static fields
-.field public static final a:D
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/android/root/RootController;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/android/root/RootController;I)V
+    .locals 0
 
-    const-wide v0, 0x4046800000000000L    # 45.0
+    iput p2, p0, Lj3e;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    iput-object p1, p0, Lj3e;->b:Lone/me/android/root/RootController;
 
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v0
-
-    sput-wide v0, Lj3e;->a:D
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(FFZ)F
-    .locals 6
 
-    if-eqz p2, :cond_0
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    float-to-double v0, p0
+    iget v0, p0, Lj3e;->a:I
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    const/4 v1, -0x1
 
-    sget-wide v4, Lj3e;->a:D
+    iget-object v2, p0, Lj3e;->b:Lone/me/android/root/RootController;
 
-    sub-double/2addr v2, v4
+    packed-switch v0, :pswitch_data_0
 
-    float-to-double p0, p1
+    sget-object v0, Lone/me/android/root/RootController;->t0:[Lz28;
 
-    mul-double/2addr v2, p0
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    add-double/2addr v2, v0
+    move-result-object v0
 
-    double-to-float p0, v2
+    invoke-static {v0}, Ls18;->a(Landroid/content/Context;)Lda2;
 
-    :cond_0
-    return p0
-.end method
+    move-result-object v0
 
-.method public static b(FFZ)F
-    .locals 6
+    sget v2, Lv7d;->root_top_indicator:I
 
-    const/high16 v0, 0x3fc00000    # 1.5f
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
-    if-eqz p2, :cond_0
+    new-instance v2, Lab4;
 
-    mul-float/2addr p0, v0
+    const/4 v3, -0x2
 
-    float-to-double v0, p0
+    invoke-direct {v2, v1, v3}, Lab4;-><init>(II)V
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-wide v4, Lj3e;->a:D
+    const/16 v1, 0x64
 
-    sub-double/2addr v2, v4
+    int-to-float v1, v1
 
-    float-to-double p0, p1
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    mul-double/2addr v2, p0
+    move-result-object v2
 
-    add-double/2addr v2, v0
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    double-to-float p0, v2
+    move-result-object v2
 
-    return p0
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_0
-    mul-float/2addr p0, v0
+    mul-float/2addr v1, v2
 
-    return p0
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    neg-float v1, v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/android/root/RootController;->t0:[Lz28;
+
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ls18;->a(Landroid/content/Context;)Lda2;
+
+    move-result-object v0
+
+    sget v2, Lv7d;->root_screen:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+
+    new-instance v2, Lab4;
+
+    invoke-direct {v2, v1, v1}, Lab4;-><init>(II)V
+
+    new-instance v1, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;
+
+    invoke-direct {v1}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;-><init>()V
+
+    invoke-virtual {v2, v1}, Lab4;->b(Lxa4;)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

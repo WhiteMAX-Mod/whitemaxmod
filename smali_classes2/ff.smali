@@ -9,16 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+.field public final synthetic b:Lef;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;I)V
+.method public synthetic constructor <init>(Lef;I)V
     .locals 0
 
     iput p2, p0, Lff;->a:I
 
-    iput-object p1, p0, Lff;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+    iput-object p1, p0, Lff;->b:Lef;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,88 +28,58 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 3
 
     iget v0, p0, Lff;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lff;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+    iget-object v0, p0, Lff;->b:Lef;
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lcr0;
+    iget-object v0, v0, Lef;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+
+    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u1:Lff;
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Lbr0;->c()V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u1:Lff;
+
+    :cond_0
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t1:Z
+
+    invoke-static {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->a(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;)V
+
+    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->e()V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lff;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+    iget-object v0, p0, Lff;->b:Lef;
 
-    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->k1:Ljava/util/ArrayList;
+    iget-object v1, v0, Lef;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+    iget-object v1, v1, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lbr0;
 
-    move-result v2
+    invoke-virtual {v1}, Lbr0;->b()V
 
-    if-nez v2, :cond_0
+    new-instance v1, Lff;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    const/4 v2, 0x1
 
-    move-result v2
+    invoke-direct {v1, v0, v2}, Lff;-><init>(Lef;I)V
 
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_0
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/view/View;
-
-    invoke-virtual {v4}, Landroid/view/View;->invalidate()V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->H0:Z
-
-    if-eqz v1, :cond_2
-
-    :cond_1
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->j1:Landroid/view/View;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    :cond_2
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lff;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    iget-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->W0:Z
-
-    if-nez v1, :cond_3
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->start()V
-
-    :cond_3
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->invalidateInternal()V
+    invoke-static {v1}, Lie;->d(Ljava/lang/Runnable;)V
 
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

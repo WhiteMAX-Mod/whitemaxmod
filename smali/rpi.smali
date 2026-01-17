@@ -1,79 +1,132 @@
 .class public final Lrpi;
-.super Lcom/google/android/gms/common/internal/a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/content/Intent;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/content/Intent;Ljava/lang/Object;I)V
+    .locals 0
+
+    iput p3, p0, Lrpi;->a:I
+
+    iput-object p1, p0, Lrpi;->b:Landroid/content/Intent;
+
+    iput-object p2, p0, Lrpi;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final g()I
-    .locals 1
-
-    const v0, 0x1110e58
-
-    return v0
-.end method
-
-.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
+.method public final a()V
     .locals 3
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lrpi;->a:I
 
-    const/4 p1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    return-object p1
+    iget-object v0, p0, Lrpi;->b:Landroid/content/Intent;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lrpi;->c:Ljava/lang/Object;
+
+    const/4 v2, 0x2
+
+    invoke-interface {v1, v0, v2}, Ld88;->b(Landroid/content/Intent;I)V
 
     :cond_0
-    const-string v0, "com.google.android.gms.common.moduleinstall.internal.IModuleInstallService"
+    return-void
 
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    :pswitch_0
+    iget-object v0, p0, Lrpi;->b:Landroid/content/Intent;
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    instance-of v2, v1, Lzoi;
+    iget-object v1, p0, Lrpi;->c:Ljava/lang/Object;
 
-    if-eqz v2, :cond_1
+    check-cast v1, Lcom/google/android/gms/common/api/GoogleApiActivity;
 
-    check-cast v1, Lzoi;
+    const/4 v2, 0x2
 
-    return-object v1
+    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     :cond_1
-    new-instance v1, Lzoi;
+    return-void
 
-    const/4 v2, 0x0
+    nop
 
-    invoke-direct {v1, p1, v0, v2}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
-
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m()[Ltx5;
-    .locals 1
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
-    sget-object v0, Ls1j;->b:[Ltx5;
+    :try_start_0
+    invoke-virtual {p0}, Lrpi;->a()V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public final p()Ljava/lang/String;
-    .locals 1
+    :catchall_0
+    move-exception p2
 
-    const-string v0, "com.google.android.gms.common.moduleinstall.internal.IModuleInstallService"
+    goto :goto_1
 
-    return-object v0
-.end method
+    :catch_0
+    move-exception p2
 
-.method public final q()Ljava/lang/String;
-    .locals 1
+    :try_start_1
+    const-string v0, "Failed to start resolution intent."
 
-    const-string v0, "com.google.android.gms.chimera.container.moduleinstall.ModuleInstallService.START"
+    const-string v1, "Failed to start resolution intent. This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store."
 
-    return-object v0
-.end method
+    sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
-.method public final r()Z
-    .locals 1
+    const-string v3, "generic"
 
-    const/4 v0, 0x1
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    return v0
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v3, v2, :cond_0
+
+    move-object v0, v1
+
+    :cond_0
+    const-string v1, "DialogRedirect"
+
+    invoke-static {v1, v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    return-void
+
+    :goto_1
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    throw p2
 .end method

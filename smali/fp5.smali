@@ -2,109 +2,146 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljvd;
-
 
 # instance fields
-.field public final a:Ly52;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Z
+.field public final b:Ls8g;
 
-.field public final c:Z
+.field public final c:Lbs4;
 
-.field public final d:Lqg8;
+.field public final d:Lx30;
 
-.field public final e:I
+.field public e:Lj4g;
 
-.field public final f:Lcu;
+.field public f:Lj4g;
 
-.field public final g:Landroid/media/metrics/LogSessionId;
+.field public final g:Lx30;
+
+.field public final h:Landroid/os/Looper;
+
+.field public final i:Lw20;
+
+.field public final j:I
+
+.field public final k:Z
+
+.field public final l:Ljke;
+
+.field public final m:Lvr4;
+
+.field public final n:J
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(ZZLqg8;ILcu;Landroid/media/metrics/LogSessionId;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lloe;)V
+    .locals 6
+
+    new-instance v0, Lbs4;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1, p2}, Lbs4;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lx30;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p2, p1, v1}, Lx30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v1, Lx30;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, p1, v2}, Lx30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v2, Lti4;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v3}, Lti4;-><init>(I)V
+
+    new-instance v3, Lx30;
+
+    const/16 v4, 0x8
+
+    invoke-direct {v3, p1, v4}, Lx30;-><init>(Landroid/content/Context;I)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lfp5;->b:Z
+    iput-object p1, p0, Lfp5;->a:Landroid/content/Context;
 
-    iput-boolean p2, p0, Lfp5;->c:Z
+    iput-object v0, p0, Lfp5;->c:Lbs4;
 
-    iput-object p3, p0, Lfp5;->d:Lqg8;
+    iput-object p2, p0, Lfp5;->d:Lx30;
 
-    iput p4, p0, Lfp5;->e:I
+    iput-object v1, p0, Lfp5;->e:Lj4g;
 
-    iput-object p5, p0, Lfp5;->f:Lcu;
+    iput-object v2, p0, Lfp5;->f:Lj4g;
 
-    iput-object p6, p0, Lfp5;->g:Landroid/media/metrics/LogSessionId;
+    iput-object v3, p0, Lfp5;->g:Lx30;
 
-    new-instance p1, Ly52;
+    sget p1, Lkbh;->a:I
 
-    const/16 p2, 0x12
-
-    invoke-direct {p1, p2}, Ly52;-><init>(I)V
-
-    iput-object p1, p0, Lfp5;->a:Ly52;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b(Landroid/os/Handler;Ltp5;Ltp5;Ltp5;Ltp5;)[Lol0;
-    .locals 6
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-boolean p2, p0, Lfp5;->b:Z
-
-    iget-object v4, p0, Lfp5;->f:Lcu;
-
-    iget-object v1, p0, Lfp5;->d:Lqg8;
-
-    if-nez p2, :cond_0
-
-    new-instance p2, Lqo5;
-
-    iget-object p3, p0, Lfp5;->a:Ly52;
-
-    iget-object p4, p0, Lfp5;->g:Landroid/media/metrics/LogSessionId;
-
-    invoke-direct {p2, v1, p3, v4, p4}, Lqo5;-><init>(Lqg8;Ly52;Lcu;Landroid/media/metrics/LogSessionId;)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    iget-boolean p2, p0, Lfp5;->c:Z
-
-    if-nez p2, :cond_1
-
-    new-instance v0, Lso5;
-
-    iget-object v3, p0, Lfp5;->a:Ly52;
-
-    iget-object v5, p0, Lfp5;->g:Landroid/media/metrics/LogSessionId;
-
-    iget v2, p0, Lfp5;->e:I
-
-    invoke-direct/range {v0 .. v5}, Lso5;-><init>(Lqg8;ILy52;Lcu;Landroid/media/metrics/LogSessionId;)V
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    const/4 p2, 0x0
-
-    new-array p2, p2, [Lol0;
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p1
 
-    check-cast p1, [Lol0;
+    if-eqz p1, :cond_0
 
-    return-object p1
+    goto :goto_0
+
+    :cond_0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    :goto_0
+    iput-object p1, p0, Lfp5;->h:Landroid/os/Looper;
+
+    sget-object p1, Lw20;->Y:Lw20;
+
+    iput-object p1, p0, Lfp5;->i:Lw20;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lfp5;->j:I
+
+    iput-boolean p1, p0, Lfp5;->k:Z
+
+    sget-object p1, Ljke;->c:Ljke;
+
+    iput-object p1, p0, Lfp5;->l:Ljke;
+
+    const-wide/16 p1, 0x14
+
+    invoke-static {p1, p2}, Lkbh;->B(J)J
+
+    move-result-wide v2
+
+    const-wide/16 p1, 0x1f4
+
+    invoke-static {p1, p2}, Lkbh;->B(J)J
+
+    move-result-wide v4
+
+    new-instance v0, Lvr4;
+
+    const/4 v1, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lvr4;-><init>(IJJ)V
+
+    iput-object v0, p0, Lfp5;->m:Lvr4;
+
+    sget-object p1, Ls8g;->a:Ls8g;
+
+    iput-object p1, p0, Lfp5;->b:Ls8g;
+
+    const-wide/16 p1, 0x7d0
+
+    iput-wide p1, p0, Lfp5;->n:J
+
+    return-void
 .end method

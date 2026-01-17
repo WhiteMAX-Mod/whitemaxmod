@@ -4,52 +4,62 @@
 
 
 # instance fields
-.field public final a:J
+.field public a:Ljava/lang/String;
 
-.field public final b:Z
+.field public b:J
 
-.field public final c:Z
+.field public c:Ljava/lang/String;
 
-.field public final d:Z
+.field public d:I
 
-.field public final e:Ljava/lang/String;
+.field public e:Ljava/util/List;
 
-.field public final f:Ljava/lang/String;
+.field public f:I
 
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:I
-
-.field public final j:Lr37;
+.field public g:I
 
 
 # direct methods
-.method public constructor <init>(JZZZLjava/lang/String;Ljava/lang/String;ZZILr37;)V
-    .locals 0
+.method public constructor <init>(Lth2;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lth2;->a:J
+    iget-object v0, p1, Lth2;->a:Ljava/lang/String;
 
-    iput-boolean p3, p0, Lth2;->b:Z
+    iput-object v0, p0, Lth2;->a:Ljava/lang/String;
 
-    iput-boolean p4, p0, Lth2;->c:Z
+    iget-wide v0, p1, Lth2;->b:J
 
-    iput-boolean p5, p0, Lth2;->d:Z
+    iput-wide v0, p0, Lth2;->b:J
 
-    iput-object p6, p0, Lth2;->e:Ljava/lang/String;
+    iget-object v0, p1, Lth2;->c:Ljava/lang/String;
 
-    iput-object p7, p0, Lth2;->f:Ljava/lang/String;
+    iput-object v0, p0, Lth2;->c:Ljava/lang/String;
 
-    iput-boolean p8, p0, Lth2;->g:Z
+    iget v0, p1, Lth2;->d:I
 
-    iput-boolean p9, p0, Lth2;->h:Z
+    iput v0, p0, Lth2;->d:I
 
-    iput p10, p0, Lth2;->i:I
+    iget-object v0, p1, Lth2;->e:Ljava/util/List;
 
-    iput-object p11, p0, Lth2;->j:Lr37;
+    iput-object v0, p0, Lth2;->e:Ljava/util/List;
+
+    iget v0, p1, Lth2;->f:I
+
+    iput v0, p0, Lth2;->f:I
+
+    iget p1, p1, Lth2;->g:I
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x3
+
+    :goto_0
+    iput p1, p0, Lth2;->g:I
 
     return-void
 .end method

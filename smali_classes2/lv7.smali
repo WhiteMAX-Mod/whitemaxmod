@@ -1,73 +1,123 @@
-.class public final enum Llv7;
-.super Ljava/lang/Enum;
+.class public final Llv7;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final enum a:Llv7;
 
-.field public static final enum b:Llv7;
+# instance fields
+.field public final synthetic X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-.field public static final synthetic c:[Llv7;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+    .locals 0
 
-    new-instance v0, Llv7;
+    iput-object p2, p0, Llv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    const-string v1, "INVITE_BY_PHONE"
+    const/4 p2, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Llv7;->a:Llv7;
-
-    new-instance v1, Llv7;
-
-    const-string v2, "INVITE_BY_LINK"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Llv7;->b:Llv7;
-
-    filled-new-array {v0, v1}, [Llv7;
-
-    move-result-object v0
-
-    sput-object v0, Llv7;->c:[Llv7;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Llv7;
-    .locals 1
 
-    const-class v0, Llv7;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Llv7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Llv7;
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Llv7;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Llv7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Llv7;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Llv7;->c:[Llv7;
+    new-instance v0, Llv7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Llv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Llv7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
 
-    check-cast v0, [Llv7;
+    iput-object p1, v0, Llv7;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Llv7;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljv7;
+
+    instance-of p1, v0, Liv7;
+
+    iget-object v1, p0, Llv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, v1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->v0:Ln8g;
+
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Li14;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    check-cast v0, Liv7;
+
+    iget-object v0, v0, Liv7;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1, v1, v0}, Li14;->a(Landroid/content/Context;Landroid/net/Uri;)V
+
+    goto :goto_0
+
+    :cond_0
+    instance-of p1, v0, Lhv7;
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->z0:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->B0()Lefb;
+
+    move-result-object p1
+
+    const-string v0, ""
+
+    invoke-virtual {p1, v0}, Lefb;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

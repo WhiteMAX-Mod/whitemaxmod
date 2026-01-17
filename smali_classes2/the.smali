@@ -1,23 +1,27 @@
-.class public final Lthe;
+.class public abstract Lthe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
+# static fields
+.field public static final a:J
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lta5;->d:I
 
-    iput p1, p0, Lthe;->a:I
+    const/4 v0, 0x5
 
-    iput p2, p0, Lthe;->b:I
+    sget-object v1, Lza5;->d:Lza5;
+
+    invoke-static {v0, v1}, Laoj;->g(ILza5;)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lthe;->a:J
 
     return-void
 .end method

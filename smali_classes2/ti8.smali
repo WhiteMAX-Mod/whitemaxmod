@@ -1,45 +1,43 @@
 .class public final Lti8;
-.super Ljava/lang/Object;
+.super Llm0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lorg/webrtc/PeerConnectionFactory;
+.field public final a:Ljava/lang/String;
 
-.field public b:La94;
+.field public final b:Landroid/content/Context;
 
-.field public c:Ljava/util/concurrent/Executor;
 
-.field public d:Landroid/content/Context;
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 0
 
-.field public e:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Ljava/lang/String;
+    iput-object p2, p0, Lti8;->a:Ljava/lang/String;
 
-.field public g:Ljava/lang/String;
+    iput-object p1, p0, Lti8;->b:Landroid/content/Context;
 
-.field public h:Lcgd;
+    return-void
+.end method
 
-.field public i:Lorg/webrtc/EglBase$Context;
 
-.field public j:Lvi8;
+# virtual methods
+.method public final a()Lkef;
+    .locals 3
 
-.field public k:Z
+    new-instance v0, Lcx0;
 
-.field public l:Z
+    const/4 v1, 0x6
 
-.field public m:Lz2e;
+    invoke-direct {v0, v1, p0}, Lcx0;-><init>(ILjava/lang/Object;)V
 
-.field public n:Lnkg;
+    new-instance v1, Lrza;
 
-.field public o:Z
+    const/4 v2, 0x4
 
-.field public p:Z
+    invoke-direct {v1, v2, v0}, Lrza;-><init>(ILjava/lang/Object;)V
 
-.field public q:Lki8;
-
-.field public r:Llxd;
-
-.field public s:Ljava/lang/Integer;
-
-.field public t:Z
+    return-object v1
+.end method

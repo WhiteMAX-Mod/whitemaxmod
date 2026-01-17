@@ -1,170 +1,247 @@
-.class public final enum Ljjj;
-.super Ljava/lang/Enum;
+.class public abstract Ljjj;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmzi;
-
-
-# static fields
-.field public static final enum X:Ljjj;
-
-.field public static final enum Y:Ljjj;
-
-.field public static final synthetic Z:[Ljjj;
-
-.field public static final enum b:Ljjj;
-
-.field public static final enum c:Ljjj;
-
-.field public static final enum d:Ljjj;
-
-.field public static final enum o:Ljjj;
-
-
-# instance fields
-.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
+.method public static a(Landroid/content/Context;Ljava/lang/String;)I
+    .locals 6
 
-    new-instance v0, Ljjj;
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    const-string v1, "UNKNOWN_FORMAT"
+    move-result v0
+
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, p1, v0, v1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
+
+    move-result v0
+
+    const/4 v3, -0x1
+
+    if-ne v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Lmq;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    if-nez v2, :cond_4
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_3
+
+    array-length v4, v2
+
+    if-gtz v4, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    aget-object v2, v2, v0
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    return v3
+
+    :cond_4
+    :goto_1
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-class v5, Landroid/app/AppOpsManager;
+
+    if-ne v3, v1, :cond_7
+
+    invoke-static {v4, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1d
+
+    if-lt v3, v4, :cond_6
+
+    invoke-static {p0}, Lnq;->c(Landroid/content/Context;)Landroid/app/AppOpsManager;
+
+    move-result-object v3
+
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v4
+
+    invoke-static {v3, p1, v4, v2}, Lnq;->a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    invoke-static {p0}, Lnq;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v3, p1, v1, p0}, Lnq;->a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_6
+    invoke-static {p0, v5}, Lmq;->a(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/AppOpsManager;
+
+    invoke-static {p0, p1, v2}, Lmq;->c(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_7
+    invoke-static {p0, v5}, Lmq;->a(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/AppOpsManager;
+
+    invoke-static {p0, p1, v2}, Lmq;->c(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    :goto_2
+    if-nez v2, :cond_8
+
+    :goto_3
+    return v0
+
+    :cond_8
+    const/4 p0, -0x2
+
+    return p0
+.end method
+
+.method public static final b(Ljava/lang/String;)Ljava/util/ArrayList;
+    .locals 5
+
+    new-instance v0, Lorg/json/JSONArray;
+
+    invoke-direct {v0, p0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+
+    move-result v1
+
+    invoke-direct {p0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+
+    move-result v2
+
+    invoke-static {v1, v2}, Lamj;->i(II)Lus7;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lss7;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    move-object v2, v1
+
+    check-cast v2, Lts7;
+
+    iget-boolean v2, v2, Lts7;->c:Z
+
+    if-eqz v2, :cond_2
+
+    move-object v2, v1
+
+    check-cast v2, Lts7;
+
+    invoke-virtual {v2}, Lts7;->nextInt()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v2}, Ljjj;-><init>(Ljava/lang/String;II)V
+    goto :goto_1
 
-    sput-object v0, Ljjj;->b:Ljjj;
+    :cond_1
+    const-string v3, "id"
 
-    new-instance v1, Ljjj;
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
-    const-string v2, "NV16"
+    move-result v3
 
-    const/4 v3, 0x1
+    int-to-byte v3, v3
 
-    invoke-direct {v1, v2, v3, v3}, Ljjj;-><init>(Ljava/lang/String;II)V
+    const-string v4, "title"
 
-    sput-object v1, Ljjj;->c:Ljjj;
+    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    new-instance v2, Ljjj;
+    move-result-object v2
 
-    const-string v3, "NV21"
+    new-instance v4, Lan3;
 
-    const/4 v4, 0x2
+    invoke-direct {v4, v3, v2}, Lan3;-><init>(BLjava/lang/String;)V
 
-    invoke-direct {v2, v3, v4, v4}, Ljjj;-><init>(Ljava/lang/String;II)V
+    move-object v2, v4
 
-    sput-object v2, Ljjj;->d:Ljjj;
+    :goto_1
+    if-eqz v2, :cond_0
 
-    new-instance v3, Ljjj;
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string v4, "YV12"
+    goto :goto_0
 
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Ljjj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Ljjj;->o:Ljjj;
-
-    new-instance v4, Ljjj;
-
-    const-string v5, "YUV_420_888"
-
-    const/4 v6, 0x4
-
-    const/4 v7, 0x7
-
-    invoke-direct {v4, v5, v6, v7}, Ljjj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Ljjj;->X:Ljjj;
-
-    new-instance v5, Ljjj;
-
-    const-string v8, "JPEG"
-
-    const/4 v9, 0x5
-
-    const/16 v10, 0x8
-
-    invoke-direct {v5, v8, v9, v10}, Ljjj;-><init>(Ljava/lang/String;II)V
-
-    move v8, v6
-
-    new-instance v6, Ljjj;
-
-    const-string v11, "BITMAP"
-
-    const/4 v12, 0x6
-
-    invoke-direct {v6, v11, v12, v8}, Ljjj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Ljjj;->Y:Ljjj;
-
-    move v8, v7
-
-    new-instance v7, Ljjj;
-
-    const-string v11, "CM_SAMPLE_BUFFER_REF"
-
-    invoke-direct {v7, v11, v8, v9}, Ljjj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v8, Ljjj;
-
-    const-string v9, "UI_IMAGE"
-
-    invoke-direct {v8, v9, v10, v12}, Ljjj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v9, Ljjj;
-
-    const-string v10, "CV_PIXEL_BUFFER_REF"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11, v11}, Ljjj;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array/range {v0 .. v9}, [Ljjj;
-
-    move-result-object v0
-
-    sput-object v0, Ljjj;->Z:[Ljjj;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Ljjj;->a:I
-
-    return-void
-.end method
-
-.method public static values()[Ljjj;
-    .locals 1
-
-    sget-object v0, Ljjj;->Z:[Ljjj;
-
-    invoke-virtual {v0}, [Ljjj;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljjj;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final d()I
-    .locals 1
-
-    iget v0, p0, Ljjj;->a:I
-
-    return v0
+    :cond_2
+    return-object p0
 .end method

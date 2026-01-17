@@ -1,476 +1,202 @@
 .class public final Ljr5;
-.super Ljava/lang/Object;
+.super Li5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:I
-
-.field public final i:Lpi3;
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:I
-
-.field public final m:Ljava/lang/String;
-
-.field public final n:Ljava/lang/String;
-
-.field public final o:I
-
-.field public final p:Landroidx/media3/transformer/ExportException;
-
-.field public final q:Lal7;
+.field public final synthetic c:Lkr5;
 
 
 # direct methods
-.method public constructor <init>(Lltd;JJIIILjava/lang/String;Ljava/lang/String;ILpi3;IIILjava/lang/String;Ljava/lang/String;ILandroidx/media3/transformer/ExportException;)V
-    .locals 2
+.method public constructor <init>(Lkr5;)V
+    .locals 0
 
-    move-object/from16 v0, p17
+    iput-object p1, p0, Ljr5;->c:Lkr5;
 
-    move/from16 v1, p18
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljr5;->q:Lal7;
-
-    iput-wide p2, p0, Ljr5;->a:J
-
-    iput-wide p4, p0, Ljr5;->b:J
-
-    iput p6, p0, Ljr5;->c:I
-
-    iput p7, p0, Ljr5;->d:I
-
-    iput p8, p0, Ljr5;->e:I
-
-    iput-object p9, p0, Ljr5;->f:Ljava/lang/String;
-
-    iput-object p10, p0, Ljr5;->g:Ljava/lang/String;
-
-    iput p11, p0, Ljr5;->h:I
-
-    iput-object p12, p0, Ljr5;->i:Lpi3;
-
-    iput p13, p0, Ljr5;->j:I
-
-    move/from16 p2, p14
-
-    iput p2, p0, Ljr5;->k:I
-
-    move/from16 p2, p15
-
-    iput p2, p0, Ljr5;->l:I
-
-    move-object/from16 p2, p16
-
-    iput-object p2, p0, Ljr5;->m:Ljava/lang/String;
-
-    iput-object v0, p0, Ljr5;->n:Ljava/lang/String;
-
-    iput v1, p0, Ljr5;->o:I
-
-    move-object/from16 p2, p19
-
-    iput-object p2, p0, Ljr5;->p:Landroidx/media3/transformer/ExportException;
-
-    const/4 p2, 0x1
-
-    invoke-static {p10, v1, p1, p2}, Ljr5;->a(Ljava/lang/String;ILltd;I)V
-
-    const/4 p2, 0x2
-
-    invoke-static {v0, v1, p1, p2}, Ljr5;->a(Ljava/lang/String;ILltd;I)V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;ILltd;I)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    const/4 p0, 0x1
-
-    if-ne p1, p0, :cond_1
-
-    goto :goto_2
-
-    :cond_1
     const/4 p1, 0x0
 
-    invoke-virtual {p2, p1}, Lal7;->l(I)Lcc6;
+    invoke-direct {p0, p1}, Li5;-><init>(I)V
 
-    move-result-object p2
-
-    :goto_0
-    invoke-virtual {p2}, Ly1;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p2}, Ly1;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lir5;
-
-    if-ne p3, p0, :cond_2
-
-    iget-object v0, v0, Lir5;->d:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v0, v0, Lir5;->e:Ljava/lang/String;
-
-    :goto_1
-    const/4 v1, 0x2
-
-    if-nez v0, :cond_4
-
-    if-ne p1, p0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_4
-    if-ne p1, v1, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move p1, p0
-
-    goto :goto_0
-
-    :cond_6
-    :goto_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final G(IILandroid/os/Bundle;)Z
+    .locals 7
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Ljr5;->c:Lkr5;
 
-    goto/16 :goto_0
+    iget-object v1, v0, Lkr5;->i:Landroid/view/View;
 
-    :cond_0
-    instance-of v0, p1, Ljr5;
+    const/4 v2, -0x1
 
-    if-nez v0, :cond_1
+    if-eq p1, v2, :cond_8
 
-    goto/16 :goto_1
+    const/4 v2, 0x1
 
-    :cond_1
-    check-cast p1, Ljr5;
+    if-eq p2, v2, :cond_7
 
-    iget-object v0, p0, Ljr5;->q:Lal7;
+    const/4 v3, 0x2
 
-    iget-object v1, p1, Ljr5;->q:Lal7;
+    if-eq p2, v3, :cond_6
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/16 v3, 0x40
 
-    move-result v0
+    const/4 v4, 0x0
 
-    if-eqz v0, :cond_2
+    const/high16 v5, 0x10000
 
-    iget-wide v0, p0, Ljr5;->a:J
+    const/high16 v6, -0x80000000
 
-    iget-wide v2, p1, Ljr5;->a:J
+    if-eq p2, v3, :cond_2
 
-    cmp-long v0, v0, v2
+    const/16 v3, 0x80
 
-    if-nez v0, :cond_2
+    if-eq p2, v3, :cond_0
 
-    iget-wide v0, p0, Ljr5;->b:J
-
-    iget-wide v2, p1, Ljr5;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_2
-
-    iget v0, p0, Ljr5;->c:I
-
-    iget v1, p1, Ljr5;->c:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Ljr5;->d:I
-
-    iget v1, p1, Ljr5;->d:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Ljr5;->e:I
-
-    iget v1, p1, Ljr5;->e:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Ljr5;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Ljr5;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Ljr5;->g:Ljava/lang/String;
-
-    iget-object v1, p1, Ljr5;->g:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Ljr5;->h:I
-
-    iget v1, p1, Ljr5;->h:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Ljr5;->i:Lpi3;
-
-    iget-object v1, p1, Ljr5;->i:Lpi3;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Ljr5;->j:I
-
-    iget v1, p1, Ljr5;->j:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Ljr5;->k:I
-
-    iget v1, p1, Ljr5;->k:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Ljr5;->l:I
-
-    iget v1, p1, Ljr5;->l:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Ljr5;->m:Ljava/lang/String;
-
-    iget-object v1, p1, Ljr5;->m:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Ljr5;->n:Ljava/lang/String;
-
-    iget-object v1, p1, Ljr5;->n:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Ljr5;->o:I
-
-    iget v1, p1, Ljr5;->o:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Ljr5;->p:Landroidx/media3/transformer/ExportException;
-
-    iget-object p1, p1, Ljr5;->p:Landroidx/media3/transformer/ExportException;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1, p2, p3}, Lkr5;->s(IILandroid/os/Bundle;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    return p1
 
+    :cond_0
+    iget p2, v0, Lkr5;->k:I
+
+    if-ne p2, p1, :cond_1
+
+    iput v6, v0, Lkr5;->k:I
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    invoke-virtual {v0, p1, v5}, Lkr5;->x(II)V
+
+    return v2
+
+    :cond_1
+    return v4
+
+    :cond_2
+    iget-object p2, v0, Lkr5;->h:Landroid/view/accessibility/AccessibilityManager;
+
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_5
+
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget p2, v0, Lkr5;->k:I
+
+    if-eq p2, p1, :cond_5
+
+    if-eq p2, v6, :cond_4
+
+    iput v6, v0, Lkr5;->k:I
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    invoke-virtual {v0, p2, v5}, Lkr5;->x(II)V
+
+    :cond_4
+    iput p1, v0, Lkr5;->k:I
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    const p2, 0x8000
+
+    invoke-virtual {v0, p1, p2}, Lkr5;->x(II)V
+
+    return v2
+
+    :cond_5
     :goto_0
-    const/4 p1, 0x1
+    return v4
+
+    :cond_6
+    invoke-virtual {v0, p1}, Lkr5;->j(I)Z
+
+    move-result p1
 
     return p1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
+    :cond_7
+    invoke-virtual {v0, p1}, Lkr5;->w(I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_8
+    sget-object p1, Lxsh;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, p2, p3}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
+
+    move-result p1
 
     return p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final w(I)Lg5;
+    .locals 1
 
-    iget-object v0, p0, Ljr5;->q:Lal7;
+    iget-object v0, p0, Ljr5;->c:Lkr5;
 
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    invoke-virtual {v0, p1}, Lkr5;->r(I)Lg5;
 
-    move-result v0
+    move-result-object p1
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, p1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    iget-wide v1, p0, Ljr5;->a:J
+    invoke-static {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    long-to-int v1, v1
+    move-result-object p1
 
-    add-int/2addr v0, v1
+    new-instance v0, Lg5;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {v0, p1}, Lg5;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    iget-wide v1, p0, Ljr5;->b:J
+    return-object v0
+.end method
 
-    long-to-int v1, v1
+.method public final x(I)Lg5;
+    .locals 2
 
-    add-int/2addr v0, v1
+    const/4 v0, 0x2
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v1, p0, Ljr5;->c:Lkr5;
 
-    iget v1, p0, Ljr5;->c:I
+    if-ne p1, v0, :cond_0
 
-    add-int/2addr v0, v1
+    iget p1, v1, Lkr5;->k:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    goto :goto_0
 
-    iget v1, p0, Ljr5;->d:I
+    :cond_0
+    iget p1, v1, Lkr5;->l:I
 
-    add-int/2addr v0, v1
+    :goto_0
+    const/high16 v0, -0x80000000
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-ne p1, v0, :cond_1
 
-    iget v1, p0, Ljr5;->e:I
+    const/4 p1, 0x0
 
-    add-int/2addr v0, v1
+    return-object p1
 
-    mul-int/lit8 v0, v0, 0x1f
+    :cond_1
+    invoke-virtual {p0, p1}, Ljr5;->w(I)Lg5;
 
-    iget-object v1, p0, Ljr5;->f:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ljr5;->g:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ljr5;->h:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ljr5;->i:Lpi3;
-
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Ljr5;->j:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Ljr5;->k:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Ljr5;->l:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ljr5;->m:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ljr5;->n:Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Ljr5;->o:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ljr5;->p:Landroidx/media3/transformer/ExportException;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-object p1
 .end method

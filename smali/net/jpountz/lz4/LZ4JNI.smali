@@ -31,12 +31,12 @@
 
     const-string v2, "Unsupported OS/arch, cannot find "
 
-    const-class v3, Lpia;
+    const-class v3, Lnia;
 
     monitor-enter v3
 
     :try_start_0
-    sget-boolean v4, Lpia;->a:Z
+    sget-boolean v4, Lnia;->a:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -48,7 +48,7 @@
 
     :cond_0
     :try_start_1
-    invoke-static {}, Lpia;->a()V
+    invoke-static {}, Lnia;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -59,7 +59,7 @@
 
     invoke-static {v5}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    sput-boolean v4, Lpia;->a:Z
+    sput-boolean v4, Lnia;->a:Z
     :try_end_2
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -75,11 +75,11 @@
 
     :catch_0
     :try_start_3
-    invoke-static {}, Lpia;->d()Ljava/lang/String;
+    invoke-static {}, Lnia;->d()Ljava/lang/String;
 
     move-result-object v5
 
-    const-class v6, Lpia;
+    const-class v6, Lnia;
 
     invoke-virtual {v6, v5}, Ljava/lang/Class;->getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -98,11 +98,11 @@
 
     invoke-direct {v7, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lpia;->c()I
+    invoke-static {}, Lnia;->b()I
 
     move-result v1
 
-    invoke-static {v1}, Lgg9;->b(I)Ljava/lang/String;
+    invoke-static {v1}, Lva9;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -176,7 +176,7 @@
 
     invoke-static {v0}, Ljava/lang/System;->load(Ljava/lang/String;)V
 
-    sput-boolean v4, Lpia;->a:Z
+    sput-boolean v4, Lnia;->a:Z
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
@@ -295,7 +295,7 @@
 
     :goto_4
     :try_start_f
-    sget-boolean v4, Lpia;->a:Z
+    sget-boolean v4, Lnia;->a:Z
 
     if-nez v4, :cond_4
 

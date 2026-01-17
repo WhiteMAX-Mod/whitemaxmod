@@ -161,13 +161,13 @@
 
     iget-boolean v2, p0, Lnta;->b:Z
 
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
     move-result v0
 
     iget-boolean v2, p0, Lnta;->c:Z
 
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
     move-result v0
 
@@ -215,7 +215,7 @@
 
     iget-boolean v4, p0, Lnta;->d:Z
 
-    invoke-static {v1, v2, v0, v3, v4}, Lxd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+    invoke-static {v1, v2, v0, v3, v4}, Lhc0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
 
     move-result-object v0
 

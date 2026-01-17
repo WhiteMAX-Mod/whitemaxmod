@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnje;
+.implements Lhke;
 
 
 # instance fields
-.field public final synthetic a:Lms4;
+.field public final synthetic a:Lns4;
 
 
 # direct methods
-.method public constructor <init>(Lms4;)V
+.method public constructor <init>(Lns4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lls4;->a:Lms4;
+    iput-object p1, p0, Lls4;->a:Lns4;
 
     return-void
 .end method
@@ -31,16 +31,16 @@
     return v0
 .end method
 
-.method public final e(J)Llje;
-    .locals 13
+.method public final e(J)Lfke;
+    .locals 11
 
-    iget-object v0, p0, Lls4;->a:Lms4;
+    iget-object v0, p0, Lls4;->a:Lns4;
 
-    iget-object v1, v0, Lms4;->w0:Ljava/lang/Object;
+    iget-object v1, v0, Lns4;->x0:Ljava/lang/Object;
 
-    check-cast v1, Lgxf;
+    check-cast v1, Lqyf;
 
-    iget v1, v1, Lgxf;->f:I
+    iget v1, v1, Lqyf;->f:I
 
     int-to-long v1, v1
 
@@ -50,61 +50,45 @@
 
     div-long/2addr v1, v3
 
-    iget-wide v3, v0, Lms4;->b:J
+    iget-wide v5, v0, Lns4;->b:J
 
-    invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    iget-wide v3, v0, Lns4;->c:J
 
-    move-result-object v1
+    sub-long v7, v3, v5
 
-    iget-wide v5, v0, Lms4;->c:J
+    mul-long/2addr v7, v1
 
-    sub-long v7, v5, v3
+    iget-wide v0, v0, Lns4;->o:J
 
-    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    div-long/2addr v7, v0
 
-    move-result-object v2
+    add-long/2addr v7, v5
 
-    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
+    const-wide/16 v0, 0x7530
 
-    move-result-object v1
-
-    iget-wide v7, v0, Lms4;->o:J
-
-    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
-
-    move-result-wide v1
-
-    add-long/2addr v1, v3
-
-    const-wide/16 v3, 0x7530
-
-    sub-long v7, v1, v3
-
-    iget-wide v9, v0, Lms4;->b:J
+    sub-long/2addr v7, v0
 
     const-wide/16 v0, 0x1
 
-    sub-long v11, v5, v0
+    sub-long/2addr v3, v0
 
-    invoke-static/range {v7 .. v12}, Lqah;->j(JJJ)J
+    move-wide v9, v7
+
+    move-wide v7, v3
+
+    move-wide v3, v9
+
+    invoke-static/range {v3 .. v8}, Lkbh;->j(JJJ)J
 
     move-result-wide v0
 
-    new-instance v2, Llje;
+    new-instance v2, Lfke;
 
-    new-instance v3, Lrje;
+    new-instance v3, Llke;
 
-    invoke-direct {v3, p1, p2, v0, v1}, Lrje;-><init>(JJ)V
+    invoke-direct {v3, p1, p2, v0, v1}, Llke;-><init>(JJ)V
 
-    invoke-direct {v2, v3, v3}, Llje;-><init>(Lrje;Lrje;)V
+    invoke-direct {v2, v3, v3}, Lfke;-><init>(Llke;Llke;)V
 
     return-object v2
 .end method
@@ -112,19 +96,19 @@
 .method public final f()J
     .locals 6
 
-    iget-object v0, p0, Lls4;->a:Lms4;
+    iget-object v0, p0, Lls4;->a:Lns4;
 
-    iget-object v1, v0, Lms4;->w0:Ljava/lang/Object;
+    iget-object v1, v0, Lns4;->x0:Ljava/lang/Object;
 
-    check-cast v1, Lgxf;
+    check-cast v1, Lqyf;
 
-    iget-wide v2, v0, Lms4;->o:J
+    iget-wide v2, v0, Lns4;->o:J
 
     const-wide/32 v4, 0xf4240
 
     mul-long/2addr v2, v4
 
-    iget v0, v1, Lgxf;->f:I
+    iget v0, v1, Lqyf;->f:I
 
     int-to-long v0, v0
 

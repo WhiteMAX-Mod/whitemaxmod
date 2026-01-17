@@ -1,145 +1,57 @@
 .class public final Lif6;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lgr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Throwable;
+.field public final a:Lo58;
 
-.field public synthetic Y:J
+.field public final b:Lo58;
 
-.field public o:I
+.field public final c:Ln8g;
+
+.field public final d:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final e:Ljava/util/concurrent/atomic/AtomicReference;
 
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method public constructor <init>(Lo58;Lo58;)V
+    .locals 0
 
-    check-cast p1, Lh76;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Ljava/lang/Throwable;
+    iput-object p1, p0, Lif6;->a:Lo58;
 
-    check-cast p3, Ljava/lang/Number;
+    iput-object p2, p0, Lif6;->b:Lo58;
 
-    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
+    new-instance p1, Lss5;
 
-    move-result-wide v0
+    const/16 p2, 0xa
 
-    check-cast p4, Lkotlin/coroutines/Continuation;
+    invoke-direct {p1, p2}, Lss5;-><init>(I)V
 
-    new-instance p1, Lif6;
+    new-instance p2, Ln8g;
 
-    const/4 p3, 0x4
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
 
-    invoke-direct {p1, p3, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lif6;->c:Ln8g;
 
-    iput-object p2, p1, Lif6;->X:Ljava/lang/Throwable;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-wide v0, p1, Lif6;->Y:J
+    const/4 p2, 0x0
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    invoke-virtual {p1, p2}, Lif6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p1, p0, Lif6;->d:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result-object p1
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    return-object p1
-.end method
+    const/4 p2, 0x0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    iget v0, p0, Lif6;->o:I
+    iput-object p1, p0, Lif6;->e:Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lif6;->X:Ljava/lang/Throwable;
-
-    iget-wide v2, p0, Lif6;->Y:J
-
-    const-wide/16 v4, 0x5
-
-    cmp-long v0, v2, v4
-
-    if-gez v0, :cond_3
-
-    instance-of v0, p1, Lru/ok/tamtam/errors/TamErrorException;
-
-    if-eqz v0, :cond_3
-
-    check-cast p1, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p1, p1, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
-
-    invoke-static {p1}, Lz7f;->d(Lcbg;)Lhbg;
-
-    move-result-object p1
-
-    instance-of p1, p1, Ldbg;
-
-    if-eqz p1, :cond_3
-
-    long-to-int p1, v2
-
-    sget v0, Lqa5;->d:I
-
-    const/4 v0, 0x5
-
-    sget-object v2, Lwa5;->d:Lwa5;
-
-    invoke-static {v0, v2}, Lfnj;->h(ILwa5;)J
-
-    move-result-wide v2
-
-    const/4 v0, 0x4
-
-    invoke-static {p1, v0, v2, v3}, Lbh0;->b(IIJ)J
-
-    move-result-wide v2
-
-    iput v1, p0, Lif6;->o:I
-
-    invoke-static {v2, v3, p0}, Lzlj;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :cond_3
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
+    return-void
 .end method

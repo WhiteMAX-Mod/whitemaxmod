@@ -1,130 +1,31 @@
 .class public final Ltc8;
-.super Landroid/text/style/URLSpan;
+.super Lewc;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Luc8;
-
-.field public b:I
-
-.field public final c:Z
-
-.field public final d:Ll7;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;IZ)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroid/text/style/URLSpan;-><init>(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Ltc8;->a:Luc8;
-
-    iput p2, p0, Ltc8;->b:I
-
-    iput-boolean p3, p0, Ltc8;->c:Z
-
-    new-instance p1, Ll7;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltc8;->d:Ll7;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 7
+.method public final G(Landroid/view/View$OnClickListener;)V
+    .locals 1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    move-result-wide v0
+    invoke-static {v0, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    iget-object v2, p0, Ltc8;->d:Ll7;
-
-    iget-wide v3, v2, Ll7;->a:J
-
-    sub-long v3, v0, v3
-
-    const-wide/16 v5, 0x12c
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_3
-
-    iput-wide v0, v2, Ll7;->a:J
-
-    instance-of v0, p1, Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getLinksClickable()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Ltc8;->a:Luc8;
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p1, Luc8;
-
-    if-eqz v0, :cond_1
-
-    move-object v0, p1
-
-    check-cast v0, Luc8;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :cond_2
-    :goto_0
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v1, Lyc8;->a:Lyc8;
-
-    invoke-interface {v0, p1, v1, p0}, Luc8;->b(Ljava/lang/String;Lyc8;Landroid/text/style/ClickableSpan;)V
-
-    :cond_3
-    :goto_1
     return-void
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 2
+.method public final y(Lud8;)V
+    .locals 1
 
-    iget v0, p1, Landroid/text/TextPaint;->bgColor:I
+    check-cast p1, Lxrc;
 
-    iget v1, p0, Ltc8;->b:I
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    if-eq v0, v1, :cond_0
+    check-cast v0, Lsc8;
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
+    iget-object p1, p1, Lxrc;->a:Ljava/lang/CharSequence;
 
-    :cond_0
-    iget-boolean v0, p0, Ltc8;->c:Z
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    invoke-virtual {v0, p1}, Lsc8;->setLink(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

@@ -1,182 +1,98 @@
-.class public final synthetic Liaf;
-.super Ljava/lang/Object;
+.class public final Liaf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lmaf;
-
-.field public final synthetic c:Ljaf;
-
-.field public final synthetic d:Lorg/json/JSONObject;
+.field public final synthetic o:Llaf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmaf;Ljaf;Lorg/json/JSONObject;I)V
+.method public constructor <init>(Llaf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p4, p0, Liaf;->a:I
+    iput-object p1, p0, Liaf;->o:Llaf;
 
-    iput-object p1, p0, Liaf;->b:Lmaf;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Liaf;->c:Ljaf;
-
-    iput-object p3, p0, Liaf;->d:Lorg/json/JSONObject;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Liaf;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Liaf;->c:Ljaf;
+    invoke-virtual {p0, p1, p2}, Liaf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const-string v1, "OKSignaling"
+    move-result-object p1
 
-    iget-object v2, p0, Liaf;->b:Lmaf;
+    check-cast p1, Liaf;
 
-    iget-object v3, v2, Lmaf;->c:Lcgd;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const-string v4, "<!> ignoring "
+    invoke-virtual {p1, p2}, Liaf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :try_start_0
-    instance-of v5, v0, Lyli;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p1
 
-    iget-object v6, p0, Liaf;->d:Lorg/json/JSONObject;
+    return-object p1
+.end method
 
-    if-eqz v5, :cond_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    :try_start_1
-    check-cast v0, Lyli;
+    new-instance p1, Liaf;
 
-    invoke-virtual {v0, v6}, Lyli;->onResponse(Lorg/json/JSONObject;)V
+    iget-object v0, p0, Liaf;->o:Llaf;
 
-    goto :goto_1
+    invoke-direct {p1, v0, p2}, Liaf;-><init>(Llaf;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    iget-boolean v2, v2, Lmaf;->r:Z
+    return-object p1
+.end method
 
-    if-eqz v2, :cond_1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-interface {v0, v6}, Ljaf;->onResponse(Lorg/json/JSONObject;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    goto :goto_1
+    iget-object p1, p0, Liaf;->o:Llaf;
 
-    :catch_0
-    move-exception v0
+    iget-object p1, p1, Llaf;->d:Lo58;
 
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v3, v1, v0}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    check-cast v0, Landroid/content/Context;
 
-    goto :goto_1
+    sget v1, Lo6d;->ic_geolocation_filled_28:I
 
-    :goto_0
-    const-string v2, "signaling.response"
+    sget-object v2, Lpc3;->t0:Lkme;
 
-    invoke-interface {v3, v1, v2, v0}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    :goto_1
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    iget-object v0, p0, Liaf;->c:Ljaf;
+    check-cast p1, Landroid/content/Context;
 
-    const-string v1, "OKSignaling"
+    invoke-static {v2, p1}, Liwd;->g(Lkme;Landroid/content/Context;)Lwe7;
 
-    iget-object v2, p0, Liaf;->b:Lmaf;
+    move-result-object p1
 
-    iget-object v3, v2, Lmaf;->c:Lcgd;
+    iget p1, p1, Lwe7;->k:I
 
-    const-string v4, "<!> ignoring "
+    invoke-static {v1, p1, v0}, Lxti;->q(IILandroid/content/Context;)Landroid/graphics/Bitmap;
 
-    :try_start_2
-    instance-of v5, v0, Lyli;
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    move-result-object p1
 
-    iget-object v6, p0, Liaf;->d:Lorg/json/JSONObject;
-
-    if-eqz v5, :cond_2
-
-    :try_start_3
-    check-cast v0, Lyli;
-
-    invoke-virtual {v0, v6}, Lyli;->onResponse(Lorg/json/JSONObject;)V
-
-    goto :goto_3
-
-    :cond_2
-    iget-boolean v2, v2, Lmaf;->r:Z
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v0, v6}, Ljaf;->onResponse(Lorg/json/JSONObject;)V
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_3
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v3, v1, v0}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-
-    goto :goto_3
-
-    :goto_2
-    const-string v2, "signaling.response"
-
-    invoke-interface {v3, v1, v2, v0}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

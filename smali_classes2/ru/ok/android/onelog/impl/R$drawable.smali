@@ -14,29 +14,29 @@
 
 
 # static fields
-.field public static notification_action_background:I = 0x7f0808e7
+.field public static notification_action_background:I = 0x7f0808c2
 
-.field public static notification_bg:I = 0x7f0808e8
+.field public static notification_bg:I = 0x7f0808c3
 
-.field public static notification_bg_low:I = 0x7f0808e9
+.field public static notification_bg_low:I = 0x7f0808c4
 
-.field public static notification_bg_low_normal:I = 0x7f0808ea
+.field public static notification_bg_low_normal:I = 0x7f0808c5
 
-.field public static notification_bg_low_pressed:I = 0x7f0808eb
+.field public static notification_bg_low_pressed:I = 0x7f0808c6
 
-.field public static notification_bg_normal:I = 0x7f0808ec
+.field public static notification_bg_normal:I = 0x7f0808c7
 
-.field public static notification_bg_normal_pressed:I = 0x7f0808ed
+.field public static notification_bg_normal_pressed:I = 0x7f0808c8
 
-.field public static notification_icon_background:I = 0x7f0808ee
+.field public static notification_icon_background:I = 0x7f0808c9
 
-.field public static notification_template_icon_bg:I = 0x7f0808f2
+.field public static notification_template_icon_bg:I = 0x7f0808cd
 
-.field public static notification_template_icon_low_bg:I = 0x7f0808f3
+.field public static notification_template_icon_low_bg:I = 0x7f0808ce
 
-.field public static notification_tile_bg:I = 0x7f0808f4
+.field public static notification_tile_bg:I = 0x7f0808cf
 
-.field public static notify_panel_notification_icon_bg:I = 0x7f0808f5
+.field public static notify_panel_notification_icon_bg:I = 0x7f0808d0
 
 
 # direct methods

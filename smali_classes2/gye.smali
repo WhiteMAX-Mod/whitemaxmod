@@ -1,275 +1,268 @@
 .class public final Lgye;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lj0f;
 
 
 # instance fields
-.field public final synthetic X:Liye;
+.field public final a:J
 
-.field public final synthetic Y:Ljava/lang/String;
+.field public final b:I
 
-.field public o:I
+.field public final c:Lfye;
+
+.field public final d:Lqhg;
 
 
 # direct methods
-.method public constructor <init>(Liye;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JILfye;)V
     .locals 0
 
-    iput-object p1, p0, Lgye;->X:Liye;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lgye;->Y:Ljava/lang/String;
+    iput-wide p1, p0, Lgye;->a:J
 
-    const/4 p1, 0x2
+    iput p3, p0, Lgye;->b:I
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Lgye;->c:Lfye;
 
-    return-void
-.end method
+    instance-of p1, p4, Leye;
 
+    if-eqz p1, :cond_0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    check-cast p4, Leye;
 
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lgye;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lgye;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lgye;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lgye;
-
-    iget-object v0, p0, Lgye;->X:Liye;
-
-    iget-object v1, p0, Lgye;->Y:Ljava/lang/String;
-
-    invoke-direct {p1, v0, v1, p2}, Lgye;-><init>(Liye;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lgye;->o:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lgye;->X:Liye;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object p1, p4, Leye;->a:Lphg;
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of p1, p4, Ldye;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-eqz p1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sget-object p1, Lqhg;->b:Lphg;
 
-    throw p1
+    :goto_0
+    iput-object p1, p0, Lgye;->d:Lqhg;
+
+    return-void
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-object p1, v3, Liye;->d:Ld68;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    throw p1
+.end method
 
-    move-result-object p1
 
-    check-cast p1, Lbbg;
+# virtual methods
+.method public final b()Lqhg;
+    .locals 1
 
-    check-cast p1, Lb9b;
-
-    invoke-virtual {p1}, Lb9b;->b()Ltb4;
-
-    move-result-object p1
-
-    new-instance v0, Lfye;
-
-    iget-object v4, p0, Lgye;->Y:Ljava/lang/String;
-
-    invoke-direct {v0, v3, v4, v1}, Lfye;-><init>(Liye;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    iput v2, p0, Lgye;->o:I
-
-    invoke-static {p1, v0, p0}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
+    const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method public final c()Lyze;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final d()Lqhg;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final e()Lg0f;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgye;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgye;
+
+    iget-wide v3, p0, Lgye;->a:J
+
+    iget-wide v5, p1, Lgye;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    :goto_0
-    check-cast p1, Lv80;
+    iget v1, p0, Lgye;->b:I
 
-    instance-of v0, p1, Lt80;
+    iget v3, p1, Lgye;->b:I
 
-    const/16 v2, 0x44
+    if-eq v1, v3, :cond_3
 
-    if-eqz v0, :cond_6
-
-    check-cast p1, Lt80;
-
-    sget-object v0, Lq80;->a:Lq80;
-
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    sget p1, Lvhb;->n:I
-
-    goto :goto_1
+    return v2
 
     :cond_3
-    sget-object v0, Lr80;->a:Lr80;
+    iget-object v1, p0, Lgye;->c:Lfye;
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p1, Lgye;->c:Lfye;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final f()Ly58;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lgye;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lqhg;
+    .locals 1
+
+    iget-object v0, p0, Lgye;->d:Lqhg;
+
+    return-object v0
+.end method
+
+.method public final getType()Li0f;
+    .locals 1
+
+    sget-object v0, Li0f;->b:Li0f;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lgye;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    const/16 v1, 0x1f
 
-    sget p1, Lvhb;->j:I
+    mul-int/2addr v0, v1
 
-    goto :goto_1
+    iget v2, p0, Lgye;->b:I
 
-    :cond_4
-    sget-object v0, Ls80;->a:Ls80;
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result v0
 
-    move-result p1
+    iget-object v1, p0, Lgye;->c:Lfye;
 
-    if-eqz p1, :cond_5
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    sget p1, Lvhb;->g:I
+    move-result v1
 
-    :goto_1
-    new-instance v0, Lbhg;
+    add-int/2addr v1, v0
 
-    invoke-direct {v0, p1}, Lbhg;-><init>(I)V
+    return v1
+.end method
 
-    sget p1, Lh5e;->k1:I
+.method public final m()I
+    .locals 1
 
-    int-to-float v2, v2
+    sget v0, Lohb;->g:I
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    return v0
+.end method
 
-    move-result-object v4
+.method public final t()I
+    .locals 1
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget v0, p0, Lgye;->b:I
 
-    move-result-object v4
+    return v0
+.end method
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    mul-float/2addr v2, v4
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Ln7j;->c(F)I
+    const-string v1, "SettingSectionNameItem(itemId="
 
-    move-result v2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v4, Liye;->D0:[Lp38;
+    iget-wide v1, p0, Lgye;->a:J
 
-    invoke-virtual {v3, v0, p1, v1, v2}, Liye;->u(Lbhg;ILbhg;I)V
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    goto :goto_2
+    const-string v1, ", sectionId="
 
-    :cond_5
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget v1, p0, Lgye;->b:I
 
-    throw p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_6
-    sget-object v0, Lu80;->a:Lu80;
+    const-string v1, ", titleElement="
 
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    iget-object v1, p0, Lgye;->c:Lfye;
 
-    if-eqz p1, :cond_7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget p1, Lvhb;->m:I
+    const-string v1, ")"
 
-    new-instance v0, Lbhg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1}, Lbhg;-><init>(I)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget p1, Lh5e;->p:I
+    move-result-object v0
 
-    int-to-float v2, v2
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Ln7j;->c(F)I
-
-    move-result v2
-
-    sget-object v4, Liye;->D0:[Lp38;
-
-    invoke-virtual {v3, v0, p1, v1, v2}, Liye;->u(Lbhg;ILbhg;I)V
-
-    iget-object p1, v3, Liye;->y0:Lyl5;
-
-    sget-object v0, Lpf3;->b:Lpf3;
-
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    :goto_2
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :cond_7
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-object v0
 .end method

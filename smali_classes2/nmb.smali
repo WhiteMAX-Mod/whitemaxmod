@@ -2,18 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lomb;
+
 
 # instance fields
-.field public final synthetic a:Lpmb;
+.field public final a:Lnq6;
 
 
 # direct methods
-.method public constructor <init>(Lpmb;)V
+.method public constructor <init>(Lnq6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnmb;->a:Lpmb;
+    iput-object p1, p0, Lnmb;->a:Lnq6;
 
     return-void
 .end method

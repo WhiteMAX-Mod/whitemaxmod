@@ -1,50 +1,74 @@
 .class public final Lel4;
-.super Ljava/lang/Object;
+.super Lhl4;
 .source "SourceFile"
-
-# interfaces
-.implements Lrdc;
-
-
-# static fields
-.field public static final a:Lhy0;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lhy0;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lhy0;-><init>(I)V
-
-    sput-object v0, Lel4;->a:Lhy0;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
+.method public final n(Lei5;)I
+    .locals 0
 
-    sget-object v0, Lel4;->a:Lhy0;
+    invoke-virtual {p1}, Lei5;->g0()I
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v0
+    return p1
+.end method
 
-    check-cast v0, Ljava/nio/ByteBuffer;
+.method public final o()Lqk7;
+    .locals 2
+
+    new-instance v0, Lqk7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Lqk7;->a:I
+
+    iput-boolean v1, v0, Lqk7;->b:Z
+
+    iput-boolean v1, v0, Lqk7;->c:Z
 
     return-object v0
 .end method
 
-.method public final bridge synthetic e(Ljava/lang/Object;)Z
-    .locals 0
+.method public final declared-synchronized s(Lei5;I)Z
+    .locals 1
 
-    const/4 p1, 0x1
+    monitor-enter p0
+
+    :try_start_0
+    invoke-static {p2}, Lzj0;->b(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lhl4;->g:Ljy7;
+
+    invoke-virtual {v0, p1, p2}, Ljy7;->e(Lei5;I)Z
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit p0
 
     return p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

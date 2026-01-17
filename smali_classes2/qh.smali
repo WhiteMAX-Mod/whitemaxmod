@@ -1,19 +1,19 @@
 .class public final Lqh;
-.super Luh;
+.super Lsh;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:F
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lqh;->a:F
+    iput-object p1, p0, Lqh;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -41,15 +41,15 @@
     :cond_1
     check-cast p1, Lqh;
 
-    iget v1, p0, Lqh;->a:F
+    iget-object v1, p0, Lqh;->a:Ljava/lang/String;
 
-    iget p1, p1, Lqh;->a:F
+    iget-object p1, p1, Lqh;->a:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
@@ -60,9 +60,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lqh;->a:F
+    iget-object v0, p0, Lqh;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -70,23 +70,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "FloatNumber(value="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lqh;->a:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    const-string v0, "Path(value="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lqh;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

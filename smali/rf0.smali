@@ -35,28 +35,28 @@
 
 .field public final o:I
 
-.field public final s0:Ljava/lang/CharSequence;
+.field public final t0:Ljava/lang/CharSequence;
 
-.field public final t0:I
+.field public final u0:I
 
-.field public final u0:Ljava/lang/CharSequence;
-
-.field public final v0:Ljava/util/ArrayList;
+.field public final v0:Ljava/lang/CharSequence;
 
 .field public final w0:Ljava/util/ArrayList;
 
-.field public final x0:Z
+.field public final x0:Ljava/util/ArrayList;
+
+.field public final y0:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lc8;
+    new-instance v0, Lz7;
 
     const/4 v1, 0x5
 
-    invoke-direct {v0, v1}, Lc8;-><init>(I)V
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
 
     sput-object v0, Lrf0;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -134,14 +134,14 @@
 
     check-cast v1, Ljava/lang/CharSequence;
 
-    iput-object v1, p0, Lrf0;->s0:Ljava/lang/CharSequence;
+    iput-object v1, p0, Lrf0;->t0:Ljava/lang/CharSequence;
 
     .line 39
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    iput v1, p0, Lrf0;->t0:I
+    iput v1, p0, Lrf0;->u0:I
 
     .line 40
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -150,21 +150,21 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lrf0;->u0:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lrf0;->v0:Ljava/lang/CharSequence;
 
     .line 41
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lrf0;->v0:Ljava/util/ArrayList;
+    iput-object v0, p0, Lrf0;->w0:Ljava/util/ArrayList;
 
     .line 42
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lrf0;->w0:Ljava/util/ArrayList;
+    iput-object v0, p0, Lrf0;->x0:Ljava/util/ArrayList;
 
     .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -181,7 +181,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Lrf0;->x0:Z
+    iput-boolean p1, p0, Lrf0;->y0:Z
 
     return-void
 .end method
@@ -242,21 +242,21 @@
 
     move-result-object v3
 
-    check-cast v3, Lln6;
+    check-cast v3, Lin6;
 
     .line 9
     iget-object v4, p0, Lrf0;->a:[I
 
     add-int/lit8 v5, v2, 0x1
 
-    iget v6, v3, Lln6;->a:I
+    iget v6, v3, Lin6;->a:I
 
     aput v6, v4, v2
 
     .line 10
     iget-object v4, p0, Lrf0;->b:Ljava/util/ArrayList;
 
-    iget-object v6, v3, Lln6;->b:Landroidx/fragment/app/a;
+    iget-object v6, v3, Lin6;->b:Landroidx/fragment/app/a;
 
     if-eqz v6, :cond_0
 
@@ -275,42 +275,42 @@
 
     add-int/lit8 v6, v2, 0x2
 
-    iget-boolean v7, v3, Lln6;->c:Z
+    iget-boolean v7, v3, Lin6;->c:Z
 
     aput v7, v4, v5
 
     add-int/lit8 v5, v2, 0x3
 
     .line 12
-    iget v7, v3, Lln6;->d:I
+    iget v7, v3, Lin6;->d:I
 
     aput v7, v4, v6
 
     add-int/lit8 v6, v2, 0x4
 
     .line 13
-    iget v7, v3, Lln6;->e:I
+    iget v7, v3, Lin6;->e:I
 
     aput v7, v4, v5
 
     add-int/lit8 v5, v2, 0x5
 
     .line 14
-    iget v7, v3, Lln6;->f:I
+    iget v7, v3, Lin6;->f:I
 
     aput v7, v4, v6
 
     add-int/lit8 v2, v2, 0x6
 
     .line 15
-    iget v6, v3, Lln6;->g:I
+    iget v6, v3, Lin6;->g:I
 
     aput v6, v4, v5
 
     .line 16
     iget-object v4, p0, Lrf0;->c:[I
 
-    iget-object v5, v3, Lln6;->h:Lc88;
+    iget-object v5, v3, Lin6;->h:Lo78;
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
@@ -321,7 +321,7 @@
     .line 17
     iget-object v4, p0, Lrf0;->d:[I
 
-    iget-object v3, v3, Lln6;->i:Lc88;
+    iget-object v3, v3, Lin6;->i:Lo78;
 
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
@@ -357,32 +357,32 @@
     .line 22
     iget-object v0, p1, Lqf0;->j:Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lrf0;->s0:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lrf0;->t0:Ljava/lang/CharSequence;
 
     .line 23
     iget v0, p1, Lqf0;->k:I
 
-    iput v0, p0, Lrf0;->t0:I
+    iput v0, p0, Lrf0;->u0:I
 
     .line 24
     iget-object v0, p1, Lqf0;->l:Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lrf0;->u0:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lrf0;->v0:Ljava/lang/CharSequence;
 
     .line 25
     iget-object v0, p1, Lqf0;->m:Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lrf0;->v0:Ljava/util/ArrayList;
+    iput-object v0, p0, Lrf0;->w0:Ljava/util/ArrayList;
 
     .line 26
     iget-object v0, p1, Lqf0;->n:Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lrf0;->w0:Ljava/util/ArrayList;
+    iput-object v0, p0, Lrf0;->x0:Ljava/util/ArrayList;
 
     .line 27
     iget-boolean p1, p1, Lqf0;->o:Z
 
-    iput-boolean p1, p0, Lrf0;->x0:Z
+    iput-boolean p1, p0, Lrf0;->y0:Z
 
     return-void
 
@@ -442,29 +442,29 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p2, p0, Lrf0;->s0:Ljava/lang/CharSequence;
+    iget-object p2, p0, Lrf0;->t0:Ljava/lang/CharSequence;
 
     const/4 v0, 0x0
 
     invoke-static {p2, p1, v0}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    iget p2, p0, Lrf0;->t0:I
+    iget p2, p0, Lrf0;->u0:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p2, p0, Lrf0;->u0:Ljava/lang/CharSequence;
+    iget-object p2, p0, Lrf0;->v0:Ljava/lang/CharSequence;
 
     invoke-static {p2, p1, v0}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
-
-    iget-object p2, p0, Lrf0;->v0:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     iget-object p2, p0, Lrf0;->w0:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    iget-boolean p2, p0, Lrf0;->x0:Z
+    iget-object p2, p0, Lrf0;->x0:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    iget-boolean p2, p0, Lrf0;->y0:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

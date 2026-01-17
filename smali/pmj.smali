@@ -4,73 +4,33 @@
 
 
 # direct methods
-.method public static final a(Lvj7;Lkx0;Lkx0;Lfl7;)Lkx0;
-    .locals 0
+.method public static final a(Ljava/lang/String;Landroid/os/Bundle;)Lktb;
+    .locals 1
 
-    iget-object p0, p0, Lvj7;->a:Ltj7;
+    invoke-static {p0, p1}, Lomj;->f(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
 
-    sget-object p3, Ltj7;->a:Ltj7;
+    move-result-object p1
 
-    if-ne p0, p3, :cond_0
+    new-instance v0, Lktb;
 
-    return-object p1
+    invoke-direct {v0, p0, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_0
-    sget-object p1, Ltj7;->b:Ltj7;
-
-    if-ne p0, p1, :cond_1
-
-    return-object p2
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public static final b(Lrb4;Lcr6;)Lhw8;
-    .locals 2
+.method public static final b(Ljava/lang/Object;)V
+    .locals 1
 
-    sget-object v0, Lcmj;->x0:Lcmj;
-
-    invoke-interface {p0, v0}, Lrb4;->get(Lqb4;)Lpb4;
-
-    move-result-object v0
+    instance-of v0, p0, Lszd;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lz5e;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, p1, v1}, Lz5e;-><init>(Lrb4;Lcr6;I)V
-
-    new-instance p0, Lhw8;
-
-    invoke-direct {p0, v0}, Lhw8;-><init>(Ltw8;)V
-
-    return-object p0
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/StringBuilder;
+    check-cast p0, Lszd;
 
-    const-string v0, "Maybe context cannot contain job in it.Its lifecycle should be managed via Disposable handle. Had "
+    iget-object p0, p0, Lszd;->a:Ljava/lang/Throwable;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw p0
 .end method

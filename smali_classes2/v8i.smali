@@ -1,94 +1,105 @@
-.class public final synthetic Lv8i;
-.super Ljava/lang/Object;
+.class public final Lv8i;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lone/me/webapp/settings/WebAppSettingsScreen;I)V
-    .locals 0
-
-    iput p2, p0, Lv8i;->a:I
-
-    iput-object p1, p0, Lv8i;->b:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lv8i;->a:I
+    check-cast p1, Lbtb;
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lv8i;->b:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Landroid/view/View;
-
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Lp38;
-
-    invoke-virtual {v2}, Lx84;->getRouter()Lw3e;
+    invoke-virtual {p0, p1, p2}, Lv8i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lw3e;->C()Z
+    check-cast p1, Lv8i;
 
-    return-object v1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :pswitch_0
-    check-cast p1, Lhp0;
-
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Lp38;
-
-    invoke-virtual {v2}, Lone/me/webapp/settings/WebAppSettingsScreen;->z0()Lg9i;
+    invoke-virtual {p1, p2}, Lv8i;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
+    return-object p1
+.end method
 
-    iget-object v2, p1, Lg9i;->Z:Ld68;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+    new-instance v0, Lv8i;
 
-    move-result-object v2
+    const/4 v1, 0x2
 
-    check-cast v2, Lbbg;
+    invoke-direct {v0, v1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    check-cast v2, Lb9b;
+    iput-object p1, v0, Lv8i;->X:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lb9b;->b()Ltb4;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v3, Le9i;
+    iget-object v0, p0, Lv8i;->X:Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    check-cast v0, Lbtb;
 
-    invoke-direct {v3, p1, v4}, Le9i;-><init>(Lg9i;Lkotlin/coroutines/Continuation;)V
+    iget v1, p0, Lv8i;->o:I
 
-    const/4 p1, 0x2
+    const/4 v2, 0x1
 
-    invoke-static {v0, v2, v4, v3, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    instance-of p1, v0, Lzsb;
+
+    if-eqz p1, :cond_2
+
+    iput-object v0, p0, Lv8i;->X:Ljava/lang/Object;
+
+    iput v2, p0, Lv8i;->o:I
+
+    const-wide/16 v1, 0x258
+
+    invoke-static {v1, v2, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    if-ne p1, v1, :cond_2
 
     return-object v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    return-object v0
 .end method

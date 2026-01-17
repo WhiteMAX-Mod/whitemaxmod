@@ -1,17 +1,34 @@
 .class public final Lh7;
-.super Lm98;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lroa;
 
-# instance fields
-.field public a:Z
 
-.field public b:I
+# static fields
+.field public static final a:Lh7;
 
-.field public c:I
 
-.field public d:Z
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public e:Z
+    new-instance v0, Lh7;
 
-.field public f:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lh7;->a:Lh7;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Active"
+
+    return-object v0
+.end method

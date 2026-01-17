@@ -1,26 +1,27 @@
-.class public interface abstract Liki;
+.class public final Liki;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract B()V
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract a(Landroid/hardware/camera2/TotalCaptureResult;)V
-.end method
+.field public final b:[B
 
-.method public abstract f()F
-.end method
+.field public final c:Z
 
-.method public abstract k()F
-.end method
 
-.method public abstract m(Lhg5;)V
-.end method
+# direct methods
+.method public constructor <init>(IZ[B)V
+    .locals 0
 
-.method public abstract v()Landroid/graphics/Rect;
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract z(FLyw1;)V
+    iput p1, p0, Liki;->a:I
+
+    iput-object p3, p0, Liki;->b:[B
+
+    iput-boolean p2, p0, Liki;->c:Z
+
+    return-void
 .end method

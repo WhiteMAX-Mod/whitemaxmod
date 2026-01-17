@@ -1,42 +1,51 @@
-.class public final synthetic Lae9;
+.class public abstract synthetic Lae9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lod9;
 
-
-# instance fields
-.field public final synthetic a:Ljd7;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljd7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lkz4;->values()[Lkz4;
 
-    iput-object p1, p0, Lae9;->a:Ljd7;
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final a(Lwk0;Lflg;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lae9;->a:Ljd7;
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p1, p1, Ljd7;->i:Ljava/lang/Object;
+    :catch_0
+    const/4 v1, 0x2
 
-    check-cast p1, Lmq5;
+    :try_start_1
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p1, p1, Lmq5;->Z:Ln8g;
+    :catch_1
+    const/4 v1, 0x0
 
-    const/16 p2, 0x16
+    const/4 v2, 0x3
 
-    invoke-virtual {p1, p2}, Ln8g;->c(I)Z
+    :try_start_2
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Lae9;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

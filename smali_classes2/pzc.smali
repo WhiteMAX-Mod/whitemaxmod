@@ -1,204 +1,331 @@
 .class public final Lpzc;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
+.field public final a:Ln8g;
 
-.field public o:I
+.field public final b:Ln8g;
+
+.field public final c:Ln8g;
+
+.field public final d:Ln8g;
+
+.field public volatile e:Z
+
+.field public volatile f:Landroid/os/PowerManager$WakeLock;
+
+.field public volatile g:Lx07;
+
+.field public final h:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lo58;)V
+    .locals 2
 
-    iput-object p1, p0, Lpzc;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Lzz;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, p1, v1}, Lzz;-><init>(Lo58;I)V
+
+    new-instance v1, Ln8g;
+
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v1, p0, Lpzc;->a:Ln8g;
+
+    new-instance v0, Lmzc;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lmzc;-><init>(Lpzc;I)V
+
+    new-instance v1, Ln8g;
+
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v1, p0, Lpzc;->b:Ln8g;
+
+    new-instance v0, Lzz;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, p1, v1}, Lzz;-><init>(Lo58;I)V
+
+    new-instance p1, Ln8g;
+
+    invoke-direct {p1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p1, p0, Lpzc;->c:Ln8g;
+
+    new-instance p1, Lmzc;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, p0, v0}, Lmzc;-><init>(Lpzc;I)V
+
+    new-instance v0, Ln8g;
+
+    invoke-direct {v0, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v0, p0, Lpzc;->d:Ln8g;
+
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object p1, p0, Lpzc;->h:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 4
 
-    check-cast p1, Lac4;
+    iget-object v0, p0, Lpzc;->b:Ln8g;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lpzc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Landroid/hardware/Sensor;
 
-    check-cast p1, Lpzc;
+    if-nez v0, :cond_0
 
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lpzc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lpzc;
-
-    iget-object v0, p0, Lpzc;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
-
-    invoke-direct {p1, v0, p2}, Lpzc;-><init>(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lpzc;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto/16 :goto_1
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :try_start_0
+    iget-object v1, p0, Lpzc;->c:Ln8g;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    throw p1
+    check-cast v1, Landroid/os/PowerManager;
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const-string v2, "max:proximity_helper"
 
-    iget-object p1, p0, Lpzc;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
+    const/16 v3, 0x20
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()La98;
+    invoke-virtual {v1, v3, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0}, La98;->p()Lc98;
+    iput-object v1, p0, Lpzc;->f:Landroid/os/PowerManager$WakeLock;
 
-    move-result-object v0
+    iget-object v1, p0, Lpzc;->a:Ln8g;
 
-    sget-object v2, Lc25;->a:Lbt4;
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
 
-    sget-object v2, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Llq8;
+    move-result-object v1
 
-    invoke-virtual {v2}, Llq8;->getImmediate()Llq8;
+    check-cast v1, Landroid/hardware/SensorManager;
+
+    iget-object v2, p0, Lpzc;->d:Ln8g;
+
+    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    iget-object v3, p0, Ll84;->b:Lrb4;
+    check-cast v2, Landroid/hardware/SensorEventListener;
 
-    invoke-virtual {v2, v3}, Ltb4;->isDispatchNeeded(Lrb4;)Z
+    const/4 v3, 0x3
 
-    move-result v3
+    invoke-virtual {v1, v2, v0, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-nez v3, :cond_3
+    return-void
 
-    iget-object v4, v0, Lc98;->d:Lc88;
+    :catch_0
+    move-exception v0
 
-    sget-object v5, Lc88;->a:Lc88;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    if-eq v4, v5, :cond_2
+    move-result-object v1
 
-    sget-object v5, Lc88;->o:Lc88;
+    const/4 v2, 0x0
 
-    invoke-virtual {v4, v5}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    new-array v2, v2, [Ljava/lang/Object;
 
-    move-result v4
+    const-string v3, "ProximityHelperTag"
 
-    if-ltz v4, :cond_3
+    invoke-static {v3, v0, v1, v2}, Lc5j;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;->z0(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;)V
+    return-void
+.end method
+
+.method public final b()V
+    .locals 4
+
+    iget-object v0, p0, Lpzc;->b:Ln8g;
+
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/Sensor;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lpzc;->f:Landroid/os/PowerManager$WakeLock;
+
+    :try_start_0
+    iget-object v1, p0, Lpzc;->a:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/SensorManager;
+
+    iget-object v2, p0, Lpzc;->d:Ln8g;
+
+    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/hardware/SensorEventListener;
+
+    invoke-virtual {v1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/os/PowerManager$WakeLock;->release(I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const-string v3, "ProximityHelperTag"
+
+    invoke-static {v3, v0, v1, v2}, Lc5j;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 4
+
+    iget-object v0, p0, Lpzc;->f:Landroid/os/PowerManager$WakeLock;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/os/PowerManager$WakeLock;->release(I)V
+
+    iget-object v0, p0, Lpzc;->g:Lx07;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v0, Lx07;->a:Ljava/lang/Object;
+
+    check-cast v0, Lnx1;
+
+    iget-object v1, v0, Lnx1;->r:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lmfa;
+
+    :cond_1
+    invoke-interface {v1}, Lmfa;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    iget-object v3, v0, Lnx1;->b:Lf41;
+
+    check-cast v3, Lg41;
+
+    invoke-virtual {v3}, Lg41;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    move-result-object v3
+
+    invoke-interface {v1, v2, v3}, Lmfa;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v2, :cond_1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
 
     goto :goto_1
 
     :cond_2
-    new-instance p1, Landroidx/lifecycle/LifecycleDestroyedException;
-
-    invoke-direct {p1}, Landroidx/lifecycle/LifecycleDestroyedException;-><init>()V
-
-    throw p1
-
-    :cond_3
-    new-instance v4, Lj2;
-
-    const/4 v5, 0x6
-
-    invoke-direct {v4, v5, p1}, Lj2;-><init>(ILjava/lang/Object;)V
-
-    iput v1, p0, Lpzc;->o:I
-
-    new-instance p1, Lp62;
-
-    invoke-static {p0}, Lv0j;->e(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v6
-
-    invoke-direct {p1, v1, v6}, Lp62;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {p1}, Lp62;->o()V
-
-    new-instance v1, Ly88;
-
-    invoke-direct {v1, v0, p1, v4}, Ly88;-><init>(Lc98;Lp62;Lj2;)V
-
-    if-eqz v3, :cond_4
-
-    new-instance v3, Ljrf;
-
-    invoke-direct {v3, v0, v5, v1}, Ljrf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    sget-object v4, Lwg5;->a:Lwg5;
-
-    invoke-virtual {v2, v4, v3}, Ltb4;->dispatch(Lrb4;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v0, v1}, Lc98;->a(Lw88;)V
-
     :goto_0
-    new-instance v3, Lehi;
+    return-void
 
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v2, v0, v1, v4}, Lehi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {p1, v3}, Lp62;->f(Loq6;)V
-
-    invoke-virtual {p1}, Lp62;->n()Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_5
-
-    return-object v0
-
-    :cond_5
     :goto_1
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const-string v3, "ProximityHelperTag"
+
+    invoke-static {v3, v0, v1, v2}, Lc5j;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
 .end method

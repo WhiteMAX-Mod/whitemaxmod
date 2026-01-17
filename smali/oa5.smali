@@ -3,82 +3,66 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhrg;
+.implements Lqi4;
 
 
-# instance fields
-.field public final a:[B
+# static fields
+.field public static final a:Loa5;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loa5;
 
-    const/16 v0, 0x1000
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Loa5;->a:[B
+    sput-object v0, Loa5;->a:Loa5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lji4;IZ)I
-    .locals 2
+.method public final R(Lzi4;)J
+    .locals 1
 
-    iget-object v0, p0, Loa5;->a:[B
+    new-instance p1, Ljava/io/IOException;
 
-    array-length v1, v0
+    const-string v0, "DummyDataSource cannot be opened"
 
-    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result p2
-
-    const/4 v1, 0x0
-
-    invoke-interface {p1, v0, v1, p2}, Lji4;->read([BII)I
-
-    move-result p1
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_1
-
-    if-eqz p3, :cond_0
-
-    return p2
-
-    :cond_0
-    new-instance p1, Ljava/io/EOFException;
-
-    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw p1
-
-    :cond_1
-    return p1
 .end method
 
-.method public final b(JIIILfrg;)V
+.method public final S(Lxsg;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final c(ILhbh;)V
+.method public final close()V
     .locals 0
-
-    invoke-virtual {p2, p1}, Lhbh;->F(I)V
 
     return-void
 .end method
 
-.method public final d(Lqj6;)V
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final read([BII)I
     .locals 0
 
-    return-void
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

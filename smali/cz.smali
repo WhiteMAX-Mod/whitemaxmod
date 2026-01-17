@@ -1,21 +1,14 @@
-.class public final Lcz;
-.super Ldz;
+.class public interface abstract Lcz;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Lhbh;
+# virtual methods
+.method public abstract a()I
+.end method
 
+.method public abstract b()I
+.end method
 
-# direct methods
-.method public constructor <init>(ILhbh;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Ldz;-><init>(II)V
-
-    iput-object p2, p0, Lcz;->c:Lhbh;
-
-    return-void
+.method public abstract c()I
 .end method

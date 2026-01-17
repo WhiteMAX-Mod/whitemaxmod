@@ -61,7 +61,7 @@
 
     const-string p2, "\" can not be represented as BigDecimal"
 
-    invoke-static {p1, v0, p2}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, p2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

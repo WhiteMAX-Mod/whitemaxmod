@@ -1,138 +1,185 @@
-.class public final Ljr4;
-.super Lfn5;
+.class public abstract Ljr4;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Executor;
 
 
 # static fields
-.field public static final a:Ljr4;
+.field public static final a:Lxh7;
 
-.field public static final b:Ltb4;
+.field public static final b:Lxh7;
+
+.field public static final c:Lxh7;
+
+.field public static final d:Lxh7;
+
+.field public static final e:Lxh7;
+
+.field public static final f:Lxh7;
+
+.field public static final g:Lxh7;
+
+.field public static final h:Lxh7;
+
+.field public static final i:Lxh7;
+
+.field public static final j:Lxh7;
+
+.field public static final k:Lxh7;
+
+.field public static final l:Lxh7;
+
+.field public static final m:Lxh7;
+
+.field public static final n:Lxh7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 15
 
-    new-instance v0, Ljr4;
+    new-instance v0, Lxh7;
 
-    invoke-direct {v0}, Ltb4;-><init>()V
+    const-string v1, "JPEG"
 
-    sput-object v0, Ljr4;->a:Ljr4;
+    const-string v2, "jpeg"
 
-    sget-object v0, Ly3h;->a:Ly3h;
+    invoke-direct {v0, v1, v2}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lkotlinx/coroutines/internal/SystemPropsKt;->getAVAILABLE_PROCESSORS()I
+    sput-object v0, Ljr4;->a:Lxh7;
 
-    move-result v1
+    new-instance v1, Lxh7;
 
-    const/16 v2, 0x40
+    const-string v2, "PNG"
 
-    if-ge v2, v1, :cond_0
+    const-string v3, "png"
 
-    move v4, v1
+    invoke-direct {v1, v2, v3}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    sput-object v1, Ljr4;->b:Lxh7;
 
-    :cond_0
-    move v4, v2
+    new-instance v2, Lxh7;
 
-    :goto_0
-    const/16 v7, 0xc
+    const-string v3, "GIF"
 
-    const/4 v8, 0x0
+    const-string v4, "gif"
 
-    const-string v3, "kotlinx.coroutines.io.parallelism"
+    invoke-direct {v2, v3, v4}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v5, 0x0
+    sput-object v2, Ljr4;->c:Lxh7;
 
-    const/4 v6, 0x0
+    new-instance v3, Lxh7;
 
-    invoke-static/range {v3 .. v8}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
+    const-string v4, "BMP"
 
-    move-result v1
+    const-string v5, "bmp"
 
-    const/4 v2, 0x2
+    invoke-direct {v3, v4, v5}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v3, 0x0
+    sput-object v3, Ljr4;->d:Lxh7;
 
-    invoke-static {v0, v1, v3, v2, v3}, Ltb4;->limitedParallelism$default(Ltb4;ILjava/lang/String;ILjava/lang/Object;)Ltb4;
+    new-instance v4, Lxh7;
+
+    const-string v5, "ICO"
+
+    const-string v6, "ico"
+
+    invoke-direct {v4, v5, v6}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v4, Ljr4;->e:Lxh7;
+
+    new-instance v5, Lxh7;
+
+    const-string v6, "WEBP_SIMPLE"
+
+    const-string v7, "webp"
+
+    invoke-direct {v5, v6, v7}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v5, Ljr4;->f:Lxh7;
+
+    new-instance v6, Lxh7;
+
+    const-string v8, "WEBP_LOSSLESS"
+
+    invoke-direct {v6, v8, v7}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v6, Ljr4;->g:Lxh7;
+
+    move-object v8, v7
+
+    new-instance v7, Lxh7;
+
+    const-string v9, "WEBP_EXTENDED"
+
+    invoke-direct {v7, v9, v8}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v7, Ljr4;->h:Lxh7;
+
+    move-object v9, v8
+
+    new-instance v8, Lxh7;
+
+    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
+
+    invoke-direct {v8, v10, v9}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v8, Ljr4;->i:Lxh7;
+
+    move-object v10, v9
+
+    new-instance v9, Lxh7;
+
+    const-string v11, "WEBP_ANIMATED"
+
+    invoke-direct {v9, v11, v10}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v9, Ljr4;->j:Lxh7;
+
+    new-instance v10, Lxh7;
+
+    const-string v11, "HEIF"
+
+    const-string v12, "heif"
+
+    invoke-direct {v10, v11, v12}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v10, Ljr4;->k:Lxh7;
+
+    new-instance v11, Lxh7;
+
+    const-string v12, "DNG"
+
+    const-string v13, "dng"
+
+    invoke-direct {v11, v12, v13}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Ljr4;->l:Lxh7;
+
+    new-instance v11, Lxh7;
+
+    const-string v12, "BINARY_XML"
+
+    const-string v13, "xml"
+
+    invoke-direct {v11, v12, v13}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Ljr4;->m:Lxh7;
+
+    new-instance v12, Lxh7;
+
+    const-string v13, "AVIF"
+
+    const-string v14, "avif"
+
+    invoke-direct {v12, v13, v14}, Lxh7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v12, Ljr4;->n:Lxh7;
+
+    filled-new-array/range {v0 .. v12}, [Lxh7;
 
     move-result-object v0
 
-    sput-object v0, Ljr4;->b:Ltb4;
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final E()Ljava/util/concurrent/Executor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final close()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Cannot be invoked on Dispatchers.IO"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final dispatch(Lrb4;Ljava/lang/Runnable;)V
-    .locals 1
-
-    sget-object v0, Ljr4;->b:Ltb4;
-
-    invoke-virtual {v0, p1, p2}, Ltb4;->dispatch(Lrb4;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final dispatchYield(Lrb4;Ljava/lang/Runnable;)V
-    .locals 1
-
-    sget-object v0, Ljr4;->b:Ltb4;
-
-    invoke-virtual {v0, p1, p2}, Ltb4;->dispatchYield(Lrb4;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
-
-    sget-object v0, Lwg5;->a:Lwg5;
-
-    invoke-virtual {p0, v0, p1}, Ljr4;->dispatch(Lrb4;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final limitedParallelism(ILjava/lang/String;)Ltb4;
-    .locals 1
-
-    sget-object v0, Ly3h;->a:Ly3h;
-
-    invoke-virtual {v0, p1, p2}, Ly3h;->limitedParallelism(ILjava/lang/String;)Ltb4;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Dispatchers.IO"
-
-    return-object v0
 .end method

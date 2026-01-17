@@ -49,13 +49,13 @@
 
     sput-object v0, Lha0;->g:Landroid/util/Range;
 
-    invoke-static {}, Lha0;->a()Ldd6;
+    invoke-static {}, Lha0;->a()Lbd6;
 
     move-result-object v0
 
-    iput-object v1, v0, Ldd6;->o:Ljava/lang/Object;
+    iput-object v1, v0, Lbd6;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ldd6;->c()Lha0;
+    invoke-virtual {v0}, Lbd6;->c()Lha0;
 
     return-void
 .end method
@@ -78,10 +78,10 @@
     return-void
 .end method
 
-.method public static a()Ldd6;
+.method public static a()Lbd6;
     .locals 2
 
-    new-instance v0, Ldd6;
+    new-instance v0, Lbd6;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
@@ -91,23 +91,23 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Ldd6;->b:Ljava/lang/Object;
+    iput-object v1, v0, Lbd6;->b:Ljava/lang/Object;
 
-    iput-object v1, v0, Ldd6;->c:Ljava/lang/Object;
+    iput-object v1, v0, Lbd6;->c:Ljava/lang/Object;
 
-    iput-object v1, v0, Ldd6;->o:Ljava/lang/Object;
+    iput-object v1, v0, Lbd6;->o:Ljava/lang/Object;
 
     sget-object v1, Lha0;->f:Landroid/util/Range;
 
     if-eqz v1, :cond_1
 
-    iput-object v1, v0, Ldd6;->a:Ljava/lang/Object;
+    iput-object v1, v0, Lbd6;->a:Ljava/lang/Object;
 
     sget-object v1, Lha0;->g:Landroid/util/Range;
 
     if-eqz v1, :cond_0
 
-    iput-object v1, v0, Ldd6;->d:Ljava/lang/Object;
+    iput-object v1, v0, Lbd6;->d:Ljava/lang/Object;
 
     return-object v0
 
@@ -283,7 +283,7 @@
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,234 +1,149 @@
 .class public final Lz55;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements La65;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+.field public final a:I
 
-.field public o:I
+.field public final b:J
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IJJ)V
     .locals 0
 
-    iput-object p1, p0, Lz55;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput p1, p0, Lz55;->a:I
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lz55;->b:J
+
+    iput-wide p4, p0, Lz55;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lac4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lz55;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lz55;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lz55;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lz55;
-
-    iget-object v0, p0, Lz55;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
-
-    invoke-direct {p1, v0, p2}, Lz55;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    iget v0, p0, Lz55;->o:I
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lz55;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
-
-    const/4 v3, 0x1
-
-    sget-object v4, Lbc4;->a:Lbc4;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lz55;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast p1, Lz55;
 
-    goto :goto_1
+    iget v1, p0, Lz55;->a:I
+
+    iget v3, p1, Lz55;->a:I
+
+    if-ne v1, v3, :cond_4
+
+    iget-wide v3, p0, Lz55;->b:J
+
+    iget-wide v5, p1, Lz55;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-wide v3, p0, Lz55;->c:J
 
-    iget-object p1, v2, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->F0:Lz7g;
+    iget-wide v5, p1, Lz55;->c:J
 
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+    cmp-long p1, v3, v5
 
-    move-result-object p1
+    if-eqz p1, :cond_3
 
-    check-cast p1, Lfv3;
-
-    iput v3, p0, Lz55;->o:I
-
-    new-instance v0, Lp62;
-
-    invoke-static {p0}, Lv0j;->e(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v5
-
-    invoke-direct {v0, v3, v5}, Lp62;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v0}, Lp62;->o()V
-
-    new-instance v5, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v5, v6}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    invoke-interface {p1}, Lfv3;->f()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    invoke-virtual {v5, v6, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    invoke-virtual {v0, p1}, Lp62;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v2
 
     :cond_3
-    new-instance v3, Lhv3;
-
-    invoke-direct {v3, p1, v0, v5}, Lhv3;-><init>(Lfv3;Lp62;Ljava/util/concurrent/atomic/AtomicBoolean;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "Network connection lost, waiting network."
-
-    invoke-static {v5, v6}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {p1, v3}, Lfv3;->c(Lev3;)V
-
-    new-instance v5, Llw1;
-
-    const/4 v6, 0x3
-
-    invoke-direct {v5, p1, v6, v3}, Llw1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v5}, Lp62;->f(Loq6;)V
-
-    :goto_0
-    invoke-virtual {v0}, Lp62;->n()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_4
-
-    goto :goto_2
+    return v0
 
     :cond_4
-    :goto_1
-    iget-object p1, v2, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->B0:Lz7g;
+    return v2
+.end method
 
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 4
 
-    move-result-object p1
+    iget v0, p0, Lz55;->a:I
 
-    check-cast p1, La5g;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-virtual {v2}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->r()Lfeg;
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lz55;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lz55;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget v0, p0, Lz55;->a:I
+
+    invoke-static {v0}, Lbj6;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v6, v0, Lfeg;->c:Ljava/lang/String;
+    const-string v1, "Loading(progress="
 
-    iget-object v0, v2, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->K0:Ljava/io/File;
+    const-string v2, ", time="
 
-    if-nez v0, :cond_5
+    iget-wide v3, p0, Lz55;->b:J
 
-    const/4 v0, 0x0
+    invoke-static {v1, v3, v4, v0, v2}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_5
-    move-object v7, v0
+    move-result-object v0
 
-    iget-object v8, v2, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->L0:Lc65;
+    const-string v1, ", botId="
 
-    iput v1, p0, Lz55;->o:I
+    const-string v2, ")"
 
-    iget-object v5, p1, La5g;->a:Lalb;
+    iget-wide v3, p0, Lz55;->c:J
 
-    const/4 v9, 0x0
+    invoke-static {v3, v4, v1, v2, v0}, Lxi4;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-    const/4 v10, 0x1
+    move-result-object v0
 
-    const-string v11, ""
-
-    move-object v12, p0
-
-    invoke-virtual/range {v5 .. v12}, Lalb;->b(Ljava/lang/String;Ljava/io/File;Lz4g;Ljava/lang/String;ZLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_6
-
-    :goto_2
-    return-object v4
-
-    :cond_6
-    return-object p1
+    return-object v0
 .end method

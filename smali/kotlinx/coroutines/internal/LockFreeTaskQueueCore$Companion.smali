@@ -36,7 +36,7 @@
         "Lkotlin/Function2;",
         "block",
         "withState",
-        "(JLcr6;)Ljava/lang/Object;",
+        "(JLbr6;)Ljava/lang/Object;",
         "addFailReason",
         "(J)I",
         "INITIAL_CAPACITY",
@@ -64,7 +64,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lro4;)V
+.method public synthetic constructor <init>(Lso4;)V
     .locals 0
 
     .line 1
@@ -151,14 +151,14 @@
     return-wide p1
 .end method
 
-.method public final withState(JLcr6;)Ljava/lang/Object;
+.method public final withState(JLbr6;)Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(J",
-            "Lcr6;",
+            "Lbr6;",
             ")TT;"
         }
     .end annotation
@@ -187,7 +187,7 @@
 
     move-result-object p1
 
-    invoke-interface {p3, p2, p1}, Lcr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p2, p1}, Lbr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

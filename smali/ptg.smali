@@ -1,47 +1,25 @@
-.class public final Lptg;
-.super Lotg;
+.class public abstract Lptg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lxs;
-
-.field public final synthetic b:Lqtg;
-
-
 # direct methods
-.method public constructor <init>(Lqtg;Lxs;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lptg;->b:Lqtg;
-
-    iput-object p2, p0, Lptg;->a:Lxs;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final c(Lltg;)V
+.method public static a(Landroid/animation/Animator;)J
     .locals 2
 
-    iget-object v0, p0, Lptg;->b:Lqtg;
+    invoke-virtual {p0}, Landroid/animation/Animator;->getTotalDuration()J
 
-    iget-object v0, v0, Lqtg;->b:Landroid/view/ViewGroup;
+    move-result-wide v0
 
-    iget-object v1, p0, Lptg;->a:Lxs;
+    return-wide v0
+.end method
 
-    invoke-virtual {v1, v0}, Lwbf;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static b(Landroid/animation/Animator;J)V
+    .locals 0
 
-    move-result-object v0
+    check-cast p0, Landroid/animation/AnimatorSet;
 
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {p1, p0}, Lltg;->D(Lktg;)Lltg;
+    invoke-virtual {p0, p1, p2}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
 
     return-void
 .end method

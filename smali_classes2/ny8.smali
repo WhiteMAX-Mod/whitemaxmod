@@ -1,194 +1,197 @@
 .class public final Lny8;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lpy8;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lpj8;
+.field public final synthetic X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-.field public final b:F
-
-.field public final c:J
-
-.field public final d:Lnba;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lpj8;FJLnba;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lny8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    iput-object p1, p0, Lny8;->a:Lpj8;
+    const/4 p2, 0x2
 
-    iput p2, p0, Lny8;->b:F
-
-    iput-wide p3, p0, Lny8;->c:J
-
-    iput-object p5, p0, Lny8;->d:Lnba;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lny8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lny8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lny8;
 
-    iget-object v1, p0, Lny8;->a:Lpj8;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object v3, p1, Lny8;->a:Lpj8;
+    invoke-virtual {p1, p2}, Lny8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lny8;->b:F
-
-    iget v3, p1, Lny8;->b:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Lny8;->c:J
-
-    iget-wide v5, p1, Lny8;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lny8;->d:Lnba;
-
-    iget-object p1, p1, Lny8;->d:Lnba;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lny8;
+
+    iget-object v1, p0, Lny8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    invoke-direct {v0, p2, v1}, Lny8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+
+    iput-object p1, v0, Lny8;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    iget-object v0, p0, Lny8;->a:Lpj8;
+    iget-object v0, p0, Lny8;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lpj8;->hashCode()I
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result v0
+    check-cast v0, Lvle;
 
-    const/16 v1, 0x1f
+    instance-of p1, v0, Lule;
 
-    mul-int/2addr v0, v1
+    iget-object v1, p0, Lny8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    iget v2, p0, Lny8;->b:F
+    if-eqz p1, :cond_0
 
-    invoke-static {v0, v2, v1}, Lqi3;->b(IFI)I
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
 
-    move-result v0
+    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lda2;
 
-    iget-wide v2, p0, Lny8;->c:J
+    move-result-object p1
 
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+    const/16 v0, 0x8
 
-    move-result v0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v1, p0, Lny8;->d:Lnba;
+    goto :goto_1
 
-    invoke-virtual {v1}, Lnba;->hashCode()I
+    :cond_0
+    instance-of p1, v0, Lsle;
 
-    move-result v1
+    if-eqz p1, :cond_1
 
-    add-int/2addr v1, v0
+    check-cast v0, Lsle;
 
-    return v1
-.end method
+    iget p1, v0, Lsle;->a:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iput p1, v1, Lone/me/chatscreen/mediabar/MediaBarWidget;->G0:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->B0(Lone/me/chatscreen/mediabar/MediaBarWidget;)V
 
-    const-string v1, "SendLocation(locationData="
+    iget p1, v0, Lsle;->a:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lny8;->a:Lpj8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", zoom="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lny8;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", livePeriod="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lny8;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sliceData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lny8;->d:Lnba;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->N0()Lymb;
 
     move-result-object v0
 
-    return-object v0
+    int-to-float p1, p1
+
+    const/high16 v1, 0x44000000    # 512.0f
+
+    div-float/2addr p1, v1
+
+    invoke-virtual {v0, p1}, Lymb;->setDropdownRotationProgress(F)V
+
+    goto :goto_1
+
+    :cond_1
+    instance-of p1, v0, Ltle;
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->H0()Lut6;
+
+    move-result-object p1
+
+    check-cast v0, Ltle;
+
+    iget-object v2, v0, Ltle;->a:Ldt6;
+
+    iget-object p1, p1, Lut6;->d:Lcm5;
+
+    new-instance v3, Lkt6;
+
+    invoke-direct {v3, v2}, Lkt6;-><init>(Ldt6;)V
+
+    invoke-static {p1, v3}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    iget-object p1, v0, Ltle;->a:Ldt6;
+
+    iget-object p1, p1, Ldt6;->a:Lct6;
+
+    invoke-virtual {p1}, Lct6;->c()Lg4;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lrs6;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast p1, Lrs6;
+
+    iget p1, p1, Lrs6;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_2
+    instance-of v0, p1, Lss6;
+
+    if-eqz v0, :cond_3
+
+    check-cast p1, Lss6;
+
+    iget-object p1, p1, Lss6;->a:Ljava/lang/String;
+
+    :goto_0
+    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->N0()Lymb;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lymb;->setTitle(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    :goto_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

@@ -1,21 +1,19 @@
 .class public final Lwk4;
-.super Lqlj;
+.super Llmj;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lwk4;
+# instance fields
+.field public final a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Z)V
+    .locals 0
 
-    new-instance v0, Lwk4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwk4;->a:Lwk4;
+    iput-boolean p1, p0, Lwk4;->a:Z
 
     return-void
 .end method
@@ -23,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -32,30 +30,53 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lwk4;
+    instance-of v1, p1, Lwk4;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lwk4;
+
+    iget-boolean v1, p0, Lwk4;->a:Z
+
+    iget-boolean p1, p1, Lwk4;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x2f4aa020
+    iget-boolean v0, p0, Lwk4;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string v0, "Route"
+    const-string v0, "Switch(isToggled="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lwk4;->a:Z
+
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

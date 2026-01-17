@@ -2,121 +2,76 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lm9h;
-.implements Lfj7;
-.implements Lcjg;
-
 
 # static fields
-.field public static final X:Lta0;
-
-.field public static final Y:Lta0;
-
-.field public static final b:Lta0;
-
-.field public static final c:Lta0;
-
-.field public static final d:Lta0;
-
-.field public static final o:Lta0;
-
-
-# instance fields
-.field public final a:Lwpb;
+.field public static final a:Lph7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 5
 
-    new-instance v0, Lta0;
+    sget-object v0, Lr56;->c:Lr56;
 
-    const-string v1, "camerax.core.imageAnalysis.backpressureStrategy"
+    const/4 v1, 0x0
 
-    const-class v2, Ldh7;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v3, 0x0
+    move-result-object v1
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sget-object v2, Llyd;->c:Llyd;
 
-    sput-object v0, Lmh7;->b:Lta0;
+    new-instance v3, Lkyd;
 
-    new-instance v0, Lta0;
+    const/4 v4, 0x0
 
-    const-string v1, "camerax.core.imageAnalysis.imageQueueDepth"
+    invoke-direct {v3, v0, v2, v4}, Lkyd;-><init>(Lr56;Llyd;Lgg7;)V
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    new-instance v0, Lkg7;
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    const/4 v2, 0x1
 
-    sput-object v0, Lmh7;->c:Lta0;
+    invoke-direct {v0, v2}, Lkg7;-><init>(I)V
 
-    new-instance v0, Lta0;
+    sget-object v2, Lhah;->m0:Lta0;
 
-    const-string v1, "camerax.core.imageAnalysis.imageReaderProxyProvider"
+    const/4 v4, 0x4
 
-    const-class v2, Lqj7;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    move-result-object v4
 
-    sput-object v0, Lmh7;->d:Lta0;
+    iget-object v0, v0, Lkg7;->b:Lffa;
 
-    new-instance v0, Lta0;
+    invoke-virtual {v0, v2, v4}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    const-string v1, "camerax.core.imageAnalysis.outputImageFormat"
+    sget-object v2, Lmi7;->A:Lta0;
 
-    const-class v2, Lgh7;
+    invoke-virtual {v0, v2, v1}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sget-object v2, Lmi7;->I:Lta0;
 
-    sput-object v0, Lmh7;->o:Lta0;
+    invoke-virtual {v0, v2, v3}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    new-instance v0, Lta0;
+    sget-object v2, Lph7;->X:Lta0;
 
-    const-string v1, "camerax.core.imageAnalysis.onePixelShiftEnabled"
+    invoke-virtual {v0, v2, v1}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    const-class v2, Ljava/lang/Boolean;
+    sget-object v1, Lci7;->z:Lta0;
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sget-object v2, Lwb5;->d:Lwb5;
 
-    sput-object v0, Lmh7;->X:Lta0;
+    invoke-virtual {v0, v1, v2}, Lffa;->n(Lta0;Ljava/lang/Object;)V
 
-    new-instance v0, Lta0;
+    new-instance v1, Lph7;
 
-    const-string v1, "camerax.core.imageAnalysis.outputImageRotationEnabled"
+    invoke-static {v0}, Lhqb;->b(Lmr3;)Lhqb;
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    move-result-object v0
 
-    sput-object v0, Lmh7;->Y:Lta0;
+    invoke-direct {v1, v0}, Lph7;-><init>(Lhqb;)V
 
-    return-void
-.end method
-
-.method public constructor <init>(Lwpb;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmh7;->a:Lwpb;
+    sput-object v1, Lmh7;->a:Lph7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final getConfig()Lkr3;
-    .locals 1
-
-    iget-object v0, p0, Lmh7;->a:Lwpb;
-
-    return-object v0
-.end method
-
-.method public final getInputFormat()I
-    .locals 1
-
-    const/16 v0, 0x23
-
-    return v0
 .end method

@@ -38,15 +38,15 @@
     return-void
 .end method
 
-.method public static a(Lhbh;)Lcf0;
+.method public static a(Ldch;)Lcf0;
     .locals 12
 
     const/4 v0, 0x4
 
     :try_start_0
-    invoke-virtual {p0, v0}, Lhbh;->F(I)V
+    invoke-virtual {p0, v0}, Ldch;->F(I)V
 
-    invoke-virtual {p0}, Lhbh;->s()I
+    invoke-virtual {p0}, Ldch;->s()I
 
     move-result v1
 
@@ -62,7 +62,7 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {p0}, Lhbh;->s()I
+    invoke-virtual {p0}, Ldch;->s()I
 
     move-result v1
     :try_end_0
@@ -75,20 +75,20 @@
     move v3, v2
 
     :goto_0
-    sget-object v6, Lzf4;->a:[B
+    sget-object v6, Lwf4;->a:[B
 
     if-ge v3, v1, :cond_0
 
     :try_start_1
-    invoke-virtual {p0}, Lhbh;->x()I
+    invoke-virtual {p0}, Ldch;->x()I
 
     move-result v7
 
-    iget v8, p0, Lhbh;->b:I
+    iget v8, p0, Ldch;->b:I
 
-    invoke-virtual {p0, v7}, Lhbh;->F(I)V
+    invoke-virtual {p0, v7}, Ldch;->F(I)V
 
-    iget-object v9, p0, Lhbh;->a:[B
+    iget-object v9, p0, Ldch;->a:[B
 
     add-int/lit8 v10, v7, 0x4
 
@@ -105,7 +105,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lhbh;->s()I
+    invoke-virtual {p0}, Ldch;->s()I
 
     move-result v3
 
@@ -114,15 +114,15 @@
     :goto_1
     if-ge v7, v3, :cond_1
 
-    invoke-virtual {p0}, Lhbh;->x()I
+    invoke-virtual {p0}, Ldch;->x()I
 
     move-result v8
 
-    iget v9, p0, Lhbh;->b:I
+    iget v9, p0, Ldch;->b:I
 
-    invoke-virtual {p0, v8}, Lhbh;->F(I)V
+    invoke-virtual {p0, v8}, Ldch;->F(I)V
 
-    iget-object v10, p0, Lhbh;->a:[B
+    iget-object v10, p0, Ldch;->a:[B
 
     add-int/lit8 v11, v8, 0x4
 
@@ -155,21 +155,21 @@
 
     array-length p0, p0
 
-    invoke-static {v5, v0, p0}, Lnsi;->h(I[BI)Lmia;
+    invoke-static {v5, v0, p0}, Lgti;->f(I[BI)Lkia;
 
     move-result-object p0
 
-    iget v0, p0, Lmia;->e:I
+    iget v0, p0, Lkia;->e:I
 
-    iget v1, p0, Lmia;->f:I
+    iget v1, p0, Lkia;->f:I
 
-    iget v2, p0, Lmia;->g:F
+    iget v2, p0, Lkia;->g:F
 
-    iget v3, p0, Lmia;->a:I
+    iget v3, p0, Lkia;->a:I
 
-    iget v6, p0, Lmia;->b:I
+    iget v6, p0, Lkia;->b:I
 
-    iget p0, p0, Lmia;->c:I
+    iget p0, p0, Lkia;->c:I
 
     const-string v7, "avc1.%02X%02X%02X"
 

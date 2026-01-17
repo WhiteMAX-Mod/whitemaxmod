@@ -1,105 +1,128 @@
-.class public final enum Lh56;
-.super Ljava/lang/Enum;
+.class public final Lh56;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum a:Lh56;
 
-.field public static final enum b:Lh56;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Lh56;
+.field public final synthetic b:Lone/me/sdk/uikit/common/span/FitFontImageSpan;
 
-.field public static final enum d:Lh56;
+.field public final synthetic c:Landroid/view/View;
 
-.field public static final synthetic o:[Lh56;
+.field public final synthetic d:Lk56;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/span/FitFontImageSpan;Landroid/view/View;Lk56;I)V
+    .locals 0
 
-    new-instance v0, Lh56;
+    iput p4, p0, Lh56;->a:I
 
-    const-string v1, "FIRST_FRAME_DECODED"
+    iput-object p1, p0, Lh56;->b:Lone/me/sdk/uikit/common/span/FitFontImageSpan;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lh56;->c:Landroid/view/View;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lh56;->d:Lk56;
 
-    new-instance v1, Lh56;
-
-    const-string v2, "FIRST_FRAME_RENDERED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lh56;->a:Lh56;
-
-    new-instance v2, Lh56;
-
-    const-string v3, "PLAYING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lh56;->b:Lh56;
-
-    new-instance v3, Lh56;
-
-    const-string v4, "READY"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lh56;->c:Lh56;
-
-    new-instance v4, Lh56;
-
-    const-string v5, "PLAY"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lh56;->d:Lh56;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lh56;
-
-    move-result-object v0
-
-    sput-object v0, Lh56;->o:[Lh56;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lh56;
-    .locals 1
 
-    const-class v0, Lh56;
+# virtual methods
+.method public final run()V
+    .locals 9
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lh56;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lh56;
+    iget-object v5, p0, Lh56;->b:Lone/me/sdk/uikit/common/span/FitFontImageSpan;
 
-    return-object p0
-.end method
+    invoke-static {v5}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->access$getShouldInvalidateSpan$p(Lone/me/sdk/uikit/common/span/FitFontImageSpan;)Z
 
-.method public static values()[Lh56;
-    .locals 1
+    move-result v0
 
-    sget-object v0, Lh56;->o:[Lh56;
+    iget-object v6, p0, Lh56;->d:Lk56;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v3, p0, Lh56;->c:Landroid/view/View;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    check-cast v0, [Lh56;
+    new-instance v1, Lsji;
 
-    return-object v0
+    const/4 v2, 0x2
+
+    const/4 v7, 0x0
+
+    move-object v4, v3
+
+    invoke-direct/range {v1 .. v7}, Lsji;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+
+    invoke-static {v3, v1}, Lmnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmnb;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Landroid/view/View;->invalidate()V
+
+    iget-object v0, v6, Lk56;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v6, p0, Lh56;->b:Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    invoke-static {v6}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->access$getShouldInvalidateSpan$p(Lone/me/sdk/uikit/common/span/FitFontImageSpan;)Z
+
+    move-result v0
+
+    iget-object v7, p0, Lh56;->d:Lk56;
+
+    iget-object v4, p0, Lh56;->c:Landroid/view/View;
+
+    if-eqz v0, :cond_1
+
+    new-instance v2, Lsji;
+
+    const/4 v3, 0x2
+
+    const/4 v8, 0x0
+
+    move-object v5, v4
+
+    invoke-direct/range {v2 .. v8}, Lsji;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+
+    invoke-static {v4, v2}, Lmnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmnb;
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v4}, Landroid/view/View;->invalidate()V
+
+    iget-object v0, v7, Lk56;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,274 +1,154 @@
 .class public final Lro2;
-.super Lie0;
+.super Ljf4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final B0:Lsna;
+
+
 # instance fields
-.field public final b:J
+.field public final A0:Ljava/util/List;
 
-.field public final c:J
+.field public final w0:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-.field public final d:Ljava/lang/String;
+.field public final x0:J
 
-.field public final e:J
+.field public final y0:Lmw4;
 
-.field public final f:Ljava/lang/String;
-
-.field public final g:J
-
-.field public final h:Ljava/lang/String;
+.field public final z0:Lsna;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;J)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x4
+    new-instance v0, Lsna;
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    const/16 v1, 0x10
 
-    iput-wide p1, p0, Lro2;->b:J
+    invoke-direct {v0, v1}, Lsna;-><init>(I)V
 
-    iput-wide p3, p0, Lro2;->c:J
+    sput-object v0, Lro2;->B0:Lsna;
 
-    iput-object p5, p0, Lro2;->d:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-wide p6, p0, Lro2;->e:J
+.method public constructor <init>(Lone/me/profile/screens/media/ChatMediaTabWidget;JLmw4;)V
+    .locals 0
 
-    iput-object p8, p0, Lro2;->f:Ljava/lang/String;
+    invoke-direct {p0, p1}, Ljf4;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iput-wide p10, p0, Lro2;->g:J
+    iput-object p1, p0, Lro2;->w0:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-    iput-object p9, p0, Lro2;->h:Ljava/lang/String;
+    iput-wide p2, p0, Lro2;->x0:J
+
+    iput-object p4, p0, Lro2;->y0:Lmw4;
+
+    sget-object p1, Lro2;->B0:Lsna;
+
+    iput-object p1, p0, Lro2;->z0:Lsna;
+
+    sget-object p1, Lfp2;->d:Lal5;
+
+    invoke-static {p1}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lro2;->A0:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final F(Lw4e;I)V
+    .locals 8
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Lw4e;->n()Z
 
-    if-ne p0, p1, :cond_0
+    move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lro2;
+    iget-object v0, p0, Lro2;->A0:Ljava/util/List;
 
-    const/4 v2, 0x0
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object p2
 
-    return v2
+    check-cast p2, Lfp2;
 
-    :cond_1
-    check-cast p1, Lro2;
+    iget-object v0, p0, Lro2;->z0:Lsna;
 
-    iget-wide v3, p0, Lro2;->b:J
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-wide v5, p1, Lro2;->b:J
+    new-instance v2, Lone/me/profile/screens/media/ChatMediaListWidget;
 
-    cmp-long v1, v3, v5
+    iget-wide v0, p0, Lro2;->x0:J
 
-    if-eqz v1, :cond_2
+    iget-object v3, p0, Lro2;->y0:Lmw4;
 
-    return v2
+    invoke-direct {v2, v0, v1, v3, p2}, Lone/me/profile/screens/media/ChatMediaListWidget;-><init>(JLmw4;Lfp2;)V
 
-    :cond_2
-    iget-wide v3, p0, Lro2;->c:J
+    iget-object p2, p0, Lro2;->w0:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-    iget-wide v5, p1, Lro2;->c:J
+    invoke-virtual {v2, p2}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
 
-    cmp-long v1, v3, v5
+    sget-object p2, Lz84;->b:Lz84;
 
-    if-eqz v1, :cond_3
+    invoke-virtual {v2, p2}, La94;->setRetainViewMode(Lz84;)V
 
-    return v2
+    new-instance v1, Lz4e;
 
-    :cond_3
-    iget-object v1, p0, Lro2;->d:Ljava/lang/String;
+    const/4 v6, 0x0
 
-    iget-object v3, p1, Lro2;->d:Ljava/lang/String;
+    const/4 v7, -0x1
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v3, 0x0
 
-    move-result v1
+    const/4 v4, 0x0
 
-    if-nez v1, :cond_4
+    const/4 v5, 0x0
 
-    return v2
+    invoke-direct/range {v1 .. v7}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
 
-    :cond_4
-    iget-wide v3, p0, Lro2;->e:J
+    invoke-virtual {p1, v1}, Lw4e;->S(Lz4e;)V
 
-    iget-wide v5, p1, Lro2;->e:J
+    return-void
+.end method
 
-    cmp-long v1, v3, v5
+.method public final j()I
+    .locals 1
 
-    if-eqz v1, :cond_5
+    iget-object v0, p0, Lro2;->A0:Ljava/util/List;
 
-    return v2
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    :cond_5
-    iget-object v1, p0, Lro2;->f:Ljava/lang/String;
+    move-result v0
 
-    iget-object v3, p1, Lro2;->f:Ljava/lang/String;
+    return v0
+.end method
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final k(I)J
+    .locals 2
 
-    move-result v1
+    iget-object v0, p0, Lro2;->A0:Ljava/util/List;
 
-    if-nez v1, :cond_6
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    return v2
+    move-result-object p1
 
-    :cond_6
-    iget-wide v3, p0, Lro2;->g:J
+    check-cast p1, Lfp2;
 
-    iget-wide v5, p1, Lro2;->g:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Lro2;->h:Ljava/lang/String;
-
-    iget-object p1, p1, Lro2;->h:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
 
-    if-nez p1, :cond_8
+    int-to-long v0, p1
 
-    return v2
-
-    :cond_8
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lro2;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lro2;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lro2;->d:Ljava/lang/String;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lro2;->e:J
-
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lro2;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lro2;->g:J
-
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lro2;->h:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "ShowFileDownloadWarningBottomSheet(chatId="
-
-    const-string v1, ", messageId="
-
-    iget-wide v2, p0, Lro2;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", attachLocalId="
-
-    iget-wide v2, p0, Lro2;->c:J
-
-    iget-object v4, p0, Lro2;->d:Ljava/lang/String;
-
-    invoke-static {v2, v3, v1, v4, v0}, Lqi3;->e(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v1, ", fileId="
-
-    const-string v2, ", fileName="
-
-    iget-wide v3, p0, Lro2;->e:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    iget-object v1, p0, Lro2;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lro2;->g:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileUrl="
-
-    const-string v2, ")"
-
-    iget-object v3, p0, Lro2;->h:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, La3e;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-wide v0
 .end method

@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Li6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Z
-
-.field public final synthetic c:Landroid/view/View;
+.field public final synthetic b:Lkha;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILandroid/view/View;Z)V
+.method public synthetic constructor <init>(Lkha;I)V
     .locals 0
 
-    iput p1, p0, Liha;->a:I
+    iput p2, p0, Liha;->a:I
 
-    iput-boolean p3, p0, Liha;->b:Z
-
-    iput-object p2, p0, Liha;->c:Landroid/view/View;
+    iput-object p1, p0, Liha;->b:Lkha;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,35 +34,75 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-boolean v0, p0, Liha;->b:Z
+    new-instance v0, Lyk0;
 
-    if-nez v0, :cond_0
+    const/16 v1, 0x1a
 
-    const/16 v0, 0x8
+    invoke-direct {v0, v1}, Lyk0;-><init>(I)V
 
-    iget-object v1, p0, Liha;->c:Landroid/view/View;
+    iget-object v1, p0, Liha;->b:Lkha;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
 
-    :cond_0
     return-void
 
     :pswitch_0
-    iget-boolean v0, p0, Liha;->b:Z
+    new-instance v0, Lhha;
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    invoke-direct {v0, v1}, Lhha;-><init>(I)V
 
-    iget-object v1, p0, Liha;->c:Landroid/view/View;
+    iget-object v1, p0, Liha;->b:Lkha;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
 
-    :cond_1
+    return-void
+
+    :pswitch_1
+    new-instance v0, Lyk0;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Lyk0;-><init>(I)V
+
+    iget-object v1, p0, Liha;->b:Lkha;
+
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Lhha;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lhha;-><init>(I)V
+
+    iget-object v1, p0, Liha;->b:Lkha;
+
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lyk0;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lyk0;-><init>(I)V
+
+    iget-object v1, p0, Liha;->b:Lkha;
+
+    invoke-virtual {v1, v0}, Le3;->k(Ldy3;)V
+
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

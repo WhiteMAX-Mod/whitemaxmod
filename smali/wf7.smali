@@ -2,14 +2,31 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr4a;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
 
 # direct methods
-.method public static a(Landroid/net/Uri;)Landroid/graphics/drawable/Icon;
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-static {p0}, Landroid/graphics/drawable/Icon;->createWithAdaptiveBitmapContentUri(Landroid/net/Uri;)Landroid/graphics/drawable/Icon;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Lwf7;->a:Ljava/lang/String;
 
-    return-object p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lwf7;->a:Ljava/lang/String;
+
+    return-object v0
 .end method

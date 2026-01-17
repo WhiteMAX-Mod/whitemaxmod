@@ -1,23 +1,53 @@
 .class public final Ll5i;
-.super Lf3;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ll5i;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lo5i;
+
+.field public Z:I
+
+.field public d:Le5i;
+
+.field public o:Lk4i;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lo5i;Lo84;)V
+    .locals 0
 
-    new-instance v0, Ll5i;
+    iput-object p1, p0, Ll5i;->Y:Lo5i;
 
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Lf3;-><init>(I)V
-
-    sput-object v0, Ll5i;->c:Ll5i;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ll5i;->X:Ljava/lang/Object;
+
+    iget p1, p0, Ll5i;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ll5i;->Z:I
+
+    iget-object p1, p0, Ll5i;->Y:Lo5i;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lo5i;->i(Ljava/lang/String;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

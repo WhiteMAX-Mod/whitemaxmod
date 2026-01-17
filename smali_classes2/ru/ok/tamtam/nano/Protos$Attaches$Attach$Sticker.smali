@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
-.super Lsp9;
+.super Lbp9;
 .source "SourceFile"
 
 
@@ -76,7 +76,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lsp9;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->clear()Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
 
@@ -90,7 +90,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ldu7;->b:Ljava/lang/Object;
+    sget-object v0, Llt7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -132,7 +132,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
+.method public static parseFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -145,7 +145,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
 
     move-result-object p0
 
@@ -165,7 +165,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;-><init>()V
 
-    invoke-static {v0, p0}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
+    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
 
     move-result-object p0
 
@@ -197,7 +197,7 @@
 
     iput-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->firstUrl:Ljava/lang/String;
 
-    sget-object v4, Lk1j;->d:[Ljava/lang/String;
+    sget-object v4, Lc2j;->d:[Ljava/lang/String;
 
     iput-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->tags:[Ljava/lang/String;
 
@@ -219,7 +219,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lsp9;->cachedSize:I
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-object p0
 .end method
@@ -239,7 +239,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v4, v0, v1}, Lmg3;->h(IJ)I
+    invoke-static {v4, v0, v1}, Lwg3;->h(IJ)I
 
     move-result v0
 
@@ -263,7 +263,7 @@
 
     iget-object v6, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->url:Ljava/lang/String;
 
-    invoke-static {v1, v6}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v6}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -276,7 +276,7 @@
 
     const/4 v6, 0x3
 
-    invoke-static {v6, v1}, Lmg3;->f(II)I
+    invoke-static {v6, v1}, Lwg3;->f(II)I
 
     move-result v1
 
@@ -289,7 +289,7 @@
 
     const/4 v6, 0x4
 
-    invoke-static {v6, v1}, Lmg3;->f(II)I
+    invoke-static {v6, v1}, Lwg3;->f(II)I
 
     move-result v1
 
@@ -308,7 +308,7 @@
 
     iget-object v6, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mp4Url:Ljava/lang/String;
 
-    invoke-static {v1, v6}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v6}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -327,7 +327,7 @@
 
     iget-object v6, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->firstUrl:Ljava/lang/String;
 
-    invoke-static {v1, v6}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v6}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -359,11 +359,11 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    invoke-static {v7}, Lmg3;->q(Ljava/lang/String;)I
+    invoke-static {v7}, Lwg3;->q(Ljava/lang/String;)I
 
     move-result v7
 
-    invoke-static {v7}, Lmg3;->j(I)I
+    invoke-static {v7}, Lwg3;->j(I)I
 
     move-result v8
 
@@ -396,7 +396,7 @@
 
     iget-object v5, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->previewUrl:Ljava/lang/String;
 
-    invoke-static {v1, v5}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v5}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -411,7 +411,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {v1, v5, v6}, Lmg3;->h(IJ)I
+    invoke-static {v1, v5, v6}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -424,7 +424,7 @@
 
     const/16 v5, 0xd
 
-    invoke-static {v5, v1}, Lmg3;->f(II)I
+    invoke-static {v5, v1}, Lwg3;->f(II)I
 
     move-result v1
 
@@ -439,7 +439,7 @@
 
     const/16 v1, 0xf
 
-    invoke-static {v1, v5, v6}, Lmg3;->h(IJ)I
+    invoke-static {v1, v5, v6}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -458,7 +458,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->lottieUrl:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v2}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -471,7 +471,7 @@
 
     const/16 v1, 0x11
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -484,7 +484,7 @@
 
     const/16 v2, 0x12
 
-    invoke-static {v2, v1}, Lmg3;->f(II)I
+    invoke-static {v2, v1}, Lwg3;->f(II)I
 
     move-result v1
 
@@ -503,7 +503,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->videoUrl:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v2}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -515,7 +515,23 @@
     return v0
 .end method
 
-.method public mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
+.method public bridge synthetic mergeFrom(Lvg3;)Lbp9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -526,7 +542,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Llg3;->s()I
+    invoke-virtual {p1}, Lvg3;->s()I
 
     move-result v0
 
@@ -537,7 +553,7 @@
     sparse-switch v0, :sswitch_data_0
 
     .line 3
-    invoke-virtual {p1, v0}, Llg3;->u(I)Z
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
 
     move-result v0
 
@@ -547,7 +563,7 @@
 
     .line 4
     :sswitch_0
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -557,7 +573,7 @@
 
     .line 5
     :sswitch_1
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v0
 
@@ -577,7 +593,7 @@
 
     .line 7
     :sswitch_2
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -587,7 +603,7 @@
 
     .line 8
     :sswitch_3
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -597,7 +613,7 @@
 
     .line 9
     :sswitch_4
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -608,7 +624,7 @@
 
     .line 11
     :sswitch_5
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v0
 
@@ -636,7 +652,7 @@
 
     .line 13
     :sswitch_6
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -647,7 +663,7 @@
 
     .line 15
     :sswitch_7
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -659,7 +675,7 @@
     const/16 v0, 0x42
 
     .line 16
-    invoke-static {p1, v0}, Lk1j;->b(Llg3;I)I
+    invoke-static {p1, v0}, Lc2j;->e(Lvg3;I)I
 
     move-result v0
 
@@ -695,14 +711,14 @@
     if-ge v3, v1, :cond_5
 
     .line 20
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v4, v3
 
     .line 21
-    invoke-virtual {p1}, Llg3;->s()I
+    invoke-virtual {p1}, Lvg3;->s()I
 
     add-int/lit8 v3, v3, 0x1
 
@@ -710,7 +726,7 @@
 
     .line 22
     :cond_5
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -723,7 +739,7 @@
 
     .line 24
     :sswitch_9
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -733,7 +749,7 @@
 
     .line 25
     :sswitch_a
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -743,7 +759,7 @@
 
     .line 26
     :sswitch_b
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v0
 
@@ -754,7 +770,7 @@
 
     .line 28
     :sswitch_c
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v0
 
@@ -765,7 +781,7 @@
 
     .line 30
     :sswitch_d
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -775,7 +791,7 @@
 
     .line 31
     :sswitch_e
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -809,23 +825,7 @@
     .end sparse-switch
 .end method
 
-.method public bridge synthetic mergeFrom(Llg3;)Lsp9;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public writeTo(Lmg3;)V
+.method public writeTo(Lwg3;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -843,7 +843,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1, v4, v0, v1}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lwg3;->x(IJ)V
 
     :cond_0
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->url:Ljava/lang/String;
@@ -860,7 +860,7 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->url:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v4}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_1
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->width:I
@@ -869,7 +869,7 @@
 
     const/4 v4, 0x3
 
-    invoke-virtual {p1, v4, v0}, Lmg3;->w(II)V
+    invoke-virtual {p1, v4, v0}, Lwg3;->w(II)V
 
     :cond_2
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->height:I
@@ -878,7 +878,7 @@
 
     const/4 v4, 0x4
 
-    invoke-virtual {p1, v4, v0}, Lmg3;->w(II)V
+    invoke-virtual {p1, v4, v0}, Lwg3;->w(II)V
 
     :cond_3
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mp4Url:Ljava/lang/String;
@@ -893,7 +893,7 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mp4Url:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v4}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_4
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->firstUrl:Ljava/lang/String;
@@ -908,7 +908,7 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->firstUrl:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v4}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_5
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->tags:[Ljava/lang/String;
@@ -934,7 +934,7 @@
 
     const/16 v5, 0x8
 
-    invoke-virtual {p1, v5, v4}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v5, v4}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_6
     add-int/lit8 v0, v0, 0x1
@@ -954,7 +954,7 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->previewUrl:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v4}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_8
     iget-wide v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->updateTime:J
@@ -965,7 +965,7 @@
 
     const/16 v0, 0xa
 
-    invoke-virtual {p1, v0, v4, v5}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v0, v4, v5}, Lwg3;->x(IJ)V
 
     :cond_9
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->stickerType:I
@@ -974,7 +974,7 @@
 
     const/16 v4, 0xd
 
-    invoke-virtual {p1, v4, v0}, Lmg3;->w(II)V
+    invoke-virtual {p1, v4, v0}, Lwg3;->w(II)V
 
     :cond_a
     iget-wide v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->setId:J
@@ -985,7 +985,7 @@
 
     const/16 v0, 0xf
 
-    invoke-virtual {p1, v0, v4, v5}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v0, v4, v5}, Lwg3;->x(IJ)V
 
     :cond_b
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->lottieUrl:Ljava/lang/String;
@@ -1000,7 +1000,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->lottieUrl:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_c
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->audio:Z
@@ -1009,7 +1009,7 @@
 
     const/16 v2, 0x11
 
-    invoke-virtual {p1, v2, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v2, v0}, Lwg3;->r(IZ)V
 
     :cond_d
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->authorType:I
@@ -1018,7 +1018,7 @@
 
     const/16 v2, 0x12
 
-    invoke-virtual {p1, v2, v0}, Lmg3;->w(II)V
+    invoke-virtual {p1, v2, v0}, Lwg3;->w(II)V
 
     :cond_e
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->videoUrl:Ljava/lang/String;
@@ -1033,7 +1033,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->videoUrl:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_f
     return-void

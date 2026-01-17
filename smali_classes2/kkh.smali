@@ -1,48 +1,46 @@
 .class public final Lkkh;
-.super Ll84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lhe8;
 
 
-# instance fields
-.field public final synthetic X:Lece;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lece;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public final a(Ljava/lang/Long;)V
     .locals 0
-
-    iput-object p1, p0, Lkkh;->X:Lece;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
+.method public final b()V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
+.end method
+
+.method public final c()Ld76;
     .locals 1
 
-    iput-object p1, p0, Lkkh;->d:Ljava/lang/Object;
+    sget-object v0, Lbh5;->a:Lbh5;
 
-    iget p1, p0, Lkkh;->o:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final d()V
+    .locals 0
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Lkkh;->o:I
+.method public final release()V
+    .locals 0
 
-    iget-object p1, p0, Lkkh;->X:Lece;
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public final seekTo(J)V
+    .locals 0
 
-    invoke-virtual {p1, v0, p0}, Lece;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

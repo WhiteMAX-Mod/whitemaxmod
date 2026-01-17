@@ -1,120 +1,50 @@
 .class public final Lxh9;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ldi9;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:J
-
-
-# direct methods
-.method public constructor <init>(IJ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lxh9;->a:I
-
-    iput-wide p2, p0, Lxh9;->b:J
-
-    return-void
-.end method
+.implements Lbr6;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/util/Set;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lxh9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lxh9;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lxh9;
 
-    iget v1, p0, Lxh9;->a:I
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget v3, p1, Lxh9;->a:I
+    invoke-virtual {p1, p2}, Lxh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lxh9;->b:J
-
-    iget-wide v5, p1, Lxh9;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget v0, p0, Lxh9;->a:I
+    new-instance p1, Lxh9;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    const/4 v0, 0x2
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lxh9;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "OnContextActionClicked(actionId="
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const-string v1, ", memberId="
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget v2, p0, Lxh9;->a:I
-
-    iget-wide v3, p0, Lxh9;->b:J
-
-    invoke-static {v2, v3, v4, v0, v1}, Lzy4;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

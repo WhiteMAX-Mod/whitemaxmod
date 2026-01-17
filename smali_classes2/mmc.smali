@@ -1,249 +1,165 @@
 .class public final Lmmc;
-.super Lb5g;
+.super Lnth;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
+
+# static fields
+.field public static final synthetic v0:[Lz28;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.field public final X:Lspf;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final Y:Lpld;
+
+.field public final Z:Lcm5;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lo58;
+
+.field public final d:Lo58;
+
+.field public final o:Lo58;
+
+.field public final t0:Lcm5;
+
+.field public volatile u0:Lmmf;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p2, p0, Lmmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    new-instance v0, Lhfa;
 
-    const/4 p2, 0x2
+    const-string v1, "loadInfoJob"
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v2, "getLoadInfoJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lmmc;
+
+    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lctd;->a:Ldtd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lz28;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lmmc;->v0:[Lz28;
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 5
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    sget-object v0, Lmxg;->a:Lmxg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-virtual {p0, p1, p2}, Lmmc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v1
 
-    move-result-object p1
+    const/16 v2, 0x33
 
-    check-cast p1, Lmmc;
+    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    move-result-object v1
 
-    invoke-virtual {p1, p2}, Lmmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lmxg;->a()Lo58;
 
-    return-object p2
-.end method
+    move-result-object v2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lmmc;
-
-    iget-object v1, p0, Lmmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    invoke-direct {v0, p2, v1}, Lmmc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
-
-    iput-object p1, v0, Lmmc;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmmc;->o:Ljava/lang/Object;
-
-    check-cast p1, Lslc;
-
-    instance-of v0, p1, Lqlc;
-
-    iget-object v1, p0, Lmmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    if-eqz v0, :cond_3
-
-    invoke-static {v1}, Lo2j;->d(Lx84;)V
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lp38;
-
-    check-cast p1, Lqlc;
-
-    iget-object v0, p1, Lqlc;->a:Lghg;
-
-    const/4 v2, 0x6
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v3, v3, v2}, Ltij;->a(Lghg;Landroid/os/Bundle;Lmbe;I)Lyt3;
-
-    move-result-object v6
-
-    iget-object v0, p1, Lqlc;->b:Lghg;
-
-    invoke-virtual {v6, v0}, Lyt3;->f(Lghg;)V
-
-    iget-object p1, p1, Lqlc;->c:Ljava/util/List;
-
-    new-instance v4, Lht2;
-
-    const/16 v10, 0x8
-
-    const/16 v11, 0x9
-
-    const/4 v5, 0x1
-
-    const-class v7, Lyt3;
-
-    const-string v8, "addButton"
-
-    const-string v9, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
-
-    invoke-direct/range {v4 .. v11}, Lht2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v0, Lby2;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v4, v2}, Lby2;-><init>(Lw8;I)V
-
-    invoke-interface {p1, v0}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
-
-    invoke-virtual {v6}, Lyt3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v1}, Lone/me/sdk/arch/Widget;->setTargetController(Lx84;)V
-
-    move-object p1, v1
-
-    :goto_0
-    invoke-virtual {p1}, Lx84;->getParentController()Lx84;
+    invoke-virtual {v0}, Lmxg;->b()Lo58;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-direct {p0}, Lnth;-><init>()V
 
-    invoke-virtual {p1}, Lx84;->getParentController()Lx84;
+    const-class v3, Lmmc;
 
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lc4e;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lc4e;
-
-    goto :goto_1
-
-    :cond_1
-    move-object p1, v3
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    check-cast p1, Lone/me/android/root/RootController;
-
-    invoke-virtual {p1}, Lone/me/android/root/RootController;->F0()Lw3e;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    :cond_2
-    invoke-virtual {v8, v1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->O0(Lone/me/sdk/arch/Widget;)V
+    iput-object v3, p0, Lmmc;->b:Ljava/lang/String;
 
-    if-eqz v3, :cond_6
+    iput-object v1, p0, Lmmc;->c:Lo58;
 
-    new-instance v7, Lz3e;
+    iput-object v2, p0, Lmmc;->d:Lo58;
 
-    const/4 v12, 0x0
+    iput-object v0, p0, Lmmc;->o:Lo58;
 
-    const/4 v13, -0x1
+    const/4 v1, 0x0
 
-    const/4 v9, 0x0
+    invoke-static {v1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    const/4 v10, 0x0
+    move-result-object v2
 
-    const/4 v11, 0x0
+    iput-object v2, p0, Lmmc;->X:Lspf;
 
-    invoke-direct/range {v7 .. v13}, Lz3e;-><init>(Lx84;Ljava/lang/String;Lc94;Lc94;ZI)V
+    new-instance v3, Lpld;
 
-    const/4 p1, 0x0
+    invoke-direct {v3, v2}, Lpld;-><init>(Lmfa;)V
 
-    const-string v0, "BottomSheetWidget"
+    iput-object v3, p0, Lmmc;->Y:Lpld;
 
-    invoke-static {p1, v7, v2, v0}, Lc12;->v(ZLz3e;ZLjava/lang/String;)V
+    new-instance v2, Lcm5;
 
-    invoke-virtual {v3, v7}, Lw3e;->H(Lz3e;)V
+    const/4 v3, 0x0
 
-    goto :goto_2
+    invoke-direct {v2, v3}, Lcm5;-><init>(I)V
 
-    :cond_3
-    instance-of v0, p1, Lrlc;
+    iput-object v2, p0, Lmmc;->Z:Lcm5;
 
-    if-eqz v0, :cond_7
+    new-instance v2, Lcm5;
 
-    iget-object v0, v1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->u0:Lsib;
+    invoke-direct {v2, v3}, Lcm5;-><init>(I)V
 
-    if-eqz v0, :cond_4
+    iput-object v2, p0, Lmmc;->t0:Lcm5;
 
-    invoke-virtual {v0}, Lsib;->a()V
+    invoke-static {}, Lhlj;->b()Lx07;
 
-    :cond_4
-    new-instance v0, Ltib;
+    move-result-object v2
 
-    invoke-direct {v0, v1}, Ltib;-><init>(Lone/me/sdk/arch/Widget;)V
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Lrlc;
+    move-result-object v0
 
-    iget-object v2, p1, Lrlc;->a:Lghg;
+    check-cast v0, Lmbg;
 
-    invoke-virtual {v0, v2}, Ltib;->g(Lghg;)V
+    check-cast v0, Lj9b;
 
-    iget-object p1, p1, Lrlc;->b:Ljava/lang/Integer;
+    invoke-virtual {v0}, Lj9b;->b()Lsb4;
 
-    if-eqz p1, :cond_5
+    move-result-object v0
 
-    new-instance v2, Lhjb;
+    new-instance v3, Lkmc;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-direct {v3, p0, v1}, Lkmc;-><init>(Lmmc;Lkotlin/coroutines/Continuation;)V
 
-    move-result p1
+    iget-object v1, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-direct {v2, p1}, Lhjb;-><init>(I)V
+    sget-object v4, Lcc4;->b:Lcc4;
 
-    invoke-virtual {v0, v2}, Ltib;->e(Lljb;)V
+    invoke-static {v1, v0, v4, v3}, Ls9j;->f(Lzb4;Lqb4;Lcc4;Lbr6;)Lmmf;
 
-    :cond_5
-    invoke-virtual {v0}, Ltib;->i()Lsib;
+    move-result-object v0
 
-    move-result-object p1
+    sget-object v1, Lmmc;->v0:[Lz28;
 
-    iput-object p1, v1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->u0:Lsib;
+    const/4 v3, 0x0
 
-    :cond_6
-    :goto_2
-    sget-object p1, Lv2h;->a:Lv2h;
+    aget-object v1, v1, v3
 
-    return-object p1
+    invoke-virtual {v2, p0, v1, v0}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
 
-    :cond_7
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-void
 .end method

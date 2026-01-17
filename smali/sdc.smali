@@ -1,168 +1,126 @@
-.class public Lsdc;
-.super Ljava/lang/Object;
+.class public final Lsdc;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lrdc;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public X:I
 
-.field public b:I
+.field public final synthetic Y:Lbtd;
+
+.field public final synthetic Z:Lvdc;
+
+.field public o:Lbtd;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lbtd;Lvdc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsdc;->Y:Lbtd;
 
-    const/16 v0, 0x100
+    iput-object p2, p0, Lsdc;->Z:Lvdc;
 
-    .line 5
-    new-array v0, v0, [Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    iput-object v0, p0, Lsdc;->a:[Ljava/lang/Object;
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-lez p1, :cond_0
-
-    .line 2
-    new-array p1, p1, [Ljava/lang/Object;
-
-    iput-object p1, p0, Lsdc;->a:[Ljava/lang/Object;
-
-    return-void
-
-    .line 3
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "The max pool size must be > 0"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lsdc;->b:I
+    check-cast p1, Lzb4;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-lez v0, :cond_0
+    invoke-virtual {p0, p1, p2}, Lsdc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    add-int/lit8 v2, v0, -0x1
+    move-result-object p1
 
-    iget-object v3, p0, Lsdc;->a:[Ljava/lang/Object;
+    check-cast p1, Lsdc;
 
-    aget-object v4, v3, v2
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    aput-object v1, v3, v2
+    invoke-virtual {p1, p2}, Lsdc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    add-int/lit8 v0, v0, -0x1
+    move-result-object p1
 
-    iput v0, p0, Lsdc;->b:I
-
-    return-object v4
-
-    :cond_0
-    return-object v1
+    return-object p1
 .end method
 
-.method public b(Lzs;)V
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lsdc;->b:I
+    new-instance p1, Lsdc;
 
-    iget-object v1, p0, Lsdc;->a:[Ljava/lang/Object;
+    iget-object v0, p0, Lsdc;->Y:Lbtd;
 
-    array-length v2, v1
+    iget-object v1, p0, Lsdc;->Z:Lvdc;
 
-    if-ge v0, v2, :cond_0
+    invoke-direct {p1, v0, v1, p2}, Lsdc;-><init>(Lbtd;Lvdc;Lkotlin/coroutines/Continuation;)V
 
-    aput-object p1, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lsdc;->b:I
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public e(Ljava/lang/Object;)Z
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lsdc;->b:I
+    iget v0, p0, Lsdc;->X:I
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    move v2, v1
+    if-eqz v0, :cond_1
 
-    :goto_0
-    iget-object v3, p0, Lsdc;->a:[Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    const/4 v4, 0x1
+    iget-object v0, p0, Lsdc;->o:Lbtd;
 
-    if-ge v2, v0, :cond_1
-
-    aget-object v5, v3, v2
-
-    if-ne v5, p1, :cond_0
-
-    move v0, v4
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_1
-    move v0, v1
-
-    :goto_1
-    if-nez v0, :cond_3
-
-    iget v0, p0, Lsdc;->b:I
-
-    array-length v2, v3
-
-    if-ge v0, v2, :cond_2
-
-    aput-object p1, v3, v0
-
-    add-int/2addr v0, v4
-
-    iput v0, p0, Lsdc;->b:I
-
-    return v4
-
-    :cond_2
-    return v1
-
-    :cond_3
+    :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Already in the pool!"
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lsdc;->Y:Lbtd;
+
+    iput-object v0, p0, Lsdc;->o:Lbtd;
+
+    iput v1, p0, Lsdc;->X:I
+
+    iget-object p1, p0, Lsdc;->Z:Lvdc;
+
+    invoke-virtual {p1, p0}, Lvdc;->a(Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    if-ne p1, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    iput-object p1, v0, Lbtd;->a:Ljava/lang/Object;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

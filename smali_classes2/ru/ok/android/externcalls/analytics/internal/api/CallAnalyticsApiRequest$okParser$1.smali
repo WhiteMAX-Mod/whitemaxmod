@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf28;
+.implements Lq18;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->getOkParser()Lf28;
+    value = Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->getOkParser()Lq18;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lf28;"
+        "Lq18;"
     }
 .end annotation
 
@@ -31,11 +31,11 @@
         "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0001\n\u0002\u0008\u0003\u0010\u0005\u001a\u0004\u0018\u00010\u00022\u0008\u0010\u0001\u001a\u0004\u0018\u00010\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
-        "Lo28;",
+        "Lz18;",
         "reader",
         "",
         "parse",
-        "(Lo28;)Ljava/lang/Void;",
+        "(Lz18;)Ljava/lang/Void;",
         "<anonymous>"
     }
     k = 0x3
@@ -64,18 +64,18 @@
 
 
 # virtual methods
-.method public bridge synthetic parse(Lo28;)Ljava/lang/Object;
+.method public bridge synthetic parse(Lz18;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest$okParser$1;->parse(Lo28;)Ljava/lang/Void;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest$okParser$1;->parse(Lz18;)Ljava/lang/Void;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final parse(Lo28;)Ljava/lang/Void;
+.method public final parse(Lz18;)Ljava/lang/Void;
     .locals 5
 
     .line 2
@@ -87,7 +87,7 @@
 
     .line 3
     :try_start_0
-    invoke-interface {p1}, Lo28;->peek()I
+    invoke-interface {p1}, Lz18;->peek()I
 
     move-result v3
 
@@ -119,7 +119,7 @@
 
     move-result-object v3
 
-    invoke-interface {p1}, Lo28;->L()Ljava/lang/String;
+    invoke-interface {p1}, Lz18;->P()Ljava/lang/String;
 
     move-result-object p1
 

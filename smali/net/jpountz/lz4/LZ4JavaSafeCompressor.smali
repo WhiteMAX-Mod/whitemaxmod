@@ -188,7 +188,7 @@
     int-to-short v2, v2
 
     .line 46
-    invoke-static {v3, v11, v2}, Lfz0;->g(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v3, v11, v2}, Lyy0;->f(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v2, v11, 0x2
 
@@ -437,7 +437,7 @@
 
     .line 4
     :cond_0
-    invoke-static {v8, v0}, Lf7e;->d(I[B)I
+    invoke-static {v8, v0}, Lc8e;->d(I[B)I
 
     move-result v14
 
@@ -618,7 +618,7 @@
     add-int/lit8 v2, v8, -0x2
 
     .line 22
-    invoke-static {v2, v0}, Lf7e;->d(I[B)I
+    invoke-static {v2, v0}, Lc8e;->d(I[B)I
 
     move-result v9
 
@@ -634,7 +634,7 @@
     aput-short v2, p2, v9
 
     .line 24
-    invoke-static {v8, v0}, Lf7e;->d(I[B)I
+    invoke-static {v8, v0}, Lc8e;->d(I[B)I
 
     move-result v2
 
@@ -795,20 +795,20 @@
     move/from16 v6, p6
 
     .line 38
-    invoke-static/range {p1 .. p1}, Lfz0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static/range {p1 .. p1}, Lyy0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
     .line 39
-    invoke-static/range {p4 .. p4}, Lfz0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static/range {p4 .. p4}, Lyy0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
     .line 40
-    invoke-static {v1, v0, v2}, Lfz0;->c(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v1, v0, v2}, Lyy0;->b(Ljava/nio/ByteBuffer;II)V
 
     .line 41
-    invoke-static {v4, v3, v6}, Lfz0;->c(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v4, v3, v6}, Lyy0;->b(Ljava/nio/ByteBuffer;II)V
 
     add-int v5, v3, v6
 
@@ -989,7 +989,7 @@
 
     .line 58
     :goto_4
-    invoke-static {v3, v12, v2}, Lfz0;->g(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v3, v12, v2}, Lyy0;->f(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v2, v12, 0x2
 
@@ -1189,10 +1189,10 @@
     move/from16 v5, p6
 
     .line 1
-    invoke-static {v1, v0, v2}, Lf7e;->c(I[BI)V
+    invoke-static {v1, v0, v2}, Lc8e;->b(I[BI)V
 
     .line 2
-    invoke-static {v4, v3, v5}, Lf7e;->c(I[BI)V
+    invoke-static {v4, v3, v5}, Lc8e;->b(I[BI)V
 
     add-int/2addr v5, v4
 
@@ -1261,7 +1261,7 @@
 
     .line 8
     :cond_1
-    invoke-static {v10, v0}, Lf7e;->d(I[B)I
+    invoke-static {v10, v0}, Lc8e;->d(I[B)I
 
     move-result v14
 
@@ -1448,7 +1448,7 @@
     add-int/lit8 v2, v10, -0x2
 
     .line 27
-    invoke-static {v2, v0}, Lf7e;->d(I[B)I
+    invoke-static {v2, v0}, Lc8e;->d(I[B)I
 
     move-result v3
 
@@ -1460,7 +1460,7 @@
     aput v2, v8, v3
 
     .line 29
-    invoke-static {v10, v0}, Lf7e;->d(I[B)I
+    invoke-static {v10, v0}, Lc8e;->d(I[B)I
 
     move-result v2
 

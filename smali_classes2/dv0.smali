@@ -1,123 +1,163 @@
-.class public final synthetic Ldv0;
+.class public final Ldv0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:F
+.field public final b:I
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;FI)V
+.method public constructor <init>(IIII)V
     .locals 0
 
-    iput p3, p0, Ldv0;->a:I
-
-    iput-object p1, p0, Ldv0;->c:Ljava/lang/Object;
-
-    iput p2, p0, Ldv0;->b:F
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ldv0;->a:I
+
+    iput p2, p0, Ldv0;->b:I
+
+    iput p3, p0, Ldv0;->c:I
+
+    iput p4, p0, Ldv0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Ldv0;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ldv0;
 
     iget v0, p0, Ldv0;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p1, Ldv0;->a:I
 
-    iget-object v0, p0, Ldv0;->c:Ljava/lang/Object;
+    if-eq v0, v1, :cond_2
 
-    check-cast v0, Ly52;
+    goto :goto_0
 
-    iget-object v0, v0, Ly52;->c:Ljava/lang/Object;
+    :cond_2
+    iget v0, p0, Ldv0;->b:I
 
-    check-cast v0, Lrdf;
+    iget v1, p1, Ldv0;->b:I
 
-    iget-object v0, v0, Lrdf;->d:Lkhh;
+    if-eq v0, v1, :cond_3
 
-    iget v1, p0, Ldv0;->b:F
+    goto :goto_0
 
-    invoke-interface {v0, v1}, Lkhh;->E(F)V
+    :cond_3
+    iget v0, p0, Ldv0;->c:I
 
-    return-void
+    iget v1, p1, Ldv0;->c:I
 
-    :pswitch_0
-    iget-object v0, p0, Ldv0;->c:Ljava/lang/Object;
+    if-eq v0, v1, :cond_4
 
-    check-cast v0, Lhg5;
+    goto :goto_0
 
-    iget-object v0, v0, Lhg5;->b:Ljava/lang/Object;
+    :cond_4
+    iget v0, p0, Ldv0;->d:I
 
-    check-cast v0, Loda;
+    iget p1, p1, Ldv0;->d:I
 
-    iget-object v0, v0, Loda;->e:Lkhh;
+    if-eq v0, p1, :cond_5
 
-    iget v1, p0, Ldv0;->b:F
+    :goto_0
+    const/4 p1, 0x0
 
-    invoke-interface {v0, v1}, Lkhh;->E(F)V
+    return p1
 
-    return-void
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
 
-    :pswitch_1
-    iget-object v0, p0, Ldv0;->c:Ljava/lang/Object;
+    return p1
+.end method
 
-    check-cast v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;
+.method public final hashCode()I
+    .locals 3
 
-    iget v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->z0:F
+    iget v0, p0, Ldv0;->a:I
 
-    iget v2, p0, Ldv0;->b:F
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    sub-float/2addr v2, v1
+    move-result v0
 
-    iget v3, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->A0:F
+    const/16 v1, 0x1f
 
-    sub-float/2addr v3, v1
+    mul-int/2addr v0, v1
 
-    div-float/2addr v2, v3
+    iget v2, p0, Ldv0;->b:I
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    cmpl-float v3, v2, v1
+    move-result v0
 
-    if-lez v3, :cond_0
+    iget v2, p0, Ldv0;->c:I
 
-    move v2, v1
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    :cond_0
-    iget v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
+    move-result v0
 
-    iget v3, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
+    iget v1, p0, Ldv0;->d:I
 
-    sub-float v3, v1, v3
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    mul-float/2addr v3, v2
+    move-result v1
 
-    sub-float/2addr v1, v3
+    add-int/2addr v1, v0
 
-    iput v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
+    return v1
+.end method
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return-void
+    const-string v0, ", insideOthers="
 
-    nop
+    const-string v1, ", outsideMy="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v2, "BubbleBackgroundReactionColors(insideMy="
+
+    iget v3, p0, Ldv0;->a:I
+
+    iget v4, p0, Ldv0;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", outsideOthers="
+
+    const-string v2, ")"
+
+    iget v3, p0, Ldv0;->c:I
+
+    iget v4, p0, Ldv0;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lhc0;->j(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

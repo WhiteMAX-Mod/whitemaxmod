@@ -1,70 +1,122 @@
 .class public final Lpcj;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Landroid/os/Binder;
 
 # interfaces
-.implements Lwwa;
+.implements Landroid/os/IInterface;
 
 
-# static fields
-.field public static final a:Lpcj;
+# instance fields
+.field public final synthetic c:Lqpi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lqpi;)V
+    .locals 0
 
-    new-instance v0, Lpcj;
+    iput-object p1, p0, Lpcj;->c:Lqpi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    sput-object v0, Lpcj;->a:Lpcj;
+    const-string p1, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverResultCallback"
 
-    new-instance v0, Lyyi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
-
-    const-class v1, Lqzi;
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final asBinder()Landroid/os/IBinder;
     .locals 0
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    return-object p0
+.end method
+
+.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 2
+
+    const v0, 0xffffff
+
+    const/4 v1, 0x0
+
+    if-le p1, v0, :cond_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p3
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/os/Binder;->getInterfaceDescriptor()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    move p3, v1
+
+    :goto_0
+    const/4 p4, 0x1
+
+    if-eqz p3, :cond_1
+
+    return p4
+
+    :cond_1
+    if-ne p1, p4, :cond_4
+
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    sget p3, Levi;->a:I
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p3
+
+    const/4 v0, 0x0
+
+    if-nez p3, :cond_2
+
+    move-object p1, v0
+
+    goto :goto_1
+
+    :cond_2
+    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Landroid/os/Parcelable;
+
+    :goto_1
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    iget-object p2, p0, Lpcj;->c:Lqpi;
+
+    iget-object p2, p2, Lqpi;->e:Ljava/lang/Object;
+
+    check-cast p2, Lieg;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->b()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_3
+
+    invoke-virtual {p2, v0}, Lieg;->b(Ljava/lang/Object;)V
+
+    return p4
+
+    :cond_3
+    invoke-static {p1}, La5j;->d(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Lieg;->a(Ljava/lang/Exception;)V
+
+    return p4
+
+    :cond_4
+    return v1
 .end method

@@ -1,162 +1,136 @@
 .class public final Lpk4;
-.super Lxbg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Lt56;
+# static fields
+.field public static final synthetic f:I
 
-.field public d:Ljava/util/List;
+
+# instance fields
+.field public final a:Lf7;
+
+.field public final b:Lp02;
+
+.field public final c:Lpbe;
+
+.field public final d:Le0d;
+
+.field public e:Lz48;
 
 
 # direct methods
-.method public constructor <init>(Lgr9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
+    sget v0, Lta5;->d:I
 
-    iget-object p1, p0, Lpk4;->d:Ljava/util/List;
+    const/16 v0, 0x64
 
-    if-nez p1, :cond_0
+    sget-object v1, Lza5;->c:Lza5;
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-static {v0, v1}, Laoj;->g(ILza5;)J
 
-    iput-object p1, p0, Lpk4;->d:Ljava/util/List;
+    return-void
+.end method
 
-    :cond_0
+.method public constructor <init>(Lf7;Lp02;)V
+    .locals 1
+
+    invoke-static {}, Lace;->a()Lpbe;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpk4;->a:Lf7;
+
+    iput-object p2, p0, Lpk4;->b:Lp02;
+
+    iput-object v0, p0, Lpk4;->c:Lpbe;
+
+    new-instance p1, Le0d;
+
+    invoke-direct {p1}, Le0d;-><init>()V
+
+    iput-object p1, p0, Lpk4;->d:Le0d;
+
+    invoke-virtual {p0}, Lpk4;->a()V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
-    .locals 3
+.method public final a()V
+    .locals 8
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lpk4;->a:Lf7;
 
-    const-string v0, "cmd"
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-wide v0, v0, Lf7;->a:J
 
-    move-result v0
+    invoke-static {v0, v1}, Lta5;->f(J)J
 
-    if-nez v0, :cond_2
+    move-result-wide v4
 
-    const-string v0, "args"
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v3, p0, Lpk4;->d:Le0d;
 
-    move-result p2
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez p2, :cond_0
+    invoke-static {}, Lace;->a()Lpbe;
 
-    invoke-virtual {p1}, Lgr9;->y()V
+    move-result-object v6
+
+    const-string v1, "unit is null"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const-string v0, "scheduler is null"
+
+    invoke-static {v6, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v2, Lvza;
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v2 .. v7}, Lvza;-><init>(Ldxa;JLpbe;I)V
+
+    iget-object v0, p0, Lpk4;->c:Lpbe;
+
+    invoke-virtual {v2, v0}, Ldxa;->i(Lpbe;)Laza;
+
+    move-result-object v0
+
+    new-instance v1, Limf;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, v2, p0}, Limf;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Lw7a;
+
+    invoke-direct {v2, p0}, Lw7a;-><init>(Lpk4;)V
+
+    new-instance v3, Lz48;
+
+    sget-object v4, Lhbe;->c:Lsr6;
+
+    invoke-direct {v3, v1, v2, v4}, Lz48;-><init>(Lay3;Lay3;Li6;)V
+
+    invoke-virtual {v0, v3}, Ldxa;->a(Le0b;)V
+
+    iput-object v3, p0, Lpk4;->e:Lz48;
 
     return-void
 
     :cond_0
-    invoke-static {p1}, Lisi;->g(Lgr9;)I
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result p2
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lpk4;->d:Ljava/util/List;
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_1
-
-    iget-object v1, p0, Lpk4;->d:Ljava/util/List;
-
-    invoke-static {p1}, Lisi;->p(Lgr9;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :cond_2
-    invoke-static {p1}, Lisi;->p(Lgr9;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lt56;->o:Lt56;
-
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    const-string v0, "SYNC_CONTACTS"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    const-string v0, "SEND_LOG"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    sget-object p2, Lt56;->X:Lt56;
-
-    goto :goto_1
-
-    :cond_5
-    sget-object p2, Lt56;->Y:Lt56;
-
-    :goto_1
-    iput-object p2, p0, Lpk4;->c:Lt56;
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-object v0, p0, Lpk4;->c:Lt56;
-
-    iget-object v1, p0, Lpk4;->d:Ljava/util/List;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "{cmd=\'"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', args="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw v0
 .end method

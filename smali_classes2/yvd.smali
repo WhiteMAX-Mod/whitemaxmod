@@ -1,25 +1,23 @@
 .class public final Lyvd;
-.super Lmz;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:Z
+.field public final a:Lwnb;
 
-.field public final o:Lxvd;
+.field public final b:Landroid/util/Size;
 
 
 # direct methods
-.method public constructor <init>(ZLxvd;ZZ)V
-    .locals 1
+.method public constructor <init>(Lwnb;Landroid/util/Size;)V
+    .locals 0
 
-    sget-object v0, Li10;->z0:Li10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p3, p4}, Lmz;-><init>(Li10;ZZ)V
+    iput-object p1, p0, Lyvd;->a:Lwnb;
 
-    iput-boolean p1, p0, Lyvd;->d:Z
-
-    iput-object p2, p0, Lyvd;->o:Lxvd;
+    iput-object p2, p0, Lyvd;->b:Landroid/util/Size;
 
     return-void
 .end method

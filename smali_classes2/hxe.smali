@@ -4,239 +4,126 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lo58;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Li7f;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Lgxe;
-
-.field public final e:Ljava/util/ArrayList;
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Lgxe;Ljava/util/ArrayList;)V
-    .locals 0
+.method public constructor <init>(Lo58;Lmbg;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lhxe;->a:I
+    iput-object p1, p0, Lhxe;->a:Lo58;
 
-    iput-object p2, p0, Lhxe;->b:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iput-object p3, p0, Lhxe;->c:Ljava/lang/String;
+    const/4 v1, 0x7
 
-    iput-object p4, p0, Lhxe;->d:Lgxe;
+    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
 
-    iput-object p5, p0, Lhxe;->e:Ljava/util/ArrayList;
+    move-result-object v0
+
+    iput-object v0, p0, Lhxe;->b:Li7f;
+
+    check-cast p2, Lj9b;
+
+    invoke-virtual {p2}, Lj9b;->a()Lsb4;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lhxe;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcy0;
+
+    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhxe;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhxe;
-
-    iget v1, p0, Lhxe;->a:I
-
-    iget v3, p1, Lhxe;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lhxe;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lhxe;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lhxe;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lhxe;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lhxe;->d:Lgxe;
-
-    iget-object v3, p1, Lhxe;->d:Lgxe;
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lhxe;->e:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lhxe;->e:Ljava/util/ArrayList;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onEvent(Lhve;)V
     .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    iget v0, p0, Lhxe;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
+    .line 3
+    new-instance v0, Lfxe;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lhxe;->b:Ljava/lang/String;
+    invoke-direct {v0, p0, p1, v1}, Lfxe;-><init>(Lhxe;Lhve;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v2, :cond_0
+    const/4 p1, 0x3
 
-    move v2, v1
+    iget-object v2, p0, Lhxe;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    goto :goto_0
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lhxe;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_1
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lhxe;->d:Lgxe;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lhxe;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final onEvent(Ljk0;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 4
+    new-instance v0, Lgxe;
 
-    const-string v1, "SettingsBannerSection(id="
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, v1}, Lgxe;-><init>(Lhxe;Ljk0;Lkotlin/coroutines/Continuation;)V
 
-    iget v1, p0, Lhxe;->a:I
+    const/4 p1, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lhxe;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string v1, ", logo="
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    iget-object v1, p0, Lhxe;->b:Ljava/lang/String;
+.method public final onEvent(Ljve;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 2
+    new-instance v0, Lexe;
 
-    const-string v1, ", title="
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p0, p1, v1}, Lexe;-><init>(Lhxe;Ljve;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lhxe;->c:Ljava/lang/String;
+    const/4 p1, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lhxe;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string v1, ", align="
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    iget-object v1, p0, Lhxe;->d:Lgxe;
+.method public final onEvent(Lkv3;)V
+    .locals 0
+    .annotation runtime Lu0g;
+    .end annotation
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x0
 
-    const-string v1, ", items="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhxe;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    .line 1
+    throw p1
 .end method

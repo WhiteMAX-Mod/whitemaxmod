@@ -1,89 +1,53 @@
-.class public abstract Lf78;
-.super Ljava/lang/Object;
+.class public final Lf78;
+.super Lo84;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:J
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lj78;
+
+.field public d:I
+
+.field public o:I
+
+.field public t0:I
+
+
 # direct methods
-.method public static a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-    .locals 2
+.method public constructor <init>(Lj78;Lo84;)V
+    .locals 0
 
-    if-nez p0, :cond_0
+    iput-object p1, p0, Lf78;->Z:Lj78;
 
-    const/4 p0, 0x0
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
-
-    :cond_0
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    invoke-interface {p0, v0, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    invoke-interface {p1, v0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Parcelable;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p0
+    return-void
 .end method
 
-.method public static b(Ljava/util/List;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
-    .locals 3
 
-    if-nez p0, :cond_0
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 p0, 0x0
+    iput-object p1, p0, Lf78;->Y:Ljava/lang/Object;
 
-    return-object p0
+    iget p1, p0, Lf78;->t0:I
 
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    or-int/2addr p1, v0
 
-    const/4 v1, 0x0
+    iput p1, p0, Lf78;->t0:I
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    iget-object p1, p0, Lf78;->Z:Lj78;
 
-    move-result v2
+    invoke-virtual {p1, p0}, Lj78;->b(Lo84;)Ljava/lang/Object;
 
-    if-ge v1, v2, :cond_1
+    move-result-object p1
 
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/os/Parcelable;
-
-    invoke-static {v2, p1}, Lf78;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
+    return-object p1
 .end method

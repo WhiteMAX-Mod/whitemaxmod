@@ -1,81 +1,27 @@
 .class public final Lu87;
-.super Lyl0;
+.super La97;
 .source "SourceFile"
 
 
 # instance fields
-.field public g:I
+.field public final w0:Z
+
+.field public final x0:Z
 
 
-# virtual methods
-.method public final b()I
-    .locals 1
-
-    iget v0, p0, Lu87;->g:I
-
-    return v0
-.end method
-
-.method public final k()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final m()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final t(JJJLjava/util/List;[Lq09;)V
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ly87;JIJLz85;Ljava/lang/String;Ljava/lang/String;JJZZZ)V
     .locals 0
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-direct/range {p0 .. p15}, La97;-><init>(Ljava/lang/String;Ly87;JIJLz85;Ljava/lang/String;Ljava/lang/String;JJZ)V
 
-    move-result-wide p1
+    move/from16 p1, p16
 
-    iget p3, p0, Lu87;->g:I
+    iput-boolean p1, p0, Lu87;->w0:Z
 
-    invoke-virtual {p0, p3, p1, p2}, Lyl0;->s(IJ)Z
+    move/from16 p1, p17
 
-    move-result p3
-
-    if-nez p3, :cond_0
+    iput-boolean p1, p0, Lu87;->x0:Z
 
     return-void
-
-    :cond_0
-    iget p3, p0, Lyl0;->b:I
-
-    add-int/lit8 p3, p3, -0x1
-
-    :goto_0
-    if-ltz p3, :cond_2
-
-    invoke-virtual {p0, p3, p1, p2}, Lyl0;->s(IJ)Z
-
-    move-result p4
-
-    if-nez p4, :cond_1
-
-    iput p3, p0, Lu87;->g:I
-
-    return-void
-
-    :cond_1
-    add-int/lit8 p3, p3, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
 .end method

@@ -1,47 +1,75 @@
-.class public abstract synthetic Ljje;
+.class public interface abstract Ljje;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lj0f;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
+# virtual methods
+.method public abstract a()I
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public b()Lqhg;
+    .locals 1
 
-    const/4 v0, 0x4
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lc12;->z(I)[I
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public c()Lyze;
+    .locals 1
 
-    array-length v0, v0
+    const/4 v0, 0x0
 
-    new-array v0, v0, [I
+    return-object v0
+.end method
 
-    const/4 v1, 0x1
+.method public d()Lqhg;
+    .locals 1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
+.end method
 
-    :catch_0
-    const/4 v1, 0x3
+.method public e()Lg0f;
+    .locals 1
 
-    const/4 v2, 0x2
+    const/4 v0, 0x0
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    return-object v0
+.end method
 
-    :catch_1
-    sput-object v0, Ljje;->$EnumSwitchMapping$0:[I
+.method public f()Ly58;
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Li0f;
+    .locals 1
+
+    sget-object v0, Li0f;->b:Li0f;
+
+    return-object v0
+.end method
+
+.method public r()Lnq6;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

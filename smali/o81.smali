@@ -1,176 +1,213 @@
 .class public final Lo81;
-.super Ljava/lang/Object;
+.super Llm4;
 .source "SourceFile"
 
-# interfaces
-.implements Lmm4;
 
+# static fields
+.field public static final b:Lo81;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final c:Lhm4;
 
-.field public final synthetic b:J
+.field public static final d:Lhm4;
 
-.field public final synthetic c:Z
+.field public static final e:Lhm4;
 
-.field public final synthetic d:Z
+.field public static final f:Lhm4;
+
+.field public static final g:Lhm4;
+
+.field public static final h:Lhm4;
+
+.field public static final i:Lhm4;
+
+.field public static final j:Lhm4;
+
+.field public static final k:Lhm4;
+
+.field public static final l:Lhm4;
+
+.field public static final m:Lhm4;
+
+.field public static final n:Lhm4;
+
+.field public static final o:Lhm4;
 
 
 # direct methods
-.method public synthetic constructor <init>(JZZI)V
-    .locals 0
-
-    iput p5, p0, Lo81;->a:I
-
-    iput-wide p1, p0, Lo81;->b:J
-
-    iput-boolean p3, p0, Lo81;->c:Z
-
-    iput-boolean p4, p0, Lo81;->d:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 7
 
-    iget v0, p0, Lo81;->a:I
+    new-instance v0, Lo81;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->O0:Ly0j;
+    sput-object v0, Lo81;->b:Lo81;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "opponent_id"
 
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
-
-    new-instance v1, Lysb;
-
-    const-string v2, "type"
-
-    const-string v3, "CHAT"
-
-    invoke-direct {v1, v2, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-wide v2, p0, Lo81;->b:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    new-instance v3, Lysb;
-
-    const-string v4, "chat_id"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v2, p0, Lo81;->c:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    new-instance v4, Lysb;
-
-    const-string v5, "video_enabled"
-
-    invoke-direct {v4, v5, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v2, p0, Lo81;->d:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    new-instance v5, Lysb;
-
-    const-string v6, "microphone_enabled"
-
-    invoke-direct {v5, v6, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, v3, v4, v5}, [Lysb;
+    filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
+    const-string v2, ":call-user"
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0xe
+
+    invoke-static {v0, v2, v1, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
+    sput-object v1, Lo81;->c:Lhm4;
 
-    return-object v0
+    const-string v1, "link"
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->O0:Ly0j;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
-
-    new-instance v1, Lysb;
-
-    const-string v2, "type"
-
-    const-string v3, "ONE_TO_ONE"
-
-    invoke-direct {v1, v2, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-wide v2, p0, Lo81;->b:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v2
 
-    new-instance v3, Lysb;
+    const-string v5, ":call-join-link"
 
-    const-string v4, "opponent_id"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v2, p0, Lo81;->c:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0, v5, v2, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     move-result-object v2
 
-    new-instance v4, Lysb;
+    sput-object v2, Lo81;->d:Lhm4;
 
-    const-string v5, "video_enabled"
+    const-string v2, "chat_id"
 
-    invoke-direct {v4, v5, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    filled-new-array {v2}, [Ljava/lang/String;
 
-    iget-boolean v2, p0, Lo81;->d:Z
+    move-result-object v5
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string v6, ":call-chat"
+
+    invoke-static {v0, v6, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v5
+
+    sput-object v5, Lo81;->e:Lhm4;
+
+    const-string v5, "call_name"
+
+    filled-new-array {v2, v5}, [Ljava/lang/String;
 
     move-result-object v2
 
-    new-instance v5, Lysb;
+    const-string v5, ":call-incoming"
 
-    const-string v6, "microphone_enabled"
+    invoke-static {v0, v5, v2, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    invoke-direct {v5, v6, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v2
 
-    filled-new-array {v1, v3, v4, v5}, [Lysb;
+    sput-object v2, Lo81;->f:Lhm4;
+
+    const/4 v2, 0x0
+
+    new-array v5, v2, [Ljava/lang/String;
+
+    const-string v6, ":call-active"
+
+    invoke-static {v0, v6, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v5
+
+    sput-object v5, Lo81;->g:Lhm4;
+
+    const-string v5, ":call-join-preview"
+
+    filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
+    invoke-static {v0, v5, v1, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
+    sput-object v1, Lo81;->h:Lhm4;
 
-    return-object v0
+    const-string v1, ":call-opponents-list"
 
-    nop
+    new-array v5, v2, [Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0, v1, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v1
+
+    sput-object v1, Lo81;->i:Lhm4;
+
+    const-string v1, ":call-admin-settings"
+
+    new-array v5, v2, [Ljava/lang/String;
+
+    invoke-static {v0, v1, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v1
+
+    sput-object v1, Lo81;->j:Lhm4;
+
+    const-string v1, ":call-debug-menu"
+
+    new-array v5, v2, [Ljava/lang/String;
+
+    invoke-static {v0, v1, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v1
+
+    sput-object v1, Lo81;->k:Lhm4;
+
+    const-string v1, ":call-pip"
+
+    new-array v5, v2, [Ljava/lang/String;
+
+    invoke-static {v0, v1, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v1
+
+    sput-object v1, Lo81;->l:Lhm4;
+
+    const-string v1, ":call-admin-waiting-room"
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    invoke-static {v0, v1, v2, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v1
+
+    sput-object v1, Lo81;->m:Lhm4;
+
+    const-string v1, "is_group"
+
+    const-string v2, "is_video"
+
+    const-string v5, "call_id"
+
+    filled-new-array {v5, v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":call-rate"
+
+    invoke-static {v0, v2, v1, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v1
+
+    sput-object v1, Lo81;->n:Lhm4;
+
+    const-string v1, "caller_id"
+
+    filled-new-array {v5, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":unknown-call"
+
+    invoke-static {v0, v2, v1, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v0
+
+    sput-object v0, Lo81;->o:Lhm4;
+
+    return-void
 .end method

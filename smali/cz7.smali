@@ -1,75 +1,43 @@
 .class public final Lcz7;
-.super Lp62;
+.super Llm4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Lkz7;
+# static fields
+.field public static final b:Lcz7;
+
+.field public static final c:Lhm4;
 
 
 # direct methods
-.method public constructor <init>(Lkz7;Lkotlin/coroutines/Continuation;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Lcz7;
 
-    invoke-direct {p0, v0, p2}, Lp62;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    iput-object p1, p0, Lcz7;->X:Lkz7;
+    sput-object v0, Lcz7;->b:Lcz7;
 
-    return-void
-.end method
+    const-string v1, "id"
 
+    const-string v2, "link"
 
-# virtual methods
-.method public final l(Lkz7;)Ljava/lang/Throwable;
-    .locals 2
-
-    iget-object v0, p0, Lcz7;->X:Lkz7;
-
-    invoke-virtual {v0}, Lkz7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lez7;
-
-    if-eqz v1, :cond_0
-
-    move-object v1, v0
-
-    check-cast v1, Lez7;
-
-    invoke-virtual {v1}, Lez7;->c()Ljava/lang/Throwable;
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x0
 
-    return-object v1
+    const/16 v3, 0xe
 
-    :cond_0
-    instance-of v1, v0, Ljo3;
+    const-string v4, ":join"
 
-    if-eqz v1, :cond_1
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    check-cast v0, Ljo3;
+    move-result-object v0
 
-    iget-object p1, v0, Ljo3;->a:Ljava/lang/Throwable;
+    sput-object v0, Lcz7;->c:Lhm4;
 
-    return-object p1
-
-    :cond_1
-    invoke-interface {p1}, Liy7;->getCancellationException()Ljava/util/concurrent/CancellationException;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final u()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "AwaitContinuation"
-
-    return-object v0
+    return-void
 .end method

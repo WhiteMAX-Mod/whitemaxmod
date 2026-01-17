@@ -1,51 +1,67 @@
-.class public abstract synthetic Lxs7;
-.super Ljava/lang/Object;
+.class public final Lxs7;
+.super Lim;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljava/lang/String;J)V
+    .locals 0
 
-    const/4 v0, 0x3
+    invoke-direct {p0, p1}, Lim;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lc12;->z(I)[I
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v3, 0x2
-
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    aput v0, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v1, Lxs7;->$EnumSwitchMapping$0:[I
+    iput-wide p2, p0, Lxs7;->b:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final d(Li28;)V
+    .locals 2
+
+    iget-object v0, p0, Lim;->a:Ljava/lang/String;
+
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
+
+    check-cast p1, La2;
+
+    iget-wide v0, p0, Lxs7;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, La2;->d(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lim;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lxs7;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

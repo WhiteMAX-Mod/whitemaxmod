@@ -1,66 +1,52 @@
-.class public final synthetic Lp5f;
-.super Ljava/lang/Object;
+.class public final Lp5f;
+.super Ld3;
 .source "SourceFile"
 
-# interfaces
-.implements Lmm4;
 
-
-# instance fields
-.field public final synthetic X:Ljava/lang/Boolean;
-
-.field public final synthetic a:J
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:I
-
-.field public final synthetic o:Ljava/lang/Integer;
+# static fields
+.field public static final c:Lp5f;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lp5f;
 
-    iput-wide p1, p0, Lp5f;->a:J
+    const/16 v1, 0xc
 
-    iput-wide p3, p0, Lp5f;->b:J
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-    iput-object p5, p0, Lp5f;->c:Ljava/lang/String;
-
-    iput p6, p0, Lp5f;->d:I
-
-    iput-object p7, p0, Lp5f;->o:Ljava/lang/Integer;
-
-    iput-object p8, p0, Lp5f;->X:Ljava/lang/Boolean;
+    sput-object v0, Lp5f;->c:Lp5f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public final L0()V
+    .locals 3
 
-    new-instance v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-virtual {p0}, Ld3;->p0()Ljm4;
 
-    iget-wide v1, p0, Lp5f;->a:J
+    move-result-object v0
 
-    iget-wide v3, p0, Lp5f;->b:J
+    invoke-virtual {v0}, Ljm4;->d()Z
 
-    iget-object v5, p0, Lp5f;->c:Ljava/lang/String;
+    move-result v0
 
-    iget v6, p0, Lp5f;->d:I
+    if-nez v0, :cond_0
 
-    iget-object v7, p0, Lp5f;->o:Ljava/lang/Integer;
+    invoke-virtual {p0}, Ld3;->p0()Ljm4;
 
-    iget-object v8, p0, Lp5f;->X:Ljava/lang/Boolean;
+    move-result-object v0
 
-    invoke-direct/range {v0 .. v8}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
+    const-string v1, ":chat-list"
 
-    return-object v0
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    :cond_0
+    return-void
 .end method

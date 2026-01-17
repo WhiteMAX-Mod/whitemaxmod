@@ -1,5 +1,5 @@
 .class public final Lpba;
-.super Lnxb;
+.super Lhyb;
 .source "SourceFile"
 
 
@@ -8,10 +8,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lywb;)V
+.method public constructor <init>(Lsxb;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lnxb;-><init>(Lywb;)V
+    invoke-direct {p0, p1}, Lhyb;-><init>(Lsxb;)V
 
     const-string p1, "msg_round_trip"
 
@@ -30,14 +30,14 @@
     return-object v0
 .end method
 
-.method public final m()Llfa;
+.method public final n()Ljfa;
     .locals 2
 
-    invoke-virtual {p0}, Lnxb;->j()Lsxb;
+    invoke-virtual {p0}, Lhyb;->j()Llyb;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lsxb;->a()I
+    invoke-virtual {v0}, Llyb;->a()I
 
     move-result v0
 
@@ -47,35 +47,35 @@
 
     const-string v1, "connection_type"
 
-    invoke-static {v0, v1}, Lbnj;->b(Ljava/lang/Object;Ljava/lang/String;)Llfa;
+    invoke-static {v0, v1}, Lxnj;->b(Ljava/lang/Object;Ljava/lang/String;)Ljfa;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final r(Lnba;)Llfa;
+.method public final s(Loba;)Ljfa;
     .locals 3
 
-    sget-object v0, Lm9e;->a:[J
+    sget-object v0, Leae;->a:[J
 
-    new-instance v0, Llfa;
+    new-instance v0, Ljfa;
 
-    invoke-direct {v0}, Llfa;-><init>()V
+    invoke-direct {v0}, Ljfa;-><init>()V
 
-    invoke-virtual {p0}, Lnxb;->j()Lsxb;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lsxb;->d:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lhyb;->j()Llyb;
 
     move-result-object v1
 
-    check-cast v1, Lmvh;
+    iget-object v1, v1, Llyb;->c:Lo58;
 
-    invoke-virtual {v1}, Lmvh;->d()Z
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liwh;
+
+    invoke-virtual {v1}, Liwh;->d()Z
 
     move-result v1
 
@@ -89,12 +89,14 @@
 
     const-string v2, "background"
 
-    invoke-virtual {v0, v2, v1}, Llfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_0
-    iget-object p1, p1, Lnba;->a:Loba;
-
     iget p1, p1, Loba;->a:I
+
+    invoke-static {p1}, Lt02;->t(I)I
+
+    move-result p1
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -102,19 +104,15 @@
 
     const-string v1, "flow"
 
-    invoke-virtual {v0, v1, p1}, Llfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method public final s(Lmba;Lnba;)V
+.method public final t(Lnba;Loba;)V
     .locals 2
 
-    const-string v0, "flow"
-
-    iget-object p2, p2, Lnba;->a:Loba;
-
-    invoke-static {p2, v0}, Lbnj;->b(Ljava/lang/Object;Ljava/lang/String;)Llfa;
+    invoke-virtual {p0, p2}, Lpba;->s(Loba;)Ljfa;
 
     move-result-object p2
 
@@ -122,29 +120,29 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v1, p2, v1, v0}, Lnxb;->o(Lnxb;Ljava/lang/String;Llfa;Ljava/lang/Long;I)Ljava/lang/String;
+    invoke-static {p0, v1, p2, v1, v0}, Lhyb;->p(Lhyb;Ljava/lang/String;Ljfa;Ljava/lang/Long;I)Ljava/lang/String;
 
     move-result-object p2
 
     const/16 v0, 0xc
 
-    invoke-static {p0, p1, p2, v1, v0}, Lnxb;->g(Lnxb;Laxb;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {p0, p1, p2, v1, v0}, Lhyb;->g(Lhyb;Luxb;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public final t(Loba;)Lnba;
+.method public final u(I)Loba;
     .locals 3
 
-    new-instance v0, Lnba;
+    new-instance v0, Loba;
 
-    invoke-virtual {p0}, Lnxb;->j()Lsxb;
+    invoke-virtual {p0}, Lhyb;->j()Llyb;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    invoke-direct {v0, p1, v1, v2}, Lnba;-><init>(Loba;J)V
+    invoke-direct {v0, p1, v1, v2}, Loba;-><init>(IJ)V
 
     return-object v0
 .end method

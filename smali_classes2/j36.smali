@@ -1,47 +1,18 @@
 .class public final Lj36;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Ll36;
-
-
-# direct methods
-.method public constructor <init>(Ll36;Ll84;)V
-    .locals 0
-
-    iput-object p1, p0, Lj36;->o:Ll36;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ln16;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final error(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    iput-object p1, p0, Lj36;->d:Ljava/lang/Object;
+    const-string v0, "Files"
 
-    iget p1, p0, Lj36;->X:I
+    invoke-static {v0, p1, p2}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lj36;->X:I
-
-    iget-object p1, p0, Lj36;->o:Ll36;
-
-    invoke-virtual {p1, p0}, Ll36;->c(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

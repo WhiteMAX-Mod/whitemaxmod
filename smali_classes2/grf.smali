@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lnbf;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+
+.field public final synthetic c:Lnq6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;I)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;I)V
     .locals 0
 
-    iput p2, p0, Lgrf;->a:I
+    iput p3, p0, Lgrf;->a:I
 
-    iput-object p1, p0, Lgrf;->b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+    iput-object p1, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+
+    iput-object p2, p0, Lgrf;->c:Lnq6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,102 +31,54 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 2
 
-    iget p1, p0, Lgrf;->a:I
+    iget v0, p0, Lgrf;->a:I
 
-    iget-object v0, p0, Lgrf;->b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+    packed-switch v0, :pswitch_data_0
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    sget-object p1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->E0:[Lp38;
+    iget-object v1, p0, Lgrf;->c:Lnq6;
 
-    iget-object p1, v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->w0:Ld68;
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->b(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Lorg/json/JSONObject;)V
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Larf;
-
-    iget-object v0, p1, Larf;->B0:Lpkd;
-
-    iget-object v0, v0, Lpkd;->a:Laof;
-
-    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrrf;
-
-    if-eqz v0, :cond_1
-
-    iget-object v1, p1, Larf;->F0:Lglf;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lm0;->isActive()Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p1, Larf;->c:Lbbg;
-
-    check-cast v1, Lb9b;
-
-    invoke-virtual {v1}, Lb9b;->b()Ltb4;
-
-    move-result-object v1
-
-    new-instance v2, Lzqf;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, p1, v3}, Lzqf;-><init>(Lrrf;Larf;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v1, v2, v0}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
-
-    move-result-object v0
-
-    iput-object v0, p1, Larf;->F0:Lglf;
-
-    :cond_1
-    :goto_0
     return-void
 
     :pswitch_0
-    sget-object p1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->E0:[Lp38;
+    iget-object v0, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    invoke-virtual {v0}, Lx84;->getParentController()Lx84;
+    iget-object v1, p0, Lgrf;->c:Lnq6;
 
-    move-result-object p1
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->a(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Lorg/json/JSONObject;)V
 
-    if-eqz p1, :cond_2
+    return-void
 
-    invoke-virtual {p1}, Lx84;->getRouter()Lw3e;
+    :pswitch_1
+    iget-object v0, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    move-result-object p1
+    iget-object v1, p0, Lgrf;->c:Lnq6;
 
-    if-eqz p1, :cond_2
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Lorg/json/JSONObject;)V
 
-    invoke-virtual {p1}, Lw3e;->C()Z
+    return-void
 
-    :cond_2
+    :pswitch_2
+    iget-object v0, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+
+    iget-object v1, p0, Lgrf;->c:Lnq6;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->g(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Lorg/json/JSONObject;)V
+
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

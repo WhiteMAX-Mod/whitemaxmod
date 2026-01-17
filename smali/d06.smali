@@ -1,52 +1,40 @@
-.class public final Ld06;
+.class public abstract Ld06;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loi4;
-
-
-# instance fields
-.field public final synthetic a:I
-
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public static synthetic a(Ljava/lang/Throwable;)Z
     .locals 0
 
-    iput p1, p0, Ld06;->a:I
+    invoke-static {p0}, Ld06;->b(Ljava/lang/Throwable;)Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result p0
 
-    return-void
+    return p0
 .end method
 
+.method private static b(Ljava/lang/Throwable;)Z
+    .locals 1
 
-# virtual methods
-.method public final a()Lsi4;
-    .locals 2
+    instance-of v0, p0, Landroid/system/ErrnoException;
 
-    iget v0, p0, Ld06;->a:I
+    if-eqz v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p0, Landroid/system/ErrnoException;
 
-    new-instance v0, Lv4e;
+    iget p0, p0, Landroid/system/ErrnoException;->errno:I
 
-    invoke-direct {v0}, Lv4e;-><init>()V
+    sget v0, Landroid/system/OsConstants;->EACCES:I
 
-    return-object v0
+    if-ne p0, v0, :cond_0
 
-    :pswitch_0
-    new-instance v0, Lf06;
+    const/4 p0, 0x1
 
-    const/4 v1, 0x0
+    return p0
 
-    invoke-direct {v0, v1}, Lek0;-><init>(Z)V
+    :cond_0
+    const/4 p0, 0x0
 
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

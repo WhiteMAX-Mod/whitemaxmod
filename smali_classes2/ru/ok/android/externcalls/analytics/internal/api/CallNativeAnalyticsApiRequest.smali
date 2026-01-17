@@ -19,17 +19,17 @@
         "sdkVersion",
         "",
         "version",
-        "Lxu0;",
+        "Lqu0;",
         "items",
         "Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;",
         "logger",
         "<init>",
-        "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILxu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V",
-        "Lx28;",
+        "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V",
+        "Li28;",
         "writer",
-        "Lv2h;",
+        "Lb3h;",
         "writeParams",
-        "(Lx28;)V",
+        "(Li28;)V",
         "Ljava/lang/String;",
         "I",
         "calls-sdk-analytics_release"
@@ -57,10 +57,10 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILxu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
     .locals 0
 
-    invoke-direct {p0, p1, p7, p8}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;-><init>(Ljava/lang/String;Lxu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
+    invoke-direct {p0, p1, p7, p8}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;-><init>(Ljava/lang/String;Lqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
 
     iput-object p2, p0, Lru/ok/android/externcalls/analytics/internal/api/CallNativeAnalyticsApiRequest;->platform:Ljava/lang/String;
 
@@ -77,26 +77,26 @@
 
 
 # virtual methods
-.method public bridge synthetic getConfigExtractor()Lvl;
+.method public bridge synthetic getConfigExtractor()Lwl;
     .locals 1
 
-    sget-object v0, Lvl;->f:Ly0j;
+    sget-object v0, Lwl;->f:Lv1j;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getFailParser()Lf28;
+.method public bridge synthetic getFailParser()Lq18;
     .locals 1
 
-    sget-object v0, Lxna;->c:Lxna;
+    sget-object v0, Lvna;->c:Lvna;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lqm;
+.method public bridge synthetic getScopeAfter()Lrm;
     .locals 1
 
-    sget-object v0, Lqm;->a:Lqm;
+    sget-object v0, Lrm;->a:Lrm;
 
     return-object v0
 .end method
@@ -117,7 +117,7 @@
     return v0
 .end method
 
-.method public writeParams(Lx28;)V
+.method public writeParams(Li28;)V
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -128,9 +128,9 @@
 
     const-string v0, "data"
 
-    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    invoke-interface {p1}, Lx28;->p()V
+    invoke-interface {p1}, Li28;->q()V
 
     :try_start_0
     const-string v0, "platform"
@@ -139,7 +139,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p0, p1, v0, v3, v4}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString(Lx28;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v0, v3, v4}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString(Li28;Ljava/lang/String;Ljava/lang/String;Z)V
 
     const-string v3, "app_version"
 
@@ -155,7 +155,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString$default(Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;Lx28;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString$default(Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;Li28;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
 
     const-string v3, "sdk_type"
 
@@ -171,7 +171,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString$default(Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;Lx28;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString$default(Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;Li28;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
 
     const-string v3, "sdk_version"
 
@@ -187,45 +187,45 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString$default(Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;Lx28;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString$default(Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;Li28;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
 
     const-string v0, "version"
 
-    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
     iget v0, p0, Lru/ok/android/externcalls/analytics/internal/api/CallNativeAnalyticsApiRequest;->version:I
 
     move-object v3, p1
 
-    check-cast v3, Lb2;
+    check-cast v3, La2;
 
-    invoke-virtual {v3, v0}, Lb2;->E(I)V
+    invoke-virtual {v3, v0}, La2;->H(I)V
 
     const-string v0, "items"
 
-    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->getItems()Lxu0;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->getItems()Lqu0;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lxu0;->write(Lx28;)V
+    invoke-virtual {v0, p1}, Lqu0;->write(Li28;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-interface {p1}, Lx28;->n()V
+    invoke-interface {p1}, Li28;->n()V
 
     return-void
 
     :catchall_0
     move-exception v0
 
-    invoke-interface {p1}, Lx28;->n()V
+    invoke-interface {p1}, Li28;->n()V
 
     throw v0
 .end method
 
-.method public bridge synthetic writeSupplyParams(Lx28;)V
+.method public bridge synthetic writeSupplyParams(Li28;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

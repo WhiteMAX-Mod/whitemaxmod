@@ -1,192 +1,116 @@
-.class public final Lvqh;
+.class public final synthetic Lvqh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+.field public final synthetic b:Liab;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chatmedia/viewer/VideoWebViewScreen;I)V
+.method public synthetic constructor <init>(Liab;I)V
     .locals 0
 
     iput p2, p0, Lvqh;->a:I
 
-    iput-object p1, p0, Lvqh;->b:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+    iput-object p1, p0, Lvqh;->b:Liab;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    iget p1, p0, Lvqh;->a:I
+    iget v0, p0, Lvqh;->a:I
 
-    return-void
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+    iget-object v0, p0, Lvqh;->b:Liab;
 
-    iget p1, p0, Lvqh;->a:I
+    iget-object v0, v0, Liab;->c:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "incrementUsage: mVideoUsage = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "VideoUsageControl"
+
+    invoke-static {v1, v0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :pswitch_0
-    iget-object p1, p0, Lvqh;->b:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+    iget-object v0, p0, Lvqh;->b:Liab;
 
-    invoke-static {p1}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->J0(Lone/me/chatmedia/viewer/VideoWebViewScreen;)Z
+    iget-object v0, v0, Liab;->c:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->O0()Lpmb;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p1}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->N0()Lio7;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lvqh;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget p1, p0, Lvqh;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lvqh;->b:Lone/me/chatmedia/viewer/VideoWebViewScreen;
-
-    invoke-static {p1}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->J0(Lone/me/chatmedia/viewer/VideoWebViewScreen;)Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    const-string v1, "decrementUsage: mVideoUsage = "
 
-    invoke-virtual {p1}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->O0()Lpmb;
+    const-string v2, "VideoUsageControl"
+
+    if-gez v0, :cond_0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", which is less than 0!"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p1}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->N0()Lio7;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v2, 0x2
-
-    if-ne p1, v2, :cond_0
-
-    const/4 p1, 0x1
+    invoke-static {v2, v0}, Lm5j;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    move p1, v1
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/16 v1, 0x8
-
-    :goto_1
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    :pswitch_0
     return-void
 
     :pswitch_data_0

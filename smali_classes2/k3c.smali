@@ -1,22 +1,25 @@
 .class public final Lk3c;
-.super Ljava/lang/Object;
+.super Lhja;
 .source "SourceFile"
-
-# interfaces
-.implements Lm3c;
 
 
 # instance fields
-.field public final a:J
+.field public final b:D
+
+.field public final c:D
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(DD)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    iput-wide p1, p0, Lk3c;->a:J
+    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
+
+    iput-wide p1, p0, Lk3c;->b:D
+
+    iput-wide p3, p0, Lk3c;->c:D
 
     return-void
 .end method
@@ -44,42 +47,83 @@
     :cond_1
     check-cast p1, Lk3c;
 
-    iget-wide v3, p0, Lk3c;->a:J
+    iget-wide v3, p0, Lk3c;->b:D
 
-    iget-wide v5, p1, Lk3c;->a:J
+    iget-wide v5, p1, Lk3c;->b:D
 
-    cmp-long p1, v3, v5
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
 
-    if-eqz p1, :cond_2
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-wide v3, p0, Lk3c;->c:D
+
+    iget-wide v5, p1, Lk3c;->c:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-wide v0, p0, Lk3c;->a:J
+    iget-wide v0, p0, Lk3c;->b:D
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lk3c;->c:D
+
+    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "Fail(requestId="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SendLocation(lat="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lk3c;->b:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lk3c;->c:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lk3c;->a:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

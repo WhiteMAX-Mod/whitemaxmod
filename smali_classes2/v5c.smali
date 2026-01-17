@@ -1,53 +1,74 @@
-.class public abstract synthetic Lv5c;
-.super Ljava/lang/Object;
+.class public final Lv5c;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lfr6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public synthetic X:Ljava/util/List;
+
+.field public synthetic Y:Z
+
+.field public synthetic o:Ljava/util/List;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x5
+    check-cast p1, Ljava/util/List;
 
-    invoke-static {v0}, Lc12;->z(I)[I
+    check-cast p2, Ljava/util/List;
 
-    move-result-object v0
+    check-cast p3, Ljava/lang/Boolean;
 
-    array-length v0, v0
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    new-array v0, v0, [I
+    move-result p3
 
-    const/4 v1, 0x1
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance v0, Lv5c;
 
-    :catch_0
-    const/4 v1, 0x2
-
-    const/4 v2, 0x3
-
-    :try_start_1
-    aput v1, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
     const/4 v1, 0x4
 
-    :try_start_2
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-direct {v0, v1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    :catch_2
-    sput-object v0, Lv5c;->$EnumSwitchMapping$0:[I
+    iput-object p1, v0, Lv5c;->o:Ljava/util/List;
 
-    return-void
+    iput-object p2, v0, Lv5c;->X:Ljava/util/List;
+
+    iput-boolean p3, v0, Lv5c;->Y:Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Lv5c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lv5c;->o:Ljava/util/List;
+
+    iget-object v1, p0, Lv5c;->X:Ljava/util/List;
+
+    iget-boolean v2, p0, Lv5c;->Y:Z
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    new-instance p1, Lsvg;
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-direct {p1, v0, v1, v2}, Lsvg;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object p1
 .end method

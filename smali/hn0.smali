@@ -1,5 +1,5 @@
 .class public final Lhn0;
-.super Lww3;
+.super Lcx3;
 .source "SourceFile"
 
 
@@ -8,35 +8,35 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljx3;I)V
+.method public synthetic constructor <init>(Lpx3;I)V
     .locals 0
 
     iput p2, p0, Lhn0;->f:I
 
-    invoke-direct {p0, p1}, Lww3;-><init>(Ljx3;)V
+    invoke-direct {p0, p1}, Lcx3;-><init>(Lpx3;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkii;)Z
+.method public final a(Lhji;)Z
     .locals 2
 
     iget v0, p0, Lhn0;->f:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p1, Lkii;->j:Lpx3;
+    iget-object p1, p1, Lhji;->j:Lvx3;
 
-    iget-boolean p1, p1, Lpx3;->e:Z
+    iget-boolean p1, p1, Lvx3;->e:Z
 
     return p1
 
     :pswitch_0
-    iget-object p1, p1, Lkii;->j:Lpx3;
+    iget-object p1, p1, Lhji;->j:Lvx3;
 
-    iget p1, p1, Lpx3;->a:I
+    iget p1, p1, Lvx3;->a:I
 
     const/4 v0, 0x3
 
@@ -67,9 +67,9 @@
     return p1
 
     :pswitch_1
-    iget-object p1, p1, Lkii;->j:Lpx3;
+    iget-object p1, p1, Lhji;->j:Lvx3;
 
-    iget p1, p1, Lpx3;->a:I
+    iget p1, p1, Lvx3;->a:I
 
     const/4 v0, 0x2
 
@@ -86,16 +86,16 @@
     return p1
 
     :pswitch_2
-    iget-object p1, p1, Lkii;->j:Lpx3;
+    iget-object p1, p1, Lhji;->j:Lvx3;
 
-    iget-boolean p1, p1, Lpx3;->d:Z
+    iget-boolean p1, p1, Lvx3;->d:Z
 
     return p1
 
     :pswitch_3
-    iget-object p1, p1, Lkii;->j:Lpx3;
+    iget-object p1, p1, Lhji;->j:Lvx3;
 
-    iget-boolean p1, p1, Lpx3;->b:Z
+    iget-boolean p1, p1, Lvx3;->b:Z
 
     return p1
 
@@ -127,13 +127,13 @@
     return p1
 
     :pswitch_0
-    check-cast p1, Lmka;
+    check-cast p1, Lkka;
 
-    iget-boolean v0, p1, Lmka;->a:Z
+    iget-boolean v0, p1, Lkka;->a:Z
 
     if-eqz v0, :cond_1
 
-    iget-boolean p1, p1, Lmka;->c:Z
+    iget-boolean p1, p1, Lkka;->c:Z
 
     if-eqz p1, :cond_0
 
@@ -152,13 +152,13 @@
     return p1
 
     :pswitch_1
-    check-cast p1, Lmka;
+    check-cast p1, Lkka;
 
-    iget-boolean v0, p1, Lmka;->a:Z
+    iget-boolean v0, p1, Lkka;->a:Z
 
     if-eqz v0, :cond_3
 
-    iget-boolean p1, p1, Lmka;->b:Z
+    iget-boolean p1, p1, Lkka;->b:Z
 
     if-nez p1, :cond_2
 

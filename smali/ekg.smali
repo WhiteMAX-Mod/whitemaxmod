@@ -1,139 +1,131 @@
 .class public final Lekg;
-.super Li4;
+.super Lsw4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lekg;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public a:Lfsi;
-
-.field public b:Z
-
-.field public c:F
-
-.field public d:Z
-
-.field public o:F
+.field public final synthetic c:Lfkg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lfkg;Lzj0;)V
+    .locals 0
 
-    new-instance v0, Lgqi;
+    iput-object p1, p0, Lekg;->c:Lfkg;
 
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Lgqi;-><init>(I)V
-
-    sput-object v0, Lekg;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lekg;->b:Z
-
-    iput-boolean v0, p0, Lekg;->d:Z
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lekg;->o:F
+    invoke-direct {p0, p2}, Lsw4;-><init>(Lzj0;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lfkg;)V
+.method public final d()V
     .locals 1
 
-    new-instance v0, Ltqi;
+    iget-object v0, p0, Lsw4;->b:Lzj0;
 
-    invoke-direct {v0, p1}, Ltqi;-><init>(Lfkg;)V
+    invoke-virtual {v0}, Lzj0;->c()V
 
-    iput-object v0, p0, Lekg;->a:Lfsi;
+    invoke-virtual {p0}, Lekg;->m()V
 
     return-void
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public final f(Ljava/lang/Throwable;)V
+    .locals 1
 
-    const/16 p2, 0x4f45
+    iget-object v0, p0, Lsw4;->b:Lzj0;
 
-    invoke-static {p1, p2}, Lwmj;->k(Landroid/os/Parcel;I)I
+    invoke-virtual {v0, p1}, Lzj0;->e(Ljava/lang/Throwable;)V
 
-    move-result p2
+    invoke-virtual {p0}, Lekg;->m()V
 
-    iget-object v0, p0, Lekg;->a:Lfsi;
+    return-void
+.end method
 
-    if-nez v0, :cond_0
+.method public final h(ILjava/lang/Object;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lsw4;->b:Lzj0;
+
+    invoke-virtual {v0, p1, p2}, Lzj0;->g(ILjava/lang/Object;)V
+
+    invoke-static {p1}, Lzj0;->a(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lekg;->m()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final m()V
+    .locals 4
+
+    iget-object v0, p0, Lekg;->c:Lfkg;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lekg;->c:Lfkg;
+
+    iget-object v1, v1, Lfkg;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/util/Pair;
+
+    if-nez v1, :cond_0
+
+    iget-object v2, p0, Lekg;->c:Lfkg;
+
+    iget v3, v2, Lfkg;->b:I
+
+    add-int/lit8 v3, v3, -0x1
+
+    iput v3, v2, Lfkg;->b:I
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
     :cond_0
-    invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
     :goto_0
-    const/4 v1, 0x2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p1, v1, v0}, Lwmj;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+    if-eqz v1, :cond_1
 
-    iget-boolean v0, p0, Lekg;->b:Z
+    iget-object v0, p0, Lekg;->c:Lfkg;
 
-    const/4 v1, 0x3
+    iget-object v0, v0, Lfkg;->d:Ljava/util/concurrent/Executor;
 
-    const/4 v2, 0x4
+    new-instance v2, Ldkg;
 
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {v2, p0, v3, v1}, Ldkg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget v0, p0, Lekg;->c:F
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-static {p1, v2, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget-boolean v0, p0, Lekg;->d:Z
-
-    const/4 v1, 0x5
-
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Lekg;->o:F
-
-    const/4 v1, 0x6
-
-    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
-    invoke-static {p1, p2}, Lwmj;->l(Landroid/os/Parcel;I)V
-
+    :cond_1
     return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

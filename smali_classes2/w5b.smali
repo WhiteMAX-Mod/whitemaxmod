@@ -8,16 +8,18 @@
 
 .field public static final enum b:Lw5b;
 
-.field public static final synthetic c:[Lw5b;
+.field public static final enum c:Lw5b;
+
+.field public static final synthetic d:[Lw5b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 5
 
     new-instance v0, Lw5b;
 
-    const-string v1, "PRIMARY"
+    const-string v1, "STANDARD"
 
     const/4 v2, 0x0
 
@@ -27,7 +29,7 @@
 
     new-instance v1, Lw5b;
 
-    const-string v2, "SECONDARY"
+    const-string v2, "ICON"
 
     const/4 v3, 0x1
 
@@ -35,11 +37,21 @@
 
     sput-object v1, Lw5b;->b:Lw5b;
 
-    filled-new-array {v0, v1}, [Lw5b;
+    new-instance v2, Lw5b;
+
+    const-string v3, "PROGRESS_BAR"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lw5b;->c:Lw5b;
+
+    filled-new-array {v0, v1, v2}, [Lw5b;
 
     move-result-object v0
 
-    sput-object v0, Lw5b;->c:[Lw5b;
+    sput-object v0, Lw5b;->d:[Lw5b;
 
     return-void
 .end method
@@ -61,7 +73,7 @@
 .method public static values()[Lw5b;
     .locals 1
 
-    sget-object v0, Lw5b;->c:[Lw5b;
+    sget-object v0, Lw5b;->d:[Lw5b;
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 

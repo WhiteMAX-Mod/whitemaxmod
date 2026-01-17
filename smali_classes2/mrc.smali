@@ -1,100 +1,31 @@
 .class public final Lmrc;
-.super Ljava/lang/Object;
+.super Ldsc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final a:I
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(ZZZZZ)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lmrc;->a:Z
+    iput p1, p0, Lmrc;->a:I
 
-    iput-boolean p2, p0, Lmrc;->b:Z
-
-    iput-boolean p3, p0, Lmrc;->c:Z
-
-    iput-boolean p4, p0, Lmrc;->d:Z
-
-    iput-boolean p5, p0, Lmrc;->e:Z
+    iput p1, p0, Lmrc;->b:I
 
     return-void
-.end method
-
-.method public static a(Lmrc;ZZZZZI)Lmrc;
-    .locals 6
-
-    and-int/lit8 v0, p6, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget-boolean p1, p0, Lmrc;->a:Z
-
-    :cond_0
-    move v1, p1
-
-    and-int/lit8 p1, p6, 0x2
-
-    if-eqz p1, :cond_1
-
-    iget-boolean p2, p0, Lmrc;->b:Z
-
-    :cond_1
-    move v2, p2
-
-    and-int/lit8 p1, p6, 0x4
-
-    if-eqz p1, :cond_2
-
-    iget-boolean p3, p0, Lmrc;->c:Z
-
-    :cond_2
-    move v3, p3
-
-    and-int/lit8 p1, p6, 0x8
-
-    if-eqz p1, :cond_3
-
-    iget-boolean p4, p0, Lmrc;->d:Z
-
-    :cond_3
-    move v4, p4
-
-    and-int/lit8 p1, p6, 0x10
-
-    if-eqz p1, :cond_4
-
-    iget-boolean p5, p0, Lmrc;->e:Z
-
-    :cond_4
-    move v5, p5
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lmrc;
-
-    invoke-direct/range {v0 .. v5}, Lmrc;-><init>(ZZZZZ)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -105,97 +36,52 @@
     :cond_0
     instance-of v1, p1, Lmrc;
 
-    const/4 v2, 0x0
-
     if-nez v1, :cond_1
 
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lmrc;
 
-    iget-boolean v1, p0, Lmrc;->a:Z
+    iget v1, p0, Lmrc;->a:I
 
-    iget-boolean v3, p1, Lmrc;->a:Z
+    iget p1, p1, Lmrc;->a:I
 
-    if-eq v1, v3, :cond_2
+    if-ne v1, p1, :cond_2
 
-    return v2
+    return v0
 
     :cond_2
-    iget-boolean v1, p0, Lmrc;->b:Z
+    :goto_0
+    const/4 p1, 0x0
 
-    iget-boolean v3, p1, Lmrc;->b:Z
+    return p1
+.end method
 
-    if-eq v1, v3, :cond_3
+.method public final getItemId()J
+    .locals 2
 
-    return v2
+    const/16 v0, 0x100
 
-    :cond_3
-    iget-boolean v1, p0, Lmrc;->c:Z
+    int-to-long v0, v0
 
-    iget-boolean v3, p1, Lmrc;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lmrc;->d:Z
-
-    iget-boolean v3, p1, Lmrc;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lmrc;->e:Z
-
-    iget-boolean p1, p1, Lmrc;->e:Z
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
+    return-wide v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-boolean v0, p0, Lmrc;->a:Z
+    iget v0, p0, Lmrc;->a:I
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lmrc;->b:Z
-
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    iget-boolean v2, p0, Lmrc;->c:Z
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+    const/4 v1, -0x1
 
-    move-result v0
-
-    iget-boolean v2, p0, Lmrc;->d:Z
-
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lmrc;->e:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
@@ -204,38 +90,28 @@
     return v1
 .end method
 
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lmrc;->b:I
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, ", canAddMembers="
+    iget v0, p0, Lmrc;->a:I
 
-    const-string v1, ", canPinMessage="
-
-    const-string v2, "ProfileMemberPermissionsModel(changePhoto="
-
-    iget-boolean v3, p0, Lmrc;->a:Z
-
-    iget-boolean v4, p0, Lmrc;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqf7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lukj;->c(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ", canCallInChat="
+    const-string v1, "Attaches(itemViewType="
 
-    const-string v2, ", canSeePrivateChatLink="
+    const-string v2, ", count=-1)"
 
-    iget-boolean v3, p0, Lmrc;->c:Z
-
-    iget-boolean v4, p0, Lmrc;->d:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lc12;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lmrc;->e:Z
-
-    invoke-static {v0, v2, v1}, Lc12;->l(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

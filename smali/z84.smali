@@ -1,39 +1,73 @@
-.class public final Lz84;
-.super Ljava/lang/Object;
+.class public final enum Lz84;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lx84;
+# static fields
+.field public static final enum a:Lz84;
 
-.field public final b:Lx84;
+.field public static final enum b:Lz84;
 
-.field public final c:Z
-
-.field public final d:Landroid/view/ViewGroup;
-
-.field public final e:Lc94;
-
-.field public final f:Ljava/util/ArrayList;
+.field public static final synthetic c:[Lz84;
 
 
 # direct methods
-.method public constructor <init>(Lx84;Lx84;ZLandroid/view/ViewGroup;Lc94;Ljava/util/ArrayList;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz84;
 
-    iput-object p1, p0, Lz84;->a:Lx84;
+    const-string v1, "RELEASE_DETACH"
 
-    iput-object p2, p0, Lz84;->b:Lx84;
+    const/4 v2, 0x0
 
-    iput-boolean p3, p0, Lz84;->c:Z
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p4, p0, Lz84;->d:Landroid/view/ViewGroup;
+    sput-object v0, Lz84;->a:Lz84;
 
-    iput-object p5, p0, Lz84;->e:Lc94;
+    new-instance v1, Lz84;
 
-    iput-object p6, p0, Lz84;->f:Ljava/util/ArrayList;
+    const-string v2, "RETAIN_DETACH"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lz84;->b:Lz84;
+
+    filled-new-array {v0, v1}, [Lz84;
+
+    move-result-object v0
+
+    sput-object v0, Lz84;->c:[Lz84;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lz84;
+    .locals 1
+
+    const-class v0, Lz84;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lz84;
+
+    return-object p0
+.end method
+
+.method public static values()[Lz84;
+    .locals 1
+
+    sget-object v0, Lz84;->c:[Lz84;
+
+    invoke-virtual {v0}, [Lz84;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lz84;
+
+    return-object v0
 .end method

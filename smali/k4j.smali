@@ -4,175 +4,334 @@
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
-    .locals 3
+.method public static a(J)Ljava/lang/String;
+    .locals 14
 
-    if-nez p1, :cond_0
+    const/16 v0, 0x3e8
 
-    const/4 p1, 0x0
+    int-to-long v0, v0
 
-    goto :goto_1
+    div-long v2, p0, v0
+
+    mul-long/2addr v0, v2
+
+    sub-long v0, p0, v0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v0
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v6, v2, v4
+
+    if-nez v6, :cond_0
+
+    cmp-long p0, p0, v4
+
+    if-gez p0, :cond_0
+
+    const-string p0, "-"
+
+    goto :goto_0
 
     :cond_0
-    move-object v0, p1
+    const-string p0, ""
 
     :goto_0
-    if-eqz v0, :cond_2
+    cmp-long p1, v0, v4
 
-    instance-of v1, v0, Ljava/net/UnknownHostException;
+    if-nez p1, :cond_1
 
-    if-eqz v1, :cond_1
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    const-string p1, "UnknownHostException (no network)"
+    move-result-object p0
 
-    goto :goto_1
+    return-object p0
 
     :cond_1
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    const/16 p1, 0x64
+
+    int-to-long v4, p1
+
+    rem-long v6, v0, v4
+
+    xor-long v8, v6, v4
+
+    neg-long v10, v6
+
+    or-long/2addr v10, v6
+
+    and-long/2addr v8, v10
+
+    const/16 p1, 0x3f
+
+    shr-long/2addr v8, p1
+
+    and-long/2addr v8, v4
+
+    add-long/2addr v6, v8
+
+    long-to-int v6, v6
+
+    const/4 v7, 0x3
+
+    if-nez v6, :cond_2
+
+    sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    div-long/2addr v0, v4
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
+
+    filled-new-array {p0, v2, v0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0, v7}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v0, "%s%d.%d"
+
+    invoke-static {p1, v0, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    const/16 v4, 0xa
+
+    int-to-long v4, v4
+
+    rem-long v8, v0, v4
+
+    xor-long v10, v8, v4
+
+    neg-long v12, v8
+
+    or-long/2addr v12, v8
+
+    and-long/2addr v10, v12
+
+    shr-long/2addr v10, p1
+
+    and-long/2addr v10, v4
+
+    add-long/2addr v8, v10
+
+    long-to-int p1, v8
+
+    if-nez p1, :cond_3
+
+    sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    div-long/2addr v0, v4
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {p0, v2, v0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0, v7}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v0, "%s%d.%02d"
+
+    invoke-static {p1, v0, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_3
+    sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {p0, v2, v0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0, v7}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v0, "%s%d.%03d"
+
+    invoke-static {p1, v0, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Landroid/view/View;FZ)V
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    int-to-float p0, p0
+
+    mul-float/2addr p0, p4
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->setTranslationY(F)V
+
+    :cond_0
+    const/high16 p0, 0x3f800000    # 1.0f
+
+    if-eqz p3, :cond_1
+
+    invoke-static {p4}, Ljava/lang/Math;->abs(F)F
+
+    move-result p2
+
+    sub-float p2, p0, p2
+
+    invoke-virtual {p3, p2}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_1
+    if-nez p5, :cond_2
 
     goto :goto_0
 
     :cond_2
-    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+    const/4 p2, 0x3
 
-    move-result-object p1
+    int-to-float p2, p2
 
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-static {p4}, Ljava/lang/Math;->abs(F)F
 
-    move-result-object p1
+    move-result p3
 
-    const-string v0, "\t"
+    mul-float/2addr p3, p2
 
-    const-string v1, "    "
+    cmpl-float p2, p3, p0
 
-    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    if-lez p2, :cond_3
 
-    move-result-object p1
-
-    :goto_1
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "\n"
-
-    const-string v1, "\n  "
-
-    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x4
-
-    invoke-static {v0, p1}, Lzy4;->f(ILjava/lang/String;)I
-
-    move-result v0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0xa
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    move p3, p0
 
     :cond_3
-    return-object p0
-.end method
+    const/high16 p2, 0x40000000    # 2.0f
 
-.method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    if-eqz p1, :cond_4
 
-    invoke-static {p1, p2}, Lk4j;->a(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    move-result-object p1
+    move-result p4
 
-    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    int-to-float p4, p4
 
-    return-void
-.end method
+    div-float/2addr p4, p2
 
-.method public static final c(Lso0;)V
-    .locals 1
+    invoke-virtual {p1, p4}, Landroid/view/View;->setPivotX(F)V
 
-    invoke-virtual {p0}, Lso0;->e()Z
+    :cond_4
+    if-eqz p1, :cond_5
 
-    move-result v0
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    if-eqz v0, :cond_0
+    move-result p4
 
-    invoke-virtual {p0}, Lso0;->getValue()Ljava/lang/Object;
+    int-to-float p4, p4
 
-    move-result-object p0
+    div-float/2addr p4, p2
 
-    check-cast p0, Landroid/view/View;
+    invoke-virtual {p1, p4}, Landroid/view/View;->setPivotY(F)V
 
-    const/16 v0, 0x8
+    :cond_5
+    const p2, 0x3dcccccd    # 0.1f
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    const/4 p4, 0x1
 
-    :cond_0
-    return-void
-.end method
+    if-eqz p1, :cond_6
 
-.method public static d(Landroid/view/inputmethod/EditorInfo;Landroid/view/inputmethod/InputConnection;Landroid/widget/TextView;)V
-    .locals 0
+    int-to-float p5, p4
 
-    if-eqz p1, :cond_0
+    sub-float/2addr p5, p3
 
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
+    mul-float/2addr p5, p2
 
-    if-nez p0, :cond_0
+    add-float/2addr p5, p0
 
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p1, p5}, Landroid/view/View;->setScaleX(F)V
 
-    move-result-object p0
+    :cond_6
+    if-eqz p1, :cond_7
 
+    int-to-float p4, p4
+
+    sub-float/2addr p4, p3
+
+    mul-float/2addr p4, p2
+
+    add-float/2addr p4, p0
+
+    invoke-virtual {p1, p4}, Landroid/view/View;->setScaleY(F)V
+
+    :cond_7
     :goto_0
-    instance-of p1, p0, Landroid/view/View;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
-.method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
-    .locals 0
+.method public static final c(Lr4h;)V
+    .locals 2
 
-    invoke-static {p1, p2}, Lk4j;->a(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
+    new-instance v0, Lmy4;
 
-    move-result-object p1
+    const/16 v1, 0x11
 
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v1}, Lmy4;-><init>(I)V
+
+    const/16 v1, 0x95
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+
+    new-instance v0, Luj6;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Luj6;-><init>(I)V
+
+    const/16 v1, 0x96
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
     return-void
 .end method

@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final G(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lkn;Landroid/view/View;Landroid/view/View;II)Z
+.method public final C(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lln;Landroid/view/View;Landroid/view/View;II)Z
     .locals 2
 
     iget v0, p0, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->o:I
@@ -49,7 +49,7 @@
 
     if-eq v0, v1, :cond_0
 
-    invoke-virtual {p0, p1, p2, p4, v0}, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->H(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lkn;Landroid/view/View;I)V
+    invoke-virtual {p0, p1, p2, p4, v0}, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->D(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lln;Landroid/view/View;I)V
 
     const/4 v0, 0x1
 
@@ -58,14 +58,14 @@
     :cond_0
     iput p6, p0, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->o:I
 
-    invoke-super/range {p0 .. p6}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->G(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lkn;Landroid/view/View;Landroid/view/View;II)Z
+    invoke-super/range {p0 .. p6}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->C(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lln;Landroid/view/View;Landroid/view/View;II)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final H(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lkn;Landroid/view/View;I)V
+.method public final D(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lln;Landroid/view/View;I)V
     .locals 2
 
     iget-boolean p4, p0, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->p:Z
@@ -90,29 +90,29 @@
     :cond_1
     iput v1, p0, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->o:I
 
-    invoke-super {p0, p1, p2, p3, v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->H(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lkn;Landroid/view/View;I)V
+    invoke-super {p0, p1, p2, p3, v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->D(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lln;Landroid/view/View;I)V
 
     return-void
 .end method
 
-.method public final bridge synthetic u(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
+.method public final bridge synthetic q(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
     .locals 0
 
-    check-cast p2, Lkn;
+    check-cast p2, Lln;
 
-    invoke-virtual/range {p0 .. p6}, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->G(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lkn;Landroid/view/View;Landroid/view/View;II)Z
+    invoke-virtual/range {p0 .. p6}, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->C(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lln;Landroid/view/View;Landroid/view/View;II)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final bridge synthetic v(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;I)V
+.method public final bridge synthetic r(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;I)V
     .locals 0
 
-    check-cast p2, Lkn;
+    check-cast p2, Lln;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->H(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lkn;Landroid/view/View;I)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/messages/views/widgets/SmoothSnapAppBarLayoutBehavior;->D(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lln;Landroid/view/View;I)V
 
     return-void
 .end method

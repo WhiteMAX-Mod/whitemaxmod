@@ -1,112 +1,102 @@
-.class public abstract Lnf4;
+.class public final Lnf4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
+
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field public static final o:Ljava/util/concurrent/ThreadFactory;
 
-.field public static final b:Ljava/lang/String;
 
-.field public static final c:Ljava/lang/String;
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicLong;
 
-.field public static final d:Ljava/lang/String;
+.field public final b:Ljava/lang/String;
 
-.field public static final e:Ljava/lang/String;
+.field public final c:I
+
+.field public final d:Landroid/os/StrictMode$ThreadPolicy;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget-object v0, Lqah;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v0
 
-    sput-object v0, Lnf4;->a:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lnf4;->b:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lnf4;->c:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lnf4;->d:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lnf4;->e:Ljava/lang/String;
+    sput-object v0, Lnf4;->o:Ljava/util/concurrent/ThreadFactory;
 
     return-void
 .end method
 
-.method public static a(Landroid/text/Spanned;Ljava/lang/Object;ILandroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)V
+    .locals 1
 
-    new-instance v0, Landroid/os/Bundle;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    sget-object v1, Lnf4;->a:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+    iput-object v0, p0, Lnf4;->a:Ljava/util/concurrent/atomic/AtomicLong;
 
-    move-result v2
+    iput-object p1, p0, Lnf4;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    iput p2, p0, Lnf4;->c:I
 
-    sget-object v1, Lnf4;->b:Ljava/lang/String;
+    iput-object p3, p0, Lnf4;->d:Landroid/os/StrictMode$ThreadPolicy;
 
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+    return-void
+.end method
 
-    move-result v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+# virtual methods
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 4
 
-    sget-object v1, Lnf4;->c:Ljava/lang/String;
+    new-instance v0, Li02;
 
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+    const/16 v1, 0x15
 
-    move-result p0
+    invoke-direct {v0, p0, v1, p1}, Li02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1, p0}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    sget-object p1, Lnf4;->o:Ljava/util/concurrent/ThreadFactory;
 
-    sget-object p0, Lnf4;->d:Ljava/lang/String;
+    invoke-interface {p1, v0}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
-    invoke-virtual {v0, p0, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    move-result-object p1
 
-    if-eqz p3, :cond_0
+    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    sget-object p0, Lnf4;->e:Ljava/lang/String;
+    iget-object v0, p0, Lnf4;->a:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-virtual {v0, p0, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
 
-    :cond_0
-    return-object v0
+    move-result-wide v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lnf4;->b:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " Thread #"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+
+    return-object p1
 .end method

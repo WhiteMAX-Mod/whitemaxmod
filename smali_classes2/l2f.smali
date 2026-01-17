@@ -1,63 +1,84 @@
 .class public final Ll2f;
-.super Lie0;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final b:Ll2f;
+
+# instance fields
+.field public final synthetic X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/SettingsPrivacyScreen;)V
+    .locals 0
 
-    new-instance v0, Ll2f;
+    iput-object p2, p0, Ll2f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
-    const/16 v1, 0x15
+    const/4 p2, 0x2
 
-    invoke-direct {v0, v1}, Lie0;-><init>(I)V
-
-    sput-object v0, Ll2f;->b:Ll2f;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Ll2f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of p1, p1, Ll2f;
+    check-cast p1, Ll2f;
 
-    if-nez p1, :cond_1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Ll2f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, -0x340f21a3    # -3.157113E7f
+    new-instance v0, Ll2f;
 
-    return v0
-.end method
+    iget-object v1, p0, Ll2f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Ll2f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/SettingsPrivacyScreen;)V
 
-    const-string v0, "OpenRingtonePicker"
+    iput-object p1, v0, Ll2f;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Ll2f;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/String;
+
+    new-instance p1, Ldjb;
+
+    iget-object v1, p0, Ll2f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+
+    invoke-direct {p1, v1}, Ldjb;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    invoke-virtual {p1, v0}, Ldjb;->h(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

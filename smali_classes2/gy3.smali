@@ -1,58 +1,33 @@
-.class public final Lgy3;
+.class public abstract Lgy3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc10;
 
-
-# instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/CharSequence;
-
-.field public final f:I
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Landroid/graphics/drawable/Drawable;
-
-.field public final i:Landroid/graphics/drawable/Drawable;
-
-.field public final j:J
+# static fields
+.field public static final a:Lcu3;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;ILjava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcu3;
 
-    iput-wide p1, p0, Lgy3;->a:J
+    sget v1, Lk8b;->l:I
 
-    iput-object p3, p0, Lgy3;->b:Ljava/lang/String;
+    sget v2, Lj6e;->r:I
 
-    iput-object p4, p0, Lgy3;->c:Ljava/lang/String;
+    new-instance v3, Llhg;
 
-    iput-object p5, p0, Lgy3;->d:Ljava/lang/String;
+    invoke-direct {v3, v2}, Llhg;-><init>(I)V
 
-    iput-object p6, p0, Lgy3;->e:Ljava/lang/CharSequence;
+    const/4 v2, 0x2
 
-    iput p7, p0, Lgy3;->f:I
+    const/16 v4, 0x38
 
-    iput-object p8, p0, Lgy3;->g:Ljava/lang/String;
+    invoke-direct {v0, v1, v3, v2, v4}, Lcu3;-><init>(ILqhg;II)V
 
-    iput-object p9, p0, Lgy3;->h:Landroid/graphics/drawable/Drawable;
-
-    iput-object p10, p0, Lgy3;->i:Landroid/graphics/drawable/Drawable;
-
-    iput-wide p11, p0, Lgy3;->j:J
+    sput-object v0, Lgy3;->a:Lcu3;
 
     return-void
 .end method

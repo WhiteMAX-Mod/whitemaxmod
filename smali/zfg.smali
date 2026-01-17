@@ -1,127 +1,117 @@
 .class public final Lzfg;
-.super Ld0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lzfg;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final d:Ljava/util/regex/Pattern;
+
+.field public static final e:Lsk7;
+
+.field public static final f:Lsk7;
+
+.field public static final g:Lsk7;
+
+.field public static final h:Lsk7;
 
 
 # instance fields
-.field public c:Ljava/lang/CharSequence;
+.field public final a:I
 
-.field public d:Z
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lc0;
+    const-string v0, "\\s+"
 
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lc0;-><init>(I)V
-
-    sput-object v0, Lzfg;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ld0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    sget-object p2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/CharSequence;
-
-    iput-object p2, p0, Lzfg;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    iput-boolean p2, p0, Lzfg;->d:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TextInputLayout.SavedState{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " error="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzfg;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lzfg;->d:Ljava/util/regex/Pattern;
+
+    const-string v0, "auto"
+
+    const-string v1, "none"
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
+
+    move-result-object v0
+
+    sput-object v0, Lzfg;->e:Lsk7;
+
+    const-string v0, "dot"
+
+    const-string v2, "sesame"
+
+    const-string v3, "circle"
+
+    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
+
+    move-result-object v0
+
+    sput-object v0, Lzfg;->f:Lsk7;
+
+    const-string v0, "filled"
+
+    const-string v3, "open"
+
+    filled-new-array {v0, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
+
+    move-result-object v0
+
+    sput-object v0, Lzfg;->g:Lsk7;
+
+    const-string v0, "before"
+
+    const-string v1, "outside"
+
+    const-string v3, "after"
+
+    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
+
+    move-result-object v0
+
+    sput-object v0, Lzfg;->h:Lsk7;
+
+    return-void
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+.method public constructor <init>(III)V
+    .locals 0
 
-    invoke-super {p0, p1, p2}, Ld0;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lzfg;->c:Ljava/lang/CharSequence;
+    iput p1, p0, Lzfg;->a:I
 
-    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
+    iput p2, p0, Lzfg;->b:I
 
-    iget-boolean p2, p0, Lzfg;->d:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iput p3, p0, Lzfg;->c:I
 
     return-void
 .end method

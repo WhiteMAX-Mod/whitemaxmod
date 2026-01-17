@@ -1,26 +1,67 @@
-.class public final Ld81;
-.super Ladf;
+.class public interface abstract Ld81;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lj0f;
 
 
 # virtual methods
-.method public final z(Lie8;)V
+.method public abstract a()I
+.end method
+
+.method public b()Lqhg;
     .locals 1
 
-    instance-of v0, p1, Li81;
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    return-void
+.method public c()Lyze;
+    .locals 1
 
-    :cond_0
-    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+    const/4 v0, 0x0
 
-    check-cast v0, Lpze;
+    return-object v0
+.end method
 
-    check-cast p1, Lfze;
+.method public d()Lqhg;
+    .locals 1
 
-    invoke-virtual {v0, p1}, Lpze;->setModelItem(Lfze;)V
+    const/4 v0, 0x0
 
-    return-void
+    return-object v0
+.end method
+
+.method public e()Lg0f;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public f()Ly58;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Li0f;
+    .locals 1
+
+    sget-object v0, Li0f;->b:Li0f;
+
+    return-object v0
 .end method

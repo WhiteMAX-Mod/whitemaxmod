@@ -1,299 +1,115 @@
-.class public interface abstract Lmd;
-.super Ljava/lang/Object;
+.class public final Lmd;
+.super Lwcj;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Ljavax/net/ssl/X509TrustManager;
+
+.field public final c:Landroid/net/http/X509TrustManagerExtensions;
+
+
+# direct methods
+.method public constructor <init>(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmd;->b:Ljavax/net/ssl/X509TrustManager;
+
+    iput-object p2, p0, Lmd;->c:Landroid/net/http/X509TrustManagerExtensions;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public A(Lld;Z)V
-    .locals 0
+.method public final a(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 2
 
-    return-void
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/security/cert/X509Certificate;
+
+    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    check-cast p2, [Ljava/security/cert/X509Certificate;
+
+    :try_start_0
+    iget-object v0, p0, Lmd;->c:Landroid/net/http/X509TrustManagerExtensions;
+
+    const-string v1, "RSA"
+
+    invoke-virtual {v0, p2, v1, p1}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    new-instance p2, Ljavax/net/ssl/SSLPeerUnverifiedException;
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p2, v0}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw p2
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public C(Lwac;Lrb9;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
+    instance-of v0, p1, Lmd;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lmd;
+
+    iget-object p1, p1, Lmd;->b:Ljavax/net/ssl/X509TrustManager;
+
+    iget-object v0, p0, Lmd;->b:Ljavax/net/ssl/X509TrustManager;
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public D(Lld;Leac;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Lmd;->b:Ljavax/net/ssl/X509TrustManager;
 
-.method public E(Lld;Ljava/lang/String;)V
-    .locals 0
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    return-void
-.end method
+    move-result v0
 
-.method public F(Lld;Lu4a;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public G(Lld;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public H(Leg8;Lz59;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public H0(ILld;Lvac;Lvac;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public I(Lld;J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public J(Lld;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public J0(Lld;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public K0(Lld;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public L(Lld;Lrj6;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public M(Lld;II)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public M0(Lld;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public N(Lld;Lnl4;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public N0(Lld;ZI)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public P(Lld;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public P0(Lld;Lasg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Q0(Lld;Ljava/lang/Exception;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public R(Leg8;Lz59;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public R0(Lld;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public S(Lld;La30;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public S0(Lld;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public T0(Lld;Lz59;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public U(Lld;Lo60;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public V(Lld;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Y(Lld;Lmph;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Z(Lld;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b0(Lld;Lrj6;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public c0(Lld;Lz59;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d0(Lld;Leg8;Lz59;Ljava/io/IOException;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g0(Lld;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m0(Lld;Ljava/lang/Object;J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o0(Lld;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p0(Lld;Lo60;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q0(Lld;IIZ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r0(Lld;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s0(Lld;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t0(Lld;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public u(Lld;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public u0(Lld;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public v(Lld;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public v0(Lld;Landroidx/media3/common/PlaybackException;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public w(Lld;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public w0(Lld;F)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public x0(Lld;IJJ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public y(Lld;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public z0(Lld;IJJ)V
-    .locals 0
-
-    return-void
+    return v0
 .end method

@@ -2,39 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+
+# instance fields
+.field public final a:Lav8;
+
+.field public final b:Ldh5;
 
 
-# virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 3
+# direct methods
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Ldhg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    new-instance v0, Lav8;
 
-    move-result v1
+    const/16 v1, 0x3e8
 
-    const-class v2, Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lav8;-><init>(I)V
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    iput-object v0, p0, Lchg;->a:Lav8;
 
-    move-result-object v2
+    sget-object v0, Ldh5;->a:Ldh5;
 
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
+    iput-object v0, p0, Lchg;->b:Ldh5;
 
-    move-result-object p1
-
-    invoke-direct {v0, v1, p1}, Ldhg;-><init>(ILjava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p1, p1, [Ldhg;
-
-    return-object p1
+    return-void
 .end method

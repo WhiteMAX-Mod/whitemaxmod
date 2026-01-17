@@ -46,11 +46,11 @@
         <item quantity="many">Вы скопировали сообщения</item>
     </plurals>
     <plurals name="chat_screen_confirmation_delete_title">
-        <item quantity="other">Удалить сообщений?</item>
+        <item quantity="other">Удалить сообщения?</item>
         <item quantity="one">Удалить сообщение?</item>
         <item quantity="two">Удалить сообщения?</item>
         <item quantity="few">Удалить сообщения?</item>
-        <item quantity="many">Удалить сообщений?</item>
+        <item quantity="many">Удалить сообщения?</item>
     </plurals>
     <plurals name="forward_snackbar_messages_sent">
         <item quantity="other">Вы переслали сообщения</item>

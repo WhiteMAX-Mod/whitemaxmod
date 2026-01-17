@@ -1,246 +1,159 @@
-.class public final Lace;
+.class public abstract Lace;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final a:Lrff;
 
-.field public final b:Ljava/lang/String;
+.field public static final b:Lpq3;
 
-.field public final c:Lfl1;
-
-.field public final d:J
-
-.field public final e:I
+.field public static final c:Ltw7;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Lfl1;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "Scheduler Supplier result can\'t be null"
 
-    iput-wide p1, p0, Lace;->a:J
+    :try_start_0
+    sget-object v1, Lzbe;->a:Lrff;
 
-    iput-object p3, p0, Lace;->b:Ljava/lang/String;
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    iput-object p4, p0, Lace;->c:Lfl1;
+    sput-object v1, Lace;->a:Lrff;
 
-    iput-wide p5, p0, Lace;->d:J
+    :try_start_1
+    sget-object v1, Lwbe;->a:Lpq3;
 
-    iput p7, p0, Lace;->e:I
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    sput-object v1, Lace;->b:Lpq3;
+
+    :try_start_2
+    sget-object v1, Lxbe;->a:Ltw7;
+
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    sput-object v1, Lace;->c:Ltw7;
+
+    sget v1, Lqsg;->c:I
+
+    :try_start_3
+    sget-object v1, Lybe;->a:Lfna;
+
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     return-void
-.end method
 
+    :catchall_0
+    move-exception v0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lace;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lace;
-
-    iget-wide v0, p0, Lace;->a:J
-
-    iget-wide v2, p1, Lace;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lace;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lace;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lace;->c:Lfl1;
-
-    iget-object v1, p1, Lace;->c:Lfl1;
-
-    invoke-virtual {v0, v1}, Lfl1;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-wide v0, p0, Lace;->d:J
-
-    iget-wide v2, p1, Lace;->d:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Lace;->e:I
-
-    iget p1, p1, Lace;->e:I
-
-    if-eq v0, p1, :cond_6
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_6
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-wide v0, p0, Lace;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lace;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lace;->c:Lfl1;
-
-    invoke-virtual {v2}, Lfl1;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-wide v3, p0, Lace;->d:J
-
-    invoke-static {v2, v1, v3, v4}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    iget v1, p0, Lace;->e:I
-
-    invoke-static {v1}, Lc12;->w(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "ScreenRecordBroadcastData(id="
-
-    const-string v1, ", streamId="
-
-    iget-wide v2, p0, Lace;->a:J
-
-    iget-object v4, p0, Lace;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object v0
 
-    const-string v1, ", initiatorId="
+    throw v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catchall_1
+    move-exception v0
 
-    iget-object v1, p0, Lace;->c:Lfl1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", startTimeMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lace;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recordType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lace;->e:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "RECORD"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "STREAM"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "NOTHING"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object v0
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catchall_3
+    move-exception v0
+
+    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public static a()Lpbe;
+    .locals 2
+
+    sget-object v0, Lace;->b:Lpq3;
+
+    sget-object v1, Lknj;->b:Lwna;
+
+    if-nez v1, :cond_0
 
     return-object v0
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1, v0}, Lwna;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    check-cast v0, Lpbe;
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public static b()Lpbe;
+    .locals 2
+
+    sget-object v0, Lace;->c:Ltw7;
+
+    sget-object v1, Lknj;->d:Lkme;
+
+    if-nez v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1, v0}, Lkme;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    check-cast v0, Lpbe;
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
 .end method

@@ -127,7 +127,7 @@
 
     const/4 v6, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/exception/CallTerminatingException;-><init>(Lru/ok/android/externcalls/sdk/exception/Domain;Ljava/lang/String;Lru/ok/android/externcalls/sdk/exception/SubDomain;Ljava/lang/Integer;Ljava/lang/Throwable;Lro4;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/exception/CallTerminatingException;-><init>(Lru/ok/android/externcalls/sdk/exception/Domain;Ljava/lang/String;Lru/ok/android/externcalls/sdk/exception/SubDomain;Ljava/lang/Integer;Ljava/lang/Throwable;Lso4;)V
 
     return-object v0
 .end method

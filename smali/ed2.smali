@@ -1,27 +1,31 @@
-.class public abstract Led2;
+.class public final Led2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcfc;
+
+# static fields
+.field public static final b:Led2;
 
 
-# virtual methods
-.method public abstract a(C)Z
-.end method
+# instance fields
+.field public a:[[I
 
-.method public final apply(Ljava/lang/Object;)Z
-    .locals 0
 
-    check-cast p1, Ljava/lang/Character;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-virtual {p1}, Ljava/lang/Character;->charValue()C
+    new-instance v0, Led2;
 
-    move-result p1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Led2;->a(C)Z
+    const/16 v1, 0x80
 
-    move-result p1
+    new-array v1, v1, [[I
 
-    return p1
+    iput-object v1, v0, Led2;->a:[[I
+
+    sput-object v0, Led2;->b:Led2;
+
+    return-void
 .end method

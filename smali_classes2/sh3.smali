@@ -1,90 +1,61 @@
 .class public final Lsh3;
-.super Landroid/view/ViewOutlineProvider;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:I
+.field public final synthetic b:Lwh3;
 
-.field public c:I
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lwh3;Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x1
+    iput p3, p0, Lsh3;->a:I
 
-    iput v0, p0, Lsh3;->a:I
+    iput-object p1, p0, Lsh3;->b:Lwh3;
 
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    iput-object p2, p0, Lsh3;->c:Landroid/graphics/drawable/Drawable;
 
-    return-void
-.end method
-
-.method public constructor <init>(II)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lsh3;->a:I
-
-    iput p1, p0, Lsh3;->b:I
-
-    iput p2, p0, Lsh3;->c:I
-
-    .line 2
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 4
+.method public final run()V
+    .locals 2
 
     iget v0, p0, Lsh3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget v0, p0, Lsh3;->b:I
+    iget-object v0, p0, Lsh3;->b:Lwh3;
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    iget-object v1, p0, Lsh3;->c:Landroid/graphics/drawable/Drawable;
 
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    iget v3, p0, Lsh3;->c:I
-
-    sub-int/2addr v2, v3
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p2, v3, v0, v1, v2}, Landroid/graphics/Outline;->setRect(IIII)V
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    invoke-static {v0, v1}, Lwh3;->A(Lwh3;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 
     :pswitch_0
-    iget p1, p0, Lsh3;->b:I
+    iget-object v0, p0, Lsh3;->b:Lwh3;
 
-    iget v0, p0, Lsh3;->c:I
+    iget-object v1, p0, Lsh3;->c:Landroid/graphics/drawable/Drawable;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p2, v1, v1, p1, v0}, Landroid/graphics/Outline;->setRect(IIII)V
+    invoke-static {v0, v1}, Lwh3;->y(Lwh3;Landroid/graphics/drawable/Drawable;)V
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

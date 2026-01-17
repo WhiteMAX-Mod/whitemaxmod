@@ -1,114 +1,156 @@
-.class public final synthetic Lng1;
+.class public final Lng1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lpg1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lng1;
 
-.field public final synthetic b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public static final b:J
+
+.field public static final c:Llhg;
+
+.field public static final d:Lw58;
+
+.field public static final o:Li0f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lng1;->a:I
+    new-instance v0, Lng1;
 
-    iput-object p1, p0, Lng1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lng1;->a:Lng1;
+
+    sget-wide v0, Lo6b;->d:J
+
+    sput-wide v0, Lng1;->b:J
+
+    sget v0, Lj6e;->d2:I
+
+    new-instance v1, Llhg;
+
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+
+    sput-object v1, Lng1;->c:Llhg;
+
+    new-instance v0, Lw58;
+
+    sget v1, Lm6b;->i:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    invoke-direct {v0, v1, v2, v3}, Lw58;-><init>(III)V
+
+    sput-object v0, Lng1;->d:Lw58;
+
+    sget-object v0, Li0f;->a:Li0f;
+
+    sput-object v0, Lng1;->o:Li0f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p1, p0, Lng1;->a:I
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lng1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lp38;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Llg1;
-
-    move-result-object p1
-
-    iget-object v0, p1, Llg1;->x0:Lhof;
-
-    invoke-virtual {v0}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfg1;
-
-    iget-object v1, p1, Llg1;->A0:Lyl5;
-
-    new-instance v2, Lue1;
-
-    iget-object v3, p1, Llg1;->b:Ljava/lang/String;
-
-    iget-boolean v4, p1, Llg1;->X:Z
-
-    iget-object p1, v0, Lfg1;->c:Lbx8;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    sget-object v7, Lbx8;->b:Lbx8;
-
-    if-ne p1, v7, :cond_0
-
-    move p1, v5
-
-    move v5, v6
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move p1, v5
+    instance-of p1, p1, Lng1;
 
-    :goto_0
-    iget-object v8, v0, Lfg1;->b:Lbx8;
+    if-nez p1, :cond_1
 
-    if-ne v8, v7, :cond_1
+    const/4 p1, 0x0
 
-    goto :goto_1
+    return p1
 
     :cond_1
-    move v6, p1
+    return v0
+.end method
 
-    :goto_1
-    iget-boolean v7, v0, Lfg1;->d:Z
+.method public final f()Ly58;
+    .locals 1
 
-    invoke-direct/range {v2 .. v7}, Lue1;-><init>(Ljava/lang/String;ZZZZ)V
+    sget-object v0, Lng1;->d:Lw58;
 
-    invoke-static {v1, v2}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    return-object v0
+.end method
 
-    return-void
+.method public final getItemId()J
+    .locals 2
 
-    :pswitch_0
-    sget-object p1, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lp38;
+    sget-wide v0, Lng1;->b:J
 
-    invoke-virtual {v0}, Lx84;->getRouter()Lw3e;
+    return-wide v0
+.end method
 
-    move-result-object p1
+.method public final getTitle()Lqhg;
+    .locals 1
 
-    invoke-virtual {p1, v0}, Lw3e;->B(Lx84;)Z
+    sget-object v0, Lng1;->c:Llhg;
 
-    return-void
+    return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final getType()Li0f;
+    .locals 1
+
+    sget-object v0, Lng1;->o:Li0f;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x1f0af277
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Ln6b;->m:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "SendToChat"
+
+    return-object v0
+.end method
+
+.method public final u()I
+    .locals 1
+
+    const/4 v0, 0x2
+
+    return v0
 .end method

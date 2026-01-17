@@ -1,30 +1,26 @@
 .class public final Ld3b;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lfab;
-
-.field public final synthetic Y:Lone/me/android/OneMeApplication;
+.field public final synthetic X:Lone/me/android/OneMeApplication;
 
 .field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lfab;Lone/me/android/OneMeApplication;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/android/OneMeApplication;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ld3b;->X:Lfab;
-
-    iput-object p2, p0, Ld3b;->Y:Lone/me/android/OneMeApplication;
+    iput-object p1, p0, Ld3b;->X:Lone/me/android/OneMeApplication;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +40,7 @@
 
     check-cast p1, Ld3b;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Ld3b;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -54,35 +50,33 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
     new-instance p1, Ld3b;
 
-    iget-object v0, p0, Ld3b;->X:Lfab;
+    iget-object v0, p0, Ld3b;->X:Lone/me/android/OneMeApplication;
 
-    iget-object v1, p0, Ld3b;->Y:Lone/me/android/OneMeApplication;
-
-    invoke-direct {p1, v0, v1, p2}, Ld3b;-><init>(Lfab;Lone/me/android/OneMeApplication;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Ld3b;-><init>(Lone/me/android/OneMeApplication;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 7
 
     iget v0, p0, Ld3b;->o:I
 
-    const/4 v1, 0x1
+    sget-object v1, Lb3h;->a:Lb3h;
+
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-object v1
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -94,35 +88,126 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    new-instance v2, Lsx9;
+    new-instance p1, Ligc;
 
-    sget-object v4, Lone/me/android/OneMeApplication;->s0:Ly2b;
+    sget-object v0, Li8b;->a:Lo58;
 
-    const/4 v8, 0x0
+    sget-object v0, Lj8b;->a:Lj8b;
 
-    const/4 v9, 0x5
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    const/4 v3, 0x1
+    move-result-object v3
 
-    const-class v5, Ly2b;
+    const/16 v4, 0xc
 
-    const-string v6, "isChromaAndDynamicFontApplicableFor"
+    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
 
-    const-string v7, "isChromaAndDynamicFontApplicableFor(Landroid/app/Activity;)Z"
+    move-result-object v3
 
-    invoke-direct/range {v2 .. v9}, Lsx9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    iput v1, p0, Ld3b;->o:I
+    move-result-object v0
 
-    iget-object p1, p0, Ld3b;->X:Lfab;
+    const/16 v4, 0x270
 
-    iget-object v0, p0, Ld3b;->Y:Lone/me/android/OneMeApplication;
+    invoke-virtual {v0, v4}, Lr5;->d(I)Ln8g;
 
-    invoke-virtual {p1, v0, v2, p0}, Lfab;->a(Landroid/content/Context;Lsx9;Ll84;)V
+    move-result-object v0
 
-    sget-object p1, Lbc4;->a:Lbc4;
+    invoke-direct {p1, v3, v0}, Ligc;-><init>(Lo58;Lo58;)V
 
-    return-object p1
+    iput v2, p0, Ld3b;->o:I
+
+    const-string v0, "PrefetchThemeBackgroundUseCase"
+
+    const-string v2, "Prefetch chat themes."
+
+    invoke-static {v0, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v0, Lpc3;->t0:Lkme;
+
+    iget-object v2, p0, Ld3b;->X:Lone/me/android/OneMeApplication;
+
+    invoke-virtual {v0, v2}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lpc3;->i()Lzbb;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzbb;->a:Ljava/lang/String;
+
+    invoke-static {}, Lqi3;->c()Lqd8;
+
+    move-result-object v4
+
+    new-instance v5, Lkg0;
+
+    const-string v6, "Light"
+
+    invoke-virtual {v0, v6}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Lkg0;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v5}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    new-instance v5, Lkg0;
+
+    const-string v6, "Dark"
+
+    invoke-virtual {v0, v6}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v5, v0}, Lkg0;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v5}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v4}, Lqi3;->b(Ljava/util/List;)Lqd8;
+
+    move-result-object v0
+
+    invoke-virtual {v3}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lmbg;
+
+    check-cast v3, Lj9b;
+
+    invoke-virtual {v3}, Lj9b;->b()Lsb4;
+
+    move-result-object v3
+
+    new-instance v4, Lhgc;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, p1, v2, v0, v5}, Lhgc;-><init>(Ligc;Landroid/content/Context;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v3, v4, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v1
+
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    return-object v1
 .end method

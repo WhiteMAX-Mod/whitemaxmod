@@ -1,142 +1,123 @@
-.class public final Lwu0;
-.super Lhm;
+.class public final synthetic Lwu0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:Lvu0;
+.field public final synthetic a:I
 
-.field public final c:Lxu0;
+.field public final synthetic b:F
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lvu0;Lxu0;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;FI)V
+    .locals 0
 
-    iget-object v0, p1, Lvu0;->a:Ljava/lang/String;
+    iput p3, p0, Lwu0;->a:I
 
-    invoke-direct {p0, v0}, Lhm;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lwu0;->c:Ljava/lang/Object;
 
-    iput-object p1, p0, Lwu0;->b:Lvu0;
+    iput p2, p0, Lwu0;->b:F
 
-    iput-object p2, p0, Lwu0;->c:Lxu0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    iget-object v0, p0, Lwu0;->b:Lvu0;
+    iget v0, p0, Lwu0;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lwu0;->c:Lxu0;
+    iget-object v0, p0, Lwu0;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lxu0;->canRepeat()Z
+    check-cast v0, Lp52;
 
-    move-result v0
+    iget-object v0, v0, Lp52;->c:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast v0, Laff;
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Laff;->d:Lfih;
 
-    return v0
+    iget v1, p0, Lwu0;->b:F
 
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    iget-object v0, p0, Lwu0;->c:Lxu0;
-
-    invoke-virtual {v0}, Lxu0;->isSupplied()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c()Z
-    .locals 1
-
-    iget-object v0, p0, Lwu0;->b:Lvu0;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lwu0;->c:Lxu0;
-
-    invoke-virtual {v0}, Lxu0;->shouldPost()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final d(Lx28;)V
-    .locals 2
-
-    iget-object v0, p0, Lwu0;->c:Lxu0;
-
-    invoke-virtual {v0}, Lxu0;->shouldSkipParam()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v0, v1}, Lfih;->E(F)V
 
     return-void
 
-    :cond_0
-    iget-object v1, p0, Lwu0;->b:Lvu0;
+    :pswitch_0
+    iget-object v0, p0, Lwu0;->c:Ljava/lang/Object;
 
-    iget-object v1, v1, Lvu0;->a:Ljava/lang/String;
+    check-cast v0, La4a;
 
-    invoke-interface {p1, v1}, Lx28;->p0(Ljava/lang/String;)Lx28;
+    iget-object v0, v0, La4a;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lxu0;->write(Lx28;)V
+    check-cast v0, Lnda;
+
+    iget-object v0, v0, Lnda;->e:Lfih;
+
+    iget v1, p0, Lwu0;->b:F
+
+    invoke-interface {v0, v1}, Lfih;->E(F)V
 
     return-void
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    :pswitch_1
+    iget-object v0, p0, Lwu0;->c:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->A0:F
 
-    iget-object v1, p0, Lhm;->a:Ljava/lang/String;
+    iget v2, p0, Lwu0;->b:F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sub-float/2addr v2, v1
 
-    const-string v1, " = "
+    iget v3, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->B0:F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sub-float/2addr v3, v1
 
-    iget-object v1, p0, Lwu0;->c:Lxu0;
+    div-float/2addr v2, v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    cmpl-float v3, v2, v1
 
-    move-result-object v0
+    if-lez v3, :cond_0
 
-    return-object v0
+    move v2, v1
+
+    :cond_0
+    iget v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:F
+
+    iget v3, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
+
+    sub-float v3, v1, v3
+
+    mul-float/2addr v3, v2
+
+    sub-float/2addr v1, v3
+
+    iput v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

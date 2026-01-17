@@ -84,7 +84,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/events/SharedAnalyticsEvent$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/events/SharedAnalyticsEvent$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/events/SharedAnalyticsEvent;->Companion:Lru/ok/android/externcalls/sdk/events/SharedAnalyticsEvent$Companion;
 
@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;Lro4;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;Lso4;)V
     .locals 0
 
     .line 1

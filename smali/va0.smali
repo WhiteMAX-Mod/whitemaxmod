@@ -8,11 +8,11 @@
 
 .field public final b:I
 
-.field public final c:Lyw1;
+.field public final c:Lqw1;
 
 
 # direct methods
-.method public constructor <init>(IILyw1;)V
+.method public constructor <init>(IILqw1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -21,7 +21,7 @@
 
     iput p2, p0, Lva0;->b:I
 
-    iput-object p3, p0, Lva0;->c:Lyw1;
+    iput-object p3, p0, Lva0;->c:Lqw1;
 
     return-void
 .end method
@@ -58,9 +58,9 @@
 
     if-ne v1, v3, :cond_1
 
-    iget-object v1, p0, Lva0;->c:Lyw1;
+    iget-object v1, p0, Lva0;->c:Lqw1;
 
-    iget-object p1, p1, Lva0;->c:Lyw1;
+    iget-object p1, p1, Lva0;->c:Lqw1;
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -91,7 +91,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lva0;->c:Lyw1;
+    iget-object v1, p0, Lva0;->c:Lqw1;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -127,7 +127,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lva0;->c:Lyw1;
+    iget-object v1, p0, Lva0;->c:Lqw1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

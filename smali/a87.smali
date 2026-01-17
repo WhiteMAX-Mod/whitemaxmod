@@ -1,64 +1,117 @@
 .class public final La87;
-.super Ljava/lang/Object;
+.super Ltc3;
 .source "SourceFile"
 
-# interfaces
-.implements Lb87;
 
+# instance fields
+.field public u0:[B
 
-# static fields
-.field public static final a:La87;
+.field public volatile v0:Z
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, La87;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, La87;->a:La87;
-
-    return-void
-.end method
+.field public w0:[B
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()V
     .locals 1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput-boolean v0, p0, La87;->v0:Z
 
-    return v0
+    return-void
+.end method
+
+.method public final load()V
+    .locals 6
+
+    :try_start_0
+    iget-object v0, p0, Ltc3;->t0:Lxqf;
+
+    iget-object v1, p0, Ltc3;->b:Laj4;
+
+    invoke-virtual {v0, v1}, Lxqf;->G(Laj4;)J
+
+    const/4 v0, 0x0
+
+    move v1, v0
 
     :cond_0
-    instance-of p1, p1, La87;
+    :goto_0
+    const/4 v2, -0x1
 
-    if-nez p1, :cond_1
+    if-eq v0, v2, :cond_2
 
-    const/4 p1, 0x0
+    iget-boolean v0, p0, La87;->v0:Z
 
-    return p1
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, La87;->u0:[B
+
+    array-length v3, v0
+
+    add-int/lit16 v4, v1, 0x4000
+
+    const/16 v5, 0x4000
+
+    if-ge v3, v4, :cond_1
+
+    array-length v3, v0
+
+    add-int/2addr v3, v5
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, La87;->u0:[B
 
     :cond_1
-    return v0
-.end method
+    iget-object v0, p0, Ltc3;->t0:Lxqf;
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v3, p0, La87;->u0:[B
 
-    const v0, 0x40e923ca
+    invoke-virtual {v0, v3, v1, v5}, Lxqf;->read([BII)I
 
-    return v0
-.end method
+    move-result v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    if-eq v0, v2, :cond_0
 
-    const-string v0, "Unknown"
+    add-int/2addr v1, v0
 
-    return-object v0
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v0, p0, La87;->v0:Z
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, La87;->u0:[B
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, La87;->w0:[B
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_3
+    iget-object v0, p0, Ltc3;->t0:Lxqf;
+
+    invoke-static {v0}, Ldmj;->a(Lsi4;)V
+
+    return-void
+
+    :goto_1
+    iget-object v1, p0, Ltc3;->t0:Lxqf;
+
+    invoke-static {v1}, Ldmj;->a(Lsi4;)V
+
+    throw v0
 .end method

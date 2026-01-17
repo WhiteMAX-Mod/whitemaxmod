@@ -1,76 +1,77 @@
-.class public final Lo8c;
+.class public final synthetic Lo8c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/ComponentCallbacks;
-.implements Ld76;
+.implements Lejb;
 
 
 # instance fields
-.field public final a:Ly8c;
+.field public final synthetic a:Ls8c;
+
+.field public final synthetic b:Lnd2;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lx68;Lgz4;Lbh;Lbn9;Lrx4;Ly8c;Ljy0;Lch2;)V
+.method public synthetic constructor <init>(Ls8c;Lnd2;JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p2, Ljava/util/HashSet;
+    iput-object p1, p0, Lo8c;->a:Ls8c;
 
-    invoke-direct {p2}, Ljava/util/HashSet;-><init>()V
+    iput-object p2, p0, Lo8c;->b:Lnd2;
 
-    iput-object p7, p0, Lo8c;->a:Ly8c;
+    iput-wide p3, p0, Lo8c;->c:J
 
-    new-instance p2, Ll8c;
-
-    invoke-direct {p2, p1, p0}, Ll8c;-><init>(Landroid/content/Context;Lo8c;)V
-
-    invoke-static {}, Ln05;->a()Ln05;
-
-    invoke-virtual {p1, p0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+    iput-wide p5, p0, Lo8c;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
+.method public final k(Lfjb;)V
+    .locals 9
 
-    return-void
-.end method
+    sget-object v0, Lfjb;->o:Lfjb;
 
-.method public onEvent(Lgl2;)V
-    .locals 0
-    .annotation runtime Ljzf;
-    .end annotation
+    if-ne p1, v0, :cond_0
 
-    .line 2
-    return-void
-.end method
+    iget-object v2, p0, Lo8c;->a:Ls8c;
 
-.method public onEvent(Lra3;)V
-    .locals 0
-    .annotation runtime Ljzf;
-    .end annotation
+    iget-object p1, v2, Ls8c;->d:Lzb4;
 
-    .line 3
-    return-void
-.end method
+    iget-object v0, v2, Ls8c;->b:Lmbg;
 
-.method public onEvent(Lraa;)V
-    .locals 0
-    .annotation runtime Ljzf;
-    .end annotation
+    check-cast v0, Lj9b;
 
-    .line 1
-    return-void
-.end method
+    invoke-virtual {v0}, Lj9b;->b()Lsb4;
 
-.method public final onLowMemory()V
-    .locals 0
+    move-result-object v0
 
+    new-instance v1, Lp8c;
+
+    const/4 v8, 0x0
+
+    iget-object v3, p0, Lo8c;->b:Lnd2;
+
+    iget-wide v4, p0, Lo8c;->c:J
+
+    iget-wide v6, p0, Lo8c;->d:J
+
+    invoke-direct/range {v1 .. v8}, Lp8c;-><init>(Ls8c;Lnd2;JJLkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-static {p1, v0, v3, v1, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    :cond_0
     return-void
 .end method

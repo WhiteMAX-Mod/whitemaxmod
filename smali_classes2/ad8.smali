@@ -1,19 +1,29 @@
 .class public final Lad8;
-.super Ljava/lang/Object;
+.super Ljd8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v5, 0x0
 
-    iput p1, p0, Lad8;->a:I
+    const-wide/16 v7, 0x0
+
+    const-wide/16 v1, 0x0
+
+    move-object v0, p0
+
+    move-wide v3, p1
+
+    invoke-direct/range {v0 .. v8}, Ljd8;-><init>(JJJJ)V
+
+    iput-object p3, v0, Lad8;->o:Ljava/lang/String;
 
     return-void
 .end method

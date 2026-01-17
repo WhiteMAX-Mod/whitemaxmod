@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final a:Lhr5;
+.field public final a:Llr5;
 
 .field public final b:J
 
@@ -14,12 +14,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lhr5;J)V
+.method public constructor <init>(Llr5;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzg0;->a:Lhr5;
+    iput-object p1, p0, Lzg0;->a:Llr5;
 
     iput-wide p2, p0, Lzg0;->b:J
 

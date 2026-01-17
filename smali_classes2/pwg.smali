@@ -1,90 +1,132 @@
 .class public final Lpwg;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lrwg;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.field public final a:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lvt7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+.method public constructor <init>(Ljava/lang/String;Lvt7;)V
     .locals 0
 
-    iput-object p2, p0, Lpwg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lpwg;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lpwg;->b:Lvt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lpwg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lpwg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lpwg;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-object v1, p0, Lpwg;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lpwg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lpwg;->a:Ljava/lang/String;
 
-    return-object p2
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lpwg;->b:Lvt7;
+
+    iget-object p1, p1, Lpwg;->b:Lvt7;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Lpwg;
+    iget-object v0, p0, Lpwg;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lpwg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v0, p2, v1}, Lpwg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+    move-result v0
 
-    iput-object p1, v0, Lpwg;->o:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
+    iget-object v1, p0, Lpwg;->b:Lvt7;
+
+    invoke-virtual {v1}, Lvt7;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lpwg;->o:Ljava/lang/Object;
+    const-string v1, "GoToRestore(trackId="
 
-    check-cast p1, Lazg;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lp38;
+    iget-object v1, p0, Lpwg;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Lpwg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->o:Ljava/lang/Object;
+    const-string v1, ", navData="
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Lpwg;->b:Lvt7;
 
-    check-cast p1, Llu7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Llu7;->a:Lw3e;
+    const-string v1, ")"
 
-    invoke-virtual {p1}, Lw3e;->D()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -55,11 +55,11 @@
 
     if-gt p2, v1, :cond_2
 
-    invoke-static {p2, p0}, Ln4h;->f(I[B)J
+    invoke-static {p2, p0}, Ls4h;->e(I[B)J
 
     move-result-wide v1
 
-    invoke-static {p1, p0}, Ln4h;->f(I[B)J
+    invoke-static {p1, p0}, Ls4h;->e(I[B)J
 
     move-result-wide v3
 
@@ -76,17 +76,17 @@
     goto :goto_0
 
     :cond_0
-    sget-object p3, Lsah;->a:Ljava/nio/ByteOrder;
+    sget-object p3, Lobh;->a:Ljava/nio/ByteOrder;
 
     sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     if-ne p3, v1, :cond_1
 
-    invoke-static {p2, p0}, Ln4h;->f(I[B)J
+    invoke-static {p2, p0}, Ls4h;->e(I[B)J
 
     move-result-wide p2
 
-    invoke-static {p1, p0}, Ln4h;->f(I[B)J
+    invoke-static {p1, p0}, Ls4h;->e(I[B)J
 
     move-result-wide p0
 
@@ -99,11 +99,11 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {p2, p0}, Ln4h;->f(I[B)J
+    invoke-static {p2, p0}, Ls4h;->e(I[B)J
 
     move-result-wide p2
 
-    invoke-static {p1, p0}, Ln4h;->f(I[B)J
+    invoke-static {p1, p0}, Ls4h;->e(I[B)J
 
     move-result-wide p0
 
@@ -126,13 +126,13 @@
 
     add-int/lit8 v1, p1, 0x1
 
-    invoke-static {p1, p0}, Ln4h;->a(I[B)B
+    invoke-static {p1, p0}, Ls4h;->a(I[B)B
 
     move-result p1
 
     add-int/lit8 v2, p2, 0x1
 
-    invoke-static {p2, p0}, Ln4h;->a(I[B)B
+    invoke-static {p2, p0}, Ls4h;->a(I[B)B
 
     move-result p2
 
@@ -162,13 +162,13 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    invoke-static {p1, p0}, Ln4h;->a(I[B)B
+    invoke-static {p1, p0}, Ls4h;->a(I[B)B
 
     move-result v1
 
     add-int/lit8 p2, p2, -0x1
 
-    invoke-static {p2, p0}, Ln4h;->a(I[B)B
+    invoke-static {p2, p0}, Ls4h;->a(I[B)B
 
     move-result v2
 
@@ -282,11 +282,11 @@
 .method public static readIntEquals([BII)Z
     .locals 0
 
-    invoke-static {p1, p0}, Ln4h;->c(I[B)I
+    invoke-static {p1, p0}, Ls4h;->b(I[B)I
 
     move-result p1
 
-    invoke-static {p2, p0}, Ln4h;->c(I[B)I
+    invoke-static {p2, p0}, Ls4h;->b(I[B)I
 
     move-result p0
 
@@ -305,11 +305,11 @@
 .method public static readShortLittleEndian([BI)I
     .locals 1
 
-    invoke-static {p1, p0}, Ln4h;->h(I[B)S
+    invoke-static {p1, p0}, Ls4h;->g(I[B)S
 
     move-result p0
 
-    sget-object p1, Lsah;->a:Ljava/nio/ByteOrder;
+    sget-object p1, Lobh;->a:Ljava/nio/ByteOrder;
 
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
@@ -349,11 +349,11 @@
 
     add-int/2addr v3, v1
 
-    invoke-static {v3, p0}, Ln4h;->a(I[B)B
+    invoke-static {v3, p0}, Ls4h;->a(I[B)B
 
     move-result v3
 
-    invoke-static {p2, v2, v3}, Ln4h;->j([BIB)V
+    invoke-static {p2, v2, v3}, Ls4h;->h([BIB)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -379,11 +379,11 @@
 
     aput-byte v3, p0, v1
 
-    invoke-static {v2, p0}, Ln4h;->a(I[B)B
+    invoke-static {v2, p0}, Ls4h;->a(I[B)B
 
     move-result v2
 
-    invoke-static {p0, v1, v2}, Ln4h;->j([BIB)V
+    invoke-static {p0, v1, v2}, Ls4h;->h([BIB)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -433,11 +433,11 @@
 
     add-int v2, p1, v0
 
-    invoke-static {v2, p0}, Ln4h;->f(I[B)J
+    invoke-static {v2, p0}, Ls4h;->e(I[B)J
 
     move-result-wide v2
 
-    invoke-static {p2, v1, v2, v3}, Ln4h;->m([BIJ)V
+    invoke-static {p2, v1, v2, v3}, Ls4h;->m([BIJ)V
 
     add-int/lit8 v0, v0, 0x8
 
@@ -469,11 +469,11 @@
 
     add-int v5, p1, v3
 
-    invoke-static {v5, p0}, Ln4h;->a(I[B)B
+    invoke-static {v5, p0}, Ls4h;->a(I[B)B
 
     move-result v5
 
-    invoke-static {p0, v4, v5}, Ln4h;->j([BIB)V
+    invoke-static {p0, v4, v5}, Ls4h;->h([BIB)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -543,11 +543,11 @@
     add-int/lit8 v3, p1, 0x1
 
     :goto_1
-    invoke-static {v3, p0}, Ln4h;->c(I[B)I
+    invoke-static {v3, p0}, Ls4h;->b(I[B)I
 
     move-result p1
 
-    invoke-static {v2, p0, p1}, Ln4h;->l(I[BI)V
+    invoke-static {v2, p0, p1}, Ls4h;->l(I[BI)V
 
     add-int/lit8 p2, p2, 0x8
 
@@ -558,11 +558,11 @@
     :cond_7
     if-ge v0, v1, :cond_8
 
-    invoke-static {p1, p0}, Ln4h;->f(I[B)J
+    invoke-static {p1, p0}, Ls4h;->e(I[B)J
 
     move-result-wide v2
 
-    invoke-static {p0, p2, v2, v3}, Ln4h;->m([BIJ)V
+    invoke-static {p0, p2, v2, v3}, Ls4h;->m([BIJ)V
 
     add-int/2addr p2, v0
 
@@ -570,11 +570,11 @@
     :goto_2
     if-ge p2, p3, :cond_9
 
-    invoke-static {p1, p0}, Ln4h;->f(I[B)J
+    invoke-static {p1, p0}, Ls4h;->e(I[B)J
 
     move-result-wide v2
 
-    invoke-static {p0, p2, v2, v3}, Ln4h;->m([BIJ)V
+    invoke-static {p0, p2, v2, v3}, Ls4h;->m([BIJ)V
 
     add-int/lit8 p2, p2, 0x8
 
@@ -598,7 +598,7 @@
 
     int-to-byte v0, v0
 
-    invoke-static {p1, p2, v0}, Ln4h;->j([BIB)V
+    invoke-static {p1, p2, v0}, Ls4h;->h([BIB)V
 
     add-int/lit16 p0, p0, -0xff
 
@@ -611,7 +611,7 @@
 
     int-to-byte p0, p0
 
-    invoke-static {p1, p2, p0}, Ln4h;->j([BIB)V
+    invoke-static {p1, p2, p0}, Ls4h;->h([BIB)V
 
     return v0
 .end method
@@ -621,7 +621,7 @@
 
     int-to-short p2, p2
 
-    sget-object v0, Lsah;->a:Ljava/nio/ByteOrder;
+    sget-object v0, Lobh;->a:Ljava/nio/ByteOrder;
 
     sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
@@ -632,7 +632,7 @@
     move-result p2
 
     :cond_0
-    invoke-static {p0, p1, p2}, Ln4h;->n([BIS)V
+    invoke-static {p0, p1, p2}, Ls4h;->n([BIS)V
 
     return-void
 .end method

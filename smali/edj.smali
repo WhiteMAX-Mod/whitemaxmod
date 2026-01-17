@@ -1,100 +1,188 @@
-.class public abstract Ledj;
+.class public final Ledj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Ledj;
+
+.field public static final b:Lfz5;
+
+.field public static final c:Lfz5;
+
+.field public static final d:Lfz5;
+
+.field public static final e:Lfz5;
+
+.field public static final f:Lfz5;
+
 
 # direct methods
-.method public static a(ZZZZZZZZZZZZ)J
+.method static constructor <clinit>()V
     .locals 4
 
-    if-eqz p11, :cond_0
+    new-instance v0, Ledj;
 
-    const-wide/16 v0, 0x1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_0
+    sput-object v0, Ledj;->a:Ledj;
 
-    :cond_0
-    const-wide/16 v0, 0x0
+    new-instance v0, Lvzi;
 
-    :goto_0
-    if-eqz p0, :cond_1
+    const/4 v1, 0x1
 
-    const-wide/16 v2, 0x2
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    or-long/2addr v0, v2
+    const-class v1, Ln0j;
 
-    :cond_1
-    if-eqz p1, :cond_2
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    const-wide/16 p0, 0x4
+    move-result-object v0
 
-    or-long/2addr v0, p0
+    new-instance v2, Lfz5;
 
-    :cond_2
-    if-eqz p2, :cond_3
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
 
-    const-wide/16 p0, 0x8
+    move-result-object v0
 
-    or-long/2addr v0, p0
+    const-string v3, "inferenceCommonLogEvent"
 
-    :cond_3
-    if-eqz p3, :cond_4
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    const-wide/16 p0, 0x10
+    sput-object v2, Ledj;->b:Lfz5;
 
-    or-long/2addr v0, p0
+    new-instance v0, Lvzi;
 
-    :cond_4
-    if-eqz p4, :cond_5
+    const/4 v2, 0x2
 
-    const-wide/16 p0, 0x20
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
 
-    or-long/2addr v0, p0
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    :cond_5
-    if-eqz p5, :cond_6
+    move-result-object v0
 
-    const-wide/16 p0, 0x40
+    new-instance v2, Lfz5;
 
-    or-long/2addr v0, p0
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
 
-    :cond_6
-    if-eqz p6, :cond_7
+    move-result-object v0
 
-    const-wide/16 p0, 0x80
+    const-string v3, "options"
 
-    or-long/2addr v0, p0
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :cond_7
-    if-eqz p7, :cond_8
+    sput-object v2, Ledj;->c:Lfz5;
 
-    const-wide/16 p0, 0x100
+    new-instance v0, Lvzi;
 
-    or-long/2addr v0, p0
+    const/4 v2, 0x3
 
-    :cond_8
-    if-eqz p8, :cond_9
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
 
-    const-wide/16 p0, 0x200
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    or-long/2addr v0, p0
+    move-result-object v0
 
-    :cond_9
-    if-eqz p9, :cond_a
+    new-instance v2, Lfz5;
 
-    const-wide/16 p0, 0x400
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
 
-    or-long/2addr v0, p0
+    move-result-object v0
 
-    :cond_a
-    if-eqz p10, :cond_b
+    const-string v3, "detectedBarcodeFormats"
 
-    const-wide/16 p0, 0x800
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    or-long/2addr p0, v0
+    sput-object v2, Ledj;->d:Lfz5;
 
-    return-wide p0
+    new-instance v0, Lvzi;
 
-    :cond_b
-    return-wide v0
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "detectedBarcodeValueTypes"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ledj;->e:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "imageInfo"
+
+    invoke-direct {v1, v2, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Ledj;->f:Lfz5;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
+
+    check-cast p1, Lplj;
+
+    check-cast p2, Lwwa;
+
+    sget-object v0, Ledj;->b:Lfz5;
+
+    iget-object v1, p1, Lplj;->a:Llkj;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Ledj;->c:Lfz5;
+
+    iget-object v1, p1, Lplj;->b:Lcqj;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Ledj;->d:Lfz5;
+
+    iget-object v1, p1, Lplj;->c:Llxi;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Ledj;->e:Lfz5;
+
+    iget-object v1, p1, Lplj;->d:Llxi;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Ledj;->f:Lfz5;
+
+    iget-object p1, p1, Lplj;->e:Lhkj;
+
+    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    return-void
 .end method

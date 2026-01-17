@@ -3,93 +3,581 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgw1;
+.implements Lnq6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lew1;->a:I
 
-    iput-wide p1, p0, Lew1;->a:J
+    iput-object p1, p0, Lew1;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lew1;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget-wide v0, p0, Lew1;->a:J
+    iget v0, p0, Lew1;->a:I
 
-    return-wide v0
-.end method
+    const/4 v1, 0x2
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    const-string v2, ""
 
-    const/4 v0, 0x1
+    const/4 v3, 0x0
 
-    if-ne p0, p1, :cond_0
+    const/4 v4, 0x0
 
-    return v0
+    const/4 v5, 0x1
 
-    :cond_0
-    instance-of v1, p1, Lew1;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    check-cast p1, Ls14;
 
-    if-nez v1, :cond_1
+    iget-object v0, p0, Lew1;->b:Ljava/lang/Object;
 
-    return v2
+    check-cast v0, Ln5c;
 
-    :cond_1
-    check-cast p1, Lew1;
+    iget-object v0, v0, Ln5c;->E0:Lvea;
 
-    iget-wide v3, p0, Lew1;->a:J
+    iget-wide v1, p1, Ls14;->a:J
 
-    iget-wide v5, p1, Lew1;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lew1;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0, v1, v2}, Lvea;->d(J)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_3
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget-boolean v0, p1, Ls14;->v0:Z
 
-    const-string v0, "None(lastUpdate="
+    if-nez v0, :cond_3
 
-    const-string v1, ")"
+    iget-object p1, p1, Ls14;->d:Ljava/util/List;
 
-    iget-wide v2, p0, Lew1;->a:J
+    if-eqz p1, :cond_4
 
-    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lew1;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_1
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    cmp-long v1, v1, v6
+
+    if-nez v1, :cond_1
+
+    :cond_3
+    move v3, v5
+
+    :cond_4
+    :goto_1
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Lew1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnf6;
+
+    invoke-virtual {v0, p1}, Lnf6;->K(I)Ldla;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    iget p1, p1, Ldla;->c:I
+
+    iget-object v0, p0, Lew1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lqma;
+
+    iget-object v0, v0, Lqma;->z0:Lspf;
+
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Ljava/util/Map;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v4, p1
+
+    check-cast v4, Ljava/lang/String;
+
+    :cond_5
+    if-nez v4, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    move-object v2, v4
+
+    :goto_2
+    return-object v2
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Lew1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnf6;
+
+    invoke-virtual {v0, p1}, Lnf6;->K(I)Ldla;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_7
+
+    iget p1, p1, Ldla;->c:I
+
+    iget-object v0, p0, Lew1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
+
+    sget-object v1, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->O0:[Lz28;
+
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->P0()Lqma;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lqma;->z0:Lspf;
+
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v4, p1
+
+    check-cast v4, Ljava/lang/String;
+
+    :cond_7
+    if-nez v4, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    move-object v2, v4
+
+    :goto_3
+    return-object v2
+
+    :pswitch_2
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    iget-object v2, p0, Lew1;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v2, p0, Lew1;->c:Ljava/lang/Object;
+
+    check-cast v2, Lo58;
+
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Llgc;
+
+    iget-object v2, v2, Llgc;->a:Lqi8;
+
+    iget-object v3, v2, Lqi8;->A0:Lnre;
+
+    sget-object v4, Lqi8;->Q0:[Lz28;
+
+    const/16 v5, 0x15
+
+    aget-object v4, v4, v5
+
+    invoke-virtual {v3, v2, v4, p1}, Lnre;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    if-eqz v0, :cond_9
+
+    goto :goto_4
+
+    :cond_9
+    const/4 v1, 0x6
+
+    :goto_4
+    sget-object p1, Lmt5;->a:Ldl8;
+
+    invoke-interface {p1, v1}, Ldl8;->i(I)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_3
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object p1, p0, Lew1;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljv3;
+
+    iget-object v0, p0, Lew1;->c:Ljava/lang/Object;
+
+    check-cast v0, Llv3;
+
+    invoke-interface {p1, v0}, Ljv3;->e(Liv3;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_4
+    check-cast p1, Ls14;
+
+    iget-boolean v0, p1, Ls14;->v0:Z
+
+    if-nez v0, :cond_11
+
+    iget-object v0, p0, Lew1;->b:Ljava/lang/Object;
+
+    check-cast v0, Ly83;
+
+    iget-object v0, v0, Ly83;->R0:Lpld;
+
+    iget-object v0, v0, Lpld;->a:Llpf;
+
+    invoke-interface {v0}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La43;
+
+    iget-object v0, v0, La43;->a:Ljava/lang/Object;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    goto :goto_6
+
+    :cond_a
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_b
+    :goto_5
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_d
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lhu2;
+
+    iget-object v1, v1, Lhu2;->C0:Ljava/lang/Long;
+
+    iget-wide v6, p1, Ls14;->a:J
+
+    if-nez v1, :cond_c
+
+    goto :goto_5
+
+    :cond_c
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    cmp-long v1, v1, v6
+
+    if-nez v1, :cond_b
+
+    goto :goto_8
+
+    :cond_d
+    :goto_6
+    iget-object p1, p1, Ls14;->d:Ljava/util/List;
+
+    if-eqz p1, :cond_12
+
+    iget-object v0, p0, Lew1;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_e
+
+    goto :goto_9
+
+    :cond_e
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_f
+    :goto_7
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_12
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    if-nez v0, :cond_10
+
+    goto :goto_7
+
+    :cond_10
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    cmp-long v1, v1, v6
+
+    if-nez v1, :cond_f
+
+    :cond_11
+    :goto_8
+    move v3, v5
+
+    :cond_12
+    :goto_9
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_5
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Lew1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profile/screens/members/ChatMembersScreen;
+
+    const/16 v2, 0x2775
+
+    if-ne p1, v2, :cond_14
+
+    iget-object p1, p0, Lew1;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_14
+
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->u0:[Lz28;
+
+    invoke-virtual {v0}, Lone/me/profile/screens/members/ChatMembersScreen;->B0()Ljh9;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ljh9;->Z:Lpld;
+
+    iget-object p1, p1, Lpld;->a:Llpf;
+
+    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    if-nez p1, :cond_13
+
+    sget-object p1, Lnh5;->a:Lnh5;
+
+    :cond_13
+    invoke-virtual {v0}, Lone/me/profile/screens/members/ChatMembersScreen;->A0()Lut2;
+
+    move-result-object v0
+
+    iget-object v2, v0, Lut2;->Y:Lo58;
+
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lmbg;
+
+    check-cast v2, Lj9b;
+
+    invoke-virtual {v2}, Lj9b;->b()Lsb4;
+
+    move-result-object v2
+
+    new-instance v3, Lrt2;
+
+    invoke-direct {v3, p1, v0, v4}, Lrt2;-><init>(Ljava/util/Set;Lut2;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v2, v3, v1}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+
+    :cond_14
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_6
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lew1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;
+
+    sget-object v1, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;->v0:[Lz28;
+
+    iget-object v0, v0, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;->b:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbw1;
+
+    iget-object v1, p0, Lew1;->c:Ljava/lang/Object;
+
+    check-cast v1, Lzv1;
+
+    check-cast v1, Lyv1;
+
+    iget-object v1, v1, Lyv1;->a:Lyk1;
+
+    xor-int/2addr p1, v5
+
+    iget-object v0, v0, Lbw1;->b:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh21;
+
+    check-cast v0, Ld31;
+
+    invoke-virtual {v0, v1, p1}, Ld31;->c(Lyk1;Z)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

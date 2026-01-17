@@ -1,31 +1,31 @@
-.class public final Laka;
+.class public abstract Laka;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lgz4;
-
-.field public final b:Lpfc;
-
-.field public final c:Lfv3;
-
-.field public final d:Lzd8;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lgz4;Lpfc;Lfv3;Lzd8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lws7;->a:Lqea;
 
-    iput-object p1, p0, Laka;->a:Lgz4;
+    new-instance v0, Lqea;
 
-    iput-object p2, p0, Laka;->b:Lpfc;
+    const/4 v1, 0x2
 
-    iput-object p3, p0, Laka;->c:Lfv3;
+    invoke-direct {v0, v1}, Lqea;-><init>(I)V
 
-    iput-object p4, p0, Laka;->d:Lzd8;
+    const/16 v1, 0x11
+
+    invoke-virtual {v0, v1}, Lqea;->h(I)V
+
+    const/16 v1, 0x12
+
+    invoke-virtual {v0, v1}, Lqea;->h(I)V
 
     return-void
 .end method

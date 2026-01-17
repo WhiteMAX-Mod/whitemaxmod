@@ -4,10 +4,10 @@
 
 
 # virtual methods
-.method public abstract b()Ljava/lang/Object;
+.method public abstract a()Ljava/lang/Object;
 .end method
 
-.method public abstract c()Z
+.method public abstract b()Z
 .end method
 
 .method public abstract close()Z

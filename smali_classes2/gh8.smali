@@ -1,146 +1,78 @@
 .class public final Lgh8;
-.super Lb5g;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lud2;
-
-.field public final synthetic Y:J
-
-.field public final synthetic Z:J
-
-.field public final synthetic o:Lhh8;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lhh8;Lud2;JJLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lgh8;->o:Lhh8;
+    .line 1
+    const/4 v0, 0x2
 
-    iput-object p2, p0, Lgh8;->X:Lud2;
+    iput v0, p0, Lgh8;->a:I
 
-    iput-wide p3, p0, Lgh8;->Y:J
+    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
 
-    iput-wide p5, p0, Lgh8;->Z:J
+    return-void
+.end method
 
-    const/4 p1, 0x2
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0, p1, p7}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lgh8;->a:I
+
+    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    .line 3
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgh8;->a:I
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
+    .locals 1
 
-    check-cast p1, Lac4;
+    iget v0, p0, Lgh8;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lgh8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
-    move-result-object p1
-
-    check-cast p1, Lgh8;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lgh8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 8
-
-    new-instance v0, Lgh8;
-
-    iget-wide v3, p0, Lgh8;->Y:J
-
-    iget-wide v5, p0, Lgh8;->Z:J
-
-    iget-object v1, p0, Lgh8;->o:Lhh8;
-
-    iget-object v2, p0, Lgh8;->X:Lud2;
-
-    move-object v7, p2
-
-    invoke-direct/range {v0 .. v7}, Lgh8;-><init>(Lhh8;Lud2;JJLkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    :pswitch_0
+    monitor-enter p0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    monitor-exit p0
 
-    iget-object p1, p0, Lgh8;->o:Lhh8;
+    return-object p0
 
-    iget-object p1, p1, Lhh8;->Z:Ld68;
+    nop
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbn9;
-
-    iget-object v0, p0, Lgh8;->X:Lud2;
-
-    iget-wide v3, v0, Lud2;->a:J
-
-    iget-object p1, p1, Lbn9;->a:Lii4;
-
-    iget-object p1, p1, Lii4;->c:Lt1e;
-
-    invoke-virtual {p1}, Lt1e;->d()Lmv9;
-
-    move-result-object v2
-
-    iget-object p1, v2, Lmv9;->a:Le1e;
-
-    new-instance v1, Lxu9;
-
-    const/4 v10, 0x4
-
-    const/4 v11, 0x0
-
-    iget-wide v5, p0, Lgh8;->Y:J
-
-    iget-wide v7, p0, Lgh8;->Z:J
-
-    sget-object v9, Lwq9;->c:Lwq9;
-
-    invoke-direct/range {v1 .. v11}, Lxu9;-><init>(Lmv9;JJJLwq9;IZ)V
-
-    const/4 v0, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v0, v2, v1}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    long-to-int p1, v0
-
-    new-instance v0, Ljava/lang/Integer;
-
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

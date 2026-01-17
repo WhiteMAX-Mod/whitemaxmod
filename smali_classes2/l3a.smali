@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public final a:Lbhg;
+.field public final a:Llhg;
 
 .field public final b:J
 
@@ -17,18 +17,18 @@
 
 
 # direct methods
-.method public constructor <init>(Lbhg;JLandroid/graphics/drawable/Drawable;)V
+.method public constructor <init>(Llhg;JLandroid/graphics/drawable/Drawable;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll3a;->a:Lbhg;
+    iput-object p1, p0, Ll3a;->a:Llhg;
 
     iput-wide p2, p0, Ll3a;->b:J
 
     iput-object p4, p0, Ll3a;->c:Landroid/graphics/drawable/Drawable;
 
-    sget p1, Lbeb;->h:I
+    sget p1, Lleb;->h:I
 
     iput p1, p0, Ll3a;->d:I
 
@@ -64,11 +64,11 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Ll3a;->a:Lbhg;
+    iget-object v0, p0, Ll3a;->a:Llhg;
 
-    iget-object v1, p1, Ll3a;->a:Lbhg;
+    iget-object v1, p1, Ll3a;->a:Llhg;
 
-    invoke-virtual {v0, v1}, Lbhg;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -92,7 +92,7 @@
 
     iget-object p1, p1, Ll3a;->c:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -118,10 +118,10 @@
     return-wide v0
 .end method
 
-.method public final getTitle()Lghg;
+.method public final getTitle()Lqhg;
     .locals 1
 
-    iget-object v0, p0, Ll3a;->a:Lbhg;
+    iget-object v0, p0, Ll3a;->a:Llhg;
 
     return-object v0
 .end method
@@ -131,7 +131,7 @@
 
     const/4 v0, 0x3
 
-    invoke-static {v0}, Lc12;->w(I)I
+    invoke-static {v0}, Lt02;->t(I)I
 
     move-result v0
 
@@ -139,23 +139,23 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Ll3a;->a:Lbhg;
+    iget-object v2, p0, Ll3a;->a:Llhg;
 
-    iget v2, v2, Lbhg;->c:I
+    iget v2, v2, Llhg;->c:I
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
     move-result v0
 
     const/4 v2, 0x2
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
     move-result v0
 
     iget-wide v2, p0, Ll3a;->b:J
 
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
     move-result v0
 
@@ -211,7 +211,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ll3a;->a:Lbhg;
+    iget-object v1, p0, Ll3a;->a:Llhg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

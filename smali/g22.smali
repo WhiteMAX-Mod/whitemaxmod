@@ -1,115 +1,121 @@
-.class public final Lg22;
-.super Ls2e;
+.class public final enum Lg22;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Y:Lta0;
+.field public static final enum X:Lg22;
 
-.field public static final Z:Lta0;
+.field public static final synthetic Y:[Lg22;
 
-.field public static final s0:Lta0;
+.field public static final enum a:Lg22;
 
-.field public static final t0:Lta0;
+.field public static final enum b:Lg22;
 
-.field public static final u0:Lta0;
+.field public static final enum c:Lg22;
 
-.field public static final v0:Lta0;
+.field public static final enum d:Lg22;
+
+.field public static final enum o:Lg22;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 8
 
-    new-instance v0, Lta0;
+    new-instance v0, Lg22;
 
-    const-string v1, "camera2.captureRequest.templateType"
+    const-string v1, "UNKNOWN"
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v0, Lg22;->a:Lg22;
 
-    sput-object v0, Lg22;->Y:Lta0;
+    new-instance v1, Lg22;
 
-    new-instance v0, Lta0;
+    const-string v2, "INACTIVE"
 
-    const-string v1, "camera2.cameraCaptureSession.streamUseCase"
+    const/4 v3, 0x1
 
-    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v1, Lg22;->b:Lg22;
 
-    sput-object v0, Lg22;->Z:Lta0;
+    new-instance v2, Lg22;
 
-    new-instance v0, Lta0;
+    const-string v3, "SEARCHING"
 
-    const-string v1, "camera2.cameraDevice.stateCallback"
+    const/4 v4, 0x2
 
-    const-class v2, Landroid/hardware/camera2/CameraDevice$StateCallback;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v2, Lg22;->c:Lg22;
 
-    sput-object v0, Lg22;->s0:Lta0;
+    new-instance v3, Lg22;
 
-    new-instance v0, Lta0;
+    const-string v4, "FLASH_REQUIRED"
 
-    const-string v1, "camera2.cameraCaptureSession.stateCallback"
+    const/4 v5, 0x3
 
-    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v3, Lg22;->d:Lg22;
 
-    sput-object v0, Lg22;->t0:Lta0;
+    new-instance v4, Lg22;
 
-    new-instance v0, Lta0;
+    const-string v5, "CONVERGED"
 
-    const-string v1, "camera2.cameraCaptureSession.captureCallback"
+    const/4 v6, 0x4
 
-    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v4, Lg22;->o:Lg22;
 
-    sput-object v0, Lg22;->u0:Lta0;
+    new-instance v5, Lg22;
 
-    new-instance v0, Lta0;
+    const-string v6, "LOCKED"
 
-    const-string v1, "camera2.cameraCaptureSession.physicalCameraId"
+    const/4 v7, 0x5
 
-    const-class v2, Ljava/lang/String;
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v5, Lg22;->X:Lg22;
 
-    sput-object v0, Lg22;->v0:Lta0;
+    filled-new-array/range {v0 .. v5}, [Lg22;
+
+    move-result-object v0
+
+    sput-object v0, Lg22;->Y:[Lg22;
 
     return-void
 .end method
 
-.method public static Q(Landroid/hardware/camera2/CaptureRequest$Key;)Lta0;
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Lg22;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-class v0, Lg22;
 
-    const-string v1, "camera2.captureRequest.option."
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    invoke-virtual {p0}, Landroid/hardware/camera2/CaptureRequest$Key;->getName()Ljava/lang/String;
+    check-cast p0, Lg22;
 
-    move-result-object v1
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public static values()[Lg22;
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v0, Lg22;->Y:[Lg22;
+
+    invoke-virtual {v0}, [Lg22;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Lta0;
+    check-cast v0, [Lg22;
 
-    const-class v2, Ljava/lang/Object;
-
-    invoke-direct {v1, v0, v2, p0}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    return-object v1
+    return-object v0
 .end method

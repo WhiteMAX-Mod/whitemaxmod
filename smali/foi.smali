@@ -2,45 +2,44 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbg0;
-
 
 # instance fields
-.field public final synthetic a:Lk07;
+.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Lk07;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfoi;->a:Lk07;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-# virtual methods
-.method public final a(Z)V
-    .locals 2
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget-object v0, p0, Lfoi;->a:Lk07;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    iget-object v0, v0, Lk07;->w0:Lz7a;
+    iput-object v0, p0, Lfoi;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const/4 v1, 0x1
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    move-result-object p1
+    iput-object v0, p0, Lfoi;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    new-instance v0, Landroid/util/Size;
+
+    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
 
     return-void
 .end method

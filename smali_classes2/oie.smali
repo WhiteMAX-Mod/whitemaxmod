@@ -1,75 +1,23 @@
-.class public interface abstract Loie;
+.class public final Loie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfze;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
 
 
-# virtual methods
-.method public abstract a()I
-.end method
+# direct methods
+.method public constructor <init>(II)V
+    .locals 0
 
-.method public b()Lghg;
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput p1, p0, Loie;->a:I
 
-    return-object v0
-.end method
+    iput p2, p0, Loie;->b:I
 
-.method public c()Luye;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public d()Lghg;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public e()Lcze;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public f()Ln68;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public getType()Leze;
-    .locals 1
-
-    sget-object v0, Leze;->b:Leze;
-
-    return-object v0
-.end method
-
-.method public r()Loq6;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
+    return-void
 .end method

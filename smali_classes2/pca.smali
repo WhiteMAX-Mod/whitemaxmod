@@ -14,10 +14,10 @@
     .locals 2
 
     .line 4
-    sget-object v0, Lmh5;->a:Lmh5;
+    sget-object v0, Lnh5;->a:Lnh5;
 
     .line 5
-    sget-object v1, Lch5;->a:Lch5;
+    sget-object v1, Ldh5;->a:Ldh5;
 
     .line 6
     invoke-direct {p0, v0, v1}, Lpca;-><init>(Ljava/util/Set;Ljava/util/List;)V

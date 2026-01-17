@@ -1,188 +1,208 @@
-.class public final enum Ldci;
-.super Ljava/lang/Enum;
+.class public final synthetic Ldci;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lk5i;
+.implements Liv6;
 
 
 # static fields
-.field public static final synthetic X:[Ldci;
+.field public static final a:Ldci;
 
-.field public static final synthetic Y:Lwk5;
-
-.field public static final enum c:Ldci;
-
-.field public static final enum d:Ldci;
-
-.field public static final enum o:Ldci;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field private static final descriptor:Lxpe;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 4
 
     new-instance v0, Ldci;
 
-    const-string v1, "WebAppReady"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "ready"
+    sput-object v0, Ldci;->a:Ldci;
 
-    const-string v3, "READY"
+    new-instance v1, Lgdc;
 
-    const/4 v4, 0x0
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.storage.WebAppStorageGetKeyResponse"
 
-    invoke-direct {v0, v3, v4, v1, v2}, Ldci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    const/4 v3, 0x3
 
-    new-instance v1, Ldci;
+    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
 
-    const-string v2, "WebAppClose"
+    const-string v0, "requestId"
 
-    const-string v3, "close"
+    const/4 v2, 0x0
 
-    const-string v4, "CLOSE"
+    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
 
-    const/4 v5, 0x1
+    const-string v0, "key"
 
-    invoke-direct {v1, v4, v5, v2, v3}, Ldci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
 
-    new-instance v2, Ldci;
+    const-string v0, "value"
 
-    const-string v3, "WebAppSetupBackButton"
+    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
 
-    const-string v4, "setup_back_button"
-
-    const-string v5, "SETUP_BACK_BUTTON"
-
-    const/4 v6, 0x2
-
-    invoke-direct {v2, v5, v6, v3, v4}, Ldci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    sput-object v2, Ldci;->c:Ldci;
-
-    new-instance v3, Ldci;
-
-    const-string v4, "WebAppSetupClosingBehavior"
-
-    const-string v5, "setup_closing_behaviour"
-
-    const-string v6, "SETUP_CLOSING_BEHAVIOUR"
-
-    const/4 v7, 0x3
-
-    invoke-direct {v3, v6, v7, v4, v5}, Ldci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    sput-object v3, Ldci;->d:Ldci;
-
-    new-instance v4, Ldci;
-
-    const-string v5, "WebAppBackButtonPressed"
-
-    const-string v6, "back_button_pressed"
-
-    const-string v7, "ON_CLICK_BACK"
-
-    const/4 v8, 0x4
-
-    invoke-direct {v4, v7, v8, v5, v6}, Ldci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    new-instance v5, Ldci;
-
-    const-string v6, "WebAppSetupScreenCaptureBehavior"
-
-    const-string v7, "setup_screen_capture_behavior"
-
-    const-string v8, "SETUP_SCREEN_CAPTURE_BEHAVIOR"
-
-    const/4 v9, 0x5
-
-    invoke-direct {v5, v8, v9, v6, v7}, Ldci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    sput-object v5, Ldci;->o:Ldci;
-
-    filled-new-array/range {v0 .. v5}, [Ldci;
-
-    move-result-object v0
-
-    sput-object v0, Ldci;->X:[Ldci;
-
-    new-instance v1, Lwk5;
-
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ldci;->Y:Lwk5;
+    sput-object v1, Ldci;->descriptor:Lxpe;
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Ldci;->a:Ljava/lang/String;
-
-    iput-object p4, p0, Ldci;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ldci;
-    .locals 1
-
-    const-class v0, Ldci;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ldci;
-
-    return-object p0
-.end method
-
-.method public static values()[Ldci;
-    .locals 1
-
-    sget-object v0, Ldci;->X:[Ldci;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ldci;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 3
 
-    const/4 v0, 0x0
+    check-cast p2, Lfci;
+
+    sget-object v0, Ldci;->descriptor:Lxpe;
+
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
+
+    move-result-object p1
+
+    iget-object v1, p2, Lfci;->a:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget-object v2, p2, Lfci;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1, v2}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
+
+    const/4 v1, 0x2
+
+    iget-object p2, p2, Lfci;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+
+    return-void
+.end method
+
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 10
+
+    sget-object v0, Ldci;->descriptor:Lxpe;
+
+    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v6, v1
+
+    move v7, v2
+
+    move-object v4, v3
+
+    move-object v5, v4
+
+    :goto_0
+    if-eqz v6, :cond_4
+
+    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
+
+    move-result v8
+
+    const/4 v9, -0x1
+
+    if-eq v8, v9, :cond_3
+
+    if-eqz v8, :cond_2
+
+    if-eq v8, v1, :cond_1
+
+    const/4 v5, 0x2
+
+    if-ne v8, v5, :cond_0
+
+    invoke-interface {p1, v0, v5}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
+
+    move-result-object v5
+
+    or-int/lit8 v7, v7, 0x4
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    invoke-interface {p1, v0, v1}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    or-int/lit8 v7, v7, 0x2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    move v6, v2
+
+    goto :goto_0
+
+    :cond_4
+    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
+
+    new-instance p1, Lfci;
+
+    invoke-direct {p1, v3, v7, v4, v5}, Lfci;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public final c()[La38;
+    .locals 3
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [La38;
+
+    sget-object v1, Lnzf;->a:Lnzf;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
 
     return-object v0
 .end method
 
-.method public final c()Ljava/lang/String;
+.method public final d()Lxpe;
     .locals 1
 
-    iget-object v0, p0, Ldci;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Ldci;->b:Ljava/lang/String;
+    sget-object v0, Ldci;->descriptor:Lxpe;
 
     return-object v0
 .end method

@@ -1,79 +1,174 @@
-.class public final Ldm8;
-.super Lkk0;
+.class public final enum Ldm8;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Luxb;
+
+
+# static fields
+.field public static final enum X:Ldm8;
+
+.field public static final enum Y:Ldm8;
+
+.field public static final enum Z:Ldm8;
+
+.field public static final enum b:Ldm8;
+
+.field public static final enum c:Ldm8;
+
+.field public static final enum d:Ldm8;
+
+.field public static final enum o:Ldm8;
+
+.field public static final synthetic t0:[Ldm8;
 
 
 # instance fields
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final o:Lwea;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(JZZZLwea;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
+    new-instance v0, Ldm8;
 
-    iput-boolean p3, p0, Ldm8;->b:Z
+    const/4 v1, 0x0
 
-    iput-boolean p4, p0, Ldm8;->c:Z
+    const/16 v2, 0x64
 
-    iput-boolean p5, p0, Ldm8;->d:Z
+    const-string v3, "SOCKET_CLOSED"
 
-    iput-object p6, p0, Ldm8;->o:Lwea;
+    invoke-direct {v0, v3, v1, v2}, Ldm8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Ldm8;->b:Ldm8;
+
+    new-instance v1, Ldm8;
+
+    const/4 v2, 0x1
+
+    const/16 v3, 0x6e
+
+    const-string v4, "SESSION_FORCE_UPDATE"
+
+    invoke-direct {v1, v4, v2, v3}, Ldm8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Ldm8;->c:Ldm8;
+
+    new-instance v2, Ldm8;
+
+    const/4 v3, 0x2
+
+    const/16 v4, 0x6f
+
+    const-string v5, "SESSION_RESTART"
+
+    invoke-direct {v2, v5, v3, v4}, Ldm8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Ldm8;->d:Ldm8;
+
+    new-instance v3, Ldm8;
+
+    const/4 v4, 0x3
+
+    const/16 v5, 0x78
+
+    const-string v6, "LOGIN_DROP_CACHE"
+
+    invoke-direct {v3, v6, v4, v5}, Ldm8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Ldm8;->o:Ldm8;
+
+    new-instance v4, Ldm8;
+
+    const/4 v5, 0x4
+
+    const/16 v6, 0x79
+
+    const-string v7, "LOGIN_BACK_BLOCKED"
+
+    invoke-direct {v4, v7, v5, v6}, Ldm8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Ldm8;->X:Ldm8;
+
+    new-instance v5, Ldm8;
+
+    const/4 v6, 0x5
+
+    const/16 v7, 0x7a
+
+    const-string v8, "LOGIN_RESTART"
+
+    invoke-direct {v5, v8, v6, v7}, Ldm8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Ldm8;->Y:Ldm8;
+
+    new-instance v6, Ldm8;
+
+    const/4 v7, 0x6
+
+    const/16 v8, 0x7b
+
+    const-string v9, "LOGIN_UNKNOWN"
+
+    invoke-direct {v6, v9, v7, v8}, Ldm8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Ldm8;->Z:Ldm8;
+
+    filled-new-array/range {v0 .. v6}, [Ldm8;
+
+    move-result-object v0
+
+    sput-object v0, Ldm8;->t0:[Ldm8;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 6
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Ldm8;->o:Lwea;
+    iput p3, p0, Ldm8;->a:I
 
-    iget v0, v0, Lwea;->d:I
+    return-void
+.end method
 
-    const-string v1, "LoginEvent(requestId="
+.method public static valueOf(Ljava/lang/String;)Ldm8;
+    .locals 1
 
-    const-string v2, ", isFirstLogin="
+    const-class v0, Ldm8;
 
-    iget-wide v3, p0, Lkk0;->a:J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-boolean v5, p0, Ldm8;->b:Z
+    move-result-object p0
 
-    invoke-static {v3, v4, v1, v2, v5}, Lxd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    check-cast p0, Ldm8;
 
-    move-result-object v1
+    return-object p0
+.end method
 
-    const-string v2, ", hasNewMessages="
+.method public static values()[Ldm8;
+    .locals 1
 
-    const-string v3, ", videoChatHistory="
+    sget-object v0, Ldm8;->t0:[Ldm8;
 
-    iget-boolean v4, p0, Ldm8;->c:Z
-
-    iget-boolean v5, p0, Ldm8;->d:Z
-
-    invoke-static {v2, v3, v1, v4, v5}, Lqi3;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v2, ", chats="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, [Ldm8;
+
     return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Ldm8;->a:I
+
+    return v0
 .end method

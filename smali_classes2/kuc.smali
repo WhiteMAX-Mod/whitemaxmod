@@ -1,288 +1,195 @@
-.class public final synthetic Lkuc;
-.super Ljava/lang/Object;
+.class public final Lkuc;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
 
-.field public final synthetic b:Lnuc;
+.field public final synthetic Y:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+.field public final synthetic Z:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnuc;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;Landroidx/constraintlayout/widget/ConstraintLayout;Lone/me/sdk/uikit/common/button/OneMeButton;)V
     .locals 0
 
-    iput p2, p0, Lkuc;->a:I
+    iput-object p2, p0, Lkuc;->X:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
 
-    iput-object p1, p0, Lkuc;->b:Lnuc;
+    iput-object p3, p0, Lkuc;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lkuc;->Z:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lkuc;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lkuc;->b:Lnuc;
-
-    iget-object p1, p1, Lnuc;->o:Lmuc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lcwc;
+    invoke-virtual {p0, p1, p2}, Lkuc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast p1, Lkuc;
 
-    invoke-virtual {p1}, Lcwc;->w()Lbbg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Lkuc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v1, Lb9b;
+    return-object p2
+.end method
 
-    invoke-virtual {v1}, Lb9b;->b()Ltb4;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    move-result-object v1
+    new-instance v0, Lkuc;
 
-    new-instance v2, Livc;
+    iget-object v1, p0, Lkuc;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    const/4 v3, 0x0
+    iget-object v2, p0, Lkuc;->Z:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    invoke-direct {v2, p1, v3}, Livc;-><init>(Lcwc;Lkotlin/coroutines/Continuation;)V
+    iget-object v3, p0, Lkuc;->X:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
 
-    const/4 v4, 0x2
+    invoke-direct {v0, p2, v3, v1, v2}, Lkuc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;Landroidx/constraintlayout/widget/ConstraintLayout;Lone/me/sdk/uikit/common/button/OneMeButton;)V
 
-    invoke-static {v0, v1, v3, v2, v4}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    iput-object p1, v0, Lkuc;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    iget-object v1, p1, Lcwc;->I0:Le7;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    sget-object v2, Lcwc;->Y0:[Lp38;
+    iget-object v0, p0, Lkuc;->X:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
 
-    const/4 v3, 0x1
+    iget-object v1, v0, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;->y0:Lo58;
 
-    aget-object v2, v2, v3
+    iget-object v2, p0, Lkuc;->o:Ljava/lang/Object;
 
-    invoke-virtual {v1, p1, v2, v0}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-void
+    check-cast v2, Lduc;
 
-    :pswitch_0
-    iget-object p1, p0, Lkuc;->b:Lnuc;
+    instance-of p1, v2, Lztc;
 
-    iget-object p1, p1, Lnuc;->o:Lmuc;
+    if-eqz p1, :cond_0
 
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lcwc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lcwc;->U0:Loic;
-
-    invoke-virtual {v0}, Loic;->i()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Lcwc;->G0:Lyl5;
-
-    new-instance v2, Lhsc;
-
-    sget-object v3, Ldt2;->c:Ldt2;
-
-    invoke-direct {v2, v0, v1, v3}, Lhsc;-><init>(JLdt2;)V
-
-    invoke-static {p1, v2}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lkuc;->b:Lnuc;
-
-    iget-object p1, p1, Lnuc;->o:Lmuc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lcwc;
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p1, Lcwc;->U0:Loic;
+    check-cast p1, Ldjb;
 
-    invoke-virtual {v0}, Loic;->i()Ljava/lang/Long;
+    sget v0, Lpfb;->z1:I
 
-    move-result-object v0
+    iget-object v1, p0, Lkuc;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Lcwc;->G0:Lyl5;
-
-    new-instance v2, Llsc;
-
-    invoke-direct {v2, v0, v1}, Llsc;-><init>(J)V
-
-    invoke-static {p1, v2}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lkuc;->b:Lnuc;
-
-    iget-object p1, p1, Lnuc;->o:Lmuc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lcwc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lcwc;->w0:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldqe;
-
-    check-cast v0, Lncc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->channel-statistics-botid:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {v0, v1, v2, v3}, Lncc;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v0
-
-    iget-object v2, p1, Lcwc;->U0:Loic;
-
-    invoke-virtual {v2}, Loic;->i()Ljava/lang/Long;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iget-object p1, p1, Lcwc;->G0:Lyl5;
-
-    sget-object v4, Lcsc;->c:Lcsc;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, ":webapp:root?bot_id="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, "&entry_point=chat_profile&chat_id="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v0}, Lu7;->e(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lxd0;->l(Ljava/lang/String;Lyl5;)V
+    invoke-virtual {p1, v0}, Ldjb;->h(Ljava/lang/CharSequence;)V
+
+    sget v0, Lpfb;->B1:I
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lu7;->e(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ldjb;->b(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+
+    goto :goto_0
+
+    :cond_0
+    instance-of p1, v2, Lcuc;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lkuc;->Z:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v4, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    const/16 p1, 0x8
+
+    invoke-virtual {v4, p1}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, La94;->getRouter()Lw4e;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lw4e;->C()Z
+
+    goto :goto_0
+
+    :cond_1
+    instance-of p1, v2, Lbuc;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v4, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldjb;
+
+    check-cast v2, Lbuc;
+
+    iget-object v0, v2, Lbuc;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v0}, Ldjb;->h(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+
+    goto :goto_0
 
     :cond_2
-    return-void
+    instance-of p1, v2, Lauc;
 
-    :pswitch_3
-    iget-object p1, p0, Lkuc;->b:Lnuc;
+    if-eqz p1, :cond_3
 
-    iget-object p1, p1, Lnuc;->o:Lmuc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lcwc;
+    invoke-virtual {v0}, La94;->getRouter()Lw4e;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcwc;->F0:Lyl5;
+    invoke-virtual {p1}, Lw4e;->C()Z
 
-    sget-object v0, Lwuc;->a:Lwuc;
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object p1, p0, Lkuc;->b:Lnuc;
-
-    iget-object p1, p1, Lnuc;->o:Lmuc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lcwc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lcwc;->U0:Loic;
-
-    invoke-virtual {v0}, Loic;->i()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Lcwc;->G0:Lyl5;
-
-    new-instance v2, Lhsc;
-
-    sget-object v3, Ldt2;->b:Ldt2;
-
-    invoke-direct {v2, v0, v1, v3}, Lhsc;-><init>(JLdt2;)V
-
-    invoke-static {p1, v2}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    return-object p1
 
     :cond_3
-    return-void
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

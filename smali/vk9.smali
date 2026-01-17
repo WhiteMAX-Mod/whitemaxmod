@@ -1,279 +1,358 @@
 .class public final Lvk9;
-.super Lo95;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Iterator;
+.implements Lo28;
 
 
 # instance fields
-.field public final A0:I
+.field public final synthetic a:I
 
-.field public B0:Lkk9;
+.field public b:Ljava/util/Iterator;
 
-.field public C0:Llk9;
-
-.field public final z0:I
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Z)V
-    .locals 2
+.method public constructor <init>(Lb2;)V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Lo95;-><init>(Landroid/content/Context;Z)V
+    const/4 v0, 0x2
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    iput v0, p0, Lvk9;->a:I
 
-    move-result-object p1
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    .line 2
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 p2, 0x1
+    iput-object v0, p0, Lvk9;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/content/res/Configuration;->getLayoutDirection()I
-
-    move-result p1
-
-    const/16 v0, 0x16
-
-    const/16 v1, 0x15
-
-    if-ne p2, p1, :cond_0
-
-    iput v1, p0, Lvk9;->z0:I
-
-    iput v0, p0, Lvk9;->A0:I
+    .line 3
+    iput-object p1, p0, Lvk9;->b:Ljava/util/Iterator;
 
     return-void
+.end method
 
-    :cond_0
-    iput v0, p0, Lvk9;->z0:I
+.method public constructor <init>(Lntg;)V
+    .locals 1
 
-    iput v1, p0, Lvk9;->A0:I
+    const/4 v0, 0x1
+
+    iput v0, p0, Lvk9;->a:I
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-object p1, p0, Lvk9;->c:Ljava/lang/Object;
+
+    .line 6
+    iget-object p1, p1, Lntg;->a:Lfpe;
+
+    .line 7
+    invoke-interface {p1}, Lfpe;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lvk9;->b:Ljava/util/Iterator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lz25;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lvk9;->a:I
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    iget-object v0, p1, Lz25;->b:Ljava/lang/Object;
+
+    check-cast v0, Let;
+
+    .line 10
+    iget-object v0, v0, Let;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    .line 11
+    iput-object v0, p0, Lvk9;->b:Ljava/util/Iterator;
+
+    .line 12
+    iget-object p1, p1, Lz25;->c:Ljava/lang/Object;
+
+    check-cast p1, Let;
+
+    .line 13
+    iget-object p1, p1, Let;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Iterable;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    .line 14
+    iput-object p1, p0, Lvk9;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onHoverEvent(Landroid/view/MotionEvent;)Z
-    .locals 4
+.method public final hasNext()Z
+    .locals 1
 
-    iget-object v0, p0, Lvk9;->B0:Lkk9;
+    iget v0, p0, Lvk9;->a:I
 
-    if-eqz v0, :cond_3
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lvk9;->b:Ljava/util/Iterator;
 
-    move-result-object v0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    instance-of v1, v0, Landroid/widget/HeaderViewListAdapter;
+    move-result v0
 
-    if-eqz v1, :cond_0
+    return v0
 
-    check-cast v0, Landroid/widget/HeaderViewListAdapter;
+    :pswitch_0
+    iget-object v0, p0, Lvk9;->b:Ljava/util/Iterator;
 
-    invoke-virtual {v0}, Landroid/widget/HeaderViewListAdapter;->getHeadersCount()I
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/widget/HeaderViewListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
+    return v0
 
-    move-result-object v0
+    :pswitch_1
+    iget-object v0, p0, Lvk9;->b:Ljava/util/Iterator;
 
-    check-cast v0, Lek9;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lvk9;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    check-cast v0, Lek9;
-
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    return v0
 
-    move-result v2
+    nop
 
-    const/16 v3, 0xa
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-eq v2, v3, :cond_1
+.method public final next()Ljava/lang/Object;
+    .locals 5
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    iget v0, p0, Lvk9;->a:I
 
-    move-result v2
+    packed-switch v0, :pswitch_data_0
 
-    float-to-int v2, v2
+    iget-object v0, p0, Lvk9;->b:Ljava/util/Iterator;
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v3
+    move-result-object v0
 
-    float-to-int v3, v3
+    iget-object v1, p0, Lvk9;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0, v2, v3}, Landroid/widget/AbsListView;->pointToPosition(II)I
+    check-cast v1, Ljava/util/ArrayList;
 
-    move-result v2
+    move-object v2, v0
 
-    const/4 v3, -0x1
+    check-cast v2, Landroid/view/View;
 
-    if-eq v2, v3, :cond_1
+    instance-of v3, v2, Landroid/view/ViewGroup;
 
-    sub-int/2addr v2, v1
+    const/4 v4, 0x0
 
-    if-ltz v2, :cond_1
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v0}, Lek9;->getCount()I
+    check-cast v2, Landroid/view/ViewGroup;
 
-    move-result v1
+    goto :goto_0
 
-    if-ge v2, v1, :cond_1
+    :cond_0
+    move-object v2, v4
 
-    invoke-virtual {v0, v2}, Lek9;->b(I)Llk9;
+    :goto_0
+    if-eqz v2, :cond_1
 
-    move-result-object v1
+    new-instance v4, Lb2;
 
-    goto :goto_1
+    const/16 v3, 0x9
+
+    invoke-direct {v4, v3, v2}, Lb2;-><init>(ILjava/lang/Object;)V
 
     :cond_1
-    const/4 v1, 0x0
+    if-eqz v4, :cond_2
 
-    :goto_1
-    iget-object v2, p0, Lvk9;->C0:Llk9;
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    if-eq v2, v1, :cond_3
-
-    iget-object v0, v0, Lek9;->a:Lhk9;
+    move-result v2
 
     if-eqz v2, :cond_2
 
-    iget-object v3, p0, Lvk9;->B0:Lkk9;
+    iget-object v2, p0, Lvk9;->b:Ljava/util/Iterator;
 
-    invoke-interface {v3, v0, v2}, Lkk9;->d(Lhk9;Landroid/view/MenuItem;)V
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput-object v4, p0, Lvk9;->b:Ljava/util/Iterator;
+
+    goto :goto_2
 
     :cond_2
-    iput-object v1, p0, Lvk9;->C0:Llk9;
+    :goto_1
+    iget-object v2, p0, Lvk9;->b:Ljava/util/Iterator;
 
-    if-eqz v1, :cond_3
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v2, p0, Lvk9;->B0:Lkk9;
+    move-result v2
 
-    invoke-interface {v2, v0, v1}, Lkk9;->m(Lhk9;Llk9;)V
+    if-nez v2, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-static {v1}, Lpi3;->M(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Iterator;
+
+    iput-object v2, p0, Lvk9;->b:Ljava/util/Iterator;
+
+    invoke-static {v1}, Lvi3;->u(Ljava/util/List;)Ljava/lang/Object;
+
+    goto :goto_1
 
     :cond_3
-    invoke-super {p0, p1}, Lo95;->onHoverEvent(Landroid/view/MotionEvent;)Z
+    :goto_2
+    return-object v0
 
-    move-result p1
+    :pswitch_0
+    iget-object v0, p0, Lvk9;->c:Ljava/lang/Object;
 
-    return p1
-.end method
+    check-cast v0, Lntg;
 
-.method public final onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 4
+    iget-object v0, v0, Lntg;->b:Lnq6;
 
-    invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedView()Landroid/view/View;
+    iget-object v1, p0, Lvk9;->b:Ljava/util/Iterator;
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/appcompat/view/menu/ListMenuItemView;
+    return-object v0
 
-    const/4 v1, 0x1
+    :pswitch_1
+    iget-object v0, p0, Lvk9;->b:Ljava/util/Iterator;
 
-    if-eqz v0, :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget v2, p0, Lvk9;->z0:I
+    move-result-object v0
 
-    if-ne p1, v2, :cond_1
+    iget-object v1, p0, Lvk9;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
+    check-cast v1, Ljava/util/Iterator;
 
-    move-result p1
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroidx/appcompat/view/menu/ListMenuItemView;->getItemData()Llk9;
+    new-instance v2, Lktb;
 
-    move-result-object p1
+    invoke-direct {v2, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Llk9;->hasSubMenu()Z
+    return-object v2
 
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemId()J
-
-    move-result-wide v2
-
-    invoke-virtual {p0, v0, p1, v2, v3}, Landroid/widget/AdapterView;->performItemClick(Landroid/view/View;IJ)Z
-
-    :cond_0
-    return v1
-
-    :cond_1
-    if-eqz v0, :cond_3
-
-    iget v0, p0, Lvk9;->A0:I
-
-    if-ne p1, v0, :cond_3
-
-    const/4 p1, -0x1
-
-    invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->setSelection(I)V
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object p1
-
-    instance-of p2, p1, Landroid/widget/HeaderViewListAdapter;
-
-    if-eqz p2, :cond_2
-
-    check-cast p1, Landroid/widget/HeaderViewListAdapter;
-
-    invoke-virtual {p1}, Landroid/widget/HeaderViewListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object p1
-
-    check-cast p1, Lek9;
-
-    goto :goto_0
-
-    :cond_2
-    check-cast p1, Lek9;
-
-    :goto_0
-    iget-object p1, p1, Lek9;->a:Lhk9;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lhk9;->c(Z)V
-
-    return v1
-
-    :cond_3
-    invoke-super {p0, p1, p2}, Landroid/view/View;->onKeyDown(ILandroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public setHoverListener(Lkk9;)V
-    .locals 0
+.method public final remove()V
+    .locals 2
 
-    iput-object p1, p0, Lvk9;->B0:Lkk9;
+    iget v0, p0, Lvk9;->a:I
 
-    return-void
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public bridge synthetic setSelector(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-super {p0, p1}, Lo95;->setSelector(Landroid/graphics/drawable/Drawable;)V
+    const-string v1, "Operation is not supported for read-only collection"
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,59 +1,42 @@
-.class public final Lg19;
+.class public interface abstract Lg19;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lg19;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Lxkg;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lg19;
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct/range {v0 .. v6}, Lg19;-><init>(JJJ)V
-
-    sput-object v0, Lg19;->e:Lg19;
+# virtual methods
+.method public I()V
+    .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>(JJJ)V
+.method public abstract L(Li19;)V
+.end method
+
+.method public R(Lite;)Lmj7;
+    .locals 1
+
+    new-instance p1, Lgue;
+
+    const/4 v0, -0x6
+
+    invoke-direct {p1, v0}, Lgue;-><init>(I)V
+
+    invoke-static {p1}, Lrs8;->c(Ljava/lang/Object;)Lmj7;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public u(Lute;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-wide p1, p0, Lg19;->a:J
-
-    iput-wide p3, p0, Lg19;->b:J
-
-    iput-wide p5, p0, Lg19;->c:J
-
-    new-instance p1, Lxkg;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2}, Lxkg;-><init>(I)V
-
-    iput-object p1, p0, Lg19;->d:Lxkg;
+.method public v()V
+    .locals 0
 
     return-void
 .end method

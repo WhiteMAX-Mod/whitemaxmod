@@ -9,11 +9,11 @@ sdkInfo:
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 6478
-  versionName: 25.21.0
+  versionCode: 6507
+  versionName: 26.1.0
 doNotCompress:
 - arsc
-- mp3
+- m4a
 - png
 - so
 - webp
@@ -105,9 +105,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_reactive.version
 - META-INF/kotlinx_coroutines_rx3.version
 - META-INF/kotlinx_coroutines_test.version
-- META-INF/services/iqg
-- META-INF/services/o18
 - META-INF/services/ru.ok.android.onelog.OneLogAppender
+- META-INF/services/tqg
+- META-INF/services/z08
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
 - okhttp3/internal/publicsuffix/publicsuffixes.gz

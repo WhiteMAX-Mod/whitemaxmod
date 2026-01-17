@@ -3,4 +3,10 @@
 
 
 # static fields
-.field public static emoji:I = 0x7f12002d
+.field public static date_time_picker:I = 0x7f0d002a
+
+.field public static day_item:I = 0x7f0d002b
+
+.field public static number_item:I = 0x7f0d00dc
+
+.field public static scheduled_send_picker_fragment:I = 0x7f0d014c

@@ -1,15 +1,15 @@
 .class public final Lu3a;
-.super Lfrd;
+.super Lcsd;
 .source "SourceFile"
 
 # interfaces
-.implements Ljig;
+.implements Luig;
 
 
 # instance fields
 .field public final X:Landroid/graphics/Rect;
 
-.field public final Y:Llx7;
+.field public final Y:La4a;
 
 .field public final a:I
 
@@ -23,7 +23,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lplb;)V
+.method public constructor <init>(Lzlb;)V
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -32,7 +32,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -44,7 +44,7 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Ln7j;->c(F)I
+    invoke-static {v0}, Lq7j;->c(F)I
 
     move-result v0
 
@@ -54,7 +54,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -66,13 +66,13 @@
 
     mul-float/2addr v1, v0
 
-    invoke-static {v1}, Ln7j;->c(F)I
+    invoke-static {v1}, Lq7j;->c(F)I
 
     move-result v1
 
     iput v1, p0, Lu3a;->b:I
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -84,7 +84,7 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Ln7j;->c(F)I
+    invoke-static {v0}, Lq7j;->c(F)I
 
     move-result v0
 
@@ -94,7 +94,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -106,7 +106,7 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Ln7j;->c(F)I
+    invoke-static {v0}, Lq7j;->c(F)I
 
     move-result v0
 
@@ -116,7 +116,7 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -140,29 +140,31 @@
 
     iput-object v0, p0, Lu3a;->X:Landroid/graphics/Rect;
 
-    new-instance v0, Llx7;
+    new-instance v0, La4a;
 
-    const/4 v1, 0x0
+    const/16 v1, 0x14
 
-    invoke-direct {v0, v1}, Llx7;-><init>(I)V
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lu3a;->Y:Llx7;
+    invoke-direct {v0, v1, v2}, La4a;-><init>(IB)V
 
-    invoke-virtual {p0, p1}, Lu3a;->onThemeChanged(Lplb;)V
+    iput-object v0, p0, Lu3a;->Y:La4a;
+
+    invoke-virtual {p0, p1}, Lu3a;->onThemeChanged(Lzlb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lsrd;)V
+.method public final g(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lpsd;)V
     .locals 2
 
     invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
 
     move-result p4
 
-    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lzqd;
+    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
 
     move-result-object v0
 
@@ -170,7 +172,7 @@
 
     if-ltz p4, :cond_4
 
-    invoke-virtual {v0}, Lzqd;->j()I
+    invoke-virtual {v0}, Lwrd;->j()I
 
     move-result v0
 
@@ -194,7 +196,7 @@
     :goto_0
     iput p4, p1, Landroid/graphics/Rect;->top:I
 
-    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lzqd;
+    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
 
     move-result-object p4
 
@@ -212,17 +214,17 @@
     goto :goto_1
 
     :cond_2
-    invoke-virtual {p4, v0}, Lzqd;->l(I)I
+    invoke-virtual {p4, v0}, Lwrd;->l(I)I
 
     move-result p4
 
-    sget v0, Lbeb;->h:I
+    sget v0, Lleb;->h:I
 
     if-ne p4, v0, :cond_3
 
     iget p4, p1, Landroid/graphics/Rect;->top:I
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -248,15 +250,15 @@
 
     :cond_3
     :goto_1
-    iget-object p4, p0, Lu3a;->Y:Llx7;
+    iget-object p4, p0, Lu3a;->Y:La4a;
 
-    invoke-virtual {p4, p1, p2, p3}, Llx7;->c(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p4, p1, p2, p3}, La4a;->G(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_4
     return-void
 .end method
 
-.method public final g(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Lsrd;)V
+.method public final h(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Lpsd;)V
     .locals 11
 
     const/4 p3, 0x0
@@ -288,7 +290,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lzqd;
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
 
     move-result-object v2
 
@@ -310,15 +312,15 @@
     goto :goto_2
 
     :cond_3
-    invoke-virtual {v2, v3}, Lzqd;->l(I)I
+    invoke-virtual {v2, v3}, Lwrd;->l(I)I
 
     move-result v2
 
-    sget v3, Lbeb;->h:I
+    sget v3, Lleb;->h:I
 
     if-ne v2, v3, :cond_1
 
-    iget-object v2, p0, Lu3a;->Y:Llx7;
+    iget-object v2, p0, Lu3a;->Y:La4a;
 
     invoke-static {v0}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
 
@@ -326,7 +328,7 @@
 
     iget-object v4, p0, Lu3a;->X:Landroid/graphics/Rect;
 
-    invoke-virtual {v2, v4, v0, v3}, Llx7;->b(Landroid/graphics/Rect;Landroid/view/View;I)V
+    invoke-virtual {v2, v4, v0, v3}, La4a;->F(Landroid/graphics/Rect;Landroid/view/View;I)V
 
     iget v0, v4, Landroid/graphics/Rect;->left:I
 
@@ -334,7 +336,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -344,7 +346,7 @@
 
     iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v2, v3, v0}, Lzy4;->c(FFI)I
+    invoke-static {v2, v3, v0}, Lxi4;->c(FFI)I
 
     move-result v0
 
@@ -358,7 +360,7 @@
 
     iget v0, v4, Landroid/graphics/Rect;->right:I
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -368,7 +370,7 @@
 
     iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v2, v3, v0}, Lzy4;->q(FFI)I
+    invoke-static {v2, v3, v0}, Lxi4;->r(FFI)I
 
     move-result v0
 
@@ -404,16 +406,16 @@
     return-void
 .end method
 
-.method public final onThemeChanged(Lplb;)V
+.method public final onThemeChanged(Lzlb;)V
     .locals 1
 
-    invoke-interface {p1}, Lplb;->i()Ltyf;
+    invoke-interface {p1}, Lzlb;->i()Lb0g;
 
     move-result-object p1
 
-    iget-object p1, p1, Ltyf;->b:Lzyf;
+    iget-object p1, p1, Lb0g;->b:Lh0g;
 
-    iget p1, p1, Lzyf;->b:I
+    iget p1, p1, Lh0g;->b:I
 
     iget-object v0, p0, Lu3a;->o:Landroid/graphics/Paint;
 

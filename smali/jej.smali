@@ -1,60 +1,49 @@
 .class public final Ljej;
-.super Ljava/lang/Object;
+.super Lmej;
 .source "SourceFile"
-
-# interfaces
-.implements Lwwa;
 
 
 # static fields
-.field public static final a:Ljej;
+.field public static final Y:Ljej;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljej;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "unusedTag"
 
-    sput-object v0, Ljej;->a:Ljej;
+    invoke-direct {v0, v1}, Lmej;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Lyyi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
-
-    const-class v1, Lqzi;
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    sput-object v0, Ljej;->Y:Ljej;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final E(J)V
     .locals 0
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final H(J)V
+    .locals 0
 
-    throw p1
+    return-void
+.end method
+
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final bridge synthetic l()V
+    .locals 0
+
+    return-void
 .end method

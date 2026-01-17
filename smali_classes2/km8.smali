@@ -1,73 +1,55 @@
 .class public final Lkm8;
-.super Ll84;
+.super Lnth;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic A0:Lmm8;
+.field public final b:Lspf;
 
-.field public B0:I
-
-.field public X:Lud2;
-
-.field public Y:Luh2;
-
-.field public Z:Lql9;
-
-.field public d:Lmm8;
-
-.field public o:Ljava/util/Iterator;
-
-.field public s0:Lql9;
-
-.field public t0:Ljava/util/Iterator;
-
-.field public u0:Lrl9;
-
-.field public v0:Lesd;
-
-.field public w0:Lesd;
-
-.field public x0:I
-
-.field public y0:I
-
-.field public synthetic z0:Ljava/lang/Object;
+.field public final c:Lpld;
 
 
 # direct methods
-.method public constructor <init>(Lmm8;Ll84;)V
-    .locals 0
+.method public constructor <init>(Lo58;)V
+    .locals 2
 
-    iput-object p1, p0, Lkm8;->A0:Lmm8;
+    invoke-direct {p0}, Lnth;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    return-void
-.end method
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
+    move-result-object v0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iput-object v0, p0, Lkm8;->b:Lspf;
 
-    iput-object p1, p0, Lkm8;->z0:Ljava/lang/Object;
+    new-instance v1, Lpld;
 
-    iget p1, p0, Lkm8;->B0:I
+    invoke-direct {v1, v0}, Lpld;-><init>(Lmfa;)V
 
-    const/high16 v0, -0x80000000
+    iput-object v1, p0, Lkm8;->c:Lpld;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lkm8;->B0:I
-
-    iget-object p1, p0, Lkm8;->A0:Lmm8;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lmm8;->f(Ljava/util/Map;Ll84;)Ljava/lang/Object;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lyzb;
+
+    sget-object v1, Lyzb;->f:[Ljava/lang/String;
+
+    invoke-virtual {p1, v1}, Lyzb;->c([Ljava/lang/String;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-void
 .end method

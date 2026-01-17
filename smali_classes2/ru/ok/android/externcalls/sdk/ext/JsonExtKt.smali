@@ -42,7 +42,7 @@
         "Lkotlin/Function2;",
         "block",
         "getSafe",
-        "(Lorg/json/JSONObject;Ljava/lang/String;Lcr6;)Ljava/lang/Object;",
+        "(Lorg/json/JSONObject;Ljava/lang/String;Lbr6;)Ljava/lang/Object;",
         "calls-sdk-common_release"
     }
     k = 0x2
@@ -248,7 +248,7 @@
     return-object v0
 .end method
 
-.method private static final getSafe(Lorg/json/JSONObject;Ljava/lang/String;Lcr6;)Ljava/lang/Object;
+.method private static final getSafe(Lorg/json/JSONObject;Ljava/lang/String;Lbr6;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -257,7 +257,7 @@
             ">(",
             "Lorg/json/JSONObject;",
             "Ljava/lang/String;",
-            "Lcr6;",
+            "Lbr6;",
             ")TT;"
         }
     .end annotation
@@ -271,7 +271,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-interface {p2, p0, p1}, Lcr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0, p1}, Lbr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
     :try_end_0

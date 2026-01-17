@@ -1,158 +1,364 @@
-.class public final Ltq8;
-.super Lb5g;
+.class public final synthetic Ltq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
+.implements Lm4g;
 .implements Lcr6;
+.implements Lrw1;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/main/MainScreen;
+.field public final synthetic a:Ljava/lang/Object;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/main/MainScreen;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p2, p0, Ltq8;->X:Lone/me/main/MainScreen;
+    iput-object p1, p0, Ltq8;->a:Ljava/lang/Object;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Ltq8;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Ltq8;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Ltq8;->d:Ljava/lang/Object;
+
+    iput-object p5, p0, Ltq8;->o:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Ltq8;->a:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Ltq8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-object v2, v0
+
+    check-cast v2, Lnq6;
+
+    iget-object v0, p0, Ltq8;->b:Ljava/lang/Object;
+
+    move-object v3, v0
+
+    check-cast v3, Lzg0;
+
+    iget-object v0, p0, Ltq8;->c:Ljava/lang/Object;
+
+    move-object v4, v0
+
+    check-cast v4, Lbr6;
+
+    iget-object v0, p0, Ltq8;->d:Ljava/lang/Object;
+
+    move-object v5, v0
+
+    check-cast v5, Lpbe;
+
+    iget-object v0, p0, Ltq8;->o:Ljava/lang/Object;
+
+    move-object v6, v0
+
+    check-cast v6, Lnq6;
+
+    check-cast p1, Ldxa;
+
+    new-instance v1, Lbd6;
+
+    invoke-direct/range {v1 .. v6}, Lbd6;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const v0, 0x7fffffff
+
+    invoke-virtual {p1, v1, v0}, Ldxa;->e(Lcr6;I)Ldxa;
 
     move-result-object p1
 
-    check-cast p1, Ltq8;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Ltq8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-object p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ltq8;
-
-    iget-object v1, p0, Ltq8;->X:Lone/me/main/MainScreen;
-
-    invoke-direct {v0, p2, v1}, Ltq8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/main/MainScreen;)V
-
-    iput-object p1, v0, Ltq8;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public get()Ljava/lang/Object;
     .locals 7
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Ltq8;->a:Ljava/lang/Object;
 
-    iget-object p1, p0, Ltq8;->o:Ljava/lang/Object;
+    move-object v2, v0
 
-    check-cast p1, Lic4;
+    check-cast v2, Lxg2;
 
-    sget-object v0, Lone/me/main/MainScreen;->Y:Lw7a;
+    iget-object v0, p0, Ltq8;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Ltq8;->X:Lone/me/main/MainScreen;
+    move-object v3, v0
 
-    invoke-virtual {v0}, Lone/me/main/MainScreen;->A0()Lj5b;
+    check-cast v3, Lmz3;
 
-    move-result-object v0
+    iget-object v0, p0, Ltq8;->c:Ljava/lang/Object;
 
-    sget v1, Lwcb;->e:I
+    check-cast v0, Ls44;
 
-    iget p1, p1, Lic4;->a:I
+    iget-object v1, p0, Ltq8;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object v4, v1
 
-    const/4 v2, 0x0
+    check-cast v4, Lpie;
 
-    move v3, v2
+    iget-object v1, p0, Ltq8;->o:Ljava/lang/Object;
 
-    :goto_0
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+    check-cast v1, Lgre;
 
-    move-result v4
+    check-cast v1, Lidc;
 
-    if-ge v3, v4, :cond_0
+    iget-object v1, v1, Lidc;->m:Leyd;
 
-    const/4 v4, 0x1
+    invoke-virtual {v1}, Leyd;->getValue()Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object v1
+
+    check-cast v1, [Ljava/lang/String;
+
+    new-instance v5, Ljie;
+
+    invoke-direct {v5, v2, v3, v0, v4}, Ljie;-><init>(Lxg2;Lmz3;Ls44;Lpie;)V
+
+    const/4 v0, 0x0
+
+    if-eqz v1, :cond_1
+
+    array-length v6, v1
+
+    if-nez v6, :cond_0
+
+    move-object v1, v0
 
     :cond_0
-    move v4, v2
+    if-eqz v1, :cond_1
 
-    :goto_1
-    if-eqz v4, :cond_4
+    new-instance v0, Lkie;
 
-    add-int/lit8 v4, v3, 0x1
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_3
-
-    sget v5, Lr9d;->tag_tab_item:I
-
-    invoke-static {v3, v5}, Lc5j;->c(Landroid/view/View;I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    instance-of v6, v5, Li5b;
-
-    if-eqz v6, :cond_1
-
-    check-cast v5, Li5b;
-
-    goto :goto_2
+    invoke-direct {v0, v1, v2, v4}, Lkie;-><init>([Ljava/lang/String;Lxg2;Lpie;)V
 
     :cond_1
-    const/4 v5, 0x0
+    move-object v6, v0
 
-    :goto_2
-    if-eqz v5, :cond_2
+    new-instance v1, Liie;
 
-    iget v5, v5, Li5b;->c:I
+    invoke-direct/range {v1 .. v6}, Liie;-><init>(Lxg2;Lmz3;Lpie;Ljie;Lkie;)V
 
-    if-ne v5, v1, :cond_2
+    return-object v1
+.end method
 
-    check-cast v3, Lyt0;
+.method public l(Lqw1;)Ljava/lang/String;
+    .locals 11
 
-    invoke-virtual {v3, p1}, Lyt0;->setCounter(I)V
+    iget-object v0, p0, Ltq8;->a:Ljava/lang/Object;
 
-    :cond_2
-    move v3, v4
+    move-object v1, v0
+
+    check-cast v1, Ls35;
+
+    iget-object v0, p0, Ltq8;->b:Ljava/lang/Object;
+
+    check-cast v0, Ly5g;
+
+    iget-object v2, p0, Ltq8;->c:Ljava/lang/Object;
+
+    move-object v5, v2
+
+    check-cast v5, Lflg;
+
+    iget-object v2, p0, Ltq8;->d:Ljava/lang/Object;
+
+    check-cast v2, Lid0;
+
+    iget-object v3, p0, Ltq8;->o:Ljava/lang/Object;
+
+    check-cast v3, Ltb0;
+
+    iget-object v8, v0, Ly5g;->c:Lwb5;
+
+    invoke-static {v3, v8, v2}, Lofh;->b(Ltb0;Lwb5;Lid0;)Lfd0;
+
+    move-result-object v2
+
+    iget-object v6, v3, Ltb0;->a:Lhd0;
+
+    iget-object v7, v0, Ly5g;->b:Landroid/util/Size;
+
+    iget-object v9, v0, Ly5g;->d:Landroid/util/Range;
+
+    iget-object v4, v2, Lfd0;->a:Ljava/lang/String;
+
+    iget-object v2, v2, Lfd0;->c:Lab0;
+
+    if-eqz v2, :cond_0
+
+    new-instance v3, Lkw3;
+
+    move-object v10, v9
+
+    move-object v9, v8
+
+    move-object v8, v2
+
+    invoke-direct/range {v3 .. v10}, Lkw3;-><init>(Ljava/lang/String;Lflg;Lhd0;Landroid/util/Size;Lab0;Lwb5;Landroid/util/Range;)V
 
     goto :goto_0
 
-    :cond_3
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    :cond_0
+    new-instance v3, Logh;
 
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    invoke-direct/range {v3 .. v9}, Logh;-><init>(Ljava/lang/String;Lflg;Lhd0;Landroid/util/Size;Lwb5;Landroid/util/Range;)V
+
+    :goto_0
+    invoke-interface {v3}, Ln4g;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ldd0;
+
+    :try_start_0
+    iget-object v3, v1, Ls35;->e:Ljava/lang/Object;
+
+    check-cast v3, Lu0b;
+
+    iget-object v4, v1, Ls35;->c:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lcj5;
+
+    invoke-direct {v3, v4, v2}, Lcj5;-><init>(Ljava/util/concurrent/Executor;Loi5;)V
+
+    iput-object v3, v1, Ls35;->f:Ljava/lang/Object;
+    :try_end_0
+    .catch Landroidx/camera/video/internal/encoder/InvalidConfigException; {:try_start_0 .. :try_end_0} :catch_1
+
+    iget-object v2, v3, Lcj5;->f:Lii5;
+
+    instance-of v3, v2, Laj5;
+
+    if-nez v3, :cond_1
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v2, "The EncoderInput of video isn\'t a SurfaceInput."
+
+    invoke-direct {v0, v2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Lqw1;->d(Ljava/lang/Throwable;)Z
+
+    goto :goto_1
+
+    :cond_1
+    check-cast v2, Laj5;
+
+    iget-object v3, v1, Ls35;->d:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/concurrent/Executor;
+
+    new-instance v4, Lpl;
+
+    const/16 v5, 0x1d
+
+    invoke-direct {v4, v1, p1, v0, v5}, Lpl;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-object v5, v2, Laj5;->a:Ljava/lang/Object;
+
+    monitor-enter v5
+
+    :try_start_1
+    iput-object v4, v2, Laj5;->d:Lpl;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object v3, v2, Laj5;->o:Ljava/util/concurrent/Executor;
+
+    iget-object p1, v2, Laj5;->b:Landroid/view/Surface;
+
+    monitor-exit v5
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz p1, :cond_2
+
+    :try_start_2
+    new-instance v0, Liv4;
+
+    const/16 v5, 0x16
+
+    invoke-direct {v0, v4, v5, p1}, Liv4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v3, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_2
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    iget-object v0, v2, Laj5;->X:Lcj5;
+
+    iget-object v0, v0, Lcj5;->a:Ljava/lang/String;
+
+    const-string v2, "Unable to post to the supplied executor."
+
+    invoke-static {v0, v2, p1}, Lm5j;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    :try_start_3
+    monitor-exit v5
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     throw p1
 
-    :cond_4
-    sget-object p1, Lv2h;->a:Lv2h;
+    :catch_1
+    move-exception v0
+
+    const-string v2, "VideoEncoderSession"
+
+    const-string v3, "Unable to initialize video encoder."
+
+    invoke-static {v2, v3, v0}, Lm5j;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {p1, v0}, Lqw1;->d(Ljava/lang/Throwable;)Z
+
+    :cond_2
+    :goto_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "ConfigureVideoEncoderFuture "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
 
     return-object p1
 .end method

@@ -1,27 +1,20 @@
-.class public Lrr6;
-.super Lqr6;
+.class public final Lrr6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lk4g;
 
-# direct methods
-.method public constructor <init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 7
 
-    sget-object v4, Lsw1;->NO_RECEIVER:Ljava/lang/Object;
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    move-object v0, p0
+    new-instance v0, Ljava/util/ArrayList;
 
-    move v1, p1
+    const/16 v1, 0x10
 
-    move-object v3, p2
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    move-object v5, p3
-
-    move-object v6, p4
-
-    move v2, p5
-
-    invoke-direct/range {v0 .. v6}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method

@@ -1,150 +1,140 @@
-.class public final Lex1;
+.class public final synthetic Lex1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lru/ok/android/externcalls/sdk/audio/Logger;
+.implements Llq6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lnx1;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lnx1;I)V
+    .locals 0
+
+    iput p2, p0, Lex1;->a:I
+
+    iput-object p1, p0, Lex1;->b:Lnx1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    .line 1
-    invoke-static {p1, p2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    iget v0, p0, Lex1;->a:I
 
-    return-void
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    new-instance v0, Lix1;
 
-    .line 2
-    invoke-static {p1, p2, p3}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v1, p0, Lex1;->b:Lnx1;
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lix1;-><init>(Lnx1;)V
 
-.method public final e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 7
+    return-object v0
 
-    .line 1
-    sget-object v0, Lm4j;->a:Lvcb;
+    :pswitch_0
+    new-instance v0, Lru/ok/android/externcalls/sdk/AudioLevelListener;
 
-    if-eqz v0, :cond_0
+    new-instance v1, Landroid/os/Handler;
 
-    .line 2
-    sget-object v1, Lxk8;->Y:Lxk8;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    const/4 v5, 0x0
+    move-result-object v2
 
-    const/16 v6, 0x8
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    const/4 v4, 0x0
+    new-instance v2, Lj3;
 
-    move-object v2, p1
+    const/16 v3, 0x1b
 
-    move-object v3, p2
+    iget-object v4, p0, Lex1;->b:Lnx1;
 
-    invoke-static/range {v0 .. v6}, Lvcb;->f(Lvcb;Lxk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    invoke-direct {v2, v3, v4}, Lj3;-><init>(ILjava/lang/Object;)V
 
-    :cond_0
-    return-void
-.end method
+    const/16 v3, 0x1f4
 
-.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    invoke-direct {v0, v3, v1, v2}, Lru/ok/android/externcalls/sdk/AudioLevelListener;-><init>(SLandroid/os/Handler;Ljava/lang/Runnable;)V
 
-    .line 3
-    invoke-static {p1, p2, p3}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return-object v0
 
-    return-void
-.end method
+    :pswitch_1
+    iget-object v0, p0, Lex1;->b:Lnx1;
 
-.method public final i(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    iget-object v0, v0, Lnx1;->t:Ln8g;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    .line 1
-    invoke-static {p1, p2, v0}, Lm4j;->o(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    move-result-object v0
 
-    return-void
-.end method
+    check-cast v0, Llfa;
 
-.method public final i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    return-object v0
 
-    const/4 p3, 0x0
+    :pswitch_2
+    iget-object v0, p0, Lex1;->b:Lnx1;
 
-    .line 2
-    invoke-static {p1, p2, p3}, Lm4j;->o(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    iget-object v0, v0, Lnx1;->t:Ln8g;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-.method public final v(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    move-result-object v0
 
-    .line 1
-    invoke-static {p1, p2}, Lm4j;->w(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Llfa;
 
-    return-void
-.end method
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-.method public final v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 7
+    invoke-interface {v0, v1}, Llfa;->h(Ljava/lang/Object;)Z
 
-    .line 2
-    sget-object v0, Lm4j;->a:Lvcb;
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    if-eqz v0, :cond_0
+    return-object v0
 
-    sget-object v1, Lxk8;->c:Lxk8;
+    :pswitch_3
+    iget-object v0, p0, Lex1;->b:Lnx1;
 
-    const/4 v4, 0x0
+    iget-object v0, v0, Lnx1;->r:Ln8g;
 
-    const/16 v6, 0x8
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    move-object v2, p1
+    move-result-object v0
 
-    move-object v3, p2
+    check-cast v0, Lmfa;
 
-    move-object v5, p3
+    return-object v0
 
-    invoke-static/range {v0 .. v6}, Lvcb;->f(Lvcb;Lxk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    :pswitch_4
+    iget-object v0, p0, Lex1;->b:Lnx1;
 
-    :cond_0
-    return-void
-.end method
+    iget-object v0, v0, Lnx1;->b:Lf41;
 
-.method public final w(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    check-cast v0, Lg41;
 
-    .line 1
-    invoke-static {p1, p2}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lg41;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    .line 2
-    invoke-static {p1, p2, p3}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v0
 
-    return-void
-.end method
+    return-object v0
 
-.method public final w(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 3
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

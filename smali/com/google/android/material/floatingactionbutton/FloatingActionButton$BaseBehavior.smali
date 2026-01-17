@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/floatingactionbutton/FloatingActionButton$BaseBehavior;
-.super Lua4;
+.super Lxa4;
 .source "SourceFile"
 
 
@@ -9,7 +9,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lua4;"
+        "Lxa4;"
     }
 .end annotation
 
@@ -31,7 +31,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    sget-object v0, Lefd;->FloatingActionButton_Behavior_Layout:[I
+    sget-object v0, Lcgd;->FloatingActionButton_Behavior_Layout:[I
 
     .line 4
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -39,7 +39,7 @@
     move-result-object p1
 
     .line 5
-    sget p2, Lefd;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
+    sget p2, Lcgd;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
 
     const/4 v0, 0x1
 
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final e(Landroid/view/View;)Z
+.method public final a(Landroid/view/View;)Z
     .locals 0
 
     new-instance p1, Ljava/lang/ClassCastException;
@@ -64,22 +64,22 @@
     throw p1
 .end method
 
-.method public final g(Lxa4;)V
+.method public final c(Lab4;)V
     .locals 1
 
-    iget v0, p1, Lxa4;->h:I
+    iget v0, p1, Lab4;->h:I
 
     if-nez v0, :cond_0
 
     const/16 v0, 0x50
 
-    iput v0, p1, Lxa4;->h:I
+    iput v0, p1, Lab4;->h:I
 
     :cond_0
     return-void
 .end method
 
-.method public final h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
+.method public final d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
     new-instance p1, Ljava/lang/ClassCastException;
@@ -89,7 +89,7 @@
     throw p1
 .end method
 
-.method public final l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
+.method public final h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 0
 
     new-instance p1, Ljava/lang/ClassCastException;

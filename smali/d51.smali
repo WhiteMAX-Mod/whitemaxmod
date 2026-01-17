@@ -1,106 +1,214 @@
 .class public final Ld51;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lh51;
+.implements Ldr6;
 
 
-# static fields
-.field public static final a:Ld51;
+# instance fields
+.field public synthetic X:Z
 
-.field public static final b:I
+.field public synthetic Y:Z
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    new-instance v0, Ld51;
+    iput p3, p0, Ld51;->o:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ld51;->a:Ld51;
-
-    const/16 v0, 0x40
-
-    int-to-float v0, v0
-
-    invoke-static {v0}, La3e;->e(F)I
-
-    move-result v0
-
-    sput v0, Ld51;->b:I
-
-    const/16 v0, 0x20
-
-    int-to-float v0, v0
-
-    invoke-static {v0}, La3e;->e(F)I
-
-    move-result v0
-
-    sput v0, Ld51;->c:I
-
-    const/4 v0, 0x1
-
-    int-to-float v0, v0
-
-    invoke-static {v0}, La3e;->e(F)I
-
-    move-result v0
-
-    sput v0, Ld51;->d:I
-
-    const/4 v0, 0x6
-
-    int-to-float v0, v0
-
-    invoke-static {v0}, La3e;->e(F)I
-
-    move-result v0
-
-    sput v0, Ld51;->e:I
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    sget v0, Ld51;->c:I
+    iget v0, p0, Ld51;->o:I
 
-    return v0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ld51;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, p3, v2}, Ld51;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-boolean p1, v0, Ld51;->X:Z
+
+    iput-boolean p2, v0, Ld51;->Y:Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Ld51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Ld51;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Ld51;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-boolean p1, v0, Ld51;->X:Z
+
+    iput-boolean p2, v0, Ld51;->Y:Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Ld51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Ld51;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2}, Ld51;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-boolean p1, v0, Ld51;->X:Z
+
+    iput-boolean p2, v0, Ld51;->Y:Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Ld51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b()I
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    sget v0, Ld51;->d:I
+    iget v0, p0, Ld51;->o:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final c()I
-    .locals 1
+    iget-boolean v0, p0, Ld51;->X:Z
 
-    sget v0, Ld51;->b:I
+    iget-boolean v1, p0, Ld51;->Y:Z
 
-    return v0
-.end method
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.method public final d()I
-    .locals 1
+    if-nez v0, :cond_1
 
-    sget v0, Ld51;->e:I
+    if-eqz v1, :cond_0
 
-    return v0
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-boolean v0, p0, Ld51;->X:Z
+
+    iget-boolean v1, p0, Ld51;->Y:Z
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    if-eqz v0, :cond_2
+
+    if-nez v1, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-boolean v0, p0, Ld51;->X:Z
+
+    iget-boolean v1, p0, Ld51;->Y:Z
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    if-eqz v0, :cond_3
+
+    if-nez v1, :cond_3
+
+    const/4 p1, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    const/4 p1, 0x0
+
+    :goto_3
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

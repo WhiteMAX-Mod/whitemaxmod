@@ -1,55 +1,40 @@
-.class public abstract Loke;
-.super Ljava/lang/Object;
+.class public final Loke;
+.super Lff0;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Lyz0;
-
-.field public final b:Lntb;
-
-.field public c:Ljava/util/concurrent/Executor;
-
-.field public d:J
-
-.field public e:J
-
-
-# direct methods
-.method public constructor <init>(Lyz0;Lntb;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Loke;->a:Lyz0;
-
-    iput-object p2, p0, Loke;->b:Lntb;
-
-    new-instance p1, Lhs;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p1, p2}, Lhs;-><init>(I)V
-
-    iput-object p1, p0, Loke;->c:Ljava/util/concurrent/Executor;
-
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide p1, p0, Loke;->e:J
-
-    return-void
-.end method
+# interfaces
+.implements Lqke;
 
 
 # virtual methods
-.method public abstract a(Lz49;)Lske;
+.method public final a(J)J
+    .locals 0
+
+    const-wide/16 p1, 0x0
+
+    return-wide p1
 .end method
 
-.method public abstract b(J)Loke;
+.method public final b()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
 .end method
 
-.method public abstract c(Ljava/util/concurrent/ExecutorService;)Loke;
+.method public final g()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
 .end method
 
-.method public abstract d(J)Loke;
+.method public final h()I
+    .locals 1
+
+    const v0, -0x7fffffff
+
+    return v0
 .end method

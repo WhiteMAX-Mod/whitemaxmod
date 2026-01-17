@@ -1,83 +1,80 @@
 .class public final Lo45;
-.super Ljava/lang/Object;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lq45;
 
 
 # instance fields
-.field public final a:I
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
 
-    iput p1, p0, Lo45;->a:I
+    iput-object p5, p0, Lo45;->b:Ljava/lang/String;
+
+    iput-object p6, p0, Lo45;->c:Ljava/lang/String;
+
+    if-nez p7, :cond_0
+
+    const-string p7, ""
+
+    :cond_0
+    iput-object p7, p0, Lo45;->d:Ljava/lang/String;
+
+    iput-wide p3, p0, Lo45;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lo45;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lo45;
-
-    iget v1, p0, Lo45;->a:I
-
-    iget p1, p1, Lo45;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lo45;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    const-string v0, "DownloadFailed(textFailRes="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, "DownloadCompleteEvent{url=\'"
 
-    iget v2, p0, Lo45;->a:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lo45;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', path=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lo45;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', attachLocalId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lo45;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', messageId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lo45;->o:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
 

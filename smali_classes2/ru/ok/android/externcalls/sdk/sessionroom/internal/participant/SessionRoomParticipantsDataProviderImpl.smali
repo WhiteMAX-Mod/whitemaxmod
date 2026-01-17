@@ -25,37 +25,37 @@
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/sessionroom/internal/listener/SessionRoomListenerManagerImpl;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;)V",
         "",
-        "Ljte;",
+        "Lmue;",
         "getRoomIds",
         "()Ljava/util/Set;",
         "roomId",
         "",
-        "Lzk1;",
+        "Lsk1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "getRoomParticipantIds",
-        "(Ljte;)Ljava/util/Collection;",
+        "(Lmue;)Ljava/util/Collection;",
         "getAllRoomParticipantIds",
         "()Ljava/util/Collection;",
-        "Lkte;",
+        "Lnue;",
         "internalIds",
         "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;",
         "mapInternalIdsToSessionRoomParticipants",
-        "(Lkte;Ljava/util/Collection;)Ljava/util/Collection;",
+        "(Lnue;Ljava/util/Collection;)Ljava/util/Collection;",
         "internalId",
         "mapInternalIdToSessionRoomParticipant",
-        "(Lzk1;)Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;",
+        "(Lsk1;)Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "participant",
         "mapConversationParticipantToSessionRoomParticipant",
         "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;",
         "Lkotlin/Function1;",
         "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;",
-        "Lv2h;",
+        "Lb3h;",
         "onSuccess",
         "",
         "onError",
         "getMainCallParticipantIds",
-        "(Loq6;Loq6;)V",
+        "(Lnq6;Lnq6;)V",
         "participantIds",
         "",
         "getUnresolvedExternalIds",
@@ -63,15 +63,15 @@
         "Lkotlin/Function0;",
         "onResolve",
         "resolveParticipantIds",
-        "(Ljava/util/Collection;Lmq6;Loq6;)V",
+        "(Ljava/util/Collection;Llq6;Lnq6;)V",
         "getRoomParticipants",
-        "(Lkte;Loq6;Loq6;)V",
+        "(Lnue;Lnq6;Lnq6;)V",
         "getAllInRoomParticipants",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
         "getParticipantRoomId",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Loq6;Loq6;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnq6;Lnq6;)V",
         "externalId",
         "onIdResolved",
         "resolveInternalIdByExternal",
@@ -83,7 +83,7 @@
         "Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;",
         "Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;",
         "",
-        "Lete;",
+        "Lhue;",
         "knownSessionRooms",
         "Ljava/util/Map;",
         "ru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl$roomsListener$1",
@@ -110,8 +110,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Ljte;",
-            "Lete;",
+            "Lmue;",
+            "Lhue;",
             ">;"
         }
     .end annotation
@@ -151,10 +151,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Loq6;)V
+.method public static synthetic a(Lnq6;)V
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveParticipantIds$lambda$9(Loq6;)V
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveParticipantIds$lambda$9(Lnq6;)V
 
     return-void
 .end method
@@ -167,46 +167,46 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getRoomParticipantIds(Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;Ljte;)Ljava/util/Collection;
+.method public static final synthetic access$getRoomParticipantIds(Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;Lmue;)Ljava/util/Collection;
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->getRoomParticipantIds(Ljte;)Ljava/util/Collection;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->getRoomParticipantIds(Lmue;)Ljava/util/Collection;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic access$mapInternalIdsToSessionRoomParticipants(Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;Lkte;Ljava/util/Collection;)Ljava/util/Collection;
+.method public static final synthetic access$mapInternalIdsToSessionRoomParticipants(Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;Lnue;Ljava/util/Collection;)Ljava/util/Collection;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->mapInternalIdsToSessionRoomParticipants(Lkte;Ljava/util/Collection;)Ljava/util/Collection;
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->mapInternalIdsToSessionRoomParticipants(Lnue;Ljava/util/Collection;)Ljava/util/Collection;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic b(Loq6;Loq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzk1;)V
+.method public static synthetic b(Lnq6;Lnq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsk1;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveInternalIdByExternal$lambda$0(Loq6;Loq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzk1;)V
+    invoke-static {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveInternalIdByExternal$lambda$0(Lnq6;Lnq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsk1;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Loq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
+.method public static synthetic c(Lnq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveInternalIdByExternal$lambda$1(Loq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveInternalIdByExternal$lambda$1(Lnq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
 
     return-void
 .end method
 
-.method public static synthetic d(Lmq6;)V
+.method public static synthetic d(Llq6;)V
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveParticipantIds$lambda$8(Lmq6;)V
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveParticipantIds$lambda$8(Llq6;)V
 
     return-void
 .end method
@@ -217,7 +217,7 @@
         value = {
             "()",
             "Ljava/util/Collection<",
-            "Lzk1;",
+            "Lsk1;",
             ">;"
         }
     .end annotation
@@ -247,29 +247,29 @@
 
     move-result-object v2
 
-    check-cast v2, Lete;
+    check-cast v2, Lhue;
 
-    iget-object v2, v2, Lete;->e:Ljava/util/List;
+    iget-object v2, v2, Lhue;->e:Ljava/util/List;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lgi3;->o(Ljava/lang/Iterable;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lri3;->o(Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private final getMainCallParticipantIds(Loq6;Loq6;)V
+.method private final getMainCallParticipantIds(Lnq6;Lnq6;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loq6;",
-            "Loq6;",
+            "Lnq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -278,15 +278,15 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lei3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {p2}, Lpi3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    sget-object v1, Lite;->a:Lite;
+    sget-object v1, Llue;->a:Llue;
 
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipants(Lkte;)Ljava/util/Collection;
+    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipants(Lnue;)Ljava/util/Collection;
 
     move-result-object v0
 
@@ -326,7 +326,7 @@
 
     if-nez v5, :cond_0
 
-    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzk1;
+    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsk1;
 
     move-result-object v4
 
@@ -345,7 +345,7 @@
 
     const/16 v0, 0xa
 
-    invoke-static {v2, v0}, Lgi3;->n(Ljava/lang/Iterable;I)I
+    invoke-static {v2, v0}, Lri3;->n(Ljava/lang/Iterable;I)I
 
     move-result v0
 
@@ -379,9 +379,9 @@
     :cond_2
     new-instance v0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;
 
-    invoke-direct {v0, v1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;-><init>(Lkte;Ljava/util/Collection;)V
+    invoke-direct {v0, v1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;-><init>(Lnue;Ljava/util/Collection;)V
 
-    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -392,7 +392,7 @@
         value = {
             "()",
             "Ljava/util/Set<",
-            "Ljte;",
+            "Lmue;",
             ">;"
         }
     .end annotation
@@ -403,22 +403,22 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lei3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {v0}, Lpi3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private final getRoomParticipantIds(Ljte;)Ljava/util/Collection;
+.method private final getRoomParticipantIds(Lmue;)Ljava/util/Collection;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljte;",
+            "Lmue;",
             ")",
             "Ljava/util/Collection<",
-            "Lzk1;",
+            "Lsk1;",
             ">;"
         }
     .end annotation
@@ -429,22 +429,22 @@
 
     move-result-object p1
 
-    check-cast p1, Lete;
+    check-cast p1, Lhue;
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p1, Lete;->e:Ljava/util/List;
+    iget-object p1, p1, Lhue;->e:Ljava/util/List;
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lei3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {p1}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    sget-object p1, Lch5;->a:Lch5;
+    sget-object p1, Ldh5;->a:Ldh5;
 
     return-object p1
 .end method
@@ -455,10 +455,10 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lzk1;",
+            "Lsk1;",
             ">;)",
             "Ljava/util/List<",
-            "Lzk1;",
+            "Lsk1;",
             ">;"
         }
     .end annotation
@@ -483,11 +483,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lzk1;
+    check-cast v1, Lsk1;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    invoke-virtual {v2, v1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-virtual {v2, v1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByInternal(Lsk1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v2
 
@@ -512,21 +512,21 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v2, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipantRoomId(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lkte;
+    invoke-virtual {v2, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipantRoomId(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lnue;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
+    invoke-direct {v0, v1, v2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
 
     return-object v0
 .end method
 
-.method private final mapInternalIdToSessionRoomParticipant(Lzk1;)Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;
+.method private final mapInternalIdToSessionRoomParticipant(Lsk1;)Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v0
 
@@ -534,7 +534,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByInternal(Lsk1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object p1
 
@@ -544,7 +544,7 @@
 
     new-instance v1, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;
 
-    invoke-direct {v1, p1, v0, v0}, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
+    invoke-direct {v1, p1, v0, v0}, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnue;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
 
     return-object v1
 
@@ -559,14 +559,14 @@
     return-object p1
 .end method
 
-.method private final mapInternalIdsToSessionRoomParticipants(Lkte;Ljava/util/Collection;)Ljava/util/Collection;
+.method private final mapInternalIdsToSessionRoomParticipants(Lnue;Ljava/util/Collection;)Ljava/util/Collection;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkte;",
+            "Lnue;",
             "Ljava/util/Collection<",
-            "Lzk1;",
+            "Lsk1;",
             ">;)",
             "Ljava/util/Collection<",
             "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;",
@@ -594,9 +594,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lzk1;
+    check-cast v1, Lsk1;
 
-    invoke-direct {p0, v1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->mapInternalIdToSessionRoomParticipant(Lzk1;)Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;
+    invoke-direct {p0, v1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->mapInternalIdToSessionRoomParticipant(Lsk1;)Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;
 
     move-result-object v1
 
@@ -613,7 +613,7 @@
     :cond_1
     iget-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {p2, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipants(Lkte;)Ljava/util/Collection;
+    invoke-virtual {p2, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipants(Lnue;)Ljava/util/Collection;
 
     move-result-object p1
 
@@ -678,12 +678,12 @@
     return-object p1
 .end method
 
-.method private static final resolveInternalIdByExternal$lambda$0(Loq6;Loq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lzk1;)V
+.method private static final resolveInternalIdByExternal$lambda$0(Lnq6;Lnq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsk1;)V
     .locals 1
 
     if-eqz p3, :cond_0
 
-    invoke-interface {p0, p3}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p3}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -710,13 +710,13 @@
 
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, p0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void
 .end method
 
-.method private static final resolveInternalIdByExternal$lambda$1(Loq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
+.method private static final resolveInternalIdByExternal$lambda$1(Lnq6;Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
     .locals 3
 
     if-eqz p0, :cond_0
@@ -741,22 +741,22 @@
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private final resolveParticipantIds(Ljava/util/Collection;Lmq6;Loq6;)V
+.method private final resolveParticipantIds(Ljava/util/Collection;Llq6;Lnq6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lzk1;",
+            "Lsk1;",
             ">;",
-            "Lmq6;",
-            "Loq6;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -767,7 +767,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p2}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -782,7 +782,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p2}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -793,28 +793,28 @@
 
     const/4 v2, 0x5
 
-    invoke-direct {v1, v2, p2}, Lsj0;-><init>(ILmq6;)V
+    invoke-direct {v1, v2, p2}, Lsj0;-><init>(ILlq6;)V
 
-    new-instance p2, Lmte;
+    new-instance p2, Lpue;
 
     const/4 v2, 0x0
 
-    invoke-direct {p2, v2, p3}, Lmte;-><init>(ILoq6;)V
+    invoke-direct {p2, v2, p3}, Lpue;-><init>(ILnq6;)V
 
     invoke-interface {v0, p1, v1, p2}, Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;->resolveExternalsByInternalsIds(Ljava/util/List;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method private static final resolveParticipantIds$lambda$8(Lmq6;)V
+.method private static final resolveParticipantIds$lambda$8(Llq6;)V
     .locals 0
 
-    invoke-interface {p0}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
 
-.method private static final resolveParticipantIds$lambda$9(Loq6;)V
+.method private static final resolveParticipantIds$lambda$9(Lnq6;)V
     .locals 2
 
     if-eqz p0, :cond_0
@@ -825,7 +825,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -833,13 +833,13 @@
 
 
 # virtual methods
-.method public getAllInRoomParticipants(Loq6;Loq6;)V
+.method public getAllInRoomParticipants(Lnq6;Lnq6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loq6;",
-            "Loq6;",
+            "Lnq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -854,9 +854,9 @@
 
     if-eqz v1, :cond_0
 
-    sget-object p2, Lch5;->a:Lch5;
+    sget-object p2, Ldh5;->a:Ldh5;
 
-    invoke-interface {p1, p2}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -867,9 +867,9 @@
 
     new-instance v2, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl$getAllInRoomParticipants$1;
 
-    invoke-direct {v2, v0, p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl$getAllInRoomParticipants$1;-><init>(Ljava/util/Set;Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;Loq6;)V
+    invoke-direct {v2, v0, p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl$getAllInRoomParticipants$1;-><init>(Ljava/util/Set;Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;Lnq6;)V
 
-    invoke-direct {p0, v1, v2, p2}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveParticipantIds(Ljava/util/Collection;Lmq6;Loq6;)V
+    invoke-direct {p0, v1, v2, p2}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveParticipantIds(Ljava/util/Collection;Llq6;Lnq6;)V
 
     return-void
 .end method
@@ -884,7 +884,7 @@
             ">;)",
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lzk1;",
+            "Lsk1;",
             ">;"
         }
     .end annotation
@@ -912,7 +912,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    invoke-virtual {v2, v1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lzk1;
+    invoke-virtual {v2, v1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lsk1;
 
     move-result-object v2
 
@@ -945,14 +945,14 @@
     return-object v0
 .end method
 
-.method public getParticipantRoomId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Loq6;Loq6;)V
+.method public getParticipantRoomId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnq6;Lnq6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Loq6;",
-            "Loq6;",
+            "Lnq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -987,14 +987,14 @@
 
     invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p3, p2}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_0
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipantRoomId(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lkte;
+    invoke-virtual {v1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipantRoomId(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lnue;
 
     move-result-object v0
 
@@ -1018,87 +1018,87 @@
 
     invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p3, p2}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void
 
     :cond_2
-    invoke-interface {p2, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public getRoomParticipants(Lkte;Loq6;Loq6;)V
+.method public getRoomParticipants(Lnue;Lnq6;Lnq6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkte;",
-            "Loq6;",
-            "Loq6;",
+            "Lnue;",
+            "Lnq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 
-    instance-of v0, p1, Lite;
+    instance-of v0, p1, Llue;
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->getMainCallParticipantIds(Loq6;Loq6;)V
+    invoke-direct {p0, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->getMainCallParticipantIds(Lnq6;Lnq6;)V
 
     return-void
 
     :cond_0
-    instance-of v0, p1, Ljte;
+    instance-of v0, p1, Lmue;
 
     if-eqz v0, :cond_1
 
     move-object v0, p1
 
-    check-cast v0, Ljte;
+    check-cast v0, Lmue;
 
-    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->getRoomParticipantIds(Ljte;)Ljava/util/Collection;
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->getRoomParticipantIds(Lmue;)Ljava/util/Collection;
 
     move-result-object v0
 
     new-instance v1, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl$getRoomParticipants$1;
 
-    invoke-direct {v1, p2, p1, p0, v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl$getRoomParticipants$1;-><init>(Loq6;Lkte;Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;Ljava/util/Collection;)V
+    invoke-direct {v1, p2, p1, p0, v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl$getRoomParticipants$1;-><init>(Lnq6;Lnue;Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;Ljava/util/Collection;)V
 
-    invoke-direct {p0, v0, v1, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveParticipantIds(Ljava/util/Collection;Lmq6;Loq6;)V
+    invoke-direct {p0, v0, v1, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveParticipantIds(Ljava/util/Collection;Llq6;Lnq6;)V
 
     :cond_1
     return-void
 .end method
 
-.method public final resolveInternalIdByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;Loq6;Loq6;)V
+.method public final resolveInternalIdByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnq6;Lnq6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Loq6;",
-            "Loq6;",
+            "Lnq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->idMappingResolver:Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;
 
-    new-instance v1, Lws4;
+    new-instance v1, Lxs4;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, v2, p1, p2, p3}, Lws4;-><init>(ILjava/io/Serializable;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, p2, p3, p1, v2}, Lxs4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/io/Serializable;I)V
 
-    new-instance p2, Llte;
+    new-instance p2, Loue;
 
-    const/4 v2, 0x3
+    const/4 v2, 0x4
 
-    invoke-direct {p2, p3, v2, p1}, Llte;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, p3, v2, p1}, Loue;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-interface {v0, p1, v1, p2}, Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvx3;Ljava/lang/Runnable;)V
+    invoke-interface {v0, p1, v1, p2}, Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lby3;Ljava/lang/Runnable;)V
 
     return-void
 .end method

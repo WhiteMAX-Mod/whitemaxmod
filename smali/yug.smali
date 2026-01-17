@@ -1,115 +1,85 @@
 .class public final Lyug;
-.super Lb5g;
+.super Lxug;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lgvg;
-
-.field public o:I
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(Lgvg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lyug;->Y:Lgvg;
+    iput p1, p0, Lyug;->d:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Lxug;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final next()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Lidc;
+    iget v0, p0, Lyug;->d:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lyug;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lxug;->c:I
 
-    move-result-object p1
+    add-int/lit8 v1, v0, 0x2
 
-    check-cast p1, Lyug;
+    iput v1, p0, Lxug;->c:I
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-object v1, p0, Lxug;->a:[Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lyug;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    add-int/lit8 v0, v0, 0x1
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lyug;
-
-    iget-object v1, p0, Lyug;->Y:Lgvg;
-
-    invoke-direct {v0, v1, p2}, Lyug;-><init>(Lgvg;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lyug;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lyug;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyug;->X:Ljava/lang/Object;
-
-    check-cast p1, Lidc;
-
-    iput v1, p0, Lyug;->o:I
-
-    iget-object v0, p0, Lyug;->Y:Lgvg;
-
-    invoke-static {v0, p1, p0}, Lgvg;->a(Lgvg;Lgdc;Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
+    aget-object v0, v1, v0
 
     return-object v0
 
-    :cond_2
-    return-object p1
+    :pswitch_0
+    iget v0, p0, Lxug;->c:I
+
+    add-int/lit8 v1, v0, 0x2
+
+    iput v1, p0, Lxug;->c:I
+
+    iget-object v1, p0, Lxug;->a:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :pswitch_1
+    iget v0, p0, Lxug;->c:I
+
+    add-int/lit8 v1, v0, 0x2
+
+    iput v1, p0, Lxug;->c:I
+
+    new-instance v1, Lqr8;
+
+    iget-object v2, p0, Lxug;->a:[Ljava/lang/Object;
+
+    aget-object v3, v2, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    aget-object v0, v2, v0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v3, v2, v0}, Lqr8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

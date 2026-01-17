@@ -1,94 +1,118 @@
-.class public abstract Lzli;
-.super Lrli;
+.class public final synthetic Lzli;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/my/tracker/core/utils/Consumer;
 
 
 # instance fields
-.field private fragmentSource:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field private height:I
+.field public final synthetic b:Lcom/my/tracker/core/a;
 
-.field public final id:I
+.field public final synthetic c:J
 
-.field private width:I
+.field public final synthetic d:J
+
+.field public final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Lcom/my/tracker/core/a;Ljava/lang/Object;JJI)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lbni;-><init>(Ljava/lang/String;)V
+    iput p7, p0, Lzli;->a:I
 
-    iput-object p1, p0, Lzli;->fragmentSource:Ljava/lang/String;
+    iput-object p1, p0, Lzli;->b:Lcom/my/tracker/core/a;
 
-    iput p2, p0, Lzli;->id:I
+    iput-object p2, p0, Lzli;->e:Ljava/lang/Object;
+
+    iput-wide p3, p0, Lzli;->c:J
+
+    iput-wide p5, p0, Lzli;->d:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getHeight()I
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 8
 
-    iget v0, p0, Lzli;->height:I
+    iget v0, p0, Lzli;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public getSource()Ljava/lang/String;
-    .locals 1
+    iget-object v0, p0, Lzli;->e:Ljava/lang/Object;
 
-    iget-object v0, p0, Lzli;->fragmentSource:Ljava/lang/String;
+    move-object v2, v0
 
-    return-object v0
-.end method
+    check-cast v2, Ljava/lang/String;
 
-.method public getTarget()I
-    .locals 1
+    iget-wide v5, p0, Lzli;->d:J
 
-    const/16 v0, 0xde1
+    move-object v7, p1
 
-    return v0
-.end method
+    check-cast v7, Lcom/my/tracker/core/EngineCore;
 
-.method public final getWidth()I
-    .locals 1
+    iget-object v1, p0, Lzli;->b:Lcom/my/tracker/core/a;
 
-    iget v0, p0, Lzli;->width:I
+    iget-wide v3, p0, Lzli;->c:J
 
-    return v0
-.end method
-
-.method public final setSize(II)V
-    .locals 1
-
-    iget v0, p0, Lzli;->width:I
-
-    if-ne p1, v0, :cond_1
-
-    iget v0, p0, Lzli;->height:I
-
-    if-eq p2, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    iput p2, p0, Lzli;->height:I
-
-    iput p1, p0, Lzli;->width:I
-
-    invoke-virtual {p0, p1, p2}, Lzli;->updateLocations(II)V
+    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->g(Lcom/my/tracker/core/a;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore;)V
 
     return-void
-.end method
 
-.method public updateLocations(II)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lzli;->e:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Lcom/my/tracker/core/UserInfoState;
+
+    iget-wide v5, p0, Lzli;->d:J
+
+    move-object v7, p1
+
+    check-cast v7, Lcom/my/tracker/core/EngineCore;
+
+    iget-object v1, p0, Lzli;->b:Lcom/my/tracker/core/a;
+
+    iget-wide v3, p0, Lzli;->c:J
+
+    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->f(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;JJLcom/my/tracker/core/EngineCore;)V
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lzli;->e:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    iget-wide v5, p0, Lzli;->d:J
+
+    move-object v7, p1
+
+    check-cast v7, Lcom/my/tracker/core/EngineCore;
+
+    iget-object v1, p0, Lzli;->b:Lcom/my/tracker/core/a;
+
+    iget-wide v3, p0, Lzli;->c:J
+
+    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->c(Lcom/my/tracker/core/a;Ljava/lang/Boolean;JJLcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -10,10 +10,10 @@
 
 
 # virtual methods
-.method public final b(Lwrg;)V
+.method public final b(Lfsg;)V
     .locals 4
 
-    iget-object p1, p1, Lwrg;->o:Ljava/lang/Object;
+    iget-object p1, p1, Lfsg;->o:Ljava/lang/Object;
 
     check-cast p1, Landroid/app/Notification$Builder;
 

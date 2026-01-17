@@ -1,53 +1,37 @@
-.class public final Loz4;
+.class public abstract Loz4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:J
-
-.field public d:J
-
-.field public e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public h:[I
-
-.field public final i:Ljava/util/TreeMap;
+# static fields
+.field public static volatile a:Lrz6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JIII[ILjava/util/TreeMap;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lg4d;->c:Lg4d;
 
-    iput-object p1, p0, Loz4;->a:Ljava/lang/String;
+    invoke-static {}, Lacj;->a()Lc15;
 
-    iput-object p2, p0, Loz4;->b:Ljava/lang/String;
+    move-result-object v1
 
-    iput-wide p3, p0, Loz4;->c:J
+    new-instance v2, Lyk0;
 
-    const-wide/16 p1, 0x0
+    const/16 v3, 0xc
 
-    iput-wide p1, p0, Loz4;->d:J
+    invoke-direct {v2, v3}, Lyk0;-><init>(I)V
 
-    iput p5, p0, Loz4;->e:I
+    iget-object v0, v0, Lg4d;->a:Lpy;
 
-    iput p6, p0, Loz4;->f:I
+    new-instance v3, Lf4d;
 
-    iput p7, p0, Loz4;->g:I
+    const/4 v4, 0x0
 
-    iput-object p8, p0, Loz4;->h:[I
+    invoke-direct {v3, v4, v2}, Lf4d;-><init>(ILjava/lang/Object;)V
 
-    iput-object p9, p0, Loz4;->i:Ljava/util/TreeMap;
+    invoke-virtual {v0, v1, v3}, Lpy;->a(Ljava/util/concurrent/Executor;Lcxa;)V
 
     return-void
 .end method

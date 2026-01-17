@@ -1,49 +1,39 @@
 .class public final Lczb;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Landroid/app/Application;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Lxzb;
 
-.field public final synthetic o:Ldzb;
+.field public final c:Lox5;
 
 
 # direct methods
-.method public constructor <init>(Ldzb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lczb;->o:Ldzb;
-
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Landroid/app/Application;)V
     .locals 1
 
-    iput-object p1, p0, Lczb;->d:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lczb;->X:I
+    iput-object p1, p0, Lczb;->a:Landroid/app/Application;
 
-    const/high16 v0, -0x80000000
+    new-instance p1, Lxzb;
 
-    or-int/2addr p1, v0
+    sget-object v0, Lyzb;->f:[Ljava/lang/String;
 
-    iput p1, p0, Lczb;->X:I
+    invoke-direct {p1, v0}, Lxzb;-><init>([Ljava/lang/String;)V
 
-    iget-object p1, p0, Lczb;->o:Ldzb;
+    iput-object p1, p0, Lczb;->b:Lxzb;
 
-    const/4 v0, 0x0
+    new-instance p1, Lox5;
 
-    invoke-static {p1, v0, p0}, Ldzb;->k(Ldzb;Lh76;Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x1
 
-    sget-object p1, Lbc4;->a:Lbc4;
+    invoke-direct {p1, v0, p0}, Lox5;-><init>(ILjava/lang/Object;)V
 
-    return-object p1
+    iput-object p1, p0, Lczb;->c:Lox5;
+
+    return-void
 .end method

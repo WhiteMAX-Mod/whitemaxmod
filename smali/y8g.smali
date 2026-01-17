@@ -1,45 +1,66 @@
 .class public final Ly8g;
-.super Lka9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ly8g;->a:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public a:Landroid/os/Message;
 
 
 # virtual methods
-.method public final f(I)V
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    iget-object v0, p0, Ly8g;->a:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v0, Landroid/media/MediaRouter$RouteInfo;
+    iput-object v0, p0, Ly8g;->a:Landroid/os/Message;
 
-    invoke-virtual {v0, p1}, Landroid/media/MediaRouter$RouteInfo;->requestSetVolume(I)V
+    sget-object v0, La9g;->b:Ljava/util/ArrayList;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/16 v2, 0x32
+
+    if-ge v1, v2, :cond_0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
     return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
-.method public final i(I)V
+.method public final b()V
     .locals 1
 
-    iget-object v0, p0, Ly8g;->a:Ljava/lang/Object;
+    iget-object v0, p0, Ly8g;->a:Landroid/os/Message;
 
-    check-cast v0, Landroid/media/MediaRouter$RouteInfo;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, p1}, Landroid/media/MediaRouter$RouteInfo;->requestUpdateVolume(I)V
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    invoke-virtual {p0}, Ly8g;->a()V
 
     return-void
 .end method

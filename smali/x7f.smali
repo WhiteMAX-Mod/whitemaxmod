@@ -3,23 +3,29 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/content/Context;
+# static fields
+.field public static final a:Lvof;
 
-.field public b:Ljava/lang/String;
+.field public static final b:Lyof;
 
-.field public c:[Landroid/content/Intent;
 
-.field public d:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public e:Ljava/lang/String;
+    new-instance v0, Lvof;
 
-.field public f:Landroidx/core/graphics/drawable/IconCompat;
+    const/4 v1, 0x0
 
-.field public g:Lat;
+    invoke-direct {v0, v1}, Lvof;-><init>(I)V
 
-.field public h:Llk8;
+    sput-object v0, Lx7f;->a:Lvof;
 
-.field public i:Z
+    new-instance v0, Lyof;
 
-.field public j:Landroid/os/PersistableBundle;
+    invoke-direct {v0, v1}, Lyof;-><init>(I)V
+
+    sput-object v0, Lx7f;->b:Lyof;
+
+    return-void
+.end method

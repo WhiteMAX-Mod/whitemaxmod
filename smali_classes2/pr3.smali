@@ -1,24 +1,23 @@
 .class public final Lpr3;
-.super Ljava/lang/Object;
+.super Licg;
 .source "SourceFile"
 
-# interfaces
-.implements Lsr3;
 
+# instance fields
+.field public final c:Ljava/lang/String;
 
-# static fields
-.field public static final a:Lpr3;
+.field public final d:Ldbh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ldbh;)V
+    .locals 0
 
-    new-instance v0, Lpr3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpr3;->c:Ljava/lang/String;
 
-    sput-object v0, Lpr3;->a:Lpr3;
+    iput-object p2, p0, Lpr3;->d:Ldbh;
 
     return-void
 .end method
@@ -26,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -35,30 +34,104 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lpr3;
+    instance-of v1, p1, Lpr3;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lpr3;
+
+    iget-object v1, p0, Lpr3;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lpr3;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lpr3;->d:Ldbh;
+
+    iget-object p1, p1, Lpr3;->d:Ldbh;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    const v0, 0x68d954d6
+    iget-object v0, p0, Lpr3;->c:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lpr3;->d:Ldbh;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ldbh;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    const-string v0, "SafeModeEnabled"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Response(hash="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpr3;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", userSettings="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpr3;->d:Ldbh;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

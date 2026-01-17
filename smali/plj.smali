@@ -1,138 +1,55 @@
-.class public abstract Lplj;
+.class public final Lplj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Llkj;
+
+.field public final b:Lcqj;
+
+.field public final c:Llxi;
+
+.field public final d:Llxi;
+
+.field public final e:Lhkj;
+
+
 # direct methods
-.method public static final a(Lkotlin/coroutines/Continuation;)V
-    .locals 4
+.method public synthetic constructor <init>(Lt07;)V
+    .locals 1
 
-    sget-boolean v0, Luk4;->a:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Ltk4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iget-object v0, p1, Lt07;->a:Ljava/lang/Object;
 
-    sget-object v1, Luk4;->c:Ltk4;
+    check-cast v0, Llkj;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    iput-object v0, p0, Lplj;->a:Llkj;
 
-    move-result v2
+    iget-object v0, p1, Lt07;->b:Ljava/lang/Object;
 
-    if-lez v2, :cond_5
+    check-cast v0, Lcqj;
 
-    sget-boolean v2, Luk4;->a:Z
+    iput-object v0, p0, Lplj;->b:Lcqj;
 
-    if-eqz v2, :cond_0
+    iget-object v0, p1, Lt07;->c:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lkotlin/coroutines/Continuation;->getContext()Lrb4;
+    check-cast v0, Llxi;
 
-    move-result-object v2
+    iput-object v0, p0, Lplj;->c:Llxi;
 
-    sget-object v3, Lwg5;->a:Lwg5;
+    iget-object v0, p1, Lt07;->d:Ljava/lang/Object;
 
-    if-ne v2, v3, :cond_0
+    check-cast v0, Llxi;
 
-    goto :goto_2
+    iput-object v0, p0, Lplj;->d:Llxi;
 
-    :cond_0
-    instance-of v2, p0, Lcc4;
+    iget-object p1, p1, Lt07;->e:Ljava/lang/Object;
 
-    if-eqz v2, :cond_1
+    check-cast p1, Lhkj;
 
-    check-cast p0, Lcc4;
+    iput-object p1, p0, Lplj;->e:Lhkj;
 
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_0
-    if-nez p0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
-
-    move-result v0
-
-    if-lez v0, :cond_5
-
-    sget-object v0, Luk4;->b:Lfr3;
-
-    invoke-virtual {v0, p0}, Lfr3;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_4
-
-    :goto_1
-    invoke-interface {p0}, Lcc4;->getCallerFrame()Lcc4;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_2
     return-void
-
-    :cond_4
-    new-instance p0, Ljava/lang/ClassCastException;
-
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p0
-
-    :cond_5
-    return-void
-.end method
-
-.method public static final b(Lc98;Lc88;Lcr6;Lb5g;)Ljava/lang/Object;
-    .locals 2
-
-    sget-object v0, Lc88;->b:Lc88;
-
-    if-eq p1, v0, :cond_2
-
-    iget-object v0, p0, Lc98;->d:Lc88;
-
-    sget-object v1, Lc88;->a:Lc88;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lqvd;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lqvd;-><init>(Lc98;Lc88;Lcr6;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, p3}, Lmkj;->c(Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lbc4;->a:Lbc4;
-
-    if-ne p0, p1, :cond_1
-
-    return-object p0
-
-    :cond_1
-    :goto_0
-    sget-object p0, Lv2h;->a:Lv2h;
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "repeatOnLifecycle cannot start work with the INITIALIZED lifecycle state."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method

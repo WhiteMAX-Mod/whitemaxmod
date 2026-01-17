@@ -4,20 +4,18 @@
 
 
 # static fields
-.field public static final a:Lisd;
+.field public static final a:Ltw7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lisd;
+    new-instance v0, Ltw7;
 
-    const-string v1, "[\\x00-\\x20]*[+-]?(NaN|Infinity|((((\\p{Digit}+)(\\.)?((\\p{Digit}+)?)([eE][+-]?(\\p{Digit}+))?)|(\\.((\\p{Digit}+))([eE][+-]?(\\p{Digit}+))?)|(((0[xX](\\p{XDigit}+)(\\.)?)|(0[xX](\\p{XDigit}+)?(\\.)(\\p{XDigit}+)))[pP][+-]?(\\p{Digit}+)))[fFdD]?))[\\x00-\\x20]*"
+    invoke-direct {v0}, Ltw7;-><init>()V
 
-    invoke-direct {v0, v1}, Lisd;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lxbe;->a:Lisd;
+    sput-object v0, Lxbe;->a:Ltw7;
 
     return-void
 .end method

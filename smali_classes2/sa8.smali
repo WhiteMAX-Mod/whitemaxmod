@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnb8;
+.implements Lxa8;
 
 
 # static fields
@@ -30,11 +30,11 @@
 
     sput-object v0, Lsa8;->a:Lsa8;
 
-    new-instance v0, Ly58;
+    new-instance v0, Lj58;
 
-    const/4 v1, 0x4
+    const/16 v1, 0x14
 
-    invoke-direct {v0, v1}, Ly58;-><init>(I)V
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
 
     sput-object v0, Lsa8;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -76,7 +76,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x1269e0f3
+    const v0, 0x6f539772
 
     return v0
 .end method
@@ -84,7 +84,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Error"
+    const-string v0, "ShowContactRemoved"
 
     return-object v0
 .end method

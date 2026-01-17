@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le74;
+.implements Li74;
 
 
 # static fields
@@ -116,7 +116,7 @@
 
 
 # virtual methods
-.method public final b(Lg74;)Lto4;
+.method public final b(Lxz0;)Lto4;
     .locals 7
 
     new-instance v0, Ljava/util/HashMap;
@@ -127,7 +127,9 @@
 
     new-instance v2, Ljava/util/ArrayList;
 
-    iget-object v3, p1, Lg74;->b:Ljava/util/ArrayList;
+    iget-object v3, p1, Lxz0;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/ArrayList;
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
@@ -157,7 +159,9 @@
     :cond_0
     new-instance v2, Ljava/util/HashMap;
 
-    iget-object p1, p1, Lg74;->a:Ljava/util/HashMap;
+    iget-object p1, p1, Lxz0;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/HashMap;
 
     invoke-direct {v2, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
@@ -272,7 +276,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    sget-object v4, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+    sget-object v4, Lkd2;->c:Ljava/nio/charset/Charset;
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 

@@ -1,26 +1,34 @@
 .class public final Lenh;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public X:Lspf;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public Y:I
+
+.field public final synthetic Z:Llnh;
+
+.field public o:Landroid/graphics/Bitmap;
+
+.field public final synthetic t0:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+.method public constructor <init>(Llnh;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lenh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iput-object p1, p0, Lenh;->Z:Llnh;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lenh;->t0:Ljava/util/List;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +38,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lzb4;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lenh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,210 +48,122 @@
 
     check-cast p1, Lenh;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lenh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Lenh;
+    new-instance p1, Lenh;
 
-    iget-object v1, p0, Lenh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iget-object v0, p0, Lenh;->Z:Llnh;
 
-    invoke-direct {v0, p2, v1}, Lenh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    iget-object v1, p0, Lenh;->t0:Ljava/util/List;
 
-    iput-object p1, v0, Lenh;->o:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Lenh;-><init>(Llnh;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    sget-object v0, Lac4;->a:Lac4;
 
-    iget-object p1, p0, Lenh;->o:Ljava/lang/Object;
+    iget v1, p0, Lenh;->Y:I
 
-    check-cast p1, Lpgc;
+    const/4 v2, 0x1
 
-    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lp38;
+    if-eqz v1, :cond_1
 
-    iget-object v0, p0, Lenh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    if-ne v1, v2, :cond_0
 
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0()Lrmh;
+    iget-object v0, p0, Lenh;->X:Lspf;
 
-    move-result-object v1
+    iget-object v1, p0, Lenh;->o:Landroid/graphics/Bitmap;
 
-    iget-object v1, v1, Lrmh;->b:Laih;
-
-    check-cast v1, Lllh;
-
-    iget-object v1, v1, Lllh;->E:Lpkd;
-
-    iget-object v1, v1, Lpkd;->a:Laof;
-
-    invoke-interface {v1}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    if-nez p1, :cond_0
-
-    const/4 v1, -0x1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lumh;->$EnumSwitchMapping$0:[I
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result v2
-
-    aget v1, v1, v2
-
-    :goto_0
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eq v1, v3, :cond_3
-
-    const/4 v4, 0x2
-
-    if-ne v1, v4, :cond_2
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->B0()Leih;
-
-    move-result-object v1
-
-    iget-object v4, v1, Leih;->d:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    iget-object v5, v1, Leih;->c:Landroid/view/ViewPropertyAnimator;
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5}, Landroid/view/ViewPropertyAnimator;->cancel()V
-
-    :cond_1
-    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v4
-
-    const-wide/16 v5, 0xc8
-
-    invoke-virtual {v4, v5, v6}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v4
-
-    new-instance v5, Lcih;
-
-    invoke-direct {v5, v1, v2}, Lcih;-><init>(Leih;I)V
-
-    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->withStartAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v4
-
-    new-instance v5, Lcih;
-
-    invoke-direct {v5, v1, v3}, Lcih;-><init>(Leih;I)V
-
-    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v4
-
-    iput-object v4, v1, Leih;->c:Landroid/view/ViewPropertyAnimator;
-
-    if-eqz v4, :cond_4
-
-    invoke-virtual {v4}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    goto :goto_1
-
-    :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lenh;->Z:Llnh;
+
+    iget-object p1, p1, Llnh;->w0:Lspf;
+
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v1, p1
+
+    check-cast v1, Landroid/graphics/Bitmap;
+
+    iget-object p1, p0, Lenh;->Z:Llnh;
+
+    iget-object v3, p1, Llnh;->w0:Lspf;
+
+    iget-object p1, p1, Llnh;->o:Ln8g;
+
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lzjh;
+
+    iget-object v4, p0, Lenh;->t0:Ljava/util/List;
+
+    iget-object v5, p0, Lenh;->Z:Llnh;
+
+    iget v5, v5, Llnh;->u0:I
+
+    iget-object v6, p0, Lenh;->Z:Llnh;
+
+    iget v6, v6, Llnh;->v0:I
+
+    iput-object v1, p0, Lenh;->o:Landroid/graphics/Bitmap;
+
+    iput-object v3, p0, Lenh;->X:Lspf;
+
+    iput v2, p0, Lenh;->Y:I
+
+    invoke-virtual {p1, v4, v5, v6, p0}, Lzjh;->c(Ljava/util/List;IILo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    move-object v0, v3
+
+    :goto_0
+    invoke-interface {v0, p1}, Lmfa;->setValue(Ljava/lang/Object;)V
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+
     :cond_3
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->B0()Leih;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0()Lrmh;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lrmh;->b:Laih;
-
-    check-cast v4, Lllh;
-
-    iget-object v4, v4, Lllh;->q:Lhof;
-
-    invoke-virtual {v4}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lalh;
-
-    iget-object v4, v4, Lalh;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v4}, Leih;->setPlaceholder(Ljava/lang/String;)V
-
-    :cond_4
-    :goto_1
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0()Lrmh;
-
-    move-result-object v0
-
-    sget-object v1, Lpgc;->b:Lpgc;
-
-    if-ne p1, v1, :cond_5
-
-    move v2, v3
-
-    :cond_5
-    iget-object p1, v0, Lrmh;->b:Laih;
-
-    check-cast p1, Lllh;
-
-    iget-object p1, p1, Lllh;->D:Lhof;
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_6
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

@@ -6,7 +6,7 @@
 # instance fields
 .field public final a:Landroid/graphics/drawable/Drawable;
 
-.field public final b:Lt3b;
+.field public final b:Lc4b;
 
 .field public final c:Landroid/graphics/Paint;
 
@@ -14,26 +14,26 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lt3b;Landroid/content/Context;Loq6;Loq6;)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lc4b;Landroid/content/Context;Lnq6;Lnq6;)V
     .locals 2
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     iput-object p1, p0, Lxe0;->a:Landroid/graphics/drawable/Drawable;
 
-    iput-object p2, p0, Lxe0;->b:Lt3b;
+    iput-object p2, p0, Lxe0;->b:Lc4b;
 
-    sget-object v0, Ldc3;->s0:Lole;
+    sget-object v0, Lpc3;->t0:Lkme;
 
-    invoke-virtual {v0, p3}, Lole;->i(Landroid/content/Context;)Ldc3;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ldc3;->k()Lplb;
+    invoke-virtual {v0, p3}, Lkme;->n(Landroid/content/Context;)Lpc3;
 
     move-result-object v1
 
-    invoke-interface {p4, v1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lpc3;->j()Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {p4, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p4
 
@@ -43,7 +43,7 @@
 
     move-result p4
 
-    invoke-static {p1, p4}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, p4}, Lv75;->g(Landroid/graphics/drawable/Drawable;I)V
 
     new-instance p1, Landroid/graphics/Paint;
 
@@ -53,15 +53,15 @@
 
     invoke-virtual {p1, p4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    invoke-virtual {v0, p3}, Lole;->i(Landroid/content/Context;)Ldc3;
+    invoke-virtual {v0, p3}, Lkme;->n(Landroid/content/Context;)Lpc3;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Ldc3;->k()Lplb;
+    invoke-virtual {p3}, Lpc3;->j()Lzlb;
 
     move-result-object p3
 
-    invoke-interface {p5, p3}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, p3}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p3
 
@@ -77,23 +77,23 @@
 
     new-instance p1, Lj;
 
-    const/16 p3, 0x10
+    const/16 p3, 0x13
 
     invoke-direct {p1, p3}, Lj;-><init>(I)V
 
     const/4 p3, 0x3
 
-    invoke-static {p3, p1}, Lv2j;->c(ILmq6;)Ld68;
+    invoke-static {p3, p1}, Le8;->b(ILlq6;)Lo58;
 
     move-result-object p1
 
     iput-object p1, p0, Lxe0;->d:Ljava/lang/Object;
 
-    instance-of p2, p2, Ls3b;
+    instance-of p2, p2, Lb4b;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -103,7 +103,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lf4f;->a(Landroid/graphics/Path;Landroid/graphics/Rect;)V
+    invoke-static {p1, p2}, Lg5f;->a(Landroid/graphics/Path;Landroid/graphics/Rect;)V
 
     :cond_0
     return-void
@@ -134,9 +134,9 @@
 
     move-result v0
 
-    iget-object v1, p0, Lxe0;->b:Lt3b;
+    iget-object v1, p0, Lxe0;->b:Lc4b;
 
-    instance-of v2, v1, Lq3b;
+    instance-of v2, v1, Lz3b;
 
     iget-object v3, p0, Lxe0;->c:Landroid/graphics/Paint;
 
@@ -177,13 +177,13 @@
     goto :goto_0
 
     :cond_0
-    instance-of v2, v1, Ls3b;
+    instance-of v2, v1, Lb4b;
 
     if-eqz v2, :cond_1
 
     iget-object v1, p0, Lxe0;->d:Ljava/lang/Object;
 
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -194,18 +194,18 @@
     goto :goto_0
 
     :cond_1
-    sget-object v2, Lr3b;->a:Lr3b;
+    sget-object v2, La4b;->a:La4b;
 
-    invoke-static {v1, v2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     :goto_0
-    sget v1, La4b;->L0:I
+    sget v1, Lj4b;->M0:I
 
-    invoke-static {v0}, Lcdj;->a(I)I
+    invoke-static {v0}, Lvdj;->a(I)I
 
     move-result v0
 
@@ -268,21 +268,21 @@
 .method public final onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
 
-    iget-object v0, p0, Lxe0;->b:Lt3b;
+    iget-object v0, p0, Lxe0;->b:Lc4b;
 
-    instance-of v0, v0, Ls3b;
+    instance-of v0, v0, Lb4b;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lxe0;->d:Ljava/lang/Object;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/Path;
 
-    invoke-static {v0, p1}, Lf4f;->a(Landroid/graphics/Path;Landroid/graphics/Rect;)V
+    invoke-static {v0, p1}, Lg5f;->a(Landroid/graphics/Path;Landroid/graphics/Rect;)V
 
     :cond_0
     return-void

@@ -4,20 +4,16 @@
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
+.field public final a:[I
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>([I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lw17;->a:I
-
-    iput p2, p0, Lw17;->b:I
+    iput-object p1, p0, Lw17;->a:[I
 
     return-void
 .end method
@@ -25,85 +21,68 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 3
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lw17;
+    instance-of v1, p1, Lw17;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lw17;
 
-    iget v0, p0, Lw17;->a:I
+    iget-object v1, p0, Lw17;->a:[I
 
-    iget v1, p1, Lw17;->a:I
+    iget-object p1, p1, Lw17;->a:[I
 
-    if-eq v0, v1, :cond_2
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    iget v0, p0, Lw17;->b:I
-
-    iget p1, p1, Lw17;->b:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget v0, p0, Lw17;->a:I
+    iget-object v0, p0, Lw17;->a:[I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lw17;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, ", transparent="
+    iget-object v0, p0, Lw17;->a:[I
 
-    const-string v1, ")"
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    const-string v2, "GradientsLoadingIconPrimaryColors(filled="
+    move-result-object v0
 
-    iget v3, p0, Lw17;->a:I
+    const-string v1, "GradientsLocalColors(promoTextGradient="
 
-    iget v4, p0, Lw17;->b:I
+    const-string v2, ")"
 
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

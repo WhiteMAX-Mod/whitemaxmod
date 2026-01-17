@@ -1,66 +1,35 @@
-.class public final Lge5;
+.class public interface abstract Lge5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:D
-
-.field public volatile b:D
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide v0, 0x3fd3333333333333L    # 0.3
-
-    .line 5
-    iput-wide v0, p0, Lge5;->a:D
-
-    return-void
-.end method
-
-.method public constructor <init>(D)V
-    .locals 2
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
-
-    .line 2
-    iput-wide v0, p0, Lge5;->a:D
-
-    .line 3
-    iput-wide p1, p0, Lge5;->b:D
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a(D)V
-    .locals 6
+.method public abstract b()Z
+.end method
 
-    iget-wide v0, p0, Lge5;->b:D
+.method public abstract c()Landroid/graphics/Rect;
+.end method
 
-    iget-wide v2, p0, Lge5;->a:D
+.method public abstract d(Lzlb;)V
+.end method
 
-    mul-double/2addr p1, v2
+.method public abstract e(Ljava/lang/String;)F
+.end method
 
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+.method public abstract getAsView()Landroid/view/View;
+.end method
 
-    sub-double/2addr v4, v2
+.method public abstract getLineHeight()I
+.end method
 
-    mul-double/2addr v4, v0
+.method public abstract getSpannableText()Ljava/lang/CharSequence;
+.end method
 
-    add-double/2addr v4, p1
+.method public abstract getTextValue()Ljava/lang/CharSequence;
+.end method
 
-    iput-wide v4, p0, Lge5;->b:D
+.method public abstract setTextColor(I)V
+.end method
 
-    return-void
+.method public abstract setTextValue(Ljava/lang/CharSequence;)V
 .end method

@@ -3,30 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwx3;
+.implements Ljava/util/function/BiConsumer;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lch2;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic c:J
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lch2;Ljava/lang/Object;JI)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    iput p5, p0, Lvg2;->a:I
+    iput p2, p0, Lvg2;->a:I
 
-    iput-object p1, p0, Lvg2;->b:Lch2;
+    iput-object p1, p0, Lvg2;->c:Ljava/lang/Object;
 
-    iput-object p2, p0, Lvg2;->d:Ljava/lang/Object;
-
-    iput-wide p3, p0, Lvg2;->c:J
+    iput-object p3, p0, Lvg2;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,98 +31,111 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 4
 
     iget v0, p0, Lvg2;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvg2;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lvg2;->c:Ljava/lang/Object;
 
-    check-cast v0, Lz9b;
+    check-cast v0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
-    check-cast p1, Lhh2;
+    iget-object v1, p0, Lvg2;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lvg2;->b:Lch2;
+    check-cast v1, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Ljava/lang/Long;
 
-    iput-object v0, p1, Lhh2;->d0:Lz9b;
+    check-cast p2, Ljava/lang/String;
 
-    iget-wide v2, p0, Lvg2;->c:J
-
-    iput-wide v2, p1, Lhh2;->e0:J
-
-    iget-object v0, v1, Lch2;->o:Lpfc;
-
-    iget-object v0, v0, Lpfc;->a:Ldj8;
-
-    invoke-virtual {v0}, Lcfe;->j()J
-
-    move-result-wide v0
-
-    iput-wide v0, p1, Lhh2;->f0:J
+    invoke-static {v0, v1, p1, p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->b(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Ljava/lang/Long;Ljava/lang/String;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lvg2;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lvg2;->c:Ljava/lang/Object;
 
-    check-cast v0, Ldn9;
+    check-cast v0, Ljava/util/Collection;
 
-    check-cast p1, Lhh2;
+    iget-object v1, p0, Lvg2;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lvg2;->b:Lch2;
+    check-cast v1, Lys;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Ljava/lang/Long;
 
-    if-nez v0, :cond_0
+    check-cast p2, Ley3;
 
-    const-wide/16 v0, 0x0
+    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    iput-wide v0, p1, Lhh2;->i0:J
+    move-result v0
 
-    goto :goto_0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1, p1, p2}, Ladf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    iget-wide v2, p1, Lhh2;->i0:J
+    return-void
 
-    iget-object v1, v1, Lch2;->t:Lg35;
+    :pswitch_1
+    iget-object v0, p0, Lvg2;->c:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lg35;->get()Ljava/lang/Object;
+    check-cast v0, Ljava/util/Collection;
 
-    move-result-object v1
+    iget-object v1, p0, Lvg2;->b:Ljava/lang/Object;
 
-    check-cast v1, Lbn9;
+    check-cast v1, Ljava/util/ArrayList;
 
-    iget-wide v4, p0, Lvg2;->c:J
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-virtual {v1, v4, v5, v2, v3}, Lbn9;->h(JJ)Ldn9;
+    check-cast p2, Lnd2;
 
-    move-result-object v1
+    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_1
+    move-result p1
 
-    iget-wide v2, v0, Ldn9;->c:J
+    if-eqz p1, :cond_1
 
-    iget-wide v4, v1, Ldn9;->c:J
-
-    cmp-long v1, v2, v4
-
-    if-lez v1, :cond_2
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    iget-wide v0, v0, Ldn9;->b:J
+    return-void
 
-    iput-wide v0, p1, Lhh2;->i0:J
+    :pswitch_2
+    iget-object v0, p0, Lvg2;->c:Ljava/lang/Object;
+
+    check-cast v0, Lvea;
+
+    iget-object v1, p0, Lvg2;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    check-cast p1, Ljava/lang/Long;
+
+    check-cast p2, Lnd2;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v2, v3}, Lvea;->d(J)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    :goto_0
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

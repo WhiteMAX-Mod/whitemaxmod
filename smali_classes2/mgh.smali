@@ -2,165 +2,181 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lm39;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Ljava/lang/String;
+.field public final b:I
 
-.field public final c:Ljava/lang/String;
+.field public final c:I
 
 .field public final d:I
 
 .field public final e:I
 
-.field public final f:I
-
-.field public final g:F
-
-.field public final h:Lqo6;
-
-.field public final i:Lz7g;
-
-.field public final j:Lz7g;
-
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIFLqo6;)V
+.method public constructor <init>(IIIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmgh;->a:Ljava/lang/String;
+    iput p1, p0, Lmgh;->a:I
 
-    iput-object p2, p0, Lmgh;->b:Ljava/lang/String;
+    iput p2, p0, Lmgh;->b:I
 
-    iput-object p3, p0, Lmgh;->c:Ljava/lang/String;
+    iput p3, p0, Lmgh;->c:I
 
     iput p4, p0, Lmgh;->d:I
 
     iput p5, p0, Lmgh;->e:I
-
-    iput p6, p0, Lmgh;->f:I
-
-    iput p7, p0, Lmgh;->g:F
-
-    iput-object p8, p0, Lmgh;->h:Lqo6;
-
-    new-instance p1, Llgh;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p0, p2}, Llgh;-><init>(Lmgh;I)V
-
-    new-instance p2, Lz7g;
-
-    invoke-direct {p2, p1}, Lz7g;-><init>(Lmq6;)V
-
-    iput-object p2, p0, Lmgh;->i:Lz7g;
-
-    new-instance p1, Llgh;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p0, p2}, Llgh;-><init>(Lmgh;I)V
-
-    new-instance p2, Lz7g;
-
-    invoke-direct {p2, p1}, Lz7g;-><init>(Lmq6;)V
-
-    iput-object p2, p0, Lmgh;->j:Lz7g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lmgh;->b:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    return-object v0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lmgh;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lmgh;
+
+    iget v1, p0, Lmgh;->a:I
+
+    iget v3, p1, Lmgh;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lmgh;->b:I
+
+    iget v3, p1, Lmgh;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lmgh;->c:I
+
+    iget v3, p1, Lmgh;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lmgh;->d:I
+
+    iget v3, p1, Lmgh;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lmgh;->e:I
+
+    iget p1, p1, Lmgh;->e:I
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
-.method public final b()Lqo6;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Lmgh;->i:Lz7g;
+    iget v0, p0, Lmgh;->a:I
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Lqo6;
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
+    iget v1, p0, Lmgh;->b:I
+
+    invoke-static {v1, v0}, Laaj;->a(II)I
+
+    move-result v0
+
+    iget v1, p0, Lmgh;->c:I
+
+    invoke-static {v1, v0}, Laaj;->a(II)I
+
+    move-result v0
+
+    iget v1, p0, Lmgh;->d:I
+
+    invoke-static {v1, v0}, Laaj;->a(II)I
+
+    move-result v0
+
+    iget v1, p0, Lmgh;->e:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", sampleMimeType: "
+    const-string v0, ", landscapeHeight="
 
-    const-string v1, ", codecs: "
+    const-string v1, ", portraitWidth="
 
-    const-string v2, "VideoFormat(id: "
+    const-string v2, "VideoDimension(landscapeWidth="
 
-    iget-object v3, p0, Lmgh;->a:Ljava/lang/String;
+    iget v3, p0, Lmgh;->a:I
 
-    iget-object v4, p0, Lmgh;->b:Ljava/lang/String;
+    iget v4, p0, Lmgh;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lmgh;->c:Ljava/lang/String;
+    const-string v1, ", portraitHeight="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ", fps="
 
-    const-string v1, ", bitrate: "
+    iget v3, p0, Lmgh;->c:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v4, p0, Lmgh;->d:I
 
-    iget v1, p0, Lmgh;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", width: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", height: "
-
-    const-string v2, ", frameRate: "
-
-    iget v3, p0, Lmgh;->e:I
-
-    iget v4, p0, Lmgh;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget v1, p0, Lmgh;->g:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", serverChooseFrameSize: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmgh;->h:Lqo6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lmgh;->e:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

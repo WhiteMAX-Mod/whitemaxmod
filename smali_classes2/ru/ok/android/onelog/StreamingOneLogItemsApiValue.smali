@@ -1,5 +1,5 @@
 .class Lru/ok/android/onelog/StreamingOneLogItemsApiValue;
-.super Lxu0;
+.super Lqu0;
 .source "SourceFile"
 
 
@@ -20,7 +20,7 @@
 
 
 # virtual methods
-.method public write(Lx28;)V
+.method public write(Li28;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -29,7 +29,7 @@
         }
     .end annotation
 
-    invoke-interface {p1}, Lx28;->r()V
+    invoke-interface {p1}, Li28;->t()V
 
     :try_start_0
     new-instance v0, Ljava/io/InputStreamReader;
@@ -47,7 +47,7 @@
     .catch Lru/ok/android/api/json/JsonSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    invoke-interface {p1, v0}, Lx28;->Q(Ljava/io/InputStreamReader;)V
+    invoke-interface {p1, v0}, Li28;->T(Ljava/io/InputStreamReader;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -56,7 +56,7 @@
     :try_end_2
     .catch Lru/ok/android/api/json/JsonSyntaxException; {:try_start_2 .. :try_end_2} :catch_0
 
-    invoke-interface {p1}, Lx28;->q()V
+    invoke-interface {p1}, Li28;->r()V
 
     return-void
 

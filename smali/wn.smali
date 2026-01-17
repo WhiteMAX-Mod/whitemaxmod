@@ -1,204 +1,114 @@
-.class public abstract Lwn;
+.class public final Lwn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
-# static fields
-.field public static X:Z
 
-.field public static final Y:Lat;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final Z:Ljava/lang/Object;
+.field public final b:Ljava/lang/Object;
 
-.field public static final a:Lvn;
+.field public final c:Ljava/lang/Object;
 
-.field public static final b:I
+.field public final d:Ljava/lang/Object;
 
-.field public static c:Lkj8;
-
-.field public static d:Lkj8;
-
-.field public static o:Ljava/lang/Boolean;
-
-.field public static final s0:Ljava/lang/Object;
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lvn;
-
-    new-instance v1, La15;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2}, La15;-><init>(I)V
-
-    invoke-direct {v0, v1}, Lvn;-><init>(La15;)V
-
-    sput-object v0, Lwn;->a:Lvn;
-
-    const/16 v0, -0x64
-
-    sput v0, Lwn;->b:I
+.method public constructor <init>(Lc15;)V
+    .locals 1
 
     const/4 v0, 0x0
 
-    sput-object v0, Lwn;->c:Lkj8;
+    iput v0, p0, Lwn;->a:I
 
-    sput-object v0, Lwn;->d:Lkj8;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lwn;->o:Ljava/lang/Boolean;
-
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lwn;->X:Z
-
-    new-instance v1, Lat;
-
-    invoke-direct {v1, v0}, Lat;-><init>(I)V
-
-    sput-object v1, Lwn;->Y:Lat;
-
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lwn;->Z:Ljava/lang/Object;
+    iput-object v0, p0, Lwn;->b:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/Object;
+    .line 4
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    sput-object v0, Lwn;->s0:Ljava/lang/Object;
+    iput-object v0, p0, Lwn;->c:Ljava/lang/Object;
+
+    .line 5
+    iput-object p1, p0, Lwn;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static d(Landroid/content/Context;)Z
-    .locals 4
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Legc;Lx07;Lieg;)V
+    .locals 1
 
-    sget-object v0, Lwn;->o:Ljava/lang/Boolean;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    iput v0, p0, Lwn;->a:I
 
-    :try_start_0
-    sget v0, Lgq;->a:I
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lfq;->a()I
+    iput-object p1, p0, Lwn;->b:Ljava/lang/Object;
 
-    move-result v0
+    iput-object p2, p0, Lwn;->c:Ljava/lang/Object;
 
-    or-int/lit16 v0, v0, 0x80
+    iput-object p3, p0, Lwn;->d:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    iput-object p4, p0, Lwn;->o:Ljava/lang/Object;
 
-    move-result-object v1
-
-    new-instance v2, Landroid/content/ComponentName;
-
-    const-class v3, Lgq;
-
-    invoke-direct {v2, p0, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getServiceInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;
-
-    move-result-object p0
-
-    iget-object p0, p0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
-
-    if-eqz p0, :cond_0
-
-    const-string v0, "autoStoreLocales"
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    sput-object p0, Lwn;->o:Ljava/lang/Boolean;
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const-string p0, "AppCompatDelegate"
-
-    const-string v0, "Checking for metadata for AppLocalesMetadataHolderService : Service not found"
-
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    sput-object p0, Lwn;->o:Ljava/lang/Boolean;
-
-    :cond_0
-    :goto_0
-    sget-object p0, Lwn;->o:Ljava/lang/Boolean;
-
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public static g(Ljo;)V
+
+# virtual methods
+.method public a()V
     .locals 3
 
-    sget-object v0, Lwn;->Z:Ljava/lang/Object;
+    iget-object v0, p0, Lwn;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Lwn;->Y:Lat;
+    iget-object v1, p0, Lwn;->c:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v1, Ljava/util/ArrayDeque;
 
-    new-instance v2, Lts;
-
-    invoke-direct {v2, v1}, Lts;-><init>(Lat;)V
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v2}, Lts;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v2}, Lts;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/ref/WeakReference;
+    check-cast v1, Ljava/lang/Runnable;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iput-object v1, p0, Lwn;->o:Ljava/lang/Object;
 
-    move-result-object v1
+    if-eqz v1, :cond_0
 
-    check-cast v1, Lwn;
+    iget-object v2, p0, Lwn;->d:Ljava/lang/Object;
 
-    if-eq v1, p0, :cond_1
+    check-cast v2, Lc15;
 
-    if-nez v1, :cond_0
-
-    :cond_1
-    invoke-virtual {v2}, Lts;->remove()V
+    invoke-virtual {v2, v1}, Lc15;->execute(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
-    :cond_2
+    :cond_0
+    :goto_0
     monitor-exit v0
 
     return-void
@@ -208,34 +118,110 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v1
 .end method
 
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 4
 
-# virtual methods
-.method public abstract a()V
-.end method
+    iget v0, p0, Lwn;->a:I
 
-.method public abstract b()V
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract e()V
-.end method
+    iget-object v0, p0, Lwn;->b:Ljava/lang/Object;
 
-.method public abstract f()V
-.end method
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-.method public abstract h(I)Z
-.end method
+    :try_start_0
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public abstract i(I)V
-.end method
+    return-void
 
-.method public abstract j(Landroid/view/View;)V
-.end method
+    :catch_0
+    move-exception p1
 
-.method public abstract k(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-.end method
+    iget-object v0, p0, Lwn;->c:Ljava/lang/Object;
 
-.method public abstract l(Ljava/lang/CharSequence;)V
+    check-cast v0, Legc;
+
+    iget-object v0, v0, Legc;->b:Ljava/lang/Object;
+
+    check-cast v0, Liqj;
+
+    invoke-virtual {v0}, Liqj;->g()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lwn;->d:Ljava/lang/Object;
+
+    check-cast v0, Lx07;
+
+    invoke-virtual {v0}, Lx07;->n()V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lwn;->o:Ljava/lang/Object;
+
+    check-cast v0, Lieg;
+
+    invoke-virtual {v0, p1}, Lieg;->a(Ljava/lang/Exception;)V
+
+    :goto_0
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lwn;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, p0, Lwn;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayDeque;
+
+    new-instance v2, Lud;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, p0, v3, p1}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lwn;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Runnable;
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {p0}, Lwn;->a()V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    monitor-exit v0
+
+    return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,120 +1,73 @@
-.class public final Ld6b;
-.super Lf3;
+.class public final enum Ld6b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final enum a:Ld6b;
 
-.field public final synthetic d:Le6b;
+.field public static final enum b:Ld6b;
+
+.field public static final synthetic c:[Ld6b;
 
 
 # direct methods
-.method public constructor <init>(Le6b;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Ld6b;->c:I
+    new-instance v0, Ld6b;
 
-    iput-object p1, p0, Ld6b;->d:Le6b;
+    const-string v1, "ICON"
 
-    const/16 p1, 0xb
+    const/4 v2, 0x0
 
-    packed-switch p2, :pswitch_data_0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget-object p2, Lx5b;->b:Lx5b;
+    sput-object v0, Ld6b;->a:Ld6b;
 
-    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
+    new-instance v1, Ld6b;
+
+    const-string v2, "ICON_WITH_TEXT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ld6b;->b:Ld6b;
+
+    filled-new-array {v0, v1}, [Ld6b;
+
+    move-result-object v0
+
+    sput-object v0, Ld6b;->c:[Ld6b;
 
     return-void
-
-    :pswitch_0
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    sget-object p2, Lw5b;->a:Lw5b;
-
-    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-
-# virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public static valueOf(Ljava/lang/String;)Ld6b;
     .locals 1
 
-    iget v0, p0, Ld6b;->c:I
+    const-class v0, Ld6b;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p0
 
-    move-result v0
+    check-cast p0, Ld6b;
 
-    if-nez v0, :cond_0
+    return-object p0
+.end method
 
-    check-cast p2, Lplb;
+.method public static values()[Ld6b;
+    .locals 1
 
-    check-cast p1, Lplb;
+    sget-object v0, Ld6b;->c:[Ld6b;
 
-    iget-object p1, p0, Ld6b;->d:Le6b;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    move-result-object v0
 
-    :cond_0
-    return-void
+    check-cast v0, [Ld6b;
 
-    :pswitch_0
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    check-cast p2, Lw5b;
-
-    check-cast p1, Lw5b;
-
-    iget-object p1, p0, Ld6b;->d:Le6b;
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    check-cast p2, Lx5b;
-
-    check-cast p1, Lx5b;
-
-    iget-object p1, p0, Ld6b;->d:Le6b;
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

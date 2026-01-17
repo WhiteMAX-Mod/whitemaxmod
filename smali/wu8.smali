@@ -1,80 +1,152 @@
 .class public final Lwu8;
-.super Ld0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lwu8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public c:Z
+.field public A:I
 
+.field public B:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public C:I
 
-    new-instance v0, Lc0;
+.field public D:F
 
-    const/4 v1, 0x5
+.field public E:F
 
-    invoke-direct {v0, v1}, Lc0;-><init>(I)V
+.field public F:F
 
-    sput-object v0, Lwu8;->CREATOR:Landroid/os/Parcelable$Creator;
+.field public G:F
 
-    return-void
-.end method
+.field public H:F
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 0
+.field public I:F
 
-    invoke-direct {p0, p1, p2}, Ld0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.field public J:F
 
-    if-nez p2, :cond_0
+.field public K:F
 
-    const-class p2, Lwu8;
+.field public L:F
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+.field public M:F
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+.field public N:[B
 
-    move-result p1
+.field public O:I
 
-    const/4 p2, 0x1
+.field public P:I
 
-    if-ne p1, p2, :cond_1
+.field public Q:I
 
-    goto :goto_0
+.field public R:J
 
-    :cond_1
-    const/4 p2, 0x0
+.field public S:J
 
-    :goto_0
-    iput-boolean p2, p0, Lwu8;->c:Z
+.field public T:Ltvg;
 
-    return-void
-.end method
+.field public U:Z
+
+.field public V:Z
+
+.field public W:Ljava/lang/String;
+
+.field public X:Lqrg;
+
+.field public Y:I
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:Z
+
+.field public i:[B
+
+.field public j:Lorg;
+
+.field public k:[B
+
+.field public l:Ly85;
+
+.field public m:I
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
+
+.field public r:I
+
+.field public s:F
+
+.field public t:F
+
+.field public u:F
+
+.field public v:[B
+
+.field public w:I
+
+.field public x:Z
+
+.field public y:I
+
+.field public z:I
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final a(Ljava/lang/String;)[B
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Ld0;->writeToParcel(Landroid/os/Parcel;I)V
+    iget-object v0, p0, Lwu8;->k:[B
 
-    iget-boolean p2, p0, Lwu8;->c:Z
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    return-void
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const-string v1, "Missing CodecPrivate for codec "
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/String;
+
+    invoke-direct {p1, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    const/4 v0, 0x0
+
+    invoke-static {v0, p1}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_1
+    return-object v0
 .end method

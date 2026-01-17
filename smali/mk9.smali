@@ -1,143 +1,284 @@
 .class public final Lmk9;
-.super Lk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ActionProvider$VisibilityListener;
+.implements Lzq5;
 
 
 # instance fields
-.field public c:Le7;
+.field public final a:Lzq5;
 
-.field public final d:Landroid/view/ActionProvider;
+.field public final b:Ljrg;
 
 
 # direct methods
-.method public constructor <init>(Lpk9;Landroid/content/Context;Landroid/view/ActionProvider;)V
+.method public constructor <init>(Lzq5;Ljrg;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lk7;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lmk9;->d:Landroid/view/ActionProvider;
+    iput-object p1, p0, Lmk9;->a:Lzq5;
+
+    iput-object p2, p0, Lmk9;->b:Ljrg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final a()Ljrg;
     .locals 1
 
-    iget-object v0, p0, Lmk9;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->hasSubMenu()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    iget-object v0, p0, Lmk9;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->isVisible()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c()Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lmk9;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->onCreateActionView()Landroid/view/View;
-
-    move-result-object v0
+    iget-object v0, p0, Lmk9;->b:Ljrg;
 
     return-object v0
 .end method
 
-.method public final d(Llk9;)Landroid/view/View;
+.method public final b()I
     .locals 1
 
-    iget-object v0, p0, Lmk9;->d:Landroid/view/ActionProvider;
+    iget-object v0, p0, Lmk9;->a:Lzq5;
 
-    invoke-virtual {v0, p1}, Landroid/view/ActionProvider;->onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;
+    invoke-interface {v0}, Lzq5;->b()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1}, Lzq5;->c(Z)V
+
+    return-void
+.end method
+
+.method public final d(I)Loj6;
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1}, Lzq5;->d(I)Loj6;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final e()Z
+.method public final e()V
     .locals 1
 
-    iget-object v0, p0, Lmk9;->d:Landroid/view/ActionProvider;
+    iget-object v0, p0, Lmk9;->a:Lzq5;
 
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->onPerformDefaultAction()Z
+    invoke-interface {v0}, Lzq5;->e()V
+
+    return-void
+.end method
+
+.method public final f(I)I
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1}, Lzq5;->f(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final g(JLjava/util/List;)I
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1, p2, p3}, Lzq5;->g(JLjava/util/List;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final h()V
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0}, Lzq5;->h()V
+
+    return-void
+.end method
+
+.method public final i()I
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0}, Lzq5;->i()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final f(Lezf;)V
+.method public final j()Loj6;
     .locals 1
 
-    iget-object v0, p0, Lmk9;->d:Landroid/view/ActionProvider;
+    iget-object v0, p0, Lmk9;->a:Lzq5;
 
-    invoke-virtual {v0, p1}, Landroid/view/ActionProvider;->onPrepareSubMenu(Landroid/view/SubMenu;)V
+    invoke-interface {v0}, Lzq5;->j()Loj6;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final g()Z
+.method public final k()I
     .locals 1
 
-    iget-object v0, p0, Lmk9;->d:Landroid/view/ActionProvider;
+    iget-object v0, p0, Lmk9;->a:Lzq5;
 
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->overridesItemVisibility()Z
+    invoke-interface {v0}, Lzq5;->k()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final h(Le7;)V
-    .locals 0
+.method public final l(F)V
+    .locals 1
 
-    iput-object p1, p0, Lmk9;->c:Le7;
+    iget-object v0, p0, Lmk9;->a:Lzq5;
 
-    iget-object p1, p0, Lmk9;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {p1, p0}, Landroid/view/ActionProvider;->setVisibilityListener(Landroid/view/ActionProvider$VisibilityListener;)V
+    invoke-interface {v0, p1}, Lzq5;->l(F)V
 
     return-void
 .end method
 
-.method public final onActionProviderVisibilityChanged(Z)V
+.method public final length()I
     .locals 1
 
-    iget-object p1, p0, Lmk9;->c:Le7;
+    iget-object v0, p0, Lmk9;->a:Lzq5;
 
-    if-eqz p1, :cond_0
+    invoke-interface {v0}, Lzq5;->length()I
 
-    iget-object p1, p1, Le7;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast p1, Llk9;
+    return v0
+.end method
 
-    iget-object p1, p1, Llk9;->x0:Lhk9;
+.method public final m()Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lmk9;->a:Lzq5;
 
-    iput-boolean v0, p1, Lhk9;->Z:Z
+    invoke-interface {v0}, Lzq5;->m()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lhk9;->p(Z)V
+    move-result-object v0
 
-    :cond_0
+    return-object v0
+.end method
+
+.method public final n()V
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0}, Lzq5;->n()V
+
     return-void
+.end method
+
+.method public final o()V
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0}, Lzq5;->o()V
+
+    return-void
+.end method
+
+.method public final p(I)I
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1}, Lzq5;->p(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final q(Loj6;)I
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1}, Lzq5;->q(Loj6;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final r(IJ)Z
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1, p2, p3}, Lzq5;->r(IJ)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final s(IJ)Z
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1, p2, p3}, Lzq5;->s(IJ)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final t(JJJLjava/util/List;[Luz8;)V
+    .locals 9
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    move-wide v1, p1
+
+    move-wide v3, p3
+
+    move-wide v5, p5
+
+    move-object/from16 v7, p7
+
+    move-object/from16 v8, p8
+
+    invoke-interface/range {v0 .. v8}, Lzq5;->t(JJJLjava/util/List;[Luz8;)V
+
+    return-void
+.end method
+
+.method public final u(JLqc3;Ljava/util/List;)Z
+    .locals 1
+
+    iget-object v0, p0, Lmk9;->a:Lzq5;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Lzq5;->u(JLqc3;Ljava/util/List;)Z
+
+    move-result p1
+
+    return p1
 .end method

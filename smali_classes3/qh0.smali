@@ -116,13 +116,13 @@
 
     iget v2, p0, Lqh0;->b:I
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
     move-result v0
 
     const/16 v2, 0x14
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
     move-result v0
 

@@ -1,319 +1,117 @@
 .class public final Lt3e;
-.super Ljava/lang/Object;
+.super Lg4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lt3e;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public b:Z
+.field public final b:Z
 
-.field public c:[F
+.field public final c:Z
 
-.field public d:I
+.field public final d:I
 
-.field public e:F
-
-.field public f:I
-
-.field public g:F
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Leri;
 
-    const/4 v0, 0x2
+    const/16 v1, 0xa
 
-    iput v0, p0, Lt3e;->a:I
+    invoke-direct {v0, v1}, Leri;-><init>(I)V
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lt3e;->b:Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lt3e;->c:[F
-
-    iput v0, p0, Lt3e;->d:I
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lt3e;->e:F
-
-    iput v0, p0, Lt3e;->f:I
-
-    iput v1, p0, Lt3e;->g:F
+    sput-object v0, Lt3e;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static a()Lt3e;
-    .locals 2
+.method public constructor <init>(IIIZZ)V
+    .locals 0
 
-    new-instance v0, Lt3e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lt3e;-><init>()V
+    iput p1, p0, Lt3e;->a:I
 
-    const/4 v1, 0x1
+    iput-boolean p4, p0, Lt3e;->b:Z
 
-    iput-boolean v1, v0, Lt3e;->b:Z
+    iput-boolean p5, p0, Lt3e;->c:Z
 
-    return-object v0
+    iput p2, p0, Lt3e;->d:I
+
+    iput p3, p0, Lt3e;->o:I
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final b(FFFF)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    iget-object v0, p0, Lt3e;->c:[F
+    const/16 p2, 0x4f45
 
-    if-nez v0, :cond_0
+    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
 
-    const/16 v0, 0x8
+    move-result p2
 
-    new-array v0, v0, [F
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lt3e;->c:[F
+    const/4 v1, 0x4
 
-    :cond_0
-    iget-object v0, p0, Lt3e;->c:[F
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    const/4 v1, 0x1
+    iget v0, p0, Lt3e;->a:I
 
-    aput p1, v0, v1
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 v1, 0x0
+    const/4 v0, 0x2
 
-    aput p1, v0, v1
-
-    const/4 p1, 0x3
-
-    aput p2, v0, p1
-
-    const/4 p1, 0x2
-
-    aput p2, v0, p1
-
-    const/4 p1, 0x5
-
-    aput p3, v0, p1
-
-    const/4 p1, 0x4
-
-    aput p3, v0, p1
-
-    const/4 p1, 0x7
-
-    aput p4, v0, p1
-
-    const/4 p1, 0x6
-
-    aput p4, v0, p1
-
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_8
-
-    const-class v0, Lt3e;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lt3e;
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
     iget-boolean v0, p0, Lt3e;->b:Z
 
-    iget-boolean v1, p1, Lt3e;->b:Z
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eq v0, v1, :cond_2
+    const/4 v0, 0x3
 
-    goto :goto_0
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    :cond_2
+    iget-boolean v0, p0, Lt3e;->c:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p1, v1, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
+
     iget v0, p0, Lt3e;->d:I
 
-    iget v1, p1, Lt3e;->d:I
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eq v0, v1, :cond_3
+    const/4 v0, 0x5
 
-    goto :goto_0
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    :cond_3
-    iget v0, p1, Lt3e;->e:F
+    iget v0, p0, Lt3e;->o:I
 
-    iget v1, p0, Lt3e;->e:F
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
+    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
 
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lt3e;->f:I
-
-    iget v1, p1, Lt3e;->f:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p1, Lt3e;->g:F
-
-    iget v1, p0, Lt3e;->g:F
-
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lt3e;->a:I
-
-    iget v1, p1, Lt3e;->a:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-object v0, p0, Lt3e;->c:[F
-
-    iget-object p1, p1, Lt3e;->c:[F
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([F[F)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_8
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget v0, p0, Lt3e;->a:I
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Lc12;->w(I)I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v2, p0, Lt3e;->b:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lt3e;->c:[F
-
-    if-eqz v2, :cond_1
-
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([F)I
-
-    move-result v2
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v1
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v2, p0, Lt3e;->d:I
-
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v2, p0, Lt3e;->e:F
-
-    const/4 v3, 0x0
-
-    cmpl-float v4, v2, v3
-
-    if-eqz v4, :cond_2
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v1
-
-    :goto_2
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v2, p0, Lt3e;->f:I
-
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v2, p0, Lt3e;->g:F
-
-    cmpl-float v3, v2, v3
-
-    if-eqz v3, :cond_3
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    :cond_3
-    add-int/2addr v0, v1
-
-    mul-int/lit16 v0, v0, 0x3c1
-
-    return v0
+    return-void
 .end method

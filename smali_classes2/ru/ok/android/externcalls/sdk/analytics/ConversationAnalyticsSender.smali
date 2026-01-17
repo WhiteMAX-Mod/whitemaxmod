@@ -11,7 +11,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;",
         "",
-        "Lv2h;",
+        "Lb3h;",
         "forceSendScheduledEvents",
         "()V",
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfiguration;",

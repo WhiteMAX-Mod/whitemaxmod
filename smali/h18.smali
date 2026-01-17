@@ -1,323 +1,394 @@
 .class public final Lh18;
-.super Lc2j;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Lwrg;
+.field public final a:J
 
-.field public final b:Lyna;
+.field public final b:J
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final transient o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwrg;Lv08;)V
+.method public constructor <init>(IIJJLjava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh18;->a:Lwrg;
+    iput-object p7, p0, Lh18;->o:Ljava/lang/Object;
 
-    iget-object p1, p2, Lv08;->b:Lyna;
+    iput-wide p3, p0, Lh18;->a:J
 
-    iput-object p1, p0, Lh18;->b:Lyna;
+    iput-wide p5, p0, Lh18;->b:J
+
+    iput p1, p0, Lh18;->c:I
+
+    iput p2, p0, Lh18;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A()S
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget-object v0, p0, Lh18;->a:Lwrg;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lwrg;->B()Ljava/lang/String;
+    if-ne p1, p0, :cond_0
 
-    move-result-object v1
+    return v0
 
-    const/4 v2, 0x0
+    :cond_0
+    const/4 v1, 0x0
 
-    :try_start_0
-    invoke-static {v1}, Lc2j;->E(Ljava/lang/String;)Lp1h;
+    if-nez p1, :cond_1
 
-    move-result-object v3
+    return v1
 
-    if-eqz v3, :cond_1
+    :cond_1
+    instance-of v2, p1, Lh18;
 
-    iget v3, v3, Lp1h;->a:I
+    if-nez v2, :cond_2
 
-    const v4, 0xffff
+    return v1
 
-    invoke-static {v3, v4}, Ljava/lang/Integer;->compareUnsigned(II)I
+    :cond_2
+    check-cast p1, Lh18;
 
-    move-result v4
+    iget-object v2, p1, Lh18;->o:Ljava/lang/Object;
 
-    if-lez v4, :cond_0
+    iget-object v3, p0, Lh18;->o:Ljava/lang/Object;
+
+    if-nez v3, :cond_3
+
+    if-eqz v2, :cond_4
+
+    return v1
+
+    :cond_3
+    invoke-virtual {v3, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    return v1
+
+    :cond_4
+    iget v2, p0, Lh18;->c:I
+
+    iget v3, p1, Lh18;->c:I
+
+    if-ne v2, v3, :cond_5
+
+    iget v2, p0, Lh18;->d:I
+
+    iget v3, p1, Lh18;->d:I
+
+    if-ne v2, v3, :cond_5
+
+    iget-wide v2, p0, Lh18;->b:J
+
+    iget-wide v4, p1, Lh18;->b:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_5
+
+    iget-wide v2, p0, Lh18;->a:J
+
+    iget-wide v4, p1, Lh18;->a:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_5
+
+    return v0
+
+    :cond_5
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lh18;->o:Ljava/lang/Object;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    int-to-short v3, v3
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    new-instance v4, Lz1h;
+    move-result v0
 
-    invoke-direct {v4, v3}, Lz1h;-><init>(S)V
-
-    goto :goto_1
-
-    :cond_1
     :goto_0
-    move-object v4, v2
+    iget v1, p0, Lh18;->c:I
 
-    :goto_1
-    if-eqz v4, :cond_2
+    xor-int/2addr v0, v1
 
-    iget-short v0, v4, Lz1h;->a:S
+    iget v1, p0, Lh18;->d:I
+
+    add-int/2addr v0, v1
+
+    iget-wide v1, p0, Lh18;->b:J
+
+    long-to-int v1, v1
+
+    xor-int/2addr v0, v1
+
+    iget-wide v1, p0, Lh18;->a:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
 
     return v0
-
-    :cond_2
-    invoke-static {v1}, Lpyf;->h(Ljava/lang/String;)V
-
-    throw v2
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Failed to parse type \'UShort\' for input \'"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x27
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x6
-
-    invoke-static {v0, v1, v3, v2, v4}, Lwrg;->F(Lwrg;Ljava/lang/String;ILjava/lang/String;I)V
-
-    throw v2
 .end method
 
-.method public final e(Lvoe;)I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 9
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "unsupported"
+    const/16 v1, 0x50
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    throw p1
-.end method
+    const-string v1, "[Source: "
 
-.method public final k()I
-    .locals 5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lh18;->a:Lwrg;
+    const/16 v1, 0x5d
 
-    invoke-virtual {v0}, Lwrg;->B()Ljava/lang/String;
+    iget-object v2, p0, Lh18;->o:Ljava/lang/Object;
 
-    move-result-object v1
+    if-nez v2, :cond_0
 
-    const/4 v2, 0x0
+    const-string v2, "UNKNOWN"
 
-    :try_start_0
-    invoke-static {v1}, Lc2j;->E(Ljava/lang/String;)Lp1h;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_4
+
+    :cond_0
+    instance-of v3, v2, Ljava/lang/Class;
+
+    if-eqz v3, :cond_1
+
+    move-object v3, v2
+
+    check-cast v3, Ljava/lang/Class;
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    if-eqz v3, :cond_0
+    :goto_0
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget v0, v3, Lp1h;->a:I
+    move-result-object v4
 
-    return v0
+    const-string v5, "java."
 
-    :cond_0
-    invoke-static {v1}, Lpyf;->h(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    throw v2
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v5
 
-    :catch_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    if-eqz v5, :cond_2
 
-    const-string v4, "Failed to parse type \'UInt\' for input \'"
+    invoke-virtual {v3}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v4
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    const/16 v1, 0x27
+    :cond_2
+    instance-of v3, v2, [B
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    if-eqz v3, :cond_3
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v4, "byte[]"
 
-    move-result-object v1
+    goto :goto_1
 
-    const/4 v3, 0x0
+    :cond_3
+    instance-of v3, v2, [C
 
-    const/4 v4, 0x6
+    if-eqz v3, :cond_4
 
-    invoke-static {v0, v1, v3, v2, v4}, Lwrg;->F(Lwrg;Ljava/lang/String;ILjava/lang/String;I)V
+    const-string v4, "char[]"
 
-    throw v2
-.end method
+    :cond_4
+    :goto_1
+    const/16 v3, 0x28
 
-.method public final n()Lyna;
-    .locals 1
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lh18;->b:Lyna;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x29
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    instance-of v3, v2, Ljava/lang/CharSequence;
+
+    const/16 v4, 0x22
+
+    const/16 v5, 0x1f4
+
+    const/4 v6, 0x0
+
+    const-string v7, " chars"
+
+    if-eqz v3, :cond_5
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v3
+
+    invoke-static {v3, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v5
+
+    invoke-interface {v2, v6, v5}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    :goto_2
+    sub-int v6, v3, v2
+
+    goto :goto_3
+
+    :cond_5
+    instance-of v3, v2, [C
+
+    if-eqz v3, :cond_6
+
+    check-cast v2, [C
+
+    array-length v3, v2
+
+    new-instance v8, Ljava/lang/String;
+
+    invoke-static {v3, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v5
+
+    invoke-direct {v8, v2, v6, v5}, Ljava/lang/String;-><init>([CII)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_6
+    instance-of v3, v2, [B
+
+    if-eqz v3, :cond_7
+
+    check-cast v2, [B
+
+    array-length v3, v2
+
+    invoke-static {v3, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v3
+
+    new-instance v5, Ljava/lang/String;
+
+    const-string v7, "UTF-8"
+
+    invoke-static {v7}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v7
+
+    invoke-direct {v5, v2, v6, v3, v7}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    array-length v2, v2
+
+    sub-int v6, v2, v3
+
+    const-string v7, " bytes"
+
+    :cond_7
+    :goto_3
+    if-lez v6, :cond_8
+
+    const-string v2, "[truncated "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_8
+    :goto_4
+    const-string v2, "; line: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lh18;->c:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", column: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lh18;->d:I
+
+    invoke-static {v0, v2, v1}, Lhc0;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final t()J
-    .locals 5
-
-    iget-object v0, p0, Lh18;->a:Lwrg;
-
-    invoke-virtual {v0}, Lwrg;->B()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    invoke-static {v1}, Lc2j;->F(Ljava/lang/String;)Lu1h;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    iget-wide v0, v3, Lu1h;->a:J
-
-    return-wide v0
-
-    :cond_0
-    invoke-static {v1}, Lpyf;->h(Ljava/lang/String;)V
-
-    throw v2
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Failed to parse type \'ULong\' for input \'"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x27
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x6
-
-    invoke-static {v0, v1, v3, v2, v4}, Lwrg;->F(Lwrg;Ljava/lang/String;ILjava/lang/String;I)V
-
-    throw v2
-.end method
-
-.method public final z()B
-    .locals 5
-
-    iget-object v0, p0, Lh18;->a:Lwrg;
-
-    invoke-virtual {v0}, Lwrg;->B()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    invoke-static {v1}, Lc2j;->E(Ljava/lang/String;)Lp1h;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    iget v3, v3, Lp1h;->a:I
-
-    const/16 v4, 0xff
-
-    invoke-static {v3, v4}, Ljava/lang/Integer;->compareUnsigned(II)I
-
-    move-result v4
-
-    if-lez v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    int-to-byte v3, v3
-
-    new-instance v4, Lk1h;
-
-    invoke-direct {v4, v3}, Lk1h;-><init>(B)V
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move-object v4, v2
-
-    :goto_1
-    if-eqz v4, :cond_2
-
-    iget-byte v0, v4, Lk1h;->a:B
-
-    return v0
-
-    :cond_2
-    invoke-static {v1}, Lpyf;->h(Ljava/lang/String;)V
-
-    throw v2
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Failed to parse type \'UByte\' for input \'"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x27
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x6
-
-    invoke-static {v0, v1, v3, v2, v4}, Lwrg;->F(Lwrg;Ljava/lang/String;ILjava/lang/String;I)V
-
-    throw v2
 .end method

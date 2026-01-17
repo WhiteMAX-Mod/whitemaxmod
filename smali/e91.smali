@@ -1,21 +1,16 @@
-.class public final Le91;
-.super Lzp;
+.class public interface abstract Le91;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp91;
 
-# static fields
-.field public static final a:Le91;
 
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public getPriority()I
     .locals 1
 
-    new-instance v0, Le91;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Lzp;-><init>()V
-
-    sput-object v0, Le91;->a:Le91;
-
-    return-void
+    return v0
 .end method

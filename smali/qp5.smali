@@ -1,23 +1,38 @@
-.class public abstract Lqp5;
+.class public final synthetic Lqp5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpe8;
+
+
+# instance fields
+.field public final synthetic a:Lcq5;
+
 
 # direct methods
-.method public static a()Lobc;
-    .locals 3
+.method public synthetic constructor <init>(Lcq5;)V
+    .locals 0
 
-    new-instance v0, Lobc;
+    iput-object p1, p0, Lqp5;->a:Lcq5;
 
-    invoke-static {}, Lk69;->f()Landroid/media/metrics/LogSessionId;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    return-void
+.end method
 
-    new-instance v2, Lnbc;
 
-    invoke-direct {v2, v1}, Lnbc;-><init>(Landroid/media/metrics/LogSessionId;)V
+# virtual methods
+.method public invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-direct {v0, v2}, Lobc;-><init>(Lnbc;)V
+    check-cast p1, Lnbc;
 
-    return-object v0
+    iget-object v0, p0, Lqp5;->a:Lcq5;
+
+    iget-object v0, v0, Lcq5;->U0:Lkbc;
+
+    invoke-interface {p1, v0}, Lnbc;->H(Lkbc;)V
+
+    return-void
 .end method

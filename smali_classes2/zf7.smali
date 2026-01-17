@@ -2,18 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll5e;
+
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ljava/util/HashMap;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lzf7;->a:I
+    iput-object p1, p0, Lzf7;->a:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -21,36 +24,43 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    instance-of v0, p1, Lzf7;
+    if-eqz p1, :cond_2
 
-    if-nez v0, :cond_1
+    const-class v0, Lzf7;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
     check-cast p1, Lzf7;
 
-    iget v0, p0, Lzf7;->a:I
+    iget-object v0, p0, Lzf7;->a:Ljava/util/HashMap;
 
-    iget p1, p1, Lzf7;->a:I
+    iget-object p1, p1, Lzf7;->a:Ljava/util/HashMap;
 
-    if-eq v0, p1, :cond_2
+    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
-    :goto_0
-    const/4 p1, 0x0
+    move-result p1
 
     return p1
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    :goto_0
+    const/4 p1, 0x0
 
     return p1
 .end method
@@ -58,9 +68,13 @@
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lzf7;->a:I
+    iget-object v0, p0, Lzf7;->a:Ljava/util/HashMap;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -68,15 +82,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "IconLocalPromoColors(accent="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, "IdMappingsNotification{mapping="
 
-    iget v2, p0, Lzf7;->a:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lzf7;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

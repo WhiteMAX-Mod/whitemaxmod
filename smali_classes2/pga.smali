@@ -3,60 +3,100 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxx3;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lqga;
 
-.field public final synthetic b:Z
+.field public final synthetic b:Lit8;
+
+.field public final synthetic c:D
+
+.field public final synthetic d:D
 
 
 # direct methods
-.method public synthetic constructor <init>(ZI)V
+.method public synthetic constructor <init>(Lqga;Lit8;DD)V
     .locals 0
 
-    iput p2, p0, Lpga;->a:I
-
-    iput-boolean p1, p0, Lpga;->b:Z
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpga;->a:Lqga;
+
+    iput-object p2, p0, Lpga;->b:Lit8;
+
+    iput-wide p3, p0, Lpga;->c:D
+
+    iput-wide p5, p0, Lpga;->d:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    iget v0, p0, Lpga;->a:I
+    check-cast p1, Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lpga;->b:Lit8;
 
-    check-cast p1, Lboh;
+    iget-wide v1, v0, Lit8;->c:J
 
-    iget-boolean v0, p0, Lpga;->b:Z
+    const-wide/16 v3, 0x0
 
-    iput-boolean v0, p1, Lboh;->b:Z
+    cmp-long v1, v1, v3
 
-    const/4 v0, 0x0
+    if-eqz v1, :cond_0
 
-    iput-boolean v0, p1, Lboh;->c:Z
+    iget-object v1, p0, Lpga;->a:Lqga;
 
-    return-void
+    iget-object v2, v1, Lqga;->w0:Lcj8;
 
-    :pswitch_0
-    iget-boolean v0, p0, Lpga;->b:Z
+    invoke-virtual {v2}, Lcj8;->a()Z
 
-    check-cast p1, Lboh;
+    move-result v2
 
-    iput-boolean v0, p1, Lboh;->a:Z
+    if-eqz v2, :cond_0
 
-    return-void
+    iget-object v3, v1, Lqga;->Y:Lvbg;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, v1, Lqga;->w0:Lcj8;
+
+    iget-wide v8, v1, Lcj8;->a:D
+
+    iget-wide v10, v1, Lcj8;->b:D
+
+    iget-wide v4, p0, Lpga;->c:D
+
+    iget-wide v6, p0, Lpga;->d:D
+
+    invoke-interface/range {v3 .. v11}, Lvbg;->a(DDDD)F
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v1, -0x40800000    # -1.0f
+
+    :goto_0
+    invoke-virtual {v0}, Lit8;->a()Lht8;
+
+    move-result-object v0
+
+    iput-object p1, v0, Lht8;->f:Ljava/lang/String;
+
+    iput v1, v0, Lht8;->g:F
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, v0, Lht8;->i:Z
+
+    new-instance p1, Lit8;
+
+    invoke-direct {p1, v0}, Lit8;-><init>(Lht8;)V
+
+    return-object p1
 .end method

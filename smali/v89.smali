@@ -1,287 +1,607 @@
-.class public abstract synthetic Lv89;
-.super Ljava/lang/Object;
+.class public final Lv89;
+.super Landroid/os/AsyncTask;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/graphics/Bitmap;
+
+.field public final b:Landroid/net/Uri;
+
+.field public c:I
+
+.field public d:J
+
+.field public final synthetic e:Landroidx/mediarouter/app/d;
+
+
 # direct methods
-.method public static bridge synthetic A(Landroid/media/MediaRouter2$RoutingController;Landroid/media/MediaRoute2Info;)V
-    .locals 0
+.method public constructor <init>(Landroidx/mediarouter/app/d;)V
+    .locals 3
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaRouter2$RoutingController;->selectRoute(Landroid/media/MediaRoute2Info;)V
+    iput-object p1, p0, Lv89;->e:Landroidx/mediarouter/app/d;
 
-    return-void
-.end method
+    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-.method public static bridge synthetic B(Landroid/media/MediaRoute2Info;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getVolumeMax()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic C(Landroid/media/MediaRouter2$RoutingController;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->getVolumeHandling()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic D(Landroid/media/MediaRoute2Info;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getVolume()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic a(Landroid/media/MediaRoute2Info;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getConnectionState()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/media/MediaRouter2$RoutingController;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->getVolume()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Landroid/telephony/TelephonyDisplayInfo;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/telephony/TelephonyDisplayInfo;->getOverrideNetworkType()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic d(Landroid/media/MediaRouter2;)Landroid/media/MediaRouter2$RoutingController;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRouter2;->getSystemController()Landroid/media/MediaRouter2$RoutingController;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic e(Landroid/content/Context;)Landroid/media/MediaRouter2;
-    .locals 0
-
-    invoke-static {p0}, Landroid/media/MediaRouter2;->getInstance(Landroid/content/Context;)Landroid/media/MediaRouter2;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic f(Ljava/util/ArrayList;)Landroid/media/RouteDiscoveryPreference$Builder;
-    .locals 2
-
-    new-instance v0, Landroid/media/RouteDiscoveryPreference$Builder;
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->f1:Landroid/support/v4/media/MediaDescriptionCompat;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Landroid/media/RouteDiscoveryPreference$Builder;-><init>(Ljava/util/List;Z)V
+    if-nez v0, :cond_0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->getIconBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v0, "MediaRouteCtrlDialog"
+
+    const-string v2, "Can\'t fetch the given art bitmap because it\'s already recycled."
+
+    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-object v0, v1
+
+    :cond_1
+    iput-object v0, p0, Lv89;->a:Landroid/graphics/Bitmap;
+
+    iget-object p1, p1, Landroidx/mediarouter/app/d;->f1:Landroid/support/v4/media/MediaDescriptionCompat;
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/support/v4/media/MediaDescriptionCompat;->getIconUri()Landroid/net/Uri;
+
+    move-result-object v1
+
+    :goto_1
+    iput-object v1, p0, Lv89;->b:Landroid/net/Uri;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/net/Uri;)Ljava/io/BufferedInputStream;
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "android.resource"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "content"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "file"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/net/URL;
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+
+    move-result-object p1
+
+    sget v0, Landroidx/mediarouter/app/d;->A1:I
+
+    invoke-virtual {p1, v0}, Ljava/net/URLConnection;->setConnectTimeout(I)V
+
+    invoke-virtual {p1, v0}, Ljava/net/URLConnection;->setReadTimeout(I)V
+
+    invoke-virtual {p1}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lv89;->e:Landroidx/mediarouter/app/d;
+
+    iget-object v0, v0, Landroidx/mediarouter/app/d;->u0:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+
+    move-result-object p1
+
+    :goto_1
+    if-nez p1, :cond_2
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_2
+    new-instance v0, Ljava/io/BufferedInputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
     return-object v0
 .end method
 
-.method public static synthetic g(Ljava/util/ArrayList;Z)Landroid/media/RouteDiscoveryPreference$Builder;
-    .locals 1
+.method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    new-instance v0, Landroid/media/RouteDiscoveryPreference$Builder;
+    check-cast p1, [Ljava/lang/Void;
 
-    invoke-direct {v0, p0, p1}, Landroid/media/RouteDiscoveryPreference$Builder;-><init>(Ljava/util/List;Z)V
+    const-string p1, "Unable to open: "
 
-    return-object v0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    const-string v2, "MediaRouteCtrlDialog"
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lv89;->a:Landroid/graphics/Bitmap;
+
+    if-eqz v4, :cond_0
+
+    goto/16 :goto_6
+
+    :cond_0
+    iget-object v4, p0, Lv89;->b:Landroid/net/Uri;
+
+    if-eqz v4, :cond_8
+
+    :try_start_0
+    invoke-virtual {p0, v4}, Lv89;->a(Landroid/net/Uri;)Ljava/io/BufferedInputStream;
+
+    move-result-object v5
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    if-nez v5, :cond_3
+
+    :try_start_1
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v5, :cond_2
+
+    :cond_1
+    :goto_0
+    :try_start_2
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_6
+
+    :cond_2
+    return-object v3
+
+    :catchall_0
+    move-exception p1
+
+    move-object v3, v5
+
+    goto/16 :goto_4
+
+    :catch_0
+    move-exception v6
+
+    goto :goto_3
+
+    :cond_3
+    :try_start_3
+    new-instance v6, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v6}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    iput-boolean v1, v6, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    invoke-static {v5, v3, v6}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    iget v7, v6, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    if-eqz v7, :cond_1
+
+    iget v7, v6, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    if-nez v7, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    :try_start_4
+    invoke-virtual {v5}, Ljava/io/InputStream;->reset()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    goto :goto_2
+
+    :catch_1
+    :try_start_5
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+
+    invoke-virtual {p0, v4}, Lv89;->a(Landroid/net/Uri;)Ljava/io/BufferedInputStream;
+
+    move-result-object v5
+
+    if-nez v5, :cond_5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    if-eqz v5, :cond_c
+
+    :goto_1
+    :try_start_6
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_6
+
+    goto/16 :goto_8
+
+    :cond_5
+    :goto_2
+    :try_start_7
+    iput-boolean v0, v6, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    iget-object v7, p0, Lv89;->e:Landroidx/mediarouter/app/d;
+
+    iget v8, v6, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v9, v6, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    invoke-virtual {v7, v8, v9}, Landroidx/mediarouter/app/d;->k(II)I
+
+    move-result v7
+
+    iget v8, v6, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    div-int/2addr v8, v7
+
+    invoke-static {v8}, Ljava/lang/Integer;->highestOneBit(I)I
+
+    move-result v7
+
+    invoke-static {v1, v7}, Ljava/lang/Math;->max(II)I
+
+    move-result v7
+
+    iput v7, v6, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    invoke-static {v5, v3, v6}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object v4
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_0
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    :try_start_8
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
+
+    goto :goto_6
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_4
+
+    :catch_2
+    move-exception v6
+
+    move-object v5, v3
+
+    :goto_3
+    :try_start_9
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_0
+
+    if-eqz v5, :cond_8
+
+    :try_start_a
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_4
+
+    goto :goto_5
+
+    :goto_4
+    if-eqz v3, :cond_7
+
+    :try_start_b
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+    :try_end_b
+    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_3
+
+    :catch_3
+    :cond_7
+    throw p1
+
+    :catch_4
+    :cond_8
+    :goto_5
+    move-object v4, v3
+
+    :catch_5
+    :goto_6
+    if-eqz v4, :cond_9
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Can\'t use recycled bitmap: "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_8
+
+    :cond_9
+    if-eqz v4, :cond_b
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p1
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    if-ge p1, v2, :cond_b
+
+    new-instance p1, Luq0;
+
+    invoke-direct {p1, v4}, Luq0;-><init>(Landroid/graphics/Bitmap;)V
+
+    iput v1, p1, Luq0;->b:I
+
+    invoke-virtual {p1}, Luq0;->e()Lloe;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lloe;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    goto :goto_7
+
+    :cond_a
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lotb;
+
+    iget v0, p1, Lotb;->d:I
+
+    :goto_7
+    iput v0, p0, Lv89;->c:I
+
+    :cond_b
+    move-object v3, v4
+
+    :catch_6
+    :cond_c
+    :goto_8
+    return-object v3
 .end method
 
-.method public static bridge synthetic h(Landroid/media/MediaRoute2Info;)Landroid/net/Uri;
-    .locals 0
+.method public final onPostExecute(Ljava/lang/Object;)V
+    .locals 6
 
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getIconUri()Landroid/net/Uri;
+    check-cast p1, Landroid/graphics/Bitmap;
 
-    move-result-object p0
+    const/4 v0, 0x0
 
-    return-object p0
-.end method
+    iget-object v1, p0, Lv89;->e:Landroidx/mediarouter/app/d;
 
-.method public static bridge synthetic i(Landroid/media/MediaRoute2Info;)Ljava/lang/CharSequence;
-    .locals 0
+    iput-object v0, v1, Landroidx/mediarouter/app/d;->g1:Lv89;
 
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getName()Ljava/lang/CharSequence;
+    iget-object v0, v1, Landroidx/mediarouter/app/d;->h1:Landroid/graphics/Bitmap;
 
-    move-result-object p0
+    iget-object v2, p0, Lv89;->a:Landroid/graphics/Bitmap;
 
-    return-object p0
-.end method
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public static bridge synthetic j(Landroid/media/MediaRouter2$RoutingController;)Ljava/lang/String;
-    .locals 0
+    move-result v0
 
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->getId()Ljava/lang/String;
+    iget-object v3, p0, Lv89;->b:Landroid/net/Uri;
 
-    move-result-object p0
+    if-eqz v0, :cond_1
 
-    return-object p0
-.end method
+    iget-object v0, v1, Landroidx/mediarouter/app/d;->i1:Landroid/net/Uri;
 
-.method public static bridge synthetic k(Landroid/media/MediaRouter2$RoutingController;)Ljava/util/List;
-    .locals 0
+    invoke-static {v0, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->getSelectableRoutes()Ljava/util/List;
+    move-result v0
 
-    move-result-object p0
+    if-nez v0, :cond_0
 
-    return-object p0
-.end method
+    goto :goto_0
 
-.method public static bridge synthetic l(Landroid/media/MediaRouter2;)Ljava/util/List;
-    .locals 0
+    :cond_0
+    return-void
 
-    invoke-virtual {p0}, Landroid/media/MediaRouter2;->getRoutes()Ljava/util/List;
+    :cond_1
+    :goto_0
+    iput-object v2, v1, Landroidx/mediarouter/app/d;->h1:Landroid/graphics/Bitmap;
 
-    move-result-object p0
+    iput-object p1, v1, Landroidx/mediarouter/app/d;->k1:Landroid/graphics/Bitmap;
 
-    return-object p0
-.end method
+    iput-object v3, v1, Landroidx/mediarouter/app/d;->i1:Landroid/net/Uri;
 
-.method public static bridge synthetic m(Landroid/media/MediaRouter2$RoutingController;)V
-    .locals 0
+    iget p1, p0, Lv89;->c:I
 
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->release()V
+    iput p1, v1, Landroidx/mediarouter/app/d;->l1:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v1, Landroidx/mediarouter/app/d;->j1:Z
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lv89;->d:J
+
+    sub-long/2addr v2, v4
+
+    const-wide/16 v4, 0x78
+
+    cmp-long v0, v2, v4
+
+    if-lez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_1
+    invoke-virtual {v1, p1}, Landroidx/mediarouter/app/d;->r(Z)V
 
     return-void
 .end method
 
-.method public static bridge synthetic n(Landroid/media/MediaRouter2$RoutingController;I)V
-    .locals 0
+.method public final onPreExecute()V
+    .locals 3
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaRouter2$RoutingController;->setVolume(I)V
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    return-void
-.end method
+    move-result-wide v0
 
-.method public static bridge synthetic o(Landroid/media/MediaRouter2$RoutingController;Landroid/media/MediaRoute2Info;)V
-    .locals 0
+    iput-wide v0, p0, Lv89;->d:J
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaRouter2$RoutingController;->deselectRoute(Landroid/media/MediaRoute2Info;)V
+    iget-object v0, p0, Lv89;->e:Landroidx/mediarouter/app/d;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
-.method public static bridge synthetic p(Landroid/media/MediaRouter2;Lkx1;Lw89;)V
-    .locals 0
+    iput-boolean v1, v0, Landroidx/mediarouter/app/d;->j1:Z
 
-    invoke-virtual {p0, p1, p2}, Landroid/media/MediaRouter2;->registerControllerCallback(Ljava/util/concurrent/Executor;Landroid/media/MediaRouter2$ControllerCallback;)V
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    iput-object v2, v0, Landroidx/mediarouter/app/d;->k1:Landroid/graphics/Bitmap;
 
-.method public static bridge synthetic q(Landroid/media/MediaRouter2;Lkx1;Lz89;Landroid/media/RouteDiscoveryPreference;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3}, Landroid/media/MediaRouter2;->registerRouteCallback(Ljava/util/concurrent/Executor;Landroid/media/MediaRouter2$RouteCallback;Landroid/media/RouteDiscoveryPreference;)V
+    iput v1, v0, Landroidx/mediarouter/app/d;->l1:I
 
     return-void
-.end method
-
-.method public static bridge synthetic r(Landroid/media/MediaRouter2;Lkx1;La99;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/media/MediaRouter2;->registerTransferCallback(Ljava/util/concurrent/Executor;Landroid/media/MediaRouter2$TransferCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic s(Landroid/media/MediaRouter2;Lw89;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaRouter2;->unregisterControllerCallback(Landroid/media/MediaRouter2$ControllerCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic t(Landroid/media/MediaRouter2;Lz89;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaRouter2;->unregisterRouteCallback(Landroid/media/MediaRouter2$RouteCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic u(Landroid/media/MediaRouter2;La99;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaRouter2;->unregisterTransferCallback(Landroid/media/MediaRouter2$TransferCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic v(Landroid/media/MediaRouter2$RoutingController;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->isReleased()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic w(Landroid/media/MediaRoute2Info;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getVolumeHandling()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic x(Landroid/media/MediaRouter2$RoutingController;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->getVolumeMax()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic y(Landroid/media/MediaRoute2Info;)Ljava/lang/CharSequence;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getDescription()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic z(Landroid/media/MediaRouter2$RoutingController;)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->getDeselectableRoutes()Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
 .end method

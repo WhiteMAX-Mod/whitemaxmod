@@ -2,249 +2,437 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lud8;
+
 
 # instance fields
-.field public final a:Lhg5;
+.field public final X:J
+
+.field public final Y:Z
+
+.field public final Z:I
+
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final d:Ljava/util/List;
+
+.field public final o:Landroid/graphics/drawable/Drawable;
+
+.field public final t0:J
 
 
 # direct methods
-.method public constructor <init>(Lhg5;)V
-    .locals 0
+.method public synthetic constructor <init>(IILjava/lang/CharSequence;Ljava/util/ArrayList;Landroid/graphics/drawable/Drawable;JZI)V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    and-int/lit8 v0, p9, 0x8
 
-    iput-object p1, p0, Lmf5;->a:Lhg5;
+    if-eqz v0, :cond_0
+
+    .line 11
+    sget-object p4, Ldh5;->a:Ldh5;
+
+    :cond_0
+    move-object v4, p4
+
+    and-int/lit8 p4, p9, 0x20
+
+    if-eqz p4, :cond_1
+
+    const-wide/16 v0, 0x0
+
+    move-wide v6, v0
+
+    goto :goto_0
+
+    :cond_1
+    move-wide v6, p6
+
+    :goto_0
+    and-int/lit8 p4, p9, 0x40
+
+    if-eqz p4, :cond_2
+
+    const/4 p4, 0x1
+
+    move v8, p4
+
+    :goto_1
+    move-object v0, p0
+
+    move v1, p1
+
+    move v2, p2
+
+    move-object v3, p3
+
+    move-object v5, p5
+
+    goto :goto_2
+
+    :cond_2
+    move/from16 v8, p8
+
+    goto :goto_1
+
+    .line 12
+    :goto_2
+    invoke-direct/range {v0 .. v8}, Lmf5;-><init>(IILjava/lang/CharSequence;Ljava/util/List;Landroid/graphics/drawable/Drawable;JZ)V
 
     return-void
 .end method
 
+.method public constructor <init>(IILjava/lang/CharSequence;Ljava/util/List;Landroid/graphics/drawable/Drawable;JZ)V
+    .locals 0
 
-# virtual methods
-.method public final a(Ljava/lang/CharSequence;II)Lig5;
-    .locals 21
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v0, p0
+    .line 2
+    iput p1, p0, Lmf5;->a:I
 
-    iget-object v1, v0, Lmf5;->a:Lhg5;
+    .line 3
+    iput p2, p0, Lmf5;->b:I
 
-    if-eqz v1, :cond_a
+    .line 4
+    iput-object p3, p0, Lmf5;->c:Ljava/lang/CharSequence;
 
-    iget-object v1, v1, Lhg5;->b:Ljava/lang/Object;
+    .line 5
+    iput-object p4, p0, Lmf5;->d:Ljava/util/List;
 
-    check-cast v1, [J
+    .line 6
+    iput-object p5, p0, Lmf5;->o:Landroid/graphics/drawable/Drawable;
 
-    move/from16 v4, p2
+    .line 7
+    iput-wide p6, p0, Lmf5;->X:J
 
-    const/4 v5, 0x0
+    .line 8
+    iput-boolean p8, p0, Lmf5;->Y:Z
 
-    const/4 v6, 0x0
+    .line 9
+    sget p3, Lbhb;->a:I
 
-    const/4 v8, -0x1
+    iput p3, p0, Lmf5;->Z:I
 
-    const/4 v9, -0x1
+    const-wide/16 p3, 0x0
 
-    const/4 v10, -0x1
+    cmp-long p3, p6, p3
 
-    const/4 v11, 0x0
+    if-eqz p3, :cond_0
 
-    :goto_0
-    if-ltz v5, :cond_3
+    const-wide p2, 0x7fffffffffffffffL
 
-    array-length v7, v1
+    .line 10
+    invoke-static {p6, p7}, Ljava/lang/Math;->abs(J)J
 
-    if-ge v5, v7, :cond_3
+    move-result-wide p4
 
-    move/from16 v7, p3
+    sub-long/2addr p2, p4
 
-    if-ge v4, v7, :cond_3
+    int-to-long p4, p1
 
-    move-object/from16 v12, p1
+    sub-long/2addr p2, p4
 
-    invoke-interface {v12, v4}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v13
-
-    add-int/lit8 v14, v5, 0x1
-
-    aget-wide v2, v1, v5
-
-    long-to-int v2, v2
-
-    add-int/2addr v2, v14
-
-    add-int/lit8 v2, v2, -0x1
-
-    :goto_1
-    const-wide/32 v15, 0xffff
-
-    if-gt v14, v2, :cond_1
-
-    sub-int v3, v2, v14
-
-    ushr-int/lit8 v3, v3, 0x1
-
-    add-int/2addr v3, v14
-
-    aget-wide v17, v1, v3
-
-    move-object v5, v1
-
-    and-long v0, v17, v15
-
-    long-to-int v0, v0
-
-    int-to-char v0, v0
-
-    if-ge v0, v13, :cond_0
-
-    add-int/lit8 v3, v3, 0x1
-
-    move v14, v3
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_0
-    if-le v0, v13, :cond_2
+    int-to-long p2, p2
 
-    add-int/lit8 v3, v3, -0x1
+    :goto_0
+    iput-wide p2, p0, Lmf5;->t0:J
 
-    move v2, v3
+    return-void
+.end method
 
-    :goto_2
-    move-object/from16 v0, p0
+.method public static l(Lmf5;IIZI)Lmf5;
+    .locals 9
 
-    move-object v1, v5
+    and-int/lit8 v0, p4, 0x1
 
-    goto :goto_1
+    if-eqz v0, :cond_0
+
+    iget p1, p0, Lmf5;->a:I
+
+    :cond_0
+    move v1, p1
+
+    and-int/lit8 p1, p4, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget p2, p0, Lmf5;->b:I
 
     :cond_1
-    move-object v5, v1
+    move v2, p2
 
-    add-int/lit8 v14, v14, 0x1
+    iget-object v3, p0, Lmf5;->c:Ljava/lang/CharSequence;
 
-    neg-int v3, v14
+    iget-object v4, p0, Lmf5;->d:Ljava/util/List;
+
+    iget-object v5, p0, Lmf5;->o:Landroid/graphics/drawable/Drawable;
+
+    iget-wide v6, p0, Lmf5;->X:J
+
+    and-int/lit8 p1, p4, 0x40
+
+    if-eqz p1, :cond_2
+
+    iget-boolean p3, p0, Lmf5;->Y:Z
 
     :cond_2
-    if-gtz v3, :cond_4
+    move v8, p3
+
+    new-instance v0, Lmf5;
+
+    invoke-direct/range {v0 .. v8}, Lmf5;-><init>(IILjava/lang/CharSequence;Ljava/util/List;Landroid/graphics/drawable/Drawable;JZ)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lmf5;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lmf5;
+
+    iget v1, p0, Lmf5;->a:I
+
+    iget v3, p1, Lmf5;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lmf5;->b:I
+
+    iget v3, p1, Lmf5;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
 
     :cond_3
-    const/4 v2, -0x1
+    iget-object v1, p0, Lmf5;->c:Ljava/lang/CharSequence;
 
-    goto :goto_3
+    iget-object v3, p1, Lmf5;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
 
     :cond_4
-    add-int/lit8 v6, v6, 0x1
+    iget-object v1, p0, Lmf5;->d:Ljava/util/List;
 
-    aget-wide v0, v5, v3
+    iget-object v3, p1, Lmf5;->d:Ljava/util/List;
 
-    const/16 v2, 0x30
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    ushr-long v2, v0, v2
+    move-result v1
 
-    and-long/2addr v2, v15
+    if-nez v1, :cond_5
 
-    long-to-int v2, v2
-
-    const v3, 0xffff
-
-    if-ne v2, v3, :cond_5
-
-    const/4 v2, -0x1
+    return v2
 
     :cond_5
-    const/16 v3, 0x28
+    iget-object v1, p0, Lmf5;->o:Landroid/graphics/drawable/Drawable;
 
-    ushr-long v13, v0, v3
+    iget-object v3, p1, Lmf5;->o:Landroid/graphics/drawable/Drawable;
 
-    const-wide/16 v15, 0xff
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    and-long/2addr v13, v15
+    move-result v1
 
-    long-to-int v3, v13
+    if-nez v1, :cond_6
 
-    const/16 v13, 0xff
-
-    if-ne v3, v13, :cond_6
-
-    const/4 v3, -0x1
+    return v2
 
     :cond_6
-    const/16 v14, 0x20
+    iget-wide v3, p0, Lmf5;->X:J
 
-    ushr-long v17, v0, v14
+    iget-wide v5, p1, Lmf5;->X:J
 
-    move-wide/from16 v19, v0
+    cmp-long v1, v3, v5
 
-    and-long v0, v17, v15
+    if-eqz v1, :cond_7
 
-    long-to-int v0, v0
-
-    if-ne v0, v13, :cond_7
-
-    const/4 v0, -0x1
+    return v2
 
     :cond_7
-    const/16 v1, 0x18
+    iget-boolean v1, p0, Lmf5;->Y:Z
 
-    ushr-long v17, v19, v1
+    iget-boolean p1, p1, Lmf5;->Y:Z
 
-    move/from16 p2, v2
+    if-eq v1, p1, :cond_8
 
-    and-long v1, v17, v15
-
-    long-to-int v1, v1
-
-    if-ne v1, v13, :cond_8
-
-    const/4 v1, -0x1
+    return v2
 
     :cond_8
-    const/4 v2, -0x1
+    return v0
+.end method
 
-    if-eq v3, v2, :cond_9
+.method public final getItemId()J
+    .locals 2
 
-    if-eq v0, v2, :cond_9
+    iget-wide v0, p0, Lmf5;->t0:J
 
-    if-eq v1, v2, :cond_9
+    return-wide v0
+.end method
 
-    add-int/2addr v11, v6
+.method public final hashCode()I
+    .locals 4
 
-    move v9, v0
+    iget v0, p0, Lmf5;->a:I
 
-    move v10, v1
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move v8, v3
+    move-result v0
 
-    const/4 v6, 0x0
+    const/16 v1, 0x1f
 
-    :cond_9
-    add-int/lit8 v4, v4, 0x1
+    mul-int/2addr v0, v1
 
-    move-object/from16 v0, p0
+    iget v2, p0, Lmf5;->b:I
 
-    move-object v1, v5
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    move/from16 v5, p2
+    move-result v0
 
-    goto/16 :goto_0
+    iget-object v2, p0, Lmf5;->c:Ljava/lang/CharSequence;
 
-    :goto_3
-    if-eq v8, v2, :cond_a
+    invoke-static {v2, v0, v1}, Lj27;->d(Ljava/lang/CharSequence;II)I
 
-    if-eq v9, v2, :cond_a
+    move-result v0
 
-    if-eq v10, v2, :cond_a
+    iget-object v2, p0, Lmf5;->d:Ljava/util/List;
 
-    new-instance v7, Lig5;
+    invoke-static {v2, v0, v1}, Lmrf;->e(Ljava/util/List;II)I
 
-    const/4 v12, 0x0
+    move-result v0
 
-    invoke-direct/range {v7 .. v12}, Lig5;-><init>(IIIII)V
+    iget-object v2, p0, Lmf5;->o:Landroid/graphics/drawable/Drawable;
 
-    return-object v7
+    if-nez v2, :cond_0
 
-    :cond_a
-    const/4 v0, 0x0
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lmf5;->X:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lmf5;->Y:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lmf5;->Z:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", itemIndex="
+
+    const-string v1, ", defaultValue="
+
+    const-string v2, "EmojiModel(groupIndex="
+
+    iget v3, p0, Lmf5;->a:I
+
+    iget v4, p0, Lmf5;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lmf5;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", values="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmf5;->d:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", drawable="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmf5;->o:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", animojiId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lmf5;->X:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSelected="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lmf5;->Y:Z
+
+    invoke-static {v0, v1, v3, v2}, Lva9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

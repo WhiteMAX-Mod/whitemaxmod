@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;JLru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;ILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;JLru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;ILso4;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x8
@@ -125,7 +125,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

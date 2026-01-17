@@ -1,159 +1,55 @@
 .class public final Lov2;
-.super Lum;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lucg;
-.implements Lgzb;
 
 
 # instance fields
-.field public final d:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final o:Z
+.field public final synthetic Y:Lqv2;
+
+.field public Z:I
+
+.field public d:J
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(JJZ)V
+.method public constructor <init>(Lqv2;Lo84;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lum;-><init>(J)V
+    iput-object p1, p0, Lov2;->Y:Lqv2;
 
-    iput-wide p3, p0, Lov2;->d:J
-
-    iput-boolean p5, p0, Lov2;->o:Z
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final d()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    invoke-virtual {p0}, Lum;->r()Lkeg;
+    iput-object p1, p0, Lov2;->X:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lov2;->Z:I
 
-    iget-wide v1, p0, Lum;->a:J
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0, v1, v2}, Lkeg;->d(J)V
+    or-int/2addr p1, v0
 
-    return-void
-.end method
+    iput p1, p0, Lov2;->Z:I
 
-.method public final e(Lxbg;)V
-    .locals 1
+    const-wide/16 v0, 0x0
 
-    check-cast p1, Lpv2;
+    const/4 p1, 0x0
 
-    iget-object p1, p1, Lpv2;->c:Lvd2;
+    iget-object v2, p0, Lov2;->Y:Lqv2;
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lum;->k()Lch2;
-
-    move-result-object v0
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v2, v0, v1, p1, p0}, Lqv2;->a(JZLo84;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lch2;->j0(Ljava/util/List;)Lwea;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;-><init>()V
-
-    iget-wide v1, p0, Lum;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;->requestId:J
-
-    iget-wide v1, p0, Lov2;->d:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;->chatId:J
-
-    iget-boolean v1, p0, Lov2;->o:Z
-
-    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;->hideNonContactBar:Z
-
-    invoke-static {v0}, Lsp9;->toByteArray(Lsp9;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lum;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Lhzb;
-    .locals 1
-
-    sget-object v0, Lhzb;->c1:Lhzb;
-
-    return-object v0
-.end method
-
-.method public final h()Lk2;
-    .locals 4
-
-    new-instance v0, Lmj2;
-
-    sget-object v1, Lmob;->l1:Lmob;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v0, v1, v2}, Lmj2;-><init>(Lmob;I)V
-
-    const-string v1, "chatId"
-
-    iget-wide v2, p0, Lov2;->d:J
-
-    invoke-virtual {v0, v2, v3, v1}, Lk2;->v(JLjava/lang/String;)V
-
-    const-string v1, "hideNonContactBar"
-
-    iget-boolean v2, p0, Lov2;->o:Z
-
-    invoke-virtual {v0, v1, v2}, Lk2;->j(Ljava/lang/String;Z)V
-
-    return-object v0
-.end method
-
-.method public final l(Lcbg;)V
-    .locals 0
-
-    iget-object p1, p1, Lcbg;->b:Ljava/lang/String;
-
-    invoke-static {p1}, Lcoj;->a(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lov2;->d()V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

@@ -1,172 +1,163 @@
-.class public final Lmw4;
-.super Ljava/lang/Object;
+.class public final enum Lmw4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final enum X:Lmw4;
+
+.field public static final synthetic Y:[Lmw4;
+
+.field public static final d:Lwna;
+
+.field public static final enum o:Lmw4;
 
 
 # instance fields
-.field public final a:J
+.field public final a:B
 
-.field public final b:Z
+.field public final b:Ln8g;
+
+.field public final c:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmw4;
 
-    iput-wide p1, p0, Lmw4;->a:J
+    const-string v1, "REGULAR"
 
-    iput-boolean p3, p0, Lmw4;->b:Z
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lmw4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v0, Lmw4;->o:Lmw4;
+
+    new-instance v1, Lmw4;
+
+    const-string v2, "DELAYED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lmw4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v1, Lmw4;->X:Lmw4;
+
+    filled-new-array {v0, v1}, [Lmw4;
+
+    move-result-object v0
+
+    sput-object v0, Lmw4;->Y:[Lmw4;
+
+    new-instance v0, Lwna;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Lwna;-><init>(I)V
+
+    sput-object v0, Lmw4;->d:Lwna;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;IB)V
+    .locals 0
 
-# virtual methods
-.method public final a()Ljava/util/Map;
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-wide v0, p0, Lmw4;->a:J
+    iput-byte p3, p0, Lmw4;->a:B
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance p1, Llw4;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Llw4;-><init>(Lmw4;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lmw4;->b:Ln8g;
+
+    new-instance p1, Llw4;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Llw4;-><init>(Lmw4;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lmw4;->c:Ln8g;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lmw4;
+    .locals 1
+
+    const-class v0, Lmw4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lmw4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lmw4;
+    .locals 1
+
+    sget-object v0, Lmw4;->Y:[Lmw4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Lysb;
-
-    const-string v2, "timeToFire"
-
-    invoke-direct {v1, v2, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v0, p0, Lmw4;->b:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    new-instance v2, Lysb;
-
-    const-string v3, "notifySender"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, v2}, [Lysb;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lit8;->e([Lysb;)Ljava/util/Map;
-
-    move-result-object v0
+    check-cast v0, [Lmw4;
 
     return-object v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
 
-    const/4 v0, 0x1
+# virtual methods
+.method public final a()Z
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lmw4;->c:Ln8g;
 
-    return v0
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Lmw4;
+    move-result-object v0
 
-    const/4 v2, 0x0
+    check-cast v0, Ljava/lang/Boolean;
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lmw4;
-
-    iget-wide v3, p0, Lmw4;->a:J
-
-    iget-wide v5, p1, Lmw4;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lmw4;->b:Z
-
-    iget-boolean p1, p1, Lmw4;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lmw4;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lmw4;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final b()Z
+    .locals 1
 
-    iget-wide v0, p0, Lmw4;->a:J
+    iget-object v0, p0, Lmw4;->b:Ln8g;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lklj;->b(Ljava/lang/Long;)Ljava/lang/String;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast v0, Ljava/lang/Boolean;
 
-    const-string v2, "DelayedAttributes(timeToFire="
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", notifySender="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v0, p0, Lmw4;->b:Z
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

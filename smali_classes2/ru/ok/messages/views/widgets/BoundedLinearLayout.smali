@@ -30,19 +30,19 @@
     return-void
 
     :cond_0
-    sget-object v1, Lgfd;->BoundedLinearLayout:[I
+    sget-object v1, Legd;->BoundedLinearLayout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lgfd;->BoundedLinearLayout_boundedWidth:I
+    sget p2, Legd;->BoundedLinearLayout_boundedWidth:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p2
 
-    sget v1, Lgfd;->BoundedLinearLayout_boundedHeight:I
+    sget v1, Legd;->BoundedLinearLayout_boundedHeight:I
 
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 

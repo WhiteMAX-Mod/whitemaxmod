@@ -1,62 +1,49 @@
-.class public final synthetic Lgkc;
-.super Ljava/lang/Object;
+.class public final Lgkc;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lteb;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Likc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lteb;I)V
+.method public constructor <init>(Likc;Lo84;)V
     .locals 0
 
-    iput p2, p0, Lgkc;->a:I
+    iput-object p1, p0, Lgkc;->o:Likc;
 
-    iput-object p1, p0, Lgkc;->b:Lteb;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lgkc;->a:I
+    iput-object p1, p0, Lgkc;->d:Ljava/lang/Object;
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    iget p1, p0, Lgkc;->X:I
 
-    iget-object v2, p0, Lgkc;->b:Lteb;
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Landroid/view/View;
+    or-int/2addr p1, v0
 
-    packed-switch v0, :pswitch_data_0
+    iput p1, p0, Lgkc;->X:I
 
-    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Lp38;
+    iget-object p1, p0, Lgkc;->o:Likc;
 
-    invoke-virtual {v2, p1}, Lteb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    return-object v1
+    invoke-virtual {p1, v0, p0}, Likc;->b(ILo84;)Ljava/io/Serializable;
 
-    :pswitch_0
-    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Lp38;
+    move-result-object p1
 
-    invoke-virtual {v2, p1}, Lteb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,128 +1,49 @@
 .class public final Lw25;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Leoe;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final b:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:Ljava/lang/Object;
+.field public final synthetic o:Lsx;
 
 
 # direct methods
-.method public synthetic constructor <init>(Leoe;Ljava/lang/Object;I)V
+.method public constructor <init>(Lsx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Lw25;->a:I
+    iput-object p1, p0, Lw25;->o:Lsx;
 
-    iput-object p1, p0, Lw25;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lw25;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lmq6;Loq6;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lw25;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    check-cast p1, Ln58;
-
-    iput-object p1, p0, Lw25;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lw25;->c:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lw25;->a:I
+    iput-object p1, p0, Lw25;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lw25;->X:I
 
-    iget-object v0, p0, Lw25;->b:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lv36;
+    or-int/2addr p1, v0
 
-    new-instance v1, Ljava/util/ArrayList;
+    iput p1, p0, Lw25;->X:I
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    iget-object p1, p0, Lw25;->o:Lsx;
 
-    invoke-static {v0, v1}, Lpoe;->n(Leoe;Ljava/util/Collection;)V
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lw25;->c:Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lsx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    check-cast v0, Ljava/util/Comparator;
+    move-result-object p1
 
-    invoke-static {v0, v1}, Lji3;->p(Ljava/util/Comparator;Ljava/util/List;)V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lpl9;
-
-    invoke-direct {v0, p0}, Lpl9;-><init>(Lw25;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lmv6;
-
-    invoke-direct {v0, p0}, Lmv6;-><init>(Lw25;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lv25;
-
-    iget-object v1, p0, Lw25;->b:Ljava/lang/Object;
-
-    check-cast v1, Ldt;
-
-    iget-object v1, v1, Ldt;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Iterable;
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lw25;->c:Ljava/lang/Object;
-
-    check-cast v2, Lj75;
-
-    invoke-direct {v0, v1, v2}, Lv25;-><init>(Ljava/util/Iterator;Lj75;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

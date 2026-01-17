@@ -4,36 +4,34 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
-.field public static final b:J
+.field public static final b:I
 
-.field public static final c:J
+.field public static final c:I
 
-.field public static final synthetic d:I
+.field public static final d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lf8d;->oneme_notifications_settings_open_settings_call_ringtone_title:I
+    sget v0, Lydd;->oneme_messages_settings_fast_reaction_settings_action_title:I
 
-    int-to-long v0, v0
+    sput v0, Lmeb;->a:I
 
-    sput-wide v0, Lmeb;->a:J
+    sget v0, Lydd;->oneme_messages_settings_send_by_enter_action_title:I
 
-    sget v0, Lf8d;->oneme_notifications_settings_open_settings_calls_ringtone:I
+    sput v0, Lmeb;->b:I
 
-    int-to-long v0, v0
+    sget v0, Lydd;->oneme_messages_settings_stickers_settings_action_title:I
 
-    sput-wide v0, Lmeb;->b:J
+    sput v0, Lmeb;->c:I
 
-    sget v0, Lf8d;->oneme_notifications_settings_open_settings_calls_vibration:I
+    sget v0, Lydd;->oneme_messages_settings_toolbar_title:I
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lmeb;->c:J
+    sput v0, Lmeb;->d:I
 
     return-void
 .end method

@@ -3,15 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llxc;
+.implements Lnyc;
 
 
 # static fields
 .field public static final enum b:Ln4a;
 
-.field public static final enum c:Ln4a;
-
-.field public static final synthetic d:[Ln4a;
+.field public static final synthetic c:[Ln4a;
 
 
 # instance fields
@@ -24,7 +22,7 @@
 
     new-instance v0, Ln4a;
 
-    const-string v1, "UNKNOWN"
+    const-string v1, "UNKNOWN_OS"
 
     const/4 v2, 0x0
 
@@ -32,7 +30,7 @@
 
     new-instance v1, Ln4a;
 
-    const-string v2, "DATA_MESSAGE"
+    const-string v2, "ANDROID"
 
     const/4 v3, 0x1
 
@@ -42,7 +40,7 @@
 
     new-instance v2, Ln4a;
 
-    const-string v3, "TOPIC"
+    const-string v3, "IOS"
 
     const/4 v4, 0x2
 
@@ -50,19 +48,17 @@
 
     new-instance v3, Ln4a;
 
-    const-string v4, "DISPLAY_NOTIFICATION"
+    const-string v4, "WEB"
 
     const/4 v5, 0x3
 
     invoke-direct {v3, v4, v5, v5}, Ln4a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v3, Ln4a;->c:Ln4a;
-
     filled-new-array {v0, v1, v2, v3}, [Ln4a;
 
     move-result-object v0
 
-    sput-object v0, Ln4a;->d:[Ln4a;
+    sput-object v0, Ln4a;->c:[Ln4a;
 
     return-void
 .end method
@@ -94,7 +90,7 @@
 .method public static values()[Ln4a;
     .locals 1
 
-    sget-object v0, Ln4a;->d:[Ln4a;
+    sget-object v0, Ln4a;->c:[Ln4a;
 
     invoke-virtual {v0}, [Ln4a;->clone()Ljava/lang/Object;
 

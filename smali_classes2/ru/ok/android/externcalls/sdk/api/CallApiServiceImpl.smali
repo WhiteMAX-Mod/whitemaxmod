@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ly31;
+.implements Lt31;
 
 
 # annotations
@@ -13,19 +13,19 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;",
-        "Ly31;",
-        "Lja4;",
+        "Lt31;",
+        "Lma4;",
         "cidProvider",
         "",
         "anonToken",
         "<init>",
-        "(Lja4;Ljava/lang/String;)V",
-        "Ly47;",
+        "(Lma4;Ljava/lang/String;)V",
+        "Li47;",
         "reason",
-        "Lv2h;",
+        "Lb3h;",
         "hangupConversation",
-        "(Ly47;)V",
-        "Lja4;",
+        "(Li47;)V",
+        "Lma4;",
         "Ljava/lang/String;",
         "Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;",
         "<set-?>",
@@ -52,16 +52,16 @@
 
 .field private apiServiceImpl:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
-.field private final cidProvider:Lja4;
+.field private final cidProvider:Lma4;
 
 
 # direct methods
-.method public constructor <init>(Lja4;Ljava/lang/String;)V
+.method public constructor <init>(Lma4;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;->cidProvider:Lja4;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;->cidProvider:Lma4;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;->anonToken:Ljava/lang/String;
 
@@ -78,7 +78,7 @@
     return-object v0
 .end method
 
-.method public hangupConversation(Ly47;)V
+.method public hangupConversation(Li47;)V
     .locals 3
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -90,25 +90,25 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;->cidProvider:Lja4;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;->cidProvider:Lma4;
 
-    check-cast v1, Lka4;
+    check-cast v1, Lna4;
 
-    iget-object v1, v1, Lka4;->a:Ljava/lang/String;
+    iget-object v1, v1, Lna4;->a:Ljava/lang/String;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl;->anonToken:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1, v2}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->hangupConversation(Ljava/lang/String;Ly47;Ljava/lang/String;)Lbdf;
+    invoke-virtual {v0, v1, p1, v2}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->hangupConversation(Ljava/lang/String;Li47;Ljava/lang/String;)Lkef;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-static {}, Lbbe;->b()Lqae;
+    invoke-static {}, Lace;->b()Lpbe;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lbdf;->n(Lqae;)Ltdf;
+    invoke-virtual {p1, v0}, Lkef;->n(Lpbe;)Lcff;
 
     move-result-object p1
 
@@ -116,7 +116,7 @@
 
     sget-object v1, Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl$hangupConversation$2;->INSTANCE:Lru/ok/android/externcalls/sdk/api/CallApiServiceImpl$hangupConversation$2;
 
-    invoke-virtual {p1, v0, v1}, Lbdf;->k(Lux3;Lux3;)Lvw1;
+    invoke-virtual {p1, v0, v1}, Lkef;->k(Lay3;Lay3;)Lnw1;
 
     :cond_0
     return-void

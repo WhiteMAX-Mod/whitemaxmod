@@ -1,85 +1,82 @@
 .class public final Lnh;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lsh;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/animation/AnimatorSet;
-
-.field public final synthetic c:Lmq6;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/animation/AnimatorSet;Lmq6;I)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p3, p0, Lnh;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnh;->b:Landroid/animation/AnimatorSet;
-
-    iput-object p2, p0, Lnh;->c:Lmq6;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput p1, p0, Lnh;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lnh;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    return v0
 
-    return-void
+    :cond_0
+    instance-of v1, p1, Lnh;
 
-    :pswitch_0
-    iget-object p1, p0, Lnh;->b:Landroid/animation/AnimatorSet;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
+    if-nez v1, :cond_1
 
-    iget-object p1, p0, Lnh;->c:Lmq6;
+    return v2
 
-    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lnh;
 
-    return-void
+    iget v1, p0, Lnh;->a:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget p1, p1, Lnh;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
+.method public final hashCode()I
     .locals 1
 
     iget v0, p0, Lnh;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+    move-result v0
 
-    return-void
+    return v0
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Lnh;->b:Landroid/animation/AnimatorSet;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
+    const-string v0, "Color(value="
 
-    iget-object p1, p0, Lnh;->c:Lmq6;
+    const-string v1, ")"
 
-    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
+    iget v2, p0, Lnh;->a:I
 
-    return-void
+    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    move-result-object v0
+
+    return-object v0
 .end method

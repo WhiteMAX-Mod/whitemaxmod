@@ -3,60 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lux3;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lvx3;
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:Z
-
-.field public final synthetic o:Lvx3;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lvx3;ZZLvx3;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Lru/ok/android/externcalls/sdk/h;->a:I
+
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/h;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/h;->b:Lvx3;
-
-    iput-boolean p3, p0, Lru/ok/android/externcalls/sdk/h;->c:Z
-
-    iput-boolean p4, p0, Lru/ok/android/externcalls/sdk/h;->d:Z
-
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/h;->o:Lvx3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final run()V
+    .locals 1
 
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/h;->o:Lvx3;
+    iget v0, p0, Lru/ok/android/externcalls/sdk/h;->a:I
 
-    move-object v5, p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v5, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl$1;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/h;->b:Lvx3;
-
-    iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/h;->c:Z
-
-    iget-boolean v3, p0, Lru/ok/android/externcalls/sdk/h;->d:Z
-
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->B(Lru/ok/android/externcalls/sdk/ConversationImpl;Lvx3;ZZLvx3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl$1;->b(Lru/ok/android/externcalls/sdk/ConversationImpl$1;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->F(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->A(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->N(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->J(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->d(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

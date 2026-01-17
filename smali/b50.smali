@@ -1,89 +1,109 @@
-.class public final enum Lb50;
-.super Ljava/lang/Enum;
+.class public final Lb50;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lb50;
+# instance fields
+.field public final a:Lmbg;
 
-.field public static final enum b:Lb50;
+.field public final b:Lr3e;
 
-.field public static final synthetic c:[Lb50;
+.field public final c:Lo58;
+
+.field public final d:Lo58;
+
+.field public final e:Ljava/lang/String;
+
+.field public f:Ld49;
+
+.field public final g:Ljava/util/LinkedHashMap;
+
+.field public h:Z
+
+.field public i:J
+
+.field public final j:Ljava/util/EnumSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lo58;Lo58;Lmbg;Lr3e;)V
+    .locals 0
 
-    new-instance v0, Lb50;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ACTION_PLAY"
+    iput-object p3, p0, Lb50;->a:Lmbg;
 
-    const/4 v2, 0x0
+    iput-object p4, p0, Lb50;->b:Lr3e;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lb50;->c:Lo58;
 
-    new-instance v1, Lb50;
+    iput-object p2, p0, Lb50;->d:Lo58;
 
-    const-string v2, "FIRST_BYTES"
+    const-class p1, Lb50;
 
-    const/4 v3, 0x1
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object p1
 
-    sput-object v1, Lb50;->a:Lb50;
+    iput-object p1, p0, Lb50;->e:Ljava/lang/String;
 
-    new-instance v2, Lb50;
+    new-instance p1, Ljava/util/LinkedHashMap;
 
-    const-string v3, "ACTION_READY"
+    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const/4 v4, 0x2
+    iput-object p1, p0, Lb50;->g:Ljava/util/LinkedHashMap;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 p1, 0x1
 
-    sput-object v2, Lb50;->b:Lb50;
+    iput-boolean p1, p0, Lb50;->h:Z
 
-    new-instance v3, Lb50;
+    const-wide/16 p1, -0x1
 
-    const-string v4, "CONTENT_ERROR"
+    iput-wide p1, p0, Lb50;->i:J
 
-    const/4 v5, 0x3
+    const-class p1, Lz40;
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
 
-    filled-new-array {v0, v1, v2, v3}, [Lb50;
+    move-result-object p1
 
-    move-result-object v0
-
-    sput-object v0, Lb50;->c:[Lb50;
+    iput-object p1, p0, Lb50;->j:Ljava/util/EnumSet;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lb50;
-    .locals 1
 
-    const-class v0, Lb50;
+# virtual methods
+.method public final a(Ljava/lang/String;Llr8;)V
+    .locals 12
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lb50;->c:Lo58;
 
-    move-result-object p0
-
-    check-cast p0, Lb50;
-
-    return-object p0
-.end method
-
-.method public static values()[Lb50;
-    .locals 1
-
-    sget-object v0, Lb50;->c:[Lb50;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lb50;
+    check-cast v0, Ldd;
 
-    return-object v0
+    new-instance v1, Lgk8;
+
+    const-wide/16 v9, 0x0
+
+    const/16 v11, 0x2c
+
+    const-string v2, "AUDIO_STATS"
+
+    const-wide/16 v4, 0x0
+
+    const-wide/16 v6, 0x0
+
+    move-object v3, p1
+
+    move-object v8, p2
+
+    invoke-direct/range {v1 .. v11}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
+
+    invoke-virtual {v0, v1}, Ldd;->h(Lgk8;)V
+
+    return-void
 .end method

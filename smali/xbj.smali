@@ -2,82 +2,89 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Lnnj;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/Boolean;
-
-.field public final h:Ljava/lang/Boolean;
-
-.field public final i:Ljava/lang/Boolean;
-
-.field public final j:Ljava/lang/Integer;
-
-.field public final k:Ljava/lang/Integer;
+# static fields
+.field public static final a:Lxbj;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lobj;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxbj;
 
-    iget-object v0, p1, Lobj;->a:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lxbj;->a:Ljava/lang/String;
+    sput-object v0, Lxbj;->a:Lxbj;
 
-    iget-object v0, p1, Lobj;->b:Ljava/lang/String;
+    new-instance v0, Lvzi;
 
-    iput-object v0, p0, Lxbj;->b:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    iget-object v0, p1, Lobj;->c:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    iput-object v0, p0, Lxbj;->c:Ljava/lang/String;
+    const-class v1, Ln0j;
 
-    iget-object v0, p1, Lobj;->d:Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    iput-object v0, p0, Lxbj;->d:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v0, p1, Lobj;->k:Ljava/util/AbstractCollection;
+    const/4 v2, 0x2
 
-    check-cast v0, Lnnj;
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    iput-object v0, p0, Lxbj;->e:Lnnj;
+    move-result-object v0
 
-    iget-object v0, p1, Lobj;->e:Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    iput-object v0, p0, Lxbj;->f:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v0, p1, Lobj;->f:Ljava/lang/Boolean;
+    const/4 v2, 0x3
 
-    iput-object v0, p0, Lxbj;->g:Ljava/lang/Boolean;
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    iget-object v0, p1, Lobj;->g:Ljava/lang/Boolean;
+    move-result-object v0
 
-    iput-object v0, p0, Lxbj;->h:Ljava/lang/Boolean;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    iget-object v0, p1, Lobj;->h:Ljava/lang/Boolean;
+    move-result-object v0
 
-    iput-object v0, p0, Lxbj;->i:Ljava/lang/Boolean;
+    const/4 v2, 0x4
 
-    iget-object v0, p1, Lobj;->i:Ljava/lang/Integer;
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    iput-object v0, p0, Lxbj;->j:Ljava/lang/Integer;
+    move-result-object v0
 
-    iget-object p1, p1, Lobj;->j:Ljava/lang/Integer;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    iput-object p1, p0, Lxbj;->k:Ljava/lang/Integer;
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

@@ -4,486 +4,281 @@
 
 
 # direct methods
-.method public static final a(Lyj5;)Ljava/lang/String;
-    .locals 11
+.method public static a(Landroid/os/Bundle;Landroid/os/Bundle;)Li9e;
+    .locals 5
 
-    iget v0, p0, Lyj5;->i:I
+    if-nez p0, :cond_2
 
-    new-instance v1, Ljava/util/ArrayList;
+    if-nez p1, :cond_0
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    new-instance p0, Li9e;
 
-    iget-object v2, p0, Lyj5;->c:Ljava/lang/String;
+    invoke-direct {p0}, Li9e;-><init>()V
 
-    if-eqz v2, :cond_0
-
-    new-instance v3, Lysb;
-
-    const-string v4, "userId"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    return-object p0
 
     :cond_0
-    iget-object v2, p0, Lyj5;->b:Ljava/lang/String;
+    new-instance p0, Ljava/util/HashMap;
 
-    if-eqz v2, :cond_1
+    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    new-instance v3, Lysb;
-
-    const-string v4, "token"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    iget-object v2, p0, Lyj5;->a:Ljava/lang/String;
-
-    new-instance v3, Lysb;
-
-    const-string v4, "conversationId"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/4 v2, 0x6
-
-    if-lt v0, v2, :cond_2
-
-    iget v2, p0, Lyj5;->d:I
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Lysb;
-
-    const-string v4, "deviceIdx"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    iget-object v2, p0, Lyj5;->g:Ljava/lang/Long;
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Lysb;
-
-    const-string v4, "peerId"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_3
-    iget-object v2, p0, Lyj5;->o:Ljava/util/Locale;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Lysb;
-
-    const-string v4, "locale"
-
-    invoke-direct {v3, v4, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_4
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    new-instance v2, Lysb;
-
-    const-string v3, "version"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lyj5;->j:Ljava/lang/String;
-
-    new-instance v2, Lysb;
-
-    const-string v3, "capabilities"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
-
-    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    const-string v3, "/"
-
-    invoke-static {v0, v3, v2}, Lzy4;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
-
-    new-instance v2, Lysb;
-
-    const-string v3, "device"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Lysb;
-
-    const-string v2, "platform"
-
-    const-string v3, "ANDROID"
-
-    invoke-direct {v0, v2, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lyj5;->h:Ljava/lang/String;
-
-    new-instance v2, Lysb;
-
-    const-string v3, "clientType"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lyj5;->f:Ljava/lang/String;
-
-    new-instance v2, Lysb;
-
-    const-string v3, "appVersion"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v2, Lysb;
-
-    const-string v3, "osVersion"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lyj5;->l:Ljava/lang/String;
-
-    new-instance v2, Lysb;
-
-    const-string v3, "ispAsOrg"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lyj5;->m:Ljava/lang/String;
-
-    new-instance v2, Lysb;
-
-    const-string v3, "locCc"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lyj5;->n:Ljava/lang/String;
-
-    new-instance v2, Lysb;
-
-    const-string v3, "locReg"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lyj5;->k:Ljava/lang/Integer;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v2, Lysb;
-
-    const-string v3, "ispAsNo"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_5
-    iget-object v0, p0, Lyj5;->p:Ljava/lang/String;
-
-    if-eqz v0, :cond_6
-
-    new-instance v2, Lysb;
-
-    const-string v3, "compression"
-
-    invoke-direct {v2, v3, v0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_6
-    iget-object p0, p0, Lyj5;->e:Ljava/lang/String;
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_7
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_b
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    invoke-virtual {v0, v5}, Landroid/net/Uri;->getQueryParameters(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
 
     :goto_0
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v7
+    move-result v1
 
-    if-eqz v7, :cond_7
+    if-eqz v1, :cond_1
 
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v8
-
-    :cond_8
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_9
-
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    move-object v10, v9
-
-    check-cast v10, Lysb;
-
-    iget-object v10, v10, Lysb;->a:Ljava/lang/Object;
-
-    invoke-static {v10, v5}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_8
-
-    goto :goto_1
-
-    :cond_9
-    const/4 v9, 0x0
-
-    :goto_1
-    check-cast v9, Lysb;
-
-    if-nez v9, :cond_a
-
-    new-instance v8, Lysb;
-
-    invoke-direct {v8, v5, v7}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v3, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_a
-    iget-object v7, v9, Lysb;->b:Ljava/lang/Object;
-
-    new-instance v8, Lysb;
-
-    invoke-direct {v8, v5, v7}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v3, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_b
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    :cond_c
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v1, Ljava/lang/String;
 
-    move-result v4
+    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
-    if-eqz v4, :cond_d
+    move-result-object v2
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v4
+    goto :goto_0
 
-    move-object v5, v4
+    :cond_1
+    new-instance p1, Li9e;
 
-    check-cast v5, Lysb;
+    invoke-direct {p1, p0}, Li9e;-><init>(Ljava/util/HashMap;)V
 
-    iget-object v5, v5, Lysb;->a:Ljava/lang/Object;
+    return-object p1
 
-    invoke-interface {v2, v5}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    :cond_2
+    const-class p1, Li9e;
 
-    move-result v5
+    invoke-virtual {p1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    if-nez v5, :cond_c
+    move-result-object p1
 
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    goto :goto_2
+    const-string p1, "keys"
 
-    :cond_d
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    const-string v0, "values"
+
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    if-eqz p1, :cond_4
+
+    if-eqz p0, :cond_4
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_4
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
     const/4 v2, 0x0
 
-    move v4, v2
+    :goto_1
+    if-ge v2, v1, :cond_3
 
-    :goto_3
-    if-ge v4, v1, :cond_e
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object v5
+    check-cast v3, Ljava/lang/String;
 
-    add-int/lit8 v4, v4, 0x1
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    check-cast v5, Lysb;
+    move-result-object v4
 
-    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_e
-    invoke-virtual {p0}, Landroid/net/Uri$Builder;->clearQuery()Landroid/net/Uri$Builder;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    :goto_4
-    if-ge v2, v0, :cond_f
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
+    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v2, v2, 0x1
 
-    check-cast v1, Lysb;
+    goto :goto_1
 
-    iget-object v4, v1, Lysb;->a:Ljava/lang/Object;
+    :cond_3
+    new-instance p0, Li9e;
 
-    check-cast v4, Ljava/lang/String;
+    invoke-direct {p0, v0}, Li9e;-><init>(Ljava/util/HashMap;)V
 
-    iget-object v1, v1, Lysb;->b:Ljava/lang/Object;
+    return-object p0
 
-    check-cast v1, Ljava/lang/String;
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p0, v4, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+    const-string p1, "Invalid bundle passed as restored state"
 
-    goto :goto_4
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :cond_f
-    invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+    throw p0
+.end method
 
-    move-result-object p0
+.method public static b(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    .locals 6
 
-    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    instance-of v0, p0, Landroid/graphics/drawable/BitmapDrawable;
+
+    if-eqz v0, :cond_2
+
+    check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    if-ne p1, v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    if-ne p2, v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     return-object p0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    const/4 v0, 0x1
+
+    invoke-static {p0, p1, p2, v0}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "bitmap is null"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iget v1, v0, Landroid/graphics/Rect;->left:I
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    iget v3, v0, Landroid/graphics/Rect;->right:I
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {p1, p2, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    invoke-virtual {p0, v5, v5, p1, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    new-instance p1, Landroid/graphics/Canvas;
+
+    invoke-direct {p1, v4}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p0, v1, v2, v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-object v4
 .end method
 
-.method public static b(Lbf7;)V
-    .locals 0
+.method public static c(Landroid/graphics/drawable/RippleDrawable;IIII)V
+    .locals 1
 
-    if-eqz p0, :cond_0
+    and-int/lit8 v0, p4, 0x1
 
-    :try_start_0
-    invoke-interface {p0}, Lbf7;->onDisconnected()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_0
 
-    :catch_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/graphics/Rect;->left:I
+
     :cond_0
+    and-int/lit8 v0, p4, 0x2
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/graphics/Rect;->top:I
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/Rect;->right:I
+
+    and-int/lit8 p4, p4, 0x8
+
+    if-eqz p4, :cond_2
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object p3
+
+    iget p3, p3, Landroid/graphics/Rect;->bottom:I
+
+    :cond_2
+    invoke-virtual {p0, p1, p2, v0, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
     return-void
 .end method

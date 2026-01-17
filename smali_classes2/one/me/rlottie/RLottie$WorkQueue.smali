@@ -22,7 +22,7 @@
         "",
         "Ljava/lang/Runnable;",
         "action",
-        "Lv2h;",
+        "Lb3h;",
         "post",
         "(Ljava/lang/Runnable;)V",
         "",
@@ -33,7 +33,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30

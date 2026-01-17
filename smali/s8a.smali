@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls4a;
+.implements Lr4a;
 
 
 # instance fields
@@ -118,7 +118,7 @@
 
     iget-wide v0, p0, Ls8a;->a:J
 
-    invoke-static {v0, v1}, Lv5j;->c(J)I
+    invoke-static {v0, v1}, Ll6j;->d(J)I
 
     move-result v0
 
@@ -128,7 +128,7 @@
 
     iget-wide v1, p0, Ls8a;->b:J
 
-    invoke-static {v1, v2}, Lv5j;->c(J)I
+    invoke-static {v1, v2}, Ll6j;->d(J)I
 
     move-result v1
 
@@ -138,7 +138,7 @@
 
     iget-wide v2, p0, Ls8a;->c:J
 
-    invoke-static {v2, v3}, Lv5j;->c(J)I
+    invoke-static {v2, v3}, Ll6j;->d(J)I
 
     move-result v0
 
@@ -148,7 +148,7 @@
 
     iget-wide v1, p0, Ls8a;->d:J
 
-    invoke-static {v1, v2}, Lv5j;->c(J)I
+    invoke-static {v1, v2}, Ll6j;->d(J)I
 
     move-result v1
 
@@ -158,7 +158,7 @@
 
     iget-wide v2, p0, Ls8a;->e:J
 
-    invoke-static {v2, v3}, Lv5j;->c(J)I
+    invoke-static {v2, v3}, Ll6j;->d(J)I
 
     move-result v0
 

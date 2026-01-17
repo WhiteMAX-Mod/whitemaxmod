@@ -16,7 +16,7 @@
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;",
         "<init>",
         "()V",
-        "Lv2h;",
+        "Lb3h;",
         "forceSendScheduledEvents",
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;",
         "configuration",

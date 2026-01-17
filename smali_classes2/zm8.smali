@@ -1,51 +1,41 @@
 .class public final Lzm8;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lo58;
 
-.field public final synthetic Y:Lbn8;
+.field public final b:Lo58;
 
-.field public Z:I
+.field public final c:Lo58;
 
-.field public d:Lbn8;
+.field public final d:Lo58;
 
-.field public o:J
+.field public final e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public constructor <init>(Lbn8;Ll84;)V
+.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;)V
     .locals 0
 
-    iput-object p1, p0, Lzm8;->Y:Lbn8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lzm8;->a:Lo58;
+
+    iput-object p2, p0, Lzm8;->b:Lo58;
+
+    iput-object p3, p0, Lzm8;->c:Lo58;
+
+    iput-object p4, p0, Lzm8;->d:Lo58;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p1, p0, Lzm8;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lzm8;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lzm8;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lzm8;->Z:I
-
-    iget-object p1, p0, Lzm8;->Y:Lbn8;
-
-    invoke-virtual {p1, p0}, Lbn8;->a(Ll84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

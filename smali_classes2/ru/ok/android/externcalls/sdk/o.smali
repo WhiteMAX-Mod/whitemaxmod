@@ -3,55 +3,40 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lux3;
-.implements Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$GrantRolesRequest;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
+.field public final synthetic b:Z
+
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Z)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/o;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/o;->b:Z
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->m(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->e(Lru/ok/android/externcalls/sdk/ConversationImpl;Z)Ljava/lang/Boolean;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public grantRoles(Lzk1;Z[Lcl1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-    .locals 6
-
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->s(Lru/ok/android/externcalls/sdk/ConversationImpl;Lzk1;Z[Lcl1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    return-void
+    return-object v0
 .end method

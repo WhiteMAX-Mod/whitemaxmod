@@ -1,49 +1,87 @@
 .class public final Ly55;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La65;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
-
-.field public Y:I
-
-.field public d:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Ll84;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput-object p1, p0, Ly55;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Ly55;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Ly55;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Ly55;->Y:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Ly55;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Ly55;->Y:I
+    goto :goto_0
 
-    iget-object p1, p0, Ly55;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    :cond_1
+    check-cast p1, Ly55;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->n(Ll84;)Ljava/lang/Object;
+    iget-boolean v0, p0, Ly55;->a:Z
 
-    move-result-object p1
+    iget-boolean p1, p1, Ly55;->a:Z
 
-    return-object p1
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Ly55;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "FileDownloadInterrupted(shouldRetry="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Ly55;->a:Z
+
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

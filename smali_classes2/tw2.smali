@@ -1,136 +1,119 @@
-.class public final synthetic Ltw2;
-.super Ljava/lang/Object;
+.class public final Ltw2;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
 
-.field public final synthetic b:Lvy2;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvy2;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    iput p2, p0, Ltw2;->a:I
+    iput-object p2, p0, Ltw2;->X:Lone/me/chatscreen/ChatScreen;
 
-    iput-object p1, p0, Ltw2;->b:Lvy2;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ltw2;->a:I
+    check-cast p1, Lfu0;
 
-    const-string v1, "&video_enabled="
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v2, Lv2h;->a:Lv2h;
+    invoke-virtual {p0, p1, p2}, Ltw2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    iget-object v4, p0, Ltw2;->b:Lvy2;
+    check-cast p1, Ltw2;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->m1:[Lp38;
+    invoke-virtual {p1, p2}, Ltw2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Liy2;->c:Liy2;
+    return-object p2
+.end method
 
-    iget-wide v5, v4, Lvy2;->b:J
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-boolean v4, v4, Lvy2;->d:Z
+    new-instance v0, Ltw2;
 
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
+    iget-object v1, p0, Ltw2;->X:Lone/me/chatscreen/ChatScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Ltw2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    iput-object p1, v0, Ltw2;->o:Ljava/lang/Object;
 
-    const-string v8, ":call-chat?chat_id="
+    return-object v0
+.end method
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    invoke-virtual {v7, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ltw2;->o:Ljava/lang/Object;
 
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Lfu0;
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object p1, Lone/me/chatscreen/ChatScreen;->n1:[Lz28;
 
-    move-result-object v1
+    iget-object p1, p0, Ltw2;->X:Lone/me/chatscreen/ChatScreen;
 
-    invoke-virtual {v0, v1, v3}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-object v2
-
-    :pswitch_0
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->m1:[Lp38;
-
-    sget-object v0, Liy2;->c:Liy2;
-
-    iget-object v1, v4, Lvy2;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
-
-    move-result-object v0
-
-    const-string v4, ":call-join-link?link="
-
-    invoke-virtual {v4, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->a1()Lzw9;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v3}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    return-object v2
+    move-result-object v2
 
-    :pswitch_1
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->m1:[Lp38;
+    const-string v3, "SEARCH"
 
-    sget-object v0, Liy2;->c:Liy2;
+    invoke-static {v2, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-wide v5, v4, Lvy2;->a:J
+    move-result v2
 
-    iget-boolean v4, v4, Lvy2;->d:Z
+    iget-object v1, v1, Lzw9;->b:Lspf;
 
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
+    :cond_0
+    invoke-virtual {v1}, Lspf;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v3
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    move-object v4, v3
 
-    const-string v8, ":call-user?opponent_id="
+    check-cast v4, Ljava/lang/Boolean;
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v7, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3, v4}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v3
 
-    move-result-object v1
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v0, v1, v3}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-static {p1, v0}, Lone/me/chatscreen/ChatScreen;->N0(Lone/me/chatscreen/ChatScreen;Lfu0;)V
 
-    return-object v2
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

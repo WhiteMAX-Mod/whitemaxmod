@@ -1,96 +1,87 @@
 .class public final Llk3;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lnk3;
 
 
 # instance fields
-.field public final synthetic o:Ltk3;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Ltk3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Llk3;->o:Ltk3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Llk3;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lac4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Llk3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
-
-    check-cast p1, Llk3;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Llk3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Llk3;
-
-    iget-object v0, p0, Llk3;->o:Ltk3;
-
-    invoke-direct {p1, v0, p2}, Llk3;-><init>(Ltk3;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Llk3;->o:Ltk3;
-
-    iget-object v0, p1, Ltk3;->k:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Lrk3;
+    :cond_0
+    instance-of v1, p1, Llk3;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2}, Lrk3;-><init>(Ltk3;Lkotlin/coroutines/Continuation;)V
+    if-nez v1, :cond_1
 
-    const/4 v3, 0x1
+    return v2
 
-    sget-object v4, Ldc4;->b:Ldc4;
+    :cond_1
+    check-cast p1, Llk3;
 
-    invoke-static {v0, v2, v4, v1, v3}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    iget-wide v3, p0, Llk3;->a:J
+
+    iget-wide v5, p1, Llk3;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Llk3;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Add(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Llk3;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p1, Ltk3;->l:Le7;
-
-    sget-object v2, Ltk3;->m:[Lp38;
-
-    const/4 v3, 0x0
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p1, v2, v0}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-object v0
 .end method

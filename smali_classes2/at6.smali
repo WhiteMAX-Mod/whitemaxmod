@@ -1,12 +1,12 @@
 .class public final Lat6;
-.super Ldt6;
+.super Lbt6;
 .source "SourceFile"
 
 
 # static fields
 .field public static final a:Lat6;
 
-.field public static final b:Lts6;
+.field public static final b:Lrs6;
 
 .field public static final c:Ljava/util/List;
 
@@ -21,15 +21,15 @@
 
     sput-object v0, Lat6;->a:Lat6;
 
-    new-instance v0, Lts6;
+    new-instance v0, Lrs6;
 
-    sget v1, Lygb;->a:I
+    sget v1, Lihb;->b:I
 
-    invoke-direct {v0, v1}, Lts6;-><init>(I)V
+    invoke-direct {v0, v1}, Lrs6;-><init>(I)V
 
-    sput-object v0, Lat6;->b:Lts6;
+    sput-object v0, Lat6;->b:Lrs6;
 
-    sget-object v0, Lws6;->e:Lws6;
+    sget-object v0, Lvs6;->e:Lvs6;
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -45,15 +45,15 @@
 .method public final b()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ru.ok.tamtam.ALL_PHOTO"
+    const-string v0, "ru.ok.tamtam.ALL_VIDEO"
 
     return-object v0
 .end method
 
-.method public final c()Li4;
+.method public final c()Lg4;
     .locals 1
 
-    sget-object v0, Lat6;->b:Lts6;
+    sget-object v0, Lat6;->b:Lrs6;
 
     return-object v0
 .end method
@@ -66,10 +66,10 @@
     return-object v0
 .end method
 
-.method public final f()Lts6;
+.method public final f()Lrs6;
     .locals 1
 
-    sget-object v0, Lat6;->b:Lts6;
+    sget-object v0, Lat6;->b:Lrs6;
 
     return-object v0
 .end method

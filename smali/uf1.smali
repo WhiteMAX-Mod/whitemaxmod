@@ -1,6 +1,9 @@
 .class public final Luf1;
-.super Lzf1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvf1;
 
 
 # instance fields
@@ -53,6 +56,37 @@
     return v0
 .end method
 
+.method public final getItemId()J
+    .locals 2
+
+    const-wide v0, 0x7ffffffffffffffeL
+
+    return-wide v0
+.end method
+
+.method public final h(Lud8;)Z
+    .locals 4
+
+    const-wide v0, 0x7ffffffffffffffeL
+
+    invoke-interface {p1}, Lud8;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
 .method public final hashCode()I
     .locals 1
 
@@ -65,16 +99,24 @@
     return v0
 .end method
 
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x4
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "LoadingState(isEnabled="
+    const-string v0, "CallWaitingRoomState(isWaitingForAdmin="
 
     const-string v1, ")"
 
     iget-boolean v2, p0, Luf1;->a:Z
 
-    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

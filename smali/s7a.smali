@@ -1,5 +1,5 @@
 .class public final Ls7a;
-.super Lsg7;
+.super Lwf7;
 .source "SourceFile"
 
 
@@ -21,7 +21,7 @@
 
     const-string v0, "MLLT"
 
-    invoke-direct {p0, v0}, Lsg7;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lwf7;-><init>(Ljava/lang/String;)V
 
     iput p1, p0, Ls7a;->b:I
 

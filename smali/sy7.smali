@@ -1,57 +1,50 @@
-.class public abstract Lsy7;
-.super Ljava/lang/Object;
+.class public final synthetic Lsy7;
+.super Lqr6;
 .source "SourceFile"
 
+# interfaces
+.implements Ldr6;
 
-# instance fields
-.field public a:Z
 
-.field public b:I
+# static fields
+.field public static final a:Lsy7;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lsy7;
+
+    const-string v4, "onAwaitInternalRegFunc(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x3
+
+    const-class v2, Lvy7;
+
+    const-string v3, "onAwaitInternalRegFunc"
+
+    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lsy7;->a:Lsy7;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-boolean v0, p0, Lsy7;->a:Z
+    check-cast p1, Lvy7;
 
-    if-nez v0, :cond_0
+    check-cast p2, Lqme;
 
-    const/4 v0, 0x1
+    invoke-static {p1, p2, p3}, Lvy7;->access$onAwaitInternalRegFunc(Lvy7;Lqme;Ljava/lang/Object;)V
 
-    iput-boolean v0, p0, Lsy7;->a:Z
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iput p1, p0, Lsy7;->b:I
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lsy7;->b:I
-
-    if-ne v0, p1, :cond_1
-
-    return-void
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Given job ID "
-
-    const-string v2, " is different than previous "
-
-    invoke-static {p1, v1, v2}, Lqf7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    iget v1, p0, Lsy7;->b:I
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p1
 .end method

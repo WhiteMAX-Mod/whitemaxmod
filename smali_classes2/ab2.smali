@@ -1,81 +1,73 @@
-.class public final enum Lab2;
-.super Ljava/lang/Enum;
+.class public final Lab2;
+.super Lg4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Lab2;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lab2;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum b:Lab2;
 
-.field public static final synthetic c:[Lab2;
+# instance fields
+.field public final a:Lqh8;
 
-.field public static final synthetic d:Lwk5;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lab2;
+    new-instance v0, Lz7;
 
-    const-string v1, "PUBLIC"
+    const/16 v1, 0xe
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lab2;->a:Lab2;
-
-    new-instance v1, Lab2;
-
-    const-string v2, "PRIVATE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lab2;->b:Lab2;
-
-    filled-new-array {v0, v1}, [Lab2;
-
-    move-result-object v0
-
-    sput-object v0, Lab2;->c:[Lab2;
-
-    new-instance v1, Lwk5;
-
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lab2;->d:Lwk5;
+    sput-object v0, Lab2;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lab2;
-    .locals 1
+.method public constructor <init>(Lqh8;Ljava/lang/String;)V
+    .locals 0
 
-    const-class v0, Lab2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lab2;->a:Lqh8;
 
-    move-result-object p0
+    iput-object p2, p0, Lab2;->b:Ljava/lang/String;
 
-    check-cast p0, Lab2;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lab2;
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget-object v0, Lab2;->c:[Lab2;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    check-cast v0, [Lab2;
+    iget-object v0, p0, Lab2;->a:Lqh8;
 
-    return-object v0
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object p2, p0, Lab2;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

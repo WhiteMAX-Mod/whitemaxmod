@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ly45;
+.implements Lb55;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x26c2381a
+    const v0, -0x1b686896
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "MaxFailedCount"
+    const-string v0, "Fail"
 
     return-object v0
 .end method

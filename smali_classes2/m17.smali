@@ -45,7 +45,7 @@
 
     iget-object p1, p1, Lm17;->a:[I
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -78,11 +78,11 @@
 
     move-result-object v0
 
-    const-string v1, "GradientsBannerDKStrokeColors(iconContainerGradient="
+    const-string v1, "GradientsComplexColors(overlayFloatingGradient="
 
     const-string v2, ")"
 
-    invoke-static {v1, v0, v2}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

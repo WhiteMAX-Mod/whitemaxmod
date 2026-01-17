@@ -1,128 +1,160 @@
 .class public final Lqmi;
-.super Ljava/lang/Object;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Lxmi;
-
-
-# static fields
-.field public static final b:[F
-
-.field public static final c:[F
+.implements Llq6;
 
 
 # instance fields
-.field public final a:Lxmi;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lnh1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lnh1;I)V
+    .locals 0
 
-    const/16 v0, 0x8
+    iput p2, p0, Lqmi;->a:I
 
-    new-array v1, v0, [F
+    iput-object p1, p0, Lqmi;->b:Lnh1;
 
-    fill-array-data v1, :array_0
+    const/4 p1, 0x0
 
-    sput-object v1, Lqmi;->b:[F
-
-    new-array v0, v0, [F
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lqmi;->c:[F
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x0
-        0x0
-        0x3f800000    # 1.0f
-        0x0
-        0x0
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-    .end array-data
-.end method
-
-.method public constructor <init>(II)V
-    .locals 4
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 v0, 0x1f02
-
-    invoke-static {v0}, Landroid/opengl/GLES20;->glGetString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v1, Lqmi;->b:[F
-
-    sget-object v2, Lqmi;->c:[F
-
-    if-eqz v0, :cond_0
-
-    const-string v3, "3."
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lzkd;
-
-    invoke-direct {v0, p1, p2, v1, v2}, Lzkd;-><init>(II[F[F)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lblf;
-
-    invoke-direct {v0, p1, p2, v1, v2}, Lblf;-><init>(II[F[F)V
-
-    :goto_0
-    iput-object v0, p0, Lqmi;->a:Lxmi;
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lqmi;->a:Lxmi;
+    iget v0, p0, Lqmi;->a:I
 
-    invoke-interface {v0}, Lxmi;->a()V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    iget-object v0, p0, Lqmi;->b:Lnh1;
 
-.method public final b()V
-    .locals 1
+    iget-object v0, v0, Lnh1;->k:Ljava/lang/Object;
 
-    iget-object v0, p0, Lqmi;->a:Lxmi;
+    check-cast v0, Lna5;
 
-    invoke-interface {v0}, Lxmi;->b()V
+    return-object v0
 
-    return-void
+    :pswitch_0
+    new-instance v0, Lfcf;
+
+    iget-object v1, p0, Lqmi;->b:Lnh1;
+
+    iget-object v2, v1, Lnh1;->c:Ljava/lang/Object;
+
+    check-cast v2, Lahd;
+
+    iget-object v1, v1, Lnh1;->d:Ljava/lang/Object;
+
+    check-cast v1, Lbhd;
+
+    invoke-direct {v0, v2, v1}, Lfcf;-><init>(Lahd;Lbhd;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lrde;
+
+    iget-object v1, p0, Lqmi;->b:Lnh1;
+
+    iget-object v2, v1, Lnh1;->m:Ljava/lang/Object;
+
+    check-cast v2, Ldt1;
+
+    iget-object v2, v2, Ldt1;->k:Lja1;
+
+    iget-object v1, v1, Lnh1;->e:Ljava/lang/Object;
+
+    check-cast v1, Lxkg;
+
+    invoke-direct {v0, v2, v1}, Lrde;-><init>(Lia1;Lxkg;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lym1;
+
+    iget-object v1, p0, Lqmi;->b:Lnh1;
+
+    iget-object v2, v1, Lnh1;->v:Ljava/lang/Object;
+
+    check-cast v2, Lgcf;
+
+    iget-object v2, v2, Lgcf;->i:Lxt;
+
+    iget-object v1, v1, Lnh1;->f:Ljava/lang/Object;
+
+    check-cast v1, Lnh1;
+
+    invoke-direct {v0, v2, v1}, Lym1;-><init>(Lxt;Lnh1;)V
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lqmi;->b:Lnh1;
+
+    iget-object v0, v0, Lnh1;->h:Ljava/lang/Object;
+
+    check-cast v0, Lcl1;
+
+    iget-object v0, v0, Lcl1;->a:Lxk1;
+
+    iget-object v0, v0, Lxk1;->c:Lzea;
+
+    iget-boolean v0, v0, Lzea;->e:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lqmi;->b:Lnh1;
+
+    iget-object v0, v0, Lnh1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxk1;
+
+    iget-object v0, v0, Lxk1;->a:Lsk1;
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Lz31;
+
+    iget-object v1, p0, Lqmi;->b:Lnh1;
+
+    iget-object v2, v1, Lnh1;->v:Ljava/lang/Object;
+
+    check-cast v2, Lgcf;
+
+    iget-object v2, v2, Lgcf;->j:Lxt;
+
+    iget-object v1, v1, Lnh1;->f:Ljava/lang/Object;
+
+    check-cast v1, Lnh1;
+
+    invoke-direct {v0, v2, v1}, Lz31;-><init>(Lxt;Lnh1;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

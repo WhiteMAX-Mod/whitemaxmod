@@ -1,33 +1,23 @@
-.class public abstract synthetic Ls2i;
-.super Ljava/lang/Object;
+.class public abstract Ls2i;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    invoke-static {}, Li2i;->values()[Li2i;
+    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Ls2i;->a:Ljava/lang/String;
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Ls2i;->$EnumSwitchMapping$0:[I
+    iput p2, p0, Ls2i;->b:I
 
     return-void
 .end method

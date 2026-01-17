@@ -1,24 +1,24 @@
 .class public final Lhva;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Ljva;
+.field public final synthetic o:Lkva;
 
 
 # direct methods
-.method public constructor <init>(Ljva;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkva;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lhva;->o:Ljva;
+    iput-object p1, p0, Lhva;->o:Lkva;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,7 +38,7 @@
 
     check-cast p1, Lhva;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lhva;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,199 +50,76 @@
 
     new-instance p1, Lhva;
 
-    iget-object v0, p0, Lhva;->o:Ljva;
+    iget-object v0, p0, Lhva;->o:Lkva;
 
-    invoke-direct {p1, v0, p2}, Lhva;-><init>(Ljva;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lhva;-><init>(Lkva;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    .locals 6
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    sget-object p1, Ljva;->F0:[Lp38;
+    sget-object p1, Lkva;->G0:[Lz28;
 
-    iget-object p1, p0, Lhva;->o:Ljva;
+    iget-object p1, p0, Lhva;->o:Lkva;
 
-    invoke-virtual {p1}, Ljva;->s()Ljah;
+    invoke-virtual {p1}, Lkva;->s()Lfbh;
 
     move-result-object v0
 
-    const-wide/16 v1, 0x0
+    iget-object v0, v0, Lx3;->g:Lr58;
 
-    const-string v3, "app.notification.dontDisturbUntil"
+    const-string v1, "app.notification.dontDisturbUntil"
 
-    invoke-virtual {v0, v1, v2, v3}, Lz3;->h(JLjava/lang/String;)V
+    const-wide/16 v2, 0x0
 
-    const-string v1, "app.notification.show.text"
+    invoke-virtual {v0, v1, v2, v3}, Lr58;->getLong(Ljava/lang/String;J)J
 
-    const/4 v9, 0x1
+    move-result-wide v4
 
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
+    cmp-long v0, v4, v2
 
-    const-string v1, "app.notification.ringtone"
+    if-nez v0, :cond_0
 
-    const/4 v8, 0x0
+    const-wide/16 v2, -0x1
 
-    invoke-virtual {v0, v1, v8}, Lz3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "app.notification.vibrate"
-
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {v0}, Ljah;->l()[I
-
-    move-result-object v1
-
-    const/4 v2, 0x3
-
-    aget v1, v1, v2
-
-    const-string v3, "app.notification.led.color"
-
-    invoke-virtual {v0, v1, v3}, Lz3;->g(ILjava/lang/String;)V
-
-    const-string v1, "app.notification.dialogs.show"
-
-    const/4 v11, 0x0
-
-    invoke-virtual {v0, v11, v1}, Lz3;->g(ILjava/lang/String;)V
-
-    iget-object v1, v0, Ljah;->j:Lmn0;
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lmn0;->d(Ljava/lang/Object;)V
-
-    const-string v1, "app.notification.dialogs.ringtone"
-
-    invoke-virtual {v0, v1, v8}, Lz3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "app.notification.dialogs.vibrate"
-
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {v0}, Ljah;->l()[I
-
-    move-result-object v1
-
-    aget v1, v1, v2
-
-    const-string v3, "app.notification.dialogs.led.color"
-
-    invoke-virtual {v0, v1, v3}, Lz3;->g(ILjava/lang/String;)V
-
-    invoke-virtual {v0, v11}, Ljah;->r(I)V
-
-    const-string v1, "app.notification.chats.ringtone"
-
-    invoke-virtual {v0, v1, v8}, Lz3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "app.notification.chats.vibrate"
-
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {v0}, Ljah;->l()[I
-
-    move-result-object v1
-
-    aget v1, v1, v2
-
-    const-string v2, "app.notification.chats.led.color"
-
-    invoke-virtual {v0, v1, v2}, Lz3;->g(ILjava/lang/String;)V
-
-    const-string v1, "app.group.chat.call.notification.status"
-
-    const-string v2, "ON"
-
-    invoke-virtual {v0, v1, v2}, Lz3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "app.notification.in.app.sound"
-
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.notification.in.app.vibrate"
-
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.notification.show.new.users"
-
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.notification.show.drafts"
-
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.calls.incoming.vibration"
-
-    invoke-virtual {v0, v1, v9}, Lz3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.calls.incoming.ringtone"
-
-    const-string v2, "default_"
-
-    invoke-virtual {v0, v1, v2}, Lz3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p1, Ljva;->o:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {p1}, Lkva;->s()Lfbh;
 
     move-result-object v0
 
-    check-cast v0, Lo2b;
+    invoke-virtual {v0, v2, v3, v1}, Lx3;->h(JLjava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p1, Lkva;->o:Lo58;
 
-    new-instance v2, Llr3;
-
-    invoke-virtual {v0}, Lo2b;->s()Lpfc;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lpfc;->a:Ldj8;
-
-    invoke-virtual {v1}, Lcfe;->k()J
-
-    move-result-wide v3
-
-    const/4 v7, 0x0
-
-    sget-object v10, Lo2b;->g:[J
-
-    const-wide/16 v5, 0x0
-
-    invoke-direct/range {v2 .. v10}, Llr3;-><init>(JJZLhah;Z[J)V
-
-    invoke-virtual {v0}, Lo2b;->t()Lxcg;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/16 v1, 0xc
+    check-cast v0, Lt2b;
 
-    invoke-static {v0, v2, v11, v1}, Lxcg;->d(Lxcg;Lum;ZI)J
+    new-instance v1, Lzah;
 
-    iget-object v0, p1, Ljva;->x0:Lhof;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljva;->s()Ljah;
+    new-instance v4, Ljava/lang/Long;
 
-    move-result-object v1
+    invoke-direct {v4, v2, v3}, Ljava/lang/Long;-><init>(J)V
 
-    invoke-virtual {v1}, Ljah;->j()Ld0e;
+    iput-object v4, v1, Lzah;->b:Ljava/lang/Long;
 
-    move-result-object v1
+    new-instance v2, Ldbh;
 
-    const/4 v2, 0x0
+    invoke-direct {v2, v1}, Ldbh;-><init>(Lzah;)V
 
-    invoke-virtual {v0, v2, v1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Lt2b;->n(Ldbh;)J
 
-    iget-object p1, p1, Ljva;->y0:Lhof;
+    iget-object p1, p1, Lkva;->z0:Lspf;
 
-    invoke-virtual {p1}, Lhof;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -252,15 +129,17 @@
 
     move-result v0
 
-    add-int/2addr v0, v9
+    add-int/lit8 v0, v0, 0x1
 
     new-instance v1, Ljava/lang/Integer;
 
     invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
 
-    invoke-virtual {p1, v8, v1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v0, 0x0
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {p1, v0, v1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

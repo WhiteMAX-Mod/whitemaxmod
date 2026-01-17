@@ -1,48 +1,167 @@
 .class public final Lakd;
-.super Ll84;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lvr7;
+.field public final a:Lbjd;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:J
 
-.field public o:I
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lvr7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLbjd;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lakd;->X:Lvr7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lakd;->a:Lbjd;
+
+    iput-wide p1, p0, Lakd;->b:J
+
+    iput-object p4, p0, Lakd;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    iput-object p1, p0, Lakd;->d:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lakd;->o:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lakd;
 
-    iput p1, p0, Lakd;->o:I
+    if-nez v1, :cond_1
 
-    iget-object p1, p0, Lakd;->X:Lvr7;
+    goto :goto_0
 
-    const/4 v0, 0x0
+    :cond_1
+    check-cast p1, Lakd;
 
-    invoke-virtual {p1, v0, p0}, Lvr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lakd;->a:Lbjd;
 
-    move-result-object p1
+    iget-object v2, p1, Lakd;->a:Lbjd;
 
-    return-object p1
+    invoke-static {v1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v1, p0, Lakd;->b:J
+
+    iget-wide v3, p1, Lakd;->b:J
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v1, p0, Lakd;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lakd;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lakd;->a:Lbjd;
+
+    invoke-virtual {v0}, Lbjd;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lakd;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lakd;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AddReaction(selfReaction="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lakd;->a:Lbjd;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", msgLocalId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lakd;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", msgTime=0, effectLottieUrl="
+
+    const-string v2, ", checkIsVisibleInWindow=false)"
+
+    iget-object v3, p0, Lakd;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2}, Lmrf;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,27 +1,64 @@
 .class public final Lkd6;
-.super Ladf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmd6;
 
-# virtual methods
-.method public final E()V
-    .locals 2
 
-    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+# static fields
+.field public static final a:Lkd6;
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    const/4 v1, 0x0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    new-instance v0, Lkd6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lkd6;->a:Lkd6;
 
     return-void
 .end method
 
-.method public final bridge synthetic z(Lie8;)V
-    .locals 0
 
-    check-cast p1, Ljd6;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lkd6;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x667a69eb
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ConfirmDeletion"
+
+    return-object v0
 .end method

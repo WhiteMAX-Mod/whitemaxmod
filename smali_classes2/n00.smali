@@ -1,14 +1,48 @@
-.class public abstract Ln00;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Ln00;
+.super Lo84;
+
+
+# instance fields
+.field public final synthetic X:Lo00;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lo00;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ln00;->X:Lo00;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b()J
-.end method
+    iput-object p1, p0, Ln00;->d:Ljava/lang/Object;
 
-.method public abstract c()Lghg;
+    iget p1, p0, Ln00;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ln00;->o:I
+
+    iget-object p1, p0, Ln00;->X:Lo00;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lo00;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

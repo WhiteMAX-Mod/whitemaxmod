@@ -1,85 +1,59 @@
-.class public abstract Le25;
+.class public final Le25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
+
+# instance fields
+.field public final a:Lsb4;
+
 
 # direct methods
-.method public static a(Landroid/graphics/Rect;Ljava/util/List;)Landroid/view/DisplayCutout;
+.method public constructor <init>(Lsb4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Le25;->a:Lsb4;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 3
+
+    iget-object v0, p0, Le25;->a:Lsb4;
+
+    sget-object v1, Lxg5;->a:Lxg5;
+
+    invoke-static {v0, v1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->safeIsDispatchNeeded(Lsb4;Lqb4;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v0, v1, p1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->safeDispatch(Lsb4;Lqb4;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/graphics/Rect;",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;)",
-            "Landroid/view/DisplayCutout;"
-        }
-    .end annotation
 
-    new-instance v0, Landroid/view/DisplayCutout;
+    iget-object v0, p0, Le25;->a:Lsb4;
 
-    invoke-direct {v0, p0, p1}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Rect;Ljava/util/List;)V
+    invoke-virtual {v0}, Lsb4;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public static b(Landroid/view/DisplayCutout;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/view/DisplayCutout;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getBoundingRects()Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static d(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static e(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static f(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
-
-    move-result p0
-
-    return p0
 .end method

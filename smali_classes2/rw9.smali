@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lww9;
+.implements Ltw9;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x5bccf09e
+    const v0, 0x19157898
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "CloseMultiSelect"
+    const-string v0, "ScrollToBottom"
 
     return-object v0
 .end method

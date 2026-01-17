@@ -2,96 +2,104 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final l:Lmh2;
+# interfaces
+.implements Ljava/io/Serializable;
+.implements Lsc3;
 
 
 # instance fields
-.field public final a:Z
+.field public final a:J
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
-
-.field public final k:Z
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
-
-    new-instance v0, Lmh2;
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v0 .. v11}, Lmh2;-><init>(ZZZZZZZZZZZ)V
-
-    sput-object v0, Lmh2;->l:Lmh2;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZZZZZZZZ)V
-    .locals 0
+.method public constructor <init>(JJ)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lmh2;->a:Z
+    iput-wide p1, p0, Lmh2;->a:J
 
-    iput-boolean p2, p0, Lmh2;->b:Z
+    iput-wide p3, p0, Lmh2;->b:J
 
-    iput-boolean p3, p0, Lmh2;->c:Z
+    const-wide/16 v0, -0x1
 
-    iput-boolean p4, p0, Lmh2;->d:Z
+    cmp-long p1, p1, v0
 
-    iput-boolean p5, p0, Lmh2;->e:Z
+    const-string p2, ""
 
-    iput-boolean p6, p0, Lmh2;->f:Z
+    const-string v2, "Chunk"
 
-    iput-boolean p7, p0, Lmh2;->g:Z
+    if-nez p1, :cond_0
 
-    iput-boolean p8, p0, Lmh2;->h:Z
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iput-boolean p9, p0, Lmh2;->i:Z
+    const-string v3, "start time is -1"
 
-    iput-boolean p10, p0, Lmh2;->j:Z
+    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput-boolean p11, p0, Lmh2;->k:Z
+    invoke-static {v2, p2, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    :cond_0
+    cmp-long p1, p3, v0
+
+    if-nez p1, :cond_1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p3, "end time is -1"
+
+    invoke-direct {p1, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2, p2, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, Lmh2;->a:J
+
+    return-wide v0
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-wide v0, p0, Lmh2;->b:J
+
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Chunk(startTime="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lmh2;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", endTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lmh2;->b:J
+
+    const/16 v3, 0x29
+
+    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

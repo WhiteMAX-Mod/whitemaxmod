@@ -1,45 +1,25 @@
 .class public abstract Lqyd;
-.super Lak0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;)V
-    .locals 1
+.method public static a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-    invoke-direct {p0, p1}, Lak0;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
-    if-eqz p1, :cond_1
+    move-result-object p0
 
-    invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lrb4;
-
-    move-result-object p1
-
-    sget-object v0, Lwg5;->a:Lwg5;
-
-    if-ne p1, v0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Coroutines with restricted suspension must have EmptyCoroutineContext"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/content/res/Resources;IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-# virtual methods
-.method public final getContext()Lrb4;
-    .locals 1
+    invoke-virtual {p0, p1, p2, p3}, Landroid/content/res/Resources;->getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
-    sget-object v0, Lwg5;->a:Lwg5;
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

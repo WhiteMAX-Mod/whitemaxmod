@@ -1,100 +1,181 @@
 .class public final Lgk7;
-.super Lvv4;
+.super Lhk7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic o:I
+.field public final transient c:I
 
-.field public final p:Ljava/lang/Object;
+.field public final transient d:I
+
+.field public final synthetic o:Lhk7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Surface;)V
-    .locals 2
+.method public constructor <init>(Lhk7;II)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lgk7;->o:Lhk7;
 
-    iput v0, p0, Lgk7;->o:I
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    .line 3
-    sget-object v0, Lvv4;->k:Landroid/util/Size;
+    iput p2, p0, Lgk7;->c:I
 
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lvv4;-><init>(Landroid/util/Size;I)V
-
-    .line 4
-    iput-object p1, p0, Lgk7;->p:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/Surface;Landroid/util/Size;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lgk7;->o:I
-
-    .line 1
-    invoke-direct {p0, p2, p3}, Lvv4;-><init>(Landroid/util/Size;I)V
-
-    .line 2
-    iput-object p1, p0, Lgk7;->p:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj4g;Landroid/util/Size;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lgk7;->o:I
-
-    .line 5
-    iput-object p1, p0, Lgk7;->p:Ljava/lang/Object;
-
-    const/16 p1, 0x22
-
-    invoke-direct {p0, p2, p1}, Lvv4;-><init>(Landroid/util/Size;I)V
+    iput p3, p0, Lgk7;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()Lwe8;
+.method public final c()[Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lgk7;->o:I
+    iget-object v0, p0, Lgk7;->o:Lhk7;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lgk7;->p:Ljava/lang/Object;
-
-    check-cast v0, Lj4g;
-
-    iget-object v0, v0, Lj4g;->g:Lbx1;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lgk7;->p:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/Surface;
-
-    invoke-static {v0}, Ledf;->g(Ljava/lang/Object;)Lek7;
+    invoke-virtual {v0}, Lyj7;->c()[Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    nop
+.method public final d()I
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lgk7;->o:Lhk7;
+
+    invoke-virtual {v0}, Lyj7;->e()I
+
+    move-result v0
+
+    iget v1, p0, Lgk7;->c:I
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, Lgk7;->d:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final e()I
+    .locals 2
+
+    iget-object v0, p0, Lgk7;->o:Lhk7;
+
+    invoke-virtual {v0}, Lyj7;->e()I
+
+    move-result v0
+
+    iget v1, p0, Lgk7;->c:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lgk7;->d:I
+
+    invoke-static {p1, v0}, Lekj;->d(II)V
+
+    iget v0, p0, Lgk7;->c:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lgk7;->o:Lhk7;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lhk7;->l(I)Lac6;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Lhk7;->l(I)Lac6;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lhk7;->l(I)Lac6;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final s(II)Lhk7;
+    .locals 1
+
+    iget v0, p0, Lgk7;->d:I
+
+    invoke-static {p1, p2, v0}, Lekj;->g(III)V
+
+    iget v0, p0, Lgk7;->c:I
+
+    add-int/2addr p1, v0
+
+    add-int/2addr p2, v0
+
+    iget-object v0, p0, Lgk7;->o:Lhk7;
+
+    invoke-virtual {v0, p1, p2}, Lhk7;->s(II)Lhk7;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lgk7;->d:I
+
+    return v0
+.end method
+
+.method public final bridge synthetic subList(II)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lgk7;->s(II)Lhk7;
+
+    move-result-object p1
+
+    return-object p1
 .end method

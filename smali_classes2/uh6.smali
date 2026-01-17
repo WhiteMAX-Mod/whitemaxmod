@@ -1,48 +1,107 @@
-.class public final Luh6;
-.super Ll84;
+.class public final synthetic Luh6;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lv73;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Lwh6;
 
-.field public o:I
+.field public final synthetic c:Lolb;
 
 
 # direct methods
-.method public constructor <init>(Lv73;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lwh6;Lolb;I)V
     .locals 0
 
-    iput-object p1, p0, Luh6;->X:Lv73;
+    iput p3, p0, Luh6;->a:I
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Luh6;->b:Lwh6;
+
+    iput-object p2, p0, Luh6;->c:Lolb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Luh6;->d:Ljava/lang/Object;
+    iget v0, p0, Luh6;->a:I
 
-    iget p1, p0, Luh6;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Luh6;->b:Lwh6;
 
-    or-int/2addr p1, v0
+    iget-object v1, v0, Lwh6;->X:Ljava/lang/Object;
 
-    iput p1, p0, Luh6;->o:I
+    check-cast v1, Lvh6;
 
-    iget-object p1, p0, Luh6;->X:Lv73;
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Luh6;->c:Lolb;
 
-    invoke-virtual {p1, v0, p0}, Lv73;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Lcom/google/android/material/tabs/TabLayout;->k(Ljag;)V
 
-    move-result-object p1
+    :cond_0
+    const/4 v1, 0x0
 
-    return-object p1
+    iput-object v1, v0, Lwh6;->X:Ljava/lang/Object;
+
+    iput-object v1, v0, Lwh6;->Y:Ljava/lang/Object;
+
+    iget-object v2, v0, Lwh6;->x0:Ljava/lang/Object;
+
+    check-cast v2, Lgv;
+
+    iget-object v3, v2, Lgv;->f:Ljava/util/List;
+
+    iput-object v3, v0, Lwh6;->b:Ljava/lang/Object;
+
+    invoke-virtual {v2, v1, v1}, Lgv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    :goto_0
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Luh6;->b:Lwh6;
+
+    iget-object v1, v0, Lwh6;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/List;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    iget-object v3, p0, Luh6;->c:Lolb;
+
+    invoke-virtual {v3}, Lcom/google/android/material/tabs/TabLayout;->j()V
+
+    iget-object v3, v0, Lwh6;->x0:Ljava/lang/Object;
+
+    check-cast v3, Lgv;
+
+    invoke-virtual {v3, v1, v2}, Lgv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    :cond_1
+    iput-object v2, v0, Lwh6;->b:Ljava/lang/Object;
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

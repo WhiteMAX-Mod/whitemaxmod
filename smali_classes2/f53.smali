@@ -1,77 +1,265 @@
-.class public abstract synthetic Lf53;
+.class public final synthetic Lf53;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf76;
+.implements Lnr6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-static {}, Lin9;->values()[Lin9;
+    iput p1, p0, Lf53;->a:I
+
+    iput-object p2, p0, Lf53;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lf53;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lq6h;
+
+    iget-object v0, p0, Lf53;->b:Ljava/lang/Object;
+
+    check-cast v0, Lfjc;
+
+    check-cast v0, Lcjc;
+
+    iget-object v0, v0, Lcjc;->a:Lyw0;
+
+    invoke-interface {v0, p1, p2}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, La43;
+
+    iget-object v0, p0, Lf53;->b:Ljava/lang/Object;
+
+    check-cast v0, Lf76;
+
+    invoke-interface {v0, p1, p2}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget v0, p0, Lf53;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    instance-of v0, p1, Lf76;
+
+    if-eqz v0, :cond_0
+
+    instance-of v0, p1, Lnr6;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lf53;->getFunctionDelegate()Lgr6;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast p1, Lnr6;
 
-    new-array v0, v0, [I
+    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    :try_start_0
-    sget-object v2, Lin9;->b:Ljava/util/List;
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const/4 v2, 0x0
+    move-result p1
 
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    goto :goto_0
 
-    :catch_0
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    instance-of v0, p1, Lf76;
+
+    if-eqz v0, :cond_1
+
+    instance-of v0, p1, Lnr6;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lf53;->getFunctionDelegate()Lgr6;
+
+    move-result-object v0
+
+    check-cast p1, Lnr6;
+
+    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getFunctionDelegate()Lgr6;
+    .locals 9
+
+    iget v0, p0, Lf53;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v1, Lqr6;
+
+    iget-object v0, p0, Lf53;->b:Ljava/lang/Object;
+
+    move-object v5, v0
+
+    check-cast v5, Lfjc;
+
+    const-string v7, "send(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
+
+    const/4 v3, 0x0
+
     const/4 v2, 0x2
 
-    :try_start_1
-    sget-object v3, Lin9;->b:Ljava/util/List;
+    const-class v4, Lfjc;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const-string v6, "send"
 
-    :catch_1
-    const/4 v1, 0x3
+    invoke-direct/range {v1 .. v7}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_2
-    sget-object v3, Lin9;->b:Ljava/util/List;
+    return-object v1
 
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    :pswitch_0
+    new-instance v2, Lqr6;
 
-    :catch_2
-    const/4 v2, 0x4
+    iget-object v0, p0, Lf53;->b:Ljava/lang/Object;
 
-    :try_start_3
-    sget-object v3, Lin9;->b:Ljava/util/List;
+    move-object v6, v0
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    check-cast v6, Lf76;
 
-    :catch_3
-    :try_start_4
-    sget-object v1, Lin9;->b:Ljava/util/List;
+    const-string v8, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
 
-    const/4 v1, 0x5
+    const/4 v4, 0x0
 
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    const/4 v3, 0x2
 
-    :catch_4
-    sput-object v0, Lf53;->$EnumSwitchMapping$0:[I
+    const-class v5, Lf76;
 
-    return-void
+    const-string v7, "emit"
+
+    invoke-direct/range {v2 .. v8}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lf53;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lf53;->getFunctionDelegate()Lgr6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lf53;->getFunctionDelegate()Lgr6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

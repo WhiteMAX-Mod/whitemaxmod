@@ -3,42 +3,48 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwx3;
+.implements Lcy3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lwh2;
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lch2;Lwh2;)V
-    .locals 0
-
-    .line 1
-    const/4 p1, 0x0
-
-    iput p1, p0, Lmg2;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lmg2;->b:Lwh2;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lwh2;)V
+.method public synthetic constructor <init>(Lxg2;I)V
     .locals 1
 
-    .line 2
+    .line 1
     const/4 v0, 0x1
 
     iput v0, p0, Lmg2;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmg2;->b:Lwh2;
+    iput-object p1, p0, Lmg2;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lmg2;->b:I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lxg2;Ljava/util/List;I)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x0
+
+    iput p1, p0, Lmg2;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lmg2;->c:Ljava/lang/Object;
+
+    iput p3, p0, Lmg2;->b:I
 
     return-void
 .end method
@@ -46,48 +52,86 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 2
+    .locals 6
 
     iget v0, p0, Lmg2;->a:I
 
-    check-cast p1, Lhh2;
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lmg2;->b:Lwh2;
+    iget-object v0, p0, Lmg2;->c:Ljava/lang/Object;
 
-    iput-object v0, p1, Lhh2;->c:Lwh2;
+    check-cast v0, Lxg2;
 
-    sget-object v1, Lwh2;->d:Lwh2;
+    check-cast p1, Lch2;
 
-    if-eq v0, v1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Lwh2;->b:Lwh2;
+    new-instance v0, Lng2;
 
-    if-ne v0, v1, :cond_1
+    iget v1, p0, Lmg2;->b:I
 
-    :cond_0
-    const-wide/16 v0, 0x0
+    invoke-direct {v0, v1}, Lng2;-><init>(I)V
 
-    iput-wide v0, p1, Lhh2;->y:J
+    invoke-virtual {v0, p1}, Lng2;->accept(Ljava/lang/Object;)V
 
-    :cond_1
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lmg2;->b:Lwh2;
+    iget-object v0, p0, Lmg2;->c:Ljava/lang/Object;
 
-    iput-object v0, p1, Lhh2;->c:Lwh2;
+    check-cast v0, Ljava/util/List;
 
-    invoke-static {p1}, Lch2;->A(Lhh2;)V
+    check-cast p1, Lch2;
 
-    const-wide/16 v0, 0x0
+    new-instance v1, Lys;
 
-    iput-wide v0, p1, Lhh2;->y:J
+    const/4 v2, 0x0
 
-    const/4 v0, 0x0
+    invoke-direct {v1, v2}, Ladf;-><init>(I)V
 
-    iput v0, p1, Lhh2;->m:I
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Long;
+
+    new-instance v3, Lah2;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    iput-wide v4, v3, Lah2;->b:J
+
+    iget v4, p0, Lmg2;->b:I
+
+    iput v4, v3, Lah2;->a:I
+
+    new-instance v4, Lbh2;
+
+    invoke-direct {v4, v3}, Lbh2;-><init>(Lah2;)V
+
+    invoke-virtual {v1, v2, v4}, Ladf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p1, Lch2;->S:Lys;
+
+    invoke-virtual {p1, v1}, Lys;->putAll(Ljava/util/Map;)V
 
     return-void
 

@@ -13,7 +13,7 @@
         "Landroid/widget/FrameLayout;",
         "Landroid/animation/LayoutTransition;",
         "transition",
-        "Lv2h;",
+        "Lb3h;",
         "setLayoutTransition",
         "(Landroid/animation/LayoutTransition;)V",
         "Landroid/view/View$OnApplyWindowInsetsListener;",
@@ -86,7 +86,7 @@
     move-result-object v1
 
     .line 6
-    sget-object v2, Lqfd;->FragmentContainerView:[I
+    sget-object v2, Logd;->FragmentContainerView:[I
 
     .line 7
     invoke-virtual {p1, p2, v2, v0, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -96,7 +96,7 @@
     if-nez v1, :cond_0
 
     .line 8
-    sget p2, Lqfd;->FragmentContainerView_android_name:I
+    sget p2, Logd;->FragmentContainerView_android_name:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -196,7 +196,7 @@
     move-result-object v1
 
     .line 23
-    sget-object v2, Lqfd;->FragmentContainerView:[I
+    sget-object v2, Logd;->FragmentContainerView:[I
 
     const/4 v3, 0x0
 
@@ -208,7 +208,7 @@
     if-nez v1, :cond_0
 
     .line 25
-    sget v1, Lqfd;->FragmentContainerView_android_name:I
+    sget v1, Logd;->FragmentContainerView_android_name:I
 
     invoke-virtual {v2, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -216,7 +216,7 @@
 
     .line 26
     :cond_0
-    sget v3, Lqfd;->FragmentContainerView_android_tag:I
+    sget v3, Logd;->FragmentContainerView_android_tag:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -231,7 +231,7 @@
     move-result v2
 
     .line 29
-    invoke-virtual {p3, v2}, Landroidx/fragment/app/c;->D(I)Landroidx/fragment/app/a;
+    invoke-virtual {p3, v2}, Landroidx/fragment/app/c;->C(I)Landroidx/fragment/app/a;
 
     move-result-object v4
 
@@ -265,7 +265,7 @@
     const-string p3, "FragmentContainerView must have an android:id to add Fragment "
 
     .line 33
-    invoke-static {p3, v1, p1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, v1, p1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -276,38 +276,38 @@
 
     .line 35
     :cond_2
-    invoke-virtual {p3}, Landroidx/fragment/app/c;->I()Lwm6;
+    invoke-virtual {p3}, Landroidx/fragment/app/c;->H()Lum6;
 
     move-result-object v4
 
     invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
-    invoke-virtual {v4, v1}, Lwm6;->a(Ljava/lang/String;)Landroidx/fragment/app/a;
+    invoke-virtual {v4, v1}, Lum6;->a(Ljava/lang/String;)Landroidx/fragment/app/a;
 
     move-result-object p1
 
     .line 36
-    iput v2, p1, Landroidx/fragment/app/a;->H0:I
-
-    .line 37
     iput v2, p1, Landroidx/fragment/app/a;->I0:I
 
+    .line 37
+    iput v2, p1, Landroidx/fragment/app/a;->J0:I
+
     .line 38
-    iput-object v3, p1, Landroidx/fragment/app/a;->J0:Ljava/lang/String;
+    iput-object v3, p1, Landroidx/fragment/app/a;->K0:Ljava/lang/String;
 
     .line 39
-    iput-object p3, p1, Landroidx/fragment/app/a;->D0:Landroidx/fragment/app/c;
+    iput-object p3, p1, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/c;
 
     .line 40
-    iget-object v1, p3, Landroidx/fragment/app/c;->w:Lpm6;
+    iget-object v1, p3, Landroidx/fragment/app/c;->w:Lnm6;
 
     .line 41
-    iput-object v1, p1, Landroidx/fragment/app/a;->E0:Lpm6;
+    iput-object v1, p1, Landroidx/fragment/app/a;->F0:Lnm6;
 
     const/4 v1, 0x0
 
     .line 42
-    invoke-virtual {p1, p2, v1}, Landroidx/fragment/app/a;->V(Landroid/util/AttributeSet;Landroid/os/Bundle;)V
+    invoke-virtual {p1, p2, v1}, Landroidx/fragment/app/a;->T(Landroid/util/AttributeSet;Landroid/os/Bundle;)V
 
     .line 43
     new-instance p2, Lqf0;
@@ -318,10 +318,10 @@
     iput-boolean v0, p2, Lqf0;->o:Z
 
     .line 45
-    iput-object p0, p1, Landroidx/fragment/app/a;->R0:Landroid/view/ViewGroup;
+    iput-object p0, p1, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
 
     .line 46
-    iput-boolean v0, p1, Landroidx/fragment/app/a;->z0:Z
+    iput-boolean v0, p1, Landroidx/fragment/app/a;->A0:Z
 
     .line 47
     invoke-virtual {p0}, Landroid/view/View;->getId()I
@@ -339,7 +339,7 @@
     .line 50
     iget-object p1, p2, Lqf0;->q:Landroidx/fragment/app/c;
 
-    invoke-virtual {p1, p2, v0}, Landroidx/fragment/app/c;->B(Lqf0;Z)V
+    invoke-virtual {p1, p2, v0}, Landroidx/fragment/app/c;->A(Lqf0;Z)V
 
     goto :goto_1
 
@@ -384,7 +384,7 @@
     iget-object p3, p2, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
     .line 54
-    iget v0, p3, Landroidx/fragment/app/a;->I0:I
+    iget v0, p3, Landroidx/fragment/app/a;->J0:I
 
     invoke-virtual {p0}, Landroid/view/View;->getId()I
 
@@ -392,7 +392,7 @@
 
     if-ne v0, v1, :cond_5
 
-    iget-object v0, p3, Landroidx/fragment/app/a;->S0:Landroid/view/View;
+    iget-object v0, p3, Landroidx/fragment/app/a;->T0:Landroid/view/View;
 
     if-eqz v0, :cond_5
 
@@ -404,7 +404,7 @@
     if-nez v0, :cond_5
 
     .line 56
-    iput-object p0, p3, Landroidx/fragment/app/a;->R0:Landroid/view/ViewGroup;
+    iput-object p0, p3, Landroidx/fragment/app/a;->S0:Landroid/view/ViewGroup;
 
     .line 57
     invoke-virtual {p2}, Landroidx/fragment/app/e;->b()V
@@ -442,7 +442,7 @@
 .method public final addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .locals 2
 
-    sget v0, Le9d;->fragment_container_view_tag:I
+    sget v0, Lbad;->fragment_container_view_tag:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -499,7 +499,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v0, p1}, Lahi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lahi;
+    invoke-static {v0, p1}, Lxhi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lxhi;
 
     move-result-object v1
 
@@ -511,21 +511,21 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lahi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lahi;
+    invoke-static {v0, v1}, Lxhi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lxhi;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p0, v1}, Lash;->i(Landroid/view/View;Lahi;)Lahi;
+    invoke-static {p0, v1}, Lxsh;->i(Landroid/view/View;Lxhi;)Lxhi;
 
     move-result-object v0
 
     :goto_0
-    iget-object v1, v0, Lahi;->a:Lygi;
+    iget-object v1, v0, Lxhi;->a:Lvhi;
 
-    invoke-virtual {v1}, Lygi;->m()Z
+    invoke-virtual {v1}, Lvhi;->m()Z
 
     move-result v1
 
@@ -544,7 +544,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v0}, Lash;->b(Landroid/view/View;Lahi;)Lahi;
+    invoke-static {v3, v0}, Lxsh;->b(Landroid/view/View;Lxhi;)Lxhi;
 
     add-int/lit8 v2, v2, 0x1
 
@@ -669,7 +669,7 @@
 
     if-eqz v0, :cond_3
 
-    sget v2, Le9d;->fragment_container_view_tag:I
+    sget v2, Lbad;->fragment_container_view_tag:I
 
     invoke-virtual {v0, v2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -715,13 +715,13 @@
     :goto_2
     if-eqz v2, :cond_5
 
-    invoke-virtual {v2}, Landroidx/fragment/app/a;->F()Z
+    invoke-virtual {v2}, Landroidx/fragment/app/a;->D()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v2}, Landroidx/fragment/app/a;->u()Landroidx/fragment/app/c;
+    invoke-virtual {v2}, Landroidx/fragment/app/a;->s()Landroidx/fragment/app/c;
 
     move-result-object v0
 
@@ -789,7 +789,7 @@
     :goto_4
     if-eqz v1, :cond_8
 
-    invoke-virtual {v1}, Landroidx/fragment/app/b;->z()Len6;
+    invoke-virtual {v1}, Landroidx/fragment/app/b;->A()Lcn6;
 
     move-result-object v0
 
@@ -798,7 +798,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->D(I)Landroidx/fragment/app/a;
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->C(I)Landroidx/fragment/app/a;
 
     move-result-object v0
 

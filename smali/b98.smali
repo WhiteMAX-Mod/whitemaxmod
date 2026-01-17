@@ -1,40 +1,82 @@
 .class public final Lb98;
-.super Ljava/lang/Object;
+.super Lml0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lc88;
+.field public h:I
 
-.field public b:Ls88;
+.field public i:I
+
+.field public j:Z
+
+.field public k:I
 
 
 # virtual methods
-.method public final a(La98;Lb88;)V
-    .locals 3
+.method public final a()V
+    .locals 2
 
-    invoke-virtual {p2}, Lb88;->a()Lc88;
+    invoke-super {p0}, Lml0;->a()V
 
-    move-result-object v0
+    iget v0, p0, Lb98;->k:I
 
-    iget-object v1, p0, Lb98;->a:Lc88;
+    if-ltz v0, :cond_4
 
-    invoke-virtual {v0, v1}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    iget v0, p0, Lb98;->h:I
 
-    move-result v2
+    if-nez v0, :cond_3
 
-    if-gez v2, :cond_0
+    iget v0, p0, Lml0;->b:I
 
-    move-object v1, v0
+    if-lez v0, :cond_1
+
+    iget v0, p0, Lml0;->g:I
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    iput-object v1, p0, Lb98;->a:Lc88;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget-object v1, p0, Lb98;->b:Ls88;
+    const-string v1, "Rounded corners without gap are not supported in contiguous indeterminate animation."
 
-    invoke-interface {v1, p1, p2}, Ls88;->d(La98;Lb88;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lb98;->a:Lc88;
+    throw v0
 
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lml0;->c:[I
+
+    array-length v0, v0
+
+    const/4 v1, 0x3
+
+    if-lt v0, v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
+    :goto_1
     return-void
+
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Stop indicator size must be >= 0."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

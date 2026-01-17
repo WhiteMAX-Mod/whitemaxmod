@@ -1,102 +1,386 @@
 .class public final Lqf4;
-.super Ljava/lang/Object;
+.super Lsf4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # static fields
-.field public static final o:Ljava/util/concurrent/ThreadFactory;
+.field public static final c:Lqf4;
+
+.field public static final d:Lqf4;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:Landroid/os/StrictMode$ThreadPolicy;
+.field public final synthetic b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method static synthetic constructor <clinit>()V
+    .locals 3
 
-    invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
+    new-instance v0, Lqf4;
 
-    move-result-object v0
+    const-string v1, ""
 
-    sput-object v0, Lqf4;->o:Ljava/util/concurrent/ThreadFactory;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lqf4;-><init>(Ljava/lang/Comparable;I)V
+
+    sput-object v0, Lqf4;->c:Lqf4;
+
+    new-instance v0, Lqf4;
+
+    const-string v1, ""
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lqf4;-><init>(Ljava/lang/Comparable;I)V
+
+    sput-object v0, Lqf4;->d:Lqf4;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Comparable;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lqf4;->b:I
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object v0, p0, Lqf4;->a:Ljava/util/concurrent/atomic/AtomicLong;
-
-    iput-object p1, p0, Lqf4;->b:Ljava/lang/String;
-
-    iput p2, p0, Lqf4;->c:I
-
-    iput-object p3, p0, Lqf4;->d:Landroid/os/StrictMode$ThreadPolicy;
+    invoke-direct {p0, p1}, Lsf4;-><init>(Ljava/lang/Comparable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 4
+.method public a(Lsf4;)I
+    .locals 1
 
-    new-instance v0, Lp02;
+    iget v0, p0, Lqf4;->b:I
 
-    const/16 v1, 0x15
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, v1, p1}, Lp02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-super {p0, p1}, Lsf4;->a(Lsf4;)I
 
-    sget-object p1, Lqf4;->o:Ljava/util/concurrent/ThreadFactory;
+    move-result p1
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    return p1
 
-    move-result-object p1
+    :pswitch_0
+    if-ne p1, p0, :cond_0
 
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lqf4;->a:Ljava/util/concurrent/atomic/AtomicLong;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
+    :cond_0
+    const/4 p1, -0x1
 
-    move-result-wide v0
+    :goto_0
+    return p1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    :pswitch_1
+    if-ne p1, p0, :cond_1
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p1, 0x0
 
-    iget-object v3, p0, Lqf4;->b:Ljava/lang/String;
+    goto :goto_1
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    const/4 p1, 0x1
 
-    const-string v3, " Thread #"
+    :goto_1
+    return p1
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.method public final b(Ljava/lang/StringBuilder;)V
+    .locals 1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v0, p0, Lqf4;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/16 v0, 0x5b
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lsf4;->a:Ljava/lang/Object;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :pswitch_0
+    const-string v0, "(-\u221e"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :pswitch_1
+    new-instance p1, Ljava/lang/AssertionError;
+
+    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public compareTo(Ljava/lang/Object;)I
+    .locals 1
+
+    iget v0, p0, Lqf4;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lsf4;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Lsf4;
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, -0x1
+
+    :goto_0
+    return p1
+
+    :pswitch_1
+    check-cast p1, Lsf4;
+
+    if-ne p1, p0, :cond_1
+
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ljava/lang/StringBuilder;)V
+    .locals 1
+
+    iget v0, p0, Lqf4;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lsf4;->a:Ljava/lang/Object;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x29
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/AssertionError;
+
+    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+
+    throw p1
+
+    :pswitch_1
+    const-string v0, "+\u221e)"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public e()Ljava/lang/Comparable;
+    .locals 2
+
+    iget v0, p0, Lqf4;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lsf4;->e()Ljava/lang/Comparable;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+    return-object v0
 
-    return-object p1
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "range unbounded on this side"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "range unbounded on this side"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f(Ljava/lang/Comparable;)Z
+    .locals 3
+
+    iget v0, p0, Lqf4;->b:I
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    packed-switch v0, :pswitch_data_0
+
+    sget v0, Lqhd;->c:I
+
+    iget-object v0, p0, Lsf4;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-gtz p1, :cond_0
+
+    move v1, v2
+
+    :cond_0
+    return v1
+
+    :pswitch_0
+    return v2
+
+    :pswitch_1
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lqf4;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lsf4;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_1
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lqf4;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "\\"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lsf4;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "-\u221e"
+
+    return-object v0
+
+    :pswitch_1
+    const-string v0, "+\u221e"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,62 +1,98 @@
 .class public final Lsaf;
-.super Ljava/lang/Object;
+.super Lq14;
 .source "SourceFile"
-
-# interfaces
-.implements Lqaf;
 
 
 # instance fields
-.field public final a:Labf;
-
-.field public final b:Z
-
-.field public final c:Z
+.field public final a:Llhg;
 
 
 # direct methods
-.method public constructor <init>(Labf;ZZ)V
+.method public constructor <init>(Llhg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsaf;->a:Labf;
-
-    iput-boolean p2, p0, Lsaf;->b:Z
-
-    iput-boolean p3, p0, Lsaf;->c:Z
+    iput-object p1, p0, Lsaf;->a:Llhg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lorg/json/JSONObject;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lorg/json/JSONObject;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    goto :goto_1
 
-    const-string v1, "command"
+    :cond_0
+    instance-of v0, p1, Lsaf;
 
-    const-string v2, "change-media-settings"
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    goto :goto_0
 
-    iget-boolean v1, p0, Lsaf;->b:Z
+    :cond_1
+    check-cast p1, Lsaf;
 
-    iget-boolean v2, p0, Lsaf;->c:Z
+    iget-object v0, p0, Lsaf;->a:Llhg;
 
-    iget-object v3, p0, Lsaf;->a:Labf;
+    iget-object p1, p1, Lsaf;->a:Llhg;
 
-    invoke-static {v3, v1, v2}, Lsoj;->q(Labf;ZZ)Lorg/json/JSONObject;
+    invoke-virtual {v0, p1}, Llhg;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result p1
 
-    const-string v2, "mediaSettings"
+    if-nez p1, :cond_2
 
-    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lsaf;->a:Llhg;
+
+    iget v0, v0, Llhg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lsaf;->a:Llhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

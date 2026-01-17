@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract g(ILarg;[I)Lltd;
+.method public abstract e(ILjrg;[I)Lhud;
 .end method

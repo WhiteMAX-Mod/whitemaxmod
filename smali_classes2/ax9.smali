@@ -1,87 +1,110 @@
-.class public final Lax9;
+.class public final synthetic Lax9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbx9;
+.implements Llq6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsz9;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Lsz9;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lax9;->a:I
 
-    iput-wide p1, p0, Lax9;->a:J
+    iput-object p1, p0, Lax9;->b:Lsz9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 14
 
-    const/4 v0, 0x1
+    iget v0, p0, Lax9;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v1, Lh3a;
 
-    :cond_0
-    instance-of v1, p1, Lax9;
+    iget-object v4, p0, Lax9;->b:Lsz9;
 
-    const/4 v2, 0x0
+    iget-object v0, v4, Lsz9;->b:La1a;
 
-    if-nez v1, :cond_1
+    iget-object v10, v4, Lsz9;->F0:Lsb4;
 
-    return v2
+    iget-object v11, v4, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    :cond_1
-    check-cast p1, Lax9;
+    iget-object v12, v4, Lsz9;->D1:Lpld;
 
-    iget-wide v3, p0, Lax9;->a:J
+    iget-object v13, v4, Lsz9;->F1:Lpld;
 
-    iget-wide v5, p1, Lax9;->a:J
+    new-instance v2, Ldw9;
 
-    cmp-long p1, v3, v5
+    const/4 v8, 0x0
 
-    if-eqz p1, :cond_2
+    const/4 v9, 0x2
 
-    return v2
+    const/4 v3, 0x2
 
-    :cond_2
-    return v0
-.end method
+    const-class v5, Lsz9;
 
-.method public final hashCode()I
-    .locals 2
+    const-string v6, "processReactionEffect"
 
-    iget-wide v0, p0, Lax9;->a:J
+    const-string v7, "processReactionEffect(Ljava/util/Set;J)V"
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-direct/range {v2 .. v9}, Ldw9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    move-result v0
+    new-instance v8, Ly07;
 
-    return v0
-.end method
+    const/16 v3, 0x14
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    invoke-direct {v8, v3, v4}, Ly07;-><init>(ILjava/lang/Object;)V
 
-    const-string v0, "SetRepliedMessage(messageId="
+    move-object v7, v2
 
-    const-string v1, ")"
+    move-object v3, v10
 
-    iget-wide v2, p0, Lax9;->a:J
+    move-object v4, v11
 
-    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-object v5, v12
 
-    move-result-object v0
+    move-object v6, v13
+
+    move-object v2, v0
+
+    invoke-direct/range {v1 .. v8}, Lh3a;-><init>(La1a;Lsb4;Lkotlinx/coroutines/internal/ContextScope;Lpld;Lpld;Ldw9;Ly07;)V
+
+    return-object v1
+
+    :pswitch_0
+    new-instance v0, Lp4h;
+
+    iget-object v1, p0, Lax9;->b:Lsz9;
+
+    iget-object v2, v1, Lsz9;->D1:Lpld;
+
+    iget-object v3, v1, Lsz9;->F1:Lpld;
+
+    iget-object v4, v1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, v1, Lsz9;->Y:Lmbg;
+
+    invoke-direct {v0, v2, v3, v4, v1}, Lp4h;-><init>(Lpld;Lpld;Lkotlinx/coroutines/internal/ContextScope;Lmbg;)V
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

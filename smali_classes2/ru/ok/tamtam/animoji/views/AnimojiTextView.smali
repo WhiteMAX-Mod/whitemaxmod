@@ -29,7 +29,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -37,9 +37,9 @@
 
 
 # instance fields
-.field public final u0:Ltk;
+.field public final v0:Luk;
 
-.field public v0:Lysb;
+.field public w0:Lktb;
 
 
 # direct methods
@@ -48,7 +48,7 @@
 
     const/4 v0, 0x0
 
-    .line 1
+    .line 9
     invoke-direct {p0, p1, p2, v0}, Lru/ok/tamtam/animoji/views/AnimojiTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -59,41 +59,41 @@
 
     const/4 p3, 0x0
 
-    .line 2
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 3
-    new-instance p1, Ltk;
+    .line 2
+    new-instance p1, Luk;
 
-    new-instance p2, Lrk;
+    new-instance p2, Lsk;
 
-    invoke-direct {p2, p3, p0}, Lrk;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p0}, Lsk;-><init>(ILjava/lang/Object;)V
 
     new-instance p3, Li;
 
-    const/16 v0, 0x9
+    const/16 v0, 0xc
 
     invoke-direct {p3, v0, p0}, Li;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p1, p0, p2, p3}, Ltk;-><init>(Lru/ok/tamtam/animoji/views/AnimojiTextView;Lrk;Li;)V
+    invoke-direct {p1, p0, p2, p3}, Luk;-><init>(Lru/ok/tamtam/animoji/views/AnimojiTextView;Lsk;Li;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->u0:Ltk;
+    iput-object p1, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->v0:Luk;
 
-    .line 4
-    iget-object p1, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->v0:Lysb;
+    .line 3
+    iget-object p1, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->w0:Lktb;
 
     if-eqz p1, :cond_0
 
-    .line 5
-    iget-object p2, p1, Lysb;->a:Ljava/lang/Object;
+    .line 4
+    iget-object p2, p1, Lktb;->a:Ljava/lang/Object;
 
-    .line 6
+    .line 5
     check-cast p2, Ljava/lang/CharSequence;
 
-    .line 7
-    iget-object p1, p1, Lysb;->b:Ljava/lang/Object;
+    .line 6
+    iget-object p1, p1, Lktb;->b:Ljava/lang/Object;
 
-    .line 8
+    .line 7
     check-cast p1, Landroid/widget/TextView$BufferType;
 
     invoke-virtual {p0, p2, p1}, Lru/ok/tamtam/animoji/views/AnimojiTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
@@ -101,8 +101,8 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 9
-    iput-object p1, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->v0:Lysb;
+    .line 8
+    iput-object p1, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->w0:Lktb;
 
     return-void
 .end method
@@ -128,11 +128,11 @@
 .method public final getAnimojiEnabled()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->u0:Ltk;
+    iget-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->v0:Luk;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, v0, Ltk;->b:Z
+    iget-boolean v0, v0, Luk;->b:Z
 
     return v0
 
@@ -145,11 +145,11 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->u0:Ltk;
+    iget-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->v0:Luk;
 
     if-eqz v0, :cond_1
 
-    sget-boolean v1, Lyh;->b:Z
+    sget-boolean v1, Lwh;->b:Z
 
     const-string v2, "AnimojiTextView"
 
@@ -157,10 +157,10 @@
 
     const-string v3, "---> onDraw start"
 
-    invoke-static {v2, v3}, Lyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lwh;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    iget-object v0, v0, Ltk;->X:Ljava/lang/Object;
+    iget-object v0, v0, Luk;->X:Ljava/lang/Object;
 
     check-cast v0, Li;
 
@@ -170,7 +170,7 @@
 
     const-string p1, "<--- onDraw finish"
 
-    invoke-static {v2, p1}, Lyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lwh;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -179,11 +179,11 @@
 .method public final setAnimojiEnabled(Z)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->u0:Ltk;
+    iget-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->v0:Luk;
 
     if-eqz v0, :cond_0
 
-    iput-boolean p1, v0, Ltk;->b:Z
+    iput-boolean p1, v0, Luk;->b:Z
 
     :cond_0
     return-void
@@ -192,32 +192,32 @@
 .method public setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
     .locals 9
 
-    iget-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->u0:Ltk;
+    iget-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->v0:Luk;
 
     if-nez v0, :cond_0
 
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    new-instance v0, Lysb;
+    new-instance v0, Lktb;
 
-    invoke-direct {v0, p1, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, p1, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->v0:Lysb;
+    iput-object v0, p0, Lru/ok/tamtam/animoji/views/AnimojiTextView;->w0:Lktb;
 
     return-void
 
     :cond_0
-    iget-object v1, v0, Ltk;->d:Ljava/lang/Object;
+    iget-object v1, v0, Luk;->d:Ljava/lang/Object;
 
     check-cast v1, Lru/ok/tamtam/animoji/views/AnimojiTextView;
 
-    iget-object v2, v0, Ltk;->o:Ljava/lang/Object;
+    iget-object v2, v0, Luk;->o:Ljava/lang/Object;
 
-    check-cast v2, Lrk;
+    check-cast v2, Lsk;
 
     if-eqz p1, :cond_d
 
-    invoke-static {p1}, Liyf;->G(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lrzf;->H(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -226,14 +226,14 @@
     goto/16 :goto_7
 
     :cond_1
-    iget-boolean v3, v0, Ltk;->b:Z
+    iget-boolean v3, v0, Luk;->b:Z
 
     if-nez v3, :cond_2
 
     goto/16 :goto_7
 
     :cond_2
-    sget-object v3, Lyh;->c:Luj;
+    sget-object v3, Lwh;->c:Lsj;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -260,7 +260,7 @@
     :goto_0
     if-eqz v7, :cond_4
 
-    const-class v8, Lg1h;
+    const-class v8, Lo1h;
 
     invoke-interface {v7, v5, v4, v8}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
@@ -287,11 +287,11 @@
     :cond_6
     :goto_2
     :try_start_1
-    invoke-static {}, Lue5;->a()Lue5;
+    invoke-static {}, Lve5;->a()Lve5;
 
     move-result-object v4
 
-    invoke-virtual {v4, p1}, Lue5;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v4, p1}, Lve5;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v4
     :try_end_1
@@ -302,16 +302,16 @@
     :catchall_1
     move-exception v4
 
-    new-instance v6, Lyyd;
+    new-instance v6, Lszd;
 
-    invoke-direct {v6, v4}, Lyyd;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v6, v4}, Lszd;-><init>(Ljava/lang/Throwable;)V
 
     move-object v4, v6
 
     :goto_3
     nop
 
-    instance-of v6, v4, Lyyd;
+    instance-of v6, v4, Lszd;
 
     if-eqz v6, :cond_7
 
@@ -323,12 +323,12 @@
 
     if-nez v4, :cond_8
 
-    invoke-virtual {v2, p1, p2}, Lrk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, p1, p2}, Lsk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_6
 
     :cond_8
-    invoke-virtual {v3, v4}, Luj;->a(Ljava/lang/CharSequence;)Ljava/util/List;
+    invoke-virtual {v3, v4}, Lsj;->a(Ljava/lang/CharSequence;)Ljava/util/List;
 
     move-result-object p1
 
@@ -353,13 +353,13 @@
     goto :goto_5
 
     :cond_9
-    invoke-interface {v1}, Lve5;->a()Z
+    invoke-interface {v1}, Lwe5;->a()Z
 
     move-result p1
 
     if-eqz p1, :cond_a
 
-    invoke-interface {v1, v5}, Lve5;->setEmojiCompatEnabled(Z)V
+    invoke-interface {v1, v5}, Lwe5;->setEmojiCompatEnabled(Z)V
 
     :cond_a
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -368,7 +368,7 @@
 
     xor-int/lit8 p1, p1, 0x1
 
-    iput-boolean p1, v0, Ltk;->c:Z
+    iput-boolean p1, v0, Luk;->c:Z
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -376,39 +376,39 @@
 
     if-nez p1, :cond_b
 
-    iget-object p1, v0, Ltk;->Y:Ljava/lang/Object;
+    iget-object p1, v0, Luk;->Y:Ljava/lang/Object;
 
-    check-cast p1, Lwj;
+    check-cast p1, Luj;
 
     if-nez p1, :cond_b
 
-    new-instance p1, Lwj;
+    new-instance p1, Luj;
 
-    invoke-direct {p1, v1}, Lwj;-><init>(Lru/ok/tamtam/animoji/views/AnimojiTextView;)V
+    invoke-direct {p1, v1}, Luj;-><init>(Lru/ok/tamtam/animoji/views/AnimojiTextView;)V
 
-    iput-object p1, v0, Ltk;->Y:Ljava/lang/Object;
+    iput-object p1, v0, Luk;->Y:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lwj;->a()V
+    invoke-virtual {p1}, Luj;->a()V
 
     :cond_b
     move-object p1, v4
 
     check-cast p1, Landroid/text/Spannable;
 
-    sget-object v0, Lyh;->c:Luj;
+    sget-object v0, Lwh;->c:Lsj;
 
-    invoke-static {p1, v3, v0}, Lz3j;->b(Landroid/text/Spannable;Ljava/util/ArrayList;Luj;)V
+    invoke-static {p1, v3, v0}, Lt4j;->a(Landroid/text/Spannable;Ljava/util/ArrayList;Lsj;)V
 
-    invoke-static {v4}, Lz3j;->l(Ljava/lang/CharSequence;)V
+    invoke-static {v4}, Lt4j;->c(Ljava/lang/CharSequence;)V
 
     :goto_5
-    invoke-virtual {v2, v4, p2}, Lrk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v4, p2}, Lsk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_6
     return-void
 
     :cond_c
-    invoke-static {p1}, La3e;->h(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
+    invoke-static {p1}, Liwd;->h(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
@@ -416,7 +416,7 @@
 
     :cond_d
     :goto_7
-    invoke-virtual {v2, p1, p2}, Lrk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, p1, p2}, Lsk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

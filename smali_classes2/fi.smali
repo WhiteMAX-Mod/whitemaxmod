@@ -1,19 +1,19 @@
 .class public final Lfi;
-.super Lgi;
+.super Lei;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[F
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>([F)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfi;->a:[F
+    iput p1, p0, Lfi;->a:I
 
     return-void
 .end method

@@ -1,65 +1,102 @@
-.class public final Lz87;
-.super Loke;
+.class public abstract Lz87;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
+
+
+# instance fields
+.field public final X:Ly85;
+
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lx87;
+
+.field public final c:J
+
+.field public final d:I
+
+.field public final o:J
+
+.field public final t0:J
+
+.field public final u0:J
+
+.field public final v0:Z
 
 
 # direct methods
-.method public constructor <init>(Lyz0;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Lx87;JIJLy85;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    .locals 0
 
-    new-instance v0, Lga7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lga7;-><init>()V
+    iput-object p1, p0, Lz87;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p1, v0}, Loke;-><init>(Lyz0;Lntb;)V
+    iput-object p2, p0, Lz87;->b:Lx87;
+
+    iput-wide p3, p0, Lz87;->c:J
+
+    iput p5, p0, Lz87;->d:I
+
+    iput-wide p6, p0, Lz87;->o:J
+
+    iput-object p8, p0, Lz87;->X:Ly85;
+
+    iput-object p9, p0, Lz87;->Y:Ljava/lang/String;
+
+    iput-object p10, p0, Lz87;->Z:Ljava/lang/String;
+
+    iput-wide p11, p0, Lz87;->t0:J
+
+    iput-wide p13, p0, Lz87;->u0:J
+
+    iput-boolean p15, p0, Lz87;->v0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lz49;)Lske;
-    .locals 9
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    new-instance v0, La97;
+    check-cast p1, Ljava/lang/Long;
 
-    iget-object v4, p0, Loke;->c:Ljava/util/concurrent/Executor;
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    iget-wide v5, p0, Loke;->d:J
+    move-result-wide v0
 
-    iget-wide v7, p0, Loke;->e:J
+    iget-wide v2, p0, Lz87;->o:J
 
-    iget-object v2, p0, Loke;->b:Lntb;
+    cmp-long v0, v2, v0
 
-    iget-object v3, p0, Loke;->a:Lyz0;
+    if-lez v0, :cond_0
 
-    move-object v1, p1
+    const/4 p1, 0x1
 
-    invoke-direct/range {v0 .. v8}, Lske;-><init>(Lz49;Lntb;Lyz0;Ljava/util/concurrent/Executor;JJ)V
+    return p1
 
-    return-object v0
-.end method
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-.method public final b(J)Loke;
-    .locals 0
+    move-result-wide v0
 
-    iput-wide p1, p0, Loke;->e:J
+    cmp-long p1, v2, v0
 
-    return-object p0
-.end method
+    if-gez p1, :cond_1
 
-.method public final c(Ljava/util/concurrent/ExecutorService;)Loke;
-    .locals 0
+    const/4 p1, -0x1
 
-    iput-object p1, p0, Loke;->c:Ljava/util/concurrent/Executor;
+    return p1
 
-    return-object p0
-.end method
+    :cond_1
+    const/4 p1, 0x0
 
-.method public final d(J)Loke;
-    .locals 0
-
-    iput-wide p1, p0, Loke;->d:J
-
-    return-object p0
+    return p1
 .end method

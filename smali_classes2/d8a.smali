@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltt8;
+.implements Ldt8;
 
 
 # instance fields
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final copy()Lab4;
+.method public final copy()Ldb4;
     .locals 1
 
     new-instance v0, Ld8a;

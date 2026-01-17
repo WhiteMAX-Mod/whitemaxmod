@@ -3,52 +3,72 @@
 
 
 # static fields
-.field public static audio_record_active_call_error_snackbar_title:I = 0x7f130086
+.field public static app_host:I = 0x7f130063
 
-.field public static audio_record_confirm_exit_accept:I = 0x7f130089
+.field public static app_host_1:I = 0x7f130064
 
-.field public static audio_record_confirm_exit_description:I = 0x7f13008a
+.field public static app_host_2:I = 0x7f130065
 
-.field public static audio_record_confirm_exit_title:I = 0x7f13008b
+.field public static app_host_3:I = 0x7f130066
 
-.field public static audio_record_error_common:I = 0x7f13008e
+.field public static app_host_prod:I = 0x7f130067
 
-.field public static audio_record_error_limit:I = 0x7f13008f
+.field public static app_host_prod_port:I = 0x7f130068
 
-.field public static audio_record_error_short:I = 0x7f130090
+.field public static app_host_redirects:I = 0x7f130069
 
-.field public static audio_record_hold_to_start:I = 0x7f130091
+.field public static app_scheme:I = 0x7f13006d
 
-.field public static channel_input_hint:I = 0x7f1302cb
+.field public static auth_path:I = 0x7f1300a7
 
-.field public static chat_input_hint:I = 0x7f130325
+.field public static folder_path:I = 0x7f13053c
 
-.field public static messagewrite_edit_quote_title:I = 0x7f1306f5
+.field public static link_call_join_path:I = 0x7f1305b5
 
-.field public static reply_quote_self:I = 0x7f130cab
+.field public static link_chat_join_path:I = 0x7f1305b6
 
-.field public static reply_quote_to_somebody:I = 0x7f130cac
+.field public static link_chat_path:I = 0x7f1305b7
 
-.field public static video_message_record_error_common:I = 0x7f130e9d
+.field public static link_host_api:I = 0x7f1305c2
 
-.field public static video_message_record_error_no_camera:I = 0x7f130e9e
+.field public static link_private_channel_path:I = 0x7f1305ca
 
-.field public static video_record_active_call_error_snackbar_title:I = 0x7f130ea9
+.field public static link_private_contact_path:I = 0x7f1305cb
 
-.field public static writebar__add_link_button:I = 0x7f130ec9
+.field public static link_startwebapp_path:I = 0x7f1305ce
 
-.field public static writebar__add_link_error_has_space:I = 0x7f130eca
+.field public static link_stickerset_path:I = 0x7f1305cf
 
-.field public static writebar__add_link_error_not_valid_link:I = 0x7f130ecb
+.field public static oneme_settings_app_version:I = 0x7f13097c
 
-.field public static writebar__add_link_error_not_valid_scheme:I = 0x7f130ecc
+.field public static oneme_settings_check_updates:I = 0x7f130986
 
-.field public static writebar__add_link_error_short_link:I = 0x7f130ecd
+.field public static oneme_settings_dump_active_notifications:I = 0x7f130988
 
-.field public static writebar__add_link_title:I = 0x7f130ece
+.field public static oneme_settings_dump_heap:I = 0x7f130989
 
-.field public static writebar_commands_not_found:I = 0x7f130ecf
+.field public static oneme_settings_dump_threads:I = 0x7f13098a
 
-.field public static writebar_mentions_not_found:I = 0x7f130ed0
+.field public static oneme_settings_iar_market_build_condition:I = 0x7f13098b
 
-.field public static writebar_mentions_title:I = 0x7f130ed1
+.field public static oneme_settings_iar_time_condition:I = 0x7f13098c
+
+.field public static oneme_settings_new_messages_screen:I = 0x7f1309a9
+
+.field public static oneme_settings_old_dev_menu:I = 0x7f1309aa
+
+.field public static oneme_settings_old_logs_menu:I = 0x7f1309ab
+
+.field public static oneme_settings_send_logs:I = 0x7f1309f8
+
+.field public static oneme_settings_thread_state_count:I = 0x7f130a14
+
+.field public static oneme_settings_thread_tracer:I = 0x7f130a15
+
+.field public static oneme_settings_thread_viewer_state:I = 0x7f130a16
+
+.field public static oneme_settings_user_id:I = 0x7f130a49
+
+.field public static oneme_settings_web_app_ssl:I = 0x7f130a4a
+
+.field public static web_scheme:I = 0x7f130ec3

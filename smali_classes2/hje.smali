@@ -1,59 +1,64 @@
-.class public abstract synthetic Lhje;
+.class public final Lhje;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lije;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Lv0f;
+
+.field public final b:Lfm4;
+
+.field public final c:I
+
+.field public final d:J
+
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lv0f;Lfm4;IJI)V
+    .locals 0
 
-    const/4 v0, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lc12;->z(I)[I
+    iput-object p1, p0, Lhje;->a:Lv0f;
 
-    move-result-object v1
+    iput-object p2, p0, Lhje;->b:Lfm4;
 
-    array-length v1, v1
+    iput p3, p0, Lhje;->c:I
 
-    new-array v1, v1, [I
+    iput-wide p4, p0, Lhje;->d:J
 
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v3, 0x2
-
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v3, 0x3
-
-    :try_start_2
-    aput v3, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    aput v0, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v1, Lhje;->$EnumSwitchMapping$0:[I
+    iput p6, p0, Lhje;->o:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Lhje;->o:I
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lhje;->d:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lhje;->c:I
+
+    return v0
 .end method

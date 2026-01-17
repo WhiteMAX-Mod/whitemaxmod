@@ -1,27 +1,50 @@
-.class public final Lqp3;
+.class public interface abstract Lqp3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lxk0;
+# virtual methods
+.method public abstract a(Lthc;I)Lkl4;
+.end method
 
-.field public final b:Lnp3;
+.method public abstract e(Lxpe;)I
+.end method
 
-.field public final c:Lop3;
+.method public abstract f(Lthc;I)D
+.end method
 
+.method public abstract g(Lthc;I)C
+.end method
 
-# direct methods
-.method public constructor <init>(Lxk0;Lnp3;Lop3;)V
-    .locals 0
+.method public abstract h(Lthc;I)F
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract i(Lthc;I)B
+.end method
 
-    iput-object p1, p0, Lqp3;->a:Lxk0;
+.method public abstract j(Lxpe;I)Ljava/lang/String;
+.end method
 
-    iput-object p2, p0, Lqp3;->b:Lnp3;
+.method public abstract l(Lthc;I)S
+.end method
 
-    iput-object p3, p0, Lqp3;->c:Lop3;
+.method public abstract m(Lxpe;)V
+.end method
 
-    return-void
+.method public abstract n()Lkme;
+.end method
+
+.method public abstract p(Lxpe;ILa38;Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract u(Lthc;I)I
+.end method
+
+.method public abstract w(Lxpe;ILa38;Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract x(Lthc;I)J
+.end method
+
+.method public abstract y(Lxpe;I)Z
 .end method

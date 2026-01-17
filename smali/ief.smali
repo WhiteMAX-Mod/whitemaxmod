@@ -1,272 +1,227 @@
 .class public final Lief;
-.super Lqae;
+.super Lf94;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lf6e;
-
-.field public static final e:Ljava/util/concurrent/ScheduledExecutorService;
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public X:Z
+
+.field public Y:Landroid/view/ViewGroup;
+
+.field public Z:Ld94;
+
+.field public d:Z
+
+.field public final o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(I)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object v0
-
-    sput-object v0, Lief;->e:Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
-
-    const-string v0, "rx3.single-priority"
-
-    const/4 v1, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    const/16 v1, 0xa
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    new-instance v2, Lf6e;
-
-    const-string v3, "RxSingleScheduler"
-
-    invoke-direct {v2, v3, v0, v1}, Lf6e;-><init>(Ljava/lang/String;IZ)V
-
-    sput-object v2, Lief;->d:Lf6e;
+    .line 1
+    invoke-direct {p0, v0}, Lief;-><init>(Z)V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Z)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    invoke-direct {p0}, Lf94;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    .line 3
+    iput-boolean p1, p0, Lief;->d:Z
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    const/4 p1, 0x1
 
-    iput-object v0, p0, Lief;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-boolean v1, Lwae;->a:Z
-
-    new-instance v1, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lief;->d:Lf6e;
-
-    invoke-direct {v1, v2, v3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
-
-    sget-boolean v2, Lwae;->a:Z
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setRemoveOnCancelPolicy(Z)V
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    .line 4
+    iput-boolean p1, p0, Lief;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Loae;
+.method public final a()V
     .locals 2
 
-    new-instance v0, Lhef;
+    iget-object v0, p0, Lief;->Z:Ld94;
 
-    iget-object v1, p0, Lief;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-direct {v0, v1}, Lhef;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
-
-    return-object v0
-.end method
-
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ll25;
-    .locals 3
-
-    new-instance v0, Lq9e;
-
-    const-string v1, "run is null"
-
-    invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Lq0;-><init>(Ljava/lang/Runnable;Z)V
-
-    const-wide/16 v1, 0x0
-
-    cmp-long p1, p2, v1
-
-    iget-object v1, p0, Lief;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    if-gtz p1, :cond_0
-
-    :try_start_0
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_1
+    invoke-virtual {v0}, Ld94;->d()V
 
     :cond_0
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    iput-object v0, p0, Lief;->Z:Ld94;
 
-    check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
+    iget-object v1, p0, Lief;->Y:Landroid/view/ViewGroup;
 
-    invoke-interface {p1, v0, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    if-eqz v1, :cond_1
 
-    move-result-object p1
-
-    :goto_0
-    invoke-virtual {v0, p1}, Lq0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :goto_1
-    invoke-static {p1}, Lomj;->d(Ljava/lang/Throwable;)V
-
-    sget-object p1, Lxg5;->a:Lxg5;
-
-    return-object p1
-.end method
-
-.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ll25;
-    .locals 8
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v1, p4, v4
-
-    sget-object v7, Lxg5;->a:Lxg5;
-
-    iget-object v6, p0, Lief;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    if-gtz v1, :cond_1
-
-    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v6, Lbt7;
-
-    invoke-direct {v6, p1, v1}, Lbt7;-><init>(Ljava/lang/Runnable;Ljava/util/concurrent/ScheduledExecutorService;)V
-
-    cmp-long v0, p2, v4
-
-    if-gtz v0, :cond_0
-
-    :try_start_0
-    invoke-interface {v1, v6}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {v1, v6, p2, p3, p6}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-virtual {v6, v0}, Lbt7;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v6
-
-    :goto_1
-    invoke-static {v0}, Lomj;->d(Ljava/lang/Throwable;)V
-
-    return-object v7
+    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     :cond_1
-    new-instance v1, Lp9e;
+    iput-object v0, p0, Lief;->Y:Landroid/view/ViewGroup;
 
-    const/4 v5, 0x1
+    return-void
+.end method
 
-    invoke-direct {v1, p1, v5}, Lq0;-><init>(Ljava/lang/Runnable;Z)V
+.method public final b()Lf94;
+    .locals 2
 
-    :try_start_1
-    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    new-instance v0, Lief;
 
-    move-result-object v0
+    iget-boolean v1, p0, Lief;->d:Z
 
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-direct {v0, v1}, Lief;-><init>(Z)V
 
-    move-wide v2, p2
+    return-object v0
+.end method
 
-    move-wide v4, p4
+.method public final d()Z
+    .locals 1
 
-    move-object v6, p6
+    iget-boolean v0, p0, Lief;->d:Z
 
-    invoke-interface/range {v0 .. v6}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final e()Z
+    .locals 1
 
-    invoke-virtual {v1, v0}, Lq0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_1
+    iget-boolean v0, p0, Lief;->o:Z
 
-    return-object v1
+    return v0
+.end method
 
-    :catch_1
-    move-exception v0
+.method public final f(Lf94;La94;)V
+    .locals 0
 
-    invoke-static {v0}, Lomj;->d(Ljava/lang/Throwable;)V
+    const/4 p1, 0x1
 
-    return-object v7
+    iput-boolean p1, p0, Lief;->X:Z
+
+    return-void
+.end method
+
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLd94;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lief;->X:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    if-eqz p2, :cond_2
+
+    if-eqz p4, :cond_1
+
+    iget-boolean p4, p0, Lief;->d:Z
+
+    if-eqz p4, :cond_2
+
+    :cond_1
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_2
+    if-eqz p3, :cond_3
+
+    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p2
+
+    if-nez p2, :cond_3
+
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_4
+
+    invoke-virtual {p5}, Ld94;->d()V
+
+    return-void
+
+    :cond_4
+    iput-object p5, p0, Lief;->Z:Ld94;
+
+    iput-object p1, p0, Lief;->Y:Landroid/view/ViewGroup;
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
+.end method
+
+.method public final h(Landroid/os/Bundle;)V
+    .locals 1
+
+    const-string v0, "SimpleSwapChangeHandler.removesFromViewOnPush"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lief;->d:Z
+
+    return-void
+.end method
+
+.method public final i(Landroid/os/Bundle;)V
+    .locals 2
+
+    const-string v0, "SimpleSwapChangeHandler.removesFromViewOnPush"
+
+    iget-boolean v1, p0, Lief;->d:Z
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 1
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object p1, p0, Lief;->Z:Ld94;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ld94;->d()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lief;->Z:Ld94;
+
+    iget-object v0, p0, Lief;->Y:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    :cond_1
+    iput-object p1, p0, Lief;->Y:Landroid/view/ViewGroup;
+
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
+
+    return-void
 .end method

@@ -2,49 +2,29 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lki4;
-
 
 # virtual methods
-.method public abstract J(IZ)Z
+.method public E()Ljava/util/List;
+    .locals 1
+
+    sget-object v0, Lhk7;->b:Lac6;
+
+    sget-object v0, Lhud;->o:Lhud;
+
+    return-object v0
 .end method
 
-.method public abstract K(I)I
+.method public abstract H(Lkt5;)V
 .end method
 
-.method public abstract P(IZ)Z
+.method public abstract d(JJ)V
 .end method
 
-.method public abstract a([BIIZ)Z
+.method public abstract f0(Lit5;Lf7;)I
 .end method
 
-.method public abstract d(I[BI)V
+.method public abstract l(Lit5;)Z
 .end method
 
-.method public abstract getLength()J
-.end method
-
-.method public abstract getPosition()J
-.end method
-
-.method public abstract n([BIIZ)Z
-.end method
-
-.method public abstract o()J
-.end method
-
-.method public abstract q(I)V
-.end method
-
-.method public abstract readFully([BII)V
-.end method
-
-.method public abstract t(I[BI)I
-.end method
-
-.method public abstract x()V
-.end method
-
-.method public abstract y(I)V
+.method public abstract release()V
 .end method

@@ -1,33 +1,47 @@
-.class public final Ldoa;
+.class public final synthetic Ldoa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/function/Predicate;
+
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:J
 
-.field public b:Z
 
-.field public c:Z
+# direct methods
+.method public synthetic constructor <init>(J)V
+    .locals 0
 
-.field public d:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public e:I
+    iput-wide p1, p0, Ldoa;->a:J
 
-.field public f:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    return-void
+.end method
 
-.field public g:Ljava/lang/String;
 
-.field public h:I
+# virtual methods
+.method public final test(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public i:I
+    check-cast p1, Lf9h;
 
-.field public j:I
+    iget-wide v0, p1, Lf9h;->b:J
 
-.field public k:I
+    iget-wide v2, p0, Ldoa;->a:J
 
-.field public l:I
+    cmp-long p1, v0, v2
 
-.field public m:Z
+    if-nez p1, :cond_0
 
-.field public n:Ly3b;
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method

@@ -1,232 +1,273 @@
 .class public final Ldla;
-.super Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljig;
+.implements Landroid/os/Parcelable;
+.implements Lud8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldla;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public C0:Z
+.field public final a:J
 
-.field public final D0:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
+    new-instance v0, Lhu8;
 
-    const/4 p1, 0x1
+    const/16 v1, 0x10
 
-    iput-boolean p1, p0, Ldla;->C0:Z
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
 
-    new-instance v0, Lk87;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1, p0}, Lk87;-><init>(ILjava/lang/Object;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldla;->D0:Ljava/lang/Object;
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance p1, Lrv6;
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Lrv6;-><init>(Landroid/content/res/Resources;)V
-
-    invoke-direct {p0}, Ldla;->getShimmerDrawable()Lcla;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lrv6;->d:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {}, Lt3e;->a()Lt3e;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lrv6;->p:Lt3e;
-
-    invoke-virtual {p1}, Lrv6;->a()Lqv6;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ln85;->setHierarchy(Lk85;)V
+    sput-object v0, Ldla;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method private final getShimmerDrawable()Lcla;
-    .locals 1
+.method public constructor <init>(IJLjava/lang/String;Z)V
+    .locals 0
 
-    iget-object v0, p0, Ldla;->D0:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    iput-wide p2, p0, Ldla;->a:J
 
-    move-result-object v0
+    iput-object p4, p0, Ldla;->b:Ljava/lang/String;
 
-    check-cast v0, Lcla;
+    iput p1, p0, Ldla;->c:I
+
+    iput-boolean p5, p0, Ldla;->d:Z
+
+    return-void
+.end method
+
+.method public static x(Ldla;Z)Ldla;
+    .locals 6
+
+    iget-wide v2, p0, Ldla;->a:J
+
+    iget-object v4, p0, Ldla;->b:Ljava/lang/String;
+
+    iget v1, p0, Ldla;->c:I
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ldla;
+
+    move v5, p1
+
+    invoke-direct/range {v0 .. v5}, Ldla;-><init>(IJLjava/lang/String;Z)V
 
     return-object v0
 .end method
 
-.method public static k(Lplb;)Lz6f;
-    .locals 3
 
-    new-instance v0, Lxp8;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    const/16 v1, 0x1a
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Lxp8;-><init>(I)V
+    return v0
+.end method
 
-    iget-object v1, v0, Lxp8;->b:Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast v1, Lz6f;
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldla;
 
     const/4 v2, 0x0
 
-    iput-boolean v2, v1, Lz6f;->j:Z
+    if-nez v1, :cond_1
 
-    invoke-interface {p0}, Lplb;->b()Lxf0;
+    return v2
 
-    move-result-object v2
+    :cond_1
+    check-cast p1, Ldla;
 
-    iget v2, v2, Lxf0;->m:I
+    iget-wide v3, p0, Ldla;->a:J
 
-    invoke-virtual {v0, v2}, Lxp8;->M(I)V
+    iget-wide v5, p1, Ldla;->a:J
 
-    invoke-interface {p0}, Lplb;->b()Lxf0;
+    cmp-long v1, v3, v5
 
-    move-result-object p0
+    if-eqz v1, :cond_2
 
-    iget p0, p0, Lxf0;->l:I
+    return v2
 
-    iput p0, v1, Lz6f;->d:I
+    :cond_2
+    iget-object v1, p0, Ldla;->b:Ljava/lang/String;
 
-    const/high16 p0, 0x3f800000    # 1.0f
+    iget-object v3, p1, Ldla;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Lxp8;->L(F)V
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/16 p0, 0x40
+    move-result v1
 
-    int-to-float p0, p0
+    if-nez v1, :cond_3
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    return v2
 
-    move-result-object v1
+    :cond_3
+    iget v1, p0, Ldla;->c:I
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget v3, p1, Ldla;->c:I
 
-    move-result-object v1
+    if-eq v1, v3, :cond_4
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    return v2
 
-    mul-float/2addr p0, v1
+    :cond_4
+    iget-boolean v1, p0, Ldla;->d:Z
 
-    invoke-static {p0}, Ln7j;->c(F)I
+    iget-boolean p1, p1, Ldla;->d:Z
 
-    move-result p0
+    if-eq v1, p1, :cond_5
 
-    invoke-virtual {v0, p0}, Lxp8;->O(I)V
+    return v2
 
-    invoke-virtual {v0}, Lxp8;->m()Lz6f;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_5
+    return v0
 .end method
 
+.method public final getItemId()J
+    .locals 2
 
-# virtual methods
-.method public final j(Lti7;Landroid/graphics/drawable/Animatable;)V
-    .locals 0
+    iget-wide v0, p0, Ldla;->a:J
 
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Ldla;->C0:Z
-
-    invoke-direct {p0}, Ldla;->getShimmerDrawable()Lcla;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lc7f;->d()V
-
-    iget-boolean p1, p0, Ldla;->C0:Z
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final onAttachedToWindow()V
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Ldla;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ldla;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Ldla;->c:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Ldla;->d:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
     .locals 1
 
-    invoke-super {p0}, Ln85;->onAttachedToWindow()V
+    const/4 v0, 0x1
 
-    iget-boolean v0, p0, Ldla;->C0:Z
+    return v0
+.end method
 
-    xor-int/lit8 v0, v0, 0x1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
+    const-string v0, "NeuroAvatarModel(id="
 
-    iget-boolean v0, p0, Ldla;->C0:Z
+    const-string v1, ", url="
 
-    if-nez v0, :cond_0
+    iget-wide v2, p0, Ldla;->a:J
 
-    invoke-direct {p0}, Ldla;->getShimmerDrawable()Lcla;
+    iget-object v4, p0, Ldla;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lc7f;->c()V
+    const-string v1, ", categoryId="
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final onDetachedFromWindow()V
-    .locals 1
+    iget v1, p0, Ldla;->c:I
 
-    invoke-super {p0}, Ln85;->onDetachedFromWindow()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Ldla;->C0:Z
+    const-string v1, ", isSelected="
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Ldla;->getShimmerDrawable()Lcla;
+    iget-boolean v1, p0, Ldla;->d:Z
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lc7f;->d()V
+    const-string v1, ")"
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final onThemeChanged(Lplb;)V
-    .locals 1
-
-    invoke-direct {p0}, Ldla;->getShimmerDrawable()Lcla;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1}, Ldla;->k(Lplb;)Lz6f;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    invoke-virtual {v0, p1}, Lc7f;->b(Lz6f;)V
+    iget-wide v0, p0, Ldla;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object p2, p0, Ldla;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget p2, p0, Ldla;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ldla;->d:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

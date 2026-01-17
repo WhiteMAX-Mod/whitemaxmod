@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->resolveInternalIds(Ljava/util/List;Loq6;Loq6;)V
+    value = Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->resolveInternalIds(Ljava/util/List;Lnq6;Lnq6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lv2h;",
+        "Lb3h;",
         "run",
         "()V",
         "<anonymous>"
@@ -36,18 +36,18 @@
 
 
 # instance fields
-.field final synthetic $onError:Loq6;
+.field final synthetic $onError:Lnq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loq6;"
+            "Lnq6;"
         }
     .end annotation
 .end field
 
-.field final synthetic $onResult:Loq6;
+.field final synthetic $onResult:Lnq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loq6;"
+            "Lnq6;"
         }
     .end annotation
 .end field
@@ -56,7 +56,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lwv1;",
+            "Lpv1;",
             ">;"
         }
     .end annotation
@@ -66,17 +66,17 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;Ljava/util/List;Loq6;Loq6;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;Ljava/util/List;Lnq6;Lnq6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;",
             "Ljava/util/List<",
-            "Lwv1;",
+            "Lpv1;",
             ">;",
-            "Loq6;",
-            "Loq6;",
+            "Lnq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -85,9 +85,9 @@
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$waitingParticipants:Ljava/util/List;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$onResult:Loq6;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$onResult:Lnq6;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$onError:Loq6;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$onError:Lnq6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -108,9 +108,9 @@
     move-result-object v0
 
     :try_start_0
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$onResult:Loq6;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$onResult:Lnq6;
 
-    invoke-interface {v1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -119,9 +119,9 @@
     :catch_0
     move-exception v0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$onError:Loq6;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$resolveInternalIds$1;->$onError:Lnq6;
 
-    invoke-interface {v1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

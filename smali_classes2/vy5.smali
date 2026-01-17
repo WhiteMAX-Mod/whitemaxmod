@@ -1,386 +1,119 @@
 .class public final Lvy5;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Laj4;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic Y:Lxy5;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lxy5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lvy5;->a:I
+    iput-object p1, p0, Lvy5;->Y:Lxy5;
 
-    iput-object p2, p0, Lvy5;->b:Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final e()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Lpi4;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Lpi4;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Lpi4;)V
-    .locals 0
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lpi4;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lvy5;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lvy5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgzd;
-
-    iget-object v1, v0, Lgzd;->h:Lpi4;
-
-    if-ne p1, v1, :cond_0
-
-    check-cast p1, Lp0;
-
-    invoke-virtual {p1}, Lp0;->e()F
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Lp0;->j(F)Z
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lvy5;->b:Ljava/lang/Object;
-
-    check-cast v0, Ldi7;
-
-    check-cast p1, Lp0;
-
-    invoke-virtual {p1}, Lp0;->e()F
-
-    move-result v1
-
-    invoke-virtual {p1}, Lp0;->g()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {p1}, Lp0;->f()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_0
-    const v2, 0x3f7d70a4    # 0.99f
-
-    cmpg-float v2, v1, v2
-
-    if-gez v2, :cond_4
-
-    if-eqz p1, :cond_4
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {p0, p1, p2}, Lvy5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/os/Looper;->isCurrentThread()Z
+    check-cast p1, Lvy5;
 
-    move-result p1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    if-eqz p1, :cond_2
-
-    sget-object p1, Lvh7;->a:Lvh7;
-
-    invoke-static {v0, p1}, Ldi7;->l(Ldi7;Lxh7;)V
-
-    iget-object p1, v0, Ldi7;->N0:Ljava/lang/Object;
-
-    invoke-interface {p1}, Ld68;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lvy5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lh10;
+    return-object p1
+.end method
 
-    const/16 v0, 0x2710
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    int-to-float v0, v0
+    new-instance v0, Lvy5;
 
-    mul-float/2addr v1, v0
+    iget-object v1, p0, Lvy5;->Y:Lxy5;
 
-    invoke-static {v1}, Ln7j;->c(F)I
+    invoke-direct {v0, v1, p2}, Lvy5;-><init>(Lxy5;Lkotlin/coroutines/Continuation;)V
 
-    move-result v0
+    iput-object p1, v0, Lvy5;->X:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+    return-object v0
+.end method
 
-    goto :goto_1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    :cond_2
-    invoke-virtual {v0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+    iget-object v0, p0, Lvy5;->X:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Lzb4;
 
-    if-eqz p1, :cond_3
-
-    new-instance v2, Lbi7;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v1, v3}, Lbi7;-><init>(Ldi7;FI)V
-
-    invoke-virtual {p1, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    goto :goto_1
-
-    :cond_3
-    new-instance p1, Lbi7;
+    iget v1, p0, Lvy5;->o:I
 
     const/4 v2, 0x1
 
-    invoke-direct {p1, v0, v1, v2}, Lbi7;-><init>(Ldi7;FI)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_4
-    :goto_1
-    :pswitch_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Lpi4;)V
-    .locals 2
-
-    iget v0, p0, Lvy5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lvy5;->b:Ljava/lang/Object;
-
-    check-cast p1, Lgzd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lvy5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lp62;
-
-    invoke-virtual {v0}, Lp62;->r()Z
-
-    move-result v1
-
     if-eqz v1, :cond_1
 
-    check-cast p1, Lp0;
+    if-ne v1, v2, :cond_0
 
-    invoke-virtual {p1}, Lp0;->d()Ljava/lang/Throwable;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object p1
+    return-object p1
 
-    if-nez p1, :cond_0
-
+    :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v1, "fail"
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    new-instance v1, Lyyd;
-
-    invoke-direct {v1, p1}, Lyyd;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, v1}, Lp62;->resumeWith(Ljava/lang/Object;)V
+    throw p1
 
     :cond_1
-    return-void
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    nop
+    const/4 p1, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    iput-object p1, p0, Lvy5;->X:Ljava/lang/Object;
 
-.method public final c()V
-    .locals 2
+    iput v2, p0, Lvy5;->o:I
 
-    iget v0, p0, Lvy5;->a:I
+    iget-object p1, p0, Lvy5;->Y:Lxy5;
 
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lvy5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lp62;
-
-    invoke-virtual {v0}, Lp62;->r()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lp62;->h(Ljava/lang/Throwable;)Z
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d(Lpi4;)V
-    .locals 3
-
-    iget v0, p0, Lvy5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lvy5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgzd;
-
-    invoke-interface {p1}, Lpi4;->c()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lgzd;->h:Lpi4;
-
-    if-ne p1, v1, :cond_1
-
-    check-cast p1, Lp0;
-
-    iget-object p1, p1, Lp0;->a:Ljava/util/Map;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2, p1}, Lp0;->k(Ljava/lang/Object;ZLjava/util/Map;)Z
-
-    goto :goto_0
-
-    :cond_0
-    check-cast p1, Lp0;
-
-    invoke-virtual {p1}, Lp0;->g()Z
-
-    :cond_1
-    :goto_0
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lvy5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lp62;
-
-    invoke-virtual {v0}, Lp62;->isCancelled()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    move-object v1, p1
-
-    check-cast v1, Lp0;
-
-    invoke-virtual {v1}, Lp0;->g()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface {p1}, Lpi4;->b()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lxy5;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lp62;->resumeWith(Ljava/lang/Object;)V
+    sget-object v0, Lac4;->a:Lac4;
 
-    :cond_3
-    :goto_1
-    return-void
+    if-ne p1, v0, :cond_2
 
-    nop
+    return-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    return-object p1
 .end method

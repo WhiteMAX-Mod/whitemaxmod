@@ -1,184 +1,88 @@
 .class public final Lkxa;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Lkef;
 .source "SourceFile"
 
 # interfaces
-.implements Lc0b;
+.implements Lxr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Llv8;
 
-.field public final b:Lc0b;
+.field public final b:Ltr6;
 
-.field public final c:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final c:Le7e;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc0b;Ljava/util/concurrent/atomic/AtomicInteger;I)V
+.method public constructor <init>(Llv8;Ltr6;Le7e;)V
     .locals 0
 
-    iput p3, p0, Lkxa;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-object p1, p0, Lkxa;->a:Llv8;
 
-    iput-object p1, p0, Lkxa;->b:Lc0b;
+    iput-object p2, p0, Lkxa;->b:Ltr6;
 
-    iput-object p2, p0, Lkxa;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p3, p0, Lkxa;->c:Le7e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final b()Ldxa;
+    .locals 5
 
-    iget v0, p0, Lkxa;->a:I
+    new-instance v0, Ljxa;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lkxa;->c:Le7e;
 
-    iget-object v0, p0, Lkxa;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+    const/4 v2, 0x0
 
-    check-cast v0, Lmxa;
+    iget-object v3, p0, Lkxa;->a:Llv8;
 
-    const/4 v1, 0x0
+    iget-object v4, p0, Lkxa;->b:Ltr6;
 
-    iput-boolean v1, v0, Lmxa;->Y:Z
+    invoke-direct {v0, v3, v4, v1, v2}, Ljxa;-><init>(Ldxa;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {v0}, Lmxa;->a()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lkxa;->c:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    check-cast v0, Llxa;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Llxa;->s0:Z
-
-    invoke-virtual {v0}, Llxa;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final c(Ll25;)V
-    .locals 1
+.method public final m(Ldff;)V
+    .locals 4
 
-    iget v0, p0, Lkxa;->a:I
+    :try_start_0
+    iget-object v0, p0, Lkxa;->b:Ltr6;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, v0, Ltr6;->a:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lp25;->d(Ljava/util/concurrent/atomic/AtomicReference;Ll25;)Z
+    const-string v1, "The initialSupplier returned a null value"
 
-    return-void
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :pswitch_0
-    invoke-static {p0, p1}, Lp25;->d(Ljava/util/concurrent/atomic/AtomicReference;Ll25;)Z
+    new-instance v1, Lixa;
 
-    return-void
+    iget-object v2, p0, Lkxa;->c:Le7e;
 
-    nop
+    const/4 v3, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-direct {v1, p1, v0, v2, v3}, Lixa;-><init>(Ljava/lang/Object;Ljava/lang/Object;Le7e;I)V
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
+    iget-object p1, p0, Lkxa;->a:Llv8;
 
-    iget v0, p0, Lkxa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lkxa;->b:Lc0b;
-
-    check-cast v0, Lcpe;
-
-    invoke-virtual {v0, p1}, Lcpe;->d(Ljava/lang/Object;)V
+    invoke-virtual {p1, v1}, Ldxa;->a(Le0b;)V
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lkxa;->b:Lc0b;
+    :catchall_0
+    move-exception v0
 
-    invoke-interface {v0, p1}, Lc0b;->d(Ljava/lang/Object;)V
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget v0, p0, Lkxa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lkxa;->c:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    check-cast v0, Lmxa;
-
-    invoke-virtual {v0}, Lmxa;->dispose()V
-
-    iget-object v0, p0, Lkxa;->b:Lc0b;
-
-    check-cast v0, Lcpe;
-
-    invoke-virtual {v0, p1}, Lcpe;->onError(Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lyg5;->d(Ljava/lang/Throwable;Ldff;)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lkxa;->c:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    check-cast v0, Llxa;
-
-    iget-object v1, v0, Llxa;->d:Llz;
-
-    invoke-virtual {v1, p1}, Llz;->b(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-boolean p1, v0, Llxa;->X:Z
-
-    if-nez p1, :cond_0
-
-    iget-object p1, v0, Llxa;->Z:Ll25;
-
-    invoke-interface {p1}, Ll25;->dispose()V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput-boolean p1, v0, Llxa;->s0:Z
-
-    invoke-virtual {v0}, Llxa;->a()V
-
-    :cond_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

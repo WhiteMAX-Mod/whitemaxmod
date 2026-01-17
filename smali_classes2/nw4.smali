@@ -1,123 +1,172 @@
 .class public final Lnw4;
-.super Lc94;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic Y:I
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public X:Lw22;
+.field public final a:J
 
-.field public final d:J
-
-.field public final o:Landroid/os/Handler;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(JZ)V
+    .locals 0
 
-    invoke-direct {p0}, Lc94;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x3e8
+    iput-wide p1, p0, Lnw4;->a:J
 
-    iput-wide v0, p0, Lnw4;->d:J
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object v0, p0, Lnw4;->o:Landroid/os/Handler;
+    iput-boolean p3, p0, Lnw4;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final a()Ljava/util/Map;
+    .locals 4
 
-    iget-object v0, p0, Lnw4;->X:Lw22;
+    iget-wide v0, p0, Lnw4;->a:J
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v1, p0, Lnw4;->o:Landroid/os/Handler;
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    new-instance v1, Lktb;
+
+    const-string v2, "timeToFire"
+
+    invoke-direct {v1, v2, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v0, p0, Lnw4;->b:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    new-instance v2, Lktb;
+
+    const-string v3, "notifySender"
+
+    invoke-direct {v2, v3, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, v2}, [Lktb;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lss8;->i([Lktb;)Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lnw4;->X:Lw22;
+    instance-of v1, p1, Lnw4;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Lw22;->run()V
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    const/4 v0, 0x0
+    check-cast p1, Lnw4;
 
-    iput-object v0, p0, Lnw4;->X:Lw22;
+    iget-wide v3, p0, Lnw4;->a:J
 
-    return-void
+    iget-wide v5, p1, Lnw4;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lnw4;->b:Z
+
+    iget-boolean p1, p1, Lnw4;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final f(Lc94;Lx84;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    iget-object p1, p0, Lnw4;->X:Lw22;
+    iget-wide v0, p0, Lnw4;->a:J
 
-    if-eqz p1, :cond_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-object p2, p0, Lnw4;->o:Landroid/os/Handler;
+    move-result v0
 
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-boolean v1, p0, Lnw4;->b:Z
 
-    iput-object p1, p0, Lnw4;->X:Lw22;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    return-void
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLa94;)V
-    .locals 9
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lnw4;->X:Lw22;
+    iget-wide v0, p0, Lnw4;->a:J
 
-    iget-object v1, p0, Lnw4;->o:Landroid/os/Handler;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lgmj;->f(Ljava/lang/Long;)Ljava/lang/String;
 
-    :cond_0
-    new-instance v2, Lw22;
+    move-result-object v0
 
-    move-object v5, p0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-object v6, p1
+    const-string v2, "DelayedAttributes(timeToFire="
 
-    move-object v3, p2
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-object v7, p3
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v4, p4
+    const-string v0, ", notifySender="
 
-    move-object v8, p5
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v2 .. v8}, Lw22;-><init>(Landroid/view/View;ZLnw4;Landroid/view/ViewGroup;Landroid/view/View;La94;)V
+    iget-boolean v0, p0, Lnw4;->b:Z
 
-    iget-wide p1, v5, Lnw4;->d:J
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    const-string v0, ")"
 
-    iput-object v2, v5, Lnw4;->X:Lw22;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

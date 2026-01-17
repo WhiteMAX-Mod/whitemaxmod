@@ -4,11 +4,5 @@
 
 
 # virtual methods
-.method public abstract e()Ldac;
-.end method
-
-.method public abstract r()J
-.end method
-
-.method public abstract s(Ldac;)V
+.method public abstract a(Ljava/lang/Object;)I
 .end method

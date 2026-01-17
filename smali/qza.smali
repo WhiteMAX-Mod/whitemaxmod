@@ -3,23 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo1d;
+.implements Lp2d;
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lc0b;
+.field public final a:Le0b;
 
 .field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lc0b;Ljava/lang/Object;)V
+.method public constructor <init>(Le0b;Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    iput-object p1, p0, Lqza;->a:Lc0b;
+    iput-object p1, p0, Lqza;->a:Le0b;
 
     iput-object p2, p0, Lqza;->b:Ljava/lang/Object;
 
@@ -48,7 +48,7 @@
     return-void
 .end method
 
-.method public final f()Z
+.method public final e()Z
     .locals 2
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -67,6 +67,16 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public final g(I)I
+    .locals 0
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    return p1
 .end method
 
 .method public final isEmpty()Z
@@ -125,16 +135,6 @@
     return-object v0
 .end method
 
-.method public final q(I)I
-    .locals 0
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    return p1
-.end method
-
 .method public final run()V
     .locals 3
 
@@ -156,9 +156,9 @@
 
     iget-object v0, p0, Lqza;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lqza;->a:Lc0b;
+    iget-object v2, p0, Lqza;->a:Le0b;
 
-    invoke-interface {v2, v0}, Lc0b;->d(Ljava/lang/Object;)V
+    invoke-interface {v2, v0}, Le0b;->r(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
@@ -170,7 +170,7 @@
 
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
-    invoke-interface {v2}, Lc0b;->b()V
+    invoke-interface {v2}, Le0b;->b()V
 
     :cond_0
     return-void

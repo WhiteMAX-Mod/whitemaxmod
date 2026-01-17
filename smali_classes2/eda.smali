@@ -6,30 +6,30 @@
 # instance fields
 .field public final a:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public final b:Liw9;
+.field public final b:Lnf6;
 
-.field public final c:Lyca;
+.field public final c:Lxca;
 
-.field public final d:Lcx9;
+.field public final d:Lwne;
 
-.field public e:Lab3;
+.field public e:Lo14;
 
-.field public f:Lyl4;
+.field public f:Lxl4;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Liw9;Lyca;Lcx9;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Lnf6;Lxca;Lymb;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Leda;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iput-object p2, p0, Leda;->b:Liw9;
+    iput-object p2, p0, Leda;->b:Lnf6;
 
-    iput-object p3, p0, Leda;->c:Lyca;
+    iput-object p3, p0, Leda;->c:Lxca;
 
-    iput-object p4, p0, Leda;->d:Lcx9;
+    iput-object p4, p0, Leda;->d:Lwne;
 
     return-void
 .end method

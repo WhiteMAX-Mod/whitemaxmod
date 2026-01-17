@@ -24,7 +24,7 @@
 
     move-result-object p1
 
-    sget p2, La5d;->browser_actions_context_menu_min_padding:I
+    sget p2, Lx5d;->browser_actions_context_menu_min_padding:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -36,7 +36,7 @@
 
     move-result-object p1
 
-    sget p2, La5d;->browser_actions_context_menu_max_width:I
+    sget p2, Lx5d;->browser_actions_context_menu_max_width:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

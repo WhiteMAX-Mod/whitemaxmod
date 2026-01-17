@@ -12,12 +12,12 @@
         "one/me/android/LibraryUpgradeHelper$FailToClearStatException",
         "Ljava/lang/IllegalStateException;",
         "Lkotlin/IllegalStateException;",
-        "oneme_playGoogleRelease"
+        "oneme_googleRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30

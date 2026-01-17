@@ -1,124 +1,83 @@
-.class public final synthetic Lb54;
-.super Ljava/lang/Object;
+.class public final Lb54;
+.super Ltsd;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final F0:Ly44;
 
-.field public final synthetic b:Lv44;
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:Lwrd;
+.field public final G0:Laj0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwrd;Lv44;ZI)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ly44;)V
+    .locals 2
 
-    iput p4, p0, Lb54;->a:I
+    sget-object v0, Lui0;->a:Lui0;
 
-    iput-object p1, p0, Lb54;->d:Lwrd;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    iput-object p2, p0, Lb54;->b:Lv44;
+    move-result-object v0
 
-    iput-boolean p3, p0, Lb54;->c:Z
+    const/16 v1, 0x19f
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
+    check-cast v0, Laj0;
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+    new-instance v1, Lpab;
 
-    iget p1, p0, Lb54;->a:I
+    invoke-direct {v1, p1}, Lpab;-><init>(Landroid/content/Context;)V
 
-    packed-switch p1, :pswitch_data_0
+    invoke-direct {p0, v1}, Ltsd;-><init>(Landroid/view/View;)V
 
-    iget-object p1, p0, Lb54;->d:Lwrd;
+    iput-object p2, p0, Lb54;->F0:Ly44;
 
-    check-cast p1, Lr54;
+    iput-object v0, p0, Lb54;->G0:Laj0;
 
-    iget-object v0, p1, Lr54;->E0:Lt44;
+    new-instance p2, Landroid/view/ViewGroup$LayoutParams;
 
-    iget-object v1, p0, Lb54;->b:Lv44;
+    const/4 v0, -0x1
 
-    iget v1, v1, Lv44;->a:I
+    invoke-direct {p2, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-interface {v0, v1}, Lt44;->C(I)V
+    invoke-virtual {v1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object p1, p1, Lr54;->F0:Laj0;
+    sget p2, Lv5e;->b0:I
 
-    invoke-static {v1}, Lhjj;->h(I)I
+    invoke-virtual {v1, p2}, Lpab;->setIcon(I)V
 
-    move-result v0
+    sget p2, Lycd;->banner_big_permit_phone_book_contacts_title:I
 
-    iget-boolean v1, p0, Lb54;->c:Z
+    new-instance v0, Llhg;
 
-    const/4 v2, 0x2
+    invoke-direct {v0, p2}, Llhg;-><init>(I)V
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v1, v0}, Lpab;->setTitle(Lqhg;)V
 
-    const/4 v1, 0x1
+    sget p2, Lycd;->banner_big_permit_phone_book_contacts_subtitle:I
 
-    goto :goto_0
+    new-instance v0, Llhg;
 
-    :cond_0
-    move v1, v2
+    invoke-direct {v0, p2}, Llhg;-><init>(I)V
 
-    :goto_0
-    invoke-virtual {p1, v0, v2, v1}, Laj0;->a(III)V
+    invoke-virtual {v1, v0}, Lpab;->setSubtitle(Lqhg;)V
 
-    return-void
+    sget p2, Lycd;->banner_big_permit_phone_book_contacts_action_button_text:I
 
-    :pswitch_0
-    iget-object p1, p0, Lb54;->d:Lwrd;
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    check-cast p1, Lc54;
+    move-result-object p1
 
-    iget-object v0, p1, Lc54;->E0:Lt44;
+    new-instance p2, Lc6;
 
-    iget-object v1, p0, Lb54;->b:Lv44;
+    const/16 v0, 0x11
 
-    iget v1, v1, Lv44;->a:I
+    invoke-direct {p2, v0, p0}, Lc6;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {v0, v1}, Lt44;->C(I)V
-
-    iget-object p1, p1, Lc54;->F0:Laj0;
-
-    invoke-static {v1}, Lhjj;->h(I)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lb54;->c:Z
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x2
-
-    :goto_1
-    invoke-virtual {p1, v0, v2, v1}, Laj0;->a(III)V
+    invoke-virtual {v1, p1, p2}, Lpab;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

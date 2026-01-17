@@ -1,50 +1,80 @@
-.class public final Llfg;
-.super Lf3;
+.class public final synthetic Llfg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnhh;
 
-# static fields
-.field public static final c:Llfg;
+
+# instance fields
+.field public final synthetic a:Lmfg;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Lgo6;
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lmfg;ILgo6;J)V
+    .locals 0
 
-    new-instance v0, Llfg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Llfg;->a:Lmfg;
 
-    const/16 v2, 0xf
+    iput p2, p0, Llfg;->b:I
 
-    invoke-direct {v0, v2, v1}, Lf3;-><init>(ILjava/lang/Object;)V
+    iput-object p3, p0, Llfg;->c:Lgo6;
 
-    sput-object v0, Llfg;->c:Llfg;
+    iput-wide p4, p0, Llfg;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i0()Z
-    .locals 2
+.method public final run()V
+    .locals 9
 
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    iget-object v0, p0, Llfg;->a:Lmfg;
 
-    move-result-object v0
+    iget v1, p0, Llfg;->b:I
 
-    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+    iget-object v2, p0, Llfg;->c:Lgo6;
 
-    move-result v0
+    iget-wide v3, p0, Llfg;->d:J
 
-    const/4 v1, 0x1
+    new-instance v5, Lbz6;
 
-    if-ne v0, v1, :cond_0
+    iget-object v6, v2, Lgo6;->a:Lpj6;
 
-    return v1
+    iget v7, v6, Lpj6;->u:I
 
-    :cond_0
-    const/4 v0, 0x0
+    iget v6, v6, Lpj6;->v:I
 
-    return v0
+    const/4 v8, -0x1
+
+    invoke-direct {v5, v1, v8, v7, v6}, Lbz6;-><init>(IIII)V
+
+    iget-object v0, v0, Lmfg;->d:Lfsg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, v5, v3, v4}, Lfsg;->W(Lbz6;J)V
+
+    iget-object v0, v2, Lgo6;->a:Lpj6;
+
+    iget v0, v0, Lpj6;->u:I
+
+    sget-object v0, Lzk4;->a:Ljava/util/LinkedHashMap;
+
+    const-class v0, Lzk4;
+
+    monitor-enter v0
+
+    monitor-exit v0
+
+    return-void
 .end method

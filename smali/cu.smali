@@ -4,17 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(I)V
-.end method
-
-.method public abstract b(Lrj6;)Lg7e;
-.end method
-
-.method public abstract c(Landroidx/media3/transformer/ExportException;)V
-.end method
-
-.method public abstract d(J)V
-.end method
-
-.method public abstract e(ILrj6;)Z
+.method public abstract f(Lhd5;Landroid/os/Looper;Ldu;Lqq3;)Leu;
 .end method

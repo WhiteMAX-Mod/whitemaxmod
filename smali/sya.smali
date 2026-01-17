@@ -1,47 +1,43 @@
 .class public final Lsya;
-.super Ljava/lang/Object;
+.super Lzm0;
 .source "SourceFile"
-
-# interfaces
-.implements Lzb6;
-.implements Ll25;
 
 
 # instance fields
-.field public final a:Lc0b;
+.field public X:Z
 
-.field public b:Lqzf;
+.field public final a:Le0b;
+
+.field public final b:Ljava/util/Iterator;
+
+.field public volatile c:Z
+
+.field public d:Z
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lc0b;)V
+.method public constructor <init>(Le0b;Ljava/util/Iterator;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsya;->a:Lc0b;
+    iput-object p1, p0, Lsya;->a:Le0b;
+
+    iput-object p2, p0, Lsya;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final clear()V
     .locals 1
 
-    iget-object v0, p0, Lsya;->a:Lc0b;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Lc0b;->b()V
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lsya;->a:Lc0b;
-
-    invoke-interface {v0, p1}, Lc0b;->d(Ljava/lang/Object;)V
+    iput-boolean v0, p0, Lsya;->o:Z
 
     return-void
 .end method
@@ -49,67 +45,80 @@
 .method public final dispose()V
     .locals 1
 
-    iget-object v0, p0, Lsya;->b:Lqzf;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Lqzf;->cancel()V
-
-    sget-object v0, Ltzf;->a:Ltzf;
-
-    iput-object v0, p0, Lsya;->b:Lqzf;
+    iput-boolean v0, p0, Lsya;->c:Z
 
     return-void
 .end method
 
-.method public final e(Lqzf;)V
-    .locals 2
+.method public final e()Z
+    .locals 1
 
-    iget-object v0, p0, Lsya;->b:Lqzf;
+    iget-boolean v0, p0, Lsya;->c:Z
 
-    invoke-static {v0, p1}, Ltzf;->h(Lqzf;Lqzf;)Z
+    return v0
+.end method
 
-    move-result v0
+.method public final g(I)I
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lsya;->d:Z
+
+    return p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lsya;->o:Z
+
+    return v0
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 4
+
+    iget-boolean v0, p0, Lsya;->o:Z
+
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lsya;->b:Lqzf;
-
-    iget-object v0, p0, Lsya;->a:Lc0b;
-
-    invoke-interface {v0, p0}, Lc0b;->c(Ll25;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Lqzf;->g(J)V
+    return-object v1
 
     :cond_0
-    return-void
-.end method
+    iget-boolean v0, p0, Lsya;->X:Z
 
-.method public final f()Z
-    .locals 2
+    const/4 v2, 0x1
 
-    iget-object v0, p0, Lsya;->b:Lqzf;
+    iget-object v3, p0, Lsya;->b:Ljava/util/Iterator;
 
-    sget-object v1, Ltzf;->a:Ltzf;
+    if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    const/4 v0, 0x1
+    move-result v0
 
-    return v0
+    if-nez v0, :cond_2
 
-    :cond_0
-    const/4 v0, 0x0
+    iput-boolean v2, p0, Lsya;->o:Z
 
-    return v0
-.end method
+    return-object v1
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    :cond_1
+    iput-boolean v2, p0, Lsya;->X:Z
 
-    iget-object v0, p0, Lsya;->a:Lc0b;
+    :cond_2
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-interface {v0, p1}, Lc0b;->onError(Ljava/lang/Throwable;)V
+    move-result-object v0
 
-    return-void
+    const-string v1, "The iterator returned a null value"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    return-object v0
 .end method

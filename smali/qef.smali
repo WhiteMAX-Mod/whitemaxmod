@@ -1,61 +1,73 @@
 .class public final Lqef;
-.super Lbw4;
+.super Lkef;
 .source "SourceFile"
-
-# interfaces
-.implements Ludf;
 
 
 # instance fields
-.field public c:Ll25;
+.field public final synthetic a:I
+
+.field public final b:Lkef;
+
+.field public final c:Lay3;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lkef;Lay3;I)V
+    .locals 0
+
+    iput p3, p0, Lqef;->a:I
+
+    iput-object p1, p0, Lqef;->b:Lkef;
+
+    iput-object p2, p0, Lqef;->c:Lay3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final c(Ll25;)V
-    .locals 1
+.method public final m(Ldff;)V
+    .locals 3
 
-    iget-object v0, p0, Lqef;->c:Ll25;
+    iget v0, p0, Lqef;->a:I
 
-    invoke-static {v0, p1}, Lp25;->j(Ll25;Ll25;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    new-instance v0, Lo2b;
 
-    if-eqz v0, :cond_0
+    const/16 v1, 0xa
 
-    iput-object p1, p0, Lqef;->c:Ll25;
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lbw4;->a:Lozf;
+    invoke-direct {v0, p0, p1, v2, v1}, Lo2b;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    invoke-interface {p1, p0}, Lozf;->e(Lqzf;)V
+    iget-object p1, p0, Lqef;->b:Lkef;
 
-    :cond_0
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lbw4;->b:Ljava/lang/Object;
-
-    iget-object v0, p0, Lqef;->c:Ll25;
-
-    invoke-interface {v0}, Ll25;->dispose()V
+    invoke-virtual {p1, v0}, Lkef;->l(Ldff;)V
 
     return-void
-.end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    :pswitch_0
+    new-instance v0, Lbxa;
 
-    iget-object v0, p0, Lbw4;->a:Lozf;
+    const/16 v1, 0xa
 
-    invoke-interface {v0, p1}, Lozf;->onError(Ljava/lang/Throwable;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v2, v1}, Lbxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-object p1, p0, Lqef;->b:Lkef;
+
+    invoke-virtual {p1, v0}, Lkef;->l(Ldff;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

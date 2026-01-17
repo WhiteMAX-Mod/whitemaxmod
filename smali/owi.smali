@@ -1,16 +1,13 @@
 .class public final Lowi;
-.super Lkvi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvwa;
 
 
 # static fields
-.field public static final o:Lowi;
-
-
-# instance fields
-.field public final transient c:[Ljava/lang/Object;
-
-.field public final transient d:I
+.field public static final a:Lowi;
 
 
 # direct methods
@@ -19,91 +16,65 @@
 
     new-instance v0, Lowi;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-array v2, v1, [Ljava/lang/Object;
+    sput-object v0, Lowi;->a:Lowi;
 
-    invoke-direct {v0, v1, v2}, Lowi;-><init>(I[Ljava/lang/Object;)V
+    new-instance v0, Lbri;
 
-    sput-object v0, Lowi;->o:Lowi;
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
+    const-class v1, Lpri;
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    iput-object p2, p0, Lowi;->c:[Ljava/lang/Object;
+    move-result-object v0
 
-    iput p1, p0, Lowi;->d:I
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I[Ljava/lang/Object;)I
-    .locals 3
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lowi;->c:[Ljava/lang/Object;
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    const/4 v1, 0x0
+    move-result-object p1
 
-    iget v2, p0, Lowi;->d:I
-
-    invoke-static {v0, v1, p2, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    add-int/2addr p1, v2
-
-    return p1
-.end method
-
-.method public final b()I
-    .locals 1
-
-    iget v0, p0, Lowi;->d:I
-
-    return v0
-.end method
-
-.method public final c()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final d()[Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lowi;->c:[Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lowi;->d:I
-
-    invoke-static {p1, v0}, Le9j;->c(II)V
-
-    iget-object v0, p0, Lowi;->c:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lowi;->d:I
-
-    return v0
+    throw p1
 .end method

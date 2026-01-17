@@ -2,5 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfl;
+
+# instance fields
+.field public a:J
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;

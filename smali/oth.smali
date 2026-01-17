@@ -1,45 +1,141 @@
-.class public final Loth;
+.class public abstract Loth;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lird;
+
+# instance fields
+.field public final a:Ls84;
 
 
-# virtual methods
-.method public final b(Landroid/view/View;)V
-    .locals 0
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ls84;
+
+    invoke-direct {v0}, Ls84;-><init>()V
+
+    iput-object v0, p0, Loth;->a:Ls84;
 
     return-void
 .end method
 
-.method public final d(Landroid/view/View;)V
-    .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+# virtual methods
+.method public final a()V
+    .locals 4
 
-    move-result-object p1
+    iget-object v0, p0, Loth;->a:Ls84;
 
-    check-cast p1, Lhrd;
+    if-eqz v0, :cond_3
 
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+    iget-boolean v1, v0, Ls84;->a:Z
 
-    const/4 v1, -0x1
+    if-eqz v1, :cond_0
 
-    if-ne v0, v1, :cond_0
-
-    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    if-ne p1, v1, :cond_0
-
-    return-void
+    goto :goto_3
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v1, 0x1
 
-    const-string v0, "Pages must fill the whole ViewPager2 (use match_parent)"
+    iput-boolean v1, v0, Ls84;->a:Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v1, v0, Ls84;->b:Ljava/lang/Object;
 
-    throw p1
+    check-cast v1, Lpdf;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v0, Ls84;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/AutoCloseable;
+
+    invoke-static {v3}, Ls84;->b(Ljava/lang/AutoCloseable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v2, v0, Ls84;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/AutoCloseable;
+
+    invoke-static {v3}, Ls84;->b(Ljava/lang/AutoCloseable;)V
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, v0, Ls84;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0}, Ljava/util/Set;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    goto :goto_3
+
+    :goto_2
+    monitor-exit v1
+
+    throw v0
+
+    :cond_3
+    :goto_3
+    invoke-virtual {p0}, Loth;->b()V
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 0
+
+    return-void
 .end method

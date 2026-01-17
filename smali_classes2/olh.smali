@@ -1,31 +1,22 @@
-.class public final Lolh;
-.super Ljava/lang/Object;
+.class public final synthetic Lolh;
+.super Lt8;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ld68;
-
-.field public final b:Ld68;
-
-.field public final c:Ld68;
-
-.field public final d:Ld68;
+# interfaces
+.implements Llq6;
 
 
-# direct methods
-.method public constructor <init>(Ld68;Ld68;Ld68;Ld68;)V
-    .locals 0
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lt8;->a:Ljava/lang/Object;
 
-    iput-object p1, p0, Lolh;->a:Ld68;
+    check-cast v0, Ly5g;
 
-    iput-object p2, p0, Lolh;->b:Ld68;
+    invoke-virtual {v0}, Ly5g;->d()V
 
-    iput-object p3, p0, Lolh;->c:Ld68;
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    iput-object p4, p0, Lolh;->d:Ld68;
-
-    return-void
+    return-object v0
 .end method

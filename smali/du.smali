@@ -4,14 +4,17 @@
 
 
 # virtual methods
-.method public abstract g(Lt56;)I
+.method public abstract a(I)V
 .end method
 
-.method public abstract j()Lel7;
+.method public abstract b(Lpj6;)Ld8e;
 .end method
 
-.method public abstract release()V
+.method public abstract c(Landroidx/media3/transformer/ExportException;)V
 .end method
 
-.method public abstract start()V
+.method public abstract d(J)V
+.end method
+
+.method public abstract e(ILpj6;)Z
 .end method

@@ -2,84 +2,250 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvz0;
+
 
 # instance fields
-.field public a:Z
+.field public final a:Ljava/util/LinkedHashMap;
 
-.field public b:I
 
-.field public c:I
+# direct methods
+.method public constructor <init>(Ljava/util/Map;)V
+    .locals 6
 
-.field public d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public e:I
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-.field public f:I
+    invoke-interface {p1}, Ljava/util/Map;->size()I
 
-.field public g:I
+    move-result v1
 
-.field public h:Z
+    invoke-static {v1}, Lss8;->h(I)I
 
-.field public i:Z
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    new-instance v3, La68;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v4
+
+    invoke-direct {v3, v4, v5}, La68;-><init>(J)V
+
+    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v0, p0, Lb68;->a:Ljava/util/LinkedHashMap;
+
+    return-void
+.end method
+
+.method public static e(Ljava/lang/String;)Le49;
+    .locals 3
+
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    const-string v0, "MediaItemType"
+
+    invoke-virtual {p0, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p0}, Lyzf;->k(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, -0x1
+
+    :goto_0
+    new-instance v0, Lb2;
+
+    const/4 v1, 0x0
+
+    sget-object v2, Le49;->X:Lal5;
+
+    invoke-direct {v0, v1, v2}, Lb2;-><init>(ILjava/lang/Object;)V
+
+    :cond_1
+    invoke-virtual {v0}, Lb2;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Le49;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    if-ne v2, p0, :cond_1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_1
+    check-cast v1, Le49;
+
+    if-nez v1, :cond_3
+
+    sget-object p0, Le49;->a:Le49;
+
+    return-object p0
+
+    :cond_3
+    return-object v1
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a(Lcdf;Lfdf;)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p2, Lf01;->a:Ljava/lang/String;
 
-    const-string v1, "LayoutState{mAvailable="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lb68;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mCurrentPosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lb68;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mItemDirection="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lb68;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mLayoutDirection="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lb68;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mStartLine="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lb68;->f:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mEndLine="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lb68;->g:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lxd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0}, Lb68;->e(Ljava/lang/String;)Le49;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v1, p0, Lb68;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La68;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, La68;->a(Lcdf;Lfdf;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final b(Lmz0;Ljava/lang/String;JJ)V
+    .locals 8
+
+    iget-object v0, p0, Lb68;->a:Ljava/util/LinkedHashMap;
+
+    invoke-static {p2}, Lb68;->e(Ljava/lang/String;)Le49;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, La68;
+
+    if-eqz v1, :cond_0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-wide v4, p3
+
+    move-wide v6, p5
+
+    invoke-virtual/range {v1 .. v7}, La68;->b(Lmz0;Ljava/lang/String;JJ)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Lcdf;Lfdf;Lfdf;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lb68;->d(Lcdf;Lf01;)V
+
+    invoke-virtual {p0, p1, p3}, Lb68;->a(Lcdf;Lfdf;)V
+
+    return-void
+.end method
+
+.method public final d(Lcdf;Lf01;)V
+    .locals 2
+
+    iget-object v0, p2, Lf01;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Lb68;->e(Ljava/lang/String;)Le49;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lb68;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La68;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, La68;->d(Lcdf;Lf01;)V
+
+    :cond_0
+    return-void
 .end method

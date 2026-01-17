@@ -17,14 +17,14 @@
         "callAnalyticsSender",
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;",
         "analyticsConfiguration",
-        "Lt0b;",
+        "Lv0b;",
         "api",
         "Lkotlin/Function0;",
-        "Lcgd;",
+        "Lahd;",
         "logger",
-        "Lv2h;",
+        "Lb3h;",
         "init",
-        "(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Lt0b;Lmq6;)V",
+        "(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Lv0b;Llq6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -48,15 +48,15 @@
 
 
 # virtual methods
-.method public final init(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Lt0b;Lmq6;)V
+.method public final init(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Lv0b;Llq6;)V
     .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/analytics/CallAnalyticsSender;",
             "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;",
-            "Lt0b;",
-            "Lmq6;",
+            "Lv0b;",
+            "Llq6;",
             ")V"
         }
     .end annotation
@@ -75,43 +75,43 @@
 
     invoke-direct {v4, v0}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$1;-><init>(Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;)V
 
-    invoke-direct {v3, v4}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;-><init>(Lmq6;)V
+    invoke-direct {v3, v4}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;-><init>(Llq6;)V
 
     new-instance v0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;
 
     move-object/from16 v4, p4
 
-    invoke-direct {v0, v4}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;-><init>(Lmq6;)V
+    invoke-direct {v0, v4}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsLoggerImpl;-><init>(Llq6;)V
 
     new-instance v4, Lru/ok/android/externcalls/analytics/config/UploadConfig;
 
     new-instance v11, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$2;
 
-    invoke-direct {v11, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$2;-><init>(Lmq6;)V
+    invoke-direct {v11, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$2;-><init>(Llq6;)V
 
     new-instance v12, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$3;
 
-    invoke-direct {v12, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$3;-><init>(Lmq6;)V
+    invoke-direct {v12, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$3;-><init>(Llq6;)V
 
     new-instance v13, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$4;
 
-    invoke-direct {v13, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$4;-><init>(Lmq6;)V
+    invoke-direct {v13, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$4;-><init>(Llq6;)V
 
     new-instance v14, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$5;
 
-    invoke-direct {v14, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$5;-><init>(Lmq6;)V
+    invoke-direct {v14, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$5;-><init>(Llq6;)V
 
     new-instance v15, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$6;
 
-    invoke-direct {v15, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$6;-><init>(Lmq6;)V
+    invoke-direct {v15, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$6;-><init>(Llq6;)V
 
     new-instance v5, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$7;
 
-    invoke-direct {v5, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$7;-><init>(Lmq6;)V
+    invoke-direct {v5, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$7;-><init>(Llq6;)V
 
     new-instance v6, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$8;
 
-    invoke-direct {v6, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$8;-><init>(Lmq6;)V
+    invoke-direct {v6, v1}, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$8;-><init>(Llq6;)V
 
     const/16 v18, 0xf
 
@@ -129,11 +129,11 @@
 
     const-wide/16 v9, 0x0
 
-    invoke-direct/range {v4 .. v19}, Lru/ok/android/externcalls/analytics/config/UploadConfig;-><init>(ILjava/util/concurrent/Executor;JJLmq6;Lmq6;Lmq6;Lmq6;Lmq6;Lmq6;Lmq6;ILro4;)V
+    invoke-direct/range {v4 .. v19}, Lru/ok/android/externcalls/analytics/config/UploadConfig;-><init>(ILjava/util/concurrent/Executor;JJLlq6;Llq6;Llq6;Llq6;Llq6;Llq6;Llq6;ILso4;)V
 
     move-object/from16 v1, p3
 
-    invoke-direct {v2, v1, v3, v0, v4}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;-><init>(Lt0b;Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;Lru/ok/android/externcalls/analytics/config/UploadConfig;)V
+    invoke-direct {v2, v1, v3, v0, v4}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;-><init>(Lv0b;Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;Lru/ok/android/externcalls/analytics/config/UploadConfig;)V
 
     move-object/from16 v0, p1
 

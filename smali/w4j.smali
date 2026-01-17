@@ -1,184 +1,128 @@
-.class public abstract Lw4j;
+.class public final Lw4j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
 
 # static fields
-.field public static a:I = 0x3
+.field public static final a:Lw4j;
+
+.field public static final b:Lfz5;
+
+.field public static final c:Lfz5;
+
+.field public static final d:Lfz5;
 
 
 # direct methods
-.method public static final varargs a([Lysb;)Lxs;
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Lxs;
+    new-instance v0, Lw4j;
 
-    array-length v1, p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lwbf;-><init>(I)V
+    sput-object v0, Lw4j;->a:Lw4j;
 
-    array-length v1, p0
+    new-instance v0, Lvzi;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x1
 
-    :goto_0
-    if-ge v2, v1, :cond_0
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    aget-object v3, p0, v2
+    const-class v1, Ln0j;
 
-    iget-object v4, v3, Lysb;->a:Ljava/lang/Object;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    iget-object v3, v3, Lysb;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-virtual {v0, v4, v3}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v2, Lfz5;
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    return-object v0
-.end method
+    const-string v3, "logEventKey"
 
-.method public static b(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    const/4 v0, 0x3
+    sput-object v2, Lw4j;->b:Lfz5;
 
-    invoke-static {v0, p0}, Lw4j;->f(ILjava/lang/String;)Z
+    new-instance v0, Lvzi;
 
-    move-result v0
+    const/4 v2, 0x2
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    :cond_0
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "eventCount"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lw4j;->c:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "inferenceDurationStats"
+
+    invoke-direct {v1, v2, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lw4j;->d:Lfz5;
+
     return-void
 .end method
 
-.method public static c(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
 
-    const/4 v0, 0x6
-
-    invoke-static {v0, p0}, Lw4j;->f(ILjava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    const/4 v0, 0x6
-
-    invoke-static {v0, p0}, Lw4j;->f(ILjava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static final e(Landroidx/viewpager2/widget/ViewPager2;)V
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    new-instance v0, Ldt;
+    check-cast p1, Lm1j;
 
-    const/16 v1, 0x8
+    check-cast p2, Lwwa;
 
-    invoke-direct {v0, v1, p0}, Ldt;-><init>(ILjava/lang/Object;)V
+    sget-object v0, Lw4j;->b:Lfz5;
 
-    sget-object p0, Lh71;->F0:Lh71;
+    iget-object v1, p1, Lm1j;->a:Lj1j;
 
-    invoke-static {v0, p0}, Lpoe;->e(Leoe;Loq6;)Lv36;
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    move-result-object p0
+    sget-object v0, Lw4j;->c:Lfz5;
 
-    invoke-static {p0}, Lpoe;->h(Leoe;)Ljava/lang/Object;
+    iget-object v1, p1, Lm1j;->b:Ljava/lang/Integer;
 
-    move-result-object p0
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
+    sget-object v0, Lw4j;->d:Lfz5;
 
-    if-eqz p0, :cond_0
+    iget-object p1, p1, Lm1j;->c:Lckj;
 
-    sget v0, Ly4e;->a1:I
+    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setId(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static f(ILjava/lang/String;)Z
-    .locals 1
-
-    sget v0, Lw4j;->a:I
-
-    if-le v0, p0, :cond_1
-
-    invoke-static {p1, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static g(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x5
-
-    invoke-static {v0, p0}, Lw4j;->f(ILjava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    const/4 v0, 0x5
-
-    invoke-static {v0, p0}, Lw4j;->f(ILjava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
     return-void
 .end method

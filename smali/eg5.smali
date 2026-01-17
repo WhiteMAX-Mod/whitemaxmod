@@ -1,127 +1,149 @@
 .class public final Leg5;
-.super Lse5;
+.super Looj;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/ref/WeakReference;
+.field public final a:Ldg5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;)V
+.method public constructor <init>(Landroid/widget/TextView;)V
     .locals 1
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Leg5;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    new-instance v0, Ldg5;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p1}, Ldg5;-><init>(Landroid/widget/TextView;)V
 
-    iput-object v0, p0, Leg5;->b:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/appcompat/widget/SwitchCompat;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Leg5;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Leg5;->b:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Leg5;->a:Ldg5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
+.method public final a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
     .locals 1
 
-    iget v0, p0, Leg5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Leg5;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/appcompat/widget/SwitchCompat;
+    sget-object v0, Lve5;->k:Lve5;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/SwitchCompat;->d()V
+    const/4 v0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    if-nez v0, :cond_1
+
+    return-object p1
+
+    :cond_1
+    iget-object v0, p0, Leg5;->a:Ldg5;
+
+    invoke-virtual {v0, p1}, Ldg5;->a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b()V
-    .locals 2
+.method public final b()Z
+    .locals 1
 
-    iget v0, p0, Leg5;->a:I
+    iget-object v0, p0, Leg5;->a:Ldg5;
 
-    packed-switch v0, :pswitch_data_0
+    iget-boolean v0, v0, Ldg5;->c:Z
 
-    iget-object v0, p0, Leg5;->b:Ljava/lang/ref/WeakReference;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+.method public final d(Z)V
+    .locals 1
 
-    move-result-object v0
-
-    check-cast v0, Landroidx/appcompat/widget/SwitchCompat;
+    sget-object v0, Lve5;->k:Lve5;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/SwitchCompat;->d()V
+    const/4 v0, 0x1
+
+    goto :goto_0
 
     :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Leg5;->b:Ljava/lang/ref/WeakReference;
+    :cond_1
+    iget-object v0, p0, Leg5;->a:Ldg5;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ldg5;->d(Z)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, Landroid/widget/EditText;
+.method public final e(Z)V
+    .locals 2
+
+    iget-object v0, p0, Leg5;->a:Ldg5;
+
+    sget-object v1, Lve5;->k:Lve5;
+
+    if-eqz v1, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lfg5;->a(Landroid/widget/EditText;I)V
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-nez v1, :cond_1
+
+    iput-boolean p1, v0, Ldg5;->c:Z
 
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    invoke-virtual {v0, p1}, Ldg5;->e(Z)V
+
+    return-void
+.end method
+
+.method public final f(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+    .locals 1
+
+    sget-object v0, Lve5;->k:Lve5;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    return-object p1
+
+    :cond_1
+    iget-object v0, p0, Leg5;->a:Ldg5;
+
+    invoke-virtual {v0, p1}, Ldg5;->f(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -2,6 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsr1;
-.implements Lxu1;
+
+# virtual methods
+.method public abstract b(Ljava/lang/String;)V
+.end method

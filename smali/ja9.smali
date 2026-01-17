@@ -1,147 +1,195 @@
-.class public abstract Lja9;
-.super Lka9;
+.class public final Lja9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Ljte;
+
+.field public static final f:Llbc;
+
+
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Ljte;
 
-.field public b:Ljava/util/concurrent/Executor;
+.field public final b:Llbc;
 
-.field public c:Ll9b;
+.field public final c:Lhk7;
 
-.field public d:Lr99;
-
-.field public e:Ljava/util/ArrayList;
+.field public final d:Lhk7;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lja9;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public j()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public k()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final l(Lr99;Ljava/util/ArrayList;)V
+.method static constructor <clinit>()V
     .locals 8
 
-    if-eqz p1, :cond_1
+    new-instance v0, Ljava/util/HashSet;
 
-    iget-object v1, p0, Lja9;->a:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    monitor-enter v1
+    sget-object v1, Lite;->d:Lhud;
 
-    :try_start_0
-    iget-object v0, p0, Lja9;->b:Ljava/util/concurrent/Executor;
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_0
-
-    iget-object v4, p0, Lja9;->c:Ll9b;
-
-    new-instance v2, Lvii;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    const/4 v7, 0x5
-
-    move-object v3, p0
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    :try_start_1
-    invoke-direct/range {v2 .. v7}, Lvii;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
+    move v3, v2
 
     :goto_0
-    move-object p1, v0
+    iget v4, v1, Lhud;->d:I
 
-    goto :goto_2
+    if-ge v3, v4, :cond_0
 
-    :catchall_1
-    move-exception v0
+    new-instance v4, Lite;
 
-    move-object v3, p0
+    invoke-virtual {v1, v3}, Lhud;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    invoke-direct {v4, v5}, Lite;-><init>(I)V
+
+    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    move-object v3, p0
+    new-instance v3, Ljte;
 
-    move-object v5, p1
+    invoke-direct {v3, v0}, Ljte;-><init>(Ljava/util/HashSet;)V
 
-    move-object v6, p2
+    sput-object v3, Lja9;->e:Ljte;
 
-    iput-object v5, v3, Lja9;->d:Lr99;
+    new-instance v0, Ljava/util/HashSet;
 
-    new-instance p1, Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    invoke-direct {p1, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    sget-object v3, Lite;->e:Lhud;
 
-    iput-object p1, v3, Lja9;->e:Ljava/util/ArrayList;
+    move v4, v2
 
     :goto_1
-    monitor-exit v1
+    iget v5, v3, Lhud;->d:I
 
-    return-void
+    if-ge v4, v5, :cond_1
 
-    :goto_2
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    new-instance v5, Lite;
 
-    throw p1
+    invoke-virtual {v3, v4}, Lhud;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Integer;
+
+    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    invoke-direct {v5, v6}, Lite;-><init>(I)V
+
+    invoke-virtual {v0, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
 
     :cond_1
-    move-object v3, p0
+    move v3, v2
 
-    new-instance p1, Ljava/lang/NullPointerException;
+    :goto_2
+    iget v4, v1, Lhud;->d:I
 
-    const-string p2, "groupRoute must not be null"
+    if-ge v3, v4, :cond_2
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    new-instance v4, Lite;
 
-    throw p1
+    invoke-virtual {v1, v3}, Lhud;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    invoke-direct {v4, v5}, Lite;-><init>(I)V
+
+    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v1, Ljte;
+
+    invoke-direct {v1, v0}, Ljte;-><init>(Ljava/util/HashSet;)V
+
+    new-instance v0, Landroid/util/SparseBooleanArray;
+
+    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
+
+    sget-object v1, La4a;->c:[I
+
+    array-length v3, v1
+
+    move v4, v2
+
+    :goto_3
+    const/4 v5, 0x1
+
+    if-ge v4, v3, :cond_3
+
+    aget v6, v1, v4
+
+    const/4 v7, 0x0
+
+    xor-int/2addr v7, v5
+
+    invoke-static {v7}, Lh6j;->g(Z)V
+
+    invoke-virtual {v0, v6, v5}, Landroid/util/SparseBooleanArray;->append(IZ)V
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    new-instance v1, Llbc;
+
+    xor-int/2addr v2, v5
+
+    invoke-static {v2}, Lh6j;->g(Z)V
+
+    new-instance v2, Lg66;
+
+    invoke-direct {v2, v0}, Lg66;-><init>(Landroid/util/SparseBooleanArray;)V
+
+    invoke-direct {v1, v2}, Llbc;-><init>(Lg66;)V
+
+    sput-object v1, Lja9;->f:Llbc;
+
+    return-void
 .end method
 
-.method public abstract m(Ljava/lang/String;)V
-.end method
+.method public constructor <init>(Ljte;Llbc;Lhk7;Lhk7;)V
+    .locals 0
 
-.method public abstract n(Ljava/lang/String;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract o(Ljava/util/List;)V
+    iput-object p1, p0, Lja9;->a:Ljte;
+
+    iput-object p2, p0, Lja9;->b:Llbc;
+
+    iput-object p3, p0, Lja9;->c:Lhk7;
+
+    iput-object p4, p0, Lja9;->d:Lhk7;
+
+    return-void
 .end method

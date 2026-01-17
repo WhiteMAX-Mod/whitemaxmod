@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build La35;
+.annotation build Ld35;
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -45,11 +45,11 @@
 # virtual methods
 .method public final shouldUseHardwareBitmapConfig(Landroid/graphics/Bitmap$Config;)Z
     .locals 1
-    .annotation build La35;
-    .end annotation
-
     .annotation build Landroid/annotation/TargetApi;
         value = 0x1a
+    .end annotation
+
+    .annotation build Ld35;
     .end annotation
 
     sget-object v0, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;

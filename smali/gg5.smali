@@ -3,96 +3,217 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/method/TransformationMethod;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field public final a:Landroid/text/method/TransformationMethod;
+.field public X:Z
+
+.field public final a:Landroid/widget/EditText;
+
+.field public final b:Z
+
+.field public c:Lfg5;
+
+.field public d:I
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/method/TransformationMethod;)V
-    .locals 0
+.method public constructor <init>(Landroid/widget/EditText;Z)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgg5;->a:Landroid/text/method/TransformationMethod;
+    const v0, 0x7fffffff
 
+    iput v0, p0, Lgg5;->d:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgg5;->o:I
+
+    iput-object p1, p0, Lgg5;->a:Landroid/widget/EditText;
+
+    iput-boolean p2, p0, Lgg5;->b:Z
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lgg5;->X:Z
+
+    return-void
+.end method
+
+.method public static a(Landroid/widget/EditText;I)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_2
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
+
+    move-result p1
+
+    invoke-static {p0}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+
+    move-result v0
+
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Lve5;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    if-ltz p1, :cond_0
+
+    if-ltz v0, :cond_0
+
+    invoke-static {p0, p1, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+
+    return-void
+
+    :cond_0
+    if-ltz p1, :cond_1
+
+    invoke-static {p0, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    return-void
+
+    :cond_1
+    if-ltz v0, :cond_2
+
+    invoke-static {p0, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-    .locals 1
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
-    invoke-virtual {p2}, Landroid/view/View;->isInEditMode()Z
+    return-void
+.end method
 
-    move-result v0
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    return-object p1
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 7
 
-    :cond_0
-    iget-object v0, p0, Lgg5;->a:Landroid/text/method/TransformationMethod;
+    iget-object v0, p0, Lgg5;->a:Landroid/widget/EditText;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
 
-    invoke-interface {v0, p1, p2}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    move-result v1
 
-    move-result-object p1
+    if-nez v1, :cond_5
 
-    :cond_1
-    if-eqz p1, :cond_3
+    iget-boolean v1, p0, Lgg5;->X:Z
 
-    invoke-static {}, Lue5;->a()Lue5;
+    if-eqz v1, :cond_5
 
-    move-result-object p2
+    iget-boolean v1, p0, Lgg5;->b:Z
 
-    invoke-virtual {p2}, Lue5;->b()I
+    if-nez v1, :cond_1
 
-    move-result p2
+    sget-object v1, Lve5;->k:Lve5;
 
-    const/4 v0, 0x1
-
-    if-eq p2, v0, :cond_2
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    if-gt p3, p4, :cond_5
+
+    instance-of p3, p1, Landroid/text/Spannable;
+
+    if-eqz p3, :cond_5
+
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Lve5;->b()I
+
+    move-result p3
+
+    if-eqz p3, :cond_3
+
+    const/4 v1, 0x1
+
+    if-eq p3, v1, :cond_2
+
+    const/4 p1, 0x3
+
+    if-eq p3, p1, :cond_3
+
+    goto :goto_1
+
     :cond_2
-    invoke-static {}, Lue5;->a()Lue5;
+    move-object v4, p1
 
-    move-result-object p2
+    check-cast v4, Landroid/text/Spannable;
 
-    invoke-virtual {p2, p1}, Lue5;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object v1
+
+    add-int v3, p2, p4
+
+    iget v5, p0, Lgg5;->d:I
+
+    iget v6, p0, Lgg5;->o:I
+
+    move v2, p2
+
+    invoke-virtual/range {v1 .. v6}, Lve5;->e(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
+
+    return-void
+
+    :cond_3
+    invoke-static {}, Lve5;->a()Lve5;
 
     move-result-object p1
 
-    :cond_3
-    :goto_0
-    return-object p1
-.end method
+    iget-object p2, p0, Lgg5;->c:Lfg5;
 
-.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-    .locals 6
+    if-nez p2, :cond_4
 
-    iget-object v0, p0, Lgg5;->a:Landroid/text/method/TransformationMethod;
+    new-instance p2, Lfg5;
 
-    if-eqz v0, :cond_0
+    invoke-direct {p2, v0}, Lfg5;-><init>(Landroid/widget/EditText;)V
 
-    move-object v1, p1
+    iput-object p2, p0, Lgg5;->c:Lfg5;
 
-    move-object v2, p2
+    :cond_4
+    iget-object p2, p0, Lgg5;->c:Lfg5;
 
-    move v3, p3
+    invoke-virtual {p1, p2}, Lve5;->g(Lte5;)V
 
-    move v4, p4
-
-    move-object v5, p5
-
-    invoke-interface/range {v0 .. v5}, Landroid/text/method/TransformationMethod;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-
-    :cond_0
+    :cond_5
+    :goto_1
     return-void
 .end method

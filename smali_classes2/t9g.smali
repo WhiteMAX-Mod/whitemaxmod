@@ -1,118 +1,118 @@
 .class public final Lt9g;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Lb36;
+.field public final synthetic X:Lbag;
+
+.field public final synthetic Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lb36;)V
+.method public constructor <init>(Lbag;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lt9g;->X:Lbag;
 
-    iput-object p1, p0, Lt9g;->a:Lb36;
+    iput-object p2, p0, Lt9g;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/nio/ByteBuffer;)I
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lt9g;->a:Lb36;
+    check-cast p1, Lzb4;
 
-    iget-object v1, v0, Lb36;->Y:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast v1, Lq9g;
+    invoke-virtual {p0, p1, p2}, Lt9g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v1, :cond_0
+    move-result-object p1
 
-    iget-object v0, v0, Lb36;->b:Ljava/lang/Object;
+    check-cast p1, Lt9g;
 
-    check-cast v0, Ljava/nio/channels/SocketChannel;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v0, p1}, Ljava/nio/channels/SocketChannel;->write(Ljava/nio/ByteBuffer;)I
+    invoke-virtual {p1, p2}, Lt9g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object p1
 
-    return p1
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lt9g;
+
+    iget-object v0, p0, Lt9g;->X:Lbag;
+
+    iget-object v1, p0, Lt9g;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+    invoke-direct {p1, v0, v1, p2}, Lt9g;-><init>(Lbag;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lt9g;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
-    iget-object v2, v1, Lq9g;->b:Ljava/nio/ByteBuffer;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v1, v1, Lq9g;->a:Ljavax/net/ssl/SSLEngine;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v2}, Ljava/nio/Buffer;->hasRemaining()Z
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    iget-object p1, v0, Lb36;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/nio/channels/SocketChannel;
-
-    invoke-virtual {p1, v2}, Ljava/nio/channels/SocketChannel;->write(Ljava/nio/ByteBuffer;)I
-
-    const/4 p1, 0x0
-
-    return p1
+    throw p1
 
     :cond_1
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v1, p1, v2}, Ljavax/net/ssl/SSLEngine;->wrap(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)Ljavax/net/ssl/SSLEngineResult;
+    iput v1, p0, Lt9g;->o:I
+
+    iget-object p1, p0, Lt9g;->X:Lbag;
+
+    iget-object v0, p0, Lt9g;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+    invoke-virtual {p1, v0, p0}, Lbag;->f(Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    sget-object v0, Lac4;->a:Lac4;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLEngineResult;->getStatus()Ljavax/net/ssl/SSLEngineResult$Status;
-
-    move-result-object v1
-
-    sget-object v3, Ljavax/net/ssl/SSLEngineResult$Status;->OK:Ljavax/net/ssl/SSLEngineResult$Status;
-
-    if-ne v1, v3, :cond_2
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    iget-object v0, v0, Lb36;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/nio/channels/SocketChannel;
-
-    invoke-virtual {v0, v2}, Ljava/nio/channels/SocketChannel;->write(Ljava/nio/ByteBuffer;)I
-
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLEngineResult;->bytesConsumed()I
-
-    move-result p1
-
-    return p1
+    return-object v0
 
     :cond_2
-    new-instance v1, Ljava/lang/StringBuilder;
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    const-string v2, "TLS engine.wrap error. res: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lb36;->a(Ljava/lang/String;)V
-
-    new-instance v0, Ljava/io/IOException;
-
-    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p1
 .end method

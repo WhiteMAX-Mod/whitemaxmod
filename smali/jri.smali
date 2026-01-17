@@ -1,200 +1,126 @@
-.class public abstract Ljri;
-.super Ljava/lang/Object;
+.class public final Ljri;
+.super Lcpi;
 .source "SourceFile"
 
+# interfaces
+.implements Lpsi;
 
-# static fields
-.field public static final a:[J
+
+# instance fields
+.field public final synthetic d:I
+
+.field public final synthetic e:Lb2b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lb2b;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Ljri;->d:I
 
-    new-array v0, v0, [J
+    iput-object p1, p0, Ljri;->e:Lb2b;
 
-    sput-object v0, Ljri;->a:[J
+    const-string p1, "com.google.android.gms.maps.internal.IOnMapReadyCallback"
 
-    return-void
-.end method
+    const/4 p2, 0x6
 
-.method public static a(I)I
-    .locals 1
-
-    const/16 v0, 0x9
-
-    if-gt p0, v0, :cond_0
-
-    add-int/lit8 p0, p0, 0x30
-
-    return p0
-
-    :cond_0
-    add-int/lit8 p0, p0, 0x57
-
-    return p0
-.end method
-
-.method public static final b(Lum5;Ljava/lang/Exception;)V
-    .locals 3
-
-    new-instance v0, Lwwb;
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "ONEME-11709"
-
-    invoke-direct {v0, v2, v1, p1}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    check-cast p0, Liab;
-
-    invoke-virtual {p0, v0}, Liab;->a(Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p2}, Lcpi;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public static c(I)I
-    .locals 3
 
-    const/16 v0, 0x30
+# virtual methods
+.method public final O(Ly1j;)V
+    .locals 1
 
-    if-lt p0, v0, :cond_0
+    iget v0, p0, Ljri;->d:I
 
-    const/16 v1, 0x39
+    packed-switch v0, :pswitch_data_0
 
-    if-gt p0, v1, :cond_0
+    new-instance v0, Lq07;
 
-    sub-int/2addr p0, v0
+    invoke-direct {v0, p1}, Lq07;-><init>(Ly1j;)V
 
-    return p0
+    iget-object p1, p0, Ljri;->e:Lb2b;
 
-    :cond_0
-    const/16 v0, 0x61
+    invoke-interface {p1, v0}, Lb2b;->U(Lq07;)V
 
-    if-lt p0, v0, :cond_1
+    return-void
 
-    const/16 v0, 0x66
+    :pswitch_0
+    new-instance v0, Lq07;
 
-    if-gt p0, v0, :cond_1
+    invoke-direct {v0, p1}, Lq07;-><init>(Ly1j;)V
 
-    add-int/lit8 p0, p0, -0x57
+    iget-object p1, p0, Ljri;->e:Lb2b;
 
-    return p0
+    invoke-interface {p1, v0}, Lb2b;->U(Lq07;)V
 
-    :cond_1
-    const/16 v0, 0x41
+    return-void
 
-    if-lt p0, v0, :cond_2
+    nop
 
-    const/16 v0, 0x46
-
-    if-gt p0, v0, :cond_2
-
-    add-int/lit8 p0, p0, -0x37
-
-    return p0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Not a hex char \'"
-
-    const-string v2, "\'"
-
-    invoke-static {p0, v1, v2}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static final d([JII)[J
+.method public final V(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
     .locals 4
 
-    :goto_0
-    sget-object v0, Ljri;->a:[J
+    const/4 v0, 0x1
 
-    if-ltz p1, :cond_6
+    if-ne p1, v0, :cond_2
 
-    array-length v1, p0
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    const/4 v2, 0x1
+    move-result-object p1
 
-    sub-int/2addr v1, v2
+    if-nez p1, :cond_0
 
-    if-le p1, v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-nez p2, :cond_2
-
-    array-length p2, p0
-
-    sub-int/2addr p2, v2
-
-    if-gt p1, p2, :cond_1
-
-    aget-wide p1, p0, p1
-
-    new-array p0, v2, [J
-
-    aput-wide p1, p0, v1
-
-    return-object p0
-
-    :cond_1
-    return-object v0
-
-    :cond_2
-    if-lez p2, :cond_4
-
-    add-int/2addr p2, p1
-
-    array-length v1, p0
-
-    if-le p2, v1, :cond_3
-
-    array-length p2, p0
-
-    :cond_3
-    :try_start_0
-    invoke-static {p0, p1, p2}, Ljava/util/Arrays;->copyOfRange([JII)[J
-
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object p0
-
-    :catchall_0
-    return-object v0
-
-    :cond_4
-    add-int/2addr p2, p1
-
-    if-gez p2, :cond_5
-
-    move p2, v1
-
-    :cond_5
-    move v3, p2
-
-    move p2, p1
-
-    move p1, v3
+    const/4 p1, 0x0
 
     goto :goto_0
 
-    :cond_6
-    :goto_1
-    return-object v0
+    :cond_0
+    const-string v1, "com.google.android.gms.maps.internal.IGoogleMapDelegate"
+
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Ly1j;
+
+    if-eqz v3, :cond_1
+
+    move-object p1, v2
+
+    check-cast p1, Ly1j;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Ly1j;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, p1, v1, v3}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object p1, v2
+
+    :goto_0
+    invoke-static {p2}, Lvui;->b(Landroid/os/Parcel;)V
+
+    invoke-interface {p0, p1}, Lpsi;->O(Ly1j;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
 .end method

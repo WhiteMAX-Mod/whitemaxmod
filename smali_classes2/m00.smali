@@ -1,229 +1,69 @@
 .class public final Lm00;
-.super Ln00;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final b:F
+.field public final b:Li7f;
 
-.field public final c:Lfhg;
-
-.field public final d:Ljava/lang/String;
+.field public final c:Lold;
 
 
 # direct methods
-.method public constructor <init>(JFLfhg;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lmbg;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lm00;->a:J
+    check-cast p1, Lj9b;
 
-    iput p3, p0, Lm00;->b:F
+    invoke-virtual {p1}, Lj9b;->a()Lsb4;
 
-    iput-object p4, p0, Lm00;->c:Lfhg;
+    move-result-object p1
 
-    iput-object p5, p0, Lm00;->d:Ljava/lang/String;
+    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lm00;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x7
+
+    invoke-static {p1, p1, v0}, Lj7f;->b(III)Li7f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lm00;->b:Li7f;
+
+    new-instance v0, Lold;
+
+    invoke-direct {v0, p1}, Lold;-><init>(Llfa;)V
+
+    iput-object v0, p0, Lm00;->c:Lold;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lm00;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final b()J
-    .locals 2
-
-    iget-wide v0, p0, Lm00;->a:J
-
-    return-wide v0
-.end method
-
-.method public final c()Lghg;
-    .locals 1
-
-    iget-object v0, p0, Lm00;->c:Lfhg;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lm00;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lm00;
-
-    iget-wide v0, p0, Lm00;->a:J
-
-    iget-wide v2, p1, Lm00;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lm00;->b:F
-
-    iget v1, p1, Lm00;->b:F
-
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lm00;->c:Lfhg;
-
-    iget-object v1, p1, Lm00;->c:Lfhg;
-
-    invoke-virtual {v0, v1}, Lfhg;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lm00;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lm00;->d:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final a(Lyid;)V
     .locals 3
 
-    iget-wide v0, p0, Lm00;->a:J
+    new-instance v0, Ll00;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-direct {v0, p0, p1, v1}, Ll00;-><init>(Lm00;Lyid;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v1, 0x1f
+    const/4 p1, 0x3
 
-    mul-int/2addr v0, v1
+    iget-object v2, p0, Lm00;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget v2, p0, Lm00;->b:F
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    invoke-static {v0, v2, v1}, Lqi3;->b(IFI)I
-
-    move-result v0
-
-    iget-object v2, p0, Lm00;->c:Lfhg;
-
-    invoke-virtual {v2}, Lfhg;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lm00;->d:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    add-int/2addr v2, v0
-
-    return v2
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Uploading(messageId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lm00;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", progress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lm00;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", textSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm00;->c:Lfhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", attachId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm00;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

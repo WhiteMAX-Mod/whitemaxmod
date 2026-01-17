@@ -1,118 +1,84 @@
 .class public final Lnvf;
-.super Lb5g;
+.super Ljef;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lkje;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lfvf;
-
-.field public o:I
+.field public F0:Lije;
 
 
 # direct methods
-.method public constructor <init>(Lfvf;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput-object p1, p0, Lnvf;->Y:Lfvf;
+    new-instance v0, Lt0f;
 
-    const/4 p1, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1, v1}, Lt0f;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Ltsd;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b(Lrvf;)V
+    .locals 3
 
-    check-cast p1, Lh76;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lnvf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v1, Lqjd;
 
-    move-result-object p1
+    const/16 v2, 0x12
 
-    check-cast p1, Lnvf;
+    invoke-direct {v1, p0, p1, v2}, Lqjd;-><init>(Ljef;Lnq6;I)V
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-static {v0, v1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {p1, p2}, Lnvf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lnvf;
-
-    iget-object v1, p0, Lnvf;->Y:Lfvf;
-
-    invoke-direct {v0, v1, p2}, Lnvf;-><init>(Lfvf;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lnvf;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lnvf;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast v0, Lt0f;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 p1, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    throw p1
+    return-void
+.end method
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+.method public final y(Lud8;)V
+    .locals 1
 
-    iget-object p1, p0, Lnvf;->X:Ljava/lang/Object;
+    instance-of v0, p1, Lhje;
 
-    check-cast p1, Lh76;
+    if-nez v0, :cond_0
 
-    iput v1, p0, Lnvf;->o:I
+    return-void
 
-    iget-object v0, p0, Lnvf;->Y:Lfvf;
+    :cond_0
+    move-object v0, p1
 
-    invoke-interface {p1, v0, p0}, Lh76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast v0, Lije;
 
-    move-result-object p1
+    iput-object v0, p0, Lnvf;->F0:Lije;
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    if-ne p1, v0, :cond_2
+    check-cast v0, Lt0f;
 
-    return-object v0
+    check-cast p1, Lhje;
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget-object p1, p1, Lhje;->a:Lv0f;
 
-    return-object p1
+    invoke-virtual {v0, p1}, Lt0f;->setModelItem(Lj0f;)V
+
+    return-void
 .end method

@@ -1,97 +1,214 @@
-.class public final enum Lt9h;
-.super Ljava/lang/Enum;
+.class public final Lt9h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp9h;
 
-# static fields
-.field public static final enum a:Lt9h;
 
-.field public static final enum b:Lt9h;
-
-.field public static final enum c:Lt9h;
-
-.field public static final enum d:Lt9h;
-
-.field public static final synthetic o:[Lt9h;
+# instance fields
+.field public final a:Ljava/util/Map;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lt9h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ALL"
+    new-instance v0, Lav8;
 
-    const/4 v2, 0x0
+    const/16 v1, 0x3e8
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1}, Lav8;-><init>(I)V
 
-    sput-object v0, Lt9h;->a:Lt9h;
-
-    new-instance v1, Lt9h;
-
-    const-string v2, "USER_FOLDER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lt9h;->b:Lt9h;
-
-    new-instance v2, Lt9h;
-
-    const-string v3, "CREATE_FOLDER"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lt9h;->c:Lt9h;
-
-    new-instance v3, Lt9h;
-
-    const-string v4, "RECOMMENDED_FOLDER"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lt9h;->d:Lt9h;
-
-    filled-new-array {v0, v1, v2, v3}, [Lt9h;
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Lt9h;->o:[Lt9h;
+    iput-object v0, p0, Lt9h;->a:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lt9h;
-    .locals 1
 
-    const-class v0, Lt9h;
+# virtual methods
+.method public final a(Lq6h;)Lbo3;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lahg;
 
-    move-result-object p0
+    const/16 v1, 0x8
 
-    check-cast p0, Lt9h;
+    invoke-direct {v0, p0, v1, p1}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    return-object p0
+    new-instance p1, Leo3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Leo3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
 .end method
 
-.method public static values()[Lt9h;
+.method public final b(J)Lbo3;
+    .locals 2
+
+    new-instance v0, Lf10;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, p1, p2, v1}, Lf10;-><init>(JI)V
+
+    new-instance p1, Lahg;
+
+    const/16 p2, 0x9
+
+    invoke-direct {p1, p0, p2, v0}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p2, Leo3;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, v0, p1}, Leo3;-><init>(ILjava/lang/Object;)V
+
+    return-object p2
+.end method
+
+.method public final clear()V
     .locals 1
 
-    sget-object v0, Lt9h;->o:[Lt9h;
+    iget-object v0, p0, Lt9h;->a:Ljava/util/Map;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, [Lt9h;
+.method public final d(Lp7h;)Lbo3;
+    .locals 2
+
+    new-instance v0, Ls9h;
+
+    invoke-direct {v0, p0, p1}, Ls9h;-><init>(Lt9h;Lp7h;)V
+
+    new-instance p1, Leo3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Leo3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final e(Lp7h;)Lev8;
+    .locals 1
+
+    new-instance v0, Ls9h;
+
+    invoke-direct {v0, p0, p1}, Ls9h;-><init>(Lt9h;Lp7h;)V
+
+    new-instance p1, Liv8;
+
+    invoke-direct {p1, v0}, Liv8;-><init>(Lsv8;)V
+
+    return-object p1
+.end method
+
+.method public final f(J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lt9h;->b(J)Lbo3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lbo3;->a()V
+
+    return-void
+.end method
+
+.method public final g(Ljava/lang/String;)Lbo3;
+    .locals 2
+
+    new-instance v0, Lan4;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p1, v1}, Lan4;-><init>(Ljava/lang/String;I)V
+
+    new-instance p1, Lahg;
+
+    const/16 v1, 0x9
+
+    invoke-direct {p1, p0, v1, v0}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Leo3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p1}, Leo3;-><init>(ILjava/lang/Object;)V
 
     return-object v0
+.end method
+
+.method public final h(Ljava/lang/String;)Lev8;
+    .locals 3
+
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Ljv8;->a:Ljv8;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lahg;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, p0, v1, p1}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Liv8;
+
+    invoke-direct {p1, v0}, Liv8;-><init>(Lsv8;)V
+
+    :goto_0
+    new-instance v0, Lisg;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lisg;-><init>(I)V
+
+    new-instance v1, Lnv8;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p1, v0, v2}, Lnv8;-><init>(Lev8;Ljava/lang/Object;I)V
+
+    return-object v1
+.end method
+
+.method public final i()Lev8;
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final j(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lt9h;->g(Ljava/lang/String;)Lbo3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lbo3;->a()V
+
+    return-void
 .end method

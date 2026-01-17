@@ -3,6 +3,4 @@
 
 
 # static fields
-.field public static email_intent_title:I = 0x7f130495
-
-.field public static faq_title:I = 0x7f1304f5
+.field public static ya_key:I = 0x7f130ed0

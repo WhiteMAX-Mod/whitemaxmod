@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public final f(Landroid/view/View;Landroid/view/View;)Z
+.method public final b(Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
     const/4 p1, 0x0
@@ -37,7 +37,7 @@
     return p1
 .end method
 
-.method public final w(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public final s(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
     const/4 p1, 0x0

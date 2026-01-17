@@ -1,877 +1,727 @@
-.class public abstract Lh5e;
+.class public final Lh5e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final a:Lk5e;
 
-.field public static final A0:I
+.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static final A1:I
+.field public final c:Lcmi;
 
-.field public static final B:I
+.field public final d:Ldmi;
 
-.field public static final B0:I
+.field public final e:Landroid/os/HandlerThread;
 
-.field public static final B1:I
+.field public final f:Landroid/os/Handler;
 
-.field public static final C:I
+.field public final g:Landroid/os/Handler;
 
-.field public static final C0:I
+.field public final h:Landroid/os/Handler;
 
-.field public static final C1:I
+.field public final i:Le0e;
 
-.field public static final D:I
+.field public final j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public static final D0:I
+.field public k:J
 
-.field public static final D1:I
+.field public final l:Landroid/util/LongSparseArray;
 
-.field public static final E:I
+.field public final m:Ljava/util/LinkedList;
 
-.field public static final E0:I
+.field public final n:Lle5;
 
-.field public static final E1:I
-
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final F1:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final G1:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final H1:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final I1:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final J1:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final K1:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final L1:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final M1:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final N1:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final a1:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final b1:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final c1:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final d1:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final e1:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final f1:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final g1:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final h1:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final i1:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final j1:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final k1:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final l1:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final m1:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final n1:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final o1:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final p1:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final q1:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final r1:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final s1:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final t1:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final u1:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final v1:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final w1:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final x1:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final y1:I
-
-.field public static final z:I
-
-.field public static final z0:I
-
-.field public static final z1:I
+.field public final o:Lahd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lbxa;)V
+    .locals 2
 
-    sget v0, Lh6d;->a_24:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lh5e;->a:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lh6d;->a_36:I
+    const/4 v1, 0x0
 
-    sput v0, Lh5e;->b:I
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    sget v0, Lh6d;->add_photo_24:I
+    iput-object v0, p0, Lh5e;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Lh5e;->c:I
+    new-instance v0, Lcmi;
 
-    sget v0, Lh6d;->baseline_done_all_white_48:I
+    invoke-direct {v0, p0}, Lcmi;-><init>(Lh5e;)V
 
-    sput v0, Lh5e;->d:I
+    iput-object v0, p0, Lh5e;->c:Lcmi;
 
-    sget v0, Lh6d;->baseline_reply_white_48:I
+    new-instance v0, Ldmi;
 
-    sput v0, Lh5e;->e:I
+    const/4 v1, 0x2
 
-    sget v0, Lh6d;->chart_24:I
+    invoke-direct {v0, v1, p0}, Ldmi;-><init>(ILjava/lang/Object;)V
 
-    sput v0, Lh5e;->f:I
+    iput-object v0, p0, Lh5e;->d:Ldmi;
 
-    sget v0, Lh6d;->chats:I
+    new-instance v0, Landroid/os/Handler;
 
-    sput v0, Lh5e;->g:I
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    sget v0, Lh6d;->check_24:I
+    move-result-object v1
 
-    sput v0, Lh5e;->h:I
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    sget v0, Lh6d;->chevron_right_16:I
+    iput-object v0, p0, Lh5e;->g:Landroid/os/Handler;
 
-    sput v0, Lh5e;->i:I
+    new-instance v0, Landroid/os/Handler;
 
-    sget v0, Lh6d;->code_32:I
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    sput v0, Lh5e;->j:I
+    move-result-object v1
 
-    sget v0, Lh6d;->cross_24:I
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    sput v0, Lh5e;->k:I
+    iput-object v0, p0, Lh5e;->h:Landroid/os/Handler;
 
-    sget v0, Lh6d;->cross_fill_28:I
+    new-instance v0, Le0e;
 
-    sput v0, Lh5e;->l:I
+    invoke-direct {v0}, Le0e;-><init>()V
 
-    sget v0, Lh6d;->delete_fill_24:I
+    iput-object v0, p0, Lh5e;->i:Le0e;
 
-    sput v0, Lh5e;->m:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    sget v0, Lh6d;->delete_fill_32:I
+    const/4 v1, 0x0
 
-    sput v0, Lh5e;->n:I
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    sget v0, Lh6d;->devices_24:I
+    iput-object v0, p0, Lh5e;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    sput v0, Lh5e;->o:I
+    const-wide/16 v0, 0x0
 
-    sget v0, Lh6d;->done_fill_round_28:I
+    iput-wide v0, p0, Lh5e;->k:J
 
-    sput v0, Lh5e;->p:I
+    new-instance v0, Landroid/util/LongSparseArray;
 
-    sget v0, Lh6d;->downloads_fill_round_28:I
+    invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
 
-    sput v0, Lh5e;->q:I
+    iput-object v0, p0, Lh5e;->l:Landroid/util/LongSparseArray;
 
-    sget v0, Lh6d;->draw_sticker_background_black:I
+    new-instance v0, Ljava/util/LinkedList;
 
-    sput v0, Lh5e;->r:I
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    sget v0, Lh6d;->draw_sticker_background_white:I
+    iput-object v0, p0, Lh5e;->m:Ljava/util/LinkedList;
 
-    sput v0, Lh5e;->s:I
+    iget-object v0, p1, Lbxa;->c:Ljava/lang/Object;
 
-    sget v0, Lh6d;->email_24:I
+    check-cast v0, Lk5e;
 
-    sput v0, Lh5e;->t:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lh6d;->fire_24:I
+    iput-object v0, p0, Lh5e;->a:Lk5e;
 
-    sput v0, Lh5e;->u:I
+    iget-object p1, p1, Lbxa;->b:Ljava/lang/Object;
 
-    sget v0, Lh6d;->flash_off_fill_24:I
+    check-cast p1, Lahd;
 
-    sput v0, Lh5e;->v:I
+    iput-object p1, p0, Lh5e;->o:Lahd;
 
-    sget v0, Lh6d;->flash_on_fill_24:I
+    new-instance v0, Lle5;
 
-    sput v0, Lh5e;->w:I
+    invoke-direct {v0, p1}, Lle5;-><init>(Lahd;)V
 
-    sget v0, Lh6d;->hide_24:I
+    iput-object v0, p0, Lh5e;->n:Lle5;
 
-    sput v0, Lh5e;->x:I
+    new-instance p1, Landroid/os/HandlerThread;
 
-    sget v0, Lh6d;->ic_add_24:I
+    const-string v0, "RtcCommExec"
 
-    sput v0, Lh5e;->y:I
+    invoke-direct {p1, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    sget v0, Lh6d;->ic_add_contact_fill_24:I
+    iput-object p1, p0, Lh5e;->e:Landroid/os/HandlerThread;
 
-    sput v0, Lh5e;->z:I
+    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
-    sget v0, Lh6d;->ic_add_users_24:I
+    new-instance v0, Landroid/os/Handler;
 
-    sput v0, Lh5e;->A:I
+    invoke-virtual {p1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
-    sget v0, Lh6d;->ic_alert_16:I
+    move-result-object p1
 
-    sput v0, Lh5e;->B:I
+    invoke-direct {v0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    sget v0, Lh6d;->ic_arrow_forward_24:I
+    iput-object v0, p0, Lh5e;->f:Landroid/os/Handler;
 
-    sput v0, Lh5e;->C:I
+    return-void
 
-    sget v0, Lh6d;->ic_back_24:I
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    sput v0, Lh5e;->D:I
+    const-string v0, "Illegal \'serializer\' value: null"
 
-    sget v0, Lh6d;->ic_call_24:I
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    sput v0, Lh5e;->E:I
+    throw p1
+.end method
 
-    sget v0, Lh6d;->ic_call_fill_32:I
 
-    sput v0, Lh5e;->F:I
+# virtual methods
+.method public final a()V
+    .locals 7
 
-    sget v0, Lh6d;->ic_call_grid_fill_24:I
+    iget-object v0, p0, Lh5e;->g:Landroid/os/Handler;
 
-    sput v0, Lh5e;->G:I
+    const/4 v1, 0x0
 
-    sget v0, Lh6d;->ic_call_speaker_fill_24:I
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    sput v0, Lh5e;->H:I
+    iget-object v0, p0, Lh5e;->m:Ljava/util/LinkedList;
 
-    sget v0, Lh6d;->ic_camera_24:I
+    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    sput v0, Lh5e;->I:I
+    const/4 v1, 0x0
 
-    sget v0, Lh6d;->ic_check_24:I
+    :goto_0
+    iget-object v2, p0, Lh5e;->l:Landroid/util/LongSparseArray;
 
-    sput v0, Lh5e;->J:I
+    invoke-virtual {v2}, Landroid/util/LongSparseArray;->size()I
 
-    sget v0, Lh6d;->ic_checkbox_24:I
+    move-result v3
 
-    sput v0, Lh5e;->K:I
+    if-ge v1, v3, :cond_0
 
-    sget v0, Lh6d;->ic_checkbox_bg_28:I
+    invoke-virtual {v2, v1}, Landroid/util/LongSparseArray;->keyAt(I)J
 
-    sput v0, Lh5e;->L:I
+    move-result-wide v3
 
-    sget v0, Lh6d;->ic_checkbox_disabled_28:I
+    invoke-virtual {v2, v1}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
-    sput v0, Lh5e;->M:I
+    move-result-object v2
 
-    sget v0, Lh6d;->ic_checkbox_empty_28:I
+    check-cast v2, Lgni;
 
-    sput v0, Lh5e;->N:I
+    const-wide/16 v5, 0x0
 
-    sget v0, Lh6d;->ic_collage_mode_24:I
+    iput-wide v5, v2, Lgni;->e:J
 
-    sput v0, Lh5e;->O:I
+    iput-wide v5, v2, Lgni;->f:J
 
-    sget v0, Lh6d;->ic_collage_mode_selected_24:I
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    sput v0, Lh5e;->P:I
+    move-result-object v2
 
-    sget v0, Lh6d;->ic_copy_24:I
+    invoke-virtual {v0, v2}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
 
-    sput v0, Lh5e;->Q:I
+    add-int/lit8 v1, v1, 0x1
 
-    sget v0, Lh6d;->ic_cross_24:I
+    goto :goto_0
 
-    sput v0, Lh5e;->R:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lh6d;->ic_cross_rounded_24:I
+.method public final b()V
+    .locals 11
 
-    sput v0, Lh5e;->S:I
+    iget-object v0, p0, Lh5e;->h:Landroid/os/Handler;
 
-    sget v0, Lh6d;->ic_down_2_24:I
+    iget-object v1, p0, Lh5e;->n:Lle5;
 
-    sput v0, Lh5e;->T:I
+    iget-object v2, p0, Lh5e;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lh6d;->ic_draw_sticker_24:I
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sput v0, Lh5e;->U:I
+    move-result-object v2
 
-    sget v0, Lh6d;->ic_draw_sticker_selected_24:I
+    check-cast v2, Lai4;
 
-    sput v0, Lh5e;->V:I
+    if-eqz v2, :cond_5
 
-    sget v0, Lh6d;->ic_edit_24:I
+    invoke-virtual {v2}, Lai4;->b()Z
 
-    sput v0, Lh5e;->W:I
+    move-result v3
 
-    sget v0, Lh6d;->ic_file_mode_24:I
+    if-nez v3, :cond_0
 
-    sput v0, Lh5e;->X:I
+    goto/16 :goto_4
 
-    sget v0, Lh6d;->ic_file_mode_selected_24:I
+    :cond_0
+    iget-object v3, p0, Lh5e;->m:Ljava/util/LinkedList;
 
-    sput v0, Lh5e;->Y:I
+    invoke-virtual {v3}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
-    sget v0, Lh6d;->ic_folder_24:I
+    move-result-object v4
 
-    sput v0, Lh5e;->Z:I
+    check-cast v4, Ljava/lang/Long;
 
-    sget v0, Lh6d;->ic_gallery_item_placeholder:I
+    :goto_0
+    if-eqz v4, :cond_5
 
-    sput v0, Lh5e;->a0:I
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
 
-    sget v0, Lh6d;->ic_geo_dot_blue:I
+    move-result-wide v4
 
-    sput v0, Lh5e;->b0:I
+    iget-object v6, p0, Lh5e;->l:Landroid/util/LongSparseArray;
 
-    sget v0, Lh6d;->ic_geo_dot_grey:I
+    invoke-virtual {v6, v4, v5}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
 
-    sput v0, Lh5e;->c0:I
+    move-result-object v4
 
-    sget v0, Lh6d;->ic_geo_layers_24:I
+    check-cast v4, Lgni;
 
-    sput v0, Lh5e;->d0:I
+    if-eqz v4, :cond_4
 
-    sget v0, Lh6d;->ic_geo_pin_blue_big_combine:I
+    :try_start_0
+    iget-object v5, p0, Lh5e;->a:Lk5e;
 
-    sput v0, Lh5e;->e0:I
+    iget-wide v7, v4, Lgni;->b:J
 
-    sget v0, Lh6d;->ic_geo_pin_blue_small_combine:I
+    iget-object v9, v4, Lgni;->c:Le5e;
 
-    sput v0, Lh5e;->f0:I
+    invoke-interface {v5, v7, v8, v9}, Lk5e;->b(JLe5e;)Lyi;
 
-    sget v0, Lh6d;->ic_geo_pin_grey_big_combine:I
+    move-result-object v5
 
-    sput v0, Lh5e;->g0:I
+    iget-object v7, v5, Lyi;->c:Ljava/lang/Object;
 
-    sget v0, Lh6d;->ic_geo_pin_grey_small_combine:I
+    check-cast v7, [B
 
-    sput v0, Lh5e;->h0:I
+    iget v8, v5, Lyi;->b:I
 
-    sget v0, Lh6d;->ic_geolocation_filled_28:I
+    invoke-virtual {v2, v8, v7}, Lai4;->e(I[B)Z
 
-    sput v0, Lh5e;->i0:I
+    move-result v7
 
-    sget v0, Lh6d;->ic_incoming_call_fill_16:I
+    if-eqz v7, :cond_1
 
-    sput v0, Lh5e;->j0:I
+    iget-object v8, v4, Lgni;->c:Le5e;
 
-    sget v0, Lh6d;->ic_incoming_video_call_fill_16:I
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sput v0, Lh5e;->k0:I
+    new-instance v9, Lini;
 
-    sget v0, Lh6d;->ic_info_24:I
+    const/4 v10, 0x1
 
-    sput v0, Lh5e;->l0:I
+    invoke-direct {v9, v1, v8, v10}, Lini;-><init>(Lle5;Le5e;I)V
 
-    sget v0, Lh6d;->ic_lighting_24:I
+    iget-object v8, v1, Lle5;->d:Ljava/lang/Object;
 
-    sput v0, Lh5e;->m0:I
+    check-cast v8, Landroid/os/Handler;
 
-    sget v0, Lh6d;->ic_lighting_auto_24:I
+    invoke-virtual {v8, v9}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sput v0, Lh5e;->n0:I
+    iget-object v8, v5, Lyi;->c:Ljava/lang/Object;
 
-    sget v0, Lh6d;->ic_lighting_off_24:I
+    check-cast v8, [B
 
-    sput v0, Lh5e;->o0:I
+    iget v5, v5, Lyi;->b:I
 
-    sget v0, Lh6d;->ic_message_fill_24:I
+    new-instance v9, Ljni;
 
-    sput v0, Lh5e;->p0:I
+    const/4 v10, 0x1
 
-    sget v0, Lh6d;->ic_missed_call_fill_16:I
+    invoke-direct {v9, v1, v8, v5, v10}, Ljni;-><init>(Lle5;[BII)V
 
-    sput v0, Lh5e;->q0:I
+    iget-object v5, v1, Lle5;->d:Ljava/lang/Object;
 
-    sget v0, Lh6d;->ic_missed_video_call_fill_16:I
+    check-cast v5, Landroid/os/Handler;
 
-    sput v0, Lh5e;->r0:I
+    invoke-virtual {v5, v9}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget v0, Lh6d;->ic_music_24:I
+    goto :goto_1
 
-    sput v0, Lh5e;->s0:I
+    :catchall_0
+    move-exception v5
 
-    sget v0, Lh6d;->ic_outgoing_call_fill_16:I
+    goto :goto_2
 
-    sput v0, Lh5e;->t0:I
+    :cond_1
+    :goto_1
+    if-eqz v7, :cond_3
 
-    sget v0, Lh6d;->ic_outgoing_video_call_fill_16:I
+    iget-object v5, v4, Lgni;->c:Le5e;
 
-    sput v0, Lh5e;->u0:I
+    invoke-interface {v5}, Le5e;->a()Z
 
-    sget v0, Lh6d;->ic_pending_send_24:I
+    move-result v5
 
-    sput v0, Lh5e;->v0:I
+    if-eqz v5, :cond_2
 
-    sget v0, Lh6d;->ic_phone_off_fill_32:I
+    iget-object v5, v4, Lgni;->c:Le5e;
 
-    sput v0, Lh5e;->w0:I
+    invoke-virtual {v1, v5}, Lle5;->b(Le5e;)V
 
-    sget v0, Lh6d;->ic_photo_24:I
+    iget-wide v7, v4, Lgni;->b:J
 
-    sput v0, Lh5e;->x0:I
+    invoke-virtual {v6, v7, v8}, Landroid/util/LongSparseArray;->remove(J)V
 
-    sget v0, Lh6d;->ic_play_24:I
+    :cond_2
+    new-instance v5, Lhgh;
 
-    sput v0, Lh5e;->y0:I
+    const/16 v6, 0xf
 
-    sget v0, Lh6d;->ic_postpone_24:I
+    invoke-direct {v5, v6, v4}, Lhgh;-><init>(ILjava/lang/Object;)V
 
-    sput v0, Lh5e;->z0:I
+    invoke-virtual {v0, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget v0, Lh6d;->ic_privacy_24:I
+    goto :goto_3
 
-    sput v0, Lh5e;->A0:I
+    :cond_3
+    iget-wide v4, v4, Lgni;->b:J
 
-    sget v0, Lh6d;->ic_privacy_fill_32:I
+    invoke-virtual {p0, v4, v5}, Lh5e;->c(J)V
 
-    sput v0, Lh5e;->B0:I
+    goto :goto_3
 
-    sget v0, Lh6d;->ic_profile_fill_24:I
+    :goto_2
+    iget-object v7, v4, Lgni;->c:Le5e;
 
-    sput v0, Lh5e;->C0:I
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v0, Lh6d;->ic_recording_fill_24:I
+    new-instance v8, Lxqd;
 
-    sput v0, Lh5e;->D0:I
+    const/16 v9, 0x13
 
-    sget v0, Lh6d;->ic_refresh_24:I
+    invoke-direct {v8, v1, v7, v5, v9}, Lxqd;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    sput v0, Lh5e;->E0:I
+    iget-object v7, v1, Lle5;->d:Ljava/lang/Object;
 
-    sget v0, Lh6d;->ic_reorder_24:I
+    check-cast v7, Landroid/os/Handler;
 
-    sput v0, Lh5e;->F0:I
+    invoke-virtual {v7, v8}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget v0, Lh6d;->ic_rotate_camera_24:I
+    iget-object v7, v4, Lgni;->c:Le5e;
 
-    sput v0, Lh5e;->G0:I
+    invoke-virtual {v1, v7}, Lle5;->b(Le5e;)V
 
-    sget v0, Lh6d;->ic_route_sign_24:I
+    new-instance v7, Lghh;
 
-    sput v0, Lh5e;->H0:I
+    const/16 v8, 0x14
 
-    sget v0, Lh6d;->ic_search_24:I
+    invoke-direct {v7, v4, v8, v5}, Lghh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    sput v0, Lh5e;->I0:I
+    invoke-virtual {v0, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget v0, Lh6d;->ic_secure_animated:I
+    iget-wide v4, v4, Lgni;->b:J
 
-    sput v0, Lh5e;->J0:I
+    invoke-virtual {v6, v4, v5}, Landroid/util/LongSparseArray;->remove(J)V
 
-    sget v0, Lh6d;->ic_send_24:I
+    :cond_4
+    :goto_3
+    invoke-virtual {v3}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
-    sput v0, Lh5e;->K0:I
+    move-result-object v4
 
-    sget v0, Lh6d;->ic_settings_fill_24:I
+    check-cast v4, Ljava/lang/Long;
 
-    sput v0, Lh5e;->L0:I
+    goto/16 :goto_0
 
-    sget v0, Lh6d;->ic_share_24:I
+    :cond_5
+    :goto_4
+    return-void
+.end method
 
-    sput v0, Lh5e;->M0:I
+.method public final c(J)V
+    .locals 19
 
-    sget v0, Lh6d;->ic_share_screen_on_fill_24:I
+    move-object/from16 v0, p0
 
-    sput v0, Lh5e;->N0:I
+    move-wide/from16 v1, p1
 
-    sget v0, Lh6d;->ic_sound_off_24:I
+    iget-object v3, v0, Lh5e;->l:Landroid/util/LongSparseArray;
 
-    sput v0, Lh5e;->O0:I
+    invoke-virtual {v3, v1, v2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
 
-    sget v0, Lh6d;->ic_sound_on_24:I
+    move-result-object v4
 
-    sput v0, Lh5e;->P0:I
+    check-cast v4, Lgni;
 
-    sget v0, Lh6d;->ic_sound_on_fill_24:I
+    if-eqz v4, :cond_7
 
-    sput v0, Lh5e;->Q0:I
+    iget-object v5, v0, Lh5e;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    sget v0, Lh6d;->ic_statusbar_downloads_24:I
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    sput v0, Lh5e;->R0:I
+    move-result v5
 
-    sget v0, Lh6d;->ic_statusbar_play_24:I
+    if-eqz v5, :cond_0
 
-    sput v0, Lh5e;->S0:I
+    goto/16 :goto_0
 
-    sget v0, Lh6d;->ic_statusbar_uploads_24:I
+    :cond_0
+    iget-object v5, v4, Lgni;->d:Lf5e;
 
-    sput v0, Lh5e;->T0:I
+    iget-wide v6, v5, Lf5e;->e:J
 
-    sget v0, Lh6d;->ic_text_28:I
+    iget-object v8, v5, Lf5e;->b:Le5e;
 
-    sput v0, Lh5e;->U0:I
+    const-wide/16 v9, 0x0
 
-    sget v0, Lh6d;->ic_trash_24:I
+    cmp-long v11, v6, v9
 
-    sput v0, Lh5e;->V0:I
+    iget-object v12, v0, Lh5e;->i:Le0e;
 
-    sget v0, Lh6d;->ic_unlocked_24:I
+    if-ltz v11, :cond_6
 
-    sput v0, Lh5e;->W0:I
+    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v0, Lh6d;->ic_video_16:I
+    iget-wide v13, v5, Lf5e;->f:J
 
-    sput v0, Lh5e;->X0:I
+    cmp-long v11, v13, v9
 
-    sget v0, Lh6d;->ic_video_32:I
+    if-ltz v11, :cond_5
 
-    sput v0, Lh5e;->Y0:I
+    iget v11, v5, Lf5e;->g:F
 
-    sget v0, Lh6d;->ic_videocam_off_fill_28:I
+    const/4 v15, 0x0
 
-    sput v0, Lh5e;->Z0:I
+    cmpg-float v16, v11, v15
 
-    sget v0, Lh6d;->ic_videocam_on_fill_28:I
+    if-ltz v16, :cond_4
 
-    sput v0, Lh5e;->a1:I
+    iget v5, v5, Lf5e;->h:F
 
-    sget v0, Lh6d;->ic_videocam_on_fill_32:I
+    cmpg-float v15, v5, v15
 
-    sput v0, Lh5e;->b1:I
+    if-ltz v15, :cond_3
 
-    sget v0, Lh6d;->info_fill_24:I
+    iput v5, v12, Le0e;->b:F
 
-    sput v0, Lh5e;->c1:I
+    move-wide v15, v9
 
-    sget v0, Lh6d;->key_24:I
+    iget-wide v9, v4, Lgni;->f:J
 
-    sput v0, Lh5e;->d1:I
+    cmp-long v5, v9, v15
 
-    sget v0, Lh6d;->lamp_32:I
+    if-ltz v5, :cond_2
 
-    sput v0, Lh5e;->e1:I
+    iget-wide v1, v4, Lgni;->e:J
 
-    sget v0, Lh6d;->link_broken_28:I
+    const-wide/16 v17, 0x1
 
-    sput v0, Lh5e;->f1:I
+    add-long v1, v1, v17
 
-    sget v0, Lh6d;->lock:I
+    iput-wide v1, v4, Lgni;->e:J
 
-    sput v0, Lh5e;->g1:I
+    long-to-float v1, v9
 
-    sget v0, Lh6d;->media_fill_24:I
+    mul-float/2addr v1, v11
 
-    sput v0, Lh5e;->h1:I
+    float-to-long v1, v1
 
-    sget v0, Lh6d;->mention_32:I
+    long-to-float v1, v1
 
-    sput v0, Lh5e;->i1:I
+    long-to-float v2, v6
 
-    sget v0, Lh6d;->mirror_outline_24:I
+    long-to-float v5, v13
 
-    sput v0, Lh5e;->j1:I
+    invoke-static {v1, v5}, Ljava/lang/Math;->min(FF)F
 
-    sget v0, Lh6d;->not_delivered_fill_28:I
+    move-result v1
 
-    sput v0, Lh5e;->k1:I
+    invoke-static {v2, v1}, Ljava/lang/Math;->max(FF)F
 
-    sget v0, Lh6d;->not_delivered_fill_color_16:I
+    move-result v1
 
-    sput v0, Lh5e;->l1:I
+    iget-object v2, v12, Le0e;->a:Ljava/util/Random;
 
-    sget v0, Lh6d;->password_32:I
+    invoke-virtual {v2}, Ljava/util/Random;->nextGaussian()D
 
-    sput v0, Lh5e;->m1:I
+    move-result-wide v5
 
-    sget v0, Lh6d;->picture_24:I
+    float-to-double v9, v1
 
-    sput v0, Lh5e;->n1:I
+    mul-double/2addr v5, v9
 
-    sget v0, Lh6d;->play_fill_48:I
+    iget v2, v12, Le0e;->b:F
 
-    sput v0, Lh5e;->o1:I
+    float-to-double v9, v2
 
-    sget v0, Lh6d;->presense_on:I
+    mul-double/2addr v5, v9
 
-    sput v0, Lh5e;->p1:I
+    double-to-float v2, v5
 
-    sget v0, Lh6d;->presense_on_small:I
+    add-float/2addr v1, v2
 
-    sput v0, Lh5e;->q1:I
+    float-to-long v1, v1
 
-    sget v0, Lh6d;->privacy_fill_24:I
+    iput-wide v1, v4, Lgni;->f:J
 
-    sput v0, Lh5e;->r1:I
+    iget-wide v5, v4, Lgni;->e:J
 
-    sget v0, Lh6d;->profile:I
+    cmp-long v5, v5, v15
 
-    sput v0, Lh5e;->s1:I
+    if-ltz v5, :cond_1
 
-    sget v0, Lh6d;->quote_12:I
+    new-instance v1, Lru/ok/android/webrtc/protocol/exceptions/RtcRetryLimitExceedException;
 
-    sput v0, Lh5e;->t1:I
+    invoke-direct {v1}, Lru/ok/android/webrtc/protocol/exceptions/RtcRetryLimitExceedException;-><init>()V
 
-    sget v0, Lh6d;->right_arrow_1:I
+    iget-object v2, v0, Lh5e;->n:Lle5;
 
-    sput v0, Lh5e;->u1:I
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v0, Lh6d;->right_arrow_10:I
+    new-instance v5, Lxqd;
 
-    sput v0, Lh5e;->v1:I
+    const/16 v6, 0x13
 
-    sget v0, Lh6d;->right_arrow_11:I
+    invoke-direct {v5, v2, v8, v1, v6}, Lxqd;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    sput v0, Lh5e;->w1:I
+    iget-object v6, v2, Lle5;->d:Ljava/lang/Object;
 
-    sget v0, Lh6d;->right_arrow_12:I
+    check-cast v6, Landroid/os/Handler;
 
-    sput v0, Lh5e;->x1:I
+    invoke-virtual {v6, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget v0, Lh6d;->right_arrow_13:I
+    invoke-virtual {v2, v8}, Lle5;->b(Le5e;)V
 
-    sput v0, Lh5e;->y1:I
+    new-instance v2, Lghh;
 
-    sget v0, Lh6d;->right_arrow_14:I
+    const/16 v5, 0x14
 
-    sput v0, Lh5e;->z1:I
+    invoke-direct {v2, v4, v5, v1}, Lghh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    sget v0, Lh6d;->right_arrow_15:I
+    iget-object v1, v0, Lh5e;->h:Landroid/os/Handler;
 
-    sput v0, Lh5e;->A1:I
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget v0, Lh6d;->right_arrow_2:I
+    move-wide/from16 v4, p1
 
-    sput v0, Lh5e;->B1:I
+    invoke-virtual {v3, v4, v5}, Landroid/util/LongSparseArray;->remove(J)V
 
-    sget v0, Lh6d;->right_arrow_3:I
+    return-void
 
-    sput v0, Lh5e;->C1:I
+    :cond_1
+    move-wide/from16 v4, p1
 
-    sget v0, Lh6d;->right_arrow_4:I
+    new-instance v3, Lg5e;
 
-    sput v0, Lh5e;->D1:I
+    const/4 v6, 0x1
 
-    sget v0, Lh6d;->right_arrow_5:I
+    invoke-direct {v3, v0, v4, v5, v6}, Lg5e;-><init>(Lh5e;JI)V
 
-    sput v0, Lh5e;->E1:I
+    iget-object v4, v0, Lh5e;->g:Landroid/os/Handler;
 
-    sget v0, Lh6d;->right_arrow_6:I
+    invoke-virtual {v4, v3, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    sput v0, Lh5e;->F1:I
+    return-void
 
-    sget v0, Lh6d;->right_arrow_7:I
+    :cond_2
+    new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    sput v0, Lh5e;->G1:I
+    const-string v2, "Illegal \'latestRetryTimeout\' value: "
 
-    sget v0, Lh6d;->right_arrow_8:I
+    invoke-static {v9, v10, v2}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
 
-    sput v0, Lh5e;->H1:I
+    move-result-object v2
 
-    sget v0, Lh6d;->right_arrow_9:I
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    sput v0, Lh5e;->I1:I
+    throw v1
 
-    sget v0, Lh6d;->rotate_screen_24:I
+    :cond_3
+    new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    sput v0, Lh5e;->J1:I
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    sget v0, Lh6d;->rotation_outline_24:I
+    const-string v3, "Illegal \'retryBackoffJitter\' value: "
 
-    sput v0, Lh5e;->K1:I
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v0, Lh6d;->show_24:I
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    sput v0, Lh5e;->L1:I
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget v0, Lh6d;->show_fill_12:I
+    move-result-object v2
 
-    sput v0, Lh5e;->M1:I
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    sget v0, Lh6d;->verification_24:I
+    throw v1
 
-    sput v0, Lh5e;->N1:I
+    :cond_4
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Illegal \'retryBackoffFactor\' value: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_5
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Illegal \'maxRetryTimeoutMs\' value: "
+
+    invoke-static {v13, v14, v2}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_6
+    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Illegal \'minRetryTimeoutMs\' value: "
+
+    invoke-static {v6, v7, v2}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_7
+    :goto_0
+    return-void
+.end method
+
+.method public final d(Lf5e;)V
+    .locals 3
+
+    iget-object v0, p0, Lh5e;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "RTCCommand"
+
+    const-string v1, "execute on disposed"
+
+    iget-object v2, p0, Lh5e;->o:Lahd;
+
+    invoke-interface {v2, v0, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    new-instance v0, Lbhc;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, p0, v1, p1}, Lbhc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lh5e;->f:Landroid/os/Handler;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

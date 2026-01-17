@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lob;
+.implements Llb;
 
 
 # instance fields
@@ -73,13 +73,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "DisableAllCamerasOnce(isSuccess="
+    const-string v0, "DisableAllRaiseHandsOnce(isSuccess="
 
     const-string v1, ")"
 
     iget-boolean v2, p0, Ldb;->a:Z
 
-    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

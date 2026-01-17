@@ -1,256 +1,198 @@
-.class public final enum Lpkj;
-.super Ljava/lang/Enum;
+.class public abstract Lpkj;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmzi;
-
-
-# static fields
-.field public static final enum X:Lpkj;
-
-.field public static final enum Y:Lpkj;
-
-.field public static final enum Z:Lpkj;
-
-.field public static final enum b:Lpkj;
-
-.field public static final enum c:Lpkj;
-
-.field public static final enum d:Lpkj;
-
-.field public static final enum o:Lpkj;
-
-.field public static final enum s0:Lpkj;
-
-.field public static final enum t0:Lpkj;
-
-.field public static final enum u0:Lpkj;
-
-.field public static final enum v0:Lpkj;
-
-.field public static final enum w0:Lpkj;
-
-.field public static final enum x0:Lpkj;
-
-.field public static final enum y0:Lpkj;
-
-.field public static final synthetic z0:[Lpkj;
-
-
-# instance fields
-.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 17
+.method public static final a(Lfjc;Llq6;Lo84;)Ljava/lang/Object;
+    .locals 4
 
-    new-instance v0, Lpkj;
+    instance-of v0, p2, Lzic;
 
-    const-string v1, "FORMAT_UNKNOWN"
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    move-object v0, p2
 
-    invoke-direct {v0, v1, v2, v2}, Lpkj;-><init>(Ljava/lang/String;II)V
+    check-cast v0, Lzic;
 
-    sput-object v0, Lpkj;->b:Lpkj;
+    iget v1, v0, Lzic;->X:I
 
-    new-instance v1, Lpkj;
+    const/high16 v2, -0x80000000
 
-    const-string v2, "FORMAT_CODE_128"
+    and-int v3, v1, v2
 
-    const/4 v3, 0x1
+    if-eqz v3, :cond_0
 
-    invoke-direct {v1, v2, v3, v3}, Lpkj;-><init>(Ljava/lang/String;II)V
+    sub-int/2addr v1, v2
 
-    sput-object v1, Lpkj;->c:Lpkj;
+    iput v1, v0, Lzic;->X:I
 
-    new-instance v2, Lpkj;
+    goto :goto_0
 
-    const-string v3, "FORMAT_CODE_39"
+    :cond_0
+    new-instance v0, Lzic;
 
-    const/4 v4, 0x2
+    invoke-direct {v0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v2, v3, v4, v4}, Lpkj;-><init>(Ljava/lang/String;II)V
+    :goto_0
+    iget-object p2, v0, Lzic;->o:Ljava/lang/Object;
 
-    sput-object v2, Lpkj;->d:Lpkj;
+    iget v1, v0, Lzic;->X:I
 
-    new-instance v3, Lpkj;
+    const/4 v2, 0x1
 
-    const-string v4, "FORMAT_CODE_93"
+    if-eqz v1, :cond_2
 
-    const/4 v5, 0x3
+    if-ne v1, v2, :cond_1
 
-    const/4 v6, 0x4
+    iget-object p1, v0, Lzic;->d:Llq6;
 
-    invoke-direct {v3, v4, v5, v6}, Lpkj;-><init>(Ljava/lang/String;II)V
+    :try_start_0
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput-object v3, Lpkj;->o:Lpkj;
+    goto :goto_1
 
-    new-instance v4, Lpkj;
+    :catchall_0
+    move-exception p0
 
-    const-string v5, "FORMAT_CODABAR"
+    goto :goto_2
 
-    const/16 v7, 0x8
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v4, v5, v6, v7}, Lpkj;-><init>(Ljava/lang/String;II)V
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    sput-object v4, Lpkj;->X:Lpkj;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v5, Lpkj;
+    throw p0
 
-    const/4 v6, 0x5
+    :cond_2
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/16 v8, 0x10
+    iget-object p2, v0, Lo84;->b:Lqb4;
 
-    const-string v9, "FORMAT_DATA_MATRIX"
+    sget-object v1, Ldgj;->y0:Ldgj;
 
-    invoke-direct {v5, v9, v6, v8}, Lpkj;-><init>(Ljava/lang/String;II)V
+    invoke-interface {p2, v1}, Lqb4;->get(Lpb4;)Lob4;
 
-    sput-object v5, Lpkj;->Y:Lpkj;
+    move-result-object p2
 
-    new-instance v6, Lpkj;
+    if-ne p2, p0, :cond_4
 
-    const/4 v8, 0x6
+    :try_start_1
+    iput-object p1, v0, Lzic;->d:Llq6;
 
-    const/16 v9, 0x20
+    iput v2, v0, Lzic;->X:I
 
-    const-string v10, "FORMAT_EAN_13"
+    new-instance p2, Lg62;
 
-    invoke-direct {v6, v10, v8, v9}, Lpkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Lpkj;->Z:Lpkj;
-
-    new-instance v8, Lpkj;
-
-    const/4 v9, 0x7
-
-    const/16 v10, 0x40
-
-    const-string v11, "FORMAT_EAN_8"
-
-    invoke-direct {v8, v11, v9, v10}, Lpkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v8, Lpkj;->s0:Lpkj;
-
-    move-object v9, v8
-
-    new-instance v8, Lpkj;
-
-    const-string v10, "FORMAT_ITF"
-
-    const/16 v11, 0x80
-
-    invoke-direct {v8, v10, v7, v11}, Lpkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v8, Lpkj;->t0:Lpkj;
-
-    move-object v7, v9
-
-    new-instance v9, Lpkj;
-
-    const/16 v10, 0x9
-
-    const/16 v11, 0x100
-
-    const-string v12, "FORMAT_QR_CODE"
-
-    invoke-direct {v9, v12, v10, v11}, Lpkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v9, Lpkj;->u0:Lpkj;
-
-    new-instance v10, Lpkj;
-
-    const/16 v11, 0xa
-
-    const/16 v12, 0x200
-
-    const-string v13, "FORMAT_UPC_A"
-
-    invoke-direct {v10, v13, v11, v12}, Lpkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v10, Lpkj;->v0:Lpkj;
-
-    new-instance v11, Lpkj;
-
-    const/16 v12, 0xb
-
-    const/16 v13, 0x400
-
-    const-string v14, "FORMAT_UPC_E"
-
-    invoke-direct {v11, v14, v12, v13}, Lpkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v11, Lpkj;->w0:Lpkj;
-
-    new-instance v12, Lpkj;
-
-    const/16 v13, 0xc
-
-    const/16 v14, 0x800
-
-    const-string v15, "FORMAT_PDF417"
-
-    invoke-direct {v12, v15, v13, v14}, Lpkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v12, Lpkj;->x0:Lpkj;
-
-    new-instance v13, Lpkj;
-
-    const/16 v14, 0xd
-
-    const/16 v15, 0x1000
-
-    move-object/from16 v16, v0
-
-    const-string v0, "FORMAT_AZTEC"
-
-    invoke-direct {v13, v0, v14, v15}, Lpkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v13, Lpkj;->y0:Lpkj;
-
-    move-object/from16 v0, v16
-
-    filled-new-array/range {v0 .. v13}, [Lpkj;
+    invoke-static {v0}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object v0
 
-    sput-object v0, Lpkj;->z0:[Lpkj;
+    invoke-direct {p2, v2, v0}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    return-void
+    invoke-virtual {p2}, Lg62;->o()V
+
+    new-instance v0, Lxq;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p2, v1}, Lxq;-><init>(Lg62;I)V
+
+    check-cast p0, Lcjc;
+
+    invoke-virtual {p0, v0}, Lcjc;->D(Lxq;)V
+
+    invoke-virtual {p2}, Lg62;->n()Ljava/lang/Object;
+
+    move-result-object p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p0, p2, :cond_3
+
+    return-object p2
+
+    :cond_3
+    :goto_1
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+
+    sget-object p0, Lb3h;->a:Lb3h;
+
+    return-object p0
+
+    :goto_2
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+
+    throw p0
+
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "awaitClose() can only be invoked from the producer context"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method public static b(Landroid/content/Context;)Landroid/content/Context;
+    .locals 4
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lpkj;->a:I
-
-    return-void
-.end method
-
-.method public static values()[Lpkj;
-    .locals 1
-
-    sget-object v0, Lpkj;->z0:[Lpkj;
-
-    invoke-virtual {v0}, [Lpkj;->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, [Lpkj;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    const/16 v2, 0x22
+
+    if-lt v1, v2, :cond_0
+
+    invoke-static {p0}, Ltp0;->c(Landroid/content/Context;)I
+
+    move-result v2
+
+    invoke-static {v0}, Ltp0;->c(Landroid/content/Context;)I
+
+    move-result v3
+
+    if-eq v2, v3, :cond_0
+
+    invoke-static {v0, v2}, Ltp0;->a(Landroid/content/Context;I)Landroid/content/Context;
+
+    move-result-object v0
+
+    :cond_0
+    const/16 v2, 0x1e
+
+    if-lt v1, v2, :cond_1
+
+    invoke-static {p0}, Ll84;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0}, Ll84;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-static {v0, p0}, Ll84;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
     return-object v0
-.end method
-
-
-# virtual methods
-.method public final d()I
-    .locals 1
-
-    iget v0, p0, Lpkj;->a:I
-
-    return v0
 .end method

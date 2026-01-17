@@ -1,11 +1,19 @@
-.class public interface abstract Ljtb;
+.class public abstract Ljtb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liy7;
+
+# static fields
+.field public static final synthetic a:I
 
 
-# virtual methods
-.method public abstract getChildJobCancellationCause()Ljava/util/concurrent/CancellationException;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    return-void
 .end method

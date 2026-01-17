@@ -1,5 +1,5 @@
 .class public final Lvk4;
-.super Lqlj;
+.super Llmj;
 .source "SourceFile"
 
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x2e75b35f
+    const v0, 0x2f4aa020
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Click"
+    const-string v0, "Route"
 
     return-object v0
 .end method

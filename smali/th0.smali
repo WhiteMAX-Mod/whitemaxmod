@@ -31,9 +31,9 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 11
 
-    sget v3, Lrh0;->y0:I
+    sget v3, Lrh0;->z0:I
 
-    sget v0, Lrh0;->x0:I
+    sget v0, Lrh0;->y0:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -195,13 +195,13 @@
     move v4, v2
 
     :goto_3
-    sget-object v2, Lefd;->Badge:[I
+    sget-object v2, Lcgd;->Badge:[I
 
     new-array v5, v8, [I
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lsig;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
+    invoke-static/range {v0 .. v5}, Ldjg;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -209,7 +209,7 @@
 
     move-result-object v1
 
-    sget v2, Lefd;->Badge_badgeRadius:I
+    sget v2, Lcgd;->Badge_badgeRadius:I
 
     const/4 v3, -0x1
 
@@ -225,7 +225,7 @@
 
     move-result-object v2
 
-    sget v4, Lf5d;->mtrl_badge_horizontal_edge_offset:I
+    sget v4, Lb6d;->mtrl_badge_horizontal_edge_offset:I
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -237,7 +237,7 @@
 
     move-result-object v2
 
-    sget v4, Lf5d;->mtrl_badge_text_horizontal_edge_offset:I
+    sget v4, Lb6d;->mtrl_badge_text_horizontal_edge_offset:I
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -245,7 +245,7 @@
 
     iput v2, p0, Lth0;->j:I
 
-    sget v2, Lefd;->Badge_badgeWithTextRadius:I
+    sget v2, Lcgd;->Badge_badgeWithTextRadius:I
 
     invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -255,9 +255,9 @@
 
     iput v2, p0, Lth0;->d:F
 
-    sget v2, Lefd;->Badge_badgeWidth:I
+    sget v2, Lcgd;->Badge_badgeWidth:I
 
-    sget v4, Lf5d;->m3_badge_size:I
+    sget v4, Lb6d;->m3_badge_size:I
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -269,9 +269,9 @@
 
     iput v2, p0, Lth0;->e:F
 
-    sget v2, Lefd;->Badge_badgeWithTextWidth:I
+    sget v2, Lcgd;->Badge_badgeWithTextWidth:I
 
-    sget v4, Lf5d;->m3_badge_with_text_size:I
+    sget v4, Lb6d;->m3_badge_with_text_size:I
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -283,9 +283,9 @@
 
     iput v2, p0, Lth0;->g:F
 
-    sget v2, Lefd;->Badge_badgeHeight:I
+    sget v2, Lcgd;->Badge_badgeHeight:I
 
-    sget v4, Lf5d;->m3_badge_size:I
+    sget v4, Lb6d;->m3_badge_size:I
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -297,9 +297,9 @@
 
     iput v2, p0, Lth0;->f:F
 
-    sget v2, Lefd;->Badge_badgeWithTextHeight:I
+    sget v2, Lcgd;->Badge_badgeWithTextHeight:I
 
-    sget v4, Lf5d;->m3_badge_with_text_size:I
+    sget v4, Lb6d;->m3_badge_with_text_size:I
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -311,7 +311,7 @@
 
     iput v2, p0, Lth0;->h:F
 
-    sget v2, Lefd;->Badge_offsetAlignmentMode:I
+    sget v2, Lcgd;->Badge_offsetAlignmentMode:I
 
     invoke-virtual {p1, v2, v7}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -321,7 +321,7 @@
 
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    iget v4, v6, Lsh0;->s0:I
+    iget v4, v6, Lsh0;->t0:I
 
     const/4 v5, -0x2
 
@@ -330,18 +330,18 @@
     const/16 v4, 0xff
 
     :cond_6
-    iput v4, v2, Lsh0;->s0:I
+    iput v4, v2, Lsh0;->t0:I
 
-    iget v4, v6, Lsh0;->u0:I
+    iget v4, v6, Lsh0;->v0:I
 
     if-eq v4, v5, :cond_7
 
-    iput v4, v2, Lsh0;->u0:I
+    iput v4, v2, Lsh0;->v0:I
 
     goto :goto_4
 
     :cond_7
-    sget v2, Lefd;->Badge_number:I
+    sget v2, Lcgd;->Badge_number:I
 
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -351,34 +351,34 @@
 
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    sget v3, Lefd;->Badge_number:I
+    sget v3, Lcgd;->Badge_number:I
 
     invoke-virtual {p1, v3, v8}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v3
 
-    iput v3, v2, Lsh0;->u0:I
+    iput v3, v2, Lsh0;->v0:I
 
     goto :goto_4
 
     :cond_8
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    iput v3, v2, Lsh0;->u0:I
+    iput v3, v2, Lsh0;->v0:I
 
     :goto_4
-    iget-object v2, v6, Lsh0;->t0:Ljava/lang/String;
+    iget-object v2, v6, Lsh0;->u0:Ljava/lang/String;
 
     if-eqz v2, :cond_9
 
     iget-object v3, p0, Lth0;->b:Lsh0;
 
-    iput-object v2, v3, Lsh0;->t0:Ljava/lang/String;
+    iput-object v2, v3, Lsh0;->u0:Ljava/lang/String;
 
     goto :goto_5
 
     :cond_9
-    sget v2, Lefd;->Badge_badgeText:I
+    sget v2, Lcgd;->Badge_badgeText:I
 
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -388,56 +388,56 @@
 
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    sget v3, Lefd;->Badge_badgeText:I
+    sget v3, Lcgd;->Badge_badgeText:I
 
     invoke-virtual {p1, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v2, Lsh0;->t0:Ljava/lang/String;
+    iput-object v3, v2, Lsh0;->u0:Ljava/lang/String;
 
     :cond_a
     :goto_5
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    iget-object v3, v6, Lsh0;->y0:Ljava/lang/CharSequence;
-
-    iput-object v3, v2, Lsh0;->y0:Ljava/lang/CharSequence;
-
     iget-object v3, v6, Lsh0;->z0:Ljava/lang/CharSequence;
+
+    iput-object v3, v2, Lsh0;->z0:Ljava/lang/CharSequence;
+
+    iget-object v3, v6, Lsh0;->A0:Ljava/lang/CharSequence;
 
     if-nez v3, :cond_b
 
-    sget v3, Lvbd;->mtrl_badge_numberless_content_description:I
+    sget v3, Ltcd;->mtrl_badge_numberless_content_description:I
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     :cond_b
-    iput-object v3, v2, Lsh0;->z0:Ljava/lang/CharSequence;
+    iput-object v3, v2, Lsh0;->A0:Ljava/lang/CharSequence;
 
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    iget v3, v6, Lsh0;->A0:I
+    iget v3, v6, Lsh0;->B0:I
 
     if-nez v3, :cond_c
 
-    sget v3, Llbd;->mtrl_badge_content_description:I
+    sget v3, Ljcd;->mtrl_badge_content_description:I
 
     :cond_c
-    iput v3, v2, Lsh0;->A0:I
+    iput v3, v2, Lsh0;->B0:I
 
-    iget v3, v6, Lsh0;->B0:I
+    iget v3, v6, Lsh0;->C0:I
 
     if-nez v3, :cond_d
 
-    sget v3, Lvbd;->mtrl_exceed_max_badge_number_content_description:I
+    sget v3, Ltcd;->mtrl_exceed_max_badge_number_content_description:I
 
     :cond_d
-    iput v3, v2, Lsh0;->B0:I
+    iput v3, v2, Lsh0;->C0:I
 
-    iget-object v3, v6, Lsh0;->D0:Ljava/lang/Boolean;
+    iget-object v3, v6, Lsh0;->E0:Ljava/lang/Boolean;
 
     if-eqz v3, :cond_f
 
@@ -463,37 +463,37 @@
 
     move-result-object v3
 
-    iput-object v3, v2, Lsh0;->D0:Ljava/lang/Boolean;
+    iput-object v3, v2, Lsh0;->E0:Ljava/lang/Boolean;
 
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    iget v3, v6, Lsh0;->v0:I
+    iget v3, v6, Lsh0;->w0:I
 
     if-ne v3, v5, :cond_10
 
-    sget v3, Lefd;->Badge_maxCharacterCount:I
+    sget v3, Lcgd;->Badge_maxCharacterCount:I
 
     invoke-virtual {p1, v3, v5}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v3
 
     :cond_10
-    iput v3, v2, Lsh0;->v0:I
+    iput v3, v2, Lsh0;->w0:I
 
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    iget v3, v6, Lsh0;->w0:I
+    iget v3, v6, Lsh0;->x0:I
 
     if-ne v3, v5, :cond_11
 
-    sget v3, Lefd;->Badge_maxNumber:I
+    sget v3, Lcgd;->Badge_maxNumber:I
 
     invoke-virtual {p1, v3, v5}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v3
 
     :cond_11
-    iput v3, v2, Lsh0;->w0:I
+    iput v3, v2, Lsh0;->x0:I
 
     iget-object v2, p0, Lth0;->b:Lsh0;
 
@@ -501,9 +501,9 @@
 
     if-nez v3, :cond_12
 
-    sget v3, Lefd;->Badge_badgeShapeAppearance:I
+    sget v3, Lcgd;->Badge_badgeShapeAppearance:I
 
-    sget v4, Lred;->ShapeAppearance_M3_Sys_Shape_Corner_Full:I
+    sget v4, Lqfd;->ShapeAppearance_M3_Sys_Shape_Corner_Full:I
 
     invoke-virtual {p1, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -529,7 +529,7 @@
 
     if-nez v3, :cond_13
 
-    sget v3, Lefd;->Badge_badgeShapeAppearanceOverlay:I
+    sget v3, Lcgd;->Badge_badgeShapeAppearanceOverlay:I
 
     invoke-virtual {p1, v3, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -555,9 +555,9 @@
 
     if-nez v3, :cond_14
 
-    sget v3, Lefd;->Badge_badgeWithTextShapeAppearance:I
+    sget v3, Lcgd;->Badge_badgeWithTextShapeAppearance:I
 
-    sget v4, Lred;->ShapeAppearance_M3_Sys_Shape_Corner_Full:I
+    sget v4, Lqfd;->ShapeAppearance_M3_Sys_Shape_Corner_Full:I
 
     invoke-virtual {p1, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -583,7 +583,7 @@
 
     if-nez v3, :cond_15
 
-    sget v3, Lefd;->Badge_badgeWithTextShapeAppearanceOverlay:I
+    sget v3, Lcgd;->Badge_badgeWithTextShapeAppearanceOverlay:I
 
     invoke-virtual {p1, v3, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -609,9 +609,9 @@
 
     if-nez v3, :cond_16
 
-    sget v3, Lefd;->Badge_backgroundColor:I
+    sget v3, Lcgd;->Badge_backgroundColor:I
 
-    invoke-static {v0, p1, v3}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1, v3}, Lm7j;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
@@ -639,9 +639,9 @@
 
     if-nez v3, :cond_17
 
-    sget v3, Lefd;->Badge_badgeTextAppearance:I
+    sget v3, Lcgd;->Badge_badgeTextAppearance:I
 
-    sget v4, Lred;->TextAppearance_MaterialComponents_Badge:I
+    sget v4, Lqfd;->TextAppearance_MaterialComponents_Badge:I
 
     invoke-virtual {p1, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -672,7 +672,7 @@
     goto/16 :goto_f
 
     :cond_18
-    sget v2, Lefd;->Badge_badgeTextColor:I
+    sget v2, Lcgd;->Badge_badgeTextColor:I
 
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -682,9 +682,9 @@
 
     iget-object v2, p0, Lth0;->b:Lsh0;
 
-    sget v3, Lefd;->Badge_badgeTextColor:I
+    sget v3, Lcgd;->Badge_badgeTextColor:I
 
-    invoke-static {v0, p1, v3}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1, v3}, Lm7j;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -709,43 +709,43 @@
 
     move-result v2
 
-    sget-object v3, Lefd;->TextAppearance:[I
+    sget-object v3, Lcgd;->TextAppearance:[I
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object v3
 
-    sget v4, Lefd;->TextAppearance_android_textSize:I
+    sget v4, Lcgd;->TextAppearance_android_textSize:I
 
     const/4 v5, 0x0
 
     invoke-virtual {v3, v4, v5}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
-    sget v4, Lefd;->TextAppearance_android_textColor:I
+    sget v4, Lcgd;->TextAppearance_android_textColor:I
 
-    invoke-static {v0, v3, v4}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, v3, v4}, Lm7j;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v4
 
-    sget v9, Lefd;->TextAppearance_android_textColorHint:I
+    sget v9, Lcgd;->TextAppearance_android_textColorHint:I
 
-    invoke-static {v0, v3, v9}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, v3, v9}, Lm7j;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
-    sget v9, Lefd;->TextAppearance_android_textColorLink:I
+    sget v9, Lcgd;->TextAppearance_android_textColorLink:I
 
-    invoke-static {v0, v3, v9}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, v3, v9}, Lm7j;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
-    sget v9, Lefd;->TextAppearance_android_textStyle:I
+    sget v9, Lcgd;->TextAppearance_android_textStyle:I
 
     invoke-virtual {v3, v9, v8}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    sget v9, Lefd;->TextAppearance_android_typeface:I
+    sget v9, Lcgd;->TextAppearance_android_typeface:I
 
     invoke-virtual {v3, v9, v7}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    sget v7, Lefd;->TextAppearance_fontFamily:I
+    sget v7, Lcgd;->TextAppearance_fontFamily:I
 
-    sget v9, Lefd;->TextAppearance_android_fontFamily:I
+    sget v9, Lcgd;->TextAppearance_android_fontFamily:I
 
     invoke-virtual {v3, v7}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -763,39 +763,39 @@
 
     invoke-virtual {v3, v7}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    sget v7, Lefd;->TextAppearance_textAllCaps:I
+    sget v7, Lcgd;->TextAppearance_textAllCaps:I
 
     invoke-virtual {v3, v7, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    sget v7, Lefd;->TextAppearance_android_shadowColor:I
+    sget v7, Lcgd;->TextAppearance_android_shadowColor:I
 
-    invoke-static {v0, v3, v7}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, v3, v7}, Lm7j;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
-    sget v7, Lefd;->TextAppearance_android_shadowDx:I
-
-    invoke-virtual {v3, v7, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    sget v7, Lefd;->TextAppearance_android_shadowDy:I
+    sget v7, Lcgd;->TextAppearance_android_shadowDx:I
 
     invoke-virtual {v3, v7, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
-    sget v7, Lefd;->TextAppearance_android_shadowRadius:I
+    sget v7, Lcgd;->TextAppearance_android_shadowDy:I
+
+    invoke-virtual {v3, v7, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    sget v7, Lcgd;->TextAppearance_android_shadowRadius:I
 
     invoke-virtual {v3, v7, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
-    sget-object v3, Lefd;->MaterialTextAppearance:[I
+    sget-object v3, Lcgd;->MaterialTextAppearance:[I
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v2, Lefd;->MaterialTextAppearance_android_letterSpacing:I
+    sget v2, Lcgd;->MaterialTextAppearance_android_letterSpacing:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    sget v2, Lefd;->MaterialTextAppearance_android_letterSpacing:I
+    sget v2, Lcgd;->MaterialTextAppearance_android_letterSpacing:I
 
     invoke-virtual {v0, v2, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -816,11 +816,11 @@
     :goto_f
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v2, v6, Lsh0;->C0:Ljava/lang/Integer;
+    iget-object v2, v6, Lsh0;->D0:Ljava/lang/Integer;
 
     if-nez v2, :cond_1b
 
-    sget v2, Lefd;->Badge_badgeGravity:I
+    sget v2, Lcgd;->Badge_badgeGravity:I
 
     const v3, 0x800035
 
@@ -840,17 +840,17 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lsh0;->C0:Ljava/lang/Integer;
+    iput-object v2, v0, Lsh0;->D0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v2, v6, Lsh0;->E0:Ljava/lang/Integer;
+    iget-object v2, v6, Lsh0;->F0:Ljava/lang/Integer;
 
     if-nez v2, :cond_1c
 
-    sget v2, Lefd;->Badge_badgeWidePadding:I
+    sget v2, Lcgd;->Badge_badgeWidePadding:I
 
-    sget v3, Lf5d;->mtrl_badge_long_text_horizontal_padding:I
+    sget v3, Lb6d;->mtrl_badge_long_text_horizontal_padding:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -872,17 +872,17 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lsh0;->E0:Ljava/lang/Integer;
+    iput-object v2, v0, Lsh0;->F0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v2, v6, Lsh0;->F0:Ljava/lang/Integer;
+    iget-object v2, v6, Lsh0;->G0:Ljava/lang/Integer;
 
     if-nez v2, :cond_1d
 
-    sget v2, Lefd;->Badge_badgeVerticalPadding:I
+    sget v2, Lcgd;->Badge_badgeVerticalPadding:I
 
-    sget v3, Lf5d;->m3_badge_with_text_vertical_padding:I
+    sget v3, Lb6d;->m3_badge_with_text_vertical_padding:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -904,15 +904,15 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->F0:Ljava/lang/Integer;
+    iput-object v1, v0, Lsh0;->G0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v1, v6, Lsh0;->G0:Ljava/lang/Integer;
+    iget-object v1, v6, Lsh0;->H0:Ljava/lang/Integer;
 
     if-nez v1, :cond_1e
 
-    sget v1, Lefd;->Badge_horizontalOffset:I
+    sget v1, Lcgd;->Badge_horizontalOffset:I
 
     invoke-virtual {p1, v1, v8}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -930,15 +930,15 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->G0:Ljava/lang/Integer;
+    iput-object v1, v0, Lsh0;->H0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v1, v6, Lsh0;->H0:Ljava/lang/Integer;
+    iget-object v1, v6, Lsh0;->I0:Ljava/lang/Integer;
 
     if-nez v1, :cond_1f
 
-    sget v1, Lefd;->Badge_verticalOffset:I
+    sget v1, Lcgd;->Badge_verticalOffset:I
 
     invoke-virtual {p1, v1, v8}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -956,17 +956,17 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->H0:Ljava/lang/Integer;
+    iput-object v1, v0, Lsh0;->I0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v1, v6, Lsh0;->I0:Ljava/lang/Integer;
+    iget-object v1, v6, Lsh0;->J0:Ljava/lang/Integer;
 
     if-nez v1, :cond_20
 
-    sget v1, Lefd;->Badge_horizontalOffsetWithText:I
+    sget v1, Lcgd;->Badge_horizontalOffsetWithText:I
 
-    iget-object v2, v0, Lsh0;->G0:Ljava/lang/Integer;
+    iget-object v2, v0, Lsh0;->H0:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -988,17 +988,17 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->I0:Ljava/lang/Integer;
+    iput-object v1, v0, Lsh0;->J0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v1, v6, Lsh0;->J0:Ljava/lang/Integer;
+    iget-object v1, v6, Lsh0;->K0:Ljava/lang/Integer;
 
     if-nez v1, :cond_21
 
-    sget v1, Lefd;->Badge_verticalOffsetWithText:I
+    sget v1, Lcgd;->Badge_verticalOffsetWithText:I
 
-    iget-object v2, v0, Lsh0;->H0:Ljava/lang/Integer;
+    iget-object v2, v0, Lsh0;->I0:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -1020,15 +1020,15 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->J0:Ljava/lang/Integer;
+    iput-object v1, v0, Lsh0;->K0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v1, v6, Lsh0;->M0:Ljava/lang/Integer;
+    iget-object v1, v6, Lsh0;->N0:Ljava/lang/Integer;
 
     if-nez v1, :cond_22
 
-    sget v1, Lefd;->Badge_largeFontVerticalOffsetAdjustment:I
+    sget v1, Lcgd;->Badge_largeFontVerticalOffsetAdjustment:I
 
     invoke-virtual {p1, v1, v8}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -1046,11 +1046,11 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->M0:Ljava/lang/Integer;
+    iput-object v1, v0, Lsh0;->N0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v1, v6, Lsh0;->K0:Ljava/lang/Integer;
+    iget-object v1, v6, Lsh0;->L0:Ljava/lang/Integer;
 
     if-nez v1, :cond_23
 
@@ -1068,11 +1068,11 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->K0:Ljava/lang/Integer;
+    iput-object v1, v0, Lsh0;->L0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v1, v6, Lsh0;->L0:Ljava/lang/Integer;
+    iget-object v1, v6, Lsh0;->M0:Ljava/lang/Integer;
 
     if-nez v1, :cond_24
 
@@ -1090,15 +1090,15 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->L0:Ljava/lang/Integer;
+    iput-object v1, v0, Lsh0;->M0:Ljava/lang/Integer;
 
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iget-object v1, v6, Lsh0;->N0:Ljava/lang/Boolean;
+    iget-object v1, v6, Lsh0;->O0:Ljava/lang/Boolean;
 
     if-nez v1, :cond_25
 
-    sget v1, Lefd;->Badge_autoAdjustToWithinGrandparentBounds:I
+    sget v1, Lcgd;->Badge_autoAdjustToWithinGrandparentBounds:I
 
     invoke-virtual {p1, v1, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -1116,11 +1116,11 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lsh0;->N0:Ljava/lang/Boolean;
+    iput-object v1, v0, Lsh0;->O0:Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    iget-object p1, v6, Lsh0;->x0:Ljava/util/Locale;
+    iget-object p1, v6, Lsh0;->y0:Ljava/util/Locale;
 
     if-nez p1, :cond_26
 
@@ -1132,14 +1132,14 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lsh0;->x0:Ljava/util/Locale;
+    iput-object v0, p1, Lsh0;->y0:Ljava/util/Locale;
 
     goto :goto_1b
 
     :cond_26
     iget-object v0, p0, Lth0;->b:Lsh0;
 
-    iput-object p1, v0, Lsh0;->x0:Ljava/util/Locale;
+    iput-object p1, v0, Lsh0;->y0:Ljava/util/Locale;
 
     :goto_1b
     iput-object v6, p0, Lth0;->a:Lsh0;

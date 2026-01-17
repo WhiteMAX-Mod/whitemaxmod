@@ -1,25 +1,25 @@
 .class public final Lae4;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lke4;
+.field public final synthetic X:Lhe4;
 
 .field public Y:I
 
-.field public d:Lke4;
+.field public d:Lkfa;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lke4;Ll84;)V
+.method public constructor <init>(Lhe4;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lae4;->X:Lke4;
+    iput-object p1, p0, Lae4;->X:Lhe4;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -39,9 +39,11 @@
 
     iput p1, p0, Lae4;->Y:I
 
-    iget-object p1, p0, Lae4;->X:Lke4;
+    iget-object p1, p0, Lae4;->X:Lhe4;
 
-    invoke-virtual {p1, p0}, Lke4;->j(Ll84;)Ljava/io/Serializable;
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lhe4;->b(Lhe4;Lkfa;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

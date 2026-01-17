@@ -1,121 +1,64 @@
-.class public final synthetic Lyv6;
-.super Ljava/lang/Object;
+.class public final Lyv6;
+.super Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/GestureDetector;
+.field public final synthetic a:Lzv6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/GestureDetector;I)V
+.method public constructor <init>(Lzv6;)V
     .locals 0
 
-    iput p2, p0, Lyv6;->a:I
+    iput-object p1, p0, Lyv6;->a:Lzv6;
 
-    iput-object p1, p0, Lyv6;->b:Landroid/view/GestureDetector;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final onScale(Landroid/view/ScaleGestureDetector;)Z
+    .locals 6
 
-    iget p1, p0, Lyv6;->a:I
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
-    iget-object v0, p0, Lyv6;->b:Landroid/view/GestureDetector;
+    move-result v0
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v1, p0, Lyv6;->a:Lzv6;
 
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    iget v2, v1, Lzv6;->Q0:F
 
-    move-result p1
+    iget v3, v1, Lzv6;->R0:F
 
-    return p1
+    iget-object v4, v1, Lctg;->u0:Landroid/graphics/Matrix;
 
-    :pswitch_0
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    const/4 v5, 0x0
 
-    move-result p1
+    cmpl-float v5, v0, v5
 
-    return p1
+    if-eqz v5, :cond_0
 
-    :pswitch_1
-    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->o:[Lp38;
+    invoke-virtual {v4, v0, v0, v2, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    if-eqz p2, :cond_0
-
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    const/4 p1, 0x0
-
-    return p1
+    invoke-virtual {v1, v4}, Lctg;->setImageMatrix(Landroid/graphics/Matrix;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
 
-    const-string p2, "Required value was null."
+    move-result v0
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput v0, v1, Lzv6;->S0:F
 
-    throw p1
-
-    :pswitch_2
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
-
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusY()F
 
     move-result p1
 
-    return p1
+    iput p1, v1, Lzv6;->T0:F
 
-    :pswitch_3
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
+    const/4 p1, 0x1
 
     return p1
-
-    :pswitch_4
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_5
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_6
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

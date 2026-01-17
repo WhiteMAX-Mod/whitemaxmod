@@ -1,854 +1,167 @@
-.class public final Ld5;
+.class public abstract Ld5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Ld5;
-
-.field public static final f:Ld5;
-
-.field public static final g:Ld5;
-
-.field public static final h:Ld5;
-
-.field public static final i:Ld5;
-
-.field public static final j:Ld5;
-
-.field public static final k:Ld5;
-
-.field public static final l:Ld5;
-
-.field public static final m:Ld5;
-
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:I
-
-.field public final c:Ljava/lang/Class;
-
-.field public final d:Lt5;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 21
-
-    new-instance v0, Ld5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Ld5;-><init>(I)V
-
-    sput-object v0, Ld5;->e:Ld5;
-
-    new-instance v0, Ld5;
-
-    const/16 v1, 0x20
-
-    invoke-direct {v0, v1}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const/16 v2, 0x40
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const/16 v2, 0x80
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const-class v2, Lm5;
-
-    const/16 v3, 0x100
-
-    invoke-direct {v0, v2, v3}, Ld5;-><init>(Ljava/lang/Class;I)V
-
-    new-instance v0, Ld5;
-
-    const/16 v3, 0x200
-
-    invoke-direct {v0, v2, v3}, Ld5;-><init>(Ljava/lang/Class;I)V
-
-    new-instance v0, Ld5;
-
-    const-class v2, Ln5;
-
-    const/16 v3, 0x400
-
-    invoke-direct {v0, v2, v3}, Ld5;-><init>(Ljava/lang/Class;I)V
-
-    new-instance v0, Ld5;
-
-    const/16 v3, 0x800
-
-    invoke-direct {v0, v2, v3}, Ld5;-><init>(Ljava/lang/Class;I)V
-
-    new-instance v0, Ld5;
-
-    const/16 v2, 0x1000
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    sput-object v0, Ld5;->f:Ld5;
-
-    new-instance v0, Ld5;
-
-    const/16 v2, 0x2000
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    sput-object v0, Ld5;->g:Ld5;
-
-    new-instance v0, Ld5;
-
-    const/16 v2, 0x4000
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const v2, 0x8000
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const/high16 v2, 0x10000
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    new-instance v0, Ld5;
-
-    const/high16 v2, 0x20000
-
-    const-class v3, Lr5;
-
-    invoke-direct {v0, v3, v2}, Ld5;-><init>(Ljava/lang/Class;I)V
-
-    new-instance v0, Ld5;
-
-    const/high16 v2, 0x40000
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    sput-object v0, Ld5;->h:Ld5;
-
-    new-instance v0, Ld5;
-
-    const/high16 v2, 0x80000
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    sput-object v0, Ld5;->i:Ld5;
-
-    new-instance v0, Ld5;
-
-    const/high16 v2, 0x100000
-
-    invoke-direct {v0, v2}, Ld5;-><init>(I)V
-
-    sput-object v0, Ld5;->j:Ld5;
-
-    new-instance v0, Ld5;
-
-    const/high16 v2, 0x200000
-
-    const-class v3, Ls5;
-
-    invoke-direct {v0, v3, v2}, Ld5;-><init>(Ljava/lang/Class;I)V
-
-    new-instance v4, Ld5;
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    sget-object v5, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SHOW_ON_SCREEN:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const v6, 0x1020036
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v4 .. v9}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v10, Ld5;
-
-    sget-object v11, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_TO_POSITION:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const/4 v14, 0x0
-
-    const-class v15, Lp5;
-
-    const v12, 0x1020037
-
-    const/4 v13, 0x0
-
-    invoke-direct/range {v10 .. v15}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v2, Ld5;
-
-    sget-object v3, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_UP:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const/4 v6, 0x0
-
-    const v4, 0x1020038
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v2 .. v7}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    sput-object v2, Ld5;->k:Ld5;
-
-    new-instance v3, Ld5;
-
-    sget-object v4, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_LEFT:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const v5, 0x1020039
-
-    invoke-direct/range {v3 .. v8}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v9, Ld5;
-
-    sget-object v10, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_DOWN:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const v11, 0x102003a
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v9 .. v14}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    sput-object v9, Ld5;->l:Ld5;
-
-    new-instance v2, Ld5;
-
-    sget-object v3, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_RIGHT:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const v4, 0x102003b
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v2 .. v7}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v8, Ld5;
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x1d
-
-    if-lt v0, v3, :cond_0
-
-    invoke-static {}, Lz4;->g()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v4
-
-    move-object v9, v4
-
-    goto :goto_0
-
-    :cond_0
-    move-object v9, v2
-
-    :goto_0
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    const v10, 0x1020046
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v8 .. v13}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v14, Ld5;
-
-    if-lt v0, v3, :cond_1
-
-    invoke-static {}, Lz4;->y()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v4
-
-    move-object v15, v4
-
-    goto :goto_1
-
-    :cond_1
-    move-object v15, v2
-
-    :goto_1
-    const/16 v18, 0x0
-
-    const/16 v19, 0x0
-
-    const v16, 0x1020047
-
-    const/16 v17, 0x0
-
-    invoke-direct/range {v14 .. v19}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v4, Ld5;
-
-    if-lt v0, v3, :cond_2
-
-    invoke-static {}, Lz4;->C()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v5
-
-    goto :goto_2
-
-    :cond_2
-    move-object v5, v2
-
-    :goto_2
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const v6, 0x1020048
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v4 .. v9}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v10, Ld5;
-
-    if-lt v0, v3, :cond_3
-
-    invoke-static {}, Lz4;->D()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v3
-
-    move-object v11, v3
-
-    goto :goto_3
-
-    :cond_3
-    move-object v11, v2
-
-    :goto_3
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const v12, 0x1020049
-
-    const/4 v13, 0x0
-
-    invoke-direct/range {v10 .. v15}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v3, Ld5;
-
-    sget-object v4, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_CONTEXT_CLICK:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const v5, 0x102003c
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v3 .. v8}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v9, Ld5;
-
-    sget-object v10, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SET_PROGRESS:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const-class v14, Lq5;
-
-    const v11, 0x102003d
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v9 .. v14}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    sput-object v9, Ld5;->m:Ld5;
-
-    new-instance v3, Ld5;
-
-    sget-object v4, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_MOVE_WINDOW:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    const-class v8, Lo5;
-
-    const v5, 0x1020042
-
-    invoke-direct/range {v3 .. v8}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v9, Ld5;
-
-    const/16 v3, 0x1c
-
-    if-lt v0, v3, :cond_4
-
-    invoke-static {}, Ly4;->o()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v4
-
-    move-object v10, v4
-
-    goto :goto_4
-
-    :cond_4
-    move-object v10, v2
-
-    :goto_4
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const v11, 0x1020044
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v9 .. v14}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v15, Ld5;
-
-    if-lt v0, v3, :cond_5
-
-    invoke-static {}, Ly4;->B()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v3
-
-    move-object/from16 v16, v3
-
-    goto :goto_5
-
-    :cond_5
-    move-object/from16 v16, v2
-
-    :goto_5
-    const/16 v19, 0x0
-
-    const/16 v20, 0x0
-
-    const v17, 0x1020045
-
-    const/16 v18, 0x0
-
-    invoke-direct/range {v15 .. v20}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v3, Ld5;
-
-    const/16 v9, 0x1e
-
-    if-lt v0, v9, :cond_6
-
-    invoke-static {}, Lc5;->n()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v4
-
-    goto :goto_6
-
-    :cond_6
-    move-object v4, v2
-
-    :goto_6
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const v5, 0x102004a
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v3 .. v8}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v10, Ld5;
-
-    if-lt v0, v9, :cond_7
-
-    invoke-static {}, Lc5;->B()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v3
-
-    move-object v11, v3
-
-    goto :goto_7
-
-    :cond_7
-    move-object v11, v2
-
-    :goto_7
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const v12, 0x1020054
-
-    const/4 v13, 0x0
-
-    invoke-direct/range {v10 .. v15}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v3, Ld5;
-
-    if-lt v0, v1, :cond_8
-
-    invoke-static {}, La5;->d()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v4
-
-    goto :goto_8
-
-    :cond_8
-    move-object v4, v2
-
-    :goto_8
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const v5, 0x1020055
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v3 .. v8}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v9, Ld5;
-
-    if-lt v0, v1, :cond_9
-
-    invoke-static {}, La5;->k()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v3
-
-    move-object v10, v3
-
-    goto :goto_9
-
-    :cond_9
-    move-object v10, v2
-
-    :goto_9
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const v11, 0x1020056
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v9 .. v14}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v3, Ld5;
-
-    if-lt v0, v1, :cond_a
-
-    invoke-static {}, La5;->m()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v1
-
-    move-object v4, v1
-
-    goto :goto_a
-
-    :cond_a
-    move-object v4, v2
-
-    :goto_a
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const v5, 0x1020057
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v3 .. v8}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v9, Ld5;
-
-    const/16 v1, 0x21
-
-    if-lt v0, v1, :cond_b
-
-    invoke-static {}, Lb5;->i()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v1
-
-    move-object v10, v1
-
-    goto :goto_b
-
-    :cond_b
-    move-object v10, v2
-
-    :goto_b
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const v11, 0x1020058
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v9 .. v14}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    new-instance v3, Ld5;
-
-    const/16 v1, 0x22
-
-    if-lt v0, v1, :cond_c
-
-    invoke-static {}, Lg5;->a()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    move-result-object v2
-
-    :cond_c
-    move-object v4, v2
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const v5, 0x102005e
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v3 .. v8}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 6
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v0, p0
-
-    move v2, p1
-
-    .line 1
-    invoke-direct/range {v0 .. v5}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Class;I)V
-    .locals 6
-
-    const/4 v1, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v0, p0
-
-    move-object v5, p1
-
-    move v2, p2
-
-    .line 2
-    invoke-direct/range {v0 .. v5}, Ld5;-><init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;ILjava/lang/String;Lt5;Ljava/lang/Class;)V
-    .locals 0
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput p2, p0, Ld5;->b:I
-
-    .line 5
-    iput-object p4, p0, Ld5;->d:Lt5;
-
-    if-nez p1, :cond_0
-
-    .line 6
-    new-instance p1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    invoke-direct {p1, p2, p3}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
-
-    iput-object p1, p0, Ld5;->a:Ljava/lang/Object;
-
-    goto :goto_0
-
-    .line 7
-    :cond_0
-    iput-object p1, p0, Ld5;->a:Ljava/lang/Object;
-
-    .line 8
-    :goto_0
-    iput-object p5, p0, Ld5;->c:Ljava/lang/Class;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 1
-
-    iget-object v0, p0, Ld5;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getId()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public static a(ZIIIIZLjava/lang/String;Ljava/lang/String;)Lf5;
     .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lf5;
 
-    if-nez p1, :cond_0
+    new-instance v1, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-    return v0
+    invoke-direct {v1}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;-><init>()V
 
-    :cond_0
-    instance-of v1, p1, Ld5;
+    invoke-virtual {v1, p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setHeading(Z)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-    if-nez v1, :cond_1
+    move-result-object p0
 
-    return v0
+    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setColumnIndex(I)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-    :cond_1
-    check-cast p1, Ld5;
+    move-result-object p0
 
-    iget-object p1, p1, Ld5;->a:Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setRowIndex(I)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-    iget-object v1, p0, Ld5;->a:Ljava/lang/Object;
+    move-result-object p0
 
-    if-nez v1, :cond_2
+    invoke-virtual {p0, p3}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setColumnSpan(I)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-    if-eqz p1, :cond_3
+    move-result-object p0
 
-    return v0
+    invoke-virtual {p0, p4}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setRowSpan(I)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-    :cond_2
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result-object p0
 
-    move-result p1
+    invoke-virtual {p0, p5}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setSelected(Z)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-    if-nez p1, :cond_3
+    move-result-object p0
 
-    return v0
+    invoke-virtual {p0, p6}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setRowTitle(Ljava/lang/String;)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-    :cond_3
-    const/4 p1, 0x1
+    move-result-object p0
 
-    return p1
-.end method
+    invoke-virtual {p0, p7}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setColumnTitle(Ljava/lang/String;)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p0
 
-    iget-object v0, p0, Ld5;->a:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->build()Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
 
-    if-eqz v0, :cond_0
+    move-result-object p0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AccessibilityActionCompat: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ld5;->b:I
-
-    invoke-static {v1}, Lj5;->d(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "ACTION_UNKNOWN"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Ld5;->a:Ljava/lang/Object;
-
-    move-object v3, v2
-
-    check-cast v3, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    invoke-virtual {v3}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getLabel()Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    check-cast v2, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    invoke-virtual {v2}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getLabel()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p0}, Lf5;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;)V
 
     return-object v0
+.end method
+
+.method public static b(Landroid/view/accessibility/AccessibilityNodeInfo;II)Lg5;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChild(II)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    new-instance p1, Lg5;
+
+    invoke-direct {p1, p0}, Lg5;-><init>(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static c(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
+
+    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
+
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->getColumnTitle()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
+
+    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
+
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->getRowTitle()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static e(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo$ExtraRenderingInfo;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getExtraRenderingInfo()Landroid/view/accessibility/AccessibilityNodeInfo$ExtraRenderingInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Landroid/view/accessibility/AccessibilityNodeInfo;I)Lg5;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getParent(I)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    new-instance p1, Lg5;
+
+    invoke-direct {p1, p0}, Lg5;-><init>(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static g(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getUniqueId()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isTextSelectable()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static i(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTextSelectable(Z)V
+
+    return-void
+.end method
+
+.method public static j(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setUniqueId(Ljava/lang/String;)V
+
+    return-void
 .end method

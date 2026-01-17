@@ -3,139 +3,123 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic p:I
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lo10;
 
-.field public final b:Ljava/lang/String;
+.field public final b:J
 
-.field public final c:I
+.field public final c:Ljava/util/ArrayList;
 
-.field public final d:I
+.field public final d:Ljava/lang/String;
 
-.field public final e:J
+.field public final e:Ljava/lang/String;
 
-.field public final f:Ljava/util/List;
+.field public final f:Ljava/lang/String;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Lz10;
+
+.field public final i:Ljava/lang/String;
+
+.field public final j:Ljava/lang/String;
+
+.field public final k:Z
+
+.field public final l:I
+
+.field public final m:J
+
+.field public final n:J
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    new-instance v0, Ln10;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0}, Ln10;->a()Lp10;
 
     return-void
 .end method
 
-.method public constructor <init>(Lo10;)V
+.method public constructor <init>(Ln10;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lo10;->d:Ljava/io/Serializable;
+    iget-object v0, p1, Ln10;->a:Lo10;
 
-    check-cast v0, Ljava/lang/String;
+    iput-object v0, p0, Lp10;->a:Lo10;
 
-    iput-object v0, p0, Lp10;->a:Ljava/lang/String;
+    iget-wide v0, p1, Ln10;->b:J
 
-    iget-object v0, p1, Lo10;->e:Ljava/io/Serializable;
+    iput-wide v0, p0, Lp10;->b:J
 
-    check-cast v0, Ljava/lang/String;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lp10;->b:Ljava/lang/String;
+    iget-object v1, p1, Ln10;->c:Ljava/util/List;
 
-    iget v0, p1, Lo10;->a:I
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput v0, p0, Lp10;->c:I
+    iput-object v0, p0, Lp10;->c:Ljava/util/ArrayList;
 
-    iget v0, p1, Lo10;->b:I
+    iget-object v0, p1, Ln10;->d:Ljava/lang/String;
 
-    iput v0, p0, Lp10;->d:I
+    iput-object v0, p0, Lp10;->d:Ljava/lang/String;
 
-    iget-wide v0, p1, Lo10;->c:J
+    iget-object v0, p1, Ln10;->e:Ljava/lang/String;
 
-    iput-wide v0, p0, Lp10;->e:J
+    iput-object v0, p0, Lp10;->e:Ljava/lang/String;
 
-    iget-object p1, p1, Lo10;->f:Ljava/lang/Object;
+    iget-object v0, p1, Ln10;->f:Ljava/lang/String;
 
-    check-cast p1, Ljava/util/List;
+    iput-object v0, p0, Lp10;->f:Ljava/lang/String;
 
-    iput-object p1, p0, Lp10;->f:Ljava/util/List;
+    iget-object v0, p1, Ln10;->g:Ljava/lang/String;
+
+    iput-object v0, p0, Lp10;->g:Ljava/lang/String;
+
+    iget-object v0, p1, Ln10;->h:Lz10;
+
+    iput-object v0, p0, Lp10;->h:Lz10;
+
+    iget-object v0, p1, Ln10;->i:Ljava/lang/String;
+
+    iput-object v0, p0, Lp10;->i:Ljava/lang/String;
+
+    iget-object v0, p1, Ln10;->j:Ljava/lang/String;
+
+    iput-object v0, p0, Lp10;->j:Ljava/lang/String;
+
+    iget-boolean v0, p1, Ln10;->k:Z
+
+    iput-boolean v0, p0, Lp10;->k:Z
+
+    iget v0, p1, Ln10;->l:I
+
+    iput v0, p0, Lp10;->l:I
+
+    iget-wide v0, p1, Ln10;->m:J
+
+    iput-wide v0, p0, Lp10;->m:J
+
+    iget-wide v0, p1, Ln10;->n:J
+
+    iput-wide v0, p0, Lp10;->n:J
+
+    iget-object p1, p1, Ln10;->o:Ljava/lang/String;
+
+    iput-object p1, p0, Lp10;->o:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Z
-    .locals 2
-
-    iget v0, p0, Lp10;->d:I
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    const/4 v0, 0x5
-
-    iget v1, p0, Lp10;->d:I
-
-    if-ne v1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lp10;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-ne v1, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_2
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final c()Z
-    .locals 2
-
-    iget v0, p0, Lp10;->c:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
 .end method

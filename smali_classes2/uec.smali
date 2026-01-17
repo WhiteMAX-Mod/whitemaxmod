@@ -1,120 +1,93 @@
 .class public final Luec;
-.super Ljava/lang/Object;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/CharSequence;
+# static fields
+.field public static final CREATOR:Ltec;
 
-.field public final b:[Ljava/lang/String;
+
+# instance fields
+.field public final a:I
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltec;
 
-    iput-object p1, p0, Luec;->a:Ljava/lang/CharSequence;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Luec;->b:[Ljava/lang/String;
+    sput-object v0, Luec;->CREATOR:Ltec;
 
     return-void
 .end method
 
-.method public static a()Luec;
-    .locals 3
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
-    new-instance v0, Luec;
+    .line 4
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    const/4 v1, 0x0
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    new-array v1, v1, [Ljava/lang/String;
+    move-result v0
 
-    const-string v2, ""
+    iput v0, p0, Luec;->a:I
 
-    invoke-direct {v0, v2, v1}, Luec;-><init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
-    return-object v0
+    move-result p1
+
+    if-lez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Luec;->b:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcelable;IZ)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
+
+    .line 2
+    iput p2, p0, Luec;->a:I
+
+    .line 3
+    iput-boolean p3, p0, Luec;->b:Z
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    const/4 p1, 0x1
+    iget p2, p0, Luec;->a:I
 
-    return p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :cond_0
-    instance-of v0, p1, Luec;
+    iget-boolean p2, p0, Luec;->b:Z
 
-    const/4 v1, 0x0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    check-cast p1, Luec;
-
-    iget-object v0, p0, Luec;->a:Ljava/lang/CharSequence;
-
-    iget-object v2, p1, Luec;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-object v0, p0, Luec;->b:[Ljava/lang/String;
-
-    iget-object p1, p1, Luec;->b:[Ljava/lang/String;
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PreProcessedText{text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Luec;->a:Ljava/lang/CharSequence;
-
-    invoke-static {v1}, Lwri;->f(Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", tokens="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Luec;->b:[Ljava/lang/String;
-
-    array-length v1, v1
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lxd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

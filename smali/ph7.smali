@@ -1,188 +1,186 @@
 .class public final Lph7;
-.super Lkh7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhah;
+.implements Lmi7;
+.implements Lmw7;
+
+
+# static fields
+.field public static final X:Lta0;
+
+.field public static final Y:Lta0;
+
+.field public static final Z:Lta0;
+
+.field public static final b:Lta0;
+
+.field public static final c:Lta0;
+
+.field public static final d:Lta0;
+
+.field public static final o:Lta0;
+
+.field public static final t0:Lta0;
+
+.field public static final u0:Lta0;
+
+.field public static final v0:Lta0;
+
+.field public static final w0:Lta0;
 
 
 # instance fields
-.field public final D0:Ljava/util/concurrent/Executor;
-
-.field public final E0:Ljava/lang/Object;
-
-.field public F0:Lnj7;
-
-.field public G0:Loh7;
+.field public final a:Lhqb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Lkh7;-><init>()V
+    new-instance v0, Lta0;
 
-    new-instance v0, Ljava/lang/Object;
+    const-string v1, "camerax.core.imageCapture.captureMode"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    iput-object v0, p0, Lph7;->E0:Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    iput-object p1, p0, Lph7;->D0:Ljava/util/concurrent/Executor;
+    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->b:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.flashMode"
+
+    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->c:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.captureBundle"
+
+    const-class v4, Lb72;
+
+    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->d:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.bufferFormat"
+
+    const-class v4, Ljava/lang/Integer;
+
+    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->o:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.outputFormat"
+
+    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->X:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.imageReaderProxyProvider"
+
+    const-class v4, Lxi7;
+
+    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->Y:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.useSoftwareJpegEncoder"
+
+    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->Z:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.flashType"
+
+    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->t0:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.jpegCompressionQuality"
+
+    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->u0:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.imageCapture.screenFlash"
+
+    const-class v2, Lnh7;
+
+    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->v0:Lta0;
+
+    new-instance v0, Lta0;
+
+    const-string v1, "camerax.core.useCase.isPostviewEnabled"
+
+    const-class v2, Ljava/lang/Boolean;
+
+    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lph7;->w0:Lta0;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lhqb;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lph7;->a:Lhqb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lpj7;)Lnj7;
-    .locals 0
+.method public final getConfig()Lmr3;
+    .locals 1
 
-    invoke-interface {p1}, Lpj7;->f()Lnj7;
+    iget-object v0, p0, Lph7;->a:Lhqb;
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final c()V
-    .locals 2
+.method public final getInputFormat()I
+    .locals 1
 
-    iget-object v0, p0, Lph7;->E0:Ljava/lang/Object;
+    sget-object v0, Lci7;->y:Lta0;
 
-    monitor-enter v0
+    invoke-interface {p0, v0}, Lmld;->d(Lta0;)Ljava/lang/Object;
 
-    :try_start_0
-    iget-object v1, p0, Lph7;->F0:Lnj7;
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    const/4 v1, 0x0
+    move-result v0
 
-    iput-object v1, p0, Lph7;->F0:Lnj7;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final f(Lnj7;)V
-    .locals 5
-
-    iget-object v0, p0, Lph7;->E0:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lkh7;->C0:Z
-
-    if-nez v1, :cond_0
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v1, p0, Lph7;->G0:Loh7;
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p1}, Lnj7;->getImageInfo()Lui7;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lui7;->getTimestamp()J
-
-    move-result-wide v1
-
-    iget-object v3, p0, Lph7;->G0:Loh7;
-
-    iget-object v3, v3, Lql6;->b:Lnj7;
-
-    invoke-interface {v3}, Lnj7;->getImageInfo()Lui7;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lui7;->getTimestamp()J
-
-    move-result-wide v3
-
-    cmp-long v1, v1, v3
-
-    if-gtz v1, :cond_1
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lph7;->F0:Lnj7;
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
-
-    :cond_2
-    iput-object p1, p0, Lph7;->F0:Lnj7;
-
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :cond_3
-    new-instance v1, Loh7;
-
-    invoke-direct {v1, p1, p0}, Loh7;-><init>(Lnj7;Lph7;)V
-
-    iput-object v1, p0, Lph7;->G0:Loh7;
-
-    invoke-virtual {p0, v1}, Lkh7;->b(Lnj7;)Lwe8;
-
-    move-result-object p1
-
-    new-instance v2, Lgud;
-
-    const/16 v3, 0x15
-
-    invoke-direct {v2, v3, v1}, Lgud;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lgbj;->a()La15;
-
-    move-result-object v1
-
-    invoke-static {p1, v2, v1}, Ledf;->a(Lwe8;Lbs6;Ljava/util/concurrent/Executor;)V
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+    return v0
 .end method

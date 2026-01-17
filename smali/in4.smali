@@ -3,28 +3,42 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lef8;
+.implements Lpe8;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lld;
-
-.field public final synthetic c:Lo60;
+.field public final synthetic b:Lhqh;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lld;Lo60;I)V
+.method public synthetic constructor <init>(Lhd;Lhqh;)V
     .locals 0
 
-    iput p3, p0, Lin4;->a:I
+    .line 1
+    const/4 p1, 0x0
 
-    iput-object p1, p0, Lin4;->b:Lld;
-
-    iput-object p2, p0, Lin4;->c:Lo60;
+    iput p1, p0, Lin4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lin4;->b:Lhqh;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lhqh;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lin4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lin4;->b:Lhqh;
 
     return-void
 .end method
@@ -32,31 +46,126 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+    .locals 7
 
     iget v0, p0, Lin4;->a:I
 
+    iget-object v1, p0, Lin4;->b:Lhqh;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lin4;->c:Lo60;
+    check-cast p1, Lnbc;
 
-    check-cast p1, Lmd;
-
-    iget-object v1, p0, Lin4;->b:Lld;
-
-    invoke-interface {p1, v1, v0}, Lmd;->U(Lld;Lo60;)V
+    invoke-interface {p1, v1}, Lnbc;->A(Lhqh;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lin4;->c:Lo60;
+    check-cast p1, Lep5;
 
-    check-cast p1, Lmd;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Lin4;->b:Lld;
+    const-string v0, "videoDebugListener.onVideoSizeChanged: %s"
 
-    invoke-interface {p1, v1, v0}, Lmd;->p0(Lld;Lo60;)V
+    filled-new-array {v1}, [Ljava/lang/Object;
 
+    move-result-object v2
+
+    const-string v3, "ep5"
+
+    invoke-static {v3, v0, v2}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget v0, v1, Lhqh;->c:I
+
+    iget v2, v1, Lhqh;->b:I
+
+    iget v1, v1, Lhqh;->a:I
+
+    const/16 v3, 0x5a
+
+    if-eq v0, v3, :cond_1
+
+    const/16 v3, 0x10e
+
+    if-ne v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput v1, p1, Lep5;->u0:I
+
+    iput v2, p1, Lep5;->v0:I
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iput v2, p1, Lep5;->u0:I
+
+    iput v1, p1, Lep5;->v0:I
+
+    :goto_1
+    iput v0, p1, Lep5;->w0:I
+
+    iget-object v0, p1, Lep5;->Y:Lpfh;
+
+    if-eqz v0, :cond_3
+
+    int-to-float v0, v1
+
+    int-to-float v3, v2
+
+    div-float/2addr v0, v3
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    div-float/2addr v3, v0
+
+    iget v0, p1, Lep5;->Z:F
+
+    sub-float/2addr v0, v3
+
+    const/4 v3, 0x0
+
+    cmpl-float v3, v0, v3
+
+    if-eqz v3, :cond_2
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    float-to-double v3, v0
+
+    const-wide v5, 0x3f1a36e2eb1c432dL    # 1.0E-4
+
+    cmpg-double v0, v3, v5
+
+    if-gtz v0, :cond_3
+
+    :cond_2
+    iput v2, p1, Lep5;->u0:I
+
+    iput v1, p1, Lep5;->v0:I
+
+    :cond_3
+    iget-object v0, p1, Lep5;->X:Lyh8;
+
+    if-eqz v0, :cond_4
+
+    iget v1, p1, Lep5;->u0:I
+
+    iget v2, p1, Lep5;->v0:I
+
+    iget p1, p1, Lep5;->w0:I
+
+    iget-object v0, v0, Lyh8;->e:Ld3;
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0, v1, v2, p1}, Lk79;->K(III)V
+
+    :cond_4
     return-void
 
     nop

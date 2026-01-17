@@ -1,19 +1,14 @@
-.class public final Lf6i;
+.class public interface abstract Lf6i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()Lq38;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lq38;"
-        }
-    .end annotation
+.method public abstract a()Ljava/lang/Integer;
+.end method
 
-    sget-object v0, Le6i;->a:Le6i;
+.method public abstract b()Ljava/lang/String;
+.end method
 
-    return-object v0
+.method public abstract d()Ljava/lang/String;
 .end method

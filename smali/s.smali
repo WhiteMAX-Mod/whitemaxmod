@@ -1,3 +1,3 @@
 .class public final Ls;
-.super Ljja;
+.super Lhja;
 .source "SourceFile"

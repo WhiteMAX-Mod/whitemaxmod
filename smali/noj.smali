@@ -1,83 +1,199 @@
-.class public final Lnoj;
+.class public abstract Lnoj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Lowi;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/Boolean;
-
-.field public final h:Ljava/lang/Boolean;
-
-.field public final i:Ljava/lang/Boolean;
-
-.field public final j:Ljava/lang/Integer;
-
-.field public final k:Ljava/lang/Integer;
-
-
 # direct methods
-.method public synthetic constructor <init>(Lobj;)V
-    .locals 1
+.method public static a(Landroid/content/Context;I)Landroid/graphics/Bitmap;
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p1, Lobj;->a:Ljava/lang/String;
+    sget p1, Lahb;->r:I
 
-    iput-object v0, p0, Lnoj;->a:Ljava/lang/String;
+    goto :goto_0
 
-    iget-object v0, p1, Lobj;->b:Ljava/lang/String;
+    :pswitch_0
+    sget p1, Lahb;->q:I
 
-    iput-object v0, p0, Lnoj;->b:Ljava/lang/String;
+    goto :goto_0
 
-    iget-object v0, p1, Lobj;->c:Ljava/lang/String;
+    :pswitch_1
+    sget p1, Lahb;->p:I
 
-    iput-object v0, p0, Lnoj;->c:Ljava/lang/String;
+    goto :goto_0
 
-    iget-object v0, p1, Lobj;->d:Ljava/lang/String;
+    :pswitch_2
+    sget p1, Lahb;->o:I
 
-    iput-object v0, p0, Lnoj;->d:Ljava/lang/String;
+    goto :goto_0
 
-    iget-object v0, p1, Lobj;->k:Ljava/util/AbstractCollection;
+    :pswitch_3
+    sget p1, Lahb;->n:I
 
-    check-cast v0, Lowi;
+    goto :goto_0
 
-    iput-object v0, p0, Lnoj;->e:Lowi;
+    :pswitch_4
+    sget p1, Lahb;->l:I
 
-    iget-object v0, p1, Lobj;->e:Ljava/lang/String;
+    goto :goto_0
 
-    iput-object v0, p0, Lnoj;->f:Ljava/lang/String;
+    :pswitch_5
+    sget p1, Lahb;->k:I
 
-    iget-object v0, p1, Lobj;->f:Ljava/lang/Boolean;
+    goto :goto_0
 
-    iput-object v0, p0, Lnoj;->g:Ljava/lang/Boolean;
+    :pswitch_6
+    sget p1, Lahb;->j:I
 
-    iget-object v0, p1, Lobj;->g:Ljava/lang/Boolean;
+    goto :goto_0
 
-    iput-object v0, p0, Lnoj;->h:Ljava/lang/Boolean;
+    :pswitch_7
+    sget p1, Lahb;->i:I
 
-    iget-object v0, p1, Lobj;->h:Ljava/lang/Boolean;
+    goto :goto_0
 
-    iput-object v0, p0, Lnoj;->i:Ljava/lang/Boolean;
+    :pswitch_8
+    sget p1, Lahb;->h:I
 
-    iget-object v0, p1, Lobj;->i:Ljava/lang/Integer;
+    goto :goto_0
 
-    iput-object v0, p0, Lnoj;->j:Ljava/lang/Integer;
+    :pswitch_9
+    sget p1, Lahb;->g:I
 
-    iget-object p1, p1, Lobj;->j:Ljava/lang/Integer;
+    goto :goto_0
 
-    iput-object p1, p0, Lnoj;->k:Ljava/lang/Integer;
+    :pswitch_a
+    sget p1, Lahb;->f:I
+
+    goto :goto_0
+
+    :pswitch_b
+    sget p1, Lahb;->e:I
+
+    goto :goto_0
+
+    :pswitch_c
+    sget p1, Lahb;->d:I
+
+    goto :goto_0
+
+    :pswitch_d
+    sget p1, Lahb;->c:I
+
+    goto :goto_0
+
+    :pswitch_e
+    sget p1, Lahb;->y:I
+
+    goto :goto_0
+
+    :pswitch_f
+    sget p1, Lahb;->x:I
+
+    goto :goto_0
+
+    :pswitch_10
+    sget p1, Lahb;->w:I
+
+    goto :goto_0
+
+    :pswitch_11
+    sget p1, Lahb;->v:I
+
+    goto :goto_0
+
+    :pswitch_12
+    sget p1, Lahb;->u:I
+
+    goto :goto_0
+
+    :pswitch_13
+    sget p1, Lahb;->t:I
+
+    goto :goto_0
+
+    :pswitch_14
+    sget p1, Lahb;->s:I
+
+    goto :goto_0
+
+    :pswitch_15
+    sget p1, Lahb;->m:I
+
+    goto :goto_0
+
+    :pswitch_16
+    sget p1, Lahb;->b:I
+
+    goto :goto_0
+
+    :pswitch_17
+    sget p1, Lahb;->a:I
+
+    :goto_0
+    invoke-static {p0, p1}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    instance-of p1, p0, Landroid/graphics/drawable/BitmapDrawable;
+
+    if-eqz p1, :cond_0
+
+    check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static final b(Lr4h;)V
+    .locals 2
+
+    new-instance v0, Lffe;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lffe;-><init>(I)V
+
+    const/16 v1, 0x1d4
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
     return-void
 .end method

@@ -1,61 +1,77 @@
 .class public final Lxwi;
-.super Lkvi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lc0j;
+.implements Landroid/os/IInterface;
 
 
 # instance fields
-.field public final transient c:[Ljava/lang/Object;
-
-.field public final transient d:I
-
-.field public final transient o:I
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method public constructor <init>(I[Ljava/lang/Object;)V
+.method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxwi;->c:[Ljava/lang/Object;
-
-    iput p1, p0, Lxwi;->d:I
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lxwi;->o:I
+    iput-object p1, p0, Lxwi;->c:Landroid/os/IBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
+.method public final asBinder()Landroid/os/IBinder;
     .locals 1
 
-    iget v0, p0, Lxwi;->o:I
+    iget-object v0, p0, Lxwi;->c:Landroid/os/IBinder;
 
-    invoke-static {p1, v0}, Le9j;->c(II)V
-
-    add-int/2addr p1, p1
-
-    iget v0, p0, Lxwi;->d:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Lxwi;->c:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final size()I
-    .locals 1
+.method public final i(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    .locals 3
 
-    iget v0, p0, Lxwi;->o:I
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    return v0
+    move-result-object v0
+
+    :try_start_0
+    iget-object v1, p0, Lxwi;->c:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p2
+
+    :try_start_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
 .end method

@@ -55,7 +55,7 @@
 
     iget v1, p0, Lna0;->a:I
 
-    invoke-static {v1, v0}, Lc12;->d(II)Z
+    invoke-static {v1, v0}, Lt02;->d(II)Z
 
     move-result v0
 
@@ -92,7 +92,7 @@
 
     iget v0, p0, Lna0;->a:I
 
-    invoke-static {v0}, Lc12;->w(I)I
+    invoke-static {v0}, Lt02;->t(I)I
 
     move-result v0
 

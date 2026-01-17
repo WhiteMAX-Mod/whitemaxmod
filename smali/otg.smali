@@ -1,38 +1,17 @@
-.class public abstract Lotg;
+.class public final Lotg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lktg;
 
+# instance fields
+.field public a:Landroid/view/View;
 
-# virtual methods
-.method public a(Lltg;)V
-    .locals 0
+.field public b:Ljava/lang/String;
 
-    return-void
-.end method
+.field public c:Ldug;
 
-.method public b()V
-    .locals 0
+.field public d:Landroid/view/WindowId;
 
-    return-void
-.end method
+.field public e:Lstg;
 
-.method public c(Lltg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public h(Lltg;)V
-    .locals 0
-
-    return-void
-.end method
+.field public f:Landroid/animation/Animator;

@@ -62,7 +62,7 @@
 
 .field mRegistrationCallbackHandler:Landroid/support/v4/media/session/MediaSessionCompat$RegistrationCallbackHandler;
 
-.field mRemoteUserInfo:Lmc9;
+.field mRemoteUserInfo:Lub9;
 
 .field mRepeatMode:I
 
@@ -76,7 +76,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lvch;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ltdh;Landroid/os/Bundle;)V
     .locals 1
 
     .line 1
@@ -122,7 +122,7 @@
 
     move-result-object p1
 
-    invoke-direct {v0, p1, p2, p3}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Lvch;)V
+    invoke-direct {v0, p1, p2, p3}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Ltdh;)V
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
@@ -291,7 +291,7 @@
     return-object v0
 .end method
 
-.method public getCurrentControllerInfo()Lmc9;
+.method public getCurrentControllerInfo()Lub9;
     .locals 2
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mLock:Ljava/lang/Object;
@@ -299,7 +299,7 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mRemoteUserInfo:Lmc9;
+    iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mRemoteUserInfo:Lub9;
 
     monitor-exit v0
 
@@ -580,7 +580,7 @@
     return-void
 .end method
 
-.method public setCurrentControllerInfo(Lmc9;)V
+.method public setCurrentControllerInfo(Lub9;)V
     .locals 1
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mLock:Ljava/lang/Object;
@@ -588,7 +588,7 @@
     monitor-enter v0
 
     :try_start_0
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mRemoteUserInfo:Lmc9;
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mRemoteUserInfo:Lub9;
 
     monitor-exit v0
 
@@ -776,7 +776,7 @@
     return-void
 .end method
 
-.method public setPlaybackToRemote(Lxvh;)V
+.method public setPlaybackToRemote(Ltwh;)V
     .locals 0
 
     const/4 p1, 0x0

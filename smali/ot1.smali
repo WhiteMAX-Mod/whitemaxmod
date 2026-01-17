@@ -1,39 +1,31 @@
 .class public final Lot1;
-.super Lmaj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Z
 
 .field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lot1;->a:J
+    iput-boolean p1, p0, Lot1;->a:Z
 
-    iput-boolean p3, p0, Lot1;->b:Z
+    iput-boolean p2, p0, Lot1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lot1;->b:Z
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -53,13 +45,11 @@
     :cond_1
     check-cast p1, Lot1;
 
-    iget-wide v3, p0, Lot1;->a:J
+    iget-boolean v1, p0, Lot1;->a:Z
 
-    iget-wide v5, p1, Lot1;->a:J
+    iget-boolean v3, p1, Lot1;->a:Z
 
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
+    if-eq v1, v3, :cond_2
 
     return v2
 
@@ -79,9 +69,9 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lot1;->a:J
+    iget-boolean v0, p0, Lot1;->a:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -101,23 +91,17 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, "User(userId="
-
-    const-string v1, ", isVideo="
-
-    iget-wide v2, p0, Lot1;->a:J
-
-    iget-boolean v4, p0, Lot1;->b:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lxd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    const-string v0, ", settingsButtonVisibility="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "ButtonsVisibility(moreButtonVisibility="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-boolean v3, p0, Lot1;->a:Z
+
+    iget-boolean v4, p0, Lot1;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lhc0;->h(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

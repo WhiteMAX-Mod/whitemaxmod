@@ -33,7 +33,7 @@
     .line 3
     const-string v0, "input channel is null"
 
-    invoke-static {p1, v0}, Lnjj;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Likj;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lorg/msgpack/core/buffer/ChannelBufferInput;->channel:Ljava/nio/channels/ReadableByteChannel;
 
@@ -51,7 +51,7 @@
     const-string v0, "buffer size must be > 0: "
 
     .line 5
-    invoke-static {p2, v0}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

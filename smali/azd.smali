@@ -1,128 +1,173 @@
-.class public final Lazd;
+.class public abstract Lazd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Ljava/io/Closeable;
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+# virtual methods
+.method public abstract E()J
+.end method
 
+.method public abstract H()Lle9;
+.end method
 
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method public final close()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Lazd;->f0()Lfx0;
 
-    iput-object p1, p0, Lazd;->a:Ljava/lang/Object;
+    move-result-object v0
+
+    invoke-static {v0}, Llbh;->c(Ljava/io/Closeable;)V
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/Object;)Ljava/lang/Throwable;
-    .locals 1
-
-    instance-of v0, p0, Lyyd;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lyyd;
-
-    iget-object p0, p0, Lyyd;->a:Ljava/lang/Throwable;
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+.method public abstract f0()Lfx0;
 .end method
 
+.method public final g0()Ljava/lang/String;
+    .locals 9
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {p0}, Lazd;->f0()Lfx0;
 
-    instance-of v0, p1, Lazd;
+    move-result-object v0
 
-    if-nez v0, :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Lazd;->H()Lle9;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4
+
+    sget-object v2, Ljd2;->a:Ljava/nio/charset/Charset;
+
+    const-string v3, "charset"
+
+    iget-object v1, v1, Lle9;->b:[Ljava/lang/String;
+
+    new-instance v4, Lus7;
+
+    array-length v5, v1
+
+    const/4 v6, 0x1
+
+    sub-int/2addr v5, v6
+
+    const/4 v7, 0x0
+
+    invoke-direct {v4, v7, v5, v6}, Lss7;-><init>(III)V
+
+    const/4 v5, 0x2
+
+    invoke-static {v4, v5}, Lamj;->h(Lss7;I)Lss7;
+
+    move-result-object v4
+
+    iget v5, v4, Lss7;->a:I
+
+    iget v7, v4, Lss7;->b:I
+
+    iget v4, v4, Lss7;->c:I
+
+    if-ltz v4, :cond_0
+
+    if-gt v5, v7, :cond_2
 
     goto :goto_0
 
     :cond_0
-    check-cast p1, Lazd;
-
-    iget-object p1, p1, Lazd;->a:Ljava/lang/Object;
-
-    iget-object v0, p0, Lazd;->a:Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
+    if-lt v5, v7, :cond_2
 
     :goto_0
-    const/4 p1, 0x0
+    aget-object v8, v1, v5
 
-    return p1
+    invoke-static {v8, v3, v6}, Lzzf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    add-int/2addr v5, v6
+
+    aget-object v1, v1, v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
 
     :cond_1
-    const/4 p1, 0x1
+    if-eq v5, v7, :cond_2
 
-    return p1
+    add-int/2addr v5, v4
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_1
+    if-eqz v1, :cond_3
+
+    :try_start_1
+    invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v2
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catch_0
+    :cond_3
+    if-eqz v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :try_start_2
+    sget-object v2, Ljd2;->a:Ljava/nio/charset/Charset;
+
+    :goto_2
+    invoke-static {v0, v2}, Llbh;->r(Lfx0;Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lfx0;->a0(Ljava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_3
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :catchall_1
+    move-exception v2
+
+    invoke-static {v0, v1}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v2
 .end method
 
-.method public final hashCode()I
+.method public final l()Ljava/io/InputStream;
     .locals 1
 
-    iget-object v0, p0, Lazd;->a:Ljava/lang/Object;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lazd;->a:Ljava/lang/Object;
-
-    instance-of v1, v0, Lyyd;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lazd;->f0()Lfx0;
 
     move-result-object v0
 
-    return-object v0
-
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Success("
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v0, 0x29
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lfx0;->y0()Ljava/io/InputStream;
 
     move-result-object v0
 

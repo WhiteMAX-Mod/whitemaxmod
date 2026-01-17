@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build La35;
+.annotation build Ld35;
 .end annotation
 
 .annotation system Ldalvik/annotation/EnclosingClass;

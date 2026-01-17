@@ -1,5 +1,5 @@
 .class public final Lru/ok/android/externcalls/sdk/log/ExtLogger;
-.super Lfgd;
+.super Ldhd;
 .source "SourceFile"
 
 
@@ -17,7 +17,7 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
-        "Lfgd;",
+        "Ldhd;",
         "Landroid/content/Context;",
         "context",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger$TimeProvider;",
@@ -26,21 +26,21 @@
         "itemLogger",
         "<init>",
         "(Landroid/content/Context;Lru/ok/android/externcalls/sdk/log/ExtLogger$TimeProvider;Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;)V",
-        "Lunf;",
+        "Lfpf;",
         "operation",
         "",
         "cid",
         "param",
-        "Lv2h;",
+        "Lb3h;",
         "logSimple",
-        "(Lunf;Ljava/lang/String;Ljava/lang/String;)V",
+        "(Lfpf;Ljava/lang/String;Ljava/lang/String;)V",
         "Lru/ok/android/externcalls/sdk/log/LogItem;",
         "item",
         "log",
         "(Lru/ok/android/externcalls/sdk/log/LogItem;)V",
         "",
         "custom",
-        "(Lunf;Ljava/util/Map;)V",
+        "(Lfpf;Ljava/util/Map;)V",
         "",
         "time",
         "statType",
@@ -91,7 +91,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->Companion:Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;
 
@@ -105,7 +105,7 @@
 
     const-string v0, ""
 
-    iput-object v0, p0, Lfgd;->conversationId:Ljava/lang/String;
+    iput-object v0, p0, Ldhd;->conversationId:Ljava/lang/String;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->itemLogger:Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
 
@@ -126,12 +126,12 @@
     return-void
 .end method
 
-.method public static final simpleBuilder(Lunf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
+.method public static final simpleBuilder(Lfpf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
     .locals 1
 
     sget-object v0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->Companion:Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;
 
-    invoke-virtual {v0, p0}, Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;->simpleBuilder(Lunf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
+    invoke-virtual {v0, p0}, Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;->simpleBuilder(Lfpf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
 
     move-result-object p0
 
@@ -152,6 +152,29 @@
 
 
 # virtual methods
+.method public final log(Lfpf;Ljava/util/Map;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lfpf;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 2
+    const-string v0, "ok.mobile.apps.video"
+
+    iget-object p1, p1, Lfpf;->a:Ljava/lang/String;
+
+    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    return-void
+.end method
+
 .method public log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -398,35 +421,12 @@
     return-void
 .end method
 
-.method public final log(Lunf;Ljava/util/Map;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lunf;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 2
-    const-string v0, "ok.mobile.apps.video"
-
-    iget-object p1, p1, Lunf;->a:Ljava/lang/String;
-
-    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-
-    return-void
-.end method
-
-.method public logSimple(Lunf;Ljava/lang/String;Ljava/lang/String;)V
+.method public logSimple(Lfpf;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     sget-object v0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->Companion:Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;->simpleBuilder(Lunf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger$Companion;->simpleBuilder(Lfpf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
 
     move-result-object p1
 

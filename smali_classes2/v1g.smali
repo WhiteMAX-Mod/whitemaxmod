@@ -1,31 +1,26 @@
 .class public final Lv1g;
-.super Ladf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
 # virtual methods
-.method public final z(Lie8;)V
-    .locals 4
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lu1g;
+    new-instance v0, Lw1g;
 
-    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+    invoke-direct {v0, p1}, Lw1g;-><init>(Landroid/os/Parcel;)V
 
-    check-cast v0, Le7b;
+    return-object v0
+.end method
 
-    iget-object v1, p1, Lu1g;->b:Ljava/lang/CharSequence;
+.method public final newArray(I)[Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {v0, v1}, Le7b;->setTitle(Ljava/lang/CharSequence;)V
+    new-array p1, p1, [Lw1g;
 
-    iget-object v2, p1, Lu1g;->d:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v2}, Le7b;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-wide v2, p1, Lu1g;->a:J
-
-    iget-object p1, p1, Lu1g;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v1, p1}, Le7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method

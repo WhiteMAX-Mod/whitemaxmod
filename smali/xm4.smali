@@ -3,32 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lef8;
+.implements Lqe8;
 
 
 # instance fields
-.field public final synthetic a:Lld;
+.field public final synthetic a:Lid;
 
-.field public final synthetic b:I
+.field public final synthetic b:Z
 
 .field public final synthetic c:I
 
-.field public final synthetic d:Z
-
 
 # direct methods
-.method public synthetic constructor <init>(Lld;IIZ)V
+.method public synthetic constructor <init>(Lid;ZI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxm4;->a:Lld;
+    iput-object p1, p0, Lxm4;->a:Lid;
 
-    iput p2, p0, Lxm4;->b:I
+    iput-boolean p2, p0, Lxm4;->b:Z
 
     iput p3, p0, Lxm4;->c:I
-
-    iput-boolean p4, p0, Lxm4;->d:Z
 
     return-void
 .end method
@@ -36,19 +32,17 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)V
-    .locals 4
+    .locals 3
 
-    iget-boolean v0, p0, Lxm4;->d:Z
+    iget v0, p0, Lxm4;->c:I
 
-    check-cast p1, Lmd;
+    check-cast p1, Ljd;
 
-    iget-object v1, p0, Lxm4;->a:Lld;
+    iget-object v1, p0, Lxm4;->a:Lid;
 
-    iget v2, p0, Lxm4;->b:I
+    iget-boolean v2, p0, Lxm4;->b:Z
 
-    iget v3, p0, Lxm4;->c:I
-
-    invoke-interface {p1, v1, v2, v3, v0}, Lmd;->q0(Lld;IIZ)V
+    invoke-interface {p1, v1, v2, v0}, Ljd;->N0(Lid;ZI)V
 
     return-void
 .end method

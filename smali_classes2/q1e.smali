@@ -1,51 +1,60 @@
-.class public final Lq1e;
-.super Ll84;
+.class public final synthetic Lq1e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic X:Lt1e;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public d:Lt1e;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Llq6;
 
 
 # direct methods
-.method public constructor <init>(Lt1e;Ll84;)V
+.method public synthetic constructor <init>(ILlq6;)V
     .locals 0
 
-    iput-object p1, p0, Lq1e;->X:Lt1e;
+    iput p1, p0, Lq1e;->a:I
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lq1e;->b:Llq6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final call()Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Lq1e;->o:Ljava/lang/Object;
+    iget v0, p0, Lq1e;->a:I
 
-    iget p1, p0, Lq1e;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lq1e;->b:Llq6;
 
-    or-int/2addr p1, v0
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
-    iput p1, p0, Lq1e;->Y:I
+    move-result-object v0
 
-    iget-object p1, p0, Lq1e;->X:Lt1e;
+    return-object v0
 
-    const-wide/16 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lq1e;->b:Llq6;
 
-    invoke-virtual {p1, v0, v1, p0}, Lt1e;->n(JLl84;)Ljava/lang/Object;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

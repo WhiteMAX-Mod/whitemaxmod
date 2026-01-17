@@ -1,87 +1,61 @@
 .class public final Lgd4;
-.super Ljava/lang/Object;
+.super Lid4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lh6f;
-
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+# static fields
+.field public static final a:Lgd4;
 
 
 # direct methods
-.method public constructor <init>(Ljy0;Lbbg;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgd4;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Li6f;->b(III)Lh6f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lgd4;->a:Lh6f;
-
-    check-cast p2, Lb9b;
-
-    invoke-virtual {p2}, Lb9b;->a()Ltb4;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lgd4;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Ljy0;->d(Ljava/lang/Object;)V
+    sput-object v0, Lgd4;->a:Lgd4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Ljk0;)V
-    .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    .line 2
-    new-instance v0, Lfd4;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p0, p1, v1}, Lfd4;-><init>(Lgd4;Ljk0;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    const/4 p1, 0x3
+    :cond_0
+    instance-of p1, p1, Lgd4;
 
-    iget-object v2, p0, Lgd4;->b:Lkotlinx/coroutines/internal/ContextScope;
+    if-nez p1, :cond_1
 
-    invoke-static {v2, v1, v1, v0, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    const/4 p1, 0x0
 
-    return-void
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final onEvent(Lvb2;)V
-    .locals 3
-    .annotation runtime Ljzf;
-    .end annotation
+.method public final hashCode()I
+    .locals 1
 
-    .line 1
-    new-instance v0, Led4;
+    const v0, 0x7e4d4462
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    invoke-direct {v0, p0, p1, v1}, Led4;-><init>(Lgd4;Lvb2;Lkotlin/coroutines/Continuation;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    const/4 p1, 0x3
+    const-string v0, "NoInternetConnection"
 
-    iget-object v2, p0, Lgd4;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    return-void
+    return-object v0
 .end method

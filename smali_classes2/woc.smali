@@ -1,272 +1,202 @@
-.class public final Lwoc;
-.super Lb5g;
+.class public final synthetic Lwoc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lxoc;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
 
 
 # direct methods
-.method public constructor <init>(Lxoc;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lwoc;->X:Lxoc;
+    iput p2, p0, Lwoc;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lwoc;->b:Lone/me/profileedit/ProfileEditScreen;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    check-cast p1, Lanc;
+    iget v0, p0, Lwoc;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lwoc;->b:Lone/me/profileedit/ProfileEditScreen;
 
-    invoke-virtual {p0, p1, p2}, Lwoc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    sget-object v0, Lone/me/profileedit/ProfileEditScreen;->y0:[Lz28;
 
-    check-cast p1, Lwoc;
+    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1, p2}, Lwoc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v2
 
-    return-object p2
-.end method
+    const/4 v3, 0x0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-direct {v0, v2, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    new-instance v0, Lwoc;
+    sget v2, Lmfb;->c0:I
 
-    iget-object v1, p0, Lwoc;->X:Lxoc;
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
-    invoke-direct {v0, v1, p2}, Lwoc;-><init>(Lxoc;Lkotlin/coroutines/Continuation;)V
+    sget-object v2, Ly5b;->c:Ly5b;
 
-    iput-object p1, v0, Lwoc;->o:Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ly5b;)V
+
+    sget-object v2, Lx5b;->a:Lx5b;
+
+    invoke-virtual {v0, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lx5b;)V
+
+    sget-object v2, Lv5b;->d:Lv5b;
+
+    invoke-virtual {v0, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lv5b;)V
+
+    new-instance v2, Lab4;
+
+    const/4 v3, -0x1
+
+    const/4 v4, -0x2
+
+    invoke-direct {v2, v3, v4}, Lab4;-><init>(II)V
+
+    const/16 v3, 0x50
+
+    iput v3, v2, Lab4;->c:I
+
+    const/16 v3, 0x10
+
+    int-to-float v3, v3
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v3
+
+    invoke-static {v4}, Lq7j;->c(F)I
+
+    move-result v4
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v5
+
+    invoke-static {v3}, Lq7j;->c(F)I
+
+    move-result v3
+
+    const/16 v5, 0xc
+
+    int-to-float v5, v5
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v5, v6
+
+    invoke-static {v5}, Lq7j;->c(F)I
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v2, v4, v6, v3, v5}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v2, Lpfb;->T:I
+
+    invoke-virtual {v0, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+
+    new-instance v2, Lxoc;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v1, v3}, Lxoc;-><init>(Lone/me/profileedit/ProfileEditScreen;I)V
+
+    invoke-static {v0, v2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    :pswitch_0
+    iget-wide v0, v1, Lone/me/profileedit/ProfileEditScreen;->a:J
 
-    iget-object v0, p0, Lwoc;->X:Lxoc;
+    sget-object v2, Lnnc;->a:Lnnc;
 
-    iget-object v1, v0, Lxoc;->b:Lad5;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
 
-    iget-object v2, v0, Lxoc;->v0:Lyl5;
+    move-result-object v2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const/16 v3, 0x33
 
-    iget-object p1, p0, Lwoc;->o:Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Lr5;->d(I)Ln8g;
 
-    check-cast p1, Lanc;
+    move-result-object v2
 
-    instance-of v3, p1, Lzmc;
+    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
 
-    if-eqz v3, :cond_4
+    move-result-object v2
 
-    check-cast p1, Lzmc;
+    check-cast v2, Lef3;
 
-    iget-object v3, p1, Lzmc;->a:Ljava/lang/Long;
+    check-cast v2, Lyfe;
 
-    iget-object p1, p1, Lzmc;->b:Lghg;
+    invoke-virtual {v2}, Lyfe;->s()J
 
-    iget-object v4, v1, Lad5;->m:Ljava/util/concurrent/atomic/AtomicLong;
+    move-result-wide v2
 
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    cmp-long v0, v0, v2
 
-    move-result-wide v4
+    if-nez v0, :cond_0
 
-    if-nez v3, :cond_0
+    sget-object v0, Llce;->l1:Llce;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+    sget-object v0, Llce;->a1:Llce;
 
-    move-result-wide v6
-
-    cmp-long v4, v6, v4
-
-    if-nez v4, :cond_1
-
-    iget-object v1, v0, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {v0}, Lxoc;->s()Lbbg;
-
-    move-result-object v3
-
-    check-cast v3, Lb9b;
-
-    invoke-virtual {v3}, Lb9b;->b()Ltb4;
-
-    move-result-object v3
-
-    new-instance v4, Lroc;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v0, v5}, Lroc;-><init>(Lxoc;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x2
-
-    invoke-static {v1, v3, v5, v4, v0}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    new-instance v0, Lunc;
-
-    sget v1, Lx4e;->L:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, v1}, Lunc;-><init>(Lghg;Ljava/lang/Integer;)V
-
-    invoke-static {v2, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    goto/16 :goto_2
-
-    :cond_1
     :goto_0
-    iget-object v0, v1, Lad5;->l:Ljava/util/concurrent/atomic/AtomicLong;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    nop
 
-    move-result-wide v0
-
-    if-nez v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    cmp-long v0, v4, v0
-
-    if-nez v0, :cond_3
-
-    new-instance v0, Lunc;
-
-    sget v1, Lx4e;->L:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, v1}, Lunc;-><init>(Lghg;Ljava/lang/Integer;)V
-
-    invoke-static {v2, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    if-nez v3, :cond_6
-
-    new-instance v0, Lunc;
-
-    sget v1, Lx4e;->L:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, v1}, Lunc;-><init>(Lghg;Ljava/lang/Integer;)V
-
-    invoke-static {v2, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_4
-    instance-of v0, p1, Lwmc;
-
-    if-eqz v0, :cond_5
-
-    check-cast p1, Lwmc;
-
-    iget-wide v3, p1, Lwmc;->a:J
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v3, v4}, Ljava/lang/Long;-><init>(J)V
-
-    iget-object v0, v1, Lad5;->m:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    cmp-long p1, v3, v0
-
-    if-nez p1, :cond_6
-
-    new-instance p1, Lunc;
-
-    sget v0, Lhfb;->t:I
-
-    new-instance v1, Lbhg;
-
-    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
-
-    sget v0, Lx4e;->p:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-direct {p1, v1, v0}, Lunc;-><init>(Lghg;Ljava/lang/Integer;)V
-
-    invoke-static {v2, p1}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_5
-    instance-of p1, p1, Lymc;
-
-    if-eqz p1, :cond_6
-
-    new-instance p1, Lunc;
-
-    sget v0, Lhfb;->t:I
-
-    new-instance v1, Lbhg;
-
-    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
-
-    sget v0, Lx4e;->p:I
-
-    new-instance v3, Ljava/lang/Integer;
-
-    invoke-direct {v3, v0}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-direct {p1, v1, v3}, Lunc;-><init>(Lghg;Ljava/lang/Integer;)V
-
-    invoke-static {v2, p1}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    :cond_6
-    :goto_2
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

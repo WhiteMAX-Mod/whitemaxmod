@@ -1,21 +1,22 @@
 .class public final Lcs5;
-.super Ljja;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lds5;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Z)V
+    .locals 0
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Ljja;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lcs5;->b:Ljava/lang/String;
+    iput-boolean p1, p0, Lcs5;->a:Z
 
     return-void
 .end method
@@ -43,15 +44,11 @@
     :cond_1
     check-cast p1, Lcs5;
 
-    iget-object v1, p0, Lcs5;->b:Ljava/lang/String;
+    iget-boolean v1, p0, Lcs5;->a:Z
 
-    iget-object p1, p1, Lcs5;->b:Ljava/lang/String;
+    iget-boolean p1, p1, Lcs5;->a:Z
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eq v1, p1, :cond_2
 
     return v2
 
@@ -62,9 +59,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lcs5;->b:Ljava/lang/String;
+    iget-boolean v0, p0, Lcs5;->a:Z
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -74,13 +71,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "ExternalCallback(params="
+    const-string v0, "WaitingRoom(adminIsHere="
 
     const-string v1, ")"
 
-    iget-object v2, p0, Lcs5;->b:Ljava/lang/String;
+    iget-boolean v2, p0, Lcs5;->a:Z
 
-    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

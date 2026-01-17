@@ -3,206 +3,64 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkv6;
+.implements Lnm4;
 
 
-# static fields
-.field public static final a:La3i;
+# instance fields
+.field public final synthetic X:I
 
-.field private static final descriptor:Lvoe;
+.field public final synthetic a:J
+
+.field public final synthetic b:Ljyh;
+
+.field public final synthetic c:Ljava/lang/Long;
+
+.field public final synthetic d:Ljava/lang/String;
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(JLjyh;Ljava/lang/Long;Ljava/lang/String;ZI)V
+    .locals 0
 
-    new-instance v0, La3i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, La3i;->a:J
 
-    sput-object v0, La3i;->a:La3i;
+    iput-object p3, p0, La3i;->b:Ljyh;
 
-    new-instance v1, Llcc;
+    iput-object p4, p0, La3i;->c:Ljava/lang/Long;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.download.WebAppDownloadFileRequest"
+    iput-object p5, p0, La3i;->d:Ljava/lang/String;
 
-    const/4 v3, 0x3
+    iput-boolean p6, p0, La3i;->o:Z
 
-    invoke-direct {v1, v2, v0, v3}, Llcc;-><init>(Ljava/lang/String;Lkv6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Llcc;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "url"
-
-    invoke-virtual {v1, v0, v2}, Llcc;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "file_name"
-
-    invoke-virtual {v1, v0, v2}, Llcc;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, La3i;->descriptor:Lvoe;
+    iput p7, p0, La3i;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 8
 
-    check-cast p2, Lc3i;
+    new-instance v0, Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-    sget-object v0, La3i;->descriptor:Lvoe;
+    iget-wide v1, p0, La3i;->a:J
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lvoe;)Lkotlinx/serialization/json/internal/b;
+    iget-object v3, p0, La3i;->b:Ljyh;
 
-    move-result-object p1
+    iget-object v4, p0, La3i;->c:Ljava/lang/Long;
 
-    iget-object v1, p2, Lc3i;->a:Ljava/lang/String;
+    iget-object v5, p0, La3i;->d:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    iget-boolean v6, p0, La3i;->o:Z
 
-    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lvoe;ILjava/lang/String;)V
+    iget v7, p0, La3i;->X:I
 
-    const/4 v1, 0x1
-
-    iget-object v2, p2, Lc3i;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, v2}, Lkotlinx/serialization/json/internal/b;->s(Lvoe;ILjava/lang/String;)V
-
-    const/4 v1, 0x2
-
-    iget-object p2, p2, Lc3i;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lvoe;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
-
-    return-void
-.end method
-
-.method public final b(Lll4;)Ljava/lang/Object;
-    .locals 10
-
-    sget-object v0, La3i;->descriptor:Lvoe;
-
-    invoke-interface {p1, v0}, Lll4;->r(Lvoe;)Lip3;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v6, v1
-
-    move v7, v2
-
-    move-object v4, v3
-
-    move-object v5, v4
-
-    :goto_0
-    if-eqz v6, :cond_4
-
-    invoke-interface {p1, v0}, Lip3;->e(Lvoe;)I
-
-    move-result v8
-
-    const/4 v9, -0x1
-
-    if-eq v8, v9, :cond_3
-
-    if-eqz v8, :cond_2
-
-    if-eq v8, v1, :cond_1
-
-    const/4 v5, 0x2
-
-    if-ne v8, v5, :cond_0
-
-    invoke-interface {p1, v0, v5}, Lip3;->j(Lvoe;I)Ljava/lang/String;
-
-    move-result-object v5
-
-    or-int/lit8 v7, v7, 0x4
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-interface {p1, v0, v1}, Lip3;->j(Lvoe;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v7, v7, 0x2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-interface {p1, v0, v2}, Lip3;->j(Lvoe;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    move v6, v2
-
-    goto :goto_0
-
-    :cond_4
-    invoke-interface {p1, v0}, Lip3;->m(Lvoe;)V
-
-    new-instance p1, Lc3i;
-
-    invoke-direct {p1, v3, v7, v4, v5}, Lc3i;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final c()[Lq38;
-    .locals 3
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Lq38;
-
-    sget-object v1, Leyf;->a:Leyf;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
-.method public final d()Lvoe;
-    .locals 1
-
-    sget-object v0, La3i;->descriptor:Lvoe;
+    invoke-direct/range {v0 .. v7}, Lone/me/webapp/rootscreen/WebAppRootScreen;-><init>(JLjyh;Ljava/lang/Long;Ljava/lang/String;ZI)V
 
     return-object v0
 .end method

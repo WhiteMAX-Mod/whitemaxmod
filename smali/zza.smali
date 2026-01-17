@@ -1,83 +1,154 @@
 .class public final Lzza;
-.super Lcxa;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lo25;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lqae;
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/TimeUnit;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Lqae;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lzza;->a:I
 
-    iput-wide p1, p0, Lzza;->b:J
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object p3, p0, Lzza;->c:Ljava/util/concurrent/TimeUnit;
-
-    iput-object p4, p0, Lzza;->a:Lqae;
+    iput-object p2, p0, Lzza;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Lc0b;)V
-    .locals 4
+.method public final dispose()V
+    .locals 1
 
-    new-instance v0, Lyza;
+    iget v0, p0, Lzza;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1, p1}, Lyza;-><init>(ILjava/lang/Object;)V
+    invoke-static {p0}, Ls25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    invoke-interface {p1, v0}, Lc0b;->c(Ll25;)V
+    return-void
 
-    iget-wide v1, p0, Lzza;->b:J
+    :pswitch_0
+    invoke-static {p0}, Ls25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    iget-object p1, p0, Lzza;->c:Ljava/util/concurrent/TimeUnit;
+    return-void
 
-    iget-object v3, p0, Lzza;->a:Lqae;
+    nop
 
-    invoke-virtual {v3, v0, v1, v2, p1}, Lqae;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ll25;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public final e()Z
+    .locals 2
 
-    :cond_0
-    const/4 v1, 0x0
+    iget v0, p0, Lzza;->a:I
 
-    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    sget-object v1, Lp25;->a:Lp25;
+    check-cast v0, Lo25;
 
-    if-ne v0, v1, :cond_2
+    invoke-static {v0}, Ls25;->b(Lo25;)Z
 
-    invoke-interface {p1}, Ll25;->dispose()V
+    move-result v0
 
-    :cond_2
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Ls25;->a:Ls25;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
     :goto_0
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 3
+
+    iget v0, p0, Lzza;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzza;->b:Ljava/lang/Object;
+
+    check-cast v0, Ldff;
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ldff;->a(Ljava/lang/Object;)V
+
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzza;->b:Ljava/lang/Object;
+
+    check-cast v0, Le0b;
+
+    invoke-virtual {p0}, Lzza;->e()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Le0b;->r(Ljava/lang/Object;)V
+
+    sget-object v1, Lyg5;->a:Lyg5;
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Le0b;->b()V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,99 +1,122 @@
-.class public final enum Lcud;
-.super Ljava/lang/Enum;
+.class public final Lcud;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum b:Lcud;
-
-.field public static final synthetic c:[Lcud;
-
-.field public static final synthetic d:Lwk5;
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    .locals 0
+
+    iput-object p2, p0, Lcud;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lcud;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lcud;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lcud;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lcud;
 
-    const-string v1, "UNKNOWN"
+    iget-object v1, p0, Lcud;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p2, v1}, Lcud;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
 
-    invoke-direct {v0, v1, v2, v2}, Lcud;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lcud;->b:Lcud;
-
-    new-instance v1, Lcud;
-
-    const-string v2, "HIGH"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lcud;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lcud;
-
-    const-string v3, "NORMAL"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Lcud;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1, v2}, [Lcud;
-
-    move-result-object v0
-
-    sput-object v0, Lcud;->c:[Lcud;
-
-    new-instance v1, Lwk5;
-
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lcud;->d:Lwk5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lcud;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcud;
-    .locals 1
-
-    const-class v0, Lcud;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lcud;
-
-    return-object p0
-.end method
-
-.method public static values()[Lcud;
-    .locals 1
-
-    sget-object v0, Lcud;->c:[Lcud;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcud;
+    iput-object p1, v0, Lcud;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lcud;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lhja;
+
+    instance-of p1, v0, Lola;
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lcm8;->c:Lcm8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Ld3;->p0()Ljm4;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    const-string v1, ":chat-list"
+
+    invoke-virtual {p1, v1, v0}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of p1, v0, Lfm4;
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lcm8;->c:Lcm8;
+
+    check-cast v0, Lfm4;
+
+    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
+
+    goto :goto_0
+
+    :cond_1
+    instance-of p1, v0, Lag3;
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcud;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    invoke-virtual {p1}, La94;->getRouter()Lw4e;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lw4e;->C()Z
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

@@ -1,80 +1,319 @@
 .class public final Lo2h;
-.super Ltb4;
+.super Ldk0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lo2h;
+# instance fields
+.field public final X:[B
+
+.field public final Y:Ljava/net/DatagramPacket;
+
+.field public Z:Landroid/net/Uri;
+
+.field public final o:I
+
+.field public t0:Ljava/net/DatagramSocket;
+
+.field public u0:Ljava/net/MulticastSocket;
+
+.field public v0:Ljava/net/InetAddress;
+
+.field public w0:Z
+
+.field public x0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 4
 
-    new-instance v0, Lo2h;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ltb4;-><init>()V
+    invoke-direct {p0, v0}, Ldk0;-><init>(Z)V
 
-    sput-object v0, Lo2h;->a:Lo2h;
+    const/16 v0, 0x1f40
+
+    iput v0, p0, Lo2h;->o:I
+
+    const/16 v0, 0x7d0
+
+    new-array v1, v0, [B
+
+    iput-object v1, p0, Lo2h;->X:[B
+
+    new-instance v2, Ljava/net/DatagramPacket;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v1, v3, v0}, Ljava/net/DatagramPacket;-><init>([BII)V
+
+    iput-object v2, p0, Lo2h;->Y:Ljava/net/DatagramPacket;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispatch(Lrb4;Ljava/lang/Runnable;)V
-    .locals 0
+.method public final R(Lzi4;)J
+    .locals 3
 
-    sget-object p2, Ldki;->b:Lexf;
+    iget-object v0, p1, Lzi4;->a:Landroid/net/Uri;
 
-    invoke-interface {p1, p2}, Lrb4;->get(Lqb4;)Lpb4;
+    iput-object v0, p0, Lo2h;->Z:Landroid/net/Uri;
 
-    move-result-object p1
+    invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
-    check-cast p1, Ldki;
+    move-result-object v0
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p2, 0x1
+    iget-object v1, p0, Lo2h;->Z:Landroid/net/Uri;
 
-    iput-boolean p2, p1, Ldki;->a:Z
+    invoke-virtual {v1}, Landroid/net/Uri;->getPort()I
 
-    return-void
+    move-result v1
+
+    invoke-virtual {p0}, Ldk0;->c()V
+
+    :try_start_0
+    invoke-static {v0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lo2h;->v0:Ljava/net/InetAddress;
+
+    new-instance v0, Ljava/net/InetSocketAddress;
+
+    iget-object v2, p0, Lo2h;->v0:Ljava/net/InetAddress;
+
+    invoke-direct {v0, v2, v1}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
+
+    iget-object v1, p0, Lo2h;->v0:Ljava/net/InetAddress;
+
+    invoke-virtual {v1}, Ljava/net/InetAddress;->isMulticastAddress()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/net/MulticastSocket;
+
+    invoke-direct {v1, v0}, Ljava/net/MulticastSocket;-><init>(Ljava/net/SocketAddress;)V
+
+    iput-object v1, p0, Lo2h;->u0:Ljava/net/MulticastSocket;
+
+    iget-object v0, p0, Lo2h;->v0:Ljava/net/InetAddress;
+
+    invoke-virtual {v1, v0}, Ljava/net/MulticastSocket;->joinGroup(Ljava/net/InetAddress;)V
+
+    iget-object v0, p0, Lo2h;->u0:Ljava/net/MulticastSocket;
+
+    iput-object v0, p0, Lo2h;->t0:Ljava/net/DatagramSocket;
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_2
 
     :cond_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance v1, Ljava/net/DatagramSocket;
 
-    const-string p2, "Dispatchers.Unconfined.dispatch function can only be used by the yield function. If you wrap Unconfined dispatcher in your code, make sure you properly delegate isDispatchNeeded and dispatch calls."
+    invoke-direct {v1, v0}, Ljava/net/DatagramSocket;-><init>(Ljava/net/SocketAddress;)V
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iput-object v1, p0, Lo2h;->t0:Ljava/net/DatagramSocket;
 
-    throw p1
+    :goto_0
+    iget-object v0, p0, Lo2h;->t0:Ljava/net/DatagramSocket;
+
+    iget v1, p0, Lo2h;->o:I
+
+    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lo2h;->w0:Z
+
+    invoke-virtual {p0, p1}, Ldk0;->d(Lzi4;)V
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    :goto_1
+    new-instance v0, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 v1, 0x7d1
+
+    invoke-direct {v0, p1, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw v0
+
+    :goto_2
+    new-instance v0, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 v1, 0x7d6
+
+    invoke-direct {v0, p1, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw v0
 .end method
 
-.method public final isDispatchNeeded(Lrb4;)Z
-    .locals 0
+.method public final close()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lo2h;->Z:Landroid/net/Uri;
+
+    iget-object v1, p0, Lo2h;->u0:Ljava/net/MulticastSocket;
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    iget-object v2, p0, Lo2h;->v0:Ljava/net/InetAddress;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1, v2}, Ljava/net/MulticastSocket;->leaveGroup(Ljava/net/InetAddress;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    iput-object v0, p0, Lo2h;->u0:Ljava/net/MulticastSocket;
+
+    :cond_0
+    iget-object v1, p0, Lo2h;->t0:Ljava/net/DatagramSocket;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
+
+    iput-object v0, p0, Lo2h;->t0:Ljava/net/DatagramSocket;
+
+    :cond_1
+    iput-object v0, p0, Lo2h;->v0:Ljava/net/InetAddress;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lo2h;->x0:I
+
+    iget-boolean v1, p0, Lo2h;->w0:Z
+
+    if-eqz v1, :cond_2
+
+    iput-boolean v0, p0, Lo2h;->w0:Z
+
+    invoke-virtual {p0}, Ldk0;->b()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Lo2h;->Z:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final read([BII)I
+    .locals 2
+
+    if-nez p3, :cond_0
 
     const/4 p1, 0x0
 
     return p1
-.end method
 
-.method public final limitedParallelism(ILjava/lang/String;)Ltb4;
-    .locals 0
+    :cond_0
+    iget v0, p0, Lo2h;->x0:I
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v1, p0, Lo2h;->Y:Ljava/net/DatagramPacket;
 
-    const-string p2, "limitedParallelism is not supported for Dispatchers.Unconfined"
+    if-nez v0, :cond_1
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    iget-object v0, p0, Lo2h;->t0:Ljava/net/DatagramSocket;
 
-    throw p1
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
+    :try_end_0
+    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v0, "Dispatchers.Unconfined"
+    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
 
-    return-object v0
+    move-result v0
+
+    iput v0, p0, Lo2h;->x0:I
+
+    invoke-virtual {p0, v0}, Ldk0;->a(I)V
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :goto_0
+    new-instance p2, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 p3, 0x7d1
+
+    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p2
+
+    :goto_1
+    new-instance p2, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 p3, 0x7d2
+
+    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p2
+
+    :cond_1
+    :goto_2
+    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
+
+    move-result v0
+
+    iget v1, p0, Lo2h;->x0:I
+
+    sub-int/2addr v0, v1
+
+    invoke-static {v1, p3}, Ljava/lang/Math;->min(II)I
+
+    move-result p3
+
+    iget-object v1, p0, Lo2h;->X:[B
+
+    invoke-static {v1, v0, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lo2h;->x0:I
+
+    sub-int/2addr p1, p3
+
+    iput p1, p0, Lo2h;->x0:I
+
+    return p3
 .end method

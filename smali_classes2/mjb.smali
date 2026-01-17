@@ -1,9 +1,6 @@
 .class public final Lmjb;
-.super Ljava/lang/Object;
+.super Lpjb;
 .source "SourceFile"
-
-# interfaces
-.implements Lrjb;
 
 
 # static fields
@@ -17,24 +14,26 @@
     .end annotation
 .end field
 
-.field public static final a:Lmjb;
+.field public static final b:Lmjb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lmjb;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide v1, 0x7fffffffffffffffL
 
-    sput-object v0, Lmjb;->a:Lmjb;
+    invoke-direct {v0, v1, v2}, Lpjb;-><init>(J)V
 
-    new-instance v0, Lev8;
+    sput-object v0, Lmjb;->b:Lmjb;
 
-    const/16 v1, 0x1d
+    new-instance v0, Lhu8;
 
-    invoke-direct {v0, v1}, Lev8;-><init>(I)V
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
 
     sput-object v0, Lmjb;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -76,7 +75,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x4e19c0b1
+    const v0, 0x6f5f0da2
 
     return v0
 .end method
@@ -84,7 +83,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "CancelBtn"
+    const-string v0, "Indeterminate"
 
     return-object v0
 .end method

@@ -13,7 +13,7 @@
         "",
         "",
         "millis",
-        "Lv2h;",
+        "Lb3h;",
         "setTimeout",
         "(J)V",
         "",

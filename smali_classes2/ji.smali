@@ -1,3 +1,3 @@
 .class public final Lji;
-.super Lv3j;
+.super Ljava/lang/Object;
 .source "SourceFile"

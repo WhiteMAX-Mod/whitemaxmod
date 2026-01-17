@@ -1,147 +1,73 @@
 .class public final Lze5;
-.super Ljava/lang/Object;
+.super Lloj;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lrx4;
+.field public final synthetic a:Lloj;
 
-.field public b:I
-
-.field public c:I
+.field public final synthetic b:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;Z)V
-    .locals 5
+.method public constructor <init>(Lloj;Ljava/util/concurrent/ThreadPoolExecutor;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7fffffff
+    iput-object p1, p0, Lze5;->a:Lloj;
 
-    iput v0, p0, Lze5;->b:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lze5;->c:I
-
-    new-instance v1, Lrx4;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v1, Lrx4;->a:Ljava/lang/Object;
-
-    new-instance v2, Lfg5;
-
-    invoke-direct {v2, p1, p2}, Lfg5;-><init>(Landroid/widget/EditText;Z)V
-
-    iput-object v2, v1, Lrx4;->b:Ljava/lang/Object;
-
-    invoke-virtual {p1, v2}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    sget-object p2, Laf5;->b:Laf5;
-
-    if-nez p2, :cond_1
-
-    sget-object p2, Laf5;->a:Ljava/lang/Object;
-
-    monitor-enter p2
-
-    :try_start_0
-    sget-object v2, Laf5;->b:Laf5;
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Laf5;
-
-    invoke-direct {v2}, Landroid/text/Editable$Factory;-><init>()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    const-string v3, "android.text.DynamicLayout$ChangeWatcher"
-
-    const-class v4, Laf5;
-
-    invoke-virtual {v4}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v4
-
-    invoke-static {v3, v0, v4}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    sput-object v0, Laf5;->c:Ljava/lang/Class;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :catchall_0
-    :try_start_2
-    sput-object v2, Laf5;->b:Laf5;
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p2
-
-    goto :goto_2
-
-    :goto_1
-    monitor-exit p2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw p1
-
-    :cond_1
-    :goto_2
-    sget-object p2, Laf5;->b:Laf5;
-
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setEditableFactory(Landroid/text/Editable$Factory;)V
-
-    iput-object v1, p0, Lze5;->a:Lrx4;
+    iput-object p2, p0, Lze5;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Lef5;
+.method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Lze5;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const/4 p1, 0x0
+    :try_start_0
+    iget-object v1, p0, Lze5;->a:Lloj;
 
-    return-object p1
+    invoke-virtual {v1, p1}, Lloj;->a(Ljava/lang/Throwable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_0
-    iget-object v0, p0, Lze5;->a:Lrx4;
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    instance-of v1, p1, Lef5;
+    :catchall_0
+    move-exception p1
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
-    check-cast p1, Lef5;
+    throw p1
+.end method
 
-    return-object p1
+.method public final b(Lloe;)V
+    .locals 2
 
-    :cond_1
-    new-instance v1, Lef5;
+    iget-object v0, p0, Lze5;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    iget-object v0, v0, Lrx4;->a:Ljava/lang/Object;
+    :try_start_0
+    iget-object v1, p0, Lze5;->a:Lloj;
 
-    check-cast v0, Landroid/widget/EditText;
+    invoke-virtual {v1, p1}, Lloj;->b(Lloe;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v1, v0, p1, p2}, Lef5;-><init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
-    return-object v1
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+
+    throw p1
 .end method

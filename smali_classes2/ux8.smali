@@ -1,128 +1,54 @@
-.class public final Lux8;
-.super Ljava/lang/Object;
+.class public final synthetic Lux8;
+.super Lt8;
 .source "SourceFile"
 
 # interfaces
-.implements Lxx8;
+.implements Ldr6;
 
 
-# instance fields
-.field public final a:Ljme;
-
-.field public final b:I
+# static fields
+.field public static final Z:Lux8;
 
 
 # direct methods
-.method public constructor <init>(Ljme;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lux8;
 
-    iput-object p1, p0, Lux8;->a:Ljme;
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    iput p2, p0, Lux8;->b:I
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Lktb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lux8;->Z:Lux8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return v0
+    check-cast p2, Ljava/util/List;
 
-    :cond_0
-    instance-of v1, p1, Lux8;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    sget-object p3, Lfy8;->P0:[Lz28;
 
-    if-nez v1, :cond_1
+    new-instance p3, Lktb;
 
-    return v2
+    invoke-direct {p3, p1, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_1
-    check-cast p1, Lux8;
-
-    iget-object v1, p0, Lux8;->a:Ljme;
-
-    iget-object v3, p1, Lux8;->a:Ljme;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lux8;->b:I
-
-    iget p1, p1, Lux8;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lux8;->a:Ljme;
-
-    invoke-virtual {v0}, Ljme;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lux8;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowMediaItem(item="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lux8;->a:Ljme;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uiPosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lux8;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p3
 .end method

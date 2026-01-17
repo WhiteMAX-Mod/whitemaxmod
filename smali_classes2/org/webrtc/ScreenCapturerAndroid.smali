@@ -51,11 +51,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lqbe;
+    new-instance v0, Lpce;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lqbe;-><init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
+    invoke-direct {v0, p0, v1}, Lpce;-><init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
 
     iput-object v0, p0, Lorg/webrtc/ScreenCapturerAndroid;->rerequestTextureFrame:Ljava/lang/Runnable;
 
@@ -390,11 +390,11 @@
 
     move-result-object p1
 
-    new-instance p2, Lqbe;
+    new-instance p2, Lpce;
 
     const/4 p3, 0x1
 
-    invoke-direct {p2, p0, p3}, Lqbe;-><init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
+    invoke-direct {p2, p0, p3}, Lpce;-><init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
 
     invoke-static {p1, p2}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/lang/Runnable;)V
     :try_end_1

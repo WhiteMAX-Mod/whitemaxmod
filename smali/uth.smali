@@ -1,61 +1,61 @@
 .class public final Luth;
-.super Landroid/view/View$BaseSavedState;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Luth;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public a:I
-
-.field public b:I
-
-.field public c:Landroid/os/Parcelable;
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lc0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xa
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    invoke-direct {v0, v1}, Lc0;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    sput-object v0, Luth;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object v0, p0, Luth;->a:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    iget-object v0, p0, Luth;->a:Ljava/util/LinkedHashMap;
 
-    iget v0, p0, Luth;->a:I
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v1
 
-    iget v0, p0, Luth;->b:I
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v1
 
-    iget-object v0, p0, Luth;->c:Landroid/os/Parcelable;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Loth;
+
+    invoke-virtual {v2}, Loth;->a()V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
 
     return-void
 .end method

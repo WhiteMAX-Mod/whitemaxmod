@@ -1,5 +1,5 @@
 .class public final Lph;
-.super Luh;
+.super Lsh;
 .source "SourceFile"
 
 
@@ -68,13 +68,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "Color(value="
+    const-string v0, "IntNumber(value="
 
     const-string v1, ")"
 
     iget v2, p0, Lph;->a:I
 
-    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

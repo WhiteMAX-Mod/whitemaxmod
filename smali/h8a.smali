@@ -39,11 +39,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lev8;
+    new-instance v0, Lhu8;
 
     const/16 v1, 0xc
 
-    invoke-direct {v0, v1}, Lev8;-><init>(I)V
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
 
     sput-object v0, Lh8a;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -61,7 +61,7 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/util/Calendar;->set(II)V
 
-    invoke-static {p1}, Lmah;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-static {p1}, Libh;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
 
     move-result-object p1
 
@@ -109,7 +109,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lmah;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-static {v0}, Libh;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
 
     move-result-object v0
 
@@ -128,12 +128,12 @@
     return-object p0
 .end method
 
-.method public static c(J)Lh8a;
+.method public static b(J)Lh8a;
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lmah;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-static {v0}, Libh;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
 
     move-result-object v0
 
@@ -181,7 +181,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lmah;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    sget-object v3, Libh;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     const-string v3, "yMMMM"
 
@@ -225,6 +225,43 @@
     return v0
 .end method
 
+.method public final e(Lh8a;)I
+    .locals 2
+
+    iget-object v0, p0, Lh8a;->a:Ljava/util/Calendar;
+
+    instance-of v0, v0, Ljava/util/GregorianCalendar;
+
+    if-eqz v0, :cond_0
+
+    iget v0, p1, Lh8a;->c:I
+
+    iget v1, p0, Lh8a;->c:I
+
+    sub-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0xc
+
+    iget p1, p1, Lh8a;->b:I
+
+    iget v1, p0, Lh8a;->b:I
+
+    sub-int/2addr p1, v1
+
+    add-int/2addr p1, v0
+
+    return p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Only Gregorian calendars are supported."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -262,43 +299,6 @@
 
     :cond_2
     return v2
-.end method
-
-.method public final f(Lh8a;)I
-    .locals 2
-
-    iget-object v0, p0, Lh8a;->a:Ljava/util/Calendar;
-
-    instance-of v0, v0, Ljava/util/GregorianCalendar;
-
-    if-eqz v0, :cond_0
-
-    iget v0, p1, Lh8a;->c:I
-
-    iget v1, p0, Lh8a;->c:I
-
-    sub-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0xc
-
-    iget p1, p1, Lh8a;->b:I
-
-    iget v1, p0, Lh8a;->b:I
-
-    sub-int/2addr p1, v1
-
-    add-int/2addr p1, v0
-
-    return p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Only Gregorian calendars are supported."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 .method public final hashCode()I

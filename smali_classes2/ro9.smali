@@ -1,135 +1,109 @@
-.class public final Lro9;
-.super Lgab;
+.class public final enum Lro9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:Luo9;
+# static fields
+.field public static final synthetic X:[Lro9;
+
+.field public static final enum a:Lro9;
+
+.field public static final enum b:Lro9;
+
+.field public static final enum c:Lro9;
+
+.field public static final enum d:Lro9;
+
+.field public static final enum o:Lro9;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Luo9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p2, p0, Lro9;->b:Luo9;
+    new-instance v0, Lro9;
 
-    const/16 p2, 0xe
+    const-string v1, "SIMPLE"
 
-    invoke-direct {p0, p1, p2}, Lgab;-><init>(Landroid/content/Context;I)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lro9;->a:Lro9;
+
+    new-instance v1, Lro9;
+
+    const-string v2, "CONTACT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lro9;->b:Lro9;
+
+    new-instance v2, Lro9;
+
+    const-string v3, "MEDIA"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lro9;->c:Lro9;
+
+    new-instance v3, Lro9;
+
+    const-string v4, "STICKER"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lro9;->d:Lro9;
+
+    new-instance v4, Lro9;
+
+    const-string v5, "FORWARD"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lro9;->o:Lro9;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lro9;
+
+    move-result-object v0
+
+    sput-object v0, Lro9;->X:[Lro9;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onSelectionChanged(II)V
+.method public static valueOf(Ljava/lang/String;)Lro9;
     .locals 1
 
-    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onSelectionChanged(II)V
+    const-class v0, Lro9;
 
-    iget-object p1, p0, Lro9;->b:Luo9;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object p2, p1, Luo9;->c:Lpo9;
+    move-result-object p0
 
-    if-nez p2, :cond_0
+    check-cast p0, Lro9;
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/widget/TextView;->hasSelection()Z
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    if-eqz p2, :cond_2
-
-    iget-object p1, p1, Luo9;->c:Lpo9;
-
-    if-eqz p1, :cond_3
-
-    check-cast p1, Lhg5;
-
-    iget-object p1, p1, Lhg5;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    sget-object p2, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Lpp8;
-
-    move-result-object p1
-
-    iget-object p2, p1, Lpp8;->X:Lhof;
-
-    invoke-virtual {p2}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lqp8;
-
-    iget p2, p2, Lqp8;->b:I
-
-    if-eq p2, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p2, 0x2
-
-    invoke-static {p1, p2}, Lpp8;->s(Lpp8;I)V
-
-    return-void
-
-    :cond_2
-    iget-object p1, p1, Luo9;->c:Lpo9;
-
-    if-eqz p1, :cond_3
-
-    check-cast p1, Lhg5;
-
-    iget-object p1, p1, Lhg5;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    sget-object p2, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Lpp8;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1, v0}, Lpp8;->s(Lpp8;I)V
-
-    :cond_3
-    :goto_0
-    return-void
+    return-object p0
 .end method
 
-.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+.method public static values()[Lro9;
     .locals 1
 
-    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+    sget-object v0, Lro9;->X:[Lro9;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    move-result-object v0
 
-    move-result p1
+    check-cast v0, [Lro9;
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method

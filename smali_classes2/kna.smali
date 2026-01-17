@@ -2,45 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnna;
+
+
+# static fields
+.field public static final b:Lkna;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "AOUIE\u0410\u041e\u0423\u042b\u0418\u042d\u0415\u042e\u042f\u0401"
+    new-instance v0, Lkna;
 
-    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->sort([C)V
+    sput-object v0, Lkna;->b:Lkna;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/StringBuilder;IC)Z
-    .locals 2
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    add-int/2addr p1, v0
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v1
-
-    if-ge p1, v1, :cond_0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result p0
-
-    if-ne p0, p2, :cond_0
+    if-ne p0, p1, :cond_0
 
     return v0
 
     :cond_0
-    const/4 p0, 0x0
+    instance-of p1, p1, Lkna;
 
-    return p0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x29dda79b
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Enabled"
+
+    return-object v0
 .end method

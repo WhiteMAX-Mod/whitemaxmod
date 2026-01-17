@@ -1,12 +1,12 @@
 .class public abstract Lcom/google/android/material/transformation/ExpandableBehavior;
-.super Lua4;
+.super Lxa4;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lua4;"
+        "Lxa4;"
     }
 .end annotation
 
@@ -35,10 +35,10 @@
 
 
 # virtual methods
-.method public abstract f(Landroid/view/View;Landroid/view/View;)Z
+.method public abstract b(Landroid/view/View;Landroid/view/View;)Z
 .end method
 
-.method public final h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
+.method public final d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -50,10 +50,10 @@
     throw p1
 .end method
 
-.method public final l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
+.method public final h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 3
 
-    sget-object p3, Lash;->a:Ljava/util/WeakHashMap;
+    sget-object p3, Lxsh;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p2}, Landroid/view/View;->isLaidOut()Z
 
@@ -82,7 +82,7 @@
 
     check-cast v2, Landroid/view/View;
 
-    invoke-virtual {p0, p2, v2}, Lcom/google/android/material/transformation/ExpandableBehavior;->f(Landroid/view/View;Landroid/view/View;)Z
+    invoke-virtual {p0, p2, v2}, Lcom/google/android/material/transformation/ExpandableBehavior;->b(Landroid/view/View;Landroid/view/View;)Z
 
     add-int/lit8 v1, v1, 0x1
 

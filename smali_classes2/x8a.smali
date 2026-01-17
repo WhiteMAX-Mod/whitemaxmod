@@ -1,5 +1,5 @@
 .class public final Lx8a;
-.super Lyaj;
+.super Lsbj;
 .source "SourceFile"
 
 

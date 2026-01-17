@@ -1,37 +1,19 @@
 .class public final Lajg;
-.super Landroid/text/style/CharacterStyle;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/text/style/UpdateAppearance;
-.implements Ljig;
 
 
 # instance fields
-.field public final a:Loq6;
-
-.field public b:I
+.field public final a:Lh7g;
 
 
 # direct methods
-.method public constructor <init>(Lplb;Loq6;)V
+.method public constructor <init>(Lh7g;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lajg;->a:Loq6;
-
-    invoke-interface {p2, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iput p1, p0, Lajg;->b:I
+    iput-object p1, p0, Lajg;->a:Lh7g;
 
     return-void
 .end method
@@ -57,13 +39,17 @@
     return v2
 
     :cond_1
-    iget v1, p0, Lajg;->b:I
-
     check-cast p1, Lajg;
 
-    iget p1, p1, Lajg;->b:I
+    iget-object v1, p0, Lajg;->a:Lh7g;
 
-    if-eq v1, p1, :cond_2
+    iget-object p1, p1, Lajg;->a:Lh7g;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -72,56 +58,37 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    const-class v0, Lajg;
+    iget-object v0, p0, Lajg;->a:Lh7g;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    iget v1, p0, Lajg;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
-.method public final onThemeChanged(Lplb;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Lajg;->a:Loq6;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "SvgPattern(svgPattern="
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Ljava/lang/Number;
+    iget-object v1, p0, Lajg;->a:Lh7g;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    const-string v1, ")"
 
-    iput p1, p0, Lajg;->b:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    move-result-object v0
 
-    if-eqz p1, :cond_0
-
-    iget v0, p0, Lajg;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

@@ -1,744 +1,166 @@
-.class public abstract Ls65;
-.super Landroid/app/Service;
+.class public final Ls65;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final X:Ljava/util/HashMap;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ls65;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public a:Lr65;
+.field public final a:J
 
-.field public b:I
-
-.field public c:Z
-
-.field public d:Z
-
-.field public o:Z
+.field public final b:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Ljava/util/HashMap;
+    new-instance v0, Lxj4;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    const/4 v1, 0x4
 
-    sput-object v0, Ls65;->X:Ljava/util/HashMap;
+    invoke-direct {v0, v1}, Lxj4;-><init>(I)V
+
+    sput-object v0, Ls65;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static a(Ls65;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 6
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v4, 0x0
+
+    cmp-long p1, v2, v4
+
+    if-gez p1, :cond_1
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    invoke-static {p1}, Lh6j;->b(Z)V
+
+    iput-wide v0, p0, Ls65;->a:J
+
+    iput-wide v2, p0, Ls65;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    iget-object v0, p0, Ls65;->a:Lr65;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Lr65;->b:Lh65;
-
-    iget-boolean v0, v0, Lh65;->k:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1c
-
-    if-ge v0, v1, :cond_1
-
-    iget-boolean v0, p0, Ls65;->d:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ls65;->o:Z
-
-    return-void
-
-    :cond_1
-    iget-boolean v0, p0, Ls65;->o:Z
-
-    iget v1, p0, Ls65;->b:I
-
-    invoke-virtual {p0, v1}, Landroid/app/Service;->stopSelfResult(I)Z
-
-    move-result v1
-
-    or-int/2addr v0, v1
-
-    iput-boolean v0, p0, Ls65;->o:Z
-
-    return-void
-.end method
-
-.method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final onCreate()V
-    .locals 6
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    sget-object v1, Ls65;->X:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr65;
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_0
-
-    sget-object v2, Lz19;->a:Lz19;
-
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v2
-
-    const/16 v4, 0x39
-
-    invoke-virtual {v2, v4}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lh65;
-
-    invoke-virtual {v2, v3}, Lh65;->c(Z)V
-
-    new-instance v4, Lr65;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    invoke-direct {v4, v5, v2, v3, v0}, Lr65;-><init>(Landroid/content/Context;Lh65;ZLjava/lang/Class;)V
-
-    invoke-virtual {v1, v0, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-object v2, v4
-
-    :cond_0
-    iput-object v2, p0, Ls65;->a:Lr65;
-
-    iget-object v0, v2, Lr65;->e:Ls65;
-
-    if-nez v0, :cond_1
-
-    const/4 v3, 0x1
-
-    :cond_1
-    invoke-static {v3}, Lp5j;->g(Z)V
-
-    iput-object p0, v2, Lr65;->e:Ls65;
-
-    iget-object v0, v2, Lr65;->b:Lh65;
-
-    iget-boolean v0, v0, Lh65;->h:Z
-
-    if-eqz v0, :cond_2
+.method public final describeContents()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lqah;->o(Lnq3;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    new-instance v1, Lhv4;
-
-    const/4 v3, 0x7
-
-    invoke-direct {v1, v2, v3, p0}, Lhv4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    :cond_2
-    return-void
-.end method
-
-.method public final onDestroy()V
-    .locals 2
-
-    iget-object v0, p0, Ls65;->a:Lr65;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, v0, Lr65;->e:Ls65;
-
-    if-ne v1, p0, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {v1}, Lp5j;->g(Z)V
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lr65;->e:Ls65;
-
-    return-void
-.end method
-
-.method public final onStartCommand(Landroid/content/Intent;II)I
-    .locals 12
-
-    iput p3, p0, Ls65;->b:I
-
-    const/4 p2, 0x0
-
-    iput-boolean p2, p0, Ls65;->d:Z
-
-    const-string p3, "androidx.media3.exoplayer.downloadService.action.RESTART"
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "content_id"
-
-    invoke-virtual {p1, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-boolean v4, p0, Ls65;->c:Z
-
-    const-string v5, "foreground"
-
-    invoke-virtual {p1, v5, p2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v5, p2
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v5, v0
-
-    :goto_1
-    or-int/2addr v4, v5
-
-    iput-boolean v4, p0, Ls65;->c:Z
-
-    goto :goto_2
-
-    :cond_2
-    move-object v2, v1
-
-    move-object v3, v2
-
-    :goto_2
-    const-string v4, "androidx.media3.exoplayer.downloadService.action.INIT"
-
-    if-nez v2, :cond_3
-
-    move-object v2, v4
-
-    :cond_3
-    iget-object v5, p0, Ls65;->a:Lr65;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v5, v5, Lr65;->b:Lh65;
-
-    iget-object v6, v5, Lh65;->c:Le65;
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v7
-
-    const/16 v8, 0x8
-
-    const/4 v9, 0x7
-
-    const/4 v10, 0x4
-
-    const/4 v11, -0x1
-
-    sparse-switch v7, :sswitch_data_0
-
-    goto/16 :goto_3
-
-    :sswitch_0
-    const-string p3, "androidx.media3.exoplayer.downloadService.action.PAUSE_DOWNLOADS"
-
-    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_4
-
-    goto/16 :goto_3
-
-    :cond_4
-    move v11, v8
-
-    goto/16 :goto_3
-
-    :sswitch_1
-    const-string p3, "androidx.media3.exoplayer.downloadService.action.SET_REQUIREMENTS"
-
-    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move v11, v9
-
-    goto :goto_3
-
-    :sswitch_2
-    const-string p3, "androidx.media3.exoplayer.downloadService.action.ADD_DOWNLOAD"
-
-    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    const/4 v11, 0x6
-
-    goto :goto_3
-
-    :sswitch_3
-    const-string p3, "androidx.media3.exoplayer.downloadService.action.REMOVE_ALL_DOWNLOADS"
-
-    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    const/4 v11, 0x5
-
-    goto :goto_3
-
-    :sswitch_4
-    const-string p3, "androidx.media3.exoplayer.downloadService.action.RESUME_DOWNLOADS"
-
-    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    move v11, v10
-
-    goto :goto_3
-
-    :sswitch_5
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_9
-
-    goto :goto_3
-
-    :cond_9
-    const/4 v11, 0x3
-
-    goto :goto_3
-
-    :sswitch_6
-    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_a
-
-    goto :goto_3
-
-    :cond_a
-    const/4 v11, 0x2
-
-    goto :goto_3
-
-    :sswitch_7
-    const-string p3, "androidx.media3.exoplayer.downloadService.action.REMOVE_DOWNLOAD"
-
-    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_b
-
-    goto :goto_3
-
-    :cond_b
-    move v11, v0
-
-    goto :goto_3
-
-    :sswitch_8
-    const-string p3, "androidx.media3.exoplayer.downloadService.action.SET_STOP_REASON"
-
-    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_c
-
-    goto :goto_3
-
-    :cond_c
-    move v11, p2
-
-    :goto_3
-    const-string p3, "stop_reason"
-
-    const-string v4, "DownloadService"
-
-    packed-switch v11, :pswitch_data_0
-
-    const-string p1, "Ignored unrecognized action: "
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v4, p1}, Lnfi;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_4
-
-    :pswitch_0
-    invoke-virtual {v5, v0}, Lh65;->c(Z)V
-
-    goto/16 :goto_4
-
-    :pswitch_1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string p3, "requirements"
-
-    invoke-virtual {p1, p3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcxd;
-
-    if-nez p1, :cond_d
-
-    const-string p1, "Ignored SET_REQUIREMENTS: Missing requirements extra"
-
-    invoke-static {v4, p1}, Lnfi;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_4
-
-    :cond_d
-    iget-object p3, v5, Lh65;->m:Lac0;
-
-    iget-object p3, p3, Lac0;->d:Ljava/lang/Object;
-
-    check-cast p3, Lcxd;
-
-    invoke-virtual {p1, p3}, Lcxd;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_e
-
-    goto/16 :goto_4
-
-    :cond_e
-    iget-object p3, v5, Lh65;->m:Lac0;
-
-    iget-object v2, p3, Lac0;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroid/content/Context;
-
-    iget-object v3, p3, Lac0;->f:Ljava/lang/Object;
-
-    check-cast v3, Lgo;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    iput-object v1, p3, Lac0;->f:Ljava/lang/Object;
-
-    iget-object v3, p3, Lac0;->g:Ljava/lang/Object;
-
-    check-cast v3, Lexd;
-
-    if-eqz v3, :cond_f
-
-    const-string v3, "connectivity"
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/net/ConnectivityManager;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v3, p3, Lac0;->g:Ljava/lang/Object;
-
-    check-cast v3, Lexd;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2, v3}, Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
-
-    iput-object v1, p3, Lac0;->g:Ljava/lang/Object;
-
-    :cond_f
-    new-instance p3, Lac0;
-
-    iget-object v1, v5, Lh65;->a:Landroid/content/Context;
-
-    iget-object v2, v5, Lh65;->d:Lss4;
-
-    invoke-direct {p3, v1, v2, p1}, Lac0;-><init>(Landroid/content/Context;Lss4;Lcxd;)V
-
-    iput-object p3, v5, Lh65;->m:Lac0;
-
-    invoke-virtual {p3}, Lac0;->d()I
-
-    move-result p1
-
-    iget-object p3, v5, Lh65;->m:Lac0;
-
-    invoke-virtual {v5, p3, p1}, Lh65;->b(Lac0;I)V
-
-    goto :goto_4
-
-    :pswitch_2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v1, "download_request"
-
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    check-cast v1, Lq65;
-
-    if-nez v1, :cond_10
-
-    const-string p1, "Ignored ADD_DOWNLOAD: Missing download_request extra"
-
-    invoke-static {v4, p1}, Lnfi;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_4
-
-    :cond_10
-    invoke-virtual {p1, p3, p2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result p1
-
-    iget p3, v5, Lh65;->f:I
-
-    add-int/2addr p3, v0
-
-    iput p3, v5, Lh65;->f:I
-
-    invoke-virtual {v6, v9, p1, p2, v1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    goto :goto_4
-
-    :pswitch_3
-    iget p1, v5, Lh65;->f:I
-
-    add-int/2addr p1, v0
-
-    iput p1, v5, Lh65;->f:I
-
-    const/16 p1, 0x9
-
-    invoke-virtual {v6, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    goto :goto_4
-
-    :pswitch_4
-    invoke-virtual {v5, p2}, Lh65;->c(Z)V
-
-    goto :goto_4
-
-    :pswitch_5
-    if-nez v3, :cond_11
-
-    const-string p1, "Ignored REMOVE_DOWNLOAD: Missing content_id extra"
-
-    invoke-static {v4, p1}, Lnfi;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_4
-
-    :cond_11
-    iget p1, v5, Lh65;->f:I
-
-    add-int/2addr p1, v0
-
-    iput p1, v5, Lh65;->f:I
-
-    invoke-virtual {v6, v8, v3}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    goto :goto_4
-
-    :pswitch_6
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1, p3}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_12
-
-    const-string p1, "Ignored SET_STOP_REASON: Missing stop_reason extra"
-
-    invoke-static {v4, p1}, Lnfi;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_4
-
-    :cond_12
-    invoke-virtual {p1, p3, p2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result p1
-
-    iget p3, v5, Lh65;->f:I
-
-    add-int/2addr p3, v0
-
-    iput p3, v5, Lh65;->f:I
-
-    invoke-virtual {v6, v10, p1, p2, v3}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    :goto_4
-    :pswitch_7
-    iput-boolean p2, p0, Ls65;->o:Z
-
-    iget p1, v5, Lh65;->g:I
-
-    if-nez p1, :cond_13
-
-    iget p1, v5, Lh65;->f:I
-
-    if-nez p1, :cond_13
-
-    invoke-virtual {p0}, Ls65;->b()V
-
-    :cond_13
     return v0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7b47cdc8 -> :sswitch_8
-        -0x47112489 -> :sswitch_7
-        -0x274df87d -> :sswitch_6
-        -0xe367804 -> :sswitch_5
-        0x1f2a425 -> :sswitch_4
-        0x1bab7dfe -> :sswitch_3
-        0x3175ed72 -> :sswitch_2
-        0x3267e259 -> :sswitch_1
-        0x6815b736 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_7
-        :pswitch_7
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final onTaskRemoved(Landroid/content/Intent;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    instance-of v0, p1, Ls65;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast p1, Ls65;
+
+    iget-wide v2, p0, Ls65;->a:J
+
+    iget-wide v4, p1, Ls65;->a:J
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_1
+
+    iget-wide v2, p0, Ls65;->b:J
+
+    iget-wide v4, p1, Ls65;->b:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_1
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Ls65;->d:Z
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Ls65;->a:J
+
+    long-to-int v0, v0
+
+    mul-int/lit16 v0, v0, 0x3c1
+
+    iget-wide v1, p0, Ls65;->b:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Ls65;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p0, Ls65;->b:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     return-void
 .end method

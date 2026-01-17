@@ -4,8 +4,10 @@
 
 
 # virtual methods
-.method public abstract i()Ljava/lang/String;
-.end method
+.method public x(Lpq9;)Licg;
+    .locals 0
 
-.method public abstract j()Z
+    sget-object p1, Licg;->b:Lhcg;
+
+    return-object p1
 .end method

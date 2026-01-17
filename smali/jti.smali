@@ -1,281 +1,482 @@
-.class public abstract Ljti;
-.super Ljava/lang/Object;
+.class public final Ljti;
+.super Lz7a;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[Ljava/lang/String;
+# instance fields
+.field public final synthetic b:Lcom/google/android/gms/common/internal/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;Landroid/os/Looper;)V
+    .locals 0
 
-    const-string v0, "/proc/self"
+    iput-object p1, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
 
-    const-string v1, "/data/data/ru.oneme.app"
+    const/4 p1, 0x6
 
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ljti;->a:[Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Lz7a;-><init>(Landroid/os/Looper;I)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;II)V
-    .locals 2
 
-    new-instance v0, Landroid/graphics/Rect;
+# virtual methods
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 9
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    iget-object v0, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
 
-    invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->G0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p0}, Landroid/view/View;->isLayoutRequested()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
-
-    move-result v1
-
-    if-ge v1, p1, :cond_0
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
-
-    move-result v1
-
-    sub-int/2addr p1, v1
-
-    iget v1, v0, Landroid/graphics/Rect;->left:I
-
-    div-int/lit8 p1, p1, 0x2
-
-    sub-int/2addr v1, p1
-
-    iput v1, v0, Landroid/graphics/Rect;->left:I
-
-    iget v1, v0, Landroid/graphics/Rect;->right:I
-
-    add-int/2addr v1, p1
-
-    iput v1, v0, Landroid/graphics/Rect;->right:I
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
-
-    move-result p1
-
-    if-ge p1, p2, :cond_1
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
-
-    move-result p1
-
-    sub-int/2addr p2, p1
-
-    iget p1, v0, Landroid/graphics/Rect;->top:I
-
-    div-int/lit8 p2, p2, 0x2
-
-    sub-int/2addr p1, p2
-
-    iput p1, v0, Landroid/graphics/Rect;->top:I
-
-    iget p1, v0, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr p1, p2
-
-    iput p1, v0, Landroid/graphics/Rect;->bottom:I
-
-    :cond_1
-    new-instance p1, Lar5;
-
-    invoke-direct {p1, v0, p0}, Lar5;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
-
-    return-void
-
-    :cond_2
-    new-instance v1, Llpg;
-
-    invoke-direct {v1, p0, v0, p1, p2}, Llpg;-><init>(Landroid/view/View;Landroid/graphics/Rect;II)V
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    return-void
-.end method
-
-.method public static b(ILandroid/view/View;Landroid/view/ViewGroup;)V
-    .locals 8
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lxp3;
-
-    const/4 v7, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v5, 0x0
-
-    move v4, p0
-
-    move-object v1, p1
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v7}, Lxp3;-><init>(Landroid/view/View;IIIILandroid/view/View;I)V
-
-    invoke-virtual {v6, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public static final c(Landroid/view/View;)I
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_2
-
-    invoke-virtual {p0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-static {p0}, Lvud;->j(Landroid/view/TouchDelegate;)Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-static {p0}, Lvud;->b(Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;)I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
 
-    if-gtz v0, :cond_0
+    iget v1, p1, Landroid/os/Message;->arg1:I
 
-    const/4 p0, 0x0
+    const/4 v2, 0x7
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-eq v0, v1, :cond_2
+
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    if-eq v0, v3, :cond_1
+
+    if-eq v0, v4, :cond_1
+
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p0}, Lvud;->d(Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;)Landroid/graphics/Region;
-
-    move-result-object p0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Landroid/graphics/Region;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    iget p0, p0, Landroid/graphics/Rect;->left:I
-
-    return p0
+    return-void
 
     :cond_1
-    const/4 p0, -0x1
+    :goto_0
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    return p0
+    check-cast p1, Luqi;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Luqi;->c()V
+
+    return-void
 
     :cond_2
-    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    move-result p0
+    const/4 v1, 0x4
 
-    return p0
-.end method
+    const/4 v5, 0x5
 
-.method public static final d(Lm4h;)V
-    .locals 3
+    if-eq v0, v4, :cond_4
 
-    new-instance v0, Ll07;
+    if-eq v0, v2, :cond_4
 
-    const/4 v1, 0x5
+    if-ne v0, v1, :cond_3
 
-    invoke-direct {v0, v1}, Ll07;-><init>(I)V
+    goto :goto_1
 
-    const/16 v1, 0x1b7
+    :cond_3
+    if-ne v0, v5, :cond_5
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    :cond_4
+    :goto_1
+    iget-object v0, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
 
-    new-instance v0, Ll07;
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->d()Z
 
+    move-result v0
+
+    if-eqz v0, :cond_1a
+
+    :cond_5
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    const/16 v6, 0x8
+
+    const/4 v7, 0x3
+
+    const/4 v8, 0x0
+
+    if-ne v0, v1, :cond_b
+
+    iget-object v0, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
+
+    new-instance v1, Lyv3;
+
+    iget p1, p1, Landroid/os/Message;->arg2:I
+
+    invoke-direct {v1, p1}, Lyv3;-><init>(I)V
+
+    iput-object v1, v0, Lcom/google/android/gms/common/internal/a;->D0:Lyv3;
+
+    iget-boolean p1, v0, Lcom/google/android/gms/common/internal/a;->E0:Z
+
+    if-eqz p1, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->p()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    goto :goto_2
+
+    :cond_8
+    :try_start_0
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->p()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object p1, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-boolean v0, p1, Lcom/google/android/gms/common/internal/a;->E0:Z
+
+    if-eqz v0, :cond_9
+
+    goto :goto_2
+
+    :cond_9
+    invoke-virtual {p1, v7, v8}, Lcom/google/android/gms/common/internal/a;->v(ILandroid/os/IInterface;)V
+
+    return-void
+
+    :catch_0
+    :goto_2
+    iget-object p1, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, p1, Lcom/google/android/gms/common/internal/a;->D0:Lyv3;
+
+    if-eqz v0, :cond_a
+
+    goto :goto_3
+
+    :cond_a
+    new-instance v0, Lyv3;
+
+    invoke-direct {v0, v6}, Lyv3;-><init>(I)V
+
+    :goto_3
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->t0:Lpk0;
+
+    invoke-interface {p1, v0}, Lpk0;->f(Lyv3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+
+    :cond_b
+    if-ne v0, v5, :cond_d
+
+    iget-object p1, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, p1, Lcom/google/android/gms/common/internal/a;->D0:Lyv3;
+
+    if-eqz v0, :cond_c
+
+    goto :goto_4
+
+    :cond_c
+    new-instance v0, Lyv3;
+
+    invoke-direct {v0, v6}, Lyv3;-><init>(I)V
+
+    :goto_4
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->t0:Lpk0;
+
+    invoke-interface {p1, v0}, Lpk0;->f(Lyv3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+
+    :cond_d
+    if-ne v0, v7, :cond_f
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    instance-of v1, v0, Landroid/app/PendingIntent;
+
+    if-eqz v1, :cond_e
+
+    move-object v8, v0
+
+    check-cast v8, Landroid/app/PendingIntent;
+
+    :cond_e
+    new-instance v0, Lyv3;
+
+    iget p1, p1, Landroid/os/Message;->arg2:I
+
+    invoke-direct {v0, p1, v8}, Lyv3;-><init>(ILandroid/app/PendingIntent;)V
+
+    iget-object p1, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->t0:Lpk0;
+
+    invoke-interface {p1, v0}, Lpk0;->f(Lyv3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+
+    :cond_f
     const/4 v1, 0x6
 
-    invoke-direct {v0, v1}, Ll07;-><init>(I)V
+    if-ne v0, v1, :cond_11
 
-    const/16 v1, 0x25c
+    iget-object v0, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    invoke-virtual {v0, v5, v8}, Lcom/google/android/gms/common/internal/a;->v(ILandroid/os/IInterface;)V
 
-    new-instance v0, Lky4;
+    iget-object v0, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
 
-    const/16 v1, 0xa
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->y0:Ly2e;
 
-    invoke-direct {v0, v1}, Lky4;-><init>(I)V
+    if-eqz v0, :cond_10
 
-    const/16 v1, 0x24c
+    iget p1, p1, Landroid/os/Message;->arg2:I
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    iget-object v0, v0, Ly2e;->a:Ljava/lang/Object;
 
-    new-instance v0, Ll07;
+    check-cast v0, Le07;
 
-    const/4 v1, 0x7
+    invoke-interface {v0, p1}, Le07;->B(I)V
 
-    invoke-direct {v0, v1}, Ll07;-><init>(I)V
+    :cond_10
+    iget-object p1, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
 
-    const/16 v1, 0x249
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->s()V
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    iget-object p1, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
 
-    new-instance v0, Lv5f;
+    invoke-static {p1, v5, v4, v8}, Lcom/google/android/gms/common/internal/a;->u(Lcom/google/android/gms/common/internal/a;IILandroid/os/IInterface;)Z
 
-    invoke-direct {v0}, Lv5f;-><init>()V
+    return-void
 
-    new-instance v1, Lmp6;
+    :cond_11
+    if-ne v0, v3, :cond_13
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Ljti;->b:Lcom/google/android/gms/common/internal/a;
 
-    invoke-direct {v1, v2, v0}, Lmp6;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->isConnected()Z
 
-    const/16 v0, 0x25d
+    move-result v0
 
-    invoke-virtual {p0, v0, v1}, Lm4h;->e(ILys7;)V
+    if-eqz v0, :cond_12
 
-    new-instance v0, Ll07;
+    goto :goto_5
 
-    const/16 v1, 0x8
+    :cond_12
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ll07;-><init>(I)V
+    check-cast p1, Luqi;
 
-    const/16 v1, 0x25e
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, v1, v0}, Lm4h;->e(ILys7;)V
+    invoke-virtual {p1}, Luqi;->c()V
+
+    return-void
+
+    :cond_13
+    :goto_5
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    if-eq v0, v3, :cond_15
+
+    if-eq v0, v4, :cond_15
+
+    if-ne v0, v2, :cond_14
+
+    goto :goto_6
+
+    :cond_14
+    const-string p1, "Don\'t know how to handle message: "
+
+    invoke-static {v0, p1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/Exception;
+
+    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
+
+    const-string v1, "GmsClient"
+
+    invoke-static {v1, p1, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+
+    :cond_15
+    :goto_6
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    move-object v0, p1
+
+    check-cast v0, Luqi;
+
+    const-string p1, "Callback proxy "
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, v0, Luqi;->a:Ljava/lang/Boolean;
+
+    iget-boolean v2, v0, Luqi;->b:Z
+
+    if-eqz v2, :cond_16
+
+    const-string v2, "GmsClient"
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " being reused. This is not safe."
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_7
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_9
+
+    :cond_16
+    :goto_7
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v1, :cond_19
+
+    iget-object p1, v0, Luqi;->f:Lcom/google/android/gms/common/internal/a;
+
+    iget v1, v0, Luqi;->d:I
+
+    if-nez v1, :cond_17
+
+    invoke-virtual {v0}, Luqi;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_19
+
+    invoke-virtual {p1, v4, v8}, Lcom/google/android/gms/common/internal/a;->v(ILandroid/os/IInterface;)V
+
+    new-instance p1, Lyv3;
+
+    invoke-direct {p1, v6, v8}, Lyv3;-><init>(ILandroid/app/PendingIntent;)V
+
+    invoke-virtual {v0, p1}, Luqi;->a(Lyv3;)V
+
+    goto :goto_8
+
+    :cond_17
+    invoke-virtual {p1, v4, v8}, Lcom/google/android/gms/common/internal/a;->v(ILandroid/os/IInterface;)V
+
+    iget-object p1, v0, Luqi;->e:Landroid/os/Bundle;
+
+    if-eqz p1, :cond_18
+
+    const-string v2, "pendingIntent"
+
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    move-object v8, p1
+
+    check-cast v8, Landroid/app/PendingIntent;
+
+    :cond_18
+    new-instance p1, Lyv3;
+
+    invoke-direct {p1, v1, v8}, Lyv3;-><init>(ILandroid/app/PendingIntent;)V
+
+    invoke-virtual {v0, p1}, Luqi;->a(Lyv3;)V
+
+    :cond_19
+    :goto_8
+    monitor-enter v0
+
+    :try_start_2
+    iput-boolean v4, v0, Luqi;->b:Z
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    invoke-virtual {v0}, Luqi;->c()V
+
+    return-void
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw p1
+
+    :goto_9
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p1
+
+    :cond_1a
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast p1, Luqi;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Luqi;->c()V
 
     return-void
 .end method

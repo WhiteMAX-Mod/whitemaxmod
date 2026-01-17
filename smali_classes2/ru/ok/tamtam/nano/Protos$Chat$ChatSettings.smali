@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
-.super Lsp9;
+.super Lbp9;
 .source "SourceFile"
 
 
@@ -40,7 +40,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lsp9;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->clear()Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
 
@@ -54,7 +54,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ldu7;->b:Ljava/lang/Object;
+    sget-object v0, Llt7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -96,7 +96,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
+.method public static parseFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -109,7 +109,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
 
     move-result-object p0
 
@@ -129,7 +129,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;-><init>()V
 
-    invoke-static {v0, p0}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
+    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
 
     move-result-object p0
 
@@ -147,7 +147,7 @@
 
     iput-wide v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->dontDisturbUntil:J
 
-    sget-object v2, Lk1j;->a:[I
+    sget-object v2, Lc2j;->a:[I
 
     iput-object v2, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->options:[I
 
@@ -167,7 +167,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lsp9;->cachedSize:I
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-object p0
 .end method
@@ -187,7 +187,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v4, v0, v1}, Lmg3;->h(IJ)I
+    invoke-static {v4, v0, v1}, Lwg3;->h(IJ)I
 
     move-result v0
 
@@ -216,7 +216,7 @@
 
     aget v4, v4, v5
 
-    invoke-static {v4}, Lmg3;->g(I)I
+    invoke-static {v4}, Lwg3;->g(I)I
 
     move-result v4
 
@@ -242,7 +242,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v4, v5}, Lmg3;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -257,7 +257,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v1, v4, v5}, Lmg3;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -270,7 +270,7 @@
 
     const/4 v1, 0x6
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -285,7 +285,7 @@
 
     const/4 v1, 0x7
 
-    invoke-static {v1, v4, v5}, Lmg3;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -300,7 +300,7 @@
 
     const/16 v1, 0x8
 
-    invoke-static {v1, v4, v5}, Lmg3;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -315,7 +315,7 @@
 
     const/16 v1, 0x9
 
-    invoke-static {v1, v4, v5}, Lmg3;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -327,7 +327,23 @@
     return v0
 .end method
 
-.method public mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
+.method public bridge synthetic mergeFrom(Lvg3;)Lbp9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
     .locals 9
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -338,7 +354,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Llg3;->s()I
+    invoke-virtual {p1}, Lvg3;->s()I
 
     move-result v0
 
@@ -387,7 +403,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Llg3;->u(I)Z
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
 
     move-result v0
 
@@ -397,7 +413,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -408,7 +424,7 @@
 
     .line 6
     :cond_2
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -419,7 +435,7 @@
 
     .line 8
     :cond_3
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -430,7 +446,7 @@
 
     .line 10
     :cond_4
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -440,7 +456,7 @@
 
     .line 11
     :cond_5
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -451,7 +467,7 @@
 
     .line 13
     :cond_6
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -462,17 +478,17 @@
 
     .line 15
     :cond_7
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v0
 
     .line 16
-    invoke-virtual {p1, v0}, Llg3;->e(I)I
+    invoke-virtual {p1, v0}, Lvg3;->e(I)I
 
     move-result v0
 
     .line 17
-    invoke-virtual {p1}, Llg3;->c()I
+    invoke-virtual {p1}, Lvg3;->c()I
 
     move-result v1
 
@@ -480,14 +496,14 @@
 
     .line 18
     :goto_1
-    invoke-virtual {p1}, Llg3;->b()I
+    invoke-virtual {p1}, Lvg3;->b()I
 
     move-result v6
 
     if-lez v6, :cond_9
 
     .line 19
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v6
 
@@ -508,7 +524,7 @@
     if-eqz v5, :cond_e
 
     .line 20
-    invoke-virtual {p1, v1}, Llg3;->t(I)V
+    invoke-virtual {p1, v1}, Lvg3;->t(I)V
 
     .line 21
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->options:[I
@@ -536,14 +552,14 @@
     .line 24
     :cond_b
     :goto_3
-    invoke-virtual {p1}, Llg3;->b()I
+    invoke-virtual {p1}, Lvg3;->b()I
 
     move-result v1
 
     if-lez v1, :cond_d
 
     .line 25
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v1
 
@@ -571,13 +587,13 @@
 
     .line 28
     :cond_e
-    invoke-virtual {p1, v0}, Llg3;->d(I)V
+    invoke-virtual {p1, v0}, Lvg3;->d(I)V
 
     goto/16 :goto_0
 
     .line 29
     :cond_f
-    invoke-static {p1, v1}, Lk1j;->b(Llg3;I)I
+    invoke-static {p1, v1}, Lc2j;->e(Lvg3;I)I
 
     move-result v0
 
@@ -594,11 +610,11 @@
     if-eqz v5, :cond_10
 
     .line 31
-    invoke-virtual {p1}, Llg3;->s()I
+    invoke-virtual {p1}, Lvg3;->s()I
 
     .line 32
     :cond_10
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v7
 
@@ -670,7 +686,7 @@
 
     .line 40
     :cond_16
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -684,23 +700,7 @@
     return-object p0
 .end method
 
-.method public bridge synthetic mergeFrom(Llg3;)Lsp9;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public writeTo(Lmg3;)V
+.method public writeTo(Lwg3;)V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -718,7 +718,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1, v4, v0, v1}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lwg3;->x(IJ)V
 
     :cond_0
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->options:[I
@@ -742,7 +742,7 @@
 
     aget v1, v1, v0
 
-    invoke-virtual {p1, v4, v1}, Lmg3;->w(II)V
+    invoke-virtual {p1, v4, v1}, Lwg3;->w(II)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -757,7 +757,7 @@
 
     const/4 v4, 0x3
 
-    invoke-virtual {p1, v4, v0, v1}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lwg3;->x(IJ)V
 
     :cond_2
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->favoriteIndex:J
@@ -768,7 +768,7 @@
 
     const/4 v4, 0x4
 
-    invoke-virtual {p1, v4, v0, v1}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lwg3;->x(IJ)V
 
     :cond_3
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->hideLiveLocationPanel:Z
@@ -777,7 +777,7 @@
 
     const/4 v1, 0x6
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_4
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->hideMyLiveLocationPanelBeforeTime:J
@@ -788,7 +788,7 @@
 
     const/4 v4, 0x7
 
-    invoke-virtual {p1, v4, v0, v1}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lwg3;->x(IJ)V
 
     :cond_5
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->hideLiveLocationPanelBeforeTime:J
@@ -799,7 +799,7 @@
 
     const/16 v4, 0x8
 
-    invoke-virtual {p1, v4, v0, v1}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lwg3;->x(IJ)V
 
     :cond_6
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatSettings;->lastNotifMessageId:J
@@ -810,7 +810,7 @@
 
     const/16 v2, 0x9
 
-    invoke-virtual {p1, v2, v0, v1}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v2, v0, v1}, Lwg3;->x(IJ)V
 
     :cond_7
     return-void

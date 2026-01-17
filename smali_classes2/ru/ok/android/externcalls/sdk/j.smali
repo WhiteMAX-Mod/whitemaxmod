@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljaf;
+.implements Lay3;
 
 
 # instance fields
@@ -11,13 +11,11 @@
 
 .field public final synthetic b:Z
 
-.field public final synthetic c:Lw11;
-
-.field public final synthetic d:Lvx3;
+.field public final synthetic c:Lby3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLw11;Lvx3;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLby3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,27 +24,25 @@
 
     iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/j;->b:Z
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/j;->c:Lw11;
-
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/j;->d:Lvx3;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/j;->c:Lby3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/j;->c:Lw11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/j;->c:Lby3;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/j;->d:Lvx3;
+    check-cast p1, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/j;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/j;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    iget-boolean v3, p0, Lru/ok/android/externcalls/sdk/j;->b:Z
+    iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/j;->b:Z
 
-    invoke-static {v2, v3, v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->v(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLw11;Lvx3;Lorg/json/JSONObject;)V
+    invoke-static {v1, v2, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->S(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLby3;Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;)V
 
     return-void
 .end method

@@ -19,7 +19,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/video/DisplayLayoutSender$SendFilter;",
         "condition",
-        "Lv2h;",
+        "Lb3h;",
         "applyFilter",
         "(Lru/ok/android/externcalls/sdk/video/DisplayLayoutSender$SendFilter;)V",
         "",

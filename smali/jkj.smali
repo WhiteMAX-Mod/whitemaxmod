@@ -4,180 +4,197 @@
 
 
 # direct methods
-.method public static final a(Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/StackTraceElement;
-    .locals 3
+.method public static a(Ljava/lang/String;Z)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    const/4 v0, 0x0
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    aget-object p0, p0, v0
+    throw p1
+.end method
 
-    new-instance v0, Ljava/lang/StackTraceElement;
+.method public static b(Z)V
+    .locals 0
 
-    const-string v1, "_COROUTINE."
+    if-eqz p0, :cond_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static c(ILjava/lang/String;II)V
+    .locals 3
+
+    const-string v0, ", "
+
+    const-string v1, " is out of range of ["
+
+    if-lt p0, p2, :cond_1
+
+    if-gt p0, p3, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "] (too high)"
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    throw p0
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getLineNumber()I
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    move-result p0
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string v2, "_"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v2, v1, p0}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-object v0
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "] (too low)"
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method public static b(Ljava/util/Collection;Lghg;Lfhg;)Lgrc;
-    .locals 7
+.method public static d(I)V
+    .locals 0
 
-    new-instance v0, Lgrc;
+    if-ltz p0, :cond_0
 
-    new-instance v1, Lzt3;
+    return-void
 
-    sget v2, Lifb;->G0:I
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    sget v3, Lkfb;->f2:I
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    new-instance v4, Lbhg;
-
-    invoke-direct {v4, v3}, Lbhg;-><init>(I)V
-
-    const/4 v3, 0x1
-
-    const/16 v5, 0x38
-
-    invoke-direct {v1, v2, v4, v3, v5}, Lzt3;-><init>(ILghg;II)V
-
-    new-instance v2, Lzt3;
-
-    sget v3, Lifb;->I0:I
-
-    sget v4, Ll5e;->q:I
-
-    new-instance v6, Lbhg;
-
-    invoke-direct {v6, v4}, Lbhg;-><init>(I)V
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v6, v4, v5}, Lzt3;-><init>(ILghg;II)V
-
-    filled-new-array {v1, v2}, [Lzt3;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-static {p0}, Lei3;->a0(Ljava/util/Collection;)[J
-
-    move-result-object p0
-
-    new-instance v2, Lysb;
-
-    const-string v3, "profile:memberslist:ids_to_delete"
-
-    invoke-direct {v2, v3, p0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v2}, [Lysb;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    invoke-direct {v0, p1, p2, v1, p0}, Lgrc;-><init>(Lghg;Lghg;Ljava/util/List;Landroid/os/Bundle;)V
-
-    return-object v0
+    throw p0
 .end method
 
-.method public static c(Ljava/util/Collection;Lghg;Lfhg;)Lgrc;
-    .locals 8
+.method public static e(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lgrc;
+    if-eqz p0, :cond_0
 
-    new-instance v1, Lzt3;
+    return-void
 
-    sget v2, Lifb;->H0:I
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    sget v3, Lkfb;->f2:I
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    new-instance v4, Lbhg;
+    move-result-object p1
 
-    invoke-direct {v4, v3}, Lbhg;-><init>(I)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    const/4 v3, 0x1
+    throw p0
+.end method
 
-    const/16 v5, 0x38
+.method public static f(Ljava/lang/String;Z)V
+    .locals 0
 
-    invoke-direct {v1, v2, v4, v3, v5}, Lzt3;-><init>(ILghg;II)V
+    if-eqz p1, :cond_0
 
-    new-instance v2, Lzt3;
+    return-void
 
-    sget v4, Lifb;->J0:I
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    sget v6, Lkfb;->g2:I
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v7, Lbhg;
+    throw p1
+.end method
 
-    invoke-direct {v7, v6}, Lbhg;-><init>(I)V
+.method public static final g(Lxpe;)Ll28;
+    .locals 1
 
-    invoke-direct {v2, v4, v7, v3, v5}, Lzt3;-><init>(ILghg;II)V
+    instance-of v0, p0, Lw74;
 
-    new-instance v3, Lzt3;
+    if-eqz v0, :cond_0
 
-    sget v4, Lifb;->I0:I
+    check-cast p0, Lw74;
 
-    sget v6, Ll5e;->q:I
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v7, Lbhg;
+    const/4 p0, 0x0
 
-    invoke-direct {v7, v6}, Lbhg;-><init>(I)V
+    return-object p0
 
-    const/4 v6, 0x2
+    :cond_0
+    instance-of v0, p0, Lype;
 
-    invoke-direct {v3, v4, v7, v6, v5}, Lzt3;-><init>(ILghg;II)V
+    if-eqz v0, :cond_1
 
-    filled-new-array {v1, v2, v3}, [Lzt3;
+    check-cast p0, Lype;
 
-    move-result-object v1
+    iget-object p0, p0, Lype;->a:Lxpe;
 
-    invoke-static {v1}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-static {p0}, Lei3;->a0(Ljava/util/Collection;)[J
-
-    move-result-object p0
-
-    new-instance v2, Lysb;
-
-    const-string v3, "profile:memberslist:ids_to_delete"
-
-    invoke-direct {v2, v3, p0}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v2}, [Lysb;
+    invoke-static {p0}, Ljkj;->g(Lxpe;)Ll28;
 
     move-result-object p0
 
-    invoke-static {p0}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
+    return-object p0
 
-    move-result-object p0
+    :cond_1
+    const/4 p0, 0x0
 
-    invoke-direct {v0, p1, p2, v1, p0}, Lgrc;-><init>(Lghg;Lghg;Ljava/util/List;Landroid/os/Bundle;)V
-
-    return-object v0
+    return-object p0
 .end method

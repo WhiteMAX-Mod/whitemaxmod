@@ -13,7 +13,7 @@
 
 .field public c:I
 
-.field public d:Lyi4;
+.field public d:Lzi4;
 
 
 # direct methods
@@ -37,7 +37,7 @@
 
 
 # virtual methods
-.method public final S(Lpsg;)V
+.method public final S(Lxsg;)V
     .locals 2
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -62,12 +62,12 @@
     return-void
 .end method
 
-.method public final b(I)V
+.method public final a(I)V
     .locals 4
 
-    iget-object v0, p0, Ldk0;->d:Lyi4;
+    iget-object v0, p0, Ldk0;->d:Lzi4;
 
-    sget v1, Loah;->a:I
+    sget v1, Lkbh;->a:I
 
     const/4 v1, 0x0
 
@@ -82,13 +82,13 @@
 
     move-result-object v2
 
-    check-cast v2, Lpsg;
+    check-cast v2, Lxsg;
 
     iget-boolean v3, p0, Ldk0;->a:Z
 
-    check-cast v2, Lco4;
+    check-cast v2, Ldo4;
 
-    invoke-virtual {v2, v0, v3, p1}, Lco4;->d(Lyi4;ZI)V
+    invoke-virtual {v2, v0, v3, p1}, Ldo4;->d(Lzi4;ZI)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -98,12 +98,12 @@
     return-void
 .end method
 
-.method public final c()V
+.method public final b()V
     .locals 4
 
-    iget-object v0, p0, Ldk0;->d:Lyi4;
+    iget-object v0, p0, Ldk0;->d:Lzi4;
 
-    sget v1, Loah;->a:I
+    sget v1, Lkbh;->a:I
 
     const/4 v1, 0x0
 
@@ -118,13 +118,13 @@
 
     move-result-object v2
 
-    check-cast v2, Lpsg;
+    check-cast v2, Lxsg;
 
     iget-boolean v3, p0, Ldk0;->a:Z
 
-    check-cast v2, Lco4;
+    check-cast v2, Ldo4;
 
-    invoke-virtual {v2, v0, v3}, Lco4;->e(Lyi4;Z)V
+    invoke-virtual {v2, v0, v3}, Ldo4;->e(Lzi4;Z)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -133,12 +133,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Ldk0;->d:Lyi4;
+    iput-object v0, p0, Ldk0;->d:Lzi4;
 
     return-void
 .end method
 
-.method public final e()V
+.method public final c()V
     .locals 2
 
     const/4 v0, 0x0
@@ -154,7 +154,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lpsg;
+    check-cast v1, Lxsg;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -166,10 +166,10 @@
     return-void
 .end method
 
-.method public final f(Lyi4;)V
+.method public final d(Lzi4;)V
     .locals 3
 
-    iput-object p1, p0, Ldk0;->d:Lyi4;
+    iput-object p1, p0, Ldk0;->d:Lzi4;
 
     const/4 v0, 0x0
 
@@ -184,13 +184,13 @@
 
     move-result-object v1
 
-    check-cast v1, Lpsg;
+    check-cast v1, Lxsg;
 
     iget-boolean v2, p0, Ldk0;->a:Z
 
-    check-cast v1, Lco4;
+    check-cast v1, Ldo4;
 
-    invoke-virtual {v1, p1, v2}, Lco4;->f(Lyi4;Z)V
+    invoke-virtual {v1, p1, v2}, Ldo4;->f(Lzi4;Z)V
 
     add-int/lit8 v0, v0, 0x1
 

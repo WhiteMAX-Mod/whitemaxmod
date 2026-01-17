@@ -1,5 +1,5 @@
 .class public final Ldh0;
-.super Lc4h;
+.super Lh4h;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/io/File;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p3}, Lc4h;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p3}, Lh4h;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     iput-object p2, p0, Ldh0;->e:Ljava/io/File;
 
@@ -43,7 +43,7 @@
 .method public final e()[B
     .locals 6
 
-    iget-object v0, p0, Lc4h;->d:Landroid/content/Context;
+    iget-object v0, p0, Lh4h;->d:Landroid/content/Context;
 
     iget-object v1, p0, Ldh0;->e:Ljava/io/File;
 

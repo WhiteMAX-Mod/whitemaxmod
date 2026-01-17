@@ -1,142 +1,91 @@
-.class public final Lvmd;
-.super Lxbg;
+.class public final synthetic Lvmd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnq6;
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public d:Z
+.field public final synthetic b:Lxmd;
+
+.field public final synthetic c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lgr9;)V
+.method public synthetic constructor <init>(Lxmd;Ljava/util/ArrayList;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
+    iput p3, p0, Lvmd;->a:I
 
-    const/4 p1, 0x1
+    iput-object p1, p0, Lvmd;->b:Lxmd;
 
-    iput-boolean p1, p0, Lvmd;->d:Z
+    iput-object p2, p0, Lvmd;->c:Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lvmd;->a:I
 
-    const-string v0, "tls"
+    check-cast p1, Lf7e;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lvmd;->b:Lxmd;
 
-    if-nez v0, :cond_1
+    iget-object v0, v0, Lxmd;->b:Lai;
 
-    const-string v0, "redirectHost"
+    iget-object v1, p0, Lvmd;->c:Ljava/util/ArrayList;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1, v1}, Luk5;->c(Lf7e;Ljava/lang/Iterable;)V
 
-    move-result p2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    if-nez p2, :cond_0
+    return-object p1
 
-    invoke-virtual {p1}, Lgr9;->y()V
+    :pswitch_0
+    iget-object p1, p0, Lvmd;->b:Lxmd;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_0
-    invoke-static {p1}, Lisi;->p(Lgr9;)Ljava/lang/String;
+    iget-object v0, p1, Lxmd;->a:Lb2e;
 
-    move-result-object p1
+    new-instance v1, Lxob;
 
-    iput-object p1, p0, Lvmd;->c:Ljava/lang/String;
+    const/16 v2, 0x18
 
-    return-void
+    invoke-direct {v1, v2}, Lxob;-><init>(I)V
 
-    :cond_1
-    invoke-virtual {p1}, Lgr9;->G0()Z
+    const/4 v2, 0x0
 
-    move-result p1
+    const/4 v3, 0x1
 
-    iput-boolean p1, p0, Lvmd;->d:Z
+    invoke-static {v0, v2, v3, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
 
-    return-void
-.end method
+    new-instance v1, Lvmd;
 
-.method public final f()Ljava/lang/String;
-    .locals 3
+    const/4 v4, 0x1
 
-    iget-object v0, p0, Lvmd;->c:Ljava/lang/String;
+    iget-object v5, p0, Lvmd;->c:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Ltri;->e(Ljava/lang/CharSequence;)Z
+    invoke-direct {v1, p1, v5, v4}, Lvmd;-><init>(Lxmd;Ljava/util/ArrayList;I)V
 
-    move-result v0
+    invoke-static {v0, v2, v3, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    goto :goto_0
 
-    iget-object v0, p0, Lvmd;->c:Ljava/lang/String;
-
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    iget-object v1, p0, Lvmd;->c:Ljava/lang/String;
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-object v0, p0, Lvmd;->c:Ljava/lang/String;
-
-    iget-boolean v1, p0, Lvmd;->d:Z
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "{redirectHost=\'"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', tls="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,114 +1,23 @@
-.class public final synthetic Lyv5;
+.class public final Lyv5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls2g;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/List;
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+.method public constructor <init>(JLjava/util/List;)V
     .locals 0
-
-    iput p4, p0, Lyv5;->a:I
-
-    iput-object p1, p0, Lyv5;->c:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lyv5;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p3, p0, Lyv5;->a:Ljava/util/List;
+
+    iput-wide p1, p0, Lyv5;->b:J
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 9
-
-    iget v0, p0, Lyv5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lyv5;->c:Ljava/lang/Object;
-
-    check-cast v0, Lkw5;
-
-    new-instance v1, Lnef;
-
-    invoke-direct {v1}, Lnef;-><init>()V
-
-    iget-object v2, v0, Lkw5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v0, v0, Lkw5;->a:Lo2b;
-
-    new-instance v3, Lfu;
-
-    invoke-virtual {v0}, Lo2b;->s()Lpfc;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lpfc;->a:Ldj8;
-
-    invoke-virtual {v4}, Lcfe;->k()J
-
-    move-result-wide v5
-
-    const/4 v4, 0x4
-
-    iget-wide v7, p0, Lyv5;->b:J
-
-    invoke-direct/range {v3 .. v8}, Lfu;-><init>(IJJ)V
-
-    invoke-virtual {v0}, Lo2b;->t()Lxcg;
-
-    move-result-object v0
-
-    const/16 v4, 0xc
-
-    const/4 v5, 0x0
-
-    invoke-static {v0, v3, v5, v4}, Lxcg;->d(Lxcg;Lum;ZI)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lyv5;->c:Ljava/lang/Object;
-
-    check-cast v0, Lcw5;
-
-    new-instance v1, Lxv5;
-
-    const/4 v2, 0x0
-
-    iget-wide v3, p0, Lyv5;->b:J
-
-    invoke-direct {v1, v0, v3, v4, v2}, Lxv5;-><init>(Ljava/lang/Object;JI)V
-
-    invoke-virtual {v0, v1}, Lcw5;->a(Ljava/util/concurrent/Callable;)Lnef;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

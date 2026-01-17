@@ -1,186 +1,98 @@
-.class public final Lto2;
-.super Lie0;
+.class public final synthetic Lto2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final b:Lbhg;
+.field public final synthetic a:I
 
-.field public final c:Ljava/lang/Integer;
-
-.field public final d:Lghg;
+.field public final synthetic b:Luo2;
 
 
 # direct methods
-.method public constructor <init>(Lbhg;Ljava/lang/Integer;Lghg;)V
-    .locals 1
+.method public synthetic constructor <init>(Luo2;I)V
+    .locals 0
 
-    const/4 v0, 0x4
+    iput p2, p0, Lto2;->a:I
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    iput-object p1, p0, Lto2;->b:Luo2;
 
-    iput-object p1, p0, Lto2;->b:Lbhg;
-
-    iput-object p2, p0, Lto2;->c:Ljava/lang/Integer;
-
-    iput-object p3, p0, Lto2;->d:Lghg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lto2;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lto2;
-
-    iget-object v0, p0, Lto2;->b:Lbhg;
-
-    iget-object v1, p1, Lto2;->b:Lbhg;
-
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lto2;->c:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lto2;->c:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lto2;->d:Lghg;
-
-    iget-object p1, p1, Lto2;->d:Lghg;
-
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final invoke()Ljava/lang/Object;
     .locals 3
 
-    iget-object v0, p0, Lto2;->b:Lbhg;
+    iget v0, p0, Lto2;->a:I
 
-    iget v0, v0, Lbhg;->c:I
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v0, p0, Lto2;->b:Luo2;
 
-    move-result v0
+    sget-object v1, Lpc3;->t0:Lkme;
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lto2;->c:Ljava/lang/Integer;
-
-    if-nez v2, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lto2;->d:Lghg;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_1
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lto2;->b:Lbhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lto2;->c:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lto2;->d:Lghg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
     move-result-object v0
 
+    invoke-interface {v0}, Lzlb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lxf0;->a:Lwf0;
+
+    iget v0, v0, Lwf0;->h:I
+
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    return-object v1
+
+    :pswitch_0
+    sget v0, Lv5e;->Z:I
+
+    sget-object v1, Lpc3;->t0:Lkme;
+
+    iget-object v2, p0, Lto2;->b:Luo2;
+
+    invoke-virtual {v1, v2}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
+
+    move-result-object v1
+
+    iget v1, v1, Lwe7;->h:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

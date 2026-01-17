@@ -25,10 +25,10 @@
 
     .line 5
     :cond_0
-    sget-object p1, Lmh5;->a:Lmh5;
+    sget-object p1, Lnh5;->a:Lnh5;
 
     .line 6
-    sget-object v1, Lch5;->a:Lch5;
+    sget-object v1, Ldh5;->a:Ldh5;
 
     .line 7
     invoke-direct {p0, v0, p1, v1}, Loca;-><init>(ZLjava/util/Set;Ljava/util/List;)V

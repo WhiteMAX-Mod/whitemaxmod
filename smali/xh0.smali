@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract a(Lnn4;)V
+.method public abstract a(Lon4;)V
 .end method
 
 .method public b()J
@@ -15,11 +15,11 @@
     return-wide v0
 .end method
 
-.method public abstract e()Lqsg;
+.method public abstract e()Lysg;
 .end method
 
 .method public abstract f()J
 .end method
 
-.method public abstract g(Landroid/os/Handler;Lnn4;)V
+.method public abstract g(Landroid/os/Handler;Lon4;)V
 .end method

@@ -1,117 +1,190 @@
 .class public final Lq87;
-.super Lec3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public t0:[B
+.field public final a:Ljava/lang/String;
 
-.field public volatile u0:Z
+.field public final b:I
 
-.field public v0:[B
+.field public final c:D
+
+.field public final d:Ljava/lang/String;
 
 
-# virtual methods
-.method public final a()V
-    .locals 1
+# direct methods
+.method public constructor <init>(Ljava/lang/String;D)V
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v0, p0, Lq87;->u0:Z
+    .line 2
+    iput-object p1, p0, Lq87;->a:Ljava/lang/String;
+
+    const/4 p1, 0x2
+
+    .line 3
+    iput p1, p0, Lq87;->b:I
+
+    .line 4
+    iput-wide p2, p0, Lq87;->c:D
+
+    const/4 p1, 0x0
+
+    .line 5
+    iput-object p1, p0, Lq87;->d:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final load()V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lec3;->s0:Llpf;
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lec3;->b:Lyi4;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Llpf;->R(Lyi4;)J
+    if-ne p3, v0, :cond_1
 
-    const/4 v0, 0x0
+    .line 7
+    const-string v1, "0x"
 
-    move v1, v0
+    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    :cond_0
-    :goto_0
-    const/4 v2, -0x1
+    move-result v1
 
-    if-eq v0, v2, :cond_2
+    if-nez v1, :cond_1
 
-    iget-boolean v0, p0, Lq87;->u0:Z
+    const-string v1, "0X"
 
-    if-nez v0, :cond_2
+    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    iget-object v0, p0, Lq87;->t0:[B
+    move-result v1
 
-    array-length v3, v0
-
-    add-int/lit16 v4, v1, 0x4000
-
-    const/16 v5, 0x4000
-
-    if-ge v3, v4, :cond_1
-
-    array-length v3, v0
-
-    add-int/2addr v3, v5
-
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lq87;->t0:[B
-
-    :cond_1
-    iget-object v0, p0, Lec3;->s0:Llpf;
-
-    iget-object v3, p0, Lq87;->t0:[B
-
-    invoke-virtual {v0, v3, v1, v5}, Llpf;->read([BII)I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_0
-
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    const/4 v0, 0x0
+
+    :cond_1
+    :goto_0
+    invoke-static {v0}, Lh6j;->g(Z)V
+
+    .line 8
+    iput-object p1, p0, Lq87;->a:Ljava/lang/String;
+
+    .line 9
+    iput p3, p0, Lq87;->b:I
+
+    .line 10
+    iput-object p2, p0, Lq87;->d:Ljava/lang/String;
+
+    const-wide/16 p1, 0x0
+
+    .line 11
+    iput-wide p1, p0, Lq87;->c:D
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lq87;
+
+    if-nez v0, :cond_1
 
     goto :goto_1
 
+    :cond_1
+    check-cast p1, Lq87;
+
+    iget v0, p0, Lq87;->b:I
+
+    iget v1, p1, Lq87;->b:I
+
+    if-ne v0, v1, :cond_2
+
+    iget-wide v0, p0, Lq87;->c:D
+
+    iget-wide v2, p1, Lq87;->c:D
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lq87;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lq87;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lq87;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lq87;->d:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
     :cond_2
-    iget-boolean v0, p0, Lq87;->u0:Z
+    :goto_1
+    const/4 p1, 0x0
 
-    if-nez v0, :cond_3
+    return p1
+.end method
 
-    iget-object v0, p0, Lq87;->t0:[B
+.method public final hashCode()I
+    .locals 4
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+    iget v0, p0, Lq87;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    iput-object v0, p0, Lq87;->v0:[B
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-wide v1, p0, Lq87;->c:D
 
-    :cond_3
-    iget-object v0, p0, Lec3;->s0:Llpf;
+    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    invoke-static {v0}, Lglj;->a(Lqi4;)V
+    move-result-object v1
 
-    return-void
+    iget-object v2, p0, Lq87;->d:Ljava/lang/String;
 
-    :goto_1
-    iget-object v1, p0, Lec3;->s0:Llpf;
+    iget-object v3, p0, Lq87;->a:Ljava/lang/String;
 
-    invoke-static {v1}, Lglj;->a(Lqi4;)V
+    filled-new-array {v3, v0, v1, v2}, [Ljava/lang/Object;
 
-    throw v0
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

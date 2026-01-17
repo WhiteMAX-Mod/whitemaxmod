@@ -1,37 +1,59 @@
-.class public abstract Lka9;
+.class public interface abstract Lka9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public d()V
+.method public b(I)V
     .locals 0
 
     return-void
 .end method
 
-.method public e()V
+.method public c(ILandroid/app/PendingIntent;)V
     .locals 0
 
     return-void
 .end method
 
-.method public abstract f(I)V
-.end method
-
-.method public g()V
+.method public d(ILite;)V
     .locals 0
 
     return-void
 .end method
 
-.method public h(I)V
+.method public e(ILe78;)V
     .locals 0
-
-    invoke-virtual {p0}, Lka9;->g()V
 
     return-void
 .end method
 
-.method public abstract i(I)V
+.method public f(ILlbc;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public g(ILgue;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public h(ILncc;Llbc;ZZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public i(ILeue;ZZI)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onDisconnected()V
+    .locals 0
+
+    return-void
 .end method

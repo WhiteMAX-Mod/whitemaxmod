@@ -1,135 +1,99 @@
 .class public final Ls1h;
-.super Lwgc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Comparable;
 
-# static fields
-.field public static final c:Ls1h;
+
+# instance fields
+.field public final a:B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(B)V
+    .locals 0
 
-    new-instance v0, Ls1h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lt1h;->a:Lt1h;
-
-    invoke-direct {v0, v1}, Lwgc;-><init>(Lq38;)V
-
-    sput-object v0, Ls1h;->c:Ls1h;
+    iput-byte p1, p0, Ls1h;->a:B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h(Ljava/lang/Object;)I
-    .locals 0
+.method public final synthetic compareTo(Ljava/lang/Object;)I
+    .locals 1
 
-    check-cast p1, Lq1h;
+    check-cast p1, Ls1h;
 
-    iget-object p1, p1, Lq1h;->a:[I
+    iget-byte p1, p1, Ls1h;->a:B
 
-    array-length p1, p1
+    iget-byte v0, p0, Ls1h;->a:B
+
+    and-int/lit16 v0, v0, 0xff
+
+    and-int/lit16 p1, p1, 0xff
+
+    invoke-static {v0, p1}, Le1j;->b(II)I
+
+    move-result p1
 
     return p1
 .end method
 
-.method public final j(Lip3;ILjava/lang/Object;)V
-    .locals 2
-
-    check-cast p3, Lr1h;
-
-    iget-object v0, p0, Lwgc;->b:Lvgc;
-
-    invoke-interface {p1, v0, p2}, Lip3;->a(Lvgc;I)Lll4;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lll4;->k()I
-
-    move-result p1
-
-    invoke-static {p3}, Lugc;->c(Lugc;)V
-
-    iget-object p2, p3, Lr1h;->a:[I
-
-    iget v0, p3, Lr1h;->b:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p3, Lr1h;->b:I
-
-    aput p1, p2, v0
-
-    return-void
-.end method
-
-.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    check-cast p1, Lq1h;
+    instance-of v0, p1, Ls1h;
 
-    iget-object p1, p1, Lq1h;->a:[I
-
-    new-instance v0, Lr1h;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v0, Lr1h;->a:[I
-
-    array-length p1, p1
-
-    iput p1, v0, Lr1h;->b:I
-
-    const/16 p1, 0xa
-
-    invoke-virtual {v0, p1}, Lr1h;->b(I)V
-
-    return-object v0
-.end method
-
-.method public final n()Ljava/lang/Object;
-    .locals 2
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [I
-
-    new-instance v1, Lq1h;
-
-    invoke-direct {v1, v0}, Lq1h;-><init>([I)V
-
-    return-object v1
-.end method
-
-.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
-    .locals 3
-
-    check-cast p2, Lq1h;
-
-    iget-object p2, p2, Lq1h;->a:[I
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p3, :cond_0
-
-    iget-object v1, p0, Lwgc;->b:Lvgc;
-
-    invoke-virtual {p1, v1, v0}, Lkotlinx/serialization/json/internal/b;->j(Lvgc;I)Lkotlinx/serialization/json/internal/b;
-
-    move-result-object v1
-
-    aget v2, p2, v0
-
-    invoke-virtual {v1, v2}, Lkotlinx/serialization/json/internal/b;->k(I)V
-
-    add-int/lit8 v0, v0, 0x1
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-void
+    check-cast p1, Ls1h;
+
+    iget-byte p1, p1, Ls1h;->a:B
+
+    iget-byte v0, p0, Ls1h;->a:B
+
+    if-eq v0, p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-byte v0, p0, Ls1h;->a:B
+
+    invoke-static {v0}, Ljava/lang/Byte;->hashCode(B)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-byte v0, p0, Ls1h;->a:B
+
+    and-int/lit16 v0, v0, 0xff
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

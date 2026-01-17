@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc62;
+.implements Lt52;
 
 
 # instance fields
@@ -37,7 +37,7 @@
 
     aget-object v3, v0, v2
 
-    iget-object v3, v3, Lkf0;->c:Lo25;
+    iget-object v3, v3, Lkf0;->c:Lr25;
 
     if-eqz v3, :cond_0
 
@@ -47,7 +47,7 @@
     const/4 v3, 0x0
 
     :goto_1
-    invoke-interface {v3}, Lo25;->dispose()V
+    invoke-interface {v3}, Lr25;->dispose()V
 
     add-int/lit8 v2, v2, 0x1
 

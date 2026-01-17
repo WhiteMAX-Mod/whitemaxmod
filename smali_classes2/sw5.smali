@@ -1,103 +1,73 @@
-.class public final Lsw5;
+.class public final synthetic Lsw5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnq6;
+
 
 # instance fields
-.field public final a:Le1e;
+.field public final synthetic a:I
 
-.field public final b:Lci;
+.field public final synthetic b:Ltw5;
+
+.field public final synthetic c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 1
+.method public synthetic constructor <init>(Ltw5;Ljava/util/ArrayList;I)V
+    .locals 0
+
+    iput p3, p0, Lsw5;->a:I
+
+    iput-object p1, p0, Lsw5;->b:Ltw5;
+
+    iput-object p2, p0, Lsw5;->c:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsw5;->a:Le1e;
-
-    new-instance p1, Lci;
-
-    const/4 v0, 0x6
-
-    invoke-direct {p1, v0}, Lci;-><init>(I)V
-
-    iput-object p1, p0, Lsw5;->b:Lci;
-
     return-void
-.end method
-
-.method public static b(ILjava/util/List;)Ljava/util/ArrayList;
-    .locals 6
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_0
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    new-instance v3, Lyu5;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    iput-wide v4, v3, Lyu5;->a:J
-
-    add-int v2, p0, v1
-
-    int-to-long v4, v2
-
-    iput-wide v4, v3, Lyu5;->b:J
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Lqw5;
+    iget v0, p0, Lsw5;->a:I
 
-    const/4 v1, 0x1
+    check-cast p1, Lf7e;
 
-    invoke-direct {v0, p0, p1, v1}, Lqw5;-><init>(Lsw5;Ljava/util/List;I)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lsw5;->a:Le1e;
+    iget-object v0, p0, Lsw5;->b:Ltw5;
 
-    const/4 v1, 0x0
+    iget-object v0, v0, Ltw5;->b:Lai;
 
-    const/4 v2, 0x1
+    iget-object v1, p0, Lsw5;->c:Ljava/util/ArrayList;
 
-    invoke-static {p1, v1, v2, v0}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Luk5;->c(Lf7e;Ljava/lang/Iterable;)V
 
-    return-void
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lsw5;->b:Ltw5;
+
+    iget-object v0, v0, Ltw5;->b:Lai;
+
+    iget-object v1, p0, Lsw5;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1, v1}, Luk5;->c(Lf7e;Ljava/lang/Iterable;)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

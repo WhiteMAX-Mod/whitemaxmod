@@ -52,37 +52,7 @@
     .end array-data
 .end method
 
-.method public constructor <init>(Lye0;Ljava/lang/CharSequence;I)V
-    .locals 2
-
-    .line 9
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
-
-    .line 10
-    new-instance v0, Landroid/text/TextPaint;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
-
-    iput-object v0, p0, Lze0;->a:Landroid/text/TextPaint;
-
-    .line 11
-    iput-object p1, p0, Lze0;->b:Lye0;
-
-    .line 12
-    iput-object p2, p0, Lze0;->c:Ljava/lang/CharSequence;
-
-    .line 13
-    iput p3, p0, Lze0;->d:I
-
-    .line 14
-    invoke-virtual {v0, p3}, Landroid/graphics/Paint;->setColor(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lye0;Lyx3;)V
+.method public constructor <init>(Lye0;Ley3;)V
     .locals 3
 
     .line 1
@@ -101,14 +71,14 @@
     iput-object p1, p0, Lze0;->b:Lye0;
 
     .line 4
-    invoke-virtual {p2}, Lyx3;->o()Ljava/lang/CharSequence;
+    invoke-virtual {p2}, Ley3;->p()Ljava/lang/CharSequence;
 
     move-result-object p1
 
     iput-object p1, p0, Lze0;->c:Ljava/lang/CharSequence;
 
     .line 5
-    invoke-virtual {p2}, Lyx3;->p()J
+    invoke-virtual {p2}, Ley3;->r()J
 
     move-result-wide p1
 
@@ -138,6 +108,36 @@
 
     .line 8
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lye0;Ljava/lang/CharSequence;I)V
+    .locals 2
+
+    .line 9
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    .line 10
+    new-instance v0, Landroid/text/TextPaint;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
+
+    iput-object v0, p0, Lze0;->a:Landroid/text/TextPaint;
+
+    .line 11
+    iput-object p1, p0, Lze0;->b:Lye0;
+
+    .line 12
+    iput-object p2, p0, Lze0;->c:Ljava/lang/CharSequence;
+
+    .line 13
+    iput p3, p0, Lze0;->d:I
+
+    .line 14
+    invoke-virtual {v0, p3}, Landroid/graphics/Paint;->setColor(I)V
 
     return-void
 .end method
@@ -221,7 +221,7 @@
 
     add-int/2addr v8, v3
 
-    iget-object v3, v4, Lye0;->b:Lzv8;
+    iget-object v3, v4, Lye0;->b:Lav8;
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

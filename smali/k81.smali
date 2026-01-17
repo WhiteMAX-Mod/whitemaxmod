@@ -1,67 +1,118 @@
-.class public interface abstract Lk81;
+.class public final Lk81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfze;
+.implements Lnm4;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/os/Bundle;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/os/Bundle;I)V
+    .locals 0
+
+    iput p2, p0, Lk81;->a:I
+
+    iput-object p1, p0, Lk81;->b:Landroid/os/Bundle;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()I
-.end method
+.method public final a()Ljava/lang/Object;
+    .locals 6
 
-.method public b()Lghg;
-    .locals 1
+    iget v0, p0, Lk81;->a:I
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    const-string v0, "call_id"
 
-.method public c()Luye;
-    .locals 1
+    iget-object v1, p0, Lk81;->b:Landroid/os/Bundle;
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public d()Lghg;
-    .locals 1
+    const-string v2, "caller_id"
 
-    const/4 v0, 0x0
+    invoke-static {v2, v1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
 
-    return-object v0
-.end method
+    move-result-wide v1
 
-.method public e()Lcze;
-    .locals 1
+    new-instance v3, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
 
-    const/4 v0, 0x0
+    invoke-direct {v3, v0, v1, v2}, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;-><init>(Ljava/lang/String;J)V
 
-    return-object v0
-.end method
+    return-object v3
 
-.method public f()Ln68;
-    .locals 1
+    :pswitch_0
+    const-string v0, "call_id"
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lk81;->b:Landroid/os/Bundle;
 
-    return-object v0
-.end method
+    invoke-static {v0, v1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
 
-.method public g()Z
-    .locals 1
+    move-result-object v0
 
-    const/4 v0, 0x1
+    const-string v2, "is_video"
 
-    return v0
-.end method
+    invoke-static {v2, v1}, Lomj;->h(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-.method public getType()Leze;
-    .locals 1
+    move-result v2
 
-    sget-object v0, Leze;->b:Leze;
+    const-string v3, "is_group"
 
-    return-object v0
+    invoke-static {v3, v1}, Lomj;->h(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    move-result v3
+
+    const-string v4, "sdk_reasons"
+
+    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-static {v4, v1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, ","
+
+    filled-new-array {v4}, [Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x4
+
+    invoke-static {v1, v4, v5}, Lrzf;->U(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    new-instance v4, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+
+    invoke-direct {v4, v0, v3, v2, v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;-><init>(Ljava/lang/String;ZZLjava/util/List;)V
+
+    return-object v4
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

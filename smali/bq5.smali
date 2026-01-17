@@ -1,60 +1,50 @@
-.class public final synthetic Lbq5;
+.class public final Lbq5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Logh;
+.implements Lgd9;
 
 
 # instance fields
-.field public final synthetic a:Lnq5;
+.field public final a:Ljava/lang/Object;
 
-.field public final synthetic b:Logh;
+.field public final b:Ltt8;
+
+.field public c:Lrlg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnq5;Logh;)V
+.method public constructor <init>(Ljava/lang/Object;Ltt8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbq5;->a:Lnq5;
+    iput-object p1, p0, Lbq5;->a:Ljava/lang/Object;
 
-    iput-object p2, p0, Lbq5;->b:Logh;
+    iput-object p2, p0, Lbq5;->b:Ltt8;
+
+    iget-object p1, p2, Ltt8;->o:Lpt8;
+
+    iput-object p1, p0, Lbq5;->c:Lrlg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(JJLrj6;Landroid/media/MediaFormat;)V
-    .locals 8
+.method public final a()Lrlg;
+    .locals 1
 
-    iget-object v0, p0, Lbq5;->a:Lnq5;
+    iget-object v0, p0, Lbq5;->c:Lrlg;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
+.end method
 
-    iget-object v1, p0, Lbq5;->b:Logh;
+.method public final getUid()Ljava/lang/Object;
+    .locals 1
 
-    move-wide v2, p1
+    iget-object v0, p0, Lbq5;->a:Ljava/lang/Object;
 
-    move-wide v4, p3
-
-    move-object v6, p5
-
-    move-object v7, p6
-
-    invoke-interface/range {v1 .. v7}, Logh;->b(JJLrj6;Landroid/media/MediaFormat;)V
-
-    move-wide v1, v2
-
-    move-wide v3, v4
-
-    move-object v5, v6
-
-    move-object v6, v7
-
-    invoke-virtual/range {v0 .. v6}, Lnq5;->b(JJLrj6;Landroid/media/MediaFormat;)V
-
-    return-void
+    return-object v0
 .end method

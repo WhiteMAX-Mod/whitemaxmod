@@ -1,27 +1,27 @@
 .class public Lru/ok/messages/messages/widgets/MessageComposeEditText;
-.super Lqi;
+.super Lli;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic v0:I
+.field public static final synthetic w0:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lh4d;->editTextStyle:I
+    sget v0, Lh5d;->editTextStyle:I
 
-    invoke-direct {p0, p1, p2, v0}, Lqi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lli;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-static {}, Lbn;->a()Laq3;
+    invoke-static {}, Lcn;->a()Liq3;
 
     move-result-object p1
 
-    check-cast p1, Ld8b;
+    check-cast p1, Lj8b;
 
-    invoke-virtual {p1}, Ld8b;->a()Lgd;
+    invoke-virtual {p1}, Lj8b;->a()Ldd;
 
     return-void
 .end method
@@ -54,13 +54,13 @@
 
     iput-object v1, p1, Landroid/view/inputmethod/EditorInfo;->contentMimeTypes:[Ljava/lang/String;
 
-    new-instance p1, Led9;
+    new-instance p1, Lmc9;
 
-    invoke-direct {p1, p0}, Led9;-><init>(Lru/ok/messages/messages/widgets/MessageComposeEditText;)V
+    invoke-direct {p1, p0}, Lmc9;-><init>(Lru/ok/messages/messages/widgets/MessageComposeEditText;)V
 
-    new-instance v1, Luq7;
+    new-instance v1, Lcq7;
 
-    invoke-direct {v1, v0, p1}, Luq7;-><init>(Landroid/view/inputmethod/InputConnection;Lvq7;)V
+    invoke-direct {v1, v0, p1}, Lcq7;-><init>(Landroid/view/inputmethod/InputConnection;Ldq7;)V
 
     return-object v1
 .end method
@@ -139,19 +139,19 @@
     return p1
 .end method
 
-.method public setListener(Lqm9;)V
+.method public setListener(Lwl9;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setMIUITextSelectListener(Lrm9;)V
+.method public setMIUITextSelectListener(Lxl9;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setTextSelectListener(Lsm9;)V
+.method public setTextSelectListener(Lyl9;)V
     .locals 0
 
     return-void

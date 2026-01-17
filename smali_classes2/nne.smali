@@ -4,95 +4,139 @@
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final a:J
 
-.field public final b:Ld68;
-
-.field public final c:Ld68;
-
-.field public final d:Ld68;
-
-.field public final e:Ld68;
-
-.field public final f:Ld68;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;)V
+.method public constructor <init>(JI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnne;->a:Ld68;
+    iput-wide p1, p0, Lnne;->a:J
 
-    iput-object p2, p0, Lnne;->b:Ld68;
-
-    iput-object p3, p0, Lnne;->c:Ld68;
-
-    iput-object p4, p0, Lnne;->d:Ld68;
-
-    iput-object p5, p0, Lnne;->e:Ld68;
-
-    iput-object p6, p0, Lnne;->f:Ld68;
+    iput p3, p0, Lnne;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLjava/lang/CharSequence;Ljava/util/List;ZLjava/lang/Long;Lgk6;Lnba;Lb5g;)Ljava/lang/Object;
-    .locals 12
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lnne;->a:Ld68;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbbg;
-
-    check-cast v0, Lb9b;
-
-    invoke-virtual {v0}, Lb9b;->b()Ltb4;
-
-    move-result-object v0
-
-    new-instance v1, Lmne;
-
-    const/4 v11, 0x0
-
-    move-object v5, p0
-
-    move-wide v6, p1
-
-    move-object v4, p3
-
-    move-object/from16 v2, p4
-
-    move/from16 v3, p5
-
-    move-object/from16 v8, p6
-
-    move-object/from16 v10, p7
-
-    move-object/from16 v9, p8
-
-    invoke-direct/range {v1 .. v11}, Lmne;-><init>(Ljava/util/List;ZLjava/lang/CharSequence;Lnne;JLjava/lang/Long;Lnba;Lgk6;Lkotlin/coroutines/Continuation;)V
-
-    move-object/from16 p1, p9
-
-    invoke-static {v0, v1, p1}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lbc4;->a:Lbc4;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
+    goto :goto_1
 
     :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    instance-of v0, p1, Lnne;
 
-    return-object p1
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lnne;
+
+    iget-wide v0, p0, Lnne;->a:J
+
+    iget-wide v2, p1, Lnne;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lnne;->b:I
+
+    iget p1, p1, Lnne;->b:I
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lnne;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lnne;->b:I
+
+    invoke-static {v1}, Lt02;->t(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "SelectedMention(id="
+
+    const-string v1, ", selectedMentionType="
+
+    iget-wide v2, p0, Lnne;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lnne;->b:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "NAME"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "SHORTLINK"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

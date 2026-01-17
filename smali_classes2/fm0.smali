@@ -46,7 +46,7 @@
 
     const-string p1, "w_"
 
-    invoke-static {p2, p1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -112,7 +112,7 @@
 
     move-result p1
 
-    invoke-static {v0, p1}, Ly5f;->c(II)I
+    invoke-static {v0, p1}, Le1j;->b(II)I
 
     move-result p1
 
@@ -187,7 +187,7 @@
 
     iget v2, p0, Lfm0;->b:I
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
     move-result v0
 
@@ -231,7 +231,7 @@
 
     iget v2, p0, Lfm0;->c:I
 
-    invoke-static {v0, v2, v1}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,32 +1,59 @@
 .class public final Lgsi;
-.super Ljava/lang/Object;
+.super Lhri;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
 
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
 
-# static fields
-.field public static final a:Lgsi;
+.field public final transient d:I
+
+.field public final transient o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(II[Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lgsi;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lgsi;->c:[Ljava/lang/Object;
 
-    sput-object v0, Lgsi;->a:Lgsi;
+    iput p1, p0, Lgsi;->d:I
+
+    iput p2, p0, Lgsi;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iget v0, p0, Lgsi;->o:I
+
+    invoke-static {p1, v0}, Lkbj;->f(II)V
+
+    add-int/2addr p1, p1
+
+    iget v0, p0, Lgsi;->d:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lgsi;->c:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lgsi;->o:I
+
+    return v0
 .end method

@@ -1,8 +1,35 @@
-.class public interface abstract Lyg6;
+.class public abstract synthetic Lyg6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract c(Ljava/lang/String;Landroidx/recyclerview/widget/b;)Lone/me/sdk/arch/Widget;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    invoke-static {}, Loah;->values()[Loah;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    sput-object v0, Lyg6;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

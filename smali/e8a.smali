@@ -6,7 +6,7 @@
 # virtual methods
 .method public now()J
     .locals 3
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -23,6 +23,6 @@
 .end method
 
 .method public abstract nowNanos()J
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 .end method

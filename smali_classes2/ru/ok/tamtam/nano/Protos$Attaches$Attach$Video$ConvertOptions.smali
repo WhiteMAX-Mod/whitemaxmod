@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
-.super Lsp9;
+.super Lbp9;
 .source "SourceFile"
 
 
@@ -34,7 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lsp9;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->clear()Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
 
@@ -48,7 +48,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ldu7;->b:Ljava/lang/Object;
+    sget-object v0, Llt7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -90,7 +90,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
+.method public static parseFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -103,7 +103,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
 
     move-result-object p0
 
@@ -123,7 +123,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;-><init>()V
 
-    invoke-static {v0, p0}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
+    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
 
     move-result-object p0
 
@@ -155,7 +155,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lsp9;->cachedSize:I
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-object p0
 .end method
@@ -169,7 +169,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v1, v0}, Lmg3;->i(ILsp9;)I
+    invoke-static {v1, v0}, Lwg3;->i(ILbp9;)I
 
     move-result v0
 
@@ -195,7 +195,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v1}, Lmg3;->e(I)I
+    invoke-static {v1}, Lwg3;->e(I)I
 
     move-result v1
 
@@ -216,7 +216,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1}, Lmg3;->e(I)I
+    invoke-static {v1}, Lwg3;->e(I)I
 
     move-result v1
 
@@ -229,7 +229,7 @@
 
     const/4 v2, 0x4
 
-    invoke-static {v2, v1}, Lmg3;->f(II)I
+    invoke-static {v2, v1}, Lwg3;->f(II)I
 
     move-result v1
 
@@ -242,7 +242,7 @@
 
     const/4 v1, 0x5
 
-    invoke-static {v1}, Lmg3;->a(I)I
+    invoke-static {v1}, Lwg3;->a(I)I
 
     move-result v1
 
@@ -254,7 +254,23 @@
     return v0
 .end method
 
-.method public mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
+.method public bridge synthetic mergeFrom(Lvg3;)Lbp9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -265,7 +281,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Llg3;->s()I
+    invoke-virtual {p1}, Lvg3;->s()I
 
     move-result v0
 
@@ -292,7 +308,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Llg3;->u(I)Z
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
 
     move-result v0
 
@@ -302,7 +318,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Llg3;->f()Z
+    invoke-virtual {p1}, Lvg3;->f()Z
 
     move-result v0
 
@@ -312,7 +328,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p1}, Llg3;->p()I
+    invoke-virtual {p1}, Lvg3;->p()I
 
     move-result v0
 
@@ -323,7 +339,7 @@
 
     .line 7
     :cond_3
-    invoke-virtual {p1}, Llg3;->i()F
+    invoke-virtual {p1}, Lvg3;->i()F
 
     move-result v0
 
@@ -333,7 +349,7 @@
 
     .line 8
     :cond_4
-    invoke-virtual {p1}, Llg3;->i()F
+    invoke-virtual {p1}, Lvg3;->i()F
 
     move-result v0
 
@@ -358,7 +374,7 @@
     :cond_6
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->quality:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$Quality;
 
-    invoke-virtual {p1, v0}, Llg3;->j(Lsp9;)V
+    invoke-virtual {p1, v0}, Lvg3;->j(Lbp9;)V
 
     goto :goto_0
 
@@ -367,23 +383,7 @@
     return-object p0
 .end method
 
-.method public bridge synthetic mergeFrom(Llg3;)Lsp9;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public writeTo(Lmg3;)V
+.method public writeTo(Lwg3;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -397,7 +397,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->y(ILsp9;)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->y(ILbp9;)V
 
     :cond_0
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->startTrimPosition:F
@@ -418,7 +418,7 @@
 
     iget v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->startTrimPosition:F
 
-    invoke-virtual {p1, v0, v2}, Lmg3;->v(IF)V
+    invoke-virtual {p1, v0, v2}, Lwg3;->v(IF)V
 
     :cond_1
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->endTrimPosition:F
@@ -437,7 +437,7 @@
 
     iget v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->endTrimPosition:F
 
-    invoke-virtual {p1, v0, v1}, Lmg3;->v(IF)V
+    invoke-virtual {p1, v0, v1}, Lwg3;->v(IF)V
 
     :cond_2
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->qualityValue:I
@@ -446,7 +446,7 @@
 
     const/4 v1, 0x4
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->w(II)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
 
     :cond_3
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->mute:Z
@@ -455,7 +455,7 @@
 
     const/4 v1, 0x5
 
-    invoke-virtual {p1, v1, v0}, Lmg3;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
 
     :cond_4
     return-void

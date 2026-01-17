@@ -1,49 +1,29 @@
-.class public final Laz6;
+.class public interface abstract Laz6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public abstract c()V
+.end method
 
-.field public final b:I
+.method public abstract d(Lui8;)V
+.end method
 
-.field public final c:[F
+.method public abstract e(Luy6;Lbz6;J)V
+.end method
 
-.field public final d:[I
+.method public abstract f(Lbz6;)V
+.end method
 
-.field public e:I
+.method public abstract flush()V
+.end method
 
-.field public f:I
+.method public abstract g(Ljava/util/concurrent/Executor;Lhv4;)V
+.end method
 
-.field public g:I
+.method public abstract h(Lyy6;)V
+.end method
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p2, p0, Laz6;->a:I
-
-    iput p3, p0, Laz6;->b:I
-
-    const/16 p1, 0x10
-
-    new-array p1, p1, [F
-
-    iput-object p1, p0, Laz6;->c:[F
-
-    const/4 p1, 0x4
-
-    new-array p1, p1, [I
-
-    iput-object p1, p0, Laz6;->d:[I
-
-    const/16 p1, 0x2601
-
-    iput p1, p0, Laz6;->g:I
-
-    return-void
+.method public abstract release()V
 .end method

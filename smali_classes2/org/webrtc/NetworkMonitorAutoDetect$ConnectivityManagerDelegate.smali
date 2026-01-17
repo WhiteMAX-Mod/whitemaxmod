@@ -384,7 +384,7 @@
 
     const-string v10, " because it has type "
 
-    invoke-static {v5, v0, v9, v4, v10}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v0, v9, v4, v10}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -469,7 +469,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {v0}, Lk69;->v(Landroid/net/NetworkRequest$Builder;)V
+    invoke-static {v0}, Lq59;->u(Landroid/net/NetworkRequest$Builder;)V
 
     :cond_1
     invoke-virtual {v0}, Landroid/net/NetworkRequest$Builder;->build()Landroid/net/NetworkRequest;

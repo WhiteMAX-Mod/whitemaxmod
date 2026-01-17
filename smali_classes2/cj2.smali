@@ -1,92 +1,133 @@
-.class public final Lcj2;
+.class public final synthetic Lcj2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnq6;
+
 
 # instance fields
-.field public final a:Ljy0;
+.field public final synthetic X:Ljava/util/Set;
 
-.field public final b:J
+.field public final synthetic Y:Ljava/util/Set;
 
-.field public final c:Lh6f;
+.field public final synthetic a:Lfj2;
 
-.field public final d:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic b:Ljava/util/Set;
 
-.field public final e:Lokd;
+.field public final synthetic c:Ljava/util/Set;
+
+.field public final synthetic d:Ljava/util/Map;
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lbbg;Ljy0;J)V
+.method public synthetic constructor <init>(Lfj2;Ljava/util/Set;Ljava/util/Set;Ljava/util/Map;Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcj2;->a:Ljy0;
+    iput-object p1, p0, Lcj2;->a:Lfj2;
 
-    iput-wide p3, p0, Lcj2;->b:J
+    iput-object p2, p0, Lcj2;->b:Ljava/util/Set;
 
-    const/4 p3, 0x0
+    iput-object p3, p0, Lcj2;->c:Ljava/util/Set;
 
-    const/4 p4, 0x7
+    iput-object p4, p0, Lcj2;->d:Ljava/util/Map;
 
-    invoke-static {p3, p3, p4}, Li6f;->b(III)Lh6f;
+    iput-object p5, p0, Lcj2;->o:Ljava/lang/String;
 
-    move-result-object p3
+    iput-object p6, p0, Lcj2;->X:Ljava/util/Set;
 
-    iput-object p3, p0, Lcj2;->c:Lh6f;
-
-    check-cast p1, Lb9b;
-
-    invoke-virtual {p1}, Lb9b;->a()Ltb4;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcj2;->d:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p1, Lokd;
-
-    invoke-direct {p1, p3}, Lokd;-><init>(Lnfa;)V
-
-    iput-object p1, p0, Lcj2;->e:Lokd;
-
-    invoke-virtual {p2, p0}, Ljy0;->d(Ljava/lang/Object;)V
+    iput-object p7, p0, Lcj2;->Y:Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lsyd;)V
-    .locals 4
-    .annotation runtime Ljzf;
-    .end annotation
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-wide v0, p0, Lcj2;->b:J
+    move-object v3, p1
 
-    iget-wide v2, p1, Lsyd;->c:J
+    check-cast v3, Lnd2;
 
-    cmp-long p1, v0, v2
+    iget-object v0, p0, Lcj2;->a:Lfj2;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    iget-object p1, v3, Lnd2;->b:Luh2;
+
+    iget-wide v1, p1, Luh2;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcj2;->b:Ljava/util/Set;
+
+    invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    iget-object v2, p0, Lcj2;->d:Ljava/util/Map;
+
+    iget-object v4, p0, Lcj2;->o:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v5, 0x1
+
+    iget-object v1, p0, Lcj2;->c:Ljava/util/Set;
+
+    invoke-virtual/range {v0 .. v5}, Lfj2;->f(Ljava/util/Set;Ljava/util/Map;Lnd2;Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     :cond_0
-    new-instance p1, Lbj2;
+    iget-wide v5, p1, Luh2;->a:J
 
-    const/4 v0, 0x0
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {p1, p0, v0}, Lbj2;-><init>(Lcj2;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lcj2;->X:Ljava/util/Set;
 
-    iget-object v2, p0, Lcj2;->d:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-interface {v1, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    invoke-static {v2, v0, v0, p1, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    move-result p1
 
-    return-void
+    if-nez p1, :cond_2
+
+    const/4 v5, 0x0
+
+    iget-object v1, p0, Lcj2;->Y:Ljava/util/Set;
+
+    invoke-virtual/range {v0 .. v5}, Lfj2;->f(Ljava/util/Set;Ljava/util/Map;Lnd2;Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

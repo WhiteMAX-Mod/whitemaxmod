@@ -9,7 +9,7 @@
 # virtual methods
 .method public bridge synthetic now()J
     .locals 2
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     invoke-super {p0}, Le8a;->now()J
@@ -20,6 +20,6 @@
 .end method
 
 .method public abstract synthetic nowNanos()J
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 .end method

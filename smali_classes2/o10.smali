@@ -1,233 +1,181 @@
-.class public final Lo10;
-.super Ljava/lang/Object;
+.class public final enum Lo10;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lt60;
 
+# static fields
+.field public static final enum X:Lo10;
 
-# instance fields
-.field public a:I
+.field public static final enum Y:Lo10;
 
-.field public b:I
+.field public static final enum Z:Lo10;
 
-.field public c:J
+.field public static final enum a:Lo10;
 
-.field public d:Ljava/io/Serializable;
+.field public static final enum b:Lo10;
 
-.field public e:Ljava/io/Serializable;
+.field public static final enum c:Lo10;
 
-.field public f:Ljava/lang/Object;
+.field public static final enum d:Lo10;
+
+.field public static final enum o:Lo10;
+
+.field public static final enum t0:Lo10;
+
+.field public static final enum u0:Lo10;
+
+.field public static final enum v0:Lo10;
+
+.field public static final synthetic w0:[Lo10;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 13
+
+    new-instance v0, Lo10;
+
+    const-string v1, "UNKNOWN"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lo10;->a:Lo10;
+
+    new-instance v1, Lo10;
+
+    const-string v2, "NEW"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lo10;->b:Lo10;
+
+    new-instance v2, Lo10;
+
+    const-string v3, "ADD"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lo10;->c:Lo10;
+
+    new-instance v3, Lo10;
+
+    const-string v4, "REMOVE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lo10;->d:Lo10;
+
+    new-instance v4, Lo10;
+
+    const-string v5, "LEAVE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lo10;->o:Lo10;
+
+    new-instance v5, Lo10;
+
+    const-string v6, "TITLE"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lo10;->X:Lo10;
+
+    new-instance v6, Lo10;
+
+    const-string v7, "ICON"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lo10;->Y:Lo10;
+
+    new-instance v7, Lo10;
+
+    const-string v8, "SYSTEM"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lo10;->Z:Lo10;
+
+    new-instance v8, Lo10;
+
+    const-string v9, "JOIN_BY_LINK"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lo10;->t0:Lo10;
+
+    new-instance v9, Lo10;
+
+    const-string v10, "PIN"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Lo10;->u0:Lo10;
+
+    new-instance v10, Lo10;
+
+    const-string v11, "BOT_STARTED"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, Lo10;->v0:Lo10;
+
+    filled-new-array/range {v0 .. v10}, [Lo10;
+
+    move-result-object v0
+
+    sput-object v0, Lo10;->w0:[Lo10;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lo10;
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lo10;
 
-    const/4 v0, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput v0, p0, Lo10;->a:I
+    move-result-object p0
 
-    iput v0, p0, Lo10;->b:I
+    check-cast p0, Lo10;
 
-    return-void
+    return-object p0
 .end method
 
+.method public static values()[Lo10;
+    .locals 1
 
-# virtual methods
-.method public a()V
-    .locals 2
+    sget-object v0, Lo10;->w0:[Lo10;
 
-    iget-object v0, p0, Lo10;->e:Ljava/io/Serializable;
+    invoke-virtual {v0}, [Lo10;->clone()Ljava/lang/Object;
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    check-cast v0, [Lo10;
 
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
-
-    const-string v1, "AudioStream has been released."
-
-    invoke-static {v1, v0}, Lpjj;->f(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public read(Ljava/nio/ByteBuffer;)Lja0;
-    .locals 11
-
-    invoke-virtual {p0}, Lo10;->a()V
-
-    iget-object v0, p0, Lo10;->d:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    const-string v1, "AudioStream has not been started."
-
-    invoke-static {v1, v0}, Lpjj;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    iget v2, p0, Lo10;->a:I
-
-    invoke-static {v2, v0, v1}, Lit8;->h(IJ)J
-
-    move-result-wide v0
-
-    int-to-long v2, v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v6, v2, v4
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    if-lez v6, :cond_0
-
-    move v6, v7
-
-    goto :goto_0
-
-    :cond_0
-    move v6, v8
-
-    :goto_0
-    const-string v9, "bytesPerFrame must be greater than 0."
-
-    invoke-static {v9, v6}, Lpjj;->a(Ljava/lang/String;Z)V
-
-    mul-long/2addr v2, v0
-
-    long-to-int v2, v2
-
-    if-gtz v2, :cond_1
-
-    iget-wide v0, p0, Lo10;->c:J
-
-    new-instance p1, Lja0;
-
-    invoke-direct {p1, v8, v0, v1}, Lja0;-><init>(IJ)V
-
-    return-object p1
-
-    :cond_1
-    iget v3, p0, Lo10;->b:I
-
-    invoke-static {v3, v0, v1}, Lit8;->a(IJ)J
-
-    move-result-wide v0
-
-    iget-wide v9, p0, Lo10;->c:J
-
-    add-long/2addr v9, v0
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v0
-
-    sub-long v0, v9, v0
-
-    cmp-long v3, v0, v4
-
-    if-lez v3, :cond_2
-
-    :try_start_0
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "SilentAudioStream"
-
-    const-string v3, "Ignore interruption"
-
-    invoke-static {v1, v3, v0}, Lw4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    if-gt v2, v0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move v7, v8
-
-    :goto_2
-    const/4 v0, 0x0
-
-    invoke-static {v0, v7}, Lpjj;->f(Ljava/lang/String;Z)V
-
-    iget-object v0, p0, Lo10;->f:Ljava/lang/Object;
-
-    check-cast v0, [B
-
-    if-eqz v0, :cond_4
-
-    array-length v0, v0
-
-    if-ge v0, v2, :cond_5
-
-    :cond_4
-    new-array v0, v2, [B
-
-    iput-object v0, p0, Lo10;->f:Ljava/lang/Object;
-
-    :cond_5
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
-
-    move-result v0
-
-    iget-object v1, p0, Lo10;->f:Ljava/lang/Object;
-
-    check-cast v1, [B
-
-    invoke-virtual {p1, v1, v8, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    add-int v1, v0, v2
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
-
-    iget-wide v0, p0, Lo10;->c:J
-
-    new-instance p1, Lja0;
-
-    invoke-direct {p1, v2, v0, v1}, Lja0;-><init>(IJ)V
-
-    iput-wide v9, p0, Lo10;->c:J
-
-    return-object p1
+    return-object v0
 .end method

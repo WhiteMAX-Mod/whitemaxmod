@@ -1,246 +1,119 @@
 .class public final Lv69;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+
 # direct methods
-.method public static a(Ljava/util/Set;Lzk1;Lkte;)Lorg/json/JSONObject;
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lorg/json/JSONObject;
+    const/16 v0, 0x9
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    if-eqz p1, :cond_0
+    iput-object p1, p0, Lv69;->b:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lzk1;->b()Ljava/lang/String;
+    iput-object p2, p0, Lv69;->c:Ljava/lang/String;
 
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    const-string v1, "participantId"
-
-    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    new-instance p1, Lorg/json/JSONArray;
-
-    invoke-direct {p1}, Lorg/json/JSONArray;-><init>()V
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lr69;
-
-    sget-object v2, Lu69;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aget v1, v2, v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_4
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_3
-
-    const/4 v2, 0x3
-
-    if-eq v1, v2, :cond_2
-
-    const/4 v2, 0x4
-
-    if-ne v1, v2, :cond_1
-
-    const-string v1, "MOVIE_SHARING"
-
-    goto :goto_2
-
-    :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    const-string v1, "SCREEN_SHARING"
-
-    goto :goto_2
-
-    :cond_3
-    const-string v1, "VIDEO"
-
-    goto :goto_2
-
-    :cond_4
-    const-string v1, "AUDIO"
-
-    :goto_2
-    invoke-virtual {p1, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    goto :goto_1
-
-    :cond_5
-    const-string p0, "requestedMedia"
-
-    invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p0, "command"
-
-    const-string p1, "mute-participant"
-
-    invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    instance-of p0, p2, Ljte;
-
-    if-eqz p0, :cond_6
-
-    check-cast p2, Ljte;
-
-    iget p0, p2, Ljte;->a:I
-
-    const-string p1, "roomId"
-
-    invoke-virtual {v0, p1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    :cond_6
-    return-object v0
+    return-void
 .end method
 
-.method public static b(Ljava/util/Map;Lzk1;Lkte;)Lorg/json/JSONObject;
-    .locals 3
 
-    new-instance v0, Lorg/json/JSONObject;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_0
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1}, Lzk1;->b()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Lv69;
 
-    :goto_0
-    const-string v1, "participantId"
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    if-nez v1, :cond_1
 
-    new-instance p1, Lorg/json/JSONObject;
-
-    invoke-direct {p1}, Lorg/json/JSONObject;-><init>()V
-
-    sget-object v1, Lr69;->a:Lr69;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls69;
-
-    invoke-static {v1}, Lsoj;->D(Ls69;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "AUDIO"
-
-    invoke-virtual {p1, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    sget-object v1, Lr69;->b:Lr69;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls69;
-
-    invoke-static {v1}, Lsoj;->D(Ls69;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "VIDEO"
-
-    invoke-virtual {p1, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    sget-object v1, Lr69;->c:Lr69;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls69;
-
-    invoke-static {v1}, Lsoj;->D(Ls69;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "SCREEN_SHARING"
-
-    invoke-virtual {p1, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    sget-object v1, Lr69;->d:Lr69;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ls69;
-
-    invoke-static {p0}, Lsoj;->D(Ls69;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "MOVIE_SHARING"
-
-    invoke-virtual {p1, v1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p0, "muteStates"
-
-    invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p0, "command"
-
-    const-string p1, "mute-participant"
-
-    invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    instance-of p0, p2, Ljte;
-
-    if-eqz p0, :cond_1
-
-    check-cast p2, Ljte;
-
-    iget p0, p2, Ljte;->a:I
-
-    const-string p1, "roomId"
-
-    invoke-virtual {v0, p1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    return v2
 
     :cond_1
+    check-cast p1, Lv69;
+
+    iget-object v1, p0, Lv69;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lv69;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lv69;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lv69;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lv69;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lv69;->c:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", path="
+
+    const-string v1, ")"
+
+    const-string v2, "OpenCropScreen(uriAsString="
+
+    iget-object v3, p0, Lv69;->b:Ljava/lang/String;
+
+    iget-object v4, p0, Lv69;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method

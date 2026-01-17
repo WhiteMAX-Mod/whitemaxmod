@@ -1,215 +1,203 @@
 .class public final Lsm7;
-.super Lb5g;
+.super La56;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic g:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final h:Z
 
-.field public final synthetic Z:Lfn7;
+.field public final i:Z
 
-.field public o:J
+.field public final j:Lqr6;
 
 
 # direct methods
-.method public constructor <init>(Lfn7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lqr6;ZZLxkg;Lia1;Lahd;I)V
     .locals 0
 
-    iput-object p1, p0, Lsm7;->Z:Lfn7;
+    iput p7, p0, Lsm7;->g:I
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p4, p5, p6}, La56;-><init>(Lxkg;Lia1;Lahd;)V
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lsm7;->j:Lqr6;
+
+    iput-boolean p2, p0, Lsm7;->h:Z
+
+    iput-boolean p3, p0, Lsm7;->i:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public b()V
+    .locals 1
 
-    check-cast p1, Lac4;
+    iget v0, p0, Lsm7;->g:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lsm7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-void
 
-    move-result-object p1
+    :pswitch_0
+    invoke-virtual {p0}, La56;->h()V
 
-    check-cast p1, Lsm7;
+    return-void
 
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lsm7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final d(Ltqf;)V
+    .locals 1
 
-    new-instance v0, Lsm7;
+    iget v0, p0, Lsm7;->g:I
 
-    iget-object v1, p0, Lsm7;->Z:Lfn7;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1, p2}, Lsm7;-><init>(Lfn7;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lsm7;->j:Lqr6;
 
-    iput-object p1, v0, Lsm7;->Y:Ljava/lang/Object;
+    check-cast v0, Lh4b;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Lh4b;->invoke()Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    move-result-object v0
 
-    iget-object v0, p0, Lsm7;->Z:Lfn7;
+    check-cast v0, Ljava/lang/Boolean;
 
-    iget-object v1, v0, Lfn7;->w0:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget v2, p0, Lsm7;->X:I
+    move-result v0
 
-    const-string v3, "prefetch "
+    if-nez v0, :cond_1
 
-    const/4 v4, 0x1
+    iget-boolean v0, p0, Lsm7;->h:Z
 
-    const/4 v5, 0x0
+    if-eqz v0, :cond_1
 
-    if-eqz v2, :cond_1
+    iget-boolean v0, p0, Lsm7;->i:Z
 
-    if-ne v2, v4, :cond_0
-
-    iget-wide v6, p0, Lsm7;->o:J
-
-    iget-object v2, p0, Lsm7;->Y:Ljava/lang/Object;
-
-    check-cast v2, Lac4;
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    invoke-super {p0, p1}, La56;->d(Ltqf;)V
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lsm7;->Y:Ljava/lang/Object;
-
-    move-object v2, p1
-
-    check-cast v2, Lac4;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v6
-
-    sget-object p1, Lfn7;->D0:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v8
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v8, ": start load real albums"
-
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {p1, v8}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p1, Lrm7;
-
-    invoke-direct {p1, v0, v5}, Lrm7;-><init>(Lfn7;Lkotlin/coroutines/Continuation;)V
-
-    iput-object v2, p0, Lsm7;->Y:Ljava/lang/Object;
-
-    iput-wide v6, p0, Lsm7;->o:J
-
-    iput v4, p0, Lsm7;->X:I
-
-    invoke-static {p1, p0}, Lmkj;->c(Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v4, Lbc4;->a:Lbc4;
-
-    if-ne p1, v4, :cond_2
-
-    return-object v4
-
-    :cond_2
     :goto_0
-    check-cast p1, Ljava/util/List;
+    return-void
 
-    invoke-static {v2}, Lmkj;->e(Lac4;)Z
+    :pswitch_0
+    iget-object v0, p0, Lsm7;->j:Lqr6;
 
-    move-result v2
+    check-cast v0, Lh4b;
 
-    sget-object v4, Lv2h;->a:Lv2h;
+    invoke-virtual {v0}, Lh4b;->invoke()Ljava/lang/Object;
 
-    if-nez v2, :cond_3
+    move-result-object v0
 
-    return-object v4
+    check-cast v0, Ljava/lang/Boolean;
 
-    :cond_3
-    iget-object v0, v0, Lfn7;->u0:Lhof;
-
-    new-instance v2, Lul5;
-
-    invoke-direct {v2, p1}, Lul5;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v5, v2}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lfn7;->D0:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    if-nez v0, :cond_3
 
-    move-result-wide v1
+    iget-boolean v0, p0, Lsm7;->h:Z
 
-    sub-long/2addr v1, v6
+    if-nez v0, :cond_3
 
-    const-string v5, ": finish load real albums, time = "
+    iget-boolean v0, p0, Lsm7;->i:Z
 
-    invoke-static {v0, v1, v2, v3, v5}, Lzy4;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_2
 
-    move-result-object v0
+    goto :goto_1
 
-    const-string v1, "ms"
+    :cond_2
+    invoke-super {p0, p1}, La56;->d(Ltqf;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_3
+    :goto_1
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    nop
 
-    move-result-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-static {p1, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+.method public e()V
+    .locals 1
 
-    return-object v4
+    iget v0, p0, Lsm7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, La56;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lsm7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x2
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x3
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lsm7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "OutgoingP2PFirstDataStat"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "incomingP2PFirstDataStat"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

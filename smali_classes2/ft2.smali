@@ -1,136 +1,166 @@
-.class public final synthetic Lft2;
+.class public final Lft2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
+
+# static fields
+.field public static final d:Lft2;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final synthetic b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lft2;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, v1, v1}, Lft2;-><init>(ZII)V
+
+    sput-object v0, Lft2;->d:Lft2;
+
+    return-void
+.end method
+
+.method public constructor <init>(ZII)V
     .locals 0
 
-    iput p2, p0, Lft2;->a:I
-
-    iput-object p1, p0, Lft2;->b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lft2;->a:Z
+
+    iput p2, p0, Lft2;->b:I
+
+    iput p3, p0, Lft2;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lft2;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lft2;->b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
+    goto :goto_1
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of v0, p1, Lft2;
 
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Y:[Lp38;
+    if-nez v0, :cond_1
 
-    new-instance v2, Lub1;
+    goto :goto_0
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->A0()Lyt2;
+    :cond_1
+    check-cast p1, Lft2;
 
-    move-result-object v4
+    iget-boolean v0, p0, Lft2;->a:Z
 
-    const/4 v8, 0x0
+    iget-boolean v1, p1, Lft2;->a:Z
 
-    const/16 v9, 0xa
+    if-eq v0, v1, :cond_2
 
-    const/4 v3, 0x0
+    goto :goto_0
 
-    const-class v5, Lyt2;
+    :cond_2
+    iget v0, p0, Lft2;->b:I
 
-    const-string v6, "getMemberListActions"
+    iget v1, p1, Lft2;->b:I
 
-    const-string v7, "getMemberListActions()Lkotlinx/coroutines/flow/Flow;"
+    if-eq v0, v1, :cond_3
 
-    invoke-direct/range {v2 .. v9}, Lub1;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    goto :goto_0
 
-    new-instance v3, Le9;
+    :cond_3
+    iget v0, p0, Lft2;->c:I
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->z0()J
+    iget p1, p1, Lft2;->c:I
 
-    move-result-wide v4
+    if-eq v0, p1, :cond_4
 
-    sget-object v0, Lvkc;->a:Lvkc;
+    :goto_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Lvkc;->a()Ld68;
+    return p1
 
-    move-result-object v6
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    return p1
+.end method
 
-    move-result-object v7
+.method public final hashCode()I
+    .locals 3
 
-    const/16 v8, 0xcb
+    iget-boolean v0, p0, Lft2;->a:Z
 
-    invoke-virtual {v7, v8}, Lu5;->d(I)Lz7g;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result-object v7
+    move-result v0
 
-    invoke-virtual {v0}, Lvkc;->b()Ld68;
+    const/16 v1, 0x1f
 
-    move-result-object v8
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    iget v2, p0, Lft2;->b:I
 
-    move-result-object v9
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
 
-    const/16 v10, 0xcd
+    move-result v0
 
-    invoke-virtual {v9, v10}, Lu5;->d(I)Lz7g;
+    iget v1, p0, Lft2;->c:I
 
-    move-result-object v9
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-virtual {v0}, Lvkc;->e()Ld68;
+    move-result v1
 
-    move-result-object v10
+    add-int/2addr v1, v0
 
-    const/4 v11, 0x1
+    return v1
+.end method
 
-    invoke-direct/range {v3 .. v11}, Le9;-><init>(JLd68;Ld68;Ld68;Ld68;Ld68;I)V
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    new-instance v0, Lei9;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v4, Lhb2;
+    const-string v1, "ChatMembersLoadConfig(newLoadingContactsLogicEnabled="
 
-    const/4 v5, 0x4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lhb2;-><init>(ILjava/lang/Object;)V
+    iget-boolean v1, p0, Lft2;->a:Z
 
-    invoke-direct {v0, v4, v3, v2}, Lei9;-><init>(Loq6;Les4;Lmq6;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxLoadCount="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lft2;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", minInCall="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, Lft2;->c:I
+
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Y:[Lp38;
-
-    new-instance v0, Lyt2;
-
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->z0()J
-
-    move-result-wide v1
-
-    const/16 v3, 0x7c
-
-    invoke-direct {v0, v1, v2, v3}, Lyt2;-><init>(JI)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

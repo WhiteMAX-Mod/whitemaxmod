@@ -1,64 +1,19 @@
 .class public final Lebg;
-.super Ljava/lang/Object;
+.super Lko4;
 .source "SourceFile"
-
-# interfaces
-.implements Lhbg;
-
-
-# static fields
-.field public static final a:Lebg;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lebg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lebg;->a:Lebg;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final D(Landroid/net/Uri;)Landroid/net/Uri;
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lsh7;->a(Landroid/net/Uri;)Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    return v0
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    :cond_0
-    instance-of p1, p1, Lebg;
+    move-result-object p1
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x947bb45
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CommonNetworkError"
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,123 +1,63 @@
-.class public final synthetic Ljoc;
-.super Ljava/lang/Object;
+.class public final Ljoc;
+.super Lie0;
 .source "SourceFile"
 
-# interfaces
-.implements Loq6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpf6;
+# static fields
+.field public static final b:Ljoc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpf6;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Ljoc;->a:I
+    new-instance v0, Ljoc;
 
-    iput-object p1, p0, Ljoc;->b:Lpf6;
+    const/16 v1, 0xe
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lie0;-><init>(I)V
+
+    sput-object v0, Ljoc;->b:Ljoc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Ljoc;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    iget-object v0, p0, Ljoc;->b:Lpf6;
+    :cond_0
+    instance-of p1, p1, Ljoc;
 
-    iget-object v0, v0, Lpf6;->X:Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->A0()Lxoc;
+    return p1
 
-    move-result-object v0
+    :cond_1
+    return v0
+.end method
 
-    iget-object v0, v0, Lxoc;->b:Lad5;
+.method public final hashCode()I
+    .locals 1
 
-    const/4 v1, 0x4
+    const v0, 0x57bae991
 
-    invoke-virtual {v0, v1, p1}, Lad5;->m(ILjava/lang/String;)V
+    return v0
+.end method
 
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-object p1
+    const-string v0, "ChangePhone"
 
-    :pswitch_0
-    iget-object v0, p0, Ljoc;->b:Lpf6;
-
-    iget-object v0, v0, Lpf6;->X:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
-
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->A0()Lxoc;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lxoc;->b:Lad5;
-
-    const/high16 v1, 0x20000
-
-    invoke-virtual {v0, v1, p1}, Lad5;->m(ILjava/lang/String;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Ljoc;->b:Lpf6;
-
-    iget-object v0, v0, Lpf6;->X:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
-
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->A0()Lxoc;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lxoc;->b:Lad5;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1, p1}, Lad5;->m(ILjava/lang/String;)V
-
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Ljoc;->b:Lpf6;
-
-    iget-object v0, v0, Lpf6;->X:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
-
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->A0()Lxoc;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lxoc;->b:Lad5;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1, p1}, Lad5;->m(ILjava/lang/String;)V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

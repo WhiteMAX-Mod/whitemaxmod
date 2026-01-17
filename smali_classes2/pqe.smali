@@ -1,80 +1,57 @@
 .class public final Lpqe;
-.super Ljre;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic h:I
+.field public final a:Lkv1;
 
-.field public final i:Ljava/lang/Object;
+.field public final b:Loqe;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/Object;I)V
+.method public constructor <init>(Lkv1;Loqe;)V
     .locals 0
 
-    .line 1
-    iput p4, p0, Lpqe;->h:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ljre;-><init>(J)V
+    iput-object p1, p0, Lpqe;->a:Lkv1;
 
-    iput-object p3, p0, Lpqe;->i:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ldn9;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lpqe;->h:I
-
-    const-wide/16 v0, 0x0
-
-    .line 2
-    invoke-direct {p0, v0, v1}, Ljre;-><init>(J)V
-
-    .line 3
-    iput-object p1, p0, Lpqe;->i:Ljava/lang/Object;
+    iput-object p2, p0, Lpqe;->b:Loqe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkre;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Lpqe;->h:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "DisplayLayoutItem{videoTrackParticipantKey="
 
-    new-instance v0, Lmre;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, p0}, Lmre;-><init>(Lpqe;)V
+    iget-object v1, p0, Lpqe;->a:Lkv1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", layout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpqe;->b:Loqe;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Lqqe;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lqqe;-><init>(Lpqe;B)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lqqe;
-
-    invoke-direct {v0, p0}, Lqqe;-><init>(Lpqe;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

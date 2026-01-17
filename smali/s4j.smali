@@ -1,108 +1,70 @@
-.class public abstract Ls4j;
+.class public final Ls4j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
 
 # static fields
-.field public static a:Z = true
+.field public static final a:Ls4j;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x3
+    new-instance v0, Ls4j;
 
-    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    sput-object v0, Ls4j;->a:Ls4j;
 
-    if-eqz v0, :cond_0
+    new-instance v0, Lvzi;
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v1, 0x1
 
-    :cond_0
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-.method public static b(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+    const-class v1, Ln0j;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/4 v2, 0x2
 
-    move-result-object p0
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    const-string v1, "string"
+    move-result-object v0
 
-    invoke-virtual {p0, p1, v1, v0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    move-result p1
+    move-result-object v0
 
-    if-nez p1, :cond_0
+    const/4 v2, 0x3
 
-    const/4 p0, 0x0
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    return-object p0
+    move-result-object v0
 
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
-.end method
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
-.method public static c(Landroid/view/ViewGroup;Z)V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {p0, p1}, Lish;->b(Landroid/view/ViewGroup;Z)V
-
-    return-void
-
-    :cond_0
-    sget-boolean v0, Ls4j;->a:Z
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    invoke-static {p0, p1}, Lish;->b(Landroid/view/ViewGroup;Z)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    const/4 p0, 0x0
-
-    sput-boolean p0, Ls4j;->a:Z
-
-    :cond_1
     return-void
 .end method
 
-.method public static d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
 
-    const/4 v0, 0x2
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
+    throw p1
 .end method

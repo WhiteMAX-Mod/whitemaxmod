@@ -1,41 +1,44 @@
-.class public abstract Lbq3;
+.class public final Lbq3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lv4a;
+
+
+# instance fields
+.field public final a:Lzii;
+
+.field public final b:Lzii;
+
 
 # direct methods
-.method public static a(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintList()Landroid/content/res/ColorStateList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    new-instance v0, Lzii;
 
-    return-object p0
-.end method
+    new-instance v1, Lsna;
 
-.method public static b(Landroid/widget/CompoundButton;)Landroid/graphics/PorterDuff$Mode;
-    .locals 0
+    const/16 v2, 0x18
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-direct {v1, v2}, Lsna;-><init>(I)V
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Lzii;-><init>(Lhr8;)V
 
-    return-object p0
-.end method
+    iput-object v0, p0, Lbq3;->a:Lzii;
 
-.method public static c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
-    .locals 0
+    new-instance v0, Lzii;
 
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
+    new-instance v1, Lfca;
 
-    return-void
-.end method
+    invoke-direct {v1, v2}, Lfca;-><init>(I)V
 
-.method public static d(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
+    invoke-direct {v0, v1}, Lzii;-><init>(Lhr8;)V
 
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    iput-object v0, p0, Lbq3;->b:Lzii;
 
     return-void
 .end method

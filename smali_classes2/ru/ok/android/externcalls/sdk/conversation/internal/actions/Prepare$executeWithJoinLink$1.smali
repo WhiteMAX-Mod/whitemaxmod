@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;
-.super Ln58;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Llq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeWithJoinLink(Ljava/lang/String;Ljava/lang/String;)Lbdf;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeWithJoinLink(Ljava/lang/String;Ljava/lang/String;)Lkef;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ln58;",
-        "Lmq6;"
+        "Ly48;",
+        "Llq6;"
     }
 .end annotation
 
@@ -28,11 +28,11 @@
         "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00020\u00010\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
-        "Lbdf;",
-        "Lrpb;",
+        "Lkef;",
+        "Lcqb;",
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "invoke",
-        "()Lbdf;",
+        "()Lkef;",
         "<anonymous>"
     }
     k = 0x3
@@ -64,19 +64,30 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Ln58;-><init>(I)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Lbdf;
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lkef;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final invoke()Lkef;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lbdf;"
+            "Lkef;"
         }
     .end annotation
 
@@ -112,7 +123,7 @@
     move-result-object v6
 
     .line 7
-    invoke-virtual/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->joinConversationByLink(Ljava/lang/String;Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lbdf;
+    invoke-virtual/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->joinConversationByLink(Ljava/lang/String;Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lkef;
 
     move-result-object v0
 
@@ -126,27 +137,16 @@
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 9
-    new-instance v2, Lhdf;
+    new-instance v2, Lqef;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v0, v1, v3}, Lhdf;-><init>(Lbdf;Lux3;I)V
+    invoke-direct {v2, v0, v1, v3}, Lqef;-><init>(Lkef;Lay3;I)V
 
     .line 10
     sget-object v0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$2;->INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$2;
 
-    invoke-virtual {v2, v0}, Lbdf;->h(Ldr6;)Ljdf;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lbdf;
+    invoke-virtual {v2, v0}, Lkef;->h(Lcr6;)Lsef;
 
     move-result-object v0
 

@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public a:Lm22;
+.field public a:Ld22;
 
-.field public b:Lgk7;
+.field public b:Lnj7;
 
-.field public final c:Lgk7;
+.field public final c:Lnj7;
 
 .field public final d:Landroid/util/Size;
 
@@ -18,28 +18,28 @@
 
 .field public final g:Z
 
-.field public final h:Lhc5;
+.field public final h:Ljc5;
 
-.field public final i:Lhc5;
+.field public final i:Ljc5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Size;IIZLhc5;Lhc5;)V
+.method public constructor <init>(Landroid/util/Size;IIZLjc5;Ljc5;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lq72;
+    new-instance v0, Li72;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lq72;-><init>(I)V
+    invoke-direct {v0, v1}, Li72;-><init>(I)V
 
-    iput-object v0, p0, Lra0;->a:Lm22;
+    iput-object v0, p0, Lra0;->a:Ld22;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lra0;->c:Lgk7;
+    iput-object v0, p0, Lra0;->c:Lnj7;
 
     if-eqz p1, :cond_0
 
@@ -51,9 +51,9 @@
 
     iput-boolean p4, p0, Lra0;->g:Z
 
-    iput-object p5, p0, Lra0;->h:Lhc5;
+    iput-object p5, p0, Lra0;->h:Ljc5;
 
-    iput-object p6, p0, Lra0;->i:Lhc5;
+    iput-object p6, p0, Lra0;->i:Ljc5;
 
     return-void
 
@@ -111,9 +111,9 @@
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lra0;->h:Lhc5;
+    iget-object v0, p0, Lra0;->h:Ljc5;
 
-    iget-object v1, p1, Lra0;->h:Lhc5;
+    iget-object v1, p1, Lra0;->h:Ljc5;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -121,9 +121,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lra0;->i:Lhc5;
+    iget-object v0, p0, Lra0;->i:Ljc5;
 
-    iget-object p1, p1, Lra0;->i:Lhc5;
+    iget-object p1, p1, Lra0;->i:Ljc5;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -191,7 +191,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lra0;->h:Lhc5;
+    iget-object v2, p0, Lra0;->h:Ljc5;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -201,7 +201,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lra0;->i:Lhc5;
+    iget-object v1, p0, Lra0;->i:Ljc5;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -253,7 +253,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lra0;->h:Lhc5;
+    iget-object v1, p0, Lra0;->h:Ljc5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -261,7 +261,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lra0;->i:Lhc5;
+    iget-object v1, p0, Lra0;->i:Ljc5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -1,121 +1,461 @@
 .class public final Lxj5;
-.super Ljava/lang/Object;
+.super Lyrd;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/String;
+.field public final b:Ljava/lang/Object;
 
-.field public c:Ljava/lang/String;
+.field public final c:Ljava/lang/Object;
 
-.field public d:I
+.field public final synthetic d:Ljava/lang/Object;
 
-.field public e:Ljava/lang/String;
 
-.field public f:Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;)V
+    .locals 2
 
-.field public g:Ljava/lang/Long;
+    const/4 v0, 0x0
 
-.field public h:Ljava/lang/String;
+    iput v0, p0, Lxj5;->a:I
 
-.field public i:I
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public j:Ljava/lang/String;
+    .line 4
+    iput-object p1, p0, Lxj5;->d:Ljava/lang/Object;
 
-.field public k:Ljava/lang/Integer;
+    .line 5
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public l:Ljava/lang/String;
+    const/4 v1, 0x1
 
-.field public m:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-.field public n:Ljava/lang/String;
+    iput-object v0, p0, Lxj5;->b:Ljava/lang/Object;
 
-.field public o:Ljava/util/Locale;
+    .line 6
+    new-instance v0, Liv4;
 
-.field public p:Ljava/lang/String;
+    const/16 v1, 0x17
+
+    invoke-direct {v0, p0, v1, p1}, Liv4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lxj5;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Luee;Landroidx/recyclerview/widget/RecyclerView;Lwrd;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lxj5;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lxj5;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lxj5;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lxj5;->d:Ljava/lang/Object;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lyj5;
-    .locals 20
+.method public a()V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lxj5;->a:I
 
-    iget-object v1, v0, Lxj5;->a:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "conversation id must not be null"
+    return-void
 
-    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :pswitch_0
+    invoke-virtual {p0}, Lxj5;->h()V
 
-    iget-object v1, v0, Lxj5;->e:Ljava/lang/String;
+    return-void
 
-    const-string v2, "endpointBaseUrl must not be null"
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+.method public b(II)V
+    .locals 5
 
-    iget-object v1, v0, Lxj5;->f:Ljava/lang/String;
+    iget p1, p0, Lxj5;->a:I
 
-    const-string v2, "appVersion must not be null"
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    return-void
 
-    iget-object v1, v0, Lxj5;->h:Ljava/lang/String;
+    :pswitch_0
+    sget-object p1, Lkk8;->d:Lkk8;
 
-    const-string v2, "clientType must not be null"
+    const-class p2, Lxj5;
 
-    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget-object v1, v0, Lxj5;->j:Ljava/lang/String;
+    move-result-object v0
 
-    const-string v2, "capabilities must not be null"
+    iget-object v1, p0, Lxj5;->d:Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    check-cast v1, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    new-instance v3, Lyj5;
+    sget-object v2, Lc5j;->a:Ledb;
 
-    iget-object v4, v0, Lxj5;->a:Ljava/lang/String;
+    const/4 v3, 0x0
 
-    iget-object v5, v0, Lxj5;->b:Ljava/lang/String;
+    if-nez v2, :cond_0
 
-    iget-object v6, v0, Lxj5;->c:Ljava/lang/String;
+    goto :goto_0
 
-    iget v7, v0, Lxj5;->d:I
+    :cond_0
+    invoke-virtual {v2, p1}, Ledb;->b(Lkk8;)Z
 
-    iget-object v8, v0, Lxj5;->e:Ljava/lang/String;
+    move-result v4
 
-    iget-object v9, v0, Lxj5;->f:Ljava/lang/String;
+    if-eqz v4, :cond_1
 
-    iget-object v10, v0, Lxj5;->g:Ljava/lang/Long;
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
 
-    iget-object v11, v0, Lxj5;->h:Ljava/lang/String;
+    move-result v1
 
-    iget v12, v0, Lxj5;->i:I
+    const-string v4, "onItemRangeInserted start. isComputingLayout:"
 
-    iget-object v13, v0, Lxj5;->j:Ljava/lang/String;
+    invoke-static {v4, v1}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
 
-    iget-object v14, v0, Lxj5;->k:Ljava/lang/Integer;
+    move-result-object v1
 
-    iget-object v15, v0, Lxj5;->l:Ljava/lang/String;
+    invoke-virtual {v2, p1, v0, v1, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v1, v0, Lxj5;->m:Ljava/lang/String;
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lxj5;->h()V
 
-    iget-object v2, v0, Lxj5;->n:Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-object/from16 v16, v1
+    move-result-object p2
 
-    iget-object v1, v0, Lxj5;->o:Ljava/util/Locale;
+    iget-object v0, p0, Lxj5;->d:Ljava/lang/Object;
 
-    move-object/from16 v18, v1
+    check-cast v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget-object v1, v0, Lxj5;->p:Ljava/lang/String;
+    sget-object v1, Lc5j;->a:Ledb;
 
-    move-object/from16 v19, v1
+    if-nez v1, :cond_2
 
-    move-object/from16 v17, v2
+    goto :goto_1
 
-    invoke-direct/range {v3 .. v19}, Lyj5;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;Ljava/lang/String;)V
+    :cond_2
+    invoke-virtual {v1, p1}, Ledb;->b(Lkk8;)Z
 
-    return-object v3
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result v0
+
+    const-string v2, "onItemRangeInserted end. isComputingLayout:"
+
+    invoke-static {v2, v0}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, p1, p2, v0, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c(IILjava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lxj5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Lyrd;->c(IILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lxj5;->h()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(II)V
+    .locals 4
+
+    iget v0, p0, Lxj5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lkk8;->d:Lkk8;
+
+    iget-object v1, p0, Lxj5;->b:Ljava/lang/Object;
+
+    check-cast v1, Luee;
+
+    const/4 v2, 0x1
+
+    if-ne p2, v2, :cond_3
+
+    iget-object p2, p0, Lxj5;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {v1, p2, p1}, Luee;->d(Luee;Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p0, Lxj5;->b:Ljava/lang/Object;
+
+    check-cast p1, Luee;
+
+    iget-object p1, p1, Luee;->d:Ljava/lang/String;
+
+    iget-object p2, p0, Lxj5;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v1, Lc5j;->a:Ledb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1, v0}, Ledb;->b(Lkk8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result p2
+
+    const-string v3, "onItemRangeInserted start. isComputingLayout:"
+
+    invoke-static {v3, p2}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v1, v0, p1, p2, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lxj5;->b:Ljava/lang/Object;
+
+    check-cast p1, Luee;
+
+    iget-object p2, p0, Lxj5;->d:Ljava/lang/Object;
+
+    check-cast p2, Lwrd;
+
+    invoke-static {p1, p2}, Luee;->e(Luee;Lwrd;)V
+
+    iget-object p1, p0, Lxj5;->b:Ljava/lang/Object;
+
+    check-cast p1, Luee;
+
+    iget-object p1, p1, Luee;->d:Ljava/lang/String;
+
+    iget-object p2, p0, Lxj5;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v1, Lc5j;->a:Ledb;
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v1, v0}, Ledb;->b(Lkk8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result p2
+
+    const-string v3, "onItemRangeInserted end. isComputingLayout:"
+
+    invoke-static {v3, p2}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v1, v0, p1, p2, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lxj5;->h()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e(II)V
+    .locals 3
+
+    iget v0, p0, Lxj5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxj5;->d:Ljava/lang/Object;
+
+    check-cast v0, Lwrd;
+
+    iget-object v1, p0, Lxj5;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v2, p0, Lxj5;->b:Ljava/lang/Object;
+
+    check-cast v2, Luee;
+
+    invoke-static {v2, v1, p1}, Luee;->d(Luee;Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v2, v0}, Luee;->e(Luee;Lwrd;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2, v1, p2}, Luee;->d(Luee;Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {v2, v0}, Luee;->e(Luee;Lwrd;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lxj5;->h()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f(II)V
+    .locals 2
+
+    iget v0, p0, Lxj5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxj5;->b:Ljava/lang/Object;
+
+    check-cast v0, Luee;
+
+    const/4 v1, 0x1
+
+    if-ne p2, v1, :cond_0
+
+    iget-object p2, p0, Lxj5;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {v0, p2, p1}, Luee;->d(Luee;Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lxj5;->d:Ljava/lang/Object;
+
+    check-cast p1, Lwrd;
+
+    invoke-static {v0, p1}, Luee;->e(Luee;Lwrd;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lxj5;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h()V
+    .locals 4
+
+    iget-object v0, p0, Lxj5;->d:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    iget-object v1, p0, Lxj5;->c:Ljava/lang/Object;
+
+    check-cast v1, Liv4;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x5
+
+    invoke-static {v3, v0, v1, v2}, Lhmj;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+
+    return-void
 .end method

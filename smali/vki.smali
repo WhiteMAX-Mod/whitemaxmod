@@ -1,249 +1,392 @@
-.class public abstract Lvki;
+.class public final Lvki;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqke;
 
-# static fields
-.field public static a:Lhl8;
+
+# instance fields
+.field public final X:J
+
+.field public final Y:[J
+
+.field public final a:J
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:I
+
+.field public final o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lsh8;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lsh8;-><init>(I)V
-
-    sput-object v0, Lvki;->a:Lhl8;
-
-    return-void
-.end method
-
-.method public static a(Ljava/util/Collection;)I
+.method public constructor <init>(JIJIJ[J)V
     .locals 0
 
-    if-nez p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p0, 0x0
+    iput-wide p1, p0, Lvki;->a:J
 
-    return p0
+    iput p3, p0, Lvki;->b:I
 
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
+    iput-wide p4, p0, Lvki;->c:J
 
-    move-result p0
+    iput p6, p0, Lvki;->d:I
 
-    return p0
-.end method
+    iput-wide p7, p0, Lvki;->o:J
 
-.method public static b(Ljava/util/Map;)I
-    .locals 0
+    iput-object p9, p0, Lvki;->Y:[J
 
-    if-nez p0, :cond_0
+    const-wide/16 p3, -0x1
 
-    const/4 p0, 0x0
+    cmp-long p5, p7, p3
 
-    return p0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Map;->size()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Ljava/util/Map;Lgl8;)Ljava/lang/String;
-    .locals 3
-
-    invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    if-nez p5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    add-long p3, p1, p7
 
-    move-result-object p0
+    :goto_0
+    iput-wide p3, p0, Lvki;->X:J
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    return-void
+.end method
 
-    move-result-object p0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+# virtual methods
+.method public final a(J)J
+    .locals 13
+
+    iget-wide v0, p0, Lvki;->a:J
+
+    sub-long/2addr p1, v0
+
+    invoke-virtual {p0}, Lvki;->c()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_3
 
-    :goto_0
-    const-string p0, "{}"
+    iget v0, p0, Lvki;->b:I
 
-    return-object p0
+    int-to-long v0, v0
 
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
+    cmp-long v0, p1, v0
 
-    const-string v1, "{"
+    if-gtz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_2
 
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_0
+    iget-object v0, p0, Lvki;->Y:[J
 
-    move-result-object v1
+    invoke-static {v0}, Lh6j;->h(Ljava/lang/Object;)V
 
-    check-cast v1, Ljava/util/Map$Entry;
+    long-to-double p1, p1
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    const-wide/high16 v1, 0x4070000000000000L    # 256.0
 
-    move-result-object v2
+    mul-double/2addr p1, v1
 
-    check-cast v2, Ljava/lang/String;
+    iget-wide v1, p0, Lvki;->o:J
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    long-to-double v1, v1
 
-    move-result-object v1
+    div-double/2addr p1, v1
 
-    if-eqz p1, :cond_2
+    double-to-long v1, p1
 
-    invoke-interface {p1, v1, v2}, Lgl8;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    const/4 v3, 0x1
 
-    move-result-object v1
-
-    :cond_2
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x3d
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0, v1, v2, v3}, Lmbh;->e([JJZ)I
 
     move-result v1
 
-    if-nez v1, :cond_3
+    int-to-long v2, v1
 
-    const/16 p0, 0x7d
+    iget-wide v4, p0, Lvki;->c:J
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    mul-long/2addr v2, v4
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-wide/16 v6, 0x64
 
-    move-result-object p0
+    div-long/2addr v2, v6
 
-    return-object p0
+    aget-wide v8, v0, v1
 
-    :cond_3
-    const-string v1, ", "
+    add-int/lit8 v10, v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    int-to-long v11, v10
 
-    goto :goto_1
-.end method
+    mul-long/2addr v4, v11
 
-.method public static final d(Ljava/lang/String;)I
-    .locals 2
+    div-long/2addr v4, v6
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    const/16 v6, 0x63
 
-    move-result v0
+    if-ne v1, v6, :cond_1
 
-    const/16 v1, 0x608
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x61f
-
-    if-eq v0, v1, :cond_2
-
-    const/16 v1, 0x621
-
-    if-eq v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "12"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
+    const-wide/16 v0, 0x100
 
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x3
+    aget-wide v6, v0, v10
 
-    return p0
+    move-wide v0, v6
+
+    :goto_0
+    cmp-long v6, v8, v0
+
+    if-nez v6, :cond_2
+
+    const-wide/16 p1, 0x0
+
+    goto :goto_1
 
     :cond_2
-    const-string v0, "10"
+    long-to-double v6, v8
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sub-double/2addr p1, v6
 
-    move-result p0
+    sub-long/2addr v0, v8
 
-    if-nez p0, :cond_3
+    long-to-double v0, v0
+
+    div-double/2addr p1, v0
+
+    :goto_1
+    sub-long/2addr v4, v2
+
+    long-to-double v0, v4
+
+    mul-double/2addr p1, v0
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v2
+
+    return-wide p1
+
+    :cond_3
+    :goto_2
+    const-wide/16 p1, 0x0
+
+    return-wide p1
+.end method
+
+.method public final b()J
+    .locals 2
+
+    iget-wide v0, p0, Lvki;->X:J
+
+    return-wide v0
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    iget-object v0, p0, Lvki;->Y:[J
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e(J)Lgke;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0}, Lvki;->c()Z
+
+    move-result v1
+
+    iget v2, v0, Lvki;->b:I
+
+    iget-wide v3, v0, Lvki;->a:J
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lgke;
+
+    new-instance v5, Lmke;
+
+    int-to-long v6, v2
+
+    add-long/2addr v3, v6
+
+    const-wide/16 v6, 0x0
+
+    invoke-direct {v5, v6, v7, v3, v4}, Lmke;-><init>(JJ)V
+
+    invoke-direct {v1, v5, v5}, Lgke;-><init>(Lmke;Lmke;)V
+
+    return-object v1
+
+    :cond_0
+    const-wide/16 v10, 0x0
+
+    iget-wide v12, v0, Lvki;->c:J
+
+    move-wide/from16 v8, p1
+
+    invoke-static/range {v8 .. v13}, Lmbh;->j(JJJ)J
+
+    move-result-wide v5
+
+    long-to-double v7, v5
+
+    const-wide/high16 v9, 0x4059000000000000L    # 100.0
+
+    mul-double/2addr v7, v9
+
+    iget-wide v11, v0, Lvki;->c:J
+
+    long-to-double v11, v11
+
+    div-double/2addr v7, v11
+
+    const-wide/16 v11, 0x0
+
+    cmpg-double v1, v7, v11
+
+    if-gtz v1, :cond_1
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    goto :goto_1
+
+    :cond_1
+    cmpl-double v1, v7, v9
+
+    if-ltz v1, :cond_2
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    const-wide/high16 v11, 0x4070000000000000L    # 256.0
+
+    goto :goto_1
+
+    :cond_2
+    double-to-int v1, v7
+
+    iget-object v9, v0, Lvki;->Y:[J
+
+    invoke-static {v9}, Lh6j;->h(Ljava/lang/Object;)V
+
+    aget-wide v10, v9, v1
+
+    long-to-double v10, v10
+
+    const/16 v12, 0x63
+
+    if-ne v1, v12, :cond_3
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    const-wide/high16 v12, 0x4070000000000000L    # 256.0
 
     goto :goto_0
 
     :cond_3
-    const/4 p0, 0x2
+    add-int/lit8 v12, v1, 0x1
 
-    return p0
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
 
-    :cond_4
-    const-string v0, "08"
+    aget-wide v13, v9, v12
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
+    long-to-double v12, v13
 
     :goto_0
-    const/4 p0, 0x4
+    int-to-double v14, v1
 
-    return p0
+    sub-double/2addr v7, v14
 
-    :cond_5
-    const/4 p0, 0x1
+    sub-double/2addr v12, v10
 
-    return p0
+    mul-double/2addr v12, v7
+
+    add-double v11, v12, v10
+
+    :goto_1
+    div-double v11, v11, p1
+
+    iget-wide v7, v0, Lvki;->o:J
+
+    long-to-double v9, v7
+
+    mul-double/2addr v11, v9
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v13
+
+    int-to-long v1, v2
+
+    const-wide/16 v9, 0x1
+
+    sub-long v17, v7, v9
+
+    move-wide v15, v1
+
+    invoke-static/range {v13 .. v18}, Lmbh;->j(JJJ)J
+
+    move-result-wide v1
+
+    new-instance v7, Lgke;
+
+    new-instance v8, Lmke;
+
+    add-long/2addr v3, v1
+
+    invoke-direct {v8, v5, v6, v3, v4}, Lmke;-><init>(JJ)V
+
+    invoke-direct {v7, v8, v8}, Lgke;-><init>(Lmke;Lmke;)V
+
+    return-object v7
 .end method
 
-.method public static e(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lydg;)V
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lvki;->c:J
+
+    return-wide v0
+.end method
+
+.method public final g()J
+    .locals 4
+
+    iget v0, p0, Lvki;->b:I
+
+    int-to-long v0, v0
+
+    iget-wide v2, p0, Lvki;->a:J
+
+    add-long/2addr v2, v0
+
+    return-wide v2
+.end method
+
+.method public final h()I
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->b()Z
+    iget v0, p0, Lvki;->d:I
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p2, Lydg;->a:Ljpj;
-
-    invoke-virtual {p0, p1}, Ljpj;->q(Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_0
-    invoke-static {p0}, Lg4j;->a(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Lydg;->c(Ljava/lang/Exception;)Z
-
-    return-void
+    return v0
 .end method

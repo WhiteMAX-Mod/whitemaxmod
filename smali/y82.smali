@@ -1,769 +1,183 @@
-.class public final Ly82;
+.class public abstract Ly82;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li1g;
+
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/ArrayDeque;
 
-.field public b:I
+.field public final b:Ljava/util/ArrayDeque;
 
-.field public c:I
+.field public final c:Ljava/util/ArrayDeque;
 
-.field public d:[B
+.field public d:Lu82;
 
-.field public e:I
+.field public e:J
+
+.field public f:J
+
+.field public g:J
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 5
 
-    iput p1, p0, Ly82;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    sget-object p1, Loah;->f:[B
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    iput-object p1, p0, Ly82;->d:[B
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    return-void
+    iput-object v0, p0, Ly82;->a:Ljava/util/ArrayDeque;
 
-    .line 4
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    .line 5
-    sget-object p1, Lqah;->b:[B
+    move v1, v0
 
-    iput-object p1, p0, Ly82;->d:[B
+    :goto_0
+    const/16 v2, 0xa
 
-    return-void
+    if-ge v1, v2, :cond_0
 
-    nop
+    iget-object v2, p0, Ly82;->a:Ljava/util/ArrayDeque;
 
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
-.end method
+    new-instance v3, Lu82;
 
-.method public constructor <init>(III)V
-    .locals 0
+    const/4 v4, 0x1
 
-    iput p3, p0, Ly82;->a:I
+    invoke-direct {v3, v4}, Lol4;-><init>(I)V
 
-    packed-switch p3, :pswitch_data_0
+    invoke-virtual {v2, v3}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    .line 24
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    add-int/lit8 v1, v1, 0x1
 
-    .line 25
-    iput p1, p0, Ly82;->b:I
+    goto :goto_0
 
-    .line 26
-    iput p2, p0, Ly82;->c:I
+    :cond_0
+    new-instance v1, Ljava/util/ArrayDeque;
 
-    mul-int/lit8 p2, p2, 0x2
+    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
 
-    add-int/lit8 p2, p2, -0x1
+    iput-object v1, p0, Ly82;->b:Ljava/util/ArrayDeque;
 
-    .line 27
-    new-array p1, p2, [B
+    :goto_1
+    const/4 v1, 0x2
 
-    iput-object p1, p0, Ly82;->d:[B
+    if-ge v0, v1, :cond_1
 
-    const/4 p1, 0x0
+    iget-object v1, p0, Ly82;->b:Ljava/util/ArrayDeque;
 
-    .line 28
-    iput p1, p0, Ly82;->e:I
+    new-instance v2, Lw82;
 
-    return-void
+    new-instance v3, Ls82;
 
-    .line 29
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v4, 0x1
 
-    .line 30
-    iput p1, p0, Ly82;->b:I
+    invoke-direct {v3, v4, p0}, Ls82;-><init>(ILjava/lang/Object;)V
 
-    .line 31
-    iput p2, p0, Ly82;->c:I
+    invoke-direct {v2}, Lw82;-><init>()V
 
-    mul-int/lit8 p2, p2, 0x2
+    iput-object v3, v2, Lw82;->Z:Ljava/lang/Object;
 
-    add-int/lit8 p2, p2, -0x1
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    .line 32
-    new-array p1, p2, [B
+    add-int/lit8 v0, v0, 0x1
 
-    iput-object p1, p0, Ly82;->d:[B
+    goto :goto_1
 
-    const/4 p1, 0x0
+    :cond_1
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    .line 33
-    iput p1, p0, Ly82;->e:I
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    return-void
+    iput-object v0, p0, Ly82;->c:Ljava/util/ArrayDeque;
 
-    nop
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(III[B)V
-    .locals 0
-
-    iput p3, p0, Ly82;->a:I
-
-    packed-switch p3, :pswitch_data_0
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    iput-object p4, p0, Ly82;->d:[B
-
-    .line 8
-    iput p1, p0, Ly82;->c:I
-
-    .line 9
-    iput p2, p0, Ly82;->b:I
-
-    const/4 p1, 0x0
-
-    .line 10
-    iput p1, p0, Ly82;->e:I
-
-    .line 11
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    .line 12
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 13
-    iput-object p4, p0, Ly82;->d:[B
-
-    .line 14
-    iput p1, p0, Ly82;->c:I
-
-    .line 15
-    iput p2, p0, Ly82;->b:I
-
-    const/4 p1, 0x0
-
-    .line 16
-    iput p1, p0, Ly82;->e:I
-
-    .line 17
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(I[B)V
-    .locals 0
-
-    iput p1, p0, Ly82;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 18
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 19
-    iput-object p2, p0, Ly82;->d:[B
-
-    .line 20
-    array-length p1, p2
-
-    iput p1, p0, Ly82;->b:I
-
-    return-void
-
-    .line 21
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 22
-    iput-object p2, p0, Ly82;->d:[B
-
-    .line 23
-    array-length p1, p2
-
-    iput p1, p0, Ly82;->b:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic constructor <init>([BIIB)V
-    .locals 0
-
-    .line 1
-    iput p3, p0, Ly82;->a:I
-
-    iput-object p1, p0, Ly82;->d:[B
-
-    iput p2, p0, Ly82;->e:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide v0, p0, Ly82;->g:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method public final a(J)V
+    .locals 0
 
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->c:I
-
-    if-ltz v0, :cond_1
-
-    iget v1, p0, Ly82;->b:I
-
-    if-lt v0, v1, :cond_0
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Ly82;->e:I
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lp5j;->g(Z)V
+    iput-wide p1, p0, Ly82;->e:J
 
     return-void
-
-    :pswitch_0
-    iget v0, p0, Ly82;->c:I
-
-    if-ltz v0, :cond_3
-
-    iget v1, p0, Ly82;->b:I
-
-    if-lt v0, v1, :cond_2
-
-    if-ne v0, v1, :cond_3
-
-    iget v0, p0, Ly82;->e:I
-
-    if-nez v0, :cond_3
-
-    :cond_2
-    const/4 v0, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v0, 0x0
-
-    :goto_1
-    invoke-static {v0}, Ln5j;->d(Z)V
-
-    return-void
-
-    :pswitch_1
-    iget v0, p0, Ly82;->b:I
-
-    if-ltz v0, :cond_5
-
-    iget v1, p0, Ly82;->e:I
-
-    if-lt v0, v1, :cond_4
-
-    if-ne v0, v1, :cond_5
-
-    iget v0, p0, Ly82;->c:I
-
-    if-nez v0, :cond_5
-
-    :cond_4
-    const/4 v0, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    const/4 v0, 0x0
-
-    :goto_2
-    invoke-static {v0}, Lp5j;->g(Z)V
-
-    return-void
-
-    :pswitch_2
-    iget v0, p0, Ly82;->b:I
-
-    if-ltz v0, :cond_7
-
-    iget v1, p0, Ly82;->e:I
-
-    if-lt v0, v1, :cond_6
-
-    if-ne v0, v1, :cond_7
-
-    iget v0, p0, Ly82;->c:I
-
-    if-nez v0, :cond_7
-
-    :cond_6
-    const/4 v0, 0x1
-
-    goto :goto_3
-
-    :cond_7
-    const/4 v0, 0x0
-
-    :goto_3
-    invoke-static {v0}, Ln5j;->d(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public b()I
-    .locals 2
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->e:I
-
-    iget v1, p0, Ly82;->b:I
-
-    sub-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x8
-
-    iget v1, p0, Ly82;->c:I
-
-    :goto_0
-    sub-int/2addr v0, v1
-
-    return v0
-
-    :pswitch_0
-    iget v0, p0, Ly82;->e:I
-
-    iget v1, p0, Ly82;->b:I
-
-    sub-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x8
-
-    iget v1, p0, Ly82;->c:I
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public c()V
+.method public bridge synthetic b()Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ly82;->a:I
+    invoke-virtual {p0}, Ly82;->h()Lw82;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget v0, p0, Ly82;->c:I
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Ly82;->d:Lu82;
 
     if-nez v0, :cond_0
 
+    const/4 v0, 0x1
+
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
-    iput v0, p0, Ly82;->c:I
-
-    iget v0, p0, Ly82;->b:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ly82;->b:I
-
-    invoke-virtual {p0}, Ly82;->a()V
-
     :goto_0
-    return-void
+    invoke-static {v0}, Lh6j;->g(Z)V
 
-    :pswitch_0
-    iget v0, p0, Ly82;->c:I
+    iget-object v0, p0, Ly82;->a:Ljava/util/ArrayDeque;
 
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    iput v0, p0, Ly82;->c:I
-
-    iget v0, p0, Ly82;->b:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ly82;->b:I
-
-    invoke-virtual {p0}, Ly82;->a()V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public d(I)Z
-    .locals 4
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->c:I
-
-    div-int/lit8 v1, p1, 0x8
-
-    add-int v2, v0, v1
-
-    iget v3, p0, Ly82;->e:I
-
-    add-int/2addr v3, p1
-
-    mul-int/lit8 v1, v1, 0x8
-
-    sub-int/2addr v3, v1
-
-    const/4 p1, 0x7
-
-    if-le v3, p1, :cond_0
-
-    add-int/lit8 v2, v2, 0x1
-
-    add-int/lit8 v3, v3, -0x8
-
-    :cond_0
-    const/4 p1, 0x1
-
-    :cond_1
-    :goto_0
-    add-int/2addr v0, p1
-
-    if-gt v0, v2, :cond_2
-
-    iget v1, p0, Ly82;->b:I
-
-    if-ge v2, v1, :cond_2
-
-    invoke-virtual {p0, v0}, Ly82;->r(I)Z
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    add-int/lit8 v2, v2, 0x1
+    const/4 v0, 0x0
 
-    add-int/lit8 v0, v0, 0x2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Ly82;->b:I
-
-    if-lt v2, v0, :cond_4
-
-    if-ne v2, v0, :cond_3
-
-    if-nez v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    :cond_4
-    :goto_1
-    return p1
-
-    :pswitch_0
-    iget v0, p0, Ly82;->c:I
-
-    div-int/lit8 v1, p1, 0x8
-
-    add-int v2, v0, v1
-
-    iget v3, p0, Ly82;->e:I
-
-    add-int/2addr v3, p1
-
-    mul-int/lit8 v1, v1, 0x8
-
-    sub-int/2addr v3, v1
-
-    const/4 p1, 0x7
-
-    if-le v3, p1, :cond_5
-
-    add-int/lit8 v2, v2, 0x1
-
-    add-int/lit8 v3, v3, -0x8
-
-    :cond_5
-    const/4 p1, 0x1
-
-    :cond_6
-    :goto_2
-    add-int/2addr v0, p1
-
-    if-gt v0, v2, :cond_7
-
-    iget v1, p0, Ly82;->b:I
-
-    if-ge v2, v1, :cond_7
-
-    invoke-virtual {p0, v0}, Ly82;->r(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    add-int/lit8 v2, v2, 0x1
-
-    add-int/lit8 v0, v0, 0x2
-
-    goto :goto_2
-
-    :cond_7
-    iget v0, p0, Ly82;->b:I
-
-    if-lt v2, v0, :cond_9
-
-    if-ne v2, v0, :cond_8
-
-    if-nez v3, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    const/4 p1, 0x0
-
-    :cond_9
-    :goto_3
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public e()Z
-    .locals 7
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->c:I
-
-    iget v1, p0, Ly82;->e:I
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    iget v4, p0, Ly82;->c:I
-
-    iget v5, p0, Ly82;->b:I
-
-    if-ge v4, v5, :cond_0
-
-    invoke-virtual {p0}, Ly82;->h()Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    iget v4, p0, Ly82;->c:I
-
-    iget v5, p0, Ly82;->b:I
-
-    const/4 v6, 0x1
-
-    if-ne v4, v5, :cond_1
-
-    move v4, v6
-
-    goto :goto_1
+    return-object v0
 
     :cond_1
-    move v4, v2
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
 
-    :goto_1
-    iput v0, p0, Ly82;->c:I
+    move-result-object v0
 
-    iput v1, p0, Ly82;->e:I
+    check-cast v0, Lu82;
 
-    if-nez v4, :cond_2
+    iput-object v0, p0, Ly82;->d:Lu82;
 
-    mul-int/lit8 v3, v3, 0x2
-
-    add-int/2addr v3, v6
-
-    invoke-virtual {p0, v3}, Ly82;->d(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    move v2, v6
-
-    :cond_2
-    return v2
-
-    :pswitch_0
-    iget v0, p0, Ly82;->c:I
-
-    iget v1, p0, Ly82;->e:I
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_2
-    iget v4, p0, Ly82;->c:I
-
-    iget v5, p0, Ly82;->b:I
-
-    if-ge v4, v5, :cond_3
-
-    invoke-virtual {p0}, Ly82;->h()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    iget v4, p0, Ly82;->c:I
-
-    iget v5, p0, Ly82;->b:I
-
-    const/4 v6, 0x1
-
-    if-ne v4, v5, :cond_4
-
-    move v4, v6
-
-    goto :goto_3
-
-    :cond_4
-    move v4, v2
-
-    :goto_3
-    iput v0, p0, Ly82;->c:I
-
-    iput v1, p0, Ly82;->e:I
-
-    if-nez v4, :cond_5
-
-    mul-int/lit8 v3, v3, 0x2
-
-    add-int/2addr v3, v6
-
-    invoke-virtual {p0, v3}, Ly82;->d(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    move v2, v6
-
-    :cond_5
-    return v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public f()I
-    .locals 1
+.method public final d(J)V
+    .locals 0
 
-    iget v0, p0, Ly82;->a:I
+    iput-wide p1, p0, Ly82;->g:J
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget v0, p0, Ly82;->c:I
+.method public final e(Ln1g;)V
+    .locals 6
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Ly82;->d:Lu82;
+
+    if-ne p1, v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -773,2104 +187,247 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Lp5j;->g(Z)V
+    invoke-static {v0}, Lh6j;->b(Z)V
 
-    iget v0, p0, Ly82;->b:I
+    check-cast p1, Lu82;
 
-    return v0
+    const/4 v0, 0x4
 
-    :pswitch_0
-    iget v0, p0, Ly82;->c:I
+    invoke-virtual {p1, v0}, Laz;->g(I)Z
+
+    move-result v0
 
     if-nez v0, :cond_1
 
-    const/4 v0, 0x1
+    iget-wide v0, p1, Lol4;->Y:J
+
+    const-wide/high16 v2, -0x8000000000000000L
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_1
+
+    iget-wide v2, p0, Ly82;->g:J
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v4, v2, v4
+
+    if-eqz v4, :cond_1
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_1
+
+    invoke-virtual {p1}, Lol4;->x()V
+
+    iget-object v0, p0, Ly82;->a:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_1
-    const/4 v0, 0x0
+    iget-wide v0, p0, Ly82;->f:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Ly82;->f:J
+
+    iput-wide v0, p1, Lu82;->v0:J
+
+    iget-object v0, p0, Ly82;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
     :goto_1
-    invoke-static {v0}, Ln5j;->d(Z)V
+    const/4 p1, 0x0
 
-    iget v0, p0, Ly82;->b:I
+    iput-object p1, p0, Ly82;->d:Lu82;
 
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public g()I
-    .locals 2
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->b:I
-
-    mul-int/lit8 v0, v0, 0x8
-
-    iget v1, p0, Ly82;->c:I
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-
-    :pswitch_0
-    iget v0, p0, Ly82;->b:I
-
-    mul-int/lit8 v0, v0, 0x8
-
-    iget v1, p0, Ly82;->c:I
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+.method public abstract f()Lz82;
 .end method
 
-.method public h()Z
+.method public flush()V
     .locals 3
 
-    iget v0, p0, Ly82;->a:I
+    const-wide/16 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    iput-wide v0, p0, Ly82;->f:J
 
-    iget-object v0, p0, Ly82;->d:[B
-
-    iget v1, p0, Ly82;->c:I
-
-    aget-byte v0, v0, v1
-
-    and-int/lit16 v0, v0, 0xff
-
-    iget v1, p0, Ly82;->e:I
-
-    shr-int/2addr v0, v1
-
-    const/4 v1, 0x1
-
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
+    iput-wide v0, p0, Ly82;->e:J
 
     :goto_0
-    invoke-virtual {p0, v1}, Ly82;->t(I)V
+    iget-object v0, p0, Ly82;->c:Ljava/util/ArrayDeque;
 
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Ly82;->d:[B
-
-    iget v1, p0, Ly82;->c:I
-
-    aget-byte v0, v0, v1
-
-    and-int/lit16 v0, v0, 0xff
-
-    iget v1, p0, Ly82;->e:I
-
-    shr-int/2addr v0, v1
-
-    const/4 v1, 0x1
-
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_1
-
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_1
-    invoke-virtual {p0, v1}, Ly82;->t(I)V
-
-    return v0
-
-    :pswitch_1
-    iget-object v0, p0, Ly82;->d:[B
-
-    iget v1, p0, Ly82;->c:I
-
-    aget-byte v0, v0, v1
-
-    const/16 v1, 0x80
-
-    iget v2, p0, Ly82;->e:I
-
-    shr-int/2addr v1, v2
-
-    and-int/2addr v0, v1
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v0, 0x0
-
-    :goto_2
-    invoke-virtual {p0}, Ly82;->s()V
-
-    return v0
-
-    :pswitch_2
-    iget-object v0, p0, Ly82;->d:[B
-
-    iget v1, p0, Ly82;->c:I
-
-    aget-byte v0, v0, v1
-
-    const/16 v1, 0x80
-
-    iget v2, p0, Ly82;->e:I
-
-    shr-int/2addr v1, v2
-
-    and-int/2addr v0, v1
-
-    if-eqz v0, :cond_3
-
-    const/4 v0, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v0, 0x0
-
-    :goto_3
-    invoke-virtual {p0}, Ly82;->s()V
-
-    return v0
-
-    :pswitch_3
-    iget-object v0, p0, Ly82;->d:[B
-
-    iget v1, p0, Ly82;->b:I
-
-    aget-byte v0, v0, v1
-
-    const/16 v1, 0x80
-
-    iget v2, p0, Ly82;->c:I
-
-    shr-int/2addr v1, v2
-
-    and-int/2addr v0, v1
-
-    if-eqz v0, :cond_4
-
-    const/4 v0, 0x1
-
-    goto :goto_4
-
-    :cond_4
-    const/4 v0, 0x0
-
-    :goto_4
-    invoke-virtual {p0}, Ly82;->s()V
-
-    return v0
-
-    :pswitch_4
-    iget-object v0, p0, Ly82;->d:[B
-
-    iget v1, p0, Ly82;->b:I
-
-    aget-byte v0, v0, v1
-
-    const/16 v1, 0x80
-
-    iget v2, p0, Ly82;->c:I
-
-    shr-int/2addr v1, v2
-
-    and-int/2addr v0, v1
-
-    if-eqz v0, :cond_5
-
-    const/4 v0, 0x1
-
-    goto :goto_5
-
-    :cond_5
-    const/4 v0, 0x0
-
-    :goto_5
-    invoke-virtual {p0}, Ly82;->s()V
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public i(I)I
-    .locals 9
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->c:I
-
-    iget v1, p0, Ly82;->e:I
-
-    rsub-int/lit8 v1, v1, 0x8
-
-    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v1
 
-    iget-object v2, p0, Ly82;->d:[B
+    iget-object v2, p0, Ly82;->a:Ljava/util/ArrayDeque;
 
-    add-int/lit8 v3, v0, 0x1
+    if-nez v1, :cond_0
 
-    aget-byte v0, v2, v0
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
-    const/16 v4, 0xff
+    move-result-object v0
 
-    and-int/2addr v0, v4
+    check-cast v0, Lu82;
 
-    iget v5, p0, Ly82;->e:I
+    sget-object v1, Lmbh;->a:Ljava/lang/String;
 
-    shr-int/2addr v0, v5
+    invoke-virtual {v0}, Lol4;->x()V
 
-    rsub-int/lit8 v5, v1, 0x8
-
-    shr-int v5, v4, v5
-
-    and-int/2addr v0, v5
-
-    :goto_0
-    if-ge v1, p1, :cond_0
-
-    add-int/lit8 v5, v3, 0x1
-
-    aget-byte v3, v2, v3
-
-    and-int/2addr v3, v4
-
-    shl-int/2addr v3, v1
-
-    or-int/2addr v0, v3
-
-    add-int/lit8 v1, v1, 0x8
-
-    move v3, v5
+    invoke-virtual {v2, v0}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    rsub-int/lit8 v1, p1, 0x20
+    iget-object v0, p0, Ly82;->d:Lu82;
 
-    const/4 v2, -0x1
+    if-eqz v0, :cond_1
 
-    ushr-int v1, v2, v1
+    invoke-virtual {v0}, Lol4;->x()V
 
-    and-int/2addr v0, v1
+    invoke-virtual {v2, v0}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, p1}, Ly82;->t(I)V
+    const/4 v0, 0x0
 
-    return v0
+    iput-object v0, p0, Ly82;->d:Lu82;
 
-    :pswitch_0
-    iget v0, p0, Ly82;->c:I
+    :cond_1
+    return-void
+.end method
 
-    iget v1, p0, Ly82;->e:I
+.method public abstract g(Lu82;)V
+.end method
 
-    rsub-int/lit8 v1, v1, 0x8
+.method public h()Lw82;
+    .locals 11
 
-    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
+    iget-object v0, p0, Ly82;->b:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v1
 
-    iget-object v2, p0, Ly82;->d:[B
-
-    add-int/lit8 v3, v0, 0x1
-
-    aget-byte v0, v2, v0
-
-    const/16 v4, 0xff
-
-    and-int/2addr v0, v4
-
-    iget v5, p0, Ly82;->e:I
-
-    shr-int/2addr v0, v5
-
-    rsub-int/lit8 v5, v1, 0x8
-
-    shr-int v5, v4, v5
-
-    and-int/2addr v0, v5
-
-    :goto_1
-    if-ge v1, p1, :cond_1
-
-    add-int/lit8 v5, v3, 0x1
-
-    aget-byte v3, v2, v3
-
-    and-int/2addr v3, v4
-
-    shl-int/2addr v3, v1
-
-    or-int/2addr v0, v3
-
-    add-int/lit8 v1, v1, 0x8
-
-    move v3, v5
+    if-eqz v1, :cond_0
 
     goto :goto_1
 
-    :cond_1
-    rsub-int/lit8 v1, p1, 0x20
-
-    const/4 v2, -0x1
-
-    ushr-int v1, v2, v1
-
-    and-int/2addr v0, v1
-
-    invoke-virtual {p0, p1}, Ly82;->t(I)V
-
-    return v0
-
-    :pswitch_1
-    iget v0, p0, Ly82;->e:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Ly82;->e:I
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_2
-    iget v2, p0, Ly82;->e:I
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    const/16 v5, 0x8
-
-    if-le v2, v5, :cond_3
-
-    add-int/lit8 v2, v2, -0x8
-
-    iput v2, p0, Ly82;->e:I
-
-    iget-object v5, p0, Ly82;->d:[B
-
-    iget v6, p0, Ly82;->c:I
-
-    aget-byte v5, v5, v6
-
-    and-int/lit16 v5, v5, 0xff
-
-    shl-int v2, v5, v2
-
-    or-int/2addr v1, v2
-
-    add-int/lit8 v2, v6, 0x1
-
-    invoke-virtual {p0, v2}, Ly82;->r(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    move v3, v4
-
-    :goto_3
-    add-int/2addr v6, v3
-
-    iput v6, p0, Ly82;->c:I
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v6, p0, Ly82;->d:[B
-
-    iget v7, p0, Ly82;->c:I
-
-    aget-byte v6, v6, v7
-
-    and-int/lit16 v6, v6, 0xff
-
-    rsub-int/lit8 v8, v2, 0x8
-
-    shr-int/2addr v6, v8
-
-    or-int/2addr v1, v6
-
-    rsub-int/lit8 p1, p1, 0x20
-
-    const/4 v6, -0x1
-
-    ushr-int p1, v6, p1
-
-    and-int/2addr p1, v1
-
-    if-ne v2, v5, :cond_5
-
-    iput v0, p0, Ly82;->e:I
-
-    add-int/lit8 v0, v7, 0x1
-
-    invoke-virtual {p0, v0}, Ly82;->r(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    move v3, v4
-
-    :goto_4
-    add-int/2addr v7, v3
-
-    iput v7, p0, Ly82;->c:I
-
-    :cond_5
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return p1
-
-    :pswitch_2
-    iget v0, p0, Ly82;->e:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Ly82;->e:I
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_5
-    iget v2, p0, Ly82;->e:I
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    const/16 v5, 0x8
-
-    if-le v2, v5, :cond_7
-
-    add-int/lit8 v2, v2, -0x8
-
-    iput v2, p0, Ly82;->e:I
-
-    iget-object v5, p0, Ly82;->d:[B
-
-    iget v6, p0, Ly82;->c:I
-
-    aget-byte v5, v5, v6
-
-    and-int/lit16 v5, v5, 0xff
-
-    shl-int v2, v5, v2
-
-    or-int/2addr v1, v2
-
-    add-int/lit8 v2, v6, 0x1
-
-    invoke-virtual {p0, v2}, Ly82;->r(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    goto :goto_6
-
-    :cond_6
-    move v3, v4
-
-    :goto_6
-    add-int/2addr v6, v3
-
-    iput v6, p0, Ly82;->c:I
-
-    goto :goto_5
-
-    :cond_7
-    iget-object v6, p0, Ly82;->d:[B
-
-    iget v7, p0, Ly82;->c:I
-
-    aget-byte v6, v6, v7
-
-    and-int/lit16 v6, v6, 0xff
-
-    rsub-int/lit8 v8, v2, 0x8
-
-    shr-int/2addr v6, v8
-
-    or-int/2addr v1, v6
-
-    rsub-int/lit8 p1, p1, 0x20
-
-    const/4 v6, -0x1
-
-    ushr-int p1, v6, p1
-
-    and-int/2addr p1, v1
-
-    if-ne v2, v5, :cond_9
-
-    iput v0, p0, Ly82;->e:I
-
-    add-int/lit8 v0, v7, 0x1
-
-    invoke-virtual {p0, v0}, Ly82;->r(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    goto :goto_7
-
-    :cond_8
-    move v3, v4
-
-    :goto_7
-    add-int/2addr v7, v3
-
-    iput v7, p0, Ly82;->c:I
-
-    :cond_9
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return p1
-
-    :pswitch_3
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_a
-
-    goto :goto_9
-
-    :cond_a
-    iget v1, p0, Ly82;->c:I
-
-    add-int/2addr v1, p1
-
-    iput v1, p0, Ly82;->c:I
-
-    move v1, v0
-
-    :goto_8
-    iget v2, p0, Ly82;->c:I
-
-    const/16 v3, 0x8
-
-    if-le v2, v3, :cond_b
-
-    add-int/lit8 v2, v2, -0x8
-
-    iput v2, p0, Ly82;->c:I
-
-    iget-object v3, p0, Ly82;->d:[B
-
-    iget v4, p0, Ly82;->b:I
-
-    add-int/lit8 v5, v4, 0x1
-
-    iput v5, p0, Ly82;->b:I
-
-    aget-byte v3, v3, v4
-
-    and-int/lit16 v3, v3, 0xff
-
-    shl-int v2, v3, v2
-
-    or-int/2addr v1, v2
-
-    goto :goto_8
-
-    :cond_b
-    iget-object v4, p0, Ly82;->d:[B
-
-    iget v5, p0, Ly82;->b:I
-
-    aget-byte v4, v4, v5
-
-    and-int/lit16 v4, v4, 0xff
-
-    rsub-int/lit8 v6, v2, 0x8
-
-    shr-int/2addr v4, v6
-
-    or-int/2addr v1, v4
-
-    rsub-int/lit8 p1, p1, 0x20
-
-    const/4 v4, -0x1
-
-    ushr-int p1, v4, p1
-
-    and-int/2addr p1, v1
-
-    if-ne v2, v3, :cond_c
-
-    iput v0, p0, Ly82;->c:I
-
-    add-int/lit8 v5, v5, 0x1
-
-    iput v5, p0, Ly82;->b:I
-
-    :cond_c
-    invoke-virtual {p0}, Ly82;->a()V
-
-    move v0, p1
-
-    :goto_9
-    return v0
-
-    :pswitch_4
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_d
-
-    goto :goto_b
-
-    :cond_d
-    iget v1, p0, Ly82;->c:I
-
-    add-int/2addr v1, p1
-
-    iput v1, p0, Ly82;->c:I
-
-    move v1, v0
-
-    :goto_a
-    iget v2, p0, Ly82;->c:I
-
-    const/16 v3, 0x8
-
-    if-le v2, v3, :cond_e
-
-    add-int/lit8 v2, v2, -0x8
-
-    iput v2, p0, Ly82;->c:I
-
-    iget-object v3, p0, Ly82;->d:[B
-
-    iget v4, p0, Ly82;->b:I
-
-    add-int/lit8 v5, v4, 0x1
-
-    iput v5, p0, Ly82;->b:I
-
-    aget-byte v3, v3, v4
-
-    and-int/lit16 v3, v3, 0xff
-
-    shl-int v2, v3, v2
-
-    or-int/2addr v1, v2
-
-    goto :goto_a
-
-    :cond_e
-    iget-object v4, p0, Ly82;->d:[B
-
-    iget v5, p0, Ly82;->b:I
-
-    aget-byte v4, v4, v5
-
-    and-int/lit16 v4, v4, 0xff
-
-    rsub-int/lit8 v6, v2, 0x8
-
-    shr-int/2addr v4, v6
-
-    or-int/2addr v1, v4
-
-    rsub-int/lit8 p1, p1, 0x20
-
-    const/4 v4, -0x1
-
-    ushr-int p1, v4, p1
-
-    and-int/2addr p1, v1
-
-    if-ne v2, v3, :cond_f
-
-    iput v0, p0, Ly82;->c:I
-
-    add-int/lit8 v5, v5, 0x1
-
-    iput v5, p0, Ly82;->b:I
-
-    :cond_f
-    invoke-virtual {p0}, Ly82;->a()V
-
-    move v0, p1
-
-    :goto_b
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public j(I[B)V
-    .locals 9
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    shr-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
+    :cond_0
     :goto_0
-    const/16 v3, 0xff
+    iget-object v1, p0, Ly82;->c:Ljava/util/ArrayDeque;
 
-    const/16 v4, 0x8
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    if-ge v2, v0, :cond_0
+    move-result v2
 
-    iget-object v5, p0, Ly82;->d:[B
+    if-nez v2, :cond_3
 
-    iget v6, p0, Ly82;->b:I
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
 
-    add-int/lit8 v7, v6, 0x1
+    move-result-object v2
 
-    iput v7, p0, Ly82;->b:I
+    check-cast v2, Lu82;
 
-    aget-byte v6, v5, v6
+    sget-object v3, Lmbh;->a:Ljava/lang/String;
 
-    iget v8, p0, Ly82;->c:I
+    iget-wide v2, v2, Lol4;->Y:J
 
-    shl-int/2addr v6, v8
+    iget-wide v4, p0, Ly82;->e:J
 
-    int-to-byte v6, v6
+    cmp-long v2, v2, v4
 
-    aput-byte v6, p2, v2
+    if-gtz v2, :cond_3
 
-    aget-byte v5, v5, v7
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
-    and-int/2addr v3, v5
+    move-result-object v1
 
-    sub-int/2addr v4, v8
+    check-cast v1, Lu82;
 
-    shr-int/2addr v3, v4
+    const/4 v2, 0x4
 
-    or-int/2addr v3, v6
-
-    int-to-byte v3, v3
-
-    aput-byte v3, p2, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    and-int/lit8 p1, p1, 0x7
-
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    aget-byte v2, p2, v0
-
-    shr-int v5, v3, p1
-
-    and-int/2addr v2, v5
-
-    int-to-byte v2, v2
-
-    aput-byte v2, p2, v0
-
-    iget v5, p0, Ly82;->c:I
-
-    add-int v6, v5, p1
-
-    if-le v6, v4, :cond_2
-
-    iget-object v6, p0, Ly82;->d:[B
-
-    iget v7, p0, Ly82;->b:I
-
-    add-int/lit8 v8, v7, 0x1
-
-    iput v8, p0, Ly82;->b:I
-
-    aget-byte v6, v6, v7
-
-    and-int/2addr v6, v3
-
-    shl-int/2addr v6, v5
-
-    or-int/2addr v2, v6
-
-    int-to-byte v2, v2
-
-    aput-byte v2, p2, v0
-
-    sub-int/2addr v5, v4
-
-    iput v5, p0, Ly82;->c:I
-
-    :cond_2
-    iget v2, p0, Ly82;->c:I
-
-    add-int/2addr v2, p1
-
-    iput v2, p0, Ly82;->c:I
-
-    iget-object v5, p0, Ly82;->d:[B
-
-    iget v6, p0, Ly82;->b:I
-
-    aget-byte v5, v5, v6
-
-    and-int/2addr v3, v5
-
-    rsub-int/lit8 v5, v2, 0x8
-
-    shr-int/2addr v3, v5
-
-    aget-byte v5, p2, v0
-
-    rsub-int/lit8 p1, p1, 0x8
-
-    shl-int p1, v3, p1
-
-    int-to-byte p1, p1
-
-    or-int/2addr p1, v5
-
-    int-to-byte p1, p1
-
-    aput-byte p1, p2, v0
-
-    if-ne v2, v4, :cond_3
-
-    iput v1, p0, Ly82;->c:I
-
-    add-int/lit8 v6, v6, 0x1
-
-    iput v6, p0, Ly82;->b:I
-
-    :cond_3
-    invoke-virtual {p0}, Ly82;->a()V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    shr-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_2
-    const/16 v3, 0xff
-
-    const/16 v4, 0x8
-
-    if-ge v2, v0, :cond_4
-
-    iget-object v5, p0, Ly82;->d:[B
-
-    iget v6, p0, Ly82;->b:I
-
-    add-int/lit8 v7, v6, 0x1
-
-    iput v7, p0, Ly82;->b:I
-
-    aget-byte v6, v5, v6
-
-    iget v8, p0, Ly82;->c:I
-
-    shl-int/2addr v6, v8
-
-    int-to-byte v6, v6
-
-    aput-byte v6, p2, v2
-
-    aget-byte v5, v5, v7
-
-    and-int/2addr v3, v5
-
-    sub-int/2addr v4, v8
-
-    shr-int/2addr v3, v4
-
-    or-int/2addr v3, v6
-
-    int-to-byte v3, v3
-
-    aput-byte v3, p2, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    and-int/lit8 p1, p1, 0x7
-
-    if-nez p1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    aget-byte v2, p2, v0
-
-    shr-int v5, v3, p1
-
-    and-int/2addr v2, v5
-
-    int-to-byte v2, v2
-
-    aput-byte v2, p2, v0
-
-    iget v5, p0, Ly82;->c:I
-
-    add-int v6, v5, p1
-
-    if-le v6, v4, :cond_6
-
-    iget-object v6, p0, Ly82;->d:[B
-
-    iget v7, p0, Ly82;->b:I
-
-    add-int/lit8 v8, v7, 0x1
-
-    iput v8, p0, Ly82;->b:I
-
-    aget-byte v6, v6, v7
-
-    and-int/2addr v6, v3
-
-    shl-int/2addr v6, v5
-
-    or-int/2addr v2, v6
-
-    int-to-byte v2, v2
-
-    aput-byte v2, p2, v0
-
-    sub-int/2addr v5, v4
-
-    iput v5, p0, Ly82;->c:I
-
-    :cond_6
-    iget v2, p0, Ly82;->c:I
-
-    add-int/2addr v2, p1
-
-    iput v2, p0, Ly82;->c:I
-
-    iget-object v5, p0, Ly82;->d:[B
-
-    iget v6, p0, Ly82;->b:I
-
-    aget-byte v5, v5, v6
-
-    and-int/2addr v3, v5
-
-    rsub-int/lit8 v5, v2, 0x8
-
-    shr-int/2addr v3, v5
-
-    aget-byte v5, p2, v0
-
-    rsub-int/lit8 p1, p1, 0x8
-
-    shl-int p1, v3, p1
-
-    int-to-byte p1, p1
-
-    or-int/2addr p1, v5
-
-    int-to-byte p1, p1
-
-    aput-byte p1, p2, v0
-
-    if-ne v2, v4, :cond_7
-
-    iput v1, p0, Ly82;->c:I
-
-    add-int/lit8 v6, v6, 0x1
-
-    iput v6, p0, Ly82;->b:I
-
-    :cond_7
-    invoke-virtual {p0}, Ly82;->a()V
-
-    :goto_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public k(I)J
-    .locals 6
-
-    const-wide v0, 0xffffffffL
-
-    const/16 v2, 0x20
-
-    if-gt p1, v2, :cond_0
-
-    invoke-virtual {p0, p1}, Ly82;->i(I)I
-
-    move-result p1
-
-    sget-object v2, Lqah;->a:Ljava/lang/String;
-
-    int-to-long v2, p1
-
-    and-long/2addr v0, v2
-
-    return-wide v0
-
-    :cond_0
-    sub-int/2addr p1, v2
-
-    invoke-virtual {p0, p1}, Ly82;->i(I)I
-
-    move-result p1
-
-    invoke-virtual {p0, v2}, Ly82;->i(I)I
+    invoke-virtual {v1, v2}, Laz;->g(I)Z
 
     move-result v3
 
-    sget-object v4, Lqah;->a:Ljava/lang/String;
+    iget-object v4, p0, Ly82;->a:Ljava/util/ArrayDeque;
 
-    int-to-long v4, p1
+    if-eqz v3, :cond_1
 
-    and-long/2addr v4, v0
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
 
-    shl-long/2addr v4, v2
+    move-result-object v0
 
-    int-to-long v2, v3
+    check-cast v0, Lw82;
 
-    and-long/2addr v0, v2
+    invoke-virtual {v0, v2}, Laz;->a(I)V
 
-    or-long/2addr v0, v4
+    invoke-virtual {v1}, Lol4;->x()V
 
-    return-wide v0
-.end method
+    invoke-virtual {v4, v1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-.method public l(I[B)V
-    .locals 3
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->c:I
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    invoke-static {v0}, Lp5j;->g(Z)V
-
-    iget-object v0, p0, Ly82;->d:[B
-
-    iget v2, p0, Ly82;->b:I
-
-    invoke-static {v0, v2, p2, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget p2, p0, Ly82;->b:I
-
-    add-int/2addr p2, p1
-
-    iput p2, p0, Ly82;->b:I
-
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    :pswitch_0
-    iget v0, p0, Ly82;->c:I
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_1
+    return-object v0
 
     :cond_1
-    move v0, v1
+    invoke-virtual {p0, v1}, Ly82;->g(Lu82;)V
 
-    :goto_1
-    invoke-static {v0}, Ln5j;->d(Z)V
-
-    iget-object v0, p0, Ly82;->d:[B
-
-    iget v2, p0, Ly82;->b:I
-
-    invoke-static {v0, v2, p2, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget p2, p0, Ly82;->b:I
-
-    add-int/2addr p2, p1
-
-    iput p2, p0, Ly82;->b:I
-
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public m()I
-    .locals 4
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    invoke-virtual {p0}, Ly82;->h()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x1
-
-    shl-int v3, v2, v1
-
-    sub-int/2addr v3, v2
-
-    if-lez v1, :cond_1
-
-    invoke-virtual {p0, v1}, Ly82;->i(I)I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v3, v0
-
-    return v3
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_1
-    invoke-virtual {p0}, Ly82;->h()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v2, 0x1
-
-    shl-int v3, v2, v1
-
-    sub-int/2addr v3, v2
-
-    if-lez v1, :cond_3
-
-    invoke-virtual {p0, v1}, Ly82;->i(I)I
-
-    move-result v0
-
-    :cond_3
-    add-int/2addr v3, v0
-
-    return v3
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public n()I
-    .locals 3
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ly82;->m()I
-
-    move-result v0
-
-    rem-int/lit8 v1, v0, 0x2
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_0
-
-    const/4 v1, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    div-int/lit8 v0, v0, 0x2
-
-    :goto_1
-    mul-int/2addr v0, v1
-
-    return v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Ly82;->m()I
-
-    move-result v0
-
-    rem-int/lit8 v1, v0, 0x2
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_1
-
-    const/4 v1, -0x1
-
-    goto :goto_2
-
-    :cond_1
-    move v1, v2
-
-    :goto_2
-    add-int/2addr v0, v2
-
-    div-int/lit8 v0, v0, 0x2
-
-    goto :goto_1
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public o(I[B)V
-    .locals 1
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iput-object p2, p0, Ly82;->d:[B
-
-    const/4 p2, 0x0
-
-    iput p2, p0, Ly82;->b:I
-
-    iput p2, p0, Ly82;->c:I
-
-    iput p1, p0, Ly82;->e:I
-
-    return-void
-
-    :pswitch_0
-    iput-object p2, p0, Ly82;->d:[B
-
-    const/4 p2, 0x0
-
-    iput p2, p0, Ly82;->b:I
-
-    iput p2, p0, Ly82;->c:I
-
-    iput p1, p0, Ly82;->e:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public p(Lktb;)V
-    .locals 2
-
-    iget-object v0, p1, Lktb;->a:[B
-
-    iget v1, p1, Lktb;->c:I
-
-    invoke-virtual {p0, v1, v0}, Ly82;->o(I[B)V
-
-    iget p1, p1, Lktb;->b:I
-
-    mul-int/lit8 p1, p1, 0x8
-
-    invoke-virtual {p0, p1}, Ly82;->q(I)V
-
-    return-void
-.end method
-
-.method public q(I)V
-    .locals 1
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    div-int/lit8 v0, p1, 0x8
-
-    iput v0, p0, Ly82;->b:I
-
-    mul-int/lit8 v0, v0, 0x8
-
-    sub-int/2addr p1, v0
-
-    iput p1, p0, Ly82;->c:I
-
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    :pswitch_0
-    div-int/lit8 v0, p1, 0x8
-
-    iput v0, p0, Ly82;->b:I
-
-    mul-int/lit8 v0, v0, 0x8
-
-    sub-int/2addr p1, v0
-
-    iput p1, p0, Ly82;->c:I
-
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public r(I)Z
-    .locals 3
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x2
-
-    if-gt v0, p1, :cond_0
-
-    iget v0, p0, Ly82;->b:I
-
-    if-ge p1, v0, :cond_0
-
-    iget-object v0, p0, Ly82;->d:[B
-
-    aget-byte v1, v0, p1
-
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_0
-
-    add-int/lit8 v1, p1, -0x2
-
-    aget-byte v1, v0, v1
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x1
-
-    sub-int/2addr p1, v1
-
-    aget-byte p1, v0, p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    return v1
-
-    :pswitch_0
-    const/4 v0, 0x2
-
-    if-gt v0, p1, :cond_1
-
-    iget v0, p0, Ly82;->b:I
-
-    if-ge p1, v0, :cond_1
-
-    iget-object v0, p0, Ly82;->d:[B
-
-    aget-byte v1, v0, p1
-
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_1
-
-    add-int/lit8 v1, p1, -0x2
-
-    aget-byte v1, v0, v1
-
-    if-nez v1, :cond_1
-
-    const/4 v1, 0x1
-
-    sub-int/2addr p1, v1
-
-    aget-byte p1, v0, p1
-
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_1
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public s()V
-    .locals 3
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->e:I
-
-    const/4 v1, 0x1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Ly82;->e:I
-
-    const/16 v2, 0x8
-
-    if-ne v0, v2, :cond_1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ly82;->e:I
-
-    iget v0, p0, Ly82;->c:I
-
-    add-int/lit8 v2, v0, 0x1
-
-    invoke-virtual {p0, v2}, Ly82;->r(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v1, 0x2
-
-    :cond_0
-    add-int/2addr v0, v1
-
-    iput v0, p0, Ly82;->c:I
-
-    :cond_1
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    :pswitch_0
-    iget v0, p0, Ly82;->e:I
-
-    const/4 v1, 0x1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Ly82;->e:I
-
-    const/16 v2, 0x8
-
-    if-ne v0, v2, :cond_3
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ly82;->e:I
-
-    iget v0, p0, Ly82;->c:I
-
-    add-int/lit8 v2, v0, 0x1
-
-    invoke-virtual {p0, v2}, Ly82;->r(I)Z
+    invoke-virtual {p0}, Ly82;->i()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    const/4 v1, 0x2
+    invoke-virtual {p0}, Ly82;->f()Lz82;
+
+    move-result-object v8
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, Lw82;
+
+    iget-wide v6, v1, Lol4;->Y:J
+
+    const-wide v9, 0x7fffffffffffffffL
+
+    invoke-virtual/range {v5 .. v10}, Lw82;->z(JLg1g;J)V
+
+    invoke-virtual {v1}, Lol4;->x()V
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    return-object v5
 
     :cond_2
-    add-int/2addr v0, v1
+    invoke-virtual {v1}, Lol4;->x()V
 
-    iput v0, p0, Ly82;->c:I
-
-    :cond_3
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    :pswitch_1
-    iget v0, p0, Ly82;->c:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ly82;->c:I
-
-    const/16 v1, 0x8
-
-    if-ne v0, v1, :cond_4
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ly82;->c:I
-
-    iget v0, p0, Ly82;->b:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ly82;->b:I
-
-    :cond_4
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    :pswitch_2
-    iget v0, p0, Ly82;->c:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ly82;->c:I
-
-    const/16 v1, 0x8
-
-    if-ne v0, v1, :cond_5
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ly82;->c:I
-
-    iget v0, p0, Ly82;->b:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ly82;->b:I
-
-    :cond_5
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public t(I)V
-    .locals 4
-
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    div-int/lit8 v0, p1, 0x8
-
-    iget v1, p0, Ly82;->c:I
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Ly82;->c:I
-
-    iget v2, p0, Ly82;->e:I
-
-    mul-int/lit8 v0, v0, 0x8
-
-    sub-int/2addr p1, v0
-
-    add-int/2addr p1, v2
-
-    iput p1, p0, Ly82;->e:I
-
-    const/4 v0, 0x7
-
-    const/4 v2, 0x1
-
-    if-le p1, v0, :cond_0
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Ly82;->c:I
-
-    add-int/lit8 p1, p1, -0x8
-
-    iput p1, p0, Ly82;->e:I
-
-    :cond_0
-    iget p1, p0, Ly82;->c:I
-
-    if-ltz p1, :cond_1
-
-    iget v0, p0, Ly82;->b:I
-
-    if-lt p1, v0, :cond_2
-
-    if-ne p1, v0, :cond_1
-
-    iget p1, p0, Ly82;->e:I
-
-    if-nez p1, :cond_1
+    invoke-virtual {v4, v1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_1
-    const/4 v2, 0x0
-
-    :cond_2
-    :goto_0
-    invoke-static {v2}, Lp5j;->g(Z)V
-
-    return-void
-
-    :pswitch_0
-    div-int/lit8 v0, p1, 0x8
-
-    iget v1, p0, Ly82;->c:I
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Ly82;->c:I
-
-    iget v2, p0, Ly82;->e:I
-
-    mul-int/lit8 v0, v0, 0x8
-
-    sub-int/2addr p1, v0
-
-    add-int/2addr p1, v2
-
-    iput p1, p0, Ly82;->e:I
-
-    const/4 v0, 0x7
-
-    const/4 v2, 0x1
-
-    if-le p1, v0, :cond_3
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Ly82;->c:I
-
-    add-int/lit8 p1, p1, -0x8
-
-    iput p1, p0, Ly82;->e:I
-
     :cond_3
-    iget p1, p0, Ly82;->c:I
-
-    if-ltz p1, :cond_4
-
-    iget v0, p0, Ly82;->b:I
-
-    if-lt p1, v0, :cond_5
-
-    if-ne p1, v0, :cond_4
-
-    iget p1, p0, Ly82;->e:I
-
-    if-nez p1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    const/4 v2, 0x0
-
-    :cond_5
     :goto_1
-    invoke-static {v2}, Ln5j;->d(Z)V
+    const/4 v0, 0x0
 
-    return-void
-
-    :pswitch_1
-    iget v0, p0, Ly82;->c:I
-
-    div-int/lit8 v1, p1, 0x8
-
-    add-int v2, v0, v1
-
-    iput v2, p0, Ly82;->c:I
-
-    iget v3, p0, Ly82;->e:I
-
-    mul-int/lit8 v1, v1, 0x8
-
-    sub-int/2addr p1, v1
-
-    add-int/2addr p1, v3
-
-    iput p1, p0, Ly82;->e:I
-
-    const/4 v1, 0x7
-
-    if-le p1, v1, :cond_6
-
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Ly82;->c:I
-
-    add-int/lit8 p1, p1, -0x8
-
-    iput p1, p0, Ly82;->e:I
-
-    :cond_6
-    :goto_2
-    add-int/lit8 v0, v0, 0x1
-
-    iget p1, p0, Ly82;->c:I
-
-    if-gt v0, p1, :cond_7
-
-    invoke-virtual {p0, v0}, Ly82;->r(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    iget p1, p0, Ly82;->c:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Ly82;->c:I
-
-    add-int/lit8 v0, v0, 0x2
-
-    goto :goto_2
-
-    :cond_7
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    :pswitch_2
-    iget v0, p0, Ly82;->c:I
-
-    div-int/lit8 v1, p1, 0x8
-
-    add-int v2, v0, v1
-
-    iput v2, p0, Ly82;->c:I
-
-    iget v3, p0, Ly82;->e:I
-
-    mul-int/lit8 v1, v1, 0x8
-
-    sub-int/2addr p1, v1
-
-    add-int/2addr p1, v3
-
-    iput p1, p0, Ly82;->e:I
-
-    const/4 v1, 0x7
-
-    if-le p1, v1, :cond_8
-
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Ly82;->c:I
-
-    add-int/lit8 p1, p1, -0x8
-
-    iput p1, p0, Ly82;->e:I
-
-    :cond_8
-    :goto_3
-    add-int/lit8 v0, v0, 0x1
-
-    iget p1, p0, Ly82;->c:I
-
-    if-gt v0, p1, :cond_9
-
-    invoke-virtual {p0, v0}, Ly82;->r(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    iget p1, p0, Ly82;->c:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Ly82;->c:I
-
-    add-int/lit8 v0, v0, 0x2
-
-    goto :goto_3
-
-    :cond_9
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    :pswitch_3
-    div-int/lit8 v0, p1, 0x8
-
-    iget v1, p0, Ly82;->b:I
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Ly82;->b:I
-
-    iget v2, p0, Ly82;->c:I
-
-    mul-int/lit8 v0, v0, 0x8
-
-    sub-int/2addr p1, v0
-
-    add-int/2addr p1, v2
-
-    iput p1, p0, Ly82;->c:I
-
-    const/4 v0, 0x7
-
-    if-le p1, v0, :cond_a
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Ly82;->b:I
-
-    add-int/lit8 p1, p1, -0x8
-
-    iput p1, p0, Ly82;->c:I
-
-    :cond_a
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    :pswitch_4
-    div-int/lit8 v0, p1, 0x8
-
-    iget v1, p0, Ly82;->b:I
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Ly82;->b:I
-
-    iget v2, p0, Ly82;->c:I
-
-    mul-int/lit8 v0, v0, 0x8
-
-    sub-int/2addr p1, v0
-
-    add-int/2addr p1, v2
-
-    iput p1, p0, Ly82;->c:I
-
-    const/4 v0, 0x7
-
-    if-le p1, v0, :cond_b
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Ly82;->b:I
-
-    add-int/lit8 p1, p1, -0x8
-
-    iput p1, p0, Ly82;->c:I
-
-    :cond_b
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public u(I)V
-    .locals 1
+.method public abstract i()Z
+.end method
 
-    iget v0, p0, Ly82;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ly82;->c:I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lp5j;->g(Z)V
-
-    iget v0, p0, Ly82;->b:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Ly82;->b:I
-
-    invoke-virtual {p0}, Ly82;->a()V
+.method public release()V
+    .locals 0
 
     return-void
-
-    :pswitch_0
-    iget v0, p0, Ly82;->c:I
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_1
-    invoke-static {v0}, Ln5j;->d(Z)V
-
-    iget v0, p0, Ly82;->b:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Ly82;->b:I
-
-    invoke-virtual {p0}, Ly82;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
 .end method

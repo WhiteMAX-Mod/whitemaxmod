@@ -1,73 +1,53 @@
-.class public final synthetic Laua;
-.super Ljava/lang/Object;
+.class public final Laua;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lcua;
+.field public final synthetic Y:Leua;
 
-.field public final synthetic c:Ljava/util/List;
+.field public Z:I
+
+.field public d:Leua;
+
+.field public o:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcua;Ljava/util/List;I)V
+.method public constructor <init>(Leua;Lo84;)V
     .locals 0
 
-    iput p3, p0, Laua;->a:I
+    iput-object p1, p0, Laua;->Y:Leua;
 
-    iput-object p1, p0, Laua;->b:Lcua;
-
-    iput-object p2, p0, Laua;->c:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Laua;->a:I
+    iput-object p1, p0, Laua;->X:Ljava/lang/Object;
 
-    check-cast p1, Lj6e;
+    iget p1, p0, Laua;->Z:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Laua;->b:Lcua;
+    or-int/2addr p1, v0
 
-    iget-object v0, v0, Lcua;->b:Lci;
+    iput p1, p0, Laua;->Z:I
 
-    iget-object v1, p0, Laua;->c:Ljava/util/List;
+    iget-object p1, p0, Laua;->Y:Leua;
 
-    invoke-virtual {v0, p1, v1}, Lsk5;->c(Lj6e;Ljava/lang/Iterable;)V
+    const/4 v0, 0x0
 
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-static {p1, v0, v0, p0}, Leua;->a(Leua;Ljava/util/List;Ljava/util/List;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Laua;->b:Lcua;
-
-    iget-object v0, v0, Lcua;->c:Lbua;
-
-    iget-object v1, p0, Laua;->c:Ljava/util/List;
-
-    invoke-virtual {v0, p1, v1}, Lxnj;->d(Lj6e;Ljava/lang/Iterable;)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

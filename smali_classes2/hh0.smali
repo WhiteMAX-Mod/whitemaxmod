@@ -22,7 +22,7 @@
     return-void
 .end method
 
-.method public static a(ZLcgd;Ljava/lang/String;Ljava/lang/String;)V
+.method public static a(ZLahd;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     if-eqz p0, :cond_0
@@ -31,13 +31,13 @@
 
     const-string v0, "]: "
 
-    invoke-static {p0, p2, v0, p3}, Lx02;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p2, v0, p3}, Lkz1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p2, "BadNetworkIndicatorConfig"
 
-    invoke-interface {p1, p2, p0}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, p2, p0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -45,22 +45,22 @@
 
 
 # virtual methods
-.method public final b(Lcgd;Ljava/lang/String;Ljava/lang/String;)V
+.method public final b(Lahd;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     iget-boolean v0, p0, Lhh0;->a:Z
 
-    invoke-static {v0, p1, p2, p3}, Lhh0;->a(ZLcgd;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1, p2, p3}, Lhh0;->a(ZLahd;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final c(Lcgd;Ljava/lang/String;Ljava/lang/String;)V
+.method public final c(Lahd;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     iget-boolean v0, p0, Lhh0;->b:Z
 
-    invoke-static {v0, p1, p2, p3}, Lhh0;->a(ZLcgd;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1, p2, p3}, Lhh0;->a(ZLahd;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -142,7 +142,7 @@
 
     iget-boolean v4, p0, Lhh0;->b:Z
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v4, v1}, Lhc0;->h(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

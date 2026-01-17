@@ -1,31 +1,31 @@
 .class public final Ltpa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lmfa;
+.field public final X:Lkfa;
 
 .field public final c:J
 
-.field public final d:Lffa;
+.field public final d:Lefa;
 
 .field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(JLffa;Ljava/util/List;Lmfa;)V
+.method public constructor <init>(JLefa;Ljava/util/List;Lkfa;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Ltpa;->c:J
 
-    iput-object p3, p0, Ltpa;->d:Lffa;
+    iput-object p3, p0, Ltpa;->d:Lefa;
 
     iput-object p4, p0, Ltpa;->o:Ljava/util/List;
 
-    iput-object p5, p0, Ltpa;->X:Lmfa;
+    iput-object p5, p0, Ltpa;->X:Lkfa;
 
     return-void
 .end method
@@ -64,11 +64,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Ltpa;->d:Lffa;
+    iget-object v1, p0, Ltpa;->d:Lefa;
 
-    iget-object v3, p1, Ltpa;->d:Lffa;
+    iget-object v3, p1, Ltpa;->d:Lefa;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -81,7 +81,7 @@
 
     iget-object v3, p1, Ltpa;->o:Ljava/util/List;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -90,11 +90,11 @@
     return v2
 
     :cond_4
-    iget-object v1, p0, Ltpa;->X:Lmfa;
+    iget-object v1, p0, Ltpa;->X:Lkfa;
 
-    iget-object p1, p1, Ltpa;->X:Lmfa;
+    iget-object p1, p1, Ltpa;->X:Lkfa;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -119,9 +119,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Ltpa;->d:Lffa;
+    iget-object v2, p0, Ltpa;->d:Lefa;
 
-    invoke-virtual {v2}, Lffa;->hashCode()I
+    invoke-virtual {v2}, Lefa;->hashCode()I
 
     move-result v2
 
@@ -131,13 +131,13 @@
 
     iget-object v0, p0, Ltpa;->o:Ljava/util/List;
 
-    invoke-static {v0, v2, v1}, Lq3g;->l(Ljava/util/List;II)I
+    invoke-static {v0, v2, v1}, Lmrf;->e(Ljava/util/List;II)I
 
     move-result v0
 
-    iget-object v1, p0, Ltpa;->X:Lmfa;
+    iget-object v1, p0, Ltpa;->X:Lkfa;
 
-    invoke-virtual {v1}, Lmfa;->hashCode()I
+    invoke-virtual {v1}, Lkfa;->hashCode()I
 
     move-result v1
 
@@ -163,7 +163,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ltpa;->d:Lffa;
+    iget-object v1, p0, Ltpa;->d:Lefa;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -179,7 +179,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ltpa;->X:Lmfa;
+    iget-object v1, p0, Ltpa;->X:Lkfa;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

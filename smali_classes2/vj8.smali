@@ -1,63 +1,70 @@
 .class public final Lvj8;
-.super Lkm4;
+.super Licg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lvj8;
-
-.field public static final c:Lgm4;
-
-.field public static final d:Lgm4;
+# instance fields
+.field public c:Lxk9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lpq9;)V
+    .locals 0
 
-    new-instance v0, Lvj8;
+    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
 
-    invoke-direct {v0}, Lkm4;-><init>()V
+    return-void
+.end method
 
-    sput-object v0, Lvj8;->b:Lvj8;
 
-    const-string v1, "request_code"
+# virtual methods
+.method public final d(Lpq9;Ljava/lang/String;)V
+    .locals 1
 
-    const-string v2, "chat_id"
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    filled-new-array {v2, v1}, [Ljava/lang/String;
+    const-string v0, "message"
 
-    move-result-object v1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v3, ":location-new/pick"
+    move-result p2
 
-    const/4 v4, 0x0
+    if-nez p2, :cond_0
 
-    const/16 v5, 0xe
+    invoke-virtual {p1}, Lpq9;->B()V
 
-    invoke-static {v0, v3, v1, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    return-void
 
-    move-result-object v1
+    :cond_0
+    invoke-static {p1}, Lw9j;->c(Lpq9;)Lxk9;
 
-    sput-object v1, Lvj8;->c:Lgm4;
+    move-result-object p1
 
-    const-string v1, "lon"
+    iput-object p1, p0, Lvj8;->c:Lxk9;
 
-    const-string v3, "z"
+    return-void
+.end method
 
-    const-string v6, "lat"
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    filled-new-array {v2, v6, v1, v3}, [Ljava/lang/String;
+    iget-object v0, p0, Lvj8;->c:Lxk9;
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, ":location-new/show"
+    const-string v2, "{message="
 
-    invoke-static {v0, v2, v1, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lvj8;->d:Lgm4;
-
-    return-void
+    return-object v0
 .end method

@@ -1,26 +1,48 @@
 .class public final Lpyg;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ltyg;
+.super Lo84;
 
 
 # instance fields
-.field public final a:Ltt3;
+.field public final synthetic X:Lyve;
 
-.field public final b:Lghg;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ltt3;Lghg;)V
+.method public constructor <init>(Lyve;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpyg;->X:Lyve;
 
-    iput-object p1, p0, Lpyg;->a:Ltt3;
-
-    iput-object p2, p0, Lpyg;->b:Lghg;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lpyg;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lpyg;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpyg;->o:I
+
+    iget-object p1, p0, Lpyg;->X:Lyve;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lyve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

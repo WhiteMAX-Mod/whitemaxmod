@@ -1,157 +1,288 @@
-.class public final enum Lwa5;
-.super Ljava/lang/Enum;
+.class public final Lwa5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La38;
 
 
 # static fields
-.field public static final enum X:Lwa5;
+.field public static final a:Lwa5;
 
-.field public static final enum Y:Lwa5;
-
-.field public static final synthetic Z:[Lwa5;
-
-.field public static final enum b:Lwa5;
-
-.field public static final enum c:Lwa5;
-
-.field public static final enum d:Lwa5;
-
-.field public static final enum o:Lwa5;
-
-
-# instance fields
-.field public final a:Ljava/util/concurrent/TimeUnit;
+.field public static final b:Lxhc;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 3
 
     new-instance v0, Lwa5;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sput-object v0, Lwa5;->a:Lwa5;
 
-    const-string v3, "NANOSECONDS"
+    new-instance v0, Lxhc;
 
-    invoke-direct {v0, v3, v1, v2}, Lwa5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    const-string v1, "kotlin.time.Duration"
 
-    sput-object v0, Lwa5;->b:Lwa5;
+    sget-object v2, Lvhc;->j:Lvhc;
 
-    new-instance v1, Lwa5;
+    invoke-direct {v0, v1, v2}, Lxhc;-><init>(Ljava/lang/String;Lwhc;)V
 
-    const/4 v2, 0x1
-
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-string v4, "MICROSECONDS"
-
-    invoke-direct {v1, v4, v2, v3}, Lwa5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
-
-    new-instance v2, Lwa5;
-
-    const/4 v3, 0x2
-
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-string v5, "MILLISECONDS"
-
-    invoke-direct {v2, v5, v3, v4}, Lwa5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
-
-    sput-object v2, Lwa5;->c:Lwa5;
-
-    new-instance v3, Lwa5;
-
-    const/4 v4, 0x3
-
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-string v6, "SECONDS"
-
-    invoke-direct {v3, v6, v4, v5}, Lwa5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
-
-    sput-object v3, Lwa5;->d:Lwa5;
-
-    new-instance v4, Lwa5;
-
-    const/4 v5, 0x4
-
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    const-string v7, "MINUTES"
-
-    invoke-direct {v4, v7, v5, v6}, Lwa5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
-
-    sput-object v4, Lwa5;->o:Lwa5;
-
-    new-instance v5, Lwa5;
-
-    const/4 v6, 0x5
-
-    sget-object v7, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
-
-    const-string v8, "HOURS"
-
-    invoke-direct {v5, v8, v6, v7}, Lwa5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
-
-    sput-object v5, Lwa5;->X:Lwa5;
-
-    new-instance v6, Lwa5;
-
-    const/4 v7, 0x6
-
-    sget-object v8, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
-
-    const-string v9, "DAYS"
-
-    invoke-direct {v6, v9, v7, v8}, Lwa5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
-
-    sput-object v6, Lwa5;->Y:Lwa5;
-
-    filled-new-array/range {v0 .. v6}, [Lwa5;
-
-    move-result-object v0
-
-    sput-object v0, Lwa5;->Z:[Lwa5;
+    sput-object v0, Lwa5;->b:Lxhc;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
-    .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 16
 
-    iput-object p3, p0, Lwa5;->a:Ljava/util/concurrent/TimeUnit;
+    move-object/from16 v0, p2
+
+    check-cast v0, Lta5;
+
+    iget-wide v0, v0, Lta5;->a:J
+
+    sget v2, Lta5;->d:I
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v0, v4
+
+    if-gez v2, :cond_0
+
+    const/16 v6, 0x2d
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_0
+    const-string v6, "PT"
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-gez v2, :cond_1
+
+    invoke-static {v0, v1}, Lta5;->s(J)J
+
+    move-result-wide v6
+
+    goto :goto_0
+
+    :cond_1
+    move-wide v6, v0
+
+    :goto_0
+    sget-object v2, Lza5;->X:Lza5;
+
+    invoke-static {v6, v7, v2}, Lta5;->o(JLza5;)J
+
+    move-result-wide v8
+
+    invoke-static {v6, v7}, Lta5;->k(J)Z
+
+    move-result v2
+
+    const/16 v10, 0x3c
+
+    const/4 v11, 0x0
+
+    if-eqz v2, :cond_2
+
+    move v2, v11
+
+    goto :goto_1
+
+    :cond_2
+    sget-object v2, Lza5;->o:Lza5;
+
+    invoke-static {v6, v7, v2}, Lta5;->o(JLza5;)J
+
+    move-result-wide v12
+
+    int-to-long v14, v10
+
+    rem-long/2addr v12, v14
+
+    long-to-int v2, v12
+
+    :goto_1
+    invoke-static {v6, v7}, Lta5;->k(J)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_3
+
+    move v10, v11
+
+    goto :goto_2
+
+    :cond_3
+    sget-object v12, Lza5;->d:Lza5;
+
+    invoke-static {v6, v7, v12}, Lta5;->o(JLza5;)J
+
+    move-result-wide v12
+
+    int-to-long v14, v10
+
+    rem-long/2addr v12, v14
+
+    long-to-int v10, v12
+
+    :goto_2
+    invoke-static {v6, v7}, Lta5;->h(J)I
+
+    move-result v6
+
+    invoke-static {v0, v1}, Lta5;->k(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const-wide v8, 0x9184e729fffL
+
+    :cond_4
+    cmp-long v0, v8, v4
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_5
+
+    move v0, v1
+
+    goto :goto_3
+
+    :cond_5
+    move v0, v11
+
+    :goto_3
+    if-nez v10, :cond_7
+
+    if-eqz v6, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    move v4, v11
+
+    goto :goto_5
+
+    :cond_7
+    :goto_4
+    move v4, v1
+
+    :goto_5
+    if-nez v2, :cond_8
+
+    if-eqz v4, :cond_9
+
+    if-eqz v0, :cond_9
+
+    :cond_8
+    move v11, v1
+
+    :cond_9
+    if-eqz v0, :cond_a
+
+    invoke-virtual {v3, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x48
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_a
+    if-eqz v11, :cond_b
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x4d
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_b
+    if-nez v4, :cond_c
+
+    if-nez v0, :cond_d
+
+    if-nez v11, :cond_d
+
+    :cond_c
+    const-string v7, "S"
+
+    const/4 v8, 0x1
+
+    move v5, v6
+
+    const/16 v6, 0x9
+
+    move v4, v10
+
+    invoke-static/range {v3 .. v8}, Lta5;->b(Ljava/lang/StringBuilder;IIILjava/lang/String;Z)V
+
+    :cond_d
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v1, p1
+
+    invoke-virtual {v1, v0}, Lkotlinx/serialization/json/internal/b;->r(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lwa5;
-    .locals 1
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 4
 
-    const-class v0, Lwa5;
+    sget v0, Lta5;->d:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-interface {p1}, Lkl4;->q()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lwa5;
+    :try_start_0
+    invoke-static {p1}, Laoj;->a(Ljava/lang/String;)J
 
-    return-object p0
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance p1, Lta5;
+
+    invoke-direct {p1, v0, v1}, Lta5;-><init>(J)V
+
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Invalid ISO duration string format: \'"
+
+    const-string v3, "\'."
+
+    invoke-static {v2, p1, v3}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public static values()[Lwa5;
+.method public final d()Lxpe;
     .locals 1
 
-    sget-object v0, Lwa5;->Z:[Lwa5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lwa5;
+    sget-object v0, Lwa5;->b:Lxhc;
 
     return-object v0
 .end method

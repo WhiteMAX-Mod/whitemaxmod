@@ -1,97 +1,225 @@
 .class public final Lo97;
-.super Lq97;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final v0:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final w0:Lal7;
+.field public final b:Ljava/io/BufferedReader;
+
+.field public final c:Ljava/util/ArrayDeque;
+
+.field public d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 19
+.method public synthetic constructor <init>(Ljava/util/ArrayDeque;Ljava/io/BufferedReader;I)V
+    .locals 0
 
-    .line 1
-    sget-object v0, Lal7;->b:Lcc6;
+    iput p3, p0, Lo97;->a:I
 
-    .line 2
-    sget-object v18, Lltd;->o:Lltd;
+    iput-object p1, p0, Lo97;->c:Ljava/util/ArrayDeque;
 
-    const/4 v3, 0x0
+    iput-object p2, p0, Lo97;->b:Ljava/io/BufferedReader;
 
-    .line 3
-    const-string v4, ""
-
-    const-wide/16 v5, 0x0
-
-    const/4 v7, -0x1
-
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v10, 0x0
-
-    const/16 v17, 0x0
-
-    move-object/from16 v1, p0
-
-    move-wide/from16 v13, p1
-
-    move-wide/from16 v15, p3
-
-    move-object/from16 v2, p5
-
-    move-object/from16 v11, p6
-
-    move-object/from16 v12, p7
-
-    invoke-direct/range {v1 .. v18}, Lo97;-><init>(Ljava/lang/String;Lo97;Ljava/lang/String;JIJLv85;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lo97;Ljava/lang/String;JIJLv85;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
-    .locals 16
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public final a()Z
+    .locals 3
 
-    move-object/from16 v1, p1
+    iget v0, p0, Lo97;->a:I
 
-    move-object/from16 v2, p2
+    packed-switch v0, :pswitch_data_0
 
-    move-wide/from16 v3, p4
+    iget-object v0, p0, Lo97;->d:Ljava/lang/String;
 
-    move/from16 v5, p6
+    const/4 v1, 0x1
 
-    move-wide/from16 v6, p7
+    if-eqz v0, :cond_0
 
-    move-object/from16 v8, p9
+    goto :goto_0
 
-    move-object/from16 v9, p10
+    :cond_0
+    iget-object v0, p0, Lo97;->c:Ljava/util/ArrayDeque;
 
-    move-object/from16 v10, p11
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    move-wide/from16 v11, p12
+    move-result v2
 
-    move-wide/from16 v13, p14
+    if-nez v2, :cond_1
 
-    move/from16 v15, p16
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
-    .line 4
-    invoke-direct/range {v0 .. v15}, Lq97;-><init>(Ljava/lang/String;Lo97;JIJLv85;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    move-result-object v0
 
-    move-object/from16 v1, p3
+    check-cast v0, Ljava/lang/String;
 
-    .line 5
-    iput-object v1, v0, Lo97;->v0:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 6
-    invoke-static/range {p17 .. p17}, Lal7;->j(Ljava/util/Collection;)Lal7;
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
 
-    move-result-object v1
+    goto :goto_0
 
-    iput-object v1, v0, Lo97;->w0:Lal7;
+    :cond_1
+    iget-object v0, p0, Lo97;->b:Ljava/io/BufferedReader;
 
-    return-void
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
+
+    :pswitch_0
+    iget-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v0, p0, Lo97;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_4
+    iget-object v0, p0, Lo97;->b:Ljava/io/BufferedReader;
+
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_1
+
+    :cond_5
+    const/4 v1, 0x0
+
+    :goto_1
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lo97;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lo97;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lo97;->d:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lo97;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lo97;->d:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

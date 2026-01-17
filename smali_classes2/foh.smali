@@ -1,105 +1,40 @@
-.class public final enum Lfoh;
-.super Ljava/lang/Enum;
+.class public final Lfoh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr25;
 
-# static fields
-.field public static final synthetic a:[Lfoh;
+
+# instance fields
+.field public final synthetic a:Lzih;
+
+.field public final synthetic b:Lmv1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Lzih;Lmv1;)V
+    .locals 0
 
-    new-instance v0, Lfoh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "LOWEST"
+    iput-object p1, p0, Lfoh;->a:Lzih;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lfoh;
-
-    const-string v2, "HIGHEST"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lfoh;
-
-    const-string v3, "MAX_QVGA"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lfoh;
-
-    const-string v4, "MAX_480P"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v4, Lfoh;
-
-    const-string v5, "MAX_720P"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lfoh;
-
-    const-string v6, "MAX_1080P"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Lfoh;
-
-    const-string v7, "MAX_2160P"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array/range {v0 .. v6}, [Lfoh;
-
-    move-result-object v0
-
-    sput-object v0, Lfoh;->a:[Lfoh;
+    iput-object p2, p0, Lfoh;->b:Lmv1;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfoh;
-    .locals 1
 
-    const-class v0, Lfoh;
+# virtual methods
+.method public final dispose()V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lfoh;->a:Lzih;
 
-    move-result-object p0
+    iget-object v1, p0, Lfoh;->b:Lmv1;
 
-    check-cast p0, Lfoh;
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    return-object p0
-.end method
-
-.method public static values()[Lfoh;
-    .locals 1
-
-    sget-object v0, Lfoh;->a:[Lfoh;
-
-    invoke-virtual {v0}, [Lfoh;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lfoh;
-
-    return-object v0
+    return-void
 .end method

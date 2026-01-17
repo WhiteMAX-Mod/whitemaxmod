@@ -2,30 +2,44 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:J
-
-.field public b:F
-
-.field public c:J
+# interfaces
+.implements Lx75;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 3
+# virtual methods
+.method public final a(Lhg3;)Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    instance-of v0, p1, Lno4;
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    const/4 v1, 0x0
 
-    iput-wide v0, p0, Lwg8;->a:J
+    if-eqz v0, :cond_0
 
-    const v2, -0x800001
+    check-cast p1, Lno4;
 
-    iput v2, p0, Lwg8;->b:F
+    goto :goto_0
 
-    iput-wide v0, p0, Lwg8;->c:J
+    :cond_0
+    move-object p1, v1
 
-    return-void
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lno4;->S()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    return-object v1
+.end method
+
+.method public final b(Lhg3;)Z
+    .locals 0
+
+    instance-of p1, p1, Lno4;
+
+    return p1
 .end method

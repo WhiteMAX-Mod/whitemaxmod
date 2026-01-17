@@ -1,101 +1,258 @@
-.class public final synthetic Lbk7;
-.super Ljava/lang/Object;
+.class public final Lbk7;
+.super Lw1;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/ImageDecoder$OnHeaderDecodedListener;
+.implements Lxbh;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:B
 
-.field public final synthetic b:I
+.field public final b:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
+.method public constructor <init>(B[B)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lbk7;->a:I
+    iput-byte p1, p0, Lbk7;->a:B
 
-    iput p2, p0, Lbk7;->b:I
+    iput-object p2, p0, Lbk7;->b:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onHeaderDecoded(Landroid/graphics/ImageDecoder;Landroid/graphics/ImageDecoder$ImageInfo;Landroid/graphics/ImageDecoder$Source;)V
-    .locals 3
+.method public final a()Ljava/lang/String;
+    .locals 6
 
-    iget p3, p0, Lbk7;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lbk7;->b:I
+    const-string v1, "["
 
-    invoke-static {p2}, Ly4;->n(Landroid/graphics/ImageDecoder$ImageInfo;)Landroid/util/Size;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-byte v1, p0, Lbk7;->a:B
+
+    invoke-static {v1}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    const-string v1, ",\""
 
-    invoke-static {p2}, Ly4;->n(Landroid/graphics/ImageDecoder$ImageInfo;)Landroid/util/Size;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    iget-object v1, p0, Lbk7;->b:[B
 
-    invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
+    array-length v2, v1
 
-    move-result p2
+    const/4 v3, 0x0
 
-    int-to-float p3, p3
+    :goto_0
+    if-ge v3, v2, :cond_0
 
-    int-to-float v1, v1
+    aget-byte v4, v1, v3
 
-    div-float/2addr p3, v1
+    const/16 v5, 0x10
 
-    int-to-float v0, v0
+    invoke-static {v4, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    int-to-float p2, p2
+    move-result-object v4
 
-    div-float/2addr v0, p2
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    add-int/lit8 v3, v3, 0x1
 
-    invoke-static {v0, v2}, Ljava/lang/Math;->min(FF)F
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "\"]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()I
+    .locals 1
+
+    const/16 v0, 0x9
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lxbh;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lxbh;
+
+    move-object v0, p1
+
+    check-cast v0, Lw1;
+
+    invoke-interface {v0}, Lxbh;->b()I
 
     move-result v0
 
-    invoke-static {p3, v0}, Ljava/lang/Math;->min(FF)F
+    if-eqz v0, :cond_3
 
-    move-result p3
+    const/16 v1, 0x9
 
-    cmpg-float v0, p3, v2
+    if-ne v0, v1, :cond_2
 
-    if-gez v0, :cond_0
+    invoke-interface {p1}, Lxbh;->n()Lbk7;
 
-    mul-float/2addr v1, p3
+    move-result-object p1
 
-    float-to-int v0, v1
+    iget-byte v0, p0, Lbk7;->a:B
 
-    mul-float/2addr p2, p3
+    iget-byte v1, p1, Lbk7;->a:B
 
-    float-to-int p2, p2
+    if-ne v0, v1, :cond_2
 
-    invoke-static {p1, v0, p2}, Ly4;->t(Landroid/graphics/ImageDecoder;II)V
+    iget-object v0, p0, Lbk7;->b:[B
+
+    iget-object p1, p1, Lbk7;->b:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-byte v0, p0, Lbk7;->a:B
+
+    add-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lbk7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v4, v1, v3
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    add-int/2addr v0, v4
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
 
     :cond_0
-    sget-object p2, Landroid/graphics/ColorSpace$Named;->SRGB:Landroid/graphics/ColorSpace$Named;
+    return v0
+.end method
 
-    invoke-static {p2}, Landroid/graphics/ColorSpace;->get(Landroid/graphics/ColorSpace$Named;)Landroid/graphics/ColorSpace;
+.method public final n()Lbk7;
+    .locals 0
 
-    move-result-object p2
+    return-object p0
+.end method
 
-    invoke-static {p1, p2}, Ly4;->u(Landroid/graphics/ImageDecoder;Landroid/graphics/ColorSpace;)V
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    invoke-static {p1}, Ly4;->s(Landroid/graphics/ImageDecoder;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, "("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-byte v1, p0, Lbk7;->a:B
+
+    invoke-static {v1}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",0x"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbk7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v4, v1, v3
+
+    const/16 v5, 0x10
+
+    invoke-static {v4, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final u()Lbk7;
+    .locals 0
+
+    return-object p0
 .end method

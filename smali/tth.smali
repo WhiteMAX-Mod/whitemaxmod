@@ -1,119 +1,46 @@
-.class public final Ltth;
-.super Landroidx/recyclerview/widget/RecyclerView;
+.class public Ltth;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsth;
 
-# instance fields
-.field public final synthetic U1:Landroidx/viewpager2/widget/ViewPager2;
 
-
-# direct methods
-.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Landroid/content/Context;)V
-    .locals 0
-
-    iput-object p1, p0, Ltth;->U1:Landroidx/viewpager2/widget/ViewPager2;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p2, p1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-void
-.end method
+# static fields
+.field public static a:Ltth;
 
 
 # virtual methods
-.method public final getAccessibilityClassName()Ljava/lang/CharSequence;
-    .locals 1
+.method public a(Ljava/lang/Class;)Loth;
+    .locals 0
 
-    iget-object v0, p0, Ltth;->U1:Landroidx/viewpager2/widget/ViewPager2;
+    invoke-static {p1}, Lc3j;->c(Ljava/lang/Class;)Loth;
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->G0:Lkne;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAccessibilityClassName()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method
 
-.method public final onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 2
+.method public b(Ljava/lang/Class;Llea;)Loth;
+    .locals 0
 
-    invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {p0, p1}, Ltth;->a(Ljava/lang/Class;)Loth;
 
-    iget-object v0, p0, Ltth;->U1:Landroidx/viewpager2/widget/ViewPager2;
+    move-result-object p1
 
-    iget v1, v0, Landroidx/viewpager2/widget/ViewPager2;->d:I
-
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setFromIndex(I)V
-
-    iget v1, v0, Landroidx/viewpager2/widget/ViewPager2;->d:I
-
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setToIndex(I)V
-
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->G0:Lkne;
-
-    iget-object v0, v0, Lkne;->d:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityRecord;->setSource(Landroid/view/View;)V
-
-    const-string v0, "androidx.viewpager.widget.ViewPager"
-
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final c(Lrd3;Llea;)Loth;
+    .locals 0
 
-    iget-object v0, p0, Ltth;->U1:Landroidx/viewpager2/widget/ViewPager2;
+    invoke-interface {p1}, Lpd3;->a()Ljava/lang/Class;
 
-    iget-boolean v0, v0, Landroidx/viewpager2/widget/ViewPager2;->E0:Z
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, p1, p2}, Ltth;->b(Ljava/lang/Class;Llea;)Loth;
 
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Ltth;->U1:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-boolean v0, v0, Landroidx/viewpager2/widget/ViewPager2;->E0:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object p1
 .end method

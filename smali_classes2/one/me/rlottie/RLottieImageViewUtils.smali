@@ -35,7 +35,7 @@
         "setLottieDrawable",
         "(Lone/me/rlottie/RLottieImageView;Lone/me/rlottie/RLottieDrawable;)Z",
         "networkFetchEnabled",
-        "Lv2h;",
+        "Lb3h;",
         "restartDownloadFromUrl",
         "(Lone/me/rlottie/RLottieImageView;Z)V",
         "debug",
@@ -47,7 +47,7 @@
     k = 0x2
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lle;->b()Z
+    invoke-static {}, Lie;->b()Z
 
     move-result v1
 

@@ -1,102 +1,68 @@
-.class public final synthetic Lzr4;
+.class public final Lzr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lr2g;
+.implements Ls59;
+
+
+# static fields
+.field public static final f:I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:I
 
-.field public final synthetic c:Loi4;
+.field public final c:Landroid/app/NotificationManager;
+
+.field public d:Lvd;
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Loi4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lzr4;->a:I
+    sget v0, Lzdd;->default_notification_channel_name:I
 
-    iput-object p1, p0, Lzr4;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lzr4;->c:Loi4;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lzr4;->f:I
 
     return-void
 .end method
 
+.method public constructor <init>(Ldu0;)V
+    .locals 1
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 3
+    iget-object v0, p1, Ldu0;->d:Ljava/lang/Object;
 
-    iget v0, p0, Lzr4;->a:I
+    check-cast v0, Landroid/content/Context;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p1, Ldu0;->b:I
 
-    iget-object v0, p0, Lzr4;->b:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v0, Lbs4;
+    iput-object v0, p0, Lzr4;->a:Landroid/content/Context;
 
-    new-instance v1, Lwwc;
+    iput p1, p0, Lzr4;->b:I
 
-    iget-object v0, v0, Lbs4;->b:Ljava/lang/Object;
+    const-string p1, "notification"
 
-    check-cast v0, Llq4;
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lzr4;->c:Loi4;
+    move-result-object p1
 
-    invoke-direct {v1, v2, v0}, Lwwc;-><init>(Loi4;Llq4;)V
+    check-cast p1, Landroid/app/NotificationManager;
 
-    return-object v1
+    invoke-static {p1}, Lh6j;->h(Ljava/lang/Object;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lzr4;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lzr4;->c:Landroid/app/NotificationManager;
 
-    check-cast v0, Ljava/lang/Class;
+    sget p1, Lh7d;->media3_notification_small_icon:I
 
-    iget-object v1, p0, Lzr4;->c:Loi4;
+    iput p1, p0, Lzr4;->e:I
 
-    invoke-static {v0, v1}, Lds4;->c(Ljava/lang/Class;Loi4;)Lld9;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lzr4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Class;
-
-    iget-object v1, p0, Lzr4;->c:Loi4;
-
-    invoke-static {v0, v1}, Lds4;->c(Ljava/lang/Class;Loi4;)Lld9;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lzr4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Class;
-
-    iget-object v1, p0, Lzr4;->c:Loi4;
-
-    invoke-static {v0, v1}, Lds4;->c(Ljava/lang/Class;Loi4;)Lld9;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

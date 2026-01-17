@@ -3,102 +3,74 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls88;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lxm6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public a:Ljava/lang/String;
 
-.field public final synthetic b:Lhn6;
-
-.field public final synthetic c:Lc98;
-
-.field public final synthetic d:Landroidx/fragment/app/c;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/c;Ljava/lang/String;Lhn6;Lc98;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lxj4;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lxj4;-><init>(I)V
+
+    sput-object v0, Lxm6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxm6;->d:Landroidx/fragment/app/c;
+    iput-object p1, p0, Lxm6;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lxm6;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lxm6;->b:Lhn6;
-
-    iput-object p4, p0, Lxm6;->c:Lc98;
+    iput p2, p0, Lxm6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(La98;Lb88;)V
-    .locals 4
+.method public final describeContents()I
+    .locals 1
 
-    iget-object p1, p0, Lxm6;->d:Landroidx/fragment/app/c;
+    const/4 v0, 0x0
 
-    iget-object v0, p1, Landroidx/fragment/app/c;->l:Ljava/util/Map;
+    return v0
+.end method
 
-    sget-object v1, Lb88;->ON_START:Lb88;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v2, p0, Lxm6;->a:Ljava/lang/String;
+    iget-object p2, p0, Lxm6;->a:Ljava/lang/String;
 
-    if-ne p2, v1, :cond_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget p2, p0, Lxm6;->b:I
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    check-cast v1, Landroid/os/Bundle;
-
-    if-eqz v1, :cond_0
-
-    iget-object v3, p0, Lxm6;->b:Lhn6;
-
-    invoke-interface {v3, v2, v1}, Lhn6;->b(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Clearing fragment result with key "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "FragmentManager"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lb88;->ON_DESTROY:Lb88;
-
-    if-ne p2, v0, :cond_1
-
-    iget-object p2, p0, Lxm6;->c:Lc98;
-
-    invoke-virtual {p2, p0}, Lc98;->f(Lw88;)V
-
-    iget-object p1, p1, Landroidx/fragment/app/c;->m:Ljava/util/Map;
-
-    invoke-interface {p1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
     return-void
 .end method

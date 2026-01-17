@@ -1,0 +1,53 @@
+.class public final Lchh;
+.super Lo84;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic X:Lehh;
+
+.field public Y:I
+
+.field public d:Ljm9;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lehh;Lo84;)V
+    .locals 0
+
+    iput-object p1, p0, Lchh;->X:Lehh;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iput-object p1, p0, Lchh;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lchh;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lchh;->Y:I
+
+    const/4 p1, 0x0
+
+    const-wide/16 v0, 0x0
+
+    iget-object v2, p0, Lchh;->X:Lehh;
+
+    invoke-static {v2, p1, v0, v1, p0}, Lehh;->a(Lehh;Ljm9;JLo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

@@ -1,53 +1,48 @@
-.class public abstract synthetic Lpx1;
+.class public final Lpx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb4;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Ln8g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lo58;Lo58;)V
+    .locals 2
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->values()[Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lox1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, p2, v1}, Lox1;-><init>(Lo58;Lo58;I)V
+
+    new-instance p1, Ln8g;
+
+    invoke-direct {p1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p1, p0, Lpx1;->a:Ln8g;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getCoroutineContext()Lqb4;
+    .locals 1
+
+    iget-object v0, p0, Lpx1;->a:Ln8g;
+
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Lqb4;
 
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->EARPIECE:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->SPEAKER_PHONE:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lpx1;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

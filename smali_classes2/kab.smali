@@ -1,75 +1,80 @@
 .class public final Lkab;
-.super Ljava/util/concurrent/LinkedTransferQueue;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+.field public final synthetic c:Lai7;
+
+.field public final synthetic d:Landroid/graphics/drawable/Animatable;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Ljava/lang/String;Lai7;Landroid/graphics/drawable/Animatable;I)V
+    .locals 0
+
+    iput p5, p0, Lkab;->a:I
+
+    iput-object p1, p0, Lkab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    iput-object p3, p0, Lkab;->c:Lai7;
+
+    iput-object p4, p0, Lkab;->d:Landroid/graphics/drawable/Animatable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final bridge contains(Ljava/lang/Object;)Z
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lkab;->a:I
 
-    const/4 v0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_0
+    iget-object v0, p0, Lkab;->c:Lai7;
 
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
+    iget-object v1, p0, Lkab;->d:Landroid/graphics/drawable/Animatable;
 
-    :goto_0
-    if-nez v0, :cond_1
+    iget-object v2, p0, Lkab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    const/4 p1, 0x0
+    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->k(Lai7;Landroid/graphics/drawable/Animatable;)V
 
-    return p1
+    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
 
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
+    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
 
-    invoke-super {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->contains(Ljava/lang/Object;)Z
+    return-void
 
-    move-result p1
+    :pswitch_0
+    iget-object v0, p0, Lkab;->c:Lai7;
 
-    return p1
-.end method
+    iget-object v1, p0, Lkab;->d:Landroid/graphics/drawable/Animatable;
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 0
+    iget-object v2, p0, Lkab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    check-cast p1, Ljava/lang/Runnable;
+    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->k(Lai7;Landroid/graphics/drawable/Animatable;)V
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->tryTransfer(Ljava/lang/Object;)Z
+    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
 
-    move-result p1
+    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
 
-    return p1
-.end method
+    return-void
 
-.method public final bridge remove(Ljava/lang/Object;)Z
-    .locals 1
+    nop
 
-    if-nez p1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
-
-    invoke-super {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

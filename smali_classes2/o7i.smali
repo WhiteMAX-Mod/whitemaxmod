@@ -1,64 +1,80 @@
 .class public final Lo7i;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lu7i;
+.implements Lbr6;
 
 
-# static fields
-.field public static final a:Lo7i;
+# instance fields
+.field public final synthetic X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    .locals 0
 
-    new-instance v0, Lo7i;
+    iput-object p2, p0, Lo7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lo7i;->a:Lo7i;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lo7i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of p1, p1, Lo7i;
+    check-cast p1, Lo7i;
 
-    if-nez p1, :cond_1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Lo7i;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, 0x3ec512d9
+    new-instance v0, Lo7i;
 
-    return v0
-.end method
+    iget-object v1, p0, Lo7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lo7i;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
 
-    const-string v0, "ShowPhoneConfirmationDialog"
+    iput-object p1, v0, Lo7i;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lo7i;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lm8i;
+
+    sget-object p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->K0:[Lz28;
+
+    iget-object p1, p0, Lo7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+
+    invoke-virtual {p1, v0}, Lone/me/webapp/rootscreen/WebAppRootScreen;->R0(Lm8i;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

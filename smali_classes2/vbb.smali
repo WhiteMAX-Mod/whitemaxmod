@@ -26,54 +26,84 @@
 
 .field public static final k:I
 
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view:I
+    sget v0, Lq8d;->oneme_folders_chats_picker_toolbar:I
 
     sput v0, Lvbb;->a:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_icon:I
+    sget v0, Lq8d;->oneme_folders_delete_folder_bottom_sheet_cancel_button:I
 
     sput v0, Lvbb;->b:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
+    sget v0, Lq8d;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
     sput v0, Lvbb;->c:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
+    sget v0, Lq8d;->oneme_folders_edit_create_button:I
 
     sput v0, Lvbb;->d:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
+    sget v0, Lq8d;->oneme_folders_edit_members_list:I
 
     sput v0, Lvbb;->e:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
+    sget v0, Lq8d;->oneme_folders_edit_screen:I
 
     sput v0, Lvbb;->f:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_title:I
+    sget v0, Lq8d;->oneme_folders_edit_toolbar:I
 
     sput v0, Lvbb;->g:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_thank_view:I
+    sget v0, Lq8d;->oneme_folders_list_all_folder_view_type:I
 
     sput v0, Lvbb;->h:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
+    sget v0, Lq8d;->oneme_folders_list_create_folder_view_type:I
 
     sput v0, Lvbb;->i:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_thank_view_icon:I
+    sget v0, Lq8d;->oneme_folders_list_menu_action_change:I
 
     sput v0, Lvbb;->j:I
 
-    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_thank_view_title:I
+    sget v0, Lq8d;->oneme_folders_list_menu_action_delete_folder:I
 
     sput v0, Lvbb;->k:I
+
+    sget v0, Lq8d;->oneme_folders_list_recommended_folder_view_type:I
+
+    sput v0, Lvbb;->l:I
+
+    sget v0, Lq8d;->oneme_folders_list_recycler_view:I
+
+    sput v0, Lvbb;->m:I
+
+    sget v0, Lq8d;->oneme_folders_list_screen:I
+
+    sput v0, Lvbb;->n:I
+
+    sget v0, Lq8d;->oneme_folders_list_toolbar:I
+
+    sput v0, Lvbb;->o:I
+
+    sget v0, Lq8d;->oneme_folders_list_user_folder_view_type:I
+
+    sput v0, Lvbb;->p:I
 
     return-void
 .end method

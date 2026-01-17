@@ -1,3 +1,3 @@
-.class public abstract Lyze;
-.super Ltl5;
+.class public interface abstract Lyze;
+.super Ljava/lang/Object;
 .source "SourceFile"

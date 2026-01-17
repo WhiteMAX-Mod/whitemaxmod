@@ -1,5 +1,5 @@
 .class public final Lr7a;
-.super Lrg7;
+.super Lvf7;
 .source "SourceFile"
 
 
@@ -31,11 +31,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lev8;
+    new-instance v0, Lhu8;
 
     const/16 v1, 0xb
 
-    invoke-direct {v0, v1}, Lev8;-><init>(I)V
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
 
     sput-object v0, Lr7a;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -48,7 +48,7 @@
     .line 1
     const-string v0, "MLLT"
 
-    invoke-direct {p0, v0}, Lrg7;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lvf7;-><init>(Ljava/lang/String;)V
 
     .line 2
     iput p1, p0, Lr7a;->b:I
@@ -74,7 +74,7 @@
     .line 7
     const-string v0, "MLLT"
 
-    invoke-direct {p0, v0}, Lrg7;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lvf7;-><init>(Ljava/lang/String;)V
 
     .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    sget v1, Loah;->a:I
+    sget v1, Lkbh;->a:I
 
     iput-object v0, p0, Lr7a;->o:[I
 

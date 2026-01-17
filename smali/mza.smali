@@ -1,90 +1,147 @@
 .class public final Lmza;
-.super Lcxa;
+.super Ljava/util/ArrayList;
 .source "SourceFile"
+
+# interfaces
+.implements Liza;
 
 
 # instance fields
-.field public final a:Lcxa;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final c:Leza;
-
-.field public final d:Ljza;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljza;Lcxa;Ljava/util/concurrent/atomic/AtomicReference;Leza;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmza;->d:Ljza;
-
-    iput-object p2, p0, Lmza;->a:Lcxa;
-
-    iput-object p3, p0, Lmza;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p4, p0, Lmza;->c:Leza;
-
-    return-void
-.end method
+.field public volatile a:I
 
 
 # virtual methods
-.method public final n(Lc0b;)V
+.method public final a()V
     .locals 1
 
-    iget-object v0, p0, Lmza;->d:Ljza;
+    sget-object v0, Lzsa;->a:Lzsa;
 
-    invoke-virtual {v0, p1}, Ljza;->a(Lc0b;)V
+    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    iget v0, p0, Lmza;->a:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lmza;->a:I
 
     return-void
 .end method
 
-.method public final s()V
-    .locals 3
+.method public final b(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lmza;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget p1, p0, Lmza;->a:I
 
-    move-result-object v1
+    add-int/lit8 p1, p1, 0x1
 
-    check-cast v1, Liza;
+    iput p1, p0, Lmza;->a:I
 
-    if-eqz v1, :cond_2
+    return-void
+.end method
 
-    invoke-virtual {v1}, Liza;->f()Z
+.method public final c(Lgza;)V
+    .locals 5
 
-    move-result v2
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p1, Lgza;->b:Le0b;
+
+    const/4 v1, 0x1
+
+    :cond_1
+    iget-boolean v2, p1, Lgza;->d:Z
 
     if-eqz v2, :cond_2
 
-    :cond_0
-    const/4 v2, 0x0
+    goto :goto_1
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :cond_2
+    iget v2, p0, Lmza;->a:I
 
-    move-result v2
+    iget-object v3, p1, Lgza;->c:Ljava/io/Serializable;
 
-    if-eqz v2, :cond_1
+    check-cast v3, Ljava/lang/Integer;
 
-    return-void
+    if-eqz v3, :cond_3
 
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_6
+
+    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-static {v0, v4}, Lzsa;->a(Le0b;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    iget-boolean v4, p1, Lgza;->d:Z
+
+    if-eqz v4, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    if-eq v2, v1, :cond_0
+    iput-object v2, p1, Lgza;->c:Ljava/io/Serializable;
 
-    :cond_2
+    neg-int v1, v1
+
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :goto_1
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Throwable;)V
+    .locals 1
+
+    new-instance v0, Lxsa;
+
+    invoke-direct {v0, p1}, Lxsa;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    iget p1, p0, Lmza;->a:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lmza;->a:I
+
     return-void
 .end method

@@ -1,63 +1,235 @@
-.class public abstract Lmfg;
-.super Ljava/lang/Object;
+.class public final Lmfg;
+.super Le3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkfg;
+# instance fields
+.field public X:Lgo6;
 
-.field public static final b:Lkfg;
+.field public final Y:Luy6;
 
-.field public static final c:Lkfg;
+.field public d:Lfsg;
 
-.field public static final d:Lkfg;
-
-.field public static final e:Lkfg;
+.field public o:Ljda;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Luy6;Lc02;)V
+    .locals 0
+
+    invoke-direct {p0, p2}, Le3;-><init>(Lc02;)V
+
+    iput-object p1, p0, Lmfg;->Y:Luy6;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized f()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lmfg;->d:Lfsg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lfsg;->r()V
+
+    invoke-super {p0}, Le3;->f()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final h()I
+    .locals 2
+
+    iget-object v0, p0, Lmfg;->d:Lfsg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Lfsg;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final m(IJ)V
+    .locals 7
+
+    iget-object v3, p0, Lmfg;->X:Lgo6;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lmfg;->o:Ljda;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Le3;->a:Ljava/lang/Object;
+
+    move-object v6, v0
+
+    check-cast v6, Lc02;
+
+    new-instance v0, Llfg;
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move-wide v4, p2
+
+    invoke-direct/range {v0 .. v5}, Llfg;-><init>(Lmfg;ILgo6;J)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v6, v0, p1}, Lc02;->g(Lnhh;Z)V
+
+    return-void
+.end method
+
+.method public final o()V
     .locals 4
 
-    new-instance v0, Lkfg;
+    iget-object v0, p0, Lmfg;->d:Lfsg;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Le3;->a:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Lkfg;-><init>(Ljfg;Z)V
+    check-cast v0, Lc02;
 
-    sput-object v0, Lmfg;->a:Lkfg;
+    iget-object v1, p0, Lmfg;->d:Lfsg;
 
-    new-instance v0, Lkfg;
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    new-instance v2, Lkv4;
 
-    invoke-direct {v0, v1, v3}, Lkfg;-><init>(Ljfg;Z)V
+    const/4 v3, 0x3
 
-    sput-object v0, Lmfg;->b:Lkfg;
+    invoke-direct {v2, v3, v1}, Lkv4;-><init>(ILjava/lang/Object;)V
 
-    new-instance v0, Lkfg;
+    const/4 v1, 0x1
 
-    sget-object v1, Luna;->C0:Luna;
+    invoke-virtual {v0, v2, v1}, Lc02;->g(Lnhh;Z)V
 
-    invoke-direct {v0, v1, v2}, Lkfg;-><init>(Ljfg;Z)V
+    return-void
+.end method
 
-    sput-object v0, Lmfg;->c:Lkfg;
+.method public final p(Lbz6;)V
+    .locals 3
 
-    new-instance v0, Lkfg;
+    iget-object v0, p0, Le3;->a:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v3}, Lkfg;-><init>(Ljfg;Z)V
+    check-cast v0, Lc02;
 
-    sput-object v0, Lmfg;->d:Lkfg;
+    new-instance v1, Ll92;
 
-    new-instance v0, Lkfg;
+    const/4 v2, 0x5
 
-    sget-object v1, Lfca;->z0:Lfca;
+    invoke-direct {v1, p0, v2, p1}, Ll92;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {v0, v1, v2}, Lkfg;-><init>(Ljfg;Z)V
+    const/4 p1, 0x1
 
-    sput-object v0, Lmfg;->e:Lkfg;
+    invoke-virtual {v0, v1, p1}, Lc02;->g(Lnhh;Z)V
+
+    return-void
+.end method
+
+.method public final s()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final w(Lgo6;Z)V
+    .locals 0
+
+    iput-object p1, p0, Lmfg;->X:Lgo6;
+
+    return-void
+.end method
+
+.method public final x(Ljda;)V
+    .locals 0
+
+    iput-object p1, p0, Lmfg;->o:Ljda;
+
+    return-void
+.end method
+
+.method public final y(Lht4;)V
+    .locals 3
+
+    new-instance v0, Lfsg;
+
+    iget-object v1, p0, Le3;->a:Ljava/lang/Object;
+
+    check-cast v1, Lc02;
+
+    iget-object v2, p0, Lmfg;->Y:Luy6;
+
+    invoke-direct {v0, v2, p1, v1}, Lfsg;-><init>(Luy6;Laz6;Lc02;)V
+
+    iput-object v0, p0, Lmfg;->d:Lfsg;
+
+    return-void
+.end method
+
+.method public final z()V
+    .locals 3
+
+    iget-object v0, p0, Le3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lc02;
+
+    new-instance v1, Lkv4;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, p0}, Lkv4;-><init>(ILjava/lang/Object;)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lc02;->g(Lnhh;Z)V
 
     return-void
 .end method

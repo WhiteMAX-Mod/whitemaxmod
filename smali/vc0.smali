@@ -4,29 +4,40 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lp5g;
 
-.field public final b:Landroid/view/Surface;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(ILandroid/view/Surface;)V
+.method public constructor <init>(Lp5g;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lvc0;->a:I
+    if-eqz p1, :cond_1
+
+    iput-object p1, p0, Lvc0;->a:Lp5g;
 
     if-eqz p2, :cond_0
 
-    iput-object p2, p0, Lvc0;->b:Landroid/view/Surface;
+    iput-object p2, p0, Lvc0;->b:Ljava/util/List;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null surface"
+    const-string p2, "Null outConfigs"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null surfaceEdge"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -36,50 +47,57 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lvc0;
+    instance-of v1, p1, Lvc0;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lvc0;
 
-    iget v0, p0, Lvc0;->a:I
+    iget-object v1, p0, Lvc0;->a:Lp5g;
 
-    iget v1, p1, Lvc0;->a:I
+    iget-object v3, p1, Lvc0;->a:Lp5g;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lvc0;->b:Landroid/view/Surface;
+    move-result v1
 
-    iget-object p1, p1, Lvc0;->b:Landroid/view/Surface;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lvc0;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lvc0;->b:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 
     :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lvc0;->a:I
+    iget-object v0, p0, Lvc0;->a:Lp5g;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -87,9 +105,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lvc0;->b:Landroid/view/Surface;
+    iget-object v1, p0, Lvc0;->b:Ljava/util/List;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
 
     move-result v1
 
@@ -99,31 +117,27 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Result{resultCode="
+    const-string v1, "In{surfaceEdge="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lvc0;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", surface="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvc0;->b:Landroid/view/Surface;
+    iget-object v1, p0, Lvc0;->a:Lp5g;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string v1, ", outConfigs="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lvc0;->b:Ljava/util/List;
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lecj;->b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

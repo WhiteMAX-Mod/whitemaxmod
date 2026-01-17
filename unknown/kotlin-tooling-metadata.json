@@ -3,7 +3,7 @@
   "buildSystem": "Gradle",
   "buildSystemVersion": "8.14.3",
   "buildPlugin": "org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper",
-  "buildPluginVersion": "2.0.0",
+  "buildPluginVersion": "2.2.21",
   "projectSettings": {
     "isHmppEnabled": true,
     "isCompatibilityMetadataVariantEnabled": false,

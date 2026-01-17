@@ -2,110 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic e:[Lp38;
+# interfaces
+.implements Lf76;
 
 
 # instance fields
-.field public final a:Lac4;
+.field public final synthetic a:I
 
-.field public final b:Len8;
-
-.field public final c:Lb5g;
-
-.field public final d:Le7;
+.field public final synthetic b:Lun8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lifa;
-
-    const-string v1, "subscribeJob"
-
-    const-string v2, "getSubscribeJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lgn8;
-
-    invoke-direct {v0, v3, v1, v2}, Lifa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lfsd;->a:Lgsd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lp38;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lgn8;->e:[Lp38;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ldah;Len8;Loq6;)V
+.method public synthetic constructor <init>(Lun8;I)V
     .locals 0
 
+    iput p2, p0, Lgn8;->a:I
+
+    iput-object p1, p0, Lgn8;->b:Lun8;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgn8;->a:Lac4;
-
-    iput-object p2, p0, Lgn8;->b:Len8;
-
-    check-cast p3, Lb5g;
-
-    iput-object p3, p0, Lgn8;->c:Lb5g;
-
-    invoke-static {}, Llkj;->b()Le7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgn8;->d:Le7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lgn8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/util/List;
+
+    new-instance v0, Lfn8;
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lgn8;->b:Lun8;
+
+    invoke-direct {v0, v2, p1, v1}, Lfn8;-><init>(Lun8;Ljava/util/List;I)V
+
+    sget-object p1, Lxg5;->a:Lxg5;
+
+    invoke-static {p1, v0, p2}, Lc1j;->b(Lqb4;Llq6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/util/List;
 
     new-instance v0, Lfn8;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lfn8;-><init>(Lgn8;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Lgn8;->b:Lun8;
 
-    const/4 v2, 0x3
+    invoke-direct {v0, v2, p1, v1}, Lfn8;-><init>(Lun8;Ljava/util/List;I)V
 
-    iget-object v3, p0, Lgn8;->a:Lac4;
+    sget-object p1, Lxg5;->a:Lxg5;
 
-    invoke-static {v3, v1, v1, v0, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    invoke-static {p1, v0, p2}, Lc1j;->b(Lqb4;Llq6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v1, Lb17;
+    sget-object p2, Lac4;->a:Lac4;
 
-    const/16 v2, 0xb
+    if-ne p1, p2, :cond_1
 
-    invoke-direct {v1, v2, p0}, Lb17;-><init>(ILjava/lang/Object;)V
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Lkz7;->invokeOnCompletion(Loq6;)Lo25;
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    sget-object v1, Lgn8;->e:[Lp38;
+    :goto_1
+    return-object p1
 
-    const/4 v2, 0x0
+    nop
 
-    aget-object v1, v1, v2
-
-    iget-object v2, p0, Lgn8;->d:Le7;
-
-    invoke-virtual {v2, p0, v1, v0}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -20,7 +20,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;Lt9c;)Lag3;
+.method public final a(Landroid/graphics/Bitmap;Loac;)Lkg3;
     .locals 3
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
@@ -29,7 +29,7 @@
 
     iget-object v1, p0, Lse0;->c:Lue0;
 
-    iget-boolean v1, v1, Lue0;->s0:Z
+    iget-boolean v1, v1, Lue0;->t0:Z
 
     if-eqz v1, :cond_0
 
@@ -47,7 +47,7 @@
     :goto_0
     iget-object v2, p0, Lse0;->c:Lue0;
 
-    iget-boolean v2, v2, Lue0;->s0:Z
+    iget-boolean v2, v2, Lue0;->t0:Z
 
     if-eqz v2, :cond_1
 
@@ -68,12 +68,12 @@
     sget-object v0, Lgl0;->a:Landroid/graphics/Bitmap$Config;
 
     :cond_2
-    invoke-virtual {p2, v1, v2, v0}, Lt9c;->c(IILandroid/graphics/Bitmap$Config;)Lag3;
+    invoke-virtual {p2, v1, v2, v0}, Loac;->c(IILandroid/graphics/Bitmap$Config;)Lkg3;
 
     move-result-object p2
 
     :try_start_0
-    invoke-virtual {p2}, Lag3;->n0()Ljava/lang/Object;
+    invoke-virtual {p2}, Lkg3;->p0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -81,13 +81,13 @@
 
     invoke-virtual {p0, v0, p1}, Lse0;->d(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p2}, Lag3;->l()Lag3;
+    invoke-virtual {p2}, Lkg3;->l()Lkg3;
 
     move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p2}, Lag3;->close()V
+    invoke-virtual {p2}, Lkg3;->close()V
 
     return-object p1
 
@@ -102,7 +102,7 @@
     :catchall_1
     move-exception v0
 
-    invoke-static {p2, p1}, Lbij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p2, p1}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v0
 .end method
@@ -112,7 +112,7 @@
 
     iget-object v0, p0, Lse0;->c:Lue0;
 
-    iget-boolean v0, v0, Lue0;->s0:Z
+    iget-boolean v0, v0, Lue0;->t0:Z
 
     if-eqz v0, :cond_0
 
@@ -161,9 +161,9 @@
     :cond_0
     iget-object v0, p0, Lse0;->c:Lue0;
 
-    iget-object v0, v0, Lue0;->Y:Lz7g;
+    iget-object v0, v0, Lue0;->Y:Ln8g;
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -173,9 +173,9 @@
 
     iget-object p1, p0, Lse0;->c:Lue0;
 
-    iget-object p1, p1, Lue0;->Y:Lz7g;
+    iget-object p1, p1, Lue0;->Y:Ln8g;
 
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 

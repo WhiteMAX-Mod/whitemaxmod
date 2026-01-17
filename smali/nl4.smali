@@ -1,285 +1,226 @@
-.class public final Lnl4;
-.super Ljava/lang/Object;
+.class public Lnl4;
+.super Laz;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:J
 
-.field public b:I
+.field public Y:Ljava/nio/ByteBuffer;
 
-.field public c:I
+.field public final Z:I
 
-.field public d:I
+.field public final c:Lle4;
 
-.field public e:I
+.field public d:Ljava/nio/ByteBuffer;
 
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:I
-
-.field public l:J
-
-.field public m:I
+.field public o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lnl4;->a:I
+    const-string v0, "goog.exo.decoder"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Lsq5;->a(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Laz;-><init>(I)V
+
+    new-instance v0, Lle4;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lle4;-><init>(I)V
+
+    iput-object v0, p0, Lnl4;->c:Lle4;
+
+    iput p1, p0, Lnl4;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 28
+.method public final A()V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lnl4;->d:Ljava/nio/ByteBuffer;
 
-    iget v1, v0, Lnl4;->a:I
+    if-eqz v0, :cond_0
 
-    const-string v2, "\n}"
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    const-string v3, "\n videoFrameProcessingOffsetCount="
+    :cond_0
+    iget-object v0, p0, Lnl4;->Y:Ljava/nio/ByteBuffer;
 
-    const-string v4, "\n totalVideoFrameProcessingOffsetUs="
+    if-eqz v0, :cond_1
 
-    const-string v5, "\n droppedToKeyframeEvents="
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    const-string v6, "\n maxConsecutiveDroppedBuffers="
+    :cond_1
+    return-void
+.end method
 
-    const-string v7, "\n droppedInputBuffers="
+.method public x()V
+    .locals 2
 
-    const-string v8, "\n droppedBuffers="
+    const/4 v0, 0x0
 
-    const-string v9, "\n skippedOutputBuffers="
+    iput v0, p0, Laz;->b:I
 
-    const-string v10, "\n renderedOutputBuffers="
+    iget-object v1, p0, Lnl4;->d:Ljava/nio/ByteBuffer;
 
-    const-string v11, "\n skippedInputBuffers="
+    if-eqz v1, :cond_0
 
-    const-string v12, "\n queuedInputBuffers="
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    const-string v13, ",\n decoderReleases="
+    :cond_0
+    iget-object v1, p0, Lnl4;->Y:Ljava/nio/ByteBuffer;
 
-    const-string v14, "DecoderCounters {\n decoderInits="
+    if-eqz v1, :cond_1
 
-    packed-switch v1, :pswitch_data_0
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    iget v1, v0, Lnl4;->b:I
+    :cond_1
+    iput-boolean v0, p0, Lnl4;->o:Z
 
-    iget v15, v0, Lnl4;->c:I
+    return-void
+.end method
 
-    move-object/from16 v16, v2
+.method public final y(I)Ljava/nio/ByteBuffer;
+    .locals 4
 
-    iget v2, v0, Lnl4;->d:I
+    const/4 v0, 0x1
 
-    move-object/from16 v17, v3
+    iget v1, p0, Lnl4;->Z:I
 
-    iget v3, v0, Lnl4;->e:I
+    if-ne v1, v0, :cond_0
 
-    move-object/from16 v18, v4
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    iget v4, v0, Lnl4;->f:I
+    move-result-object p1
 
-    move-object/from16 v19, v5
+    return-object p1
 
-    iget v5, v0, Lnl4;->g:I
+    :cond_0
+    const/4 v0, 0x2
 
-    move-object/from16 v20, v6
+    if-ne v1, v0, :cond_1
 
-    iget v6, v0, Lnl4;->h:I
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    move/from16 v21, v6
+    move-result-object p1
 
-    iget v6, v0, Lnl4;->i:I
+    return-object p1
 
-    move/from16 v22, v6
+    :cond_1
+    iget-object v0, p0, Lnl4;->d:Ljava/nio/ByteBuffer;
 
-    iget v6, v0, Lnl4;->j:I
+    if-nez v0, :cond_2
 
-    move/from16 v23, v6
+    const/4 v0, 0x0
 
-    iget v6, v0, Lnl4;->k:I
+    goto :goto_0
 
-    move/from16 v25, v6
+    :cond_2
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    move-object/from16 v24, v7
+    move-result v0
 
-    iget-wide v6, v0, Lnl4;->l:J
+    :goto_0
+    new-instance v1, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer$InsufficientCapacityException;
 
-    move-wide/from16 v26, v6
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    iget v6, v0, Lnl4;->m:I
+    const/16 v3, 0x2c
 
-    sget-object v7, Lqah;->a:Ljava/lang/String;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
+    const-string v3, "Buffer too small ("
 
-    invoke-static {v14, v1, v13, v15, v12}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " < "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ")"
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final z(I)V
+    .locals 3
+
+    iget-object v0, p0, Lnl4;->d:Ljava/nio/ByteBuffer;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, p1}, Lnl4;->y(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnl4;->d:Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result v2
+
+    add-int/2addr p1, v2
+
+    if-lt v1, p1, :cond_1
+
+    iput-object v0, p0, Lnl4;->d:Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0, p1}, Lnl4;->y(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
 
     move-result-object v1
 
-    invoke-static {v1, v2, v11, v3, v10}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    invoke-static {v1, v4, v9, v5, v8}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    if-lez v2, :cond_2
 
-    move-object/from16 v4, v20
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    move/from16 v2, v21
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    move/from16 v3, v22
+    :cond_2
+    iput-object p1, p0, Lnl4;->d:Ljava/nio/ByteBuffer;
 
-    move-object/from16 v5, v24
-
-    invoke-static {v1, v2, v5, v3, v4}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v7, v18
-
-    move-object/from16 v15, v19
-
-    move/from16 v2, v23
-
-    move/from16 v3, v25
-
-    invoke-static {v1, v2, v15, v3, v7}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v4, v17
-
-    move-wide/from16 v2, v26
-
-    invoke-static {v1, v2, v3, v4, v6}, Ln0c;->m(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-
-    move-object/from16 v2, v16
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    return-object v1
-
-    :pswitch_0
-    move-object v1, v3
-
-    move-object v15, v5
-
-    move-object v5, v7
-
-    move-object v7, v4
-
-    move-object v4, v6
-
-    iget v3, v0, Lnl4;->b:I
-
-    iget v6, v0, Lnl4;->c:I
-
-    move-object/from16 v16, v2
-
-    iget v2, v0, Lnl4;->d:I
-
-    move-object/from16 v17, v1
-
-    iget v1, v0, Lnl4;->e:I
-
-    move-object/from16 v18, v7
-
-    iget v7, v0, Lnl4;->f:I
-
-    move-object/from16 v19, v15
-
-    iget v15, v0, Lnl4;->g:I
-
-    move-object/from16 v20, v4
-
-    iget v4, v0, Lnl4;->h:I
-
-    move/from16 v21, v4
-
-    iget v4, v0, Lnl4;->i:I
-
-    move/from16 v22, v4
-
-    iget v4, v0, Lnl4;->j:I
-
-    move/from16 v23, v4
-
-    iget v4, v0, Lnl4;->k:I
-
-    move/from16 v25, v4
-
-    move-object/from16 v24, v5
-
-    iget-wide v4, v0, Lnl4;->l:J
-
-    move-wide/from16 v26, v4
-
-    iget v4, v0, Lnl4;->m:I
-
-    sget v5, Loah;->a:I
-
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-static {v14, v3, v13, v6, v12}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-static {v3, v2, v11, v1, v10}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-static {v3, v7, v9, v15, v8}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v5, v20
-
-    move/from16 v1, v21
-
-    move/from16 v2, v22
-
-    move-object/from16 v6, v24
-
-    invoke-static {v3, v1, v6, v2, v5}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v7, v18
-
-    move-object/from16 v15, v19
-
-    move/from16 v1, v23
-
-    move/from16 v2, v25
-
-    invoke-static {v3, v1, v15, v2, v7}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v5, v17
-
-    move-wide/from16 v1, v26
-
-    invoke-static {v3, v1, v2, v5, v4}, Ln0c;->m(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-
-    move-object/from16 v2, v16
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,76 +1,49 @@
 .class public final Lvi9;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lwi9;
 
 
 # instance fields
-.field public final a:Lpkd;
+.field public final synthetic X:Lzi9;
 
-.field public final b:Lah5;
+.field public Y:I
+
+.field public d:Lzi9;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lzi9;Lo84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvi9;->X:Lzi9;
 
-    sget-object v0, Lch5;->a:Lch5;
-
-    invoke-static {v0}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object v0
-
-    new-instance v1, Lpkd;
-
-    invoke-direct {v1, v0}, Lpkd;-><init>(Lofa;)V
-
-    iput-object v1, p0, Lvi9;->a:Lpkd;
-
-    sget-object v0, Lah5;->a:Lah5;
-
-    iput-object v0, p0, Lvi9;->b:Lah5;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final b()Lf76;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lvi9;->b:Lah5;
+    iput-object p1, p0, Lvi9;->o:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    iget p1, p0, Lvi9;->Y:I
 
-.method public final d()Z
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    const/4 v0, 0x0
+    or-int/2addr p1, v0
 
-    return v0
-.end method
+    iput p1, p0, Lvi9;->Y:I
 
-.method public final e()Lpkd;
-    .locals 1
+    iget-object p1, p0, Lvi9;->X:Lzi9;
 
-    iget-object v0, p0, Lvi9;->a:Lpkd;
+    invoke-virtual {p1, p0}, Lzi9;->z(Lo84;)Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final f()V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

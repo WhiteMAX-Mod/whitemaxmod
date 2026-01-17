@@ -3,9 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhr6;
-
-
-# virtual methods
-.method public abstract invoke()Ljava/lang/Object;
-.end method
+.implements Lgr6;

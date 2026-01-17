@@ -13,22 +13,22 @@
         "",
         "Lfh0;",
         "callback",
-        "Lv2h;",
+        "Lb3h;",
         "registerBadConnectionCallback",
         "(Lfh0;)V",
         "unregisterBadConnectionCallback",
-        "Ljka;",
+        "Lhka;",
         "listener",
         "addNetworkConnectivityListener",
-        "(Ljka;)V",
+        "(Lhka;)V",
         "removeNetworkConnectivityListener",
-        "Lfpg;",
+        "Lopg;",
         "plusAssign",
-        "(Lfpg;)V",
+        "(Lopg;)V",
         "minusAssign",
-        "Lbpg;",
+        "Lkpg;",
         "getTopology",
-        "()Lbpg;",
+        "()Lkpg;",
         "topology",
         "calls-sdk_release"
     }
@@ -43,22 +43,22 @@
 
 
 # virtual methods
-.method public abstract addNetworkConnectivityListener(Ljka;)V
+.method public abstract addNetworkConnectivityListener(Lhka;)V
 .end method
 
-.method public abstract getTopology()Lbpg;
+.method public abstract getTopology()Lkpg;
 .end method
 
-.method public abstract minusAssign(Lfpg;)V
+.method public abstract minusAssign(Lopg;)V
 .end method
 
-.method public abstract plusAssign(Lfpg;)V
+.method public abstract plusAssign(Lopg;)V
 .end method
 
 .method public abstract registerBadConnectionCallback(Lfh0;)V
 .end method
 
-.method public abstract removeNetworkConnectivityListener(Ljka;)V
+.method public abstract removeNetworkConnectivityListener(Lhka;)V
 .end method
 
 .method public abstract unregisterBadConnectionCallback(Lfh0;)V

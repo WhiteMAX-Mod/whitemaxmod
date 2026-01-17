@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld3d;
+.implements Ld4d;
 
 
 # instance fields
@@ -11,14 +11,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lk32;)V
+.method public constructor <init>(Lb32;)V
     .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    invoke-virtual {p1, v0}, Lk32;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lb32;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object p1
 

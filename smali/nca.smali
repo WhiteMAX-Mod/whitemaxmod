@@ -23,7 +23,7 @@
 .method public final onCallbackDied(Landroid/os/IInterface;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Llf7;
+    check-cast p1, Lqe7;
 
     iget-object p1, p0, Lnca;->a:Landroidx/room/MultiInstanceInvalidationService;
 

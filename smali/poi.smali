@@ -1,27 +1,45 @@
-.class public final Lpoi;
-.super Ljava/lang/Object;
+.class public final synthetic Lpoi;
+.super Liyc;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljpi;
-
-.field public final b:I
-
-.field public final c:Lf07;
+# static fields
+.field public static final a:Lpoi;
 
 
 # direct methods
-.method public constructor <init>(Ljpi;ILf07;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpoi;
 
-    iput-object p1, p0, Lpoi;->a:Ljpi;
+    const-string v1, "getFirSent()J"
 
-    iput p2, p0, Lpoi;->b:I
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lpoi;->c:Lf07;
+    const-class v3, Lwlf;
+
+    const-string v4, "firSent"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lpoi;->a:Lpoi;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Lwlf;
+
+    iget-wide v0, p1, Lwlf;->n:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,768 +1,1028 @@
-.class public final enum Lfkj;
-.super Ljava/lang/Enum;
+.class public abstract Lfkj;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmzi;
-
-
-# static fields
-.field public static final enum X:Lfkj;
-
-.field public static final synthetic Y:[Lfkj;
-
-.field public static final enum b:Lfkj;
-
-.field public static final enum c:Lfkj;
-
-.field public static final enum d:Lfkj;
-
-.field public static final enum o:Lfkj;
-
-
-# instance fields
-.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 57
+.method public static a(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v1, Lfkj;
+    if-eqz p0, :cond_0
 
-    const-string v0, "NO_ERROR"
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static b([B)Lvz3;
+    .locals 14
+
+    sget-object v0, Lru/ok/tamtam/nano/a;->a:[B
+
+    new-instance v0, Lru/ok/tamtam/nano/Protos$Contact;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Contact;-><init>()V
+
+    :try_start_0
+    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
+
+    move-result-object p0
+
+    check-cast p0, Lru/ok/tamtam/nano/Protos$Contact;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance v0, Lnz3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->serverId:J
+
+    iput-wide v1, v0, Lnz3;->a:J
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->baseUrl:Ljava/lang/String;
+
+    iput-object v1, v0, Lnz3;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->baseRawUrl:Ljava/lang/String;
+
+    iput-object v1, v0, Lnz3;->c:Ljava/lang/String;
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->deviceAvatarUrl:Ljava/lang/String;
+
+    iput-object v1, v0, Lnz3;->d:Ljava/lang/String;
+
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->photoId:J
+
+    iput-wide v1, v0, Lnz3;->e:J
+
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->lastUpdateTime:J
+
+    iput-wide v1, v0, Lnz3;->g:J
+
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->serverPhone:J
+
+    iput-wide v1, v0, Lnz3;->h:J
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->country:Ljava/lang/String;
+
+    iput-object v1, v0, Lnz3;->x:Ljava/lang/String;
+
+    iget v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->settings:I
+
+    iput v1, v0, Lnz3;->m:I
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->description:Ljava/lang/String;
+
+    iput-object v1, v0, Lnz3;->o:Ljava/lang/String;
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->link:Ljava/lang/String;
+
+    iput-object v1, v0, Lnz3;->p:Ljava/lang/String;
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->birthday:Ljava/lang/String;
+
+    iput-object v1, v0, Lnz3;->q:Ljava/lang/String;
+
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->lastSearchClickTime:J
+
+    iput-wide v1, v0, Lnz3;->r:J
+
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->lastSyncTime:J
+
+    iput-wide v1, v0, Lnz3;->s:J
+
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->lastShowingUnknownContactBar:J
+
+    iput-wide v1, v0, Lnz3;->t:J
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->profileOptions:[I
+
+    iput-object v1, v0, Lnz3;->v:[I
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->menuButton:Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, v2, v2}, Lfkj;-><init>(Ljava/lang/String;II)V
+    if-nez v1, :cond_0
 
-    sput-object v1, Lfkj;->b:Lfkj;
+    move-object v3, v2
 
-    new-instance v2, Lfkj;
+    goto :goto_0
 
-    const-string v0, "INCOMPATIBLE_INPUT"
+    :cond_0
+    new-instance v3, Lqz3;
 
-    const/4 v3, 0x1
+    iget-object v1, v1, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->text:Ljava/lang/String;
 
-    invoke-direct {v2, v0, v3, v3}, Lfkj;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v3, v1}, Lqz3;-><init>(Ljava/lang/String;)V
 
-    new-instance v3, Lfkj;
+    :goto_0
+    iput-object v3, v0, Lnz3;->u:Lqz3;
 
-    const-string v0, "INCOMPATIBLE_OUTPUT"
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->startMessage:Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
 
-    const/4 v4, 0x2
+    if-eqz v1, :cond_3
 
-    invoke-direct {v3, v0, v4, v4}, Lfkj;-><init>(Ljava/lang/String;II)V
+    iget-object v3, v1, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->text:Ljava/lang/String;
 
-    new-instance v4, Lfkj;
+    iget-object v1, v1, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
 
-    const-string v0, "INCOMPATIBLE_TFLITE_VERSION"
+    if-eqz v1, :cond_1
 
-    const/4 v5, 0x3
+    array-length v4, v1
 
-    invoke-direct {v4, v0, v5, v5}, Lfkj;-><init>(Ljava/lang/String;II)V
+    if-lez v4, :cond_1
 
-    new-instance v5, Lfkj;
+    invoke-static {v1}, Lum9;->a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
 
-    const-string v0, "MISSING_OP"
+    move-result-object v1
 
-    const/4 v6, 0x4
+    goto :goto_1
 
-    invoke-direct {v5, v0, v6, v6}, Lfkj;-><init>(Ljava/lang/String;II)V
+    :cond_1
+    move-object v1, v2
 
-    new-instance v6, Lfkj;
+    :goto_1
+    iget-object v4, p0, Lru/ok/tamtam/nano/Protos$Contact;->startMessage:Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
 
-    const-string v0, "DATA_TYPE_ERROR"
+    iget-object v4, v4, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->media:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
-    const/4 v7, 0x5
+    if-eqz v4, :cond_2
 
-    const/4 v8, 0x6
+    invoke-static {v4}, Lru/ok/tamtam/nano/a;->c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Li20;
 
-    invoke-direct {v6, v0, v7, v8}, Lfkj;-><init>(Ljava/lang/String;II)V
+    move-result-object v4
 
-    new-instance v0, Lfkj;
+    goto :goto_2
 
-    const-string v9, "TFLITE_INTERNAL_ERROR"
+    :cond_2
+    move-object v4, v2
 
-    const/4 v10, 0x7
+    :goto_2
+    if-eqz v3, :cond_3
 
-    invoke-direct {v0, v9, v8, v10}, Lfkj;-><init>(Ljava/lang/String;II)V
+    new-instance v5, Lsz3;
 
-    new-instance v8, Lfkj;
+    invoke-direct {v5, v4, v3, v1}, Lsz3;-><init>(Li20;Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    const-string v9, "TFLITE_UNKNOWN_ERROR"
+    iput-object v5, v0, Lnz3;->w:Lsz3;
 
-    const/16 v11, 0x8
+    :cond_3
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-direct {v8, v9, v10, v11}, Lfkj;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v9, Lfkj;
+    iget-object v3, p0, Lru/ok/tamtam/nano/Protos$Contact;->names:[Lru/ok/tamtam/nano/Protos$Contact$ContactName;
 
-    const-string v10, "MEDIAPIPE_ERROR"
+    const/4 v4, 0x1
 
-    const/16 v12, 0x9
+    const/4 v5, 0x2
 
-    invoke-direct {v9, v10, v11, v12}, Lfkj;-><init>(Ljava/lang/String;II)V
+    const/4 v6, 0x3
 
-    new-instance v10, Lfkj;
+    const/4 v7, 0x0
 
-    const-string v11, "TIME_OUT_FETCHING_MODEL_METADATA"
+    if-eqz v3, :cond_8
 
-    invoke-direct {v10, v11, v12, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    array-length v8, v3
 
-    new-instance v11, Lfkj;
+    if-lez v8, :cond_8
 
-    const/16 v7, 0xa
+    array-length v8, v3
 
-    const/16 v12, 0x64
+    move v9, v7
 
-    const-string v13, "MODEL_NOT_DOWNLOADED"
+    :goto_3
+    if-ge v9, v8, :cond_8
 
-    invoke-direct {v11, v13, v7, v12}, Lfkj;-><init>(Ljava/lang/String;II)V
+    aget-object v10, v3, v9
 
-    sput-object v11, Lfkj;->c:Lfkj;
+    iget-object v11, v10, Lru/ok/tamtam/nano/Protos$Contact$ContactName;->name:Ljava/lang/String;
 
-    new-instance v12, Lfkj;
+    iget-object v12, v10, Lru/ok/tamtam/nano/Protos$Contact$ContactName;->lastName:Ljava/lang/String;
 
-    const/16 v7, 0xb
+    iget v10, v10, Lru/ok/tamtam/nano/Protos$Contact$ContactName;->type:I
 
-    const/16 v13, 0x65
+    sget-object v13, Loz3;->d:Loz3;
 
-    const-string v14, "URI_EXPIRED"
+    if-eqz v10, :cond_7
 
-    invoke-direct {v12, v14, v7, v13}, Lfkj;-><init>(Ljava/lang/String;II)V
+    if-eq v10, v4, :cond_6
 
-    new-instance v13, Lfkj;
+    if-eq v10, v5, :cond_5
 
-    const/16 v7, 0xc
+    if-eq v10, v6, :cond_4
 
-    const/16 v14, 0x66
+    goto :goto_4
 
-    const-string v15, "NO_NETWORK_CONNECTION"
+    :cond_4
+    sget-object v13, Loz3;->c:Loz3;
 
-    invoke-direct {v13, v15, v7, v14}, Lfkj;-><init>(Ljava/lang/String;II)V
+    goto :goto_4
 
-    new-instance v14, Lfkj;
+    :cond_5
+    sget-object v13, Loz3;->b:Loz3;
 
-    const/16 v7, 0xd
+    goto :goto_4
 
-    const/16 v15, 0x67
+    :cond_6
+    sget-object v13, Loz3;->a:Loz3;
 
-    move-object/from16 v16, v0
+    :cond_7
+    :goto_4
+    new-instance v10, Lpz3;
 
-    const-string v0, "METERED_NETWORK"
+    invoke-direct {v10, v11, v13, v12}, Lpz3;-><init>(Ljava/lang/String;Loz3;Ljava/lang/String;)V
 
-    invoke-direct {v14, v0, v7, v15}, Lfkj;-><init>(Ljava/lang/String;II)V
+    invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v15, Lfkj;
+    add-int/lit8 v9, v9, 0x1
 
-    const/16 v0, 0xe
+    goto :goto_3
 
-    const/16 v7, 0x68
+    :cond_8
+    iput-object v1, v0, Lnz3;->f:Ljava/util/List;
 
-    move-object/from16 v17, v1
+    iget v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->status:I
 
-    const-string v1, "DOWNLOAD_FAILED"
+    if-eq v1, v4, :cond_a
 
-    invoke-direct {v15, v1, v0, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    if-eq v1, v5, :cond_9
 
-    new-instance v0, Lfkj;
+    move-object v1, v2
 
-    const/16 v1, 0xf
+    goto :goto_5
 
-    const/16 v7, 0x69
+    :cond_9
+    sget-object v1, Ltz3;->b:Ltz3;
 
-    move-object/from16 v18, v2
+    goto :goto_5
 
-    const-string v2, "MODEL_INFO_DOWNLOAD_UNSUCCESSFUL_HTTP_STATUS"
+    :cond_a
+    sget-object v1, Ltz3;->a:Ltz3;
 
-    invoke-direct {v0, v2, v1, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    :goto_5
+    iput-object v1, v0, Lnz3;->i:Ltz3;
 
-    new-instance v1, Lfkj;
+    iget v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->type:I
 
-    const/16 v2, 0x10
+    if-eqz v1, :cond_c
 
-    const/16 v7, 0x6a
+    if-ne v1, v4, :cond_b
 
-    move-object/from16 v19, v0
+    sget-object v1, Luz3;->b:Luz3;
 
-    const-string v0, "MODEL_INFO_DOWNLOAD_NO_HASH"
+    goto :goto_6
 
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    :cond_b
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Lfkj;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/16 v2, 0x11
+    const-string v2, "unknown proto.type "
 
-    const/16 v7, 0x6b
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-object/from16 v20, v1
+    iget p0, p0, Lru/ok/tamtam/nano/Protos$Contact;->type:I
 
-    const-string v1, "MODEL_INFO_DOWNLOAD_CONNECTION_FAILED"
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v1, Lfkj;
+    move-result-object p0
 
-    const/16 v2, 0x12
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const/16 v7, 0x6c
+    throw v0
 
-    move-object/from16 v21, v0
+    :cond_c
+    sget-object v1, Luz3;->a:Luz3;
 
-    const-string v0, "NO_VALID_MODEL"
+    :goto_6
+    iput-object v1, v0, Lnz3;->k:Luz3;
 
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    iget v1, p0, Lru/ok/tamtam/nano/Protos$Contact;->gender:I
 
-    new-instance v0, Lfkj;
+    if-eqz v1, :cond_f
 
-    const/16 v2, 0x13
+    if-eq v1, v4, :cond_e
 
-    const/16 v7, 0x6d
+    if-ne v1, v5, :cond_d
 
-    move-object/from16 v22, v1
+    move v1, v6
 
-    const-string v1, "LOCAL_MODEL_INVALID"
+    goto :goto_7
 
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    :cond_d
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Lfkj;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/16 v2, 0x14
+    const-string v2, "unknown proto.gender "
 
-    const/16 v7, 0x6e
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-object/from16 v23, v0
+    iget p0, p0, Lru/ok/tamtam/nano/Protos$Contact;->gender:I
 
-    const-string v0, "REMOTE_MODEL_INVALID"
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v0, Lfkj;
+    move-result-object p0
 
-    const/16 v2, 0x15
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const/16 v7, 0x6f
+    throw v0
 
-    move-object/from16 v24, v1
+    :cond_e
+    move v1, v5
 
-    const-string v1, "REMOTE_MODEL_LOADER_ERROR"
+    goto :goto_7
 
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    :cond_f
+    move v1, v4
 
-    new-instance v1, Lfkj;
+    :goto_7
+    iput v1, v0, Lnz3;->l:I
 
-    const/16 v2, 0x16
+    new-instance v1, Ljava/util/ArrayList;
 
-    const/16 v7, 0x70
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    move-object/from16 v25, v0
+    iget-object p0, p0, Lru/ok/tamtam/nano/Protos$Contact;->options:[I
 
-    const-string v0, "REMOTE_MODEL_LOADER_LOADS_NO_MODEL"
+    if-eqz p0, :cond_16
 
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    array-length v3, p0
 
-    new-instance v0, Lfkj;
+    if-lez v3, :cond_16
 
-    const/16 v2, 0x17
+    array-length v3, p0
 
-    const/16 v7, 0x71
+    :goto_8
+    if-ge v7, v3, :cond_16
 
-    move-object/from16 v26, v1
+    aget v8, p0, v7
 
-    const-string v1, "SMART_REPLY_LANG_ID_DETECTAION_FAILURE"
+    if-eqz v8, :cond_15
 
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    if-eq v8, v4, :cond_14
 
-    new-instance v1, Lfkj;
+    if-eq v8, v5, :cond_13
 
-    const/16 v2, 0x18
+    if-eq v8, v6, :cond_12
 
-    const/16 v7, 0x72
+    const/4 v9, 0x4
 
-    move-object/from16 v27, v0
+    if-eq v8, v9, :cond_11
 
-    const-string v0, "MODEL_NOT_REGISTERED"
+    const/4 v9, 0x5
 
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    if-eq v8, v9, :cond_10
 
-    new-instance v0, Lfkj;
+    move-object v8, v2
 
-    const/16 v2, 0x19
+    goto :goto_9
 
-    const/16 v7, 0x73
+    :cond_10
+    sget-object v8, Lrz3;->X:Lrz3;
 
-    move-object/from16 v28, v1
+    goto :goto_9
 
-    const-string v1, "MODEL_TYPE_MISUSE"
+    :cond_11
+    sget-object v8, Lrz3;->o:Lrz3;
 
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    goto :goto_9
 
-    new-instance v1, Lfkj;
+    :cond_12
+    sget-object v8, Lrz3;->d:Lrz3;
 
-    const/16 v2, 0x1a
+    goto :goto_9
 
-    const/16 v7, 0x74
+    :cond_13
+    sget-object v8, Lrz3;->c:Lrz3;
 
-    move-object/from16 v29, v0
+    goto :goto_9
 
-    const-string v0, "MODEL_HASH_MISMATCH"
+    :cond_14
+    sget-object v8, Lrz3;->b:Lrz3;
 
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    goto :goto_9
 
-    new-instance v0, Lfkj;
+    :cond_15
+    sget-object v8, Lrz3;->a:Lrz3;
 
-    const/16 v2, 0x1b
+    :goto_9
+    invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const/16 v7, 0xc9
+    add-int/lit8 v7, v7, 0x1
 
-    move-object/from16 v30, v1
+    goto :goto_8
 
-    const-string v1, "OPTIONAL_MODULE_NOT_AVAILABLE"
+    :cond_16
+    iput-object v1, v0, Lnz3;->n:Ljava/util/List;
 
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
+    invoke-virtual {v0}, Lnz3;->a()Lvz3;
 
-    sput-object v0, Lfkj;->d:Lfkj;
+    move-result-object p0
 
-    new-instance v1, Lfkj;
+    return-object p0
 
-    const/16 v2, 0x1c
+    :catch_0
+    move-exception p0
 
-    const/16 v7, 0xca
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
 
-    move-object/from16 v31, v0
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    const-string v0, "OPTIONAL_MODULE_INIT_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lfkj;->o:Lfkj;
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x1d
-
-    const/16 v7, 0xcb
-
-    move-object/from16 v32, v1
-
-    const-string v1, "OPTIONAL_MODULE_INFERENCE_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x1e
-
-    const/16 v7, 0xcc
-
-    move-object/from16 v33, v0
-
-    const-string v0, "OPTIONAL_MODULE_RELEASE_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x1f
-
-    const/16 v7, 0xcd
-
-    move-object/from16 v34, v1
-
-    const-string v1, "OPTIONAL_TFLITE_MODULE_INIT_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x20
-
-    const/16 v7, 0xce
-
-    move-object/from16 v35, v0
-
-    const-string v0, "NATIVE_LIBRARY_LOAD_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x21
-
-    const/16 v7, 0xcf
-
-    move-object/from16 v36, v1
-
-    const-string v1, "OPTIONAL_MODULE_CREATE_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x22
-
-    const/16 v7, 0x12d
-
-    move-object/from16 v37, v0
-
-    const-string v0, "CAMERAX_SOURCE_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x23
-
-    const/16 v7, 0x12e
-
-    move-object/from16 v38, v1
-
-    const-string v1, "CAMERA1_SOURCE_CANT_START_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x24
-
-    const/16 v7, 0x12f
-
-    move-object/from16 v39, v0
-
-    const-string v0, "CAMERA1_SOURCE_NO_SUITABLE_SIZE_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x25
-
-    const/16 v7, 0x130
-
-    move-object/from16 v40, v1
-
-    const-string v1, "CAMERA1_SOURCE_NO_SUITABLE_FPS_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x26
-
-    const/16 v7, 0x131
-
-    move-object/from16 v41, v0
-
-    const-string v0, "CAMERA1_SOURCE_NO_BYTE_SOURCE_FOUND_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x27
-
-    const/16 v7, 0x190
-
-    move-object/from16 v42, v1
-
-    const-string v1, "CODE_SCANNER_UNAVAILABLE"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x28
-
-    const/16 v7, 0x191
-
-    move-object/from16 v43, v0
-
-    const-string v0, "CODE_SCANNER_CANCELLED"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x29
-
-    const/16 v7, 0x192
-
-    move-object/from16 v44, v1
-
-    const-string v1, "CODE_SCANNER_CAMERA_PERMISSION_NOT_GRANTED"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x2a
-
-    const/16 v7, 0x193
-
-    move-object/from16 v45, v0
-
-    const-string v0, "CODE_SCANNER_APP_NAME_UNAVAILABLE"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x2b
-
-    const/16 v7, 0x194
-
-    move-object/from16 v46, v1
-
-    const-string v1, "CODE_SCANNER_TASK_IN_PROGRESS"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x2c
-
-    const/16 v7, 0x195
-
-    move-object/from16 v47, v0
-
-    const-string v0, "CODE_SCANNER_PIPELINE_INITIALIZATION_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x2d
-
-    const/16 v7, 0x196
-
-    move-object/from16 v48, v1
-
-    const-string v1, "CODE_SCANNER_PIPELINE_INFERENCE_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x2e
-
-    const/16 v7, 0x197
-
-    move-object/from16 v49, v0
-
-    const-string v0, "CODE_SCANNER_GOOGLE_PLAY_SERVICES_VERSION_TOO_OLD"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x2f
-
-    const/16 v7, 0x1f4
-
-    move-object/from16 v50, v1
-
-    const-string v1, "LOW_LIGHT_AUTO_EXPOSURE_COMPUTATION_FAILURE"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x30
-
-    const/16 v7, 0x1f5
-
-    move-object/from16 v51, v0
-
-    const-string v0, "LOW_LIGHT_IMAGE_CAPTURE_PROCESSING_FAILURE"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x31
-
-    const/16 v7, 0x258
-
-    move-object/from16 v52, v1
-
-    const-string v1, "PERMISSION_DENIED"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x32
-
-    const/16 v7, 0x259
-
-    move-object/from16 v53, v0
-
-    const-string v0, "CANCELLED"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x33
-
-    const/16 v7, 0x25a
-
-    move-object/from16 v54, v1
-
-    const-string v1, "GOOGLE_PLAY_SERVICES_VERSION_TOO_OLD"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lfkj;
-
-    const/16 v2, 0x34
-
-    const/16 v7, 0x25b
-
-    move-object/from16 v55, v0
-
-    const-string v0, "LOW_MEMORY"
-
-    invoke-direct {v1, v0, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lfkj;
-
-    const/16 v2, 0x35
-
-    const/16 v7, 0x270f
-
-    move-object/from16 v56, v1
-
-    const-string v1, "UNKNOWN_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lfkj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lfkj;->X:Lfkj;
-
-    move-object/from16 v7, v16
-
-    move-object/from16 v1, v17
-
-    move-object/from16 v2, v18
-
-    move-object/from16 v16, v19
-
-    move-object/from16 v17, v20
-
-    move-object/from16 v18, v21
-
-    move-object/from16 v19, v22
-
-    move-object/from16 v20, v23
-
-    move-object/from16 v21, v24
-
-    move-object/from16 v22, v25
-
-    move-object/from16 v23, v26
-
-    move-object/from16 v24, v27
-
-    move-object/from16 v25, v28
-
-    move-object/from16 v26, v29
-
-    move-object/from16 v27, v30
-
-    move-object/from16 v28, v31
-
-    move-object/from16 v29, v32
-
-    move-object/from16 v30, v33
-
-    move-object/from16 v31, v34
-
-    move-object/from16 v32, v35
-
-    move-object/from16 v33, v36
-
-    move-object/from16 v34, v37
-
-    move-object/from16 v35, v38
-
-    move-object/from16 v36, v39
-
-    move-object/from16 v37, v40
-
-    move-object/from16 v38, v41
-
-    move-object/from16 v39, v42
-
-    move-object/from16 v40, v43
-
-    move-object/from16 v41, v44
-
-    move-object/from16 v42, v45
-
-    move-object/from16 v43, v46
-
-    move-object/from16 v44, v47
-
-    move-object/from16 v45, v48
-
-    move-object/from16 v46, v49
-
-    move-object/from16 v47, v50
-
-    move-object/from16 v48, v51
-
-    move-object/from16 v49, v52
-
-    move-object/from16 v50, v53
-
-    move-object/from16 v51, v54
-
-    move-object/from16 v52, v55
-
-    move-object/from16 v53, v56
-
-    move-object/from16 v54, v0
-
-    filled-new-array/range {v1 .. v54}, [Lfkj;
-
-    move-result-object v0
-
-    sput-object v0, Lfkj;->Y:[Lfkj;
-
-    return-void
+    throw v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method public static c(Lvz3;)[B
+    .locals 16
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-object/from16 v0, p0
 
-    iput p3, p0, Lfkj;->a:I
+    sget-object v1, Lru/ok/tamtam/nano/a;->a:[B
 
-    return-void
-.end method
+    new-instance v1, Lru/ok/tamtam/nano/Protos$Contact;
 
-.method public static values()[Lfkj;
-    .locals 1
+    invoke-direct {v1}, Lru/ok/tamtam/nano/Protos$Contact;-><init>()V
 
-    sget-object v0, Lfkj;->Y:[Lfkj;
+    iget-wide v2, v0, Lvz3;->a:J
 
-    invoke-virtual {v0}, [Lfkj;->clone()Ljava/lang/Object;
+    iget-object v4, v0, Lvz3;->u:Lqz3;
+
+    iget-object v5, v0, Lvz3;->i:Ltz3;
+
+    iget-object v6, v0, Lvz3;->w:Lsz3;
+
+    iget-object v7, v0, Lvz3;->n:Ljava/util/List;
+
+    iget-object v8, v0, Lvz3;->f:Ljava/util/List;
+
+    iput-wide v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->serverId:J
+
+    iget-object v2, v0, Lvz3;->c:Ljava/lang/String;
+
+    const-string v3, ""
+
+    if-nez v2, :cond_0
+
+    move-object v2, v3
+
+    :cond_0
+    iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->baseUrl:Ljava/lang/String;
+
+    iget-object v2, v0, Lvz3;->d:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    move-object v2, v3
+
+    :cond_1
+    iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->baseRawUrl:Ljava/lang/String;
+
+    iget-object v2, v0, Lvz3;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_2
+
+    move-object v2, v3
+
+    :cond_2
+    iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->deviceAvatarUrl:Ljava/lang/String;
+
+    iget-wide v9, v0, Lvz3;->e:J
+
+    iput-wide v9, v1, Lru/ok/tamtam/nano/Protos$Contact;->photoId:J
+
+    iget-wide v9, v0, Lvz3;->g:J
+
+    iput-wide v9, v1, Lru/ok/tamtam/nano/Protos$Contact;->lastUpdateTime:J
+
+    iget-wide v9, v0, Lvz3;->h:J
+
+    iput-wide v9, v1, Lru/ok/tamtam/nano/Protos$Contact;->serverPhone:J
+
+    iget v2, v0, Lvz3;->m:I
+
+    iput v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->settings:I
+
+    iget-object v2, v0, Lvz3;->o:Ljava/lang/String;
+
+    if-nez v2, :cond_3
+
+    move-object v2, v3
+
+    :cond_3
+    iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->description:Ljava/lang/String;
+
+    iget-object v2, v0, Lvz3;->p:Ljava/lang/String;
+
+    if-nez v2, :cond_4
+
+    move-object v2, v3
+
+    :cond_4
+    iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->link:Ljava/lang/String;
+
+    iget-object v2, v0, Lvz3;->q:Ljava/lang/String;
+
+    if-nez v2, :cond_5
+
+    move-object v2, v3
+
+    :cond_5
+    iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->birthday:Ljava/lang/String;
+
+    iget-wide v9, v0, Lvz3;->r:J
+
+    iput-wide v9, v1, Lru/ok/tamtam/nano/Protos$Contact;->lastSearchClickTime:J
+
+    iget-wide v9, v0, Lvz3;->s:J
+
+    iput-wide v9, v1, Lru/ok/tamtam/nano/Protos$Contact;->lastSyncTime:J
+
+    iget-wide v9, v0, Lvz3;->t:J
+
+    iput-wide v9, v1, Lru/ok/tamtam/nano/Protos$Contact;->lastShowingUnknownContactBar:J
+
+    iget-object v2, v0, Lvz3;->v:[I
+
+    iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->profileOptions:[I
+
+    iget-object v2, v0, Lvz3;->x:Ljava/lang/String;
+
+    if-nez v2, :cond_6
+
+    move-object v2, v3
+
+    :cond_6
+    iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->country:Ljava/lang/String;
+
+    invoke-interface {v8}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    const/4 v9, 0x3
+
+    const/4 v10, 0x2
+
+    const/4 v12, 0x1
+
+    if-nez v2, :cond_d
+
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    new-array v13, v2, [Lru/ok/tamtam/nano/Protos$Contact$ContactName;
+
+    iput-object v13, v1, Lru/ok/tamtam/nano/Protos$Contact;->names:[Lru/ok/tamtam/nano/Protos$Contact$ContactName;
+
+    const/4 v13, 0x0
+
+    :goto_0
+    if-ge v13, v2, :cond_d
+
+    invoke-interface {v8, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, Lpz3;
+
+    new-instance v15, Lru/ok/tamtam/nano/Protos$Contact$ContactName;
+
+    invoke-direct {v15}, Lru/ok/tamtam/nano/Protos$Contact$ContactName;-><init>()V
+
+    iget-object v11, v14, Lpz3;->a:Ljava/lang/String;
+
+    if-nez v11, :cond_7
+
+    move-object v11, v3
+
+    :cond_7
+    iput-object v11, v15, Lru/ok/tamtam/nano/Protos$Contact$ContactName;->name:Ljava/lang/String;
+
+    iget-object v11, v14, Lpz3;->b:Ljava/lang/String;
+
+    if-nez v11, :cond_8
+
+    move-object v11, v3
+
+    :cond_8
+    iput-object v11, v15, Lru/ok/tamtam/nano/Protos$Contact$ContactName;->lastName:Ljava/lang/String;
+
+    iget-object v11, v14, Lpz3;->c:Loz3;
+
+    invoke-virtual {v11}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v11
+
+    if-eqz v11, :cond_c
+
+    if-eq v11, v12, :cond_b
+
+    if-eq v11, v10, :cond_a
+
+    if-ne v11, v9, :cond_9
+
+    const/4 v11, 0x0
+
+    goto :goto_1
+
+    :cond_9
+    new-instance v0, Ljava/lang/IncompatibleClassChangeError;
+
+    invoke-direct {v0}, Ljava/lang/IncompatibleClassChangeError;-><init>()V
+
+    throw v0
+
+    :cond_a
+    move v11, v9
+
+    goto :goto_1
+
+    :cond_b
+    move v11, v10
+
+    goto :goto_1
+
+    :cond_c
+    move v11, v12
+
+    :goto_1
+    iput v11, v15, Lru/ok/tamtam/nano/Protos$Contact$ContactName;->type:I
+
+    iget-object v11, v1, Lru/ok/tamtam/nano/Protos$Contact;->names:[Lru/ok/tamtam/nano/Protos$Contact$ContactName;
+
+    aput-object v15, v11, v13
+
+    add-int/lit8 v13, v13, 0x1
+
+    goto :goto_0
+
+    :cond_d
+    if-nez v5, :cond_e
+
+    const/4 v2, 0x0
+
+    iput v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->status:I
+
+    goto :goto_2
+
+    :cond_e
+    sget-object v2, Ltz3;->a:Ltz3;
+
+    if-ne v5, v2, :cond_f
+
+    iput v12, v1, Lru/ok/tamtam/nano/Protos$Contact;->status:I
+
+    goto :goto_2
+
+    :cond_f
+    sget-object v2, Ltz3;->b:Ltz3;
+
+    if-ne v5, v2, :cond_22
+
+    iput v10, v1, Lru/ok/tamtam/nano/Protos$Contact;->status:I
+
+    :goto_2
+    iget-object v2, v0, Lvz3;->k:Luz3;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    const-string v5, "unknown type"
+
+    if-eqz v2, :cond_11
+
+    if-ne v2, v12, :cond_10
+
+    iput v12, v1, Lru/ok/tamtam/nano/Protos$Contact;->type:I
+
+    goto :goto_3
+
+    :cond_10
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_11
+    const/4 v2, 0x0
+
+    iput v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->type:I
+
+    :goto_3
+    iget v0, v0, Lvz3;->l:I
+
+    invoke-static {v0}, Lt02;->t(I)I
+
+    move-result v0
+
+    if-eqz v0, :cond_14
+
+    if-eq v0, v12, :cond_13
+
+    if-ne v0, v10, :cond_12
+
+    iput v10, v1, Lru/ok/tamtam/nano/Protos$Contact;->gender:I
+
+    :goto_4
+    const/4 v2, 0x0
+
+    goto :goto_5
+
+    :cond_12
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_13
+    iput v12, v1, Lru/ok/tamtam/nano/Protos$Contact;->gender:I
+
+    goto :goto_4
+
+    :cond_14
+    const/4 v2, 0x0
+
+    iput v2, v1, Lru/ok/tamtam/nano/Protos$Contact;->gender:I
+
+    :goto_5
+    if-eqz v4, :cond_16
+
+    new-instance v0, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;-><init>()V
+
+    iget-object v4, v4, Lqz3;->a:Ljava/lang/String;
+
+    if-nez v4, :cond_15
+
+    move-object v4, v3
+
+    :cond_15
+    iput-object v4, v0, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->text:Ljava/lang/String;
+
+    iput-object v0, v1, Lru/ok/tamtam/nano/Protos$Contact;->menuButton:Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
+
+    :cond_16
+    invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1d
+
+    invoke-interface {v7}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    new-array v0, v0, [I
+
+    iput-object v0, v1, Lru/ok/tamtam/nano/Protos$Contact;->options:[I
+
+    move v0, v2
+
+    :goto_6
+    iget-object v4, v1, Lru/ok/tamtam/nano/Protos$Contact;->options:[I
+
+    array-length v4, v4
+
+    if-ge v0, v4, :cond_1d
+
+    invoke-interface {v7, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lrz3;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    if-eqz v4, :cond_1b
+
+    if-eq v4, v12, :cond_1a
+
+    if-eq v4, v10, :cond_19
+
+    if-eq v4, v9, :cond_18
+
+    const/4 v5, 0x4
+
+    if-eq v4, v5, :cond_1c
+
+    const/4 v5, 0x5
+
+    if-ne v4, v5, :cond_17
+
+    goto :goto_7
+
+    :cond_17
+    new-instance v0, Ljava/lang/IncompatibleClassChangeError;
+
+    invoke-direct {v0}, Ljava/lang/IncompatibleClassChangeError;-><init>()V
+
+    throw v0
+
+    :cond_18
+    move v5, v9
+
+    goto :goto_7
+
+    :cond_19
+    move v5, v10
+
+    goto :goto_7
+
+    :cond_1a
+    move v5, v12
+
+    goto :goto_7
+
+    :cond_1b
+    move v5, v2
+
+    :cond_1c
+    :goto_7
+    iget-object v4, v1, Lru/ok/tamtam/nano/Protos$Contact;->options:[I
+
+    aput v5, v4, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_6
+
+    :cond_1d
+    if-eqz v6, :cond_21
+
+    new-instance v0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;-><init>()V
+
+    iget-object v2, v6, Lsz3;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_1e
+
+    goto :goto_8
+
+    :cond_1e
+    move-object v3, v2
+
+    :goto_8
+    iput-object v3, v0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->text:Ljava/lang/String;
+
+    iget-object v2, v6, Lsz3;->a:Li20;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_1f
+
+    invoke-static {v2}, Lru/ok/tamtam/nano/a;->d(Li20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->media:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    goto :goto_9
+
+    :cond_1f
+    iput-object v3, v0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->media:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    :goto_9
+    iget-object v2, v6, Lsz3;->c:Ljava/util/List;
+
+    if-eqz v2, :cond_20
+
+    invoke-static {v2}, Lum9;->c(Ljava/util/List;)Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
+
+    iput-object v2, v0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
+
+    goto :goto_a
+
+    :cond_20
+    iput-object v3, v0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
+
+    :goto_a
+    iput-object v0, v1, Lru/ok/tamtam/nano/Protos$Contact;->startMessage:Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
+
+    :cond_21
+    invoke-static {v1}, Lbp9;->toByteArray(Lbp9;)[B
 
     move-result-object v0
-
-    check-cast v0, [Lfkj;
 
     return-object v0
+
+    :cond_22
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "unknown status "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
+.method public static d(I)Lvgc;
+    .locals 4
 
-# virtual methods
-.method public final d()I
-    .locals 1
+    const/16 v0, -0x80
 
-    iget v0, p0, Lfkj;->a:I
+    sget-object v1, Lvgc;->b:Lvgc;
 
-    return v0
+    if-gt v0, p0, :cond_3
+
+    const/16 v0, 0x7f
+
+    if-gt p0, v0, :cond_3
+
+    int-to-byte p0, p0
+
+    sget-object v0, Lvgc;->o:Lal5;
+
+    invoke-virtual {v0}, Le2;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    move-object v2, v0
+
+    check-cast v2, Lb2;
+
+    invoke-virtual {v2}, Lb2;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v2}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Lvgc;
+
+    iget-byte v3, v3, Lvgc;->a:B
+
+    if-ne v3, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v2, 0x0
+
+    :goto_0
+    check-cast v2, Lvgc;
+
+    if-nez v2, :cond_2
+
+    return-object v1
+
+    :cond_2
+    return-object v2
+
+    :cond_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "presencestatus.value not byte, value="
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "ContactsTypeConverters"
+
+    invoke-static {v0, p0}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
 .end method

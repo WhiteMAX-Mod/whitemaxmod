@@ -1,5 +1,5 @@
 .class public final Lf1;
-.super Le2j;
+.super Ly2j;
 .source "SourceFile"
 
 
@@ -120,39 +120,7 @@
     return p1
 .end method
 
-.method public final d(Lu1;)Ld1;
-    .locals 2
-
-    sget-object v0, Ld1;->d:Ld1;
-
-    iget-object v1, p0, Lf1;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->getAndSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ld1;
-
-    return-object p1
-.end method
-
-.method public final e(Lu1;)Ls1;
-    .locals 2
-
-    sget-object v0, Ls1;->c:Ls1;
-
-    iget-object v1, p0, Lf1;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->getAndSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ls1;
-
-    return-object p1
-.end method
-
-.method public final f(Ls1;Ls1;)V
+.method public final h(Ls1;Ls1;)V
     .locals 1
 
     iget-object v0, p0, Lf1;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
@@ -162,7 +130,7 @@
     return-void
 .end method
 
-.method public final g(Ls1;Ljava/lang/Thread;)V
+.method public final i(Ls1;Ljava/lang/Thread;)V
     .locals 1
 
     iget-object v0, p0, Lf1;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;

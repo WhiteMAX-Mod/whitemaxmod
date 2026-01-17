@@ -1,44 +1,20 @@
-.class public final Lqke;
+.class public interface abstract Lqke;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:Lzi4;
-
-
-# direct methods
-.method public constructor <init>(JLzi4;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lqke;->a:J
-
-    iput-object p3, p0, Lqke;->b:Lzi4;
-
-    return-void
-.end method
+.implements Like;
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.method public abstract a(J)J
+.end method
 
-    check-cast p1, Lqke;
+.method public abstract b()J
+.end method
 
-    iget-wide v0, p0, Lqke;->a:J
+.method public abstract g()J
+.end method
 
-    iget-wide v2, p1, Lqke;->a:J
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
-
-    move-result p1
-
-    return p1
+.method public abstract h()I
 .end method

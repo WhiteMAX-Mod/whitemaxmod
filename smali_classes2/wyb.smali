@@ -1,94 +1,95 @@
 .class public final Lwyb;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lazb;
+.field public final synthetic a:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Landroid/widget/LinearLayout;
+
+.field public final synthetic c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lazb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/sdk/permissionhost/PermissionBottomSheet;Landroid/widget/LinearLayout;Lone/me/sdk/permissionhost/PermissionBottomSheet;)V
     .locals 0
 
-    iput-object p1, p0, Lwyb;->X:Lazb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lwyb;->a:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lwyb;->b:Landroid/widget/LinearLayout;
+
+    iput-object p3, p0, Lwyb;->c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 6
 
-    check-cast p1, Lbzb;
+    iget-object p1, p0, Lwyb;->c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lwyb;->a:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    invoke-virtual {p0, p1, p2}, Lwyb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    iput-boolean v1, v0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->P0:Z
 
-    check-cast p1, Lwyb;
+    iget-object v0, p0, Lwyb;->b:Landroid/widget/LinearLayout;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    :try_start_0
+    iget-object v2, p1, Lone/me/sdk/permissionhost/PermissionBottomSheet;->G0:Lls;
 
-    invoke-virtual {p1, p2}, Lwyb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v3, Lone/me/sdk/permissionhost/PermissionBottomSheet;->Q0:[Lz28;
 
-    return-object p2
-.end method
+    const/4 v4, 0x2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    aget-object v3, v3, v4
 
-    new-instance v0, Lwyb;
+    invoke-virtual {v2, p1}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lwyb;->X:Lazb;
+    move-result-object v2
 
-    invoke-direct {v0, v1, p2}, Lwyb;-><init>(Lazb;Lkotlin/coroutines/Continuation;)V
+    check-cast v2, Landroid/content/Intent;
 
-    iput-object p1, v0, Lwyb;->o:Ljava/lang/Object;
+    if-nez v2, :cond_0
 
-    return-object v0
-.end method
+    new-instance v2, Landroid/content/Intent;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const-string v3, "android.settings.APPLICATION_DETAILS_SETTINGS"
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const-string v4, "package"
 
-    iget-object p1, p0, Lwyb;->o:Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    check-cast p1, Lbzb;
+    move-result-object v0
 
-    sget-object v0, Lbzb;->a:Lbzb;
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    if-ne p1, v0, :cond_0
+    move-result-object v0
 
-    const-string p1, "allowed"
+    const/4 v5, 0x0
 
-    goto :goto_0
+    invoke-static {v4, v0, v5}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     :cond_0
-    const-string p1, "denied"
+    invoke-virtual {p1, v2}, La94;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_0
-    iget-object v0, p0, Lwyb;->X:Lazb;
+    :catchall_0
+    invoke-virtual {p1, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
 
-    const-string v1, "gallery"
-
-    invoke-static {v0, v1, p1}, Lazb;->a(Lazb;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-void
 .end method

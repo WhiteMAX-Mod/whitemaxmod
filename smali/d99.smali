@@ -1,176 +1,65 @@
 .class public final Ld99;
-.super Ljava/lang/Object;
+.super Ltsd;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final F0:Landroid/view/View;
 
-.field public final synthetic b:Landroid/view/KeyEvent$Callback;
+.field public final G0:Landroid/widget/ImageView;
+
+.field public final H0:Landroid/widget/ProgressBar;
+
+.field public final I0:Landroid/widget/TextView;
+
+.field public final synthetic J0:Le99;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/KeyEvent$Callback;I)V
-    .locals 0
+.method public constructor <init>(Le99;Landroid/view/View;)V
+    .locals 2
 
-    iput p2, p0, Ld99;->a:I
+    iput-object p1, p0, Ld99;->J0:Le99;
 
-    iput-object p1, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
+    invoke-direct {p0, p2}, Ltsd;-><init>(Landroid/view/View;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ld99;->F0:Landroid/view/View;
 
-    return-void
-.end method
+    sget v0, Lo7d;->mr_picker_route_icon:I
 
-.method public static a(II)I
-    .locals 1
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    const/16 v0, 0x1f
+    move-result-object v0
 
-    invoke-static {p0, p1, v0}, Lq3g;->k(III)I
+    check-cast v0, Landroid/widget/ImageView;
 
-    move-result p0
+    iput-object v0, p0, Ld99;->G0:Landroid/widget/ImageView;
 
-    return p0
-.end method
+    sget v0, Lo7d;->mr_picker_route_progress_bar:I
 
-.method private final k()V
-    .locals 0
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public static final m(Ljava/lang/Boolean;)Z
-    .locals 0
+    check-cast v0, Landroid/widget/ProgressBar;
 
-    if-eqz p0, :cond_0
+    iput-object v0, p0, Ld99;->H0:Landroid/widget/ProgressBar;
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    sget v1, Lo7d;->mr_picker_route_name:I
 
-    move-result p0
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return p0
+    move-result-object p2
 
-    :cond_0
-    const/4 p0, 0x0
+    check-cast p2, Landroid/widget/TextView;
 
-    return p0
-.end method
+    iput-object p2, p0, Ld99;->I0:Landroid/widget/TextView;
 
+    iget-object p1, p1, Le99;->u0:Lf99;
 
-# virtual methods
-.method public final b()V
-    .locals 0
+    iget-object p1, p1, Lf99;->Z:Landroid/content/Context;
 
-    return-void
-.end method
-
-.method public final c()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final d()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g(Lua9;)V
-    .locals 1
-
-    iget v0, p0, Ld99;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
-
-    check-cast v0, Lha9;
-
-    iput-object p1, v0, Lha9;->s0:Lua9;
-
-    invoke-virtual {v0}, Lha9;->o()V
-
-    invoke-virtual {v0}, Lha9;->m()V
-
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
-
-    check-cast p1, Ly99;
-
-    invoke-virtual {p1}, Llo;->dismiss()V
-
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
-
-    check-cast p1, Lh99;
-
-    invoke-virtual {p1}, Llo;->dismiss()V
-
-    return-void
-
-    :pswitch_4
-    iget-object p1, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
-
-    check-cast p1, Lf99;
-
-    invoke-virtual {p1}, Lf99;->b()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_0
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final h(Lua9;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final i()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final j(Lua9;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final l()V
-    .locals 0
+    invoke-static {p1, v0}, Lia9;->i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
 
     return-void
 .end method

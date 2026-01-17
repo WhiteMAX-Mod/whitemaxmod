@@ -3,86 +3,48 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcgd;
-
-
-# instance fields
-.field public final a:Lgqg;
-
-.field public final b:Lcgd;
+.implements Lsqg;
 
 
 # direct methods
-.method public constructor <init>(Lgqg;Lcgd;)V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnqg;->a:Lgqg;
-
-    iput-object p2, p0, Lnqg;->b:Lcgd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final log(Ljava/lang/String;Ljava/lang/String;)V
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lnqg;->b:Lcgd;
+    const-string v0, "one.video.calls.externcalls"
 
-    invoke-interface {v0, p1, p2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lnqg;->b:Lcgd;
+    const-string v0, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
 
-    invoke-interface {v0, p1, p2, p3}, Lcgd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final c()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lnqg;->b:Lcgd;
+    const/4 v0, 0x0
 
-    invoke-interface {v0, p1, p2, p3}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lnqg;->a:Lgqg;
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v0, "0.1.1"
 
-    :try_start_0
-    iget-object p1, p1, Lgqg;->b:Lz7g;
-
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzpg;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2, p3}, Lzpg;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    const-string p2, "TracerLiteFacade"
-
-    const-string p3, "Crash report failed"
-
-    invoke-static {p2, p3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return-void
+    return-object v0
 .end method

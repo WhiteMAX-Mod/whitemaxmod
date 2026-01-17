@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfkg;
+.implements Lpkg;
 
 
 # static fields
 .field public static final a:Lku5;
 
-.field public static final b:Lz7g;
+.field public static final b:Ln8g;
 
 
 # direct methods
@@ -22,33 +22,33 @@
 
     sput-object v0, Lku5;->a:Lku5;
 
-    new-instance v0, Lju5;
+    new-instance v0, Lss5;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lju5;-><init>(I)V
+    invoke-direct {v0, v1}, Lss5;-><init>(I)V
 
-    new-instance v1, Lz7g;
+    new-instance v1, Ln8g;
 
-    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    sput-object v1, Lku5;->b:Lz7g;
+    sput-object v1, Lku5;->b:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(III)Lckg;
+.method public final a(III)Lmkg;
     .locals 0
 
-    sget-object p1, Lku5;->b:Lz7g;
+    sget-object p1, Lku5;->b:Ln8g;
 
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lckg;
+    check-cast p1, Lmkg;
 
     return-object p1
 .end method

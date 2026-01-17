@@ -1,7 +1,11 @@
 .class public final Lkaa;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public a:I
+
+.field public b:J
+
+.field public c:I

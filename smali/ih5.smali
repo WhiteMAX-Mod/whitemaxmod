@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq7e;
+.implements Lm8e;
 
 
 # virtual methods
@@ -21,7 +21,7 @@
     return v0
 .end method
 
-.method public final h(J)I
+.method public final g(J)I
     .locals 0
 
     const/4 p1, 0x0
@@ -29,12 +29,12 @@
     return p1
 .end method
 
-.method public final s(Lykc;Lpl4;I)I
+.method public final o(Lzii;Lnl4;I)I
     .locals 0
 
     const/4 p1, 0x4
 
-    iput p1, p2, Ldz;->b:I
+    iput p1, p2, Laz;->b:I
 
     const/4 p1, -0x4
 

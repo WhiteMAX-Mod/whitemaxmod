@@ -3,22 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls2g;
+.implements Lay3;
+.implements Lcr6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lqw5;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lqw5;I)V
     .locals 0
 
-    iput p1, p0, Low5;->a:I
+    iput p2, p0, Low5;->a:I
 
-    iput-object p2, p0, Low5;->b:Ljava/lang/Object;
+    iput-object p1, p0, Low5;->b:Lqw5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,100 +28,164 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 4
+.method public accept(Ljava/lang/Object;)V
+    .locals 5
 
     iget v0, p0, Low5;->a:I
 
-    iget-object v1, p0, Low5;->b:Ljava/lang/Object;
+    const-string v1, "qw5"
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast v1, Laii;
+    iget-object v0, p0, Low5;->b:Lqw5;
 
-    iget-object v0, v1, Laii;->d:Lmn0;
+    check-cast p1, Lkw5;
 
-    invoke-virtual {v0}, Lmn0;->t()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    iget-wide v1, p1, Lkw5;->b:J
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-wide/16 v3, 0x0
 
-    const-string v3, "getWorkManager: enable = "
+    cmp-long p1, v1, v3
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "aii"
-
-    invoke-static {v2, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lmn0;->t()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Boolean;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-static {v0}, Lcxa;->k(Ljava/lang/Object;)Lxya;
-
-    move-result-object v0
-
-    goto :goto_0
+    invoke-virtual {v0, v1, v2}, Lqw5;->b(J)V
 
     :cond_0
-    const-string v1, "waiting for enable ..."
-
-    invoke-static {v2, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-object v0
+    return-void
 
     :pswitch_0
-    check-cast v1, Lpw5;
+    iget-object v0, p0, Low5;->b:Lqw5;
 
-    iget-object v0, v1, Lpw5;->a:Lg35;
+    check-cast p1, Ljava/util/List;
 
-    invoke-virtual {v0}, Lg35;->get()Ljava/lang/Object;
+    const-string v2, "publishFavoritesIds: %s"
 
-    move-result-object v0
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    check-cast v0, Lgv5;
+    move-result-object v3
 
-    invoke-virtual {v0}, Lgv5;->a()Ljdf;
+    invoke-static {v1, v2, v3}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object v1, v0, Lqw5;->Z:Lrp3;
 
-    new-instance v1, Lev5;
+    iget-boolean v1, v1, Lrp3;->b:Z
 
-    const/4 v2, 0x1
+    if-nez v1, :cond_1
 
-    invoke-direct {v1, v2}, Lev5;-><init>(I)V
+    iget-object v0, v0, Lqw5;->t0:Lmn0;
 
-    new-instance v2, Lkw8;
+    invoke-virtual {v0, p1}, Lmn0;->r(Ljava/lang/Object;)V
 
-    const/4 v3, 0x4
+    :cond_1
+    return-void
 
-    invoke-direct {v2, v0, v1, v3}, Lkw8;-><init>(Ljava/lang/Object;Ldr6;I)V
+    :pswitch_1
+    iget-object v0, p0, Low5;->b:Lqw5;
 
-    return-object v2
+    check-cast p1, Ljava/util/List;
+
+    const-string v2, "on next favorite sticker ids from obs: %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lqw5;->e(Ljava/util/List;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Low5;->b:Lqw5;
+
+    check-cast p1, Ljava/util/List;
+
+    const-string v2, "onNotifUpdated: updated ids: %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lqw5;->e(Ljava/util/List;)V
+
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Low5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Low5;->b:Lqw5;
+
+    iget-object v0, v0, Lqw5;->a:Lj35;
+
+    invoke-virtual {v0}, Lj35;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhv5;
+
+    invoke-virtual {v0}, Lhv5;->a()Lsef;
+
+    move-result-object v0
+
+    new-instance v1, Ltj2;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2, p1}, Ltj2;-><init>(ILjava/util/List;)V
+
+    new-instance p1, Lco3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v0, v2, v1}, Lco3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
+
+    iget-object v0, p0, Low5;->b:Lqw5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lrv5;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, v2, p1}, Lrv5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Leo3;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, v1}, Leo3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x3
         :pswitch_0
     .end packed-switch
 .end method

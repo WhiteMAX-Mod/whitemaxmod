@@ -1,101 +1,72 @@
-.class public final Lmnh;
+.class public final synthetic Lmnh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lnq6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public final synthetic a:I
 
-.field public final synthetic b:Z
-
-.field public final synthetic c:Z
+.field public final synthetic b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;ZZ)V
+.method public synthetic constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
     .locals 0
 
+    iput p2, p0, Lmnh;->a:I
+
+    iput-object p1, p0, Lmnh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmnh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iput-boolean p2, p0, Lmnh;->b:Z
-
-    iput-boolean p3, p0, Lmnh;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iget v0, p0, Lmnh;->a:I
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    check-cast p1, Landroid/view/MotionEvent;
 
-    return-void
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    iget-object v0, p0, Lmnh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    return-void
-.end method
+    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0:Landroid/view/ScaleGestureDetector;
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 4
+    if-eqz v0, :cond_0
 
-    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lp38;
-
-    iget-object p1, p0, Lmnh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->F0()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lmnh;->b:Z
-
-    const/16 v2, 0x8
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_0
-
-    move v1, v3
-
-    goto :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     :cond_0
-    move v1, v2
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :goto_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    return-object p1
 
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->C0()Landroid/widget/ImageView;
+    :pswitch_0
+    iget-object v0, p0, Lmnh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->E0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    iget-boolean v0, p0, Lmnh;->c:Z
+    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0:Landroid/view/ScaleGestureDetector;
 
     if-eqz v0, :cond_1
 
-    move v2, v3
+    invoke-virtual {v0, p1}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     :cond_1
-    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    return-void
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

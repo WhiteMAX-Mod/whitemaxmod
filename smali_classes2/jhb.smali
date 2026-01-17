@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lxad;->oneme_stickers_set_count:I
+    sget v0, Lv6d;->ic_row_10:I
 
     sput v0, Ljhb;->a:I
 

@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwf9;
-
 
 # static fields
 .field public static final a:Ltf9;
@@ -50,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x72d9d95f
+    const v0, 0x388508e4
 
     return v0
 .end method
@@ -58,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Gallery"
+    const-string v0, "InvalidateAll"
 
     return-object v0
 .end method

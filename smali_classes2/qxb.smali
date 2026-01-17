@@ -1,23 +1,17 @@
 .class public final Lqxb;
-.super Ljava/lang/Object;
+.super Lru/ok/tamtam/exception/IssueKeyException;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Integer;
-
-
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 2
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v0, "ONEME-25589"
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqxb;->a:Ljava/lang/Integer;
+    invoke-direct {p0, v0, v1, p1}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

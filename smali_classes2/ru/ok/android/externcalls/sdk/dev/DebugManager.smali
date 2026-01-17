@@ -11,42 +11,42 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/dev/DebugManager;",
         "",
-        "Lunf;",
+        "Lfpf;",
         "operation",
         "",
         "param",
-        "Lv2h;",
+        "Lb3h;",
         "report",
-        "(Lunf;Ljava/lang/String;)V",
+        "(Lfpf;Ljava/lang/String;)V",
         "",
         "error",
         "reportError",
         "(Ljava/lang/Throwable;)V",
         "Lkotlin/Function1;",
-        "Ln52;",
+        "Ld52;",
         "updater",
         "updateCameraToggles",
-        "(Loq6;)V",
+        "(Lnq6;)V",
         "dumpPath",
         "enableFullAudioDump",
         "(Ljava/lang/String;)V",
-        "Lhpf;",
+        "Lsqf;",
         "listener",
         "",
         "period",
         "Ljava/util/concurrent/TimeUnit;",
         "unit",
         "registerStatListener",
-        "(Lhpf;ILjava/util/concurrent/TimeUnit;)V",
+        "(Lsqf;ILjava/util/concurrent/TimeUnit;)V",
         "removeStatListener",
-        "(Lhpf;)V",
+        "(Lsqf;)V",
         "Lru/ok/android/externcalls/sdk/dev/MediaDumpManager;",
         "getMediaDumpManager",
         "()Lru/ok/android/externcalls/sdk/dev/MediaDumpManager;",
         "mediaDumpManager",
-        "Ly11;",
+        "Ls11;",
         "getUnderlyingCall",
-        "()Ly11;",
+        "()Ls11;",
         "underlyingCall",
         "calls-sdk_release"
     }
@@ -67,26 +67,26 @@
 .method public abstract getMediaDumpManager()Lru/ok/android/externcalls/sdk/dev/MediaDumpManager;
 .end method
 
-.method public abstract getUnderlyingCall()Ly11;
+.method public abstract getUnderlyingCall()Ls11;
 .end method
 
-.method public abstract registerStatListener(Lhpf;ILjava/util/concurrent/TimeUnit;)V
+.method public abstract registerStatListener(Lsqf;ILjava/util/concurrent/TimeUnit;)V
 .end method
 
-.method public abstract removeStatListener(Lhpf;)V
+.method public abstract removeStatListener(Lsqf;)V
 .end method
 
-.method public abstract report(Lunf;Ljava/lang/String;)V
+.method public abstract report(Lfpf;Ljava/lang/String;)V
 .end method
 
 .method public abstract reportError(Ljava/lang/Throwable;)V
 .end method
 
-.method public abstract updateCameraToggles(Loq6;)V
+.method public abstract updateCameraToggles(Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation

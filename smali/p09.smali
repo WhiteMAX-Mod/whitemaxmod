@@ -1,67 +1,129 @@
-.class public abstract Lp09;
-.super Lhc3;
+.class public final Lp09;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final t0:J
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lsi4;Lzi4;Lrj6;ILjava/lang/Object;JJJ)V
-    .locals 11
+.method public constructor <init>(Ljava/lang/String;ZZ)V
+    .locals 0
 
-    const/4 v3, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
+    iput-object p1, p0, Lp09;->a:Ljava/lang/String;
 
-    move-object v1, p1
+    iput-boolean p2, p0, Lp09;->b:Z
 
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object/from16 v6, p5
-
-    move-wide/from16 v7, p6
-
-    move-wide/from16 v9, p8
-
-    invoke-direct/range {v0 .. v10}, Lhc3;-><init>(Lsi4;Lzi4;ILrj6;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-wide/from16 p1, p10
-
-    iput-wide p1, p0, Lp09;->t0:J
+    iput-boolean p3, p0, Lp09;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()J
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-wide v0, p0, Lp09;->t0:J
+    if-ne p0, p1, :cond_0
 
-    const-wide/16 v2, -0x1
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    return-wide v0
+    goto :goto_0
 
     :cond_0
-    return-wide v2
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-class v1, Lp09;
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lp09;
+
+    iget-object v0, p0, Lp09;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lp09;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lp09;->b:Z
+
+    iget-boolean v1, p1, Lp09;->b:Z
+
+    if-ne v0, v1, :cond_2
+
+    iget-boolean v0, p0, Lp09;->c:Z
+
+    iget-boolean p1, p1, Lp09;->c:Z
+
+    if-ne v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public abstract c()Z
+.method public final hashCode()I
+    .locals 5
+
+    iget-object v0, p0, Lp09;->a:Ljava/lang/String;
+
+    const/16 v1, 0x1f
+
+    invoke-static {v1, v1, v0}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lp09;->b:Z
+
+    const/16 v3, 0x4d5
+
+    const/16 v4, 0x4cf
+
+    if-eqz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v1, p0, Lp09;->c:Z
+
+    if-eqz v1, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    add-int/2addr v0, v3
+
+    return v0
 .end method

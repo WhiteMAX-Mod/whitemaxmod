@@ -1,37 +1,21 @@
 .class public final Lrpb;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lrpb;
-
-
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final b:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/net/Uri;)V
+    .locals 1
 
-    new-instance v0, Lrpb;
+    const/16 v0, 0xd
 
-    const/4 v1, 0x0
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lrpb;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-
-    sput-object v0, Lrpb;->b:Lrpb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrpb;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lrpb;->b:Landroid/net/Uri;
 
     return-void
 .end method
@@ -39,45 +23,48 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
-    instance-of v0, p1, Lrpb;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_1
+    if-ne p0, p1, :cond_0
 
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lrpb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lrpb;
 
-    if-eq p1, p0, :cond_0
+    iget-object v1, p0, Lrpb;->b:Landroid/net/Uri;
 
-    if-eqz p1, :cond_1
+    iget-object p1, p1, Lrpb;->b:Landroid/net/Uri;
 
-    iget-object v0, p0, Lrpb;->a:Ljava/lang/Object;
-
-    iget-object p1, p1, Lrpb;->a:Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-nez p1, :cond_2
 
-    :cond_0
-    const/4 p1, 0x1
+    return v2
 
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    :cond_2
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lrpb;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lrpb;->b:Landroid/net/Uri;
 
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
     move-result v0
 
@@ -87,24 +74,23 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lrpb;->a:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    const-string v1, "OpenExternalLink(url="
 
-    const-string v1, "Optional[%s]"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    iget-object v1, p0, Lrpb;->b:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "Optional.empty"
 
     return-object v0
 .end method

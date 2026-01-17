@@ -1,5 +1,5 @@
 .class public final Lufb;
-.super Lxfb;
+.super Lagb;
 .source "SourceFile"
 
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x4b0cc9f9    # 9226745.0f
+    const v0, 0x3a87ae91
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Medium"
+    const-string v0, "ContrastStatic"
 
     return-object v0
 .end method

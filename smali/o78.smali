@@ -1,255 +1,130 @@
-.class public final Lo78;
-.super Ljava/io/OutputStream;
+.class public final enum Lo78;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final synthetic X:[Lo78;
 
-.field public b:J
+.field public static final enum a:Lo78;
+
+.field public static final enum b:Lo78;
+
+.field public static final enum c:Lo78;
+
+.field public static final enum d:Lo78;
+
+.field public static final enum o:Lo78;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p1, p0, Lo78;->a:I
+    new-instance v0, Lo78;
 
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+    const-string v1, "DESTROYED"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lo78;->a:Lo78;
+
+    new-instance v1, Lo78;
+
+    const-string v2, "INITIALIZED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lo78;->b:Lo78;
+
+    new-instance v2, Lo78;
+
+    const-string v3, "CREATED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lo78;->c:Lo78;
+
+    new-instance v3, Lo78;
+
+    const-string v4, "STARTED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lo78;->d:Lo78;
+
+    new-instance v4, Lo78;
+
+    const-string v5, "RESUMED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lo78;->o:Lo78;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lo78;
+
+    move-result-object v0
+
+    sput-object v0, Lo78;->X:[Lo78;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lo78;
+    .locals 1
+
+    const-class v0, Lo78;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lo78;
+
+    return-object p0
+.end method
+
+.method public static values()[Lo78;
+    .locals 1
+
+    sget-object v0, Lo78;->X:[Lo78;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lo78;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final write(I)V
-    .locals 4
+.method public final a(Lo78;)Z
+    .locals 0
 
-    iget p1, p0, Lo78;->a:I
+    invoke-virtual {p0, p1}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-    packed-switch p1, :pswitch_data_0
+    move-result p1
 
-    .line 1
-    iget-wide v0, p0, Lo78;->b:J
+    if-ltz p1, :cond_0
 
-    const-wide/16 v2, 0x1
+    const/4 p1, 0x1
 
-    add-long/2addr v0, v2
+    return p1
 
-    iput-wide v0, p0, Lo78;->b:J
-
-    return-void
-
-    .line 2
-    :pswitch_0
-    iget-wide v0, p0, Lo78;->b:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lo78;->b:J
-
-    return-void
-
-    .line 3
-    :pswitch_1
-    iget-wide v0, p0, Lo78;->b:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lo78;->b:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([B)V
-    .locals 4
-
-    iget v0, p0, Lo78;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 4
-    iget-wide v0, p0, Lo78;->b:J
-
-    array-length p1, p1
-
-    int-to-long v2, p1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lo78;->b:J
-
-    return-void
-
-    .line 5
-    :pswitch_0
-    iget-wide v0, p0, Lo78;->b:J
-
-    array-length p1, p1
-
-    int-to-long v2, p1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lo78;->b:J
-
-    return-void
-
-    .line 6
-    :pswitch_1
-    iget-wide v0, p0, Lo78;->b:J
-
-    array-length p1, p1
-
-    int-to-long v2, p1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lo78;->b:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([BII)V
-    .locals 2
-
-    iget v0, p0, Lo78;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    if-ltz p2, :cond_0
-
-    .line 7
-    array-length p1, p1
-
-    if-gt p2, p1, :cond_0
-
-    if-ltz p3, :cond_0
-
-    add-int/2addr p2, p3
-
-    if-gt p2, p1, :cond_0
-
-    if-ltz p2, :cond_0
-
-    .line 8
-    iget-wide p1, p0, Lo78;->b:J
-
-    int-to-long v0, p3
-
-    add-long/2addr p1, v0
-
-    iput-wide p1, p0, Lo78;->b:J
-
-    return-void
-
-    .line 9
     :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    const/4 p1, 0x0
 
-    .line 10
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-
-    :pswitch_0
-    if-ltz p2, :cond_1
-
-    .line 11
-    array-length p1, p1
-
-    if-gt p2, p1, :cond_1
-
-    if-ltz p3, :cond_1
-
-    add-int/2addr p2, p3
-
-    if-gt p2, p1, :cond_1
-
-    if-ltz p2, :cond_1
-
-    .line 12
-    iget-wide p1, p0, Lo78;->b:J
-
-    int-to-long v0, p3
-
-    add-long/2addr p1, v0
-
-    iput-wide p1, p0, Lo78;->b:J
-
-    return-void
-
-    .line 13
-    :cond_1
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    .line 14
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-
-    :pswitch_1
-    if-ltz p2, :cond_2
-
-    .line 15
-    array-length v0, p1
-
-    if-gt p2, v0, :cond_2
-
-    if-ltz p3, :cond_2
-
-    add-int/2addr p2, p3
-
-    array-length p1, p1
-
-    if-gt p2, p1, :cond_2
-
-    if-ltz p2, :cond_2
-
-    .line 16
-    iget-wide p1, p0, Lo78;->b:J
-
-    int-to-long v0, p3
-
-    add-long/2addr p1, v0
-
-    iput-wide p1, p0, Lo78;->b:J
-
-    return-void
-
-    .line 17
-    :cond_2
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

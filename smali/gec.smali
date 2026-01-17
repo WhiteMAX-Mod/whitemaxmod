@@ -1,41 +1,55 @@
-.class public abstract Lgec;
-.super Ljava/lang/Object;
+.class public final Lgec;
+.super Lo84;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Liec;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Throwable;
+
+.field public t0:I
+
+
 # direct methods
-.method public static a(Landroid/widget/PopupWindow;)Z
+.method public constructor <init>(Liec;Lo84;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/PopupWindow;->getOverlapAnchor()Z
+    iput-object p1, p0, Lgec;->Z:Liec;
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static b(Landroid/widget/PopupWindow;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/PopupWindow;->getWindowLayoutType()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Landroid/widget/PopupWindow;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setOverlapAnchor(Z)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static d(Landroid/widget/PopupWindow;I)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iput-object p1, p0, Lgec;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lgec;->t0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lgec;->t0:I
+
+    iget-object p1, p0, Lgec;->Z:Liec;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Liec;->g(Lssg;Lbr6;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

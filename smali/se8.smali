@@ -4,14 +4,5 @@
 
 
 # virtual methods
-.method public abstract b(II)V
-.end method
-
-.method public abstract i(II)V
-.end method
-
-.method public abstract q(II)V
-.end method
-
-.method public abstract v(IILjava/lang/Object;)V
+.method public abstract c(Ljava/lang/Object;Lg66;)V
 .end method

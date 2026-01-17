@@ -1,206 +1,186 @@
 .class public final Lny3;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lzy3;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Lzy3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lo58;)V
     .locals 0
 
-    iput-object p1, p0, Lny3;->X:Lzy3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lny3;->a:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(I)V
+    .locals 13
 
-    check-cast p1, Lcb2;
+    new-instance v0, Llr8;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {v0}, Llr8;-><init>()V
 
-    invoke-virtual {p0, p1, p2}, Lny3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/16 v1, 0x190
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    check-cast p1, Lny3;
+    move-result-object v1
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    const-string v2, "screen"
 
-    invoke-virtual {p1, p2}, Lny3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
-.end method
+    const/4 v1, 0x1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    if-eq p1, v1, :cond_1
 
-    new-instance v0, Lny3;
+    const/4 v1, 0x2
 
-    iget-object v1, p0, Lny3;->X:Lzy3;
+    if-ne p1, v1, :cond_0
 
-    invoke-direct {v0, v1, p2}, Lny3;-><init>(Lzy3;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lny3;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lny3;->o:Ljava/lang/Object;
-
-    check-cast p1, Lcb2;
-
-    iget-object v0, p0, Lny3;->X:Lzy3;
-
-    iget-object v1, v0, Lma2;->c:Lhof;
-
-    invoke-virtual {v1}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lza2;
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_7
-
-    iget-object v4, v0, Lma2;->h:Lhof;
-
-    invoke-virtual {v4}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcb2;
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    if-eqz v4, :cond_1
-
-    if-eqz p1, :cond_0
-
-    iget-object v4, v4, Lcb2;->b:Ljava/lang/String;
-
-    iget-object v7, p1, Lcb2;->b:Ljava/lang/String;
-
-    invoke-static {v4, v7}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    xor-int/2addr v4, v5
+    const-string p1, "block"
 
     goto :goto_0
 
     :cond_0
-    move v4, v6
+    const/4 p1, 0x0
 
-    :goto_0
-    if-ne v4, v5, :cond_1
-
-    move v4, v5
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    move v4, v6
+    const-string p1, "to_contacts"
 
-    :goto_1
-    if-eqz p1, :cond_2
+    :goto_0
+    const-string v1, "clickType"
 
-    iget-object v3, p1, Lcb2;->b:Ljava/lang/String;
+    invoke-virtual {v0, v1, p1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    if-eqz v3, :cond_4
+    invoke-virtual {v0}, Llr8;->b()Llr8;
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    move-result-object v9
 
-    move-result v3
+    new-instance v2, Lgk8;
 
-    if-nez v3, :cond_3
+    const-string v3, "CONTACT_OR_BLOCK"
 
-    goto :goto_2
+    const-string v4, "clicked"
 
-    :cond_3
-    move v3, v6
+    const-wide/16 v5, 0x0
 
-    goto :goto_3
+    const-wide/16 v7, 0x0
 
-    :cond_4
-    :goto_2
-    move v3, v5
+    const-wide/16 v10, 0x0
 
-    :goto_3
-    if-nez v3, :cond_6
+    const/16 v12, 0x2c
 
-    if-eqz p1, :cond_5
+    invoke-direct/range {v2 .. v12}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
 
-    iget-boolean p1, p1, Lcb2;->e:Z
+    iget-object p1, p0, Lny3;->a:Lo58;
 
-    if-nez p1, :cond_5
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    move p1, v5
+    move-result-object p1
 
-    goto :goto_4
+    check-cast p1, Ldd;
 
-    :cond_5
-    move p1, v6
+    invoke-virtual {p1, v2}, Ldd;->h(Lgk8;)V
 
-    :goto_4
-    if-eqz p1, :cond_6
+    return-void
+.end method
 
-    goto :goto_5
+.method public final b(I)V
+    .locals 13
 
-    :cond_6
-    move v5, v6
+    new-instance v0, Llr8;
 
-    :goto_5
-    const/16 p1, 0x9
+    invoke-direct {v0}, Llr8;-><init>()V
 
-    invoke-static {v2, v4, v5, v6, p1}, Lza2;->a(Lza2;ZZZI)Lza2;
+    const/16 v1, 0x15e
 
-    move-result-object v3
-
-    :cond_7
-    invoke-virtual {v1, v3}, Lhof;->setValue(Ljava/lang/Object;)V
-
-    iget-object p1, v0, Lma2;->d:Lhof;
-
-    iget-object v1, v0, Lma2;->g:Lz7g;
-
-    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    check-cast v1, Lsa2;
+    const-string v2, "screen"
 
-    invoke-virtual {v1, v0}, Lsa2;->a(Lma2;)Ljava/util/List;
+    invoke-virtual {v0, v2, v1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    const-string v1, "UIElementType"
 
-    invoke-virtual {p1, v0}, Lhof;->setValue(Ljava/lang/Object;)V
+    const-string v2, "add_or_block_infobar"
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {v0, v1, v2}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    const/4 v1, 0x1
+
+    if-eq p1, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq p1, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-ne p1, v1, :cond_0
+
+    const-string p1, "close"
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    const-string p1, "block"
+
+    goto :goto_0
+
+    :cond_2
+    const-string p1, "to_contacts"
+
+    :goto_0
+    const-string v1, "clickType"
+
+    invoke-virtual {v0, v1, p1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0}, Llr8;->b()Llr8;
+
+    move-result-object v9
+
+    new-instance v2, Lgk8;
+
+    const-string v3, "CONTACT_OR_BLOCK"
+
+    const-string v4, "clicked"
+
+    const-wide/16 v5, 0x0
+
+    const-wide/16 v7, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const/16 v12, 0x2c
+
+    invoke-direct/range {v2 .. v12}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
+
+    iget-object p1, p0, Lny3;->a:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldd;
+
+    invoke-virtual {p1, v2}, Ldd;->h(Lgk8;)V
+
+    return-void
 .end method

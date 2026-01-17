@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnr6;
+.implements Lay3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lmga;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic b:Lnga;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmga;Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(Lnga;I)V
     .locals 0
 
-    iput p3, p0, Lkga;->a:I
+    iput p2, p0, Lkga;->a:I
 
-    iput-object p1, p0, Lkga;->b:Lmga;
-
-    iput-object p2, p0, Lkga;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lkga;->b:Lnga;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,94 +27,130 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
     iget v0, p0, Lkga;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lkga;->c:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Long;
 
-    check-cast v0, Lg1d;
+    iget-object p1, p0, Lkga;->b:Lnga;
 
-    check-cast p1, Lzi8;
+    iget-object v0, p1, Lnga;->x0:Lkw8;
 
-    iget-object v1, p0, Lkga;->b:Lmga;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    const/4 v2, 0x0
+    iget-object v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    iput-boolean v2, p1, Lzi8;->a:Z
+    iget-object v1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lru/ok/messages/messages/widgets/MessageComposeEditText;
 
-    const/4 v3, 0x1
+    invoke-virtual {v1}, Landroid/view/View;->isFocused()Z
 
-    iput-boolean v3, p1, Lzi8;->b:Z
+    move-result v1
 
-    iput-boolean v2, p1, Lzi8;->c:Z
+    if-eqz v1, :cond_0
 
-    iput-object v0, p1, Lzi8;->i:Lg1d;
+    iget-object v0, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Ln48;
 
-    iput-boolean v2, p1, Lzi8;->g:Z
+    iget-object v0, v0, Ln48;->b:Lm48;
 
-    iput-boolean v2, p1, Lzi8;->h:Z
+    iget-boolean v0, v0, Lm48;->o:Z
 
-    iget-object v0, v1, Lmga;->s0:Lcfh;
+    if-nez v0, :cond_2
 
-    iget-boolean v0, v0, Lcfh;->d:Z
+    :cond_0
+    new-instance v0, Lyk0;
 
-    iput-boolean v0, p1, Lzi8;->n:Z
+    const/16 v1, 0xe
 
-    return-object p1
+    invoke-direct {v0, v1}, Lyk0;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lnga;->P0(Ldy3;)V
+
+    iget-object p1, p1, Lnga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->C0(Z)V
+
+    :cond_2
+    :goto_0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lkga;->c:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Throwable;
 
-    check-cast v0, Llga;
+    iget-object v0, p0, Lkga;->b:Lnga;
 
-    check-cast p1, Lzi8;
+    iget-object v0, v0, Lnga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
 
-    iget-object v1, p0, Lkga;->b:Lmga;
+    if-nez v0, :cond_3
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_1
 
-    iget-object v2, v0, Llga;->b:Lcfh;
+    :cond_3
+    invoke-virtual {v0, p1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->F0(Ljava/lang/Throwable;)V
 
-    iget-object v2, v2, Lcfh;->a:Lg1d;
+    :goto_1
+    return-void
 
-    iput-object v2, p1, Lzi8;->i:Lg1d;
+    :pswitch_1
+    check-cast p1, Lpfh;
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lkga;->b:Lnga;
 
-    iput-boolean v2, p1, Lzi8;->a:Z
+    iget-object v1, v0, Lnga;->c:Lyh8;
 
-    iput-boolean v2, p1, Lzi8;->b:Z
+    invoke-virtual {v1, p1, v0}, Lyh8;->j(Lpfh;Lj79;)V
 
-    const/4 v2, 0x0
+    new-instance v1, Lm52;
 
-    iput-boolean v2, p1, Lzi8;->g:Z
+    const/4 v2, 0x2
 
-    iput-boolean v2, p1, Lzi8;->h:Z
+    invoke-direct {v1, v2, p1}, Lm52;-><init>(ILjava/lang/Object;)V
 
-    iput-boolean v2, p1, Lzi8;->c:Z
+    invoke-virtual {v0, v1}, Lnga;->P0(Ldy3;)V
 
-    iget-object v1, v1, Lmga;->s0:Lcfh;
+    iget-object p1, v0, Ld3;->b:Ljava/lang/Object;
 
-    iget-boolean v1, v1, Lcfh;->d:Z
+    check-cast p1, Ltga;
 
-    iput-boolean v1, p1, Lzi8;->n:Z
+    check-cast p1, Ldha;
 
-    iget-boolean v0, v0, Llga;->e:Z
+    iget-object p1, p1, Ldha;->X:Lru/ok/messages/video/widgets/VideoView;
 
-    iput-boolean v0, p1, Lzi8;->o:Z
+    invoke-virtual {p1, v0}, Lru/ok/messages/video/widgets/VideoView;->a(Lwqh;)V
 
-    return-object p1
+    return-void
 
-    nop
+    :pswitch_2
+    check-cast p1, Ljava/lang/Long;
+
+    new-instance p1, Llga;
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lkga;->b:Lnga;
+
+    invoke-direct {p1, v1, v0}, Llga;-><init>(Lnga;I)V
+
+    invoke-virtual {v1, p1}, Lnga;->P0(Ldy3;)V
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

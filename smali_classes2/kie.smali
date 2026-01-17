@@ -3,239 +3,129 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loie;
+.implements Llie;
 
 
 # instance fields
-.field public final a:Lghg;
+.field public final a:[Ljava/lang/String;
 
-.field public final b:Loq6;
+.field public final b:Lxg2;
 
-.field public final c:I
+.field public final c:Lpie;
 
 
 # direct methods
-.method public constructor <init>(Lghg;Latd;)V
-    .locals 1
-
-    sget v0, Lbib;->p:I
+.method public constructor <init>([Ljava/lang/String;Lxg2;Lpie;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkie;->a:Lghg;
+    iput-object p1, p0, Lkie;->a:[Ljava/lang/String;
 
-    iput-object p2, p0, Lkie;->b:Loq6;
+    iput-object p2, p0, Lkie;->b:Lxg2;
 
-    sget p1, Laib;->w:I
-
-    iput p1, p0, Lkie;->c:I
+    iput-object p3, p0, Lkie;->c:Lpie;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final a(Ljava/lang/String;)Ljava/util/List;
+    .locals 8
 
-    const/4 v0, 0x3
+    iget-object v0, p0, Lkie;->c:Lpie;
 
-    return v0
-.end method
+    iget-object v1, p0, Lkie;->b:Lxg2;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-virtual {v1}, Lxg2;->T()Lspf;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v1
+
+    invoke-virtual {v1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lnd2;
+
+    sget-object v2, Ldh5;->a:Ldh5;
+
+    if-nez v1, :cond_0
 
     goto :goto_1
 
     :cond_0
-    instance-of v0, p1, Lkie;
+    :try_start_0
+    invoke-virtual {v0, v1, p1}, Lpie;->g(Lnd2;Ljava/lang/String;)Z
 
-    if-nez v0, :cond_1
+    move-result v3
 
-    goto :goto_0
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v0, v1, p1}, Lpie;->a(Lnd2;Ljava/lang/String;)Luhe;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
 
     :cond_1
-    check-cast p1, Lkie;
+    iget-object v3, p0, Lkie;->a:[Ljava/lang/String;
 
-    iget-object v0, p0, Lkie;->a:Lghg;
+    array-length v4, v3
 
-    iget-object v1, p1, Lkie;->a:Lghg;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :goto_0
+    if-ge v5, v4, :cond_3
 
-    move-result v0
+    aget-object v6, v3, v5
 
-    if-nez v0, :cond_2
+    invoke-virtual {v0, v6, p1}, Lpie;->i(Ljava/lang/String;Ljava/lang/String;)Z
 
-    goto :goto_0
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    invoke-virtual {v0, v1, v6}, Lpie;->a(Lnd2;Ljava/lang/String;)Luhe;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object p1
 
     :cond_2
-    sget-wide v0, Lbib;->n:J
-
-    cmp-long v0, v0, v0
-
-    if-eqz v0, :cond_3
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lkie;->b:Loq6;
-
-    iget-object p1, p1, Lkie;->b:Loq6;
-
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
     :goto_1
-    const/4 p1, 0x1
+    return-object v2
 
-    return p1
-.end method
+    :goto_2
+    const-class v0, Lkie;
 
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Lbib;->n:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Lghg;
-    .locals 1
-
-    iget-object v0, p0, Lkie;->a:Lghg;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-object v0, p0, Lkie;->a:Lghg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    sget-wide v3, Lbib;->n:J
-
-    invoke-static {v0, v1, v3, v4}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    const/4 v3, 0x3
-
-    invoke-static {v3, v0, v1}, Ln0c;->j(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lkie;->b:Loq6;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lkie;->c:I
-
-    return v0
-.end method
-
-.method public final r()Loq6;
-    .locals 1
-
-    iget-object v0, p0, Lkie;->b:Loq6;
-
-    return-object v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget-wide v0, Lbib;->n:J
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Warning(title="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lkie;->a:Lghg;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", sectionId=0, itemId="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", sectionItemType="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "LAST"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", sectionBorderColor="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lkie;->b:Loq6;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    const-string v1, "fail to search saved messages chat"
+
+    invoke-static {v0, v1, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
 .end method

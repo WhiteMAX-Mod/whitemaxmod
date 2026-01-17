@@ -4,43 +4,41 @@
 
 # interfaces
 .implements Ljava/io/Closeable;
-.implements Lw88;
+.implements Lg88;
 
 
 # static fields
-.field public static final o:Lc07;
+.field public static final o:Lxz0;
 
 
 # instance fields
 .field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final b:Lg3;
+.field public final b:Le3;
 
-.field public final c:Lclf;
+.field public final c:Lx07;
 
 .field public final d:Ljava/util/concurrent/Executor;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
-    new-instance v0, Lc07;
+    new-instance v0, Lxz0;
 
-    const-string v1, ""
+    const-string v1, "MobileVisionBase"
 
-    const/4 v2, 0x0
+    const-string v2, ""
 
-    const-string v3, "MobileVisionBase"
+    invoke-direct {v0, v1, v2}, Lxz0;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v0, v3, v1, v2}, Lc07;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lv7a;->o:Lc07;
+    sput-object v0, Lv7a;->o:Lxz0;
 
     return-void
 .end method
 
-.method public constructor <init>(Lrbj;Ljava/util/concurrent/Executor;)V
+.method public constructor <init>(Locj;Ljava/util/concurrent/Executor;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,44 +51,44 @@
 
     iput-object v0, p0, Lv7a;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p1, p0, Lv7a;->b:Lg3;
+    iput-object p1, p0, Lv7a;->b:Le3;
 
-    new-instance v0, Lclf;
+    new-instance v0, Lx07;
 
-    const/4 v1, 0x6
+    const/16 v1, 0x9
 
-    invoke-direct {v0, v1}, Lclf;-><init>(I)V
+    invoke-direct {v0, v1}, Lx07;-><init>(I)V
 
-    iput-object v0, p0, Lv7a;->c:Lclf;
+    iput-object v0, p0, Lv7a;->c:Lx07;
 
     iput-object p2, p0, Lv7a;->d:Ljava/util/concurrent/Executor;
 
-    iget-object v1, p1, Lg3;->b:Ljava/lang/Object;
+    iget-object v1, p1, Le3;->b:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    iget-object v0, v0, Lclf;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lx07;->a:Ljava/lang/Object;
 
-    check-cast v0, Lqee;
+    check-cast v0, Legc;
 
-    sget-object v1, Lksi;->a:Lksi;
+    sget-object v1, Liti;->a:Liti;
 
-    invoke-virtual {p1, p2, v1, v0}, Lg3;->c(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;Lqee;)Ljpj;
+    invoke-virtual {p1, p2, v1, v0}, Le3;->c(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;Legc;)Liqj;
 
     move-result-object p1
 
-    sget-object p2, Laoa;->B0:Laoa;
+    sget-object p2, Lyna;->H0:Lyna;
 
-    invoke-virtual {p1, p2}, Ljpj;->j(Lv1b;)Ljpj;
+    invoke-virtual {p1, p2}, Liqj;->j(Lz1b;)Liqj;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Landroid/media/Image;ILandroid/graphics/Matrix;)Ljpj;
+.method public final E(Landroid/media/Image;ILandroid/graphics/Matrix;)Liqj;
     .locals 16
 
     move/from16 v4, p2
@@ -117,13 +115,13 @@
     :goto_0
     const-string v3, "Only YUV_420_888 is supported now"
 
-    invoke-static {v3, v0}, Lijj;->a(Ljava/lang/String;Z)V
+    invoke-static {v3, v0}, Ldkj;->a(Ljava/lang/String;Z)V
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v7
 
-    invoke-static {v4}, Lyq7;->b(I)V
+    invoke-static {v4}, Lgq7;->b(I)V
 
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getFormat()I
 
@@ -150,7 +148,7 @@
     :goto_1
     const-string v2, "Only JPEG and YUV_420_888 are supported now"
 
-    invoke-static {v2, v0}, Lijj;->a(Ljava/lang/String;Z)V
+    invoke-static {v2, v0}, Ldkj;->a(Ljava/lang/String;Z)V
 
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
@@ -176,7 +174,7 @@
 
     move-result v0
 
-    new-instance v2, Lyq7;
+    new-instance v2, Lgq7;
 
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getFormat()I
 
@@ -194,7 +192,7 @@
     :goto_2
     const-string v5, "Only JPEG is supported now"
 
-    invoke-static {v5, v3}, Lijj;->a(Ljava/lang/String;Z)V
+    invoke-static {v5, v3}, Ldkj;->a(Ljava/lang/String;Z)V
 
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
@@ -262,7 +260,7 @@
     move-result-object v1
 
     :goto_3
-    invoke-direct {v2, v1}, Lyq7;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {v2, v1}, Lgq7;-><init>(Landroid/graphics/Bitmap;)V
 
     move v6, v0
 
@@ -307,7 +305,7 @@
     goto :goto_4
 
     :cond_8
-    new-instance v0, Lyq7;
+    new-instance v0, Lgq7;
 
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getWidth()I
 
@@ -321,7 +319,7 @@
 
     move-object/from16 v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lyq7;-><init>(Landroid/media/Image;IIILandroid/graphics/Matrix;)V
+    invoke-direct/range {v0 .. v5}, Lgq7;-><init>(Landroid/media/Image;IIILandroid/graphics/Matrix;)V
 
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
@@ -364,18 +362,18 @@
 
     move/from16 v7, p2
 
-    invoke-static/range {v0 .. v7}, Lyq7;->c(IIJIIII)V
+    invoke-static/range {v0 .. v7}, Lgq7;->c(IIJIIII)V
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lv7a;->E(Lyq7;)Ljpj;
+    invoke-virtual {v0, v9}, Lv7a;->H(Lgq7;)Liqj;
 
     move-result-object v1
 
     return-object v1
 .end method
 
-.method public final declared-synchronized E(Lyq7;)Ljpj;
+.method public final declared-synchronized H(Lgq7;)Liqj;
     .locals 3
 
     monitor-enter p0
@@ -397,7 +395,7 @@
 
     invoke-direct {p1, v0, v1}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p1}, Lwki;->j(Ljava/lang/Exception;)Ljpj;
+    invoke-static {p1}, Lmsi;->e(Ljava/lang/Exception;)Liqj;
 
     move-result-object p1
     :try_end_0
@@ -414,31 +412,31 @@
 
     :cond_0
     :try_start_1
-    iget v0, p1, Lyq7;->c:I
+    iget v0, p1, Lgq7;->c:I
 
     const/16 v1, 0x20
 
     if-lt v0, v1, :cond_1
 
-    iget v0, p1, Lyq7;->d:I
+    iget v0, p1, Lgq7;->d:I
 
     if-lt v0, v1, :cond_1
 
-    iget-object v0, p0, Lv7a;->b:Lg3;
+    iget-object v0, p0, Lv7a;->b:Le3;
 
     iget-object v1, p0, Lv7a;->d:Ljava/util/concurrent/Executor;
 
-    new-instance v2, Llii;
+    new-instance v2, Liji;
 
-    invoke-direct {v2, p0, p1}, Llii;-><init>(Lv7a;Lyq7;)V
+    invoke-direct {v2, p0, p1}, Liji;-><init>(Lv7a;Lgq7;)V
 
-    iget-object p1, p0, Lv7a;->c:Lclf;
+    iget-object p1, p0, Lv7a;->c:Lx07;
 
-    iget-object p1, p1, Lclf;->b:Ljava/lang/Object;
+    iget-object p1, p1, Lx07;->a:Ljava/lang/Object;
 
-    check-cast p1, Lqee;
+    check-cast p1, Legc;
 
-    invoke-virtual {v0, v1, v2, p1}, Lg3;->c(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;Lqee;)Ljpj;
+    invoke-virtual {v0, v1, v2, p1}, Le3;->c(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;Legc;)Liqj;
 
     move-result-object p1
     :try_end_1
@@ -458,7 +456,7 @@
 
     invoke-direct {p1, v0, v1}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p1}, Lwki;->j(Ljava/lang/Exception;)Ljpj;
+    invoke-static {p1}, Lmsi;->e(Ljava/lang/Exception;)Liqj;
 
     move-result-object p1
     :try_end_2
@@ -478,9 +476,9 @@
 .end method
 
 .method public declared-synchronized close()V
-    .locals 6
-    .annotation runtime Lw1b;
-        value = .enum Lb88;->ON_DESTROY:Lb88;
+    .locals 5
+    .annotation runtime La2b;
+        value = .enum Ln78;->ON_DESTROY:Ln78;
     .end annotation
 
     monitor-enter p0
@@ -496,15 +494,15 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lv7a;->c:Lclf;
+    iget-object v0, p0, Lv7a;->c:Lx07;
 
-    invoke-virtual {v0}, Lclf;->g()V
+    invoke-virtual {v0}, Lx07;->n()V
 
-    iget-object v0, p0, Lv7a;->b:Lg3;
+    iget-object v0, p0, Lv7a;->b:Le3;
 
     iget-object v1, p0, Lv7a;->d:Ljava/util/concurrent/Executor;
 
-    iget-object v2, v0, Lg3;->b:Ljava/lang/Object;
+    iget-object v2, v0, Le3;->b:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -514,23 +512,21 @@
 
     if-lez v2, :cond_0
 
-    new-instance v2, Lydg;
+    new-instance v2, Lieg;
 
-    invoke-direct {v2}, Lydg;-><init>()V
+    invoke-direct {v2}, Lieg;-><init>()V
 
-    new-instance v3, Lfsg;
+    new-instance v3, Lkuf;
 
-    const/16 v4, 0x9
+    const/16 v4, 0xc
 
-    const/4 v5, 0x0
+    invoke-direct {v3, v0, v4, v2}, Lkuf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {v3, v0, v2, v5, v4}, Lfsg;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    iget-object v0, v0, Le3;->a:Ljava/lang/Object;
 
-    iget-object v0, v0, Lg3;->a:Ljava/lang/Object;
+    check-cast v0, Lnp6;
 
-    check-cast v0, Lop6;
-
-    invoke-virtual {v0, v3, v1}, Lop6;->w(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {v0, v3, v1}, Lnp6;->o(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

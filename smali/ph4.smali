@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lntb;
+.implements Lztb;
 
 
 # static fields
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final l(Landroid/net/Uri;Lvi4;)Ljava/lang/Object;
+.method public final g(Landroid/net/Uri;Lvi4;)Ljava/lang/Object;
     .locals 10
 
     const-string p1, "Couldn\'t parse timestamp: "

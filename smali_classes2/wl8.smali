@@ -1,134 +1,168 @@
 .class public final Lwl8;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ldm4;
+.implements Lbr6;
 
 
-# static fields
-.field public static final a:Lwl8;
+# instance fields
+.field public X:I
 
-.field public static final b:Lxl8;
+.field public final synthetic Y:Lam8;
+
+.field public o:Lam8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lam8;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lwl8;
+    iput-object p1, p0, Lwl8;->Y:Lam8;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lwl8;->a:Lwl8;
-
-    sget-object v0, Lxl8;->b:Lxl8;
-
-    sput-object v0, Lwl8;->b:Lxl8;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkm4;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lwl8;->b:Lxl8;
+    check-cast p1, Lzb4;
 
-    return-object v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final b(Ljava/lang/String;Lgm4;Landroid/os/Bundle;)Lnm4;
-    .locals 12
+    invoke-virtual {p0, p1, p2}, Lwl8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lwl8;->b:Lxl8;
+    move-result-object p1
 
-    iget-object v0, v0, Lkm4;->a:Ljava/util/LinkedHashSet;
+    check-cast p1, Lwl8;
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-result v0
+    invoke-virtual {p1, p2}, Lwl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :cond_0
-    sget-object v0, Lxl8;->c:Lgm4;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {p2, v0}, Lgm4;->equals(Ljava/lang/Object;)Z
+    new-instance p1, Lwl8;
 
-    move-result v0
+    iget-object v0, p0, Lwl8;->Y:Lam8;
+
+    invoke-direct {p1, v0, p2}, Lwl8;-><init>(Lam8;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lwl8;->X:I
+
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Le;
+    if-ne v0, v1, :cond_0
 
-    const/16 v1, 0x12
+    iget-object v0, p0, Lwl8;->o:Lam8;
 
-    invoke-direct {v0, v1}, Le;-><init>(I)V
+    :try_start_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object v10, v0
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_0
 
-    :cond_1
-    sget-object v0, Lxl8;->d:Lgm4;
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {p2, v0}, Lgm4;->equals(Ljava/lang/Object;)Z
+    goto :goto_2
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "id"
-
-    invoke-static {v0, p3}, Lulj;->h(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v0
-
-    new-instance v2, Lcc1;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v0, v1, v3}, Lcc1;-><init>(JI)V
-
-    move-object v10, v2
-
-    :goto_0
-    new-instance v4, Lnm4;
-
-    const/16 v11, 0x18
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    move-object v7, p3
-
-    invoke-direct/range {v4 .. v11}, Lnm4;-><init>(Ljava/lang/String;Lgm4;Landroid/os/Bundle;ILlm4;Lmm4;I)V
-
-    return-object v4
-
-    :cond_2
-    move-object v6, p2
-
+    :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p2, "invalid route "
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-static {p2, v6}, Lc12;->i(Ljava/lang/String;Lgm4;)Ljava/lang/String;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object p2
+    throw p1
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
+    iget-object v0, p0, Lwl8;->Y:Lam8;
+
+    :try_start_1
+    iget-object p1, v0, Lam8;->E:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lae3;
+
+    iput-object v0, p0, Lwl8;->o:Lam8;
+
+    iput v1, p0, Lwl8;->X:I
+
+    invoke-virtual {p1, p0}, Lae3;->a(Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :goto_0
+    const-string v1, "am8"
+
+    const-string v2, "Can\'t clearCache"
+
+    invoke-static {v1, v2, p1}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, v0, Lam8;->y:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lym5;
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    check-cast p1, Lqab;
+
+    invoke-virtual {p1, v0}, Lqab;->a(Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :goto_2
     throw p1
 .end method

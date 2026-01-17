@@ -1,9 +1,9 @@
 .class public final Lpt9;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +30,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lpr9;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lpt9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +40,7 @@
 
     check-cast p1, Lpt9;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lpt9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,76 +62,83 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 10
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Lpt9;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lpt9;->o:Ljava/lang/Object;
+    check-cast v0, Lpr9;
 
-    check-cast p1, Lul5;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-eqz p1, :cond_0
-
-    iget-object p1, p1, Lul5;->a:Ljava/lang/Object;
-
-    check-cast p1, Lur9;
-
-    goto :goto_0
-
-    :cond_0
     const/4 p1, 0x0
 
-    :goto_0
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
+    if-eqz v0, :cond_0
 
-    if-eqz p1, :cond_1
+    iget-boolean v1, v0, Lpr9;->a:Z
 
-    iget-object p1, p1, Lur9;->a:Lio9;
+    const/4 v2, 0x1
 
-    goto :goto_1
+    if-ne v1, v2, :cond_0
 
-    :cond_1
-    sget-object p1, Lio9;->a:Lio9;
+    move p1, v2
 
-    :goto_1
-    iget-object v0, p0, Lpt9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    :cond_0
+    sget-object v1, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0:[Lz28;
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0()Luo9;
+    iget-object v1, p0, Lpt9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    move-result-object v1
+    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
 
-    invoke-virtual {v1, p1}, Luo9;->setEmojiExpandableState(Lio9;)V
+    move-result-object v2
 
-    sget-object v1, Lio9;->b:Lio9;
+    invoke-virtual {v2, p1}, Leo9;->setLeftOuterIconVisible(Z)V
 
-    if-ne p1, v1, :cond_2
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0()Luo9;
+    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
 
     move-result-object p1
 
-    new-instance v1, Lct9;
+    new-instance v2, Llb1;
 
-    const/4 v2, 0x6
+    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0()Los9;
 
-    invoke-direct {v1, v0, v2}, Lct9;-><init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+    move-result-object v4
 
-    iget-object p1, p1, Luo9;->d:Lro9;
+    const/4 v8, 0x0
 
+    const/16 v9, 0x19
+
+    const/4 v3, 0x0
+
+    const-class v5, Los9;
+
+    const-string v6, "onMiniAppClick"
+
+    const-string v7, "onMiniAppClick$message_write_widget_release()V"
+
+    invoke-direct/range {v2 .. v9}, Llb1;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    invoke-virtual {p1, v2}, Leo9;->setLeftOuterIconOnClickListener(Llq6;)V
+
+    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
+
+    move-result-object p1
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lpr9;->b:Ljava/lang/CharSequence;
+
+    goto :goto_0
+
+    :cond_1
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setShowSoftInputOnFocus(Z)V
-
-    new-instance v0, Lae3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2, v1}, Lae3;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+    :goto_0
+    invoke-virtual {p1, v0}, Leo9;->setLeftOuterIconText(Ljava/lang/CharSequence;)V
 
     :cond_2
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

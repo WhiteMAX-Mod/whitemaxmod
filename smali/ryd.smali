@@ -1,23 +1,25 @@
-.class public final Lryd;
-.super Ljja;
+.class public abstract Lryd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lryd;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)I
+    .locals 0
 
-    new-instance v0, Lryd;
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    move-result p0
 
-    invoke-direct {v0, v1}, Ljja;-><init>(Ljava/lang/Object;)V
+    return p0
+.end method
 
-    sput-object v0, Lryd;->b:Lryd;
+.method public static b(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+    .locals 0
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getColorStateList(ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    return-object p0
 .end method

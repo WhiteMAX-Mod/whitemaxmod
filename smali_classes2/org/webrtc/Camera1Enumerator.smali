@@ -322,7 +322,7 @@
 
     const-string v0, " done. Time spent: "
 
-    invoke-static {p0, v7, v8, v3, v0}, Lzy4;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0, v7, v8, v3, v0}, Lxi4;->l(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
@@ -441,7 +441,7 @@
 
     const-string v3, ", have: "
 
-    invoke-static {v2, p0, v3, v1}, Lx02;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0, v3, v1}, Lkz1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

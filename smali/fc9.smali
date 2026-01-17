@@ -1,100 +1,80 @@
-.class public final Lfc9;
+.class public final synthetic Lfc9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqc9;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:Landroid/media/VolumeProvider;
-
-.field public final synthetic f:Landroid/os/Handler;
-
-.field public final synthetic g:Lccc;
+.field public final synthetic b:Ld49;
 
 
 # direct methods
-.method public constructor <init>(IIILjava/lang/String;Landroid/os/Handler;Lccc;)V
+.method public synthetic constructor <init>(Ld49;I)V
     .locals 0
 
+    iput p2, p0, Lfc9;->a:I
+
+    iput-object p1, p0, Lfc9;->b:Ld49;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p5, p0, Lfc9;->f:Landroid/os/Handler;
-
-    iput-object p6, p0, Lfc9;->g:Lccc;
-
-    iput p1, p0, Lfc9;->a:I
-
-    iput p2, p0, Lfc9;->b:I
-
-    iput p3, p0, Lfc9;->d:I
-
-    iput-object p4, p0, Lfc9;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/media/VolumeProvider;
-    .locals 8
+.method public final o(Lgb9;Lla9;I)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lfc9;->e:Landroid/media/VolumeProvider;
+    iget p3, p0, Lfc9;->a:I
 
-    if-nez v0, :cond_1
+    packed-switch p3, :pswitch_data_0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object p3, p0, Lfc9;->b:Ld49;
 
-    const/16 v1, 0x1e
+    invoke-static {p3}, Lhk7;->m(Ljava/lang/Object;)Lhud;
 
-    if-lt v0, v1, :cond_0
+    move-result-object p3
 
-    new-instance v2, Lvvh;
+    invoke-virtual {p1, p2, p3}, Lgb9;->l(Lla9;Ljava/util/List;)Lie8;
 
-    iget v6, p0, Lfc9;->d:I
+    move-result-object p1
 
-    iget-object v7, p0, Lfc9;->c:Ljava/lang/String;
+    return-object p1
 
-    iget v4, p0, Lfc9;->a:I
+    :pswitch_0
+    iget-object p3, p0, Lfc9;->b:Ld49;
 
-    iget v5, p0, Lfc9;->b:I
+    invoke-static {p3}, Lhk7;->m(Ljava/lang/Object;)Lhud;
 
-    move-object v3, p0
+    move-result-object p3
 
-    invoke-direct/range {v2 .. v7}, Lvvh;-><init>(Lfc9;IIILjava/lang/String;)V
+    invoke-virtual {p1, p2, p3}, Lgb9;->l(Lla9;Ljava/util/List;)Lie8;
 
-    iput-object v2, v3, Lfc9;->e:Landroid/media/VolumeProvider;
+    move-result-object p1
 
-    goto :goto_0
+    return-object p1
 
-    :cond_0
-    move-object v3, p0
+    :pswitch_1
+    iget-object p3, p0, Lfc9;->b:Ld49;
 
-    new-instance v0, Ler1;
+    invoke-static {p3}, Lhk7;->m(Ljava/lang/Object;)Lhud;
 
-    iget v1, v3, Lfc9;->b:I
+    move-result-object p3
 
-    iget v2, v3, Lfc9;->d:I
+    invoke-virtual {p1, p2, p3}, Lgb9;->l(Lla9;Ljava/util/List;)Lie8;
 
-    iget v4, v3, Lfc9;->a:I
+    move-result-object p1
 
-    invoke-direct {v0, p0, v4, v1, v2}, Ler1;-><init>(Lfc9;III)V
+    return-object p1
 
-    iput-object v0, v3, Lfc9;->e:Landroid/media/VolumeProvider;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v3, p0
-
-    :goto_0
-    iget-object v0, v3, Lfc9;->e:Landroid/media/VolumeProvider;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

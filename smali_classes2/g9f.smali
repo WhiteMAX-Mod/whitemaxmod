@@ -1,98 +1,97 @@
 .class public final Lg9f;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic o:Lj9f;
+.field public final a:Lo58;
+
+.field public final b:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(Lj9f;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lo58;)V
+    .locals 1
 
-    iput-object p1, p0, Lg9f;->o:Lj9f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lg9f;->a:Lo58;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Lcre;
+
+    const/16 v0, 0x1a
+
+    invoke-direct {p1, v0}, Lcre;-><init>(I)V
+
+    new-instance v0, Ln8g;
+
+    invoke-direct {v0, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v0, p0, Lg9f;->b:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lg9f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lg9f;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lg9f;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    new-instance p1, Lg9f;
+    if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lg9f;->o:Lj9f;
+    if-nez p2, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lg9f;-><init>(Lj9f;Lkotlin/coroutines/Continuation;)V
+    goto :goto_0
 
-    return-object p1
-.end method
+    :cond_0
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    move-result v0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    if-nez v0, :cond_1
 
-    iget-object p1, p0, Lg9f;->o:Lj9f;
+    invoke-static {p2}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    iget-object p1, p1, Lj9f;->d:Ld68;
+    move-result-object p2
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lg9f;->b:Ln8g;
+
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/content/Context;
+    check-cast v0, Lftd;
 
-    sget v1, Lr5d;->ic_geolocation_filled_28:I
+    iget-object v0, v0, Lftd;->a:Ljava/util/regex/Pattern;
 
-    sget-object v2, Ldc3;->s0:Lole;
+    invoke-virtual {v0, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    move-result-object p2
 
-    move-result-object p1
+    const-string v0, ""
 
-    check-cast p1, Landroid/content/Context;
+    invoke-virtual {p2, v0}, Ljava/util/regex/Matcher;->replaceFirst(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v2, p1}, La3e;->f(Lole;Landroid/content/Context;)Lsf7;
+    move-result-object p2
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget p1, p1, Lsf7;->k:I
+    move-result p1
 
-    invoke-static {v1, p1, v0}, Ldti;->o(IILandroid/content/Context;)Landroid/graphics/Bitmap;
+    if-eqz p1, :cond_2
 
-    move-result-object p1
+    :cond_1
+    const/4 p1, 0x1
 
-    return-object p1
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

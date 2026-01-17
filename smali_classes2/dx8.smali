@@ -1,205 +1,284 @@
-.class public final Ldx8;
+.class public final synthetic Ldx8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Lex8;
-
-.field public final c:Lnwb;
-
-.field public final d:Z
+.field public final synthetic b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
 
 # direct methods
-.method public constructor <init>(ILex8;Lnwb;Z)V
+.method public synthetic constructor <init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
     .locals 0
 
+    iput p2, p0, Ldx8;->a:I
+
+    iput-object p1, p0, Ldx8;->b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Ldx8;->a:I
-
-    iput-object p2, p0, Ldx8;->b:Lex8;
-
-    iput-object p3, p0, Ldx8;->c:Lnwb;
-
-    iput-boolean p4, p0, Ldx8;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ldx8;->a:I
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Ldx8;->b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lth8;
+
+    iget-object p1, p1, Lth8;->f:Lgne;
+
+    iget-object v0, p1, Lgne;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
+
+    invoke-virtual {p1}, Lgne;->n()V
+
+    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->T0:Lex8;
+
+    if-eqz p1, :cond_1
+
+    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object v0, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
+
+    const-string v2, "SELECTED_MEDIA_ALBUM"
+
+    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Ly5;->G()V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->a0()V
+
+    :cond_1
+    :goto_0
+    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Lfx8;
+
+    invoke-virtual {p1}, Lwrd;->m()V
+
+    return-void
+
+    :pswitch_0
+    sget p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->b1:I
+
+    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lth8;
+
+    iget-object v2, p1, Lth8;->f:Lgne;
+
+    iget v3, v2, Lgne;->k:I
+
+    const/4 v4, 0x3
+
+    if-ne v3, v4, :cond_2
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Ldx8;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ldx8;
-
-    iget v0, p0, Ldx8;->a:I
-
-    iget v1, p1, Ldx8;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
     :cond_2
-    iget-object v0, p0, Ldx8;->b:Lex8;
+    move v0, v4
 
-    iget-object v1, p1, Ldx8;->b:Lex8;
+    :goto_1
+    invoke-virtual {v2, v0}, Lgne;->p(I)V
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->u()V
 
-    move-result v0
+    iget-object p1, p1, Lth8;->f:Lgne;
 
-    if-nez v0, :cond_3
+    iget p1, p1, Lgne;->k:I
 
-    goto :goto_0
+    if-ne p1, v4, :cond_3
+
+    sget p1, Lj6e;->R1:I
+
+    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->w(I)V
+
+    goto :goto_2
 
     :cond_3
-    iget-object v0, p0, Ldx8;->c:Lnwb;
+    sget p1, Lj6e;->W1:I
 
-    iget-object v1, p1, Ldx8;->c:Lnwb;
+    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->w(I)V
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :goto_2
+    return-void
 
-    move-result v0
+    :pswitch_1
+    sget p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->b1:I
 
-    if-nez v0, :cond_4
+    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lth8;
 
-    goto :goto_0
+    iget-object v2, p1, Lth8;->f:Lgne;
+
+    iget v3, v2, Lgne;->k:I
+
+    const/4 v4, 0x2
+
+    if-ne v3, v4, :cond_4
+
+    move v3, v0
+
+    goto :goto_3
 
     :cond_4
-    iget-boolean v0, p0, Ldx8;->d:Z
+    move v3, v4
 
-    iget-boolean p1, p1, Ldx8;->d:Z
+    :goto_3
+    invoke-virtual {v2, v3}, Lgne;->p(I)V
 
-    if-eq v0, p1, :cond_5
+    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->u()V
 
-    :goto_0
-    const/4 p1, 0x0
+    iget-object p1, p1, Lth8;->f:Lgne;
 
-    return p1
+    iget v2, p1, Lgne;->k:I
+
+    if-ne v2, v4, :cond_6
+
+    invoke-virtual {p1}, Lgne;->b()I
+
+    move-result p1
+
+    if-le p1, v0, :cond_5
+
+    sget p1, Lj6e;->T1:I
+
+    goto :goto_4
 
     :cond_5
-    :goto_1
-    const/4 p1, 0x1
+    sget p1, Lj6e;->S1:I
 
-    return p1
-.end method
+    :goto_4
+    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->w(I)V
 
-.method public final hashCode()I
-    .locals 2
+    goto :goto_5
 
-    iget v0, p0, Ldx8;->a:I
+    :cond_6
+    sget p1, Lj6e;->U1:I
 
-    invoke-static {v0}, Lc12;->w(I)I
+    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->w(I)V
 
-    move-result v0
+    :goto_5
+    return-void
 
-    mul-int/lit8 v0, v0, 0x1f
+    :pswitch_2
+    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->T0:Lex8;
 
-    iget-object v1, p0, Ldx8;->b:Lex8;
+    if-nez p1, :cond_7
 
-    invoke-virtual {v1}, Lex8;->hashCode()I
+    goto :goto_6
 
-    move-result v1
+    :cond_7
+    iget-boolean p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->X0:Z
 
-    add-int/2addr v1, v0
+    if-eqz p1, :cond_8
 
-    mul-int/lit8 v1, v1, 0x1f
+    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->W0:Llgc;
 
-    iget-object v0, p0, Ldx8;->c:Lnwb;
+    iget-object p1, p1, Llgc;->b:Lidc;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x0
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    goto :goto_0
+    const/16 v3, 0xc
 
-    :cond_0
-    invoke-virtual {v0}, Lnwb;->hashCode()I
+    int-to-long v3, v3
 
-    move-result v0
+    invoke-virtual {p1, v2, v3, v4}, Lidc;->m(Ljava/lang/Enum;J)J
 
-    :goto_0
-    add-int/2addr v1, v0
+    move-result-wide v2
 
-    mul-int/lit8 v1, v1, 0x1f
+    long-to-int p1, v2
 
-    iget-boolean v0, p0, Ldx8;->d:Z
+    iget-object v2, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lth8;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v2, v2, Lth8;->f:Lgne;
 
-    move-result v0
+    invoke-virtual {v2}, Lgne;->b()I
 
-    add-int/2addr v0, v1
+    move-result v2
 
-    return v0
-.end method
+    if-le v2, p1, :cond_8
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "NetworkConditionChange(condition="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ldx8;->a:I
-
-    invoke-static {v1}, Lqf7;->s(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", state="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldx8;->b:Lex8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", suggestedVideoSettings="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldx8;->c:Lnwb;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", preferHardwarePVXEncoder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Ldx8;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget v2, Lh6e;->a:I
+
+    invoke-static {v2, p1, v1}, Llig;->p(IILandroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0, p1}, Lfui;->d(ILandroid/content/Context;Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_8
+    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->T0:Lex8;
+
+    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object v1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ldu2;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    if-eq v1, v0, :cond_9
+
+    goto :goto_6
+
+    :cond_9
+    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->U()V
+
+    goto :goto_6
+
+    :cond_a
+    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->U()V
+
+    :goto_6
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

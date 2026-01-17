@@ -9,16 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lmq6;
+.field public final synthetic b:Llq6;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILmq6;)V
+.method public synthetic constructor <init>(ILlq6;)V
     .locals 0
 
     iput p1, p0, Lsj0;->a:I
 
-    iput-object p2, p0, Lsj0;->b:Lmq6;
+    iput-object p2, p0, Lsj0;->b:Llq6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,79 +34,79 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->g(Lmq6;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->g(Llq6;)V
 
     return-void
 
     :pswitch_1
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->i(Lmq6;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->i(Llq6;)V
 
     return-void
 
     :pswitch_2
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->d(Lmq6;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->d(Llq6;)V
 
     return-void
 
     :pswitch_3
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->e(Lmq6;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->e(Llq6;)V
 
     return-void
 
     :pswitch_4
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->d(Lmq6;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->d(Llq6;)V
 
     return-void
 
     :pswitch_5
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_6
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_7
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_8
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_9
-    iget-object v0, p0, Lsj0;->b:Lmq6;
+    iget-object v0, p0, Lsj0;->b:Llq6;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->a(Lmq6;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->a(Llq6;)V
 
     return-void
 

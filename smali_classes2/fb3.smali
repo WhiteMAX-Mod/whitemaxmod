@@ -1,193 +1,49 @@
 .class public final Lfb3;
-.super La2;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lo28;
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lgb3;
 
 
 # direct methods
-.method public constructor <init>(Lo28;)V
-    .locals 1
+.method public constructor <init>(Lgb3;Lo84;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Lfb3;->o:Lgb3;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfb3;->a:Lo28;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lfb3;->a:Lo28;
+    iput-object p1, p0, Lfb3;->d:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lo28;->C()I
+    iget p1, p0, Lfb3;->X:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final L()Ljava/lang/String;
-    .locals 1
+    iput p1, p0, Lfb3;->X:I
 
-    iget-object v0, p0, Lfb3;->a:Lo28;
+    iget-object p1, p0, Lfb3;->o:Lgb3;
 
-    invoke-interface {v0}, Lo28;->L()Ljava/lang/String;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, v0, p0}, Lgb3;->a(Ljava/lang/String;Ljc8;Lo84;)Ljava/io/Serializable;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    return-void
-.end method
-
-.method public final e0()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->e0()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final hasNext()Z
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->hasNext()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final j0()Z
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->j0()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final n()V
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->n()V
-
-    return-void
-.end method
-
-.method public final name()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final o0()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->o0()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final p()V
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->p()V
-
-    return-void
-.end method
-
-.method public final peek()I
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->peek()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final q()V
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->q()V
-
-    return-void
-.end method
-
-.method public final r()V
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->r()V
-
-    return-void
-.end method
-
-.method public final v()J
-    .locals 2
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->v()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final y()V
-    .locals 1
-
-    iget-object v0, p0, Lfb3;->a:Lo28;
-
-    invoke-interface {v0}, Lo28;->y()V
-
-    return-void
+    return-object p1
 .end method

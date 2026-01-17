@@ -1,115 +1,75 @@
-.class public final Lajh;
-.super Lb5g;
+.class public abstract synthetic Lajh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
+
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
-# instance fields
-.field public synthetic o:Ljava/lang/Object;
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lrhi;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lajh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lajh;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lajh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lajh;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lajh;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+# direct methods
+.method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {}, Lkmh;->values()[Lkmh;
 
-    iget-object p1, p0, Lajh;->o:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p1, Lrhi;
+    array-length v0, v0
 
-    const/4 v0, 0x0
+    new-array v0, v0, [I
 
-    if-eqz p1, :cond_0
+    const/4 v1, 0x1
 
-    iget-object v1, p1, Lrhi;->b:Lqhi;
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    :catch_0
+    const/4 v1, 0x2
 
-    :cond_0
-    move-object v1, v0
+    :try_start_1
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    :goto_0
-    sget-object v2, Lqhi;->c:Lqhi;
+    :catch_1
+    const/4 v1, 0x3
 
-    if-eq v1, v2, :cond_4
+    :try_start_2
+    aput v1, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    if-eqz p1, :cond_1
+    :catch_2
+    const/4 v1, 0x0
 
-    iget-object v1, p1, Lrhi;->b:Lqhi;
+    const/4 v2, 0x4
 
-    goto :goto_1
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    :cond_1
-    move-object v1, v0
+    :catch_3
+    const/4 v1, 0x5
 
-    :goto_1
-    sget-object v2, Lqhi;->d:Lqhi;
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    if-eq v1, v2, :cond_4
+    :catch_4
+    const/4 v2, 0x6
 
-    if-eqz p1, :cond_2
+    :try_start_5
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    iget-object v0, p1, Lrhi;->b:Lqhi;
+    :catch_5
+    sput-object v0, Lajh;->$EnumSwitchMapping$0:[I
 
-    :cond_2
-    sget-object p1, Lqhi;->X:Lqhi;
-
-    if-ne v0, p1, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    const/4 p1, 0x0
-
-    goto :goto_3
-
-    :cond_4
-    :goto_2
-    const/4 p1, 0x1
-
-    :goto_3
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

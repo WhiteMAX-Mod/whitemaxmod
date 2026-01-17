@@ -1,151 +1,114 @@
-.class public final enum Lw04;
-.super Ljava/lang/Enum;
+.class public final Lw04;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lw04;
-
-.field public static final enum Y:Lw04;
-
-.field public static final synthetic Z:[Lw04;
-
-.field public static final enum b:Lw04;
-
-.field public static final enum c:Lw04;
-
-.field public static final enum d:Lw04;
-
-.field public static final enum o:Lw04;
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lz04;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
-
-    new-instance v0, Lw04;
-
-    const-string v1, "TT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v1}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Lw04;
-
-    const-string v2, "OFFICIAL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v2}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lw04;->b:Lw04;
-
-    new-instance v2, Lw04;
-
-    const-string v3, "PRIVATE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v3}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v3, Lw04;
-
-    const-string v4, "BOT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v4}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lw04;->c:Lw04;
-
-    new-instance v4, Lw04;
-
-    const-string v5, "SERVICE_ACCOUNT"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v5}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lw04;->d:Lw04;
-
-    new-instance v5, Lw04;
-
-    const-string v6, "HAS_WEBAPP"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v6}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lw04;->o:Lw04;
-
-    new-instance v6, Lw04;
-
-    const-string v7, "RESTRICTED"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8, v7}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Lw04;->X:Lw04;
-
-    new-instance v7, Lw04;
-
-    const-string v8, "NO_FORWARD"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9, v8}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Lw04;->Y:Lw04;
-
-    filled-new-array/range {v0 .. v7}, [Lw04;
-
-    move-result-object v0
-
-    sput-object v0, Lw04;->Z:[Lw04;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lz04;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lw04;->X:Lz04;
 
-    iput-object p3, p0, Lw04;->a:Ljava/lang/String;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lw04;
-    .locals 1
 
-    const-class v0, Lw04;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lzb4;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lw04;
+    invoke-virtual {p0, p1, p2}, Lw04;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lw04;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lw04;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lw04;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lw04;->Z:[Lw04;
+    new-instance p1, Lw04;
 
-    invoke-virtual {v0}, [Lw04;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lw04;->X:Lz04;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lw04;-><init>(Lz04;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lw04;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lw04;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lw04;->X:Lz04;
+
+    iget-object p1, p1, Lz04;->a:Li7f;
+
+    iput v1, p0, Lw04;->o:I
+
+    sget-object v0, Lr04;->a:Lr04;
+
+    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

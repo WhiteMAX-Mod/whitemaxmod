@@ -1,10 +1,10 @@
 .class public final Lqpa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lope;
+.field public X:Lqqe;
 
 .field public c:J
 
@@ -14,17 +14,17 @@
 
 
 # direct methods
-.method public constructor <init>(Lgr9;)V
+.method public constructor <init>(Lpq9;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
+    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
+.method public final d(Lpq9;Ljava/lang/String;)V
     .locals 4
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -106,21 +106,21 @@
 
     packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {p1}, Lgr9;->y()V
+    invoke-virtual {p1}, Lpq9;->B()V
 
     return-void
 
     :pswitch_0
-    invoke-static {p1}, Lsnj;->a(Lgr9;)Lope;
+    invoke-static {p1}, Lroj;->a(Lpq9;)Lqqe;
 
     move-result-object p1
 
-    iput-object p1, p0, Lqpa;->X:Lope;
+    iput-object p1, p0, Lqpa;->X:Lqqe;
 
     return-void
 
     :pswitch_1
-    invoke-static {p1, v2, v3}, Lisi;->m(Lgr9;J)J
+    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
 
     move-result-wide p1
 
@@ -129,7 +129,7 @@
     return-void
 
     :pswitch_2
-    invoke-static {p1, v2, v3}, Lisi;->m(Lgr9;J)J
+    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
 
     move-result-wide p1
 
@@ -138,7 +138,7 @@
     return-void
 
     :pswitch_3
-    invoke-static {p1, v2, v3}, Lisi;->m(Lgr9;J)J
+    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
 
     move-result-wide p1
 
@@ -172,13 +172,13 @@
 
     iget-wide v4, p0, Lqpa;->o:J
 
-    iget-object v6, p0, Lqpa;->X:Lope;
+    iget-object v6, p0, Lqpa;->X:Lqqe;
 
     const-string v7, "Response{chatId="
 
     const-string v8, "userId="
 
-    invoke-static {v0, v1, v7, v8}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v7, v8}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -188,7 +188,7 @@
 
     const-string v2, ", draft="
 
-    invoke-static {v4, v5, v1, v2, v0}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v4, v5, v1, v2, v0}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -3,120 +3,122 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static a:Lzmj;
+
+
 # direct methods
-.method public static a(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 2
+.method public static final a(DLza5;Lza5;)D
+    .locals 6
 
-    if-nez p0, :cond_0
+    iget-object p3, p3, Lza5;->a:Ljava/util/concurrent/TimeUnit;
 
-    const-string p0, ""
+    iget-object p2, p2, Lza5;->a:Ljava/util/concurrent/TimeUnit;
 
-    return-object p0
+    const-wide/16 v0, 0x1
+
+    invoke-virtual {p3, v0, v1, p2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v2, v4
+
+    if-lez v4, :cond_0
+
+    long-to-double p2, v2
+
+    mul-double/2addr p0, p2
+
+    return-wide p0
 
     :cond_0
-    const/4 v0, 0x1
+    invoke-virtual {p2, v0, v1, p3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
-    if-eq p1, v0, :cond_2
+    move-result-wide p2
 
-    const/4 v0, 0x7
+    long-to-double p2, p2
 
-    if-eq p1, v0, :cond_1
+    div-double/2addr p0, p2
 
-    packed-switch p1, :pswitch_data_0
+    return-wide p0
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public static final b(Lza5;)Ljava/lang/String;
+    .locals 3
 
-    const-string v1, "Unknown error code: "
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result-object p1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v0, "BiometricUtils"
+    const-string v2, "Unknown unit: "
 
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget p1, Lfcd;->default_error_msg:I
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :pswitch_0
-    sget p1, Lfcd;->fingerprint_error_hw_not_present:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
+    const-string p0, "d"
 
     return-object p0
 
     :pswitch_1
-    sget p1, Lfcd;->fingerprint_error_no_fingerprints:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
+    const-string p0, "h"
 
     return-object p0
 
     :pswitch_2
-    sget p1, Lfcd;->fingerprint_error_user_canceled:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
+    const-string p0, "m"
 
     return-object p0
 
-    :cond_1
     :pswitch_3
-    sget p1, Lfcd;->fingerprint_error_lockout:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
+    const-string p0, "s"
 
     return-object p0
 
-    :cond_2
-    sget p1, Lfcd;->fingerprint_error_hw_not_available:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
+    :pswitch_4
+    const-string p0, "ms"
 
     return-object p0
 
-    nop
+    :pswitch_5
+    const-string p0, "us"
+
+    return-object p0
+
+    :pswitch_6
+    const-string p0, "ns"
+
+    return-object p0
 
     :pswitch_data_0
-    .packed-switch 0x9
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public static final b(Lm4h;)V
-    .locals 2
-
-    new-instance v0, Lj0f;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lj0f;-><init>(I)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1, v0}, Lm4h;->c(ILys7;)V
-
-    return-void
 .end method

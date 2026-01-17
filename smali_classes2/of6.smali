@@ -1,80 +1,65 @@
-.class public final synthetic Lof6;
-.super Ljava/lang/Object;
+.class public final Lof6;
+.super Lpab;
 .source "SourceFile"
-
-# interfaces
-.implements Loq6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpf6;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lpf6;I)V
-    .locals 0
-
-    iput p2, p0, Lof6;->a:I
-
-    iput-object p1, p0, Lof6;->b:Lpf6;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onMeasure(II)V
+    .locals 3
 
-    iget v0, p0, Lof6;->a:I
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    check-cast p1, Lwf6;
+    move-result p2
 
-    packed-switch v0, :pswitch_data_0
+    const/16 v0, 0x8
 
-    iget-object v0, p0, Lof6;->b:Lpf6;
+    int-to-float v0, v0
 
-    iget-object v0, v0, Lpf6;->X:Ljava/lang/Object;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    check-cast v0, Lag6;
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    check-cast v0, Lm82;
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Lm82;->f(Lwf6;)V
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    const/4 v2, 0x2
 
-    return-object p1
+    invoke-static {v0, v1, v2, p2}, Lxi4;->d(FFII)I
 
-    :pswitch_0
-    iget-object v0, p0, Lof6;->b:Lpf6;
+    move-result p2
 
-    iget-object v0, v0, Lpf6;->X:Ljava/lang/Object;
+    const/16 v0, 0x80
 
-    check-cast v0, Lag6;
+    int-to-float v0, v0
 
-    if-eqz v0, :cond_1
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    check-cast v0, Lm82;
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Lm82;->f(Lwf6;)V
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_1
-    sget-object p1, Lv2h;->a:Lv2h;
+    move-result-object v1
 
-    return-object p1
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    nop
+    mul-float/2addr v0, v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    sub-int/2addr p2, v0
+
+    const/high16 v0, 0x40000000    # 2.0f
+
+    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p2
+
+    invoke-super {p0, p1, p2}, Lpab;->onMeasure(II)V
+
+    return-void
 .end method

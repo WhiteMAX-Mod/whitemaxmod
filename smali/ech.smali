@@ -1,35 +1,137 @@
-.class public abstract Lech;
+.class public final Lech;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpke;
+
+
+# instance fields
+.field public final a:[J
+
+.field public final b:[J
+
+.field public final c:J
+
+.field public final d:J
+
 
 # direct methods
-.method public static a(Landroid/view/VelocityTracker;I)F
+.method public constructor <init>([J[JJJ)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getAxisVelocity(I)F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-object p1, p0, Lech;->a:[J
 
-    return p0
+    iput-object p2, p0, Lech;->b:[J
+
+    iput-wide p3, p0, Lech;->c:J
+
+    iput-wide p5, p0, Lech;->d:J
+
+    return-void
 .end method
 
-.method public static b(Landroid/view/VelocityTracker;II)F
-    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/VelocityTracker;->getAxisVelocity(II)F
+# virtual methods
+.method public final a(J)J
+    .locals 2
 
-    move-result p0
+    iget-object v0, p0, Lech;->b:[J
 
-    return p0
+    const/4 v1, 0x1
+
+    invoke-static {v0, p1, p2, v1}, Lkbh;->e([JJZ)I
+
+    move-result p1
+
+    iget-object p2, p0, Lech;->a:[J
+
+    aget-wide p1, p2, p1
+
+    return-wide p1
 .end method
 
-.method public static c(Landroid/view/VelocityTracker;I)Z
-    .locals 0
+.method public final b()J
+    .locals 2
 
-    invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->isAxisSupported(I)Z
+    iget-wide v0, p0, Lech;->d:J
 
-    move-result p0
+    return-wide v0
+.end method
 
-    return p0
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final e(J)Lfke;
+    .locals 9
+
+    iget-object v0, p0, Lech;->a:[J
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, p1, p2, v1}, Lkbh;->e([JJZ)I
+
+    move-result v2
+
+    new-instance v3, Llke;
+
+    aget-wide v4, v0, v2
+
+    iget-object v6, p0, Lech;->b:[J
+
+    aget-wide v7, v6, v2
+
+    invoke-direct {v3, v4, v5, v7, v8}, Llke;-><init>(JJ)V
+
+    cmp-long p1, v4, p1
+
+    if-gez p1, :cond_1
+
+    array-length p1, v0
+
+    sub-int/2addr p1, v1
+
+    if-ne v2, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Llke;
+
+    add-int/2addr v2, v1
+
+    aget-wide v4, v0, v2
+
+    aget-wide v0, v6, v2
+
+    invoke-direct {p1, v4, v5, v0, v1}, Llke;-><init>(JJ)V
+
+    new-instance p2, Lfke;
+
+    invoke-direct {p2, v3, p1}, Lfke;-><init>(Llke;Llke;)V
+
+    return-object p2
+
+    :cond_1
+    :goto_0
+    new-instance p1, Lfke;
+
+    invoke-direct {p1, v3, v3}, Lfke;-><init>(Llke;Llke;)V
+
+    return-object p1
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lech;->c:J
+
+    return-wide v0
 .end method

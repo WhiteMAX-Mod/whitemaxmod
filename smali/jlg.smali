@@ -1,92 +1,59 @@
 .class public final Ljlg;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.super Lqlg;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final a:J
-
-
-# direct methods
-.method public constructor <init>(JLl84;)V
-    .locals 1
-
-    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Lrb4;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0, p3}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lrb4;Lkotlin/coroutines/Continuation;)V
-
-    iput-wide p1, p0, Ljlg;->a:J
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final nameString$kotlinx_coroutines_core()Ljava/lang/String;
-    .locals 4
+.method public final b(Ljava/lang/Object;)I
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 p1, -0x1
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-super {p0}, Lm0;->nameString$kotlinx_coroutines_core()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "(timeMillis="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ljlg;->a:J
-
-    const/16 v3, 0x29
-
-    invoke-static {v0, v1, v2, v3}, Ln0c;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method
 
-.method public final run()V
-    .locals 3
+.method public final f(ILllg;Z)Lllg;
+    .locals 0
 
-    invoke-virtual {p0}, Lm0;->getContext()Lrb4;
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    move-result-object v0
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    invoke-static {v0}, Lzlj;->f(Lrb4;)Lgw4;
+    throw p1
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public final h()I
+    .locals 1
 
-    const-string v1, "Timed out waiting for "
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return v0
+.end method
 
-    iget-wide v1, p0, Ljlg;->a:J
+.method public final l(I)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    const-string v1, " ms"
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw p1
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final m(ILolg;J)Lolg;
+    .locals 0
 
-    move-result-object v0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    new-instance v1, Lkotlinx/coroutines/TimeoutCancellationException;
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    invoke-direct {v1, v0, p0}, Lkotlinx/coroutines/TimeoutCancellationException;-><init>(Ljava/lang/String;Liy7;)V
+    throw p1
+.end method
 
-    invoke-virtual {p0, v1}, Lkz7;->cancelCoroutine(Ljava/lang/Throwable;)Z
+.method public final o()I
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
+
+    return v0
 .end method

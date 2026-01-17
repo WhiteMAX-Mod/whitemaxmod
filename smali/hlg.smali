@@ -1,23 +1,23 @@
 .class public final Lhlg;
-.super Lilg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final d(J)Lilg;
+# instance fields
+.field public final a:Lbz6;
+
+.field public final b:J
+
+
+# direct methods
+.method public constructor <init>(Lbz6;J)V
     .locals 0
 
-    return-object p0
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public final f()V
-    .locals 0
+    iput-object p1, p0, Lhlg;->a:Lbz6;
+
+    iput-wide p2, p0, Lhlg;->b:J
 
     return-void
-.end method
-
-.method public final g(JLjava/util/concurrent/TimeUnit;)Lilg;
-    .locals 0
-
-    return-object p0
 .end method

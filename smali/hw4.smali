@@ -1,31 +1,14 @@
-.class public final Lhw4;
-.super Ll84;
+.class public interface abstract Lhw4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract delay(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.end method
 
-    iput-object p1, p0, Lhw4;->d:Ljava/lang/Object;
+.method public abstract invokeOnTimeout(JLjava/lang/Runnable;Lqb4;)Lr25;
+.end method
 
-    iget p1, p0, Lhw4;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lhw4;->o:I
-
-    invoke-static {p0}, Lzlj;->a(Ll84;)V
-
-    sget-object p1, Lbc4;->a:Lbc4;
-
-    return-object p1
+.method public abstract scheduleResumeAfterDelay(JLf62;)V
 .end method

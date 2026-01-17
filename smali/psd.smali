@@ -1,293 +1,201 @@
 .class public final Lpsd;
-.super Lka9;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmsd;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public a:I
 
-.field public final b:Ljava/lang/String;
+.field public b:Landroid/util/SparseArray;
 
-.field public c:Z
+.field public c:I
 
 .field public d:I
 
 .field public e:I
 
-.field public f:Llsd;
+.field public f:I
 
-.field public g:I
+.field public g:Z
 
-.field public final synthetic h:Lqsd;
+.field public h:Z
 
+.field public i:Z
 
-# direct methods
-.method public constructor <init>(Lqsd;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.field public j:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public k:Z
 
-    iput-object p1, p0, Lpsd;->h:Lqsd;
+.field public l:Z
 
-    const/4 p1, -0x1
+.field public m:I
 
-    iput p1, p0, Lpsd;->d:I
+.field public n:J
 
-    iput-object p2, p0, Lpsd;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lpsd;->b:Ljava/lang/String;
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final a(I)V
+    .locals 3
 
-    iget v0, p0, Lpsd;->g:I
+    iget v0, p0, Lpsd;->e:I
+
+    and-int/2addr v0, p1
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Layout state should be one of "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " but it is "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p1, p0, Lpsd;->e:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final b()I
+    .locals 2
+
+    iget-boolean v0, p0, Lpsd;->h:Z
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lpsd;->c:I
+
+    iget v1, p0, Lpsd;->d:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+
+    :cond_0
+    iget v0, p0, Lpsd;->f:I
 
     return v0
 .end method
 
-.method public final b(Llsd;)V
-    .locals 6
-
-    iput-object p1, p0, Lpsd;->f:Llsd;
-
-    iget v3, p1, Llsd;->e:I
-
-    add-int/lit8 v0, v3, 0x1
-
-    iput v0, p1, Llsd;->e:I
-
-    new-instance v5, Landroid/os/Bundle;
-
-    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
-
-    const-string v0, "routeId"
-
-    iget-object v1, p0, Lpsd;->a:Ljava/lang/String;
-
-    invoke-virtual {v5, v0, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "routeGroupId"
-
-    iget-object v1, p0, Lpsd;->b:Ljava/lang/String;
-
-    invoke-virtual {v5, v0, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v2, p1, Llsd;->d:I
-
-    add-int/lit8 v0, v2, 0x1
-
-    iput v0, p1, Llsd;->d:I
-
-    const/4 v4, 0x0
-
-    const/4 v1, 0x3
-
-    move-object v0, p1
-
-    invoke-virtual/range {v0 .. v5}, Llsd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
-
-    iput v3, p0, Lpsd;->g:I
-
-    iget-boolean p1, p0, Lpsd;->c:Z
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0, v3}, Llsd;->a(I)V
-
-    iget p1, p0, Lpsd;->d:I
-
-    if-ltz p1, :cond_0
-
-    iget v1, p0, Lpsd;->g:I
-
-    invoke-virtual {v0, v1, p1}, Llsd;->c(II)V
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lpsd;->d:I
-
-    :cond_0
-    iget p1, p0, Lpsd;->e:I
-
-    if-eqz p1, :cond_1
-
-    iget v1, p0, Lpsd;->g:I
-
-    invoke-virtual {v0, v1, p1}, Llsd;->d(II)V
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lpsd;->e:I
-
-    :cond_1
-    return-void
-.end method
-
-.method public final c()V
-    .locals 6
-
-    iget-object v0, p0, Lpsd;->f:Llsd;
-
-    if-eqz v0, :cond_0
-
-    iget v3, p0, Lpsd;->g:I
-
-    iget v2, v0, Llsd;->d:I
-
-    add-int/lit8 v1, v2, 0x1
-
-    iput v1, v0, Llsd;->d:I
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x4
-
-    invoke-virtual/range {v0 .. v5}, Llsd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lpsd;->f:Llsd;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lpsd;->g:I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lpsd;->h:Lqsd;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lqsd;->u0:Ljava/util/ArrayList;
+    const-string v1, "State{mTargetPosition="
 
-    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lpsd;->c()V
+    iget v1, p0, Lpsd;->a:I
 
-    invoke-virtual {v0}, Lqsd;->o()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, ", mData="
 
-.method public final e()V
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    iget-object v1, p0, Lpsd;->b:Landroid/util/SparseArray;
 
-    iput-boolean v0, p0, Lpsd;->c:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lpsd;->f:Llsd;
+    const-string v1, ", mItemCount="
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lpsd;->g:I
+    iget v1, p0, Lpsd;->f:I
 
-    invoke-virtual {v0, v1}, Llsd;->a(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
-.end method
+    const-string v1, ", mIsMeasuring="
 
-.method public final f(I)V
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lpsd;->f:Llsd;
+    iget-boolean v1, p0, Lpsd;->j:Z
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lpsd;->g:I
+    const-string v1, ", mPreviousLayoutItemCount="
 
-    invoke-virtual {v0, v1, p1}, Llsd;->c(II)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget v1, p0, Lpsd;->c:I
 
-    :cond_0
-    iput p1, p0, Lpsd;->d:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    const-string v1, ", mDeletedInvisibleItemCountSincePreviousLayout="
 
-    iput p1, p0, Lpsd;->e:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget v1, p0, Lpsd;->d:I
 
-.method public final g()V
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, ", mStructureChanged="
 
-    invoke-virtual {p0, v0}, Lpsd;->h(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget-boolean v1, p0, Lpsd;->g:Z
 
-.method public final h(I)V
-    .locals 7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, ", mInPreLayout="
 
-    iput-boolean v0, p0, Lpsd;->c:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lpsd;->f:Llsd;
+    iget-boolean v1, p0, Lpsd;->h:Z
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget v4, p0, Lpsd;->g:I
+    const-string v1, ", mRunSimpleAnimations="
 
-    const-string v0, "unselectReason"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v0}, Lqf7;->e(ILjava/lang/String;)Landroid/os/Bundle;
+    iget-boolean v1, p0, Lpsd;->k:Z
 
-    move-result-object v6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget v3, v1, Llsd;->d:I
+    const-string v1, ", mRunPredictiveAnimations="
 
-    add-int/lit8 p1, v3, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput p1, v1, Llsd;->d:I
+    iget-boolean v1, p0, Lpsd;->l:Z
 
-    const/4 v5, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x6
+    const/16 v1, 0x7d
 
-    invoke-virtual/range {v1 .. v6}, Llsd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final i(I)V
-    .locals 2
+    move-result-object v0
 
-    iget-object v0, p0, Lpsd;->f:Llsd;
-
-    if-eqz v0, :cond_0
-
-    iget v1, p0, Lpsd;->g:I
-
-    invoke-virtual {v0, v1, p1}, Llsd;->d(II)V
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lpsd;->e:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lpsd;->e:I
-
-    return-void
+    return-object v0
 .end method

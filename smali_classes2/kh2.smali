@@ -4,76 +4,114 @@
 
 
 # static fields
-.field public static final f:Lkh2;
-
-.field public static final g:Lkh2;
+.field public static final h:Lkh2;
 
 
 # instance fields
-.field public final a:Lrh2;
+.field public final a:J
 
-.field public final b:I
+.field public final b:Ljava/util/List;
 
 .field public final c:J
 
 .field public final d:J
 
-.field public final e:Ljava/util/List;
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 4
 
-    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    sget-object v0, Lgh2;->b:Lgh2;
+
+    sget-object v1, Lgh2;->c:Lgh2;
+
+    sget-object v2, Lgh2;->a:Lgh2;
+
+    filled-new-array {v2, v0, v1}, [Lgh2;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    new-instance v1, Ljh2;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, v1, Ljh2;->a:J
+
+    iput-wide v2, v1, Ljh2;->c:J
+
+    iput-wide v2, v1, Ljh2;->d:J
+
+    iput-object v0, v1, Ljh2;->b:Ljava/util/List;
+
+    iput-wide v2, v1, Ljh2;->f:J
+
+    iput-wide v2, v1, Ljh2;->g:J
 
     new-instance v0, Lkh2;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Lkh2;-><init>(Ljh2;)V
 
-    const/4 v2, 0x0
-
-    const-wide/16 v3, 0x0
-
-    const-wide/16 v5, 0x0
-
-    invoke-direct/range {v0 .. v7}, Lkh2;-><init>(Lrh2;IJJLjava/util/List;)V
-
-    sput-object v0, Lkh2;->f:Lkh2;
-
-    sget-object v8, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    new-instance v1, Lkh2;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const-wide/16 v4, 0x0
-
-    const-wide/16 v6, 0x0
-
-    invoke-direct/range {v1 .. v8}, Lkh2;-><init>(Lrh2;IJJLjava/util/List;)V
-
-    sput-object v1, Lkh2;->g:Lkh2;
+    sput-object v0, Lkh2;->h:Lkh2;
 
     return-void
 .end method
 
-.method public constructor <init>(Lrh2;IJJLjava/util/List;)V
-    .locals 0
+.method public constructor <init>(Ljh2;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkh2;->a:Lrh2;
+    iget-wide v0, p1, Ljh2;->a:J
 
-    iput p2, p0, Lkh2;->b:I
+    iput-wide v0, p0, Lkh2;->a:J
 
-    iput-wide p3, p0, Lkh2;->c:J
+    iget-object v0, p1, Ljh2;->b:Ljava/util/List;
 
-    iput-wide p5, p0, Lkh2;->d:J
+    if-eqz v0, :cond_0
 
-    iput-object p7, p0, Lkh2;->e:Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    :goto_0
+    iput-object v0, p0, Lkh2;->b:Ljava/util/List;
+
+    iget-wide v0, p1, Ljh2;->c:J
+
+    iput-wide v0, p0, Lkh2;->c:J
+
+    iget-wide v0, p1, Ljh2;->d:J
+
+    iput-wide v0, p0, Lkh2;->d:J
+
+    iget-wide v0, p1, Ljh2;->e:J
+
+    iput-wide v0, p0, Lkh2;->e:J
+
+    iget-wide v0, p1, Ljh2;->f:J
+
+    iput-wide v0, p0, Lkh2;->f:J
+
+    iget-wide v0, p1, Ljh2;->g:J
+
+    iput-wide v0, p0, Lkh2;->g:J
 
     return-void
 .end method
@@ -87,25 +125,139 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lkh2;->a:Lrh2;
+    iget-wide v1, p0, Lkh2;->a:J
 
-    iput-object v1, v0, Ljh2;->d:Ljava/lang/Object;
+    iput-wide v1, v0, Ljh2;->a:J
 
-    iget v1, p0, Lkh2;->b:I
+    new-instance v1, Ljava/util/ArrayList;
 
-    iput v1, v0, Ljh2;->a:I
+    iget-object v2, p0, Lkh2;->b:Ljava/util/List;
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object v1, v0, Ljh2;->b:Ljava/util/List;
 
     iget-wide v1, p0, Lkh2;->c:J
 
-    iput-wide v1, v0, Ljh2;->b:J
+    iput-wide v1, v0, Ljh2;->c:J
 
     iget-wide v1, p0, Lkh2;->d:J
 
-    iput-wide v1, v0, Ljh2;->c:J
+    iput-wide v1, v0, Ljh2;->d:J
 
-    iget-object v1, p0, Lkh2;->e:Ljava/util/List;
+    iget-wide v1, p0, Lkh2;->e:J
 
-    iput-object v1, v0, Ljh2;->o:Ljava/lang/Object;
+    iput-wide v1, v0, Ljh2;->e:J
+
+    iget-wide v1, p0, Lkh2;->f:J
+
+    iput-wide v1, v0, Ljh2;->f:J
+
+    iget-wide v1, p0, Lkh2;->g:J
+
+    iput-wide v1, v0, Ljh2;->g:J
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 10
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatSettings{dontDisturbUntil="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lkh2;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", options="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lkh2;->b:Ljava/util/List;
+
+    if-nez v2, :cond_0
+
+    const-string v1, "[]"
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v9, Lqq7;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v9, v1}, Lqq7;-><init>(I)V
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, ","
+
+    const-string v5, "["
+
+    const-string v6, "]"
+
+    const/4 v7, -0x1
+
+    const-string v8, "..."
+
+    invoke-static/range {v2 .. v9}, Lpi3;->I(Ljava/lang/Iterable;Ljava/lang/StringBuilder;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/String;Lnq6;)V
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lastNotifMark="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lkh2;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lastNotifMessageId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lkh2;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", favoriteIndex="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lkh2;->e:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hideMyLiveLocationPanelBeforeTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lkh2;->f:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hideLiveLocationPanelBeforeTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lkh2;->g:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

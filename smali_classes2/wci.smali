@@ -1,82 +1,82 @@
 .class public final Lwci;
-.super Lb5g;
+.super Lrz7;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/webapp/settings/WebAppsSettingScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppsSettingScreen;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput-object p2, p0, Lwci;->X:Lone/me/webapp/settings/WebAppsSettingScreen;
+    invoke-direct {p0}, Lrz7;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lwci;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lwci;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lwci;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lwci;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-boolean v1, p0, Lwci;->c:Z
 
-    invoke-virtual {p1, p2}, Lwci;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean p1, p1, Lwci;->c:Z
 
-    return-object p2
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lwci;
-
-    iget-object v1, p0, Lwci;->X:Lone/me/webapp/settings/WebAppsSettingScreen;
-
-    invoke-direct {v0, p2, v1}, Lwci;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppsSettingScreen;)V
-
-    iput-object p1, v0, Lwci;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-boolean v0, p0, Lwci;->c:Z
 
-    iget-object p1, p0, Lwci;->o:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    check-cast p1, Ljava/util/List;
+    move-result v0
 
-    iget-object v0, p0, Lwci;->X:Lone/me/webapp/settings/WebAppsSettingScreen;
+    return v0
+.end method
 
-    iget-object v0, v0, Lone/me/webapp/settings/WebAppsSettingScreen;->d:Lvci;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {v0, p1}, Lbe8;->E(Ljava/util/List;)V
+    const-string v0, "ScreenCaptureBehavior(isEnabled="
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    const-string v1, ")"
 
-    return-object p1
+    iget-boolean v2, p0, Lwci;->c:Z
+
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

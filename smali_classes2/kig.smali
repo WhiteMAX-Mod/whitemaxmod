@@ -1,185 +1,109 @@
-.class public final Lkig;
-.super Landroid/graphics/drawable/DrawableWrapper;
+.class public abstract Lkig;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljig;
-.implements Landroid/graphics/drawable/Animatable;
 
-
-# instance fields
-.field public final a:I
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lkgb;->S:I
+    const-string v0, "#(?i)([\\p{L}0-9_]+)"
 
-    invoke-direct {p0, p1}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    iput v0, p0, Lkig;->a:I
-
-    if-eqz p2, :cond_0
-
-    sget-object p1, Ldc3;->s0:Lole;
-
-    invoke-virtual {p1, p2}, Lole;->i(Landroid/content/Context;)Ldc3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ldc3;->k()Lplb;
-
-    move-result-object p1
-
-    invoke-interface {p1, v0}, Lplb;->d(I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
-
-    :cond_0
     return-void
 .end method
 
-
-# virtual methods
-.method public final isRunning()Z
+.method public static a(Li1c;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    const-string v0, "+"
 
-    move-result-object v0
+    invoke-static {p2}, Lzsi;->e(Ljava/lang/CharSequence;)Z
 
-    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
+    move-result v1
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Landroid/graphics/drawable/Animatable;
+    move-object p2, p3
+
+    :cond_0
+    invoke-static {p2}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+
+    move-result p3
+
+    const-string v1, "RU"
+
+    if-eqz p3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->isRunning()Z
-
-    move-result v0
-
-    return v0
-
     :cond_1
-    const/4 v0, 0x0
+    invoke-virtual {p2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
-    return v0
-.end method
+    move-result-object p2
 
-.method public final onThemeChanged(Lplb;)V
-    .locals 2
+    iget-object p3, p0, Li1c;->f:Ljava/util/HashSet;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p3
 
-    instance-of v0, v0, Ljig;
+    invoke-interface {p3, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_1
+    move-result p3
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    instance-of v1, v0, Ljig;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Ljig;
+    if-nez p3, :cond_2
 
     goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0, p1}, Ljig;->onThemeChanged(Lplb;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget v1, p0, Lkig;->a:I
-
-    invoke-interface {p1, v1}, Lplb;->d(I)I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     :cond_2
-    return-void
-.end method
-
-.method public final start()V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroid/graphics/drawable/Animatable;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
+    move-object v1, p2
 
     :goto_0
-    if-eqz v0, :cond_1
+    :try_start_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->start()V
+    move-result p2
 
-    :cond_1
-    return-void
-.end method
+    if-nez p2, :cond_3
 
-.method public final stop()V
-    .locals 2
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    move-result-object p2
 
-    move-result-object v0
+    goto :goto_1
 
-    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
+    :cond_3
+    move-object p2, p1
 
-    if-eqz v1, :cond_0
+    :goto_1
+    invoke-virtual {p0, p2, v1}, Li1c;->u(Ljava/lang/String;Ljava/lang/String;)Lh2c;
 
-    check-cast v0, Landroid/graphics/drawable/Animatable;
+    move-result-object p2
+    :try_end_0
+    .catch Lio/michaelrocks/libphonenumber/android/NumberParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_2
 
-    :cond_0
-    const/4 v0, 0x0
+    :catch_0
+    const/4 p2, 0x0
 
-    :goto_0
-    if-eqz v0, :cond_1
+    :goto_2
+    if-nez p2, :cond_4
 
-    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->stop()V
+    return-object p1
 
-    :cond_1
-    return-void
+    :cond_4
+    const/4 p1, 0x2
+
+    invoke-virtual {p0, p2, p1}, Li1c;->d(Lh2c;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

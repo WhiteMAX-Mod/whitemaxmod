@@ -1,42 +1,164 @@
-.class public final Ltb1;
-.super Lqr4;
+.class public final synthetic Ltb1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnm4;
 
 
 # instance fields
-.field public final synthetic t:Lvb1;
+.field public final synthetic a:I
+
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(Lvb1;)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    iput-object p1, p0, Ltb1;->t:Lvb1;
+    iput p3, p0, Ltb1;->a:I
 
-    invoke-direct {p0}, Lqr4;-><init>()V
+    iput-wide p1, p0, Ltb1;->b:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()J
-    .locals 2
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Ltb1;->t:Lvb1;
+    iget v0, p0, Ltb1;->a:I
 
-    iget-object v0, v0, Lvb1;->K0:Lqpb;
+    packed-switch v0, :pswitch_data_0
 
-    iget v0, v0, Lqpb;->a:I
+    new-instance v0, Lone/me/webapp/settings/WebAppSettingsScreen;
 
-    if-nez v0, :cond_0
+    iget-wide v1, p0, Ltb1;->b:J
 
-    const-wide/16 v0, 0x96
+    invoke-direct {v0, v1, v2}, Lone/me/webapp/settings/WebAppSettingsScreen;-><init>(J)V
 
-    return-wide v0
+    return-object v0
 
-    :cond_0
-    const-wide/16 v0, 0x0
+    :pswitch_0
+    new-instance v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    return-wide v0
+    sget-object v1, Lguf;->d:Lguf;
+
+    iget-wide v2, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2, v3}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lguf;J)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lone/me/startconversation/channel/PickSubscribersScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/startconversation/channel/PickSubscribersScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Lone/me/profile/screens/invite/ProfileInviteScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/invite/ProfileInviteScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Lone/me/profile/screens/media/ChatMediaTabWidget;
+
+    sget-object v1, Lmw4;->o:Lmw4;
+
+    iget-wide v2, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v2, v3, v1}, Lone/me/profile/screens/media/ChatMediaTabWidget;-><init>(JLmw4;)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_8
+    new-instance v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/folders/pickerfolders/FoldersPickerScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/folders/edit/FolderEditScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_a
+    new-instance v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+
+    iget-wide v1, p0, Ltb1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;-><init>(J)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

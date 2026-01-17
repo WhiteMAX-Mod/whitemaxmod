@@ -3,52 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvoe;
-
-
-# static fields
-.field public static final b:Ly08;
-
-.field public static final c:Ljava/lang/String;
+.implements Lxpe;
 
 
 # instance fields
-.field public final synthetic a:Lps;
+.field public final a:Ln8g;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Llq6;)V
     .locals 1
-
-    new-instance v0, Ly08;
-
-    invoke-direct {v0}, Ly08;-><init>()V
-
-    sput-object v0, Ly08;->b:Ly08;
-
-    const-string v0, "kotlinx.serialization.json.JsonArray"
-
-    sput-object v0, Ly08;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lm18;->a:Lm18;
+    new-instance v0, Ln8g;
 
-    new-instance v1, Lps;
+    invoke-direct {v0, p1}, Ln8g;-><init>(Llq6;)V
 
-    invoke-virtual {v0}, Lm18;->d()Lvoe;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lje8;-><init>(Lvoe;)V
-
-    iput-object v1, p0, Ly08;->a:Lps;
+    iput-object v0, p0, Ly08;->a:Ln8g;
 
     return-void
 .end method
@@ -58,17 +30,33 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Ly08;->c:Ljava/lang/String;
+    invoke-virtual {p0}, Ly08;->b()Lxpe;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lxpe;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()Lxpe;
+    .locals 1
+
+    iget-object v0, p0, Ly08;->a:Ln8g;
+
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxpe;
 
     return-object v0
 .end method
 
 .method public final c()Z
     .locals 1
-
-    iget-object v0, p0, Ly08;->a:Lps;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v0, 0x0
 
@@ -78,23 +66,27 @@
 .method public final d(Ljava/lang/String;)I
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
+    invoke-virtual {p0}, Ly08;->b()Lxpe;
 
-    invoke-virtual {v0, p1}, Lje8;->d(Ljava/lang/String;)I
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lxpe;->d(Ljava/lang/String;)I
 
     move-result p1
 
     return p1
 .end method
 
-.method public final e()Lrnj;
+.method public final e()Lqoj;
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
+    invoke-virtual {p0}, Ly08;->b()Lxpe;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    sget-object v0, Lbzf;->c:Lbzf;
+    invoke-interface {v0}, Lxpe;->e()Lqoj;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -102,11 +94,13 @@
 .method public final f()I
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
+    invoke-virtual {p0}, Ly08;->b()Lxpe;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    const/4 v0, 0x1
+    invoke-interface {v0}, Lxpe;->f()I
+
+    move-result v0
 
     return v0
 .end method
@@ -114,11 +108,11 @@
 .method public final g(I)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
+    invoke-virtual {p0}, Ly08;->b()Lxpe;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lxpe;->g(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -128,11 +122,7 @@
 .method public final getAnnotations()Ljava/util/List;
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lch5;->a:Lch5;
+    sget-object v0, Ldh5;->a:Ldh5;
 
     return-object v0
 .end method
@@ -140,21 +130,25 @@
 .method public final h(I)Ljava/util/List;
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
+    invoke-virtual {p0}, Ly08;->b()Lxpe;
 
-    invoke-virtual {v0, p1}, Lje8;->h(I)Ljava/util/List;
+    move-result-object v0
 
-    sget-object p1, Lch5;->a:Lch5;
+    invoke-interface {v0, p1}, Lxpe;->h(I)Ljava/util/List;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final i(I)Lvoe;
+.method public final i(I)Lxpe;
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
+    invoke-virtual {p0}, Ly08;->b()Lxpe;
 
-    invoke-virtual {v0, p1}, Lje8;->i(I)Lvoe;
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lxpe;->i(I)Lxpe;
 
     move-result-object p1
 
@@ -164,10 +158,6 @@
 .method public final isInline()Z
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     const/4 v0, 0x0
 
     return v0
@@ -176,11 +166,13 @@
 .method public final j(I)Z
     .locals 1
 
-    iget-object v0, p0, Ly08;->a:Lps;
+    invoke-virtual {p0}, Ly08;->b()Lxpe;
 
-    invoke-virtual {v0, p1}, Lje8;->j(I)Z
+    move-result-object v0
 
-    const/4 p1, 0x0
+    invoke-interface {v0, p1}, Lxpe;->j(I)Z
+
+    move-result p1
 
     return p1
 .end method

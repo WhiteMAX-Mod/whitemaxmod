@@ -13,12 +13,12 @@
         "Landroid/app/Service;",
         "<init>",
         "()V",
-        "room-runtime_release"
+        "room-runtime"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30

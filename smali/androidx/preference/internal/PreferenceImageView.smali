@@ -31,13 +31,13 @@
 
     iput v1, p0, Landroidx/preference/internal/PreferenceImageView;->b:I
 
-    sget-object v2, Lyed;->PreferenceImageView:[I
+    sget-object v2, Lqgd;->PreferenceImageView:[I
 
     invoke-virtual {p1, p2, v2, v0, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lyed;->PreferenceImageView_maxWidth:I
+    sget p2, Lqgd;->PreferenceImageView_maxWidth:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -45,7 +45,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/internal/PreferenceImageView;->setMaxWidth(I)V
 
-    sget p2, Lyed;->PreferenceImageView_maxHeight:I
+    sget p2, Lqgd;->PreferenceImageView_maxHeight:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 

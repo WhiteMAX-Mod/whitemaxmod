@@ -1,150 +1,193 @@
 .class public final Lexd;
-.super Landroid/net/ConnectivityManager$NetworkCallback;
+.super Lixd;
 .source "SourceFile"
+
+# interfaces
+.implements Lth4;
 
 
 # instance fields
-.field public a:Z
-
-.field public b:Z
-
-.field public final synthetic c:Lac0;
+.field public final X:Lxke;
 
 
 # direct methods
-.method public constructor <init>(Lac0;)V
+.method public constructor <init>(Loj6;Lhk7;Lxke;Ljava/util/ArrayList;)V
     .locals 0
 
-    iput-object p1, p0, Lexd;->c:Lac0;
+    invoke-direct {p0, p1, p2, p3, p4}, Lixd;-><init>(Loj6;Ljava/util/List;Lhle;Ljava/util/List;)V
 
-    invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
+    iput-object p3, p0, Lexd;->X:Lxke;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAvailable(Landroid/net/Network;)V
+.method public final B()J
     .locals 2
 
-    iget-object p1, p0, Lexd;->c:Lac0;
+    iget-object v0, p0, Lexd;->X:Lxke;
 
-    iget-object p1, p1, Lac0;->e:Ljava/lang/Object;
+    iget-wide v0, v0, Lxke;->d:J
 
-    check-cast p1, Landroid/os/Handler;
-
-    new-instance v0, Ldxd;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Ldxd;-><init>(Lexd;I)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final onBlockedStatusChanged(Landroid/net/Network;Z)V
+.method public final C(J)J
     .locals 1
 
-    if-nez p2, :cond_0
+    iget-object v0, p0, Lexd;->X:Lxke;
 
-    iget-object p1, p0, Lexd;->c:Lac0;
+    invoke-virtual {v0, p1, p2}, Lxke;->e(J)J
 
-    iget-object p1, p1, Lac0;->e:Ljava/lang/Object;
+    move-result-wide p1
 
-    check-cast p1, Landroid/os/Handler;
-
-    new-instance p2, Ldxd;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p2, p0, v0}, Ldxd;-><init>(Lexd;I)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
+    return-wide p1
 .end method
 
-.method public final onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+.method public final D(JJ)J
     .locals 1
 
-    const/16 p1, 0x10
+    iget-object v0, p0, Lexd;->X:Lxke;
 
-    invoke-virtual {p2, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+    invoke-virtual {v0, p1, p2, p3, p4}, Lxke;->c(JJ)J
 
-    move-result p1
+    move-result-wide p1
 
-    iget-boolean p2, p0, Lexd;->a:Z
+    return-wide p1
+.end method
 
-    iget-object v0, p0, Lexd;->c:Lac0;
+.method public final a(J)J
+    .locals 1
 
-    if-eqz p2, :cond_2
+    iget-object v0, p0, Lexd;->X:Lxke;
 
-    iget-boolean p2, p0, Lexd;->b:Z
+    invoke-virtual {v0, p1, p2}, Lxke;->h(J)J
 
-    if-eq p2, p1, :cond_0
+    move-result-wide p1
 
-    goto :goto_0
+    return-wide p1
+.end method
 
-    :cond_0
-    if-eqz p1, :cond_1
-
-    iget-object p1, v0, Lac0;->e:Ljava/lang/Object;
-
-    check-cast p1, Landroid/os/Handler;
-
-    new-instance p2, Ldxd;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p2, p0, v0}, Ldxd;-><init>(Lexd;I)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_1
-    return-void
-
-    :cond_2
-    :goto_0
-    const/4 p2, 0x1
-
-    iput-boolean p2, p0, Lexd;->a:Z
-
-    iput-boolean p1, p0, Lexd;->b:Z
-
-    iget-object p1, v0, Lac0;->e:Ljava/lang/Object;
-
-    check-cast p1, Landroid/os/Handler;
-
-    new-instance p2, Ldxd;
+.method public final b()Ljava/lang/String;
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, p0, v0}, Ldxd;-><init>(Lexd;I)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    return-object v0
 .end method
 
-.method public final onLost(Landroid/net/Network;)V
-    .locals 2
+.method public final c()Lth4;
+    .locals 0
 
-    iget-object p1, p0, Lexd;->c:Lac0;
+    return-object p0
+.end method
 
-    iget-object p1, p1, Lac0;->e:Ljava/lang/Object;
+.method public final d(JJ)J
+    .locals 1
 
-    check-cast p1, Landroid/os/Handler;
+    iget-object v0, p0, Lexd;->X:Lxke;
 
-    new-instance v0, Ldxd;
+    invoke-virtual {v0, p1, p2, p3, p4}, Lxke;->f(JJ)J
 
-    const/4 v1, 0x0
+    move-result-wide p1
 
-    invoke-direct {v0, p0, v1}, Ldxd;-><init>(Lexd;I)V
+    return-wide p1
+.end method
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+.method public final e()Lshd;
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final g(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Lexd;->X:Lxke;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lxke;->d(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final j(JJ)J
+    .locals 3
+
+    iget-object v0, p0, Lexd;->X:Lxke;
+
+    iget-object v1, v0, Lxke;->f:Ljava/util/List;
+
+    if-eqz v1, :cond_0
+
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    return-wide p1
+
+    :cond_0
+    invoke-virtual {v0, p1, p2, p3, p4}, Lxke;->d(JJ)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lxke;->c(JJ)J
+
+    move-result-wide p3
+
+    add-long/2addr p3, v1
+
+    invoke-virtual {v0, p3, p4}, Lxke;->h(J)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, p3, p4, p1, p2}, Lxke;->f(JJ)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v1
+
+    iget-wide p3, v0, Lxke;->i:J
+
+    sub-long/2addr p1, p3
+
+    return-wide p1
+.end method
+
+.method public final k(J)Lshd;
+    .locals 1
+
+    iget-object v0, p0, Lexd;->X:Lxke;
+
+    invoke-virtual {v0, p0, p1, p2}, Lxke;->i(Lexd;J)Lshd;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final u(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Lexd;->X:Lxke;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lxke;->g(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final z()Z
+    .locals 1
+
+    iget-object v0, p0, Lexd;->X:Lxke;
+
+    invoke-virtual {v0}, Lxke;->j()Z
+
+    move-result v0
+
+    return v0
 .end method

@@ -38,10 +38,10 @@
 
 
 # virtual methods
-.method public final h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
+.method public final d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;->h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;->d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
 
     iget-boolean p1, p0, Lcom/google/android/material/search/SearchBar$ScrollingViewBehavior;->g:Z
 
@@ -49,7 +49,7 @@
 
     if-nez p1, :cond_0
 
-    instance-of p1, p3, Lkn;
+    instance-of p1, p3, Lln;
 
     if-eqz p1, :cond_0
 
@@ -57,13 +57,13 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/search/SearchBar$ScrollingViewBehavior;->g:Z
 
-    check-cast p3, Lkn;
+    check-cast p3, Lln;
 
     invoke-virtual {p3, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {p3, p1}, Lkn;->setTargetElevation(F)V
+    invoke-virtual {p3, p1}, Lln;->setTargetElevation(F)V
 
     :cond_0
     return p2

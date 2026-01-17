@@ -13,7 +13,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0007\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0016\n\u0002\u0010 \n\u0002\u0008\u0006\u0008\u0001\u0018\u0000 J2\u00020\u00012\u00020\u0002:\u0001KBC\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0005\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0006\u0010\n\u001a\u00020\u0005\u0012\u0006\u0010\u000b\u001a\u00020\u0005\u0012\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u0001\u00a2\u0006\u0004\u0008\r\u0010\u000eB\u0011\u0008\u0016\u0012\u0006\u0010\u000f\u001a\u00020\u0000\u00a2\u0006\u0004\u0008\r\u0010\u0010J\u0018\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0011H\u0096\u0001\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0018\u0010\u0017\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0016H\u0096\u0001\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0018\u0010\u001a\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0019H\u0096\u0001\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0018\u0010\u001d\u001a\u00020\u00132\u0006\u0010\u001c\u001a\u00020\u0005H\u0096\u0001\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0018\u0010!\u001a\u00020\u00132\u0006\u0010 \u001a\u00020\u001fH\u0096\u0001\u00a2\u0006\u0004\u0008!\u0010\"J\u001a\u0010#\u001a\u0004\u0018\u00010\u00162\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008#\u0010$J\u001a\u0010%\u001a\u0004\u0018\u00010\u00112\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008%\u0010&J\u001a\u0010\'\u001a\u0004\u0018\u00010\u00192\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008\'\u0010(J\u0015\u0010+\u001a\u00020\u00132\u0006\u0010*\u001a\u00020)\u00a2\u0006\u0004\u0008+\u0010,J\r\u0010-\u001a\u00020\u0013\u00a2\u0006\u0004\u0008-\u0010.J\u0015\u00101\u001a\u00020\u00132\u0006\u00100\u001a\u00020/\u00a2\u0006\u0004\u00081\u00102J\u000f\u00103\u001a\u00020\u0003H\u0016\u00a2\u0006\u0004\u00083\u00104R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0004\u00105\u001a\u0004\u00086\u00104R\u0017\u0010\u0006\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0006\u00107\u001a\u0004\u00088\u00109R\u0017\u0010\u0007\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u00107\u001a\u0004\u0008:\u00109R\"\u0010\t\u001a\u00020\u00088\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\t\u0010;\u001a\u0004\u0008<\u0010=\"\u0004\u0008>\u0010?R\u0017\u0010\n\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\n\u00107\u001a\u0004\u0008@\u00109R\u0017\u0010\u000b\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000b\u00107\u001a\u0004\u0008A\u00109R\u0014\u0010\u000c\u001a\u00020\u00018\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000c\u0010BR\u0014\u0010C\u001a\u00020)8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008C\u0010DR\u0014\u00100\u001a\u00020/8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00080\u0010ER\u0011\u0010G\u001a\u0008\u0012\u0004\u0012\u00020\u00190F8\u0016X\u0096\u0005R\u0011\u0010H\u001a\u0008\u0012\u0004\u0012\u00020\u00110F8\u0016X\u0096\u0005R\u0011\u0010I\u001a\u0008\u0012\u0004\u0012\u00020\u00160F8\u0016X\u0096\u0005\u00a8\u0006L"
+        "\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0007\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u001a\n\u0002\u0010 \n\u0002\u0008\n\u0008\u0001\u0018\u0000 N2\u00020\u00012\u00020\u0002:\u0001OBC\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0005\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0006\u0010\n\u001a\u00020\u0005\u0012\u0006\u0010\u000b\u001a\u00020\u0005\u0012\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u0001\u00a2\u0006\u0004\u0008\r\u0010\u000eB\u0011\u0008\u0016\u0012\u0006\u0010\u000f\u001a\u00020\u0000\u00a2\u0006\u0004\u0008\r\u0010\u0010J\u0015\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0011\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\r\u0010\u0016\u001a\u00020\u0013\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0015\u0010\u001a\u001a\u00020\u00132\u0006\u0010\u0019\u001a\u00020\u0018\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u000f\u0010\u001c\u001a\u00020\u0003H\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0018\u0010 \u001a\u00020\u00132\u0006\u0010\u001f\u001a\u00020\u001eH\u0096\u0001\u00a2\u0006\u0004\u0008 \u0010!J\u0018\u0010#\u001a\u00020\u00132\u0006\u0010\u001f\u001a\u00020\"H\u0096\u0001\u00a2\u0006\u0004\u0008#\u0010$J\u0018\u0010&\u001a\u00020\u00132\u0006\u0010\u001f\u001a\u00020%H\u0096\u0001\u00a2\u0006\u0004\u0008&\u0010\'J\u0018\u0010)\u001a\u00020\u00132\u0006\u0010(\u001a\u00020\u0005H\u0096\u0001\u00a2\u0006\u0004\u0008)\u0010*J\u0018\u0010-\u001a\u00020\u00132\u0006\u0010,\u001a\u00020+H\u0096\u0001\u00a2\u0006\u0004\u0008-\u0010.J\u001a\u0010/\u001a\u0004\u0018\u00010\"2\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u0008/\u00100J\u001a\u00101\u001a\u0004\u0018\u00010\u001e2\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u00081\u00102J\u001a\u00103\u001a\u0004\u0018\u00010%2\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0001\u00a2\u0006\u0004\u00083\u00104R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0004\u00105\u001a\u0004\u00086\u0010\u001dR\u0017\u0010\u0006\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0006\u00107\u001a\u0004\u00088\u00109R\u0017\u0010\u0007\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u00107\u001a\u0004\u0008:\u00109R\"\u0010\t\u001a\u00020\u00088\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\t\u0010;\u001a\u0004\u0008<\u0010=\"\u0004\u0008>\u0010?R\u0017\u0010\n\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\n\u00107\u001a\u0004\u0008@\u00109R\u0017\u0010\u000b\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000b\u00107\u001a\u0004\u0008A\u00109R\u0014\u0010\u000c\u001a\u00020\u00018\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000c\u0010BR\u0014\u0010C\u001a\u00020\u00118\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008C\u0010DR\u0014\u0010\u0019\u001a\u00020\u00188\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0019\u0010ER\u001a\u0010I\u001a\u0008\u0012\u0004\u0012\u00020\u001e0F8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008G\u0010HR\u001a\u0010K\u001a\u0008\u0012\u0004\u0012\u00020\"0F8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008J\u0010HR\u001a\u0010M\u001a\u0008\u0012\u0004\u0012\u00020%0F8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008L\u0010H\u00a8\u0006P"
     }
     d2 = {
         "Lone/me/sdk/richvector/internal/element/Shape;",
@@ -33,9 +33,21 @@
         "(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;)V",
         "prototype",
         "(Lone/me/sdk/richvector/internal/element/Shape;)V",
+        "Landroid/graphics/Path;",
+        "path",
+        "Lb3h;",
+        "appendToFullPath",
+        "(Landroid/graphics/Path;)V",
+        "buildTransformMatrices",
+        "()V",
+        "Landroid/graphics/Matrix;",
+        "scaleMatrix",
+        "scaleAllPaths",
+        "(Landroid/graphics/Matrix;)V",
+        "toString",
+        "()Ljava/lang/String;",
         "Lone/me/sdk/richvector/internal/element/GroupElement;",
         "element",
-        "Lv2h;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",
@@ -57,18 +69,6 @@
         "(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;",
         "findClipPath",
         "(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;",
-        "Landroid/graphics/Path;",
-        "path",
-        "appendToFullPath",
-        "(Landroid/graphics/Path;)V",
-        "buildTransformMatrices",
-        "()V",
-        "Landroid/graphics/Matrix;",
-        "scaleMatrix",
-        "scaleAllPaths",
-        "(Landroid/graphics/Matrix;)V",
-        "toString",
-        "()Ljava/lang/String;",
         "Ljava/lang/String;",
         "getName",
         "F",
@@ -87,17 +87,21 @@
         "Landroid/graphics/Path;",
         "Landroid/graphics/Matrix;",
         "",
-        "clipPathElements",
+        "getGroupElements",
+        "()Ljava/util/List;",
         "groupElements",
+        "getPathElements",
         "pathElements",
+        "getClipPathElements",
+        "clipPathElements",
         "Companion",
-        "u3f",
+        "v4f",
         "rich-vector_release"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -105,7 +109,7 @@
 
 
 # static fields
-.field public static final Companion:Lu3f;
+.field public static final Companion:Lv4f;
 
 .field private static final EMPTY:Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -134,11 +138,11 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    new-instance v0, Lu3f;
+    new-instance v0, Lv4f;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Lu3f;
+    sput-object v0, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Lv4f;
 
     new-instance v1, Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -160,7 +164,7 @@
 
     const/4 v8, 0x0
 
-    invoke-direct/range {v1 .. v10}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILro4;)V
+    invoke-direct/range {v1 .. v10}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILso4;)V
 
     sput-object v1, Lone/me/sdk/richvector/internal/element/Shape;->EMPTY:Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -211,7 +215,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILro4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILso4;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x40
@@ -359,7 +363,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v0}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
@@ -368,7 +372,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v2, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -554,7 +558,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v0}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
@@ -565,7 +569,7 @@
     move v3, v2
 
     :goto_0
-    invoke-static {v3, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -587,7 +591,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v0}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
@@ -596,7 +600,7 @@
     move v3, v2
 
     :goto_1
-    invoke-static {v3, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -618,14 +622,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->e(Ljava/util/List;)I
+    invoke-static {v0}, Lqi3;->e(Ljava/util/List;)I
 
     move-result v1
 
     if-ltz v1, :cond_5
 
     :goto_2
-    invoke-static {v2, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -763,7 +767,7 @@
 
     const-string v0, ")"
 
-    invoke-static {v11, v10, v0}, Lc12;->k(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v11, v10, v0}, Lecj;->b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,181 +1,113 @@
-.class public abstract Le49;
-.super Ljava/lang/Object;
+.class public final enum Le49;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lby0;
 
 
 # static fields
-.field public static final X:Lsh8;
+.field public static final synthetic X:Lal5;
 
+.field public static final enum a:Le49;
 
-# instance fields
-.field public final a:J
+.field public static final enum b:Le49;
 
-.field public final b:J
+.field public static final enum c:Le49;
 
-.field public final c:Z
+.field public static final enum d:Le49;
 
-.field public final d:Z
-
-.field public final o:Z
+.field public static final synthetic o:[Le49;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lc49;
-
-    invoke-direct {v0}, Lc49;-><init>()V
-
-    invoke-virtual {v0}, Lc49;->a()Lg49;
-
-    new-instance v0, Lsh8;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lsh8;-><init>(I)V
-
-    sput-object v0, Le49;->X:Lsh8;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lc49;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v0, p1, Lc49;->a:J
-
-    iput-wide v0, p0, Le49;->a:J
-
-    iget-wide v0, p1, Lc49;->b:J
-
-    iput-wide v0, p0, Le49;->b:J
-
-    iget-boolean v0, p1, Lc49;->c:Z
-
-    iput-boolean v0, p0, Le49;->c:Z
-
-    iget-boolean v0, p1, Lc49;->d:Z
-
-    iput-boolean v0, p0, Le49;->d:Z
-
-    iget-boolean p1, p1, Lc49;->e:Z
-
-    iput-boolean p1, p0, Le49;->o:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
-    const/4 v0, 0x1
+    new-instance v0, Le49;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Le49;
+    const-string v1, "UNKNOWN"
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return v2
+    sput-object v0, Le49;->a:Le49;
 
-    :cond_1
-    check-cast p1, Le49;
+    new-instance v1, Le49;
 
-    iget-wide v3, p0, Le49;->a:J
+    const-string v2, "AUDIO_MESSAGE"
 
-    iget-wide v5, p1, Le49;->a:J
+    const/4 v3, 0x1
 
-    cmp-long v1, v3, v5
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-nez v1, :cond_2
+    sput-object v1, Le49;->b:Le49;
 
-    iget-wide v3, p0, Le49;->b:J
+    new-instance v2, Le49;
 
-    iget-wide v5, p1, Le49;->b:J
+    const-string v3, "AUDIO_DRAFT"
 
-    cmp-long v1, v3, v5
+    const/4 v4, 0x2
 
-    if-nez v1, :cond_2
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-boolean v1, p0, Le49;->c:Z
+    new-instance v3, Le49;
 
-    iget-boolean v3, p1, Le49;->c:Z
+    const-string v4, "AUDIO_RECORD"
 
-    if-ne v1, v3, :cond_2
+    const/4 v5, 0x3
 
-    iget-boolean v1, p0, Le49;->d:Z
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-boolean v3, p1, Le49;->d:Z
+    sput-object v3, Le49;->c:Le49;
 
-    if-ne v1, v3, :cond_2
+    new-instance v4, Le49;
 
-    iget-boolean v1, p0, Le49;->o:Z
+    const-string v5, "MUSIC_FILE"
 
-    iget-boolean p1, p1, Le49;->o:Z
+    const/4 v6, 0x4
 
-    if-ne v1, p1, :cond_2
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return v0
+    sput-object v4, Le49;->d:Le49;
 
-    :cond_2
-    return v2
+    filled-new-array {v0, v1, v2, v3, v4}, [Le49;
+
+    move-result-object v0
+
+    sput-object v0, Le49;->o:[Le49;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Le49;->X:Lal5;
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 5
+.method public static valueOf(Ljava/lang/String;)Le49;
+    .locals 1
 
-    iget-wide v0, p0, Le49;->a:J
+    const-class v0, Le49;
 
-    const/16 v2, 0x20
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    ushr-long v3, v0, v2
+    move-result-object p0
 
-    xor-long/2addr v0, v3
+    check-cast p0, Le49;
 
-    long-to-int v0, v0
+    return-object p0
+.end method
 
-    mul-int/lit8 v0, v0, 0x1f
+.method public static values()[Le49;
+    .locals 1
 
-    iget-wide v3, p0, Le49;->b:J
+    sget-object v0, Le49;->o:[Le49;
 
-    ushr-long v1, v3, v2
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    xor-long/2addr v1, v3
+    move-result-object v0
 
-    long-to-int v1, v1
+    check-cast v0, [Le49;
 
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Le49;->c:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Le49;->d:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Le49;->o:Z
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-object v0
 .end method

@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvx3;
+.implements Lby3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/JoinAnonByLinkParams;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;I)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/JoinAnonByLinkParams;I)V
     .locals 0
 
     iput p2, p0, Lfa4;->a:I
 
-    iput-object p1, p0, Lfa4;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+    iput-object p1, p0, Lfa4;->b:Lru/ok/android/externcalls/sdk/factory/JoinAnonByLinkParams;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,20 +34,20 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lfa4;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+    iget-object v0, p0, Lfa4;->b:Lru/ok/android/externcalls/sdk/factory/JoinAnonByLinkParams;
 
-    check-cast p1, Ljava/lang/Throwable;
+    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->e(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->r(Lru/ok/android/externcalls/sdk/factory/JoinAnonByLinkParams;Lru/ok/android/externcalls/sdk/Conversation;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lfa4;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+    iget-object v0, p0, Lfa4;->b:Lru/ok/android/externcalls/sdk/factory/JoinAnonByLinkParams;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->q(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->f(Lru/ok/android/externcalls/sdk/factory/JoinAnonByLinkParams;Ljava/lang/Throwable;)V
 
     return-void
 

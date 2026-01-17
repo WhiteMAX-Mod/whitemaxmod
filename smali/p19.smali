@@ -1,8 +1,3 @@
-.class public interface abstract Lp19;
-.super Ljava/lang/Object;
+.class public Lp19;
+.super Ld3;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract b(Ljava/lang/Object;)I
-.end method

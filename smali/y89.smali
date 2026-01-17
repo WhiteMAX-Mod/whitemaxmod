@@ -1,201 +1,414 @@
 .class public final Ly89;
-.super Lka9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Landroid/os/Bundle;
 
-.field public final b:Lx89;
+.field public b:Ljava/util/List;
+
+.field public c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lx89;)V
+.method public constructor <init>(Landroid/os/Bundle;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly89;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ly89;->b:Lx89;
+    iput-object p1, p0, Ly89;->a:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(I)V
-    .locals 6
+.method public final a()V
+    .locals 2
 
-    iget-object v0, p0, Ly89;->a:Ljava/lang/String;
+    iget-object v0, p0, Ly89;->c:Ljava/util/List;
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Ly89;->b:Lx89;
+    iget-object v0, p0, Ly89;->a:Landroid/os/Bundle;
 
-    if-nez v1, :cond_0
+    const-string v1, "controlFilters"
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ly89;->c:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Ly89;->c:Ljava/util/List;
 
     :cond_0
-    iget-object v2, v1, Lx89;->h:Landroid/os/Messenger;
-
-    iget-object v3, v1, Lx89;->g:Landroid/media/MediaRouter2$RoutingController;
-
-    if-eqz v3, :cond_2
-
-    invoke-static {v3}, Lv89;->v(Landroid/media/MediaRouter2$RoutingController;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v3, v1, Lx89;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v3
-
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v4
-
-    const/4 v5, 0x7
-
-    iput v5, v4, Landroid/os/Message;->what:I
-
-    iput v3, v4, Landroid/os/Message;->arg1:I
-
-    new-instance v3, Landroid/os/Bundle;
-
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
-
-    const-string v5, "volume"
-
-    invoke-virtual {v3, v5, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string p1, "routeId"
-
-    invoke-virtual {v3, p1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    iget-object p1, v1, Lx89;->i:Landroid/os/Messenger;
-
-    iput-object p1, v4, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
-
-    :try_start_0
-    invoke-virtual {v2, v4}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-    :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    const-string v0, "MR2Provider"
-
-    const-string v1, "Could not send control request to service."
-
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :catch_1
-    :cond_2
-    :goto_0
     return-void
 .end method
 
-.method public final i(I)V
-    .locals 6
+.method public final b()Ljava/util/List;
+    .locals 2
 
-    iget-object v0, p0, Ly89;->a:Ljava/lang/String;
+    iget-object v0, p0, Ly89;->b:Ljava/util/List;
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Ly89;->b:Lx89;
+    iget-object v0, p0, Ly89;->a:Landroid/os/Bundle;
 
-    if-nez v1, :cond_0
+    const-string v1, "groupMemberIds"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ly89;->b:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Ly89;->b:Ljava/util/List;
+
+    :cond_0
+    iget-object v0, p0, Ly89;->b:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Ly89;->a:Landroid/os/Bundle;
+
+    const-string v1, "id"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final d()Z
+    .locals 2
+
+    invoke-virtual {p0}, Ly89;->a()V
+
+    invoke-virtual {p0}, Ly89;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ly89;->a:Landroid/os/Bundle;
+
+    const-string v1, "name"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ly89;->c:Ljava/util/List;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, v1, Lx89;->h:Landroid/os/Messenger;
+    const/4 v0, 0x1
 
-    iget-object v3, v1, Lx89;->g:Landroid/media/MediaRouter2$RoutingController;
+    return v0
 
-    if-eqz v3, :cond_2
+    :cond_1
+    :goto_0
+    const/4 v0, 0x0
 
-    invoke-static {v3}, Lv89;->v(Landroid/media/MediaRouter2$RoutingController;)Z
+    return v0
+.end method
 
-    move-result v3
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    if-nez v3, :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v2, :cond_1
+    const-string v1, "MediaRouteDescriptor{ id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ly89;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", groupMemberIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ly89;->b()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", name="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "name"
+
+    iget-object v2, p0, Ly89;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v2, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "status"
+
+    invoke-virtual {v2, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", iconUri="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "iconUri"
+
+    invoke-virtual {v2, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :cond_1
-    iget-object v3, v1, Lx89;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+    :cond_0
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    move-result-object v1
 
-    move-result v3
-
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v4
-
-    const/16 v5, 0x8
-
-    iput v5, v4, Landroid/os/Message;->what:I
-
-    iput v3, v4, Landroid/os/Message;->arg1:I
-
-    new-instance v3, Landroid/os/Bundle;
-
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
-
-    const-string v5, "volume"
-
-    invoke-virtual {v3, v5, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string p1, "routeId"
-
-    invoke-virtual {v3, p1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    iget-object p1, v1, Lx89;->i:Landroid/os/Messenger;
-
-    iput-object p1, v4, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
-
-    :try_start_0
-    invoke-virtual {v2, v4}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-    :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    const-string v0, "MR2Provider"
-
-    const-string v1, "Could not send control request to service."
-
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :catch_1
-    :cond_2
     :goto_0
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "enabled"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v1, v3}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", connectionState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "connectionState"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v1, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", controlFilters="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ly89;->a()V
+
+    iget-object v1, p0, Ly89;->c:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->toArray()[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", playbackType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "playbackType"
+
+    invoke-virtual {v2, v1, v3}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", playbackStream="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "playbackStream"
+
+    const/4 v5, -0x1
+
+    invoke-virtual {v2, v1, v5}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", deviceType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "deviceType"
+
+    invoke-virtual {v2, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", volume="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "volume"
+
+    invoke-virtual {v2, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", volumeMax="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "volumeMax"
+
+    invoke-virtual {v2, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", volumeHandling="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "volumeHandling"
+
+    invoke-virtual {v2, v1, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", presentationDisplayId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "presentationDisplayId"
+
+    invoke-virtual {v2, v1, v5}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", extras="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "extras"
+
+    invoke-virtual {v2, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isValid="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ly89;->d()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", minClientVersion="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "minClientVersion"
+
+    invoke-virtual {v2, v1, v3}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxClientVersion="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "maxClientVersion"
+
+    const v3, 0x7fffffff
+
+    invoke-virtual {v2, v1, v3}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " }"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

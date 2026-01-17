@@ -1,187 +1,144 @@
 .class public final Ls06;
-.super Lb5g;
+.super Ltff;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
 
-
-# instance fields
-.field public final synthetic X:Lt06;
-
-.field public o:I
+# static fields
+.field public static final b:Ls06;
 
 
 # direct methods
-.method public constructor <init>(Lt06;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ls06;->X:Lt06;
+    new-instance v0, Ls06;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ltff;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ls06;->b:Ls06;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c()Lmm4;
+    .locals 4
 
-    check-cast p1, Lac4;
+    new-instance v0, Lmm4;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v1, Lss5;
 
-    invoke-virtual {p0, p1, p2}, Ls06;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2}, Lss5;-><init>(I)V
+
+    new-instance v2, Lss5;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v3}, Lss5;-><init>(I)V
+
+    invoke-direct {v0, v1, v2}, Lmm4;-><init>(Llq6;Llq6;)V
+
+    return-object v0
+.end method
+
+.method public final d(Landroid/os/Bundle;)Lnm4;
+    .locals 13
+
+    const-string v0, "chat_id"
+
+    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v3
+
+    const-string v0, "message_id"
+
+    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v5
+
+    const-string v0, "attach_id"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v0, "file_id"
+
+    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v8
+
+    const-string v0, "file_name"
+
+    invoke-static {v0, p1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v0, "file_size"
+
+    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v11
+
+    const-string v0, "file_url"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    check-cast p1, Ls06;
+    if-eqz p1, :cond_0
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    move-object v2, p1
 
-    invoke-virtual {p1, p2}, Ls06;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v2, Landroid/net/Uri;
 
-    move-result-object p1
+    new-instance v1, Lr06;
 
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ls06;
-
-    iget-object v0, p0, Ls06;->X:Lt06;
-
-    invoke-direct {p1, v0, p2}, Ls06;-><init>(Lt06;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 30
-
-    move-object/from16 v7, p0
-
-    iget-object v8, v7, Ls06;->X:Lt06;
-
-    iget-object v5, v8, Lt06;->d:Ljava/lang/String;
-
-    iget v0, v7, Ls06;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    if-eqz v5, :cond_2
-
-    iget-object v0, v8, Lt06;->u0:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lx5h;
-
-    iget-wide v2, v8, Lt06;->b:J
-
-    move-wide v9, v2
-
-    iget-wide v3, v8, Lt06;->c:J
-
-    iput v1, v7, Ls06;->o:I
-
-    sget-object v6, Lf20;->o:Lf20;
-
-    move-wide v1, v9
-
-    invoke-virtual/range {v0 .. v7}, Lx5h;->a(JJLjava/lang/String;Lf20;Ll84;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lbc4;->a:Lbc4;
-
-    if-ne v0, v1, :cond_2
+    invoke-direct/range {v1 .. v12}, Lr06;-><init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
 
     return-object v1
 
-    :cond_2
-    :goto_0
-    iget-object v0, v8, Lt06;->t0:Ld68;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final e(Lsff;)V
+    .locals 5
+
+    const-string v0, "file_name"
+
+    const-string v1, "file_size"
+
+    const-string v2, "chat_id"
+
+    const-string v3, "message_id"
+
+    const-string v4, "file_id"
+
+    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Llz5;
+    const-string v1, "file_url"
 
-    iget-wide v10, v8, Lt06;->c:J
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    if-nez v5, :cond_3
+    move-result-object v1
 
-    const-string v5, ""
+    const/16 v2, 0xc
 
-    :cond_3
-    move-object v12, v5
+    const-string v3, ":dialogs/file-download-warning"
 
-    iget-wide v1, v8, Lt06;->o:J
+    invoke-static {p1, v3, v0, v1, v2}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    iget-object v3, v8, Lt06;->X:Ljava/lang/String;
-
-    iget-object v4, v8, Lt06;->Y:Ljava/lang/String;
-
-    new-instance v9, Lxdg;
-
-    const-wide/16 v13, 0x0
-
-    const-wide/16 v15, 0x0
-
-    const-wide/16 v17, 0x0
-
-    const-wide/16 v19, 0x0
-
-    const/16 v22, 0x1
-
-    const/16 v23, 0x0
-
-    const/16 v27, 0x0
-
-    const/16 v28, 0x0
-
-    const/16 v29, 0x0
-
-    move-wide/from16 v24, v1
-
-    move-object/from16 v26, v3
-
-    move-object/from16 v21, v4
-
-    invoke-direct/range {v9 .. v29}, Lxdg;-><init>(JLjava/lang/String;JJJJLjava/lang/String;ZZJLjava/lang/String;IZZ)V
-
-    invoke-virtual {v0, v9}, Llz5;->a(Lxdg;)Li83;
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
+    return-void
 .end method

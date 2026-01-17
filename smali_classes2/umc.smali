@@ -23,7 +23,7 @@
 
 .field public static final synthetic d:[Lumc;
 
-.field public static final synthetic o:Lwk5;
+.field public static final synthetic o:Lal5;
 
 
 # instance fields
@@ -32,15 +32,15 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 5
 
     new-instance v0, Lumc;
 
     const/4 v1, 0x0
 
-    const-string v2, "local_chat"
+    const-string v2, "setup_new_admin"
 
-    const-string v3, "LOCAL_CHAT"
+    const-string v3, "SETUP_NEW_ADMIN"
 
     invoke-direct {v0, v3, v1, v2}, Lumc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -50,41 +50,31 @@
 
     const/4 v2, 0x1
 
-    const-string v3, "server_chat"
+    const-string v3, "change_admin"
 
-    const-string v4, "SERVER_CHAT"
+    const-string v4, "CHANGE_ADMIN"
 
     invoke-direct {v1, v4, v2, v3}, Lumc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v2, Lumc;
+    sput-object v1, Lumc;->c:Lumc;
 
-    const/4 v3, 0x2
-
-    const-string v4, "contact"
-
-    const-string v5, "CONTACT"
-
-    invoke-direct {v2, v5, v3, v4}, Lumc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lumc;->c:Lumc;
-
-    filled-new-array {v0, v1, v2}, [Lumc;
+    filled-new-array {v0, v1}, [Lumc;
 
     move-result-object v0
 
     sput-object v0, Lumc;->d:[Lumc;
 
-    new-instance v1, Lwk5;
+    new-instance v1, Lal5;
 
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lumc;->o:Lwk5;
+    sput-object v1, Lumc;->o:Lal5;
 
-    new-instance v0, Lnjb;
+    new-instance v0, Lxjb;
 
-    const/16 v1, 0x13
+    const/16 v1, 0x11
 
-    invoke-direct {v0, v1}, Lnjb;-><init>(I)V
+    invoke-direct {v0, v1}, Lxjb;-><init>(I)V
 
     sput-object v0, Lumc;->CREATOR:Landroid/os/Parcelable$Creator;
 

@@ -1,67 +1,43 @@
 .class public final Lrac;
-.super Ljava/lang/Object;
+.super Lo3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Li66;
-
-
-# direct methods
-.method public constructor <init>(Li66;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrac;->a:Li66;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final e(J)J
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
-    const/4 p1, 0x1
+    move-result-object v0
 
-    return p1
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ThreadLocalRandom;->nextLong(J)J
 
-    :cond_0
-    instance-of v0, p1, Lrac;
+    move-result-wide p1
 
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Lrac;
-
-    iget-object v0, p0, Lrac;->a:Li66;
-
-    iget-object p1, p1, Lrac;->a:Li66;
-
-    invoke-virtual {v0, p1}, Li66;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    return-wide p1
 .end method
 
-.method public final hashCode()I
+.method public final f(JJ)J
     .locals 1
 
-    iget-object v0, p0, Lrac;->a:Li66;
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
-    iget-object v0, v0, Li66;->a:Landroid/util/SparseBooleanArray;
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->hashCode()I
+    invoke-virtual {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ThreadLocalRandom;->nextLong(JJ)J
 
-    move-result v0
+    move-result-wide p1
 
-    return v0
+    return-wide p1
+.end method
+
+.method public final g()Ljava/util/Random;
+    .locals 1
+
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,93 +1,120 @@
-.class public abstract Lz6e;
-.super Lty7;
+.class public final Lz6e;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic X:Lb2e;
+
+.field public final synthetic Y:Lnq6;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p2, p0, Lz6e;->X:Lb2e;
+
+    iput-object p1, p0, Lz6e;->Y:Lnq6;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public dequeueWork()Loy7;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lzb4;
 
-    :try_start_0
-    iget-object v1, p0, Lty7;->mJobImpl:Lmy7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lz6e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v1}, Lmy7;->b()Loy7;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lz6e;
 
-    return-object v0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :cond_0
-    iget-object v1, p0, Lty7;->mCompatQueue:Ljava/util/ArrayList;
+    invoke-virtual {p1, p2}, Lz6e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    monitor-enter v1
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p1
 
-    :try_start_1
-    iget-object v2, p0, Lty7;->mCompatQueue:Ljava/util/ArrayList;
+    return-object p1
+.end method
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result v2
+    new-instance p1, Lz6e;
 
-    if-lez v2, :cond_1
+    iget-object v0, p0, Lz6e;->X:Lb2e;
 
-    iget-object v2, p0, Lty7;->mCompatQueue:Ljava/util/ArrayList;
+    iget-object v1, p0, Lz6e;->Y:Lnq6;
 
-    const/4 v3, 0x0
+    invoke-direct {p1, v1, v0, p2}, Lz6e;-><init>(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    return-object p1
+.end method
 
-    move-result-object v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast v2, Loy7;
+    iget v0, p0, Lz6e;->o:I
 
-    monitor-exit v1
+    const/4 v1, 0x1
 
-    return-object v2
+    if-eqz v0, :cond_1
 
-    :catchall_0
-    move-exception v2
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    monitor-exit v1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lz6e;->o:I
+
+    iget-object p1, p0, Lz6e;->Y:Lnq6;
+
+    iget-object v0, p0, Lz6e;->X:Lb2e;
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v0, p0, v2, v1}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
+    :cond_2
     :goto_0
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :try_start_2
-    throw v2
-    :try_end_2
-    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
-
-    :catch_0
-    move-exception v1
-
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    return-object v0
-.end method
-
-.method public onCreate()V
-    .locals 1
-
-    invoke-super {p0}, Lty7;->onCreate()V
-
-    new-instance v0, Lqy7;
-
-    invoke-direct {v0, p0}, Lqy7;-><init>(Lz6e;)V
-
-    iput-object v0, p0, Lty7;->mJobImpl:Lmy7;
-
-    return-void
+    return-object p1
 .end method

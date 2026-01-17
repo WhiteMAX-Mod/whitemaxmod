@@ -44,7 +44,13 @@
 .method public abstract d()V
 .end method
 
-.method public abstract e(Lz50;)Lz50;
+.method public abstract e(Ly50;)Ly50;
+.end method
+
+.method public f(J)J
+    .locals 0
+
+    return-wide p1
 .end method
 
 .method public abstract flush()V

@@ -3,14 +3,22 @@
 
 
 # static fields
-.field public static fastscroll_default_thickness:I = 0x7f0700f4
+.field public static fastScrollEnabled:I = 0x7f0403b3
 
-.field public static fastscroll_margin:I = 0x7f0700f5
+.field public static fastScrollHorizontalThumbDrawable:I = 0x7f0403b4
 
-.field public static fastscroll_minimum_range:I = 0x7f0700f6
+.field public static fastScrollHorizontalTrackDrawable:I = 0x7f0403b5
 
-.field public static item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070144
+.field public static fastScrollVerticalThumbDrawable:I = 0x7f0403b6
 
-.field public static item_touch_helper_swipe_escape_max_velocity:I = 0x7f070145
+.field public static fastScrollVerticalTrackDrawable:I = 0x7f0403b7
 
-.field public static item_touch_helper_swipe_escape_velocity:I = 0x7f070146
+.field public static layoutManager:I = 0x7f040599
+
+.field public static recyclerViewStyle:I = 0x7f040716
+
+.field public static reverseLayout:I = 0x7f040720
+
+.field public static spanCount:I = 0x7f040793
+
+.field public static stackFromEnd:I = 0x7f0407d8

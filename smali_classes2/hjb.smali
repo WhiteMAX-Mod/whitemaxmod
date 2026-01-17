@@ -1,129 +1,64 @@
-.class public final Lhjb;
+.class public final synthetic Lhjb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lljb;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhjb;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lev8;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lev8;-><init>(I)V
-
-    sput-object v0, Lhjb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lhjb;->a:I
-
-    return-void
-.end method
+.implements Landroid/os/Handler$Callback;
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 4
 
-    const/4 v0, 0x0
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    if-nez v0, :cond_3
 
-    const/4 v0, 0x1
+    sget-object v0, Ljjb;->a:Landroid/os/Handler;
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    return v0
+    check-cast p1, Lijb;
+
+    sget-object v0, Ljjb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    sget-object v3, Ljjb;->b:Lijb;
+
+    invoke-static {v3, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Ljjb;->c:Lijb;
+
+    invoke-static {v3, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
 
     :cond_0
-    instance-of v1, p1, Lhjb;
+    sget-object v3, Lfjb;->a:Lfjb;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
+    invoke-static {p1, v3}, Ljjb;->a(Lijb;Lfjb;)V
 
     :cond_1
-    check-cast p1, Lhjb;
-
-    iget v1, p0, Lhjb;->a:I
-
-    iget p1, p1, Lhjb;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     :cond_2
-    return v0
-.end method
+    return v2
 
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lhjb;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ContrastIcon(iconRes="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lhjb;->a:I
-
-    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lhjb;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    :cond_3
+    return v1
 .end method

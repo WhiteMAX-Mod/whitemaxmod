@@ -17,7 +17,7 @@
 
     iput-object p1, p0, Lej0;->a:Lhj0;
 
-    invoke-interface {p1}, Lhj0;->e()Landroid/graphics/Rect;
+    invoke-interface {p1}, Lhj0;->c()Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
     :cond_0
     iput-object v0, p0, Lej0;->b:Landroid/graphics/Rect;
 
-    invoke-interface {p1}, Lhj0;->g()[Landroid/graphics/Point;
+    invoke-interface {p1}, Lhj0;->k()[Landroid/graphics/Point;
 
     move-result-object p1
 

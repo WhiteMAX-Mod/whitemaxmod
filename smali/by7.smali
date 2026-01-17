@@ -1,62 +1,51 @@
-.class public abstract Lby7;
-.super Ljava/lang/Object;
+.class public final Lby7;
+.super Lcy7;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Integer;
+# instance fields
+.field public final c:Landroid/app/job/JobInfo;
+
+.field public final d:Landroid/app/job/JobScheduler;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
+    .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    const-string v1, "android.os.Build$VERSION"
+    invoke-virtual {p0, p3}, Lcy7;->a(I)V
 
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    new-instance v0, Landroid/app/job/JobInfo$Builder;
 
-    move-result-object v1
+    invoke-direct {v0, p3, p2}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
-    const-string v2, "SDK_INT"
+    const-wide/16 p2, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-virtual {v0, p2, p3}, Landroid/app/job/JobInfo$Builder;->setOverrideDeadline(J)Landroid/app/job/JobInfo$Builder;
 
-    move-result-object v1
+    move-result-object p2
 
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
-    move-result-object v1
+    move-result-object p2
 
-    instance-of v2, v1, Ljava/lang/Integer;
+    iput-object p2, p0, Lby7;->c:Landroid/app/job/JobInfo;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    check-cast v1, Ljava/lang/Integer;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p1
 
-    goto :goto_0
+    const-string p2, "jobscheduler"
 
-    :catchall_0
-    :cond_0
-    move-object v1, v0
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    :goto_0
-    if-eqz v1, :cond_1
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    check-cast p1, Landroid/app/job/JobScheduler;
 
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    sput-object v0, Lby7;->a:Ljava/lang/Integer;
+    iput-object p1, p0, Lby7;->d:Landroid/app/job/JobScheduler;
 
     return-void
 .end method

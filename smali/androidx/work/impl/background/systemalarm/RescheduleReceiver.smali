@@ -13,7 +13,7 @@
 
     const-string v0, "RescheduleReceiver"
 
-    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -35,7 +35,7 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    invoke-static {}, Lwki;->l()Lwki;
+    invoke-static {}, Lkgi;->g()Lkgi;
 
     move-result-object v0
 
@@ -53,10 +53,10 @@
 
     move-result-object p2
 
-    invoke-virtual {v0, v1, p2}, Lwki;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p2}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    invoke-static {p1}, Lwhi;->d(Landroid/content/Context;)Lwhi;
+    invoke-static {p1}, Ltii;->d(Landroid/content/Context;)Ltii;
 
     move-result-object p1
 
@@ -66,14 +66,14 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lwhi;->m:Ljava/lang/Object;
+    sget-object v0, Ltii;->m:Ljava/lang/Object;
 
     monitor-enter v0
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v1, p1, Lwhi;->i:Landroid/content/BroadcastReceiver$PendingResult;
+    iget-object v1, p1, Ltii;->i:Landroid/content/BroadcastReceiver$PendingResult;
 
     if-eqz v1, :cond_0
 
@@ -88,9 +88,9 @@
 
     :cond_0
     :goto_0
-    iput-object p2, p1, Lwhi;->i:Landroid/content/BroadcastReceiver$PendingResult;
+    iput-object p2, p1, Ltii;->i:Landroid/content/BroadcastReceiver$PendingResult;
 
-    iget-boolean v1, p1, Lwhi;->h:Z
+    iget-boolean v1, p1, Ltii;->h:Z
 
     if-eqz v1, :cond_1
 
@@ -98,7 +98,7 @@
 
     const/4 p2, 0x0
 
-    iput-object p2, p1, Lwhi;->i:Landroid/content/BroadcastReceiver$PendingResult;
+    iput-object p2, p1, Ltii;->i:Landroid/content/BroadcastReceiver$PendingResult;
 
     :cond_1
     monitor-exit v0
@@ -118,7 +118,7 @@
     :catch_0
     move-exception p1
 
-    invoke-static {}, Lwki;->l()Lwki;
+    invoke-static {}, Lkgi;->g()Lkgi;
 
     move-result-object p2
 
@@ -126,7 +126,7 @@
 
     const-string v1, "Cannot reschedule jobs. WorkManager needs to be initialized via a ContentProvider#onCreate() or an Application#onCreate()."
 
-    invoke-virtual {p2, v0, v1, p1}, Lwki;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p2, v0, v1, p1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

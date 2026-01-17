@@ -1,79 +1,161 @@
 .class public final Lor4;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lwrd;
+.field public final synthetic a:I
 
-.field public b:Lwrd;
+.field public final synthetic b:Lpr4;
 
-.field public c:I
+.field public final synthetic c:Landroid/view/ViewPropertyAnimator;
 
-.field public d:I
+.field public final synthetic d:Landroid/view/View;
 
-.field public e:I
+.field public final synthetic e:Lrr4;
 
-.field public f:I
+
+# direct methods
+.method public synthetic constructor <init>(Lrr4;Lpr4;Landroid/view/ViewPropertyAnimator;Landroid/view/View;I)V
+    .locals 0
+
+    iput p5, p0, Lor4;->a:I
+
+    iput-object p1, p0, Lor4;->e:Lrr4;
+
+    iput-object p2, p0, Lor4;->b:Lpr4;
+
+    iput-object p3, p0, Lor4;->c:Landroid/view/ViewPropertyAnimator;
+
+    iput-object p4, p0, Lor4;->d:Landroid/view/View;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p1, p0, Lor4;->a:I
 
-    const-string v1, "ChangeInfo{oldHolder="
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lor4;->c:Landroid/view/ViewPropertyAnimator;
 
-    iget-object v1, p0, Lor4;->a:Lwrd;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    const-string v1, ", newHolder="
+    const/high16 p1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lor4;->d:Landroid/view/View;
 
-    iget-object v1, p0, Lor4;->b:Lwrd;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x0
 
-    const-string v1, ", fromX="
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationX(F)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    iget v1, p0, Lor4;->c:I
+    iget-object p1, p0, Lor4;->b:Lpr4;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v0, p1, Lpr4;->b:Ltsd;
 
-    const-string v1, ", fromY="
+    iget-object v1, p0, Lor4;->e:Lrr4;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Lbsd;->c(Ltsd;)V
 
-    iget v1, p0, Lor4;->d:I
+    iget-object v0, v1, Lrr4;->r:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lpr4;->b:Ltsd;
 
-    const-string v1, ", toX="
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Lrr4;->j()V
 
-    iget v1, p0, Lor4;->e:I
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object p1, p0, Lor4;->c:Landroid/view/ViewPropertyAnimator;
 
-    const-string v1, ", toY="
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    iget v1, p0, Lor4;->f:I
+    const/high16 p1, 0x3f800000    # 1.0f
 
-    const/16 v2, 0x7d
+    iget-object v0, p0, Lor4;->d:Landroid/view/View;
 
-    invoke-static {v0, v1, v2}, Lxd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    return-object v0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationX(F)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+
+    iget-object p1, p0, Lor4;->b:Lpr4;
+
+    iget-object v0, p1, Lpr4;->a:Ltsd;
+
+    iget-object v1, p0, Lor4;->e:Lrr4;
+
+    invoke-virtual {v1, v0}, Lbsd;->c(Ltsd;)V
+
+    iget-object v0, v1, Lrr4;->r:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lpr4;->a:Ltsd;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1}, Lrr4;->j()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lor4;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lor4;->b:Lpr4;
+
+    iget-object p1, p1, Lpr4;->b:Ltsd;
+
+    iget-object p1, p0, Lor4;->e:Lrr4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lor4;->b:Lpr4;
+
+    iget-object p1, p1, Lpr4;->a:Ltsd;
+
+    iget-object p1, p0, Lor4;->e:Lrr4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

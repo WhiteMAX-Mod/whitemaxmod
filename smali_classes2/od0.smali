@@ -1,209 +1,147 @@
 .class public final Lod0;
-.super Lpxd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lod0;
+
+
 # instance fields
-.field public final synthetic e:I
+.field public final a:J
+
+.field public final b:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public synthetic constructor <init>(III)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lod0;
+
+    const-wide/16 v1, 0x0
+
+    const-string v3, ""
+
+    invoke-direct {v0, v3, v1, v2}, Lod0;-><init>(Ljava/lang/CharSequence;J)V
+
+    sput-object v0, Lod0;->c:Lod0;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/CharSequence;J)V
     .locals 0
 
-    iput p3, p0, Lod0;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lpxd;-><init>(II)V
+    iput-wide p2, p0, Lod0;->a:J
+
+    iput-object p1, p0, Lod0;->b:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lh01;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lod0;->e:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lzbf;
+    return v0
 
-    const-string v1, "squircle|resize:"
+    :cond_0
+    instance-of v1, p1, Lod0;
 
-    const-string v2, ","
+    const/4 v2, 0x0
 
-    iget v3, p0, Lpxd;->c:I
+    if-nez v1, :cond_1
 
-    iget v4, p0, Lpxd;->d:I
+    return v2
 
-    invoke-static {v1, v3, v4, v2}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lod0;
 
-    move-result-object v1
+    iget-wide v3, p0, Lod0;->a:J
 
-    invoke-direct {v0, v1}, Lzbf;-><init>(Ljava/lang/String;)V
+    iget-wide v5, p1, Lod0;->a:J
 
-    return-object v0
+    cmp-long v1, v3, v5
 
-    :pswitch_0
-    new-instance v0, Lzbf;
+    if-eqz v1, :cond_2
 
-    const-string v1, "circle|resize:"
+    return v2
 
-    const-string v2, ","
+    :cond_2
+    iget-object v1, p0, Lod0;->b:Ljava/lang/CharSequence;
 
-    iget v3, p0, Lpxd;->c:I
+    iget-object p1, p1, Lod0;->b:Ljava/lang/CharSequence;
 
-    iget v4, p0, Lpxd;->d:I
-
-    invoke-static {v1, v3, v4, v2}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lzbf;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Landroid/graphics/Bitmap;)V
-    .locals 6
-
-    iget v0, p0, Lod0;->e:I
-
-    const/4 v1, 0x1
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Bitmap;->setHasAlpha(Z)V
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Bitmap;->setPremultiplied(Z)V
-
-    sget-object v0, Lf4f;->a:Lhq0;
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v1
-
-    new-instance v2, Landroid/graphics/Canvas;
-
-    invoke-direct {v2, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    sget-object v3, Lf4f;->b:Landroid/graphics/Matrix;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, p1, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    div-int/lit8 p1, p1, 0x2
+    if-nez p1, :cond_3
 
-    invoke-static {p1}, Lf4f;->b(I)Landroid/graphics/Path;
+    return v2
 
-    move-result-object v3
-
-    new-instance v4, Landroid/graphics/Matrix;
-
-    invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
-
-    int-to-float v0, v0
-
-    const/high16 v5, 0x40000000    # 2.0f
-
-    div-float/2addr v0, v5
-
-    int-to-float p1, p1
-
-    sub-float/2addr v0, p1
-
-    int-to-float v1, v1
-
-    div-float/2addr v1, v5
-
-    sub-float/2addr v1, p1
-
-    invoke-virtual {v4, v0, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
-
-    sget-object p1, Landroid/graphics/Path$FillType;->INVERSE_WINDING:Landroid/graphics/Path$FillType;
-
-    invoke-virtual {v3, p1}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
-
-    sget-object p1, Lf4f;->c:Landroid/graphics/Paint;
-
-    invoke-virtual {v2, v3, p1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, v1}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    return v0
 .end method
 
-.method public final getName()Ljava/lang/String;
-    .locals 5
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Lod0;->e:I
+    iget-wide v0, p0, Lod0;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    const-string v0, ","
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lod0;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AvatarAbbreviationModel(sourceId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lod0;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", abbreviation="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lod0;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    const-string v2, "AvatarAsSquirclePostProcessor("
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lpxd;->c:I
-
-    iget v4, p0, Lpxd;->d:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    const-string v0, ","
-
-    const-string v1, ")"
-
-    const-string v2, "AvatarAsCirclePostProcessor("
-
-    iget v3, p0, Lpxd;->c:I
-
-    iget v4, p0, Lpxd;->d:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,31 +1,26 @@
-.class public Lg09;
-.super Lnk0;
+.class public interface abstract Lg09;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic e:Luc9;
+# virtual methods
+.method public abstract a()V
+.end method
 
-.field public final synthetic f:Luc9;
+.method public abstract d(JIII)V
+.end method
 
+.method public abstract flush()V
+.end method
 
-# direct methods
-.method public constructor <init>(Luc9;)V
-    .locals 0
+.method public abstract p(ILle4;JI)V
+.end method
 
-    iput-object p1, p0, Lg09;->f:Luc9;
+.method public abstract setParameters(Landroid/os/Bundle;)V
+.end method
 
-    iput-object p1, p0, Lg09;->e:Luc9;
+.method public abstract shutdown()V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnk0;->d:Ljava/lang/Object;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lnk0;->a:Ljava/lang/Object;
-
-    return-void
+.method public abstract start()V
 .end method

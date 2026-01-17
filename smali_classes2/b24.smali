@@ -1,208 +1,49 @@
-.class public final synthetic Lb24;
-.super Ljava/lang/Object;
+.class public final Lb24;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ld24;
 
-.field public final synthetic b:Lq24;
+.field public Y:I
 
-.field public final synthetic c:J
+.field public d:Ljava/util/List;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq24;JI)V
+.method public constructor <init>(Ld24;Lo84;)V
     .locals 0
 
-    iput p4, p0, Lb24;->a:I
+    iput-object p1, p0, Lb24;->X:Ld24;
 
-    iput-object p1, p0, Lb24;->b:Lq24;
-
-    iput-wide p2, p0, Lb24;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lb24;->a:I
+    iput-object p1, p0, Lb24;->o:Ljava/lang/Object;
 
-    check-cast p1, Lvib;
+    iget p1, p0, Lb24;->Y:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    sget-object v0, Lc24;->$EnumSwitchMapping$1:[I
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    iput p1, p0, Lb24;->Y:I
 
-    move-result p1
+    iget-object p1, p0, Lb24;->X:Ld24;
 
-    aget p1, v0, p1
+    invoke-static {p1, p0}, Ld24;->d(Ld24;Lo84;)Ljava/io/Serializable;
 
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    iget-object p1, p0, Lb24;->b:Lq24;
-
-    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Lq24;->c:Lbbg;
-
-    check-cast v1, Lb9b;
-
-    invoke-virtual {v1}, Lb9b;->b()Ltb4;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lq24;->s()Lub4;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ln0;->plus(Lrb4;)Lrb4;
-
-    move-result-object v1
-
-    new-instance v2, Le24;
-
-    iget-wide v3, p0, Lb24;->c:J
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, p1, v3, v4, v5}, Le24;-><init>(Lq24;JLkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v5, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    sget-object v0, Lc24;->$EnumSwitchMapping$1:[I
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p1, p0, Lb24;->b:Lq24;
-
-    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Lq24;->c:Lbbg;
-
-    check-cast v1, Lb9b;
-
-    invoke-virtual {v1}, Lb9b;->b()Ltb4;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lq24;->s()Lub4;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ln0;->plus(Lrb4;)Lrb4;
-
-    move-result-object v1
-
-    new-instance v2, Lf24;
-
-    iget-wide v3, p0, Lb24;->c:J
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, p1, v3, v4, v5}, Lf24;-><init>(Lq24;JLkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v5, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    :cond_1
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p1, p0, Lb24;->b:Lq24;
-
-    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Lq24;->c:Lbbg;
-
-    check-cast v1, Lb9b;
-
-    invoke-virtual {v1}, Lb9b;->b()Ltb4;
-
-    move-result-object v1
-
-    sget-object v2, Lfoa;->a:Lfoa;
-
-    invoke-virtual {v1, v2}, Ln0;->plus(Lrb4;)Lrb4;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lq24;->s()Lub4;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Lrb4;->plus(Lrb4;)Lrb4;
-
-    move-result-object v1
-
-    new-instance v2, Lp24;
-
-    const/4 v3, 0x0
-
-    iget-wide v4, p0, Lb24;->c:J
-
-    invoke-direct {v2, p1, v4, v5, v3}, Lp24;-><init>(Lq24;JLkotlin/coroutines/Continuation;)V
-
-    sget-object p1, Ldc4;->c:Ldc4;
-
-    invoke-static {v0, v1, p1, v2}, Ly8j;->d(Lac4;Lrb4;Ldc4;Lcr6;)Lglf;
-
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

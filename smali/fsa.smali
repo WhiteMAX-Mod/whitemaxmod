@@ -8,7 +8,7 @@
 
 .field public final b:J
 
-.field public final c:Lyzb;
+.field public final c:Lu0c;
 
 .field public final d:Landroid/os/Bundle;
 
@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;JLyzb;)V
+.method public constructor <init>(Ljava/lang/CharSequence;JLu0c;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 
     iput-wide p2, p0, Lfsa;->b:J
 
-    iput-object p4, p0, Lfsa;->c:Lyzb;
+    iput-object p4, p0, Lfsa;->c:Lu0c;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
     check-cast v3, Lfsa;
 
-    iget-object v4, v3, Lfsa;->c:Lyzb;
+    iget-object v4, v3, Lfsa;->c:Lu0c;
 
     new-instance v5, Landroid/os/Bundle;
 
@@ -87,7 +87,7 @@
 
     const-string v6, "sender"
 
-    iget-object v7, v4, Lyzb;->a:Ljava/lang/CharSequence;
+    iget-object v7, v4, Lu0c;->a:Ljava/lang/CharSequence;
 
     invoke-virtual {v5, v6, v7}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
@@ -97,7 +97,7 @@
 
     if-lt v6, v7, :cond_1
 
-    invoke-static {v4}, Lxzb;->b(Lyzb;)Landroid/app/Person;
+    invoke-static {v4}, Lt0c;->b(Lu0c;)Landroid/app/Person;
 
     move-result-object v4
 
@@ -114,7 +114,7 @@
     :cond_1
     const-string v6, "person"
 
-    invoke-virtual {v4}, Lyzb;->b()Landroid/os/Bundle;
+    invoke-virtual {v4}, Lu0c;->b()Landroid/os/Bundle;
 
     move-result-object v4
 
@@ -174,7 +174,7 @@
 
     iget-object v5, p0, Lfsa;->a:Ljava/lang/CharSequence;
 
-    iget-object v6, p0, Lfsa;->c:Lyzb;
+    iget-object v6, p0, Lfsa;->c:Lu0c;
 
     if-lt v0, v1, :cond_1
 
@@ -183,7 +183,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v6}, Lxzb;->b(Lyzb;)Landroid/app/Person;
+    invoke-static {v6}, Lt0c;->b(Lu0c;)Landroid/app/Person;
 
     move-result-object v2
 
@@ -200,7 +200,7 @@
     goto :goto_1
 
     :cond_2
-    iget-object v2, v6, Lyzb;->a:Ljava/lang/CharSequence;
+    iget-object v2, v6, Lu0c;->a:Ljava/lang/CharSequence;
 
     :goto_1
     invoke-static {v5, v3, v4, v2}, Ldsa;->a(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle$Message;

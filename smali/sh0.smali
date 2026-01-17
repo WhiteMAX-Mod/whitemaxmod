@@ -19,15 +19,15 @@
 
 
 # instance fields
-.field public A0:I
+.field public A0:Ljava/lang/CharSequence;
 
 .field public B0:I
 
-.field public C0:Ljava/lang/Integer;
+.field public C0:I
 
-.field public D0:Ljava/lang/Boolean;
+.field public D0:Ljava/lang/Integer;
 
-.field public E0:Ljava/lang/Integer;
+.field public E0:Ljava/lang/Boolean;
 
 .field public F0:Ljava/lang/Integer;
 
@@ -45,7 +45,9 @@
 
 .field public M0:Ljava/lang/Integer;
 
-.field public N0:Ljava/lang/Boolean;
+.field public N0:Ljava/lang/Integer;
+
+.field public O0:Ljava/lang/Boolean;
 
 .field public X:Ljava/lang/Integer;
 
@@ -63,19 +65,17 @@
 
 .field public o:Ljava/lang/Integer;
 
-.field public s0:I
+.field public t0:I
 
-.field public t0:Ljava/lang/String;
-
-.field public u0:I
+.field public u0:Ljava/lang/String;
 
 .field public v0:I
 
 .field public w0:I
 
-.field public x0:Ljava/util/Locale;
+.field public x0:I
 
-.field public y0:Ljava/lang/CharSequence;
+.field public y0:Ljava/util/Locale;
 
 .field public z0:Ljava/lang/CharSequence;
 
@@ -84,11 +84,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lc8;
+    new-instance v0, Lz7;
 
     const/4 v1, 0x7
 
-    invoke-direct {v0, v1}, Lc8;-><init>(I)V
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
 
     sput-object v0, Lsh0;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -102,19 +102,19 @@
 
     const/16 v0, 0xff
 
-    iput v0, p0, Lsh0;->s0:I
+    iput v0, p0, Lsh0;->t0:I
 
     const/4 v0, -0x2
-
-    iput v0, p0, Lsh0;->u0:I
 
     iput v0, p0, Lsh0;->v0:I
 
     iput v0, p0, Lsh0;->w0:I
 
+    iput v0, p0, Lsh0;->x0:I
+
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    iput-object v0, p0, Lsh0;->D0:Ljava/lang/Boolean;
+    iput-object v0, p0, Lsh0;->E0:Ljava/lang/Boolean;
 
     return-void
 .end method
@@ -164,17 +164,13 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    iget p2, p0, Lsh0;->s0:I
+    iget p2, p0, Lsh0;->t0:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p2, p0, Lsh0;->t0:Ljava/lang/String;
+    iget-object p2, p0, Lsh0;->u0:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget p2, p0, Lsh0;->u0:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     iget p2, p0, Lsh0;->v0:I
 
@@ -184,7 +180,11 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p2, p0, Lsh0;->y0:Ljava/lang/CharSequence;
+    iget p2, p0, Lsh0;->x0:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lsh0;->z0:Ljava/lang/CharSequence;
 
     const/4 v0, 0x0
 
@@ -202,7 +202,7 @@
     :goto_0
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lsh0;->z0:Ljava/lang/CharSequence;
+    iget-object p2, p0, Lsh0;->A0:Ljava/lang/CharSequence;
 
     if-eqz p2, :cond_1
 
@@ -213,15 +213,11 @@
     :cond_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget p2, p0, Lsh0;->A0:I
+    iget p2, p0, Lsh0;->B0:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p2, p0, Lsh0;->C0:Ljava/lang/Integer;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
-
-    iget-object p2, p0, Lsh0;->E0:Ljava/lang/Integer;
+    iget-object p2, p0, Lsh0;->D0:Ljava/lang/Integer;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
@@ -245,11 +241,11 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    iget-object p2, p0, Lsh0;->M0:Ljava/lang/Integer;
+    iget-object p2, p0, Lsh0;->K0:Ljava/lang/Integer;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    iget-object p2, p0, Lsh0;->K0:Ljava/lang/Integer;
+    iget-object p2, p0, Lsh0;->N0:Ljava/lang/Integer;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
@@ -257,15 +253,19 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    iget-object p2, p0, Lsh0;->D0:Ljava/lang/Boolean;
+    iget-object p2, p0, Lsh0;->M0:Ljava/lang/Integer;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    iget-object p2, p0, Lsh0;->x0:Ljava/util/Locale;
+    iget-object p2, p0, Lsh0;->E0:Ljava/lang/Boolean;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    iget-object p2, p0, Lsh0;->N0:Ljava/lang/Boolean;
+    iget-object p2, p0, Lsh0;->y0:Ljava/util/Locale;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+
+    iget-object p2, p0, Lsh0;->O0:Ljava/lang/Boolean;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 

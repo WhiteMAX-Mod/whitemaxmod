@@ -1,112 +1,109 @@
-.class public final synthetic Loib;
+.class public abstract Loib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lqib;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqib;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Loib;->a:I
+    sget v0, Ly9d;->oneme_settings_change_avatar_cancel:I
 
-    iput-object p1, p0, Loib;->b:Lqib;
+    sput v0, Loib;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ly9d;->oneme_settings_change_avatar_upload_from_camera:I
+
+    sput v0, Loib;->b:I
+
+    sget v0, Ly9d;->oneme_settings_change_avatar_upload_from_gallery:I
+
+    sput v0, Loib;->c:I
+
+    sget v0, Ly9d;->oneme_settings_change_avatar_upload_from_neuroavatars:I
+
+    sput v0, Loib;->d:I
+
+    sget v0, Ly9d;->oneme_settings_collapsingstoolbar:I
+
+    sput v0, Loib;->e:I
+
+    sget v0, Ly9d;->oneme_settings_container:I
+
+    sput v0, Loib;->f:I
+
+    sget v0, Ly9d;->oneme_settings_list_screen_appbar:I
+
+    sput v0, Loib;->g:I
+
+    sget v0, Ly9d;->oneme_settings_list_screen_pinned_toolbar:I
+
+    sput v0, Loib;->h:I
+
+    sget v0, Ly9d;->oneme_settings_toolbar:I
+
+    sput v0, Loib;->i:I
+
+    sget v0, Ly9d;->oneme_settings_topbar:I
+
+    sput v0, Loib;->j:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_avatar:I
+
+    sput v0, Loib;->k:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_container:I
+
+    sput v0, Loib;->l:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_dotdivider:I
+
+    sput v0, Loib;->m:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_name:I
+
+    sput v0, Loib;->n:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_nick:I
+
+    sput v0, Loib;->o:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_phone:I
+
+    sput v0, Loib;->p:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 5
-
-    iget v0, p0, Loib;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Loib;->b:Lqib;
-
-    iget-object v1, v0, Lqib;->B0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lpib;
-
-    iget-object v3, v0, Lqib;->c:Loff;
-
-    iget v3, v3, Loff;->d:F
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v4}, Lpib;->a(FZ)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Loib;->b:Lqib;
-
-    iget-object v1, v0, Lqib;->B0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lpib;
-
-    iget-object v3, v0, Lqib;->c:Loff;
-
-    iget v3, v3, Loff;->d:F
-
-    const/4 v4, 0x1
-
-    invoke-interface {v2, v3, v4}, Lpib;->a(FZ)V
-
-    goto :goto_1
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,64 +1,33 @@
-.class public final Lf7i;
+.class public abstract synthetic Lf7i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu7i;
-
-
-# static fields
-.field public static final a:Lf7i;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static bridge synthetic a(Landroid/os/StrictMode$VmPolicy$Builder;)Landroid/os/StrictMode$VmPolicy$Builder;
+    .locals 0
 
-    new-instance v0, Lf7i;
+    invoke-virtual {p0}, Landroid/os/StrictMode$VmPolicy$Builder;->permitUnsafeIntentLaunch()Landroid/os/StrictMode$VmPolicy$Builder;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    sput-object v0, Lf7i;->a:Lf7i;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static bridge synthetic b(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {p0}, Landroid/os/VibratorManager;->getDefaultVibrator()Landroid/os/Vibrator;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lf7i;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public static bridge synthetic c(Ljava/lang/Object;)Landroid/os/VibratorManager;
+    .locals 0
 
-    const v0, 0x78e79e0e
+    check-cast p0, Landroid/os/VibratorManager;
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Reload"
-
-    return-object v0
+    return-object p0
 .end method

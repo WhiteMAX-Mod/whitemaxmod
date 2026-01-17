@@ -1,365 +1,191 @@
 .class public final Lkt4;
-.super Lf3;
+.super Ldkf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Z
-
-.field public d:Z
-
-.field public o:Lcii;
+.field public final c:Llt4;
 
 
 # direct methods
-.method public constructor <init>(Lyif;Z)V
-    .locals 1
+.method public constructor <init>(Llt4;)V
+    .locals 0
 
-    const/4 v0, 0x5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p1}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    iput-boolean p2, p0, Lkt4;->c:Z
+    iput-object p1, p0, Lkt4;->c:Llt4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L0(Landroid/content/Context;)Lcii;
-    .locals 8
+.method public final a(Landroid/view/ViewGroup;)V
+    .locals 3
 
-    iget-boolean v0, p0, Lkt4;->d:Z
+    iget-object v0, p0, Lkt4;->c:Llt4;
 
-    if-eqz v0, :cond_0
+    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
 
-    iget-object p1, p0, Lkt4;->o:Lcii;
+    check-cast v1, Lekf;
 
-    return-object p1
+    iget-object v2, v1, Lekf;->c:Landroidx/fragment/app/a;
 
-    :cond_0
-    iget-object v0, p0, Lf3;->b:Ljava/lang/Object;
+    iget-object v2, v2, Landroidx/fragment/app/a;->T0:Landroid/view/View;
 
-    check-cast v0, Lyif;
+    invoke-virtual {v2}, Landroid/view/View;->clearAnimation()V
 
-    iget-object v1, v0, Lyif;->c:Landroidx/fragment/app/a;
+    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
 
-    iget v0, v0, Lyif;->a:I
+    iget-object p1, v0, Ld3;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x2
+    check-cast p1, Lekf;
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, p0}, Lekf;->c(Ldkf;)V
 
-    const/4 v4, 0x1
+    const/4 p1, 0x2
 
-    if-ne v0, v2, :cond_1
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
 
-    move v0, v4
+    move-result p1
 
-    goto :goto_0
+    if-eqz p1, :cond_0
 
-    :cond_1
-    move v0, v3
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    :goto_0
-    iget-object v2, v1, Landroidx/fragment/app/a;->V0:Lmm6;
+    const-string v0, "Animation from operation "
 
-    if-nez v2, :cond_2
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move v5, v3
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v0, " has been cancelled."
 
-    :cond_2
-    iget v5, v2, Lmm6;->f:I
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    iget-boolean v6, p0, Lkt4;->c:Z
-
-    if-eqz v6, :cond_6
-
-    if-eqz v0, :cond_4
-
-    if-nez v2, :cond_3
-
-    :goto_2
-    move v2, v3
-
-    goto :goto_3
-
-    :cond_3
-    iget v2, v2, Lmm6;->d:I
-
-    goto :goto_3
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    iget v2, v2, Lmm6;->e:I
-
-    goto :goto_3
-
-    :cond_6
-    if-eqz v0, :cond_8
-
-    if-nez v2, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    iget v2, v2, Lmm6;->b:I
-
-    goto :goto_3
-
-    :cond_8
-    if-nez v2, :cond_9
-
-    goto :goto_2
-
-    :cond_9
-    iget v2, v2, Lmm6;->c:I
-
-    :goto_3
-    invoke-virtual {v1, v3, v3, v3, v3}, Landroidx/fragment/app/a;->m0(IIII)V
-
-    iget-object v3, v1, Landroidx/fragment/app/a;->R0:Landroid/view/ViewGroup;
-
-    const/4 v6, 0x0
-
-    if-eqz v3, :cond_a
-
-    sget v7, Le9d;->visible_removing_fragment_view_tag:I
-
-    invoke-virtual {v3, v7}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_a
-
-    iget-object v3, v1, Landroidx/fragment/app/a;->R0:Landroid/view/ViewGroup;
-
-    sget v7, Le9d;->visible_removing_fragment_view_tag:I
-
-    invoke-virtual {v3, v7, v6}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    :cond_a
-    iget-object v1, v1, Landroidx/fragment/app/a;->R0:Landroid/view/ViewGroup;
-
-    if-eqz v1, :cond_b
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getLayoutTransition()Landroid/animation/LayoutTransition;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_b
-
-    goto/16 :goto_7
-
-    :cond_b
-    if-nez v2, :cond_16
-
-    if-eqz v5, :cond_16
-
-    const/16 v1, 0x1001
-
-    if-eq v5, v1, :cond_14
-
-    const/16 v1, 0x2002
-
-    if-eq v5, v1, :cond_12
-
-    const/16 v1, 0x2005
-
-    if-eq v5, v1, :cond_10
-
-    const/16 v1, 0x1003
-
-    if-eq v5, v1, :cond_e
-
-    const/16 v1, 0x1004
-
-    if-eq v5, v1, :cond_c
-
-    const/4 v0, -0x1
-
-    :goto_4
-    move v2, v0
-
-    goto :goto_5
-
-    :cond_c
-    if-eqz v0, :cond_d
-
-    const v0, 0x10100b8
-
-    invoke-static {p1, v0}, Lvu7;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    goto :goto_4
-
-    :cond_d
-    const v0, 0x10100b9
-
-    invoke-static {p1, v0}, Lvu7;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    goto :goto_4
-
-    :cond_e
-    if-eqz v0, :cond_f
-
-    sget v0, Lt3d;->fragment_fade_enter:I
-
-    goto :goto_4
-
-    :cond_f
-    sget v0, Lt3d;->fragment_fade_exit:I
-
-    goto :goto_4
-
-    :cond_10
-    if-eqz v0, :cond_11
-
-    const v0, 0x10100ba
-
-    invoke-static {p1, v0}, Lvu7;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    goto :goto_4
-
-    :cond_11
-    const v0, 0x10100bb
-
-    invoke-static {p1, v0}, Lvu7;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    goto :goto_4
-
-    :cond_12
-    if-eqz v0, :cond_13
-
-    sget v0, Lt3d;->fragment_close_enter:I
-
-    goto :goto_4
-
-    :cond_13
-    sget v0, Lt3d;->fragment_close_exit:I
-
-    goto :goto_4
-
-    :cond_14
-    if-eqz v0, :cond_15
-
-    sget v0, Lt3d;->fragment_open_enter:I
-
-    goto :goto_4
-
-    :cond_15
-    sget v0, Lt3d;->fragment_open_exit:I
-
-    goto :goto_4
-
-    :cond_16
-    :goto_5
-    if-eqz v2, :cond_19
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "anim"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_17
-
-    :try_start_0
-    invoke-static {p1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_19
-
-    new-instance v3, Lcii;
-
-    const/16 v5, 0x11
-
-    const/4 v7, 0x0
-
-    invoke-direct {v3, v1, v5, v7}, Lcii;-><init>(Ljava/lang/Object;IB)V
-    :try_end_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_6
-    move-object v6, v3
-
-    goto :goto_7
-
-    :catch_0
-    move-exception p1
-
-    throw p1
-
-    :catch_1
-    :cond_17
-    :try_start_1
-    invoke-static {p1, v2}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_19
-
-    new-instance v3, Lcii;
-
-    invoke-direct {v3, v1}, Lcii;-><init>(Landroid/animation/Animator;)V
-    :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_2
-
-    goto :goto_6
-
-    :catch_2
-    move-exception v1
-
-    if-nez v0, :cond_18
-
-    invoke-static {p1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    if-eqz p1, :cond_19
+    const-string v0, "FragmentManager"
 
-    new-instance v6, Lcii;
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/16 v0, 0x11
+    :cond_0
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public final b(Landroid/view/ViewGroup;)V
+    .locals 5
 
-    invoke-direct {v6, p1, v0, v1}, Lcii;-><init>(Ljava/lang/Object;IB)V
+    iget-object v0, p0, Lkt4;->c:Llt4;
 
-    goto :goto_7
+    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
 
-    :cond_18
-    throw v1
+    check-cast v1, Lekf;
 
-    :cond_19
-    :goto_7
-    iput-object v6, p0, Lkt4;->o:Lcii;
+    invoke-virtual {v0}, Ld3;->B0()Z
 
-    iput-boolean v4, p0, Lkt4;->d:Z
+    move-result v2
 
-    return-object v6
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1, p0}, Lekf;->c(Ldkf;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lekf;->c:Landroidx/fragment/app/a;
+
+    iget-object v3, v3, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Llt4;->L0(Landroid/content/Context;)Lws8;
+
+    move-result-object v0
+
+    const-string v2, "Required value was null."
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, v0, Lws8;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/animation/Animation;
+
+    if-eqz v0, :cond_3
+
+    iget v2, v1, Lekf;->a:I
+
+    const/4 v4, 0x1
+
+    if-eq v2, v4, :cond_1
+
+    invoke-virtual {v3, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    invoke-virtual {v1, p0}, Lekf;->c(Ldkf;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
+
+    new-instance v2, Lom6;
+
+    invoke-direct {v2, v0, p1, v3}, Lom6;-><init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
+
+    new-instance v0, Ljt4;
+
+    invoke-direct {v0, v1, p1, v3, p0}, Ljt4;-><init>(Lekf;Landroid/view/ViewGroup;Landroid/view/View;Lkt4;)V
+
+    invoke-virtual {v2, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Animation from operation "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " has started."
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "FragmentManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

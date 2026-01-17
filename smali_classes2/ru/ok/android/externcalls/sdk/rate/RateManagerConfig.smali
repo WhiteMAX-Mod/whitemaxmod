@@ -79,7 +79,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;-><init>(Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;ILro4;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;-><init>(Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;ILso4;)V
 
     return-void
 .end method
@@ -105,7 +105,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;ILro4;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;ILso4;)V
     .locals 8
 
     and-int/lit8 p6, p5, 0x1
@@ -121,7 +121,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p1, v0, p6, v1, v0}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;-><init>(Ljava/lang/Long;IILro4;)V
+    invoke-direct {p1, v0, p6, v1, v0}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;-><init>(Ljava/lang/Long;IILso4;)V
 
     :cond_0
     and-int/lit8 p6, p5, 0x2
@@ -143,7 +143,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct/range {v1 .. v7}, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;-><init>(Ljava/lang/Long;Ljava/lang/Long;IIILro4;)V
+    invoke-direct/range {v1 .. v7}, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;-><init>(Ljava/lang/Long;Ljava/lang/Long;IIILso4;)V
 
     move-object p2, v1
 
@@ -157,7 +157,7 @@
     .line 9
     new-instance p3, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;
 
-    invoke-direct {p3, v0, v1, v0}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;-><init>(Ljava/util/Map;ILro4;)V
+    invoke-direct {p3, v0, v1, v0}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;-><init>(Ljava/util/Map;ILso4;)V
 
     :cond_2
     and-int/lit8 p5, p5, 0x8
@@ -167,7 +167,7 @@
     .line 10
     new-instance p4, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;
 
-    invoke-direct {p4, v0, v1, v0}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;-><init>(Ljava/util/Map;ILro4;)V
+    invoke-direct {p4, v0, v1, v0}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;-><init>(Ljava/util/Map;ILso4;)V
 
     .line 11
     :cond_3
@@ -283,7 +283,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;->rttRateHintConfig:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -296,7 +296,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;->lossHintConfig:Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -309,7 +309,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;->directCandidateTypeHintConfig:Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -322,7 +322,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;->serverCandidateTypeHintConfig:Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -1,129 +1,178 @@
-.class public final synthetic Lgu6;
-.super Ljava/lang/Object;
+.class public final Lgu6;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lgme;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Ldv6;
+.field public final synthetic X:Z
+
+.field public final synthetic o:Lbv6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldv6;)V
+.method public constructor <init>(Lbv6;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgu6;->o:Lbv6;
 
-    iput-object p1, p0, Lgu6;->a:Ldv6;
+    iput-boolean p2, p0, Lgu6;->X:Z
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final X(Ljava/util/Set;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lgu6;->a:Ldv6;
+    check-cast p1, Lzb4;
 
-    iget-object v1, v0, Ldv6;->u0:Lhof;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result v2
-
-    const/16 v3, 0x64
-
-    const/4 v4, 0x1
-
-    if-lt v2, v3, :cond_0
-
-    move v2, v4
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v3, v2}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v5, "onSelectedMediasChangeListener(), selectedCount "
-
-    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "dv6"
-
-    invoke-static {v2, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, v0, Ldv6;->K0:Lglf;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, v3}, Lkz7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    iget-object v1, v0, Ldv6;->d:Lub4;
-
-    new-instance v2, Lxu6;
-
-    invoke-direct {v2, v0, p1, v3}, Lxu6;-><init>(Ldv6;Ljava/util/Set;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v2, p1}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
+    invoke-virtual {p0, p1, p2}, Lgu6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, v0, Ldv6;->K0:Lglf;
+    check-cast p1, Lgu6;
 
-    goto :goto_1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :cond_2
-    invoke-static {v0, v4}, Ldv6;->t(Ldv6;I)V
+    invoke-virtual {p1, p2}, Lgu6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_1
-    iget-object p1, v0, Ldv6;->X:Lwt6;
+    return-object p2
+.end method
 
-    iget-object v0, v0, Ldv6;->E0:Lime;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-static {v0}, Le4j;->b(Lime;)Ljava/util/ArrayList;
+    new-instance p1, Lgu6;
+
+    iget-object v0, p0, Lgu6;->o:Lbv6;
+
+    iget-boolean v1, p0, Lgu6;->X:Z
+
+    invoke-direct {p1, v0, v1, p2}, Lgu6;-><init>(Lbv6;ZLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgu6;->o:Lbv6;
+
+    iget-object v0, p1, Lbv6;->w0:Lspf;
+
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object p1, p1, Lwt6;->c:Lyl5;
+    check-cast v0, Ljava/lang/Iterable;
 
-    new-instance v1, Lqt6;
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-direct {v1, v0}, Lqt6;-><init>(Ljava/util/List;)V
+    const/16 v2, 0xa
 
-    invoke-static {p1, v1}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lri3;->n(Ljava/lang/Iterable;I)I
 
-    return-void
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Lwt6;
+
+    iget v2, v3, Lwt6;->h:I
+
+    if-eqz v2, :cond_0
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x7bf
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-static/range {v3 .. v11}, Lwt6;->b(Lwt6;Lq2c;Lzfh;Landroid/net/Uri;IZILandroid/net/Uri;I)Lwt6;
+
+    move-result-object v3
+
+    :cond_0
+    move-object v4, v3
+
+    iget-boolean v2, p0, Lgu6;->X:Z
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, v4, Lwt6;->c:Lwh8;
+
+    iget-object v11, v2, Lwh8;->v0:Landroid/net/Uri;
+
+    const/4 v10, 0x0
+
+    const/16 v12, 0x3df
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-static/range {v4 .. v12}, Lwt6;->b(Lwt6;Lq2c;Lzfh;Landroid/net/Uri;IZILandroid/net/Uri;I)Lwt6;
+
+    move-result-object v4
+
+    :cond_1
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, p1, Lbv6;->w0:Lspf;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

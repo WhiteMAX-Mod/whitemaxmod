@@ -1,168 +1,130 @@
 .class public final Lnb6;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Lx0;
 .source "SourceFile"
-
-# interfaces
-.implements Lzb6;
-.implements Lqzf;
 
 
 # instance fields
-.field public final a:Lezc;
+.field public final synthetic c:I
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public d:Lqb6;
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lezc;)V
+.method public synthetic constructor <init>(Lpa6;Ljava/lang/Object;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    iput p3, p0, Lnb6;->c:I
 
-    iput-object p1, p0, Lnb6;->a:Lezc;
+    invoke-direct {p0, p1}, Lx0;-><init>(Lpa6;)V
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lnb6;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object p1, p0, Lnb6;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object p2, p0, Lnb6;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final f(Lxb6;)V
+    .locals 5
 
-    iget-object v0, p0, Lnb6;->d:Lqb6;
+    iget v0, p0, Lnb6;->c:I
 
-    invoke-virtual {v0}, Lqb6;->cancel()V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lnb6;->d:Lqb6;
+    new-instance v0, Liqe;
 
-    iget-object v0, v0, Lqb6;->Z:Lgpe;
+    invoke-direct {v0, p1}, Liqe;-><init>(Lz0g;)V
 
-    invoke-virtual {v0}, Lgpe;->b()V
+    const/16 v1, 0x8
 
-    return-void
-.end method
+    const-string v2, "capacityHint"
 
-.method public final cancel()V
-    .locals 1
+    invoke-static {v1, v2}, Lmti;->c(ILjava/lang/String;)V
 
-    iget-object v0, p0, Lnb6;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance v1, Lz2h;
 
-    invoke-static {v0}, Ltzf;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
+    invoke-direct {v1}, Lz2h;-><init>()V
 
-    return-void
-.end method
+    new-instance v2, Lfqe;
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
+    invoke-direct {v2, v1}, Lfqe;-><init>(Lz2h;)V
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    :try_start_0
+    iget-object v1, p0, Lnb6;->d:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v1, Lxcg;
 
-    if-nez p1, :cond_2
+    invoke-virtual {v1, v2}, Lxcg;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    iget-object p1, p0, Lnb6;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result-object v1
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    check-cast v1, Lf0d;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v3, Llb6;
+
+    iget-object v4, p0, Lx0;->b:Lpa6;
+
+    invoke-direct {v3, v4}, Llb6;-><init>(Lf0d;)V
+
+    new-instance v4, Lob6;
+
+    invoke-direct {v4, v0, v2, v3}, Lob6;-><init>(Liqe;Lfqe;Llb6;)V
+
+    iput-object v4, v3, Llb6;->d:Lob6;
+
+    invoke-interface {p1, v4}, Lz0g;->d(Lb1g;)V
+
+    check-cast v1, Lpa6;
+
+    invoke-virtual {v1, v3}, Lpa6;->e(Lz0g;)V
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    sget-object v0, Ltzf;->a:Ltzf;
-
-    if-ne p1, v0, :cond_1
+    invoke-virtual {v3, p1}, Llb6;->r(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_1
-    iget-object p1, p0, Lnb6;->d:Lqb6;
+    :catchall_0
+    move-exception v0
 
-    iget-object v0, p0, Lnb6;->a:Lezc;
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
 
-    check-cast v0, Lra6;
+    invoke-static {v0, p1}, Lzh5;->a(Ljava/lang/Throwable;Lz0g;)V
 
-    invoke-virtual {v0, p1}, Lra6;->f(Lozf;)V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    :cond_2
     :goto_0
     return-void
-.end method
 
-.method public final e(Lqzf;)V
-    .locals 5
+    :pswitch_0
+    new-instance v0, Lc1g;
 
-    iget-object v0, p0, Lnb6;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {v0}, Lc1g;-><init>()V
 
-    invoke-static {v0, p1}, Ltzf;->d(Ljava/util/concurrent/atomic/AtomicReference;Lqzf;)Z
+    invoke-interface {p1, v0}, Lz0g;->d(Lb1g;)V
 
-    move-result v0
+    new-instance v1, Lmb6;
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lnb6;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lnb6;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    check-cast v2, Lpn0;
 
-    const-wide/16 v1, 0x0
+    iget-object v3, p0, Lx0;->b:Lpa6;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
+    invoke-direct {v1, p1, v2, v0, v3}, Lmb6;-><init>(Lz0g;Lpn0;Lc1g;Lf0d;)V
 
-    move-result-wide v3
-
-    cmp-long v0, v3, v1
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1, v3, v4}, Lqzf;->g(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g(J)V
-    .locals 2
-
-    iget-object v0, p0, Lnb6;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iget-object v1, p0, Lnb6;->c:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-static {v0, v1, p1, p2}, Ltzf;->c(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;J)V
+    invoke-virtual {v1}, Lmb6;->a()V
 
     return-void
-.end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    nop
 
-    iget-object v0, p0, Lnb6;->d:Lqb6;
-
-    invoke-virtual {v0}, Lqb6;->cancel()V
-
-    iget-object v0, p0, Lnb6;->d:Lqb6;
-
-    iget-object v0, v0, Lqb6;->Z:Lgpe;
-
-    invoke-virtual {v0, p1}, Lgpe;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

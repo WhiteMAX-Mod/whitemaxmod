@@ -1,66 +1,40 @@
-.class public final synthetic Lef6;
-.super Ljava/lang/Object;
+.class public final Lef6;
+.super Ljef;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Loq6;
-
-.field public final synthetic c:Lu9h;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lrr6;Lu9h;I)V
-    .locals 0
-
-    iput p3, p0, Lef6;->a:I
-
-    check-cast p1, Loq6;
-
-    iput-object p1, p0, Lef6;->b:Loq6;
-
-    iput-object p2, p0, Lef6;->c:Lu9h;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final y(Lud8;)V
+    .locals 3
 
-    iget p1, p0, Lef6;->a:I
+    check-cast p1, Lpah;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, p1, Lpah;->b:Loah;
 
-    iget-object p1, p0, Lef6;->b:Loq6;
+    sget-object v1, Loah;->a:Loah;
 
-    iget-object v0, p0, Lef6;->c:Lu9h;
+    iget-object v2, p0, Ltsd;->a:Landroid/view/View;
 
-    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
+
+    move-object v0, v2
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
+
+    :cond_0
+    check-cast v2, Landroid/widget/TextView;
+
+    iget-object p1, p1, Lpah;->c:Lqhg;
+
+    invoke-virtual {p1, p0}, Lqhg;->a(Ljef;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lef6;->b:Loq6;
-
-    iget-object v0, p0, Lef6;->c:Lu9h;
-
-    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

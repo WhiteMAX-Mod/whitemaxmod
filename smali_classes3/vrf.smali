@@ -1,116 +1,249 @@
-.class public final synthetic Lvrf;
-.super Ljava/lang/Object;
+.class public final Lvrf;
+.super Lhk0;
 .source "SourceFile"
-
-# interfaces
-.implements Ldr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final A0:Ljava/lang/String;
 
-.field public final synthetic b:Lzrf;
+.field public final X:J
+
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final b:J
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final o:Ljava/lang/String;
+
+.field public final t0:Ljava/lang/String;
+
+.field public final u0:Ljava/util/List;
+
+.field public final v0:I
+
+.field public final w0:J
+
+.field public final x0:Ljava/lang/String;
+
+.field public final y0:Z
+
+.field public final z0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzrf;I)V
-    .locals 0
+.method public constructor <init>(Lurf;)V
+    .locals 2
 
-    iput p2, p0, Lvrf;->a:I
+    iget-wide v0, p1, Lurf;->a:J
 
-    iput-object p1, p0, Lvrf;->b:Lzrf;
+    invoke-direct {p0, v0, v1}, Lhk0;-><init>(J)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-wide v0, p1, Lurf;->b:J
+
+    iput-wide v0, p0, Lvrf;->b:J
+
+    iget v0, p1, Lurf;->c:I
+
+    iput v0, p0, Lvrf;->c:I
+
+    iget v0, p1, Lurf;->d:I
+
+    iput v0, p0, Lvrf;->d:I
+
+    iget-object v0, p1, Lurf;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Lvrf;->o:Ljava/lang/String;
+
+    iget-wide v0, p1, Lurf;->f:J
+
+    iput-wide v0, p0, Lvrf;->X:J
+
+    iget-object v0, p1, Lurf;->g:Ljava/lang/String;
+
+    iput-object v0, p0, Lvrf;->Y:Ljava/lang/String;
+
+    iget-object v0, p1, Lurf;->h:Ljava/lang/String;
+
+    iput-object v0, p0, Lvrf;->Z:Ljava/lang/String;
+
+    iget-object v0, p1, Lurf;->i:Ljava/lang/String;
+
+    iput-object v0, p0, Lvrf;->t0:Ljava/lang/String;
+
+    iget-object v0, p1, Lurf;->j:Ljava/util/List;
+
+    iput-object v0, p0, Lvrf;->u0:Ljava/util/List;
+
+    iget v0, p1, Lurf;->k:I
+
+    iput v0, p0, Lvrf;->v0:I
+
+    iget-wide v0, p1, Lurf;->l:J
+
+    iput-wide v0, p0, Lvrf;->w0:J
+
+    iget-object v0, p1, Lurf;->m:Ljava/lang/String;
+
+    iput-object v0, p0, Lvrf;->x0:Ljava/lang/String;
+
+    iget-boolean v0, p1, Lurf;->n:Z
+
+    iput-boolean v0, p0, Lvrf;->y0:Z
+
+    iget v0, p1, Lurf;->o:I
+
+    iput v0, p0, Lvrf;->z0:I
+
+    iget-object p1, p1, Lurf;->p:Ljava/lang/String;
+
+    iput-object p1, p0, Lvrf;->A0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lvrf;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p1, Ljava/util/List;
+    const-string v1, "StickerDb{stickerId="
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lvrf;->b:Lzrf;
+    iget-wide v1, p0, Lvrf;->b:J
 
-    iget-object v0, v0, Lzrf;->a:Ldgb;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ldgb;->B()Lgo3;
+    const-string v1, ", width="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lvrf;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", height="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lvrf;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvrf;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', updateTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lvrf;->X:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mp4url=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvrf;->Y:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', firstUrl=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvrf;->Z:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', previewUrl=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvrf;->t0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', tags=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvrf;->u0:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', token=\'null\', stickerType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lvrf;->v0:I
+
+    invoke-static {v1}, Lmrf;->v(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", setId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lvrf;->w0:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lottieUrl=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvrf;->x0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', audio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lvrf;->y0:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", authorType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lvrf;->z0:I
+
+    invoke-static {v1}, Liwd;->p(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", videoUrl=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvrf;->A0:Ljava/lang/String;
+
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    new-instance v1, Lsrf;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2}, Lsrf;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lbdf;->h(Ldr6;)Ljdf;
-
-    move-result-object v0
-
-    new-instance v1, Lzj2;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v1, v2, p1}, Lzj2;-><init>(ILjava/util/List;)V
-
-    new-instance p1, Ltn3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p1, v0, v2, v1}, Ltn3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lvrf;->b:Lzrf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lcxa;->i(Ljava/lang/Iterable;)Lfo3;
-
-    move-result-object p1
-
-    new-instance v1, Lsrf;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2}, Lsrf;-><init>(I)V
-
-    new-instance v2, Lvxa;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, p1, v1, v3}, Lvxa;-><init>(Lcxa;Ldr6;I)V
-
-    invoke-virtual {v2}, Lcxa;->r()Lgxa;
-
-    move-result-object p1
-
-    new-instance v1, Lvrf;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Lvrf;-><init>(Lzrf;I)V
-
-    new-instance v0, Ltn3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p1, v2, v1}, Ltn3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

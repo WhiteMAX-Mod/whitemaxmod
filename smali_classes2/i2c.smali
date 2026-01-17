@@ -1,108 +1,108 @@
-.class public final Li2c;
-.super Lb5g;
+.class public final synthetic Li2c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lnq6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lj2c;
+
+.field public final synthetic c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lj2c;Ljava/util/ArrayList;I)V
     .locals 0
 
-    iput-object p1, p0, Li2c;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iput p3, p0, Li2c;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Li2c;->b:Lj2c;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Li2c;->c:Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Ljava/util/Set;
+    iget v0, p0, Li2c;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lf7e;
 
-    invoke-virtual {p0, p1, p2}, Li2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Li2c;->b:Lj2c;
+
+    iget-object v0, v0, Lj2c;->c:Lcua;
+
+    iget-object v1, p0, Li2c;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1, v1}, Luoj;->d(Lf7e;Ljava/lang/Iterable;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object p1, p0, Li2c;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    check-cast p1, Li2c;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    move-result v0
 
-    invoke-virtual {p1, p2}, Li2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    return-object p2
-.end method
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result-object v0
 
-    new-instance v0, Li2c;
+    check-cast v0, Ljava/lang/Number;
 
-    iget-object v1, p0, Li2c;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    invoke-direct {v0, v1, p2}, Li2c;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+    move-result-wide v0
 
-    iput-object p1, v0, Li2c;->o:Ljava/lang/Object;
+    iget-object v2, p0, Li2c;->b:Lj2c;
 
-    return-object v0
-.end method
+    iget-object v2, v2, Lj2c;->a:Lb2e;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    new-instance v3, Ln33;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const/16 v4, 0x10
 
-    iget-object p1, p0, Li2c;->o:Ljava/lang/Object;
+    invoke-direct {v3, v0, v1, v4}, Ln33;-><init>(JI)V
 
-    check-cast p1, Ljava/util/Set;
+    const/4 v0, 0x0
 
-    invoke-interface {p1}, Ljava/util/Set;->size()I
+    const/4 v1, 0x1
 
-    move-result p1
-
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Li2c;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-nez p1, :cond_0
-
-    sget p1, Lfkb;->u:I
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
+    invoke-static {v2, v0, v1, v3}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    sget v2, Lfkb;->t:I
-
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v2, Ljava/lang/Integer;
-
-    invoke-direct {v2, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-virtual {v1, v2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
-
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,147 +1,127 @@
-.class public final Lc18;
-.super Ljava/lang/Object;
+.class public abstract Lc18;
+.super Ljv6;
 .source "SourceFile"
 
 
+# static fields
+.field public static final t0:[I
+
+
 # instance fields
-.field public final a:Z
+.field public final X:I
 
-.field public final b:Z
+.field public Y:Ldqe;
 
-.field public final c:Z
+.field public final Z:Z
 
-.field public final d:Ljava/lang/String;
+.field public final d:Lw5;
 
-.field public final e:Ljava/lang/String;
-
-.field public final f:Z
-
-.field public final g:I
+.field public o:[I
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lfd2;->h:[I
 
-    iput-boolean p4, p0, Lc18;->a:Z
-
-    iput-boolean p5, p0, Lc18;->b:Z
-
-    iput-boolean p6, p0, Lc18;->c:Z
-
-    iput-object p2, p0, Lc18;->d:Ljava/lang/String;
-
-    iput-object p3, p0, Lc18;->e:Ljava/lang/String;
-
-    iput-boolean p7, p0, Lc18;->f:Z
-
-    iput p1, p0, Lc18;->g:I
+    sput-object v0, Lc18;->t0:[I
 
     return-void
 .end method
 
+.method public constructor <init>(Lw5;I)V
+    .locals 4
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput p2, p0, Ljv6;->a:I
 
-    const-string v1, "JsonConfiguration(encodeDefaults=false, ignoreUnknownKeys="
+    sget-object v0, La18;->v0:La18;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v0, v0, La18;->b:I
 
-    iget-boolean v1, p0, Lc18;->a:Z
+    and-int/2addr v0, p2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v1, ", isLenient="
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Lnre;
 
-    iget-boolean v1, p0, Lc18;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allowStructuredMapKeys=false, prettyPrint=false, explicitNulls="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lc18;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", prettyPrintIndent=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lc18;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', coerceInputValues=false, useArrayPolymorphism=false, classDiscriminator=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lc18;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', allowSpecialFloatingPointValues=false, useAlternativeNames="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lc18;->f:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", namingStrategy=null, decodeEnumsCaseInsensitive=false, allowTrailingComma=false, allowComments=false, classDiscriminatorMode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lc18;->g:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
+    invoke-direct {v0, p0}, Lnre;-><init>(Ljava/io/Closeable;)V
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "POLYMORPHIC"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "ALL_JSON_OBJECTS"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "NONE"
+    move-object v0, v1
 
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v2, Lh28;
 
-    const/16 v1, 0x29
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v3, v1, v0}, Lh28;-><init>(ILh28;Lnre;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-object v2, p0, Ljv6;->c:Lh28;
 
-    move-result-object v0
+    sget-object v0, La18;->t0:La18;
 
-    return-object v0
+    iget v0, v0, La18;->b:I
+
+    and-int/2addr v0, p2
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_1
+    move v0, v3
+
+    :goto_1
+    iput-boolean v0, p0, Ljv6;->b:Z
+
+    sget-object v0, Lc18;->t0:[I
+
+    iput-object v0, p0, Lc18;->o:[I
+
+    sget-object v0, Lss4;->a:Lgqe;
+
+    iput-object v0, p0, Lc18;->Y:Ldqe;
+
+    iput-object p1, p0, Lc18;->d:Lw5;
+
+    sget-object p1, La18;->Z:La18;
+
+    iget p1, p1, La18;->b:I
+
+    and-int/2addr p1, p2
+
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0x7f
+
+    iput p1, p0, Lc18;->X:I
+
+    :cond_2
+    sget-object p1, La18;->X:La18;
+
+    iget p1, p1, La18;->b:I
+
+    and-int/2addr p1, p2
+
+    if-eqz p1, :cond_3
+
+    move v3, v1
+
+    :cond_3
+    xor-int/lit8 p1, v3, 0x1
+
+    iput-boolean p1, p0, Lc18;->Z:Z
+
+    return-void
 .end method

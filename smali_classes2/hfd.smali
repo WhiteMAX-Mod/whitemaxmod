@@ -3,26 +3,14 @@
 
 
 # static fields
-.field public static MarkdownItemView:[I = null
+.field public static scheduled_remind_button_text:I = 0x7f130cbd
 
-.field public static MarkdownItemView_miv_highlight_title:I = 0x0
+.field public static scheduled_remind_title:I = 0x7f130cbe
 
-.field public static MarkdownItemView_miv_title:I = 0x1
+.field public static scheduled_send_button_text:I = 0x7f130cc0
 
+.field public static scheduled_send_message_title:I = 0x7f130cc1
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.field public static scheduled_send_post_title:I = 0x7f130cc9
 
-    const v0, 0x7f040671
-
-    const v1, 0x7f040672
-
-    filled-new-array {v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lhfd;->MarkdownItemView:[I
-
-    return-void
-.end method
+.field public static time_divider:I = 0x7f130d81

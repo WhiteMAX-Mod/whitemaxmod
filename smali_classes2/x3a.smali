@@ -6,18 +6,18 @@
 # instance fields
 .field public final b:Ljava/lang/String;
 
-.field public final c:Ldid;
+.field public final c:Lbjd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ldid;)V
+.method public constructor <init>(Ljava/lang/String;Lbjd;)V
     .locals 0
 
     invoke-direct {p0}, Lz3a;-><init>()V
 
     iput-object p1, p0, Lx3a;->b:Ljava/lang/String;
 
-    iput-object p2, p0, Lx3a;->c:Ldid;
+    iput-object p2, p0, Lx3a;->c:Lbjd;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 
     iget-object v3, p1, Lx3a;->b:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -58,11 +58,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lx3a;->c:Ldid;
+    iget-object v1, p0, Lx3a;->c:Lbjd;
 
-    iget-object p1, p1, Lx3a;->c:Ldid;
+    iget-object p1, p1, Lx3a;->c:Lbjd;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -85,9 +85,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lx3a;->c:Ldid;
+    iget-object v1, p0, Lx3a;->c:Lbjd;
 
-    invoke-virtual {v1}, Ldid;->hashCode()I
+    invoke-virtual {v1}, Lbjd;->hashCode()I
 
     move-result v1
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lx3a;->c:Ldid;
+    iget-object v1, p0, Lx3a;->c:Lbjd;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

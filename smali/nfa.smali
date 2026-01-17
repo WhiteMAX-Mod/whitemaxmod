@@ -1,21 +1,19 @@
-.class public interface abstract Lnfa;
-.super Ljava/lang/Object;
+.class public final Lnfa;
+.super Lvag;
 .source "SourceFile"
 
-# interfaces
-.implements Ld6f;
-.implements Lh76;
 
+# direct methods
+.method public static a()Lnfa;
+    .locals 2
 
-# virtual methods
-.method public abstract a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+    new-instance v0, Lnfa;
 
-.method public abstract d()V
-.end method
+    new-instance v1, Landroid/util/ArrayMap;
 
-.method public abstract h(Ljava/lang/Object;)Z
-.end method
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-.method public abstract i()Laof;
+    invoke-direct {v0, v1}, Lvag;-><init>(Landroid/util/ArrayMap;)V
+
+    return-object v0
 .end method

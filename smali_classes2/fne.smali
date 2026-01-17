@@ -8,18 +8,16 @@
 
 .field public static final enum b:Lfne;
 
-.field public static final enum c:Lfne;
-
-.field public static final synthetic d:[Lfne;
+.field public static final synthetic c:[Lfne;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 4
 
     new-instance v0, Lfne;
 
-    const-string v1, "HideKeyboard"
+    const-string v1, "START"
 
     const/4 v2, 0x0
 
@@ -29,7 +27,7 @@
 
     new-instance v1, Lfne;
 
-    const-string v2, "SendMessage"
+    const-string v2, "FINISH"
 
     const/4 v3, 0x1
 
@@ -37,21 +35,11 @@
 
     sput-object v1, Lfne;->b:Lfne;
 
-    new-instance v2, Lfne;
-
-    const-string v3, "SendMessageWithDisabling"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lfne;->c:Lfne;
-
-    filled-new-array {v0, v1, v2}, [Lfne;
+    filled-new-array {v0, v1}, [Lfne;
 
     move-result-object v0
 
-    sput-object v0, Lfne;->d:[Lfne;
+    sput-object v0, Lfne;->c:[Lfne;
 
     return-void
 .end method
@@ -73,9 +61,9 @@
 .method public static values()[Lfne;
     .locals 1
 
-    sget-object v0, Lfne;->d:[Lfne;
+    sget-object v0, Lfne;->c:[Lfne;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lfne;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

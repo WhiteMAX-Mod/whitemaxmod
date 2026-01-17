@@ -1,41 +1,55 @@
 .class public final Lf9b;
-.super Landroid/text/style/ReplacementSpan;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Lbu0;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lh9b;
+
+.field public d:Ljm9;
+
+.field public o:Lnd2;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lh9b;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
+    iput-object p1, p0, Lf9b;->Z:Lh9b;
 
-    iput p1, p0, Lf9b;->a:I
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    int-to-float p6, p7
+    iput-object p1, p0, Lf9b;->Y:Ljava/lang/Object;
 
-    move-object p7, p9
+    iget p1, p0, Lf9b;->t0:I
 
-    invoke-virtual/range {p1 .. p7}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
+    const/high16 v0, -0x80000000
 
-    return-void
-.end method
+    or-int/2addr p1, v0
 
-.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 0
+    iput p1, p0, Lf9b;->t0:I
 
-    iget p1, p0, Lf9b;->a:I
+    iget-object p1, p0, Lf9b;->Z:Lh9b;
 
-    return p1
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, v0, p0}, Lh9b;->j(Ljm9;Lnd2;Lbu0;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

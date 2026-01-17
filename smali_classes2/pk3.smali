@@ -1,102 +1,67 @@
-.class public final Lpk3;
-.super Lb5g;
+.class public abstract synthetic Lpk3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
 
-
-# instance fields
-.field public final synthetic X:Lfk3;
-
-.field public final synthetic o:Ltk3;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Ltk3;Lfk3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lpk3;->o:Ltk3;
+    invoke-static {}, Lo10;->values()[Lo10;
 
-    iput-object p2, p0, Lpk3;->X:Lfk3;
+    move-result-object v0
 
-    const/4 p1, 0x2
+    array-length v0, v0
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v1, 0x2
+
+    :try_start_1
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/16 v1, 0x8
+
+    const/4 v2, 0x3
+
+    :try_start_2
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v1, 0x4
+
+    :try_start_3
+    aput v1, v0, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v2, 0x5
+
+    :try_start_4
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Lpk3;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lac4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lpk3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpk3;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lpk3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lpk3;
-
-    iget-object v0, p0, Lpk3;->o:Ltk3;
-
-    iget-object v1, p0, Lpk3;->X:Lfk3;
-
-    invoke-direct {p1, v0, v1, p2}, Lpk3;-><init>(Ltk3;Lfk3;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    sget-object p1, Ltk3;->m:[Lp38;
-
-    iget-object p1, p0, Lpk3;->o:Ltk3;
-
-    iget-object p1, p1, Ltk3;->f:Ld68;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lca3;
-
-    iget-object v0, p0, Lpk3;->X:Lfk3;
-
-    check-cast v0, Lek3;
-
-    iget-wide v0, v0, Lek3;->a:J
-
-    invoke-virtual {p1, v0, v1}, Lca3;->k(J)Lpkd;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lpkd;->a:Laof;
-
-    invoke-interface {p1}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,419 +1,583 @@
 .class public final Lh99;
-.super Llo;
+.super Landroid/os/AsyncTask;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lva9;
+.field public final a:Landroid/graphics/Bitmap;
 
-.field public final Y:Ld99;
+.field public final b:Landroid/net/Uri;
 
-.field public Z:Landroid/widget/TextView;
+.field public c:I
 
-.field public s0:Lna9;
-
-.field public t0:Ljava/util/ArrayList;
-
-.field public u0:Lg99;
-
-.field public v0:Landroid/widget/ListView;
-
-.field public w0:Z
-
-.field public x0:J
-
-.field public final y0:Lty;
+.field public final synthetic d:Lo99;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(Lo99;)V
+    .locals 3
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lh99;->d:Lo99;
 
-    invoke-static {p1, v0}, Lbb9;->a(Landroid/content/Context;Z)Landroid/view/ContextThemeWrapper;
+    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    move-result-object p1
+    iget-object v0, p1, Lo99;->W0:Landroid/support/v4/media/MediaDescriptionCompat;
 
-    sget v0, Lc4d;->mediaRouteTheme:I
-
-    invoke-static {p1, v0}, Lbb9;->g(Landroid/content/Context;I)I
-
-    move-result v0
+    const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    invoke-static {p1}, Lbb9;->e(Landroid/content/Context;)I
+    move-object v0, v1
 
-    move-result v0
+    goto :goto_0
 
     :cond_0
-    invoke-direct {p0, p1, v0}, Llo;-><init>(Landroid/content/Context;I)V
+    invoke-virtual {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->getIconBitmap()Landroid/graphics/Bitmap;
 
-    sget-object p1, Lna9;->c:Lna9;
+    move-result-object v0
 
-    iput-object p1, p0, Lh99;->s0:Lna9;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    new-instance p1, Lty;
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    const/4 v0, 0x6
+    move-result v2
 
-    invoke-direct {p1, v0, p0}, Lty;-><init>(ILjava/lang/Object;)V
+    if-eqz v2, :cond_1
 
-    iput-object p1, p0, Lh99;->y0:Lty;
+    const-string v0, "MediaRouteCtrlDialog"
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+    const-string v2, "Can\'t fetch the given art bitmap because it\'s already recycled."
 
-    move-result-object p1
+    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p1}, Lva9;->d(Landroid/content/Context;)Lva9;
+    move-object v0, v1
 
-    move-result-object p1
+    :cond_1
+    iput-object v0, p0, Lh99;->a:Landroid/graphics/Bitmap;
 
-    iput-object p1, p0, Lh99;->X:Lva9;
+    iget-object p1, p1, Lo99;->W0:Landroid/support/v4/media/MediaDescriptionCompat;
 
-    new-instance p1, Ld99;
+    if-nez p1, :cond_2
 
-    const/4 v0, 0x1
+    goto :goto_1
 
-    invoke-direct {p1, p0, v0}, Ld99;-><init>(Landroid/view/KeyEvent$Callback;I)V
+    :cond_2
+    invoke-virtual {p1}, Landroid/support/v4/media/MediaDescriptionCompat;->getIconUri()Landroid/net/Uri;
 
-    iput-object p1, p0, Lh99;->Y:Ld99;
+    move-result-object v1
+
+    :goto_1
+    iput-object v1, p0, Lh99;->b:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()V
-    .locals 7
+.method public final a(Landroid/net/Uri;)Ljava/io/BufferedInputStream;
+    .locals 2
 
-    iget-boolean v0, p0, Lh99;->w0:Z
+    invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-    if-eqz v0, :cond_4
+    move-result-object v0
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    iget-object v1, p0, Lh99;->X:Lva9;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "android.resource"
 
-    invoke-static {}, Lva9;->b()V
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lva9;->c()Lra9;
+    move-result v1
 
-    move-result-object v1
+    if-nez v1, :cond_1
 
-    if-nez v1, :cond_0
+    const-string v1, "content"
 
-    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "file"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, v1, Lra9;->g:Ljava/util/ArrayList;
+    new-instance v0, Ljava/net/URL;
 
-    :goto_0
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    move-result-object p1
 
-    move-result v1
+    invoke-direct {v0, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    :goto_1
-    add-int/lit8 v2, v1, -0x1
+    invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
-    if-lez v1, :cond_2
+    move-result-object p1
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const/16 v0, 0x7530
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Ljava/net/URLConnection;->setConnectTimeout(I)V
 
-    check-cast v1, Lua9;
+    invoke-virtual {p1, v0}, Ljava/net/URLConnection;->setReadTimeout(I)V
 
-    invoke-virtual {v1}, Lua9;->d()Z
+    invoke-virtual {p1}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    iget-boolean v3, v1, Lua9;->g:Z
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Lh99;->s0:Lna9;
-
-    invoke-virtual {v1, v3}, Lua9;->h(Lna9;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    :goto_2
-    move v1, v2
+    move-result-object p1
 
     goto :goto_1
 
-    :cond_2
-    sget-object v1, Lq95;->c:Lq95;
-
-    invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v1
-
-    iget-wide v3, p0, Lh99;->x0:J
-
-    sub-long/2addr v1, v3
-
-    const-wide/16 v3, 0x12c
-
-    cmp-long v1, v1, v3
-
-    if-ltz v1, :cond_3
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lh99;->x0:J
-
-    iget-object v1, p0, Lh99;->t0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v1, p0, Lh99;->t0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    iget-object v0, p0, Lh99;->u0:Lg99;
-
-    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
-
-    return-void
-
-    :cond_3
-    iget-object v1, p0, Lh99;->y0:Lty;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
-
-    invoke-virtual {v1, v2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v0
-
-    iget-wide v5, p0, Lh99;->x0:J
-
-    add-long/2addr v5, v3
-
-    invoke-virtual {v1, v0, v5, v6}, Landroid/os/Handler;->sendMessageAtTime(Landroid/os/Message;J)Z
-
-    :cond_4
-    return-void
-.end method
-
-.method public final g(Lna9;)V
-    .locals 3
-
-    if-eqz p1, :cond_2
-
-    iget-object v0, p0, Lh99;->s0:Lna9;
-
-    invoke-virtual {v0, p1}, Lna9;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iput-object p1, p0, Lh99;->s0:Lna9;
-
-    iget-boolean v0, p0, Lh99;->w0:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lh99;->X:Lva9;
-
-    iget-object v1, p0, Lh99;->Y:Ld99;
-
-    invoke-virtual {v0, v1}, Lva9;->f(Ld99;)V
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, p1, v1, v2}, Lva9;->a(Lna9;Ld99;I)V
-
-    :cond_0
-    invoke-virtual {p0}, Lh99;->f()V
-
     :cond_1
-    return-void
+    :goto_0
+    iget-object v0, p0, Lh99;->d:Lo99;
+
+    iget-object v0, v0, Lo99;->y0:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+
+    move-result-object p1
+
+    :goto_1
+    if-nez p1, :cond_2
+
+    const/4 p1, 0x0
+
+    return-object p1
 
     :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Ljava/io/BufferedInputStream;
 
-    const-string v0, "selector must not be null"
+    invoke-direct {v0, p1}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method
 
-.method public final onAttachedToWindow()V
-    .locals 4
+.method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    invoke-super {p0}, Landroid/app/Dialog;->onAttachedToWindow()V
+    check-cast p1, [Ljava/lang/Void;
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lh99;->w0:Z
-
-    iget-object v1, p0, Lh99;->s0:Lna9;
-
-    iget-object v2, p0, Lh99;->Y:Ld99;
-
-    iget-object v3, p0, Lh99;->X:Lva9;
-
-    invoke-virtual {v3, v1, v2, v0}, Lva9;->a(Lna9;Ld99;I)V
-
-    invoke-virtual {p0}, Lh99;->f()V
-
-    return-void
-.end method
-
-.method public final onCreate(Landroid/os/Bundle;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Llo;->onCreate(Landroid/os/Bundle;)V
-
-    sget p1, Lkad;->mr_chooser_dialog:I
-
-    invoke-virtual {p0, p1}, Llo;->setContentView(I)V
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lh99;->t0:Ljava/util/ArrayList;
-
-    new-instance p1, Lg99;
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lh99;->t0:Ljava/util/ArrayList;
-
-    invoke-direct {p1, v0, v1}, Lg99;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
-
-    iput-object p1, p0, Lh99;->u0:Lg99;
-
-    sget p1, Lr6d;->mr_chooser_list:I
-
-    invoke-virtual {p0, p1}, Llo;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ListView;
-
-    iput-object p1, p0, Lh99;->v0:Landroid/widget/ListView;
-
-    iget-object v0, p0, Lh99;->u0:Lg99;
-
-    invoke-virtual {p1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    iget-object p1, p0, Lh99;->v0:Landroid/widget/ListView;
-
-    iget-object v0, p0, Lh99;->u0:Lg99;
-
-    invoke-virtual {p1, v0}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    iget-object p1, p0, Lh99;->v0:Landroid/widget/ListView;
-
-    const v0, 0x1020004
-
-    invoke-virtual {p0, v0}, Llo;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
-
-    sget p1, Lr6d;->mr_chooser_title:I
-
-    invoke-virtual {p0, p1}, Llo;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    iput-object p1, p0, Lh99;->Z:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lt8j;->b(Landroid/content/Context;)I
-
-    move-result v0
-
-    const/4 v1, -0x2
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/Window;->setLayout(II)V
-
-    return-void
-.end method
-
-.method public final onDetachedFromWindow()V
-    .locals 2
+    const-string p1, "Unable to open: "
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lh99;->w0:Z
-
-    iget-object v0, p0, Lh99;->X:Lva9;
-
-    iget-object v1, p0, Lh99;->Y:Ld99;
-
-    invoke-virtual {v0, v1}, Lva9;->f(Ld99;)V
-
-    iget-object v0, p0, Lh99;->y0:Lty;
-
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+    const-string v2, "MediaRouteCtrlDialog"
 
-    invoke-super {p0}, Landroid/app/Dialog;->onDetachedFromWindow()V
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lh99;->a:Landroid/graphics/Bitmap;
+
+    if-eqz v4, :cond_0
+
+    goto/16 :goto_6
+
+    :cond_0
+    iget-object v4, p0, Lh99;->b:Landroid/net/Uri;
+
+    if-eqz v4, :cond_8
+
+    :try_start_0
+    invoke-virtual {p0, v4}, Lh99;->a(Landroid/net/Uri;)Ljava/io/BufferedInputStream;
+
+    move-result-object v5
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    if-nez v5, :cond_3
+
+    :try_start_1
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v5, :cond_2
+
+    :cond_1
+    :goto_0
+    :try_start_2
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_6
+
+    :cond_2
+    return-object v3
+
+    :catchall_0
+    move-exception p1
+
+    move-object v3, v5
+
+    goto/16 :goto_4
+
+    :catch_0
+    move-exception v6
+
+    goto :goto_3
+
+    :cond_3
+    :try_start_3
+    new-instance v6, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v6}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    iput-boolean v1, v6, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    invoke-static {v5, v3, v6}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    iget v7, v6, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    if-eqz v7, :cond_1
+
+    iget v7, v6, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    if-nez v7, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    :try_start_4
+    invoke-virtual {v5}, Ljava/io/InputStream;->reset()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    goto :goto_2
+
+    :catch_1
+    :try_start_5
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+
+    invoke-virtual {p0, v4}, Lh99;->a(Landroid/net/Uri;)Ljava/io/BufferedInputStream;
+
+    move-result-object v5
+
+    if-nez v5, :cond_5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    if-eqz v5, :cond_c
+
+    :goto_1
+    :try_start_6
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_6
+
+    goto/16 :goto_8
+
+    :cond_5
+    :goto_2
+    :try_start_7
+    iput-boolean v0, v6, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    iget-object v7, p0, Lh99;->d:Lo99;
+
+    iget-object v7, v7, Lo99;->y0:Landroid/content/Context;
+
+    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    sget v8, Lz5d;->mr_cast_meta_art_size:I
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v7
+
+    iget v8, v6, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    div-int/2addr v8, v7
+
+    invoke-static {v8}, Ljava/lang/Integer;->highestOneBit(I)I
+
+    move-result v7
+
+    invoke-static {v1, v7}, Ljava/lang/Math;->max(II)I
+
+    move-result v7
+
+    iput v7, v6, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    invoke-static {v5, v3, v6}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object v4
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_0
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    :try_start_8
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
+
+    goto :goto_6
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_4
+
+    :catch_2
+    move-exception v6
+
+    move-object v5, v3
+
+    :goto_3
+    :try_start_9
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_0
+
+    if-eqz v5, :cond_8
+
+    :try_start_a
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_4
+
+    goto :goto_5
+
+    :goto_4
+    if-eqz v3, :cond_7
+
+    :try_start_b
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+    :try_end_b
+    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_3
+
+    :catch_3
+    :cond_7
+    throw p1
+
+    :catch_4
+    :cond_8
+    :goto_5
+    move-object v4, v3
+
+    :catch_5
+    :goto_6
+    if-eqz v4, :cond_9
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Can\'t use recycled bitmap: "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_8
+
+    :cond_9
+    if-eqz v4, :cond_b
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p1
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    if-ge p1, v2, :cond_b
+
+    new-instance p1, Luq0;
+
+    invoke-direct {p1, v4}, Luq0;-><init>(Landroid/graphics/Bitmap;)V
+
+    iput v1, p1, Luq0;->b:I
+
+    invoke-virtual {p1}, Luq0;->e()Lloe;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lloe;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    goto :goto_7
+
+    :cond_a
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lotb;
+
+    iget v0, p1, Lotb;->d:I
+
+    :goto_7
+    iput v0, p0, Lh99;->c:I
+
+    :cond_b
+    move-object v3, v4
+
+    :catch_6
+    :cond_c
+    :goto_8
+    return-object v3
+.end method
+
+.method public final onPostExecute(Ljava/lang/Object;)V
+    .locals 4
+
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lh99;->d:Lo99;
+
+    iput-object v0, v1, Lo99;->X0:Lh99;
+
+    iget-object v0, v1, Lo99;->Y0:Landroid/graphics/Bitmap;
+
+    iget-object v2, p0, Lh99;->a:Landroid/graphics/Bitmap;
+
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    iget-object v3, p0, Lh99;->b:Landroid/net/Uri;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v1, Lo99;->Z0:Landroid/net/Uri;
+
+    invoke-static {v0, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    iput-object v2, v1, Lo99;->Y0:Landroid/graphics/Bitmap;
+
+    iput-object p1, v1, Lo99;->b1:Landroid/graphics/Bitmap;
+
+    iput-object v3, v1, Lo99;->Z0:Landroid/net/Uri;
+
+    iget p1, p0, Lh99;->c:I
+
+    iput p1, v1, Lo99;->c1:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v1, Lo99;->a1:Z
+
+    invoke-virtual {v1}, Lo99;->k()V
 
     return-void
 .end method
 
-.method public final setTitle(I)V
-    .locals 1
+.method public final onPreExecute()V
+    .locals 3
 
-    .line 2
-    iget-object v0, p0, Lh99;->Z:Landroid/widget/TextView;
+    iget-object v0, p0, Lh99;->d:Lo99;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    iput-boolean v1, v0, Lo99;->a1:Z
 
-.method public final setTitle(Ljava/lang/CharSequence;)V
-    .locals 1
+    const/4 v2, 0x0
 
-    .line 1
-    iget-object v0, p0, Lh99;->Z:Landroid/widget/TextView;
+    iput-object v2, v0, Lo99;->b1:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iput v1, v0, Lo99;->c1:I
 
     return-void
 .end method

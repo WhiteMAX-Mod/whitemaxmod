@@ -1,97 +1,130 @@
 .class public final Lo3e;
-.super Lvjj;
+.super Lll6;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Lo85;
+
+.field public o:Landroid/graphics/drawable/Drawable;
+
+
 # virtual methods
-.method public final a(Le4f;FF)V
-    .locals 5
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 4
 
-    mul-float v0, p3, p2
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isVisible()Z
 
-    const/4 v1, 0x0
+    move-result v0
 
-    const/high16 v2, 0x43340000    # 180.0f
+    if-nez v0, :cond_0
 
-    const/high16 v3, 0x42b40000    # 90.0f
+    goto :goto_1
 
-    invoke-virtual {p1, v1, v0, v2, v3}, Le4f;->d(FFFF)V
+    :cond_0
+    iget-object v0, p0, Lo3e;->X:Lo85;
 
-    const/high16 v0, 0x40000000    # 2.0f
+    if-eqz v0, :cond_2
 
-    mul-float/2addr p3, v0
+    iget-boolean v1, v0, Lo85;->a:Z
 
-    mul-float/2addr p3, p2
+    if-eqz v1, :cond_1
 
-    new-instance p2, La4f;
+    goto :goto_0
 
-    invoke-direct {p2, v1, v1, p3, p3}, La4f;-><init>(FFFF)V
+    :cond_1
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    iput v2, p2, La4f;->f:F
+    move-result v1
 
-    iput v3, p2, La4f;->g:F
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v3, p1, Le4f;->g:Ljava/util/ArrayList;
+    move-result-object v1
 
-    invoke-virtual {v3, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v2, v0, Lo85;->e:Lk85;
 
-    new-instance v3, Ly3f;
+    invoke-static {v2}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    invoke-direct {v3, p2}, Ly3f;-><init>(La4f;)V
+    move-result v2
 
-    invoke-virtual {p1, v2}, Le4f;->a(F)V
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object p2, p1, Le4f;->h:Ljava/util/ArrayList;
+    move-result-object v2
 
-    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lo85;->toString()Ljava/lang/String;
 
-    const/high16 p2, 0x43870000    # 270.0f
+    move-result-object v3
 
-    iput p2, p1, Le4f;->e:F
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Object;
 
-    add-float v2, v1, p3
+    move-result-object v1
 
-    const/high16 v3, 0x3f000000    # 0.5f
+    const-class v2, Lm85;
 
-    mul-float/2addr v2, v3
+    const-string v3, "%x: Draw requested for a non-attached controller %x. %s"
 
-    sub-float/2addr p3, v1
+    invoke-static {v2, v3, v1}, Lmt5;->j(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    div-float/2addr p3, v0
+    const/4 v1, 0x1
 
-    float-to-double v0, p2
+    iput-boolean v1, v0, Lo85;->b:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    iput-boolean v1, v0, Lo85;->c:Z
 
-    move-result-wide v3
+    invoke-virtual {v0}, Lo85;->b()V
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
+    :cond_2
+    :goto_0
+    invoke-super {p0, p1}, Lll6;->draw(Landroid/graphics/Canvas;)V
 
-    move-result-wide v3
+    iget-object v0, p0, Lo3e;->o:Landroid/graphics/drawable/Drawable;
 
-    double-to-float p2, v3
+    if-eqz v0, :cond_3
 
-    mul-float/2addr p2, p3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    add-float/2addr p2, v2
+    move-result-object v1
 
-    iput p2, p1, Le4f;->c:F
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    iget-object v0, p0, Lo3e;->o:Landroid/graphics/drawable/Drawable;
 
-    move-result-wide v0
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v0
-
-    double-to-float p2, v0
-
-    mul-float/2addr p3, p2
-
-    add-float/2addr p3, v2
-
-    iput p3, p1, Le4f;->d:F
-
+    :cond_3
+    :goto_1
     return-void
+.end method
+
+.method public final getIntrinsicHeight()I
+    .locals 1
+
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public final getIntrinsicWidth()I
+    .locals 1
+
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public final setVisible(ZZ)Z
+    .locals 1
+
+    iget-object v0, p0, Lo3e;->X:Lo85;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lo85;->h(Z)V
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lll6;->setVisible(ZZ)Z
+
+    move-result p1
+
+    return p1
 .end method

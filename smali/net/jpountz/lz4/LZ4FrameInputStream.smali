@@ -18,7 +18,7 @@
 # instance fields
 .field private buffer:Ljava/nio/ByteBuffer;
 
-.field private final checksum:Lsji;
+.field private final checksum:Lrki;
 
 .field private compressedBuffer:[B
 
@@ -59,14 +59,14 @@
 
     invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4Factory;->safeDecompressor()Lnet/jpountz/lz4/LZ4SafeDecompressor;
 
-    invoke-static {}, Ltji;->c()Ltji;
+    invoke-static {}, Lski;->r()Lski;
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lsji;)V
+.method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lrki;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -77,12 +77,12 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-direct {p0, p1, p2, p3, v0}, Lnet/jpountz/lz4/LZ4FrameInputStream;-><init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lsji;Z)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lnet/jpountz/lz4/LZ4FrameInputStream;-><init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lrki;Z)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lsji;Z)V
+.method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lrki;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -179,7 +179,7 @@
 
     invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4Factory;->safeDecompressor()Lnet/jpountz/lz4/LZ4SafeDecompressor;
 
-    invoke-static {}, Ltji;->c()Ltji;
+    invoke-static {}, Lski;->r()Lski;
 
     const/4 p1, 0x0
 
@@ -518,7 +518,7 @@
 
     const-string v3, " exceeded max: "
 
-    invoke-static {v2, v7, v1, v3}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v7, v1, v3}, Lj27;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

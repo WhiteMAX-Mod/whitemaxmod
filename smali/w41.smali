@@ -1,104 +1,112 @@
-.class public final synthetic Lw41;
+.class public final Lw41;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
+.implements Lb51;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lw41;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p1, p0, Lw41;->a:I
+    new-instance v0, Lw41;
 
-    iput-object p2, p0, Lw41;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lw41;->a:Lw41;
+
+    const/16 v0, 0x34
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lw41;->b:I
+
+    const/16 v0, 0x1c
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lw41;->c:I
+
+    const/4 v0, 0x2
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lw41;->d:I
+
+    invoke-static {}, Lt05;->c()F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    const-wide/high16 v2, 0x4012000000000000L    # 4.5
+
+    mul-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Lq7j;->b(D)I
+
+    move-result v0
+
+    sput v0, Lw41;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss()V
-    .locals 3
+.method public final a()I
+    .locals 1
 
-    iget v0, p0, Lw41;->a:I
+    sget v0, Lw41;->c:I
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    iget-object v2, p0, Lw41;->b:Ljava/lang/Object;
+.method public final b()I
+    .locals 1
 
-    packed-switch v0, :pswitch_data_0
+    sget v0, Lw41;->d:I
 
-    check-cast v2, Lojd;
+    return v0
+.end method
 
-    iget-object v0, v2, Lojd;->v0:Lc4a;
+.method public final c()I
+    .locals 1
 
-    if-eqz v0, :cond_0
+    sget v0, Lw41;->b:I
 
-    iget v1, v0, Lc4a;->a:I
+    return v0
+.end method
 
-    packed-switch v1, :pswitch_data_1
+.method public final d()I
+    .locals 1
 
-    goto :goto_0
+    sget v0, Lw41;->e:I
 
-    :pswitch_0
-    iget-object v0, v0, Lc4a;->b:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/messages/settings/MessagesSettingsScreen;
-
-    sget-object v1, Lone/me/messages/settings/MessagesSettingsScreen;->w0:[Lp38;
-
-    invoke-virtual {v0}, Lone/me/messages/settings/MessagesSettingsScreen;->z0()Lh77;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :pswitch_1
-    check-cast v2, Lone/me/chats/forward/ForwardPickerScreen;
-
-    iput-object v1, v2, Lone/me/chats/forward/ForwardPickerScreen;->H0:Ldog;
-
-    return-void
-
-    :pswitch_2
-    check-cast v2, Lxt1;
-
-    iput-object v1, v2, Lxt1;->H0:Ldog;
-
-    return-void
-
-    :pswitch_3
-    check-cast v2, Lmq6;
-
-    invoke-interface {v2}, Lmq6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

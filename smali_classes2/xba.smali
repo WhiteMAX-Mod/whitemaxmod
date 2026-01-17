@@ -8,10 +8,10 @@
 
 
 # direct methods
-.method public constructor <init>(JLcbg;J)V
+.method public constructor <init>(JLnbg;J)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Ljk0;-><init>(JLcbg;)V
+    invoke-direct {p0, p1, p2, p3}, Ljk0;-><init>(JLnbg;)V
 
     iput-wide p4, p0, Lxba;->c:J
 
@@ -33,7 +33,7 @@
 
     const/16 v3, 0x7d
 
-    invoke-static {v0, v1, v2, v3}, Ln0c;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
 

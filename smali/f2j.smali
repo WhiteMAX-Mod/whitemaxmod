@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwwa;
+.implements Lvwa;
 
 
 # static fields
@@ -20,79 +20,59 @@
 
     sput-object v0, Lf2j;->a:Lf2j;
 
-    new-instance v0, Ldqi;
+    new-instance v0, Lbri;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    const-class v1, Lrqi;
+    const-class v1, Lpri;
 
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
     const/4 v2, 0x2
 
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
     const/4 v2, 0x3
 
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
     const/4 v2, 0x4
 
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
     const/4 v2, 0x5
 
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
@@ -102,7 +82,7 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 

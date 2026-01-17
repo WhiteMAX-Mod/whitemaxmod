@@ -11,9 +11,9 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "",
-        "Lmaf;",
+        "Lqbf;",
         "getSignaling",
-        "()Lmaf;",
+        "()Lqbf;",
         "signaling",
         "calls-sdk_release"
     }
@@ -28,5 +28,5 @@
 
 
 # virtual methods
-.method public abstract getSignaling()Lmaf;
+.method public abstract getSignaling()Lqbf;
 .end method

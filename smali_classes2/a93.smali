@@ -1,48 +1,62 @@
-.class public final La93;
-.super Ll84;
+.class public final synthetic La93;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lejb;
 
 
 # instance fields
-.field public final synthetic X:Lv73;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Li9f;
 
 
 # direct methods
-.method public constructor <init>(Lv73;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Li9f;I)V
     .locals 0
 
-    iput-object p1, p0, La93;->X:Lv73;
+    iput p2, p0, La93;->a:I
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, La93;->b:Li9f;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final k(Lfjb;)V
+    .locals 2
 
-    iput-object p1, p0, La93;->d:Ljava/lang/Object;
+    iget v0, p0, La93;->a:I
 
-    iget p1, p0, La93;->o:I
+    iget-object v1, p0, La93;->b:Li9f;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->P0:[Lz28;
 
-    iput p1, p0, La93;->o:I
+    iget-object v0, v1, Li9f;->b:Lnq6;
 
-    iget-object p1, p0, La93;->X:Lv73;
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0, p0}, Lv73;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    sget-object v0, Lone/me/chats/list/ChatsListWidget;->M0:[Lz28;
 
-    move-result-object p1
+    iget-object v0, v1, Li9f;->b:Lnq6;
 
-    return-object p1
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

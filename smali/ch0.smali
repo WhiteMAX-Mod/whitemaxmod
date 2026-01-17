@@ -4,13 +4,13 @@
 
 # interfaces
 .implements Ljava/lang/Iterable;
-.implements Ld38;
+.implements Lo28;
 
 
 # instance fields
 .field public final a:Ljava/util/ArrayDeque;
 
-.field public b:Lv3e;
+.field public b:Lv4e;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
 
 # virtual methods
-.method public final a()Lz3e;
+.method public final a()Lz4e;
     .locals 1
 
     iget-object v0, p0, Lch0;->a:Ljava/util/ArrayDeque;
@@ -39,12 +39,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lz3e;
+    check-cast v0, Lz4e;
 
     return-object v0
 .end method
 
-.method public final b()Lz3e;
+.method public final b()Lz4e;
     .locals 2
 
     iget-object v0, p0, Lch0;->a:Ljava/util/ArrayDeque;
@@ -53,18 +53,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lz3e;
+    check-cast v0, Lz4e;
 
-    iget-object v1, p0, Lch0;->b:Lv3e;
+    iget-object v1, p0, Lch0;->b:Lv4e;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lv3e;->e()V
+    invoke-virtual {v1}, Lv4e;->e()V
 
     :cond_0
-    iget-object v1, v0, Lz3e;->a:Lx84;
+    iget-object v1, v0, Lz4e;->a:La94;
 
-    invoke-virtual {v1}, Lx84;->destroy()V
+    invoke-virtual {v1}, La94;->destroy()V
 
     return-object v0
 .end method
@@ -74,7 +74,7 @@
 
     iget-object v0, p0, Lch0;->a:Ljava/util/ArrayDeque;
 
-    invoke-static {v0}, Lei3;->S(Ljava/util/Collection;)Ljava/util/List;
+    invoke-static {v0}, Lpi3;->S(Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object v0
 
@@ -90,7 +90,7 @@
 
     const/4 v0, 0x0
 
-    new-array v0, v0, [Lz3e;
+    new-array v0, v0, [Lz4e;
 
     iget-object v1, p0, Lch0;->a:Ljava/util/ArrayDeque;
 
@@ -98,11 +98,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lc2;
+    new-instance v1, Lb2;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, v2, v0}, Lc2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Lb2;-><init>(ILjava/lang/Object;)V
 
     return-object v1
 .end method

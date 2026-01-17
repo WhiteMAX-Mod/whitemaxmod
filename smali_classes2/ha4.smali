@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvx3;
+.implements Lby3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;I)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;I)V
     .locals 0
 
     iput p2, p0, Lha4;->a:I
 
-    iput-object p1, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+    iput-object p1, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,20 +34,20 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+    iget-object v0, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->j(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->h(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;Ljava/lang/Throwable;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+    iget-object v0, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
 
     check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->n(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->p(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
 
     return-void
 

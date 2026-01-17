@@ -40,21 +40,21 @@
 
     move-result-object v1
 
-    check-cast v1, Le85;
+    check-cast v1, Lh85;
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v2, v2, v3}, Le85;->c(ZZZ)Z
+    invoke-virtual {v1, v2, v2, v3}, Lh85;->c(ZZZ)Z
 
-    invoke-virtual {v0}, Lll0;->getProgressDrawable()Liy4;
+    invoke-virtual {v0}, Lll0;->getProgressDrawable()Lky4;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lll0;->getProgressDrawable()Liy4;
+    invoke-virtual {v0}, Lll0;->getProgressDrawable()Lky4;
 
     move-result-object v1
 
@@ -65,13 +65,13 @@
     if-nez v1, :cond_2
 
     :cond_0
-    invoke-virtual {v0}, Lll0;->getIndeterminateDrawable()Ltn7;
+    invoke-virtual {v0}, Lll0;->getIndeterminateDrawable()Lan7;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lll0;->getIndeterminateDrawable()Ltn7;
+    invoke-virtual {v0}, Lll0;->getIndeterminateDrawable()Lan7;
 
     move-result-object v1
 

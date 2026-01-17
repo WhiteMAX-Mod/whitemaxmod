@@ -1,104 +1,99 @@
-.class public final synthetic Lp2f;
+.class public abstract synthetic Lp2f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lq2f;
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lq2f;I)V
-    .locals 0
-
-    iput p3, p0, Lp2f;->a:I
-
-    iput-object p1, p0, Lp2f;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lp2f;->c:Lq2f;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 5
 
-    iget v0, p0, Lp2f;->a:I
+    const/4 v0, 0x3
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Lt02;->w(I)[I
 
-    new-instance v0, Lcom/facebook/drawee/view/SimpleDraweeView;
+    move-result-object v1
 
-    iget-object v1, p0, Lp2f;->b:Landroid/content/Context;
+    array-length v1, v1
 
-    invoke-direct {v0, v1}, Lcom/facebook/drawee/view/SimpleDraweeView;-><init>(Landroid/content/Context;)V
+    new-array v1, v1, [I
 
-    sget v1, Lehb;->r:I
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+    const/4 v3, 0x2
 
-    iget-object v1, p0, Lp2f;->c:Lq2f;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0, v1}, Lq4j;->c(Landroid/view/View;Landroid/view/ViewGroup;)V
+    :catch_0
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    return-object v0
+    :catch_1
+    sput-object v1, Lp2f;->$EnumSwitchMapping$0:[I
 
-    :pswitch_0
-    new-instance v0, Landroid/widget/TextView;
+    invoke-static {}, Labh;->values()[Labh;
 
-    iget-object v1, p0, Lp2f;->b:Landroid/content/Context;
+    move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    array-length v1, v1
 
-    sget v1, Lehb;->s:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v2, -0x2
-
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v1, Lj1h;->G:Lhhg;
-
-    invoke-static {v1, v0}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
-
-    new-instance v1, Lqod;
-
-    const/4 v2, 0x3
-
-    const/16 v3, 0x8
+    new-array v1, v1, [I
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v2, v4, v3}, Lqod;-><init>(ILkotlin/coroutines/Continuation;I)V
+    :try_start_2
+    aput v2, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-static {v1, v0}, Ll5j;->c(Ler6;Landroid/view/View;)V
+    :catch_2
+    :try_start_3
+    aput v3, v1, v3
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iget-object v1, p0, Lp2f;->c:Lq2f;
+    :catch_3
+    :try_start_4
+    aput v0, v1, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-static {v0, v1}, Lq4j;->c(Landroid/view/View;Landroid/view/ViewGroup;)V
+    :catch_4
+    sput-object v1, Lp2f;->$EnumSwitchMapping$1:[I
 
-    return-object v0
+    invoke-static {}, Ltk5;->values()[Ltk5;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_5
+    aput v2, v0, v4
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    aput v3, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Lp2f;->$EnumSwitchMapping$2:[I
+
+    return-void
 .end method

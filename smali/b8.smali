@@ -1,216 +1,182 @@
-.class public abstract Lb8;
+.class public final Lb8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
 
 # static fields
-.field public static final a:Ljava/lang/Class;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lb8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:Ljava/lang/reflect/Field;
 
-.field public static final c:Ljava/lang/reflect/Field;
+# instance fields
+.field public final a:I
 
-.field public static final d:Ljava/lang/reflect/Method;
-
-.field public static final e:Ljava/lang/reflect/Method;
-
-.field public static final f:Ljava/lang/reflect/Method;
-
-.field public static final g:Landroid/os/Handler;
+.field public final b:Landroid/content/Intent;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 2
 
-    const-class v0, Landroid/app/Activity;
-
-    new-instance v1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    sput-object v1, Lb8;->g:Landroid/os/Handler;
+    new-instance v0, Lz7;
 
     const/4 v1, 0x0
 
-    :try_start_0
-    const-string v2, "android.app.ActivityThread"
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
 
-    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    sput-object v0, Lb8;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Intent;I)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p2, p0, Lb8;->a:I
+
+    .line 3
+    iput-object p1, p0, Lb8;->b:Landroid/content/Intent;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 p1, 0x0
 
     goto :goto_0
 
-    :catchall_0
-    move-object v2, v1
+    :cond_0
+    sget-object v1, Landroid/content/Intent;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/Intent;
+
+    .line 6
+    :goto_0
+    invoke-direct {p0, p1, v0}, Lb8;-><init>(Landroid/content/Intent;I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ActivityResult{resultCode="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v1, -0x1
+
+    iget v2, p0, Lb8;->a:I
+
+    if-eq v2, v1, :cond_1
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "RESULT_CANCELED"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "RESULT_OK"
 
     :goto_0
-    sput-object v2, Lb8;->a:Ljava/lang/Class;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x1
+    const-string v1, ", data="
 
-    :try_start_1
-    const-string v3, "mMainThread"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    iget-object v1, p0, Lb8;->b:Landroid/content/Intent;
 
-    move-result-object v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    const/16 v1, 0x7d
 
-    goto :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :catchall_1
-    move-object v3, v1
-
-    :goto_1
-    sput-object v3, Lb8;->b:Ljava/lang/reflect/Field;
-
-    :try_start_2
-    const-string v3, "mToken"
-
-    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    return-object v0
+.end method
 
-    goto :goto_2
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    :catchall_2
-    move-object v0, v1
+    iget v0, p0, Lb8;->a:I
 
-    :goto_2
-    sput-object v0, Lb8;->c:Ljava/lang/reflect/Field;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    sget-object v0, Lb8;->a:Ljava/lang/Class;
-
-    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    const-class v4, Landroid/os/IBinder;
-
-    const-string v5, "performStopActivity"
+    iget-object v0, p0, Lb8;->b:Landroid/content/Intent;
 
     if-nez v0, :cond_0
 
-    :catchall_3
-    move-object v0, v1
+    const/4 v1, 0x0
 
-    goto :goto_3
+    goto :goto_0
 
     :cond_0
-    :try_start_3
-    const-class v6, Ljava/lang/String;
+    const/4 v1, 0x1
 
-    filled-new-array {v4, v3, v6}, [Ljava/lang/Class;
+    :goto_0
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v6
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v5, v6}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    :goto_3
-    sput-object v0, Lb8;->d:Ljava/lang/reflect/Method;
-
-    sget-object v0, Lb8;->a:Ljava/lang/Class;
-
-    if-nez v0, :cond_1
-
-    :catchall_4
-    move-object v0, v1
-
-    goto :goto_4
+    invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     :cond_1
-    :try_start_4
-    filled-new-array {v4, v3}, [Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v5, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_4
-
-    :goto_4
-    sput-object v0, Lb8;->e:Ljava/lang/reflect/Method;
-
-    sget-object v0, Lb8;->a:Ljava/lang/Class;
-
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v4, 0x1a
-
-    if-eq v3, v4, :cond_2
-
-    const/16 v4, 0x1b
-
-    if-ne v3, v4, :cond_4
-
-    :cond_2
-    if-nez v0, :cond_3
-
-    goto :goto_5
-
-    :cond_3
-    :try_start_5
-    const-string v3, "requestRelaunchActivity"
-
-    const-class v4, Landroid/os/IBinder;
-
-    const-class v5, Ljava/util/List;
-
-    const-class v6, Ljava/util/List;
-
-    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    sget-object v8, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    const-class v9, Landroid/content/res/Configuration;
-
-    const-class v10, Landroid/content/res/Configuration;
-
-    move-object v11, v8
-
-    move-object v12, v8
-
-    filled-new-array/range {v4 .. v12}, [Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_5
-
-    move-object v1, v0
-
-    :catchall_5
-    :cond_4
-    :goto_5
-    sput-object v1, Lb8;->f:Ljava/lang/reflect/Method;
-
     return-void
 .end method

@@ -1,126 +1,214 @@
-.class public final synthetic Lgn1;
+.class public final Lgn1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljn1;
+.field public final synthetic b:Landroid/view/View;
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Landroid/view/View;
+
+.field public final synthetic e:Z
+
+.field public final synthetic f:Landroid/view/View;
+
+.field public final synthetic g:Z
+
+.field public final synthetic h:Lih;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljn1;I)V
+.method public synthetic constructor <init>(Lih;Landroid/view/View;ZLandroid/view/View;ZLandroid/view/View;ZI)V
     .locals 0
 
-    iput p2, p0, Lgn1;->a:I
+    iput p8, p0, Lgn1;->a:I
 
-    iput-object p1, p0, Lgn1;->b:Ljn1;
+    iput-object p1, p0, Lgn1;->h:Lih;
+
+    iput-object p2, p0, Lgn1;->b:Landroid/view/View;
+
+    iput-boolean p3, p0, Lgn1;->c:Z
+
+    iput-object p4, p0, Lgn1;->d:Landroid/view/View;
+
+    iput-boolean p5, p0, Lgn1;->e:Z
+
+    iput-object p6, p0, Lgn1;->f:Landroid/view/View;
+
+    iput-boolean p7, p0, Lgn1;->g:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
-    iget v0, p0, Lgn1;->a:I
+    iget p1, p0, Lgn1;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lgn1;->b:Ljn1;
+    iget-object p1, p0, Lgn1;->h:Lih;
 
-    iget-object v0, v0, Ljn1;->e:Ld68;
+    check-cast p1, Lgs1;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lgn1;->d:Landroid/view/View;
 
-    move-result-object v0
+    iget-boolean v1, p0, Lgn1;->e:Z
 
-    check-cast v0, Lux5;
+    invoke-static {p1, v0, v1}, Lgs1;->o(Lgs1;Landroid/view/View;Z)V
 
-    check-cast v0, Loy5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljfe;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lgn1;->b:Ljn1;
+    iget-object p1, p0, Lgn1;->h:Lih;
 
-    iget-object v0, v0, Ljn1;->b:Ldqe;
+    check-cast p1, Lhn1;
 
-    check-cast v0, Lncc;
+    iget-object v0, p0, Lgn1;->d:Landroid/view/View;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-boolean v1, p0, Lgn1;->e:Z
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reconnect-call-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-static {p1, v0, v1}, Lhn1;->o(Lhn1;Landroid/view/View;Z)V
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lncc;->j(Ljava/lang/Enum;Z)Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lgn1;->b:Ljn1;
-
-    iget-object v0, v0, Ljn1;->a:Landroid/content/Context;
-
-    const-string v1, "vibrator"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Vibrator;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lgn1;->b:Ljn1;
-
-    iget-object v0, v0, Ljn1;->a:Landroid/content/Context;
-
-    const-string v1, "audio"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/media/AudioManager;
-
-    return-object v0
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget p1, p0, Lgn1;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lgn1;->h:Lih;
+
+    check-cast p1, Lgs1;
+
+    iget-object v0, p0, Lgn1;->b:Landroid/view/View;
+
+    iget-boolean v1, p0, Lgn1;->c:Z
+
+    invoke-static {p1, v0, v1}, Lgs1;->o(Lgs1;Landroid/view/View;Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lgn1;->h:Lih;
+
+    check-cast p1, Lhn1;
+
+    iget-object v0, p0, Lgn1;->b:Landroid/view/View;
+
+    iget-boolean v1, p0, Lgn1;->c:Z
+
+    invoke-static {p1, v0, v1}, Lhn1;->o(Lhn1;Landroid/view/View;Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lgn1;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget p1, p0, Lgn1;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lgn1;->f:Landroid/view/View;
+
+    instance-of v0, p1, Lhp1;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lhp1;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    iget-boolean v0, p0, Lgn1;->g:Z
+
+    invoke-interface {p1, v0}, Lhp1;->c(Z)V
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lgn1;->f:Landroid/view/View;
+
+    instance-of v0, p1, Lfp1;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lfp1;
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_1
+    if-eqz p1, :cond_3
+
+    iget-boolean v0, p0, Lgn1;->g:Z
+
+    invoke-interface {p1, v0}, Lfp1;->e(Z)V
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,112 +1,161 @@
 .class public final Lglc;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-.field public final synthetic b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
     .locals 0
 
-    iput p2, p0, Lglc;->a:I
+    iput-object p2, p0, Lglc;->X:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    iput-object p1, p0, Lglc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lglc;->a:I
+    check-cast p1, Lta2;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lglc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
-
-    invoke-virtual {p1}, Lx84;->getRouter()Lw3e;
+    invoke-virtual {p0, p1, p2}, Lglc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lw3e;->C()Z
+    check-cast p1, Lglc;
 
-    return-void
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :pswitch_0
-    iget-object p1, p0, Lglc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    invoke-virtual {p1, p2}, Lglc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->X:[Lp38;
+    return-object p2
+.end method
 
-    iget-object p1, p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->c:Ld68;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    new-instance v0, Lglc;
+
+    iget-object v1, p0, Lglc;->X:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    invoke-direct {v0, p2, v1}, Lglc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+
+    iput-object p1, v0, Lglc;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lglc;->o:Ljava/lang/Object;
+
+    check-cast v0, Lta2;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lglc;->X:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    iget-object v1, p1, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->Z:Ljld;
+
+    sget-object v2, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Lz28;
+
+    const/4 v3, 0x3
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lymb;
+
+    iget v2, v0, Lta2;->a:I
+
+    invoke-virtual {v1, v2}, Lymb;->setTitle(I)V
+
+    invoke-static {p1}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->z0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    move-result-object v1
+
+    iget-boolean v2, v0, Lta2;->c:Z
+
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+
+    invoke-static {p1}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->z0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    move-result-object v1
+
+    iget-boolean v2, v0, Lta2;->d:Z
+
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    invoke-virtual {p1}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lrnc;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_1
+
+    invoke-static {p1}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->z0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
 
     move-result-object p1
 
-    check-cast p1, Lplc;
-
-    iget-object v0, p1, Lplc;->t0:Lglf;
+    iget-boolean v0, v0, Lta2;->b:Z
 
     if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lm0;->isActive()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p1, Lplc;->o:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbbg;
-
-    check-cast v0, Lb9b;
-
-    invoke-virtual {v0}, Lb9b;->b()Ltb4;
-
-    move-result-object v0
-
-    new-instance v1, Lolc;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lolc;-><init>(Lplc;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    invoke-static {p1, v0, v1, v2}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lplc;->t0:Lglf;
+    const/16 v2, 0x8
 
     :goto_0
-    return-void
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    nop
+    goto :goto_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p1}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->z0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    :goto_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

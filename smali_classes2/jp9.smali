@@ -1,67 +1,55 @@
-.class public abstract synthetic Ljp9;
+.class public final Ljp9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(ZZZZZZZZZZ)V
+    .locals 0
 
-    invoke-static {}, Lip9;->values()[Lip9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-boolean p1, p0, Ljp9;->a:Z
 
-    array-length v0, v0
+    iput-boolean p2, p0, Ljp9;->b:Z
 
-    new-array v0, v0, [I
+    iput-boolean p3, p0, Ljp9;->c:Z
 
-    const/4 v1, 0x1
+    iput-boolean p4, p0, Ljp9;->d:Z
 
-    const/4 v2, 0x0
+    iput-boolean p5, p0, Ljp9;->e:Z
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iput-boolean p6, p0, Ljp9;->f:Z
 
-    :catch_0
-    const/4 v2, 0x2
+    iput-boolean p7, p0, Ljp9;->g:Z
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iput-boolean p8, p0, Ljp9;->h:Z
 
-    :catch_1
-    const/4 v1, 0x3
+    iput-boolean p9, p0, Ljp9;->i:Z
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v2, 0x4
-
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v1, 0x5
-
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Ljp9;->$EnumSwitchMapping$0:[I
+    iput-boolean p10, p0, Ljp9;->j:Z
 
     return-void
 .end method

@@ -1,150 +1,99 @@
-.class public final Labh;
-.super Ljava/lang/Object;
+.class public final enum Labh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lp87;
+# static fields
+.field public static final enum b:Labh;
 
-.field public final b:Llw4;
+.field public static final enum c:Labh;
+
+.field public static final enum d:Labh;
+
+.field public static final synthetic o:[Labh;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lp87;Llw4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Labh;
 
-    iput-object p1, p0, Labh;->a:Lp87;
+    const-string v1, "OFF"
 
-    iput-object p2, p0, Labh;->b:Llw4;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v1}, Labh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Labh;->b:Labh;
+
+    new-instance v1, Labh;
+
+    const-string v2, "ADMIN"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Labh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Labh;->c:Labh;
+
+    new-instance v2, Labh;
+
+    const-string v3, "MANAGEABLE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Labh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Labh;->d:Labh;
+
+    filled-new-array {v0, v1, v2}, [Labh;
+
+    move-result-object v0
+
+    sput-object v0, Labh;->o:[Labh;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final a(Ljava/util/List;Loq6;Loq6;Lb1g;Lwx3;Lvw;)Ljava/util/List;
-    .locals 7
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Labh;->a:Lp87;
+    iput-object p3, p0, Labh;->a:Ljava/lang/String;
 
-    invoke-interface {v0}, Lp87;->c()Z
+    return-void
+.end method
 
-    move-result v1
+.method public static valueOf(Ljava/lang/String;)Labh;
+    .locals 1
 
-    if-nez v1, :cond_0
+    const-class v0, Labh;
 
-    return-object p1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :cond_0
-    new-instance v1, Ljava/util/ArrayList;
+    move-result-object p0
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    check-cast p0, Labh;
 
-    new-instance v2, Ljava/util/ArrayList;
+    return-object p0
+.end method
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+.method public static values()[Labh;
+    .locals 1
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    sget-object v0, Labh;->o:[Labh;
 
-    move-result-object p1
+    invoke-virtual {v0}, [Labh;->clone()Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v0
 
-    move-result v3
+    check-cast v0, [Labh;
 
-    if-eqz v3, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {p2, v3}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Number;
-
-    invoke-virtual {v4}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v4
-
-    invoke-interface {v0, v4, v5}, Lp87;->o(J)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    if-eqz p4, :cond_2
-
-    iget-object v5, p0, Labh;->b:Llw4;
-
-    invoke-virtual {v5}, Llw4;->a()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    move-object v5, v3
-
-    check-cast v5, Ldn9;
-
-    iget-object v5, v5, Ldn9;->t0:Lwq9;
-
-    sget-object v6, Lwq9;->o:Lwq9;
-
-    if-eq v5, v6, :cond_2
-
-    invoke-interface {p3, v3}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    if-eqz p6, :cond_3
-
-    invoke-virtual {p6, v3}, Lvw;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string p3, "items for delete not empty, count = "
-
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "abh"
-
-    invoke-static {p2, p1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {p5, v1}, Lwx3;->accept(Ljava/lang/Object;)V
-
-    :cond_5
-    return-object v2
+    return-object v0
 .end method

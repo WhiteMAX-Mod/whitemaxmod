@@ -1,63 +1,220 @@
 .class public final Lj34;
-.super Lwrd;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final E0:Landroid/widget/ImageView;
+.field public final synthetic X:Lone/me/contactlist/ContactListWidget;
 
-.field public final F0:Lru/ok/messages/views/widgets/TamAvatarView;
+.field public final synthetic Y:J
 
-.field public final G0:Landroid/view/View;
+.field public final synthetic Z:Landroid/view/View;
 
-.field public H0:Lzt8;
-
-.field public final synthetic I0:Lk34;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lk34;Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Lone/me/contactlist/ContactListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    iput-object p1, p0, Lj34;->I0:Lk34;
+    iput-object p1, p0, Lj34;->X:Lone/me/contactlist/ContactListWidget;
 
-    invoke-direct {p0, p2}, Lwrd;-><init>(Landroid/view/View;)V
+    iput-wide p2, p0, Lj34;->Y:J
 
-    sget p1, Lt9d;->row_contact_location__static_image:I
+    iput-object p4, p0, Lj34;->Z:Landroid/view/View;
 
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const/4 p1, 0x2
 
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    iput-object p1, p0, Lj34;->E0:Landroid/widget/ImageView;
-
-    sget p1, Lt9d;->row_contact_location__live_image:I
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/messages/views/widgets/TamAvatarView;
-
-    iput-object p1, p0, Lj34;->F0:Lru/ok/messages/views/widgets/TamAvatarView;
-
-    sget p1, Lt9d;->row_contact_location__indicator:I
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lj34;->G0:Landroid/view/View;
-
-    new-instance p1, Lbl0;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, v0, p0}, Lbl0;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p2, p1}, Lrmj;->a(Landroid/view/View;Ln6;)V
+    invoke-direct {p0, p1, p5}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lj34;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lj34;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lj34;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
+
+    new-instance v0, Lj34;
+
+    iget-wide v2, p0, Lj34;->Y:J
+
+    iget-object v4, p0, Lj34;->Z:Landroid/view/View;
+
+    iget-object v1, p0, Lj34;->X:Lone/me/contactlist/ContactListWidget;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lj34;-><init>(Lone/me/contactlist/ContactListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lj34;->o:I
+
+    const/4 v1, 0x0
+
+    iget-wide v2, p0, Lj34;->Y:J
+
+    iget-object v4, p0, Lj34;->X:Lone/me/contactlist/ContactListWidget;
+
+    const/4 v5, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v5, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/contactlist/ContactListWidget;->P0:[Lz28;
+
+    invoke-virtual {v4}, Lone/me/contactlist/ContactListWidget;->D0()Lu24;
+
+    move-result-object p1
+
+    iput v5, p0, Lj34;->o:I
+
+    iget-object v0, p1, Lu24;->c:Lmbg;
+
+    check-cast v0, Lj9b;
+
+    invoke-virtual {v0}, Lj9b;->a()Lsb4;
+
+    move-result-object v0
+
+    new-instance v5, Ll24;
+
+    invoke-direct {v5, p1, v2, v3, v1}, Ll24;-><init>(Lu24;JLkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v5, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    move-object v0, p1
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    move-object v1, p1
+
+    :cond_3
+    check-cast v1, Ljava/util/List;
+
+    if-eqz v1, :cond_4
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v2, v3}, Ljava/lang/Long;-><init>(J)V
+
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->P0:[Lz28;
+
+    iget-object v0, v4, Lone/me/contactlist/ContactListWidget;->J0:Lls;
+
+    sget-object v2, Lone/me/contactlist/ContactListWidget;->P0:[Lz28;
+
+    const/4 v3, 0x4
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v0, v4, p1}, Lls;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Lokj;->a(I)Lx74;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1}, Lx74;->o(Ljava/util/Collection;)Lx74;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lj34;->Z:Landroid/view/View;
+
+    invoke-interface {p1, v0}, Lx74;->w(Landroid/view/View;)Lx74;
+
+    move-result-object p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v1, 0x41400000    # 12.0f
+
+    mul-float/2addr v0, v1
+
+    invoke-interface {p1, v0}, Lx74;->s(F)Lx74;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lx74;->build()Ly74;
+
+    move-result-object p1
+
+    invoke-interface {p1, v4}, Ly74;->v(Lone/me/sdk/arch/Widget;)V
+
+    :cond_4
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

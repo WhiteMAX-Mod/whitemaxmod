@@ -141,20 +141,20 @@
     move/from16 v6, p6
 
     .line 59
-    invoke-static/range {p1 .. p1}, Lfz0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static/range {p1 .. p1}, Lyy0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
     .line 60
-    invoke-static/range {p4 .. p4}, Lfz0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static/range {p4 .. p4}, Lyy0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
     .line 61
-    invoke-static {v4, v0, v3}, Lfz0;->c(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v4, v0, v3}, Lyy0;->b(Ljava/nio/ByteBuffer;II)V
 
     .line 62
-    invoke-static {v1, v2, v6}, Lfz0;->c(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v1, v2, v6}, Lyy0;->b(Ljava/nio/ByteBuffer;II)V
 
     add-int v11, v0, v3
 
@@ -861,12 +861,12 @@
     move/from16 v3, p6
 
     .line 1
-    invoke-static {v1, v0, v2}, Lf7e;->c(I[BI)V
+    invoke-static {v1, v0, v2}, Lc8e;->b(I[BI)V
 
     move-object/from16 v7, p4
 
     .line 2
-    invoke-static {v8, v7, v3}, Lf7e;->c(I[BI)V
+    invoke-static {v8, v7, v3}, Lc8e;->b(I[BI)V
 
     add-int v9, v1, v2
 

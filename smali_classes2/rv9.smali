@@ -1,46 +1,63 @@
 .class public final Lrv9;
-.super Ll84;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lgr7;
+.field public final a:Lo58;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Lo58;
 
-.field public o:I
+.field public final c:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Lgr7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lo58;Lo58;Lo58;)V
     .locals 0
 
-    iput-object p1, p0, Lrv9;->X:Lgr7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrv9;->a:Lo58;
+
+    iput-object p2, p0, Lrv9;->b:Lo58;
+
+    iput-object p3, p0, Lrv9;->c:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(JLjava/lang/Long;Lp6g;)Ljava/lang/Object;
+    .locals 7
 
-    iput-object p1, p0, Lrv9;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lrv9;->c:Lo58;
 
-    iget p1, p0, Lrv9;->o:I
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    check-cast v0, Lmbg;
 
-    iput p1, p0, Lrv9;->o:I
+    check-cast v0, Lj9b;
 
-    iget-object p1, p0, Lrv9;->X:Lgr7;
+    invoke-virtual {v0}, Lj9b;->b()Lsb4;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-virtual {p1, v0, p0}, Lgr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    new-instance v1, Lqv9;
+
+    const/4 v6, 0x0
+
+    move-object v3, p0
+
+    move-wide v4, p1
+
+    move-object v2, p3
+
+    invoke-direct/range {v1 .. v6}, Lqv9;-><init>(Ljava/lang/Long;Lrv9;JLkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1, p4}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

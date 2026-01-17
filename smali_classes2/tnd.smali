@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvnd;
+.implements Lwnd;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x3f572bba
+    const v0, -0x500f739a
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "RequestPermission"
+    const-string v0, "CameraNotFound"
 
     return-object v0
 .end method

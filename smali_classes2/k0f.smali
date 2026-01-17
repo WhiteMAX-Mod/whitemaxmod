@@ -1,21 +1,11 @@
-.class public final Lk0f;
-.super Lzp;
+.class public interface abstract Lk0f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lk0f;
+# virtual methods
+.method public abstract A(J)V
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lk0f;
-
-    invoke-direct {v0}, Lzp;-><init>()V
-
-    sput-object v0, Lk0f;->a:Lk0f;
-
-    return-void
+.method public abstract h(J)V
 .end method

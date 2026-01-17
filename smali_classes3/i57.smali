@@ -1,3 +1,7 @@
-.class public interface abstract Li57;
-.super Ljava/lang/Object;
+.class public final Li57;
+.super Lusi;
 .source "SourceFile"
+
+
+# instance fields
+.field public b:Ljava/util/HashMap;

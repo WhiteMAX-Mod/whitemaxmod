@@ -1,70 +1,82 @@
 .class public final Lg1f;
-.super Lf3;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final c:Lg1f;
+
+# instance fields
+.field public final synthetic X:Lone/me/settings/SettingsListScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+    .locals 0
 
-    new-instance v0, Lg1f;
+    iput-object p2, p0, Lg1f;->X:Lone/me/settings/SettingsListScreen;
 
-    const/16 v1, 0xa
+    const/4 p2, 0x2
 
-    invoke-direct {v0, v1}, Lf3;-><init>(I)V
-
-    sput-object v0, Lg1f;->c:Lg1f;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static L0(JLjava/lang/String;)Lem4;
-    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    check-cast p1, Ljava/util/List;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v2, ":webapp:root?bot_id="
+    invoke-virtual {p0, p1, p2}, Lg1f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    check-cast p1, Lg1f;
 
-    const-string p0, "&entry_point=support_from_privacy"
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lg1f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object p2
+.end method
 
-    move-result-object p0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Lg1f;
 
-    if-eqz p2, :cond_0
+    iget-object v1, p0, Lg1f;->X:Lone/me/settings/SettingsListScreen;
 
-    const-string p0, "&start_param="
+    invoke-direct {v0, p2, v1}, Lg1f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
 
-    invoke-virtual {p0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, v0, Lg1f;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lg1f;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v0, Ljava/util/List;
 
-    new-instance p1, Lem4;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-direct {p1, p0}, Lem4;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lg1f;->X:Lone/me/settings/SettingsListScreen;
+
+    iget-object p1, p1, Lone/me/settings/SettingsListScreen;->z0:Ll0f;
+
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

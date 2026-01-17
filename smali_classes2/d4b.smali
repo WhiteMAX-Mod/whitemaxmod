@@ -1,82 +1,70 @@
 .class public final Ld4b;
-.super Ledj;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lj4b;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lj4b;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Ld4b;->a:I
 
-    iput p1, p0, Ld4b;->a:I
+    iput-object p1, p0, Ld4b;->b:Lj4b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ld4b;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ld4b;
-
-    iget v1, p0, Ld4b;->a:I
-
-    iget p1, p1, Ld4b;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
+.method public final run()V
+    .locals 2
 
     iget v0, p0, Ld4b;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Ld4b;->b:Lj4b;
 
-    return v0
-.end method
+    iget-object v1, v0, Lj4b;->D0:Llq6;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    if-eqz v1, :cond_0
 
-    const-string v0, "Counter(value="
+    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
 
-    const-string v1, ")"
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    iget v2, p0, Ld4b;->a:I
+    return-void
 
-    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :pswitch_0
+    iget-object v0, p0, Ld4b;->b:Lj4b;
 
-    move-result-object v0
+    iget-object v1, v0, Lj4b;->D0:Llq6;
 
-    return-object v0
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

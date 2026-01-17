@@ -17,7 +17,7 @@
 
     move-result-object v2
 
-    sget-object v3, Ltpi;->a:Ljava/util/HashMap;
+    sget-object v3, Lrqi;->a:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -29,7 +29,7 @@
 
     if-eqz v5, :cond_1
 
-    sget-object v5, Ltpi;->b:Ljava/util/HashMap;
+    sget-object v5, Lrqi;->b:Ljava/util/HashMap;
 
     invoke-virtual {v5, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -91,7 +91,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v1, v2, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Luv3;)V
+    invoke-direct {v0, p1, v1, v2, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lyv3;)V
 
     invoke-direct {p0, v0}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
 

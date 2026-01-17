@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq09;
-.implements Lr09;
+.implements Luz8;
+.implements Lvz8;
 
 
 # instance fields
@@ -64,7 +64,7 @@
 
 
 # virtual methods
-.method public final a()V
+.method public final c()V
     .locals 4
 
     iget v0, p0, Luk0;->a:I

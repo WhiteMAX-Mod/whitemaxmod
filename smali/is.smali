@@ -1,155 +1,64 @@
-.class public final Lis;
-.super Lgsh;
+.class public final synthetic Lis;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile c:Lis;
-
-.field public static final d:Lhs;
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public final b:Lxt4;
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lhs;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lhs;-><init>(I)V
-
-    sput-object v0, Lis;->d:Lhs;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+    iput p1, p0, Lis;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lxt4;
-
-    invoke-direct {v0}, Lxt4;-><init>()V
-
-    iput-object v0, p0, Lis;->b:Lxt4;
-
     return-void
 .end method
 
-.method public static k()Lis;
-    .locals 2
+.method private final a(Ljava/lang/Runnable;)V
+    .locals 0
 
-    sget-object v0, Lis;->c:Lis;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lis;->c:Lis;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Lis;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lis;->c:Lis;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lis;
-
-    invoke-direct {v1}, Lis;-><init>()V
-
-    sput-object v1, Lis;->c:Lis;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lis;->c:Lis;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
+    return-void
 .end method
 
 
 # virtual methods
-.method public final l(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    iget-object v0, p0, Lis;->b:Lxt4;
+    iget v0, p0, Lis;->a:I
 
-    iget-object v1, v0, Lxt4;->d:Landroid/os/Handler;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_1
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    iget-object v1, v0, Lxt4;->b:Ljava/lang/Object;
+    :pswitch_0
+    return-void
 
-    monitor-enter v1
+    :pswitch_1
+    invoke-static {}, Ljs;->c()Ljs;
 
-    :try_start_0
-    iget-object v2, v0, Lxt4;->d:Landroid/os/Handler;
+    move-result-object v0
 
-    if-nez v2, :cond_0
+    iget-object v0, v0, Ljs;->b:Lzt4;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iget-object v0, v0, Lzt4;->c:Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v2
-
-    invoke-static {v2}, Lxt4;->k(Landroid/os/Looper;)Landroid/os/Handler;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lxt4;->d:Landroid/os/Handler;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v1
-
-    goto :goto_2
-
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-
-    :cond_1
-    :goto_2
-    iget-object v0, v0, Lxt4;->d:Landroid/os/Handler;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

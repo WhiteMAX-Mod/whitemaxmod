@@ -1,23 +1,19 @@
-.class public abstract Lx1i;
-.super Ljava/lang/Throwable;
+.class public final Lx1i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# virtual methods
+.method public final serializer()La38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "La38;"
+        }
+    .end annotation
 
-.field public final b:I
+    sget-object v0, Lw1i;->a:Lw1i;
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
-
-    iput-object p1, p0, Lx1i;->a:Ljava/lang/String;
-
-    iput p2, p0, Lx1i;->b:I
-
-    return-void
+    return-object v0
 .end method

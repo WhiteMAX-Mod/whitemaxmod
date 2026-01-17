@@ -1,109 +1,118 @@
-.class public abstract Lnbb;
-.super Ljava/lang/Object;
+.class public final Lnbb;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic X:Lpbb;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lpbb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Lt7d;->oneme_folders_chats_picker_toolbar:I
+    iput-object p1, p0, Lnbb;->X:Lpbb;
 
-    sput v0, Lnbb;->a:I
+    const/4 p1, 0x2
 
-    sget v0, Lt7d;->oneme_folders_delete_folder_bottom_sheet_cancel_button:I
-
-    sput v0, Lnbb;->b:I
-
-    sget v0, Lt7d;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
-
-    sput v0, Lnbb;->c:I
-
-    sget v0, Lt7d;->oneme_folders_edit_create_button:I
-
-    sput v0, Lnbb;->d:I
-
-    sget v0, Lt7d;->oneme_folders_edit_members_list:I
-
-    sput v0, Lnbb;->e:I
-
-    sget v0, Lt7d;->oneme_folders_edit_screen:I
-
-    sput v0, Lnbb;->f:I
-
-    sget v0, Lt7d;->oneme_folders_edit_toolbar:I
-
-    sput v0, Lnbb;->g:I
-
-    sget v0, Lt7d;->oneme_folders_list_all_folder_view_type:I
-
-    sput v0, Lnbb;->h:I
-
-    sget v0, Lt7d;->oneme_folders_list_create_folder_view_type:I
-
-    sput v0, Lnbb;->i:I
-
-    sget v0, Lt7d;->oneme_folders_list_menu_action_change:I
-
-    sput v0, Lnbb;->j:I
-
-    sget v0, Lt7d;->oneme_folders_list_menu_action_delete_folder:I
-
-    sput v0, Lnbb;->k:I
-
-    sget v0, Lt7d;->oneme_folders_list_recommended_folder_view_type:I
-
-    sput v0, Lnbb;->l:I
-
-    sget v0, Lt7d;->oneme_folders_list_recycler_view:I
-
-    sput v0, Lnbb;->m:I
-
-    sget v0, Lt7d;->oneme_folders_list_screen:I
-
-    sput v0, Lnbb;->n:I
-
-    sget v0, Lt7d;->oneme_folders_list_toolbar:I
-
-    sput v0, Lnbb;->o:I
-
-    sget v0, Lt7d;->oneme_folders_list_user_folder_view_type:I
-
-    sput v0, Lnbb;->p:I
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lnbb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lnbb;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lnbb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lnbb;
+
+    iget-object v0, p0, Lnbb;->X:Lpbb;
+
+    invoke-direct {p1, v0, p2}, Lnbb;-><init>(Lpbb;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lnbb;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lnbb;->o:I
+
+    new-instance p1, Llbb;
+
+    const/4 v0, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, v1, v0, v2}, Llbb;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iget-object v0, p0, Lnbb;->X:Lpbb;
+
+    invoke-virtual {v0, p1, p0}, Lpbb;->g(Lnq6;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

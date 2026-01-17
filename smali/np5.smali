@@ -3,26 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lef8;
-.implements Ldf8;
-.implements Ltx3;
+.implements Lpe8;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:I
+.field public final synthetic b:Lvac;
 
 .field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(III)V
+.method public synthetic constructor <init>(Lvac;II)V
     .locals 0
 
     iput p3, p0, Lnp5;->a:I
 
-    iput p1, p0, Lnp5;->b:I
+    iput-object p1, p0, Lnp5;->b:Lvac;
 
     iput p2, p0, Lnp5;->c:I
 
@@ -33,74 +31,33 @@
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 3
-
-    iget v0, p0, Lnp5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lccc;
-
-    invoke-virtual {p1}, Lccc;->m0()V
-
-    iget-object p1, p1, Lccc;->a:Lzp5;
-
-    iget v0, p0, Lnp5;->b:I
-
-    iget v1, p0, Lnp5;->c:I
-
-    if-eq v0, v1, :cond_0
-
-    add-int/lit8 v2, v0, 0x1
-
-    invoke-virtual {p1, v0, v2, v1}, Lzp5;->g1(III)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget v0, p0, Lnp5;->c:I
-
-    check-cast p1, Lccc;
-
-    iget v1, p0, Lnp5;->b:I
-
-    invoke-virtual {p1, v1, v0}, Lccc;->h0(II)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public invoke(Ljava/lang/Object;)V
+.method public final invoke(Ljava/lang/Object;)V
     .locals 2
 
     iget v0, p0, Lnp5;->a:I
 
+    check-cast p1, Lnbc;
+
     packed-switch v0, :pswitch_data_0
 
-    iget v0, p0, Lnp5;->c:I
+    iget-object v0, p0, Lnp5;->b:Lvac;
 
-    check-cast p1, Lsac;
+    iget-boolean v0, v0, Lvac;->l:Z
 
-    iget v1, p0, Lnp5;->b:I
+    iget v1, p0, Lnp5;->c:I
 
-    invoke-interface {p1, v1, v0}, Lsac;->p(II)V
+    invoke-interface {p1, v1, v0}, Lnbc;->i(IZ)V
 
     return-void
 
     :pswitch_0
+    iget-object v0, p0, Lnp5;->b:Lvac;
+
+    iget-object v0, v0, Lvac;->a:Lqlg;
+
     iget v0, p0, Lnp5;->c:I
 
-    check-cast p1, Ltac;
-
-    iget v1, p0, Lnp5;->b:I
-
-    invoke-interface {p1, v1, v0}, Ltac;->p(II)V
+    invoke-interface {p1, v0}, Lnbc;->z(I)V
 
     return-void
 

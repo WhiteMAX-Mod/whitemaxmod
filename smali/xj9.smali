@@ -1,35 +1,62 @@
-.class public interface abstract Lxj9;
+.class public final Lxj9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/PopupWindow$OnDismissListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lxj9;->a:I
+
+    iput-object p2, p0, Lxj9;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract B(Lxj9;I)V
-.end method
+.method public final onDismiss()V
+    .locals 2
 
-.method public abstract E(I)B
-.end method
+    iget v0, p0, Lxj9;->a:I
 
-.method public abstract c0(III[B)I
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract close()V
-.end method
+    iget-object v0, p0, Lxj9;->b:Ljava/lang/Object;
 
-.method public abstract d0(III[B)I
-.end method
+    check-cast v0, Lone/me/pinbars/PinBarsWidget;
 
-.method public abstract getSize()I
-.end method
+    const/4 v1, 0x0
 
-.method public abstract isClosed()Z
-.end method
+    iput-object v1, v0, Lone/me/pinbars/PinBarsWidget;->b:Lmog;
 
-.method public abstract l()J
-.end method
+    return-void
 
-.method public abstract n0()J
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lxj9;->b:Ljava/lang/Object;
 
-.method public abstract o()Ljava/nio/ByteBuffer;
+    check-cast v0, Lyj9;
+
+    invoke-virtual {v0}, Lyj9;->c()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

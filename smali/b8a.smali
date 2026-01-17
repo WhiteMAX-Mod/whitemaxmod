@@ -1,5 +1,5 @@
 .class public final Lb8a;
-.super Li4;
+.super Lg4;
 .source "SourceFile"
 
 
@@ -23,11 +23,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lioh;
+    new-instance v0, Lfph;
 
-    const/16 v1, 0x8
+    const/4 v1, 0x7
 
-    invoke-direct {v0, v1}, Lioh;-><init>(I)V
+    invoke-direct {v0, v1}, Lfph;-><init>(I)V
 
     sput-object v0, Lb8a;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -51,7 +51,7 @@
 
     const/16 v0, 0x4f45
 
-    invoke-static {p1, v0}, Lwmj;->k(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, Lsnj;->k(Landroid/os/Parcel;I)I
 
     move-result v0
 
@@ -59,9 +59,9 @@
 
     iget-object v2, p0, Lb8a;->a:Landroid/app/PendingIntent;
 
-    invoke-static {p1, v1, v2, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-static {p1, v0}, Lwmj;->l(Landroid/os/Parcel;I)V
+    invoke-static {p1, v0}, Lsnj;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

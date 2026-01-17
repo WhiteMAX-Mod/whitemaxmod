@@ -1,121 +1,51 @@
 .class public final Lu5i;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final Companion:Lt5i;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lx5i;
+
+.field public Y:I
+
+.field public d:Lt5i;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lx5i;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lt5i;
+    iput-object p1, p0, Lu5i;->X:Lx5i;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lu5i;->Companion:Lt5i;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x1
-
-    const/4 v1, 0x1
-
-    if-ne v1, v0, :cond_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lu5i;->a:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    sget-object p2, Ls5i;->a:Ls5i;
-
-    invoke-virtual {p2}, Ls5i;->d()Lvoe;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lvij;->b(IILvoe;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lu5i;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lu5i;
-
-    iget-object v1, p0, Lu5i;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lu5i;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lu5i;->a:Ljava/lang/String;
+    iput-object p1, p0, Lu5i;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget p1, p0, Lu5i;->Y:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iput p1, p0, Lu5i;->Y:I
 
-    const-string v0, "WebAppOpenLinkRequest(url="
+    iget-object p1, p0, Lu5i;->X:Lx5i;
 
-    const-string v1, ")"
+    const/4 v0, 0x0
 
-    iget-object v2, p0, Lu5i;->a:Ljava/lang/String;
+    invoke-virtual {p1, v0, v0, p0}, Lx5i;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

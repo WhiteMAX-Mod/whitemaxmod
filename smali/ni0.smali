@@ -1,9 +1,9 @@
 .class public final Lni0;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ler6;
+.implements Ldr6;
 
 
 # instance fields
@@ -18,7 +18,7 @@
 
     iput p3, p0, Lni0;->o:I
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
 
     iput-boolean p1, p2, Lni0;->X:Z
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     invoke-virtual {p2, p1}, Lni0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -81,7 +81,7 @@
 
     iput-boolean p1, p2, Lni0;->X:Z
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     invoke-virtual {p2, p1}, Lni0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -104,22 +104,22 @@
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-boolean v0, p0, Lni0;->X:Z
 
-    iget-boolean p1, p0, Lni0;->X:Z
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
     :pswitch_0
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-boolean v0, p0, Lni0;->X:Z
 
-    iget-boolean p1, p0, Lni0;->X:Z
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 

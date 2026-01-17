@@ -1,411 +1,1219 @@
 .class public final Ljea;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Ltda;
+.implements Lar;
+
+
+# static fields
+.field public static final U0:J
+
+.field public static final V0:J
+
+.field public static final synthetic W0:I
 
 
 # instance fields
-.field public final synthetic o:Lkea;
+.field public final A0:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+.field public final B0:Ljava/util/LinkedHashMap;
+
+.field public C0:Landroid/os/Handler;
+
+.field public final D0:Ldh6;
+
+.field public final E0:Lspf;
+
+.field public final F0:Lpld;
+
+.field public final G0:Lspf;
+
+.field public H0:I
+
+.field public I0:Z
+
+.field public J0:Z
+
+.field public K0:Z
+
+.field public final L0:F
+
+.field public M0:Z
+
+.field public N0:Ld49;
+
+.field public O0:Ld49;
+
+.field public P0:Lm59;
+
+.field public Q0:J
+
+.field public R0:F
+
+.field public final S0:Lspf;
+
+.field public final T0:Lpld;
+
+.field public final X:Lcy0;
+
+.field public final Y:Lfab;
+
+.field public final Z:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lmbg;
+
+.field public final c:Lm36;
+
+.field public final d:Lhm9;
+
+.field public final o:Lef3;
+
+.field public final t0:Lo58;
+
+.field public final u0:Lo58;
+
+.field public final v0:Lo58;
+
+.field public volatile w0:Lmmf;
+
+.field public x0:I
+
+.field public y0:Li19;
+
+.field public z0:Lwda;
 
 
 # direct methods
-.method public constructor <init>(Lkea;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Ljea;->o:Lkea;
+    sget v0, Lta5;->d:I
 
-    const/4 p1, 0x2
+    sget-object v0, Lza5;->d:Lza5;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Laoj;->g(ILza5;)J
+
+    move-result-wide v1
+
+    sput-wide v1, Ljea;->U0:J
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Laoj;->g(ILza5;)J
+
+    move-result-wide v0
+
+    sput-wide v0, Ljea;->V0:J
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Landroid/content/Context;Lgre;Lmbg;Lm36;Lhm9;Lef3;Lcy0;Liwh;Lfab;Ltb4;Lo58;Lo58;Lo58;)V
     .locals 0
 
-    check-cast p1, Lac4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p1, p0, Ljea;->a:Landroid/content/Context;
 
-    invoke-virtual {p0, p1, p2}, Ljea;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Ljea;->b:Lmbg;
+
+    iput-object p4, p0, Ljea;->c:Lm36;
+
+    iput-object p5, p0, Ljea;->d:Lhm9;
+
+    iput-object p6, p0, Ljea;->o:Lef3;
+
+    iput-object p7, p0, Ljea;->X:Lcy0;
+
+    iput-object p9, p0, Ljea;->Y:Lfab;
+
+    iput-object p11, p0, Ljea;->t0:Lo58;
+
+    iput-object p12, p0, Ljea;->u0:Lo58;
+
+    iput-object p13, p0, Ljea;->v0:Lo58;
+
+    check-cast p3, Lj9b;
+
+    invoke-virtual {p3}, Lj9b;->c()Lzp8;
 
     move-result-object p1
 
-    check-cast p1, Ljea;
+    invoke-virtual {p1}, Lzp8;->getImmediate()Lzp8;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Ljea;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Llpb;->a()Lh4g;
 
-    return-object p2
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lm0;->plus(Lqb4;)Lqb4;
+
+    move-result-object p1
+
+    invoke-interface {p1, p10}, Lqb4;->plus(Lqb4;)Lqb4;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object p1, p0, Ljea;->A0:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    new-instance p1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object p1, p0, Ljea;->B0:Ljava/util/LinkedHashMap;
+
+    new-instance p1, Ldh6;
+
+    const/16 p2, 0x16
+
+    invoke-direct {p1, p2, p0}, Ldh6;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Ljea;->D0:Ldh6;
+
+    const-wide/16 p1, -0x1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p3
+
+    invoke-static {p3}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p4
+
+    iput-object p4, p0, Ljea;->E0:Lspf;
+
+    new-instance p5, Lpld;
+
+    invoke-direct {p5, p4}, Lpld;-><init>(Lmfa;)V
+
+    iput-object p5, p0, Ljea;->F0:Lpld;
+
+    invoke-static {p3}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p3
+
+    iput-object p3, p0, Ljea;->G0:Lspf;
+
+    const/4 p3, 0x1
+
+    iput p3, p0, Ljea;->H0:I
+
+    const/high16 p4, 0x3f800000    # 1.0f
+
+    iput p4, p0, Ljea;->L0:F
+
+    iput-boolean p3, p0, Ljea;->M0:Z
+
+    iput-wide p1, p0, Ljea;->Q0:J
+
+    iput p4, p0, Ljea;->R0:F
+
+    invoke-virtual {p8, p0}, Liwh;->c(Lar;)V
+
+    invoke-virtual {p8}, Liwh;->d()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Ljea;->f()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ljea;->S0:Lspf;
+
+    new-instance p2, Lpld;
+
+    invoke-direct {p2, p1}, Lpld;-><init>(Lmfa;)V
+
+    iput-object p2, p0, Ljea;->T0:Lpld;
+
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public static final a(Ljea;I)Ld49;
+    .locals 3
 
-    new-instance p1, Ljea;
+    const/4 v0, -0x1
 
-    iget-object v0, p0, Ljea;->o:Lkea;
-
-    invoke-direct {p1, v0, p2}, Ljea;-><init>(Lkea;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ljea;->o:Lkea;
-
-    iget-object v0, p1, Lkea;->D0:Lhof;
-
-    iget-object v1, p1, Lkea;->x0:Le29;
-
-    const-wide/16 v2, -0x1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Le29;->f()J
-
-    move-result-wide v4
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-wide v4, v2
+    iget-object p0, p0, Ljea;->y0:Li19;
 
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Li19;->v()Lrlg;
+
+    move-result-object v0
+
+    iget-object p0, p0, Li19;->a:Lplg;
+
+    const-wide/16 v1, 0x0
+
+    invoke-virtual {v0, p1, p0, v1, v2}, Lrlg;->m(ILplg;J)Lplg;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lplg;->c:Ld49;
+
+    return-object p0
+
+    :cond_1
     :goto_0
-    new-instance v1, Ljava/lang/Long;
+    const/4 p0, 0x0
 
-    invoke-direct {v1, v4, v5}, Ljava/lang/Long;-><init>(J)V
+    return-object p0
+.end method
 
-    const/4 v4, 0x0
+.method public static final g(Ljea;)V
+    .locals 6
 
-    invoke-virtual {v0, v4, v1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v0, "jea"
 
-    iget-object v1, p1, Lkea;->F0:Lhof;
+    const-string v1, "afterConnect"
 
-    iget-object v5, p1, Lkea;->x0:Le29;
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v5, :cond_1
+    const/4 v0, 0x0
 
-    invoke-virtual {v5}, Le29;->c()J
+    iput v0, p0, Ljea;->x0:I
 
-    move-result-wide v5
+    iget-object v0, p0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v1, Liea;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, v2}, Liea;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x3
+
+    invoke-static {v0, v2, v2, v1, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    iget-object v0, p0, Ljea;->z0:Lwda;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lwda;
+
+    invoke-direct {v0, p0}, Lwda;-><init>(Ljea;)V
+
+    iget-object v1, p0, Ljea;->y0:Li19;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, v0}, Li19;->b(Lobc;)V
+
+    :cond_0
+    iput-object v0, p0, Ljea;->z0:Lwda;
+
+    :cond_1
+    const-string v0, "jea"
+
+    sget-object v1, Lc5j;->a:Ledb;
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v3, Lkk8;->d:Lkk8;
+
+    invoke-virtual {v1, v3}, Ledb;->b(Lkk8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    const-string v4, "notifyListeners: onConnectedToMediaSession"
+
+    invoke-virtual {v1, v3, v0, v4, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_0
+    iget-object v0, p0, Ljea;->A0:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Ljea;->A0:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lvda;
+
+    invoke-virtual {p0}, Ljea;->j()J
+
+    move-result-wide v3
+
+    invoke-virtual {p0}, Ljea;->k()Le49;
+
+    move-result-object v5
+
+    invoke-interface {v2, v3, v4, v5}, Lvda;->a(JLe49;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :cond_4
+    monitor-exit v0
+
+    return-void
+
+    :goto_2
+    monitor-exit v0
+
+    throw p0
+.end method
+
+.method public static h(Ljava/lang/String;Ljava/lang/String;Le49;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ld49;
+    .locals 20
+
+    new-instance v0, Lh39;
+
+    invoke-direct {v0}, Lh39;-><init>()V
+
+    new-instance v1, Ln39;
+
+    invoke-direct {v1}, Ln39;-><init>()V
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    sget-object v9, Lhud;->o:Lhud;
+
+    new-instance v12, Lp39;
+
+    invoke-direct {v12}, Lp39;-><init>()V
+
+    sget-object v19, Lw39;->d:Lw39;
+
+    invoke-static/range {p0 .. p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lk59;
+
+    invoke-direct {v2}, Lk59;-><init>()V
+
+    move-object/from16 v4, p3
+
+    iput-object v4, v2, Lk59;->b:Ljava/lang/CharSequence;
+
+    move-object/from16 v4, p4
+
+    iput-object v4, v2, Lk59;->a:Ljava/lang/CharSequence;
+
+    move-object/from16 v4, p5
+
+    iput-object v4, v2, Lk59;->H:Landroid/os/Bundle;
+
+    invoke-virtual/range {p2 .. p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    iput-object v4, v2, Lk59;->G:Ljava/lang/Integer;
+
+    new-instance v13, Lm59;
+
+    invoke-direct {v13, v2}, Lm59;-><init>(Lk59;)V
+
+    iget-object v2, v1, Ln39;->b:Landroid/net/Uri;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, v1, Ln39;->a:Ljava/util/UUID;
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
 
     goto :goto_1
 
     :cond_1
-    move-wide v5, v2
+    :goto_0
+    const/4 v2, 0x1
 
     :goto_1
-    new-instance v7, Ljava/lang/Long;
+    invoke-static {v2}, Lh6j;->g(Z)V
 
-    invoke-direct {v7, v5, v6}, Ljava/lang/Long;-><init>(J)V
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, v4, v7}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v4, v2
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    if-eqz v3, :cond_3
 
-    const/4 v5, 0x1
+    new-instance v2, Lt39;
 
-    if-eqz v1, :cond_2
+    iget-object v5, v1, Ln39;->a:Ljava/util/UUID;
 
-    invoke-virtual {v1}, Le29;->getPlaybackState()I
+    if-eqz v5, :cond_2
 
-    move-result v1
+    new-instance v4, Lo39;
 
-    goto :goto_2
+    invoke-direct {v4, v1}, Lo39;-><init>(Ln39;)V
 
     :cond_2
-    move v1, v5
+    move-object v5, v4
+
+    const/4 v4, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v8, 0x0
+
+    const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct/range {v2 .. v11}, Lt39;-><init>(Landroid/net/Uri;Ljava/lang/String;Lo39;Le39;Ljava/util/List;Ljava/lang/String;Lhk7;J)V
+
+    move-object/from16 v16, v2
 
     :goto_2
-    iput v1, p1, Lkea;->G0:I
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x0
-
-    if-ne v1, v6, :cond_3
-
-    move v6, v5
+    move-object/from16 v18, v13
 
     goto :goto_3
 
     :cond_3
-    move v6, v7
+    move-object/from16 v16, v4
+
+    goto :goto_2
 
     :goto_3
-    iput-boolean v6, p1, Lkea;->J0:Z
+    new-instance v13, Ld49;
 
-    const/4 v6, 0x4
+    new-instance v15, Ll39;
 
-    if-ne v1, v6, :cond_4
+    invoke-direct {v15, v0}, Lj39;-><init>(Lh39;)V
 
-    move v1, v5
+    new-instance v0, Lr39;
 
-    goto :goto_4
+    invoke-direct {v0, v12}, Lr39;-><init>(Lp39;)V
 
-    :cond_4
-    move v1, v7
+    move-object/from16 v14, p1
 
-    :goto_4
-    iput-boolean v1, p1, Lkea;->L0:Z
+    move-object/from16 v17, v0
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    invoke-direct/range {v13 .. v19}, Ld49;-><init>(Ljava/lang/String;Ll39;Lt39;Lr39;Lm59;Lw39;)V
 
-    if-eqz v1, :cond_5
+    return-object v13
+.end method
 
-    invoke-virtual {v1}, Le29;->n()Z
 
-    move-result v1
+# virtual methods
+.method public final b(Lrda;)V
+    .locals 3
 
-    if-ne v1, v5, :cond_5
+    iget-object v0, p0, Ljea;->A0:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    move v1, v5
+    monitor-enter v0
 
-    goto :goto_5
+    :try_start_0
+    new-instance v1, Lxda;
 
-    :cond_5
-    move v1, v7
+    invoke-direct {v1, p1}, Lxda;-><init>(Lrda;)V
 
-    :goto_5
-    iput-boolean v1, p1, Lkea;->I0:Z
+    iget-object v2, p0, Ljea;->B0:Ljava/util/LinkedHashMap;
 
-    if-nez v1, :cond_6
+    invoke-interface {v2, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v1, p1, Lkea;->G0:I
+    move-result-object p1
 
-    const/4 v6, 0x3
+    check-cast p1, Lvda;
 
-    if-ne v1, v6, :cond_6
+    if-eqz p1, :cond_0
 
-    goto :goto_6
+    iget-object v2, p0, Ljea;->A0:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    :cond_6
-    move v5, v7
+    invoke-virtual {v2, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
-    :goto_6
-    iput-boolean v5, p1, Lkea;->H0:Z
+    goto :goto_0
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    :catchall_0
+    move-exception p1
 
-    if-eqz v1, :cond_7
+    goto :goto_1
 
-    invoke-virtual {v1}, Le29;->g()Z
+    :cond_0
+    :goto_0
+    iget-object p1, p0, Ljea;->A0:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    :cond_7
-    iget-object v1, p1, Lkea;->x0:Le29;
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v1, :cond_8
+    monitor-exit v0
 
-    invoke-virtual {v1}, Le29;->d()Lz49;
+    return-void
 
-    move-result-object v1
+    :goto_1
+    monitor-exit v0
 
-    goto :goto_7
+    throw p1
+.end method
 
-    :cond_8
-    move-object v1, v4
+.method public final c()V
+    .locals 4
 
-    :goto_7
-    iput-object v1, p1, Lkea;->M0:Lz49;
+    const-string v0, "jea"
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    const-string v1, "disconnect: "
 
-    const/4 v5, -0x1
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v1, :cond_9
+    invoke-virtual {p0}, Ljea;->e()V
 
-    invoke-virtual {v1}, Le29;->D()V
+    iget-object v0, p0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v1, v1, Le29;->c:Ld29;
+    new-instance v1, Lzda;
 
-    invoke-interface {v1}, Ld29;->isConnected()Z
+    const/4 v2, 0x0
 
-    move-result v6
+    invoke-direct {v1, p0, v2}, Lzda;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v6, :cond_9
+    const/4 v3, 0x3
 
-    invoke-interface {v1}, Ld29;->L()I
+    invoke-static {v0, v2, v2, v1, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    move-result v1
+    move-result-object v0
 
-    goto :goto_8
+    iput-object v0, p0, Ljea;->w0:Lmmf;
 
-    :cond_9
-    move v1, v5
+    return-void
+.end method
 
-    :goto_8
-    invoke-static {p1, v1}, Lkea;->a(Lkea;I)Lz49;
+.method public final d()V
+    .locals 2
 
-    move-result-object v1
+    const-string v0, "jea"
 
-    iput-object v1, p1, Lkea;->N0:Lz49;
+    const-string v1, "cancelPositionObserving"
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v1, :cond_a
+    iget-object v0, p0, Ljea;->C0:Landroid/os/Handler;
 
-    invoke-virtual {v1}, Le29;->D()V
+    if-eqz v0, :cond_0
 
-    iget-object v1, v1, Le29;->c:Ld29;
+    iget-object v1, p0, Ljea;->D0:Ldh6;
 
-    invoke-interface {v1}, Ld29;->isConnected()Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    move-result v6
+    :cond_0
+    return-void
+.end method
 
-    if-eqz v6, :cond_a
+.method public final e()V
+    .locals 2
 
-    invoke-interface {v1}, Ld29;->H()I
+    const-string v0, "jea"
 
-    move-result v5
+    const-string v1, "cancelScheduledConnectionAction"
 
-    :cond_a
-    invoke-static {p1, v5}, Lkea;->a(Lkea;I)Lz49;
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    iget-object v0, p0, Ljea;->w0:Lmmf;
 
-    if-eqz v1, :cond_b
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Le29;->y()Z
+    if-eqz v0, :cond_0
 
-    :cond_b
-    iget-object v1, p1, Lkea;->x0:Le29;
+    invoke-virtual {v0, v1}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    if-eqz v1, :cond_c
+    :cond_0
+    iput-object v1, p0, Ljea;->w0:Lmmf;
 
-    invoke-virtual {v1}, Le29;->getRepeatMode()I
+    return-void
+.end method
 
-    :cond_c
-    iget-object v1, p1, Lkea;->x0:Le29;
+.method public final f()V
+    .locals 4
 
-    if-eqz v1, :cond_e
+    invoke-virtual {p0}, Ljea;->e()V
 
-    invoke-virtual {v1}, Le29;->D()V
+    iget-object v0, p0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v1, v1, Le29;->c:Ld29;
+    new-instance v1, Lyda;
 
-    invoke-interface {v1}, Ld29;->isConnected()Z
+    const/4 v2, 0x0
 
-    move-result v5
+    invoke-direct {v1, p0, v2}, Lyda;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v5, :cond_d
+    const/4 v3, 0x3
 
-    invoke-interface {v1}, Ld29;->Q()Lh69;
+    invoke-static {v0, v2, v2, v1, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    move-result-object v1
+    move-result-object v0
 
-    goto :goto_9
+    iput-object v0, p0, Ljea;->w0:Lmmf;
 
-    :cond_d
-    sget-object v1, Lh69;->K:Lh69;
+    return-void
+.end method
 
-    goto :goto_9
+.method public final i(Z)V
+    .locals 4
 
-    :cond_e
-    move-object v1, v4
+    const-string v0, "jea"
 
-    :goto_9
-    iput-object v1, p1, Lkea;->O0:Lh69;
+    const-string v1, "disconnectNow started"
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v1, :cond_f
+    iget-object v0, p0, Ljea;->C0:Landroid/os/Handler;
 
-    invoke-virtual {v1}, Le29;->getDuration()J
+    if-eqz v0, :cond_0
 
-    move-result-wide v2
+    iget-object v1, p0, Ljea;->D0:Ldh6;
 
-    :cond_f
-    iput-wide v2, p1, Lkea;->P0:J
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    :cond_0
+    const/4 v0, 0x0
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    iput-object v0, p0, Ljea;->C0:Landroid/os/Handler;
 
-    if-eqz v1, :cond_11
+    new-instance v1, Liea;
 
-    invoke-virtual {v1}, Le29;->D()V
+    invoke-direct {v1, p0, v0}, Liea;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, v1, Le29;->c:Ld29;
+    const/4 v2, 0x3
 
-    invoke-interface {v1}, Ld29;->isConnected()Z
+    iget-object v3, p0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v3, v0, v0, v1, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Ljea;->e()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-object v0, p0, Ljea;->N0:Ld49;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Ld49;->a:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lyzf;->l(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final k()Le49;
+    .locals 4
+
+    iget-object v0, p0, Ljea;->N0:Ld49;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Ld49;->d:Lm59;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lm59;->H:Ljava/lang/Integer;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    :goto_0
+    new-instance v1, Lb2;
+
+    const/4 v2, 0x0
+
+    sget-object v3, Le49;->X:Lal5;
+
+    invoke-direct {v1, v2, v3}, Lb2;-><init>(ILjava/lang/Object;)V
+
+    :cond_1
+    invoke-virtual {v1}, Lb2;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v1}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Le49;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
     move-result v3
 
-    if-eqz v3, :cond_10
+    if-ne v3, v0, :cond_1
 
-    invoke-interface {v1}, Ld29;->e()Leac;
+    goto :goto_1
+
+    :cond_2
+    const/4 v2, 0x0
+
+    :goto_1
+    check-cast v2, Le49;
+
+    if-nez v2, :cond_3
+
+    sget-object v0, Le49;->a:Le49;
+
+    return-object v0
+
+    :cond_3
+    return-object v2
+.end method
+
+.method public final l()Lsda;
+    .locals 7
+
+    iget-object v0, p0, Ljea;->P0:Lm59;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_5
+
+    iget-object v2, v0, Lm59;->b:Ljava/lang/CharSequence;
+
+    iget-object v3, v0, Lm59;->a:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_0
+
+    const-string v3, ""
+
+    :cond_0
+    iget-object v0, v0, Lm59;->I:Landroid/os/Bundle;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    goto :goto_a
+    const/16 v4, 0xa
 
-    :cond_10
-    sget-object v1, Leac;->d:Leac;
+    invoke-static {v1, v4}, Lri3;->n(Ljava/lang/Iterable;I)I
 
-    :goto_a
-    if-eqz v1, :cond_11
+    move-result v4
 
-    iget v1, v1, Leac;->a:F
+    invoke-static {v4}, Lss8;->h(I)I
 
-    goto :goto_b
+    move-result v4
 
-    :cond_11
-    move v1, v2
+    const/16 v5, 0x10
 
-    :goto_b
-    iput v1, p1, Lkea;->Q0:F
+    if-ge v4, v5, :cond_1
 
-    iget-object v1, p1, Lkea;->x0:Le29;
+    move v4, v5
 
-    if-eqz v1, :cond_12
+    :cond_1
+    new-instance v5, Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v1}, Le29;->e()Z
+    invoke-direct {v5, v4}, Ljava/util/LinkedHashMap;-><init>(I)V
 
-    :cond_12
-    iget-object v1, p1, Lkea;->R0:Lhof;
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0}, Lhof;->getValue()Ljava/lang/Object;
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-interface {v5, v4, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_2
+    move-object v1, v5
+
+    :cond_3
+    if-nez v1, :cond_4
+
+    sget-object v1, Leh5;->a:Leh5;
+
+    :cond_4
+    new-instance v0, Lsda;
+
+    invoke-direct {v0, v2, v3, v1}, Lsda;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/util/Map;)V
+
+    return-object v0
+
+    :cond_5
+    return-object v1
+.end method
+
+.method public final m()V
+    .locals 0
+
+    invoke-virtual {p0}, Ljea;->f()V
+
+    return-void
+.end method
+
+.method public final n()Z
+    .locals 2
+
+    iget-boolean v0, p0, Ljea;->J0:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Ljea;->I0:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ljea;->T0:Lpld;
+
+    iget-object v0, v0, Lpld;->a:Llpf;
+
+    invoke-interface {v0}, Llpf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Number;
 
-    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
-    move-result-wide v5
+    move-result v0
 
-    iget-wide v7, p1, Lkea;->P0:J
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    long-to-double v7, v7
+    cmpg-float v0, v0, v1
 
-    div-double/2addr v5, v7
+    if-nez v0, :cond_0
 
-    double-to-float p1, v5
+    goto :goto_0
 
+    :cond_0
+    iget v0, p0, Ljea;->H0:I
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_1
+
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v2}, Lelj;->c(FFF)F
+    return v0
+.end method
 
-    move-result p1
+.method public final o()V
+    .locals 4
 
-    new-instance v0, Ljava/lang/Float;
+    new-instance v0, Lbea;
 
-    invoke-direct {v0, p1}, Ljava/lang/Float;-><init>(F)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v1, v4, v0}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, p0, v1}, Lbea;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    const/4 v2, 0x3
 
-    return-object p1
+    iget-object v3, p0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v3, v1, v1, v0, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final p()V
+    .locals 4
+
+    new-instance v0, Lcea;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcea;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x3
+
+    iget-object v3, p0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v3, v1, v1, v0, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final q()V
+    .locals 3
+
+    iget-object v0, p0, Ljea;->y0:Li19;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Li19;->d()Ld49;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    iget-object v2, p0, Ljea;->N0:Ld49;
+
+    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iput-object v1, p0, Ljea;->N0:Ld49;
+
+    :cond_1
+    iget-object v0, p0, Ljea;->y0:Li19;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0}, Li19;->t()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v2
+
+    if-ltz v2, :cond_2
+
+    move-object v1, v0
+
+    :cond_2
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    iget-object v1, p0, Ljea;->y0:Li19;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Li19;->C()V
+
+    iget-object v1, v1, Li19;->c:Lh19;
+
+    invoke-interface {v1}, Lh19;->isConnected()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    const-string v0, "MediaController"
+
+    const-string v1, "The controller is not connected. Ignoring removeMediaItem()."
+
+    invoke-static {v0, v1}, Li1h;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {v1, v0}, Lh19;->J(I)V
+
+    :cond_4
+    :goto_1
+    return-void
+.end method
+
+.method public final r(Lrda;)V
+    .locals 2
+
+    iget-object v0, p0, Ljea;->A0:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Ljea;->B0:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvda;
+
+    if-eqz p1, :cond_0
+
+    iget-object v1, p0, Ljea;->A0:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final s()V
+    .locals 4
+
+    new-instance v0, Lhea;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lhea;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x3
+
+    iget-object v3, p0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v3, v1, v1, v0, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final t()V
+    .locals 2
+
+    const-string v0, "jea"
+
+    const-string v1, "tryToStartPositionObserving"
+
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljea;->d()V
+
+    iget-object v0, p0, Ljea;->C0:Landroid/os/Handler;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Ljea;->C0:Landroid/os/Handler;
+
+    :cond_0
+    iget-object v0, p0, Ljea;->C0:Landroid/os/Handler;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Ljea;->D0:Ldh6;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
 .end method

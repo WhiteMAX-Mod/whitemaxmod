@@ -4,314 +4,296 @@
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ld68;
+.field public final b:J
 
-.field public final c:Ljava/lang/String;
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
 
 
 # direct methods
-.method public constructor <init>(Ld68;Ld68;)V
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;ZZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxj2;->a:Ld68;
+    iput-object p1, p0, Lxj2;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lxj2;->b:Ld68;
+    iput-wide p2, p0, Lxj2;->b:J
 
-    const-class p1, Lxj2;
+    iput-object p4, p0, Lxj2;->c:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object p5, p0, Lxj2;->d:Ljava/lang/String;
 
-    move-result-object p1
+    iput-object p6, p0, Lxj2;->e:Ljava/lang/String;
 
-    iput-object p1, p0, Lxj2;->c:Ljava/lang/String;
+    iput-boolean p7, p0, Lxj2;->f:Z
 
-    return-void
-.end method
+    iput-boolean p8, p0, Lxj2;->g:Z
 
-.method public static a(Lxj2;JJJJLlw4;)V
-    .locals 21
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lxj2;->c:Ljava/lang/String;
-
-    invoke-static/range {p5 .. p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lklj;->b(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "from: chatId = "
-
-    const-string v4, ", time = "
-
-    move-wide/from16 v8, p1
-
-    invoke-static {v3, v8, v9, v4, v2}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ", chatAccessToken="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lxj2;->a:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lte3;
-
-    check-cast v1, Lcfe;
-
-    invoke-virtual {v1}, Lcfe;->k()J
-
-    move-result-wide v6
-
-    new-instance v5, Lsj2;
-
-    const-wide/16 v17, 0x0
-
-    const/16 v20, 0x1d80
-
-    const/16 v16, 0x0
-
-    move-wide/from16 v10, p3
-
-    move-wide/from16 v12, p5
-
-    move-wide/from16 v14, p7
-
-    move-object/from16 v19, p9
-
-    invoke-direct/range {v5 .. v20}, Lsj2;-><init>(JJJJJZJLlw4;I)V
-
-    iget-object v0, v0, Lxj2;->b:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxcg;
-
-    invoke-static {v0, v5}, Lxcg;->b(Lxcg;Lum;)J
+    iput-boolean p9, p0, Lxj2;->h:Z
 
     return-void
 .end method
 
-.method public static b(Lxj2;JJJJJLlw4;Z)J
-    .locals 22
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v1, v0, Lxj2;->c:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    invoke-static/range {p5 .. p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v2
+    return v0
 
-    invoke-static {v2}, Lklj;->b(Ljava/lang/Long;)Ljava/lang/String;
+    :cond_0
+    instance-of v1, p1, Lxj2;
 
-    move-result-object v2
+    const/4 v2, 0x0
 
-    invoke-static/range {p7 .. p8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-nez v1, :cond_1
 
-    move-result-object v3
+    return v2
 
-    invoke-static {v3}, Lklj;->b(Ljava/lang/Long;)Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lxj2;
 
-    move-result-object v3
+    iget-object v1, p0, Lxj2;->a:Ljava/lang/String;
 
-    const-string v4, "from-to: chatId = "
+    iget-object v3, p1, Lxj2;->a:Ljava/lang/String;
 
-    const-string v5, ", time = "
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-wide/from16 v9, p1
+    move-result v1
 
-    invoke-static {v4, v9, v10, v5, v2}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_2
 
-    move-result-object v2
+    return v2
 
-    const-string v4, ", backwardTime = "
+    :cond_2
+    iget-wide v3, p0, Lxj2;->b:J
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v5, p1, Lxj2;->b:J
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    cmp-long v1, v3, v5
 
-    const-string v3, ", chatAccessToken="
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v2
 
-    const/4 v3, 0x1
+    :cond_3
+    iget-object v1, p0, Lxj2;->c:Ljava/lang/CharSequence;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v3, p1, Lxj2;->c:Ljava/lang/CharSequence;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v2
+    move-result v1
 
-    invoke-static {v1, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v1, :cond_4
 
-    iget-object v1, v0, Lxj2;->a:Ld68;
+    return v2
 
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    :cond_4
+    iget-object v1, p0, Lxj2;->d:Ljava/lang/String;
 
-    move-result-object v1
+    iget-object v3, p1, Lxj2;->d:Ljava/lang/String;
 
-    check-cast v1, Lte3;
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v1, Lcfe;
+    move-result v1
 
-    invoke-virtual {v1}, Lcfe;->k()J
+    if-nez v1, :cond_5
 
-    move-result-wide v7
+    return v2
 
-    new-instance v6, Lsj2;
+    :cond_5
+    iget-object v1, p0, Lxj2;->e:Ljava/lang/String;
 
-    const/16 v21, 0x1900
+    iget-object v3, p1, Lxj2;->e:Ljava/lang/String;
 
-    move-wide/from16 v11, p3
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-wide/from16 v13, p5
+    move-result v1
 
-    move-wide/from16 v18, p7
+    if-nez v1, :cond_6
 
-    move-wide/from16 v15, p9
+    return v2
 
-    move-object/from16 v20, p11
+    :cond_6
+    iget-boolean v1, p0, Lxj2;->f:Z
 
-    move/from16 v17, p12
+    iget-boolean v3, p1, Lxj2;->f:Z
 
-    invoke-direct/range {v6 .. v21}, Lsj2;-><init>(JJJJJZJLlw4;I)V
+    if-eq v1, v3, :cond_7
 
-    iget-object v0, v0, Lxj2;->b:Ld68;
+    return v2
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    :cond_7
+    iget-boolean v1, p0, Lxj2;->g:Z
 
-    move-result-object v0
+    iget-boolean v3, p1, Lxj2;->g:Z
 
-    check-cast v0, Lxcg;
+    if-eq v1, v3, :cond_8
 
-    invoke-static {v0, v6}, Lxcg;->b(Lxcg;Lum;)J
+    return v2
 
-    move-result-wide v0
+    :cond_8
+    iget-boolean v1, p0, Lxj2;->h:Z
 
-    return-wide v0
+    iget-boolean p1, p1, Lxj2;->h:Z
+
+    if-eq v1, p1, :cond_9
+
+    return v2
+
+    :cond_9
+    return v0
 .end method
 
-.method public static c(Lxj2;JJJJJLlw4;)J
-    .locals 22
+.method public final hashCode()I
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lxj2;->a:Ljava/lang/String;
 
-    iget-object v1, v0, Lxj2;->c:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    invoke-static/range {p5 .. p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v0, 0x0
 
-    move-result-object v2
+    goto :goto_0
 
-    invoke-static {v2}, Lklj;->b(Ljava/lang/Long;)Ljava/lang/String;
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    move-result-object v2
+    move-result v0
 
-    invoke-static/range {p7 .. p8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :goto_0
+    const/16 v1, 0x1f
 
-    move-result-object v3
+    mul-int/2addr v0, v1
 
-    invoke-static {v3}, Lklj;->b(Ljava/lang/Long;)Ljava/lang/String;
+    iget-wide v2, p0, Lxj2;->b:J
 
-    move-result-object v3
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
-    const-string v4, "to: chatId = "
+    move-result v0
 
-    const-string v5, ", time = "
+    iget-object v2, p0, Lxj2;->c:Ljava/lang/CharSequence;
 
-    move-wide/from16 v9, p1
+    invoke-static {v2, v0, v1}, Lj27;->d(Ljava/lang/CharSequence;II)I
 
-    invoke-static {v4, v9, v10, v5, v2}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    move-result-object v2
+    iget-object v2, p0, Lxj2;->d:Ljava/lang/String;
 
-    const-string v4, ", backwardTime = "
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lxj2;->e:Ljava/lang/String;
 
-    const-string v3, ", chatAccessToken="
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const/4 v3, 0x1
+    iget-boolean v2, p0, Lxj2;->f:Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v2
+    iget-boolean v2, p0, Lxj2;->g:Z
 
-    invoke-static {v1, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    iget-object v1, v0, Lxj2;->a:Ld68;
+    move-result v0
 
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    iget-boolean v1, p0, Lxj2;->h:Z
 
-    move-result-object v1
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    check-cast v1, Lte3;
+    move-result v1
 
-    check-cast v1, Lcfe;
+    add-int/2addr v1, v0
 
-    invoke-virtual {v1}, Lcfe;->k()J
+    return v1
+.end method
 
-    move-result-wide v7
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    new-instance v6, Lsj2;
+    const-string v0, "ChatItemModel(avatarUrl="
 
-    const/16 v21, 0x1980
+    const-string v1, ", avatarSourceId="
 
-    const/16 v17, 0x0
+    iget-wide v2, p0, Lxj2;->b:J
 
-    move-wide/from16 v11, p3
+    iget-object v4, p0, Lxj2;->a:Ljava/lang/String;
 
-    move-wide/from16 v13, p5
-
-    move-wide/from16 v18, p7
-
-    move-wide/from16 v15, p9
-
-    move-object/from16 v20, p11
-
-    invoke-direct/range {v6 .. v21}, Lsj2;-><init>(JJJJJZJLlw4;I)V
-
-    iget-object v0, v0, Lxj2;->b:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4, v1}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lxcg;
+    const-string v1, ", avatarAbbreviation="
 
-    invoke-static {v0, v6}, Lxcg;->b(Lxcg;Lum;)J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-wide v0
+    iget-object v1, p0, Lxj2;->c:Ljava/lang/CharSequence;
 
-    return-wide v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", chatName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lxj2;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", chatLink="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lxj2;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isLoading="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lxj2;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isPrivate="
+
+    const-string v2, ", hasEditLinkPermission="
+
+    iget-boolean v3, p0, Lxj2;->g:Z
+
+    iget-boolean v4, p0, Lxj2;->h:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lob3;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

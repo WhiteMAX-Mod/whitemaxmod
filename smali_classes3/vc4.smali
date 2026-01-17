@@ -3,46 +3,61 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxpg;
+.implements Lgqg;
 
 
 # instance fields
 .field public final a:Z
 
+.field public final b:Z
+
+.field public final c:I
+
+.field public final d:I
+
 
 # direct methods
-.method public constructor <init>(Ldjj;)V
-    .locals 0
+.method public constructor <init>(Ldgj;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p1, Ldjj;->a:Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    check-cast p1, Ljava/lang/Boolean;
+    :try_start_0
+    sget-object v0, Lru/ok/tracer/minidump/Minidump;->c:Lru/ok/tracer/minidump/Minidump;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
+    move v0, p1
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x1
+    :catchall_0
+    const/4 v0, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Lvc4;->a:Z
+    iput-boolean v0, p0, Lvc4;->a:Z
+
+    iput-boolean p1, p0, Lvc4;->b:Z
+
+    const/16 p1, 0xa
+
+    iput p1, p0, Lvc4;->c:I
+
+    const/high16 p1, 0x10000
+
+    iput p1, p0, Lvc4;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lpf5;
+.method public final a()Lsf5;
     .locals 1
 
-    sget-object v0, Lqia;->b:Lpf5;
+    sget-object v0, Lsia;->b:Lsf5;
 
     return-object v0
 .end method

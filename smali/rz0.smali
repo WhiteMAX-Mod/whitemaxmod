@@ -1,71 +1,165 @@
-.class public abstract Lrz0;
+.class public final Lrz0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi4;
 
-# static fields
-.field public static final a:Ljava/util/UUID;
 
-.field public static final b:Ljava/util/UUID;
+# instance fields
+.field public a:Lmz0;
 
-.field public static final c:Ljava/util/UUID;
+.field public final b:Lf06;
 
-.field public static final d:Ljava/util/UUID;
+.field public final c:Lc01;
 
-.field public static final e:Ljava/util/UUID;
+.field public d:Z
+
+.field public e:Loi4;
+
+.field public f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Ljava/util/UUID;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v1, 0x0
+    new-instance v0, Lf06;
 
-    invoke-direct {v0, v1, v2, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
+    const/4 v1, 0x0
 
-    sput-object v0, Lrz0;->a:Ljava/util/UUID;
+    invoke-direct {v0, v1}, Lf06;-><init>(I)V
 
-    new-instance v0, Ljava/util/UUID;
+    iput-object v0, p0, Lrz0;->b:Lf06;
 
-    const-wide v1, 0x1077efecc0b24d02L
+    sget-object v0, Lc01;->c:Lc01;
 
-    const-wide v3, -0x531cc3e1ad1d04b5L    # -1.8442503140481377E-92
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Lrz0;->b:Ljava/util/UUID;
-
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x1d8e62a7567a4c37L    # -1.6229728350858627E166
-
-    const-wide v3, 0x781ab030af78d30eL    # 3.524813189889319E270
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Lrz0;->c:Ljava/util/UUID;
-
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x121074568629b532L    # -3.563403477674908E221
-
-    const-wide v3, -0x5c37d8232ae2de13L
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Lrz0;->d:Ljava/util/UUID;
-
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x65fb0f8667bfbd7aL
-
-    const-wide v3, -0x546d19a41f77a06bL    # -8.640911267670052E-99
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Lrz0;->e:Ljava/util/UUID;
+    iput-object v0, p0, Lrz0;->c:Lc01;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic a()Lsi4;
+    .locals 1
+
+    invoke-virtual {p0}, Lrz0;->b()Ltz0;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()Ltz0;
+    .locals 3
+
+    iget-object v0, p0, Lrz0;->e:Loi4;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Loi4;->a()Lsi4;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v1, p0, Lrz0;->f:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, v1, v2}, Lrz0;->d(Lsi4;II)Ltz0;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c()Ltz0;
+    .locals 3
+
+    iget-object v0, p0, Lrz0;->e:Loi4;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Loi4;->a()Lsi4;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v1, p0, Lrz0;->f:I
+
+    or-int/lit8 v1, v1, 0x1
+
+    const/16 v2, -0xfa0
+
+    invoke-virtual {p0, v0, v1, v2}, Lrz0;->d(Lsi4;II)Ltz0;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final d(Lsi4;II)Ltz0;
+    .locals 8
+
+    iget-object v1, p0, Lrz0;->a:Lmz0;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-boolean v0, p0, Lrz0;->d:Z
+
+    if-nez v0, :cond_1
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v0, Lpz0;
+
+    invoke-direct {v0, v1}, Lpz0;-><init>(Lmz0;)V
+
+    :goto_0
+    move-object v4, v0
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :goto_2
+    new-instance v0, Ltz0;
+
+    iget-object v2, p0, Lrz0;->b:Lf06;
+
+    invoke-virtual {v2}, Lf06;->a()Lsi4;
+
+    move-result-object v3
+
+    iget-object v5, p0, Lrz0;->c:Lc01;
+
+    move-object v2, p1
+
+    move v6, p2
+
+    move v7, p3
+
+    invoke-direct/range {v0 .. v7}, Ltz0;-><init>(Lmz0;Lsi4;Lsi4;Lpz0;Lc01;II)V
+
+    return-object v0
 .end method

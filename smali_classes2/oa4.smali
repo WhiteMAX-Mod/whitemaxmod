@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lay3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic b:Lby3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+.method public synthetic constructor <init>(Lby3;I)V
     .locals 0
 
     iput p2, p0, Loa4;->a:I
 
-    iput-object p1, p0, Loa4;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Loa4;->b:Lby3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,235 +27,31 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 10
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
     iget v0, p0, Loa4;->a:I
 
-    const/4 v1, 0x0
-
-    const-string v2, "InitialDataTask"
-
-    const/16 v3, 0x1b7
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Loa4;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Loa4;->b:Lby3;
 
-    sget-object v1, Lxg5;->a:Lxg5;
+    check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    invoke-interface {v0, p1}, Lby3;->accept(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    check-cast v0, Ll25;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ll25;->dispose()V
-
-    :cond_0
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Loa4;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Loa4;->b:Lby3;
 
-    sget-object v4, Lone/me/android/OneMeApplication;->s0:Ly2b;
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v4
-
-    sget-object v6, Lefe;->a:Lefe;
-
-    invoke-virtual {v6}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v3}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lacb;
-
-    iget-object v3, v3, Lacb;->b:Lz7g;
-
-    invoke-virtual {v3}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lm6a;
-
-    const-string v6, "loadFolders"
-
-    invoke-static {v3, v6}, Lacb;->a(Lnk0;Ljava/lang/String;)Z
-
-    move-result v3
-
-    sget-object v6, Lm4j;->a:Lvcb;
-
-    if-nez v6, :cond_1
+    check-cast p1, Ljava/lang/Throwable;
 
     goto :goto_0
 
-    :cond_1
-    sget-object v7, Lxk8;->d:Lxk8;
-
-    invoke-virtual {v6, v7}, Lvcb;->b(Lxk8;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_2
-
-    sget v8, Lqa5;->d:I
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v8
-
-    sub-long/2addr v8, v4
-
-    sget-object v4, Lwa5;->b:Lwa5;
-
-    invoke-static {v8, v9, v4}, Lfnj;->i(JLwa5;)J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Lqa5;->p(J)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "initialDataStorage().loadFolders() by "
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v6, v7, v2, v4, v1}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    new-instance v1, Lw2b;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v3, v2}, Lw2b;-><init>(ZI)V
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndUpdate(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Loa4;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v4, Lone/me/android/OneMeApplication;->s0:Ly2b;
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v4
-
-    sget-object v6, Lefe;->a:Lefe;
-
-    invoke-virtual {v6}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v3}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lacb;
-
-    iget-object v3, v3, Lacb;->a:Lz7g;
-
-    invoke-virtual {v3}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lc6a;
-
-    const-string v6, "loadChats"
-
-    invoke-static {v3, v6}, Lacb;->a(Lnk0;Ljava/lang/String;)Z
-
-    move-result v3
-
-    sget-object v6, Lm4j;->a:Lvcb;
-
-    if-nez v6, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v7, Lxk8;->d:Lxk8;
-
-    invoke-virtual {v6, v7}, Lvcb;->b(Lxk8;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_4
-
-    sget v8, Lqa5;->d:I
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v8
-
-    sub-long/2addr v8, v4
-
-    sget-object v4, Lwa5;->b:Lwa5;
-
-    invoke-static {v8, v9, v4}, Lfnj;->i(JLwa5;)J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Lqa5;->p(J)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "initialDataStorage().loadChats() by "
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v6, v7, v2, v4, v1}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_1
-    new-instance v1, Lw2b;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v3, v2}, Lw2b;-><init>(ZI)V
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndUpdate(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Loa4;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/Conversation$State;
-
-    return-object v0
-
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

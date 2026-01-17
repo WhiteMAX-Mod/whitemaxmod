@@ -1,70 +1,63 @@
-.class public final Ll0j;
-.super Ljava/lang/Object;
+.class public final enum Ll0j;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lwwa;
 
 
 # static fields
-.field public static final a:Ll0j;
+.field public static final enum a:Ll0j;
+
+.field public static final synthetic b:[Ll0j;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
     new-instance v0, Ll0j;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "DEFAULT"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Ll0j;->a:Ll0j;
 
-    new-instance v0, Ldqi;
+    new-instance v1, Ll0j;
 
-    const/4 v1, 0x1
+    const-string v2, "SIGNED"
 
-    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
+    const/4 v3, 0x1
 
-    const-class v1, Lrqi;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+    new-instance v2, Ll0j;
 
-    move-result-object v0
+    const-string v3, "FIXED"
 
-    const/4 v2, 0x2
+    const/4 v4, 0x2
 
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+    filled-new-array {v0, v1, v2}, [Ll0j;
 
     move-result-object v0
 
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    sput-object v0, Ll0j;->b:[Ll0j;
 
     return-void
 .end method
 
+.method public static values()[Ll0j;
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    sget-object v0, Ll0j;->b:[Ll0j;
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-virtual {v0}, [Ll0j;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    throw p1
+    check-cast v0, [Ll0j;
+
+    return-object v0
 .end method

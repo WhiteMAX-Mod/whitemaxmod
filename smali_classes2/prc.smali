@@ -1,96 +1,112 @@
 .class public final Lprc;
-.super Lb5g;
+.super Lesc;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic o:Lzrc;
+.field public final a:Lxj2;
 
 
 # direct methods
-.method public constructor <init>(Lzrc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lxj2;)V
     .locals 0
 
-    iput-object p1, p0, Lprc;->o:Lzrc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lprc;->a:Lxj2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lac4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lprc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lprc;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lprc;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-object v1, p0, Lprc;->a:Lxj2;
 
-    invoke-virtual {p1, p2}, Lprc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lprc;->a:Lxj2;
 
-    return-object p2
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lprc;
-
-    iget-object v0, p0, Lprc;->o:Lzrc;
-
-    invoke-direct {p1, v0, p2}, Lprc;-><init>(Lzrc;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getItemId()J
     .locals 2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const/16 v0, 0x4000
 
-    iget-object p1, p0, Lprc;->o:Lzrc;
+    int-to-long v0, v0
 
-    iget-object p1, p1, Lzrc;->X:Ld68;
+    return-wide v0
+.end method
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, Lprc;->a:Lxj2;
 
-    check-cast p1, Ltib;
+    invoke-virtual {v0}, Lxj2;->hashCode()I
 
-    sget v0, Lhfb;->v1:I
+    move-result v0
 
-    new-instance v1, Lbhg;
+    return v0
+.end method
 
-    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
+.method public final m()I
+    .locals 1
 
-    invoke-virtual {p1, v1}, Ltib;->g(Lghg;)V
+    const/16 v0, 0x4000
 
-    new-instance v0, Lhjb;
+    return v0
+.end method
 
-    sget v1, Lx4e;->L:I
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-direct {v0, v1}, Lhjb;-><init>(I)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Ltib;->e(Lljb;)V
+    const-string v1, "ChatLinkItem(model="
 
-    invoke-virtual {p1}, Ltib;->i()Lsib;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget-object v1, p0, Lprc;->a:Lxj2;
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

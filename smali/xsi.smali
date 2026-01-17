@@ -4,67 +4,89 @@
 
 
 # static fields
-.field public static final a:[Lq38;
+.field public static final a:Latc;
+
+.field public static b:Latc;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Latc;
 
-    new-array v0, v0, [Lq38;
+    const/4 v1, 0x0
 
-    sput-object v0, Lxsi;->a:[Lq38;
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v1, v1, v1, v2}, Latc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    sput-object v0, Lxsi;->a:Latc;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Throwable;)V
-    .locals 2
+.method public static final a(Ljava/lang/String;)Z
+    .locals 1
 
-    const-class v0, Ljava/lang/Error;
+    const-string v0, "GET"
 
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_0
 
-    const-class v0, Ljava/lang/RuntimeException;
+    const-string v0, "HEAD"
 
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p0
 
-    if-nez v1, :cond_0
+    if-nez p0, :cond_0
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    const/4 p0, 0x1
 
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return p0
 
     :cond_0
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Throwable;
-
-    throw p0
-
-    :cond_1
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Throwable;
-
-    throw p0
+    return p0
 .end method
 
+.method public static final b(Ljava/io/Reader;)Ljava/lang/String;
+    .locals 4
 
-# virtual methods
-.method public abstract b(Z)V
+    new-instance v0, Ljava/io/StringWriter;
+
+    invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
+
+    const/16 v1, 0x2000
+
+    new-array v1, v1, [C
+
+    invoke-virtual {p0, v1}, Ljava/io/Reader;->read([C)I
+
+    move-result v2
+
+    :goto_0
+    if-ltz v2, :cond_0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3, v2}, Ljava/io/Writer;->write([CII)V
+
+    invoke-virtual {p0, v1}, Ljava/io/Reader;->read([C)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

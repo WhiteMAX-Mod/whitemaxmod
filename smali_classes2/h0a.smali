@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxv9;
+.implements Ltv9;
 
 
 # instance fields
@@ -36,19 +36,19 @@
 
     iget-object v0, p0, Lh0a;->b:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->Q0:Ls59;
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->T0:Lx49;
 
     const/4 v2, -0x1
 
-    iput v2, v1, Ls59;->e:I
+    iput v2, v1, Lx49;->e:I
 
-    iget-object v2, v0, Lone/me/messages/list/ui/MessagesListWidget;->S0:Ld0a;
+    iget-object v2, v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:Lc0a;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v3
 
-    iget-boolean v4, v2, Ld0a;->c:Z
+    iget-boolean v4, v2, Lc0a;->c:Z
 
     const/4 v5, 0x0
 
@@ -57,27 +57,27 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v3}, Ld0a;->c(Landroidx/recyclerview/widget/RecyclerView;)Z
+    invoke-static {v3}, Lc0a;->c(Landroidx/recyclerview/widget/RecyclerView;)Z
 
     move-result v4
 
-    iput-boolean v4, v2, Ld0a;->d:Z
+    iput-boolean v4, v2, Lc0a;->d:Z
 
-    invoke-virtual {v2, v3, v5, v5}, Ld0a;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    invoke-virtual {v2, v3, v5, v5}, Lc0a;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
 
     :goto_0
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0, v5, v5}, Ls59;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    invoke-virtual {v1, v0, v5, v5}, Lx49;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
 
     return-void
 
     :pswitch_0
     iget-object v0, p0, Lh0a;->b:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-virtual {v0}, Lx84;->getView()Landroid/view/View;
+    invoke-virtual {v0}, La94;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -87,7 +87,7 @@
 
     const-string v0, "Can\'t process itemsChangedCallback for scroll because root view is null"
 
-    invoke-static {v2, v0}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -106,16 +106,16 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Lmfa;
+    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Lkfa;
 
-    invoke-virtual {v0, p0}, Lmfa;->h(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lkfa;->h(Ljava/lang/Object;)V
 
     goto :goto_1
 
     :cond_2
     const-string v0, "Can\'t process itemsChangedCallback because scroll is not meet requirements"
 
-    invoke-static {v2, v0}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     return-void

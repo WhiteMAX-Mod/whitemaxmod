@@ -19,7 +19,7 @@
 
     const-string p1, "Don\'t know how to handle message: "
 
-    invoke-static {v0, p1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -40,7 +40,7 @@
 
     sget-object v0, Lcom/google/android/gms/common/api/Status;->Z:Lcom/google/android/gms/common/api/Status;
 
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->f(Lcom/google/android/gms/common/api/Status;)V
+    invoke-virtual {p1, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->h(Lcom/google/android/gms/common/api/Status;)V
 
     return-void
 
@@ -55,7 +55,7 @@
 
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    check-cast p1, Lczd;
+    check-cast p1, Lwzd;
 
     const/4 p1, 0x0
 
@@ -67,7 +67,7 @@
     :catch_0
     move-exception p1
 
-    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Lhy0;
+    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Lay0;
 
     throw p1
 

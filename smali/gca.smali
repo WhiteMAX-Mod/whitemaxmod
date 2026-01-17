@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyj7;
+.implements Lfj7;
 
 
 # instance fields
@@ -23,7 +23,7 @@
 
 
 # virtual methods
-.method public final createImageTranscoder(Lqi7;Z)Lxj7;
+.method public final createImageTranscoder(Lxh7;Z)Lej7;
     .locals 5
 
     iget v0, p0, Lgca;->a:I
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lyj7;
+    check-cast v0, Lfj7;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_6
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_5
@@ -71,17 +71,17 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {v0, p1, p2}, Lyj7;->createImageTranscoder(Lqi7;Z)Lxj7;
+    invoke-interface {v0, p1, p2}, Lfj7;->createImageTranscoder(Lxh7;Z)Lej7;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
-    new-instance p1, Liq3;
+    new-instance p1, Lqq3;
 
     iget v0, p0, Lgca;->a:I
 
-    invoke-direct {p1, p2, v0}, Liq3;-><init>(ZI)V
+    invoke-direct {p1, p2, v0}, Lqq3;-><init>(ZI)V
 
     :cond_0
     return-object p1

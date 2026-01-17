@@ -1,75 +1,80 @@
 .class public final Ljab;
-.super Lone/me/sdk/concurrent/LinkedTransferQueue34;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
+    .locals 0
+
+    iput p2, p0, Ljab;->a:I
+
+    iput-object p1, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final bridge contains(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 1
 
-    if-nez p1, :cond_0
+    iget v0, p0, Ljab;->a:I
 
-    const/4 v0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_0
+    iget-object v0, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    :goto_0
-    if-nez v0, :cond_1
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    const/4 p1, 0x0
+    return-void
 
-    return p1
+    :pswitch_0
+    iget-object v0, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    move-result p1
+    return-void
 
-    return p1
-.end method
+    :pswitch_1
+    iget-object v0, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    check-cast p1, Ljava/lang/Runnable;
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryTransfer(Ljava/lang/Object;)Z
+    return-void
 
-    move-result p1
+    :pswitch_2
+    iget-object v0, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    return p1
-.end method
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-.method public final bridge remove(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    if-nez p1, :cond_0
+    return-void
 
-    const/4 v0, 0x1
+    nop
 
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
-
-    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

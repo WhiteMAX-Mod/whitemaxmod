@@ -1,229 +1,337 @@
-.class public final synthetic Lvvb;
+.class public final Lvvb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lorg/webrtc/VideoEncoderFactory;
+.implements Law8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lahd;
 
-.field public final synthetic b:Llwb;
+.field public final b:Lxvb;
+
+.field public c:Lorg/webrtc/VideoCodecInfo;
+
+.field public final d:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+.field public final e:Ln8g;
+
+.field public final f:Ln8g;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llwb;I)V
+.method public constructor <init>(Lorg/webrtc/EglBase$Context;ZLia1;Lrk1;Lahd;)V
     .locals 0
 
-    iput p2, p0, Lvvb;->a:I
-
-    iput-object p1, p0, Lvvb;->b:Llwb;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p5, p0, Lvvb;->a:Lahd;
+
+    if-eqz p2, :cond_0
+
+    new-instance p2, Lxvb;
+
+    invoke-direct {p2, p0, p3, p5}, Lxvb;-><init>(Lvvb;Lia1;Lahd;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
+    iput-object p2, p0, Lvvb;->b:Lxvb;
+
+    new-instance p2, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {p2}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object p2, p0, Lvvb;->d:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    new-instance p2, Lur5;
+
+    const/4 p3, 0x3
+
+    invoke-direct {p2, p1, p3, p0}, Lur5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Ln8g;
+
+    invoke-direct {p1, p2}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p1, p0, Lvvb;->e:Ln8g;
+
+    new-instance p1, Lje;
+
+    const/16 p2, 0xe
+
+    invoke-direct {p1, p2, p0}, Lje;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lvvb;->f:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final createEncoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoEncoder;
+    .locals 8
 
-    iget v0, p0, Lvvb;->a:I
+    iget-object v0, p0, Lvvb;->b:Lxvb;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lvvb;->b:Llwb;
+    iget-object v1, p1, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
 
-    invoke-virtual {v0}, Llwb;->r()V
+    const-string v2, "VP9"
 
-    iget-object v1, v0, Llwb;->l:Lzj;
+    invoke-static {v1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_1
+    move-result v1
 
-    invoke-virtual {v1}, Lzj;->d()V
-
-    iget-object v2, v1, Lzj;->a:Lbi;
-
-    iget-boolean v3, v2, Lbi;->i:Z
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v2, v2, Lbi;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
-    iget-object v1, v0, Llwb;->n:Lyi;
-
-    if-eqz v1, :cond_3
-
-    iget-object v2, v1, Lyi;->c:Lai4;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2, v1}, Lai4;->c(Lt4e;)V
-
-    :cond_2
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Lyi;->c:Lai4;
-
-    :cond_3
-    iget-object v1, v0, Llwb;->C:Lcgd;
+    iget-object v0, v0, Lxvb;->c:Lahd;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ": "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Lx6a;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " was released"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "PCRTCClient"
-
-    invoke-interface {v1, v2, v0}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lvvb;->b:Llwb;
-
-    iget-object v1, v0, Llwb;->S:Ljava/lang/Object;
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v1, v0}, Lkwb;->o(Llwb;)V
-
-    :cond_4
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lvvb;->b:Llwb;
-
-    iget-object v1, v0, Llwb;->C:Lcgd;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "createPeerConnectionFactoryInternal, "
+    const-string v3, "isSoftwareCodecProhibited check for: "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", resulted as "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v3, "PCRTCClient"
+    const-string v3, "PatchedVideoEncoderFactoryCodecSelector"
 
-    invoke-interface {v1, v3, v2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v3, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
+    goto :goto_0
+
+    :cond_0
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Llwb;->P:Z
+    :goto_0
+    iget-object v0, p0, Lvvb;->e:Ln8g;
 
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lvvb;->b:Llwb;
-
-    iget-object v1, v0, Llwb;->S:Ljava/lang/Object;
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {v1, v0}, Lkwb;->b(Llwb;)V
-
-    :cond_5
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lvvb;->b:Llwb;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Llwb;->P:Z
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lvvb;->b:Llwb;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Llwb;->d0:Z
-
-    iget-object v1, v0, Llwb;->S:Ljava/lang/Object;
-
-    if-eqz v1, :cond_6
-
-    invoke-interface {v1, v0}, Lkwb;->c(Llwb;)V
-
-    :cond_6
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lvvb;->b:Llwb;
-
-    invoke-virtual {v0}, Llwb;->r()V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lvvb;->b:Llwb;
-
-    iget-object v0, v0, Llwb;->T:Ljava/lang/ref/WeakReference;
-
-    if-nez v0, :cond_7
-
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_7
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lx11;
+    check-cast v0, Lorg/webrtc/VideoEncoderFactory;
 
+    invoke-interface {v0, p1}, Lorg/webrtc/VideoEncoderFactory;->createEncoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoEncoder;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x0
+
+    goto :goto_2
+
+    :cond_2
     :goto_1
-    if-eqz v0, :cond_8
+    iget-object v1, p0, Lvvb;->f:Ln8g;
 
-    invoke-interface {v0}, Lx11;->onIceRestart()V
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
 
-    :cond_8
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoEncoderFactory;
+
+    invoke-interface {v1, p1}, Lorg/webrtc/VideoEncoderFactory;->createEncoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoEncoder;
+
+    move-result-object v1
+
+    :goto_2
+    iget-object v2, p1, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
+
+    const-string v3, "true"
+
+    const-string v4, "false"
+
+    if-nez v0, :cond_3
+
+    move-object v5, v4
+
+    goto :goto_3
+
+    :cond_3
+    move-object v5, v3
+
+    :goto_3
+    if-nez v1, :cond_4
+
+    move-object v3, v4
+
+    :cond_4
+    const-string v4, " hw="
+
+    const-string v6, " sw="
+
+    const-string v7, "Encoder is about to create: "
+
+    invoke-static {v7, v2, v4, v5, v6}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lvvb;->a:Lahd;
+
+    const-string v4, "PatchedVideoEncoderFactory"
+
+    invoke-interface {v3, v4, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lvvb;->c:Lorg/webrtc/VideoCodecInfo;
+
+    iget-object p1, p0, Lvvb;->d:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltvb;
+
+    check-cast v2, Lfxb;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lqwb;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v2, v4}, Lqwb;-><init>(Lfxb;I)V
+
+    new-instance v4, Lbmi;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v2, v3, v5}, Lbmi;-><init>(Lfxb;Lby3;I)V
+
+    const-string v3, "onNewCodecIsCreating"
+
+    invoke-virtual {v2, v4, v3}, Lfxb;->i(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_5
+    if-eqz v0, :cond_6
+
+    if-eqz v1, :cond_6
+
+    new-instance p1, Lorg/webrtc/VideoEncoderFallback;
+
+    invoke-direct {p1, v1, v0}, Lorg/webrtc/VideoEncoderFallback;-><init>(Lorg/webrtc/VideoEncoder;Lorg/webrtc/VideoEncoder;)V
+
+    return-object p1
+
+    :cond_6
+    if-nez v0, :cond_7
+
+    return-object v1
+
+    :cond_7
+    return-object v0
+.end method
+
+.method public final getEncoderSelector()Lorg/webrtc/VideoEncoderFactory$VideoEncoderSelector;
+    .locals 1
+
+    iget-object v0, p0, Lvvb;->b:Lxvb;
+
+    return-object v0
+.end method
+
+.method public final getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+    .locals 2
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iget-object v1, p0, Lvvb;->e:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoEncoderFactory;
+
+    invoke-interface {v1}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lvi3;->q(Ljava/util/AbstractCollection;[Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lvvb;->f:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoEncoderFactory;
+
+    invoke-interface {v1}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lvi3;->q(Ljava/util/AbstractCollection;[Ljava/lang/Object;)V
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lorg/webrtc/VideoCodecInfo;
+
+    invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lorg/webrtc/VideoCodecInfo;
+
+    return-object v0
+.end method
+
+.method public final n(Lbw8;)V
+    .locals 1
+
+    iget-object v0, p0, Lvvb;->b:Lxvb;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lxvb;->n(Lbw8;)V
+
+    :cond_0
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

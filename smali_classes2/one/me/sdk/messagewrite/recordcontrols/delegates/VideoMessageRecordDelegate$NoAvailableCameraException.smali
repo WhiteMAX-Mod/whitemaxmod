@@ -17,7 +17,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field public final a:Lbhg;
+.field public final a:Llhg;
 
 
 # direct methods
@@ -44,20 +44,21 @@
     .locals 1
 
     .line 2
-    sget p1, Lbhb;->n:I
+    sget p1, Llhb;->n:I
 
     .line 3
-    new-instance v0, Lbhg;
+    new-instance v0, Llhg;
 
-    invoke-direct {v0, p1}, Lbhg;-><init>(I)V
+    invoke-direct {v0, p1}, Llhg;-><init>(I)V
 
     .line 4
     const-string p1, "The phone doesn\'t have cameras at all"
 
+    .line 5
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 5
-    iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/delegates/VideoMessageRecordDelegate$NoAvailableCameraException;->a:Lbhg;
+    .line 6
+    iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/delegates/VideoMessageRecordDelegate$NoAvailableCameraException;->a:Llhg;
 
     return-void
 .end method

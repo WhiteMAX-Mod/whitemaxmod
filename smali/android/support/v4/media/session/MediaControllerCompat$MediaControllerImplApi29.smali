@@ -43,7 +43,7 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->mControllerFwk:Landroid/media/session/MediaController;
 
-    invoke-static {v0}, Lx75;->j(Landroid/media/session/MediaController;)Landroid/os/Bundle;
+    invoke-static {v0}, La85;->j(Landroid/media/session/MediaController;)Landroid/os/Bundle;
 
     move-result-object v0
 

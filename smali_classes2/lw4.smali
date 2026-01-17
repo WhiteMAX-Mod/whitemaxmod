@@ -1,163 +1,84 @@
-.class public final enum Llw4;
-.super Ljava/lang/Enum;
+.class public final synthetic Llw4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Llw4;
-
-.field public static final synthetic Y:[Llw4;
-
-.field public static final d:Lxna;
-
-.field public static final enum o:Llw4;
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final a:B
+.field public final synthetic a:I
 
-.field public final b:Lz7g;
-
-.field public final c:Lz7g;
+.field public final synthetic b:Lmw4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Llw4;
-
-    const-string v1, "REGULAR"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Llw4;-><init>(Ljava/lang/String;IB)V
-
-    sput-object v0, Llw4;->o:Llw4;
-
-    new-instance v1, Llw4;
-
-    const-string v2, "DELAYED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Llw4;-><init>(Ljava/lang/String;IB)V
-
-    sput-object v1, Llw4;->X:Llw4;
-
-    filled-new-array {v0, v1}, [Llw4;
-
-    move-result-object v0
-
-    sput-object v0, Llw4;->Y:[Llw4;
-
-    new-instance v0, Lxna;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lxna;-><init>(I)V
-
-    sput-object v0, Llw4;->d:Lxna;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IB)V
+.method public synthetic constructor <init>(Lmw4;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Llw4;->a:I
 
-    iput-byte p3, p0, Llw4;->a:B
+    iput-object p1, p0, Llw4;->b:Lmw4;
 
-    new-instance p1, Lkw4;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p0, p2}, Lkw4;-><init>(Llw4;I)V
-
-    new-instance p2, Lz7g;
-
-    invoke-direct {p2, p1}, Lz7g;-><init>(Lmq6;)V
-
-    iput-object p2, p0, Llw4;->b:Lz7g;
-
-    new-instance p1, Lkw4;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p0, p2}, Lkw4;-><init>(Llw4;I)V
-
-    new-instance p2, Lz7g;
-
-    invoke-direct {p2, p1}, Lz7g;-><init>(Lmq6;)V
-
-    iput-object p2, p0, Llw4;->c:Lz7g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Llw4;
-    .locals 1
-
-    const-class v0, Llw4;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Llw4;
-
-    return-object p0
-.end method
-
-.method public static values()[Llw4;
-    .locals 1
-
-    sget-object v0, Llw4;->Y:[Llw4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Llw4;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Llw4;->c:Lz7g;
+    iget v0, p0, Llw4;->a:I
 
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Llw4;->b:Lmw4;
 
-    check-cast v0, Ljava/lang/Boolean;
+    sget-object v1, Lmw4;->X:Lmw4;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    if-ne v0, v1, :cond_0
 
-    move-result v0
+    const/4 v0, 0x1
 
-    return v0
-.end method
+    goto :goto_0
 
-.method public final c()Z
-    .locals 1
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Llw4;->b:Lz7g;
-
-    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    :pswitch_0
+    iget-object v0, p0, Llw4;->b:Lmw4;
 
-    move-result v0
+    sget-object v1, Lmw4;->o:Lmw4;
 
-    return v0
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

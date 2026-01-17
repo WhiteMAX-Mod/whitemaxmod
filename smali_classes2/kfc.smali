@@ -1,27 +1,53 @@
-.class public final Lkfc;
+.class public abstract synthetic Lkfc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/SharedPreferences;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lmw4;->values()[Lmw4;
 
-    const-string v0, "webrtc-android-sdk-pref"
+    move-result-object v0
 
-    const/4 v1, 0x0
+    array-length v0, v0
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    new-array v0, v0, [I
 
-    move-result-object p1
+    :try_start_0
+    sget-object v1, Lmw4;->o:Lmw4;
 
-    iput-object p1, p0, Lkfc;->a:Landroid/content/SharedPreferences;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Lmw4;->X:Lmw4;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Lkfc;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

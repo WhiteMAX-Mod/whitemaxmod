@@ -107,7 +107,6 @@
     <dimen name="date_picker_selection_rect_offset">24.0dip</dimen>
     <item type="dimen" name="date_picker_today_margin_top">@dimen/date_picker_portrait_today_margin_top</item>
     <dimen name="def_drawer_elevation">10.0dip</dimen>
-    <dimen name="default_gap">8.0dip</dimen>
     <dimen name="design_appbar_elevation">4.0dip</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168.0dip</dimen>
     <dimen name="design_bottom_navigation_active_item_min_width">96.0dip</dimen>
@@ -580,7 +579,6 @@
     <dimen name="m3_toolbar_text_size_title">20.0dip</dimen>
     <dimen name="markdown_button_size">36.0dip</dimen>
     <dimen name="markdown_dot_size">8.0dip</dimen>
-    <item type="dimen" name="match_parent">-1</item>
     <dimen name="material_bottom_sheet_max_width">640.0dip</dimen>
     <dimen name="material_clock_display_height">80.0dip</dimen>
     <dimen name="material_clock_display_padding">24.0dip</dimen>
@@ -850,12 +848,11 @@
     <dimen name="notification_subtext_size">13.0sp</dimen>
     <dimen name="notification_top_pad">10.0dip</dimen>
     <dimen name="notification_top_pad_large_text">5.0dip</dimen>
-    <dimen name="onechat_react_text_size_small">16.0dip</dimen>
+    <item type="dimen" name="picker_alpha_factor">0.75</item>
     <item type="dimen" name="picker_height">@dimen/date_picker_portrait_height</item>
-    <dimen name="picker_max_width">340.0dip</dimen>
-    <item type="dimen" name="picker_min_scale_factor">0.75</item>
-    <item type="dimen" name="picker_scale_factor">0.96</item>
-    <item type="dimen" name="picker_width">@dimen/match_parent</item>
+    <item type="dimen" name="picker_min_alpha_factor">0.5</item>
+    <item type="dimen" name="picker_min_scale_factor">0.65</item>
+    <item type="dimen" name="picker_scale_factor">0.85</item>
     <dimen name="preference_dropdown_padding_start">72.0dip</dimen>
     <dimen name="preference_icon_minWidth">0.0dip</dimen>
     <dimen name="preference_seekbar_padding_horizontal">0.0dip</dimen>

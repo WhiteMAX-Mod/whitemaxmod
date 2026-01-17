@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/content/Context;Lpi3;Li01;Lkhh;Ljava/util/concurrent/Executor;JZ)Llhh;
+.method public abstract d(JJLoj6;Landroid/media/MediaFormat;)V
 .end method

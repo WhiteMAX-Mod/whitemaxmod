@@ -1,9 +1,9 @@
 .class public final La3a;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
@@ -18,7 +18,7 @@
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,7 +38,7 @@
 
     check-cast p1, La3a;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, La3a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -58,26 +58,26 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 9
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, La3a;->o:Lh3a;
 
     iget-object p1, p1, Lh3a;->i:Ljava/lang/String;
 
-    sget-object v1, Lm4j;->a:Lvcb;
+    sget-object v1, Lc5j;->a:Ledb;
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lxk8;->d:Lxk8;
+    sget-object v2, Lkk8;->d:Lkk8;
 
-    invoke-virtual {v1, v2}, Lvcb;->b(Lxk8;)Z
+    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
 
     move-result v3
 
@@ -87,23 +87,23 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, p1, v3, v4}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, p1, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
     iget-object p1, p0, La3a;->o:Lh3a;
 
-    iget-object p1, p1, Lh3a;->e:Laof;
+    iget-object p1, p1, Lh3a;->e:Llpf;
 
-    invoke-interface {p1}, Laof;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lgw9;
+    check-cast p1, Lcw9;
 
-    iget-object p1, p1, Lgw9;->a:Ljava/util/List;
+    iget-object p1, p1, Lcw9;->a:Ljava/util/List;
 
-    invoke-static {p1}, Lei3;->N(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {p1}, Lpi3;->N(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -114,21 +114,21 @@
     return-object v0
 
     :cond_2
-    iget-wide v1, p1, Lone/me/messages/list/loader/MessageModel;->E0:J
+    iget-wide v1, p1, Lone/me/messages/list/loader/MessageModel;->G0:J
 
     iget-object v3, p0, La3a;->o:Lh3a;
 
-    iget-object v3, v3, Lh3a;->k:Ld68;
+    iget-object v3, v3, Lh3a;->k:Lo58;
 
-    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lte3;
+    check-cast v3, Lef3;
 
-    check-cast v3, Lcfe;
+    check-cast v3, Lyfe;
 
-    invoke-virtual {v3}, Lcfe;->s()J
+    invoke-virtual {v3}, Lyfe;->s()J
 
     move-result-wide v3
 
@@ -142,7 +142,7 @@
 
     const-string v1, "Don\'t scroll to last self message because we handle it with scrollWork"
 
-    invoke-static {p1, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -151,25 +151,27 @@
 
     iget-object v1, v1, Lh3a;->n:Ljava/util/concurrent/atomic/AtomicReference;
 
-    new-instance v2, Lvm2;
+    new-instance v2, Ltm2;
 
     const/16 v3, 0x9
 
-    invoke-direct {v2, v3}, Lvm2;-><init>(I)V
+    invoke-direct {v2, v3}, Ltm2;-><init>(I)V
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
 
     iget-object v1, p0, La3a;->o:Lh3a;
 
-    iget-object v1, v1, Lh3a;->q:Lpde;
+    iget-object v2, v1, Lh3a;->q:Lnee;
 
-    iget-wide v2, p1, Lone/me/messages/list/loader/MessageModel;->c:J
+    iget-wide v3, p1, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    const/4 p1, 0x0
+    const-wide/16 v6, 0x0
 
-    const/4 v4, 0x4
+    const/16 v8, 0xc
 
-    invoke-static {v1, v2, v3, p1, v4}, Lpde;->l(Lpde;JZI)V
+    const/4 v5, 0x0
+
+    invoke-static/range {v2 .. v8}, Lnee;->l(Lnee;JZJI)V
 
     return-object v0
 .end method

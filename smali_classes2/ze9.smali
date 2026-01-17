@@ -2,134 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldf9;
 
-# instance fields
-.field public final a:Lre9;
 
-.field public final b:J
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public volatile d:I
-
-.field public volatile e:I
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final g:Ljava/util/concurrent/atomic/AtomicReference;
+# static fields
+.field public static final a:Lze9;
 
 
 # direct methods
-.method public constructor <init>(Lre9;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lze9;
 
-    iput-object p1, p0, Lze9;->a:Lre9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lze9;->b:J
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lze9;->c:Ljava/util/ArrayList;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lze9;->d:I
-
-    iput p1, p0, Lze9;->e:I
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lze9;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lze9;->g:Ljava/util/concurrent/atomic/AtomicReference;
+    sput-object v0, Lze9;->a:Lze9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lone/me/sdk/media/transformer/MediaTransformException;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lze9;->g:Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lze9;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x2d046971
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 8
+    .locals 1
 
-    iget-object v0, p0, Lze9;->a:Lre9;
-
-    iget-object v1, v0, Lre9;->b:Ljava/util/ArrayList;
-
-    invoke-static {v1}, Lkp6;->o(Ljava/util/ArrayList;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lze9;->c:Ljava/util/ArrayList;
-
-    invoke-static {v2}, Lkp6;->l(Ljava/util/List;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lre9;->c:Ljava/lang/String;
-
-    const-string v4, "              "
-
-    invoke-static {v0, v4}, Lkp6;->n(Lre9;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0}, Lkp6;->m(Lre9;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v5, "\n              }\n              inputMedias={"
-
-    const-string v6, "\n              }\n              out="
-
-    const-string v7, "\n            MediaTransformRequest(\n              in={"
-
-    invoke-static {v7, v1, v5, v2, v6}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "\n              anc={"
-
-    const-string v5, "\n              }\n              request={"
-
-    invoke-static {v1, v3, v2, v4, v5}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\n              }\n            )\n        "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljyf;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "File"
 
     return-object v0
 .end method

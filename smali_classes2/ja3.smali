@@ -1,107 +1,61 @@
 .class public final Lja3;
-.super Lb5g;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/tab/ChatsTabWidget;
+.field public X:I
 
-.field public synthetic o:J
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lla3;
+
+.field public d:J
+
+.field public o:Ljava/util/Set;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
+.method public constructor <init>(Lla3;Lo84;)V
     .locals 0
 
-    iput-object p2, p0, Lja3;->X:Lone/me/chats/tab/ChatsTabWidget;
+    iput-object p1, p0, Lja3;->Z:Lla3;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lja3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lja3;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lja3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lja3;
-
-    iget-object v1, p0, Lja3;->X:Lone/me/chats/tab/ChatsTabWidget;
-
-    invoke-direct {v0, p2, v1}, Lja3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide p1
-
-    iput-wide p1, v0, Lja3;->o:J
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 6
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iput-object p1, p0, Lja3;->Y:Ljava/lang/Object;
 
-    iget-wide v0, p0, Lja3;->o:J
+    iget p1, p0, Lja3;->t0:I
 
-    const-wide/16 v2, 0x0
+    const/high16 v0, -0x80000000
 
-    cmp-long p1, v0, v2
+    or-int/2addr p1, v0
 
-    if-lez p1, :cond_0
+    iput p1, p0, Lja3;->t0:I
 
-    sget-object p1, Lone/me/chats/tab/ChatsTabWidget;->G0:[Lp38;
+    const/4 v3, 0x0
 
-    iget-object p1, p0, Lja3;->X:Lone/me/chats/tab/ChatsTabWidget;
+    const/4 v4, 0x0
 
-    iget-object p1, p1, Lone/me/chats/tab/ChatsTabWidget;->s0:Ljava/lang/Object;
+    iget-object v0, p0, Lja3;->Z:Lla3;
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    const-wide/16 v1, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lla3;->x(JLjava/util/Set;ILo84;)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, Lpz1;
-
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

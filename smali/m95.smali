@@ -1,88 +1,13 @@
-.class public final Lm95;
-.super Lg85;
+.class public abstract Lm95;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public b:Z
+# direct methods
+.method public static a(Landroid/view/View;FF)V
+    .locals 0
 
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->drawableHotspotChanged(FF)V
 
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lm95;->b:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0, p1}, Lg85;->draw(Landroid/graphics/Canvas;)V
-
-    :cond_0
     return-void
-.end method
-
-.method public final setHotspot(FF)V
-    .locals 1
-
-    iget-boolean v0, p0, Lm95;->b:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0, p1, p2}, Lg85;->setHotspot(FF)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setHotspotBounds(IIII)V
-    .locals 1
-
-    iget-boolean v0, p0, Lm95;->b:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0, p1, p2, p3, p4}, Lg85;->setHotspotBounds(IIII)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setState([I)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lm95;->b:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lg85;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final setVisible(ZZ)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lm95;->b:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0, p1, p2}, Lg85;->setVisible(ZZ)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
 .end method

@@ -1,173 +1,188 @@
-.class public final synthetic Lf6;
+.class public final Lf6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lh1b;
+.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p2, p0, Lf6;->a:I
+    iput p1, p0, Lf6;->a:I
 
-    iput-object p1, p0, Lf6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    iput-object p2, p0, Lf6;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method private final a(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final i(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final j(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final k(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final l(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final E(Landroid/view/View;Lahi;)Lahi;
-    .locals 7
+.method public final onTransitionCancel(Landroid/transition/Transition;)V
+    .locals 0
 
     iget p1, p0, Lf6;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object p1, p0, Lf6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+.method public final onTransitionEnd(Landroid/transition/Transition;)V
+    .locals 3
 
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Landroid/view/View;
+    iget v0, p0, Lf6;->a:I
 
-    invoke-virtual {p2}, Lahi;->a()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object p1, p0, Lf6;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    check-cast p1, Lhjd;
 
-    move-result-object v1
+    iget-object p1, p1, Lhjd;->t0:Llq6;
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
-    iget v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    if-eq v2, v0, :cond_0
-
-    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_0
-    return-object p2
+    return-void
 
     :pswitch_0
-    iget-object p1, p0, Lf6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    iget-object p1, p0, Lf6;->b:Ljava/lang/Object;
 
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    check-cast p1, Lone/me/chats/forward/ForwardPickerScreen;
 
-    invoke-virtual {p2}, Lahi;->b()I
+    iget-object p1, p1, Lone/me/chats/forward/ForwardPickerScreen;->z0:Llq6;
 
-    move-result v0
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
-    invoke-virtual {p2}, Lahi;->c()I
+    return-void
 
-    move-result v1
+    :pswitch_1
+    invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    invoke-virtual {p2}, Lahi;->a()I
+    iget-object p1, p0, Lf6;->b:Ljava/lang/Object;
 
-    move-result v2
+    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-object v3, p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->H0:Landroid/view/View;
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    new-instance v0, Lj3;
 
-    move-result-object v4
+    const/4 v1, 0x2
 
-    check-cast v4, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-direct {v0, v1, p0}, Lj3;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v4}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginStart()I
+    const-wide/16 v1, 0x64
 
-    move-result v5
+    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    if-eq v5, v0, :cond_1
-
-    invoke-virtual {v4, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_1
-    iget-object v4, p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->G0:Landroid/view/View;
-
-    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    invoke-virtual {v5}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginStart()I
-
-    move-result v6
-
-    if-eq v6, v0, :cond_2
-
-    invoke-virtual {v5, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_2
-    invoke-static {v3, v1}, Lg1j;->e(Landroid/view/View;I)V
-
-    invoke-static {v4, v1}, Lg1j;->e(Landroid/view/View;I)V
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {p1, v0, v4, v1, v3}, Landroid/view/View;->setPadding(IIII)V
-
-    :cond_3
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_4
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {p1, v0, v1, v3, v2}, Landroid/view/View;->setPadding(IIII)V
-
-    :cond_4
-    return-object p2
-
-    nop
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public final onTransitionPause(Landroid/transition/Transition;)V
+    .locals 0
+
+    iget p1, p0, Lf6;->a:I
+
+    return-void
+.end method
+
+.method public final onTransitionResume(Landroid/transition/Transition;)V
+    .locals 0
+
+    iget p1, p0, Lf6;->a:I
+
+    return-void
+.end method
+
+.method public final onTransitionStart(Landroid/transition/Transition;)V
+    .locals 0
+
+    iget p1, p0, Lf6;->a:I
+
+    return-void
 .end method

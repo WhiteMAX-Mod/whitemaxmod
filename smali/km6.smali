@@ -4,16 +4,24 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/fragment/app/a;
+.field public a:Z
 
+.field public b:I
 
-# direct methods
-.method public constructor <init>(Landroidx/fragment/app/a;)V
-    .locals 0
+.field public c:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:I
 
-    iput-object p1, p0, Lkm6;->a:Landroidx/fragment/app/a;
+.field public e:I
 
-    return-void
-.end method
+.field public f:I
+
+.field public g:Ljava/lang/Object;
+
+.field public h:Ljava/lang/Object;
+
+.field public i:Ljava/lang/Object;
+
+.field public j:F
+
+.field public k:Landroid/view/View;

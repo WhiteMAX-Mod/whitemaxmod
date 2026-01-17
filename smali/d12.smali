@@ -1,256 +1,194 @@
-.class public final Ld12;
+.class public Ld12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
-
-.field public b:J
-
-.field public c:Ljava/lang/Object;
+# static fields
+.field public static final a:Ld12;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ld12;
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide v0, p0, Ld12;->a:J
-
-    iput-wide v0, p0, Ld12;->b:J
+    sput-object v0, Ld12;->a:Ld12;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 6
+.method public a(Lhah;Lj40;)V
+    .locals 17
 
-    iget-object v0, p0, Ld12;->c:Ljava/lang/Object;
+    move-object/from16 v0, p1
 
-    check-cast v0, Lf12;
+    move-object/from16 v1, p2
 
-    invoke-virtual {v0}, Lf12;->c()Z
+    const/4 v2, 0x0
 
-    move-result v0
+    sget-object v3, Lhah;->j0:Lta0;
 
-    if-nez v0, :cond_0
+    invoke-interface {v0, v3, v2}, Lmld;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v0, 0x2bc
+    move-result-object v2
 
-    return v0
+    check-cast v2, Ld72;
 
-    :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    sget-object v3, Lhqb;->c:Lhqb;
 
-    move-result-wide v0
+    sget-object v4, Ld72;->i:Lta0;
 
-    iget-wide v2, p0, Ld12;->b:J
+    new-instance v4, Ljava/util/HashSet;
 
-    const-wide/16 v4, -0x1
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    cmp-long v2, v2, v4
+    invoke-static {}, Lffa;->e()Lffa;
 
-    if-nez v2, :cond_1
+    move-result-object v5
 
-    iput-wide v0, p0, Ld12;->b:J
+    new-instance v6, Ljava/util/ArrayList;
 
-    :cond_1
-    iget-wide v2, p0, Ld12;->b:J
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    sub-long/2addr v0, v2
+    invoke-static {}, Lnfa;->a()Lnfa;
 
-    const-wide/32 v2, 0x1d4c0
+    move-result-object v7
 
-    cmp-long v2, v0, v2
+    new-instance v8, Ld72;
 
-    if-gtz v2, :cond_2
+    new-instance v9, Ljava/util/ArrayList;
 
-    const/16 v0, 0x3e8
+    invoke-direct {v9, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    return v0
+    invoke-static {v5}, Lhqb;->b(Lmr3;)Lhqb;
 
-    :cond_2
-    const-wide/32 v2, 0x493e0
+    move-result-object v10
 
-    cmp-long v0, v0, v2
+    new-instance v13, Ljava/util/ArrayList;
 
-    if-gtz v0, :cond_3
+    invoke-direct {v13, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    const/16 v0, 0x7d0
+    sget-object v4, Lvag;->b:Lvag;
 
-    return v0
+    new-instance v4, Landroid/util/ArrayMap;
 
-    :cond_3
-    const/16 v0, 0xfa0
+    invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
 
-    return v0
-.end method
+    iget-object v5, v7, Lvag;->a:Landroid/util/ArrayMap;
 
-.method public b()I
-    .locals 5
+    invoke-virtual {v5}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
 
-    iget-wide v0, p0, Ld12;->a:J
+    move-result-object v6
 
-    iget-object v2, p0, Ld12;->c:Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    check-cast v2, Lf12;
+    move-result-object v6
 
-    invoke-virtual {v2}, Lf12;->c()Z
+    :goto_0
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v7
 
-    const-wide/16 v3, 0x0
+    if-eqz v7, :cond_0
 
-    if-nez v2, :cond_1
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    cmp-long v2, v0, v3
+    move-result-object v7
 
-    const/16 v3, 0x2710
+    check-cast v7, Ljava/lang/String;
 
-    if-lez v2, :cond_0
+    invoke-virtual {v5, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    long-to-int v0, v0
+    move-result-object v11
 
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    return v3
-
-    :cond_1
-    cmp-long v2, v0, v3
-
-    const v3, 0x1b7740
-
-    if-lez v2, :cond_2
-
-    long-to-int v0, v0
-
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    return v0
-
-    :cond_2
-    return v3
-.end method
-
-.method public c(Ljava/lang/Exception;)V
-    .locals 7
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iget-object v2, p0, Ld12;->c:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Exception;
-
-    if-nez v2, :cond_0
-
-    iput-object p1, p0, Ld12;->c:Ljava/lang/Object;
-
-    :cond_0
-    iget-wide v2, p0, Ld12;->a:J
-
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    sget-object v2, Lzn4;->l0:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_0
-    sget v3, Lzn4;->n0:I
-
-    if-lez v3, :cond_1
-
-    const/4 v3, 0x1
+    invoke-virtual {v4, v7, v11}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    :cond_0
+    new-instance v15, Lvag;
+
+    invoke-direct {v15, v4}, Lvag;-><init>(Landroid/util/ArrayMap;)V
+
+    const/4 v11, -0x1
+
+    const/4 v12, 0x0
+
+    const/16 v16, 0x0
+
+    move v14, v12
+
+    invoke-direct/range {v8 .. v16}, Ld72;-><init>(Ljava/util/ArrayList;Lhqb;IZLjava/util/ArrayList;ZLvag;Lk22;)V
+
+    if-eqz v2, :cond_1
+
+    iget v11, v2, Ld72;->c:I
+
+    iget-object v3, v2, Ld72;->e:Ljava/util/List;
+
+    invoke-virtual {v1, v3}, Lj40;->a(Ljava/util/Collection;)V
+
+    iget-object v3, v2, Ld72;->b:Lhqb;
+
     :cond_1
-    const/4 v3, 0x0
+    invoke-static {v3}, Lffa;->i(Lmr3;)Lffa;
 
-    :goto_0
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v2
 
-    if-nez v3, :cond_2
+    iput-object v2, v1, Lj40;->f:Ljava/lang/Object;
 
-    const-wide/16 v2, 0xc8
+    new-instance v2, Lx12;
 
-    add-long/2addr v2, v0
+    sget-object v2, Lx12;->b:Lta0;
 
-    iput-wide v2, p0, Ld12;->a:J
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    goto :goto_1
+    move-result-object v3
 
-    :catchall_0
-    move-exception p1
+    invoke-interface {v0, v2, v3}, Lmr3;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object v2
 
-    throw p1
+    check-cast v2, Ljava/lang/Integer;
 
-    :cond_2
-    :goto_1
-    iget-wide v2, p0, Ld12;->a:J
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    cmp-long v6, v2, v4
+    move-result v2
 
-    if-eqz v6, :cond_4
+    iput v2, v1, Lj40;->c:I
 
-    cmp-long v2, v0, v2
+    new-instance v2, Lc12;
 
-    if-ltz v2, :cond_4
+    invoke-direct {v2}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
 
-    iget-object v0, p0, Ld12;->c:Ljava/lang/Object;
+    sget-object v3, Lx12;->X:Lta0;
 
-    check-cast v0, Ljava/lang/Exception;
+    invoke-interface {v0, v3, v2}, Lmr3;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v0, p1, :cond_3
+    move-result-object v2
 
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    check-cast v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
-    :cond_3
-    iget-object p1, p0, Ld12;->c:Ljava/lang/Object;
+    new-instance v3, Lc72;
 
-    check-cast p1, Ljava/lang/Exception;
+    invoke-direct {v3, v2}, Lc72;-><init>(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)V
 
-    const/4 v0, 0x0
+    invoke-virtual {v1, v3}, Lj40;->b(Ld22;)V
 
-    iput-object v0, p0, Ld12;->c:Ljava/lang/Object;
+    invoke-static {v0}, Lt9b;->A(Lmr3;)Lt9b;
 
-    iput-wide v4, p0, Ld12;->a:J
+    move-result-object v0
 
-    iput-wide v4, p0, Ld12;->b:J
+    invoke-virtual {v0}, Lt9b;->t()Lcvd;
 
-    throw p1
+    move-result-object v0
 
-    :cond_4
-    const-wide/16 v2, 0x32
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Ld12;->b:J
+    invoke-virtual {v1, v0}, Lj40;->c(Lmr3;)V
 
     return-void
 .end method

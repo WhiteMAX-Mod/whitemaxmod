@@ -139,11 +139,11 @@
     if-eqz p2, :cond_1
 
     .line 11
-    new-instance p2, Lufh;
+    new-instance p2, Lhgh;
 
-    const/16 v0, 0x10
+    const/16 v0, 0x11
 
-    invoke-direct {p2, v0, p1}, Lufh;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Lhgh;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {p0, p2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -339,11 +339,11 @@
     :cond_0
     sget-object v0, Lcom/my/tracker/core/o/g;->a:Landroid/os/Handler;
 
-    new-instance v1, Lw30;
+    new-instance v1, Lt30;
 
     const/4 v2, 0x7
 
-    invoke-direct {v1, p0, v2}, Lw30;-><init>(Ljava/lang/Runnable;I)V
+    invoke-direct {v1, p0, v2}, Lt30;-><init>(Ljava/lang/Runnable;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

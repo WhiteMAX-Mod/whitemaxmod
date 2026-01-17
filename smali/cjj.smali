@@ -1,45 +1,66 @@
-.class public final Lcjj;
-.super Leoi;
+.class public abstract Lcjj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Lswe;
-
-.field public final e:Lydg;
-
-.field public final synthetic f:Lbkj;
-
-.field public final synthetic g:Lbkj;
-
-
 # direct methods
-.method public constructor <init>(Lbkj;Lydg;Ljava/lang/String;)V
+.method public static final a(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+    .locals 3
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x21
+
+    const/4 v2, 0x0
+
+    if-lt v0, v1, :cond_0
+
+    int-to-long v0, v2
+
+    invoke-static {v0, v1}, Lz4;->e(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
+
+    move-result-object v0
+
+    invoke-static {p0, p1, v0}, Lksb;->a(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    invoke-virtual {p0, p1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final b(IF)I
     .locals 2
 
-    iput-object p1, p0, Lcjj;->g:Lbkj;
+    const/high16 v0, 0x437f0000    # 255.0f
 
-    new-instance p3, Lswe;
+    mul-float/2addr p1, v0
 
-    const-string v0, "OnRequestInstallCallback"
+    invoke-static {p1}, Lq7j;->c(F)I
 
-    const/4 v1, 0x1
+    move-result p1
 
-    invoke-direct {p3, v0, v1}, Lswe;-><init>(Ljava/lang/String;I)V
+    invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
-    iput-object p1, p0, Lcjj;->f:Lbkj;
+    move-result v0
 
-    const/4 p1, 0x2
+    invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
-    invoke-direct {p0, p1}, Leoi;-><init>(I)V
+    move-result v1
 
-    const-string p1, "com.google.android.play.core.appupdate.protocol.IAppUpdateServiceCallback"
+    invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
-    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    move-result p0
 
-    iput-object p3, p0, Lcjj;->d:Lswe;
+    invoke-static {p1, v0, v1, p0}, Landroid/graphics/Color;->argb(IIII)I
 
-    iput-object p2, p0, Lcjj;->e:Lydg;
+    move-result p0
 
-    return-void
+    return p0
 .end method

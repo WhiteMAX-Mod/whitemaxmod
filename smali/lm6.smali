@@ -1,79 +1,94 @@
 .class public final Llm6;
-.super Lj58;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Llm6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic c:Landroidx/fragment/app/a;
+.field public final a:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/a;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lc0;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lc0;-><init>(I)V
+
+    sput-object v0, Llm6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Bundle;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llm6;->c:Landroidx/fragment/app/a;
+    .line 2
+    iput-object p1, p0, Llm6;->a:Landroid/os/Bundle;
 
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    iput-object p1, p0, Llm6;->a:Landroid/os/Bundle;
+
+    if-eqz p2, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 5
+    invoke-virtual {p1, p2}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(I)Landroid/view/View;
-    .locals 3
-
-    iget-object v0, p0, Llm6;->c:Landroidx/fragment/app/a;
-
-    iget-object v1, v0, Landroidx/fragment/app/a;->S0:Landroid/view/View;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Fragment "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " does not have a view"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final g()Z
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Llm6;->c:Landroidx/fragment/app/a;
-
-    iget-object v0, v0, Landroidx/fragment/app/a;->S0:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p2, p0, Llm6;->a:Landroid/os/Bundle;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+
+    return-void
 .end method

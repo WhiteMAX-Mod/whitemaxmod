@@ -1,106 +1,221 @@
 .class public final Lioi;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/util/Set;
-
-
 # instance fields
-.field public final a:Lf07;
+.field public final a:Lahd;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Le0a;
+
+.field public d:D
+
+.field public e:D
+
+.field public f:D
+
+.field public g:J
+
+.field public h:J
+
+.field public i:D
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/util/WeakHashMap;
-
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lioi;->b:Ljava/util/Set;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lf07;)V
+.method public constructor <init>(Landroid/os/Looper;Lahd;Ljava/lang/String;Le0a;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object p1, p0, Lioi;->a:Lf07;
+    iput-object p2, p0, Lioi;->a:Lahd;
+
+    iput-object p3, p0, Lioi;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lioi;->c:Le0a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lm7j;)Lm7j;
-    .locals 5
+.method public final a(J)V
+    .locals 10
 
-    iget-boolean v0, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    const/4 v1, 0x1
+    move-result-wide v0
 
-    if-nez v0, :cond_1
+    iget-wide v2, p0, Lioi;->e:D
 
-    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Lhy0;
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    add-double/2addr v2, v4
 
-    move-result-object v0
+    iput-wide v2, p0, Lioi;->e:D
 
-    check-cast v0, Ljava/lang/Boolean;
+    sub-long p1, v0, p1
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-wide v4, p0, Lioi;->d:D
 
-    move-result v0
+    long-to-double p1, p1
 
-    if-eqz v0, :cond_0
+    add-double/2addr v4, p1
+
+    iput-wide v4, p0, Lioi;->d:D
+
+    div-double/2addr v4, v2
+
+    iget-wide p1, p0, Lioi;->i:D
+
+    const-wide/16 v2, 0x0
+
+    cmpl-double v6, p1, v2
+
+    if-lez v6, :cond_0
+
+    iget-wide v6, p0, Lioi;->f:D
+
+    div-double/2addr v6, p1
+
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    :goto_0
+    iget-wide v6, p0, Lioi;->g:J
+
+    sub-long v6, v0, v6
+
+    const-wide/16 v8, 0x2710
+
+    cmp-long p2, v6, v8
+
+    if-lez p2, :cond_1
+
+    iget-wide v6, p0, Lioi;->d:D
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v8, "Total calls: "
+
+    invoke-direct {p2, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v6, ", average call time: "
+
+    invoke-virtual {p2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v4, ", average idle time "
+
+    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lioi;->a:Lahd;
+
+    iget-object v4, p0, Lioi;->b:Ljava/lang/String;
+
+    invoke-interface {p2, v4, p1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-wide v0, p0, Lioi;->g:J
+
+    iput-wide v2, p0, Lioi;->e:D
+
+    iput-wide v2, p0, Lioi;->d:D
+
+    iput-wide v2, p0, Lioi;->i:D
+
+    iput-wide v2, p0, Lioi;->f:D
+
+    const-wide/16 p1, 0x0
+
+    iput-wide p1, p0, Lioi;->h:J
 
     :cond_1
+    return-void
+.end method
+
+.method public final dispatchMessage(Landroid/os/Message;)V
+    .locals 6
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    :try_start_0
+    iget-wide v2, p0, Lioi;->h:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v2, v4
+
+    if-lez v4, :cond_0
+
+    sub-long v2, v0, v2
+
+    long-to-double v2, v2
+
+    iput-wide v2, p0, Lioi;->f:D
+
+    iget-wide v2, p0, Lioi;->i:D
+
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+
+    add-double/2addr v2, v4
+
+    iput-wide v2, p0, Lioi;->i:D
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_1
+
+    :cond_0
     :goto_0
-    iput-boolean v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
+    invoke-super {p0, p1}, Landroid/os/Handler;->dispatchMessage(Landroid/os/Message;)V
 
-    iget-object v0, p0, Lioi;->a:Lf07;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iget-object v1, v0, Lf07;->j:Lk07;
+    move-result-wide v2
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-wide v2, p0, Lioi;->h:J
 
-    new-instance v2, Lxoi;
+    invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
 
-    invoke-direct {v2, p1}, Lxoi;-><init>(Lm7j;)V
+    invoke-virtual {p0, v0, v1}, Lioi;->a(J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v3, v1, Lk07;->s0:Ljava/util/concurrent/atomic/AtomicInteger;
+    return-void
 
-    new-instance v4, Lpoi;
+    :goto_1
+    invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {p0, v0, v1}, Lioi;->a(J)V
 
-    move-result v3
+    iget-object p1, p0, Lioi;->c:Le0a;
 
-    invoke-direct {v4, v2, v3, v0}, Lpoi;-><init>(Ljpi;ILf07;)V
+    invoke-virtual {p1, v2}, Le0a;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, v1, Lk07;->w0:Lz7a;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1, v4}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-object p1
+    return-void
 .end method

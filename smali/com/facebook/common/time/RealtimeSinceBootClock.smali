@@ -7,7 +7,7 @@
 
 
 # annotations
-.annotation build Lb35;
+.annotation build Le35;
 .end annotation
 
 
@@ -38,7 +38,7 @@
 
 .method public static get()Lcom/facebook/common/time/RealtimeSinceBootClock;
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     sget-object v0, Lcom/facebook/common/time/RealtimeSinceBootClock;->a:Lcom/facebook/common/time/RealtimeSinceBootClock;

@@ -1,72 +1,43 @@
-.class public final Lf84;
-.super Landroid/widget/TextView;
+.class public abstract synthetic Lf84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljig;
 
-
-# instance fields
-.field public final synthetic a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lghg;Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;Landroid/content/Context;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p2, p0, Lf84;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    const/4 v0, 0x2
 
-    invoke-direct {p0, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-static {v0}, Lt02;->w(I)[I
 
-    sget-object p3, Lj1h;->h:Lhhg;
+    move-result-object v1
 
-    invoke-static {p3, p0}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
+    array-length v1, v1
 
-    const/4 p3, 0x1
+    new-array v1, v1, [I
 
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setMaxLines(I)V
+    const/4 v2, 0x1
 
-    sget-object p3, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+    const/4 v3, 0x0
 
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Lghg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-static {p2}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->z0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Lplb;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lf84;->onThemeChanged(Lplb;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onThemeChanged(Lplb;)V
-    .locals 0
-
-    iget-object p1, p0, Lf84;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
-
-    invoke-static {p1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->z0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Lplb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lplb;->getText()Lifg;
-
-    move-result-object p1
-
-    iget p1, p1, Lifg;->h:I
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    :catch_1
+    sput-object v1, Lf84;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

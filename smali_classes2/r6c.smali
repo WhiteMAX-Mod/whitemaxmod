@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/pinbars/PinBarsWidget;
+.field public final synthetic b:Lone/me/chats/picker/members/PickerMembersListWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/pinbars/PinBarsWidget;I)V
+.method public synthetic constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;I)V
     .locals 0
 
     iput p2, p0, Lr6c;->a:I
 
-    iput-object p1, p0, Lr6c;->b:Lone/me/pinbars/PinBarsWidget;
+    iput-object p1, p0, Lr6c;->b:Lone/me/chats/picker/members/PickerMembersListWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,598 +27,395 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 10
+.method public final invoke()Ljava/lang/Object;
+    .locals 16
 
-    iget p1, p0, Lr6c;->a:I
+    move-object/from16 v0, p0
 
-    const/4 v0, 0x0
+    iget v1, v0, Lr6c;->a:I
 
-    const/4 v1, 0x1
+    const/4 v2, 0x0
 
-    const/4 v2, 0x2
+    const/4 v3, 0x7
 
-    const/4 v3, 0x3
+    const/4 v4, 0x1
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    iget-object v5, p0, Lr6c;->b:Lone/me/pinbars/PinBarsWidget;
+    iget-object v6, v0, Lr6c;->b:Lone/me/chats/picker/members/PickerMembersListWidget;
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v1, :pswitch_data_0
 
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
+    sget-object v1, Lone/me/chats/picker/members/PickerMembersListWidget;->z0:[Lz28;
 
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
+    new-instance v1, Le6c;
 
-    move-result-object p1
+    sget-object v2, Lz23;->a:Lz23;
 
-    iget-object v0, p1, Lq6c;->z0:Lew3;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
 
-    iget-object v0, v0, Lew3;->d:Ljava/lang/Object;
+    move-result-object v3
 
-    check-cast v0, Lfbc;
+    const/16 v4, 0x35
 
-    invoke-interface {v0}, Lfbc;->c()Lem4;
+    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
 
-    move-result-object v0
+    move-result-object v3
 
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Lq6c;->G0:Lyl5;
-
-    new-instance v1, Ll6c;
-
-    filled-new-array {v0}, [Lem4;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ll6c;-><init>([Lem4;)V
-
-    invoke-static {p1, v1}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
-
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lq6c;->z0:Lew3;
-
-    invoke-virtual {p1}, Lew3;->a()V
-
-    return-void
-
-    :pswitch_1
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
-
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lq6c;->d:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgcc;
-
-    check-cast v0, Lr89;
-
-    invoke-virtual {v0}, Lr89;->b()V
-
-    iget-object v0, p1, Lq6c;->z0:Lew3;
-
-    invoke-virtual {v0}, Lew3;->b()V
-
-    iget-object p1, p1, Lq6c;->t0:Lx40;
-
-    invoke-virtual {p1}, Lx40;->g()V
-
-    iget-object p1, v5, Lone/me/pinbars/PinBarsWidget;->b:Ldog;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ldog;->dismiss()V
-
-    :cond_1
-    iput-object v4, v5, Lone/me/pinbars/PinBarsWidget;->b:Ldog;
-
-    return-void
-
-    :pswitch_2
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
-
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
-
-    move-result-object p1
-
-    iget-object v2, p1, Lq6c;->b:Lo6c;
-
-    iget-object v3, v2, Lo6c;->c:Ljava/lang/Long;
-
-    if-nez v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v5, p1, Lq6c;->Y:Ly7c;
-
-    if-eqz v5, :cond_6
-
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v6
-
-    iget v2, v2, Lo6c;->d:I
-
-    if-ne v2, v1, :cond_3
-
-    move v0, v1
-
-    :cond_3
-    iget-object v1, v5, Ly7c;->h:Lhof;
-
-    invoke-virtual {v1}, Lhof;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v2, v1, Lc8c;
-
-    if-eqz v2, :cond_4
-
-    check-cast v1, Lc8c;
-
-    goto :goto_0
-
-    :cond_4
-    move-object v1, v4
-
-    :goto_0
-    if-eqz v1, :cond_5
-
-    iget-wide v1, v1, Lc8c;->a:J
-
-    sget-object v3, Ll7c;->c:Ll7c;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v6, v7, v1, v2, v0}, Ll7c;->L0(JJZ)Lem4;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v4
 
-    :cond_5
-    if-eqz v4, :cond_6
+    const/16 v5, 0x37
 
-    iget-object p1, p1, Lq6c;->G0:Lyl5;
+    invoke-virtual {v4, v5}, Lr5;->d(I)Ln8g;
 
-    new-instance v0, Ll6c;
+    move-result-object v4
 
-    filled-new-array {v4}, [Lem4;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v0, v1}, Ll6c;-><init>([Lem4;)V
+    const/16 v5, 0xc9
 
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    invoke-virtual {v2, v5}, Lr5;->d(I)Ln8g;
 
-    :cond_6
-    :goto_1
-    return-void
+    move-result-object v2
 
-    :pswitch_3
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
+    iget-object v5, v6, Lone/me/chats/picker/members/PickerMembersListWidget;->c:Lls;
 
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
+    sget-object v7, Lone/me/chats/picker/members/PickerMembersListWidget;->z0:[Lz28;
 
-    move-result-object p1
+    const/4 v8, 0x2
 
-    iget-object p1, p1, Lq6c;->D0:Lyo7;
+    aget-object v7, v7, v8
 
-    if-eqz p1, :cond_8
-
-    iget-object v0, p1, Lyo7;->j:Ljava/lang/String;
-
-    if-eqz v0, :cond_7
-
-    iget-object v1, p1, Lyo7;->m:Lh6f;
-
-    new-instance v2, Lgp7;
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Lgp7;-><init>(Landroid/net/Uri;)V
-
-    invoke-virtual {v1, v2}, Lh6f;->h(Ljava/lang/Object;)Z
-
-    :cond_7
-    iget-object v0, p1, Lyo7;->a:Lac4;
-
-    new-instance v1, Lto7;
-
-    invoke-direct {v1, p1, v4}, Lto7;-><init>(Lyo7;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v4, v4, v1, v3}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    :cond_8
-    return-void
-
-    :pswitch_4
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
-
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lq6c;->D0:Lyo7;
-
-    if-eqz p1, :cond_9
-
-    iget-object v0, p1, Lyo7;->a:Lac4;
-
-    new-instance v1, Luo7;
-
-    invoke-direct {v1, p1, v4}, Luo7;-><init>(Lyo7;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v4, v4, v1, v3}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    :cond_9
-    return-void
-
-    :pswitch_5
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
-
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lq6c;->X:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhy3;
-
-    invoke-virtual {v0, v3}, Lhy3;->b(I)V
-
-    iget-object p1, p1, Lq6c;->Z:Lmii;
-
-    if-eqz p1, :cond_a
-
-    iget-object v0, p1, Lmii;->a:Ljava/lang/Object;
-
-    check-cast v0, Laof;
-
-    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lud2;
-
-    if-eqz v0, :cond_a
-
-    iget-object v0, v0, Lud2;->b:Lzh2;
-
-    iget-wide v0, v0, Lzh2;->a:J
-
-    iget-object v3, p1, Lmii;->b:Ljava/lang/Object;
-
-    check-cast v3, Lac4;
-
-    iget-object v5, p1, Lmii;->d:Ljava/lang/Object;
-
-    check-cast v5, Lbbg;
-
-    check-cast v5, Lb9b;
-
-    invoke-virtual {v5}, Lb9b;->b()Ltb4;
+    invoke-virtual {v5, v6}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v5
 
-    new-instance v6, Lk3h;
+    check-cast v5, Lbj2;
 
-    invoke-direct {v6, p1, v0, v1, v4}, Lk3h;-><init>(Lmii;JLkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, v3, v4, v2, v5}, Le6c;-><init>(Lo58;Lo58;Lo58;Lbj2;)V
 
-    invoke-static {v3, v5, v4, v6, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    return-object v1
 
-    iget-object p1, p1, Lmii;->k:Ljava/lang/Object;
+    :pswitch_0
+    sget-object v1, Lone/me/chats/picker/members/PickerMembersListWidget;->z0:[Lz28;
 
-    check-cast p1, Lhof;
+    new-instance v1, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    invoke-virtual {p1, v4}, Lhof;->setValue(Ljava/lang/Object;)V
+    invoke-virtual {v6}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    :cond_a
-    return-void
+    move-result-object v7
 
-    :pswitch_6
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
+    const/4 v8, 0x6
 
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
+    invoke-direct {v1, v7, v2, v8}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    move-result-object p1
+    sget v7, Ly7b;->f0:I
 
-    iget-object v0, p1, Lq6c;->o:Ld68;
+    invoke-virtual {v1, v7}, Landroid/view/View;->setId(I)V
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1, v5}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    move-result-object v0
+    invoke-virtual {v1, v5}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
-    check-cast v0, Lux5;
+    invoke-virtual {v1, v5}, Landroid/view/View;->setClipToOutline(Z)V
 
-    check-cast v0, Loy5;
+    invoke-virtual {v1, v4}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
-    invoke-virtual {v0}, Loy5;->A()Z
+    new-instance v7, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    move-result v0
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_b
+    invoke-direct {v7, v4, v5}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
 
-    iget-object v0, p1, Lq6c;->X:Ld68;
+    invoke-virtual {v1, v7}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    iget-object v5, v6, Lone/me/chats/picker/members/PickerMembersListWidget;->Z:Lv4c;
 
-    move-result-object v0
+    invoke-virtual {v1, v5}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lwrd;)V
 
-    check-cast v0, Lhy3;
+    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lbsd;)V
 
-    invoke-virtual {v0, v2}, Lhy3;->b(I)V
+    new-instance v2, Lkb3;
 
-    iget-object p1, p1, Lq6c;->G0:Lyl5;
+    new-instance v5, Luj5;
 
-    sget-object v0, Lm6c;->a:Lm6c;
+    invoke-direct {v5, v1, v4}, Luj5;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
 
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+    new-instance v4, Lir7;
 
-    goto :goto_2
+    const/16 v7, 0x14
 
-    :cond_b
-    iget-object p1, p1, Lq6c;->Z:Lmii;
+    invoke-direct {v4, v1, v7, v6}, Lir7;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    if-eqz p1, :cond_c
+    new-instance v7, Lj53;
 
-    invoke-virtual {p1}, Lmii;->s()V
+    invoke-direct {v7, v3}, Lj53;-><init>(I)V
 
-    :cond_c
-    :goto_2
-    return-void
+    new-instance v8, Lj53;
 
-    :pswitch_7
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
+    invoke-direct {v8, v3}, Lj53;-><init>(I)V
 
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
+    invoke-direct {v2, v5, v4, v7, v8}, Lkb3;-><init>(Llq6;Lnq6;Lnq6;Lnq6;)V
 
-    move-result-object p1
+    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
 
-    invoke-virtual {v5}, Lx84;->getParentController()Lx84;
+    new-instance v2, Lxl4;
 
-    move-result-object v5
+    invoke-direct {v2, v1}, Lxl4;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    instance-of v6, v5, Lt6c;
+    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->l(Lhsd;)V
 
-    if-eqz v6, :cond_d
+    invoke-virtual {v6}, Lone/me/chats/picker/members/PickerMembersListWidget;->A0()Z
 
-    check-cast v5, Lt6c;
+    move-result v2
 
-    goto :goto_3
+    if-eqz v2, :cond_0
 
-    :cond_d
-    move-object v5, v4
+    invoke-virtual {v6, v1}, Lone/me/chats/picker/members/PickerMembersListWidget;->z0(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;)V
 
-    :goto_3
-    if-eqz v5, :cond_e
+    :cond_0
+    invoke-static {v1}, Lgmj;->b(Landroidx/recyclerview/widget/RecyclerView;)Lnog;
 
-    check-cast v5, Lone/me/chatscreen/ChatScreen;
+    move-result-object v2
 
-    invoke-virtual {v5}, Lone/me/chatscreen/ChatScreen;->Q0()I
+    iput-object v2, v6, Lone/me/chats/picker/members/PickerMembersListWidget;->w0:Lnog;
 
-    move-result v5
+    return-object v1
 
-    goto :goto_4
+    :pswitch_1
+    sget-object v1, Lone/me/chats/picker/members/PickerMembersListWidget;->z0:[Lz28;
 
-    :cond_e
-    move v5, v0
+    new-instance v1, Lpab;
 
-    :goto_4
-    iget-object v6, p1, Lq6c;->o:Ld68;
+    invoke-virtual {v6}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-interface {v6}, Ld68;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v6
+    invoke-direct {v1, v2}, Lpab;-><init>(Landroid/content/Context;)V
 
-    check-cast v6, Lux5;
+    sget v2, Lv5e;->P0:I
 
-    check-cast v6, Loy5;
+    invoke-virtual {v1, v2}, Lpab;->setIcon(I)V
 
-    invoke-virtual {v6}, Loy5;->A()Z
+    sget v2, Lx5e;->h:I
 
-    move-result v6
+    new-instance v3, Llhg;
 
-    if-eqz v6, :cond_f
+    invoke-direct {v3, v2}, Llhg;-><init>(I)V
 
-    iget-object v6, p1, Lq6c;->X:Ld68;
+    invoke-virtual {v1, v3}, Lpab;->setTitle(Lqhg;)V
 
-    invoke-interface {v6}, Ld68;->getValue()Ljava/lang/Object;
+    sget v2, Lx5e;->g:I
 
-    move-result-object v6
+    new-instance v3, Llhg;
 
-    check-cast v6, Lhy3;
+    invoke-direct {v3, v2}, Llhg;-><init>(I)V
 
-    invoke-virtual {v6, v1}, Lhy3;->b(I)V
+    invoke-virtual {v1, v3}, Lpab;->setSubtitle(Lqhg;)V
 
-    :cond_f
-    iget-object p1, p1, Lq6c;->Z:Lmii;
+    return-object v1
 
-    if-eqz p1, :cond_10
+    :pswitch_2
+    sget-object v1, Lone/me/chats/picker/members/PickerMembersListWidget;->z0:[Lz28;
 
-    iget-object v1, p1, Lmii;->l:Ljava/lang/Object;
+    new-instance v1, Lr6c;
 
-    check-cast v1, Lpkd;
+    const/4 v7, 0x3
 
-    iget-object v1, v1, Lpkd;->a:Laof;
+    invoke-direct {v1, v6, v7}, Lr6c;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;I)V
 
-    invoke-interface {v1}, Laof;->getValue()Ljava/lang/Object;
+    new-instance v7, Ln8g;
 
-    move-result-object v1
+    invoke-direct {v7, v1}, Ln8g;-><init>(Llq6;)V
 
-    check-cast v1, Lh3h;
+    new-instance v11, Ljji;
 
-    if-eqz v1, :cond_10
+    sget-object v1, Lz23;->a:Lz23;
 
-    iget-wide v6, v1, Lh3h;->a:J
-
-    iget-object v1, p1, Lmii;->b:Ljava/lang/Object;
-
-    check-cast v1, Lac4;
-
-    iget-object v8, p1, Lmii;->d:Ljava/lang/Object;
-
-    check-cast v8, Lbbg;
-
-    check-cast v8, Lb9b;
-
-    invoke-virtual {v8}, Lb9b;->b()Ltb4;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v8
 
-    new-instance v9, Li3h;
+    const/16 v9, 0x85
 
-    invoke-direct {v9, p1, v6, v7, v4}, Li3h;-><init>(Lmii;JLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v8, v9}, Lr5;->c(I)Ljava/lang/Object;
 
-    invoke-static {v1, v8, v4, v9, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    move-result-object v8
 
-    iget-object v1, p1, Lmii;->k:Ljava/lang/Object;
+    check-cast v8, Lm64;
 
-    check-cast v1, Lhof;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-virtual {v1, v4}, Lhof;->setValue(Ljava/lang/Object;)V
+    move-result-object v9
 
-    iget-object p1, p1, Lmii;->h:Ljava/lang/Object;
+    const/16 v10, 0x77
 
-    check-cast p1, Ld68;
+    invoke-virtual {v9, v10}, Lr5;->c(I)Ljava/lang/Object;
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+    move-result-object v9
 
-    move-result-object p1
+    check-cast v9, Lla3;
 
-    check-cast p1, Ltib;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
-    new-instance v1, Lbjb;
+    move-result-object v12
 
-    invoke-direct {v1, v0, v0, v5, v3}, Lbjb;-><init>(IIII)V
+    const/16 v13, 0x24a
 
-    invoke-virtual {p1, v1}, Ltib;->c(Lbjb;)V
+    invoke-virtual {v12, v13}, Lr5;->c(I)Ljava/lang/Object;
 
-    new-instance v0, Lhjb;
+    move-result-object v12
 
-    sget v1, Lx4e;->C:I
+    check-cast v12, Lvg9;
 
-    invoke-direct {v0, v1}, Lhjb;-><init>(I)V
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-virtual {p1, v0}, Ltib;->e(Lljb;)V
+    move-result-object v13
 
-    sget v0, Lzeb;->g:I
+    const/16 v14, 0xc
 
-    new-instance v1, Lbhg;
+    invoke-virtual {v13, v14}, Lr5;->c(I)Ljava/lang/Object;
 
-    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
+    move-result-object v13
 
-    invoke-virtual {p1, v1}, Ltib;->g(Lghg;)V
+    check-cast v13, Lmbg;
 
-    invoke-virtual {p1}, Ltib;->i()Lsib;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
-    :cond_10
-    return-void
+    move-result-object v14
 
-    :pswitch_8
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->w0:[Lp38;
+    const/16 v15, 0x75
 
-    invoke-virtual {v5}, Lone/me/pinbars/PinBarsWidget;->z0()Lq6c;
+    invoke-virtual {v14, v15}, Lr5;->d(I)Ln8g;
 
-    move-result-object p1
+    move-result-object v14
 
-    invoke-virtual {v5}, Lx84;->getParentController()Lx84;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v15
+
+    const/16 v10, 0x74
+
+    invoke-virtual {v15, v10}, Lr5;->d(I)Ln8g;
+
+    move-result-object v10
+
+    invoke-direct {v11}, Ljava/lang/Object;-><init>()V
+
+    iput-object v8, v11, Ljji;->a:Ljava/lang/Object;
+
+    iput-object v9, v11, Ljji;->b:Ljava/lang/Object;
+
+    iput-object v14, v11, Ljji;->c:Ljava/lang/Object;
+
+    iput-object v10, v11, Ljji;->d:Ljava/lang/Object;
+
+    iput-object v7, v11, Ljji;->e:Ljava/lang/Object;
+
+    check-cast v13, Lj9b;
+
+    invoke-virtual {v13}, Lj9b;->b()Lsb4;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v7
+
+    iput-object v7, v11, Ljji;->f:Ljava/lang/Object;
+
+    new-instance v8, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v8, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v8, v11, Ljji;->g:Ljava/lang/Object;
+
+    sget-object v8, Ldh5;->a:Ldh5;
+
+    invoke-static {v8}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v9
+
+    iput-object v9, v11, Ljji;->h:Ljava/lang/Object;
+
+    invoke-static {v8}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v9
+
+    iput-object v9, v11, Ljji;->i:Ljava/lang/Object;
+
+    invoke-static {v8}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v8
+
+    iput-object v8, v11, Ljji;->j:Ljava/lang/Object;
+
+    new-instance v9, Lpld;
+
+    invoke-direct {v9, v8}, Lpld;-><init>(Lmfa;)V
+
+    iput-object v9, v11, Ljji;->k:Ljava/lang/Object;
+
+    invoke-static {v5, v5, v3}, Lj7f;->b(III)Li7f;
 
     move-result-object v3
 
-    instance-of v5, v3, Lt6c;
+    iput-object v3, v11, Ljji;->l:Ljava/lang/Object;
 
-    if-eqz v5, :cond_11
+    iget-object v3, v12, Lvg9;->c:Lnc3;
 
-    check-cast v3, Lt6c;
+    new-instance v8, Lei9;
 
-    goto :goto_5
+    invoke-direct {v8, v11, v2}, Lei9;-><init>(Ljji;Lkotlin/coroutines/Continuation;)V
 
-    :cond_11
-    move-object v3, v4
+    new-instance v2, Lm96;
 
-    :goto_5
-    if-eqz v3, :cond_12
+    invoke-direct {v2, v3, v8, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
 
-    check-cast v3, Lone/me/chatscreen/ChatScreen;
+    invoke-static {v2, v7}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
-    invoke-virtual {v3}, Lone/me/chatscreen/ChatScreen;->Q0()I
+    new-instance v8, Lz6c;
 
-    move-result v0
+    iget-object v2, v6, Lone/me/chats/picker/members/PickerMembersListWidget;->a:Lls;
 
-    :cond_12
-    iget-object p1, p1, Lq6c;->Y:Ly7c;
+    sget-object v3, Lone/me/chats/picker/members/PickerMembersListWidget;->z0:[Lz28;
 
-    if-eqz p1, :cond_14
+    aget-object v3, v3, v5
 
-    iget-object v3, p1, Ly7c;->g:Lglf;
+    invoke-virtual {v2, v6}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    if-eqz v3, :cond_13
+    move-result-object v2
 
-    invoke-virtual {v3}, Lm0;->isActive()Z
+    check-cast v2, Ljava/lang/Number;
 
-    move-result v3
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
 
-    if-ne v3, v1, :cond_13
+    move-result-wide v9
 
-    goto :goto_6
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
-    :cond_13
-    iget-object v1, p1, Ly7c;->d:Lac4;
+    move-result-object v1
 
-    iget-object v3, p1, Ly7c;->b:Lbbg;
+    const/16 v2, 0x77
 
-    check-cast v3, Lb9b;
+    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
 
-    invoke-virtual {v3}, Lb9b;->b()Ltb4;
+    move-result-object v13
 
-    move-result-object v3
+    move-object v12, v11
 
-    new-instance v5, Lx7c;
+    invoke-direct/range {v8 .. v13}, Lz6c;-><init>(JLjji;Ljji;Lo58;)V
 
-    invoke-direct {v5, p1, v0, v4}, Lx7c;-><init>(Ly7c;ILkotlin/coroutines/Continuation;)V
-
-    invoke-static {v1, v3, v4, v5, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    move-result-object v0
-
-    iput-object v0, p1, Ly7c;->g:Lglf;
-
-    :cond_14
-    :goto_6
-    return-void
+    return-object v8
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

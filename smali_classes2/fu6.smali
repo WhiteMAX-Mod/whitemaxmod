@@ -2,57 +2,50 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfme;
-
 
 # instance fields
-.field public final synthetic a:Ldv6;
+.field public final synthetic a:Lbv6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldv6;)V
+.method public synthetic constructor <init>(Lbv6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfu6;->a:Ldv6;
+    iput-object p1, p0, Lfu6;->a:Lbv6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R(Lkme;)V
-    .locals 4
+.method public final a(Lfne;)V
+    .locals 2
 
-    iget-object v0, p0, Lfu6;->a:Ldv6;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ldv6;->u()Lbbg;
+    const-string v1, "got toggle state "
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v1, Lb9b;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lb9b;->f()Ltb4;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, v0, Ldv6;->d:Lub4;
+    const-string v1, "bv6"
 
-    invoke-virtual {v1, v2}, Ln0;->plus(Lrb4;)Lrb4;
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    iget-object v0, p0, Lfu6;->a:Lbv6;
 
-    new-instance v2, Lvu6;
+    iget-object v0, v0, Lbv6;->O0:Lspf;
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {v2, v0, p1, v3}, Lvu6;-><init>(Ldv6;Lkme;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v2, p1}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
+    invoke-virtual {v0, v1, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     return-void
 .end method

@@ -1,171 +1,222 @@
-.class public final Lrpj;
+.class public abstract Lrpj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnpj;
-
-
-# instance fields
-.field public final a:Le68;
-
-.field public final b:Le68;
-
-.field public final c:Lmpj;
-
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lmpj;)V
+.method public static final a(JF)F
+    .locals 3
+
+    const/16 v0, 0x20
+
+    shr-long v0, p0, v0
+
+    long-to-int v0, v0
+
+    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v0
+
+    const-wide v1, 0xffffffffL
+
+    and-long/2addr p0, v1
+
+    long-to-int p0, p0
+
+    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result p0
+
+    sub-float/2addr p0, v0
+
+    mul-float/2addr p0, p2
+
+    add-float/2addr p0, v0
+
+    return p0
+.end method
+
+.method public static b(JFFI)J
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    and-int/lit8 v0, p4, 0x1
 
-    iput-object p2, p0, Lrpj;->c:Lmpj;
+    if-eqz v0, :cond_0
 
-    sget-object p2, Lsz0;->e:Lsz0;
+    const/16 p2, 0x20
 
-    invoke-static {p1}, Leug;->b(Landroid/content/Context;)V
+    shr-long v0, p0, p2
 
-    invoke-static {}, Leug;->a()Leug;
+    long-to-int p2, v0
 
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Leug;->c(Lbi5;)Lbug;
-
-    move-result-object p1
-
-    sget-object p2, Lsz0;->d:Ljava/util/Set;
-
-    new-instance v0, Lej5;
-
-    const-string v1, "json"
-
-    invoke-direct {v0, v1}, Lej5;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p2, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-static {p2}, Ljava/lang/Float;->intBitsToFloat(I)F
 
     move-result p2
 
-    if-eqz p2, :cond_0
-
-    new-instance p2, Le68;
-
-    new-instance v0, Lrej;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p1, v1}, Lrej;-><init>(Lbug;I)V
-
-    invoke-direct {p2, v0}, Le68;-><init>(Lhyc;)V
-
-    iput-object p2, p0, Lrpj;->a:Le68;
-
     :cond_0
-    new-instance p2, Le68;
+    and-int/lit8 p4, p4, 0x2
 
-    new-instance v0, Lrej;
+    if-eqz p4, :cond_1
 
-    const/4 v1, 0x3
+    const-wide p3, 0xffffffffL
 
-    invoke-direct {v0, p1, v1}, Lrej;-><init>(Lbug;I)V
+    and-long/2addr p0, p3
 
-    invoke-direct {p2, v0}, Le68;-><init>(Lhyc;)V
+    long-to-int p0, p0
 
-    iput-object p2, p0, Lrpj;->b:Le68;
+    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
 
-    return-void
+    move-result p3
+
+    :cond_1
+    invoke-static {p2, p3}, Ls66;->a(FF)J
+
+    move-result-wide p0
+
+    return-wide p0
 .end method
 
+.method public static final c(FFF)Z
+    .locals 0
 
-# virtual methods
-.method public final a(Lwo6;)V
-    .locals 6
+    sub-float/2addr p0, p1
 
-    iget-object v0, p0, Lrpj;->c:Lmpj;
+    invoke-static {p0}, Ljava/lang/Math;->abs(F)F
 
-    iget v0, v0, Lmpj;->b:I
+    move-result p0
 
-    sget-object v1, Lbhc;->b:Lbhc;
+    cmpg-float p0, p0, p2
 
-    sget-object v2, Lbhc;->a:Lbhc;
+    if-gez p0, :cond_0
 
-    const/4 v3, 0x0
+    const/4 p0, 0x1
 
-    if-nez v0, :cond_2
+    return p0
 
-    iget-object v4, p0, Lrpj;->a:Le68;
+    :cond_0
+    const/4 p0, 0x0
 
-    if-eqz v4, :cond_1
+    return p0
+.end method
 
-    invoke-virtual {v4}, Le68;->get()Ljava/lang/Object;
+.method public static final d(Lbcf;)Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;
+    .locals 2
 
-    move-result-object v4
+    if-nez p0, :cond_0
 
-    check-cast v4, Lcug;
-
-    iget v5, p1, Lwo6;->b:I
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {p1, v0}, Lwo6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Lbb0;
-
-    invoke-direct {v0, p1, v2, v3}, Lbb0;-><init>(Ljava/lang/Object;Lbhc;Lec0;)V
+    const/4 p0, -0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, v0}, Lwo6;->b0(I)[B
+    sget-object v0, Lsbf;->$EnumSwitchMapping$0:[I
 
-    move-result-object p1
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    new-instance v0, Lbb0;
+    move-result p0
 
-    invoke-direct {v0, p1, v1, v3}, Lbb0;-><init>(Ljava/lang/Object;Lbhc;Lec0;)V
+    aget p0, v0, p0
 
     :goto_0
-    invoke-virtual {v4, v0}, Lcug;->a(Lbb0;)V
+    packed-switch p0, :pswitch_data_0
 
-    :cond_1
-    return-void
+    :pswitch_0
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    :cond_2
-    iget-object v4, p0, Lrpj;->b:Le68;
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {v4}, Le68;->get()Ljava/lang/Object;
+    throw p0
 
-    move-result-object v4
+    :pswitch_1
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Banned;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Banned;
 
-    check-cast v4, Lcug;
+    return-object p0
 
-    iget v5, p1, Lwo6;->b:I
+    :pswitch_2
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$CallTimeout;
 
-    if-eqz v5, :cond_3
+    return-object p0
 
-    invoke-virtual {p1, v0}, Lwo6;->b0(I)[B
+    :pswitch_3
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$EndedForAll;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$EndedForAll;
 
-    move-result-object p1
+    return-object p0
 
-    new-instance v0, Lbb0;
+    :pswitch_4
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$AcceptedOnAnotherDevice;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$AcceptedOnAnotherDevice;
 
-    invoke-direct {v0, p1, v2, v3}, Lbb0;-><init>(Ljava/lang/Object;Lbhc;Lec0;)V
+    return-object p0
 
-    goto :goto_1
+    :pswitch_5
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$RemovedFromCall;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$RemovedFromCall;
 
-    :cond_3
-    invoke-virtual {p1, v0}, Lwo6;->b0(I)[B
+    return-object p0
 
-    move-result-object p1
+    :pswitch_6
+    new-instance p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;
 
-    new-instance v0, Lbb0;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    invoke-direct {v0, p1, v1, v3}, Lbb0;-><init>(Ljava/lang/Object;Lbhc;Lec0;)V
+    const-string v1, "Closed by the server error"
 
-    :goto_1
-    invoke-virtual {v4, v0}, Lcug;->a(Lbb0;)V
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Error;-><init>(Ljava/lang/Throwable;)V
+
+    return-object p0
+
+    :pswitch_7
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Busy;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Busy;
+
+    return-object p0
+
+    :pswitch_8
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$SignalingTimeout;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$SignalingTimeout;
+
+    return-object p0
+
+    :pswitch_9
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Missed;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Missed;
+
+    return-object p0
+
+    :pswitch_a
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Hangup;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Hangup;
+
+    return-object p0
+
+    :pswitch_b
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Rejected;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Rejected;
+
+    return-object p0
+
+    :pswitch_c
+    sget-object p0, Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Canceled;->INSTANCE:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason$Canceled;
+
+    return-object p0
+
+    :pswitch_d
+    const/4 p0, 0x0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_d
+        :pswitch_0
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
 .end method

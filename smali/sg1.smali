@@ -3,258 +3,108 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Ltg1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lsg1;
 
-.field public final synthetic b:Ljja;
+.field public static final b:J
+
+.field public static final c:Llhg;
+
+.field public static final d:Lx5b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljja;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lsg1;->a:I
+    new-instance v0, Lsg1;
 
-    iput-object p1, p0, Lsg1;->b:Ljja;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lsg1;->a:Lsg1;
+
+    sget-wide v0, Lo6b;->c:J
+
+    sput-wide v0, Lsg1;->b:J
+
+    sget v0, Lq6b;->m:I
+
+    new-instance v1, Llhg;
+
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+
+    sput-object v1, Lsg1;->c:Llhg;
+
+    sget-object v0, Lx5b;->b:Lx5b;
+
+    sput-object v0, Lsg1;->d:Lx5b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final a()Lx5b;
+    .locals 1
 
-    iget v0, p0, Lsg1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lcsc;->c:Lcsc;
-
-    iget-object v1, p0, Lsg1;->b:Ljja;
-
-    check-cast v1, Lmsc;
-
-    iget-wide v2, v1, Lmsc;->b:J
-
-    iget-boolean v1, v1, Lmsc;->d:Z
-
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
-
-    move-result-object v0
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, ":call-chat?chat_id="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, "&video_enabled="
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    sget-object v0, Lv2h;->a:Lv2h;
+    sget-object v0, Lsg1;->d:Lx5b;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lcsc;->c:Lcsc;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v1, p0, Lsg1;->b:Ljja;
+    const/4 v0, 0x1
 
-    check-cast v1, Lmsc;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, v1, Lmsc;->e:Ljava/lang/String;
+    return v0
 
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
+    :cond_0
+    instance-of p1, p1, Lsg1;
 
-    move-result-object v0
+    if-nez p1, :cond_1
 
-    const-string v2, ":call-join-link?link="
+    const/4 p1, 0x0
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    return p1
 
-    move-result-object v1
+    :cond_1
+    return v0
+.end method
 
-    const/4 v2, 0x0
+.method public final getItemId()J
+    .locals 2
 
-    invoke-virtual {v0, v1, v2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    sget-wide v0, Lsg1;->b:J
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    return-wide v0
+.end method
 
-    return-object v0
+.method public final getTitle()Llhg;
+    .locals 1
 
-    :pswitch_1
-    sget-object v0, Lcsc;->c:Lcsc;
-
-    iget-object v1, p0, Lsg1;->b:Ljja;
-
-    check-cast v1, Lmsc;
-
-    iget-wide v2, v1, Lmsc;->b:J
-
-    iget-boolean v1, v1, Lmsc;->d:Z
-
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
-
-    move-result-object v0
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, ":call-user?opponent_id="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, "&video_enabled="
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    sget-object v0, Lv2h;->a:Lv2h;
+    sget-object v0, Lsg1;->c:Llhg;
 
     return-object v0
+.end method
 
-    :pswitch_2
-    sget-object v0, Ls54;->c:Ls54;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v1, p0, Lsg1;->b:Ljja;
+    const v0, -0x1dcefff1
 
-    check-cast v1, Lqlf;
+    return v0
+.end method
 
-    iget-wide v2, v1, Lqlf;->b:J
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-boolean v1, v1, Lqlf;->c:Z
-
-    invoke-virtual {v0, v2, v3, v1}, Ls54;->L0(JZ)V
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
-
-    :pswitch_3
-    sget-object v0, Lxi1;->c:Lxi1;
-
-    iget-object v1, p0, Lsg1;->b:Ljja;
-
-    check-cast v1, Lue1;
-
-    iget-object v2, v1, Lue1;->b:Ljava/lang/String;
-
-    iget-boolean v3, v1, Lue1;->c:Z
-
-    iget-boolean v4, v1, Lue1;->d:Z
-
-    iget-boolean v5, v1, Lue1;->e:Z
-
-    iget-boolean v1, v1, Lue1;->f:Z
-
-    invoke-virtual {v0}, Lf3;->p0()Lim4;
-
-    move-result-object v0
-
-    new-instance v6, Lhm4;
-
-    invoke-direct {v6}, Lhm4;-><init>()V
-
-    const-string v7, ":call-join-link"
-
-    iput-object v7, v6, Lhm4;->a:Ljava/lang/String;
-
-    const-string v7, "link"
-
-    invoke-virtual {v6, v2, v7}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "is_video_call"
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3, v2}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "video_enabled"
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3, v2}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "microphone_enabled"
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3, v2}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "front_camera_enabled"
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v6, v1, v2}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "is_new"
-
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {v6, v2, v1}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "replace_top"
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v6, v2, v1}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v6}, Lhm4;->a()Landroid/net/Uri;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lim4;->c(Landroid/net/Uri;Landroid/os/Bundle;)Z
-
-    sget-object v0, Lv2h;->a:Lv2h;
+    const-string v0, "TryLoadLinkAgain"
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

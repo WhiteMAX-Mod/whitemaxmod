@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lh51;
+.implements Lb51;
 
 
 # static fields
@@ -20,7 +20,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
     new-instance v0, La51;
 
@@ -28,21 +28,21 @@
 
     sput-object v0, La51;->a:La51;
 
-    const/16 v0, 0x30
+    const/16 v0, 0x40
 
     int-to-float v0, v0
 
-    invoke-static {v0}, La3e;->e(F)I
+    invoke-static {v0}, Liwd;->f(F)I
 
     move-result v0
 
     sput v0, La51;->b:I
 
-    const/16 v0, 0x1c
+    const/16 v0, 0x20
 
     int-to-float v0, v0
 
-    invoke-static {v0}, La3e;->e(F)I
+    invoke-static {v0}, Liwd;->f(F)I
 
     move-result v0
 
@@ -52,23 +52,17 @@
 
     int-to-float v0, v0
 
-    invoke-static {v0}, La3e;->e(F)I
+    invoke-static {v0}, Liwd;->f(F)I
 
     move-result v0
 
     sput v0, La51;->d:I
 
-    invoke-static {}, Lr05;->c()F
+    const/4 v0, 0x6
 
-    move-result v0
+    int-to-float v0, v0
 
-    float-to-double v0, v0
-
-    const-wide/high16 v2, 0x400c000000000000L    # 3.5
-
-    mul-double/2addr v0, v2
-
-    invoke-static {v0, v1}, Ln7j;->b(D)I
+    invoke-static {v0}, Liwd;->f(F)I
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lli5;
+.implements Loi5;
 
 
 # instance fields
@@ -11,7 +11,7 @@
 
 .field public final b:I
 
-.field public final c:Lukg;
+.field public final c:Lflg;
 
 .field public final d:I
 
@@ -21,7 +21,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILukg;III)V
+.method public constructor <init>(Ljava/lang/String;ILflg;III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -30,7 +30,7 @@
 
     iput p2, p0, Lfa0;->b:I
 
-    iput-object p3, p0, Lfa0;->c:Lukg;
+    iput-object p3, p0, Lfa0;->c:Lflg;
 
     iput p4, p0, Lfa0;->d:I
 
@@ -99,10 +99,10 @@
     return-object v0
 .end method
 
-.method public final c()Lukg;
+.method public final c()Lflg;
     .locals 1
 
-    iget-object v0, p0, Lfa0;->c:Lukg;
+    iget-object v0, p0, Lfa0;->c:Lflg;
 
     return-object v0
 .end method
@@ -141,9 +141,9 @@
 
     if-ne v1, v3, :cond_1
 
-    iget-object v1, p0, Lfa0;->c:Lukg;
+    iget-object v1, p0, Lfa0;->c:Lflg;
 
-    iget-object v3, p1, Lfa0;->c:Lukg;
+    iget-object v3, p1, Lfa0;->c:Lflg;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -196,7 +196,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lfa0;->c:Lukg;
+    iget-object v2, p0, Lfa0;->c:Lflg;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -250,7 +250,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lfa0;->c:Lukg;
+    iget-object v1, p0, Lfa0;->c:Lflg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -278,7 +278,7 @@
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

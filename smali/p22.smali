@@ -1,121 +1,64 @@
-.class public final enum Lp22;
-.super Ljava/lang/Enum;
+.class public final synthetic Lp22;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum X:Lp22;
 
-.field public static final synthetic Y:[Lp22;
+# instance fields
+.field public final synthetic a:Lj02;
 
-.field public static final enum a:Lp22;
+.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
 
-.field public static final enum b:Lp22;
+.field public final synthetic c:Landroid/hardware/camera2/CaptureRequest;
 
-.field public static final enum c:Lp22;
+.field public final synthetic d:Landroid/view/Surface;
 
-.field public static final enum d:Lp22;
-
-.field public static final enum o:Lp22;
+.field public final synthetic o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public synthetic constructor <init>(Lj02;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+    .locals 0
 
-    new-instance v0, Lp22;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    iput-object p1, p0, Lp22;->a:Lj02;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lp22;->b:Landroid/hardware/camera2/CameraCaptureSession;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lp22;->c:Landroid/hardware/camera2/CaptureRequest;
 
-    sput-object v0, Lp22;->a:Lp22;
+    iput-object p4, p0, Lp22;->d:Landroid/view/Surface;
 
-    new-instance v1, Lp22;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lp22;->b:Lp22;
-
-    new-instance v2, Lp22;
-
-    const-string v3, "SEARCHING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lp22;->c:Lp22;
-
-    new-instance v3, Lp22;
-
-    const-string v4, "FLASH_REQUIRED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lp22;->d:Lp22;
-
-    new-instance v4, Lp22;
-
-    const-string v5, "CONVERGED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lp22;->o:Lp22;
-
-    new-instance v5, Lp22;
-
-    const-string v6, "LOCKED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lp22;->X:Lp22;
-
-    filled-new-array/range {v0 .. v5}, [Lp22;
-
-    move-result-object v0
-
-    sput-object v0, Lp22;->Y:[Lp22;
+    iput-wide p5, p0, Lp22;->o:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lp22;
-    .locals 1
 
-    const-class v0, Lp22;
+# virtual methods
+.method public final run()V
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lp22;->a:Lj02;
 
-    move-result-object p0
+    iget-object v0, v0, Lj02;->b:Ljava/lang/Object;
 
-    check-cast p0, Lp22;
+    move-object v1, v0
 
-    return-object p0
-.end method
+    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
-.method public static values()[Lp22;
-    .locals 1
+    iget-object v2, p0, Lp22;->b:Landroid/hardware/camera2/CameraCaptureSession;
 
-    sget-object v0, Lp22;->Y:[Lp22;
+    iget-object v3, p0, Lp22;->c:Landroid/hardware/camera2/CaptureRequest;
 
-    invoke-virtual {v0}, [Lp22;->clone()Ljava/lang/Object;
+    iget-object v4, p0, Lp22;->d:Landroid/view/Surface;
 
-    move-result-object v0
+    iget-wide v5, p0, Lp22;->o:J
 
-    check-cast v0, [Lp22;
+    invoke-virtual/range {v1 .. v6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
 
-    return-object v0
+    return-void
 .end method

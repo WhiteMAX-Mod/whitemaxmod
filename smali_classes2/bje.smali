@@ -3,115 +3,137 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leje;
+.implements Lfoc;
 
 
 # instance fields
-.field public final a:Lbhg;
+.field public final a:Llhg;
 
-.field public final b:J
+.field public final b:Ldud;
 
-.field public final c:Lfhg;
+.field public final c:Lrhg;
 
 .field public final d:I
 
+.field public final o:I
+
 
 # direct methods
-.method public constructor <init>(Lbhg;JLfhg;)V
-    .locals 0
+.method public constructor <init>(Llhg;Lrhg;I)V
+    .locals 2
 
+    new-instance v0, Ldud;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Ldud;-><init>(I)V
+
+    and-int/lit8 v1, p3, 0x4
+
+    if-eqz v1, :cond_0
+
+    sget-object p2, Lr1h;->q:Lrhg;
+
+    :cond_0
+    and-int/lit8 p3, p3, 0x8
+
+    if-eqz p3, :cond_1
+
+    const/16 p3, 0x800
+
+    goto :goto_0
+
+    :cond_1
+    const/16 p3, 0x1000
+
+    :goto_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbje;->a:Lbhg;
+    iput-object p1, p0, Lbje;->a:Llhg;
 
-    iput-wide p2, p0, Lbje;->b:J
+    iput-object v0, p0, Lbje;->b:Ldud;
 
-    iput-object p4, p0, Lbje;->c:Lfhg;
+    iput-object p2, p0, Lbje;->c:Lrhg;
 
-    sget p1, Ljib;->F:I
+    iput p3, p0, Lbje;->d:I
 
-    iput p1, p0, Lbje;->d:I
+    iput p3, p0, Lbje;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
-
-    const/4 v0, 0x3
-
-    return v0
-.end method
-
-.method public final b()Lghg;
-    .locals 1
-
-    iget-object v0, p0, Lbje;->c:Lfhg;
-
-    return-object v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     instance-of v0, p1, Lbje;
 
     if-nez v0, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     check-cast p1, Lbje;
 
-    iget-object v0, p0, Lbje;->a:Lbhg;
+    iget-object v0, p0, Lbje;->a:Llhg;
 
-    iget-object v1, p1, Lbje;->a:Lbhg;
+    iget-object v1, p1, Lbje;->a:Llhg;
 
-    invoke-virtual {v0, v1}, Lbhg;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
-    iget-wide v0, p0, Lbje;->b:J
+    iget-object v0, p0, Lbje;->b:Ldud;
 
-    iget-wide v2, p1, Lbje;->b:J
+    iget-object v1, p1, Lbje;->b:Ldud;
 
-    cmp-long v0, v0, v2
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_3
+    move-result v0
 
-    goto :goto_0
+    if-nez v0, :cond_3
+
+    goto :goto_1
 
     :cond_3
-    iget-object v0, p0, Lbje;->c:Lfhg;
+    iget-object v0, p0, Lbje;->c:Lrhg;
 
-    iget-object p1, p1, Lbje;->c:Lfhg;
+    iget-object v1, p1, Lbje;->c:Lrhg;
 
-    invoke-virtual {v0, p1}, Lfhg;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v0
 
-    if-nez p1, :cond_4
+    if-nez v0, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    iget v0, p0, Lbje;->d:I
+
+    iget p1, p1, Lbje;->d:I
+
+    if-ne v0, p1, :cond_5
 
     :goto_0
-    const/4 p1, 0x0
+    const/4 p1, 0x1
 
     return p1
 
-    :cond_4
+    :cond_5
     :goto_1
-    const/4 p1, 0x1
+    const/4 p1, 0x0
 
     return p1
 .end method
@@ -119,55 +141,49 @@
 .method public final getItemId()J
     .locals 2
 
-    iget-wide v0, p0, Lbje;->b:J
+    iget v0, p0, Lbje;->d:I
+
+    int-to-long v0, v0
 
     return-wide v0
 .end method
 
-.method public final getTitle()Lghg;
-    .locals 1
-
-    iget-object v0, p0, Lbje;->a:Lbhg;
-
-    return-object v0
-.end method
-
 .method public final hashCode()I
-    .locals 4
+    .locals 2
 
-    iget-object v0, p0, Lbje;->a:Lbhg;
+    iget-object v0, p0, Lbje;->a:Llhg;
 
-    iget v0, v0, Lbhg;->c:I
+    iget v0, v0, Llhg;->c:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    const/16 v1, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/2addr v0, v1
+    iget-object v1, p0, Lbje;->b:Ldud;
 
-    const/4 v2, 0x1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+    move-result v1
 
-    move-result v0
+    add-int/2addr v1, v0
 
-    iget-wide v2, p0, Lbje;->b:J
+    mul-int/lit8 v1, v1, 0x1f
 
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+    iget-object v0, p0, Lbje;->c:Lrhg;
 
-    move-result v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v0, v1}, Ln0c;->j(III)I
+    invoke-virtual {v0}, Lrhg;->hashCode()I
 
     move-result v0
 
-    iget-object v1, p0, Lbje;->c:Lfhg;
+    add-int/2addr v0, v1
 
-    invoke-virtual {v1}, Lfhg;->hashCode()I
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lbje;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
@@ -179,15 +195,7 @@
 .method public final m()I
     .locals 1
 
-    iget v0, p0, Lbje;->d:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
+    iget v0, p0, Lbje;->o:I
 
     return v0
 .end method
@@ -195,45 +203,49 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lbje;->d:I
 
-    const-string v1, "ClearCacheButton(title="
+    invoke-static {v0}, Ltkj;->b(I)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-object v1, p0, Lbje;->a:Lbhg;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "Section(title="
 
-    const-string v1, ", sectionId=1, itemId="
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lbje;->a:Llhg;
 
-    iget-wide v1, p0, Lbje;->b:J
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v2, ", textColor="
 
-    const-string v1, ", sectionItemType="
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lbje;->b:Ldud;
 
-    const-string v1, "LAST"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ", typography="
 
-    const-string v1, ", descriptionRes="
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lbje;->c:Lrhg;
 
-    iget-object v1, p0, Lbje;->c:Lfhg;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, ", itemViewType="
 
-    const-string v1, ")"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

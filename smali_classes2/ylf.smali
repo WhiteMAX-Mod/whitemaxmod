@@ -1,41 +1,47 @@
-.class public final Lylf;
-.super Lzp;
+.class public abstract Lylf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lylf;
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:La2c;
+
+.field public final g:Ljava/util/HashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(IIJLjava/lang/String;Ljava/lang/String;La2c;)V
     .locals 1
 
-    new-instance v0, Lylf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lzp;-><init>()V
+    new-instance v0, Ljava/util/HashMap;
 
-    sput-object v0, Lylf;->a:Lylf;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lylf;->g:Ljava/util/HashMap;
+
+    iput p1, p0, Lylf;->a:I
+
+    iput p2, p0, Lylf;->b:I
+
+    iput-wide p3, p0, Lylf;->c:J
+
+    iput-object p5, p0, Lylf;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Lylf;->e:Ljava/lang/String;
+
+    iput-object p7, p0, Lylf;->f:La2c;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ldqe;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v0
-
-    const/16 v1, 0x33
-
-    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldqe;
-
-    return-object v0
 .end method

@@ -1,77 +1,454 @@
-.class public abstract Lhij;
+.class public final Lhij;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lhij;
+
+.field public static final b:Lfz5;
+
+.field public static final c:Lfz5;
+
+.field public static final d:Lfz5;
+
+.field public static final e:Lfz5;
+
+.field public static final f:Lfz5;
+
+.field public static final g:Lfz5;
+
+.field public static final h:Lfz5;
+
+.field public static final i:Lfz5;
+
+.field public static final j:Lfz5;
+
+.field public static final k:Lfz5;
+
+.field public static final l:Lfz5;
+
+.field public static final m:Lfz5;
+
+.field public static final n:Lfz5;
+
+.field public static final o:Lfz5;
+
 
 # direct methods
-.method public static final a(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 4
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lhij;
 
-    const/16 v1, 0x21
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    sput-object v0, Lhij;->a:Lhij;
 
-    if-lt v0, v1, :cond_0
+    new-instance v0, Lvzi;
 
-    int-to-long v0, v2
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lyrb;->c(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+
+    const-class v1, Ln0j;
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-static {p0, p1, v0}, Lyrb;->b(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
+    new-instance v2, Lfz5;
 
-    move-result-object p0
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
 
-    return-object p0
+    move-result-object v0
 
-    :cond_0
-    invoke-virtual {p0, p1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    const-string v3, "appId"
 
-    move-result-object p0
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    return-object p0
+    sput-object v2, Lhij;->b:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "appVersion"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->c:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "firebaseProjectId"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->d:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "mlSdkVersion"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->e:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "tfliteSchemaVersion"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->f:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "gcmSenderId"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->g:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "apiKey"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->h:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "languages"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->i:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "mlSdkInstanceId"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->j:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "isClearcutClient"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->k:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "isStandaloneMlkit"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->l:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "isJsonLogging"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->m:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "buildLevel"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lhij;->n:Lfz5;
+
+    new-instance v0, Lvzi;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "optionalModuleVersion"
+
+    invoke-direct {v1, v2, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lhij;->o:Lfz5;
+
+    return-void
 .end method
 
-.method public static final b(I)I
-    .locals 1
 
-    if-nez p0, :cond_0
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
 
-    const/4 p0, 0x0
+    check-cast p1, Llpj;
 
-    return p0
+    check-cast p2, Lwwa;
 
-    :cond_0
-    const v0, 0xffffff
+    sget-object v0, Lhij;->b:Lfz5;
 
-    and-int/2addr p0, v0
+    iget-object v1, p1, Llpj;->a:Ljava/lang/String;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    move-result-object p0
+    sget-object v0, Lhij;->c:Lfz5;
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    iget-object v1, p1, Llpj;->b:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    const/4 v0, 0x1
+    sget-object v0, Lhij;->d:Lfz5;
 
-    invoke-static {p0, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object p0
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    const-string v0, "#%06X"
+    sget-object v0, Lhij;->e:Lfz5;
 
-    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    iget-object v2, p1, Llpj;->c:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-interface {p2, v0, v2}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    sget-object v0, Lhij;->f:Lfz5;
 
-    move-result p0
+    iget-object v2, p1, Llpj;->d:Ljava/lang/String;
 
-    return p0
+    invoke-interface {p2, v0, v2}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->g:Lfz5;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->h:Lfz5;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->i:Lfz5;
+
+    iget-object v1, p1, Llpj;->e:Llxi;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->j:Lfz5;
+
+    iget-object v1, p1, Llpj;->f:Ljava/lang/String;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->k:Lfz5;
+
+    iget-object v1, p1, Llpj;->g:Ljava/lang/Boolean;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->l:Lfz5;
+
+    iget-object v1, p1, Llpj;->h:Ljava/lang/Boolean;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->m:Lfz5;
+
+    iget-object v1, p1, Llpj;->i:Ljava/lang/Boolean;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->n:Lfz5;
+
+    iget-object v1, p1, Llpj;->j:Ljava/lang/Integer;
+
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    sget-object v0, Lhij;->o:Lfz5;
+
+    iget-object p1, p1, Llpj;->k:Ljava/lang/Integer;
+
+    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
+
+    return-void
 .end method

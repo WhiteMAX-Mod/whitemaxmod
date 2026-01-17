@@ -1,40 +1,31 @@
-.class public final Lgn7;
+.class public abstract Lgn7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnn7;
 
-
-# instance fields
-.field public final a:Lboa;
+# static fields
+.field public static final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lboa;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lvr5;->a:Lvr5;
 
-    iput-object p1, p0, Lgn7;->a:Lboa;
+    sget-object v1, Lvr5;->o:Lvr5;
+
+    sget-object v2, Lvr5;->w0:Lvr5;
+
+    filled-new-array {v2, v0, v1}, [Lvr5;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lgn7;->a:Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final b()Lboa;
-    .locals 1
-
-    iget-object v0, p0, Lgn7;->a:Lboa;
-
-    return-object v0
-.end method
-
-.method public final isActive()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

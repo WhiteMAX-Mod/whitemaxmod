@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public abstract a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 .end method

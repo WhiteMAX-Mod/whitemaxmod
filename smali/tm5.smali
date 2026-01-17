@@ -2,138 +2,58 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lub4;
-
 
 # instance fields
-.field public final synthetic a:Lsm5;
+.field public final a:[Lnm5;
+
+.field public final b:[J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Lnm5;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lsm5;->a:Lsm5;
+    iput-object p1, p0, Ltm5;->c:Ljava/lang/String;
 
-    iput-object v0, p0, Ltm5;->a:Lsm5;
+    iput-object p2, p0, Ltm5;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Ltm5;->b:[J
+
+    iput-object p4, p0, Ltm5;->a:[Lnm5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lrb4;Ljava/lang/Throwable;)V
-    .locals 0
+.method public final a()Ljava/lang/String;
+    .locals 2
 
-    iget-object p1, p0, Ltm5;->a:Lsm5;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object p1, Lsm5;->b:Ljava/lang/Object;
+    iget-object v1, p0, Ltm5;->c:Ljava/lang/String;
 
-    monitor-enter p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    monitor-exit p1
+    const-string v1, "/"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v1, p0, Ltm5;->d:Ljava/lang/String;
 
-    instance-of v0, p1, Ltm5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_1
-
-    instance-of p1, p1, Lsm5;
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Ltm5;->a:Lsm5;
-
-    invoke-interface {v0, p1, p2}, Lrb4;->fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final get(Lqb4;)Lpb4;
-    .locals 1
-
-    iget-object v0, p0, Ltm5;->a:Lsm5;
-
-    invoke-interface {v0, p1}, Lrb4;->get(Lqb4;)Lpb4;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getKey()Lqb4;
-    .locals 1
-
-    iget-object v0, p0, Ltm5;->a:Lsm5;
-
-    invoke-virtual {v0}, Ln0;->getKey()Lqb4;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    sget-object v0, Lsm5;->a:Lsm5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final minusKey(Lqb4;)Lrb4;
-    .locals 1
-
-    iget-object v0, p0, Ltm5;->a:Lsm5;
-
-    invoke-interface {v0, p1}, Lrb4;->minusKey(Lqb4;)Lrb4;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final plus(Lrb4;)Lrb4;
-    .locals 1
-
-    iget-object v0, p0, Ltm5;->a:Lsm5;
-
-    invoke-interface {v0, p1}, Lrb4;->plus(Lrb4;)Lrb4;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,151 +1,122 @@
 .class public final Lyc2;
-.super Lsg7;
+.super Lxc2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:[Ljava/lang/String;
-
-.field public final f:[Lsg7;
+.field public final a:C
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZZ[Ljava/lang/String;[Lsg7;)V
-    .locals 1
+.method public constructor <init>(C)V
+    .locals 0
 
-    const-string v0, "CTOC"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lsg7;-><init>(Ljava/lang/String;)V
-
-    iput-object p1, p0, Lyc2;->b:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lyc2;->c:Z
-
-    iput-boolean p3, p0, Lyc2;->d:Z
-
-    iput-object p4, p0, Lyc2;->e:[Ljava/lang/String;
-
-    iput-object p5, p0, Lyc2;->f:[Lsg7;
+    iput-char p1, p0, Lyc2;->a:C
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(C)Z
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-char v0, p0, Lyc2;->a:C
 
-    if-ne p0, p1, :cond_0
+    if-ne p1, v0, :cond_0
 
-    return v0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 p1, 0x0
 
-    if-eqz p1, :cond_2
-
-    const-class v2, Lyc2;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lyc2;
-
-    iget-boolean v2, p0, Lyc2;->c:Z
-
-    iget-boolean v3, p1, Lyc2;->c:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Lyc2;->d:Z
-
-    iget-boolean v3, p1, Lyc2;->d:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lyc2;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lyc2;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lyc2;->e:[Ljava/lang/String;
-
-    iget-object v3, p1, Lyc2;->e:[Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lyc2;->f:[Lsg7;
-
-    iget-object p1, p1, Lyc2;->f:[Lsg7;
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 8
 
-    const/16 v0, 0x20f
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lyc2;->c:Z
+    const-string v1, "CharMatcher.is(\'"
 
-    add-int/2addr v0, v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v1, 0x6
 
-    iget-boolean v1, p0, Lyc2;->d:Z
+    new-array v1, v1, [C
 
-    add-int/2addr v0, v1
+    const/16 v2, 0x5c
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lyc2;->b:Ljava/lang/String;
+    aput-char v2, v1, v3
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x1
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    const/16 v4, 0x75
 
-    move-result v1
+    aput-char v4, v1, v2
+
+    const/4 v2, 0x2
+
+    aput-char v3, v1, v2
+
+    const/4 v2, 0x3
+
+    aput-char v3, v1, v2
+
+    const/4 v2, 0x4
+
+    aput-char v3, v1, v2
+
+    const/4 v4, 0x5
+
+    aput-char v3, v1, v4
+
+    iget-char v4, p0, Lyc2;->a:C
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    rsub-int/lit8 v5, v3, 0x5
+
+    and-int/lit8 v6, v4, 0xf
+
+    const-string v7, "0123456789ABCDEF"
+
+    invoke-virtual {v7, v6}, Ljava/lang/String;->charAt(I)C
+
+    move-result v6
+
+    aput-char v6, v1, v5
+
+    shr-int/2addr v4, v2
+
+    int-to-char v4, v4
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-static {v1}, Ljava/lang/String;->copyValueOf([C)Ljava/lang/String;
 
-    :goto_0
-    add-int/2addr v0, v1
+    move-result-object v1
 
-    return v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\')"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

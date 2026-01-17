@@ -1,85 +1,67 @@
-.class public final enum Lg72;
-.super Ljava/lang/Enum;
+.class public final synthetic Lg72;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum a:Lg72;
 
-.field public static final enum b:Lg72;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Lg72;
-
-.field public static final synthetic d:[Lg72;
+.field public final synthetic b:Lhz8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lhz8;I)V
+    .locals 0
 
-    new-instance v0, Lg72;
+    iput p2, p0, Lg72;->a:I
 
-    const-string v1, "COLLAPSED"
+    iput-object p1, p0, Lg72;->b:Lhz8;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lg72;->a:Lg72;
-
-    new-instance v1, Lg72;
-
-    const-string v2, "EXPANDED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lg72;->b:Lg72;
-
-    new-instance v2, Lg72;
-
-    const-string v3, "MAX_EXPANDED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lg72;->c:Lg72;
-
-    filled-new-array {v0, v1, v2}, [Lg72;
-
-    move-result-object v0
-
-    sput-object v0, Lg72;->d:[Lg72;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lg72;
+
+# virtual methods
+.method public final run()V
     .locals 1
 
-    const-class v0, Lg72;
+    iget v0, p0, Lg72;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Lg72;->b:Lhz8;
 
-    check-cast p0, Lg72;
+    invoke-virtual {v0}, Lhz8;->a()V
 
-    return-object p0
-.end method
+    return-void
 
-.method public static values()[Lg72;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lg72;->b:Lhz8;
 
-    sget-object v0, Lg72;->d:[Lg72;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Lhz8;->a()V
 
-    move-result-object v0
+    :cond_0
+    return-void
 
-    check-cast v0, [Lg72;
+    :pswitch_1
+    iget-object v0, p0, Lg72;->b:Lhz8;
 
-    return-object v0
+    invoke-virtual {v0}, Lhz8;->a()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

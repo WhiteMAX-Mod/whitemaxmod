@@ -2,78 +2,269 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwrf;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:J
+.field public final b:Lmtf;
 
-.field public c:J
+.field public final c:Landroid/widget/FrameLayout;
 
-.field public d:J
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 0
+
+    iput p2, p0, Lvo8;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p2, Lto8;
+
+    invoke-direct {p2, p1}, Lto8;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    new-instance p1, Lmtf;
+
+    invoke-direct {p1, p2}, Lmtf;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lvo8;->b:Lmtf;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p2, Luei;
+
+    invoke-direct {p2, p1}, Luei;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    new-instance p1, Lmtf;
+
+    invoke-direct {p1, p2}, Lmtf;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lvo8;->b:Lmtf;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p2, Lnrf;
+
+    invoke-direct {p2, p1}, Lnrf;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    new-instance p1, Lmtf;
+
+    invoke-direct {p1, p2}, Lmtf;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lvo8;->b:Lmtf;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final c(Lro8;)V
+    .locals 0
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(JJ)D
-    .locals 7
+.method public final a(Lcsf;)V
+    .locals 2
 
-    iget-wide v0, p0, Lvo8;->a:J
+    iget v0, p0, Lvo8;->a:I
 
-    sub-long v0, p1, v0
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/16 v2, 0x0
+    iget-object v0, p0, Lvo8;->b:Lmtf;
 
-    cmp-long v4, v0, v2
+    invoke-virtual {v0, p1}, Lmtf;->b(Lcsf;)V
 
-    if-gez v4, :cond_0
+    invoke-virtual {v0}, Lmtf;->c()V
 
-    move-wide v0, v2
+    const/16 v1, 0x15e
 
-    :cond_0
-    iput-wide v0, p0, Lvo8;->c:J
+    iget v0, v0, Lmtf;->b:I
 
-    iget-wide v4, p0, Lvo8;->b:J
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
-    sub-long v4, p3, v4
+    move-result v0
 
-    cmp-long v6, v4, v2
+    iget-object v1, p0, Lvo8;->c:Landroid/widget/FrameLayout;
 
-    if-gez v6, :cond_1
+    check-cast v1, Luei;
 
-    move-wide v4, v2
+    invoke-virtual {v1, p1, v0}, Luei;->a(Lcsf;I)V
 
-    :cond_1
-    iput-wide v4, p0, Lvo8;->d:J
+    return-void
 
-    cmp-long v6, v4, v2
+    :pswitch_0
+    iget-object v0, p0, Lvo8;->b:Lmtf;
 
-    if-nez v6, :cond_3
+    invoke-virtual {v0, p1}, Lmtf;->b(Lcsf;)V
 
-    cmp-long v2, v0, v2
+    invoke-virtual {v0}, Lmtf;->c()V
 
-    if-eqz v2, :cond_2
+    iget-object v0, p0, Lvo8;->c:Landroid/widget/FrameLayout;
 
-    goto :goto_0
+    check-cast v0, Lnrf;
 
-    :cond_2
-    const-wide/16 v0, 0x0
+    invoke-virtual {v0, p1}, Lnrf;->a(Lcsf;)V
 
-    goto :goto_1
+    return-void
 
-    :cond_3
-    :goto_0
-    long-to-double v2, v0
+    :pswitch_1
+    iget-object v0, p0, Lvo8;->b:Lmtf;
 
-    add-long/2addr v4, v0
+    invoke-virtual {v0, p1}, Lmtf;->b(Lcsf;)V
 
-    long-to-double v0, v4
+    invoke-virtual {v0}, Lmtf;->c()V
 
-    div-double v0, v2, v0
+    const/16 v1, 0x15e
 
-    :goto_1
-    iput-wide p1, p0, Lvo8;->a:J
+    iget v0, v0, Lmtf;->b:I
 
-    iput-wide p3, p0, Lvo8;->b:J
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
-    return-wide v0
+    move-result v0
+
+    iget-object v1, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v1, Lto8;
+
+    invoke-virtual {v1, p1, v0}, Lto8;->a(Lcsf;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(Lro8;)V
+    .locals 1
+
+    iget v0, p0, Lvo8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Luei;
+
+    invoke-virtual {v0, p1}, Luei;->b(Lro8;)V
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Lto8;
+
+    invoke-virtual {v0, p1}, Lto8;->b(Lro8;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final setParent(Landroid/view/ViewGroup;)V
+    .locals 3
+
+    iget v0, p0, Lvo8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Luei;
+
+    iget-object v1, p0, Lvo8;->b:Lmtf;
+
+    invoke-virtual {v0, v1}, Luei;->setSizeConfigurator(Lmtf;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Lnrf;
+
+    iget-object v1, p0, Lvo8;->b:Lmtf;
+
+    invoke-virtual {v0, v1}, Lnrf;->setSizeConfigurator(Lmtf;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lvo8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Lto8;
+
+    iget-object v1, p0, Lvo8;->b:Lmtf;
+
+    invoke-virtual {v0, v1}, Lto8;->setSizeConfigurator(Lmtf;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

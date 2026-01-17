@@ -1,50 +1,48 @@
-.class public final synthetic Luy3;
-.super Lw8;
-.source "SourceFile"
-
-# interfaces
-.implements Ler6;
+.class public final Luy3;
+.super Lo84;
 
 
-# static fields
-.field public static final Z:Luy3;
+# instance fields
+.field public final synthetic X:Lvy3;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lvy3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Luy3;
+    iput-object p1, p0, Luy3;->X:Lvy3;
 
-    const-string v1, "<init>(Lone/me/profileedit/screens/changelink/ChangeLinkScreenState;Ljava/util/List;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lla2;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lw8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Luy3;->Z:Luy3;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lza2;
+    iput-object p1, p0, Luy3;->d:Ljava/lang/Object;
 
-    check-cast p2, Ljava/util/List;
+    iget p1, p0, Luy3;->o:I
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    new-instance p3, Lla2;
+    or-int/2addr p1, v0
 
-    invoke-direct {p3, p1, p2}, Lla2;-><init>(Lza2;Ljava/util/List;)V
+    iput p1, p0, Luy3;->o:I
 
-    return-object p3
+    iget-object p1, p0, Luy3;->X:Lvy3;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lvy3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

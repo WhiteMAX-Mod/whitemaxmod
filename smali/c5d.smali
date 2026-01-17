@@ -3,48 +3,38 @@
 
 
 # static fields
-.field public static compat_button_inset_horizontal_material:I = 0x7f07007d
+.field public static externalRouteEnabledDrawable:I = 0x7f0403a4
 
-.field public static compat_button_inset_vertical_material:I = 0x7f07007e
+.field public static externalRouteEnabledDrawableStatic:I = 0x7f0403a5
 
-.field public static compat_button_padding_horizontal_material:I = 0x7f07007f
+.field public static mediaRouteAudioTrackDrawable:I = 0x7f040652
 
-.field public static compat_button_padding_vertical_material:I = 0x7f070080
+.field public static mediaRouteBodyTextAppearance:I = 0x7f040653
 
-.field public static compat_control_corner_material:I = 0x7f070081
+.field public static mediaRouteButtonStyle:I = 0x7f040654
 
-.field public static compat_notification_large_icon_max_height:I = 0x7f070082
+.field public static mediaRouteButtonTint:I = 0x7f040655
 
-.field public static compat_notification_large_icon_max_width:I = 0x7f070083
+.field public static mediaRouteCloseDrawable:I = 0x7f040656
 
-.field public static default_gap:I = 0x7f070091
+.field public static mediaRouteControlPanelThemeOverlay:I = 0x7f040657
 
-.field public static notification_action_icon_size:I = 0x7f070427
+.field public static mediaRouteDefaultIconDrawable:I = 0x7f040658
 
-.field public static notification_action_text_size:I = 0x7f070428
+.field public static mediaRouteDividerColor:I = 0x7f040659
 
-.field public static notification_big_circle_margin:I = 0x7f070429
+.field public static mediaRouteHeaderTextAppearance:I = 0x7f04065a
 
-.field public static notification_content_margin_start:I = 0x7f07042a
+.field public static mediaRoutePauseDrawable:I = 0x7f04065b
 
-.field public static notification_large_icon_height:I = 0x7f07042b
+.field public static mediaRoutePlayDrawable:I = 0x7f04065c
 
-.field public static notification_large_icon_width:I = 0x7f07042c
+.field public static mediaRouteSpeakerGroupIconDrawable:I = 0x7f04065d
 
-.field public static notification_main_column_padding_top:I = 0x7f07042d
+.field public static mediaRouteSpeakerIconDrawable:I = 0x7f04065e
 
-.field public static notification_media_narrow_margin:I = 0x7f07042e
+.field public static mediaRouteStopDrawable:I = 0x7f04065f
 
-.field public static notification_right_icon_size:I = 0x7f07042f
+.field public static mediaRouteTheme:I = 0x7f040660
 
-.field public static notification_right_side_padding_top:I = 0x7f070430
-
-.field public static notification_small_icon_background_padding:I = 0x7f070431
-
-.field public static notification_small_icon_size_as_large:I = 0x7f070432
-
-.field public static notification_subtext_size:I = 0x7f070433
-
-.field public static notification_top_pad:I = 0x7f070434
-
-.field public static notification_top_pad_large_text:I = 0x7f070435
+.field public static mediaRouteTvIconDrawable:I = 0x7f040661

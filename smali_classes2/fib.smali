@@ -36,122 +36,74 @@
 
 .field public static final p:I
 
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lqdd;->oneme_setting_item_about:I
+    sget v0, Lped;->settings_devices_auth_hint_accept_button_title:I
 
     sput v0, Lfib;->a:I
 
-    sget v0, Lqdd;->oneme_setting_item_appearance:I
+    sget v0, Lped;->settings_devices_auth_hint_deny_button_title:I
 
     sput v0, Lfib;->b:I
 
-    sget v0, Lqdd;->oneme_setting_item_battery:I
+    sget v0, Lped;->settings_devices_auth_hint_description_full:I
 
     sput v0, Lfib;->c:I
 
-    sget v0, Lqdd;->oneme_setting_item_devices:I
+    sget v0, Lped;->settings_devices_auth_hint_description_navigation_arrow:I
 
     sput v0, Lfib;->d:I
 
-    sget v0, Lqdd;->oneme_setting_item_esia_connected_title:I
+    sget v0, Lped;->settings_devices_auth_hint_description_navigation_part:I
 
     sput v0, Lfib;->e:I
 
-    sget v0, Lqdd;->oneme_setting_item_esia_not_connected_subtitle:I
+    sget v0, Lped;->settings_devices_auth_hint_title:I
 
     sput v0, Lfib;->f:I
 
-    sget v0, Lqdd;->oneme_setting_item_esia_not_connected_title:I
+    sget v0, Lped;->settings_devices_base_login_qr_error:I
 
     sput v0, Lfib;->g:I
 
-    sget v0, Lqdd;->oneme_setting_item_folders:I
+    sget v0, Lped;->settings_devices_camera_permission_denied_title:I
 
     sput v0, Lfib;->h:I
 
-    sget v0, Lqdd;->oneme_setting_item_invite_friends_title:I
+    sget v0, Lped;->settings_devices_camera_request_description:I
 
     sput v0, Lfib;->i:I
 
-    sget v0, Lqdd;->oneme_setting_item_messages:I
+    sget v0, Lped;->settings_devices_expired_login_qr_error:I
 
     sput v0, Lfib;->j:I
 
-    sget v0, Lqdd;->oneme_setting_item_notification:I
+    sget v0, Lped;->settings_devices_header_description:I
 
     sput v0, Lfib;->k:I
 
-    sget v0, Lqdd;->oneme_setting_item_notification_and_sound:I
+    sget v0, Lped;->settings_devices_header_title:I
 
     sput v0, Lfib;->l:I
 
-    sget v0, Lqdd;->oneme_setting_item_privacy:I
+    sget v0, Lped;->settings_devices_login_success:I
 
     sput v0, Lfib;->m:I
 
-    sget v0, Lqdd;->oneme_setting_item_storage:I
+    sget v0, Lped;->settings_devices_not_login_qr_error:I
 
     sput v0, Lfib;->n:I
 
-    sget v0, Lqdd;->oneme_setting_item_support:I
+    sget v0, Lped;->settings_devices_qr_scan_btn:I
 
     sput v0, Lfib;->o:I
 
-    sget v0, Lqdd;->oneme_settings_cant_open_camera:I
+    sget v0, Lped;->settings_devices_toolbar_title:I
 
     sput v0, Lfib;->p:I
-
-    sget v0, Lqdd;->oneme_settings_change_avatar_error:I
-
-    sput v0, Lfib;->q:I
-
-    sget v0, Lqdd;->oneme_settings_change_avatar_success:I
-
-    sput v0, Lfib;->r:I
-
-    sget v0, Lqdd;->oneme_settings_change_avatar_title:I
-
-    sput v0, Lfib;->s:I
-
-    sget v0, Lqdd;->oneme_settings_change_avatar_upload_from_camera:I
-
-    sput v0, Lfib;->t:I
-
-    sget v0, Lqdd;->oneme_settings_change_avatar_upload_from_gallery:I
-
-    sput v0, Lfib;->u:I
-
-    sget v0, Lqdd;->oneme_settings_change_avatar_upload_from_neuroavatars:I
-
-    sput v0, Lfib;->v:I
-
-    sget v0, Lqdd;->oneme_settings_link_copied_snackbar_title:I
-
-    sput v0, Lfib;->w:I
-
-    sget v0, Lqdd;->oneme_settings_phonenumber_copied_snackbar_title:I
-
-    sput v0, Lfib;->x:I
 
     return-void
 .end method

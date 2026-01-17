@@ -1,50 +1,87 @@
-.class public final synthetic Ljz7;
-.super Lrr6;
+.class public final Ljz7;
+.super Lnth;
 .source "SourceFile"
 
-# interfaces
-.implements Ler6;
 
+# instance fields
+.field public final b:Ljava/lang/String;
 
-# static fields
-.field public static final a:Ljz7;
+.field public final c:Lo58;
+
+.field public d:J
+
+.field public final o:Lcm5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 4
 
-    new-instance v0, Ljz7;
+    sget-object v0, Laz7;->a:Laz7;
 
-    const-string v4, "registerSelectForOnJoin(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    const/4 v5, 0x0
+    move-result-object v1
 
-    const/4 v1, 0x3
+    const/16 v2, 0x16f
 
-    const-class v2, Lkz7;
+    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
 
-    const-string v3, "registerSelectForOnJoin"
+    move-result-object v1
 
-    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    check-cast v1, Lck2;
 
-    sput-object v0, Ljz7;->a:Ljz7;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v2, 0x46
+
+    invoke-virtual {v0, v2}, Lr5;->d(I)Ln8g;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lnth;-><init>()V
+
+    iput-object p1, p0, Ljz7;->b:Ljava/lang/String;
+
+    iput-object v0, p0, Ljz7;->c:Lo58;
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Ljz7;->d:J
+
+    new-instance p1, Lcm5;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lcm5;-><init>(I)V
+
+    iput-object p1, p0, Ljz7;->o:Lcm5;
+
+    iget-object p1, v1, Lck2;->a:Li7f;
+
+    new-instance v0, Lnc3;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, p1, v1, p0}, Lnc3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lgz7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v1}, Lgz7;-><init>(Ljz7;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Lm96;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, p1, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
+
+    iget-object p1, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lkz7;
-
-    check-cast p2, Lsle;
-
-    invoke-static {p1, p2, p3}, Lkz7;->access$registerSelectForOnJoin(Lkz7;Lsle;Ljava/lang/Object;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
 .end method

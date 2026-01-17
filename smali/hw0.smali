@@ -1,106 +1,176 @@
-.class public final synthetic Lhw0;
-.super Ljava/lang/Object;
+.class public final Lhw0;
+.super Lf2;
 .source "SourceFile"
-
-# interfaces
-.implements Lzw1;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
-    .locals 0
+.method public constructor <init>(II[Ljava/lang/Object;)V
+    .locals 1
 
-    iput p2, p0, Lhw0;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iput v0, p0, Lhw0;->c:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0, p1, p2}, Lf2;-><init>(II)V
+
+    .line 2
+    iput-object p3, p0, Lhw0;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/Object;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lhw0;->c:I
+
+    .line 3
+    invoke-direct {p0, p1, v0}, Lf2;-><init>(II)V
+
+    iput-object p2, p0, Lhw0;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final r(Lyw1;)Ljava/lang/String;
-    .locals 2
+.method public final next()Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lhw0;->a:I
+    iget v0, p0, Lhw0;->c:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p0}, Lf2;->hasNext()Z
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    move-result v0
 
-    const-string p1, "Terminate InputBuffer"
+    if-eqz v0, :cond_0
 
-    return-object p1
+    iget v0, p0, Lf2;->a:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lf2;->a:I
+
+    iget-object v0, p0, Lhw0;->d:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
 
     :pswitch_0
-    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p0}, Lf2;->hasNext()Z
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    move-result v0
 
-    const-string p1, "mReleasedFuture"
+    if-eqz v0, :cond_1
 
-    return-object p1
+    iget-object v0, p0, Lhw0;->d:Ljava/lang/Object;
 
-    :pswitch_1
-    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast v0, [Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    iget v1, p0, Lf2;->a:I
 
-    const-string p1, "acquireInputBuffer"
+    add-int/lit8 v2, v1, 0x1
 
-    return-object p1
+    iput v2, p0, Lf2;->a:I
 
-    :pswitch_2
-    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    aget-object v0, v0, v1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    return-object v0
 
-    const-string p1, "Data closed"
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    return-object p1
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    :pswitch_3
-    new-instance v0, Ly12;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p1}, Ly12;-><init>(ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    const-string p1, "OnScreenFlashUiApplied"
-
-    return-object p1
-
-    :pswitch_4
-    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    const-string p1, "Data closed"
-
-    return-object p1
+    throw v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lhw0;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lf2;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lf2;->a:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lf2;->a:I
+
+    iget-object v0, p0, Lhw0;->d:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lf2;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lhw0;->d:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    iget v1, p0, Lf2;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Lf2;->a:I
+
+    aget-object v0, v0, v1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

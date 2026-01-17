@@ -1,258 +1,227 @@
-.class public final enum Lcpj;
-.super Ljava/lang/Enum;
+.class public abstract Lcpj;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmzi;
-
-
-# static fields
-.field public static final enum X:Lcpj;
-
-.field public static final enum Y:Lcpj;
-
-.field public static final enum Z:Lcpj;
-
-.field public static final enum b:Lcpj;
-
-.field public static final enum c:Lcpj;
-
-.field public static final enum d:Lcpj;
-
-.field public static final enum o:Lcpj;
-
-.field public static final enum s0:Lcpj;
-
-.field public static final enum t0:Lcpj;
-
-.field public static final enum u0:Lcpj;
-
-.field public static final enum v0:Lcpj;
-
-.field public static final enum w0:Lcpj;
-
-.field public static final enum x0:Lcpj;
-
-.field public static final synthetic y0:[Lcpj;
-
-
-# instance fields
-.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 19
+.method public static a([B)Ljava/lang/String;
+    .locals 4
 
-    new-instance v1, Lcpj;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "UNRECOGNIZED"
+    array-length v1, p0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    :goto_0
+    array-length v2, p0
+
+    if-ge v1, v2, :cond_0
+
+    aget-byte v2, p0, v1
+
+    invoke-static {v2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "%02x"
+
+    invoke-static {v3, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Ljava/io/FileDescriptor;)V
+    .locals 1
+
+    :try_start_0
+    invoke-static {p0}, Lpo5;->a(Ljava/io/FileDescriptor;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const-string p0, "ExifInterfaceUtils"
+
+    const-string v0, "Error closing fd."
+
+    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public static c(Ljava/io/Closeable;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    :try_start_0
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
+
+    :catch_1
+    move-exception p0
+
+    throw p0
+
+    :cond_0
+    return-void
+.end method
+
+.method public static d(Ljava/io/Serializable;)[J
+    .locals 4
+
+    instance-of v0, p0, [I
+
+    if-eqz v0, :cond_1
+
+    check-cast p0, [I
+
+    array-length v0, p0
+
+    new-array v0, v0, [J
+
+    const/4 v1, 0x0
+
+    :goto_0
+    array-length v2, p0
+
+    if-ge v1, v2, :cond_0
+
+    aget v2, p0, v1
+
+    int-to-long v2, v2
+
+    aput-wide v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+
+    :cond_1
+    instance-of v0, p0, [J
+
+    if-eqz v0, :cond_2
+
+    check-cast p0, [J
+
+    return-object p0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static e(Ljo5;Lzy0;I)V
+    .locals 5
+
+    const/16 v0, 0x2000
+
+    new-array v1, v0, [B
+
+    :goto_0
+    if-lez p2, :cond_1
+
+    invoke-static {p2, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0, v1, v3, v2}, Ljo5;->read([BII)I
+
+    move-result v4
+
+    if-ne v4, v2, :cond_0
+
+    sub-int/2addr p2, v4
+
+    invoke-virtual {p1, v1, v3, v4}, Lzy0;->write([BII)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/io/IOException;
+
+    const-string p1, "Failed to copy the given amount of bytes from the inputstream to the output stream."
+
+    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    return-void
+.end method
+
+.method public static f(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    .locals 3
+
+    const/16 v0, 0x2000
+
+    new-array v0, v0, [B
+
+    :goto_0
+    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, v2, v2}, Lcpj;-><init>(Ljava/lang/String;II)V
+    invoke-virtual {p1, v0, v2, v1}, Ljava/io/OutputStream;->write([BII)V
 
-    new-instance v2, Lcpj;
+    goto :goto_0
 
-    const-string v0, "CODE_128"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3, v3}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lcpj;->b:Lcpj;
-
-    new-instance v3, Lcpj;
-
-    const-string v0, "CODE_39"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v0, v4, v4}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lcpj;->c:Lcpj;
-
-    new-instance v4, Lcpj;
-
-    const-string v0, "CODE_93"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v4, v0, v5, v5}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lcpj;->d:Lcpj;
-
-    new-instance v5, Lcpj;
-
-    const-string v0, "CODABAR"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v5, v0, v6, v6}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lcpj;->o:Lcpj;
-
-    new-instance v6, Lcpj;
-
-    const-string v0, "DATA_MATRIX"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v6, v0, v7, v7}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Lcpj;->X:Lcpj;
-
-    new-instance v7, Lcpj;
-
-    const-string v0, "EAN_13"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v7, v0, v8, v8}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v7, Lcpj;->Y:Lcpj;
-
-    new-instance v8, Lcpj;
-
-    const-string v0, "EAN_8"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v8, v0, v9, v9}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v8, Lcpj;->Z:Lcpj;
-
-    new-instance v9, Lcpj;
-
-    const-string v0, "ITF"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v9, v0, v10, v10}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v9, Lcpj;->s0:Lcpj;
-
-    new-instance v10, Lcpj;
-
-    const-string v0, "QR_CODE"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v10, v0, v11, v11}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v10, Lcpj;->t0:Lcpj;
-
-    new-instance v11, Lcpj;
-
-    const-string v0, "UPC_A"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v11, v0, v12, v12}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v11, Lcpj;->u0:Lcpj;
-
-    new-instance v12, Lcpj;
-
-    const-string v0, "UPC_E"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v12, v0, v13, v13}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v12, Lcpj;->v0:Lcpj;
-
-    new-instance v13, Lcpj;
-
-    const-string v0, "PDF417"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v13, v0, v14, v14}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v13, Lcpj;->w0:Lcpj;
-
-    new-instance v14, Lcpj;
-
-    const-string v0, "AZTEC"
-
-    const/16 v15, 0xd
-
-    invoke-direct {v14, v0, v15, v15}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    sput-object v14, Lcpj;->x0:Lcpj;
-
-    new-instance v15, Lcpj;
-
-    const-string v0, "DATABAR"
-
-    move-object/from16 v16, v1
-
-    const/16 v1, 0xe
-
-    invoke-direct {v15, v0, v1, v1}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lcpj;
-
-    const/16 v1, 0xf
-
-    move-object/from16 v17, v2
-
-    const/16 v2, 0x10
-
-    move-object/from16 v18, v3
-
-    const-string v3, "TEZ_CODE"
-
-    invoke-direct {v0, v3, v1, v2}, Lcpj;-><init>(Ljava/lang/String;II)V
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v3, v18
-
-    move-object/from16 v16, v0
-
-    filled-new-array/range {v1 .. v16}, [Lcpj;
-
-    move-result-object v0
-
-    sput-object v0, Lcpj;->y0:[Lcpj;
-
+    :cond_0
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method public static final g(Lr4h;)V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v0, Lffe;
 
-    iput p3, p0, Lcpj;->a:I
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lffe;-><init>(I)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
 
     return-void
-.end method
-
-.method public static values()[Lcpj;
-    .locals 1
-
-    sget-object v0, Lcpj;->y0:[Lcpj;
-
-    invoke-virtual {v0}, [Lcpj;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcpj;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final d()I
-    .locals 1
-
-    iget v0, p0, Lcpj;->a:I
-
-    return v0
 .end method

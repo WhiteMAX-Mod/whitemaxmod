@@ -1,79 +1,104 @@
 .class public final Lf1f;
-.super Lkm4;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final b:Lf1f;
 
-.field public static final c:Lgm4;
+# instance fields
+.field public final synthetic X:Lone/me/settings/SettingsListScreen;
 
-.field public static final d:Lgm4;
-
-.field public static final e:Lgm4;
-
-.field public static final f:Lgm4;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+    .locals 0
+
+    iput-object p2, p0, Lf1f;->X:Lone/me/settings/SettingsListScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg3f;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lf1f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lf1f;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lf1f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lf1f;
 
-    invoke-direct {v0}, Lkm4;-><init>()V
+    iget-object v1, p0, Lf1f;->X:Lone/me/settings/SettingsListScreen;
 
-    sput-object v0, Lf1f;->b:Lf1f;
+    invoke-direct {v0, p2, v1}, Lf1f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
 
-    const/4 v1, 0x0
+    iput-object p1, v0, Lf1f;->o:Ljava/lang/Object;
 
-    new-array v2, v1, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    const-string v3, ":settings/privacy"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Lf1f;->o:Ljava/lang/Object;
 
-    const/16 v5, 0xe
+    check-cast v0, Lg3f;
 
-    invoke-static {v0, v3, v2, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object v2
+    sget-object p1, Lone/me/settings/SettingsListScreen;->B0:[Lz28;
 
-    sput-object v2, Lf1f;->c:Lgm4;
+    iget-object p1, p0, Lf1f;->X:Lone/me/settings/SettingsListScreen;
 
-    const-string v2, ":settings/blacklist"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
-
-    move-result-object v2
-
-    sput-object v2, Lf1f;->d:Lgm4;
-
-    const-string v2, ":settings/privacy/onboarding"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    invoke-virtual {p1}, Lone/me/settings/SettingsListScreen;->D0()Ln4f;
 
     move-result-object v1
 
-    sput-object v1, Lf1f;->e:Lgm4;
+    invoke-virtual {v1, v0}, Ln4f;->setTopBarContent(Lg3f;)V
 
-    const-string v1, "mode"
+    iget-object v1, p1, Lone/me/settings/SettingsListScreen;->t0:Ljld;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    sget-object v2, Lone/me/settings/SettingsListScreen;->B0:[Lz28;
 
-    move-result-object v1
+    const/4 v3, 0x1
 
-    const-string v2, ":settings/privacy/pincode"
+    aget-object v2, v2, v3
 
-    invoke-static {v0, v2, v1, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    sput-object v0, Lf1f;->f:Lgm4;
+    check-cast p1, Lymb;
 
-    return-void
+    iget-object v0, v0, Lg3f;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lymb;->setTitle(Ljava/lang/CharSequence;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

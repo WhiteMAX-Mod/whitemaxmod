@@ -1,29 +1,35 @@
-.class public abstract Lmr5;
+.class public final Lmr5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Object;
+# instance fields
+.field public final a:J
 
-.field public static final b:Ljava/util/HashMap;
+.field public final b:Lpj6;
+
+.field public final c:Lpj6;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JLpj6;Lpj6;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lmr5;->a:J
 
-    sput-object v0, Lmr5;->a:Ljava/lang/Object;
+    iput-object p3, p0, Lmr5;->b:Lpj6;
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p4, p0, Lmr5;->c:Lpj6;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput-object p5, p0, Lmr5;->d:Ljava/lang/String;
 
-    sput-object v0, Lmr5;->b:Ljava/util/HashMap;
+    iput-object p6, p0, Lmr5;->e:Ljava/lang/String;
 
     return-void
 .end method

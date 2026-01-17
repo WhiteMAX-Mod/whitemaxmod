@@ -1,5 +1,5 @@
 .class public final Lqb0;
-.super Luk8;
+.super Lhk8;
 .source "SourceFile"
 
 
@@ -16,11 +16,11 @@
 
 .field public final f:J
 
-.field public final g:Lika;
+.field public final g:Lgka;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Integer;J[BLjava/lang/String;JLika;)V
+.method public constructor <init>(JLjava/lang/Integer;J[BLjava/lang/String;JLgka;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +37,7 @@
 
     iput-wide p8, p0, Lqb0;->f:J
 
-    iput-object p10, p0, Lqb0;->g:Lika;
+    iput-object p10, p0, Lqb0;->g:Lgka;
 
     return-void
 .end method
@@ -54,13 +54,13 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Luk8;
+    instance-of v1, p1, Lhk8;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_5
 
-    check-cast p1, Luk8;
+    check-cast p1, Lhk8;
 
     move-object v1, p1
 
@@ -106,7 +106,7 @@
 
     check-cast v1, Lqb0;
 
-    iget-object v3, v1, Lqb0;->g:Lika;
+    iget-object v3, v1, Lqb0;->g:Lgka;
 
     iget-object v4, v1, Lqb0;->e:Ljava/lang/String;
 
@@ -164,7 +164,7 @@
 
     if-nez p1, :cond_5
 
-    iget-object p1, p0, Lqb0;->g:Lika;
+    iget-object p1, p0, Lqb0;->g:Lgka;
 
     if-nez p1, :cond_4
 
@@ -277,7 +277,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lqb0;->g:Lika;
+    iget-object v1, p0, Lqb0;->g:Lgka;
 
     if-nez v1, :cond_2
 
@@ -355,7 +355,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lqb0;->g:Lika;
+    iget-object v1, p0, Lqb0;->g:Lgka;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

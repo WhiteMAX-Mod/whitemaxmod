@@ -1,268 +1,242 @@
 .class public final Lxw7;
-.super Lb5g;
+.super Lcx7;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final X:Lone/me/folders/list/FoldersListScreen;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lone/me/folders/list/FoldersListScreen;)V
+    .locals 2
 
-    iput-object p1, p0, Lxw7;->X:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    const/4 v0, 0x3
 
-    const/4 p1, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0, v1}, Lcx7;-><init>(II)V
+
+    iput-object p1, p0, Lxw7;->X:Lone/me/folders/list/FoldersListScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;Ltsd;)V
+    .locals 5
 
-    check-cast p1, Lac4;
+    invoke-super {p0, p1, p2}, Lcx7;->a(Landroidx/recyclerview/widget/RecyclerView;Ltsd;)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    instance-of p1, p2, Lex7;
 
-    invoke-virtual {p0, p1, p2}, Lxw7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_1
+
+    check-cast p2, Lex7;
+
+    check-cast p2, Lsah;
+
+    iget-object p1, p2, Ltsd;->a:Landroid/view/View;
+
+    check-cast p1, Lrah;
+
+    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    check-cast p1, Lxw7;
+    const/4 v0, 0x0
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
 
-    invoke-virtual {p1, p2}, Lxw7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p2, Lsah;->F0:Ls3e;
 
-    return-object p2
-.end method
+    if-eqz p1, :cond_1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object p1, p1, Ls3e;->b:Ljava/lang/Object;
 
-    new-instance v0, Lxw7;
+    check-cast p1, Lone/me/folders/list/FoldersListScreen;
 
-    iget-object v1, p0, Lxw7;->X:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    invoke-virtual {p1}, Lone/me/folders/list/FoldersListScreen;->z0()Lvg6;
 
-    invoke-direct {v0, v1, p2}, Lxw7;-><init>(Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    iput-object p1, v0, Lxw7;->o:Ljava/lang/Object;
+    invoke-virtual {p2}, Ltsd;->f()I
 
-    return-object v0
-.end method
+    move-result p2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    add-int/lit8 p2, p2, -0x1
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p1, Lvg6;->w0:Ljava/lang/String;
 
-    iget-object p1, p0, Lxw7;->o:Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    check-cast p1, Lac4;
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    iget-object p1, p0, Lxw7;->X:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    move-result v1
 
-    iget-object v0, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->F0:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwah;
-
-    iget v1, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->H0:I
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->D0:Ld68;
-
-    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ldqe;
-
-    check-cast v3, Lncc;
-
-    iget-object v4, v3, Lz3;->g:Lg68;
-
-    const-string v5, "invite-long"
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v4, v5, v6}, Lg68;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x1
-
-    if-eqz v4, :cond_0
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget v4, Le5e;->J:I
+    iget-object v1, p1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    iget-object v2, p1, Lvg6;->c:Lmbg;
+
+    check-cast v2, Lj9b;
+
+    invoke-virtual {v2}, Lj9b;->c()Lzp8;
 
     move-result-object v2
 
-    invoke-virtual {v3}, Lncc;->l()Ljava/lang/String;
+    invoke-virtual {v2}, Lzp8;->getImmediate()Lzp8;
 
-    move-result-object v3
+    move-result-object v2
 
-    filled-new-array {v3}, [Ljava/lang/Object;
+    new-instance v3, Ltg6;
 
-    move-result-object v3
+    const/4 v4, 0x0
 
-    invoke-static {v3, v5}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-direct {v3, p1, v0, p2, v4}, Ltg6;-><init>(Lvg6;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
 
-    move-result-object v3
+    const/4 p2, 0x2
 
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v2, v4, v3, p2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    move-result-object v4
-
-    :goto_0
-    invoke-virtual {v0, v1, v4}, Lwah;->a(ILjava/lang/String;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, ""
+    iput-object v4, p1, Lvg6;->w0:Ljava/lang/String;
 
     :cond_1
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    :goto_0
+    return-void
+.end method
+
+.method public final i(Ltsd;Ltsd;)Z
+    .locals 5
+
+    invoke-virtual {p1}, Ltsd;->g()I
+
+    move-result p1
+
+    invoke-virtual {p2}, Ltsd;->g()I
+
+    move-result p2
+
+    iget-object v0, p0, Lxw7;->X:Lone/me/folders/list/FoldersListScreen;
+
+    iget-object v0, v0, Lone/me/folders/list/FoldersListScreen;->o:Llg6;
+
+    invoke-virtual {v0, p2}, Lnd8;->D(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    check-cast v1, Lud8;
 
-    move-result-object v2
+    check-cast v1, Lpah;
 
-    invoke-static {v1, v2}, Lcf3;->a(Landroid/content/Context;Ljava/lang/String;)V
+    iget-object v1, v1, Lpah;->b:Loah;
 
-    :try_start_0
-    iget-object v1, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->I0:Ld68;
+    sget-object v2, Loah;->b:Loah;
 
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    const/4 v4, 0x1
 
-    check-cast v1, Luw7;
+    if-ne v1, v2, :cond_0
 
-    iget-object v1, v1, Luw7;->Z:Lpkd;
+    move v1, v4
 
-    iget-object v1, v1, Lpkd;->a:Laof;
+    goto :goto_0
 
-    invoke-interface {v1}, Laof;->getValue()Ljava/lang/Object;
+    :cond_0
+    move v1, v3
 
-    move-result-object v1
+    :goto_0
+    if-lez p2, :cond_1
 
-    check-cast v1, Lqzc;
+    invoke-virtual {v0}, Lnd8;->j()I
 
-    if-eqz v1, :cond_2
+    move-result v2
 
-    iget-object v1, v1, Lqzc;->a:Landroid/net/Uri;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-lt p2, v2, :cond_2
 
-    goto :goto_2
+    :cond_1
+    move v3, v4
 
-    :catchall_0
-    move-exception v1
+    :cond_2
+    if-eqz v1, :cond_4
+
+    if-eqz v3, :cond_3
 
     goto :goto_1
 
-    :cond_2
-    move-object v1, v6
-
-    goto :goto_2
-
-    :goto_1
-    new-instance v2, Lyyd;
-
-    invoke-direct {v2, v1}, Lyyd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v1, v2
-
-    :goto_2
-    nop
-
-    instance-of v2, v1, Lyyd;
-
-    if-eqz v2, :cond_3
-
-    goto :goto_3
-
     :cond_3
-    move-object v6, v1
+    iget-object v1, v0, Lnd8;->d:Lgv;
 
-    :goto_3
-    check-cast v6, Landroid/net/Uri;
+    iget-object v1, v1, Lgv;->f:Ljava/util/List;
 
-    sget-object v1, Ltt7;->a:Ljava/lang/String;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v1, v0, v6}, Ltt7;->i(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    iget-object v0, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->E0:Ld68;
+    invoke-virtual {v2, p2, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    new-instance v1, Lip1;
 
-    move-result-object v0
+    invoke-direct {v1, v0, p1, p2, v2}, Lip1;-><init>(Llg6;IILjava/util/ArrayList;)V
 
-    check-cast v0, Lzw7;
+    invoke-virtual {v0, v2, v1}, Lnd8;->G(Ljava/util/List;Ljava/lang/Runnable;)V
 
-    const-string v1, "main"
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
 
-    const-string v2, "trigger_max"
+    return p1
+.end method
 
-    const-string v3, "clicked_to_invite"
+.method public final j(Ltsd;I)V
+    .locals 1
 
-    invoke-virtual {v0, v3, v1, v2}, Lzw7;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz p2, :cond_0
 
-    iget-object v0, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->C0:Ld68;
+    instance-of p2, p1, Lex7;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    if-eqz p2, :cond_0
 
-    move-result-object v0
+    check-cast p1, Lex7;
 
-    check-cast v0, Lte3;
+    check-cast p1, Lsah;
 
-    check-cast v0, Lcfe;
+    iget-object p1, p1, Ltsd;->a:Landroid/view/View;
 
-    iget-object v1, v0, Lcfe;->N:Lkqe;
+    check-cast p1, Lrah;
 
-    sget-object v2, Lcfe;->l0:[Lp38;
+    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    const/16 v3, 0x1f
+    move-result-object p1
 
-    aget-object v2, v2, v3
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    move-result-object p2
 
-    invoke-virtual {v1, v0, v2, v3}, Lkqe;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {p1, v5}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+    move-result-object p2
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    return-object p1
+    const/high16 v0, 0x41a00000    # 20.0f
+
+    mul-float/2addr p2, v0
+
+    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
+
+    :cond_0
+    return-void
 .end method

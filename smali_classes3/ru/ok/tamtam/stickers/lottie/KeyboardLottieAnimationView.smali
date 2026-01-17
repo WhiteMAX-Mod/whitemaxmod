@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field public w0:Z
+.field public x0:Z
 
 
 # direct methods
@@ -44,7 +44,7 @@
 
     const-string v1, "ru.ok.tamtam.stickers.lottie.KeyboardLottieAnimationView"
 
-    invoke-static {v1, v0, p1}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, p1}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -52,30 +52,30 @@
 .method public final onNextFrameRendered(Lone/me/rlottie/RLottieDrawable;I)V
     .locals 0
 
-    iget-boolean p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->w0:Z
+    iget-boolean p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->x0:Z
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->w0:Z
+    iput-boolean p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->x0:Z
 
     :cond_0
     return-void
 .end method
 
-.method public setFailureListener(Lk48;)V
+.method public setFailureListener(Lu38;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setOnFirstFrameListener(Ll48;)V
+.method public setOnFirstFrameListener(Lv38;)V
     .locals 0
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->w0:Z
+    iput-boolean p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->x0:Z
 
     return-void
 .end method

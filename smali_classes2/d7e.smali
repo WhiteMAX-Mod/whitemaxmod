@@ -1,75 +1,97 @@
-.class public final Ld7e;
-.super Lrsh;
+.class public abstract Ld7e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lp38;
-
-
-# instance fields
-.field public final b:Ld68;
-
-.field public final c:Ld68;
-
-.field public final d:Le7;
-
-.field public final o:Lyl5;
+.field public static final a:Lakj;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lifa;
+    new-instance v0, Lakj;
 
-    const-string v1, "enableSafeModeJob"
+    invoke-static {}, Lace;->b()Lpbe;
 
-    const-string v2, "getEnableSafeModeJob()Lkotlinx/coroutines/Job;"
+    move-result-object v1
 
-    const-class v3, Ld7e;
+    invoke-direct {v0, v1}, Lakj;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v3, v1, v2}, Lifa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lfsd;->a:Lgsd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lp38;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Ld7e;->X:[Lp38;
+    sput-object v0, Ld7e;->a:Lakj;
 
     return-void
 .end method
 
-.method public constructor <init>(Ld68;Ld68;)V
+.method public static a(Li6;Lay3;Lpbe;)Lnw1;
+    .locals 2
+
+    new-instance v0, Lc7e;
+
+    invoke-direct {v0, p0}, Lc7e;-><init>(Li6;)V
+
+    new-instance p0, Leo3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v1, v0}, Leo3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p2}, Lbo3;->h(Lpbe;)Lco3;
+
+    move-result-object p0
+
+    new-instance p2, Lyp4;
+
+    const/16 v0, 0x9
+
+    invoke-direct {p2, v0}, Lyp4;-><init>(I)V
+
+    new-instance v0, Lnw1;
+
+    invoke-direct {v0, p1, v1, p2}, Lnw1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p0, v0}, Lbo3;->f(Lko3;)V
+
+    return-object v0
+.end method
+
+.method public static b(Lo25;)V
+    .locals 1
+
+    invoke-static {p0}, Ld7e;->c(Lo25;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-interface {p0}, Lo25;->dispose()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static c(Lo25;)Z
     .locals 0
 
-    invoke-direct {p0}, Lrsh;-><init>()V
+    if-eqz p0, :cond_1
 
-    iput-object p1, p0, Ld7e;->b:Ld68;
+    invoke-interface {p0}, Lo25;->e()Z
 
-    iput-object p2, p0, Ld7e;->c:Ld68;
+    move-result p0
 
-    invoke-static {}, Llkj;->b()Le7;
+    if-eqz p0, :cond_0
 
-    move-result-object p1
+    goto :goto_0
 
-    iput-object p1, p0, Ld7e;->d:Le7;
+    :cond_0
+    const/4 p0, 0x0
 
-    new-instance p1, Lyl5;
+    return p0
 
-    const/4 p2, 0x0
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
 
-    invoke-direct {p1, p2}, Lyl5;-><init>(I)V
-
-    iput-object p1, p0, Ld7e;->o:Lyl5;
-
-    return-void
+    return p0
 .end method

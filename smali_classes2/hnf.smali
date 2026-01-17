@@ -1,327 +1,210 @@
 .class public final Lhnf;
-.super Lf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lem4;
 
-# instance fields
-.field public final synthetic c:I
 
-.field public final synthetic d:Ljava/lang/Object;
+# static fields
+.field public static final a:Lhnf;
+
+.field public static final b:Ljnf;
 
 
 # direct methods
-.method public constructor <init>(Linf;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Lhnf;
 
-    iput v0, p0, Lhnf;->c:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhnf;->d:Ljava/lang/Object;
+    sput-object v0, Lhnf;->a:Lhnf;
 
-    const/16 p1, 0xb
+    sget-object v0, Ljnf;->b:Ljnf;
 
-    .line 1
-    sget-object v0, Lfnf;->a:Lfnf;
-
-    invoke-direct {p0, p1, v0}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;Luyf;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lhnf;->c:I
-
-    iput-object p2, p0, Lhnf;->d:Ljava/lang/Object;
-
-    const/16 p2, 0xb
-
-    .line 5
-    invoke-direct {p0, p2, p1}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Llgg;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lhnf;->c:I
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lhnf;->d:Ljava/lang/Object;
-
-    const/16 p1, 0xb
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lojh;)V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    iput v0, p0, Lhnf;->c:I
-
-    iput-object p1, p0, Lhnf;->d:Ljava/lang/Object;
-
-    const/16 p1, 0xb
-
-    const/4 v0, 0x0
-
-    .line 4
-    invoke-direct {p0, p1, v0}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Luih;)V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lhnf;->c:I
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lhnf;->d:Ljava/lang/Object;
-
-    const/16 p1, 0xb
-
-    .line 3
-    invoke-direct {p0, p1, v0}, Lf3;-><init>(ILjava/lang/Object;)V
+    sput-object v0, Lhnf;->b:Ljnf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+.method public final a()Llm4;
+    .locals 1
 
-    iget v0, p0, Lhnf;->c:I
+    sget-object v0, Lhnf;->b:Ljnf;
+
+    return-object v0
+.end method
+
+.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
+    .locals 12
+
+    sget-object v0, Lhnf;->b:Ljnf;
+
+    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lhnf;->d:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
     if-nez v0, :cond_0
 
-    check-cast p2, Lthh;
-
-    check-cast p1, Lthh;
-
-    check-cast v3, Lojh;
-
-    invoke-static {v3}, Lojh;->o(Lojh;)V
+    return-object v1
 
     :cond_0
-    return-void
+    sget-object v0, Ljnf;->b:Ljnf;
 
-    :pswitch_0
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Ljnf;->c:Lhm4;
+
+    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-eqz v0, :cond_1
 
-    check-cast p2, Ljava/lang/Boolean;
+    new-instance v0, Lgnf;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v1, 0x0
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-direct {v0, v1}, Lgnf;-><init>(I)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    move-object v10, v0
 
-    check-cast v3, Luih;
-
-    iget-object p1, v3, Luih;->E0:Landroid/animation/ValueAnimator;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
+    goto :goto_1
 
     :cond_1
-    iget p1, v3, Luih;->A0:F
+    sget-object v0, Ljnf;->d:Lhm4;
 
-    const/4 p2, 0x0
+    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
 
-    cmpg-float p2, p1, p2
+    move-result v0
 
-    if-nez p2, :cond_2
+    if-eqz v0, :cond_2
+
+    new-instance v0, Lgnf;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lgnf;-><init>(I)V
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {v3}, Luih;->g()F
+    sget-object v0, Ljnf;->e:Lhm4;
 
-    move-result p2
+    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
 
-    const/4 v0, 0x2
+    move-result v0
 
-    new-array v0, v0, [F
+    if-eqz v0, :cond_3
 
-    aput p1, v0, v1
+    new-instance v0, Lgnf;
 
-    aput p2, v0, v2
+    const/4 v1, 0x2
 
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    invoke-direct {v0, v1}, Lgnf;-><init>(I)V
 
-    move-result-object p1
-
-    const-wide/16 v0, 0x64
-
-    invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance p2, Landroid/view/animation/AccelerateDecelerateInterpolator;
-
-    invoke-direct {p2}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    new-instance p2, Lrih;
-
-    invoke-direct {p2, v3, v2}, Lrih;-><init>(Luih;I)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance p2, Ltih;
-
-    invoke-direct {p2, v3, v2}, Ltih;-><init>(Luih;I)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    iput-object p1, v3, Luih;->E0:Landroid/animation/ValueAnimator;
+    goto :goto_0
 
     :cond_3
-    :goto_0
-    return-void
+    sget-object v0, Ljnf;->f:Lhm4;
 
-    :pswitch_1
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v3, Llgg;
-
-    invoke-virtual {v3}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v3}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-eqz v0, :cond_4
 
-    check-cast p2, [I
+    const-string v0, "ids"
 
-    check-cast p1, [I
+    invoke-static {v0, p3}, Lomj;->g(Ljava/lang/String;Landroid/os/Bundle;)[J
 
-    check-cast v3, Luyf;
+    move-result-object v0
 
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    new-instance v1, Lo54;
 
-    :cond_4
-    return-void
+    const/4 v2, 0x1
 
-    :pswitch_3
-    check-cast v3, Linf;
+    invoke-direct {v1, v2, v0}, Lo54;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    check-cast p2, Lfnf;
-
-    check-cast p1, Lfnf;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    if-ne p1, v2, :cond_5
-
-    invoke-static {v3}, Linf;->a(Linf;)V
+    move-object v10, v1
 
     goto :goto_1
 
-    :cond_5
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    :cond_4
+    sget-object v0, Ljnf;->g:Lhm4;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
 
-    throw p1
+    move-result v0
 
-    :cond_6
-    iget-object p1, v3, Linf;->c:Lz7g;
+    if-eqz v0, :cond_5
 
-    invoke-virtual {p1}, Lz7g;->e()Z
+    const-string v0, "id"
 
-    move-result p2
+    invoke-static {v0, p3}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
 
-    if-eqz p2, :cond_8
+    move-result-wide v0
 
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+    new-instance v2, Ltb1;
 
-    move-result-object p1
+    const/16 v3, 0x9
 
-    check-cast p1, Landroid/widget/TextView;
+    invoke-direct {v2, v0, v1, v3}, Ltb1;-><init>(JI)V
 
-    iget-object p2, v3, Linf;->o:Landroid/animation/ValueAnimator;
+    move-object v10, v2
 
-    if-eqz p2, :cond_7
-
-    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->cancel()V
-
-    :cond_7
-    invoke-static {v3, p1, v1}, Linf;->b(Linf;Landroid/widget/TextView;Z)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    iput-object p1, v3, Linf;->o:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    :cond_8
     :goto_1
-    return-void
+    new-instance v4, Lom4;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const/4 v9, 0x0
+
+    const/16 v11, 0x10
+
+    const/4 v8, 0x1
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    move-object v7, p3
+
+    invoke-direct/range {v4 .. v11}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
+
+    return-object v4
+
+    :cond_5
+    move-object v6, p2
+
+    const-class p1, Lhnf;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v6}, Lj27;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
+
+    move-result-object p3
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p2, v6}, Lj27;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1, p3, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
 .end method

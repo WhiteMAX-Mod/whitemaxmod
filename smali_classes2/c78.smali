@@ -1,116 +1,150 @@
-.class public final synthetic Lc78;
-.super Ljava/lang/Object;
+.class public final Lc78;
+.super Lfxf;
 .source "SourceFile"
 
 # interfaces
-.implements Lmm4;
+.implements Luig;
 
 
 # instance fields
-.field public final synthetic a:J
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Lpj8;
-
-.field public final synthetic d:F
-
-.field public final synthetic o:Ljava/lang/Long;
+.field public final d:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLpj8;FLjava/lang/Long;)V
-    .locals 0
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lfxf;-><init>(Landroid/view/View;)V
 
-    iput-wide p1, p0, Lc78;->a:J
+    iput-object p1, p0, Lc78;->d:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iput-wide p3, p0, Lc78;->b:J
+    new-instance v0, Lesd;
 
-    iput-object p5, p0, Lc78;->c:Lpj8;
+    const/16 v1, 0x1c
 
-    iput p6, p0, Lc78;->d:F
+    int-to-float v1, v1
 
-    iput-object p7, p0, Lc78;->o:Ljava/lang/Long;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    invoke-direct {v0, v2, v1}, Lesd;-><init>(II)V
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x41a40000    # 20.5f
+
+    mul-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/16 v0, 0x10
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setGravity(I)V
+
+    const/16 v0, 0xc
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v2
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    sget-object v0, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v0, p1}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lc78;->onThemeChanged(Lzlb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+.method public final onThemeChanged(Lzlb;)V
+    .locals 2
 
-    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
+    sget-object v0, Lr1h;->k:Lrhg;
 
-    iget-wide v1, p0, Lc78;->a:J
+    iget-object v1, p0, Lc78;->d:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v1}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
 
-    move-result-object v1
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
-    new-instance v2, Lysb;
+    move-result-object v0
 
-    const-string v3, "ru.ok.tamtam.extra.CHAT_ID"
+    iget v0, v0, Lrfg;->i:I
 
-    invoke-direct {v2, v3, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-wide v3, p0, Lc78;->b:J
+    invoke-interface {p1}, Lzlb;->b()Lxf0;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object p1
 
-    move-result-object v1
+    iget p1, p1, Lxf0;->l:I
 
-    new-instance v3, Lysb;
+    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    const-string v4, "ru.ok.tamtam.extra.MESSAGE_ID"
-
-    invoke-direct {v3, v4, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Lysb;
-
-    const-string v4, "ru.ok.tamtam.extra.LOCATION"
-
-    iget-object v5, p0, Lc78;->c:Lpj8;
-
-    invoke-direct {v1, v4, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget v4, p0, Lc78;->d:F
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    new-instance v5, Lysb;
-
-    const-string v6, "ru.ok.tamtam.extra.ZOOM"
-
-    invoke-direct {v5, v6, v4}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v4, Lysb;
-
-    const-string v6, "ru.ok.tamtam.extra.CONTACT_ID"
-
-    iget-object v7, p0, Lc78;->o:Ljava/lang/Long;
-
-    invoke-direct {v4, v6, v7}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v2, v3, v1, v5, v4}, [Lysb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    const v2, 0x7a3a1dca
-
-    const-class v3, Lru/ok/messages/location/FrgLocationMap;
-
-    const-string v4, "ru.ok.messages.location.FrgLocationMap"
-
-    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object v0
+    return-void
 .end method

@@ -1,23 +1,52 @@
-.class public abstract Ll95;
+.class public interface abstract Ll95;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Li95;
+
+
 # direct methods
-.method public static a(Landroid/widget/AbsListView;)Z
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/widget/AbsListView;->isSelectedChildViewEnabled()Z
+    new-instance v0, Li95;
 
-    move-result p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return p0
+    sput-object v0, Ll95;->a:Li95;
+
+    return-void
 .end method
 
-.method public static b(Landroid/widget/AbsListView;Z)V
+
+# virtual methods
+.method public abstract a(Le95;Lpj6;)La95;
+.end method
+
+.method public b(Le95;Lpj6;)Lj95;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/AbsListView;->setSelectedChildViewEnabled(Z)V
+    sget-object p1, Lj95;->p:Lxp4;
+
+    return-object p1
+.end method
+
+.method public abstract c(Landroid/os/Looper;Lkcc;)V
+.end method
+
+.method public abstract d(Lpj6;)I
+.end method
+
+.method public prepare()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public release()V
+    .locals 0
 
     return-void
 .end method

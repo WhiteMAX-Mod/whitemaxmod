@@ -1,107 +1,71 @@
-.class public final Lvp5;
+.class public final synthetic Lvp5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Logh;
-.implements Lwbc;
+.implements Lpe8;
+.implements Lzx3;
 
 
 # instance fields
-.field public a:Logh;
+.field public final synthetic a:Z
 
-.field public b:Lvp5;
+.field public final synthetic b:I
+
+
+# direct methods
+.method public synthetic constructor <init>(IZ)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lvp5;->b:I
+
+    iput-boolean p2, p0, Lvp5;->a:Z
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ZI)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lvp5;->a:Z
+
+    iput p2, p0, Lvp5;->b:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v0, 0x7
+    iget v0, p0, Lvp5;->b:I
 
-    if-eq p1, v0, :cond_3
+    check-cast p1, Lxcc;
 
-    const/16 v0, 0x8
+    iget-boolean v1, p0, Lvp5;->a:Z
 
-    if-eq p1, v0, :cond_2
-
-    const/16 v0, 0x2710
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p2, :cond_1
-
-    :goto_0
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    check-cast p2, Lvp5;
-
-    iput-object p2, p0, Lvp5;->b:Lvp5;
-
-    return-void
-
-    :cond_3
-    check-cast p2, Logh;
-
-    iput-object p2, p0, Lvp5;->a:Logh;
+    invoke-virtual {p1, v0, v1}, Lxcc;->e0(IZ)V
 
     return-void
 .end method
 
-.method public final b(JJLrj6;Landroid/media/MediaFormat;)V
-    .locals 7
+.method public invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lvp5;->a:Logh;
+    iget-boolean v0, p0, Lvp5;->a:Z
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lnbc;
 
-    move-wide v1, p1
+    iget v1, p0, Lvp5;->b:I
 
-    move-wide v3, p3
+    invoke-interface {p1, v1, v0}, Lnbc;->l(IZ)V
 
-    move-object v5, p5
-
-    move-object v6, p6
-
-    invoke-interface/range {v0 .. v6}, Logh;->b(JJLrj6;Landroid/media/MediaFormat;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    iget-object v0, p0, Lvp5;->b:Lvp5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lvp5;->c()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    iget-object v0, p0, Lvp5;->b:Lvp5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lvp5;->d()V
-
-    :cond_0
     return-void
 .end method

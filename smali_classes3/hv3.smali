@@ -1,114 +1,218 @@
-.class public final Lhv3;
+.class public abstract Lhv3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lev3;
-
 
 # instance fields
-.field public final synthetic a:Lfv3;
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public final synthetic b:Lp62;
+.field public volatile b:[B
 
-.field public final synthetic c:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final c:Lcl8;
+
+.field public final d:Ljava/security/SecureRandom;
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Lfv3;Lp62;Ljava/util/concurrent/atomic/AtomicBoolean;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Integer;Lcl8;)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhv3;->a:Lfv3;
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    iput-object p2, p0, Lhv3;->b:Lp62;
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    iput-object p3, p0, Lhv3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object v0, p0, Lhv3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    :goto_0
+    iput p1, p0, Lhv3;->e:I
+
+    iput-object p2, p0, Lhv3;->c:Lcl8;
+
+    new-instance p2, Ljava/security/SecureRandom;
+
+    invoke-direct {p2}, Ljava/security/SecureRandom;-><init>()V
+
+    iput-object p2, p0, Lhv3;->d:Ljava/security/SecureRandom;
+
+    new-array p1, p1, [B
+
+    invoke-virtual {p2, p1}, Ljava/security/SecureRandom;->nextBytes([B)V
+
+    iput-object p1, p0, Lhv3;->b:[B
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    new-instance v1, Ldv3;
+
+    iget-object v2, p0, Lhv3;->b:[B
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, p1, v2, v3}, Ldv3;-><init>(I[BI)V
+
+    invoke-virtual {v0, p2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final a()[B
+    .locals 3
 
-    iget-object v0, p0, Lhv3;->a:Lfv3;
+    iget-object v0, p0, Lhv3;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-interface {v0}, Lfv3;->f()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    invoke-interface {v0, p0}, Lfv3;->e(Lev3;)V
+    move-result-object v0
 
-    iget-object v0, p0, Lhv3;->b:Lp62;
-
-    invoke-virtual {v0}, Lp62;->r()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
+    new-instance v1, Lve3;
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lhv3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v1, v2}, Lve3;-><init>(I)V
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    new-instance v1, Lj0;
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    const/16 v2, 0x8
 
-    invoke-virtual {v0, v1}, Lp62;->resumeWith(Ljava/lang/Object;)V
+    invoke-direct {v1, v2}, Lj0;-><init>(I)V
 
-    :cond_0
-    return-void
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [B
+
+    return-object v0
 .end method
 
-.method public final b()V
-    .locals 4
+.method public final b()Ljava/util/List;
+    .locals 3
 
-    iget-object v0, p0, Lhv3;->a:Lfv3;
+    iget-object v0, p0, Lhv3;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-interface {v0}, Lfv3;->f()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    invoke-interface {v0, p0}, Lfv3;->e(Lev3;)V
+    move-result-object v0
 
-    iget-object v0, p0, Lhv3;->b:Lp62;
+    new-instance v1, Lve3;
 
-    invoke-virtual {v0}, Lp62;->r()Z
+    const/4 v2, 0x2
 
-    move-result v1
+    invoke-direct {v1, v2}, Lve3;-><init>(I)V
 
-    if-eqz v1, :cond_0
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    const/4 v2, 0x1
+    new-instance v1, Lj0;
 
-    iget-object v3, p0, Lhv3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/16 v2, 0x9
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-direct {v1, v2}, Lj0;-><init>(I)V
 
-    move-result v1
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
-    if-eqz v1, :cond_0
+    move-result-object v0
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
-    invoke-virtual {v0, v1}, Lp62;->resumeWith(Ljava/lang/Object;)V
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final c(I)[B
+    .locals 2
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lhv3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldv3;
+
+    iget v0, p1, Ldv3;->c:I
+
+    const/4 v1, 0x4
+
+    invoke-static {v0, v1}, Lt02;->d(II)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iput v1, p1, Ldv3;->c:I
+
+    iget-object p1, p1, Ldv3;->b:[B
+
+    return-object p1
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

@@ -1,21 +1,72 @@
 .class public final Luze;
-.super Lzp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lj0f;
 
-# static fields
-.field public static final a:Luze;
 
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final b()Lqhg;
     .locals 1
 
-    new-instance v0, Luze;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lzp;-><init>()V
+    return-object v0
+.end method
 
-    sput-object v0, Luze;->a:Luze;
+.method public final c()Lyze;
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final d()Lqhg;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final e()Lg0f;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final f()Ly58;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lqhg;
+    .locals 1
+
+    sget-object v0, Lqhg;->b:Lphg;
+
+    return-object v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

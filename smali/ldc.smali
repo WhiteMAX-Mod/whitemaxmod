@@ -1,55 +1,35 @@
-.class public final Lldc;
-.super Ll84;
+.class public abstract Lldc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Z
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lodc;
-
-.field public d:Lodc;
-
-.field public o:Lfw3;
-
-.field public s0:I
-
-
 # direct methods
-.method public constructor <init>(Lodc;Ll84;)V
+.method public static a(Landroid/graphics/Bitmap;FF)Landroid/view/PointerIcon;
     .locals 0
 
-    iput-object p1, p0, Lldc;->Z:Lodc;
+    invoke-static {p0, p1, p2}, Landroid/view/PointerIcon;->create(Landroid/graphics/Bitmap;FF)Landroid/view/PointerIcon;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/content/Context;I)Landroid/view/PointerIcon;
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-static {p0, p1}, Landroid/view/PointerIcon;->getSystemIcon(Landroid/content/Context;I)Landroid/view/PointerIcon;
 
-    iput-object p1, p0, Lldc;->Y:Ljava/lang/Object;
+    move-result-object p0
 
-    iget p1, p0, Lldc;->s0:I
+    return-object p0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public static c(Landroid/content/res/Resources;I)Landroid/view/PointerIcon;
+    .locals 0
 
-    or-int/2addr p1, v0
+    invoke-static {p0, p1}, Landroid/view/PointerIcon;->load(Landroid/content/res/Resources;I)Landroid/view/PointerIcon;
 
-    iput p1, p0, Lldc;->s0:I
+    move-result-object p0
 
-    iget-object p1, p0, Lldc;->Z:Lodc;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lodc;->f(ZLl84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

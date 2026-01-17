@@ -10,22 +10,52 @@
 
 .field public static final c:I
 
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lidd;->oneme_too_many_requests_bottomsheet_positive_button:I
+    sget v0, Leed;->oneme_qrscanner_camera_request_description:I
 
     sput v0, Ljgb;->a:I
 
-    sget v0, Lidd;->oneme_too_many_requests_bottomsheet_subtitle:I
+    sget v0, Leed;->oneme_qrscanner_context_menu_title:I
 
     sput v0, Ljgb;->b:I
 
-    sget v0, Lidd;->oneme_too_many_requests_bottomsheet_title:I
+    sget v0, Leed;->oneme_qrscanner_error_snackbar_title:I
 
     sput v0, Ljgb;->c:I
+
+    sget v0, Leed;->oneme_qrscanner_hint_login:I
+
+    sput v0, Ljgb;->d:I
+
+    sget v0, Leed;->oneme_qrscanner_hint_with_gallery:I
+
+    sput v0, Ljgb;->e:I
+
+    sget v0, Leed;->oneme_qrscanner_hint_without_gallery:I
+
+    sput v0, Ljgb;->f:I
+
+    sget v0, Leed;->oneme_qrscanner_storage_request_description:I
+
+    sput v0, Ljgb;->g:I
+
+    sget v0, Leed;->oneme_qrscanner_toolbar_title:I
+
+    sput v0, Ljgb;->h:I
 
     return-void
 .end method

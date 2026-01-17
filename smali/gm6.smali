@@ -1,141 +1,115 @@
-.class public abstract Lgm6;
-.super Lflg;
+.class public final Lgm6;
+.super Ltlg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lflg;
+.field public e:Ltlg;
 
 
 # direct methods
-.method public constructor <init>(Lflg;)V
+.method public constructor <init>(Ltlg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgm6;->b:Lflg;
+    iput-object p1, p0, Lgm6;->e:Ltlg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)I
+.method public final a()Ltlg;
     .locals 1
 
-    iget-object v0, p0, Lgm6;->b:Lflg;
+    iget-object v0, p0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {v0, p1}, Lflg;->a(Z)I
+    invoke-virtual {v0}, Ltlg;->a()Ltlg;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    return-object v0
 .end method
 
-.method public b(Ljava/lang/Object;)I
+.method public final b()Ltlg;
     .locals 1
 
-    iget-object v0, p0, Lgm6;->b:Lflg;
+    iget-object v0, p0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {v0, p1}, Lflg;->b(Ljava/lang/Object;)I
+    invoke-virtual {v0}, Ltlg;->b()Ltlg;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    return-object v0
 .end method
 
-.method public final c(Z)I
-    .locals 1
+.method public final c()J
+    .locals 2
 
-    iget-object v0, p0, Lgm6;->b:Lflg;
+    iget-object v0, p0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {v0, p1}, Lflg;->c(Z)I
+    invoke-virtual {v0}, Ltlg;->c()J
 
-    move-result p1
+    move-result-wide v0
 
-    return p1
+    return-wide v0
 .end method
 
-.method public final e(IIZ)I
+.method public final d(J)Ltlg;
     .locals 1
 
-    iget-object v0, p0, Lgm6;->b:Lflg;
+    iget-object v0, p0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {v0, p1, p2, p3}, Lflg;->e(IIZ)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public f(ILalg;Z)Lalg;
-    .locals 1
-
-    iget-object v0, p0, Lgm6;->b:Lflg;
-
-    invoke-virtual {v0, p1, p2, p3}, Lflg;->f(ILalg;Z)Lalg;
+    invoke-virtual {v0, p1, p2}, Ltlg;->d(J)Ltlg;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final h()I
+.method public final e()Z
     .locals 1
 
-    iget-object v0, p0, Lgm6;->b:Lflg;
+    iget-object v0, p0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {v0}, Lflg;->h()I
+    invoke-virtual {v0}, Ltlg;->e()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final k(IIZ)I
+.method public final f()V
     .locals 1
 
-    iget-object v0, p0, Lgm6;->b:Lflg;
+    iget-object v0, p0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {v0, p1, p2, p3}, Lflg;->k(IIZ)I
+    invoke-virtual {v0}, Ltlg;->f()V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method
 
-.method public l(I)Ljava/lang/Object;
+.method public final g(JLjava/util/concurrent/TimeUnit;)Ltlg;
     .locals 1
 
-    iget-object v0, p0, Lgm6;->b:Lflg;
+    iget-object v0, p0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {v0, p1}, Lflg;->l(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2, p3}, Ltlg;->g(JLjava/util/concurrent/TimeUnit;)Ltlg;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public m(ILdlg;J)Ldlg;
-    .locals 1
+.method public final h()J
+    .locals 2
 
-    iget-object v0, p0, Lgm6;->b:Lflg;
+    iget-object v0, p0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lflg;->m(ILdlg;J)Ldlg;
+    invoke-virtual {v0}, Ltlg;->h()J
 
-    move-result-object p1
+    move-result-wide v0
 
-    return-object p1
-.end method
-
-.method public final o()I
-    .locals 1
-
-    iget-object v0, p0, Lgm6;->b:Lflg;
-
-    invoke-virtual {v0}, Lflg;->o()I
-
-    move-result v0
-
-    return v0
+    return-wide v0
 .end method

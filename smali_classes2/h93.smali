@@ -1,82 +1,80 @@
-.class public final synthetic Lh93;
-.super Ljava/lang/Object;
+.class public final Lh93;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/chats/list/ChatsListWidget;
 
-.field public final synthetic b:Lbbg;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbbg;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
     .locals 0
 
-    iput p2, p0, Lh93;->a:I
+    iput-object p2, p0, Lh93;->X:Lone/me/chats/list/ChatsListWidget;
 
-    iput-object p1, p0, Lh93;->b:Lbbg;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lh93;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lh93;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lh93;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lh93;->a:I
+    new-instance v0, Lh93;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lh93;->X:Lone/me/chats/list/ChatsListWidget;
 
-    new-instance v0, Lb07;
+    invoke-direct {v0, p2, v1}, Lh93;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
 
-    iget-object v1, p0, Lh93;->b:Lbbg;
-
-    check-cast v1, Lb9b;
-
-    invoke-virtual {v1}, Lb9b;->a()Ltb4;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lb07;-><init>(Lkotlinx/coroutines/internal/ContextScope;)V
+    iput-object p1, v0, Lh93;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lh93;->b:Lbbg;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-object v0
+    iget-object v0, p0, Lh93;->o:Ljava/lang/Object;
 
-    :pswitch_1
-    iget-object v0, p0, Lh93;->b:Lbbg;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    check-cast v0, Lb9b;
+    check-cast v0, Ljava/util/List;
 
-    invoke-virtual {v0}, Lb9b;->b()Ltb4;
+    iget-object p1, p0, Lh93;->X:Lone/me/chats/list/ChatsListWidget;
 
-    move-result-object v0
+    iget-object p1, p1, Lone/me/chats/list/ChatsListWidget;->G0:Lxf6;
 
-    invoke-static {v0}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
 
-    move-result-object v0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

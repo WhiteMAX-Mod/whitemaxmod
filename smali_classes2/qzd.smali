@@ -1,53 +1,65 @@
-.class public final Lqzd;
-.super Ll84;
+.class public final enum Lqzd;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/util/Iterator;
+# static fields
+.field public static final synthetic a:[Lqzd;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lszd;
-
-.field public d:Lszd;
-
-.field public o:Lsfa;
-
-.field public s0:I
+.field public static final synthetic b:Lal5;
 
 
 # direct methods
-.method public constructor <init>(Lszd;Ll84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lqzd;->Z:Lszd;
+    new-instance v0, Lqzd;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "LIMITED_TO_REVERSE_CONTACTS"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0}, [Lqzd;
+
+    move-result-object v0
+
+    sput-object v0, Lqzd;->a:[Lqzd;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lqzd;->b:Lal5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lqzd;
     .locals 1
 
-    iput-object p1, p0, Lqzd;->Y:Ljava/lang/Object;
+    const-class v0, Lqzd;
 
-    iget p1, p0, Lqzd;->s0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lqzd;
 
-    iput p1, p0, Lqzd;->s0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lqzd;->Z:Lszd;
+.method public static values()[Lqzd;
+    .locals 1
 
-    invoke-virtual {p1, p0}, Lszd;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    sget-object v0, Lqzd;->a:[Lqzd;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, [Lqzd;
+
+    return-object v0
 .end method

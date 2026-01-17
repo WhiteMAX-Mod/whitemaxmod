@@ -1,53 +1,61 @@
-.class public abstract synthetic Lzah;
+.class public final Lzah;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public A:Ljava/lang/Boolean;
 
+.field public B:Ljava/lang/String;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.field public a:Ljava/lang/Boolean;
 
-    invoke-static {}, Llw4;->values()[Llw4;
+.field public b:Ljava/lang/Long;
 
-    move-result-object v0
+.field public c:Ljava/lang/String;
 
-    array-length v0, v0
+.field public d:Ljava/lang/String;
 
-    new-array v0, v0, [I
+.field public e:Ljava/lang/String;
 
-    :try_start_0
-    sget-object v1, Llw4;->o:Llw4;
+.field public f:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+.field public g:Ljava/lang/String;
 
-    move-result v1
+.field public h:Ljava/lang/Boolean;
 
-    const/4 v2, 0x1
+.field public i:Ljava/lang/Integer;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+.field public j:Ljava/lang/Integer;
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Llw4;->X:Llw4;
+.field public k:Ljava/lang/Integer;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+.field public l:Ljava/lang/Boolean;
 
-    move-result v1
+.field public m:Ljava/lang/Boolean;
 
-    const/4 v2, 0x2
+.field public n:Ljava/lang/Boolean;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+.field public o:I
 
-    :catch_1
-    sput-object v0, Lzah;->$EnumSwitchMapping$0:[I
+.field public p:I
 
-    return-void
-.end method
+.field public q:Lbbh;
+
+.field public r:I
+
+.field public s:I
+
+.field public t:Ljava/lang/Boolean;
+
+.field public u:Ljava/lang/Boolean;
+
+.field public v:Ljava/lang/Boolean;
+
+.field public w:I
+
+.field public x:Ljava/lang/Boolean;
+
+.field public y:Ljava/lang/Boolean;
+
+.field public z:Labh;

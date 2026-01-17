@@ -3,245 +3,389 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:[Lvx5;
+
+
 # direct methods
-.method public static final d(Lx84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 18
 
-    invoke-virtual {p0}, Lx84;->getActivity()Landroid/app/Activity;
+    new-instance v0, Lvx5;
 
-    move-result-object p0
+    const-string v1, "name_ulr_private"
 
-    if-eqz p0, :cond_0
+    const-wide/16 v2, 0x1
 
-    invoke-static {p0}, Lo2j;->e(Landroid/app/Activity;)V
+    invoke-direct {v0, v1, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
 
-    :cond_0
+    new-instance v1, Lvx5;
+
+    const-string v4, "name_sleep_segment_request"
+
+    invoke-direct {v1, v4, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    new-instance v4, Lvx5;
+
+    const-string v5, "get_last_activity_feature_id"
+
+    invoke-direct {v4, v5, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    new-instance v5, Lvx5;
+
+    const-string v6, "support_context_feature_id"
+
+    invoke-direct {v5, v6, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v6, v4
+
+    new-instance v4, Lvx5;
+
+    const-string v7, "get_current_location"
+
+    const-wide/16 v8, 0x2
+
+    invoke-direct {v4, v7, v8, v9}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v7, v5
+
+    new-instance v5, Lvx5;
+
+    const-string v8, "get_last_location_with_request"
+
+    invoke-direct {v5, v8, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v8, v6
+
+    new-instance v6, Lvx5;
+
+    const-string v9, "set_mock_mode_with_callback"
+
+    invoke-direct {v6, v9, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v9, v7
+
+    new-instance v7, Lvx5;
+
+    const-string v10, "set_mock_location_with_callback"
+
+    invoke-direct {v7, v10, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v10, v8
+
+    new-instance v8, Lvx5;
+
+    const-string v11, "inject_location_with_callback"
+
+    invoke-direct {v8, v11, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v11, v9
+
+    new-instance v9, Lvx5;
+
+    const-string v12, "location_updates_with_callback"
+
+    invoke-direct {v9, v12, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v12, v10
+
+    new-instance v10, Lvx5;
+
+    const-string v13, "use_safe_parcelable_in_intents"
+
+    invoke-direct {v10, v13, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v13, v11
+
+    new-instance v11, Lvx5;
+
+    const-string v14, "flp_debug_updates"
+
+    invoke-direct {v11, v14, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v14, v12
+
+    new-instance v12, Lvx5;
+
+    const-string v15, "google_location_accuracy_enabled"
+
+    invoke-direct {v12, v15, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v15, v13
+
+    new-instance v13, Lvx5;
+
+    move-object/from16 v16, v0
+
+    const-string v0, "geofences_with_callback"
+
+    invoke-direct {v13, v0, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v0, v14
+
+    new-instance v14, Lvx5;
+
+    move-object/from16 v17, v0
+
+    const-string v0, "location_enabled"
+
+    invoke-direct {v14, v0, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
+
+    move-object v3, v15
+
+    move-object/from16 v0, v16
+
+    move-object/from16 v2, v17
+
+    filled-new-array/range {v0 .. v14}, [Lvx5;
+
+    move-result-object v0
+
+    sput-object v0, Lo2j;->a:[Lvx5;
+
     return-void
 .end method
 
-.method public static final e(Landroid/app/Activity;)V
-    .locals 2
+.method public static final a(Lkotlinx/serialization/json/internal/b;)V
+    .locals 3
 
-    if-nez p0, :cond_0
+    instance-of v0, p0, Lkotlinx/serialization/json/internal/b;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    :goto_0
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+    return-void
 
-    move-result-object v0
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "This serializer can be used only with Json format.Expected Encoder to be JsonEncoder, got "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lctd;->a(Ljava/lang/Class;)Lrd3;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final b(Lkl4;)Lkotlinx/serialization/json/internal/a;
+    .locals 3
+
+    instance-of v0, p0, Lkotlinx/serialization/json/internal/a;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lkotlinx/serialization/json/internal/a;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "This serializer can be used only with Json format.Expected Decoder to be JsonDecoder, got "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lctd;->a(Ljava/lang/Class;)Lrd3;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static c(Lwtb;II)J
+    .locals 7
+
+    invoke-virtual {p0, p1}, Lwtb;->J(I)V
+
+    invoke-virtual {p0}, Lwtb;->a()I
+
+    move-result p1
+
+    const/4 v0, 0x5
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-ge p1, v0, :cond_0
+
+    return-wide v1
+
+    :cond_0
+    invoke-virtual {p0}, Lwtb;->j()I
+
+    move-result p1
+
+    const/high16 v0, 0x800000
+
+    and-int/2addr v0, p1
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
+    return-wide v1
 
-    :try_start_0
-    const-string v1, "input_method"
+    :cond_1
+    const v0, 0x1fff00
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    and-int/2addr v0, p1
 
-    move-result-object p0
+    shr-int/lit8 v0, v0, 0x8
 
-    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
+    if-eq v0, p2, :cond_2
 
-    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+    return-wide v1
 
-    move-result-object v0
+    :cond_2
+    and-int/lit8 p1, p1, 0x20
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Lwtb;->x()I
+
+    move-result p1
+
+    const/4 p2, 0x7
+
+    if-lt p1, p2, :cond_3
+
+    invoke-virtual {p0}, Lwtb;->a()I
+
+    move-result p1
+
+    if-lt p1, p2, :cond_3
+
+    invoke-virtual {p0}, Lwtb;->x()I
+
+    move-result p1
+
+    const/16 v0, 0x10
+
+    and-int/2addr p1, v0
+
+    if-ne p1, v0, :cond_3
+
+    const/4 p1, 0x6
+
+    new-array v0, p1, [B
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p0, v1, v0, p1}, Lwtb;->h(I[BI)V
 
-    :catchall_0
-    :cond_1
-    :goto_0
-    return-void
-.end method
+    aget-byte p0, v0, v1
 
-.method public static final f(Landroid/view/View;)V
-    .locals 2
+    int-to-long p0, p0
 
-    if-nez p0, :cond_0
+    const-wide/16 v1, 0xff
 
-    goto :goto_0
+    and-long/2addr p0, v1
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/16 v3, 0x19
 
-    move-result-object v0
+    shl-long/2addr p0, v3
 
-    invoke-virtual {p0}, Landroid/view/View;->clearFocus()V
+    const/4 v3, 0x1
 
-    :try_start_0
-    const-string v1, "input_method"
+    aget-byte v4, v0, v3
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    int-to-long v4, v4
 
-    move-result-object v0
+    and-long/2addr v4, v1
 
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+    const/16 v6, 0x11
 
-    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+    shl-long/2addr v4, v6
 
-    move-result-object p0
+    or-long/2addr p0, v4
 
-    const/4 v1, 0x0
+    const/4 v4, 0x2
 
-    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    aget-byte v4, v0, v4
 
-    :catchall_0
-    :goto_0
-    return-void
-.end method
+    int-to-long v4, v4
 
-.method public static g(Ljava/lang/Integer;)Ln8h;
-    .locals 6
+    and-long/2addr v4, v1
 
-    if-eqz p0, :cond_1
+    const/16 v6, 0x9
 
-    sget-object v0, Ln8h;->o:[Ln8h;
+    shl-long/2addr v4, v6
 
-    array-length v1, v0
+    or-long/2addr p0, v4
 
-    const/4 v2, 0x0
+    const/4 v4, 0x3
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    aget-byte v4, v0, v4
 
-    aget-object v3, v0, v2
+    int-to-long v4, v4
 
-    iget v4, v3, Ln8h;->a:I
+    and-long/2addr v4, v1
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    shl-long v3, v4, v3
 
-    move-result v5
+    or-long/2addr p0, v3
 
-    if-ne v4, v5, :cond_0
+    const/4 v3, 0x4
 
-    return-object v3
+    aget-byte v0, v0, v3
 
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    int-to-long v3, v0
 
-    goto :goto_0
+    and-long v0, v3, v1
 
-    :cond_1
-    sget-object p0, Ln8h;->b:Ln8h;
+    shr-long/2addr v0, p2
 
-    return-object p0
-.end method
+    or-long/2addr p0, v0
 
-.method public static h(Ljava/lang/Integer;)Lo8h;
-    .locals 4
+    return-wide p0
 
-    if-eqz p0, :cond_1
-
-    new-instance v0, Lc2;
-
-    const/4 v1, 0x0
-
-    sget-object v2, Lo8h;->v0:Lwk5;
-
-    invoke-direct {v0, v1, v2}, Lc2;-><init>(ILjava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {v0}, Lc2;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Lc2;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lo8h;
-
-    iget v2, v1, Lo8h;->a:I
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    if-ne v2, v3, :cond_0
-
-    return-object v1
-
-    :cond_1
-    sget-object p0, Lo8h;->b:Lo8h;
-
-    return-object p0
-.end method
-
-.method public static k(Ljava/lang/Integer;)Lg1d;
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    sget-object v0, Lg1d;->w0:Lwk5;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Lwk5;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lg1d;
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "qualityValueFromInt fail!"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static l(Landroid/view/View;)V
-    .locals 2
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->requestFocus()Z
-
-    new-instance v0, Lx36;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, p0, v1, p0}, Lx36;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
-.method public abstract a(Lh4;Ld4;Ld4;)Z
-.end method
-
-.method public abstract b(Lh4;Ljava/lang/Object;Ljava/lang/Object;)Z
-.end method
-
-.method public abstract c(Lh4;Lg4;Lg4;)Z
-.end method
-
-.method public abstract i(Lg4;Lg4;)V
-.end method
-
-.method public abstract j(Lg4;Ljava/lang/Thread;)V
+    :cond_3
+    return-wide v1
 .end method

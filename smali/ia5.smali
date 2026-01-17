@@ -1,47 +1,64 @@
-.class public final Lia5;
-.super Ljava/util/HashMap;
+.class public final synthetic Lia5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldy3;
+
+
+# instance fields
+.field public final synthetic a:Lja5;
+
+.field public final synthetic b:Landroid/graphics/SurfaceTexture;
+
+.field public final synthetic c:Landroid/view/Surface;
 
 
 # direct methods
-.method public static a(Lgr9;)Lia5;
-    .locals 6
+.method public synthetic constructor <init>(Lja5;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
+    .locals 0
 
-    invoke-static {p0}, Lisi;->n(Lgr9;)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    iput-object p1, p0, Lia5;->a:Lja5;
 
-    new-instance v1, Lia5;
+    iput-object p2, p0, Lia5;->b:Landroid/graphics/SurfaceTexture;
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    iput-object p3, p0, Lia5;->c:Landroid/view/Surface;
 
-    const/4 v2, 0x0
+    return-void
+.end method
 
-    :goto_0
-    if-ge v2, v0, :cond_0
 
-    invoke-virtual {p0}, Lgr9;->K0()J
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
-    move-result-wide v3
+    check-cast p1, Lwc0;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object p1, p0, Lia5;->a:Lja5;
 
-    move-result-object v3
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Lgr9;->K0()J
+    const/4 v0, 0x0
 
-    move-result-wide v4
+    iget-object v1, p0, Lia5;->b:Landroid/graphics/SurfaceTexture;
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v1, v0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
-    move-result-object v4
+    invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->release()V
 
-    invoke-virtual {v1, v3, v4}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lia5;->c:Landroid/view/Surface;
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
-    goto :goto_0
+    iget v0, p1, Lja5;->o:I
 
-    :cond_0
-    return-object v1
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p1, Lja5;->o:I
+
+    invoke-virtual {p1}, Lja5;->a()V
+
+    return-void
 .end method

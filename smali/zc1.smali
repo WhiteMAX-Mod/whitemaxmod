@@ -1,107 +1,150 @@
 .class public final Lzc1;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calllist/ui/CallHistoryScreen;
+.field public final a:I
 
-.field public synthetic o:J
+.field public final b:I
+
+.field public final c:Lyc1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/CallHistoryScreen;)V
+.method public constructor <init>(IILyc1;)V
     .locals 0
 
-    iput-object p2, p0, Lzc1;->X:Lone/me/calllist/ui/CallHistoryScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput p1, p0, Lzc1;->a:I
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lzc1;->b:I
+
+    iput-object p3, p0, Lzc1;->c:Lyc1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    check-cast p1, Ljava/lang/Number;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lzc1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lzc1;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lzc1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lzc1;
-
-    iget-object v1, p0, Lzc1;->X:Lone/me/calllist/ui/CallHistoryScreen;
-
-    invoke-direct {v0, p2, v1}, Lzc1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/CallHistoryScreen;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide p1
-
-    iput-wide p1, v0, Lzc1;->o:J
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-wide v0, p0, Lzc1;->o:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_0
-
-    sget-object p1, Lone/me/calllist/ui/CallHistoryScreen;->D0:[Lp38;
-
-    iget-object p1, p0, Lzc1;->X:Lone/me/calllist/ui/CallHistoryScreen;
-
-    iget-object p1, p1, Lone/me/calllist/ui/CallHistoryScreen;->Y:Ljava/lang/Object;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpz1;
+    goto :goto_1
 
     :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    instance-of v0, p1, Lzc1;
 
-    return-object p1
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lzc1;
+
+    iget v0, p0, Lzc1;->a:I
+
+    iget v1, p1, Lzc1;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lzc1;->b:I
+
+    iget v1, p1, Lzc1;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lzc1;->c:Lyc1;
+
+    iget-object p1, p1, Lzc1;->c:Lyc1;
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lzc1;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lzc1;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lzc1;->c:Lyc1;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", nameRes="
+
+    const-string v1, ", count=0, type="
+
+    const-string v2, "CallHistoryTabState(id="
+
+    iget v3, p0, Lzc1;->a:I
+
+    iget v4, p0, Lzc1;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lzc1;->c:Lyc1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

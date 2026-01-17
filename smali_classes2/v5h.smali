@@ -4,65 +4,38 @@
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ld68;
+.field public final b:Lo58;
 
-.field public final c:Ld68;
+.field public final c:Lo58;
+
+.field public final d:Lo58;
+
+.field public final e:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Ld68;Ld68;Ld68;)V
-    .locals 0
+.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lv5h;->a:Ld68;
+    const-class v0, Lv5h;
 
-    iput-object p2, p0, Lv5h;->b:Ld68;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iput-object p3, p0, Lv5h;->c:Ld68;
+    move-result-object v0
+
+    iput-object v0, p0, Lv5h;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Lv5h;->b:Lo58;
+
+    iput-object p2, p0, Lv5h;->c:Lo58;
+
+    iput-object p3, p0, Lv5h;->d:Lo58;
+
+    iput-object p4, p0, Lv5h;->e:Lo58;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(ILc2f;)Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Lv5h;->c:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbbg;
-
-    check-cast v0, Lb9b;
-
-    invoke-virtual {v0}, Lb9b;->b()Ltb4;
-
-    move-result-object v0
-
-    new-instance v1, Lu5h;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lu5h;-><init>(Lv5h;ILkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v1, p2}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lbc4;->a:Lbc4;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
 .end method

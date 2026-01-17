@@ -4,64 +4,52 @@
 
 
 # direct methods
-.method public static a(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
-    .locals 2
+.method public static final a(Landroid/content/Context;)I
+    .locals 1
 
-    instance-of v0, p0, Landroid/graphics/drawable/ColorDrawable;
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    check-cast p0, Landroid/graphics/drawable/ColorDrawable;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
 
     move-result p0
 
-    invoke-static {p0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_1
-
-    invoke-static {p0}, Lz4;->t(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {p0}, Lx75;->e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/ColorStateListDrawable;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lx75;->b(Landroid/graphics/drawable/ColorStateListDrawable;)Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
+    return p0
 .end method
 
-.method public static final b(Ljava/lang/Object;Ljava/lang/String;)Llfa;
+.method public static final b(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Lm9e;->a:[J
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Llfa;
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Llfa;-><init>()V
+    throw v0
+.end method
 
-    invoke-virtual {v0, p1, p0}, Llfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public static final c(Ljava/lang/String;)V
+    .locals 1
 
-    return-object v0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

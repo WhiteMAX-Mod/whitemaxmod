@@ -1,50 +1,83 @@
-.class public final Lb2c;
-.super Lxbg;
+.class public final synthetic Lb2c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lc2c;
 
 
-# virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method public synthetic constructor <init>(Lc2c;I)V
+    .locals 0
 
-    const-string v0, "url"
+    iput p2, p0, Lb2c;->a:I
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-object p1, p0, Lb2c;->b:Lc2c;
 
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Lgr9;->N0()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lb2c;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lgr9;->y()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
 
-    iget-object v0, p0, Lb2c;->c:Ljava/lang/String;
+# virtual methods
+.method public final run()V
+    .locals 5
 
-    const-string v1, "{url=\'"
+    iget v0, p0, Lb2c;->a:I
 
-    const-string v2, "\'}"
+    iget-object v1, p0, Lb2c;->b:Lc2c;
 
-    invoke-static {v1, v0, v2}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    :try_start_0
+    invoke-virtual {v1}, Lc2c;->d()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v0
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v2, "syncInternal: exception"
+
+    const-string v3, "c2c"
+
+    invoke-static {v3, v2, v0}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, v1, Lc2c;->h:Lym5;
+
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    const-string v4, " syncInternal: exception"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    check-cast v1, Lqab;
+
+    invoke-virtual {v1, v2}, Lqab;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {v1}, Lc2c;->d()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

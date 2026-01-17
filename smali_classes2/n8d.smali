@@ -3,4 +3,6 @@
 
 
 # static fields
-.field public static one_me_codeinput_edit_text_view:I = 0x7f0a05e6
+.field public static long_bottom_sheet_button:I = 0x7f0a0440
+
+.field public static long_bottom_sheet_input:I = 0x7f0a0441

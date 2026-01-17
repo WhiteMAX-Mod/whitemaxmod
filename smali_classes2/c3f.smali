@@ -1,26 +1,30 @@
 .class public final Lc3f;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lk3f;
+.field public final synthetic X:Lf3f;
+
+.field public final synthetic Y:I
 
 .field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lk3f;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lf3f;ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lc3f;->X:Lk3f;
+    iput-object p1, p0, Lc3f;->X:Lf3f;
+
+    iput p2, p0, Lc3f;->Y:I
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +44,7 @@
 
     check-cast p1, Lc3f;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lc3f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,31 +54,35 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance p1, Lc3f;
 
-    iget-object v0, p0, Lc3f;->X:Lk3f;
+    iget-object v0, p0, Lc3f;->X:Lf3f;
 
-    invoke-direct {p1, v0, p2}, Lc3f;-><init>(Lk3f;Lkotlin/coroutines/Continuation;)V
+    iget v1, p0, Lc3f;->Y:I
+
+    invoke-direct {p1, v0, v1, p2}, Lc3f;-><init>(Lf3f;ILkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 6
 
     iget v0, p0, Lc3f;->o:I
 
-    const/4 v1, 0x1
+    sget-object v1, Lb3h;->a:Lb3h;
+
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    goto :goto_0
+    return-object v1
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -86,25 +94,76 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iput v1, p0, Lc3f;->o:I
+    sget-object p1, Lf3f;->Q0:[Lz28;
 
-    iget-object p1, p0, Lc3f;->X:Lk3f;
+    iget-object p1, p0, Lc3f;->X:Lf3f;
 
-    invoke-static {p1, p0}, Lk3f;->t(Lk3f;Lb5g;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lf3f;->w()Lfbh;
+
+    move-result-object v0
+
+    const-string v3, "ALL"
+
+    iget-object v0, v0, Lx3;->g:Lr58;
+
+    const-string v4, "app.privacy.chats.invite"
+
+    invoke-virtual {v0, v4, v3}, Lr58;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    iget v3, p0, Lc3f;->Y:I
+
+    if-ne v0, v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lf3f;->w()Lfbh;
+
+    move-result-object v0
+
+    invoke-static {v3}, Lcbh;->g(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v4, v5}, Lx3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lf3f;->v()Lt2b;
+
+    move-result-object v0
+
+    new-instance v4, Lzah;
+
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+
+    iput v3, v4, Lzah;->o:I
+
+    new-instance v3, Ldbh;
+
+    invoke-direct {v3, v4}, Ldbh;-><init>(Lzah;)V
+
+    invoke-virtual {v0, v3}, Lt2b;->n(Ldbh;)J
+
+    iput v2, p0, Lc3f;->o:I
+
+    invoke-static {p1, p0}, Lf3f;->u(Lf3f;Lp6g;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    sget-object v0, Lac4;->a:Lac4;
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, v0, :cond_3
 
     return-object v0
 
-    :cond_2
+    :cond_3
     :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-object v1
 .end method

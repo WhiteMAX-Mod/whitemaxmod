@@ -1,117 +1,55 @@
 .class public final Lqgg;
-.super Ljava/lang/Object;
+.super Landroid/util/LruCache;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Landroid/content/Context;
-
-.field public final c:Lfab;
-
-.field public final d:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final synthetic a:Lrgg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lbbg;Landroid/content/Context;Lfab;)V
-    .locals 3
+.method public constructor <init>(Lrgg;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqgg;->a:Lrgg;
 
-    iput-object p1, p0, Lqgg;->a:Landroid/content/Context;
+    const/4 p1, 0x3
 
-    iput-object p3, p0, Lqgg;->b:Landroid/content/Context;
-
-    iput-object p4, p0, Lqgg;->c:Lfab;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lqgg;->d:Ljava/util/concurrent/ConcurrentHashMap;
-
-    sget-object p1, Ldc3;->s0:Lole;
-
-    invoke-virtual {p1, p3}, Lole;->i(Landroid/content/Context;)Ldc3;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ldc3;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lpkd;
-
-    iget-object p3, p4, Lfab;->a:Laof;
-
-    new-instance p4, Li83;
-
-    const/16 v0, 0x8
-
-    invoke-direct {p4, p3, v0}, Li83;-><init>(Lf76;I)V
-
-    new-instance p3, Logg;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p3, v0, v1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    new-instance v0, La71;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, p1, p4, p3, v2}, La71;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance p1, Lpgg;
-
-    invoke-direct {p1, p0, v1}, Lpgg;-><init>(Lqgg;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lo96;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, v0, p1, p4}, Lo96;-><init>(Lf76;Lcr6;I)V
-
-    check-cast p2, Lb9b;
-
-    invoke-virtual {p2}, Lb9b;->a()Ltb4;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    invoke-static {p3, p1}, Lqx0;->w(Lf76;Lac4;)Lglf;
+    invoke-direct {p0, p1}, Landroid/util/LruCache;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lhhg;)Landroid/text/TextPaint;
-    .locals 3
+.method public final create(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Lqfe;
+    check-cast p1, Lngg;
 
-    const/16 v1, 0xf
+    iget-object v0, p1, Lngg;->a:Lrhg;
 
-    invoke-direct {v0, p1, v1, p0}, Lqfe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget v6, p1, Lngg;->b:I
 
-    new-instance v1, Lngg;
+    iget-object v4, p1, Lngg;->c:Lub5;
 
-    const/4 v2, 0x0
+    new-instance v2, Landroid/text/TextPaint;
 
-    invoke-direct {v1, v2, v0}, Lngg;-><init>(ILoq6;)V
+    const/4 p1, 0x1
 
-    iget-object v0, p0, Lqgg;->d:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct {v2, p1}, Landroid/text/TextPaint;-><init>(I)V
 
-    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+    iget-object p1, p0, Lqgg;->a:Lrgg;
 
-    move-result-object p1
+    iget-object v1, p1, Lrgg;->a:Landroid/content/Context;
 
-    check-cast p1, Landroid/text/TextPaint;
+    const/4 v3, 0x0
 
-    return-object p1
+    const/4 v5, 0x4
+
+    invoke-static/range {v0 .. v5}, Lrhg;->c(Lrhg;Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;Lub5;I)V
+
+    invoke-virtual {v2, v6}, Landroid/graphics/Paint;->setColor(I)V
+
+    return-object v2
 .end method

@@ -7,28 +7,20 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lh3a;
 
-.field public final synthetic b:I
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:J
+.field public final synthetic b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(JIIZ)V
+.method public synthetic constructor <init>(Lh3a;J)V
     .locals 0
 
-    iput p4, p0, Lr2a;->a:I
-
-    iput p3, p0, Lr2a;->b:I
-
-    iput-boolean p5, p0, Lr2a;->c:Z
-
-    iput-wide p1, p0, Lr2a;->d:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lr2a;->a:Lh3a;
+
+    iput-wide p2, p0, Lr2a;->b:J
 
     return-void
 .end method
@@ -36,55 +28,50 @@
 
 # virtual methods
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget v0, p0, Lr2a;->a:I
+    .locals 11
 
     check-cast p1, Lt2a;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lr2a;->a:Lh3a;
 
-    new-instance v0, Lt2a;
+    iget-object p1, p1, Lh3a;->a:La1a;
 
-    const-wide/16 v4, 0x0
+    iget-object p1, p1, La1a;->b:Ljava/lang/String;
 
-    const/16 v8, 0x16
+    const-string v0, "ScheduledChatScreen"
 
-    iget v1, p0, Lr2a;->b:I
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const/4 v2, 0x0
+    move-result v4
 
-    iget-boolean v3, p0, Lr2a;->c:Z
+    if-eqz v4, :cond_0
 
-    iget-wide v6, p0, Lr2a;->d:J
+    const/4 p1, 0x4
 
-    invoke-direct/range {v0 .. v8}, Lt2a;-><init>(IZZJJI)V
+    :goto_0
+    move v2, p1
 
-    return-object v0
+    goto :goto_1
 
-    :pswitch_0
-    new-instance v0, Lt2a;
+    :cond_0
+    const/4 p1, 0x3
 
-    const-wide/16 v4, 0x0
+    goto :goto_0
 
-    const/16 v8, 0x16
+    :goto_1
+    xor-int/lit8 v5, v4, 0x1
 
-    iget v1, p0, Lr2a;->b:I
+    new-instance v1, Lt2a;
 
-    const/4 v2, 0x0
+    const-wide/16 v8, 0x0
 
-    iget-boolean v3, p0, Lr2a;->c:Z
+    const/16 v10, 0x22
 
-    iget-wide v6, p0, Lr2a;->d:J
+    const/4 v3, 0x0
 
-    invoke-direct/range {v0 .. v8}, Lt2a;-><init>(IZZJJI)V
+    iget-wide v6, p0, Lr2a;->b:J
 
-    return-object v0
+    invoke-direct/range {v1 .. v10}, Lt2a;-><init>(IZZZJJI)V
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v1
 .end method

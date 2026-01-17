@@ -1,25 +1,25 @@
 .class public final Lk2g;
-.super Ll84;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lm2g;
+.field public final synthetic X:Lw3;
 
 .field public Y:I
 
-.field public d:Lm2g;
+.field public d:Ljava/util/LinkedHashSet;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lm2g;Ll84;)V
+.method public constructor <init>(Lw3;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lk2g;->X:Lm2g;
+    iput-object p1, p0, Lk2g;->X:Lw3;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -39,9 +39,11 @@
 
     iput p1, p0, Lk2g;->Y:I
 
-    iget-object p1, p0, Lk2g;->X:Lm2g;
+    iget-object p1, p0, Lk2g;->X:Lw3;
 
-    invoke-virtual {p1, p0}, Lm2g;->c(Ll84;)Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lw3;->b(Ljava/util/LinkedHashSet;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

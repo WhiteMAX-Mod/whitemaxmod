@@ -19,9 +19,9 @@
         "",
         "",
         "key",
-        "Lbdf;",
+        "Lkef;",
         "get",
-        "(Ljava/lang/String;)Lbdf;",
+        "(Ljava/lang/String;)Lkef;",
         "Companion",
         "calls-sdk_release"
     }
@@ -62,13 +62,13 @@
 
 
 # virtual methods
-.method public abstract get(Ljava/lang/String;)Lbdf;
+.method public abstract get(Ljava/lang/String;)Lkef;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lbdf;"
+            "Lkef;"
         }
     .end annotation
 .end method

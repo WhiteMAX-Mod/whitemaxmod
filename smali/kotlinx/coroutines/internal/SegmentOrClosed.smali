@@ -45,7 +45,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -111,7 +111,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -128,7 +128,7 @@
 .method public static final equals-impl0(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-static {p0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 

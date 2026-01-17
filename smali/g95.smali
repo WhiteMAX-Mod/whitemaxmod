@@ -3,26 +3,18 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final p:Lwp4;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwp4;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lwp4;-><init>(I)V
-
-    sput-object v0, Lg95;->p:Lwp4;
-
-    return-void
+# virtual methods
+.method public abstract B(ILvc9;)V
 .end method
 
+.method public abstract e(ILvc9;Ljava/lang/Exception;)V
+.end method
 
-# virtual methods
-.method public abstract release()V
+.method public abstract v(ILvc9;I)V
+.end method
+
+.method public abstract w(ILvc9;)V
+.end method
+
+.method public abstract z(ILvc9;)V
 .end method

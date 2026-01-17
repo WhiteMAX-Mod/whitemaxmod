@@ -3,136 +3,102 @@
 
 
 # static fields
-.field public static ActionBarTheme:I = 0x7f140000
+.field public static oneme_settings_twofa_change_email_title:I = 0x7f130a17
 
-.field public static AttachButton:I = 0x7f14000c
+.field public static oneme_settings_twofa_change_password_title:I = 0x7f130a18
 
-.field public static AttachButton_QuickCamera:I = 0x7f14000d
+.field public static oneme_settings_twofa_check_password_subtitle:I = 0x7f130a19
 
-.field public static AttachButton_SmallQuickCameraButton:I = 0x7f14000e
+.field public static oneme_settings_twofa_check_password_title:I = 0x7f130a1a
 
-.field public static ComposeMessage:I = 0x7f140177
+.field public static oneme_settings_twofa_configuration_change_email_success:I = 0x7f130a1b
 
-.field public static ContactLastSeen:I = 0x7f140178
+.field public static oneme_settings_twofa_configuration_change_password_success:I = 0x7f130a1c
 
-.field public static ContactName:I = 0x7f140179
+.field public static oneme_settings_twofa_configuration_description:I = 0x7f130a1d
 
-.field public static DrawerArrowStyle:I = 0x7f14017b
+.field public static oneme_settings_twofa_configuration_disable_success:I = 0x7f130a1e
 
-.field public static ExtraActionButton:I = 0x7f14019d
+.field public static oneme_settings_twofa_configuration_disable_warning_negative_action:I = 0x7f130a1f
 
-.field public static ExtraActionButton_Down:I = 0x7f14019e
+.field public static oneme_settings_twofa_configuration_disable_warning_positive_action:I = 0x7f130a20
 
-.field public static ExtraActionButton_Up:I = 0x7f14019f
+.field public static oneme_settings_twofa_configuration_disable_warning_subtitle:I = 0x7f130a21
 
-.field public static LandscapeAttachButton:I = 0x7f1401e8
+.field public static oneme_settings_twofa_configuration_disable_warning_title:I = 0x7f130a22
 
-.field public static LandscapeAttachButton_LandscapeQuickCamera:I = 0x7f1401e9
+.field public static oneme_settings_twofa_configuration_set_email_success:I = 0x7f130a23
 
-.field public static LandscapeAttachButton_LandscapeSmallQuickCameraButton:I = 0x7f1401ea
+.field public static oneme_settings_twofa_creation_email_empty_confirmation_description:I = 0x7f130a24
 
-.field public static LayoutPadding:I = 0x7f1401eb
+.field public static oneme_settings_twofa_creation_email_empty_confirmation_email_action:I = 0x7f130a25
 
-.field public static MenuActionButtonNoCaps:I = 0x7f140201
+.field public static oneme_settings_twofa_creation_email_empty_confirmation_skip_action:I = 0x7f130a26
 
-.field public static MenuOverflow:I = 0x7f140202
+.field public static oneme_settings_twofa_creation_email_empty_confirmation_title:I = 0x7f130a27
 
-.field public static MenuOverflowWhite:I = 0x7f140203
+.field public static oneme_settings_twofa_creation_email_hint:I = 0x7f130a28
 
-.field public static MessageActionButton:I = 0x7f140204
+.field public static oneme_settings_twofa_creation_email_title:I = 0x7f130a29
 
-.field public static MessagesProgressBar:I = 0x7f140205
+.field public static oneme_settings_twofa_creation_email_verify_resend_code:I = 0x7f130a2a
 
-.field public static NavigationDrawerTheme:I = 0x7f140206
+.field public static oneme_settings_twofa_creation_email_verify_resend_code_timer:I = 0x7f130a2b
 
-.field public static ProgressBarOrange:I = 0x7f14023c
+.field public static oneme_settings_twofa_creation_email_verify_subtitle:I = 0x7f130a2c
 
-.field public static ProgressBarWhite:I = 0x7f14023d
+.field public static oneme_settings_twofa_creation_email_verify_title:I = 0x7f130a2d
 
-.field public static RoundedButton24:I = 0x7f14023e
+.field public static oneme_settings_twofa_creation_hint_input_hint:I = 0x7f130a2e
 
-.field public static RoundedButton24_Blue:I = 0x7f14023f
+.field public static oneme_settings_twofa_creation_hint_subtitle:I = 0x7f130a2f
 
-.field public static RoundedButton24_Blue_DisabledDark:I = 0x7f140240
+.field public static oneme_settings_twofa_creation_hint_title:I = 0x7f130a30
 
-.field public static RoundedButton24_Orange:I = 0x7f140241
+.field public static oneme_settings_twofa_creation_new_email_description:I = 0x7f130a31
 
-.field public static RoundedButton24_Serif:I = 0x7f140242
+.field public static oneme_settings_twofa_creation_new_email_title:I = 0x7f130a32
 
-.field public static RoundedButton24_Transparent:I = 0x7f140243
+.field public static oneme_settings_twofa_creation_new_password_title:I = 0x7f130a33
 
-.field public static RoundedButton24_Transparent_WhiteText:I = 0x7f140244
+.field public static oneme_settings_twofa_creation_other_action:I = 0x7f130a34
 
-.field public static RoundedButton24_White:I = 0x7f140245
+.field public static oneme_settings_twofa_creation_password_action:I = 0x7f130a35
 
-.field public static RowPadding:I = 0x7f140246
+.field public static oneme_settings_twofa_creation_password_first_hint:I = 0x7f130a36
 
-.field public static SearchTabText:I = 0x7f140260
+.field public static oneme_settings_twofa_creation_password_second_hint:I = 0x7f130a37
 
-.field public static SmallProgressBar:I = 0x7f14029f
+.field public static oneme_settings_twofa_creation_password_title:I = 0x7f130a38
 
-.field public static SpinnerDropDown:I = 0x7f1402a0
+.field public static oneme_settings_twofa_creation_toolbar_steps:I = 0x7f130a39
 
-.field public static SubtitleCollapsed:I = 0x7f1402a1
+.field public static oneme_settings_twofa_delete_user_title:I = 0x7f130a3a
 
-.field public static SubtitleExpanded:I = 0x7f1402a2
+.field public static oneme_settings_twofa_delete_user_undo_delete_action:I = 0x7f130a3b
 
-.field public static TabText:I = 0x7f1402a3
+.field public static oneme_settings_twofa_delete_user_undo_delete_success:I = 0x7f130a3c
 
-.field public static TamTamFab:I = 0x7f1402a4
+.field public static oneme_settings_twofa_disable_password_title:I = 0x7f130a3d
 
-.field public static TamTamTheme:I = 0x7f1402a5
+.field public static oneme_settings_twofa_error_passwords_equals:I = 0x7f130a3e
 
-.field public static TamTamTheme_Base:I = 0x7f1402a6
+.field public static oneme_settings_twofa_forget_password_action:I = 0x7f130a3f
 
-.field public static TamTamTheme_Base_Dark:I = 0x7f1402a7
+.field public static oneme_settings_twofa_lost_email_action:I = 0x7f130a40
 
-.field public static TamTamTheme_Base_PopupNotification:I = 0x7f1402a8
+.field public static oneme_settings_twofa_onboarding_description:I = 0x7f130a41
 
-.field public static TamTamTheme_CloseMode:I = 0x7f1402a9
+.field public static oneme_settings_twofa_onboarding_set_password:I = 0x7f130a42
 
-.field public static Text:I = 0x7f1402aa
+.field public static oneme_settings_twofa_onboarding_success_description:I = 0x7f130a43
 
-.field public static TextInputLayoutHint:I = 0x7f140338
+.field public static oneme_settings_twofa_onboarding_success_title:I = 0x7f130a44
 
-.field public static Text_Attach:I = 0x7f1402ab
+.field public static oneme_settings_twofa_onboarding_title:I = 0x7f130a45
 
-.field public static Text_Large:I = 0x7f1402ac
+.field public static oneme_settings_twofa_restore_delete_user_confirmation_action:I = 0x7f130a46
 
-.field public static Text_Largest:I = 0x7f1402ad
+.field public static oneme_settings_twofa_restore_delete_user_confirmation_description:I = 0x7f130a47
 
-.field public static Text_LocalMediaCount:I = 0x7f1402ae
-
-.field public static Text_LocalMediaCount_FullScreen:I = 0x7f1402af
-
-.field public static Text_Normal:I = 0x7f1402b0
-
-.field public static Text_Small:I = 0x7f1402b1
-
-.field public static Theme_Transparent:I = 0x7f1403aa
-
-.field public static Theme_Transparent_DarkMenuOverflow:I = 0x7f1403ab
-
-.field public static Theme_Transparent_WhiteMenuOverflow:I = 0x7f1403ac
-
-.field public static Theme_Transparent_WhiteMenuOverflow_NoCaps:I = 0x7f1403ad
-
-.field public static Theme_Transparent_WhiteMenuOverflow_NoCaps_Portrait:I = 0x7f1403ae
-
-.field public static TimePicker:I = 0x7f140425
-
-.field public static TimePickerShape:I = 0x7f140428
-
-.field public static TimePicker_Day:I = 0x7f140426
-
-.field public static TimePicker_Night:I = 0x7f140427
-
-.field public static TitleCollapsed:I = 0x7f140429
-
-.field public static TitleExpanded:I = 0x7f14042a
-
-.field public static TitleExpandedSmall:I = 0x7f14042b
-
-.field public static frg_auth_native_ok__common:I = 0x7f140699
-
-.field public static frg_auth_native_ok__et_login:I = 0x7f14069a
+.field public static oneme_settings_twofa_restore_delete_user_confirmation_title:I = 0x7f130a48

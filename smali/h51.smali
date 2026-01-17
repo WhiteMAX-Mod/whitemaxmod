@@ -1,17 +1,48 @@
-.class public interface abstract Lh51;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lh51;
+.super Lo84;
+
+
+# instance fields
+.field public final synthetic X:Lpx;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lpx;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lh51;->X:Lpx;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()I
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b()I
-.end method
+    iput-object p1, p0, Lh51;->d:Ljava/lang/Object;
 
-.method public abstract c()I
-.end method
+    iget p1, p0, Lh51;->o:I
 
-.method public abstract d()I
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lh51;->o:I
+
+    iget-object p1, p0, Lh51;->X:Lpx;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lpx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

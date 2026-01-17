@@ -1,75 +1,80 @@
-.class public abstract Lj5j;
+.class public final Lj5j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
 
 # static fields
-.field public static final a:Ljava/util/HashMap;
+.field public static final a:Lj5j;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 3
 
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Lj5j;
 
-    const-string v1, "review"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "app_update"
+    sput-object v0, Lj5j;->a:Lj5j;
 
-    filled-new-array {v2, v1}, [Ljava/lang/String;
+    new-instance v0, Lvzi;
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    move-result-object v1
+    const-class v1, Ln0j;
 
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/util/HashSet;
-
-    const-string v1, "unity"
-
-    const-string v2, "native"
-
-    filled-new-array {v2, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Lj5j;->a:Ljava/util/HashMap;
-
-    invoke-static {}, Landroid/os/Process;->myUid()I
-
-    move-result v0
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v1
-
-    const-string v2, "]  PID: ["
-
-    const-string v3, "] "
-
-    const-string v4, "UID: ["
-
-    invoke-static {v4, v0, v2, v1, v3}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-string v1, "PlayCoreVersion"
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

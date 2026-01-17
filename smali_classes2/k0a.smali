@@ -1,9 +1,9 @@
 .class public final Lk0a;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lk0a;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lk0a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,52 +60,38 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lk0a;->X:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object v0, p0, Lk0a;->o:Ljava/lang/Object;
 
-    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Lz7g;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast v0, Lb3h;
 
-    iget-object p1, p0, Lk0a;->o:Ljava/lang/Object;
+    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lz28;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object p1, p0, Lk0a;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lc0a;
-
-    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->s0(Llrd;)V
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v0
 
-    check-cast v0, Lc0a;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getScrollState()I
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Llrd;)V
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->A0()Lseh;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lseh;->f(Landroidx/recyclerview/widget/RecyclerView;Z)V
 
     :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

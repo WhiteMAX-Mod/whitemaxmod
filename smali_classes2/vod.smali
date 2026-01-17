@@ -1,89 +1,112 @@
 .class public final Lvod;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lxod;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public final a:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput-object p2, p0, Lvod;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-boolean p1, p0, Lvod;->a:Z
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lvod;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lvod;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lvod;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lvod;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lvod;
-
-    iget-object v1, p0, Lvod;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    invoke-direct {v0, p2, v1}, Lvod;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-
-    iput-object p1, v0, Lvod;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvod;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    iget-object v0, p0, Lvod;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    iget-object v1, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Lkxh;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1}, Lkxh;->setDurationText(Ljava/lang/String;)V
+    return v0
 
     :cond_0
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/widget/TextView;
+    instance-of v1, p1, Lvod;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvod;
+
+    iget-boolean v1, p0, Lvod;->a:Z
+
+    iget-boolean v3, p1, Lvod;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lvod;->b:Z
+
+    iget-boolean p1, p1, Lvod;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Lvod;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lvod;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", isLocked="
+
+    const-string v1, ")"
+
+    const-string v2, "Recording(afterPause="
+
+    iget-boolean v3, p0, Lvod;->a:Z
+
+    iget-boolean v4, p0, Lvod;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lhc0;->h(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    return-object v0
 .end method

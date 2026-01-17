@@ -1,88 +1,158 @@
-.class public abstract Lmoi;
+.class public final Lmoi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# instance fields
+.field public final a:I
+
+.field public final b:Lcw8;
+
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILcw8;Z)V
+    .locals 0
 
-    const-class v0, Lmoi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    iput p1, p0, Lmoi;->a:I
+
+    iput-object p2, p0, Lmoi;->b:Lcw8;
+
+    iput-boolean p3, p0, Lmoi;->c:Z
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-    .locals 1
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lmoi;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lmoi;
+
+    iget v0, p0, Lmoi;->a:I
+
+    iget v1, p1, Lmoi;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lmoi;->b:Lcw8;
+
+    iget-object v1, p1, Lmoi;->b:Lcw8;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_3
 
-    const/4 p0, 0x0
+    goto :goto_0
 
-    return-object p0
+    :cond_3
+    iget-boolean v0, p0, Lmoi;->c:Z
 
-    :cond_0
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    iget-boolean p1, p1, Lmoi;->c:Z
 
-    move-result-object p0
+    if-eq v0, p1, :cond_4
 
-    check-cast p0, Landroid/os/Parcelable;
+    :goto_0
+    const/4 p1, 0x0
 
-    return-object p0
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static b(Landroid/os/Parcel;)V
+.method public final hashCode()I
     .locals 2
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
+    iget v0, p0, Lmoi;->a:I
 
-    move-result p0
+    invoke-static {v0}, Lt02;->t(I)I
 
-    if-gtz p0, :cond_0
+    move-result v0
 
-    return-void
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_0
-    new-instance v0, Landroid/os/BadParcelableException;
+    iget-object v1, p0, Lmoi;->b:Lcw8;
 
-    const-string v1, "Parcel data not fully consumed, unread size: "
+    invoke-virtual {v1}, Lcw8;->hashCode()I
 
-    invoke-static {p0, v1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    move-result v1
 
-    move-result-object p0
+    add-int/2addr v1, v0
 
-    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+    mul-int/lit8 v1, v1, 0x1f
 
-    throw v0
+    iget-boolean v0, p0, Lmoi;->c:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public static c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_0
+    const-string v1, "NetworkParameters(condition="
 
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    iget v1, p0, Lmoi;->a:I
 
-    :cond_0
-    const/4 v1, 0x1
+    invoke-static {v1}, Lj27;->s(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v1
 
-    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", state="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmoi;->b:Lcw8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", preferHardwareVPX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lmoi;->c:Z
+
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

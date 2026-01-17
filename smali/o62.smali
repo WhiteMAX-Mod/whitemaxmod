@@ -1,26 +1,29 @@
-.class public interface abstract Lo62;
-.super Ljava/lang/Object;
+.class public final Lo62;
+.super Lso3;
 .source "SourceFile"
 
-# interfaces
-.implements Lkotlin/coroutines/Continuation;
+
+# static fields
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
 
-# virtual methods
-.method public abstract e(Ltb4;)V
-.end method
+# instance fields
+.field private volatile synthetic _resumed$volatile:I
 
-.method public abstract f(Loq6;)V
-.end method
 
-.method public abstract g(Ljava/lang/Object;Ler6;)V
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.method public abstract isCancelled()Z
-.end method
+    const-class v0, Lo62;
 
-.method public abstract j(Ljava/lang/Object;Ler6;)Lkotlinx/coroutines/internal/Symbol;
-.end method
+    const-string v1, "_resumed$volatile"
 
-.method public abstract m(Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lo62;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    return-void
 .end method

@@ -1,9 +1,9 @@
 .class public final Le3a;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
@@ -24,7 +24,7 @@
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +44,7 @@
 
     check-cast p1, Le3a;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Le3a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -68,15 +68,15 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 20
+    .locals 29
 
     move-object/from16 v0, p0
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    sget-object v1, Lkk8;->d:Lkk8;
 
-    sget-object v2, Lxk8;->d:Lxk8;
+    sget-object v2, Lb3h;->a:Lb3h;
 
-    sget-object v3, Lbc4;->a:Lbc4;
+    sget-object v3, Lac4;->a:Lac4;
 
     iget v4, v0, Le3a;->o:I
 
@@ -94,9 +94,9 @@
 
     if-ne v4, v5, :cond_0
 
-    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-object v1
+    return-object v2
 
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -108,17 +108,17 @@
     throw v1
 
     :cond_1
-    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-object v1
+    return-object v2
 
     :cond_2
-    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-object v1
+    return-object v2
 
     :cond_3
-    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     iget-object v4, v0, Le3a;->X:Lh3a;
 
@@ -126,7 +126,7 @@
 
     iget-object v8, v0, Le3a;->Y:Lone/me/messages/list/loader/MessageModel;
 
-    sget-object v9, Lm4j;->a:Lvcb;
+    sget-object v9, Lc5j;->a:Ledb;
 
     const/4 v10, 0x0
 
@@ -135,7 +135,7 @@
     goto :goto_0
 
     :cond_4
-    invoke-virtual {v9, v2}, Lvcb;->b(Lxk8;)Z
+    invoke-virtual {v9, v1}, Ledb;->b(Lkk8;)Z
 
     move-result v11
 
@@ -145,182 +145,238 @@
 
     move-result-object v8
 
-    const-string v11, "On unreadScrollButton clicked, current messageModel="
+    const-string v11, "onUnreadScrollButtonClicked, current messageModel="
 
-    invoke-virtual {v11, v8}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v11, v8}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v9, v2, v4, v8, v10}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v9, v1, v4, v8, v10}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_5
     :goto_0
     iget-object v4, v0, Le3a;->X:Lh3a;
 
-    iget-object v4, v4, Lh3a;->d:Laof;
+    iget-object v4, v4, Lh3a;->d:Llpf;
 
-    invoke-interface {v4}, Laof;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Llpf;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lud2;
+    check-cast v4, Lnd2;
 
     if-nez v4, :cond_6
 
-    goto/16 :goto_a
+    iget-object v1, v0, Le3a;->X:Lh3a;
+
+    iget-object v1, v1, Lh3a;->i:Ljava/lang/String;
+
+    const-string v3, "onUnreadScrollButtonClicked: can\'t scroll because chat is null"
+
+    invoke-static {v1, v3}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v2
 
     :cond_6
-    invoke-virtual {v4}, Lud2;->q()J
+    invoke-virtual {v4}, Lnd2;->r()J
 
     move-result-wide v8
 
-    iget-object v11, v4, Lud2;->c:Lql9;
+    iget-object v11, v4, Lnd2;->c:Lwk9;
 
     if-eqz v11, :cond_7
 
-    invoke-virtual {v11}, Lql9;->getTime()J
+    invoke-virtual {v11}, Lwk9;->getTime()J
 
-    move-result-wide v11
-
-    :goto_1
-    move-wide v14, v11
-
-    goto :goto_2
-
-    :cond_7
-    const-wide/16 v11, 0x0
+    move-result-wide v14
 
     goto :goto_1
 
+    :cond_7
+    const-wide/16 v14, 0x0
+
+    :goto_1
+    iget-object v11, v0, Le3a;->X:Lh3a;
+
+    iget-object v11, v11, Lh3a;->a:La1a;
+
+    iget-object v11, v11, La1a;->b:Ljava/lang/String;
+
+    const-string v12, "ScheduledChatScreen"
+
+    invoke-virtual {v11, v12}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    const/16 v21, 0x2
+
+    if-eqz v11, :cond_9
+
+    iget-object v1, v0, Le3a;->X:Lh3a;
+
+    iget-object v4, v1, Lh3a;->e:Llpf;
+
+    invoke-interface {v4}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcw9;
+
+    iget-object v4, v4, Lcw9;->a:Ljava/util/List;
+
+    invoke-static {v4}, Lpi3;->N(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lone/me/messages/list/loader/MessageModel;
+
+    if-eqz v4, :cond_8
+
+    iget-wide v12, v4, Lone/me/messages/list/loader/MessageModel;->c:J
+
+    move-wide/from16 v19, v12
+
+    goto :goto_2
+
+    :cond_8
+    const-wide/16 v19, 0x0
+
     :goto_2
+    iput v7, v0, Le3a;->o:I
+
+    move/from16 v23, v21
+
+    const-wide/16 v21, 0x0
+
+    const/16 v24, 0x2
+
+    move-object/from16 v18, v1
+
+    invoke-static/range {v18 .. v24}, Lh3a;->d(Lh3a;JJII)V
+
+    if-ne v2, v3, :cond_22
+
+    goto/16 :goto_f
+
+    :cond_9
     cmp-long v11, v8, v14
 
-    const/16 v18, 0x2
-
-    if-gez v11, :cond_15
+    if-gez v11, :cond_17
 
     iget-object v11, v0, Le3a;->Y:Lone/me/messages/list/loader/MessageModel;
 
-    iget-wide v11, v11, Lone/me/messages/list/loader/MessageModel;->c:J
+    iget-wide v12, v11, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    cmp-long v11, v11, v8
+    cmp-long v12, v12, v8
 
-    if-ltz v11, :cond_8
+    if-ltz v12, :cond_a
 
-    goto/16 :goto_7
-
-    :cond_8
-    iget-object v11, v0, Le3a;->X:Lh3a;
-
-    iget-object v11, v11, Lh3a;->e:Laof;
-
-    invoke-interface {v11}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Lgw9;
-
-    iget-object v12, v11, Lgw9;->a:Ljava/util/List;
-
-    invoke-interface {v11, v8, v9}, Lmw9;->f(J)I
-
-    move-result v11
-
-    if-gez v11, :cond_9
-
-    invoke-static {v11}, Ljava/lang/Math;->abs(I)I
-
-    move-result v11
-
-    sub-int/2addr v11, v7
-
-    :cond_9
-    invoke-static {v11, v12}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lone/me/messages/list/loader/MessageModel;
-
-    if-nez v7, :cond_c
-
-    iget-object v3, v0, Le3a;->X:Lh3a;
-
-    iget-object v3, v3, Lh3a;->i:Ljava/lang/String;
-
-    sget-object v4, Lm4j;->a:Lvcb;
-
-    if-nez v4, :cond_a
-
-    goto :goto_3
+    goto/16 :goto_8
 
     :cond_a
-    invoke-virtual {v4, v2}, Lvcb;->b(Lxk8;)Z
+    iget-object v6, v0, Le3a;->X:Lh3a;
+
+    iput v5, v0, Le3a;->o:I
+
+    iget-object v5, v6, Lh3a;->e:Llpf;
+
+    invoke-interface {v5}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcw9;
+
+    iget-object v12, v5, Lcw9;->a:Ljava/util/List;
+
+    invoke-interface {v5, v8, v9}, Ljw9;->g(J)I
 
     move-result v5
 
-    if-eqz v5, :cond_b
+    if-gez v5, :cond_b
 
-    const-string v5, "onUnreadScrollButtonClicked: message with ts=selfReadMark is not loaded, load around it"
+    invoke-static {v5}, Ljava/lang/Math;->abs(I)I
 
-    invoke-virtual {v4, v2, v3, v5, v10}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result v5
+
+    sub-int/2addr v5, v7
 
     :cond_b
-    :goto_3
-    iget-object v2, v0, Le3a;->X:Lh3a;
+    invoke-static {v5, v12}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
 
-    iget-object v2, v2, Lh3a;->n:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result-object v5
 
-    new-instance v3, Lq2a;
+    check-cast v5, Lone/me/messages/list/loader/MessageModel;
 
-    const/4 v4, 0x2
+    if-nez v5, :cond_e
 
-    invoke-direct {v3, v8, v9, v4}, Lq2a;-><init>(JI)V
+    iget-object v4, v6, Lh3a;->i:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+    sget-object v5, Lc5j;->a:Ledb;
 
-    iget-object v2, v0, Le3a;->X:Lh3a;
+    if-nez v5, :cond_c
 
-    iget-object v2, v2, Lh3a;->g:Lb17;
-
-    new-instance v3, Ljava/lang/Long;
-
-    invoke-direct {v3, v8, v9}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {v2, v3}, Lb17;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v1
+    goto :goto_3
 
     :cond_c
-    iget-wide v8, v7, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    iget-object v11, v0, Le3a;->Y:Lone/me/messages/list/loader/MessageModel;
-
-    iget-wide v11, v11, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    cmp-long v8, v8, v11
-
-    if-nez v8, :cond_f
-
-    iget-object v4, v0, Le3a;->X:Lh3a;
-
-    iget-object v4, v4, Lh3a;->i:Ljava/lang/String;
-
-    sget-object v5, Lm4j;->a:Lvcb;
-
-    if-nez v5, :cond_d
-
-    goto :goto_4
-
-    :cond_d
-    invoke-virtual {v5, v2}, Lvcb;->b(Lxk8;)Z
+    invoke-virtual {v5, v1}, Ledb;->b(Lkk8;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_e
+    if-eqz v7, :cond_d
+
+    const-string v7, "onUnreadScrollButtonClicked: message with ts=selfReadMark is not loaded, load around it"
+
+    invoke-virtual {v5, v1, v4, v7, v10}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_d
+    :goto_3
+    iget-object v1, v6, Lh3a;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v4, Lp2a;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v8, v9, v5}, Lp2a;-><init>(JI)V
+
+    invoke-virtual {v1, v4}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    iget-object v1, v6, Lh3a;->g:Ly07;
+
+    new-instance v4, Ljava/lang/Long;
+
+    invoke-direct {v4, v8, v9}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-virtual {v1, v4}, Ly07;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto/16 :goto_7
+
+    :cond_e
+    iget-wide v7, v5, Lone/me/messages/list/loader/MessageModel;->c:J
+
+    iget-wide v11, v11, Lone/me/messages/list/loader/MessageModel;->c:J
+
+    cmp-long v7, v7, v11
+
+    if-nez v7, :cond_11
+
+    iget-object v4, v6, Lh3a;->i:Ljava/lang/String;
+
+    sget-object v5, Lc5j;->a:Ledb;
+
+    if-nez v5, :cond_f
+
+    goto :goto_4
+
+    :cond_f
+    invoke-virtual {v5, v1}, Ledb;->b(Lkk8;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_10
 
     new-instance v7, Ljava/lang/StringBuilder;
 
-    const-string v8, "onUnreadScrollButtonClicked: message with ts=selfReadMark is loaded and is last on screen, \n                            |scroll to lastMessageTime="
+    const-string v8, "onUnreadScrollButtonClicked: message with ts=selfReadMark is loaded and is last on screen, \n                                |scroll to lastMessageTime="
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -330,177 +386,372 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Ljyf;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7}, Lszf;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v5, v2, v4, v7, v10}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v5, v1, v4, v7, v10}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_e
+    :cond_10
     :goto_4
-    iget-object v13, v0, Le3a;->X:Lh3a;
+    const/16 v22, 0xe
 
-    iput v6, v0, Le3a;->o:I
+    const/16 v21, 0x0
 
-    const/16 v18, 0x0
+    const-wide/16 v19, 0x0
 
-    const-wide/16 v16, 0x0
+    move-object/from16 v16, v6
 
-    const/16 v19, 0xe
+    move-wide/from16 v17, v14
 
-    invoke-static/range {v13 .. v19}, Lh3a;->d(Lh3a;JJII)V
+    invoke-static/range {v16 .. v22}, Lh3a;->d(Lh3a;JJII)V
 
-    if-ne v1, v3, :cond_18
+    goto :goto_7
 
-    goto/16 :goto_9
+    :cond_11
+    move-wide/from16 v17, v14
 
-    :cond_f
-    iget-object v4, v4, Lud2;->b:Lzh2;
+    iget-object v4, v4, Lnd2;->b:Luh2;
 
-    iget v4, v4, Lzh2;->m:I
+    iget v4, v4, Luh2;->m:I
 
-    if-lez v4, :cond_12
+    if-lez v4, :cond_14
 
-    iget-object v4, v0, Le3a;->X:Lh3a;
+    iget-object v4, v6, Lh3a;->i:Ljava/lang/String;
 
-    iget-object v4, v4, Lh3a;->i:Ljava/lang/String;
+    sget-object v5, Lc5j;->a:Ledb;
 
-    sget-object v6, Lm4j;->a:Lvcb;
-
-    if-nez v6, :cond_10
+    if-nez v5, :cond_12
 
     goto :goto_5
 
-    :cond_10
-    invoke-virtual {v6, v2}, Lvcb;->b(Lxk8;)Z
+    :cond_12
+    invoke-virtual {v5, v1}, Ledb;->b(Lkk8;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_11
+    if-eqz v7, :cond_13
 
     const-string v7, "onUnreadScrollButtonClicked: message with lastMessageTime > selfReadMark and hasNewMessages, scroll to lastMessageTime"
 
-    invoke-virtual {v6, v2, v4, v7, v10}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v5, v1, v4, v7, v10}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_11
+    :cond_13
     :goto_5
-    iget-object v13, v0, Le3a;->X:Lh3a;
+    const-wide/16 v19, 0x0
 
-    iput v5, v0, Le3a;->o:I
+    const/16 v22, 0x6
 
-    const-wide/16 v16, 0x0
+    move-object/from16 v16, v6
 
-    const/16 v19, 0x6
+    invoke-static/range {v16 .. v22}, Lh3a;->d(Lh3a;JJII)V
 
-    invoke-static/range {v13 .. v19}, Lh3a;->d(Lh3a;JJII)V
+    goto :goto_7
 
-    if-ne v1, v3, :cond_18
+    :cond_14
+    iget-object v4, v6, Lh3a;->i:Ljava/lang/String;
 
-    goto :goto_9
+    sget-object v7, Lc5j;->a:Ledb;
 
-    :cond_12
-    iget-object v3, v0, Le3a;->X:Lh3a;
-
-    iget-object v3, v3, Lh3a;->i:Ljava/lang/String;
-
-    sget-object v4, Lm4j;->a:Lvcb;
-
-    if-nez v4, :cond_13
+    if-nez v7, :cond_15
 
     goto :goto_6
 
-    :cond_13
-    invoke-virtual {v4, v2}, Lvcb;->b(Lxk8;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_14
-
-    const-string v5, "onUnreadScrollButtonClicked: message with ts=selfReadMark is loaded, scroll to it"
-
-    invoke-virtual {v4, v2, v3, v5, v10}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_14
-    :goto_6
-    iget-object v2, v0, Le3a;->X:Lh3a;
-
-    iget-object v2, v2, Lh3a;->n:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v3, Lvm2;
-
-    const/16 v4, 0x9
-
-    invoke-direct {v3, v4}, Lvm2;-><init>(I)V
-
-    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    iget-object v2, v0, Le3a;->X:Lh3a;
-
-    iget-object v2, v2, Lh3a;->q:Lpde;
-
-    iget-wide v3, v7, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x6
-
-    invoke-static {v2, v3, v4, v5, v6}, Lpde;->l(Lpde;JZI)V
-
-    return-object v1
-
     :cond_15
-    :goto_7
-    iget-object v4, v0, Le3a;->X:Lh3a;
+    invoke-virtual {v7, v1}, Ledb;->b(Lkk8;)Z
 
-    iget-object v4, v4, Lh3a;->i:Ljava/lang/String;
+    move-result v8
 
-    sget-object v5, Lm4j;->a:Lvcb;
+    if-eqz v8, :cond_16
 
-    if-nez v5, :cond_16
+    const-string v8, "onUnreadScrollButtonClicked: message with ts=selfReadMark is loaded, scroll to it"
 
-    goto :goto_8
+    invoke-virtual {v7, v1, v4, v8, v10}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_16
-    invoke-virtual {v5, v2}, Lvcb;->b(Lxk8;)Z
+    :goto_6
+    iget-object v1, v6, Lh3a;->n:Ljava/util/concurrent/atomic/AtomicReference;
 
-    move-result v6
+    new-instance v4, Ltm2;
 
-    if-eqz v6, :cond_17
+    const/16 v7, 0x8
 
-    const-string v6, "onUnreadScrollButtonClicked: selfReadMark="
+    invoke-direct {v4, v7}, Ltm2;-><init>(I)V
 
-    const-string v11, " >= lastMessageTime="
+    invoke-virtual {v1, v4}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
 
-    invoke-static {v8, v9, v6, v11}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v8, v6, Lh3a;->q:Lnee;
 
-    move-result-object v6
+    iget-wide v9, v5, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    invoke-virtual {v6, v14, v15}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-wide/16 v12, 0x0
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v14, 0xe
 
-    move-result-object v6
+    const/4 v11, 0x0
 
-    invoke-virtual {v5, v2, v4, v6, v10}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static/range {v8 .. v14}, Lnee;->l(Lnee;JZJI)V
+
+    :goto_7
+    if-ne v2, v3, :cond_22
+
+    goto/16 :goto_f
 
     :cond_17
     :goto_8
-    iget-object v13, v0, Le3a;->X:Lh3a;
+    iget-object v4, v0, Le3a;->X:Lh3a;
 
-    iput v7, v0, Le3a;->o:I
+    iget-object v5, v0, Le3a;->Y:Lone/me/messages/list/loader/MessageModel;
 
-    const-wide/16 v16, 0x0
+    iput v6, v0, Le3a;->o:I
 
-    const/16 v19, 0x2
+    iget-object v6, v4, Lh3a;->e:Llpf;
 
-    invoke-static/range {v13 .. v19}, Lh3a;->d(Lh3a;JJII)V
+    invoke-interface {v6}, Llpf;->getValue()Ljava/lang/Object;
 
-    if-ne v1, v3, :cond_18
+    move-result-object v11
 
-    :goto_9
-    return-object v3
+    check-cast v11, Lcw9;
+
+    iget-object v11, v11, Lcw9;->a:Ljava/util/List;
+
+    invoke-static {v11}, Lpi3;->M(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lone/me/messages/list/loader/MessageModel;
+
+    invoke-interface {v6}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcw9;
+
+    invoke-interface {v6, v14, v15}, Ljw9;->g(J)I
+
+    move-result v6
+
+    if-ltz v6, :cond_18
+
+    goto :goto_9
 
     :cond_18
+    const/4 v7, 0x0
+
+    :goto_9
+    iget-wide v11, v11, Lone/me/messages/list/loader/MessageModel;->c:J
+
+    cmp-long v6, v11, v14
+
+    if-eqz v6, :cond_19
+
+    if-eqz v7, :cond_19
+
+    goto :goto_a
+
+    :cond_19
+    move-wide v11, v14
+
     :goto_a
-    return-object v1
+    cmp-long v6, v11, v14
+
+    if-eqz v6, :cond_1c
+
+    iget-object v5, v4, Lh3a;->i:Ljava/lang/String;
+
+    sget-object v6, Lc5j;->a:Ledb;
+
+    if-nez v6, :cond_1a
+
+    goto :goto_b
+
+    :cond_1a
+    invoke-virtual {v6, v1}, Ledb;->b(Lkk8;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1b
+
+    const-string v7, "onUnreadScrollButtonClicked: \n                        |scroll to checkedTime:"
+
+    const-string v13, ", \n                        |selfReadMark="
+
+    invoke-static {v11, v12, v7, v13}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v8, ", \n                        |lastMessageTime="
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v14, v15}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v8, "\n                        |"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lszf;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v1, v5, v7, v10}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1b
+    :goto_b
+    iget-object v1, v4, Lh3a;->e:Llpf;
+
+    invoke-interface {v1}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcw9;
+
+    iget-object v1, v1, Lcw9;->a:Ljava/util/List;
+
+    invoke-static {v1}, Lpi3;->M(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/messages/list/loader/MessageModel;
+
+    iget-wide v5, v1, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object v1, v4, Lh3a;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v7, Ltm2;
+
+    const/16 v8, 0x8
+
+    invoke-direct {v7, v8}, Ltm2;-><init>(I)V
+
+    invoke-virtual {v1, v7}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    iget-object v1, v4, Lh3a;->q:Lnee;
+
+    const/16 v25, 0x1
+
+    const/16 v28, 0x4
+
+    move-object/from16 v22, v1
+
+    move-wide/from16 v26, v5
+
+    move-wide/from16 v23, v11
+
+    invoke-static/range {v22 .. v28}, Lnee;->l(Lnee;JZJI)V
+
+    goto :goto_e
+
+    :cond_1c
+    iget-wide v5, v5, Lone/me/messages/list/loader/MessageModel;->c:J
+
+    cmp-long v5, v14, v5
+
+    if-nez v5, :cond_1f
+
+    iget-object v5, v4, Lh3a;->i:Ljava/lang/String;
+
+    sget-object v6, Lc5j;->a:Ledb;
+
+    if-nez v6, :cond_1d
+
+    goto :goto_c
+
+    :cond_1d
+    invoke-virtual {v6, v1}, Ledb;->b(Lkk8;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1e
+
+    const-string v7, "onUnreadScrollButtonClicked: current message have same time with lastMessage, scroll to it"
+
+    invoke-virtual {v6, v1, v5, v7, v10}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1e
+    :goto_c
+    iget-object v1, v4, Lh3a;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v5, Ltm2;
+
+    const/16 v6, 0x8
+
+    invoke-direct {v5, v6}, Ltm2;-><init>(I)V
+
+    invoke-virtual {v1, v5}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    iget-object v1, v4, Lh3a;->q:Lnee;
+
+    const/16 v19, 0x1
+
+    const/16 v22, 0x4
+
+    const-wide/16 v20, -0x1
+
+    move-object/from16 v16, v1
+
+    move-wide/from16 v17, v14
+
+    invoke-static/range {v16 .. v22}, Lnee;->l(Lnee;JZJI)V
+
+    goto :goto_e
+
+    :cond_1f
+    iget-object v5, v4, Lh3a;->i:Ljava/lang/String;
+
+    sget-object v6, Lc5j;->a:Ledb;
+
+    if-nez v6, :cond_20
+
+    goto :goto_d
+
+    :cond_20
+    invoke-virtual {v6, v1}, Ledb;->b(Lkk8;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_21
+
+    const-string v7, "onUnreadScrollButtonClicked: selfReadMark="
+
+    const-string v11, " >= lastMessageTime="
+
+    invoke-static {v8, v9, v7, v11}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v14, v15}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v1, v5, v7, v10}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_21
+    :goto_d
+    const-wide/16 v19, 0x0
+
+    const/16 v22, 0x2
+
+    move-object/from16 v16, v4
+
+    move-wide/from16 v17, v14
+
+    invoke-static/range {v16 .. v22}, Lh3a;->d(Lh3a;JJII)V
+
+    :goto_e
+    if-ne v2, v3, :cond_22
+
+    :goto_f
+    return-object v3
+
+    :cond_22
+    return-object v2
 .end method

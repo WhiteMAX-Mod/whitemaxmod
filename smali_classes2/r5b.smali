@@ -1,97 +1,163 @@
-.class public final enum Lr5b;
-.super Ljava/lang/Enum;
+.class public final synthetic Lr5b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
 
-# static fields
-.field public static final enum a:Lr5b;
 
-.field public static final enum b:Lr5b;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Lr5b;
-
-.field public static final enum d:Lr5b;
-
-.field public static final synthetic o:[Lr5b;
+.field public final synthetic b:Ls5b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Ls5b;I)V
+    .locals 0
 
-    new-instance v0, Lr5b;
+    iput p2, p0, Lr5b;->a:I
 
-    const-string v1, "PRIMARY"
+    iput-object p1, p0, Lr5b;->b:Ls5b;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lr5b;->a:Lr5b;
-
-    new-instance v1, Lr5b;
-
-    const-string v2, "SECONDARY"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lr5b;->b:Lr5b;
-
-    new-instance v2, Lr5b;
-
-    const-string v3, "TERTIARY"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lr5b;->c:Lr5b;
-
-    new-instance v3, Lr5b;
-
-    const-string v4, "LINK"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lr5b;->d:Lr5b;
-
-    filled-new-array {v0, v1, v2, v3}, [Lr5b;
-
-    move-result-object v0
-
-    sput-object v0, Lr5b;->o:[Lr5b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lr5b;
-    .locals 1
 
-    const-class v0, Lr5b;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lr5b;->a:I
 
-    move-result-object p0
+    iget-object v1, p0, Lr5b;->b:Ls5b;
 
-    check-cast p0, Lr5b;
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
-.end method
+    iget-object v0, v1, Ls5b;->a:Landroid/content/Context;
 
-.method public static values()[Lr5b;
-    .locals 1
+    sget-object v1, Lt05;->a:Ljava/lang/Object;
 
-    sget-object v0, Lr5b;->o:[Lr5b;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v2, v1, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    int-to-float v2, v2
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr v2, v1
+
+    const/high16 v1, 0x44480000    # 800.0f
+
+    cmpl-float v1, v2, v1
+
+    if-lez v1, :cond_0
+
+    invoke-static {v0}, Lmnj;->d(Landroid/content/Context;)Landroid/util/Size;
 
     move-result-object v0
 
-    check-cast v0, [Lr5b;
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    const/16 v1, 0x64
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Lxi4;->r(FFI)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v0, 0x43b40000    # 360.0f
+
+    cmpl-float v0, v2, v0
+
+    if-lez v0, :cond_1
+
+    const/16 v0, 0x123
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v0, 0xf8
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, v1, Ls5b;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Lo1j;->a(Landroid/content/Context;)Lr2h;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

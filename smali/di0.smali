@@ -1,5 +1,5 @@
 .class public final Ldi0;
-.super Lug5;
+.super Lvg5;
 .source "SourceFile"
 
 
@@ -33,15 +33,15 @@
 
     iget-object p1, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast p1, Lmvh;
+    check-cast p1, Liwh;
 
-    iget-boolean p1, p1, Lmvh;->k:Z
+    iget-boolean p1, p1, Liwh;->k:Z
 
     iget-object v0, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast v0, Lmvh;
+    check-cast v0, Liwh;
 
-    iget-boolean v0, v0, Lmvh;->k:Z
+    iget-boolean v0, v0, Liwh;->k:Z
 
     const/4 v1, 0x0
 
@@ -49,7 +49,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "mvh"
+    const-string v4, "iwh"
 
     if-nez v0, :cond_0
 
@@ -61,26 +61,26 @@
 
     const-string v5, "set visible=true on onActivityResumed"
 
-    invoke-static {v4, v1, v5, v0}, Lm4j;->x(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v1, v5, v0}, Lc5j;->q(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iget-object v0, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast v0, Lmvh;
+    check-cast v0, Liwh;
 
-    iput-boolean v2, v0, Lmvh;->k:Z
+    iput-boolean v2, v0, Liwh;->k:Z
 
     :cond_0
     iget-object v0, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast v0, Lmvh;
+    check-cast v0, Liwh;
 
-    iget-boolean v0, v0, Lmvh;->l:Z
+    iget-boolean v0, v0, Liwh;->l:Z
 
     iget-object v5, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast v5, Lmvh;
+    check-cast v5, Liwh;
 
-    iget-boolean v5, v5, Lmvh;->l:Z
+    iget-boolean v5, v5, Liwh;->l:Z
 
     if-nez v5, :cond_1
 
@@ -92,13 +92,13 @@
 
     const-string v6, "set screenOn=true on onActivityResumed"
 
-    invoke-static {v4, v1, v6, v5}, Lm4j;->x(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v1, v6, v5}, Lc5j;->q(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iget-object v5, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast v5, Lmvh;
+    check-cast v5, Liwh;
 
-    iput-boolean v2, v5, Lmvh;->l:Z
+    iput-boolean v2, v5, Liwh;->l:Z
 
     :cond_1
     if-eqz p1, :cond_2
@@ -114,13 +114,13 @@
 
     const-string v0, "crutch! call onAppGoesForeground"
 
-    invoke-static {v4, v1, v0, p1}, Lm4j;->x(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v1, v0, p1}, Lc5j;->q(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iget-object p1, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast p1, Lmvh;
+    check-cast p1, Liwh;
 
-    invoke-virtual {p1}, Lmvh;->b()V
+    invoke-virtual {p1}, Liwh;->b()V
 
     :cond_3
     return-void
@@ -130,13 +130,13 @@
 
     check-cast p1, Lmi0;
 
-    iget-object v0, p1, Lmi0;->d:Ldzb;
+    iget-object v0, p1, Lmi0;->d:Lxzb;
 
-    invoke-virtual {v0}, Ldzb;->g()V
+    invoke-virtual {v0}, Lxzb;->g()V
 
-    iget-object p1, p1, Lmi0;->e:Ldzb;
+    iget-object p1, p1, Lmi0;->e:Lxzb;
 
-    invoke-virtual {p1}, Ldzb;->g()V
+    invoke-virtual {p1}, Lxzb;->g()V
 
     return-void
 
@@ -158,24 +158,24 @@
     :pswitch_0
     iget-object p1, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast p1, Lmvh;
+    check-cast p1, Liwh;
 
-    iget v0, p1, Lmvh;->f:I
+    iget v0, p1, Liwh;->f:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p1, Lmvh;->f:I
+    iput v0, p1, Liwh;->f:I
 
-    sget-object p1, Lm4j;->a:Lvcb;
+    sget-object p1, Lc5j;->a:Ledb;
 
     if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lxk8;->d:Lxk8;
+    sget-object v0, Lkk8;->d:Lkk8;
 
-    invoke-virtual {p1, v0}, Lvcb;->b(Lxk8;)Z
+    invoke-virtual {p1, v0}, Ledb;->b(Lkk8;)Z
 
     move-result v1
 
@@ -192,9 +192,9 @@
 
     iget-object v2, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast v2, Lmvh;
+    check-cast v2, Liwh;
 
-    iget v2, v2, Lmvh;->f:I
+    iget v2, v2, Liwh;->f:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -204,9 +204,9 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "mvh"
+    const-string v3, "iwh"
 
-    invoke-virtual {p1, v0, v3, v1, v2}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0, v3, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -231,24 +231,24 @@
     :pswitch_0
     iget-object p1, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast p1, Lmvh;
+    check-cast p1, Liwh;
 
-    iget v0, p1, Lmvh;->f:I
+    iget v0, p1, Liwh;->f:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p1, Lmvh;->f:I
+    iput v0, p1, Liwh;->f:I
 
-    sget-object p1, Lm4j;->a:Lvcb;
+    sget-object p1, Lc5j;->a:Ledb;
 
     if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lxk8;->d:Lxk8;
+    sget-object v0, Lkk8;->d:Lkk8;
 
-    invoke-virtual {p1, v0}, Lvcb;->b(Lxk8;)Z
+    invoke-virtual {p1, v0}, Ledb;->b(Lkk8;)Z
 
     move-result v1
 
@@ -265,9 +265,9 @@
 
     iget-object v2, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast v2, Lmvh;
+    check-cast v2, Liwh;
 
-    iget v2, v2, Lmvh;->f:I
+    iget v2, v2, Liwh;->f:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -277,36 +277,36 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "mvh"
+    const-string v3, "iwh"
 
-    invoke-virtual {p1, v0, v3, v1, v2}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0, v3, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     iget-object p1, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast p1, Lmvh;
+    check-cast p1, Liwh;
 
-    iget-boolean p1, p1, Lmvh;->k:Z
+    iget-boolean p1, p1, Liwh;->k:Z
 
     if-eqz p1, :cond_2
 
     iget-object p1, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast p1, Lmvh;
+    check-cast p1, Liwh;
 
-    iget v0, p1, Lmvh;->f:I
+    iget v0, p1, Liwh;->f:I
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p1, Lmvh;->k:Z
+    iput-boolean v0, p1, Liwh;->k:Z
 
     iget-object p1, p0, Ldi0;->b:Ljava/lang/Object;
 
-    check-cast p1, Lmvh;
+    check-cast p1, Liwh;
 
-    invoke-virtual {p1}, Lmvh;->a()V
+    invoke-virtual {p1}, Liwh;->a()V
 
     :cond_2
     return-void

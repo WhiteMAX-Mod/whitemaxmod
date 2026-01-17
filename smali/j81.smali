@@ -3,207 +3,96 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lk81;
+.implements Lnm4;
 
 
 # instance fields
-.field public final a:Lbhg;
+.field public final synthetic a:J
 
-.field public final b:I
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Z
 
 
 # direct methods
-.method public constructor <init>(Lbhg;)V
-    .locals 1
-
-    sget v0, Lt6b;->u:I
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj81;->a:Lbhg;
+    iput-wide p1, p0, Lj81;->a:J
 
-    sget p1, Ls6b;->F:I
+    iput-object p3, p0, Lj81;->b:Ljava/lang/String;
 
-    iput p1, p0, Lj81;->b:I
+    iput-object p4, p0, Lj81;->c:Ljava/lang/String;
+
+    iput-boolean p5, p0, Lj81;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x4
+    sget-object v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->t0:Lwna;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    new-instance v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
-    const/4 v0, 0x1
+    new-instance v1, Lktb;
 
-    if-ne p0, p1, :cond_0
+    const-string v2, "call_incoming_avatar"
 
-    return v0
+    iget-object v3, p0, Lj81;->c:Ljava/lang/String;
 
-    :cond_0
-    instance-of v1, p1, Lj81;
+    invoke-direct {v1, v2, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    if-nez v1, :cond_1
+    new-instance v2, Lktb;
 
-    goto :goto_0
+    const-string v3, "call_incoming_name"
 
-    :cond_1
-    check-cast p1, Lj81;
+    iget-object v4, p0, Lj81;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lj81;->a:Lbhg;
+    invoke-direct {v2, v3, v4}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object p1, p1, Lj81;->a:Lbhg;
+    iget-wide v3, p0, Lj81;->a:J
 
-    invoke-virtual {v1, p1}, Lbhg;->equals(Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result p1
+    move-result-object v3
 
-    if-nez p1, :cond_2
+    new-instance v4, Lktb;
 
-    goto :goto_0
+    const-string v5, "call_incoming_chat_id"
 
-    :cond_2
-    sget-wide v1, Lt6b;->p:J
+    invoke-direct {v4, v5, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    cmp-long p1, v1, v1
+    iget-boolean v3, p0, Lj81;->d:Z
 
-    if-eqz p1, :cond_3
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :goto_0
-    const/4 p1, 0x0
+    move-result-object v3
 
-    return p1
+    new-instance v5, Lktb;
 
-    :cond_3
-    return v0
-.end method
+    const-string v6, "call_incoming_video"
 
-.method public final g()Z
-    .locals 1
+    invoke-direct {v5, v6, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
+    filled-new-array {v1, v2, v4, v5}, [Lktb;
 
-    return v0
-.end method
+    move-result-object v1
 
-.method public final getItemId()J
-    .locals 2
+    invoke-static {v1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
 
-    sget-wide v0, Lt6b;->p:J
+    move-result-object v1
 
-    return-wide v0
-.end method
-
-.method public final getTitle()Lghg;
-    .locals 1
-
-    iget-object v0, p0, Lj81;->a:Lbhg;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lj81;->a:Lbhg;
-
-    iget v0, v0, Lbhg;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    sget-wide v2, Lt6b;->p:J
-
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Lc12;->w(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lj81;->b:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget-wide v0, Lt6b;->p:J
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Header(title="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lj81;->a:Lbhg;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", sectionId=0, itemId="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", sectionItemType="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0}, La3e;->u(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;-><init>(Landroid/os/Bundle;)V
 
     return-object v0
 .end method

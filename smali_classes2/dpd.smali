@@ -1,28 +1,30 @@
 .class public final Ldpd;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lfpd;
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public final synthetic Y:J
 
 .field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.method public constructor <init>(Lfpd;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Ldpd;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+    iput-object p1, p0, Ldpd;->X:Lfpd;
 
-    const/4 p2, 0x2
+    iput-wide p2, p0, Ldpd;->Y:J
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lac4;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -42,7 +44,7 @@
 
     check-cast p1, Ldpd;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Ldpd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,35 +54,33 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ldpd;
+    new-instance p1, Ldpd;
 
-    iget-object v1, p0, Ldpd;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+    iget-object v0, p0, Ldpd;->X:Lfpd;
 
-    invoke-direct {v0, p2, v1}, Ldpd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+    iget-wide v1, p0, Ldpd;->Y:J
 
-    iput-object p1, v0, Ldpd;->X:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, v2, p2}, Ldpd;-><init>(Lfpd;JLkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    .locals 3
 
     iget v0, p0, Ldpd;->o:I
 
     const/4 v1, 0x1
 
+    iget-object v2, p0, Ldpd;->X:Lfpd;
+
     if-eqz v0, :cond_1
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Ldpd;->X:Ljava/lang/Object;
-
-    check-cast v0, Lac4;
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -94,136 +94,87 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Ldpd;->X:Ljava/lang/Object;
+    sget-object p1, Lfpd;->Q0:[Lz28;
 
-    check-cast p1, Lac4;
+    invoke-virtual {v2}, Lfpd;->B()Lcqd;
 
-    move-object v0, p1
+    move-result-object p1
+
+    iput v1, p0, Ldpd;->o:I
+
+    iget-wide v0, p0, Ldpd;->Y:J
+
+    invoke-interface {p1, v0, v1, p0}, Lcqd;->e(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
     :goto_0
-    invoke-static {v0}, Lmkj;->e(Lac4;)Z
+    sget-object p1, Lfpd;->Q0:[Lz28;
 
-    move-result p1
+    invoke-virtual {v2}, Lfpd;->x()Lsnd;
 
-    if-eqz p1, :cond_6
+    move-result-object p1
 
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
+    invoke-virtual {v2}, Lfpd;->B()Lcqd;
 
-    iget-object p1, p0, Ldpd;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+    move-result-object v0
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Liod;
+    invoke-interface {v0}, Lcqd;->i()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Liod;->B()Lipd;
+    if-eqz v0, :cond_3
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-interface {v2}, Lipd;->a()I
+    move-result v0
 
-    move-result v2
+    int-to-long v0, v0
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0()Landroid/view/View;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->clearAnimation()V
-
-    int-to-float v2, v2
-
-    const v3, 0x3fb9999a    # 1.45f
-
-    mul-float/2addr v2, v3
-
-    const v4, 0x8000
-
-    int-to-float v4, v4
-
-    div-float/2addr v2, v4
-
-    int-to-float v4, v1
-
-    add-float/2addr v2, v4
-
-    cmpl-float v4, v2, v3
-
-    if-lez v4, :cond_3
-
-    move v7, v3
+    move-result-object v0
 
     goto :goto_1
 
     :cond_3
-    move v7, v2
+    const/4 v0, 0x0
 
     :goto_1
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0()Landroid/view/View;
+    invoke-interface {p1, v0}, Lsnd;->g(Ljava/lang/Long;)V
 
-    move-result-object v5
+    invoke-virtual {v2}, Lfpd;->D()Z
 
-    iget v6, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0:F
+    move-result p1
 
-    const-wide/16 v8, 0x64
+    if-eqz p1, :cond_4
 
-    const-wide/16 v10, 0x0
-
-    invoke-static/range {v5 .. v11}, Ll3j;->h(Landroid/view/View;FFJJ)Lee8;
-
-    move-result-object v2
-
-    new-instance v3, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v3, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b1:Landroid/animation/AnimatorSet;
-
-    iget-object v4, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0:Ljava/lang/Object;
-
-    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Luu5;
-
-    invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget-object v3, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b1:Landroid/animation/AnimatorSet;
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v3, v2}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
-
-    :cond_4
-    iget-object v2, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b1:Landroid/animation/AnimatorSet;
-
-    if-eqz v2, :cond_5
-
-    invoke-virtual {v2}, Landroid/animation/AnimatorSet;->start()V
-
-    :cond_5
-    iput v7, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0:F
-
-    iput-object v0, p0, Ldpd;->X:Ljava/lang/Object;
-
-    iput v1, p0, Ldpd;->o:I
-
-    const-wide/16 v2, 0x64
-
-    invoke-static {v2, v3, p0}, Lzlj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lfpd;->x()Lsnd;
 
     move-result-object p1
 
-    sget-object v2, Lbc4;->a:Lbc4;
+    invoke-interface {p1}, Lsnd;->a()V
 
-    if-ne p1, v2, :cond_2
+    goto :goto_2
 
-    return-object v2
+    :cond_4
+    invoke-virtual {v2}, Lfpd;->x()Lsnd;
 
-    :cond_6
-    sget-object p1, Lv2h;->a:Lv2h;
+    move-result-object p1
+
+    invoke-interface {p1}, Lsnd;->b()V
+
+    :goto_2
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

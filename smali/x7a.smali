@@ -4,14 +4,14 @@
 
 
 # instance fields
-.field public final synthetic a:Liy;
+.field public final synthetic a:Lfy;
 
 
 # direct methods
-.method public constructor <init>(Liy;Lk47;)V
+.method public constructor <init>(Lfy;Lu37;)V
     .locals 0
 
-    iput-object p1, p0, Lx7a;->a:Liy;
+    iput-object p1, p0, Lx7a;->a:Lfy;
 
     invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
@@ -25,9 +25,9 @@
 
     const-string v0, "An error occurred while executing doInBackground()"
 
-    iget-object v1, p0, Lx7a;->a:Liy;
+    iget-object v1, p0, Lx7a;->a:Lfy;
 
-    iget-object v2, v1, Liy;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v2, v1, Lfy;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     :try_start_0
     invoke-virtual {p0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
@@ -40,7 +40,7 @@
 
     if-nez v4, :cond_0
 
-    invoke-virtual {v1, v3}, Liy;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v3}, Lfy;->a(Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
@@ -67,7 +67,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {v1, v0}, Liy;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lfy;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 

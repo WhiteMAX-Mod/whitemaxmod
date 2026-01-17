@@ -1,137 +1,130 @@
-.class public final Libh;
+.class public abstract Libh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luje;
 
-
-# instance fields
-.field public final a:[J
-
-.field public final b:[J
-
-.field public final c:J
-
-.field public final d:J
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>([J[JJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object p1, p0, Libh;->a:[J
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object p2, p0, Libh;->b:[J
-
-    iput-wide p3, p0, Libh;->c:J
-
-    iput-wide p5, p0, Libh;->d:J
+    sput-object v0, Libh;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
+.method public static a(Ljava/util/Calendar;)Ljava/util/Calendar;
+    .locals 4
 
-# virtual methods
-.method public final a()J
-    .locals 2
+    invoke-static {p0}, Libh;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
 
-    iget-wide v0, p0, Libh;->d:J
+    move-result-object p0
 
-    return-wide v0
-.end method
+    const/4 v0, 0x0
 
-.method public final b(J)J
-    .locals 2
+    invoke-static {v0}, Libh;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
 
-    iget-object v0, p0, Libh;->b:[J
+    move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-static {v0, p1, p2, v1}, Loah;->e([JJZ)I
+    invoke-virtual {p0, v1}, Ljava/util/Calendar;->get(I)I
 
-    move-result p1
+    move-result v1
 
-    iget-object p2, p0, Libh;->a:[J
+    const/4 v2, 0x2
 
-    aget-wide p1, p2, p1
-
-    return-wide p1
-.end method
-
-.method public final c()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final e(J)Lkje;
-    .locals 9
-
-    iget-object v0, p0, Libh;->a:[J
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, p1, p2, v1}, Loah;->e([JJZ)I
+    invoke-virtual {p0, v2}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
-    new-instance v3, Lqje;
+    const/4 v3, 0x5
 
-    aget-wide v4, v0, v2
+    invoke-virtual {p0, v3}, Ljava/util/Calendar;->get(I)I
 
-    iget-object v6, p0, Libh;->b:[J
+    move-result p0
 
-    aget-wide v7, v6, v2
+    invoke-virtual {v0, v1, v2, p0}, Ljava/util/Calendar;->set(III)V
 
-    invoke-direct {v3, v4, v5, v7, v8}, Lqje;-><init>(JJ)V
-
-    cmp-long p1, v4, p1
-
-    if-gez p1, :cond_1
-
-    array-length p1, v0
-
-    sub-int/2addr p1, v1
-
-    if-ne v2, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lqje;
-
-    add-int/2addr v2, v1
-
-    aget-wide v4, v0, v2
-
-    aget-wide v0, v6, v2
-
-    invoke-direct {p1, v4, v5, v0, v1}, Lqje;-><init>(JJ)V
-
-    new-instance p2, Lkje;
-
-    invoke-direct {p2, v3, p1}, Lkje;-><init>(Lqje;Lqje;)V
-
-    return-object p2
-
-    :cond_1
-    :goto_0
-    new-instance p1, Lkje;
-
-    invoke-direct {p1, v3, v3}, Lkje;-><init>(Lqje;Lqje;)V
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final f()J
-    .locals 2
+.method public static b()Ljava/util/Calendar;
+    .locals 3
 
-    iget-wide v0, p0, Libh;->c:J
+    sget-object v0, Libh;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    return-wide v0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldlg;
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v0
+
+    const/16 v1, 0xb
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v1, 0xc
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v1, 0xd
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v1, 0xe
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+
+    const-string v1, "UTC"
+
+    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
+
+    return-object v0
+.end method
+
+.method public static c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    .locals 3
+
+    const-string v0, "UTC"
+
+    invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
+
+    move-result-object v0
+
+    if-nez p0, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    return-object v0
 .end method

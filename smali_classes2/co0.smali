@@ -1,190 +1,339 @@
 .class public final Lco0;
-.super Landroid/widget/FrameLayout;
+.super Ljef;
 .source "SourceFile"
-
-# interfaces
-.implements Ljig;
 
 
 # instance fields
-.field public final a:Lhzd;
+.field public final synthetic F0:I
 
-.field public final b:Loxd;
-
-.field public final c:Landroid/graphics/drawable/GradientDrawable;
-
-.field public final d:Landroid/widget/TextView;
-
-.field public final o:Landroid/widget/TextView;
-
-.field public final s0:Lcom/facebook/drawee/view/SimpleDraweeView;
+.field public G0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 7
+.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Ls82;)V
+    .locals 1
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    const/4 v0, 0x5
 
-    new-instance v0, Lhzd;
+    iput v0, p0, Lco0;->F0:I
 
-    invoke-direct {v0}, Lhzd;-><init>()V
+    .line 12
+    new-instance v0, Lag6;
 
-    iput-object v0, p0, Lco0;->a:Lhzd;
+    invoke-direct {v0, p1, p2}, Lag6;-><init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
 
-    const/16 v1, 0x20
+    .line 13
+    invoke-direct {p0, v0}, Ltsd;-><init>(Landroid/view/View;)V
 
-    int-to-float v1, v1
+    .line 14
+    iput-object p3, p0, Lco0;->G0:Ljava/lang/Object;
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    return-void
+.end method
 
-    move-result-object v2
+.method public constructor <init>(Landroid/content/Context;Lmf6;)V
+    .locals 1
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/4 v0, 0x3
 
-    move-result-object v2
+    iput v0, p0, Lco0;->F0:I
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    .line 6
+    new-instance v0, Lvf6;
 
-    mul-float/2addr v2, v1
+    invoke-direct {v0, p1}, Lvf6;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v2}, Ln7j;->c(F)I
+    .line 7
+    invoke-direct {p0, v0}, Ltsd;-><init>(Landroid/view/View;)V
 
-    move-result v2
+    .line 8
+    iput-object p2, p0, Lco0;->G0:Ljava/lang/Object;
 
-    if-gtz v2, :cond_0
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lmf6;B)V
+    .locals 0
+
+    const/4 p3, 0x0
+
+    iput p3, p0, Lco0;->F0:I
+
+    .line 9
+    new-instance p3, Lbo0;
+
+    invoke-direct {p3, p1}, Lbo0;-><init>(Landroid/content/Context;)V
+
+    .line 10
+    invoke-direct {p0, p3}, Ltsd;-><init>(Landroid/view/View;)V
+
+    .line 11
+    iput-object p2, p0, Lco0;->G0:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lz83;)V
+    .locals 2
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Lco0;->F0:I
+
+    .line 15
+    new-instance v0, Lof6;
+
+    .line 16
+    invoke-direct {v0, p1}, Lpab;-><init>(Landroid/content/Context;)V
+
+    .line 17
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v1, -0x1
+
+    invoke-direct {p1, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 18
+    invoke-direct {p0, v0}, Ltsd;-><init>(Landroid/view/View;)V
+
+    .line 19
+    iput-object p2, p0, Lco0;->G0:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Landroid/view/View;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x6
+
+    iput v0, p0, Lco0;->F0:I
+
+    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/widget/FrameLayout;Lgw1;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lco0;->F0:I
+
+    .line 4
+    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
+
+    .line 5
+    iput-object p2, p0, Lco0;->G0:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ls91;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lco0;->F0:I
+
+    .line 2
+    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
+
+    .line 3
+    iput-object p1, p0, Lco0;->G0:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final y(Lud8;)V
+    .locals 8
+
+    iget v0, p0, Lco0;->F0:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lip8;
+
+    iput-object p1, p0, Lco0;->G0:Ljava/lang/Object;
+
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iget-object p1, p1, Lip8;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lwf6;
+
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+
+    instance-of v1, v0, Lag6;
 
     const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lag6;
 
     goto :goto_0
 
     :cond_0
-    new-instance v3, Loxd;
-
-    invoke-direct {v3, v2, v2}, Loxd;-><init>(II)V
-
-    move-object v2, v3
+    move-object v0, v2
 
     :goto_0
-    iput-object v2, p0, Lco0;->b:Loxd;
+    if-nez v0, :cond_1
 
-    new-instance v2, Landroid/graphics/drawable/GradientDrawable;
+    goto :goto_2
 
-    invoke-direct {v2}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+    :cond_1
+    instance-of v1, p1, Lcg6;
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    if-eqz v1, :cond_2
 
-    move-result-object v3
+    move-object v2, p1
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v2, Lcg6;
 
-    move-result-object v3
+    :cond_2
+    if-eqz v2, :cond_4
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    iget-object p1, v2, Lcg6;->a:Ljava/util/ArrayList;
 
-    const/high16 v4, 0x41a00000    # 20.0f
+    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
-    mul-float/2addr v3, v4
+    move-result v1
 
-    invoke-virtual {v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+    if-nez v1, :cond_3
 
-    iput-object v2, p0, Lco0;->c:Landroid/graphics/drawable/GradientDrawable;
+    const/4 v1, 0x0
 
-    new-instance v2, Landroid/widget/TextView;
+    goto :goto_1
 
-    invoke-direct {v2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    :cond_3
+    const/16 v1, 0x8
 
-    sget v3, Lj7d;->oneme_folder_widget_title:I
+    :goto_1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
+    iget-object v1, v0, Lag6;->V1:Lnf6;
 
-    const/4 v3, 0x2
+    invoke-virtual {v1, p1}, Lnd8;->F(Ljava/util/List;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setMaxLines(I)V
+    iget-object p1, p0, Lco0;->G0:Ljava/lang/Object;
 
-    sget-object v4, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+    check-cast p1, Lyf6;
 
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+    invoke-virtual {v0, p1}, Lag6;->setListener(Lyf6;)V
 
-    sget-object v5, Lj1h;->v:Lhhg;
+    :cond_4
+    :goto_2
+    return-void
 
-    invoke-static {v5, v2}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
+    :pswitch_1
+    check-cast p1, Lwf6;
 
-    iput-object v2, p0, Lco0;->d:Landroid/widget/TextView;
+    iget-object p1, p0, Ltsd;->a:Landroid/view/View;
 
-    new-instance v5, Landroid/widget/TextView;
+    instance-of v0, p1, Lof6;
 
-    invoke-direct {v5, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    if-eqz v0, :cond_5
 
-    sget v6, Lj7d;->oneme_folder_widget_description:I
+    check-cast p1, Lof6;
 
-    invoke-virtual {v5, v6}, Landroid/view/View;->setId(I)V
+    goto :goto_3
 
-    invoke-virtual {v5, v3}, Landroid/widget/TextView;->setMaxLines(I)V
+    :cond_5
+    const/4 p1, 0x0
 
-    invoke-virtual {v5, v4}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+    :goto_3
+    if-nez p1, :cond_6
 
-    sget-object v3, Lj1h;->j:Lhhg;
+    goto :goto_4
 
-    invoke-static {v3, v5}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
+    :cond_6
+    sget v0, Lv5e;->E0:I
 
-    iput-object v5, p0, Lco0;->o:Landroid/widget/TextView;
+    invoke-virtual {p1, v0}, Lpab;->setIcon(I)V
 
-    new-instance v3, Lcom/facebook/drawee/view/SimpleDraweeView;
+    sget v0, Lhdd;->chats_list_empty_state_title:I
 
-    invoke-direct {v3, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;-><init>(Landroid/content/Context;)V
+    new-instance v1, Llhg;
 
-    sget p1, Lj7d;->oneme_folder_widget_icon:I
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
 
-    invoke-virtual {v3, p1}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p1, v1}, Lpab;->setTitle(Lqhg;)V
 
-    sget-object p1, Lkp6;->a:Lgj7;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1}, Lgj7;->a()Le9c;
+    move-result-object v0
 
-    move-result-object p1
+    sget v1, Lhdd;->chats_list_empty_state_action:I
 
-    iput-object v0, p1, Lw0;->d:Lq2g;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    iput-boolean v0, p1, Lw0;->h:Z
+    new-instance v1, Lc6;
 
-    invoke-virtual {p1}, Lw0;->a()Ld9c;
+    const/16 v2, 0x1c
 
-    move-result-object p1
+    invoke-direct {v1, v2, p0}, Lc6;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v3, p1}, Ln85;->setController(Lh85;)V
+    invoke-virtual {p1, v0, v1}, Lpab;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
 
-    iput-object v3, p0, Lco0;->s0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    :goto_4
+    return-void
 
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+    :pswitch_2
+    check-cast p1, Luf6;
 
-    const/4 v0, -0x2
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    invoke-direct {p1, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    check-cast v0, Lvf6;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iget-object v1, p1, Luf6;->b:Ljava/lang/String;
 
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+    iget-object v2, p1, Luf6;->c:Ljava/lang/CharSequence;
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    iget-object v3, p1, Luf6;->d:Ljava/lang/String;
 
-    move-result-object v4
+    iget-object v4, v0, Lvf6;->t0:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object v5, v0, Lvf6;->a:Lb0e;
 
-    move-result-object v4
+    iget-object v6, v0, Lvf6;->d:Landroid/widget/TextView;
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    mul-float/2addr v4, v1
+    iget-object v1, v0, Lvf6;->o:Landroid/widget/TextView;
 
-    invoke-static {v4}, Ln7j;->c(F)I
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    move-result v4
+    iget-object v1, v0, Lvf6;->c:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v1, Le7g;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v1, v2}, Lzii;-><init>(I)V
+
+    const/16 v2, 0x14
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -194,439 +343,342 @@
 
     iget v6, v6, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v1, v6
+    mul-float/2addr v6, v2
 
-    invoke-static {v1}, Ln7j;->c(F)I
+    invoke-static {v6}, Lq7j;->c(F)I
 
-    move-result v1
+    move-result v6
 
-    invoke-direct {p1, v4, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {p0, v3, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v7
 
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-direct {p1, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    move-result-object v7
 
-    invoke-virtual {p0, v2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
 
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+    mul-float/2addr v2, v7
 
-    invoke-direct {p1, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-static {v2}, Lq7j;->c(F)I
 
-    invoke-virtual {p0, v5, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move-result v2
+
+    iput v6, v1, Le7g;->c:I
+
+    iput v2, v1, Le7g;->d:I
+
+    new-instance v2, Lf7g;
+
+    invoke-direct {v2, v1}, Lf7g;-><init>(Le7g;)V
+
+    const/4 v1, 0x0
+
+    if-eqz v3, :cond_7
+
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ldj7;->d(Landroid/net/Uri;)Ldj7;
+
+    move-result-object v3
+
+    iput-object v2, v3, Ldj7;->f:Lth7;
+
+    iget-object v2, v0, Lvf6;->b:Liyd;
+
+    iput-object v2, v3, Ldj7;->d:Liyd;
+
+    invoke-virtual {v3}, Ldj7;->a()Lcj7;
+
+    move-result-object v2
+
+    goto :goto_5
+
+    :cond_7
+    move-object v2, v1
+
+    :goto_5
+    if-eqz v2, :cond_9
+
+    invoke-static {}, Lhp6;->i()Loi7;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v6, Lni7;
+
+    invoke-direct {v6, v3, v2, v1}, Lni7;-><init>(Loi7;Lcj7;Ljava/lang/String;)V
+
+    invoke-virtual {v5, v6}, Lb0e;->a(Li4g;)V
+
+    invoke-virtual {v4}, Lq85;->getController()Lk85;
+
+    move-result-object v1
+
+    if-nez v1, :cond_8
+
+    sget-object v1, Lhp6;->a:Lni7;
+
+    invoke-virtual {v1}, Lni7;->a()Ly9c;
+
+    move-result-object v1
+
+    iput-object v5, v1, Lv0;->d:Li4g;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Lv0;->h:Z
+
+    invoke-virtual {v1}, Lv0;->a()Lx9c;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Lq85;->setController(Lk85;)V
+
+    :cond_8
+    const/4 v1, 0x0
+
+    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_6
+
+    :cond_9
+    invoke-virtual {v4, v1}, Lq85;->setController(Lk85;)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :goto_6
+    new-instance v1, Lub;
+
+    const/16 v2, 0x1d
+
+    invoke-direct {v1, p0, v2, p1}, Lub;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v0, v1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
-.end method
 
+    :pswitch_3
+    check-cast p1, Luf1;
 
-# virtual methods
-.method public final onAttachedToWindow()V
-    .locals 1
+    iget-boolean p1, p1, Luf1;->a:Z
 
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+    if-eqz p1, :cond_a
 
-    sget-object v0, Ldc3;->s0:Lole;
+    sget p1, Lb7b;->m0:I
 
-    invoke-virtual {v0, p0}, Lole;->n(Landroid/view/View;)Lplb;
+    goto :goto_7
 
-    move-result-object v0
+    :cond_a
+    sget p1, Lb7b;->n0:I
 
-    invoke-virtual {p0, v0}, Lco0;->onThemeChanged(Lplb;)V
+    :goto_7
+    iget-object v0, p0, Lco0;->G0:Ljava/lang/Object;
+
+    check-cast v0, Lgw1;
+
+    invoke-virtual {v0, p1}, Lgw1;->setTitle(I)V
 
     return-void
-.end method
 
-.method public final onLayout(ZIIII)V
-    .locals 4
+    :pswitch_4
+    check-cast p1, Lr91;
 
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+    iget-object v0, p0, Lco0;->G0:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v0, Ls91;
 
-    const/4 p2, 0x2
+    iget-object p1, p1, Lr91;->b:Landroid/text/SpannableStringBuilder;
 
-    div-int/2addr p1, p2
-
-    iget-object p3, p0, Lco0;->d:Landroid/widget/TextView;
-
-    invoke-virtual {p3}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p4
-
-    iget-object p5, p0, Lco0;->o:Landroid/widget/TextView;
-
-    invoke-virtual {p5}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, p4
-
-    int-to-float p4, p2
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, p4
-
-    invoke-static {v1}, Ln7j;->c(F)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    div-int/2addr v1, p2
-
-    sub-int/2addr p1, v1
-
-    const/16 v0, 0x18
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Ln7j;->c(F)I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0xc
-
-    invoke-static {p3, v1, p1, v2, v3}, Lv5j;->e(Landroid/view/View;IIII)V
-
-    invoke-virtual {p3}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p3
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {p4, v1, p3, p1}, Ln0c;->i(FFII)I
-
-    move-result p1
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p3, v0
-
-    invoke-static {p3}, Ln7j;->c(F)I
-
-    move-result p3
-
-    invoke-static {p5, p3, p1, v2, v3}, Lv5j;->e(Landroid/view/View;IIII)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p1
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v0, p3, p1}, Lzy4;->q(FFI)I
-
-    move-result p1
-
-    iget-object p3, p0, Lco0;->s0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-    invoke-virtual {p3}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p4
-
-    sub-int/2addr p1, p4
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p4
-
-    div-int/2addr p4, p2
-
-    invoke-virtual {p3}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p5
-
-    div-int/2addr p5, p2
-
-    sub-int/2addr p4, p5
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p5
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v0, v1, p5}, Lzy4;->q(FFI)I
-
-    move-result p5
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    div-int/2addr v0, p2
-
-    invoke-virtual {p3}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    div-int/2addr v1, p2
-
-    add-int/2addr v1, v0
-
-    invoke-virtual {p3, p1, p4, p5, v1}, Landroid/view/View;->layout(IIII)V
+    invoke-virtual {v0, p1}, Ls91;->setLabel(Ljava/lang/CharSequence;)V
 
     return-void
-.end method
 
-.method public final onMeasure(II)V
-    .locals 7
+    :pswitch_5
+    check-cast p1, Luf6;
 
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    move-result p1
+    check-cast v0, Lbo0;
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    iget-object v1, p1, Luf6;->b:Ljava/lang/String;
 
-    move-result p2
+    iget-object v2, p1, Luf6;->c:Ljava/lang/CharSequence;
 
-    const/16 v0, 0x18
+    iget-object v3, p1, Luf6;->d:Ljava/lang/String;
 
-    int-to-float v0, v0
+    iget-object v4, v0, Lbo0;->t0:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    iget-object v5, v0, Lbo0;->a:Lb0e;
 
-    move-result-object v1
+    iget-object v6, v0, Lbo0;->d:Landroid/widget/TextView;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    move-result-object v1
+    iget-object v1, v0, Lbo0;->o:Landroid/widget/TextView;
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const/4 v2, 0x2
+    iget-object v1, v0, Lbo0;->c:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-static {v0, v1, v2, p1}, Lzy4;->d(FFII)I
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    move-result v1
+    new-instance v1, Le7g;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v1, v2}, Lzii;-><init>(I)V
 
     const/16 v2, 0x20
 
     int-to-float v2, v2
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v6
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v3
+    move-result-object v6
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v2, v3, v1}, Lzy4;->q(FFI)I
+    mul-float/2addr v6, v2
 
-    move-result v1
+    invoke-static {v6}, Lq7j;->c(F)I
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    move-result v6
 
-    move-result-object v3
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    move-result-object v7
 
-    move-result-object v3
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    move-result-object v7
 
-    invoke-static {v0, v3, v1}, Lzy4;->q(FFI)I
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
 
-    move-result v0
+    mul-float/2addr v2, v7
 
-    const/high16 v1, -0x80000000
-
-    invoke-static {v0, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    invoke-static {v4, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v5
-
-    iget-object v6, p0, Lco0;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v6, v3, v5}, Landroid/view/View;->measure(II)V
-
-    invoke-static {v0, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v0
-
-    invoke-static {v4, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v1
-
-    iget-object v3, p0, Lco0;->o:Landroid/widget/TextView;
-
-    invoke-virtual {v3, v0, v1}, Landroid/view/View;->measure(II)V
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Ln7j;->c(F)I
-
-    move-result v0
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    invoke-static {v0, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v0
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Ln7j;->c(F)I
+    invoke-static {v2}, Lq7j;->c(F)I
 
     move-result v2
 
-    invoke-static {v2, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    iput v6, v1, Le7g;->c:I
 
-    move-result v1
+    iput v2, v1, Le7g;->d:I
 
-    iget-object v2, p0, Lco0;->s0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    new-instance v2, Lf7g;
 
-    invoke-virtual {v2, v0, v1}, Landroid/view/View;->measure(II)V
+    invoke-direct {v2, v1}, Lf7g;-><init>(Le7g;)V
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    const/4 v1, 0x0
+
+    if-eqz v3, :cond_b
+
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ldj7;->d(Landroid/net/Uri;)Ldj7;
+
+    move-result-object v3
+
+    iput-object v2, v3, Ldj7;->f:Lth7;
+
+    iget-object v2, v0, Lbo0;->b:Liyd;
+
+    iput-object v2, v3, Ldj7;->d:Liyd;
+
+    invoke-virtual {v3}, Ldj7;->a()Lcj7;
+
+    move-result-object v2
+
+    goto :goto_8
+
+    :cond_b
+    move-object v2, v1
+
+    :goto_8
+    if-eqz v2, :cond_d
+
+    invoke-static {}, Lhp6;->i()Loi7;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v6, Lni7;
+
+    invoke-direct {v6, v3, v2, v1}, Lni7;-><init>(Loi7;Lcj7;Ljava/lang/String;)V
+
+    invoke-virtual {v5, v6}, Lb0e;->a(Li4g;)V
+
+    invoke-virtual {v4}, Lq85;->getController()Lk85;
+
+    move-result-object v1
+
+    if-nez v1, :cond_c
+
+    sget-object v1, Lhp6;->a:Lni7;
+
+    invoke-virtual {v1}, Lni7;->a()Ly9c;
+
+    move-result-object v1
+
+    iput-object v5, v1, Lv0;->d:Li4g;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Lv0;->h:Z
+
+    invoke-virtual {v1}, Lv0;->a()Lx9c;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Lq85;->setController(Lk85;)V
+
+    :cond_c
+    const/4 v1, 0x0
+
+    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_9
+
+    :cond_d
+    invoke-virtual {v4, v1}, Lq85;->setController(Lk85;)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :goto_9
+    new-instance v1, Lub;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p0, v2, p1}, Lub;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v0, v1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
-.end method
 
-.method public final onThemeChanged(Lplb;)V
-    .locals 6
+    nop
 
-    invoke-interface {p1}, Lplb;->getText()Lifg;
-
-    move-result-object v0
-
-    iget v0, v0, Lifg;->e:I
-
-    iget-object v1, p0, Lco0;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {p1}, Lplb;->getText()Lifg;
-
-    move-result-object v0
-
-    iget v0, v0, Lifg;->h:I
-
-    iget-object v1, p0, Lco0;->o:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {p1}, Lplb;->b()Lxf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lxf0;->i:I
-
-    iget-object v1, p0, Lco0;->c:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    float-to-double v2, v0
-
-    const-wide/high16 v4, 0x3fe0000000000000L    # 0.5
-
-    mul-double/2addr v2, v4
-
-    invoke-static {v2, v3}, Ln7j;->b(D)I
-
-    move-result v0
-
-    invoke-interface {p1}, Lplb;->i()Ltyf;
-
-    move-result-object p1
-
-    iget p1, p1, Ltyf;->g:I
-
-    invoke-virtual {v1, v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,140 +1,208 @@
 .class public final Llnd;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 # interfaces
-.implements Lnnd;
+.implements Luig;
 
 
 # instance fields
-.field public final a:Lghg;
+.field public final a:Landroid/widget/TextView;
 
-.field public final b:Ljava/lang/Integer;
+.field public final b:Landroid/widget/TextView;
 
 
 # direct methods
-.method public constructor <init>(Lghg;Ljava/lang/Integer;)V
-    .locals 0
+.method public constructor <init>(Lh4b;Landroid/content/Context;)V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Llnd;->a:Lghg;
+    new-instance v0, Landroid/widget/TextView;
 
-    iput-object p2, p0, Llnd;->b:Ljava/lang/Integer;
+    invoke-direct {v0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x2
+
+    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const v3, 0x800013
+
+    iput v3, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    const/16 v3, 0xc
+
+    int-to-float v3, v3
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v3
+
+    invoke-static {v4}, Lq7j;->c(F)I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v1, Lhdd;->chats_list_search_recent_header:I
+
+    invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget-object v1, Lr1h;->n:Lrhg;
+
+    invoke-static {v1, v0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+
+    sget-object v1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lzlb;->getText()Lrfg;
+
+    move-result-object v4
+
+    iget v4, v4, Lrfg;->i:I
+
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iput-object v0, p0, Llnd;->a:Landroid/widget/TextView;
+
+    new-instance v4, Landroid/widget/TextView;
+
+    invoke-direct {v4, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v5, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const v2, 0x800015
+
+    iput v2, v5, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lq7j;->c(F)I
+
+    move-result v2
+
+    invoke-virtual {v5, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v2, Lhdd;->chats_list_search_recent_header_clear:I
+
+    invoke-virtual {p2, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget-object p2, Lr1h;->j:Lrhg;
+
+    invoke-static {p2, v4, v1, v4}, Lt02;->g(Lrhg;Landroid/widget/TextView;Lkme;Landroid/widget/TextView;)Lrfg;
+
+    move-result-object p2
+
+    iget p2, p2, Lrfg;->i:I
+
+    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    new-instance p2, Lblc;
+
+    const/4 v1, 0x5
+
+    invoke-direct {p2, v1, p1}, Lblc;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v4, p2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    iput-object v4, p0, Llnd;->b:Landroid/widget/TextView;
+
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 p2, 0x28
+
+    int-to-float p2, p2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v1
+
+    invoke-static {p2}, Lq7j;->c(F)I
+
+    move-result p2
+
+    const/4 v1, -0x1
+
+    invoke-direct {p1, v1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llnd;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Llnd;
-
-    iget-object v1, p0, Llnd;->a:Lghg;
-
-    iget-object v3, p1, Llnd;->a:Lghg;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Llnd;->b:Ljava/lang/Integer;
-
-    iget-object p1, p1, Llnd;->b:Ljava/lang/Integer;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onThemeChanged(Lzlb;)V
     .locals 2
 
-    iget-object v0, p0, Llnd;->a:Lghg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Llnd;->b:Ljava/lang/Integer;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(textSource="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Llnd;->a:Lghg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconRes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Llnd;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
     move-result-object v0
 
-    return-object v0
+    iget v0, v0, Lrfg;->i:I
+
+    iget-object v1, p0, Llnd;->a:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+
+    move-result-object p1
+
+    iget p1, p1, Lrfg;->i:I
+
+    iget-object v0, p0, Llnd;->b:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
 .end method

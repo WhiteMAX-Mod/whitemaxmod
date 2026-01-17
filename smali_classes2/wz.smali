@@ -1,67 +1,49 @@
-.class public abstract Lwz;
+.class public final Lwz;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lm20;
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public volatile b:Z
+.field public final b:Lvz;
+
+.field public final c:Lj35;
 
 
 # direct methods
-.method public constructor <init>(Lm20;)V
-    .locals 0
+.method public constructor <init>(Lj35;Lj35;Lj35;Lj35;Lj35;Lj35;Lj35;Lj35;)V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwz;->a:Lm20;
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Lwz;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance v1, Lvz;
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    move-object/from16 v8, p7
+
+    move-object/from16 v7, p8
+
+    invoke-direct/range {v1 .. v8}, Lvz;-><init>(Lj35;Lj35;Lj35;Lj35;Lj35;Lj35;Lj35;)V
+
+    iput-object v1, p0, Lwz;->b:Lvz;
+
+    iput-object p1, p0, Lwz;->c:Lj35;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lhy;Ljava/lang/Throwable;)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, p2}, Lhy;->onError(Ljava/lang/Throwable;)V
-
-    :cond_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lwz;->b:Z
-
-    return-void
-.end method
-
-.method public b()Lcxa;
-    .locals 2
-
-    iget-object v0, p0, Lwz;->a:Lm20;
-
-    iget-object v0, v0, Lm20;->s:Ljava/lang/String;
-
-    invoke-static {v0}, Lzoj;->c(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Lcxa;->k(Ljava/lang/Object;)Lxya;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
 .end method

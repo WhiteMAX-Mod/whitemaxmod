@@ -1,45 +1,81 @@
 .class public final Lzg5;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
-# interfaces
-.implements Lbbh;
+
+# instance fields
+.field public final a:Landroid/graphics/Rect;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lzg5;->a:Landroid/graphics/Rect;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Lbhg;
+.method public final draw(Landroid/graphics/Canvas;)V
     .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    return-void
+.end method
 
-    move-result p2
+.method public final getIntrinsicWidth()I
+    .locals 1
 
-    if-nez p2, :cond_0
+    const/4 v0, 0x0
 
-    const-class p2, Lzg5;
+    return v0
+.end method
 
-    invoke-static {p2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+.method public final getOpacity()I
+    .locals 1
 
-    move-result-object p2
+    const/4 v0, -0x2
 
-    invoke-static {p1, p2}, Lo3j;->a(ILgd3;)Ljava/lang/Integer;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final invalidateSelf()V
+    .locals 0
 
-    if-eqz p1, :cond_0
+    return-void
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+.method public final setAlpha(I)V
+    .locals 0
 
-    move-result p1
+    return-void
+.end method
 
-    new-instance p2, Lbhg;
+.method public final setBounds(Landroid/graphics/Rect;)V
+    .locals 1
 
-    invoke-direct {p2, p1}, Lbhg;-><init>(I)V
+    iget-object v0, p0, Lzg5;->a:Landroid/graphics/Rect;
 
-    return-object p2
+    invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    :cond_0
     const/4 p1, 0x0
 
-    return-object p1
+    iput p1, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-super {p0, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    return-void
 .end method

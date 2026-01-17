@@ -1,234 +1,283 @@
-.class public final synthetic Lo15;
-.super Ljava/lang/Object;
+.class public final Lo15;
+.super Lsw4;
 .source "SourceFile"
-
-# interfaces
-.implements Lmq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Lbjc;
 
-.field public final synthetic b:Lp15;
+.field public final d:Li4g;
 
-.field public final synthetic c:Lq15;
+.field public final e:Lko4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp15;Lq15;I)V
+.method public constructor <init>(Lzj0;Lbjc;Li4g;Lko4;)V
     .locals 0
 
-    iput p3, p0, Lo15;->a:I
+    invoke-direct {p0, p1}, Lsw4;-><init>(Lzj0;)V
 
-    iput-object p1, p0, Lo15;->b:Lp15;
+    iput-object p2, p0, Lo15;->c:Lbjc;
 
-    iput-object p2, p0, Lo15;->c:Lq15;
+    iput-object p3, p0, Lo15;->d:Li4g;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lo15;->e:Lko4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 14
+.method public final h(ILjava/lang/Object;)V
+    .locals 13
 
-    iget v0, p0, Lo15;->a:I
+    check-cast p2, Lei5;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lsw4;->b:Lzj0;
 
-    iget-object v0, p0, Lo15;->c:Lq15;
+    iget-object v1, p0, Lo15;->c:Lbjc;
 
-    iget-object v1, v0, Lq15;->c:Lwn5;
+    move-object v2, v1
 
-    iget-object v2, v0, Lq15;->b:Lbdc;
+    check-cast v2, Lhl0;
 
-    iget-object v3, p0, Lo15;->b:Lp15;
+    iget-object v3, v2, Lhl0;->c:Lejc;
 
-    iget-object v3, v3, Lp15;->e:Ljava/lang/Object;
+    iget-object v4, v2, Lhl0;->c:Lejc;
 
-    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
+    const-string v5, "DiskCacheWriteProducer"
 
-    move-result-object v3
+    invoke-interface {v3, v1, v5}, Lejc;->j(Lbjc;Ljava/lang/String;)V
 
-    check-cast v3, Ljava/util/Map;
+    invoke-static {p1}, Lzj0;->b(I)Z
 
-    new-instance v4, Ljava/util/LinkedHashMap;
+    move-result v3
 
-    invoke-interface {v3}, Ljava/util/Map;->size()I
+    const/4 v6, 0x0
 
-    move-result v5
+    if-nez v3, :cond_5
 
-    invoke-static {v5}, Lit8;->d(I)I
+    if-eqz p2, :cond_5
 
-    move-result v5
+    and-int/lit8 v3, p1, 0xa
 
-    invoke-direct {v4, v5}, Ljava/util/LinkedHashMap;-><init>(I)V
+    if-eqz v3, :cond_0
 
-    invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/Map$Entry;
-
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v6
-
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    move-object v8, v5
-
-    check-cast v8, Lvz5;
-
-    new-instance v7, Lkx0;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v5}, Lbdc;->b(I)Lmt8;
-
-    move-result-object v9
-
-    invoke-virtual {v2}, Lbdc;->c()Laj;
-
-    move-result-object v10
-
-    invoke-interface {v1}, Lwn5;->r()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v11
-
-    invoke-interface {v1}, Lwn5;->j()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v12
-
-    iget-object v13, v0, Lq15;->d:Lfi7;
-
-    invoke-direct/range {v7 .. v13}, Lkx0;-><init>(Lvz5;Lmt8;Laj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lfi7;)V
-
-    invoke-interface {v4, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
+    goto/16 :goto_2
 
     :cond_0
-    new-instance v0, Lfl7;
+    invoke-virtual {p2}, Lei5;->C0()V
 
-    invoke-direct {v0, v4}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    iget-object v3, p2, Lei5;->b:Lxh7;
 
-    return-object v0
+    sget-object v7, Lxh7;->c:Lxh7;
 
-    :pswitch_0
-    new-instance v5, Lkx0;
+    if-ne v3, v7, :cond_1
 
-    iget-object v0, p0, Lo15;->b:Lp15;
+    goto/16 :goto_2
 
-    iget-object v0, v0, Lp15;->c:Ljava/lang/Object;
+    :cond_1
+    iget-object v2, v2, Lhl0;->a:Lcj7;
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    iget-object v3, p0, Lo15;->e:Lko4;
 
-    move-result-object v0
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object v6, v0
+    iget-object v7, v2, Lcj7;->b:Landroid/net/Uri;
 
-    check-cast v6, Lvz5;
+    invoke-virtual {v3, v7}, Lko4;->E(Landroid/net/Uri;)Lddf;
 
-    iget-object v0, p0, Lo15;->c:Lq15;
+    move-result-object v3
 
-    iget-object v1, v0, Lq15;->b:Lbdc;
+    iget-object v7, p0, Lo15;->d:Li4g;
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lbdc;->b(I)Lmt8;
+    invoke-interface {v7}, Li4g;->get()Ljava/lang/Object;
 
     move-result-object v7
 
-    invoke-virtual {v1}, Lbdc;->c()Laj;
+    check-cast v7, Lr15;
+
+    iget-object v8, v7, Lr15;->d:Ljava/lang/Object;
+
+    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v8
 
-    iget-object v1, v0, Lq15;->c:Lwn5;
+    check-cast v8, Ldx0;
 
-    invoke-interface {v1}, Lwn5;->r()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v9
-
-    invoke-interface {v1}, Lwn5;->j()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v10
-
-    iget-object v11, v0, Lq15;->d:Lfi7;
-
-    invoke-direct/range {v5 .. v11}, Lkx0;-><init>(Lvz5;Lmt8;Laj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lfi7;)V
-
-    return-object v5
-
-    :pswitch_1
-    new-instance v6, Lkx0;
-
-    iget-object v0, p0, Lo15;->b:Lp15;
-
-    iget-object v0, v0, Lp15;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    check-cast v7, Lvz5;
-
-    iget-object v0, p0, Lo15;->c:Lq15;
-
-    iget-object v1, v0, Lq15;->b:Lbdc;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lbdc;->b(I)Lmt8;
-
-    move-result-object v8
-
-    invoke-virtual {v1}, Lbdc;->c()Laj;
+    invoke-virtual {v7}, Lr15;->a()Ldx0;
 
     move-result-object v9
 
-    iget-object v1, v0, Lq15;->c:Lwn5;
+    iget-object v7, v7, Lr15;->f:Ljava/lang/Object;
 
-    invoke-interface {v1}, Lwn5;->r()Ljava/util/concurrent/ExecutorService;
+    invoke-interface {v7}, Lo58;->getValue()Ljava/lang/Object;
 
-    move-result-object v10
+    move-result-object v7
 
-    invoke-interface {v1}, Lwn5;->j()Ljava/util/concurrent/ExecutorService;
+    check-cast v7, Lmk7;
+
+    invoke-static {v2, v8, v9, v7}, Lknj;->a(Lcj7;Ldx0;Ldx0;Lmk7;)Ldx0;
+
+    move-result-object v7
+
+    if-nez v7, :cond_2
+
+    new-instance v3, Lcom/facebook/imagepipeline/producers/DiskCacheDecision$DiskCacheDecisionNoDiskCacheChosenException;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v8, "Got no disk cache for CacheChoice: "
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, v2, Lcj7;->a:Laj7;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v3, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {v4, v1, v5, v3, v6}, Lejc;->d(Lbjc;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
+
+    invoke-virtual {v0, p1, p2}, Lzj0;->g(ILjava/lang/Object;)V
+
+    return-void
+
+    :cond_2
+    const-string v2, "Failed to schedule disk-cache write for %s"
+
+    iget-object v8, v7, Ldx0;->e:Ljava/util/concurrent/Executor;
+
+    const-string v9, "Check failed."
+
+    iget-object v10, v7, Ldx0;->g:Limf;
+
+    invoke-static {}, Lvp6;->e()Lup6;
+
+    invoke-static {p2}, Lei5;->B0(Lei5;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_4
+
+    monitor-enter v10
+
+    :try_start_0
+    invoke-static {p2}, Lei5;->B0(Lei5;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_3
+
+    iget-object v9, v10, Limf;->b:Ljava/lang/Object;
+
+    check-cast v9, Ljava/util/HashMap;
+
+    invoke-static {p2}, Lei5;->d(Lei5;)Lei5;
 
     move-result-object v11
 
-    iget-object v12, v0, Lq15;->d:Lfi7;
+    invoke-virtual {v9, v3, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct/range {v6 .. v12}, Lkx0;-><init>(Lvz5;Lmt8;Laj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lfi7;)V
+    move-result-object v9
 
-    return-object v6
+    check-cast v9, Lei5;
 
-    nop
+    invoke-static {v9}, Lei5;->l(Lei5;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v10}, Limf;->m()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v10
+
+    invoke-static {p2}, Lei5;->d(Lei5;)Lei5;
+
+    move-result-object v9
+
+    :try_start_1
+    new-instance v11, Lzi;
+
+    const/4 v12, 0x5
+
+    invoke-direct {v11, v7, v3, v9, v12}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-interface {v8, v11}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v7
+
+    iget-object v8, v3, Lddf;->a:Ljava/lang/String;
+
+    filled-new-array {v8}, [Ljava/lang/Object;
+
+    move-result-object v8
+
+    invoke-static {v7, v2, v8}, Lmt5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {v10, v3, p2}, Limf;->r(Lddf;Lei5;)V
+
+    invoke-static {v9}, Lei5;->l(Lei5;)V
+
+    :goto_0
+    invoke-interface {v4, v1, v5, v6}, Lejc;->a(Lbjc;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {v0, p1, p2}, Lzj0;->g(ILjava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_3
+    :try_start_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+
+    :goto_1
+    monitor-exit v10
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v9}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    :goto_2
+    invoke-interface {v4, v1, v5, v6}, Lejc;->a(Lbjc;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {v0, p1, p2}, Lzj0;->g(ILjava/lang/Object;)V
+
+    return-void
 .end method

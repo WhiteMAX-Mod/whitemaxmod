@@ -96,11 +96,11 @@
     :cond_0
     iget-object v1, p0, Lcom/my/tracker/core/o/a;->a:Lcom/my/tracker/core/EngineMiniCore;
 
-    new-instance v2, Lwha;
+    new-instance v2, Luha;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, p0, v3, p1}, Lwha;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v3, p1}, Luha;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-interface {v1, v2}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 
@@ -388,11 +388,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lzki;
+    new-instance v1, Lxli;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lzki;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;I)V
+    invoke-direct {v1, p1, v0, v2}, Lxli;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;I)V
 
     invoke-direct {p0, v1}, Lcom/my/tracker/core/o/a;->a(Lcom/my/tracker/core/utils/BiConsumer;)V
 
@@ -406,11 +406,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lzki;
+    new-instance v1, Lxli;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v0, v2}, Lzki;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;I)V
+    invoke-direct {v1, p1, v0, v2}, Lxli;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;I)V
 
     invoke-direct {p0, v1}, Lcom/my/tracker/core/o/a;->a(Lcom/my/tracker/core/utils/BiConsumer;)V
 

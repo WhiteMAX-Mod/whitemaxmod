@@ -1,5 +1,5 @@
 .class public final Lmo1;
-.super Ljp1;
+.super Lcp1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lmo1;
 
-    invoke-direct {v0}, Ljp1;-><init>()V
+    invoke-direct {v0}, Lcp1;-><init>()V
 
     sput-object v0, Lmo1;->D:Lmo1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x1dacb1bc
+    const v0, -0x460cc81d
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "CallFinished"
+    const-string v0, "OpenAddUserChatConfirmation"
 
     return-object v0
 .end method

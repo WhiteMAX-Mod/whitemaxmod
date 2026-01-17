@@ -4,161 +4,350 @@
 
 
 # direct methods
-.method public static a(Landroid/os/Bundle;Landroid/os/Bundle;)Ll8e;
-    .locals 5
+.method public static final a(Landroid/view/View;)V
+    .locals 2
 
-    if-nez p0, :cond_2
-
-    if-nez p1, :cond_0
-
-    new-instance p0, Ll8e;
-
-    invoke-direct {p0}, Ll8e;-><init>()V
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/util/HashMap;
-
-    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {p1}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p1, Ll8e;
-
-    invoke-direct {p1, p0}, Ll8e;-><init>(Ljava/util/HashMap;)V
-
-    return-object p1
-
-    :cond_2
-    const-class p1, Ll8e;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
-
-    const-string p1, "keys"
-
-    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    const-string v0, "values"
-
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    if-eqz p1, :cond_4
-
-    if-eqz p0, :cond_4
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0}, Landroid/content/res/Configuration;->getLayoutDirection()I
 
     move-result v0
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    const/4 v1, 0x1
 
-    move-result v1
+    if-ne v0, v1, :cond_0
 
-    if-ne v0, v1, :cond_4
+    goto :goto_0
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    :cond_0
+    const/4 v1, 0x2
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    :goto_0
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    if-eq v1, v0, :cond_2
 
-    move-result v1
+    const/4 v0, 0x2
 
-    const/4 v2, 0x0
+    if-ne v1, v0, :cond_1
 
-    :goto_1
-    if-ge v2, v1, :cond_3
-
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
+    const/4 v0, 0x0
 
     goto :goto_1
 
-    :cond_3
-    new-instance p0, Ll8e;
-
-    invoke-direct {p0, v0}, Ll8e;-><init>(Ljava/util/HashMap;)V
-
-    return-object p0
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Invalid bundle passed as restored state"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :cond_1
+    const/4 p0, 0x0
 
     throw p0
-.end method
 
-.method public static b(Landroid/graphics/drawable/Drawable;I)V
-    .locals 0
-
-    invoke-static {p0, p1}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
+    :cond_2
+    :goto_1
+    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutDirection(I)V
 
     return-void
 .end method
 
-.method public static c(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-    .locals 0
+.method public static final b(Landroid/view/View;)I
+    .locals 1
 
-    invoke-static {p0, p1}, Ls75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p0}, Lymj;->c(Landroid/view/View;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/View;->getRight()I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final c(Landroid/view/View;)Z
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLayoutDirection()I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final d(Landroid/view/View;Landroid/view/ViewGroup;IIII)V
+    .locals 1
+
+    invoke-static {p0}, Lymj;->c(Landroid/view/View;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v0
+
+    sub-int/2addr v0, p4
+
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result p1
+
+    sub-int/2addr p1, p2
+
+    invoke-virtual {p0, v0, p3, p1, p5}, Landroid/view/View;->layout(IIII)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p2, p3, p4, p5}, Landroid/view/View;->layout(IIII)V
 
     return-void
 .end method
 
-.method public static d(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
+.method public static final e(Lr4h;)V
+    .locals 3
 
-    invoke-static {p0, p1}, Ls75;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    new-instance v0, Lf43;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lf43;-><init>(I)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1}, Lf43;-><init>(I)V
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x1d
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lmy4;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2}, Lmy4;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lmy4;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2}, Lmy4;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lmy4;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lmy4;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+
+    new-instance v0, Lf43;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2}, Lf43;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
 
     return-void
 .end method

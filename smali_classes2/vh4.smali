@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JJJZLgz;ZIIII)V
+.method public constructor <init>(Ljava/lang/String;JJJZLdz;ZIIII)V
     .locals 12
 
     move-object v0, p0
@@ -33,7 +33,7 @@
 
     move/from16 v11, p12
 
-    invoke-direct/range {v0 .. v11}, Lkm0;-><init>(JJZJLgz;ZII)V
+    invoke-direct/range {v0 .. v11}, Lkm0;-><init>(JJZJLdz;ZII)V
 
     iput-object p1, p0, Lvh4;->i:Ljava/lang/String;
 
@@ -160,7 +160,7 @@
 
     iget-object v2, p0, Lvh4;->i:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
     move-result v0
 

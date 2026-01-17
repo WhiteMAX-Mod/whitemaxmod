@@ -31,7 +31,7 @@
         "size",
         "()I",
         "value",
-        "Lv2h;",
+        "Lb3h;",
         "submit",
         "(F)V",
         "get",
@@ -199,7 +199,7 @@
 
     mul-float/2addr v1, v2
 
-    invoke-static {v1}, Ln7j;->c(F)I
+    invoke-static {v1}, Lq7j;->c(F)I
 
     move-result v1
 

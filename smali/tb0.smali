@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final a:Lgd0;
+.field public final a:Lhd0;
 
 .field public final b:Lha0;
 
@@ -12,12 +12,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lgd0;Lha0;I)V
+.method public constructor <init>(Lhd0;Lha0;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltb0;->a:Lgd0;
+    iput-object p1, p0, Ltb0;->a:Lhd0;
 
     iput-object p2, p0, Ltb0;->b:Lha0;
 
@@ -26,12 +26,16 @@
     return-void
 .end method
 
-.method public static a()Ldii;
-    .locals 2
+.method public static a()Latc;
+    .locals 3
 
-    new-instance v0, Ldii;
+    new-instance v0, Latc;
 
-    invoke-direct {v0}, Ldii;-><init>()V
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Latc;-><init>(IZ)V
 
     const/4 v1, -0x1
 
@@ -39,27 +43,27 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Ldii;->d:Ljava/lang/Object;
+    iput-object v1, v0, Latc;->d:Ljava/lang/Object;
 
-    invoke-static {}, Lha0;->a()Ldd6;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ldd6;->c()Lha0;
+    invoke-static {}, Lha0;->a()Lbd6;
 
     move-result-object v1
 
-    iput-object v1, v0, Ldii;->c:Ljava/lang/Object;
-
-    invoke-static {}, Lgd0;->a()Lfd0;
+    invoke-virtual {v1}, Lbd6;->c()Lha0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lfd0;->a()Lgd0;
+    iput-object v1, v0, Latc;->c:Ljava/lang/Object;
+
+    invoke-static {}, Lhd0;->a()Lgd0;
 
     move-result-object v1
 
-    iput-object v1, v0, Ldii;->b:Ljava/lang/Object;
+    invoke-virtual {v1}, Lgd0;->a()Lhd0;
+
+    move-result-object v1
+
+    iput-object v1, v0, Latc;->b:Ljava/lang/Object;
 
     return-object v0
 .end method
@@ -84,11 +88,11 @@
 
     check-cast p1, Ltb0;
 
-    iget-object v1, p0, Ltb0;->a:Lgd0;
+    iget-object v1, p0, Ltb0;->a:Lhd0;
 
-    iget-object v3, p1, Ltb0;->a:Lgd0;
+    iget-object v3, p1, Ltb0;->a:Lhd0;
 
-    invoke-virtual {v1, v3}, Lgd0;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lhd0;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -119,9 +123,9 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Ltb0;->a:Lgd0;
+    iget-object v0, p0, Ltb0;->a:Lhd0;
 
-    invoke-virtual {v0}, Lgd0;->hashCode()I
+    invoke-virtual {v0}, Lhd0;->hashCode()I
 
     move-result v0
 
@@ -157,7 +161,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltb0;->a:Lgd0;
+    iget-object v1, p0, Ltb0;->a:Lhd0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -177,7 +181,7 @@
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

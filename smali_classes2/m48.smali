@@ -1,23 +1,87 @@
 .class public final Lm48;
-.super Lf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
-# static fields
-.field public static final c:Lm48;
+
+# instance fields
+.field public final a:I
+
+.field public final b:Landroid/graphics/Rect;
+
+.field public final c:Lkg2;
+
+.field public d:I
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Lkg2;)V
+    .locals 0
 
-    new-instance v0, Lm48;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xa
+    new-instance p1, Landroid/graphics/Rect;
 
-    invoke-direct {v0, v1}, Lf3;-><init>(I)V
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    sput-object v0, Lm48;->c:Lm48;
+    iput-object p1, p0, Lm48;->b:Landroid/graphics/Rect;
+
+    const/16 p1, 0x190
+
+    iput p1, p0, Lm48;->a:I
+
+    iput-object p2, p0, Lm48;->c:Lkg2;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onGlobalLayout()V
+    .locals 4
+
+    iget-object v0, p0, Lm48;->c:Lkg2;
+
+    iget-object v1, p0, Lm48;->b:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Lkg2;->accept(Ljava/lang/Object;)V
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    iget v1, p0, Lm48;->d:I
+
+    if-eqz v1, :cond_1
+
+    iget v2, p0, Lm48;->a:I
+
+    add-int v3, v0, v2
+
+    if-le v1, v3, :cond_0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lm48;->o:Z
+
+    goto :goto_0
+
+    :cond_0
+    add-int/2addr v1, v2
+
+    if-ge v1, v0, :cond_1
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lm48;->o:Z
+
+    :cond_1
+    :goto_0
+    iput v0, p0, Lm48;->d:I
 
     return-void
 .end method

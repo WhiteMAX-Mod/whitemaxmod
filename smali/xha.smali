@@ -1,20 +1,48 @@
-.class public final synthetic Lxha;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lxha;
+.super Lo84;
 
-# interfaces
-.implements Lcom/my/tracker/core/utils/BiConsumer;
+
+# instance fields
+.field public final synthetic X:Ldr7;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lxha;->X:Ldr7;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lcom/my/tracker/core/EngineCore;
+    iput-object p1, p0, Lxha;->d:Ljava/lang/Object;
 
-    check-cast p2, Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;
+    iget p1, p0, Lxha;->o:I
 
-    invoke-static {p1, p2}, Lcom/my/tracker/applifecycle/MyTrackerAppLifecycle;->a(Lcom/my/tracker/core/EngineCore;Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;)V
+    const/high16 v0, -0x80000000
 
-    return-void
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lxha;->o:I
+
+    iget-object p1, p0, Lxha;->X:Ldr7;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ldr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

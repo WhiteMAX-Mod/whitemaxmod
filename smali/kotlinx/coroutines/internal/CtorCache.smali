@@ -19,13 +19,13 @@
         "Lkotlin/Function1;",
         "Lkotlinx/coroutines/internal/Ctor;",
         "get",
-        "(Ljava/lang/Class;)Loq6;",
+        "(Ljava/lang/Class;)Lnq6;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public abstract get(Ljava/lang/Class;)Loq6;
+.method public abstract get(Ljava/lang/Class;)Lnq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,7 +51,7 @@
             "+",
             "Ljava/lang/Throwable;",
             ">;)",
-            "Loq6;"
+            "Lnq6;"
         }
     .end annotation
 .end method

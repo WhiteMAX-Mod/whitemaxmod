@@ -1,43 +1,48 @@
 .class public final Lzle;
-.super Landroidx/recyclerview/widget/RecyclerView;
-.source "SourceFile"
+.super Lo84;
+
+
+# instance fields
+.field public final synthetic X:Lyle;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lyle;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lzle;->X:Lyle;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    iput-object p1, p0, Lzle;->d:Ljava/lang/Object;
 
-    move-result v0
+    iget p1, p0, Lzle;->o:I
 
-    const/16 v1, 0x96
+    const/high16 v0, -0x80000000
 
-    int-to-float v1, v1
+    or-int/2addr p1, v0
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    iput p1, p0, Lzle;->o:I
 
-    move-result-object v2
+    iget-object p1, p0, Lzle;->X:Lyle;
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/4 v0, 0x0
 
-    move-result-object v2
+    invoke-virtual {p1, v0, p0}, Lyle;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    move-result-object p1
 
-    invoke-static {v1, v2, v0}, Lzy4;->q(FFI)I
-
-    move-result v0
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result p2
-
-    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
-
-    return-void
+    return-object p1
 .end method

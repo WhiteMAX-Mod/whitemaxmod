@@ -1,142 +1,201 @@
 .class public final Lqh9;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lh6f;
+.field public final synthetic X:Ljava/util/List;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final c:Lbc3;
+.field public final synthetic o:Lsh9;
 
 
 # direct methods
-.method public constructor <init>(Ljy0;Lbbg;)V
-    .locals 4
+.method public constructor <init>(Lsh9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqh9;->o:Lsh9;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lqh9;->X:Ljava/util/List;
 
-    const/4 v1, 0x7
+    const/4 p1, 0x2
 
-    invoke-static {v0, v0, v1}, Li6f;->b(III)Lh6f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqh9;->a:Lh6f;
-
-    check-cast p2, Lb9b;
-
-    invoke-virtual {p2}, Lb9b;->c()Llq8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lqh9;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget p2, Lqa5;->d:I
-
-    const/16 p2, 0x3e8
-
-    sget-object v1, Lwa5;->c:Lwa5;
-
-    invoke-static {p2, v1}, Lfnj;->h(ILwa5;)J
-
-    move-result-wide v1
-
-    new-instance p2, Luj0;
-
-    const/16 v3, 0x13
-
-    invoke-direct {p2, v3}, Luj0;-><init>(I)V
-
-    invoke-static {v0, v1, v2, p2}, Lnt0;->a(Lf76;JLcr6;)Lbc3;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lqh9;->c:Lbc3;
-
-    invoke-virtual {p1, p0}, Ljy0;->d(Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Llh9;
+    check-cast p1, Lzb4;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, p0, v1}, Llh9;-><init>(Lqh9;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1, p2}, Lqh9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x3
+    move-result-object p1
 
-    iget-object v3, p0, Lqh9;->b:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast p1, Lqh9;
 
-    invoke-static {v3, v1, v1, v0, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-void
+    invoke-virtual {p1, p2}, Lqh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final onEvent(Ldm8;)V
-    .locals 0
-    .annotation runtime Ljzf;
-    .end annotation
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    .line 1
-    invoke-virtual {p0}, Lqh9;->a()V
+    new-instance p1, Lqh9;
 
-    return-void
+    iget-object v0, p0, Lqh9;->o:Lsh9;
+
+    iget-object v1, p0, Lqh9;->X:Ljava/util/List;
+
+    invoke-direct {p1, v0, v1, p2}, Lqh9;-><init>(Lsh9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final onEvent(Lh5h;)V
-    .locals 0
-    .annotation runtime Ljzf;
-    .end annotation
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    .line 4
-    invoke-virtual {p0}, Lqh9;->a()V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-void
-.end method
+    iget-object p1, p0, Lqh9;->o:Lsh9;
 
-.method public final onEvent(Lp1c;)V
-    .locals 0
-    .annotation runtime Ljzf;
-    .end annotation
+    iget-object v0, p1, Lsh9;->x0:Lpld;
 
-    .line 2
-    invoke-virtual {p0}, Lqh9;->a()V
+    iget-object v0, v0, Lpld;->a:Llpf;
 
-    return-void
-.end method
+    invoke-interface {v0}, Llpf;->getValue()Ljava/lang/Object;
 
-.method public final onEvent(Lp64;)V
-    .locals 0
-    .annotation runtime Ljzf;
-    .end annotation
+    move-result-object v0
 
-    .line 3
-    invoke-virtual {p0}, Lqh9;->a()V
+    check-cast v0, Ljava/lang/Iterable;
 
-    return-void
-.end method
+    new-instance v1, Let;
 
-.method public final onEvent(Lra3;)V
-    .locals 0
-    .annotation runtime Ljzf;
-    .end annotation
+    const/4 v2, 0x2
 
-    .line 5
-    invoke-virtual {p0}, Lqh9;->a()V
+    invoke-direct {v1, v2, v0}, Let;-><init>(ILjava/lang/Object;)V
 
-    return-void
+    new-instance v0, Lu77;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lqh9;->X:Ljava/util/List;
+
+    invoke-direct {v0, v2, v3}, Lu77;-><init>(ILjava/util/List;)V
+
+    invoke-static {v1, v0}, Lqpe;->d(Lfpe;Lnq6;)Ls36;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lfpe;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v0, Lnh5;->a:Lnh5;
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbg9;
+
+    iget-wide v1, v1, Lbg9;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v2, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbg9;
+
+    iget-wide v3, v1, Lbg9;->a:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    move-object v0, v2
+
+    :goto_1
+    iput-object v0, p1, Lsh9;->u0:Ljava/util/Set;
+
+    iget-object v1, p1, Lsh9;->X:Lug9;
+
+    new-instance v2, Log9;
+
+    iget-wide v3, p1, Lsh9;->b:J
+
+    iget-object p1, p1, Lsh9;->c:Lzs2;
+
+    invoke-direct {v2, v3, v4, p1, v0}, Log9;-><init>(JLzs2;Ljava/util/Collection;)V
+
+    iget-object p1, v1, Lug9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v0, Ltg9;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Ltg9;-><init>(Lug9;Lpg9;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    invoke-static {p1, v3, v3, v0, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

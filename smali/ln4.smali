@@ -3,26 +3,35 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lef8;
+.implements Lqe8;
+.implements Lzx3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lof8;
 
-.field public final synthetic b:Lld;
+.field public final synthetic b:Le59;
 
-.field public final synthetic c:Lz59;
+.field public final synthetic c:Ljava/io/IOException;
+
+.field public final synthetic d:Z
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lld;Lz59;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lof8;Le59;Ljava/io/IOException;Z)V
     .locals 0
 
-    iput p3, p0, Lln4;->a:I
+    iput-object p1, p0, Lln4;->o:Ljava/lang/Object;
 
-    iput-object p1, p0, Lln4;->b:Lld;
+    iput-object p2, p0, Lln4;->a:Lof8;
 
-    iput-object p2, p0, Lln4;->c:Lz59;
+    iput-object p3, p0, Lln4;->b:Le59;
+
+    iput-object p4, p0, Lln4;->c:Ljava/io/IOException;
+
+    iput-boolean p5, p0, Lln4;->d:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,38 +40,60 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public accept(Ljava/lang/Object;)V
+    .locals 8
 
-    iget v0, p0, Lln4;->a:I
+    iget-object v0, p0, Lln4;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lto6;
 
-    iget-object v0, p0, Lln4;->c:Lz59;
+    move-object v1, p1
 
-    check-cast p1, Lmd;
+    check-cast v1, Led9;
 
-    iget-object v1, p0, Lln4;->b:Lld;
+    iget v2, v0, Lto6;->b:I
 
-    invoke-interface {p1, v1, v0}, Lmd;->c0(Lld;Lz59;)V
+    iget-object p1, v0, Lto6;->c:Ljava/lang/Object;
+
+    move-object v3, p1
+
+    check-cast v3, Lvc9;
+
+    iget-object v4, p0, Lln4;->a:Lof8;
+
+    iget-object v5, p0, Lln4;->b:Le59;
+
+    iget-object v6, p0, Lln4;->c:Ljava/io/IOException;
+
+    iget-boolean v7, p0, Lln4;->d:Z
+
+    invoke-interface/range {v1 .. v7}, Led9;->a(ILvc9;Lof8;Le59;Ljava/io/IOException;Z)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lln4;->c:Lz59;
+.method public invoke(Ljava/lang/Object;)V
+    .locals 7
 
-    check-cast p1, Lmd;
+    iget-object v0, p0, Lln4;->o:Ljava/lang/Object;
 
-    iget-object v1, p0, Lln4;->b:Lld;
+    move-object v2, v0
 
-    invoke-interface {p1, v1, v0}, Lmd;->T0(Lld;Lz59;)V
+    check-cast v2, Lid;
+
+    iget-boolean v6, p0, Lln4;->d:Z
+
+    move-object v1, p1
+
+    check-cast v1, Ljd;
+
+    iget-object v3, p0, Lln4;->a:Lof8;
+
+    iget-object v4, p0, Lln4;->b:Le59;
+
+    iget-object v5, p0, Lln4;->c:Ljava/io/IOException;
+
+    invoke-interface/range {v1 .. v6}, Ljd;->d0(Lid;Lof8;Le59;Ljava/io/IOException;Z)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

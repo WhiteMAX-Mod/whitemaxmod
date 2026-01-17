@@ -1,214 +1,222 @@
 .class public final Lzx4;
-.super Lf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfoc;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic d:Lay4;
+.field public final b:Llhg;
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lay4;I)V
+.method public constructor <init>(Ljava/lang/String;Llhg;I)V
     .locals 0
 
-    iput p2, p0, Lzx4;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p2, :pswitch_data_0
+    iput-object p1, p0, Lzx4;->a:Ljava/lang/String;
 
-    const p2, 0x7fffffff
+    iput-object p2, p0, Lzx4;->b:Llhg;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    iput-object p1, p0, Lzx4;->d:Lay4;
-
-    const/16 p1, 0xb
-
-    .line 2
-    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    .line 3
-    :pswitch_0
-    iput-object p1, p0, Lzx4;->d:Lay4;
-
-    const/16 p1, 0xb
-
-    const/4 p2, 0x0
-
-    .line 4
-    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Integer;Lay4;I)V
-    .locals 0
-
-    .line 1
     iput p3, p0, Lzx4;->c:I
-
-    iput-object p2, p0, Lzx4;->d:Lay4;
-
-    const/16 p2, 0xb
-
-    invoke-direct {p0, p2, p1}, Lf3;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget v0, p0, Lzx4;->c:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Ldc3;->s0:Lole;
-
-    iget-object p2, p0, Lzx4;->d:Lay4;
-
-    invoke-virtual {p1, p2}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Lay4;->onThemeChanged(Lplb;)V
+    goto :goto_1
 
     :cond_0
-    return-void
+    instance-of v0, p1, Lzx4;
 
-    :pswitch_0
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    sget-object p1, Ldc3;->s0:Lole;
-
-    iget-object p2, p0, Lzx4;->d:Lay4;
-
-    invoke-virtual {p1, p2}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Lay4;->onThemeChanged(Lplb;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    sget-object p1, Ldc3;->s0:Lole;
-
-    iget-object p2, p0, Lzx4;->d:Lay4;
-
-    invoke-virtual {p1, p2}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Lay4;->onThemeChanged(Lplb;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_2
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    sget-object p1, Ldc3;->s0:Lole;
-
-    iget-object p2, p0, Lzx4;->d:Lay4;
-
-    invoke-virtual {p1, p2}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Lay4;->onThemeChanged(Lplb;)V
-
-    :cond_3
-    return-void
-
-    :pswitch_3
-    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    iget-object p1, p0, Lzx4;->d:Lay4;
-
-    iget-object p2, p1, Lay4;->s0:Lgab;
-
-    invoke-virtual {p1}, Lay4;->getMaxCount()I
-
-    move-result v0
-
-    const v1, 0x7fffffff
-
-    if-eq v0, v1, :cond_4
-
-    new-instance v0, Landroid/text/InputFilter$LengthFilter;
-
-    invoke-virtual {p1}, Lay4;->getMaxCount()I
-
-    move-result p1
-
-    invoke-direct {v0, p1}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
-
-    filled-new-array {v0}, [Landroid/text/InputFilter$LengthFilter;
-
-    move-result-object p1
-
-    check-cast p1, [Landroid/text/InputFilter;
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_4
-    const/4 p1, 0x0
+    :cond_1
+    check-cast p1, Lzx4;
 
-    new-array p1, p1, [Landroid/text/InputFilter;
+    iget-object v0, p0, Lzx4;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lzx4;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lzx4;->b:Llhg;
+
+    iget-object v1, p1, Lzx4;->b:Llhg;
+
+    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lzx4;->c:I
+
+    iget p1, p1, Lzx4;->c:I
+
+    if-eq v0, p1, :cond_4
 
     :goto_0
-    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
+    const/4 p1, 0x0
 
-    :cond_5
-    return-void
+    return p1
 
-    nop
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/4 v0, 0x4
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lud8;)Z
+    .locals 4
+
+    const/4 v0, 0x4
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Lud8;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lzx4;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lzx4;->b:Llhg;
+
+    iget v2, v2, Llhg;->c:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v1, p0, Lzx4;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x4
+
+    return v0
+.end method
+
+.method public final q(Lud8;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lzx4;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DescriptionItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzx4;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hint="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzx4;->b:Llhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", limitCharacters="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, Lzx4;->c:I
+
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -33,10 +33,10 @@
         "Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;",
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
         "settings",
-        "Lcgd;",
+        "Lahd;",
         "log",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lcgd;)V",
+        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lahd;)V",
         "Lorg/json/JSONObject;",
         "",
         "key",
@@ -46,7 +46,7 @@
         "",
         "",
         "jsonObject",
-        "Lv2h;",
+        "Lb3h;",
         "getAndPut",
         "(Ljava/util/Map;Lorg/json/JSONObject;Ljava/lang/String;)V",
         "config",
@@ -92,14 +92,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerConfigProviderImpl$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerConfigProviderImpl$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerConfigProviderImpl;->Companion:Lru/ok/android/externcalls/sdk/rate/internal/RateManagerConfigProviderImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lcgd;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lahd;)V
     .locals 7
 
     new-instance v0, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;
@@ -116,7 +116,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;-><init>(Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;ILro4;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;-><init>(Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;ILso4;)V
 
     const-string v5, "RateManager"
 
@@ -130,7 +130,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lcgd;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lahd;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -195,7 +195,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
@@ -234,7 +234,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0, p2, v0}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;-><init>(Ljava/util/Map;ILro4;)V
+    invoke-direct {p1, v0, p2, v0}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;-><init>(Ljava/util/Map;ILso4;)V
 
     return-object p1
 .end method
@@ -280,7 +280,7 @@
     const/4 v5, 0x0
 
     .line 6
-    invoke-direct {v1, v2, v5, v3, v4}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;-><init>(Ljava/lang/Long;IILro4;)V
+    invoke-direct {v1, v2, v5, v3, v4}, Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;-><init>(Ljava/lang/Long;IILso4;)V
 
     .line 7
     new-instance v6, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;
@@ -308,7 +308,7 @@
     const/4 v10, 0x0
 
     .line 10
-    invoke-direct/range {v6 .. v12}, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;-><init>(Ljava/lang/Long;Ljava/lang/Long;IIILro4;)V
+    invoke-direct/range {v6 .. v12}, Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;-><init>(Ljava/lang/Long;Ljava/lang/Long;IIILso4;)V
 
     .line 11
     const-string v2, "candidate_type"

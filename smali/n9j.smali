@@ -1,37 +1,90 @@
 .class public final Ln9j;
-.super Li7j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final e:[B
+
+# static fields
+.field public static final a:Ln9j;
 
 
 # direct methods
-.method public constructor <init>([B)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ln9j;
 
-    const/16 v1, 0x19
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1, v0, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
+    sput-object v0, Ln9j;->a:Ln9j;
+
+    new-instance v0, Lvzi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+
+    const-class v1, Ln0j;
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Li7j;-><init>([B)V
+    const/4 v2, 0x2
 
-    iput-object p1, p0, Ln9j;->e:[B
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Z()[B
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Ln9j;->e:[B
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    return-object v0
+    move-result-object p1
+
+    throw p1
 .end method

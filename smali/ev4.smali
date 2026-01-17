@@ -4,22 +4,20 @@
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayDeque;
+.field public final a:Ldz6;
 
-.field public b:Z
+.field public final b:Lhlg;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ldz6;Lhlg;Lp1g;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayDeque;
+    iput-object p1, p0, Lev4;->a:Ldz6;
 
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lev4;->a:Ljava/util/ArrayDeque;
+    iput-object p2, p0, Lev4;->b:Lhlg;
 
     return-void
 .end method

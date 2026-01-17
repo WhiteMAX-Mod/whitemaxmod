@@ -1,24 +1,24 @@
 .class public final Lzd0;
-.super Lski;
+.super Lrli;
 .source "SourceFile"
 
 
 # instance fields
-.field public final D0:I
-
 .field public final E0:I
 
-.field public final F0:Landroid/graphics/Path;
+.field public final F0:I
 
-.field public final G0:Landroid/graphics/Paint;
+.field public final G0:Landroid/graphics/Path;
 
 .field public final H0:Landroid/graphics/Paint;
 
-.field public final I0:Landroid/graphics/Rect;
+.field public final I0:Landroid/graphics/Paint;
 
-.field public J0:I
+.field public final J0:Landroid/graphics/Rect;
 
-.field public K0:Lyd0;
+.field public K0:I
+
+.field public L0:Lyd0;
 
 
 # direct methods
@@ -27,13 +27,13 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lski;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lrli;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/16 v0, 0x14
 
     int-to-float v0, v0
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -45,55 +45,55 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Ln7j;->c(F)I
-
-    move-result v0
-
-    iput v0, p0, Lzd0;->D0:I
-
-    const/16 v0, 0x50
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Ln7j;->c(F)I
+    invoke-static {v0}, Lq7j;->c(F)I
 
     move-result v0
 
     iput v0, p0, Lzd0;->E0:I
 
+    const/16 v0, 0x50
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p0, Lzd0;->F0:I
+
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    iput-object v0, p0, Lzd0;->F0:Landroid/graphics/Path;
+    iput-object v0, p0, Lzd0;->G0:Landroid/graphics/Path;
 
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    sget-object v1, Ldc3;->s0:Lole;
+    sget-object v1, Lpc3;->t0:Lkme;
 
-    invoke-virtual {v1, p1}, Lole;->i(Landroid/content/Context;)Ldc3;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ldc3;->k()Lplb;
+    invoke-virtual {v1, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lplb;->b()Lxf0;
+    invoke-virtual {v1}, Lpc3;->j()Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
 
     move-result-object v1
 
@@ -105,15 +105,15 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iput-object v0, p0, Lzd0;->G0:Landroid/graphics/Paint;
+    iput-object v0, p0, Lzd0;->H0:Landroid/graphics/Paint;
 
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    sget v2, Lf5e;->c:I
+    sget v2, Ld6e;->c:I
 
-    invoke-static {p1, v2}, Lo74;->a(Landroid/content/Context;I)I
+    invoke-static {p1, v2}, Lr74;->a(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -129,7 +129,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -145,13 +145,13 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iput-object v0, p0, Lzd0;->H0:Landroid/graphics/Paint;
+    iput-object v0, p0, Lzd0;->I0:Landroid/graphics/Paint;
 
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lzd0;->I0:Landroid/graphics/Rect;
+    iput-object p1, p0, Lzd0;->J0:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -161,23 +161,23 @@
 .method public final a(Landroid/graphics/Matrix;)V
     .locals 3
 
-    invoke-super {p0, p1}, Lski;->a(Landroid/graphics/Matrix;)V
+    invoke-super {p0, p1}, Lrli;->a(Landroid/graphics/Matrix;)V
 
-    iget-object p1, p0, Lzd0;->K0:Lyd0;
+    iget-object p1, p0, Lzd0;->L0:Lyd0;
 
     if-eqz p1, :cond_0
 
     check-cast p1, Lone/me/mediapicker/crop/AvatarEditScreen;
 
-    iget-object v0, p1, Lone/me/mediapicker/crop/AvatarEditScreen;->Z:Ljkd;
+    iget-object v0, p1, Lone/me/mediapicker/crop/AvatarEditScreen;->Z:Ljld;
 
-    sget-object v1, Lone/me/mediapicker/crop/AvatarEditScreen;->u0:[Lp38;
+    sget-object v1, Lone/me/mediapicker/crop/AvatarEditScreen;->v0:[Lz28;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0, p1, v1}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
+    invoke-interface {v0, p1, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -191,34 +191,34 @@
     return-void
 .end method
 
-.method public final h(Lti7;)V
+.method public final h(Lai7;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lski;->h(Lti7;)V
+    invoke-super {p0, p1}, Lrli;->h(Lai7;)V
 
-    invoke-interface {p1}, Lti7;->getWidth()I
+    invoke-interface {p1}, Lai7;->getWidth()I
 
     move-result p1
 
-    iput p1, p0, Lzd0;->J0:I
+    iput p1, p0, Lzd0;->K0:I
 
-    invoke-virtual {p0}, Lski;->getZoomableController()Lpki;
-
-    move-result-object p1
-
-    check-cast p1, Ltd4;
-
-    invoke-virtual {p1}, Ltd4;->e()V
-
-    invoke-virtual {p0}, Lski;->getZoomableController()Lpki;
+    invoke-virtual {p0}, Lrli;->getZoomableController()Loli;
 
     move-result-object p1
 
-    check-cast p1, Ltd4;
+    check-cast p1, Lqd4;
 
-    iget v0, p0, Lzd0;->J0:I
+    invoke-virtual {p1}, Lqd4;->e()V
 
-    invoke-virtual {p1, v0}, Ltd4;->d(I)V
+    invoke-virtual {p0}, Lrli;->getZoomableController()Loli;
+
+    move-result-object p1
+
+    check-cast p1, Lqd4;
+
+    iget v0, p0, Lzd0;->K0:I
+
+    invoke-virtual {p1, v0}, Lqd4;->d(I)V
 
     return-void
 .end method
@@ -226,11 +226,11 @@
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 7
 
-    invoke-super {p0, p1}, Lski;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lrli;->onDraw(Landroid/graphics/Canvas;)V
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    iget-object v0, p0, Lzd0;->F0:Landroid/graphics/Path;
+    iget-object v0, p0, Lzd0;->G0:Landroid/graphics/Path;
 
     sget-object v1, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
@@ -248,7 +248,7 @@
 
     int-to-float v5, v0
 
-    iget-object v6, p0, Lzd0;->G0:Landroid/graphics/Paint;
+    iget-object v6, p0, Lzd0;->H0:Landroid/graphics/Paint;
 
     const/4 v2, 0x0
 
@@ -260,7 +260,7 @@
 
     invoke-virtual {v1}, Landroid/graphics/Canvas;->restore()V
 
-    iget-object p1, p0, Lzd0;->I0:Landroid/graphics/Rect;
+    iget-object p1, p0, Lzd0;->J0:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->centerX()I
 
@@ -282,7 +282,7 @@
 
     int-to-float p1, p1
 
-    iget-object v3, p0, Lzd0;->H0:Landroid/graphics/Paint;
+    iget-object v3, p0, Lzd0;->I0:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0, v2, p1, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -292,31 +292,31 @@
 .method public final onLayout(ZIIII)V
     .locals 0
 
-    invoke-super/range {p0 .. p5}, Lski;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Lrli;->onLayout(ZIIII)V
 
     move-object p1, p0
 
-    invoke-virtual {p0}, Lski;->getZoomableController()Lpki;
+    invoke-virtual {p0}, Lrli;->getZoomableController()Loli;
 
     move-result-object p2
 
-    check-cast p2, Ltd4;
+    check-cast p2, Lqd4;
 
-    invoke-virtual {p2}, Ltd4;->e()V
+    invoke-virtual {p2}, Lqd4;->e()V
 
-    iget p2, p1, Lzd0;->J0:I
+    iget p2, p1, Lzd0;->K0:I
 
     if-lez p2, :cond_0
 
-    invoke-virtual {p0}, Lski;->getZoomableController()Lpki;
+    invoke-virtual {p0}, Lrli;->getZoomableController()Loli;
 
     move-result-object p2
 
-    check-cast p2, Ltd4;
+    check-cast p2, Lqd4;
 
-    iget p3, p1, Lzd0;->J0:I
+    iget p3, p1, Lzd0;->K0:I
 
-    invoke-virtual {p2, p3}, Ltd4;->d(I)V
+    invoke-virtual {p2, p3}, Lqd4;->d(I)V
 
     :cond_0
     return-void
@@ -325,13 +325,13 @@
 .method public final onMeasure(II)V
     .locals 4
 
-    invoke-super {p0, p1, p2}, Ln85;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lq85;->onMeasure(II)V
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p1
 
-    iget p2, p0, Lzd0;->D0:I
+    iget p2, p0, Lzd0;->E0:I
 
     mul-int/lit8 p2, p2, 0x2
 
@@ -341,7 +341,7 @@
 
     move-result p2
 
-    iget v0, p0, Lzd0;->E0:I
+    iget v0, p0, Lzd0;->F0:I
 
     mul-int/lit8 v0, v0, 0x2
 
@@ -352,7 +352,7 @@
     move p1, p2
 
     :cond_0
-    iget-object p2, p0, Lzd0;->F0:Landroid/graphics/Path;
+    iget-object p2, p0, Lzd0;->G0:Landroid/graphics/Path;
 
     invoke-virtual {p2}, Landroid/graphics/Path;->reset()V
 
@@ -412,17 +412,17 @@
 
     add-int/2addr v2, p1
 
-    iget-object p1, p0, Lzd0;->I0:Landroid/graphics/Rect;
+    iget-object p1, p0, Lzd0;->J0:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p2, v0, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    invoke-virtual {p0}, Lski;->getZoomableController()Lpki;
+    invoke-virtual {p0}, Lrli;->getZoomableController()Loli;
 
     move-result-object p2
 
-    check-cast p2, Ltd4;
+    check-cast p2, Lqd4;
 
-    iput-object p1, p2, Ltd4;->m:Landroid/graphics/Rect;
+    iput-object p1, p2, Lqd4;->m:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -430,7 +430,7 @@
 .method public final setTransformChangeListener(Lyd0;)V
     .locals 0
 
-    iput-object p1, p0, Lzd0;->K0:Lyd0;
+    iput-object p1, p0, Lzd0;->L0:Lyd0;
 
     return-void
 .end method

@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public final a:Le19;
+.field public final a:Li09;
 
 .field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/IllegalStateException;Le19;)V
+.method public constructor <init>(Ljava/lang/IllegalStateException;Li09;)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -26,7 +26,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, p2, Le19;->a:Ljava/lang/String;
+    iget-object v1, p2, Li09;->a:Ljava/lang/String;
 
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -37,7 +37,7 @@
 
     invoke-direct {p0, v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object p2, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecDecoderException;->a:Le19;
+    iput-object p2, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecDecoderException;->a:Li09;
 
     instance-of p2, p1, Landroid/media/MediaCodec$CodecException;
 

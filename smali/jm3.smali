@@ -1,59 +1,71 @@
 .class public final Ljm3;
-.super Lkm3;
+.super Llm3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:I
+.field public final synthetic X:I
+
+.field public final synthetic Y:Lnm3;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lnm3;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Ljm3;->X:I
 
-    iput p1, p0, Ljm3;->d:I
+    iput-object p1, p0, Ljm3;->Y:Lnm3;
+
+    invoke-direct {p0, p1}, Llm3;-><init>(Lnm3;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)Lkm3;
-    .locals 0
+.method public final a(I)Ljava/lang/Object;
+    .locals 2
 
-    return-object p0
-.end method
+    iget v0, p0, Ljm3;->X:I
 
-.method public final b(JJ)Lkm3;
-    .locals 0
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
-.end method
+    iget-object v0, p0, Ljm3;->Y:Lnm3;
 
-.method public final c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lkm3;
-    .locals 0
+    invoke-virtual {v0}, Lnm3;->j()[Ljava/lang/Object;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public final d(ZZ)Lkm3;
-    .locals 0
+    aget-object p1, v0, p1
 
-    return-object p0
-.end method
+    return-object p1
 
-.method public final e(ZZ)Lkm3;
-    .locals 0
+    :pswitch_0
+    new-instance v0, Lmm3;
 
-    return-object p0
-.end method
+    iget-object v1, p0, Ljm3;->Y:Lnm3;
 
-.method public final f()I
-    .locals 1
+    invoke-direct {v0, v1, p1}, Lmm3;-><init>(Lnm3;I)V
 
-    iget v0, p0, Ljm3;->d:I
+    return-object v0
 
-    return v0
+    :pswitch_1
+    iget-object v0, p0, Ljm3;->Y:Lnm3;
+
+    invoke-virtual {v0}, Lnm3;->i()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,52 +1,29 @@
-.class public final synthetic Lvqf;
-.super Lw8;
+.class public final Lvqf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ler6;
 
+# instance fields
+.field public final a:Lb2e;
 
-# static fields
-.field public static final Z:Lvqf;
+.field public final b:Lai;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lb2e;)V
+    .locals 1
 
-    new-instance v0, Lvqf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    iput-object p1, p0, Lvqf;->a:Lb2e;
 
-    const/4 v2, 0x4
+    new-instance p1, Lai;
 
-    const/4 v3, 0x3
+    const/16 v0, 0x13
 
-    const-class v4, Lysb;
+    invoke-direct {p1, v0}, Lai;-><init>(I)V
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lw8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lvqf;->Z:Lvqf;
+    iput-object p1, p0, Lvqf;->b:Lai;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lerf;
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    sget-object p3, Larf;->G0:[Lp38;
-
-    new-instance p3, Lysb;
-
-    invoke-direct {p3, p1, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p3
 .end method

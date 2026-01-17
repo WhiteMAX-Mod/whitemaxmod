@@ -1,121 +1,385 @@
 .class public final Lpya;
-.super Lzm0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Le0b;
+.implements Lo25;
 
 
 # instance fields
-.field public final a:Lc0b;
+.field public final synthetic a:I
 
-.field public final b:[Ljava/lang/Object;
+.field public final b:Le0b;
 
-.field public c:I
+.field public final c:Lcr6;
 
-.field public d:Z
-
-.field public volatile o:Z
+.field public d:Lo25;
 
 
 # direct methods
-.method public constructor <init>(Lc0b;[Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Le0b;Lcr6;I)V
     .locals 0
 
+    iput p3, p0, Lpya;->a:I
+
+    iput-object p1, p0, Lpya;->b:Le0b;
+
+    iput-object p2, p0, Lpya;->c:Lcr6;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpya;->a:Lc0b;
-
-    iput-object p2, p0, Lpya;->b:[Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
-    .locals 1
+.method public final b()V
+    .locals 2
 
-    iget-object v0, p0, Lpya;->b:[Ljava/lang/Object;
+    iget v0, p0, Lpya;->a:I
 
-    array-length v0, v0
+    packed-switch v0, :pswitch_data_0
 
-    iput v0, p0, Lpya;->c:I
+    iget-object v0, p0, Lpya;->b:Le0b;
+
+    invoke-interface {v0}, Le0b;->b()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    sget-object v1, Ls25;->a:Ls25;
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v1, p0, Lpya;->d:Lo25;
+
+    iget-object v0, p0, Lpya;->b:Le0b;
+
+    invoke-interface {v0}, Le0b;->b()V
+
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Lo25;)V
+    .locals 1
+
+    iget v0, p0, Lpya;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    invoke-static {v0, p1}, Ls25;->h(Lo25;Lo25;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lpya;->d:Lo25;
+
+    iget-object p1, p0, Lpya;->b:Le0b;
+
+    invoke-interface {p1, p0}, Le0b;->c(Lo25;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    invoke-static {v0, p1}, Ls25;->h(Lo25;Lo25;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iput-object p1, p0, Lpya;->d:Lo25;
+
+    iget-object p1, p0, Lpya;->b:Le0b;
+
+    invoke-interface {p1, p0}, Le0b;->c(Lo25;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final dispose()V
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lpya;->a:I
 
-    iput-boolean v0, p0, Lpya;->o:Z
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    sget-object v0, Ls25;->a:Ls25;
+
+    iput-object v0, p0, Lpya;->d:Lo25;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final f()Z
+.method public final e()Z
     .locals 1
 
-    iget-boolean v0, p0, Lpya;->o:Z
+    iget v0, p0, Lpya;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    invoke-interface {v0}, Lo25;->e()Z
+
+    move-result v0
 
     return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    invoke-interface {v0}, Lo25;->e()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final isEmpty()Z
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 3
+
+    iget v0, p0, Lpya;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpya;->b:Le0b;
+
+    :try_start_0
+    iget-object v1, p0, Lpya;->c:Lcr6;
+
+    invoke-interface {v1, p1}, Lcr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/lang/NullPointerException;
+
+    const-string v2, "The supplied value is null"
+
+    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    invoke-interface {v0, v1}, Le0b;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v0, v1}, Le0b;->r(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Le0b;->b()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    invoke-static {v1}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v1}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Le0b;->onError(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    sget-object v1, Ls25;->a:Ls25;
+
+    if-ne v0, v1, :cond_1
+
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_1
+    iput-object v1, p0, Lpya;->d:Lo25;
+
+    iget-object v0, p0, Lpya;->b:Le0b;
+
+    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final r(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lpya;->c:I
+    iget v0, p0, Lpya;->a:I
 
-    iget-object v1, p0, Lpya;->b:[Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    array-length v1, v1
+    iget-object v0, p0, Lpya;->b:Le0b;
+
+    invoke-interface {v0, p1}, Le0b;->r(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    sget-object v1, Ls25;->a:Ls25;
 
     if-ne v0, v1, :cond_0
 
-    const/4 v0, 0x1
-
-    return v0
+    goto :goto_1
 
     :cond_0
-    const/4 v0, 0x0
+    :try_start_0
+    iget-object v0, p0, Lpya;->c:Lcr6;
 
-    return v0
-.end method
+    invoke-interface {v0, p1}, Lcr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public final poll()Ljava/lang/Object;
-    .locals 3
+    move-result-object p1
 
-    iget v0, p0, Lpya;->c:I
+    check-cast p1, Ljava/lang/Iterable;
 
-    iget-object v1, p0, Lpya;->b:[Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    array-length v2, v1
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    if-eq v0, v2, :cond_0
+    :goto_0
+    :try_start_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    add-int/lit8 v2, v0, 0x1
+    move-result v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    iput v2, p0, Lpya;->c:I
+    if-eqz v0, :cond_1
 
-    aget-object v0, v1, v0
+    :try_start_2
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string v1, "The array element is null"
+    move-result-object v0
+
+    const-string v1, "The iterator returned a null value"
 
     invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    return-object v0
+    iget-object v1, p0, Lpya;->b:Le0b;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-interface {v1, v0}, Le0b;->r(Ljava/lang/Object;)V
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public final q(I)I
-    .locals 0
+    :catchall_0
+    move-exception p1
 
-    const/4 p1, 0x1
+    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
 
-    iput-boolean p1, p0, Lpya;->d:Z
+    iget-object v0, p0, Lpya;->d:Lo25;
 
-    return p1
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    invoke-virtual {p0, p1}, Lpya;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    invoke-virtual {p0, p1}, Lpya;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catchall_2
+    move-exception p1
+
+    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lpya;->d:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    invoke-virtual {p0, p1}, Lpya;->onError(Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

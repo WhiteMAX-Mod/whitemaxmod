@@ -1,90 +1,95 @@
-.class public final Ltx9;
-.super Lb5g;
+.class public final synthetic Ltx9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lc1a;
+.field public final synthetic a:I
 
-.field public final synthetic o:Luz9;
+.field public final synthetic b:Lsz9;
+
+.field public final synthetic c:Lz98;
 
 
 # direct methods
-.method public constructor <init>(Luz9;Lc1a;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lsz9;Lz98;I)V
     .locals 0
 
-    iput-object p1, p0, Ltx9;->o:Luz9;
+    iput p3, p0, Ltx9;->a:I
 
-    iput-object p2, p0, Ltx9;->X:Lc1a;
+    iput-object p1, p0, Ltx9;->b:Lsz9;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Ltx9;->c:Lz98;
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lac4;
+    iget v0, p0, Ltx9;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ltx9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Ltx9;->b:Lsz9;
 
-    move-result-object p1
+    iget-object v0, v0, Lsz9;->L1:Lcm5;
 
-    check-cast p1, Ltx9;
+    sget-object v1, Lmw9;->c:Lmw9;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-object v2, p0, Ltx9;->c:Lz98;
 
-    invoke-virtual {p1, p2}, Ltx9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v2, Lx98;
 
-    return-object p2
-.end method
+    iget-object v2, v2, Lx98;->a:Ljava/lang/String;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p1, Ltx9;
+    const-string v1, ":call-join-preview?link="
 
-    iget-object v0, p0, Ltx9;->o:Luz9;
+    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, p0, Ltx9;->X:Lc1a;
+    move-result-object v1
 
-    invoke-direct {p1, v0, v1, p2}, Ltx9;-><init>(Luz9;Lc1a;Lkotlin/coroutines/Continuation;)V
+    :goto_0
+    invoke-static {v1, v0}, Lhc0;->n(Ljava/lang/String;Lcm5;)V
 
-    return-object p1
-.end method
+    sget-object v0, Lb3h;->a:Lb3h;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    return-object v0
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :pswitch_0
+    iget-object v0, p0, Ltx9;->b:Lsz9;
 
-    iget-object p1, p0, Ltx9;->X:Lc1a;
+    iget-object v0, v0, Lsz9;->L1:Lcm5;
 
-    iget-wide v1, p1, Lc1a;->a:J
+    sget-object v1, Lmw9;->c:Lmw9;
 
-    sget-object p1, Luz9;->U1:[Lp38;
+    iget-object v2, p0, Ltx9;->c:Lz98;
 
-    const/4 v5, 0x0
+    check-cast v2, Lx98;
 
-    iget-object v0, p0, Ltx9;->o:Luz9;
+    iget-object v2, v2, Lx98;->a:Ljava/lang/String;
 
-    const/4 v3, 0x1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v4, 0x1
+    const-string v1, ":call-join-preview?link="
 
-    invoke-virtual/range {v0 .. v5}, Luz9;->P(JZZZ)V
+    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    move-result-object v1
 
-    return-object p1
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

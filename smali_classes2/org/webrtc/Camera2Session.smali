@@ -840,7 +840,7 @@
 
     const-string v1, "getCameraCharacteristics(): "
 
-    invoke-static {v1, v0}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -924,7 +924,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lc12;->j(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4}, Lhc0;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

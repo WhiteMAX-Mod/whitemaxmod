@@ -1,108 +1,85 @@
-.class public abstract Lyh;
+.class public final Lyh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi;
 
-# static fields
-.field public static final a:Lxna;
 
-.field public static final b:Z
-
-.field public static final c:Luj;
-
-.field public static final d:Ljava/lang/Object;
+# instance fields
+.field public final synthetic a:Lzh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lzh;)V
+    .locals 0
 
-    sget-object v0, Lvh;->a:Lxna;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lyh;->a:Lxna;
-
-    const-string v0, "animoji.debug"
-
-    const-string v1, "false"
-
-    invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Liyf;->c0(Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    sput-boolean v0, Lyh;->b:Z
-
-    new-instance v0, Luj;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v2, Ljo4;->c:Lli;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v1, v0, Luj;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v1, v0, Luj;->b:Ljava/util/HashMap;
-
-    sput-object v0, Lyh;->c:Luj;
-
-    new-instance v0, Lj;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Lj;-><init>(I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
+    iput-object p1, p0, Lyh;->a:Lzh;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
 
-    if-nez p1, :cond_0
+# virtual methods
+.method public final a([Ljava/lang/Double;)V
+    .locals 7
 
-    const-string p1, ""
+    iget-object v0, p0, Lyh;->a:Lzh;
+
+    iget-object v1, v0, Lzh;->a:Ls11;
+
+    iget-object v1, v1, Ls11;->k0:Lcl1;
+
+    iget-object v1, v1, Lcl1;->a:Lxk1;
+
+    iget-object v1, v1, Lxk1;->a:Lsk1;
+
+    if-eqz v1, :cond_1
+
+    array-length v2, p1
+
+    new-array v3, v2, [F
+
+    const/4 v4, 0x0
+
+    :goto_0
+    if-ge v4, v2, :cond_0
+
+    aget-object v5, p1, v4
+
+    invoke-virtual {v5}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v5
+
+    double-to-float v5, v5
+
+    aput v5, v3, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Lyh;->a:Lxna;
+    iget-object p1, v0, Lzh;->h:Lbj;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p1, Lbj;->g:Landroid/os/Handler;
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v2, Lzi;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, p1, v1, v3, v4}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public final b()V
+    .locals 0
 
     return-void
 .end method

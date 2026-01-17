@@ -1,238 +1,137 @@
-.class public final Laf6;
-.super Ljava/lang/Object;
+.class public final enum Laf6;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:[Laf6;
+
+.field public static final synthetic Y:Lal5;
+
+.field public static final b:Ljava/util/Set;
+
+.field public static final enum c:Laf6;
+
+.field public static final enum d:Laf6;
+
+.field public static final enum o:Laf6;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/CharSequence;
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final d:Lic4;
-
-.field public final e:Ljava/util/Set;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Lic4;Ljava/util/Set;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Laf6;
 
-    iput-object p1, p0, Laf6;->a:Ljava/lang/String;
+    const-string v1, "HIDE_EMPTY"
 
-    iput-object p2, p0, Laf6;->b:Ljava/lang/CharSequence;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Laf6;->c:Ljava/lang/CharSequence;
+    invoke-direct {v0, v1, v2, v2}, Laf6;-><init>(Ljava/lang/String;II)V
 
-    iput-object p4, p0, Laf6;->d:Lic4;
+    new-instance v1, Laf6;
 
-    iput-object p5, p0, Laf6;->e:Ljava/util/Set;
+    const-string v2, "NO_DELETE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Laf6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Laf6;->c:Laf6;
+
+    new-instance v2, Laf6;
+
+    const-string v3, "NO_TITLE_EDIT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Laf6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Laf6;->d:Laf6;
+
+    new-instance v3, Laf6;
+
+    const-string v4, "NO_FILTERS_EDIT"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v5}, Laf6;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Laf6;
+
+    const-string v5, "CHAT_SUGGEST"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v6}, Laf6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Laf6;->o:Laf6;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Laf6;
+
+    move-result-object v0
+
+    sput-object v0, Laf6;->X:[Laf6;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Laf6;->Y:Lal5;
+
+    const-class v0, Laf6;
+
+    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Laf6;->b:Ljava/util/Set;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput p3, p0, Laf6;->a:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Laf6;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Laf6;
-
-    iget-object v1, p0, Laf6;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Laf6;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Laf6;->b:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Laf6;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Laf6;->c:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Laf6;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Laf6;->d:Lic4;
-
-    iget-object v3, p1, Laf6;->d:Lic4;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Laf6;->e:Ljava/util/Set;
-
-    iget-object p1, p1, Laf6;->e:Ljava/util/Set;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Laf6;
+    .locals 1
 
-    iget-object v0, p0, Laf6;->a:Ljava/lang/String;
+    const-class v0, Laf6;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    const/16 v1, 0x1f
+    check-cast p0, Laf6;
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Laf6;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Lzy4;->g(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-object v2, p0, Laf6;->c:Ljava/lang/CharSequence;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Laf6;->d:Lic4;
-
-    iget v2, v2, Lic4;->a:I
-
-    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Laf6;->e:Ljava/util/Set;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static values()[Laf6;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Laf6;->X:[Laf6;
 
-    const-string v1, "FolderModel(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Laf6;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", name="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Laf6;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", emoji="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Laf6;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", counter="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Laf6;->d:Lic4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", options="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Laf6;->e:Ljava/util/Set;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Laf6;
 
     return-object v0
 .end method

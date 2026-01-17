@@ -1,66 +1,111 @@
-.class public final Ll8g;
+.class public final synthetic Ll8g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:Landroid/os/Message;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lm8g;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lm8g;I)V
+    .locals 0
+
+    iput p2, p0, Ll8g;->a:I
+
+    iput-object p1, p0, Ll8g;->b:Lm8g;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final run()V
+    .locals 4
 
-    const/4 v0, 0x0
+    iget v0, p0, Ll8g;->a:I
 
-    iput-object v0, p0, Ll8g;->a:Landroid/os/Message;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Ln8g;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Ll8g;->b:Lm8g;
 
-    monitor-enter v0
+    const-string v1, "Session call super.close()"
+
+    invoke-virtual {v0, v1}, Lm8g;->l(Ljava/lang/String;)V
+
+    iget-object v1, v0, Lm8g;->g:Limf;
+
+    const-string v2, "Need to call openCaptureSession before using this API."
+
+    invoke-static {v1, v2}, Ljkj;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v1, v0, Lm8g;->b:Lkf6;
+
+    iget-object v2, v1, Lkf6;->b:Ljava/lang/Object;
+
+    monitor-enter v2
 
     :try_start_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    iget-object v1, v1, Lkf6;->d:Ljava/lang/Object;
 
-    move-result v1
+    check-cast v1, Ljava/util/LinkedHashSet;
 
-    const/16 v2, 0x32
+    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    if-ge v1, v2, :cond_0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
-.end method
+    iget-object v1, v0, Lm8g;->g:Limf;
 
-.method public final b()V
-    .locals 1
+    iget-object v1, v1, Limf;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Ll8g;->a:Landroid/os/Message;
+    check-cast v1, Lws8;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, v1, Lws8;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession;
 
-    invoke-virtual {p0}, Ll8g;->a()V
+    invoke-virtual {v1}, Landroid/hardware/camera2/CameraCaptureSession;->close()V
+
+    iget-object v1, v0, Lm8g;->d:Lwpe;
+
+    new-instance v2, Ll8g;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v3}, Ll8g;-><init>(Lm8g;I)V
+
+    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Ll8g;->b:Lm8g;
+
+    invoke-virtual {v0, v0}, Lm8g;->g(Lm8g;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

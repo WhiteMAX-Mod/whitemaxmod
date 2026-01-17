@@ -2,33 +2,43 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final t:Ly0j;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ly0j;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Ly0j;-><init>(I)V
-
-    sput-object v0, Lht5;->t:Ly0j;
-
-    return-void
-.end method
+# interfaces
+.implements Lji4;
 
 
 # virtual methods
-.method public abstract A(II)Lhrg;
+.method public abstract F()I
 .end method
 
-.method public abstract N(Lmje;)V
+.method public abstract e([BIIZ)Z
 .end method
 
-.method public abstract v()V
+.method public abstract getLength()J
+.end method
+
+.method public abstract getPosition()J
+.end method
+
+.method public abstract i(I[BI)V
+.end method
+
+.method public abstract n([BIIZ)Z
+.end method
+
+.method public abstract o()J
+.end method
+
+.method public abstract q(I)V
+.end method
+
+.method public abstract readFully([BII)V
+.end method
+
+.method public abstract t(I[BI)I
+.end method
+
+.method public abstract x()V
+.end method
+
+.method public abstract y(I)V
 .end method

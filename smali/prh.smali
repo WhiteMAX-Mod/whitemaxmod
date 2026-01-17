@@ -1,62 +1,48 @@
-.class public abstract Lprh;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lprh;
+.super Lo84;
+
+
+# instance fields
+.field public final synthetic X:Ll51;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public static a(Landroid/view/View;)Lahi;
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    invoke-static {v1, v0}, Lahi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lahi;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lahi;->a:Lygi;
-
-    invoke-virtual {v1, v0}, Lygi;->q(Lahi;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Lygi;->d(Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/view/View;)I
+.method public constructor <init>(Ll51;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->getScrollIndicators()I
+    iput-object p1, p0, Lprh;->X:Ll51;
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Landroid/view/View;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setScrollIndicators(I)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static d(Landroid/view/View;II)V
-    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setScrollIndicators(II)V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iput-object p1, p0, Lprh;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lprh;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lprh;->o:I
+
+    iget-object p1, p0, Lprh;->X:Ll51;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ll51;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

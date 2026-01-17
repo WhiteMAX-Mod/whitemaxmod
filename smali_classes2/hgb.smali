@@ -1,355 +1,409 @@
 .class public final Lhgb;
-.super Ljava/lang/Object;
+.super Lnd3;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/ScheduledFuture;
+.implements Luig;
+
+
+# static fields
+.field public static final synthetic D0:[Lz28;
 
 
 # instance fields
-.field public volatile X:Ljava/lang/Object;
+.field public final B0:Lggb;
 
-.field public final Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public Z:Ljava/util/concurrent/ScheduledFuture;
-
-.field public final a:Ljava/util/concurrent/Callable;
-
-.field public final b:Ljava/util/concurrent/ExecutorService;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final o:Ljava/util/concurrent/CountDownLatch;
+.field public final C0:Lggb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhfa;
 
-    iput-object p1, p0, Lhgb;->a:Ljava/util/concurrent/Callable;
+    const-string v1, "appearance"
 
-    iput-object p2, p0, Lhgb;->b:Ljava/util/concurrent/ExecutorService;
+    const-string v2, "getAppearance()Lone/me/sdk/uikit/common/progressbar/OneMeProgressBar$Appearance;"
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-class v3, Lhgb;
 
-    const/4 p2, 0x0
+    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    sget-object v1, Lctd;->a:Ldtd;
 
-    iput-object p1, p0, Lhgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v2, "size"
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v4, "getSize()Lone/me/sdk/uikit/common/progressbar/OneMeProgressBar$Size;"
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    invoke-static {v1, v3, v2, v4}, Lxi4;->g(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lhfa;
 
-    iput-object p1, p0, Lhgb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v1
 
-    new-instance p1, Ljava/util/concurrent/CountDownLatch;
+    const/4 v2, 0x2
 
-    const/4 p2, 0x1
+    new-array v2, v2, [Lz28;
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    const/4 v3, 0x0
 
-    iput-object p1, p0, Lhgb;->o:Ljava/util/concurrent/CountDownLatch;
+    aput-object v0, v2, v3
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v0, 0x1
 
-    const/4 p2, 0x0
+    aput-object v1, v2, v0
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lhgb;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    sput-object v2, Lhgb;->D0:[Lz28;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 6
 
-# virtual methods
-.method public final cancel(Z)Z
-    .locals 3
+    sget v0, Lf5d;->circularProgressIndicatorStyle:I
 
-    iget-object v0, p0, Lhgb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget v1, Lnd3;->A0:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-direct {p0, v0, v1, p1}, Lll0;-><init>(IILandroid/content/Context;)V
 
-    move-result v1
+    new-instance p1, Lid3;
 
-    if-nez v1, :cond_2
+    iget-object v0, p0, Lll0;->a:Lml0;
 
-    iget-object v1, p0, Lhgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    check-cast v0, Lod3;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-direct {p1, v0}, Ls85;-><init>(Lml0;)V
 
-    move-result v2
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    if-eqz v2, :cond_0
+    move-result-object v1
 
-    goto :goto_0
+    new-instance v2, Lan7;
 
-    :cond_0
-    const/4 v2, 0x1
+    new-instance v3, Lkd3;
 
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-direct {v3, v0}, Lkd3;-><init>(Lod3;)V
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-direct {v2, v1, v0, p1, v3}, Lan7;-><init>(Landroid/content/Context;Lml0;Ls85;Lj2;)V
 
-    iget-object v0, p0, Lhgb;->Z:Ljava/util/concurrent/ScheduledFuture;
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-nez v0, :cond_1
+    move-result-object v1
+
+    sget v3, Lk7d;->indeterminate_static:I
+
+    new-instance v4, Lwch;
+
+    invoke-direct {v4}, Lwch;-><init>()V
+
+    sget-object v5, Lvyd;->a:Ljava/lang/ThreadLocal;
+
+    const/4 v5, 0x0
+
+    invoke-static {v1, v3, v5}, Lqyd;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    iput-object v1, v4, Lnch;->a:Landroid/graphics/drawable/Drawable;
+
+    new-instance v1, Lvch;
+
+    iget-object v3, v4, Lnch;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+
+    move-result-object v3
+
+    invoke-direct {v1, v3}, Lvch;-><init>(Landroid/graphics/drawable/Drawable$ConstantState;)V
+
+    iput-object v4, v2, Lan7;->y0:Lwch;
+
+    invoke-virtual {p0, v2}, Lll0;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v2, Lky4;
+
+    invoke-direct {v2, v1, v0, p1}, Lky4;-><init>(Landroid/content/Context;Lml0;Ls85;)V
+
+    invoke-virtual {p0, v2}, Lll0;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance p1, Lggb;
 
     const/4 v0, 0x0
 
-    :cond_1
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    invoke-direct {p1, p0, v0}, Lggb;-><init>(Lhgb;I)V
 
-    iget-object p1, p0, Lhgb;->o:Ljava/util/concurrent/CountDownLatch;
+    iput-object p1, p0, Lhgb;->B0:Lggb;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    new-instance p1, Lggb;
 
-    return v2
+    const/4 v0, 0x1
 
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    invoke-direct {p1, p0, v0}, Lggb;-><init>(Lhgb;I)V
 
-    return p1
-.end method
+    iput-object p1, p0, Lhgb;->C0:Lggb;
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+    invoke-virtual {p0, v0}, Lll0;->setIndeterminate(Z)V
 
-    check-cast p1, Ljava/util/concurrent/Delayed;
+    const/16 p1, 0x14
 
-    iget-object v0, p0, Lhgb;->Z:Ljava/util/concurrent/ScheduledFuture;
+    int-to-float p1, p1
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lhgb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lhgb;->o:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lhgb;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Exception;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-eqz v0, :cond_3
+    move-result-object v0
 
-    instance-of v1, v0, Ljava/util/concurrent/ExecutionException;
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    if-eqz v1, :cond_1
+    mul-float/2addr p1, v0
 
-    move-object v1, v0
+    invoke-static {p1}, Lq7j;->c(F)I
 
-    check-cast v1, Ljava/util/concurrent/ExecutionException;
+    move-result p1
 
-    goto :goto_0
+    invoke-virtual {p0, p1}, Lll0;->setTrackCornerRadius(I)V
 
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v1, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {v1, v0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_1
-    throw v1
-
-    .line 4
-    :cond_3
-    iget-object v0, p0, Lhgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    .line 5
-    iget-object v0, p0, Lhgb;->X:Ljava/lang/Object;
-
-    return-object v0
-
-    .line 6
-    :cond_4
-    new-instance v0, Ljava/util/concurrent/CancellationException;
-
-    const-string v1, "Future is cancelled"
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method
 
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 3
+.method public static d(Lagb;Lzlb;)I
+    .locals 1
 
-    .line 7
-    iget-object v0, p0, Lhgb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v0, Ltfb;->a:Ltfb;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 8
-    iget-object v0, p0, Lhgb;->o:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-static {p0, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
+    invoke-interface {p1}, Lzlb;->d()Ll17;
+
+    move-result-object p0
+
+    iget-object p0, p0, Ll17;->e:Lo17;
+
+    iget-object p0, p0, Lo17;->a:Lp17;
+
+    iget p0, p0, Lp17;->a:I
+
+    return p0
 
     :cond_0
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
+    sget-object v0, Lufb;->a:Lufb;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v2, "No result for "
+    move-result v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Lzlb;->d()Ll17;
 
-    const-string p1, " "
+    const/4 p0, -0x1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return p0
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 9
     :cond_1
-    :goto_0
-    iget-object p1, p0, Lhgb;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    sget-object v0, Lvfb;->a:Lvfb;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {p0, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v0
 
-    check-cast p1, Ljava/lang/Exception;
+    if-eqz v0, :cond_2
 
-    if-eqz p1, :cond_4
+    invoke-interface {p1}, Lzlb;->d()Ll17;
 
-    instance-of p2, p1, Ljava/util/concurrent/ExecutionException;
+    move-result-object p0
 
-    if-eqz p2, :cond_2
+    iget-object p0, p0, Ll17;->e:Lo17;
 
-    move-object p2, p1
+    iget-object p0, p0, Lo17;->c:Lr17;
 
-    check-cast p2, Ljava/util/concurrent/ExecutionException;
+    iget p0, p0, Lr17;->a:I
 
-    goto :goto_1
+    return p0
 
     :cond_2
-    const/4 p2, 0x0
+    sget-object v0, Lwfb;->a:Lwfb;
 
-    :goto_1
-    if-eqz p2, :cond_3
+    invoke-static {p0, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_2
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {p1}, Lzlb;->d()Ll17;
+
+    move-result-object p0
+
+    iget-object p0, p0, Ll17;->e:Lo17;
+
+    iget-object p0, p0, Lo17;->e:Lt17;
+
+    iget p0, p0, Lt17;->a:I
+
+    return p0
 
     :cond_3
-    new-instance p2, Ljava/util/concurrent/ExecutionException;
+    sget-object v0, Lxfb;->a:Lxfb;
 
-    invoke-direct {p2, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
+    invoke-static {p0, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_2
-    throw p2
+    move-result v0
 
-    .line 10
+    if-eqz v0, :cond_4
+
+    invoke-interface {p1}, Lzlb;->d()Ll17;
+
+    const p0, -0xf2f2f3
+
+    return p0
+
     :cond_4
-    iget-object p1, p0, Lhgb;->X:Ljava/lang/Object;
+    sget-object v0, Lzfb;->a:Lzfb;
 
-    return-object p1
+    invoke-static {p0, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {p1}, Lzlb;->d()Ll17;
+
+    move-result-object p0
+
+    iget-object p0, p0, Ll17;->e:Lo17;
+
+    iget-object p0, p0, Lo17;->g:Lv17;
+
+    iget p0, p0, Lv17;->a:I
+
+    return p0
+
+    :cond_5
+    sget-object v0, Lyfb;->a:Lyfb;
+
+    invoke-static {p0, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_6
+
+    invoke-interface {p1}, Lzlb;->d()Ll17;
+
+    move-result-object p0
+
+    iget-object p0, p0, Ll17;->e:Lo17;
+
+    iget-object p0, p0, Lo17;->d:Ls17;
+
+    iget p0, p0, Ls17;->a:I
+
+    return p0
+
+    :cond_6
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 .end method
 
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+
+# virtual methods
+.method public final getAppearance()Lagb;
     .locals 2
 
-    iget-object v0, p0, Lhgb;->Z:Ljava/util/concurrent/ScheduledFuture;
+    sget-object v0, Lhgb;->D0:[Lz28;
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    aget-object v0, v0, v1
 
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+    iget-object v0, p0, Lhgb;->B0:Lggb;
 
-    move-result-wide v0
+    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
 
-    return-wide v0
+    check-cast v0, Lagb;
+
+    return-object v0
 .end method
 
-.method public final isCancelled()Z
-    .locals 1
+.method public final getSize()Lfgb;
+    .locals 2
 
-    iget-object v0, p0, Lhgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v0, Lhgb;->D0:[Lz28;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    const/4 v1, 0x1
 
-    move-result v0
+    aget-object v0, v0, v1
 
-    return v0
+    iget-object v0, p0, Lhgb;->C0:Lggb;
+
+    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lfgb;
+
+    return-object v0
 .end method
 
-.method public final isDone()Z
+.method public final onThemeChanged(Lzlb;)V
     .locals 1
 
-    iget-object v0, p0, Lhgb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {p0}, Lhgb;->getAppearance()Lagb;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    move-result-object v0
 
-    move-result v0
+    invoke-static {v0, p1}, Lhgb;->d(Lagb;Lzlb;)I
 
-    return v0
+    move-result p1
+
+    filled-new-array {p1}, [I
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lll0;->setIndicatorColor([I)V
+
+    return-void
+.end method
+
+.method public final setAppearance(Lagb;)V
+    .locals 2
+
+    sget-object v0, Lhgb;->D0:[Lz28;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lhgb;->B0:Lggb;
+
+    invoke-virtual {v1, p0, v0, p1}, Ld3;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final setSize(Lfgb;)V
+    .locals 2
+
+    sget-object v0, Lhgb;->D0:[Lz28;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lhgb;->C0:Lggb;
+
+    invoke-virtual {v1, p0, v0, p1}, Ld3;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    return-void
 .end method

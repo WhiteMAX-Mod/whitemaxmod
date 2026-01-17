@@ -47,7 +47,7 @@
 
     iget-object p1, p1, Lpo2;->b:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -74,13 +74,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "ShareLink(link="
+    const-string v0, "ShowJoinCall(link="
 
     const-string v1, ")"
 
     iget-object v2, p0, Lpo2;->b:Ljava/lang/String;
 
-    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkv6;
+.implements Liv6;
 
 
 # static fields
 .field public static final a:Lh6i;
 
-.field private static final descriptor:Lvoe;
+.field private static final descriptor:Lxpe;
 
 
 # direct methods
@@ -22,25 +22,25 @@
 
     sput-object v0, Lh6i;->a:Lh6i;
 
-    new-instance v1, Llcc;
+    new-instance v1, Lgdc;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneResponse"
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.codereader.WebAppOpenCodeReaderRequest"
 
     const/4 v3, 0x2
 
-    invoke-direct {v1, v2, v0, v3}, Llcc;-><init>(Ljava/lang/String;Lkv6;I)V
+    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
 
     const-string v0, "requestId"
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2}, Llcc;->k(Ljava/lang/String;Z)V
+    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
 
-    const-string v0, "phone"
+    const-string v0, "fileSelect"
 
-    invoke-virtual {v1, v0, v2}, Llcc;->k(Ljava/lang/String;Z)V
+    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
 
-    sput-object v1, Lh6i;->descriptor:Lvoe;
+    sput-object v1, Lh6i;->descriptor:Lxpe;
 
     return-void
 .end method
@@ -52,9 +52,9 @@
 
     check-cast p2, Lj6i;
 
-    sget-object v0, Lh6i;->descriptor:Lvoe;
+    sget-object v0, Lh6i;->descriptor:Lxpe;
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lvoe;)Lkotlinx/serialization/json/internal/b;
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
 
     move-result-object p1
 
@@ -62,25 +62,27 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lvoe;ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
 
-    const/4 v1, 0x1
+    sget-object v1, Lss0;->a:Lss0;
 
-    iget-object p2, p2, Lj6i;->b:Ljava/lang/String;
+    iget-object p2, p2, Lj6i;->b:Ljava/lang/Boolean;
 
-    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lvoe;ILjava/lang/String;)V
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v0, v2, v1, p2}, Lkotlinx/serialization/json/internal/b;->n(Lxpe;ILa38;Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
 
     return-void
 .end method
 
-.method public final b(Lll4;)Ljava/lang/Object;
+.method public final b(Lkl4;)Ljava/lang/Object;
     .locals 9
 
-    sget-object v0, Lh6i;->descriptor:Lvoe;
+    sget-object v0, Lh6i;->descriptor:Lxpe;
 
-    invoke-interface {p1, v0}, Lll4;->r(Lvoe;)Lip3;
+    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
 
     move-result-object p1
 
@@ -99,7 +101,7 @@
     :goto_0
     if-eqz v5, :cond_3
 
-    invoke-interface {p1, v0}, Lip3;->e(Lvoe;)I
+    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
 
     move-result v7
 
@@ -111,9 +113,13 @@
 
     if-ne v7, v1, :cond_0
 
-    invoke-interface {p1, v0, v1}, Lip3;->j(Lvoe;I)Ljava/lang/String;
+    sget-object v7, Lss0;->a:Lss0;
+
+    invoke-interface {p1, v0, v1, v7, v4}, Lqp3;->w(Lxpe;ILa38;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
+
+    check-cast v4, Ljava/lang/Boolean;
 
     or-int/lit8 v6, v6, 0x2
 
@@ -127,7 +133,7 @@
     throw p1
 
     :cond_1
-    invoke-interface {p1, v0, v2}, Lip3;->j(Lvoe;I)Ljava/lang/String;
+    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -141,39 +147,45 @@
     goto :goto_0
 
     :cond_3
-    invoke-interface {p1, v0}, Lip3;->m(Lvoe;)V
+    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
 
     new-instance p1, Lj6i;
 
-    invoke-direct {p1, v6, v3, v4}, Lj6i;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v6, v3, v4}, Lj6i;-><init>(ILjava/lang/String;Ljava/lang/Boolean;)V
 
     return-object p1
 .end method
 
-.method public final c()[Lq38;
-    .locals 3
+.method public final c()[La38;
+    .locals 4
 
-    const/4 v0, 0x2
+    sget-object v0, Lss0;->a:Lss0;
 
-    new-array v0, v0, [Lq38;
+    invoke-static {v0}, Lw9j;->b(La38;)La38;
 
-    sget-object v1, Leyf;->a:Leyf;
+    move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x2
 
-    aput-object v1, v0, v2
+    new-array v1, v1, [La38;
+
+    sget-object v2, Lnzf;->a:Lnzf;
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
 
     const/4 v2, 0x1
 
-    aput-object v1, v0, v2
+    aput-object v0, v1, v2
 
-    return-object v0
+    return-object v1
 .end method
 
-.method public final d()Lvoe;
+.method public final d()Lxpe;
     .locals 1
 
-    sget-object v0, Lh6i;->descriptor:Lvoe;
+    sget-object v0, Lh6i;->descriptor:Lxpe;
 
     return-object v0
 .end method

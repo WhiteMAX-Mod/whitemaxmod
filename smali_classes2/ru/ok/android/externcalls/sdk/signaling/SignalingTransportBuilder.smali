@@ -17,12 +17,12 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;",
         "",
-        "Lxj5;",
+        "Lzj5;",
         "endpointParametersBuilder",
         "",
         "wtEndpointBaseUrl",
         "wsEndpointBaseUrl",
-        "Lyk1;",
+        "Lrk1;",
         "callParams",
         "Ljava/lang/Runnable;",
         "reconnectTimeoutAction",
@@ -32,30 +32,30 @@
         "conversationStats",
         "Lkotlin/Function0;",
         "",
-        "isFastStartEnabled",
-        "Ldgd;",
+        "isReplaceParametersInEndpointEnabled",
+        "Lbhd;",
         "logConfiguration",
-        "Lcgd;",
+        "Lahd;",
         "log",
-        "Lnkg;",
+        "Lxkg;",
         "timeProvider",
         "<init>",
-        "(Lxj5;Ljava/lang/String;Ljava/lang/String;Lyk1;Ljava/lang/Runnable;Ljava/util/concurrent/ExecutorService;Lru/ok/android/externcalls/sdk/stat/ConversationStats;Lmq6;Ldgd;Lcgd;Lnkg;)V",
-        "Lpbf;",
+        "(Lzj5;Ljava/lang/String;Ljava/lang/String;Lrk1;Ljava/lang/Runnable;Ljava/util/concurrent/ExecutorService;Lru/ok/android/externcalls/sdk/stat/ConversationStats;Llq6;Lbhd;Lahd;Lxkg;)V",
+        "Ltcf;",
         "params",
-        "Llaf;",
+        "Lpbf;",
         "build",
-        "(Lpbf;)Llaf;",
-        "Lxj5;",
+        "(Ltcf;)Lpbf;",
+        "Lzj5;",
         "Ljava/lang/String;",
-        "Lyk1;",
+        "Lrk1;",
         "Ljava/lang/Runnable;",
         "Ljava/util/concurrent/ExecutorService;",
         "Lru/ok/android/externcalls/sdk/stat/ConversationStats;",
-        "Lmq6;",
-        "Ldgd;",
-        "Lcgd;",
-        "Lnkg;",
+        "Llq6;",
+        "Lbhd;",
+        "Lahd;",
+        "Lxkg;",
         "Companion",
         "calls-sdk_release"
     }
@@ -79,29 +79,29 @@
 
 
 # instance fields
-.field private final callParams:Lyk1;
+.field private final callParams:Lrk1;
 
 .field private final conversationStats:Lru/ok/android/externcalls/sdk/stat/ConversationStats;
 
-.field private final endpointParametersBuilder:Lxj5;
+.field private final endpointParametersBuilder:Lzj5;
 
 .field private final executorService:Ljava/util/concurrent/ExecutorService;
 
-.field private final isFastStartEnabled:Lmq6;
+.field private final isReplaceParametersInEndpointEnabled:Llq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmq6;"
+            "Llq6;"
         }
     .end annotation
 .end field
 
-.field private final log:Lcgd;
+.field private final log:Lahd;
 
-.field private final logConfiguration:Ldgd;
+.field private final logConfiguration:Lbhd;
 
 .field private final reconnectTimeoutAction:Ljava/lang/Runnable;
 
-.field private final timeProvider:Lnkg;
+.field private final timeProvider:Lxkg;
 
 .field private final wsEndpointBaseUrl:Ljava/lang/String;
 
@@ -116,42 +116,42 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->Companion:Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lxj5;Ljava/lang/String;Ljava/lang/String;Lyk1;Ljava/lang/Runnable;Ljava/util/concurrent/ExecutorService;Lru/ok/android/externcalls/sdk/stat/ConversationStats;Lmq6;Ldgd;Lcgd;Lnkg;)V
+.method public constructor <init>(Lzj5;Ljava/lang/String;Ljava/lang/String;Lrk1;Ljava/lang/Runnable;Ljava/util/concurrent/ExecutorService;Lru/ok/android/externcalls/sdk/stat/ConversationStats;Llq6;Lbhd;Lahd;Lxkg;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxj5;",
+            "Lzj5;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lyk1;",
+            "Lrk1;",
             "Ljava/lang/Runnable;",
             "Ljava/util/concurrent/ExecutorService;",
             "Lru/ok/android/externcalls/sdk/stat/ConversationStats;",
-            "Lmq6;",
-            "Ldgd;",
-            "Lcgd;",
-            "Lnkg;",
+            "Llq6;",
+            "Lbhd;",
+            "Lahd;",
+            "Lxkg;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lxj5;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lzj5;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->wtEndpointBaseUrl:Ljava/lang/String;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->wsEndpointBaseUrl:Ljava/lang/String;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lyk1;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lrk1;
 
     iput-object p5, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->reconnectTimeoutAction:Ljava/lang/Runnable;
 
@@ -159,23 +159,23 @@
 
     iput-object p7, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->conversationStats:Lru/ok/android/externcalls/sdk/stat/ConversationStats;
 
-    iput-object p8, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->isFastStartEnabled:Lmq6;
+    iput-object p8, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->isReplaceParametersInEndpointEnabled:Llq6;
 
-    iput-object p9, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->logConfiguration:Ldgd;
+    iput-object p9, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->logConfiguration:Lbhd;
 
-    iput-object p10, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->log:Lcgd;
+    iput-object p10, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->log:Lahd;
 
-    iput-object p11, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->timeProvider:Lnkg;
+    iput-object p11, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->timeProvider:Lxkg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final build(Lpbf;)Llaf;
+.method public final build(Ltcf;)Lpbf;
     .locals 6
 
-    iget-boolean v0, p1, Lpbf;->a:Z
+    iget-boolean v0, p1, Ltcf;->a:Z
 
     const/4 v1, 0x0
 
@@ -203,7 +203,7 @@
     move v2, v1
 
     :goto_1
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->log:Lcgd;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->log:Lahd;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -225,9 +225,9 @@
 
     const-string v4, "SignalingBuilder"
 
-    invoke-interface {v3, v4, v0}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v4, v0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lxj5;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lzj5;
 
     if-eqz v2, :cond_2
 
@@ -239,9 +239,9 @@
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->wsEndpointBaseUrl:Ljava/lang/String;
 
     :goto_2
-    iput-object v3, v0, Lxj5;->e:Ljava/lang/String;
+    iput-object v3, v0, Lzj5;->e:Ljava/lang/String;
 
-    iget-object v0, p1, Lpbf;->c:Ljava/lang/Long;
+    iget-object v0, p1, Ltcf;->c:Ljava/lang/Long;
 
     if-eqz v0, :cond_3
 
@@ -249,27 +249,27 @@
 
     move-result-wide v3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lxj5;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lzj5;
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
-    iput-object v3, v0, Lxj5;->g:Ljava/lang/Long;
+    iput-object v3, v0, Lzj5;->g:Ljava/lang/Long;
 
     :cond_3
-    iget-object p1, p1, Lpbf;->b:Ljava/lang/String;
+    iget-object p1, p1, Ltcf;->b:Ljava/lang/String;
 
     if-eqz p1, :cond_4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lxj5;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lzj5;
 
-    iput-object p1, v0, Lxj5;->a:Ljava/lang/String;
+    iput-object p1, v0, Lzj5;->a:Ljava/lang/String;
 
     :cond_4
     if-eqz v2, :cond_5
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lxj5;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lzj5;
 
     sget-object v0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->Companion:Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;
 
@@ -277,7 +277,7 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lxj5;->p:Ljava/lang/String;
+    iput-object v0, p1, Lzj5;->p:Ljava/lang/String;
 
     new-instance p1, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder;
 
@@ -290,32 +290,32 @@
     goto :goto_3
 
     :cond_5
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lxj5;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lzj5;
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Lxj5;->p:Ljava/lang/String;
+    iput-object v0, p1, Lzj5;->p:Ljava/lang/String;
 
-    new-instance p1, Lgwh;
+    new-instance p1, Lbxh;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     :goto_3
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lyk1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lrk1;
 
-    iget-object v0, v0, Lyk1;->b:Lxk1;
+    iget-object v0, v0, Lrk1;->b:Lqk1;
 
     const/16 v0, 0x7530
 
     int-to-long v0, v0
 
-    invoke-virtual {p1, v0, v1}, Lnaf;->setTimeoutMS(J)Lnaf;
+    invoke-virtual {p1, v0, v1}, Lrbf;->setTimeoutMS(J)Lrbf;
 
     move-result-object p1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->reconnectTimeoutAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p1, v0}, Lnaf;->setReconnectTimeoutAction(Ljava/lang/Runnable;)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setReconnectTimeoutAction(Ljava/lang/Runnable;)Lrbf;
 
     move-result-object p1
 
@@ -323,65 +323,65 @@
 
     iget-object v0, v0, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->wsSignalingStat:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;
 
-    invoke-virtual {p1, v0}, Lnaf;->setSignalingStat(Ljbf;)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setSignalingStat(Lncf;)Lrbf;
 
     move-result-object p1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->executorService:Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {p1, v0}, Lnaf;->setExecutor(Ljava/util/concurrent/ExecutorService;)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setExecutor(Ljava/util/concurrent/ExecutorService;)Lrbf;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->log:Lcgd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->log:Lahd;
 
-    invoke-virtual {p1, v0}, Lnaf;->setLog(Lcgd;)Lnaf;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->timeProvider:Lnkg;
-
-    invoke-virtual {p1, v0}, Lnaf;->setTimeProvider(Lnkg;)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setLog(Lahd;)Lrbf;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->logConfiguration:Ldgd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->timeProvider:Lxkg;
 
-    invoke-virtual {p1, v0}, Lnaf;->setLogConfiguration(Ldgd;)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setTimeProvider(Lxkg;)Lrbf;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lyk1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->logConfiguration:Lbhd;
 
-    iget-object v0, v0, Lyk1;->b:Lxk1;
+    invoke-virtual {p1, v0}, Lrbf;->setLogConfiguration(Lbhd;)Lrbf;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lrk1;
+
+    iget-object v0, v0, Lrk1;->b:Lqk1;
 
     const-wide/16 v0, 0x4e20
 
-    invoke-virtual {p1, v0, v1}, Lnaf;->setServerPingTimeoutMs(J)Lnaf;
+    invoke-virtual {p1, v0, v1}, Lrbf;->setServerPingTimeoutMs(J)Lrbf;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lyk1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lrk1;
 
-    iget-boolean v0, v0, Lyk1;->k:Z
+    iget-boolean v0, v0, Lrk1;->k:Z
 
-    invoke-virtual {p1, v0}, Lnaf;->setFastRecoverEnabled(Z)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setFastRecoverEnabled(Z)Lrbf;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lxj5;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->endpointParametersBuilder:Lzj5;
 
-    invoke-virtual {v0}, Lxj5;->a()Lyj5;
+    invoke-virtual {v0}, Lzj5;->a()Lak5;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lnaf;->setEndpointParameters(Lyj5;)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setEndpointParameters(Lak5;)Lrbf;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->isFastStartEnabled:Lmq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->isReplaceParametersInEndpointEnabled:Llq6;
 
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -391,31 +391,31 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lnaf;->setIsReplaceParametersInEndpointEnabled(Z)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setIsReplaceParametersInEndpointEnabled(Z)Lrbf;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lyk1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lrk1;
 
-    iget-object v0, v0, Lyk1;->z:Lwk1;
+    iget-object v0, v0, Lrk1;->z:Lpk1;
 
-    iget-boolean v0, v0, Lwk1;->O:Z
+    iget-boolean v0, v0, Lpk1;->P:Z
 
-    invoke-virtual {p1, v0}, Lnaf;->setIsSummaryStatsEnabled(Z)Lnaf;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lyk1;
-
-    iget-object v0, v0, Lyk1;->z:Lwk1;
-
-    iget-boolean v0, v0, Lwk1;->P:Z
-
-    invoke-virtual {p1, v0}, Lnaf;->setIsSignalingLogThrottlingEnabled(Z)Lnaf;
+    invoke-virtual {p1, v0}, Lrbf;->setIsSummaryStatsEnabled(Z)Lrbf;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lnaf;->build()Llaf;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/signaling/SignalingTransportBuilder;->callParams:Lrk1;
+
+    iget-object v0, v0, Lrk1;->z:Lpk1;
+
+    iget-boolean v0, v0, Lpk1;->Q:Z
+
+    invoke-virtual {p1, v0}, Lrbf;->setIsSignalingLogThrottlingEnabled(Z)Lrbf;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lrbf;->build()Lpbf;
 
     move-result-object p1
 

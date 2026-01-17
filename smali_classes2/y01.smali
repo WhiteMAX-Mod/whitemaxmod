@@ -1,903 +1,315 @@
-.class public final Ly01;
+.class public final synthetic Ly01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnbf;
+
 
 # instance fields
-.field public final a:D
+.field public final synthetic a:I
 
-.field public final b:D
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final c:D
+.field public final synthetic c:Ljava/lang/Object;
 
-.field public final d:D
-
-.field public final e:D
-
-.field public final f:D
-
-.field public final g:D
-
-.field public final h:D
-
-.field public final i:D
-
-.field public final j:D
-
-.field public final k:D
-
-.field public final l:D
-
-.field public final m:D
-
-.field public final n:D
-
-.field public final o:D
-
-.field public final p:D
-
-.field public final q:Z
-
-.field public final r:D
-
-.field public final s:D
-
-.field public final t:D
-
-.field public final u:Z
-
-.field public final v:D
-
-.field public final w:D
-
-.field public final x:D
-
-.field public final y:D
-
-.field public final z:D
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(DDDDDDDDDDDDDDDDZDDDZDDDDD)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
+
+    .line 2
+    iput p4, p0, Ly01;->a:I
+
+    iput-object p1, p0, Ly01;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Ly01;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Ly01;->d:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ly01;->a:D
+    return-void
+.end method
 
-    iput-wide p3, p0, Ly01;->b:D
+.method public synthetic constructor <init>(Lnbf;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;)V
+    .locals 1
 
-    iput-wide p5, p0, Ly01;->c:D
+    .line 1
+    const/4 v0, 0x3
 
-    iput-wide p7, p0, Ly01;->d:D
+    iput v0, p0, Ly01;->a:I
 
-    iput-wide p9, p0, Ly01;->e:D
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p11, p0, Ly01;->f:D
+    iput-object p1, p0, Ly01;->d:Ljava/lang/Object;
 
-    iput-wide p13, p0, Ly01;->g:D
+    iput-object p2, p0, Ly01;->b:Ljava/lang/Object;
 
-    move-wide p1, p15
-
-    iput-wide p1, p0, Ly01;->h:D
-
-    move-wide/from16 p1, p17
-
-    iput-wide p1, p0, Ly01;->i:D
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, Ly01;->j:D
-
-    move-wide/from16 p1, p21
-
-    iput-wide p1, p0, Ly01;->k:D
-
-    move-wide/from16 p1, p23
-
-    iput-wide p1, p0, Ly01;->l:D
-
-    move-wide/from16 p1, p25
-
-    iput-wide p1, p0, Ly01;->m:D
-
-    move-wide/from16 p1, p27
-
-    iput-wide p1, p0, Ly01;->n:D
-
-    move-wide/from16 p1, p29
-
-    iput-wide p1, p0, Ly01;->o:D
-
-    move-wide/from16 p1, p31
-
-    iput-wide p1, p0, Ly01;->p:D
-
-    move/from16 p1, p33
-
-    iput-boolean p1, p0, Ly01;->q:Z
-
-    move-wide/from16 p1, p34
-
-    iput-wide p1, p0, Ly01;->r:D
-
-    move-wide/from16 p1, p36
-
-    iput-wide p1, p0, Ly01;->s:D
-
-    move-wide/from16 p1, p38
-
-    iput-wide p1, p0, Ly01;->t:D
-
-    move/from16 p1, p40
-
-    iput-boolean p1, p0, Ly01;->u:Z
-
-    move-wide/from16 p1, p41
-
-    iput-wide p1, p0, Ly01;->v:D
-
-    move-wide/from16 p1, p43
-
-    iput-wide p1, p0, Ly01;->w:D
-
-    move-wide/from16 p1, p45
-
-    iput-wide p1, p0, Ly01;->x:D
-
-    move-wide/from16 p1, p47
-
-    iput-wide p1, p0, Ly01;->y:D
-
-    move-wide/from16 p1, p49
-
-    iput-wide p1, p0, Ly01;->z:D
+    iput-object p3, p0, Ly01;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 6
 
-    const/4 v0, 0x1
+    iget v0, p0, Ly01;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Ly01;->b:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Ly01;
+    check-cast v0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Ly01;->c:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    check-cast v1, Lnq6;
 
-    return v2
+    iget-object v2, p0, Ly01;->d:Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Ly01;
+    check-cast v2, Ldr6;
 
-    iget-wide v3, p0, Ly01;->a:D
+    invoke-static {v0, v1, v2, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->e(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Ldr6;Lorg/json/JSONObject;)V
 
-    iget-wide v5, p1, Ly01;->a:D
+    return-void
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    :pswitch_0
+    iget-object v0, p0, Ly01;->b:Ljava/lang/Object;
 
-    move-result v1
+    check-cast v0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;
 
-    if-eqz v1, :cond_2
+    iget-object v1, p0, Ly01;->c:Ljava/lang/Object;
 
-    return v2
+    check-cast v1, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;
 
-    :cond_2
-    iget-wide v3, p0, Ly01;->b:D
+    iget-object v2, p0, Ly01;->d:Ljava/lang/Object;
 
-    iget-wide v5, p1, Ly01;->b:D
+    check-cast v2, Lnq6;
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    invoke-static {v0, v1, v2, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->d(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lnq6;Lorg/json/JSONObject;)V
 
-    move-result v1
+    return-void
 
-    if-eqz v1, :cond_3
+    :pswitch_1
+    iget-object v0, p0, Ly01;->b:Ljava/lang/Object;
 
-    return v2
+    check-cast v0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;
 
-    :cond_3
-    iget-wide v3, p0, Ly01;->c:D
+    iget-object v1, p0, Ly01;->c:Ljava/lang/Object;
 
-    iget-wide v5, p1, Ly01;->c:D
+    check-cast v1, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    iget-object v2, p0, Ly01;->d:Ljava/lang/Object;
 
-    move-result v1
+    check-cast v2, Lnq6;
 
-    if-eqz v1, :cond_4
+    invoke-static {v0, v1, v2, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->a(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lnq6;Lorg/json/JSONObject;)V
 
-    return v2
+    return-void
 
-    :cond_4
-    iget-wide v3, p0, Ly01;->d:D
+    :pswitch_2
+    iget-object v0, p0, Ly01;->d:Ljava/lang/Object;
 
-    iget-wide v5, p1, Ly01;->d:D
+    check-cast v0, Lnbf;
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    iget-object v1, p0, Ly01;->b:Ljava/lang/Object;
 
-    move-result v1
+    check-cast v1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;
 
-    if-eqz v1, :cond_5
+    iget-object v2, p0, Ly01;->c:Ljava/lang/Object;
 
-    return v2
+    check-cast v2, Ljava/util/Map;
 
-    :cond_5
-    iget-wide v3, p0, Ly01;->e:D
+    invoke-static {v0, v1, v2, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->a(Lnbf;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lorg/json/JSONObject;)V
 
-    iget-wide v5, p1, Ly01;->e:D
+    return-void
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    :pswitch_3
+    iget-object v0, p0, Ly01;->b:Ljava/lang/Object;
 
-    move-result v1
+    check-cast v0, Lws8;
 
-    if-eqz v1, :cond_6
+    iget-object v1, p0, Ly01;->c:Ljava/lang/Object;
 
-    return v2
+    check-cast v1, Le0a;
 
-    :cond_6
-    iget-wide v3, p0, Ly01;->f:D
+    iget-object v2, p0, Ly01;->d:Ljava/lang/Object;
 
-    iget-wide v5, p1, Ly01;->f:D
+    check-cast v2, Le0a;
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    const-string v3, "rooms"
 
-    move-result v1
+    invoke-virtual {p1, v3}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    if-eqz v1, :cond_7
+    move-result-object v3
 
-    return v2
+    if-eqz v3, :cond_0
 
-    :cond_7
-    iget-wide v3, p0, Ly01;->g:D
+    iget-object v0, v0, Lws8;->b:Ljava/lang/Object;
 
-    iget-wide v5, p1, Ly01;->g:D
+    check-cast v0, Lvnb;
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-wide v3, p0, Ly01;->h:D
-
-    iget-wide v5, p1, Ly01;->h:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    return v2
-
-    :cond_9
-    iget-wide v3, p0, Ly01;->i:D
-
-    iget-wide v5, p1, Ly01;->i:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    return v2
-
-    :cond_a
-    iget-wide v3, p0, Ly01;->j:D
-
-    iget-wide v5, p1, Ly01;->j:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    return v2
-
-    :cond_b
-    iget-wide v3, p0, Ly01;->k:D
-
-    iget-wide v5, p1, Ly01;->k:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_c
-
-    return v2
-
-    :cond_c
-    iget-wide v3, p0, Ly01;->l:D
-
-    iget-wide v5, p1, Ly01;->l:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_d
-
-    return v2
-
-    :cond_d
-    iget-wide v3, p0, Ly01;->m:D
-
-    iget-wide v5, p1, Ly01;->m:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_e
-
-    return v2
-
-    :cond_e
-    iget-wide v3, p0, Ly01;->n:D
-
-    iget-wide v5, p1, Ly01;->n:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_f
-
-    return v2
-
-    :cond_f
-    iget-wide v3, p0, Ly01;->o:D
-
-    iget-wide v5, p1, Ly01;->o:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_10
-
-    return v2
-
-    :cond_10
-    iget-wide v3, p0, Ly01;->p:D
-
-    iget-wide v5, p1, Ly01;->p:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_11
-
-    return v2
-
-    :cond_11
-    iget-boolean v1, p0, Ly01;->q:Z
-
-    iget-boolean v3, p1, Ly01;->q:Z
-
-    if-eq v1, v3, :cond_12
-
-    return v2
-
-    :cond_12
-    iget-wide v3, p0, Ly01;->r:D
-
-    iget-wide v5, p1, Ly01;->r:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_13
-
-    return v2
-
-    :cond_13
-    iget-wide v3, p0, Ly01;->s:D
-
-    iget-wide v5, p1, Ly01;->s:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_14
-
-    return v2
-
-    :cond_14
-    iget-wide v3, p0, Ly01;->t:D
-
-    iget-wide v5, p1, Ly01;->t:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_15
-
-    return v2
-
-    :cond_15
-    iget-boolean v1, p0, Ly01;->u:Z
-
-    iget-boolean v3, p1, Ly01;->u:Z
-
-    if-eq v1, v3, :cond_16
-
-    return v2
-
-    :cond_16
-    iget-wide v3, p0, Ly01;->v:D
-
-    iget-wide v5, p1, Ly01;->v:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_17
-
-    return v2
-
-    :cond_17
-    iget-wide v3, p0, Ly01;->w:D
-
-    iget-wide v5, p1, Ly01;->w:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_18
-
-    return v2
-
-    :cond_18
-    iget-wide v3, p0, Ly01;->x:D
-
-    iget-wide v5, p1, Ly01;->x:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_19
-
-    return v2
-
-    :cond_19
-    iget-wide v3, p0, Ly01;->y:D
-
-    iget-wide v5, p1, Ly01;->y:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result v1
-
-    if-eqz v1, :cond_1a
-
-    return v2
-
-    :cond_1a
-    iget-wide v3, p0, Ly01;->z:D
-
-    iget-wide v5, p1, Ly01;->z:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_1b
-
-    return v2
-
-    :cond_1b
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Ly01;->a:D
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Ly01;->b:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->c:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->d:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->e:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->f:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->g:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->h:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->i:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->j:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->k:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->l:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->m:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->n:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->o:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->p:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Ly01;->q:Z
-
-    invoke-static {v0, v1}, Lp8j;->a(IZ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->r:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->s:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->t:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Ly01;->u:Z
-
-    invoke-static {v0, v1}, Lp8j;->a(IZ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->v:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->w:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->x:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->y:D
-
-    invoke-static {v0, v1, v2}, Ll8j;->a(ID)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ly01;->z:D
-
-    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CalcNetworkStatusConfig(redline="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Ly01;->a:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", redlineMargin="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->b:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", ratingWeightUp="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->c:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", ratingWeightDown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->d:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", goodRtt="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->e:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", rttWeightUp="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->f:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", rttWeightDown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->g:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", rttStep="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->h:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", rttStepWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->i:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fastLossWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->j:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", slowLossWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->k:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fastLossValue="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->l:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", slowLossValue="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->m:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", criticalRtt="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->n:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", criticalFastLoss="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->o:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", criticalSlowLoss="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->p:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", newNetworkRatingModelEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Ly01;->q:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", goodLoss="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->r:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lossStep="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->s:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lossStepWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->t:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bitrateRatingEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Ly01;->u:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bitrateRatingInfluenceFactor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->v:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", estimatedBitrateWeightUp="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->w:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", estimatedBitrateWeightDown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->x:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", reportedBitrateWeightUp="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->y:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", reportedBitrateWeightDown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly01;->z:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v3}, Lvnb;->r(Lorg/json/JSONObject;)Lkcf;
 
     move-result-object v0
 
-    return-object v0
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Can\'t parse rooms from "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Le0a;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2, v0}, Le0a;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_1
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Ly01;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls11;
+
+    iget-object v1, p0, Ly01;->c:Ljava/lang/Object;
+
+    check-cast v1, Lzwb;
+
+    iget-object v2, p0, Ly01;->d:Ljava/lang/Object;
+
+    check-cast v2, Lhgh;
+
+    iget-object v0, v0, Ls11;->I0:Lrz6;
+
+    invoke-virtual {v0, p1}, Lrz6;->Q(Lorg/json/JSONObject;)Liw1;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v1, p1}, Lzwb;->accept(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2}, Lhgh;->run()V
+
+    :goto_2
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Ly01;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls11;
+
+    iget-object v1, p0, Ly01;->c:Ljava/lang/Object;
+
+    check-cast v1, Lsk1;
+
+    iget-object v2, p0, Ly01;->d:Ljava/lang/Object;
+
+    check-cast v2, Lnbf;
+
+    iget-object v3, v0, Ls11;->P:Lahd;
+
+    const-string v4, "handle response from signaling on add-participant command"
+
+    const-string v5, "OKRTCCall"
+
+    invoke-interface {v3, v5, v4}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v4, "participant"
+
+    invoke-virtual {p1, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object p1
+
+    :try_start_0
+    invoke-virtual {v0, v1, p1}, Ls11;->z(Lsk1;Lorg/json/JSONObject;)I
+
+    move-result p1
+
+    sget-object v0, Lhni;->b:[I
+
+    invoke-static {p1}, Lt02;->t(I)I
+
+    move-result p1
+
+    aget p1, v0, p1
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    new-instance p1, Lorg/json/JSONObject;
+
+    invoke-direct {p1}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v0, "error"
+
+    const-string v1, "state.accepted"
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object p1
+
+    invoke-interface {v2, p1}, Lnbf;->onResponse(Lorg/json/JSONObject;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "add.participant.success"
+
+    invoke-interface {v3, v5, v0, p1}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_3
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

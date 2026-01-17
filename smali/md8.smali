@@ -4,10 +4,16 @@
 
 
 # instance fields
-.field public a:Landroid/text/style/URLSpan;
+.field public final synthetic a:Lnd8;
 
-.field public b:Ljava/lang/String;
 
-.field public c:I
+# direct methods
+.method public constructor <init>(Lnd8;)V
+    .locals 0
 
-.field public d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmd8;->a:Lnd8;
+
+    return-void
+.end method

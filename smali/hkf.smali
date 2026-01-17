@@ -1,194 +1,290 @@
 .class public final Lhkf;
-.super Lb5g;
+.super Landroid/opengl/GLSurfaceView;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.field public final synthetic Y:J
+.field public final b:Landroid/hardware/SensorManager;
 
-.field public o:I
+.field public final c:Landroid/hardware/Sensor;
+
+.field public final d:Lnqb;
+
+.field public final o:Landroid/os/Handler;
+
+.field public final t0:Lgae;
+
+.field public u0:Landroid/graphics/SurfaceTexture;
+
+.field public v0:Landroid/view/Surface;
+
+.field public w0:Z
+
+.field public x0:Z
+
+.field public y0:Z
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 6
 
-    iput-wide p1, p0, Lhkf;->Y:J
+    const/4 v0, 0x0
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1, v0}, Landroid/opengl/GLSurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v1, p0, Lhkf;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v1, p0, Lhkf;->o:Landroid/os/Handler;
+
+    const-string v1, "sensor"
+
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v1, Landroid/hardware/SensorManager;
+
+    iput-object v1, p0, Lhkf;->b:Landroid/hardware/SensorManager;
+
+    sget v2, Lkbh;->a:I
+
+    const/16 v3, 0x12
+
+    if-lt v2, v3, :cond_0
+
+    const/16 v0, 0xf
+
+    invoke-virtual {v1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+
+    move-result-object v0
+
+    :cond_0
+    if-nez v0, :cond_1
+
+    const/16 v0, 0xb
+
+    invoke-virtual {v1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+
+    move-result-object v0
+
+    :cond_1
+    iput-object v0, p0, Lhkf;->c:Landroid/hardware/Sensor;
+
+    new-instance v0, Lgae;
+
+    invoke-direct {v0}, Lgae;-><init>()V
+
+    iput-object v0, p0, Lhkf;->t0:Lgae;
+
+    new-instance v1, Lgkf;
+
+    invoke-direct {v1, p0, v0}, Lgkf;-><init>(Lhkf;Lgae;)V
+
+    new-instance v0, Lypg;
+
+    invoke-direct {v0, p1, v1}, Lypg;-><init>(Landroid/content/Context;Lgkf;)V
+
+    const-string v2, "window"
+
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/WindowManager;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object p1
+
+    new-instance v2, Lnqb;
+
+    const/4 v3, 0x2
+
+    new-array v4, v3, [Lmqb;
+
+    const/4 v5, 0x0
+
+    aput-object v0, v4, v5
+
+    const/4 v5, 0x1
+
+    aput-object v1, v4, v5
+
+    invoke-direct {v2, p1, v4}, Lnqb;-><init>(Landroid/view/Display;[Lmqb;)V
+
+    iput-object v2, p0, Lhkf;->d:Lnqb;
+
+    iput-boolean v5, p0, Lhkf;->w0:Z
+
+    invoke-virtual {p0, v3}, Landroid/opengl/GLSurfaceView;->setEGLContextClientVersion(I)V
+
+    invoke-virtual {p0, v1}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 5
 
-    check-cast p1, Lac4;
+    iget-boolean v0, p0, Lhkf;->w0:Z
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lhkf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    iget-boolean v0, p0, Lhkf;->x0:Z
 
-    check-cast p1, Lhkf;
+    if-eqz v0, :cond_0
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, p2}, Lhkf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    move v0, v1
 
-    return-object p1
-.end method
+    :goto_0
+    iget-object v2, p0, Lhkf;->c:Landroid/hardware/Sensor;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    if-eqz v2, :cond_3
 
-    new-instance v0, Lhkf;
+    iget-boolean v3, p0, Lhkf;->y0:Z
 
-    iget-wide v1, p0, Lhkf;->Y:J
+    if-ne v0, v3, :cond_1
 
-    invoke-direct {v0, v1, v2, p2}, Lhkf;-><init>(JLkotlin/coroutines/Continuation;)V
+    goto :goto_2
 
-    iput-object p1, v0, Lhkf;->X:Ljava/lang/Object;
+    :cond_1
+    iget-object v3, p0, Lhkf;->d:Lnqb;
 
-    return-object v0
-.end method
+    iget-object v4, p0, Lhkf;->b:Landroid/hardware/SensorManager;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    if-eqz v0, :cond_2
 
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    iget v1, p0, Lhkf;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    iget-object v1, p0, Lhkf;->X:Ljava/lang/Object;
-
-    check-cast v1, Lac4;
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-virtual {v4, v3, v2, v1}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
     goto :goto_1
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhkf;->X:Ljava/lang/Object;
-
-    check-cast p1, Lac4;
-
-    move-object v1, p1
-
     :cond_2
-    :goto_0
-    invoke-static {v1}, Lmkj;->e(Lac4;)Z
+    invoke-virtual {v4, v3}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    iget-wide v3, p0, Lhkf;->Y:J
-
-    iput-object v1, p0, Lhkf;->X:Ljava/lang/Object;
-
-    iput v2, p0, Lhkf;->o:I
-
-    invoke-static {v3, v4, p0}, Lzlj;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
+    :goto_1
+    iput-boolean v0, p0, Lhkf;->y0:Z
 
     :cond_3
-    :goto_1
-    :try_start_0
-    sget-object p1, Ld8b;->a:Ld8b;
+    :goto_2
+    return-void
+.end method
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lu5;
+.method public getCameraMotionListener()Lr42;
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, Lhkf;->t0:Lgae;
 
-    const/16 v3, 0xa9
+    return-object v0
+.end method
 
-    invoke-virtual {p1, v3}, Lu5;->c(I)Ljava/lang/Object;
+.method public getVideoFrameMetadataListener()Ljhh;
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, Lhkf;->t0:Lgae;
 
-    check-cast p1, Likf;
+    return-object v0
+.end method
 
-    iget-object p1, p1, Likf;->b:Ljava/lang/String;
+.method public getVideoSurface()Landroid/view/Surface;
+    .locals 1
 
-    sget-object v3, Lm4j;->a:Lvcb;
+    iget-object v0, p0, Lhkf;->v0:Landroid/view/Surface;
 
-    if-nez v3, :cond_4
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public final onDetachedFromWindow()V
+    .locals 2
 
-    :cond_4
-    sget-object v4, Lxk8;->d:Lxk8;
+    invoke-super {p0}, Landroid/opengl/GLSurfaceView;->onDetachedFromWindow()V
 
-    invoke-virtual {v3, v4}, Lvcb;->b(Lxk8;)Z
+    new-instance v0, Lgpe;
 
-    move-result v5
+    const/16 v1, 0xc
 
-    if-eqz v5, :cond_2
+    invoke-direct {v0, v1, p0}, Lgpe;-><init>(ILjava/lang/Object;)V
 
-    const-string v5, "verifyIntegrity"
+    iget-object v1, p0, Lhkf;->o:Landroid/os/Handler;
 
-    const/4 v6, 0x0
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v3, v4, p1, v5, v6}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    goto :goto_0
+.method public final onPause()V
+    .locals 1
 
-    :catch_0
-    move-exception p1
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-boolean v0, p0, Lhkf;->x0:Z
 
-    move-result-object v3
+    invoke-virtual {p0}, Lhkf;->a()V
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-super {p0}, Landroid/opengl/GLSurfaceView;->onPause()V
 
-    move-result-object v3
+    return-void
+.end method
 
-    const-string v4, "ssl integrity verification failed"
+.method public final onResume()V
+    .locals 1
 
-    invoke-static {v3, v4, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-super {p0}, Landroid/opengl/GLSurfaceView;->onResume()V
 
-    goto :goto_0
+    const/4 v0, 0x1
 
-    :cond_5
-    sget-object p1, Lv2h;->a:Lv2h;
+    iput-boolean v0, p0, Lhkf;->x0:Z
 
-    return-object p1
+    invoke-virtual {p0}, Lhkf;->a()V
+
+    return-void
+.end method
+
+.method public setDefaultStereoMode(I)V
+    .locals 1
+
+    iget-object v0, p0, Lhkf;->t0:Lgae;
+
+    iput p1, v0, Lgae;->v0:I
+
+    return-void
+.end method
+
+.method public setUseSensorRotation(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lhkf;->w0:Z
+
+    invoke-virtual {p0}, Lhkf;->a()V
+
+    return-void
 .end method

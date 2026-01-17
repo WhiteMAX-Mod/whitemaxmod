@@ -4,14 +4,5 @@
 
 
 # virtual methods
-.method public g()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(Lfz6;J)V
-    .locals 0
-
-    return-void
+.method public abstract a(J)V
 .end method

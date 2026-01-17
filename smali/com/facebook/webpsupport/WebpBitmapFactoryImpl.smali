@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lb35;
+.annotation build Le35;
 .end annotation
 
 
@@ -19,7 +19,7 @@
 
 .method private static createBitmap(IILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     if-eqz p2, :cond_0
@@ -48,7 +48,7 @@
 
 .method private static getInTempStorageFromOptions(Landroid/graphics/BitmapFactory$Options;)[B
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -69,7 +69,7 @@
 
 .method private static getScaleFromOptions(Landroid/graphics/BitmapFactory$Options;)F
     .locals 3
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -117,7 +117,7 @@
 
 .method public static hookDecodeByteArray([BII)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     const/4 v0, 0x0
@@ -132,11 +132,11 @@
 
 .method public static hookDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
-    invoke-static {}, Ldpf;->m()V
+    invoke-static {}, Loqf;->a()V
 
     .line 2
     invoke-static {p0, p1, p2, p3}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->originalDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
@@ -148,7 +148,7 @@
 
 .method public static hookDecodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     const/4 v0, 0x0
@@ -163,7 +163,7 @@
 
 .method public static hookDecodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     const/4 v0, 0x0
@@ -220,7 +220,7 @@
 
 .method public static hookDecodeFileDescriptor(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     const/4 v0, 0x0
@@ -235,11 +235,11 @@
 
 .method public static hookDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 7
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
-    invoke-static {}, Ldpf;->m()V
+    invoke-static {}, Loqf;->a()V
 
     const-wide/16 v0, 0x0
 
@@ -365,7 +365,7 @@
 
 .method public static hookDecodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     const/4 v0, 0x0
@@ -380,7 +380,7 @@
 
 .method public static hookDecodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
@@ -472,7 +472,7 @@
 
 .method public static hookDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     if-nez p4, :cond_0
@@ -531,7 +531,7 @@
 
 .method public static hookDecodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     const/4 v0, 0x0
@@ -546,11 +546,11 @@
 
 .method public static hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
-    invoke-static {}, Ldpf;->m()V
+    invoke-static {}, Loqf;->a()V
 
     .line 2
     invoke-virtual {p0}, Ljava/io/InputStream;->markSupported()Z
@@ -578,23 +578,23 @@
 .end method
 
 .method private static native nativeDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 .end method
 
 .method private static native nativeDecodeStream(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 .end method
 
 .method private static native nativeSeek(Ljava/io/FileDescriptor;JZ)J
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 .end method
 
 .method private static originalDecodeByteArray([BII)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 2
@@ -607,7 +607,7 @@
 
 .method private static originalDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
@@ -620,7 +620,7 @@
 
 .method private static originalDecodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 2
@@ -633,7 +633,7 @@
 
 .method private static originalDecodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
@@ -646,7 +646,7 @@
 
 .method private static originalDecodeFileDescriptor(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 2
@@ -659,7 +659,7 @@
 
 .method private static originalDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
@@ -672,7 +672,7 @@
 
 .method private static originalDecodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 2
@@ -685,7 +685,7 @@
 
 .method private static originalDecodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
@@ -698,7 +698,7 @@
 
 .method private static originalDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     invoke-static {p0, p1, p2, p3, p4}, Landroid/graphics/BitmapFactory;->decodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
@@ -710,7 +710,7 @@
 
 .method private static originalDecodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 2
@@ -723,7 +723,7 @@
 
 .method private static originalDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     .line 1
@@ -736,7 +736,7 @@
 
 .method private static setBitmapSize(Landroid/graphics/BitmapFactory$Options;II)V
     .locals 0
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -751,7 +751,7 @@
 
 .method private static setOutDimensions(Landroid/graphics/BitmapFactory$Options;II)Z
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -776,7 +776,7 @@
 
 .method private static setPaddingDefaultValues(Landroid/graphics/Rect;)V
     .locals 1
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -803,7 +803,7 @@
         }
     .end annotation
 
-    .annotation build Lb35;
+    .annotation build Le35;
     .end annotation
 
     if-eqz p0, :cond_0

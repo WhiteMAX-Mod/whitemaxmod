@@ -1,82 +1,52 @@
-.class public final Lgc9;
+.class public final synthetic Lgc9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldb9;
+.implements Lzx3;
 
 
 # instance fields
-.field public final a:Llc9;
+.field public final synthetic a:I
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Llc9;)V
+.method public synthetic constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgc9;->a:Llc9;
+    iput p1, p0, Lgc9;->a:I
+
+    iput p2, p0, Lgc9;->b:I
+
+    iput p3, p0, Lgc9;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lxcc;
 
-    const/4 p1, 0x1
+    invoke-virtual {p1}, Lxcc;->m0()V
 
-    return p1
+    iget-object p1, p1, Lxcc;->a:Ldq5;
 
-    :cond_0
-    if-eqz p1, :cond_2
+    iget v0, p0, Lgc9;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, p0, Lgc9;->b:I
 
-    move-result-object v0
+    iget v2, p0, Lgc9;->c:I
 
-    const-class v1, Lgc9;
+    invoke-virtual {p1, v0, v1, v2}, Ldq5;->g1(III)V
 
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lgc9;
-
-    iget-object v0, p0, Lgc9;->a:Llc9;
-
-    iget-object p1, p1, Lgc9;->a:Llc9;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lgc9;->a:Llc9;
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

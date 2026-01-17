@@ -229,7 +229,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lu4j;->b()Landroid/app/Application;
+    invoke-static {}, Lm5j;->d()Landroid/app/Application;
 
     move-result-object v0
 

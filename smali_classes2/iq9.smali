@@ -1,91 +1,106 @@
-.class public final enum Liq9;
-.super Ljava/lang/Enum;
+.class public final synthetic Liq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum b:Liq9;
-
-.field public static final synthetic c:[Liq9;
-
-.field public static final synthetic d:Lwk5;
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/text/Layout;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Landroid/text/Layout;)V
+    .locals 1
 
-    new-instance v0, Liq9;
+    .line 2
+    const/4 v0, 0x1
 
-    const-string v1, "EMOJI"
+    iput v0, p0, Liq9;->a:I
 
-    const/4 v2, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2, v2}, Liq9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Liq9;->b:Liq9;
-
-    new-instance v1, Liq9;
-
-    const-string v2, "STICKER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Liq9;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1}, [Liq9;
-
-    move-result-object v0
-
-    sput-object v0, Liq9;->c:[Liq9;
-
-    new-instance v1, Lwk5;
-
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Liq9;->d:Lwk5;
+    iput-object p1, p0, Liq9;->b:Landroid/text/Layout;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Lkq9;Landroid/text/Layout;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 1
+    const/4 p1, 0x0
 
-    iput p3, p0, Liq9;->a:I
+    iput p1, p0, Liq9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Liq9;->b:Landroid/text/Layout;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Liq9;
-    .locals 1
 
-    const-class v0, Liq9;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Liq9;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Liq9;
+    iget-object v0, p0, Liq9;->b:Landroid/text/Layout;
 
-    return-object p0
-.end method
+    return-object v0
 
-.method public static values()[Liq9;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Liq9;->b:Landroid/text/Layout;
 
-    sget-object v0, Liq9;->c:[Liq9;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    check-cast v0, [Liq9;
+    instance-of v1, v0, Landroid/text/Spanned;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/text/Spanned;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const-class v3, Ln4d;
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    :cond_1
+    new-array v0, v1, [Ln4d;
+
+    :cond_2
+    check-cast v0, [Ln4d;
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

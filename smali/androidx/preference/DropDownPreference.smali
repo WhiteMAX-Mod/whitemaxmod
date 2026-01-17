@@ -4,14 +4,14 @@
 
 
 # instance fields
-.field public final u0:Landroid/widget/ArrayAdapter;
+.field public final v0:Landroid/widget/ArrayAdapter;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    sget v0, Ld4d;->dropdownPreferenceStyle:I
+    sget v0, Ld5d;->dropdownPreferenceStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/ListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -21,11 +21,11 @@
 
     invoke-direct {p2, p1, v0}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I)V
 
-    iput-object p2, p0, Landroidx/preference/DropDownPreference;->u0:Landroid/widget/ArrayAdapter;
+    iput-object p2, p0, Landroidx/preference/DropDownPreference;->v0:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {p2}, Landroid/widget/ArrayAdapter;->clear()V
 
-    iget-object p1, p0, Landroidx/preference/ListPreference;->s0:[Ljava/lang/CharSequence;
+    iget-object p1, p0, Landroidx/preference/ListPreference;->t0:[Ljava/lang/CharSequence;
 
     if-eqz p1, :cond_0
 
@@ -54,10 +54,10 @@
 
 
 # virtual methods
-.method public final c()V
+.method public final b()V
     .locals 1
 
-    iget-object v0, p0, Landroidx/preference/DropDownPreference;->u0:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Landroidx/preference/DropDownPreference;->v0:Landroid/widget/ArrayAdapter;
 
     if-eqz v0, :cond_0
 

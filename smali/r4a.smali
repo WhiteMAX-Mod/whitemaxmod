@@ -2,12 +2,15 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
 
 # virtual methods
-.method public l()Lqj6;
+.method public a(Lk59;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public l()Lpj6;
     .locals 1
 
     const/4 v0, 0x0
@@ -21,10 +24,4 @@
     const/4 v0, 0x0
 
     return-object v0
-.end method
-
-.method public p(Le69;)V
-    .locals 0
-
-    return-void
 .end method

@@ -1,127 +1,185 @@
 .class public final Lf17;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwxf;
 
 
 # instance fields
-.field public final synthetic a:Lg17;
+.field public final a:Landroid/content/Context;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ln8g;
+
+.field public d:I
+
+.field public e:I
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Lgo3;
 
 
 # direct methods
-.method public constructor <init>(Lg17;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lo58;Lo58;Lr3e;Lmbg;)V
+    .locals 1
 
-    iput-object p1, p0, Lf17;->a:Lg17;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    iput-object p1, p0, Lf17;->a:Landroid/content/Context;
+
+    const-class p1, Lf17;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lf17;->b:Ljava/lang/String;
+
+    new-instance p1, Lac1;
+
+    const/16 v0, 0xa
+
+    invoke-direct {p1, p0, p3, p2, v0}, Lac1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lf17;->c:Ln8g;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lf17;->d:I
+
+    iput p1, p0, Lf17;->e:I
+
+    const-string p1, "Google Play Services"
+
+    iput-object p1, p0, Lf17;->f:Ljava/lang/String;
+
+    new-instance p1, Lgo3;
+
+    invoke-direct {p1}, Lgo3;-><init>()V
+
+    iput-object p1, p0, Lf17;->g:Lgo3;
+
+    check-cast p5, Lj9b;
+
+    invoke-virtual {p5}, Lj9b;->a()Lsb4;
+
+    move-result-object p1
+
+    new-instance p2, Le17;
+
+    const/4 p5, 0x0
+
+    invoke-direct {p2, p0, p3, p5}, Le17;-><init>(Lf17;Lo58;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p3, 0x2
+
+    invoke-static {p4, p1, p5, p2, p3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 5
+.method public final a()Z
+    .locals 3
 
-    const-string p1, "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+    iget v0, p0, Lf17;->d:I
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    const/4 v1, -0x1
 
-    move-result-object v0
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sget-object v0, Lc07;->d:Lc07;
 
-    move-result p1
+    iget-object v1, p0, Lf17;->a:Landroid/content/Context;
 
-    if-nez p1, :cond_0
+    sget v2, Ld07;->a:I
 
-    return-void
+    invoke-virtual {v0, v1, v2}, Ld07;->c(Landroid/content/Context;I)I
+
+    move-result v0
+
+    iput v0, p0, Lf17;->d:I
 
     :cond_0
-    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    iget v0, p0, Lf17;->d:I
 
-    move-result-object p1
+    if-nez v0, :cond_1
 
-    const/4 p2, 0x0
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_1
-
-    const-string v0, "com.google.android.gms.auth.api.phone.EXTRA_STATUS"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/common/api/Status;
-
-    goto :goto_0
+    return v0
 
     :cond_1
-    move-object v0, p2
+    const/4 v0, 0x0
 
-    :goto_0
-    iget-object v1, p0, Lf17;->a:Lg17;
+    return v0
+.end method
 
-    if-eqz v0, :cond_2
+.method public final b(Lu9g;)Ljava/lang/Object;
+    .locals 5
 
-    iget v2, v0, Lcom/google/android/gms/common/api/Status;->a:I
+    invoke-virtual {p0}, Lf17;->a()Z
 
-    if-nez v2, :cond_2
+    move-result v0
 
-    iget-object v0, v1, Lg17;->d:Lkotlinx/coroutines/internal/ContextScope;
+    if-eqz v0, :cond_0
 
-    new-instance v2, Le17;
+    new-instance v0, Lp7e;
 
-    invoke-direct {v2, v1, p1, p2}, Le17;-><init>(Lg17;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, p2, p2, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    return-void
-
-    :cond_2
-    iget-object v1, v1, Lg17;->e:Ljava/lang/String;
-
-    new-instance v2, Lgc4;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
+    invoke-static {p1}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    goto :goto_1
+    invoke-direct {v0, p1}, Lp7e;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    :cond_3
-    move-object p1, p2
-
-    :goto_1
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "onMessageReceived: error; status = "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Lcom/google/firebase/messaging/FirebaseMessaging;->c()Lcom/google/firebase/messaging/FirebaseMessaging;
 
     move-result-object p1
 
-    invoke-direct {v2, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p1, 0x0
+    new-instance v1, Lieg;
 
-    new-array p1, p1, [Ljava/lang/Object;
+    invoke-direct {v1}, Lieg;-><init>()V
 
-    invoke-static {v1, v2, p2, p1}, Lm4j;->j(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v2, p1, Lcom/google/firebase/messaging/FirebaseMessaging;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    return-void
+    new-instance v3, Lu46;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, p1, v1, v4}, Lu46;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;Lieg;I)V
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+
+    new-instance p1, Ldgc;
+
+    const/16 v2, 0x16
+
+    invoke-direct {p1, p0, v2, v0}, Ldgc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v1, v1, Lieg;->a:Liqj;
+
+    invoke-virtual {v1, p1}, Liqj;->i(Lx1b;)Liqj;
+
+    invoke-virtual {v0}, Lp7e;->a()Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Lone/me/sdk/vendor/StoreServicesInfo$ServicesNotAvailableException;
+
+    invoke-direct {p1}, Lone/me/sdk/vendor/StoreServicesInfo$ServicesNotAvailableException;-><init>()V
+
+    throw p1
 .end method

@@ -1,94 +1,132 @@
 .class public final Lnm6;
-.super Ljava/lang/Object;
+.super Ldu7;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lnm6;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lvth;
+.implements Lj88;
+.implements Lo9e;
+.implements Len6;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public final synthetic X:Landroidx/fragment/app/b;
+
+.field public final b:Landroidx/fragment/app/b;
+
+.field public final c:Landroidx/fragment/app/b;
+
+.field public final d:Landroid/os/Handler;
+
+.field public final o:Lcn6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroidx/fragment/app/b;)V
+    .locals 1
 
-    new-instance v0, Lc0;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lc0;-><init>(I)V
-
-    sput-object v0, Lnm6;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 0
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lnm6;->a:Landroid/os/Bundle;
+    iput-object p1, p0, Lnm6;->X:Landroidx/fragment/app/b;
 
-    return-void
-.end method
+    new-instance v0, Landroid/os/Handler;
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 0
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnm6;->b:Landroidx/fragment/app/b;
 
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
+    iput-object p1, p0, Lnm6;->c:Landroidx/fragment/app/b;
 
-    move-result-object p1
+    iput-object v0, p0, Lnm6;->d:Landroid/os/Handler;
 
-    iput-object p1, p0, Lnm6;->a:Landroid/os/Bundle;
+    new-instance p1, Lcn6;
 
-    if-eqz p2, :cond_0
+    invoke-direct {p1}, Landroidx/fragment/app/c;-><init>()V
 
-    if-eqz p1, :cond_0
+    iput-object p1, p0, Lnm6;->o:Lcn6;
 
-    .line 5
-    invoke-virtual {p1, p2}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final a(Landroidx/fragment/app/a;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final c(I)Landroid/view/View;
     .locals 1
 
+    iget-object v0, p0, Lnm6;->X:Landroidx/fragment/app/b;
+
+    invoke-virtual {v0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    iget-object v0, p0, Lnm6;->X:Landroidx/fragment/app/b;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final h()Luth;
+    .locals 1
 
-    iget-object p2, p0, Lnm6;->a:Landroid/os/Bundle;
+    iget-object v0, p0, Lnm6;->X:Landroidx/fragment/app/b;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+    invoke-virtual {v0}, Lfp3;->h()Luth;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final l()Lsn;
+    .locals 1
+
+    iget-object v0, p0, Lnm6;->X:Landroidx/fragment/app/b;
+
+    iget-object v0, v0, Lfp3;->d:Lvd;
+
+    iget-object v0, v0, Lvd;->d:Ljava/lang/Object;
+
+    check-cast v0, Lsn;
+
+    return-object v0
+.end method
+
+.method public final p()Ll88;
+    .locals 1
+
+    iget-object v0, p0, Lnm6;->X:Landroidx/fragment/app/b;
+
+    iget-object v0, v0, Landroidx/fragment/app/b;->F0:Ll88;
+
+    return-object v0
 .end method

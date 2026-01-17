@@ -1,21 +1,11 @@
-.class public final Lem4;
-.super Ljja;
+.class public interface abstract Lem4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljava/lang/String;
+# virtual methods
+.method public abstract a()Llm4;
+.end method
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    invoke-direct {p0, v0}, Ljja;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lem4;->b:Ljava/lang/String;
-
-    return-void
+.method public abstract b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
 .end method

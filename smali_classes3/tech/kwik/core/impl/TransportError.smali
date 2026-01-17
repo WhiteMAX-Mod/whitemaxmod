@@ -153,7 +153,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1}, Ln0c;->r(I)Ljava/lang/String;
+    invoke-static {p1}, Lpqb;->p(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -190,7 +190,7 @@
 
     iget v1, p0, Ltech/kwik/core/impl/TransportError;->a:I
 
-    invoke-static {v1}, Ln0c;->r(I)Ljava/lang/String;
+    invoke-static {v1}, Lpqb;->p(I)Ljava/lang/String;
 
     move-result-object v1
 

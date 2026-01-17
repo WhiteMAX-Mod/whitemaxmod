@@ -1,10 +1,10 @@
 .class public final Liwa;
-.super Lzwf;
+.super Ljyf;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final B(J)V
+.method public final E(J)V
     .locals 0
 
     return-void

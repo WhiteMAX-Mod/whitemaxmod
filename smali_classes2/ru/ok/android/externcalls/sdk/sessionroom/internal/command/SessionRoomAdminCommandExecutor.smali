@@ -11,31 +11,31 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutor;",
         "",
-        "Lm7;",
+        "Lg7;",
         "params",
         "Lkotlin/Function0;",
-        "Lv2h;",
+        "Lb3h;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "activateRooms",
-        "(Lm7;Lmq6;Loq6;)V",
-        "Lc6h;",
+        "(Lg7;Llq6;Lnq6;)V",
+        "Li6h;",
         "updateRooms",
-        "(Lc6h;Lmq6;Loq6;)V",
-        "Lj7g;",
+        "(Li6h;Llq6;Lnq6;)V",
+        "Lx7g;",
         "switchRoom",
-        "(Lj7g;Lmq6;Loq6;)V",
-        "Luud;",
+        "(Lx7g;Llq6;Lnq6;)V",
+        "Lqvd;",
         "removeRooms",
-        "(Luud;Lmq6;Loq6;)V",
+        "(Lqvd;Llq6;Lnq6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
         "assignParticipantsToRooms",
-        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lmq6;Loq6;)V",
+        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Llq6;Lnq6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
         "moveParticipant",
-        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lmq6;Loq6;)V",
+        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Llq6;Lnq6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -49,73 +49,73 @@
 
 
 # virtual methods
-.method public abstract activateRooms(Lm7;Lmq6;Loq6;)V
+.method public abstract activateRooms(Lg7;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lm7;",
-            "Lmq6;",
-            "Loq6;",
+            "Lg7;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract assignParticipantsToRooms(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lmq6;Loq6;)V
+.method public abstract assignParticipantsToRooms(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
-            "Lmq6;",
-            "Loq6;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lmq6;Loq6;)V
+.method public abstract moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
-            "Lmq6;",
-            "Loq6;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract removeRooms(Luud;Lmq6;Loq6;)V
+.method public abstract removeRooms(Lqvd;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Luud;",
-            "Lmq6;",
-            "Loq6;",
+            "Lqvd;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract switchRoom(Lj7g;Lmq6;Loq6;)V
+.method public abstract switchRoom(Lx7g;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lj7g;",
-            "Lmq6;",
-            "Loq6;",
+            "Lx7g;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract updateRooms(Lc6h;Lmq6;Loq6;)V
+.method public abstract updateRooms(Li6h;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc6h;",
-            "Lmq6;",
-            "Loq6;",
+            "Li6h;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation

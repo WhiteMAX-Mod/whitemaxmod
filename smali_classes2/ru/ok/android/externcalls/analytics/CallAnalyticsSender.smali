@@ -21,7 +21,7 @@
         "()V",
         "Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;",
         "config",
-        "Lv2h;",
+        "Lb3h;",
         "initialize",
         "(Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;)V",
         "Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;",
@@ -231,7 +231,7 @@
 
     const/4 v7, 0x0
 
-    invoke-direct/range {v2 .. v9}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILro4;)V
+    invoke-direct/range {v2 .. v9}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILso4;)V
 
     invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getInstance(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;
 
@@ -279,11 +279,11 @@
 
     invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lx31;
+    new-instance v0, Ls31;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lx31;-><init>(ZI)V
+    invoke-direct {v0, p1, v1}, Ls31;-><init>(ZI)V
 
     invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProvider;)V
 

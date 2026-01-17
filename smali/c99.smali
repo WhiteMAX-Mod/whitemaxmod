@@ -1,93 +1,53 @@
 .class public final Lc99;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Ljava/lang/Object;
 
-.field public b:Z
-
-.field public final c:Ljava/util/ArrayList;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lc99;->a:Ljava/lang/Object;
 
-    iput-boolean v0, p0, Lc99;->b:Z
+    instance-of v0, p1, Ljava/lang/String;
 
-    iput-object p1, p0, Lc99;->a:Landroid/content/Context;
+    if-eqz v0, :cond_0
 
-    new-instance p1, Ljava/util/ArrayList;
+    const/4 p1, 0x1
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lc99;->c:Ljava/util/ArrayList;
+    iput p1, p0, Lc99;->b:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const-string p1, "noConnectivity"
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    iget-boolean p2, p0, Lc99;->b:Z
-
-    if-eq p2, p1, :cond_0
-
-    iput-boolean p1, p0, Lc99;->b:Z
-
-    iget-object p1, p0, Lc99;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lf99;
-
-    invoke-virtual {p2}, Lf99;->c()V
-
-    goto :goto_0
 
     :cond_0
+    instance-of p1, p1, Lba9;
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x2
+
+    iput p1, p0, Lc99;->b:I
+
+    return-void
+
+    :cond_1
+    const/4 p1, 0x0
+
+    iput p1, p0, Lc99;->b:I
+
+    const-string p1, "RecyclerAdapter"
+
+    const-string v0, "Wrong type of data passed to Item constructor"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method

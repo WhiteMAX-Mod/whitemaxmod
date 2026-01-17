@@ -1,185 +1,69 @@
 .class public final Lc3i;
-.super Ljava/lang/Object;
+.super Llm4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Companion:Lb3i;
+.field public static final b:Lc3i;
 
+.field public static final c:Lhm4;
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final d:Lhm4;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public static final e:Lhm4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
-    new-instance v0, Lb3i;
+    new-instance v0, Lc3i;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    sput-object v0, Lc3i;->Companion:Lb3i;
+    sput-object v0, Lc3i;->b:Lc3i;
 
-    return-void
-.end method
+    const-string v1, "bot_id"
 
-.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    and-int/lit8 v0, p2, 0x7
+    move-result-object v2
 
-    const/4 v1, 0x7
+    const-string v3, ":webapp:root"
 
-    if-ne v1, v0, :cond_0
+    const/4 v4, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v5, 0xe
 
-    iput-object p1, p0, Lc3i;->a:Ljava/lang/String;
+    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    iput-object p3, p0, Lc3i;->b:Ljava/lang/String;
+    move-result-object v2
 
-    iput-object p4, p0, Lc3i;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    sget-object p1, La3i;->a:La3i;
-
-    invoke-virtual {p1}, La3i;->d()Lvoe;
-
-    move-result-object p1
-
-    invoke-static {p2, v1, p1}, Lvij;->b(IILvoe;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lc3i;
+    sput-object v2, Lc3i;->c:Lhm4;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    new-array v2, v2, [Ljava/lang/String;
 
-    return v2
+    const-string v3, ":settings/webapps"
 
-    :cond_1
-    check-cast p1, Lc3i;
+    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    iget-object v1, p0, Lc3i;->a:Ljava/lang/String;
+    move-result-object v2
 
-    iget-object v3, p1, Lc3i;->a:Ljava/lang/String;
+    sput-object v2, Lc3i;->d:Lhm4;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v2, ":settings/webapp"
 
-    move-result v1
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    if-nez v1, :cond_2
+    move-result-object v1
 
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lc3i;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lc3i;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lc3i;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lc3i;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lc3i;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lc3i;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lc3i;->c:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", url="
-
-    const-string v1, ", fileName="
-
-    const-string v2, "WebAppDownloadFileRequest(requestId="
-
-    iget-object v3, p0, Lc3i;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lc3i;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     move-result-object v0
 
-    const-string v1, ")"
+    sput-object v0, Lc3i;->e:Lhm4;
 
-    iget-object v2, p0, Lc3i;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

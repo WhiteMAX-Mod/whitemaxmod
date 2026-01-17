@@ -1,39 +1,39 @@
 .class public final Lgd2;
-.super Led2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lgd2;
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lgd2;
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lgd2;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lgd2;->a:Lgd2;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(C)Z
+.method public constructor <init>(Ljava/lang/String;Lgd2;)V
     .locals 0
 
-    const/4 p1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p1
-.end method
+    iput-object p1, p0, Lgd2;->a:Ljava/lang/String;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iput-object p2, p0, Lgd2;->b:Lgd2;
 
-    const-string v0, "CharMatcher.none()"
+    const/4 p1, 0x1
 
-    return-object v0
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget p2, p2, Lgd2;->c:I
+
+    add-int/2addr p1, p2
+
+    :goto_0
+    iput p1, p0, Lgd2;->c:I
+
+    return-void
 .end method

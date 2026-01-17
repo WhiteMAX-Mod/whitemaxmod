@@ -4,36 +4,26 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lb2e;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:J
-
-.field public final f:Ljava/util/List;
+.field public final b:Lai;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/util/List;)V
-    .locals 0
+.method public constructor <init>(Lb2e;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lbk;->a:J
+    iput-object p1, p0, Lbk;->a:Lb2e;
 
-    iput-object p3, p0, Lbk;->b:Ljava/lang/String;
+    new-instance p1, Lai;
 
-    iput-object p4, p0, Lbk;->c:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    iput-object p5, p0, Lbk;->d:Ljava/lang/String;
+    invoke-direct {p1, v0}, Lai;-><init>(I)V
 
-    iput-wide p6, p0, Lbk;->e:J
-
-    iput-object p8, p0, Lbk;->f:Ljava/util/List;
+    iput-object p1, p0, Lbk;->b:Lai;
 
     return-void
 .end method

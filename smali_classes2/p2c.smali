@@ -1,131 +1,82 @@
 .class public final Lp2c;
-.super Ljja;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:D
+.field public final a:Lt2c;
 
-.field public final c:D
+.field public final b:Lod5;
+
+.field public final c:Lru/ok/messages/photoeditor/ActPhotoEditor;
+
+.field public final d:Lxgd;
+
+.field public e:Ls2c;
 
 
 # direct methods
-.method public constructor <init>(DD)V
-    .locals 1
+.method public constructor <init>(Lt2c;Lod5;Lru/ok/messages/photoeditor/ActPhotoEditor;Lxgd;Lmd5;ZZZ)V
+    .locals 8
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Ljja;-><init>(Ljava/lang/Object;)V
+    iput-object p1, p0, Lp2c;->a:Lt2c;
 
-    iput-wide p1, p0, Lp2c;->b:D
+    iput-object p2, p0, Lp2c;->b:Lod5;
 
-    iput-wide p3, p0, Lp2c;->c:D
+    iput-object p0, p2, Lod5;->b:Lp2c;
 
-    return-void
-.end method
+    iput-object p3, p0, Lp2c;->c:Lru/ok/messages/photoeditor/ActPhotoEditor;
 
+    iget-object p3, p1, Lt2c;->a:Ljava/util/HashSet;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-virtual {p3, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    const/4 v0, 0x1
+    iput-object p4, p0, Lp2c;->d:Lxgd;
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Ls2c;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lp2c;
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    const/4 v6, 0x0
 
-    :cond_1
-    check-cast p1, Lp2c;
+    move v4, p6
 
-    iget-wide v3, p0, Lp2c;->b:D
+    move v5, p7
 
-    iget-wide v5, p1, Lp2c;->b:D
+    move/from16 v7, p8
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    invoke-direct/range {v0 .. v7}, Ls2c;-><init>(ZZZZZZZ)V
 
-    move-result v1
+    iput-object v0, p0, Lp2c;->e:Ls2c;
 
-    if-eqz v1, :cond_2
+    invoke-virtual {p1, v0}, Lt2c;->a(Ls2c;)V
 
-    return v2
+    const/4 p1, 0x1
 
-    :cond_2
-    iget-wide v3, p0, Lp2c;->c:D
+    invoke-virtual {p4, p2, p5, p1}, Lxgd;->c(Lod5;Lmd5;Z)V
 
-    iget-wide v5, p1, Lp2c;->c:D
+    if-eqz p6, :cond_0
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    if-eqz p7, :cond_0
 
-    move-result p1
+    iget-object p3, p2, Lod5;->a:Lsd5;
 
-    if-eqz p1, :cond_3
+    invoke-virtual {p3, p1}, Lsd5;->setDrawStickerEnabled(Z)V
 
-    return v2
+    invoke-virtual {p2}, Lod5;->a()Lmd5;
 
-    :cond_3
-    return v0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 3
+    const/4 p3, 0x0
 
-    iget-wide v0, p0, Lp2c;->b:D
+    invoke-virtual {p4, p2, p1, p3}, Lxgd;->c(Lod5;Lmd5;Z)V
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lp2c;->c:D
-
-    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SendLocation(lat="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lp2c;->b:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lp2c;->c:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

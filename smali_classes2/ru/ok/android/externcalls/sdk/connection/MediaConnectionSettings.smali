@@ -51,7 +51,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/connection/MediaConnectionSettings;-><init>(JJILro4;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/connection/MediaConnectionSettings;-><init>(JJILso4;)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(JJILro4;)V
+.method public synthetic constructor <init>(JJILso4;)V
     .locals 2
 
     and-int/lit8 p6, p5, 0x1

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lby0;
+.implements Lux0;
 
 
 # instance fields

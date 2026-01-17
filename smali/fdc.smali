@@ -1,254 +1,71 @@
-.class public final Lfdc;
-.super Ljava/io/InputStream;
+.class public final synthetic Lfdc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final a:Lzj9;
+.field public final synthetic a:I
 
-.field public b:I
-
-.field public c:I
+.field public final synthetic b:Lgdc;
 
 
 # direct methods
-.method public constructor <init>(Lzj9;)V
-    .locals 1
+.method public synthetic constructor <init>(Lgdc;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    iput p2, p0, Lfdc;->a:I
 
-    monitor-enter p1
+    iput-object p1, p0, Lfdc;->b:Lgdc;
 
-    :try_start_0
-    iget-object v0, p1, Lzj9;->b:Lag3;
-
-    invoke-static {v0}, Lag3;->z0(Lag3;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lfdc;->a:Lzj9;
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lfdc;->b:I
-
-    iput p1, p0, Lfdc;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final available()I
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lfdc;->a:Lzj9;
+    iget v0, p0, Lfdc;->a:I
 
-    invoke-virtual {v0}, Lzj9;->d0()I
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lfdc;->b:Lgdc;
+
+    iget-object v1, v0, Lgdc;->j:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lxpe;
+
+    invoke-static {v0, v1}, Lrjj;->a(Lxpe;[Lxpe;)I
 
     move-result v0
 
-    iget v1, p0, Lfdc;->b:I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sub-int/2addr v0, v1
+    move-result-object v0
 
-    return v0
-.end method
+    return-object v0
 
-.method public final mark(I)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lfdc;->b:Lgdc;
 
-    iget p1, p0, Lfdc;->b:I
+    iget-object v0, v0, Lgdc;->b:Liv6;
 
-    iput p1, p0, Lfdc;->c:I
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
+    new-instance v0, Ljava/util/ArrayList;
 
-.method public final markSupported()Z
-    .locals 1
+    const/4 v1, 0x0
 
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final read()I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lfdc;->available()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    const/4 v0, -0x1
-
-    return v0
-
-    .line 2
-    :cond_0
-    iget v0, p0, Lfdc;->b:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lfdc;->b:I
-
-    iget-object v1, p0, Lfdc;->a:Lzj9;
-
-    invoke-virtual {v1, v0}, Lzj9;->E(I)B
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    return v0
-.end method
-
-.method public final read([B)I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    .line 3
-    array-length v1, p1
-
-    invoke-virtual {p0, p1, v0, v1}, Lfdc;->read([BII)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final read([BII)I
-    .locals 4
-
-    if-ltz p2, :cond_2
-
-    if-ltz p3, :cond_2
-
-    add-int v0, p2, p3
-
-    .line 4
-    array-length v1, p1
-
-    if-gt v0, v1, :cond_2
-
-    .line 5
-    invoke-virtual {p0}, Lfdc;->available()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    const/4 p1, -0x1
-
-    return p1
-
-    :cond_0
-    if-gtz p3, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 6
-    :cond_1
-    invoke-static {v0, p3}, Ljava/lang/Math;->min(II)I
-
-    move-result p3
-
-    .line 7
-    iget-object v0, p0, Lfdc;->a:Lzj9;
-
-    iget v1, p0, Lfdc;->b:I
-
-    invoke-virtual {v0, v1, p2, p3, p1}, Lzj9;->c0(III[B)V
-
-    .line 8
-    iget p1, p0, Lfdc;->b:I
-
-    add-int/2addr p1, p3
-
-    iput p1, p0, Lfdc;->b:I
-
-    return p3
-
-    .line 9
-    :cond_2
-    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "length="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    array-length p1, p1
-
-    const-string v2, "; regionStart="
-
-    const-string v3, "; regionLength="
-
-    .line 10
-    invoke-static {v1, p1, v2, p2, v3}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    .line 11
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final reset()V
-    .locals 1
-
-    iget v0, p0, Lfdc;->c:I
-
-    iput v0, p0, Lfdc;->b:I
-
-    return-void
-.end method
-
-.method public final skip(J)J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     goto :goto_0
 
@@ -256,29 +73,36 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0}, Lsti;->b(Ljava/util/List;)[Lxpe;
 
     move-result-object v0
 
-    invoke-static {v0}, Lhjj;->a(Ljava/lang/Boolean;)V
+    return-object v0
 
-    long-to-int p1, p1
+    :pswitch_1
+    iget-object v0, p0, Lfdc;->b:Lgdc;
 
-    invoke-virtual {p0}, Lfdc;->available()I
+    iget-object v0, v0, Lgdc;->b:Liv6;
 
-    move-result p2
+    if-eqz v0, :cond_1
 
-    invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
+    invoke-interface {v0}, Liv6;->c()[La38;
 
-    move-result p1
+    move-result-object v0
 
-    iget p2, p0, Lfdc;->b:I
+    goto :goto_1
 
-    add-int/2addr p2, p1
+    :cond_1
+    sget-object v0, Ltti;->a:[La38;
 
-    iput p2, p0, Lfdc;->b:I
+    :goto_1
+    return-object v0
 
-    int-to-long p1, p1
+    nop
 
-    return-wide p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

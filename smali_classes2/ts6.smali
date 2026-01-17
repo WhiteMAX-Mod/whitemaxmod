@@ -1,126 +1,208 @@
 .class public final Lts6;
-.super Li4;
+.super Lws6;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lts6;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final e:Lts6;
 
+.field public static final f:Landroid/net/Uri;
 
-# instance fields
-.field public final a:I
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
+
+.field public static final i:Ljava/lang/String;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
+
+.field public static final m:Ljava/lang/String;
+
+.field public static final n:Ljava/lang/String;
+
+.field public static final o:Ljava/lang/String;
+
+.field public static final p:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lwj4;
+    new-instance v0, Lts6;
 
-    const/16 v1, 0x11
+    const-string v1, "\n              _size > 0\n              AND\n              (\n                media_type = 1\n                OR\n                media_type = 3\n              )\n            "
 
-    invoke-direct {v0, v1}, Lwj4;-><init>(I)V
+    invoke-direct {v0, v1}, Lws6;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lts6;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lts6;->e:Lts6;
 
-    return-void
-.end method
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-.method public constructor <init>(I)V
-    .locals 0
+    const/16 v1, 0x1d
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "external"
 
-    iput p1, p0, Lts6;->a:I
+    if-lt v0, v1, :cond_1
+
+    invoke-static {v2}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "no content uri for MediaStore.Files"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    invoke-static {v2}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    :goto_0
+    sput-object v0, Lts6;->f:Landroid/net/Uri;
+
+    const-string v0, "_id"
+
+    sput-object v0, Lts6;->g:Ljava/lang/String;
+
+    const-string v0, "bucket_id"
+
+    sput-object v0, Lts6;->h:Ljava/lang/String;
+
+    const-string v0, "bucket_display_name"
+
+    sput-object v0, Lts6;->i:Ljava/lang/String;
+
+    const-string v0, "_data"
+
+    sput-object v0, Lts6;->j:Ljava/lang/String;
+
+    const-string v0, "date_modified"
+
+    sput-object v0, Lts6;->k:Ljava/lang/String;
+
+    const-string v0, "mime_type"
+
+    sput-object v0, Lts6;->l:Ljava/lang/String;
+
+    const-string v0, "orientation"
+
+    sput-object v0, Lts6;->m:Ljava/lang/String;
+
+    const-string v0, "duration"
+
+    sput-object v0, Lts6;->n:Ljava/lang/String;
+
+    const-string v0, "media_type"
+
+    sput-object v0, Lts6;->o:Ljava/lang/String;
+
+    const-string v0, "unknown"
+
+    sput-object v0, Lts6;->p:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lts6;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lts6;
-
-    iget v1, p0, Lts6;->a:I
-
-    iget p1, p1, Lts6;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lts6;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "AsRes(res="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lts6;->a:I
-
-    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lts6;->i:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    iget p2, p0, Lts6;->a:I
+    sget-object v0, Lts6;->h:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    return-object v0
+.end method
 
-    return-void
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lts6;->j:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lts6;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final e()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lts6;->n:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final f()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lts6;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lts6;->o:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final h()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lts6;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final i()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lts6;->m:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final j()Landroid/net/Uri;
+    .locals 1
+
+    sget-object v0, Lts6;->f:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final k()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lts6;->p:Ljava/lang/String;
+
+    return-object v0
 .end method

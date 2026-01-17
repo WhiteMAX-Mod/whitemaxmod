@@ -1,5 +1,5 @@
 .class public final Lru/ok/android/externcalls/sdk/wt/WTSignaling;
-.super Lnbf;
+.super Lrcf;
 .source "SourceFile"
 
 
@@ -17,33 +17,33 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/wt/WTSignaling;",
-        "Lnbf;",
-        "Lgd7;",
+        "Lrcf;",
+        "Lqc7;",
         "client",
         "",
         "timeoutMS",
         "Ljava/lang/Runnable;",
         "reconnectTimeoutAction",
-        "Ljbf;",
+        "Lncf;",
         "signalingStat",
         "Ljava/util/concurrent/ExecutorService;",
         "executor",
-        "Lcgd;",
+        "Lahd;",
         "log",
-        "Ldgd;",
+        "Lbhd;",
         "logConfiguration",
         "serverPingTimeoutMs",
         "",
         "isFastRecoverEnabled",
-        "Lyj5;",
+        "Lak5;",
         "endpointParameters",
         "isReplaceParametersInEndpointEnabled",
-        "Lnkg;",
+        "Lxkg;",
         "timeProvider",
         "isSummaryStatsEnabled",
         "isSignalingLogThrottlingEnabled",
         "<init>",
-        "(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZ)V",
+        "(Lqc7;JLjava/lang/Runnable;Lncf;Ljava/util/concurrent/ExecutorService;Lahd;Lbhd;JZLak5;ZLxkg;ZZ)V",
         "isFallbackSupported",
         "()Z",
         "",
@@ -53,21 +53,21 @@
         "safelyCloseSocketWithCodeAndReason",
         "(ILjava/lang/String;)Z",
         "endpoint",
-        "Lmbf;",
+        "Lqcf;",
         "listener",
-        "Lv2h;",
+        "Lb3h;",
         "safelyCreateNewSocket",
-        "(Ljava/lang/String;Lmbf;)V",
+        "(Ljava/lang/String;Lqcf;)V",
         "Lkotlin/Function1;",
         "action",
         "safelyDoIfSocketExists",
-        "(Loq6;)V",
+        "(Lnq6;)V",
         "safelyResetSocketReference",
         "()V",
         "cmd",
         "safelySendSocketMessage",
         "(Ljava/lang/String;)Z",
-        "Lgd7;",
+        "Lqc7;",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;",
         "socket",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;",
@@ -92,7 +92,7 @@
 
 
 # instance fields
-.field private final client:Lgd7;
+.field private final client:Lqc7;
 
 .field private socket:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
@@ -105,18 +105,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->Companion:Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;
 
     return-void
 .end method
 
-.method private constructor <init>(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZ)V
+.method private constructor <init>(Lqc7;JLjava/lang/Runnable;Lncf;Ljava/util/concurrent/ExecutorService;Lahd;Lbhd;JZLak5;ZLxkg;ZZ)V
     .locals 18
 
     .line 2
-    new-instance v0, Libf;
+    new-instance v0, Lmcf;
 
     .line 3
     const-string v5, "webtransport_failed_exception"
@@ -133,10 +133,10 @@
 
     const-string v4, "webtransport_failed_pings"
 
-    invoke-direct/range {v0 .. v6}, Libf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lmcf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    sget-object v1, Lgug;->a:Lgug;
+    sget-object v1, Lnug;->a:Lnug;
 
     move-wide/from16 v2, p2
 
@@ -168,22 +168,22 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct/range {v0 .. v17}, Lnbf;-><init>(Lhug;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLibf;Lnkg;ZZ)V
+    invoke-direct/range {v0 .. v17}, Lrcf;-><init>(Loug;JLjava/lang/Runnable;Lncf;Ljava/util/concurrent/ExecutorService;Lahd;Lbhd;JZLak5;ZLmcf;Lxkg;ZZ)V
 
     move-object/from16 v1, p1
 
     .line 7
-    iput-object v1, v0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lgd7;
+    iput-object v1, v0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lqc7;
 
     .line 8
-    sget v1, Ltij;->a:I
+    sget v1, Lojj;->a:I
 
     const/4 v2, 0x2
 
     if-nez v1, :cond_0
 
     .line 9
-    sput v2, Ltij;->a:I
+    sput v2, Lojj;->a:I
 
     return-void
 
@@ -203,11 +203,11 @@
     throw v1
 .end method
 
-.method public synthetic constructor <init>(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZLro4;)V
+.method public synthetic constructor <init>(Lqc7;JLjava/lang/Runnable;Lncf;Ljava/util/concurrent/ExecutorService;Lahd;Lbhd;JZLak5;ZLxkg;ZZLso4;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p16}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;-><init>(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZ)V
+    invoke-direct/range {p0 .. p16}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;-><init>(Lqc7;JLjava/lang/Runnable;Lncf;Ljava/util/concurrent/ExecutorService;Lahd;Lbhd;JZLak5;ZLxkg;ZZ)V
 
     return-void
 .end method
@@ -215,7 +215,7 @@
 .method public static final synthetic access$init(Lru/ok/android/externcalls/sdk/wt/WTSignaling;)V
     .locals 0
 
-    invoke-virtual {p0}, Lnbf;->init()V
+    invoke-virtual {p0}, Lrcf;->init()V
 
     return-void
 .end method
@@ -277,44 +277,44 @@
     return p1
 .end method
 
-.method public safelyCreateNewSocket(Ljava/lang/String;Lmbf;)V
+.method public safelyCreateNewSocket(Ljava/lang/String;Lqcf;)V
     .locals 6
 
     new-instance v0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
-    invoke-virtual {p0}, Lnbf;->getLog()Lcgd;
+    invoke-virtual {p0}, Lrcf;->getLog()Lahd;
 
     move-result-object v2
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lgd7;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lqc7;
 
     new-instance v4, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;
 
-    invoke-virtual {p0}, Lnbf;->getLog()Lcgd;
+    invoke-virtual {p0}, Lrcf;->getLog()Lahd;
 
     move-result-object v1
 
-    invoke-direct {v4, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;-><init>(Lcgd;)V
+    invoke-direct {v4, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;-><init>(Lahd;)V
 
     new-instance v5, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;
 
-    invoke-direct {v5, p2}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;-><init>(Lmbf;)V
+    invoke-direct {v5, p2}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;-><init>(Lqcf;)V
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;-><init>(Ljava/lang/String;Lcgd;Lgd7;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;-><init>(Ljava/lang/String;Lahd;Lqc7;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->socket:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
     return-void
 .end method
 
-.method public safelyDoIfSocketExists(Loq6;)V
+.method public safelyDoIfSocketExists(Lnq6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
@@ -327,7 +327,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

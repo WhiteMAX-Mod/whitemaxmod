@@ -1,27 +1,57 @@
-.class public final Lad2;
-.super Lbd2;
+.class public abstract Lad2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Iterable;
+.implements Lo28;
 
-# static fields
-.field public static final c:Lad2;
+
+# instance fields
+.field public final a:C
+
+.field public final b:C
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(CC)V
+    .locals 1
 
-    new-instance v0, Lad2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-char p1, p0, Lad2;->a:C
 
-    new-instance v1, Lms;
+    const/4 v0, 0x1
 
-    invoke-direct {v1}, Lms;-><init>()V
+    invoke-static {p1, p2, v0}, Lhlj;->a(III)I
 
-    iput-object v1, v0, Lbd2;->b:Ljava/lang/Object;
+    move-result p1
 
-    sput-object v0, Lad2;->c:Lad2;
+    int-to-char p1, p1
+
+    iput-char p1, p0, Lad2;->b:C
+
+    iput v0, p0, Lad2;->c:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
+    .locals 4
+
+    new-instance v0, Lbd2;
+
+    iget-char v1, p0, Lad2;->b:C
+
+    iget v2, p0, Lad2;->c:I
+
+    iget-char v3, p0, Lad2;->a:C
+
+    invoke-direct {v0, v3, v1, v2}, Lbd2;-><init>(CCI)V
+
+    return-object v0
 .end method

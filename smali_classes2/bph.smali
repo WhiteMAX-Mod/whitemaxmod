@@ -1,156 +1,105 @@
-.class public final Lbph;
-.super Ljava/lang/Object;
+.class public final enum Lbph;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbgh;
-
-.field public final b:Landroid/content/Context;
-
-.field public final c:Lx68;
-
-.field public final d:Lfv3;
-
-.field public final e:Lybg;
-
-.field public final f:Lpfc;
-
-.field public final g:Lo2b;
-
-.field public final h:Lpcg;
-
-.field public final i:Lvu3;
-
-.field public final j:Ljy0;
-
-.field public final k:Ly16;
-
-.field public final l:I
+# static fields
+.field public static final synthetic a:[Lbph;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lfv3;Lx68;Lybg;Lpfc;Lo2b;Lpcg;Lvu3;Ljy0;Ly16;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lbph;
 
-    new-instance v0, Lbgh;
+    const-string v1, "LOWEST"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lbph;->a:Lbgh;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lbph;->b:Landroid/content/Context;
+    new-instance v1, Lbph;
 
-    iput-object p2, p0, Lbph;->d:Lfv3;
+    const-string v2, "HIGHEST"
 
-    iput-object p3, p0, Lbph;->c:Lx68;
+    const/4 v3, 0x1
 
-    iput-object p4, p0, Lbph;->e:Lybg;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p5, p0, Lbph;->f:Lpfc;
+    new-instance v2, Lbph;
 
-    iput-object p6, p0, Lbph;->g:Lo2b;
+    const-string v3, "MAX_QVGA"
 
-    iput-object p7, p0, Lbph;->h:Lpcg;
+    const/4 v4, 0x2
 
-    iput-object p8, p0, Lbph;->i:Lvu3;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p9, p0, Lbph;->j:Ljy0;
+    new-instance v3, Lbph;
 
-    iput-object p10, p0, Lbph;->k:Ly16;
+    const-string v4, "MAX_480P"
 
-    const/16 p1, 0x1e
+    const/4 v5, 0x3
 
-    iput p1, p0, Lbph;->l:I
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v4, Lbph;
+
+    const-string v5, "MAX_720P"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v5, Lbph;
+
+    const-string v6, "MAX_1080P"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v6, Lbph;
+
+    const-string v7, "MAX_2160P"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array/range {v0 .. v6}, [Lbph;
+
+    move-result-object v0
+
+    sput-object v0, Lbph;->a:[Lbph;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lbph;
+    .locals 1
 
-# virtual methods
-.method public final a(Lm20;)Ljava/lang/String;
-    .locals 5
+    const-class v0, Lbph;
 
-    invoke-static {p1}, Lz5j;->g(Lm20;)Z
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    invoke-virtual {p1}, Lm20;->g()Z
+    check-cast p0, Lbph;
 
-    move-result v1
+    return-object p0
+.end method
 
-    iget-object v2, p1, Lm20;->s:Ljava/lang/String;
+.method public static values()[Lbph;
+    .locals 1
 
-    const-wide/16 v3, 0x0
+    sget-object v0, Lbph;->a:[Lbph;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, [Lbph;->clone()Ljava/lang/Object;
 
-    iget-object p1, p1, Lm20;->d:Ll20;
+    move-result-object v0
 
-    iget-wide v0, p1, Ll20;->a:J
+    check-cast v0, [Lbph;
 
-    goto :goto_0
-
-    :cond_0
-    if-eqz v0, :cond_4
-
-    move-wide v0, v3
-
-    :goto_0
-    invoke-static {v2}, Ltri;->e(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Ljava/io/File;
-
-    invoke-direct {p1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1}, Lzoj;->b(Ljava/io/File;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return-object v2
-
-    :cond_2
-    cmp-long p1, v0, v3
-
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object p1, p0, Lbph;->k:Ly16;
-
-    check-cast p1, Lp36;
-
-    invoke-virtual {p1, v0, v1}, Lp36;->q(J)Ljava/io/File;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lzoj;->b(Ljava/io/File;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x0
-
-    return-object p1
+    return-object v0
 .end method

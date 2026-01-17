@@ -1,159 +1,179 @@
 .class public final Lx71;
-.super Ljava/lang/Object;
+.super Lzcf;
 .source "SourceFile"
-
-# interfaces
-.implements Ly71;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Z
-
-.field public final c:Z
+.field public final o:La4a;
 
 
 # direct methods
-.method public constructor <init>(JZZ)V
+.method public constructor <init>(La4a;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lzcf;-><init>(Ljava/util/concurrent/Executor;)V
 
-    iput-wide p1, p0, Lx71;->a:J
-
-    iput-boolean p3, p0, Lx71;->b:Z
-
-    iput-boolean p4, p0, Lx71;->c:Z
+    iput-object p1, p0, Lx71;->o:La4a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lx71;->b:Z
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lx71;->c:Z
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lx71;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lx71;
-
-    iget-wide v3, p0, Lx71;->a:J
-
-    iget-wide v5, p1, Lx71;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lx71;->b:Z
-
-    iget-boolean v3, p1, Lx71;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lx71;->c:Z
-
-    iget-boolean p1, p1, Lx71;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final I(Ljef;I)V
     .locals 3
 
-    iget-wide v0, p0, Lx71;->a:J
+    instance-of v0, p1, Lw71;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    if-eqz v0, :cond_1
 
-    move-result v0
+    check-cast p1, Lw71;
 
-    const/16 v1, 0x1f
+    iget-object v0, p1, Ltsd;->a:Landroid/view/View;
 
-    mul-int/2addr v0, v1
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
 
-    iget-boolean v2, p0, Lx71;->b:Z
+    move-result-object p2
 
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+    check-cast p2, Lud8;
 
-    move-result v0
+    instance-of v1, p2, Lb81;
 
-    iget-boolean v1, p0, Lx71;->c:Z
+    if-nez v1, :cond_0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    return-void
 
-    move-result v1
+    :cond_0
+    move-object v1, v0
 
-    add-int/2addr v1, v0
+    check-cast v1, Lt0f;
 
-    return v1
+    sget-object v2, Lo0f;->b:Lo0f;
+
+    invoke-virtual {v1, v2}, Lt0f;->setThemeDepended(Lo0f;)V
+
+    invoke-virtual {p1, p2}, Lw71;->y(Lud8;)V
+
+    move-object p1, p2
+
+    check-cast p1, Lb81;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setEnabled(Z)V
+
+    new-instance p1, Lub;
+
+    check-cast p2, Lb81;
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lx71;->o:La4a;
+
+    invoke-direct {p1, v2, v1, p2}, Lub;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v0, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lud8;
+
+    invoke-virtual {p1, p2}, Ljef;->y(Lud8;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final bridge synthetic s(Ltsd;I)V
+    .locals 0
 
-    const-string v0, "User(userId="
+    check-cast p1, Ljef;
 
-    const-string v1, ", isVideoEnabled="
+    invoke-virtual {p0, p1, p2}, Lx71;->I(Ljef;I)V
 
-    iget-wide v2, p0, Lx71;->a:J
+    return-void
+.end method
 
-    iget-boolean v4, p0, Lx71;->b:Z
+.method public final u(Landroid/view/ViewGroup;I)Ltsd;
+    .locals 2
 
-    invoke-static {v2, v3, v0, v1, v4}, Lxd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    sget v0, Ly6b;->G:I
 
-    move-result-object v0
+    if-ne p2, v0, :cond_0
 
-    const-string v1, ", isAudioEnabled="
+    new-instance p2, Lw71;
 
-    const-string v2, ")"
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-boolean v3, p0, Lx71;->c:Z
+    move-result-object p1
 
-    invoke-static {v0, v1, v3, v2}, Lgg9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    new-instance v0, Lt0f;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    return-object v0
+    invoke-direct {v0, p1, v1}, Lt0f;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p2, v0}, Ltsd;-><init>(Landroid/view/View;)V
+
+    return-object p2
+
+    :cond_0
+    sget v0, Ly6b;->F:I
+
+    if-ne p2, v0, :cond_1
+
+    new-instance p2, Ld21;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Landroid/widget/TextView;
+
+    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget-object p1, Lr1h;->q:Lrhg;
+
+    invoke-static {p1, v0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+
+    sget-object p1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {p1, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lzbb;->c:Lzlb;
+
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+
+    move-result-object p1
+
+    iget p1, p1, Lrfg;->g:I
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const/4 p1, 0x2
+
+    invoke-direct {p2, v0, p1}, Ld21;-><init>(Landroid/view/View;I)V
+
+    return-object p2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "unknown item viewType "
+
+    invoke-static {p2, v0}, Lmrf;->h(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

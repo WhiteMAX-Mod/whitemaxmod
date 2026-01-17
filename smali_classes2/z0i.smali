@@ -1,75 +1,67 @@
-.class public final Lz0i;
-.super Lj8j;
+.class public abstract synthetic Lz0i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:La1i;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(La1i;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lz0i;->a:La1i;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lz0i;->a:La1i;
-
-    iget-object v0, v0, La1i;->d:Ljava/lang/Object;
-
-    check-cast v0, Lrr6;
-
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Lz0i;->a:La1i;
-
-    iget-object v0, v0, La1i;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    const-string v1, "onAuthenticationFailed"
-
-    invoke-static {v0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final d(Lgp0;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    iget-object v0, p0, Lz0i;->a:La1i;
+    invoke-static {}, Ly0i;->values()[Ly0i;
 
-    iget-object v1, v0, La1i;->a:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v1, Ljava/lang/String;
+    array-length v0, v0
 
-    const-string v2, "onAuthenticationSuccess"
+    new-array v0, v0, [I
 
-    invoke-static {v1, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, 0x1
 
-    iget-object v0, v0, La1i;->c:Ljava/lang/Object;
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast v0, Loq6;
+    :catch_0
+    const/4 v1, 0x0
 
-    iget-object p1, p1, Lgp0;->a:Lhp0;
+    const/4 v2, 0x2
 
-    invoke-interface {v0, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v1, 0x3
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v2, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v1, 0x5
+
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Lz0i;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

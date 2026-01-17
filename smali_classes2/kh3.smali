@@ -9,24 +9,28 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Llh3;
+.field public final synthetic b:Lqh3;
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+.field public final synthetic c:Lzg7;
 
-.field public final synthetic d:Ljava/lang/Runnable;
+.field public final synthetic d:Lbh3;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Llh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
+.method public synthetic constructor <init>(Lqh3;Lzg7;Lbh3;II)V
     .locals 0
 
-    iput p4, p0, Lkh3;->a:I
+    iput p5, p0, Lkh3;->a:I
 
-    iput-object p1, p0, Lkh3;->b:Llh3;
+    iput-object p1, p0, Lkh3;->b:Lqh3;
 
-    iput-object p2, p0, Lkh3;->c:Landroid/graphics/drawable/Drawable;
+    iput-object p2, p0, Lkh3;->c:Lzg7;
 
-    iput-object p3, p0, Lkh3;->d:Ljava/lang/Runnable;
+    iput-object p3, p0, Lkh3;->d:Lbh3;
+
+    iput p4, p0, Lkh3;->o:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,30 +40,34 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 4
 
     iget v0, p0, Lkh3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lkh3;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lkh3;->d:Lbh3;
 
-    iget-object v1, p0, Lkh3;->d:Ljava/lang/Runnable;
+    iget v1, p0, Lkh3;->o:I
 
-    iget-object v2, p0, Lkh3;->b:Llh3;
+    iget-object v2, p0, Lkh3;->b:Lqh3;
 
-    invoke-static {v2, v0, v1}, Llh3;->B(Llh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    iget-object v3, p0, Lkh3;->c:Lzg7;
+
+    invoke-static {v2, v3, v0, v1}, Lqh3;->a(Lqh3;Lzg7;Lbh3;I)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lkh3;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lkh3;->d:Lbh3;
 
-    iget-object v1, p0, Lkh3;->d:Ljava/lang/Runnable;
+    iget v1, p0, Lkh3;->o:I
 
-    iget-object v2, p0, Lkh3;->b:Llh3;
+    iget-object v2, p0, Lkh3;->b:Lqh3;
 
-    invoke-static {v2, v0, v1}, Llh3;->B(Llh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    iget-object v3, p0, Lkh3;->c:Lzg7;
+
+    invoke-static {v2, v3, v0, v1}, Lqh3;->a(Lqh3;Lzg7;Lbh3;I)V
 
     return-void
 

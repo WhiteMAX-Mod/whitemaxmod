@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lby3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/ConversationFactory;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationFactory;I)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;I)V
     .locals 0
 
     iput p2, p0, Lga4;->a:I
 
-    iput-object p1, p0, Lga4;->b:Lru/ok/android/externcalls/sdk/ConversationFactory;
+    iput-object p1, p0, Lga4;->b:Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,29 +27,29 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
     iget v0, p0, Lga4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lga4;->b:Lru/ok/android/externcalls/sdk/ConversationFactory;
+    iget-object v0, p0, Lga4;->b:Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->l(Lru/ok/android/externcalls/sdk/ConversationFactory;)Lcgd;
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result-object v0
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->m(Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;Ljava/lang/Throwable;)V
 
-    return-object v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lga4;->b:Lru/ok/android/externcalls/sdk/ConversationFactory;
+    iget-object v0, p0, Lga4;->b:Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->a(Lru/ok/android/externcalls/sdk/ConversationFactory;)Lcgd;
+    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
 
-    move-result-object v0
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->k(Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;Lru/ok/android/externcalls/sdk/Conversation;)V
 
-    return-object v0
+    return-void
 
     nop
 

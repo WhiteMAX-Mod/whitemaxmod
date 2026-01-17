@@ -1,142 +1,74 @@
 .class public final Lcz0;
-.super Lzpb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements La38;
 
 
-# instance fields
-.field public final a:Lyq6;
+# static fields
+.field public static final a:Lcz0;
 
-.field public final b:Lzpb;
+.field public static final b:Lxhc;
 
 
 # direct methods
-.method public constructor <init>(Lyq6;Lzpb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcz0;
 
-    iput-object p1, p0, Lcz0;->a:Lyq6;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcz0;->b:Lzpb;
+    sput-object v0, Lcz0;->a:Lcz0;
+
+    new-instance v0, Lxhc;
+
+    const-string v1, "kotlin.Byte"
+
+    sget-object v2, Lvhc;->c:Lvhc;
+
+    invoke-direct {v0, v1, v2}, Lxhc;-><init>(Ljava/lang/String;Lwhc;)V
+
+    sput-object v0, Lcz0;->b:Lxhc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lcz0;->a:Lyq6;
+    check-cast p2, Ljava/lang/Number;
 
-    invoke-interface {v0, p1}, Lyq6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Number;->byteValue()B
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->d(B)V
+
+    return-void
+.end method
+
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-interface {p1}, Lkl4;->z()B
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
 
-    invoke-interface {v0, p2}, Lyq6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    iget-object v0, p0, Lcz0;->b:Lzpb;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final d()Lxpe;
+    .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lcz0;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lcz0;
-
-    iget-object v1, p0, Lcz0;->a:Lyq6;
-
-    iget-object v3, p1, Lcz0;->a:Lyq6;
-
-    invoke-interface {v1, v3}, Lyq6;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcz0;->b:Lzpb;
-
-    iget-object p1, p1, Lcz0;->b:Lzpb;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lcz0;->a:Lyq6;
-
-    iget-object v1, p0, Lcz0;->b:Lzpb;
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lcz0;->b:Lzpb;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ".onResultOf("
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcz0;->a:Lyq6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lcz0;->b:Lxhc;
 
     return-object v0
 .end method

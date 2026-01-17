@@ -1,55 +1,52 @@
 .class public final Lxx7;
-.super Ly1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final o:Lxx7;
+# interfaces
+.implements Lyx7;
 
 
 # instance fields
-.field public final d:[Ljava/lang/Object;
+.field public final a:Landroid/content/Intent;
+
+.field public final b:I
+
+.field public final synthetic c:Ldy7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ldy7;Landroid/content/Intent;I)V
+    .locals 0
 
-    new-instance v0, Lxx7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lxx7;->c:Ldy7;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    iput-object p2, p0, Lxx7;->a:Landroid/content/Intent;
 
-    invoke-direct {v0, v1}, Lxx7;-><init>([Ljava/lang/Object;)V
-
-    sput-object v0, Lxx7;->o:Lxx7;
-
-    return-void
-.end method
-
-.method public constructor <init>([Ljava/lang/Object;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    array-length v1, p1
-
-    invoke-direct {p0, v1, v0}, Ly1;-><init>(II)V
-
-    iput-object p1, p0, Lxx7;->d:[Ljava/lang/Object;
+    iput p3, p0, Lxx7;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Ljava/lang/Object;
+.method public final a()V
+    .locals 2
+
+    iget-object v0, p0, Lxx7;->c:Ldy7;
+
+    iget v1, p0, Lxx7;->b:I
+
+    invoke-virtual {v0, v1}, Landroid/app/Service;->stopSelf(I)V
+
+    return-void
+.end method
+
+.method public final getIntent()Landroid/content/Intent;
     .locals 1
 
-    iget-object v0, p0, Lxx7;->d:[Ljava/lang/Object;
+    iget-object v0, p0, Lxx7;->a:Landroid/content/Intent;
 
-    aget-object p1, v0, p1
-
-    return-object p1
+    return-object v0
 .end method

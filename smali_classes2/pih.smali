@@ -2,21 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqih;
-
 
 # instance fields
-.field public final a:F
+.field public final a:[B
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method public constructor <init>([B)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lpih;->a:F
+    iput-object p1, p0, Lpih;->a:[B
 
     return-void
 .end method
@@ -44,15 +41,15 @@
     :cond_1
     check-cast p1, Lpih;
 
-    iget v1, p0, Lpih;->a:F
+    iget-object v1, p0, Lpih;->a:[B
 
-    iget p1, p1, Lpih;->a:F
+    iget-object p1, p1, Lpih;->a:[B
 
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
@@ -63,9 +60,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lpih;->a:F
+    iget-object v0, p0, Lpih;->a:[B
 
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result v0
 
@@ -73,23 +70,19 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lpih;->a:[B
 
-    const-string v1, "SeekStart(progress="
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget v1, p0, Lpih;->a:F
+    const-string v1, "FirstFrameReady(frameByteArray="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    const-string v2, ")"
 
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

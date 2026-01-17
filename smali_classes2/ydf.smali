@@ -3,137 +3,154 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmbc;
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public final synthetic a:Ljava/lang/String;
 
-.field public final b:Lum5;
+.field public final synthetic b:Lfef;
 
-.field public final c:Lwo5;
+.field public final synthetic c:I
 
-.field public final d:Ld68;
-
-.field public final e:Ltbc;
-
-.field public final f:Ld68;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ld68;
-
-.field public final i:Ljxd;
+.field public final synthetic d:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lum5;Lwo5;Ld68;Ltbc;Ld68;Ld68;Lgyc;)V
+.method public constructor <init>(Ljava/lang/String;Lfef;ILjava/lang/Integer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lydf;->a:Landroid/app/Application;
+    iput-object p1, p0, Lydf;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lydf;->b:Lum5;
+    iput-object p2, p0, Lydf;->b:Lfef;
 
-    iput-object p3, p0, Lydf;->c:Lwo5;
+    iput p3, p0, Lydf;->c:I
 
-    iput-object p4, p0, Lydf;->d:Ld68;
-
-    iput-object p5, p0, Lydf;->e:Ltbc;
-
-    iput-object p6, p0, Lydf;->f:Ld68;
-
-    const-class p1, Lydf;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lydf;->g:Ljava/lang/String;
-
-    iput-object p7, p0, Lydf;->h:Ld68;
-
-    new-instance p1, Lm3f;
-
-    const/4 p2, 0x5
-
-    invoke-direct {p1, p0, p2, p8}, Lm3f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p2, Ljxd;
-
-    invoke-direct {p2, p1}, Ljxd;-><init>(Lmq6;)V
-
-    iput-object p2, p0, Lydf;->i:Ljxd;
+    iput-object p4, p0, Lydf;->d:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lwnh;)V
-    .locals 2
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
+    .locals 6
 
-    iget-object v0, p0, Lydf;->g:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Single player handler. Free player"
+    const-string v1, "Playback("
 
-    invoke-static {v0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lwnh;->stop()V
+    iget-object v2, p0, Lydf;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, v0}, Lwnh;->a0(Landroid/view/Surface;)V
+    const-string v3, ") | player prepared"
 
-    return-void
-.end method
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final get()Lwnh;
-    .locals 5
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v0, p0, Lydf;->g:Ljava/lang/String;
+    move-result-object v0
 
-    sget-object v1, Lm4j;->a:Lvcb;
+    const-string v3, "SimpleRingtonePlayer"
 
-    if-nez v1, :cond_0
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
+
+    iget-object p1, p0, Lydf;->b:Lfef;
+
+    iget v0, p1, Lfef;->t0:F
+
+    invoke-virtual {p1}, Lfef;->d()Z
+
+    move-result v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ") | requesting audio focus after player start, volume:"
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, " isPlaying:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lfef;->h()Lwx5;
+
+    move-result-object v0
+
+    check-cast v0, Lpy5;
+
+    invoke-virtual {v0}, Lpy5;->r()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x2
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p1, Lfef;->o:Le40;
+
+    iget-object v1, p0, Lydf;->d:Ljava/lang/Integer;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lxk8;->d:Lxk8;
+    invoke-virtual {p1}, Lfef;->h()Lwx5;
 
-    invoke-virtual {v1, v2}, Lvcb;->b(Lxk8;)Z
+    move-result-object p1
 
-    move-result v3
+    check-cast p1, Lpy5;
 
-    if-eqz v3, :cond_1
+    invoke-virtual {p1}, Lpy5;->r()J
 
-    iget-object v3, p0, Lydf;->i:Ljxd;
+    move-result-wide v1
 
-    invoke-virtual {v3}, Ljxd;->e()Z
+    const-wide/16 v3, 0x1
 
-    move-result v3
+    cmp-long p1, v1, v3
 
-    const-string v4, "Single player handler. Player exist: "
+    if-nez p1, :cond_1
 
-    invoke-static {v4, v3}, Lgg9;->f(Ljava/lang/String;Z)Ljava/lang/String;
+    const/4 p1, 0x1
 
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_0
 
     :cond_1
+    const/4 p1, 0x2
+
     :goto_0
-    iget-object v0, p0, Lydf;->i:Ljxd;
+    iget v1, p0, Lydf;->c:I
 
-    invoke-virtual {v0}, Ljxd;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1, p1}, Le40;->n(II)V
 
-    move-result-object v0
-
-    check-cast v0, Lwnh;
-
-    return-object v0
+    :cond_2
+    return-void
 .end method

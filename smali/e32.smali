@@ -1,47 +1,40 @@
 .class public final Le32;
-.super Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lc32;
+
+
+# instance fields
+.field public final a:Lib0;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Lib0;
+
+    invoke-direct {v1, v0}, Lib0;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, p0, Le32;->a:Lib0;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onActive(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+.method public final getConfig()Lmr3;
+    .locals 1
 
-    return-void
-.end method
+    sget-object v0, Lhqb;->c:Lhqb;
 
-.method public final onCaptureQueueEmpty(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onClosed(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onReady(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onSurfacePrepared(Landroid/hardware/camera2/CameraCaptureSession;Landroid/view/Surface;)V
-    .locals 0
-
-    return-void
+    return-object v0
 .end method

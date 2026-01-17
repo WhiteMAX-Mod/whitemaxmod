@@ -1,211 +1,206 @@
-.class public final Lard;
-.super Landroid/database/Observable;
+.class public final synthetic Lard;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lird;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lird;I)V
+    .locals 0
+
+    iput p2, p0, Lard;->a:I
+
+    iput-object p1, p0, Lard;->b:Lird;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final run()V
+    .locals 8
 
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
+    iget v0, p0, Lard;->a:I
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lard;->b:Lird;
 
-    xor-int/lit8 v0, v0, 0x1
+    iget-object v1, v0, Lird;->x:Ly5g;
 
-    return v0
-.end method
+    if-eqz v1, :cond_0
 
-.method public final b()V
-    .locals 2
+    iget-object v2, v0, Lird;->y:Lflg;
 
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0, v1, v2, v3}, Lird;->h(Ly5g;Lflg;Z)V
 
-    move-result v0
+    return-void
 
-    add-int/lit8 v0, v0, -0x1
+    :cond_0
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "surface request is required to retry initialization."
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lard;->b:Lird;
+
+    iget-object v1, v0, Lird;->h:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v0, Lird;->j:Lhrd;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    if-eq v2, v3, :cond_1
+
+    const/4 v6, 0x2
+
+    if-eq v2, v6, :cond_2
+
+    move v6, v4
+
+    move-object v2, v5
 
     :goto_0
-    if-ltz v0, :cond_0
+    move-object v3, v2
 
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
+    goto :goto_2
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :cond_1
+    move v3, v4
 
-    move-result-object v1
+    :cond_2
+    iget-object v2, v0, Lird;->m:Lic0;
 
-    check-cast v1, Lbrd;
+    if-nez v2, :cond_5
 
-    invoke-virtual {v1}, Lbrd;->a()V
+    iget-boolean v2, v0, Lird;->Y:Z
 
-    add-int/lit8 v0, v0, -0x1
+    if-eqz v2, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget v2, v0, Lird;->f0:I
+
+    const/4 v6, 0x3
+
+    if-ne v2, v6, :cond_4
+
+    iget-object v2, v0, Lird;->n:Lic0;
+
+    iput-object v5, v0, Lird;->n:Lic0;
+
+    invoke-virtual {v0}, Lird;->y()V
+
+    sget-object v4, Lird;->l0:Ljava/lang/RuntimeException;
+
+    const/4 v6, 0x4
+
+    move-object v7, v4
+
+    move v4, v3
+
+    move-object v3, v7
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_4
+    iget-object v2, v0, Lird;->E:Lcj5;
+
+    if-eqz v2, :cond_5
+
+    iget-object v2, v0, Lird;->j:Lhrd;
+
+    invoke-virtual {v0, v2}, Lird;->q(Lhrd;)Lic0;
+
+    move-result-object v2
+
+    move v6, v4
+
+    move v4, v3
+
+    move-object v3, v5
+
+    move-object v5, v2
+
+    move-object v2, v3
+
+    goto :goto_2
+
+    :cond_5
+    :goto_1
+    move v6, v4
+
+    move-object v2, v5
+
+    move v4, v3
 
     goto :goto_0
 
-    :cond_0
+    :goto_2
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v5, :cond_6
+
+    invoke-virtual {v0, v5, v4}, Lird;->H(Lic0;Z)V
+
+    goto :goto_3
+
+    :cond_6
+    if-eqz v2, :cond_7
+
+    invoke-virtual {v0, v2, v6, v3}, Lird;->j(Lic0;ILjava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
     return-void
-.end method
 
-.method public final c(II)V
-    .locals 2
+    :goto_4
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
+    throw v0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    nop
 
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbrd;
-
-    invoke-virtual {v1, p1, p2}, Lbrd;->e(II)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(IILjava/lang/Object;)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbrd;
-
-    invoke-virtual {v1, p1, p2, p3}, Lbrd;->c(IILjava/lang/Object;)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e(II)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbrd;
-
-    invoke-virtual {v1, p1, p2}, Lbrd;->d(II)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(II)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbrd;
-
-    invoke-virtual {v1, p1, p2}, Lbrd;->f(II)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g()V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbrd;
-
-    invoke-virtual {v1}, Lbrd;->g()V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhr6;
+.implements Lgr6;

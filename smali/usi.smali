@@ -6,1359 +6,885 @@
 # static fields
 .field public static final a:[Ljava/lang/String;
 
-.field public static final b:[Ljava/lang/String;
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 193
 
-    const-string v0, "_id"
+    const-string v191, "Garage Rock"
 
-    const-string v1, "lookup"
+    const-string v192, "Psybient"
 
-    filled-new-array {v0, v1}, [Ljava/lang/String;
+    const-string v1, "Blues"
+
+    const-string v2, "Classic Rock"
+
+    const-string v3, "Country"
+
+    const-string v4, "Dance"
+
+    const-string v5, "Disco"
+
+    const-string v6, "Funk"
+
+    const-string v7, "Grunge"
+
+    const-string v8, "Hip-Hop"
+
+    const-string v9, "Jazz"
+
+    const-string v10, "Metal"
+
+    const-string v11, "New Age"
+
+    const-string v12, "Oldies"
+
+    const-string v13, "Other"
+
+    const-string v14, "Pop"
+
+    const-string v15, "R&B"
+
+    const-string v16, "Rap"
+
+    const-string v17, "Reggae"
+
+    const-string v18, "Rock"
+
+    const-string v19, "Techno"
+
+    const-string v20, "Industrial"
+
+    const-string v21, "Alternative"
+
+    const-string v22, "Ska"
+
+    const-string v23, "Death Metal"
+
+    const-string v24, "Pranks"
+
+    const-string v25, "Soundtrack"
+
+    const-string v26, "Euro-Techno"
+
+    const-string v27, "Ambient"
+
+    const-string v28, "Trip-Hop"
+
+    const-string v29, "Vocal"
+
+    const-string v30, "Jazz+Funk"
+
+    const-string v31, "Fusion"
+
+    const-string v32, "Trance"
+
+    const-string v33, "Classical"
+
+    const-string v34, "Instrumental"
+
+    const-string v35, "Acid"
+
+    const-string v36, "House"
+
+    const-string v37, "Game"
+
+    const-string v38, "Sound Clip"
+
+    const-string v39, "Gospel"
+
+    const-string v40, "Noise"
+
+    const-string v41, "AlternRock"
+
+    const-string v42, "Bass"
+
+    const-string v43, "Soul"
+
+    const-string v44, "Punk"
+
+    const-string v45, "Space"
+
+    const-string v46, "Meditative"
+
+    const-string v47, "Instrumental Pop"
+
+    const-string v48, "Instrumental Rock"
+
+    const-string v49, "Ethnic"
+
+    const-string v50, "Gothic"
+
+    const-string v51, "Darkwave"
+
+    const-string v52, "Techno-Industrial"
+
+    const-string v53, "Electronic"
+
+    const-string v54, "Pop-Folk"
+
+    const-string v55, "Eurodance"
+
+    const-string v56, "Dream"
+
+    const-string v57, "Southern Rock"
+
+    const-string v58, "Comedy"
+
+    const-string v59, "Cult"
+
+    const-string v60, "Gangsta"
+
+    const-string v61, "Top 40"
+
+    const-string v62, "Christian Rap"
+
+    const-string v63, "Pop/Funk"
+
+    const-string v64, "Jungle"
+
+    const-string v65, "Native American"
+
+    const-string v66, "Cabaret"
+
+    const-string v67, "New Wave"
+
+    const-string v68, "Psychadelic"
+
+    const-string v69, "Rave"
+
+    const-string v70, "Showtunes"
+
+    const-string v71, "Trailer"
+
+    const-string v72, "Lo-Fi"
+
+    const-string v73, "Tribal"
+
+    const-string v74, "Acid Punk"
+
+    const-string v75, "Acid Jazz"
+
+    const-string v76, "Polka"
+
+    const-string v77, "Retro"
+
+    const-string v78, "Musical"
+
+    const-string v79, "Rock & Roll"
+
+    const-string v80, "Hard Rock"
+
+    const-string v81, "Folk"
+
+    const-string v82, "Folk-Rock"
+
+    const-string v83, "National Folk"
+
+    const-string v84, "Swing"
+
+    const-string v85, "Fast Fusion"
+
+    const-string v86, "Bebob"
+
+    const-string v87, "Latin"
+
+    const-string v88, "Revival"
+
+    const-string v89, "Celtic"
+
+    const-string v90, "Bluegrass"
+
+    const-string v91, "Avantgarde"
+
+    const-string v92, "Gothic Rock"
+
+    const-string v93, "Progressive Rock"
+
+    const-string v94, "Psychedelic Rock"
+
+    const-string v95, "Symphonic Rock"
+
+    const-string v96, "Slow Rock"
+
+    const-string v97, "Big Band"
+
+    const-string v98, "Chorus"
+
+    const-string v99, "Easy Listening"
+
+    const-string v100, "Acoustic"
+
+    const-string v101, "Humour"
+
+    const-string v102, "Speech"
+
+    const-string v103, "Chanson"
+
+    const-string v104, "Opera"
+
+    const-string v105, "Chamber Music"
+
+    const-string v106, "Sonata"
+
+    const-string v107, "Symphony"
+
+    const-string v108, "Booty Bass"
+
+    const-string v109, "Primus"
+
+    const-string v110, "Porn Groove"
+
+    const-string v111, "Satire"
+
+    const-string v112, "Slow Jam"
+
+    const-string v113, "Club"
+
+    const-string v114, "Tango"
+
+    const-string v115, "Samba"
+
+    const-string v116, "Folklore"
+
+    const-string v117, "Ballad"
+
+    const-string v118, "Power Ballad"
+
+    const-string v119, "Rhythmic Soul"
+
+    const-string v120, "Freestyle"
+
+    const-string v121, "Duet"
+
+    const-string v122, "Punk Rock"
+
+    const-string v123, "Drum Solo"
+
+    const-string v124, "A capella"
+
+    const-string v125, "Euro-House"
+
+    const-string v126, "Dance Hall"
+
+    const-string v127, "Goa"
+
+    const-string v128, "Drum & Bass"
+
+    const-string v129, "Club-House"
+
+    const-string v130, "Hardcore"
+
+    const-string v131, "Terror"
+
+    const-string v132, "Indie"
+
+    const-string v133, "BritPop"
+
+    const-string v134, "Afro-Punk"
+
+    const-string v135, "Polsk Punk"
+
+    const-string v136, "Beat"
+
+    const-string v137, "Christian Gangsta Rap"
+
+    const-string v138, "Heavy Metal"
+
+    const-string v139, "Black Metal"
+
+    const-string v140, "Crossover"
+
+    const-string v141, "Contemporary Christian"
+
+    const-string v142, "Christian Rock"
+
+    const-string v143, "Merengue"
+
+    const-string v144, "Salsa"
+
+    const-string v145, "Thrash Metal"
+
+    const-string v146, "Anime"
+
+    const-string v147, "Jpop"
+
+    const-string v148, "Synthpop"
+
+    const-string v149, "Abstract"
+
+    const-string v150, "Art Rock"
+
+    const-string v151, "Baroque"
+
+    const-string v152, "Bhangra"
+
+    const-string v153, "Big beat"
+
+    const-string v154, "Breakbeat"
+
+    const-string v155, "Chillout"
+
+    const-string v156, "Downtempo"
+
+    const-string v157, "Dub"
+
+    const-string v158, "EBM"
+
+    const-string v159, "Eclectic"
+
+    const-string v160, "Electro"
+
+    const-string v161, "Electroclash"
+
+    const-string v162, "Emo"
+
+    const-string v163, "Experimental"
+
+    const-string v164, "Garage"
+
+    const-string v165, "Global"
+
+    const-string v166, "IDM"
+
+    const-string v167, "Illbient"
+
+    const-string v168, "Industro-Goth"
+
+    const-string v169, "Jam Band"
+
+    const-string v170, "Krautrock"
+
+    const-string v171, "Leftfield"
+
+    const-string v172, "Lounge"
+
+    const-string v173, "Math Rock"
+
+    const-string v174, "New Romantic"
+
+    const-string v175, "Nu-Breakz"
+
+    const-string v176, "Post-Punk"
+
+    const-string v177, "Post-Rock"
+
+    const-string v178, "Psytrance"
+
+    const-string v179, "Shoegaze"
+
+    const-string v180, "Space Rock"
+
+    const-string v181, "Trop Rock"
+
+    const-string v182, "World Music"
+
+    const-string v183, "Neoclassical"
+
+    const-string v184, "Audiobook"
+
+    const-string v185, "Audio theatre"
+
+    const-string v186, "Neue Deutsche Welle"
+
+    const-string v187, "Podcast"
+
+    const-string v188, "Indie-Rock"
+
+    const-string v189, "G-Funk"
+
+    const-string v190, "Dubstep"
+
+    filled-new-array/range {v1 .. v192}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lusi;->a:[Ljava/lang/String;
 
-    const-string v8, "display_name"
-
-    const-string v9, "photo_uri"
-
-    const-string v1, "contact_id"
-
-    const-string v2, "mimetype"
-
-    const-string v3, "data2"
-
-    const-string v4, "data3"
-
-    const-string v5, "data5"
-
-    const-string v6, "_id"
-
-    const-string v7, "data1"
-
-    filled-new-array/range {v1 .. v9}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lusi;->b:[Ljava/lang/String;
-
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;)[B
-    .locals 2
+.method public static a(ILdch;)Lvj3;
+    .locals 3
 
-    :try_start_0
-    const-string v0, "ASCII"
+    invoke-virtual {p1}, Ldch;->f()I
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    move-result v0
 
-    move-result-object v0
+    invoke-virtual {p1}, Ldch;->f()I
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    move-result v1
+
+    const v2, 0x64617461
+
+    if-ne v1, v2, :cond_0
+
+    const/16 p0, 0x8
+
+    invoke-virtual {p1, p0}, Ldch;->F(I)V
+
+    add-int/lit8 v0, v0, -0x10
+
+    invoke-virtual {p1, v0}, Ldch;->o(I)Ljava/lang/String;
 
     move-result-object p0
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
+    new-instance p1, Lvj3;
 
-    :catch_0
-    move-exception p0
+    const-string v0, "und"
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    invoke-direct {p1, v0, p0, p0}, Lvj3;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "ASCII not found!"
-
-    invoke-direct {v0, v1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public static b(Landroid/content/Context;Lum5;)Ljava/util/Collection;
-    .locals 21
-
-    const-string v0, "/photo"
-
-    const-string v1, "vnd.android.cursor.item/name"
-
-    const-string v2, "vnd.android.cursor.item/phone_v2"
-
-    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    if-nez v3, :cond_0
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    return-object v0
+    return-object p1
 
     :cond_0
-    new-instance v9, Lso8;
+    invoke-static {p0}, Laz;->d(I)Ljava/lang/String;
 
-    const/4 v10, 0x0
+    move-result-object p0
 
-    invoke-direct {v9, v10}, Lso8;-><init>(Ljava/lang/Object;)V
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    new-instance v11, Lso8;
+    move-result-object p0
 
-    invoke-direct {v11, v10}, Lso8;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    :try_start_0
-    const-string v6, "mimetype IN (?, ?)"
+    move-result p1
 
-    filled-new-array {v2, v1}, [Ljava/lang/String;
+    const-string v0, "Failed to parse comment attribute: "
 
-    move-result-object v7
+    if-eqz p1, :cond_1
 
-    sget-object v4, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v5, Lusi;->b:[Ljava/lang/String;
-
-    const-string v8, "display_name ASC"
-
-    invoke-virtual/range {v3 .. v8}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v3
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    if-eqz v3, :cond_d
-
-    :try_start_1
-    const-string v4, "_id"
-
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v4
-
-    const-string v5, "mimetype"
-
-    invoke-interface {v3, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v5
-
-    const-string v6, "contact_id"
-
-    invoke-interface {v3, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v6
-
-    const-string v7, "display_name"
-
-    invoke-interface {v3, v7}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v7
-
-    const-string v8, "data1"
-
-    invoke-interface {v3, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v8
-
-    const-string v12, "photo_uri"
-
-    invoke-interface {v3, v12}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v12
-
-    const-string v13, "data2"
-
-    invoke-interface {v3, v13}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v13
-
-    const-string v14, "data3"
-
-    invoke-interface {v3, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v14
-
-    const-string v15, "data5"
-
-    invoke-interface {v3, v15}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v15
-
-    :goto_0
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v16
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-eqz v16, :cond_d
-
-    move-object/from16 v16, v11
-
-    :try_start_2
-    invoke-interface {v3, v6}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v10
-
-    move/from16 v17, v15
-
-    invoke-interface {v3, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-virtual {v2, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v18
-
-    if-eqz v18, :cond_7
-
-    new-instance v15, Lr0c;
-
-    invoke-direct {v15}, Lr0c;-><init>()V
-
-    move-object/from16 v18, v2
-
-    invoke-interface {v3, v6}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v2
-
-    iput v2, v15, Lr0c;->d:I
-
-    invoke-interface {v3, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ltri;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v19
-
-    if-eqz v19, :cond_1
-
-    move-object/from16 v11, v16
-
-    move/from16 v15, v17
-
-    move-object/from16 v2, v18
-
-    :goto_1
-    const/4 v10, 0x0
+    move-result-object p0
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v9, v10, v11}, Lso8;->b(J)Ljava/lang/Object;
+    new-instance p0, Ljava/lang/String;
 
-    move-result-object v19
+    invoke-direct {p0, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    move/from16 v20, v5
+    :goto_0
+    const-string p1, "MetadataUtil"
 
-    move-object/from16 v5, v19
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    check-cast v5, Ljava/util/Set;
+    const/4 p0, 0x0
 
-    if-nez v5, :cond_2
+    return-object p0
+.end method
 
-    filled-new-array {v2}, [Ljava/lang/String;
+.method public static b(Ldch;)Lan;
+    .locals 5
 
-    move-result-object v2
+    invoke-virtual {p0}, Ldch;->f()I
 
-    invoke-static {v2}, La5j;->a([Ljava/lang/Object;)Lat;
+    move-result v0
 
-    move-result-object v5
+    invoke-virtual {p0}, Ldch;->f()I
 
-    goto :goto_2
+    move-result v1
 
-    :catchall_0
-    move-exception v0
+    const v2, 0x64617461
 
-    move-object v10, v3
+    const-string v3, "MetadataUtil"
 
-    goto/16 :goto_13
+    const/4 v4, 0x0
 
-    :catch_0
-    move-exception v0
+    if-ne v1, v2, :cond_3
 
-    move-object/from16 v2, v16
+    invoke-virtual {p0}, Ldch;->f()I
 
-    goto/16 :goto_9
+    move-result v1
+
+    const v2, 0xffffff
+
+    and-int/2addr v1, v2
+
+    const/16 v2, 0xd
+
+    if-ne v1, v2, :cond_0
+
+    const-string v2, "image/jpeg"
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0xe
+
+    if-ne v1, v2, :cond_1
+
+    const-string v2, "image/png"
+
+    goto :goto_0
+
+    :cond_1
+    move-object v2, v4
+
+    :goto_0
+    if-nez v2, :cond_2
+
+    const/16 p0, 0x29
+
+    const-string v0, "Unrecognized cover art flags: "
+
+    invoke-static {v0, p0, v1, v3}, Lt02;->q(Ljava/lang/String;IILjava/lang/String;)V
+
+    return-object v4
 
     :cond_2
-    invoke-interface {v5, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x4
 
-    :goto_2
-    invoke-virtual {v9, v10, v11, v5}, Lso8;->e(JLjava/lang/Object;)V
+    invoke-virtual {p0, v1}, Ldch;->F(I)V
 
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getLong(I)J
+    add-int/lit8 v0, v0, -0x10
 
-    move-result-wide v10
-
-    iput-wide v10, v15, Lr0c;->e:J
-
-    invoke-interface {v3, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v5, v15, Lr0c;->a:Ljava/lang/String;
-
-    if-nez v5, :cond_3
-
-    iput-object v2, v15, Lr0c;->a:Ljava/lang/String;
-
-    :cond_3
-    invoke-interface {v3, v12}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ltri;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    const-string v5, ""
-
-    invoke-virtual {v2, v0, v5}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v2
-
-    :cond_4
-    iput-object v2, v15, Lr0c;->c:Ljava/lang/String;
-
-    iget v2, v15, Lr0c;->d:I
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    int-to-long v10, v2
-
-    move-object/from16 v2, v16
-
-    :try_start_3
-    invoke-virtual {v2, v10, v11}, Lso8;->b(J)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/Set;
-
-    if-eqz v5, :cond_5
-
-    invoke-interface {v5, v15}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_5
-    new-instance v5, Ljava/util/HashSet;
-
-    invoke-direct {v5}, Ljava/util/HashSet;-><init>()V
-
-    invoke-virtual {v5, v15}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v2, v10, v11, v5}, Lso8;->e(JLjava/lang/Object;)V
-
-    :cond_6
-    :goto_3
-    move-object/from16 v16, v0
-
-    move/from16 v15, v17
-
-    move-object/from16 v17, v1
-
-    goto/16 :goto_6
-
-    :cond_7
-    move-object/from16 v18, v2
-
-    move/from16 v20, v5
-
-    move-object/from16 v2, v16
-
-    invoke-virtual {v1, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_6
-
-    new-instance v5, Lr0c;
-
-    invoke-direct {v5}, Lr0c;-><init>()V
-
-    invoke-interface {v3, v6}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v10
-
-    iput v10, v5, Lr0c;->d:I
-
-    invoke-interface {v3, v13}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-interface {v3, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v11
-
-    move-object/from16 v16, v0
-
-    move/from16 v15, v17
-
-    invoke-interface {v3, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v10}, Ltri;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v17
-
-    if-eqz v17, :cond_9
-
-    invoke-static {v11}, Ltri;->g(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    iput-object v11, v5, Lr0c;->a:Ljava/lang/String;
-
-    :cond_8
-    move-object/from16 v17, v1
-
-    goto :goto_5
-
-    :catch_1
-    move-exception v0
-
-    goto/16 :goto_9
-
-    :cond_9
-    invoke-static {v0}, Ltri;->g(Ljava/lang/CharSequence;)Z
-
-    move-result v17
-
-    if-eqz v17, :cond_a
-
-    move-object/from16 v17, v1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v10, " "
-
-    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, v5, Lr0c;->a:Ljava/lang/String;
-
-    goto :goto_4
-
-    :cond_a
-    move-object/from16 v17, v1
-
-    iput-object v10, v5, Lr0c;->a:Ljava/lang/String;
-
-    :goto_4
-    invoke-static {v11}, Ltri;->g(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    iput-object v11, v5, Lr0c;->b:Ljava/lang/String;
-
-    :cond_b
-    :goto_5
-    iget v0, v5, Lr0c;->d:I
-
-    int-to-long v0, v0
-
-    invoke-virtual {v2, v0, v1}, Lso8;->b(J)Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Ljava/util/Set;
-
-    if-eqz v10, :cond_c
-
-    invoke-interface {v10, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_6
-
-    :cond_c
-    new-instance v10, Ljava/util/HashSet;
-
-    invoke-direct {v10}, Ljava/util/HashSet;-><init>()V
-
-    invoke-virtual {v10, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v2, v0, v1, v10}, Lso8;->e(JLjava/lang/Object;)V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_6
-    move-object v11, v2
-
-    move-object/from16 v0, v16
-
-    move-object/from16 v1, v17
-
-    move-object/from16 v2, v18
-
-    move/from16 v5, v20
-
-    goto/16 :goto_1
-
-    :cond_d
-    move-object v2, v11
-
-    goto :goto_7
-
-    :catch_2
-    move-exception v0
-
-    move-object v2, v11
-
-    goto :goto_9
-
-    :goto_7
-    if-eqz v3, :cond_e
-
-    :goto_8
-    invoke-interface {v3}, Landroid/database/Cursor;->close()V
-
-    goto :goto_a
-
-    :catchall_1
-    move-exception v0
-
-    const/4 v10, 0x0
-
-    goto/16 :goto_13
-
-    :catch_3
-    move-exception v0
-
-    move-object v2, v11
+    new-array v1, v0, [B
 
     const/4 v3, 0x0
 
-    :goto_9
-    :try_start_4
-    new-instance v1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0, v3, v1, v0}, Ldch;->e(I[BI)V
 
-    const-string v4, "loadPhonebook failed"
+    new-instance p0, Lan;
 
-    invoke-direct {v1, v4, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v0, 0x3
 
-    move-object/from16 v0, p1
+    invoke-direct {p0, v2, v4, v0, v1}, Lan;-><init>(Ljava/lang/String;Ljava/lang/String;I[B)V
 
-    check-cast v0, Liab;
+    return-object p0
 
-    invoke-virtual {v0, v1}, Liab;->a(Ljava/lang/Throwable;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    :cond_3
+    const-string p0, "Failed to parse cover art attribute"
 
-    if-eqz v3, :cond_e
+    invoke-static {v3, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_8
-
-    :cond_e
-    :goto_a
-    new-instance v0, Lso8;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lso8;-><init>(Ljava/lang/Object;)V
-
-    const/4 v1, 0x0
-
-    move v3, v1
-
-    :goto_b
-    invoke-virtual {v2}, Lso8;->g()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_14
-
-    invoke-virtual {v2, v3}, Lso8;->d(I)J
-
-    move-result-wide v4
-
-    invoke-virtual {v2, v4, v5}, Lso8;->b(J)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/util/Set;
-
-    if-eqz v6, :cond_13
-
-    invoke-interface {v6}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_f
-
-    goto :goto_d
-
-    :cond_f
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    :cond_10
-    :goto_c
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_12
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lr0c;
-
-    if-nez v7, :cond_11
-
-    move-object v7, v8
-
-    goto :goto_c
-
-    :cond_11
-    iget-object v10, v8, Lr0c;->b:Ljava/lang/String;
-
-    if-eqz v10, :cond_10
-
-    iget-object v11, v7, Lr0c;->b:Ljava/lang/String;
-
-    if-nez v11, :cond_10
-
-    iget-object v11, v7, Lr0c;->a:Ljava/lang/String;
-
-    if-eqz v11, :cond_10
-
-    invoke-virtual {v11, v10}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_10
-
-    iget-object v6, v8, Lr0c;->a:Ljava/lang/String;
-
-    iput-object v6, v7, Lr0c;->a:Ljava/lang/String;
-
-    iget-object v6, v8, Lr0c;->b:Ljava/lang/String;
-
-    iput-object v6, v7, Lr0c;->b:Ljava/lang/String;
-
-    :cond_12
-    if-eqz v7, :cond_13
-
-    invoke-virtual {v0, v4, v5, v7}, Lso8;->e(JLjava/lang/Object;)V
-
-    :cond_13
-    :goto_d
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_b
-
-    :cond_14
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    move v3, v1
-
-    :goto_e
-    invoke-virtual {v9}, Lso8;->g()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_1c
-
-    invoke-virtual {v9, v3}, Lso8;->d(I)J
-
-    move-result-wide v4
-
-    invoke-virtual {v9, v3}, Lso8;->h(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/util/Set;
-
-    invoke-virtual {v0, v4, v5}, Lso8;->b(J)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lr0c;
-
-    const-string v5, "usi"
-
-    if-nez v4, :cond_15
-
-    new-array v4, v1, [Ljava/lang/Object;
-
-    invoke-static {v4, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v4
-
-    const-string v6, "contact is null"
-
-    const/4 v7, 0x0
-
-    invoke-static {v5, v7, v6, v4}, Lm4j;->x(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_12
-
-    :cond_15
-    if-eqz v6, :cond_1b
-
-    invoke-interface {v6}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_16
-
-    goto :goto_11
-
-    :cond_16
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :cond_17
-    :goto_f
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1a
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/String;
-
-    new-instance v7, Lj0c;
-
-    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
-
-    iget v8, v4, Lr0c;->d:I
-
-    iput v8, v7, Lj0c;->b:I
-
-    iput-object v6, v7, Lj0c;->c:Ljava/lang/String;
-
-    iget-object v8, v4, Lr0c;->a:Ljava/lang/String;
-
-    invoke-static {v8}, Ltri;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_18
-
-    move-object v8, v6
-
-    goto :goto_10
-
-    :cond_18
-    iget-object v8, v4, Lr0c;->a:Ljava/lang/String;
-
-    :goto_10
-    iput-object v8, v7, Lj0c;->e:Ljava/lang/String;
-
-    iget-object v8, v4, Lr0c;->b:Ljava/lang/String;
-
-    iput-object v8, v7, Lj0c;->f:Ljava/lang/String;
-
-    iget-wide v10, v4, Lr0c;->e:J
-
-    iput-wide v10, v7, Lj0c;->a:J
-
-    iget-object v8, v4, Lr0c;->c:Ljava/lang/String;
-
-    iput-object v8, v7, Lj0c;->g:Ljava/lang/String;
-
-    invoke-virtual {v2, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lj0c;
-
-    if-nez v8, :cond_19
-
-    invoke-virtual {v2, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_f
-
-    :cond_19
-    invoke-virtual {v8}, Lj0c;->b()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v7}, Lj0c;->b()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v8}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v8
-
-    if-gez v8, :cond_17
-
-    invoke-virtual {v2, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_f
-
-    :cond_1a
-    const/4 v7, 0x0
-
-    goto :goto_12
-
-    :cond_1b
-    :goto_11
-    new-array v4, v1, [Ljava/lang/Object;
-
-    invoke-static {v4, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v4
-
-    const-string v6, "phones is null or empty"
-
-    const/4 v7, 0x0
-
-    invoke-static {v5, v7, v6, v4}, Lm4j;->x(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :goto_12
-    add-int/lit8 v3, v3, 0x1
-
-    goto/16 :goto_e
-
-    :cond_1c
-    invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v0
-
-    return-object v0
-
-    :goto_13
-    if-eqz v10, :cond_1d
-
-    invoke-interface {v10}, Landroid/database/Cursor;->close()V
-
-    :cond_1d
-    throw v0
+    return-object v4
 .end method
 
-.method public static c(Landroid/content/ContentResolver;Landroid/net/Uri;Lum5;)Ljava/lang/String;
-    .locals 5
+.method public static c(ILdch;Ljava/lang/String;)Ldgg;
+    .locals 4
 
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-string v1, "r"
-
-    invoke-virtual {p0, p1, v1}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    if-nez p0, :cond_0
-
-    :try_start_1
-    const-string p1, "usi"
-
-    const-string v1, "getVCardStringFromUri: failed to get file descriptor"
-
-    invoke-static {p1, v1}, Lm4j;->g(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-eqz p0, :cond_1
-
-    :try_start_2
-    invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    :catch_0
-    return-object v0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_1
-    move-exception p1
-
-    move-object v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_3
-    invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->createInputStream()Ljava/io/FileInputStream;
-
-    move-result-object p1
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    invoke-static {p1}, Lsoj;->N(Ljava/io/InputStream;)Ljava/lang/String;
-
-    move-result-object p2
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    invoke-static {p1}, Lsoj;->e(Ljava/io/InputStream;)V
-
-    :try_start_5
-    invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
-
-    :catch_2
-    return-object p2
-
-    :catchall_1
-    move-exception p2
-
-    move-object v0, p1
-
-    move-object p1, p2
-
-    goto :goto_2
-
-    :catch_3
-    move-exception v1
-
-    move-object v4, v1
-
-    move-object v1, p1
-
-    move-object p1, v4
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception p1
-
-    move-object p0, v0
-
-    goto :goto_2
-
-    :catch_4
-    move-exception p1
-
-    move-object p0, v0
-
-    move-object v1, p0
-
-    :goto_0
-    :try_start_6
-    new-instance v2, Ljava/lang/IllegalStateException;
-
-    const-string v3, "getVCardStringFromUri failed"
-
-    invoke-direct {v2, v3, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    check-cast p2, Liab;
-
-    invoke-virtual {p2, v2}, Liab;->a(Ljava/lang/Throwable;)V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
-
-    invoke-static {v1}, Lsoj;->e(Ljava/io/InputStream;)V
-
-    if-eqz p0, :cond_1
-
-    :try_start_7
-    invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_7
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
-
-    :catch_5
-    :cond_1
-    return-object v0
-
-    :goto_1
-    move-object v0, v1
-
-    goto :goto_2
-
-    :catchall_3
-    move-exception p1
-
-    goto :goto_1
-
-    :goto_2
-    invoke-static {v0}, Lsoj;->e(Ljava/io/InputStream;)V
-
-    if-eqz p0, :cond_2
-
-    :try_start_8
-    invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_8
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_6
-
-    :catch_6
-    :cond_2
-    throw p1
-.end method
-
-.method public static d(Landroid/content/Context;Ljava/util/List;Lum5;)Landroid/util/SparseArray;
-    .locals 9
-
-    const-string v0, "_id IN ("
-
-    new-instance v1, Landroid/util/SparseArray;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Landroid/util/SparseArray;-><init>(I)V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    const-string p0, "usi"
-
-    if-nez v3, :cond_0
-
-    const-string p1, "getVCardsByPhoneContactIds failed: contentResolver is null"
-
-    invoke-static {p0, p1}, Lm4j;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :try_start_0
-    const-string v4, ","
-
-    invoke-static {v4, p1}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v4, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
-
-    sget-object v5, Lusi;->a:[Ljava/lang/String;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ")"
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v3 .. v8}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    const-string p1, "getVCardsByPhoneContactIds failed: cursor is null"
-
-    invoke-static {p0, p1}, Lm4j;->g(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v2, :cond_5
-
-    invoke-interface {v2}, Landroid/database/Cursor;->isClosed()Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    return-object v1
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_1
-
-    :cond_1
-    :try_start_1
-    const-string p1, "_id"
-
-    invoke-interface {v2, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result p1
-
-    const-string v0, "lookup"
-
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-virtual {p1}, Ldch;->f()I
 
     move-result v0
 
-    :cond_2
-    :goto_0
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-virtual {p1}, Ldch;->f()I
 
-    move-result v4
+    move-result v1
 
-    if-eqz v4, :cond_4
+    const v2, 0x64617461
 
-    invoke-interface {v2, p1}, Landroid/database/Cursor;->getInt(I)I
+    const/4 v3, 0x0
 
-    move-result v4
+    if-ne v1, v2, :cond_1
 
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    const/16 v1, 0x16
 
-    move-result-object v5
+    if-lt v0, v1, :cond_1
 
-    invoke-static {v5}, Ltri;->e(Ljava/lang/CharSequence;)Z
+    const/16 v0, 0xa
 
-    move-result v6
+    invoke-virtual {p1, v0}, Ldch;->F(I)V
 
-    if-eqz v6, :cond_3
+    invoke-virtual {p1}, Ldch;->x()I
 
-    const-string p1, "getVCardsByPhoneContactIds failed: lookupKey is empty or null"
+    move-result v0
 
-    invoke-static {p0, p1}, Lm4j;->g(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-lez v0, :cond_1
 
-    invoke-interface {v2}, Landroid/database/Cursor;->isClosed()Z
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    move-result p0
+    const/16 v1, 0xb
 
-    if-nez p0, :cond_5
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object v1
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_3
-    :try_start_2
-    sget-object v6, Landroid/provider/ContactsContract$Contacts;->CONTENT_VCARD_URI:Landroid/net/Uri;
+    move-result-object p0
 
-    invoke-static {v6, v5}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v5
-
-    invoke-static {v3, v5, p2}, Lusi;->c(Landroid/content/ContentResolver;Landroid/net/Uri;Lum5;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5}, Ltri;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    invoke-virtual {v1, v4, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_0
-
-    :cond_4
-    invoke-interface {v2}, Landroid/database/Cursor;->isClosed()Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    return-object v1
-
-    :goto_1
-    :try_start_3
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "getVCardsByPhoneContactIds failed"
-
-    invoke-direct {p1, v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    check-cast p2, Liab;
-
-    invoke-virtual {p2, p1}, Liab;->a(Ljava/lang/Throwable;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    if-eqz v2, :cond_5
-
-    invoke-interface {v2}, Landroid/database/Cursor;->isClosed()Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    :cond_5
-    return-object v1
-
-    :goto_2
-    if-eqz v2, :cond_6
-
-    invoke-interface {v2}, Landroid/database/Cursor;->isClosed()Z
+    invoke-virtual {p1}, Ldch;->x()I
 
     move-result p1
 
-    if-nez p1, :cond_6
+    if-lez p1, :cond_0
 
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    :cond_6
-    throw p0
-.end method
+    move-result-object p0
 
-.method public static final e([B[BI)Z
-    .locals 5
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    array-length v0, p1
+    move-result v0
 
-    add-int/2addr v0, p2
+    add-int/lit8 v0, v0, 0xc
 
-    array-length v1, p0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    if-le v0, v1, :cond_0
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "/"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_0
+    new-instance p1, Ldgg;
+
+    invoke-direct {p1, p2, v3, p0}, Ldgg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
+
+    :cond_1
+    invoke-static {p0}, Laz;->d(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    const-string p2, "Failed to parse index/count attribute: "
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Lmt7;
+    :cond_2
+    new-instance p0, Ljava/lang/String;
 
-    array-length v1, p1
+    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    const/4 v3, 0x1
+    :goto_0
+    const-string p1, "MetadataUtil"
 
-    sub-int/2addr v1, v3
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {v0, v2, v1, v3}, Lkt7;-><init>(III)V
+    return-object v3
+.end method
 
-    instance-of v1, v0, Ljava/util/Collection;
+.method public static d(ILdch;Ljava/lang/String;)Ldgg;
+    .locals 4
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p1}, Ldch;->f()I
 
-    move-object v1, v0
+    move-result v0
 
-    check-cast v1, Ljava/util/Collection;
-
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-virtual {p1}, Ldch;->f()I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    const v2, 0x64617461
 
-    goto :goto_1
+    const/4 v3, 0x0
+
+    if-ne v1, v2, :cond_0
+
+    const/16 p0, 0x8
+
+    invoke-virtual {p1, p0}, Ldch;->F(I)V
+
+    add-int/lit8 v0, v0, -0x10
+
+    invoke-virtual {p1, v0}, Ldch;->o(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ldgg;
+
+    invoke-direct {p1, p2, v3, p0}, Ldgg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
+
+    :cond_0
+    invoke-static {p0}, Laz;->d(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    const-string p2, "Failed to parse text attribute: "
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lkt7;->iterator()Ljava/util/Iterator;
+    new-instance p0, Ljava/lang/String;
+
+    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    const-string p1, "MetadataUtil"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v3
+.end method
+
+.method public static e(ILjava/lang/String;Ldch;ZZ)Lvf7;
+    .locals 0
+
+    invoke-static {p2}, Lusi;->f(Ldch;)I
+
+    move-result p2
+
+    if-eqz p4, :cond_0
+
+    const/4 p4, 0x1
+
+    invoke-static {p4, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p2
+
+    :cond_0
+    const/4 p4, 0x0
+
+    if-ltz p2, :cond_2
+
+    if-eqz p3, :cond_1
+
+    new-instance p0, Ldgg;
+
+    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p0, p1, p4, p2}, Ldgg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p0
+
+    :cond_1
+    new-instance p0, Lvj3;
+
+    const-string p3, "und"
+
+    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p0, p3, p1, p2}, Lvj3;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p0
+
+    :cond_2
+    invoke-static {p0}, Laz;->d(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    const-string p2, "Failed to parse uint8 attribute: "
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_3
+    new-instance p0, Ljava/lang/String;
+
+    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    const-string p1, "MetadataUtil"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object p4
+.end method
+
+.method public static f(Ldch;)I
+    .locals 2
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Ldch;->F(I)V
+
+    invoke-virtual {p0}, Ldch;->f()I
+
+    move-result v0
+
+    const v1, 0x64617461
+
+    if-ne v0, v1, :cond_0
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Ldch;->F(I)V
+
+    invoke-virtual {p0}, Ldch;->s()I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const-string p0, "MetadataUtil"
+
+    const-string v0, "Failed to parse uint8 attribute value"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public static g(Landroid/view/View;Landroid/text/TextPaint;Lrhg;)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    :cond_2
-    move-object v1, v0
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    check-cast v1, Llt7;
+    move-result-object v0
 
-    iget-boolean v1, v1, Llt7;->c:Z
+    sget-object v1, Lub5;->b:Lub5;
 
-    if-eqz v1, :cond_3
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-object v1, v0
+    move-result-object p0
 
-    check-cast v1, Llt7;
-
-    invoke-virtual {v1}, Llt7;->nextInt()I
-
-    move-result v1
-
-    add-int v4, p2, v1
-
-    aget-byte v4, p0, v4
-
-    aget-byte v1, p1, v1
-
-    if-eq v4, v1, :cond_2
-
-    :goto_0
-    return v2
-
-    :cond_3
-    :goto_1
-    return v3
-.end method
-
-.method public static f(Ljava/lang/String;Lmq6;)V
-    .locals 1
-
-    new-instance v0, Lslb;
-
-    invoke-direct {v0, p1}, Lslb;-><init>(Lmq6;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setDaemon(Z)V
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {v0, p0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    invoke-virtual {p2, p0, p1, v0, v1}, Lrhg;->a(Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;Lub5;)V
 
     return-void
 .end method

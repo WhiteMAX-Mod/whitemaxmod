@@ -1,161 +1,171 @@
-.class public final Ltqc;
-.super Luqc;
+.class public final synthetic Ltqc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final a:Lwkc;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Luqc;
 
 
 # direct methods
-.method public constructor <init>(Lwkc;I)V
+.method public synthetic constructor <init>(Luqc;I)V
     .locals 0
 
+    iput p2, p0, Ltqc;->a:I
+
+    iput-object p1, p0, Ltqc;->b:Luqc;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltqc;->a:Lwkc;
-
-    iput p2, p0, Ltqc;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Ltqc;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ltqc;->b:Luqc;
+
+    iget-object v0, v0, Luqc;->o:Lone/me/profile/screens/invite/ProfileInviteScreen;
+
+    invoke-virtual {v0}, Lone/me/profile/screens/invite/ProfileInviteScreen;->z0()Lhrc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lhrc;->G0:Lcm5;
+
+    new-instance v1, Llqc;
+
+    new-instance v2, La84;
+
+    sget v3, Lqfb;->O:I
+
+    sget v4, Lsfb;->S0:I
+
+    move v5, v4
+
+    new-instance v4, Llhg;
+
+    invoke-direct {v4, v5}, Llhg;-><init>(I)V
+
+    sget v5, Lugb;->X:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    sget v6, Lv5e;->S1:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    sget v7, Lugb;->S:I
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    invoke-direct/range {v2 .. v7}, La84;-><init>(ILqhg;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Llqc;-><init>(Ljava/util/List;)V
+
+    invoke-static {v0, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Ltqc;->b:Luqc;
+
+    iget-object v0, v0, Luqc;->o:Lone/me/profile/screens/invite/ProfileInviteScreen;
+
+    invoke-virtual {v0}, Lone/me/profile/screens/invite/ProfileInviteScreen;->z0()Lhrc;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lhrc;->G0:Lcm5;
+
+    invoke-virtual {v0}, Lhrc;->u()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v3, Ljqc;
+
+    invoke-direct {v3, v2}, Ljqc;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1, v3}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    invoke-static {}, Lnf3;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    new-instance v2, Lmqc;
+
+    invoke-virtual {v0}, Lhrc;->t()Lnd2;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lnd2;->i0()Z
+
+    move-result v0
+
+    const/4 v3, 0x1
+
+    if-ne v0, v3, :cond_1
+
+    sget v0, Lsfb;->Z0:I
 
     goto :goto_0
 
-    :cond_0
-    instance-of v0, p1, Ltqc;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
     :cond_1
-    check-cast p1, Ltqc;
-
-    iget-object v0, p0, Ltqc;->a:Lwkc;
-
-    iget-object v1, p1, Ltqc;->a:Lwkc;
-
-    invoke-virtual {v0, v1}, Lwkc;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget v0, p0, Ltqc;->b:I
-
-    iget p1, p1, Ltqc;->b:I
-
-    if-ne v0, p1, :cond_3
+    sget v0, Lsfb;->Y0:I
 
     :goto_0
-    const/4 p1, 0x1
+    new-instance v3, Llhg;
 
-    return p1
+    invoke-direct {v3, v0}, Llhg;-><init>(I)V
 
-    :cond_3
+    sget v0, Lv5e;->w:I
+
+    invoke-direct {v2, v0, v3}, Lmqc;-><init>(ILlhg;)V
+
+    iget-object v0, v1, Lcm5;->b:Li7f;
+
+    invoke-virtual {v0, v2}, Li7f;->h(Ljava/lang/Object;)Z
+
+    :cond_2
     :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-object v0, p0, Ltqc;->a:Lwkc;
-
-    iget-wide v0, v0, Lwkc;->a:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Ltqc;->a:Lwkc;
-
-    invoke-virtual {v0}, Lwkc;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x1
-
-    invoke-static {v2, v0, v1}, Ln0c;->j(III)I
-
-    move-result v0
-
-    iget v1, p0, Ltqc;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Ltqc;->b:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Ltqc;->b:I
-
-    invoke-static {v0}, Likj;->c(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Result(cellModel="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Ltqc;->a:Lwkc;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", type="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "CHAT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", itemViewType="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lb3h;->a:Lb3h;
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

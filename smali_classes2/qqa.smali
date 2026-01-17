@@ -1,19 +1,19 @@
 .class public final Lqqa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lmic;
+.field public final c:Ljjc;
 
 
 # direct methods
-.method public constructor <init>(Lmic;)V
+.method public constructor <init>(Ljjc;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqqa;->c:Lmic;
+    iput-object p1, p0, Lqqa;->c:Ljjc;
 
     return-void
 .end method
@@ -41,11 +41,11 @@
     :cond_1
     check-cast p1, Lqqa;
 
-    iget-object v1, p0, Lqqa;->c:Lmic;
+    iget-object v1, p0, Lqqa;->c:Ljjc;
 
-    iget-object p1, p1, Lqqa;->c:Lmic;
+    iget-object p1, p1, Lqqa;->c:Ljjc;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -60,9 +60,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lqqa;->c:Lmic;
+    iget-object v0, p0, Lqqa;->c:Ljjc;
 
-    invoke-virtual {v0}, Lmic;->hashCode()I
+    invoke-virtual {v0}, Ljjc;->hashCode()I
 
     move-result v0
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqqa;->c:Lmic;
+    iget-object v1, p0, Lqqa;->c:Ljjc;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

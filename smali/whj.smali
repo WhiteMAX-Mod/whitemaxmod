@@ -1,58 +1,60 @@
-.class public abstract Lwhj;
+.class public final Lwhj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lwhj;
+
 
 # direct methods
-.method public static a(Ljava/lang/String;Z)Ljava/lang/Class;
+.method static constructor <clinit>()V
     .locals 3
 
-    if-eqz p1, :cond_0
+    new-instance v0, Lwhj;
 
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result p1
+    sput-object v0, Lwhj;->a:Lwhj;
 
-    if-eqz p1, :cond_0
+    new-instance v0, Lvzi;
 
-    const/4 p0, 0x0
+    const/4 v1, 0x1
 
-    return-object p0
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    :cond_0
-    :try_start_0
-    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    const-class v1, Ln0j;
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    return-object p0
+    move-result-object v0
 
-    :catch_0
-    move-exception p1
+    const/4 v2, 0x2
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    const-string v1, "An exception occurred while finding class for name "
+    move-result-object v0
 
-    const-string v2, ". "
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    invoke-static {v1, p0, v2}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    throw p1
 .end method

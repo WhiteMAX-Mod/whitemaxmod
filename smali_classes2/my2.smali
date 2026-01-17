@@ -1,99 +1,40 @@
 .class public final Lmy2;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lvy2;
 
 
-# instance fields
-.field public final synthetic X:Lm03;
+# static fields
+.field public static final a:Lmy2;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final b:Lmy2;
+
+.field public static final c:Lmy2;
 
 
 # direct methods
-.method public constructor <init>(Lm03;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lmy2;->X:Lm03;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Laj2;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmy2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmy2;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lmy2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method static synthetic constructor <clinit>()V
+    .locals 1
 
     new-instance v0, Lmy2;
 
-    iget-object v1, p0, Lmy2;->X:Lm03;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, p2}, Lmy2;-><init>(Lm03;Lkotlin/coroutines/Continuation;)V
+    sput-object v0, Lmy2;->a:Lmy2;
 
-    iput-object p1, v0, Lmy2;->o:Ljava/lang/Object;
+    new-instance v0, Lmy2;
 
-    return-object v0
-.end method
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    sput-object v0, Lmy2;->b:Lmy2;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    new-instance v0, Lmy2;
 
-    iget-object p1, p0, Lmy2;->o:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Laj2;
+    sput-object v0, Lmy2;->c:Lmy2;
 
-    sget-object v0, Laj2;->a:Laj2;
-
-    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lmy2;->X:Lm03;
-
-    iget-object p1, p1, Lm03;->f1:Lyl5;
-
-    sget-object v0, Loy2;->c:Loy2;
-
-    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-void
 .end method

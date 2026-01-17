@@ -101,7 +101,7 @@
 
     const-string v5, " becomes available: "
 
-    invoke-static {v4, v1, v2, v5, v3}, Lxfh;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v1, v2, v5, v3}, Lcbh;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -150,7 +150,7 @@
 
     const-string v3, " capabilities changed: "
 
-    invoke-static {v2, v0, v1, v3, p2}, Lxfh;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v1, v3, p2}, Lcbh;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -210,7 +210,7 @@
 
     const-string v3, ", "
 
-    invoke-static {v2, v0, v1, v3, p1}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, v1, v3, p1}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -252,7 +252,7 @@
 
     const-string v5, ", "
 
-    invoke-static {v4, v1, v2, v5, v3}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v1, v2, v5, v3}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 

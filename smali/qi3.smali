@@ -1,349 +1,307 @@
-.class public abstract synthetic Lqi3;
+.class public abstract Lqi3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public static synthetic a(I)Ljava/lang/String;
+.method public static a(Ljava/util/List;Ljava/lang/Comparable;)I
+    .locals 4
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-static {v1, v0}, Lqi3;->k(II)V
+
+    add-int/lit8 v0, v0, -0x1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-gt v1, v0, :cond_2
+
+    add-int v2, v1, v0
+
+    ushr-int/lit8 v2, v2, 0x1
+
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Comparable;
+
+    invoke-static {v3, p1}, Lijj;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result v3
+
+    if-gez v3, :cond_0
+
+    add-int/lit8 v1, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    if-lez v3, :cond_1
+
+    add-int/lit8 v0, v2, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v2
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    neg-int p0, v1
+
+    return p0
+.end method
+
+.method public static b(Ljava/util/List;)Lqd8;
     .locals 1
+
+    check-cast p0, Lqd8;
+
+    invoke-virtual {p0}, Lqd8;->e()V
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_4
+    iput-boolean v0, p0, Lqd8;->c:Z
 
-    const/4 v0, 0x2
+    iget v0, p0, Lqd8;->b:I
 
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "UPDATE"
+    if-lez v0, :cond_0
 
     return-object p0
 
     :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "ADD"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "REMOVE"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "UNBLOCK"
-
-    return-object p0
-
-    :cond_4
-    const-string p0, "BLOCK"
+    sget-object p0, Lqd8;->d:Lqd8;
 
     return-object p0
 .end method
 
-.method public static b(IFI)I
-    .locals 0
+.method public static c()Lqd8;
+    .locals 2
 
-    invoke-static {p1}, Ljava/lang/Float;->hashCode(F)I
+    new-instance v0, Lqd8;
 
-    move-result p1
+    const/16 v1, 0xa
 
-    add-int/2addr p1, p0
+    invoke-direct {v0, v1}, Lqd8;-><init>(I)V
 
-    mul-int/2addr p1, p2
-
-    return p1
+    return-object v0
 .end method
 
-.method public static c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
+.method public static d(Ljava/util/Collection;)Lus7;
+    .locals 3
+
+    new-instance v0, Lus7;
+
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
+
+    move-result p0
+
+    const/4 v1, 0x1
+
+    sub-int/2addr p0, v1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, p0, v1}, Lss7;-><init>(III)V
+
+    return-object v0
+.end method
+
+.method public static e(Ljava/util/List;)I
     .locals 0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result p0
+
+    add-int/lit8 p0, p0, -0x1
+
+    return p0
+.end method
+
+.method public static final f(Landroid/content/pm/PackageInfo;)J
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_0
+
+    invoke-static {p0}, Ltfc;->e(Landroid/content/pm/PackageInfo;)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    int-to-long v0, p0
+
+    return-wide v0
+.end method
+
+.method public static g(Ljava/lang/String;)Ljava/util/List;
+    .locals 0
+
+    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p0
+.end method
+
+.method public static varargs h([Ljava/lang/Object;)Ljava/util/List;
+    .locals 1
+
+    array-length v0, p0
+
+    if-lez v0, :cond_0
+
+    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    sget-object p0, Ldh5;->a:Ldh5;
+
+    return-object p0
+.end method
+
+.method public static varargs i([Ljava/lang/Object;)Ljava/util/ArrayList;
+    .locals 3
+
+    array-length v0, p0
+
+    if-nez v0, :cond_0
 
     new-instance p0, Ljava/util/ArrayList;
 
-    invoke-direct {p0, p3}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {p0, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    return-object p0
+
+    :cond_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    new-instance v1, Lms;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v2}, Lms;-><init>([Ljava/lang/Object;Z)V
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    return-object v0
+.end method
+
+.method public static final j(Ljava/util/List;)Ljava/util/List;
+    .locals 2
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    return-object p0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    sget-object p0, Ldh5;->a:Ldh5;
 
     return-object p0
 .end method
 
-.method public static d(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method public static final k(II)V
+    .locals 4
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v0, ")."
+
+    if-ltz p1, :cond_1
+
+    if-gt p1, p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v2, "toIndex ("
+
+    const-string v3, ") is greater than size ("
+
+    invoke-static {v2, p1, v3, p0, v0}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p1, p2, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    throw v1
 
-    move-result-object p0
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {p1, p4, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "fromIndex (0) is greater than toIndex ("
 
-    return-void
-.end method
-
-.method public static e(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-    .locals 0
-
-    invoke-virtual {p4, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-    .locals 0
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static h(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1, v1, v0}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p4, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public static synthetic i(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
-
-    :pswitch_0
-    const-string p0, "CENTER_Y"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "CENTER_X"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "CENTER"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "BASELINE"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "BOTTOM"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "RIGHT"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "TOP"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "LEFT"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "NONE"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public static synthetic j(I)Ljava/lang/String;
-    .locals 0
+.method public static l()V
+    .locals 2
 
-    packed-switch p0, :pswitch_data_0
+    new-instance v0, Ljava/lang/ArithmeticException;
 
-    const-string p0, "null"
+    const-string v1, "Count overflow has happened."
 
-    return-object p0
+    invoke-direct {v0, v1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_0
-    const-string p0, "WAITING_FOR_CHUNK_STATUS"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "SENDING_DATA"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "SENDING_UPLOAD_REQUEST"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "WAITING_FOR_UPLOAD_STATUS"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "CONNECTED"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "WAITING_FOR_CONNECT"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "INIT"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method
 
-.method public static synthetic k(I)Ljava/lang/String;
-    .locals 1
+.method public static m()V
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/ArithmeticException;
 
-    if-eq p0, v0, :cond_2
+    const-string v1, "Index overflow has happened."
 
-    const/4 v0, 0x2
+    invoke-direct {v0, v1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
 
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "FEMALE"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "MALE"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-.end method
-
-.method public static synthetic l(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "REMOVED"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "BLOCKED"
-
-    return-object p0
+    throw v0
 .end method

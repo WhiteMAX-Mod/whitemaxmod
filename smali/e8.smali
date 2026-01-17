@@ -2,181 +2,278 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Le8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public final a:I
-
-.field public final b:Landroid/content/Intent;
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lc8;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lc8;-><init>(I)V
-
-    sput-object v0, Le8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Intent;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    .line 1
+    iput p1, p0, Le8;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p2, p0, Le8;->a:I
-
-    .line 3
-    iput-object p1, p0, Le8;->b:Landroid/content/Intent;
-
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
-
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    .line 5
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Landroid/content/Intent;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/content/Intent;
-
-    .line 6
-    :goto_0
-    invoke-direct {p0, p1, v0}, Le8;-><init>(Landroid/content/Intent;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
+.method public static final a(Li9h;)Le10;
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Ll8h;->$EnumSwitchMapping$0:[I
 
-    return v0
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p0
+
+    aget p0, v0, p0
+
+    packed-switch p0, :pswitch_data_0
+
+    sget-object p0, Le10;->b:Le10;
+
+    return-object p0
+
+    :pswitch_0
+    sget-object p0, Le10;->Y:Le10;
+
+    return-object p0
+
+    :pswitch_1
+    sget-object p0, Le10;->X:Le10;
+
+    return-object p0
+
+    :pswitch_2
+    sget-object p0, Le10;->v0:Le10;
+
+    return-object p0
+
+    :pswitch_3
+    sget-object p0, Le10;->d:Le10;
+
+    return-object p0
+
+    :pswitch_4
+    sget-object p0, Le10;->B0:Le10;
+
+    return-object p0
+
+    :pswitch_5
+    sget-object p0, Le10;->o:Le10;
+
+    return-object p0
+
+    :pswitch_6
+    sget-object p0, Le10;->b:Le10;
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static b(ILlq6;)Lo58;
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lwna;->C0:Lwna;
 
-    const-string v1, "ActivityResult{resultCode="
+    sget-object v1, Ls58;->$EnumSwitchMapping$0:[I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Lt02;->t(I)I
 
-    const/4 v1, -0x1
+    move-result p0
 
-    iget v2, p0, Le8;->a:I
+    aget p0, v1, p0
 
-    if-eq v2, v1, :cond_1
+    const/4 v1, 0x1
 
-    if-eqz v2, :cond_0
+    if-eq p0, v1, :cond_2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const/4 v1, 0x2
 
-    move-result-object v1
+    if-eq p0, v1, :cond_1
 
-    goto :goto_0
+    const/4 v1, 0x3
+
+    if-ne p0, v1, :cond_0
+
+    new-instance p0, Lq4h;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lq4h;->a:Llq6;
+
+    iput-object v0, p0, Lq4h;->b:Ljava/lang/Object;
+
+    return-object p0
 
     :cond_0
-    const-string v1, "RESULT_CANCELED"
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    goto :goto_0
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 
     :cond_1
-    const-string v1, "RESULT_OK"
+    new-instance p0, Lb8e;
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, ", data="
+    iput-object p1, p0, Lb8e;->a:Llq6;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lb8e;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Le8;->b:Landroid/content/Intent;
+    return-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_2
+    new-instance p0, Ln8g;
 
-    const/16 v1, 0x7d
+    invoke-direct {p0, p1}, Ln8g;-><init>(Llq6;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return-object p0
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public static c(Llq6;)Ln8g;
+    .locals 1
 
-    move-result-object v0
+    new-instance v0, Ln8g;
+
+    invoke-direct {v0, p0}, Ln8g;-><init>(Llq6;)V
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+
+# virtual methods
+.method public final d(Landroid/content/Intent;I)Ljava/lang/Object;
+    .locals 5
 
     iget v0, p0, Le8;->a:I
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Le8;->b:Landroid/content/Intent;
+    new-instance v0, Lb8;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0, p1, p2}, Lb8;-><init>(Landroid/content/Intent;I)V
 
-    const/4 v1, 0x0
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lb8;
+
+    invoke-direct {v0, p1, p2}, Lb8;-><init>(Landroid/content/Intent;I)V
+
+    return-object v0
+
+    :pswitch_1
+    const/4 v0, -0x1
+
+    if-eq p2, v0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    const-string p2, "androidx.activity.result.contract.extra.PERMISSIONS"
+
+    invoke-virtual {p1, p2}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS"
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getIntArrayExtra(Ljava/lang/String;)[I
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    if-nez p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v0, Ljava/util/ArrayList;
+
+    array-length v1, p1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v1, :cond_4
+
+    aget v4, p1, v3
+
+    if-nez v4, :cond_3
+
+    const/4 v4, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    move v4, v2
+
+    :goto_1
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x1
+    :cond_4
+    invoke-static {p2}, Lct;->t([Ljava/lang/Object;)Ljava/util/ArrayList;
 
-    :goto_0
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object p1
 
-    if-eqz v0, :cond_1
+    invoke-static {p1, v0}, Lpi3;->f0(Ljava/lang/Iterable;Ljava/util/List;)Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    move-result-object p1
 
-    :cond_1
-    return-void
+    invoke-static {p1}, Lss8;->n(Ljava/util/ArrayList;)Ljava/util/Map;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_5
+    :goto_2
+    sget-object p1, Leh5;->a:Leh5;
+
+    :goto_3
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

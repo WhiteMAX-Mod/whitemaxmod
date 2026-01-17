@@ -1,75 +1,43 @@
 .class public final Lqya;
-.super Ljava/lang/Object;
+.super Lzm0;
 .source "SourceFile"
-
-# interfaces
-.implements Lbo3;
-.implements Lq1d;
-.implements Lo1d;
 
 
 # instance fields
-.field public final a:Lc0b;
+.field public final a:Le0b;
 
-.field public b:Ll25;
+.field public final b:[Ljava/lang/Object;
+
+.field public c:I
+
+.field public d:Z
+
+.field public volatile o:Z
 
 
 # direct methods
-.method public constructor <init>(Lc0b;)V
+.method public constructor <init>(Le0b;[Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqya;->a:Lc0b;
+    iput-object p1, p0, Lqya;->a:Le0b;
+
+    iput-object p2, p0, Lqya;->b:[Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
-
-    sget-object v0, Lp25;->a:Lp25;
-
-    iput-object v0, p0, Lqya;->b:Ll25;
-
-    iget-object v0, p0, Lqya;->a:Lc0b;
-
-    invoke-interface {v0}, Lc0b;->b()V
-
-    return-void
-.end method
-
-.method public final c(Ll25;)V
-    .locals 1
-
-    iget-object v0, p0, Lqya;->b:Ll25;
-
-    invoke-static {v0, p1}, Lp25;->j(Ll25;Ll25;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lqya;->b:Ll25;
-
-    iget-object p1, p0, Lqya;->a:Lc0b;
-
-    invoke-interface {p1, p0}, Lc0b;->c(Ll25;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public final clear()V
-    .locals 0
+    .locals 1
+
+    iget-object v0, p0, Lqya;->b:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    iput v0, p0, Lqya;->c:I
 
     return-void
 .end method
@@ -77,81 +45,77 @@
 .method public final dispose()V
     .locals 1
 
-    iget-object v0, p0, Lqya;->b:Ll25;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Ll25;->dispose()V
-
-    sget-object v0, Lp25;->a:Lp25;
-
-    iput-object v0, p0, Lqya;->b:Ll25;
+    iput-boolean v0, p0, Lqya;->o:Z
 
     return-void
 .end method
 
-.method public final f()Z
+.method public final e()Z
     .locals 1
 
-    iget-object v0, p0, Lqya;->b:Ll25;
-
-    invoke-interface {v0}, Ll25;->f()Z
-
-    move-result v0
+    iget-boolean v0, p0, Lqya;->o:Z
 
     return v0
 .end method
 
-.method public final g(J)V
+.method public final g(I)I
     .locals 0
 
-    return-void
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lqya;->d:Z
+
+    return p1
 .end method
 
 .method public final isEmpty()Z
-    .locals 1
+    .locals 2
+
+    iget v0, p0, Lqya;->c:I
+
+    iget-object v1, p0, Lqya;->b:[Ljava/lang/Object;
+
+    array-length v1, v1
+
+    if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
 
     return v0
-.end method
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 1
+    :cond_0
+    const/4 v0, 0x0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Should not be called!"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    sget-object v0, Lp25;->a:Lp25;
-
-    iput-object v0, p0, Lqya;->b:Ll25;
-
-    iget-object v0, p0, Lqya;->a:Lc0b;
-
-    invoke-interface {v0, p1}, Lc0b;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return v0
 .end method
 
 .method public final poll()Ljava/lang/Object;
-    .locals 1
+    .locals 3
 
+    iget v0, p0, Lqya;->c:I
+
+    iget-object v1, p0, Lqya;->b:[Ljava/lang/Object;
+
+    array-length v2, v1
+
+    if-eq v0, v2, :cond_0
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Lqya;->c:I
+
+    aget-object v0, v1, v0
+
+    const-string v1, "The array element is null"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
     const/4 v0, 0x0
 
     return-object v0
-.end method
-
-.method public final q(I)I
-    .locals 0
-
-    const/4 p1, 0x2
-
-    return p1
 .end method

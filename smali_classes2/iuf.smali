@@ -1,26 +1,26 @@
 .class public final Liuf;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/stickerssettings/StickersSettingsScreen;
+.field public final synthetic X:Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/StickersSettingsScreen;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/stickersscreen/StickersScreen;)V
     .locals 0
 
-    iput-object p2, p0, Liuf;->X:Lone/me/stickerssettings/StickersSettingsScreen;
+    iput-object p2, p0, Liuf;->X:Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/util/List;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Liuf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -40,7 +38,7 @@
 
     check-cast p1, Liuf;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Liuf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,9 +50,9 @@
 
     new-instance v0, Liuf;
 
-    iget-object v1, p0, Liuf;->X:Lone/me/stickerssettings/StickersSettingsScreen;
+    iget-object v1, p0, Liuf;->X:Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    invoke-direct {v0, p2, v1}, Liuf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/StickersSettingsScreen;)V
+    invoke-direct {v0, p2, v1}, Liuf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/stickersscreen/StickersScreen;)V
 
     iput-object p1, v0, Liuf;->o:Ljava/lang/Object;
 
@@ -62,21 +60,51 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 4
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget-object v0, p0, Liuf;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Liuf;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    check-cast p1, Ljava/util/List;
+    check-cast v0, Lpwf;
 
-    iget-object v0, p0, Liuf;->X:Lone/me/stickerssettings/StickersSettingsScreen;
+    sget-object p1, Lone/me/stickerssettings/stickersscreen/StickersScreen;->v0:[Lz28;
 
-    iget-object v0, v0, Lone/me/stickerssettings/StickersSettingsScreen;->o:Leuf;
+    iget-object p1, p0, Liuf;->X:Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    invoke-virtual {v0, p1}, Lbe8;->E(Ljava/util/List;)V
+    invoke-virtual {p1}, Lone/me/stickerssettings/stickersscreen/StickersScreen;->A0()Lymb;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    move-result-object v1
+
+    iget-object v2, v0, Lpwf;->a:Lqhg;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, ""
+
+    :cond_0
+    invoke-virtual {v1, v2}, Lymb;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v0, v0, Lpwf;->b:Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Lone/me/stickerssettings/stickersscreen/StickersScreen;->A0()Lymb;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lymb;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

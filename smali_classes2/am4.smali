@@ -1,9 +1,9 @@
 .class public final synthetic Lam4;
-.super Lrr6;
+.super Lqr6;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lnq6;
 
 
 # static fields
@@ -16,17 +16,17 @@
 
     new-instance v0, Lam4;
 
-    const-string v4, "isNotEmpty(Ljava/lang/CharSequence;)Z"
+    const-string v4, "toLong(Ljava/lang/String;)J"
 
     const/4 v5, 0x1
 
     const/4 v1, 0x1
 
-    const-class v2, Liyf;
+    const-class v2, Lrzf;
 
-    const-string v3, "isNotEmpty"
+    const-string v3, "toLong"
 
-    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     sput-object v0, Lam4;->a:Lam4;
 
@@ -36,25 +36,15 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 2
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result p1
+    move-result-wide v0
 
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 

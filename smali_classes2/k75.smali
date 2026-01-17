@@ -1,267 +1,718 @@
-.class public final synthetic Lk75;
-.super Ljava/lang/Object;
+.class public final Lk75;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ll75;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic Y:J
 
-.field public final synthetic c:J
+.field public final synthetic Z:Ljava/lang/CharSequence;
+
+.field public o:I
+
+.field public final synthetic t0:Ljava/lang/Long;
+
+.field public final synthetic u0:Ljava/lang/Long;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/String;I)V
+.method public constructor <init>(Ll75;JLjava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/Long;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    iput p4, p0, Lk75;->a:I
+    iput-object p1, p0, Lk75;->X:Ll75;
 
-    iput-wide p1, p0, Lk75;->c:J
+    iput-wide p2, p0, Lk75;->Y:J
 
-    iput-object p3, p0, Lk75;->b:Ljava/lang/String;
+    iput-object p4, p0, Lk75;->Z:Ljava/lang/CharSequence;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p5, p0, Lk75;->t0:Ljava/lang/Long;
 
-    return-void
-.end method
+    iput-object p6, p0, Lk75;->u0:Ljava/lang/Long;
 
-.method public synthetic constructor <init>(Ljava/lang/String;JI)V
-    .locals 0
+    const/4 p1, 0x2
 
-    .line 2
-    iput p4, p0, Lk75;->a:I
-
-    iput-object p1, p0, Lk75;->b:Ljava/lang/String;
-
-    iput-wide p2, p0, Lk75;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p7}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lk75;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-wide v0, p0, Lk75;->c:J
-
-    check-cast p1, Lj6e;
-
-    const-string v2, "UPDATE phones SET server_phone = ?, type = ? WHERE phone = ?"
-
-    invoke-interface {p1, v2}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
+    invoke-virtual {p0, p1, p2}, Lk75;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 v2, 0x1
+    check-cast p1, Lk75;
 
-    :try_start_0
-    invoke-interface {p1, v2, v0, v1}, Lo6e;->b(IJ)V
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const/4 v0, 0x2
+    invoke-virtual {p1, p2}, Lk75;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0}, Lc12;->w(I)I
+    move-result-object p1
 
-    move-result v1
+    return-object p1
+.end method
 
-    int-to-long v1, v1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 8
 
-    invoke-interface {p1, v0, v1, v2}, Lo6e;->b(IJ)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v0, Lk75;
 
-    iget-object v0, p0, Lk75;->b:Ljava/lang/String;
+    iget-object v5, p0, Lk75;->t0:Ljava/lang/Long;
 
-    const/4 v1, 0x3
+    iget-object v6, p0, Lk75;->u0:Ljava/lang/Long;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lk75;->X:Ll75;
 
-    :try_start_1
-    invoke-interface {p1, v1}, Lo6e;->e(I)V
+    iget-wide v2, p0, Lk75;->Y:J
+
+    iget-object v4, p0, Lk75;->Z:Ljava/lang/CharSequence;
+
+    move-object v7, p2
+
+    invoke-direct/range {v0 .. v7}, Lk75;-><init>(Ll75;JLjava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/Long;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 37
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lk75;->X:Ll75;
+
+    iget-object v2, v1, Ll75;->X:Ljava/lang/Object;
+
+    check-cast v2, Lo58;
+
+    iget-object v3, v1, Ll75;->o:Ljava/lang/Object;
+
+    check-cast v3, Lo58;
+
+    iget-object v4, v1, Ll75;->c:Ljava/lang/Object;
+
+    check-cast v4, Lge3;
+
+    iget-object v5, v1, Ll75;->b:Ljava/lang/Object;
+
+    check-cast v5, Ljava/lang/String;
+
+    iget v6, v0, Lk75;->o:I
+
+    const/4 v7, 0x3
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x1
+
+    sget-object v10, Lb3h;->a:Lb3h;
+
+    const/4 v11, 0x4
+
+    if-eqz v6, :cond_4
+
+    if-eq v6, v9, :cond_3
+
+    if-eq v6, v8, :cond_2
+
+    if-eq v6, v7, :cond_1
+
+    if-ne v6, v11, :cond_0
+
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v10
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v10
+
+    :cond_2
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v10
+
+    :cond_3
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v10
+
+    :cond_4
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object v6, v1, Ll75;->Y:Ljava/lang/Object;
+
+    check-cast v6, Lo58;
+
+    invoke-interface {v6}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lgre;
+
+    check-cast v6, Lidc;
+
+    invoke-virtual {v6}, Lidc;->s()Z
+
+    move-result v6
+
+    iget-object v12, v0, Lk75;->Z:Ljava/lang/CharSequence;
+
+    invoke-static {v12}, Lzsi;->h(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v13
+
+    const-string v14, "start save and upload chatId:"
+
+    const-string v15, ", text:"
+
+    move-object/from16 v17, v10
+
+    iget-wide v9, v0, Lk75;->Y:J
+
+    invoke-static {v14, v9, v10, v15, v13}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    const-string v14, ", editId:"
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v14, v0, Lk75;->t0:Ljava/lang/Long;
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v15, ", replyId:"
+
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v15, v0, Lk75;->u0:Ljava/lang/Long;
+
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v11, ", syncEn:"
+
+    invoke-virtual {v13, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v5, v11}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lla3;
+
+    invoke-virtual {v11, v9, v10}, Lla3;->k(J)Lpld;
+
+    move-result-object v11
+
+    iget-object v11, v11, Lpld;->a:Llpf;
+
+    invoke-interface {v11}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lnd2;
+
+    if-nez v11, :cond_5
+
+    goto/16 :goto_e
+
+    :cond_5
+    iget-object v13, v11, Lnd2;->b:Luh2;
+
+    const/16 v18, 0x0
+
+    if-eqz v12, :cond_6
+
+    invoke-static {v12}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v12
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_6
+    move-object/from16 v12, v18
+
+    :goto_0
+    if-eqz v12, :cond_b
+
+    invoke-interface {v12}, Ljava/lang/CharSequence;->length()I
+
+    move-result v19
+
+    if-nez v19, :cond_7
 
     goto :goto_1
 
-    :cond_0
-    invoke-interface {p1, v1, v0}, Lo6e;->D(ILjava/lang/String;)V
+    :cond_7
+    instance-of v7, v12, Landroid/text/Spannable;
 
-    :goto_0
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-nez v7, :cond_8
 
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    new-instance v7, Lc58;
 
-    const/4 p1, 0x0
+    invoke-virtual {v12}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v12
 
-    :goto_1
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    invoke-static {v12}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    throw v0
+    move-result-object v12
 
-    :pswitch_0
-    iget-wide v0, p0, Lk75;->c:J
+    invoke-virtual {v12}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    check-cast p1, Lj6e;
+    move-result-object v12
 
-    const-string v2, "UPDATE messages SET error = ? WHERE id = ?"
+    sget-object v8, Ldh5;->a:Ldh5;
 
-    invoke-interface {p1, v2}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
+    invoke-direct {v7, v12, v8}, Lc58;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
-    move-result-object p1
-
-    iget-object v2, p0, Lk75;->b:Ljava/lang/String;
-
-    const/4 v3, 0x1
-
-    if-nez v2, :cond_1
-
-    :try_start_2
-    invoke-interface {p1, v3}, Lo6e;->e(I)V
+    move-object/from16 v23, v7
 
     goto :goto_2
 
-    :catchall_1
-    move-exception v0
+    :cond_8
+    check-cast v12, Landroid/text/Spannable;
 
-    goto :goto_3
+    invoke-static {v12}, Lfe;->a(Landroid/text/Spannable;)Landroid/text/Spannable;
 
-    :cond_1
-    invoke-interface {p1, v3, v2}, Lo6e;->D(ILjava/lang/String;)V
+    move-result-object v7
+
+    invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
+
+    move-result v8
+
+    if-nez v8, :cond_9
+
+    goto :goto_1
+
+    :cond_9
+    iget-object v8, v1, Ll75;->t0:Ljava/lang/Object;
+
+    check-cast v8, Lo58;
+
+    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lmx6;
+
+    invoke-virtual {v8, v11, v7}, Lmx6;->a(Lnd2;Ljava/lang/CharSequence;)Ljava/util/List;
+
+    move-result-object v8
+
+    invoke-virtual {v7}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-interface {v8}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v12
+
+    if-eqz v12, :cond_a
+
+    move-object/from16 v8, v18
+
+    :cond_a
+    new-instance v12, Lc58;
+
+    invoke-direct {v12, v7, v8}, Lc58;-><init>(Ljava/lang/String;Ljava/util/List;)V
+
+    move-object/from16 v23, v12
+
+    goto :goto_2
+
+    :cond_b
+    :goto_1
+    move-object/from16 v23, v18
 
     :goto_2
-    const/4 v2, 0x2
+    iget-object v7, v13, Luh2;->d0:Lgab;
 
-    invoke-interface {p1, v2, v0, v1}, Lo6e;->b(IJ)V
+    instance-of v8, v7, Lgab;
 
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    const/4 p1, 0x0
-
-    return-object p1
+    if-eqz v8, :cond_c
 
     :goto_3
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    move-object v8, v2
 
-    throw v0
-
-    :pswitch_1
-    iget-object v0, p0, Lk75;->b:Ljava/lang/String;
-
-    iget-wide v1, p0, Lk75;->c:J
-
-    check-cast p1, Lj6e;
-
-    const-string v3, "UPDATE messages SET localized_error = ? WHERE id = ?"
-
-    invoke-interface {p1, v3}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
-
-    move-result-object p1
-
-    const/4 v3, 0x1
-
-    :try_start_3
-    invoke-interface {p1, v3, v0}, Lo6e;->D(ILjava/lang/String;)V
-
-    const/4 v0, 0x2
-
-    invoke-interface {p1, v0, v1, v2}, Lo6e;->b(IJ)V
-
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :catchall_2
-    move-exception v0
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    throw v0
-
-    :pswitch_2
-    iget-wide v0, p0, Lk75;->c:J
-
-    check-cast p1, Lj6e;
-
-    const-string v2, "DELETE FROM draft_uploads WHERE chat_id=? AND attach_id=?"
-
-    invoke-interface {p1, v2}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
-
-    move-result-object p1
-
-    const/4 v2, 0x1
-
-    :try_start_4
-    invoke-interface {p1, v2, v0, v1}, Lo6e;->b(IJ)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    iget-object v0, p0, Lk75;->b:Ljava/lang/String;
-
-    const/4 v1, 0x2
-
-    if-nez v0, :cond_2
-
-    :try_start_5
-    invoke-interface {p1, v1}, Lo6e;->e(I)V
+    move-object v12, v3
 
     goto :goto_4
 
-    :catchall_3
-    move-exception v0
+    :cond_c
+    move-object/from16 v7, v18
+
+    goto :goto_3
+
+    :goto_4
+    iget-wide v2, v13, Luh2;->a:J
+
+    move/from16 p1, v6
+
+    new-instance v6, Ljava/lang/Long;
+
+    invoke-direct {v6, v2, v3}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    const-wide/16 v29, 0x0
+
+    cmp-long v2, v2, v29
+
+    if-eqz v2, :cond_d
 
     goto :goto_5
 
-    :cond_2
-    invoke-interface {p1, v1, v0}, Lo6e;->D(ILjava/lang/String;)V
-
-    :goto_4
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    :cond_d
+    move-object/from16 v6, v18
 
     :goto_5
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    if-eqz v6, :cond_e
 
-    throw v0
+    invoke-virtual {v6}, Ljava/lang/Long;->longValue()J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result-wide v2
+
+    :goto_6
+    move-wide/from16 v21, v2
+
+    goto :goto_7
+
+    :cond_e
+    iget-wide v2, v13, Luh2;->l:J
+
+    goto :goto_6
+
+    :goto_7
+    if-nez v15, :cond_f
+
+    goto :goto_8
+
+    :cond_f
+    invoke-virtual {v15}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    cmp-long v2, v2, v29
+
+    if-nez v2, :cond_10
+
+    move-object/from16 v24, v18
+
+    goto :goto_9
+
+    :cond_10
+    :goto_8
+    move-object/from16 v24, v15
+
+    :goto_9
+    if-nez v14, :cond_11
+
+    goto :goto_a
+
+    :cond_11
+    invoke-virtual {v14}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    cmp-long v2, v2, v29
+
+    if-nez v2, :cond_12
+
+    move-object/from16 v25, v18
+
+    goto :goto_b
+
+    :cond_12
+    :goto_a
+    move-object/from16 v25, v14
+
+    :goto_b
+    new-instance v20, Lgab;
+
+    const/16 v27, 0x0
+
+    const/16 v26, 0x0
+
+    const/16 v28, 0x70
+
+    invoke-direct/range {v20 .. v28}, Lgab;-><init>(JLc58;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ZI)V
+
+    move-object/from16 v2, v20
+
+    invoke-virtual {v2, v7}, Lgab;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_13
+
+    const-string v1, "Old draft equals new draft"
+
+    invoke-static {v5, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v17
+
+    :cond_13
+    invoke-virtual {v2}, Lgab;->c()Z
+
+    move-result v3
+
+    sget-object v6, Lac4;->a:Lac4;
+
+    if-nez v3, :cond_1b
+
+    iget-object v3, v2, Lgab;->c:Ljava/lang/Long;
+
+    iget-object v7, v2, Lgab;->b:Lc58;
+
+    if-eqz v3, :cond_14
+
+    invoke-static {v7}, Lzdj;->b(Lc58;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1b
+
+    :cond_14
+    iget-object v3, v2, Lgab;->d:Ljava/lang/Long;
+
+    if-eqz v3, :cond_15
+
+    invoke-static {v7}, Lzdj;->b(Lc58;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_15
+
+    goto/16 :goto_c
+
+    :cond_15
+    const-string v3, "Old draft NOT equals new draft and new draft is not empty. Start saving"
+
+    invoke-static {v5, v3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lef3;
+
+    check-cast v3, Lqi8;
+
+    move-object/from16 v20, v2
+
+    iget-object v2, v3, Lqi8;->n0:Lnre;
+
+    sget-object v16, Lqi8;->Q0:[Lz28;
+
+    const/16 v18, 0x7
+
+    move-object/from16 v21, v7
+
+    aget-object v7, v16, v18
+
+    move-object/from16 v18, v8
+
+    sget-object v8, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v2, v3, v7, v8}, Lnre;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    iget-wide v2, v13, Luh2;->e0:J
+
+    if-nez p1, :cond_16
+
+    invoke-interface/range {v18 .. v18}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lef3;
+
+    check-cast v2, Lyfe;
+
+    invoke-virtual {v2}, Lyfe;->j()J
+
+    move-result-wide v2
+
+    :cond_16
+    move-wide/from16 v34, v2
+
+    invoke-interface {v12}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lla3;
+
+    iget-wide v7, v11, Lnd2;->a:J
+
+    invoke-virtual {v2}, Lla3;->j()Lxg2;
+
+    move-result-object v31
+
+    move-wide/from16 v32, v7
+
+    move-object/from16 v36, v20
+
+    invoke-virtual/range {v31 .. v36}, Lxg2;->v(JJLgab;)V
+
+    move-object/from16 v2, v36
+
+    if-nez p1, :cond_17
+
+    const-string v1, "Drafts sync NOT enabled"
+
+    invoke-static {v5, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v17
+
+    :cond_17
+    if-eqz v14, :cond_18
+
+    invoke-virtual {v14}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v7
+
+    cmp-long v3, v7, v29
+
+    if-eqz v3, :cond_18
+
+    const-string v1, "we don\'t sync edit"
+
+    invoke-static {v5, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static/range {v21 .. v21}, Lzdj;->b(Lc58;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1c
+
+    const/4 v1, 0x2
+
+    iput v1, v0, Lk75;->o:I
+
+    invoke-virtual {v4, v9, v10, v0}, Lge3;->c(JLp6g;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v6, :cond_1c
+
+    goto :goto_d
+
+    :cond_18
+    invoke-static/range {v21 .. v21}, Lzdj;->b(Lc58;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_19
+
+    if-eqz v15, :cond_19
+
+    invoke-virtual {v15}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v7
+
+    cmp-long v3, v7, v29
+
+    if-eqz v3, :cond_19
+
+    const-string v1, "we don\'t sync empty text for replied message"
+
+    invoke-static {v5, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x3
+
+    iput v1, v0, Lk75;->o:I
+
+    invoke-virtual {v4, v9, v10, v0}, Lge3;->c(JLp6g;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v6, :cond_1c
+
+    goto :goto_d
+
+    :cond_19
+    invoke-static/range {v21 .. v21}, Lzdj;->b(Lc58;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1a
+
+    const-string v1, "Drafts sync enabled. Draft has no text and no attaches. Do NOT send to server"
+
+    invoke-static {v5, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v17
+
+    :cond_1a
+    const-string v3, "Drafts sync enabled. Send to server"
+
+    invoke-static {v5, v3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v3, 0x4
+
+    iput v3, v0, Lk75;->o:I
+
+    invoke-static {v1, v9, v10, v2, v0}, Ll75;->e(Ll75;JLgab;Lo84;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v6, :cond_1c
+
+    goto :goto_d
+
+    :cond_1b
+    :goto_c
+    const-string v1, "new draft is empty"
+
+    invoke-static {v5, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iput v1, v0, Lk75;->o:I
+
+    invoke-virtual {v4, v9, v10, v0}, Lge3;->c(JLp6g;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v6, :cond_1c
+
+    :goto_d
+    return-object v6
+
+    :cond_1c
+    :goto_e
+    return-object v17
 .end method

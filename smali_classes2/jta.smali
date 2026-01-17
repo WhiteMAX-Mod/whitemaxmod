@@ -6,24 +6,24 @@
 # instance fields
 .field public final a:Landroid/content/Context;
 
-.field public final b:Ld68;
+.field public final b:Lo58;
 
-.field public c:Ld0e;
+.field public c:Ly0e;
 
 
 # direct methods
-.method public constructor <init>(Ld68;)V
+.method public constructor <init>(Lo58;)V
     .locals 2
 
-    sget-object v0, Lh2f;->a:Lh2f;
+    sget-object v0, Lj3f;->a:Lj3f;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    const/16 v1, 0x10
+    const/16 v1, 0x11
 
-    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -33,23 +33,23 @@
 
     iput-object v0, p0, Ljta;->a:Landroid/content/Context;
 
-    iput-object p1, p0, Ljta;->b:Ld68;
+    iput-object p1, p0, Ljta;->b:Lo58;
 
-    sget-object v0, Lb0e;->a:Lb0e;
+    sget-object v0, Lw0e;->a:Lw0e;
 
-    iput-object v0, p0, Ljta;->c:Ld0e;
+    iput-object v0, p0, Ljta;->c:Ly0e;
 
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljah;
-
-    invoke-virtual {p1}, Ljah;->j()Ld0e;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Ljta;->c:Ld0e;
+    check-cast p1, Lfbh;
+
+    invoke-virtual {p1}, Lfbh;->j()Ly0e;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ljta;->c:Ly0e;
 
     return-void
 .end method

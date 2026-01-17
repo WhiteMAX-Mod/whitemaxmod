@@ -4,122 +4,200 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Z
 
-.field public final b:[B
+.field public final b:Ljava/lang/String;
 
-.field public final c:I
+.field public final c:Lorg;
 
 .field public final d:I
 
+.field public final e:[B
+
 
 # direct methods
-.method public constructor <init>(III[B)V
-    .locals 0
+.method public constructor <init>(ZLjava/lang/String;I[BII[B)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lgrg;->a:I
+    const/4 v0, 0x0
 
-    iput-object p4, p0, Lgrg;->b:[B
+    const/4 v1, 0x1
 
-    iput p2, p0, Lgrg;->c:I
+    if-nez p3, :cond_0
 
-    iput p3, p0, Lgrg;->d:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lgrg;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
+    move v2, v1
 
     goto :goto_0
 
+    :cond_0
+    move v2, v0
+
+    :goto_0
+    if-nez p7, :cond_1
+
+    move v3, v1
+
+    goto :goto_1
+
     :cond_1
-    check-cast p1, Lgrg;
+    move v3, v0
 
-    iget v2, p0, Lgrg;->a:I
+    :goto_1
+    xor-int/2addr v2, v3
 
-    iget v3, p1, Lgrg;->a:I
+    invoke-static {v2}, Ly5j;->b(Z)V
 
-    if-ne v2, v3, :cond_2
+    iput-boolean p1, p0, Lgrg;->a:Z
 
-    iget v2, p0, Lgrg;->c:I
+    iput-object p2, p0, Lgrg;->b:Ljava/lang/String;
 
-    iget v3, p1, Lgrg;->c:I
+    iput p3, p0, Lgrg;->d:I
 
-    if-ne v2, v3, :cond_2
+    iput-object p7, p0, Lgrg;->e:[B
 
-    iget v2, p0, Lgrg;->d:I
+    new-instance p1, Lorg;
 
-    iget v3, p1, Lgrg;->d:I
+    if-nez p2, :cond_2
 
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lgrg;->b:[B
-
-    iget-object p1, p1, Lgrg;->b:[B
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
+    goto :goto_4
 
     :cond_2
-    :goto_0
-    return v1
-.end method
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
-.method public final hashCode()I
-    .locals 2
+    move-result p3
 
-    iget v0, p0, Lgrg;->a:I
+    const/4 p7, 0x2
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v2, -0x1
 
-    iget-object v1, p0, Lgrg;->b:[B
+    sparse-switch p3, :sswitch_data_0
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+    :goto_2
+    move v0, v2
 
-    move-result v1
+    goto :goto_3
 
-    add-int/2addr v1, v0
+    :sswitch_0
+    const-string p3, "cens"
 
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget v0, p0, Lgrg;->c:I
+    move-result p3
 
-    add-int/2addr v1, v0
+    if-nez p3, :cond_3
 
-    mul-int/lit8 v1, v1, 0x1f
+    goto :goto_2
 
-    iget v0, p0, Lgrg;->d:I
+    :cond_3
+    const/4 v0, 0x3
 
-    add-int/2addr v1, v0
+    goto :goto_3
 
-    return v1
+    :sswitch_1
+    const-string p3, "cenc"
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move v0, p7
+
+    goto :goto_3
+
+    :sswitch_2
+    const-string p3, "cbcs"
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    move v0, v1
+
+    goto :goto_3
+
+    :sswitch_3
+    const-string p3, "cbc1"
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    :goto_3
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result p3
+
+    add-int/lit8 p3, p3, 0x44
+
+    new-instance p7, Ljava/lang/StringBuilder;
+
+    invoke-direct {p7, p3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string p3, "Unsupported protection scheme type \'"
+
+    invoke-virtual {p7, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p7, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, "\'. Assuming AES-CTR crypto mode."
+
+    invoke-virtual {p7, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string p3, "TrackEncryptionBox"
+
+    invoke-static {p3, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_4
+
+    :pswitch_0
+    move v1, p7
+
+    :goto_4
+    :pswitch_1
+    invoke-direct {p1, v1, p5, p6, p4}, Lorg;-><init>(III[B)V
+
+    iput-object p1, p0, Lgrg;->c:Lorg;
+
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x2e7ccd -> :sswitch_3
+        0x2e7d0f -> :sswitch_2
+        0x2e8997 -> :sswitch_1
+        0x2e89a7 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
 .end method

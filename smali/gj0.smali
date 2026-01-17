@@ -51,7 +51,7 @@
 
     iget-object p1, p1, Lgj0;->b:Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {v0, p1}, Lkcj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -59,7 +59,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p1, p1}, Lkcj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

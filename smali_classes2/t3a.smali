@@ -1,12 +1,12 @@
 .class public final Lt3a;
-.super Lkm4;
+.super Llm4;
 .source "SourceFile"
 
 
 # static fields
 .field public static final b:Lt3a;
 
-.field public static final c:Lgm4;
+.field public static final c:Lhm4;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     new-instance v0, Lt3a;
 
-    invoke-direct {v0}, Lkm4;-><init>()V
+    invoke-direct {v0}, Llm4;-><init>()V
 
     sput-object v0, Lt3a;->b:Lt3a;
 
@@ -29,11 +29,11 @@
 
     const-string v4, ":settings/messages"
 
-    invoke-static {v0, v4, v1, v2, v3}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     move-result-object v0
 
-    sput-object v0, Lt3a;->c:Lgm4;
+    sput-object v0, Lt3a;->c:Lhm4;
 
     return-void
 .end method

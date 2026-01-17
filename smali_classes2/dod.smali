@@ -1,63 +1,64 @@
 .class public final Ldod;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljod;
 
-# instance fields
-.field public X:Lnba;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Liod;
-
-.field public d:Liod;
-
-.field public o:Lcnd;
-
-.field public s0:I
+# static fields
+.field public static final a:Ldod;
 
 
 # direct methods
-.method public constructor <init>(Liod;Ll84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ldod;->Z:Liod;
+    new-instance v0, Ldod;
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ldod;->a:Ldod;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Ldod;->Y:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Ldod;->s0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Ldod;
 
-    iput p1, p0, Ldod;->s0:I
+    if-nez p1, :cond_1
 
-    const/4 v4, 0x0
+    const/4 p1, 0x0
 
-    const/4 v5, 0x0
+    return p1
 
-    iget-object v0, p0, Ldod;->Z:Liod;
+    :cond_1
+    return v0
+.end method
 
-    const/4 v1, 0x0
+.method public final hashCode()I
+    .locals 1
 
-    const-wide/16 v2, 0x0
+    const v0, -0x5ce2dfa5
 
-    move-object v6, p0
+    return v0
+.end method
 
-    invoke-static/range {v0 .. v6}, Liod;->s(Liod;Lcnd;J[BLnba;Ll84;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object p1
+    const-string v0, "CloseTooltip"
 
-    return-object p1
+    return-object v0
 .end method

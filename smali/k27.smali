@@ -1,71 +1,23 @@
 .class public final Lk27;
-.super Lo27;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public d:I
+.field public final a:F
+
+.field public final b:I
 
 
-# virtual methods
-.method public final a(Lt27;Landroid/view/View;Lz7f;IZ)I
-    .locals 1
+# direct methods
+.method public constructor <init>(IF)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-super/range {p0 .. p5}, Lo27;->a(Lt27;Landroid/view/View;Lz7f;IZ)I
+    iput p2, p0, Lk27;->a:F
 
-    move-result p1
-
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final b(II)V
-    .locals 1
-
-    invoke-super {p0, p1, p2}, Lo27;->b(II)V
-
-    iget v0, p0, Lk27;->d:I
-
-    add-int/2addr p1, p2
-
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iput p1, p0, Lk27;->d:I
+    iput p1, p0, Lk27;->b:I
 
     return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    invoke-super {p0}, Lo27;->c()V
-
-    const/high16 v0, -0x80000000
-
-    iput v0, p0, Lk27;->d:I
-
-    return-void
-.end method
-
-.method public final d(Z)I
-    .locals 1
-
-    invoke-super {p0, p1}, Lo27;->d(Z)I
-
-    move-result p1
-
-    iget v0, p0, Lk27;->d:I
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    return p1
 .end method

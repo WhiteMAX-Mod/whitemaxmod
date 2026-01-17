@@ -1,109 +1,111 @@
-.class public final enum Lye2;
-.super Ljava/lang/Enum;
+.class public final Lye2;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final synthetic X:[Lye2;
 
-.field public static final enum a:Lye2;
+# instance fields
+.field public final synthetic X:Lrf2;
 
-.field public static final enum b:Lye2;
-
-.field public static final enum c:Lye2;
-
-.field public static final enum d:Lye2;
-
-.field public static final enum o:Lye2;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lrf2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lye2;
+    iput-object p1, p0, Lye2;->X:Lrf2;
 
-    const-string v1, "NONE"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lye2;->a:Lye2;
-
-    new-instance v1, Lye2;
-
-    const-string v2, "IN_PROGRESS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lye2;->b:Lye2;
-
-    new-instance v2, Lye2;
-
-    const-string v3, "SENT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lye2;->c:Lye2;
-
-    new-instance v3, Lye2;
-
-    const-string v4, "READ"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lye2;->d:Lye2;
-
-    new-instance v4, Lye2;
-
-    const-string v5, "ERROR"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lye2;->o:Lye2;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lye2;
-
-    move-result-object v0
-
-    sput-object v0, Lye2;->X:[Lye2;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lye2;
-    .locals 1
 
-    const-class v0, Lye2;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lva2;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lye2;
+    invoke-virtual {p0, p1, p2}, Lye2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lye2;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lye2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lye2;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lye2;->X:[Lye2;
+    new-instance v0, Lye2;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lye2;->X:Lrf2;
+
+    invoke-direct {v0, v1, p2}, Lye2;-><init>(Lrf2;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lye2;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lye2;->o:Ljava/lang/Object;
+
+    check-cast v0, Lva2;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lye2;->X:Lrf2;
+
+    iget-object v1, p1, Lga2;->i:Lspf;
+
+    invoke-virtual {v1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lva2;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v2, Lva2;->b:Lua2;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    sget-object v3, Lua2;->b:Lua2;
+
+    if-ne v2, v3, :cond_1
+
+    invoke-virtual {v1, v0}, Lspf;->setValue(Ljava/lang/Object;)V
+
+    :cond_1
+    sget-object v0, Lrf2;->B:[Lz28;
+
+    invoke-virtual {p1}, Lrf2;->u()Lfa2;
 
     move-result-object v0
 
-    check-cast v0, [Lye2;
+    invoke-virtual {p1, v0}, Lga2;->d(Lfa2;)V
 
-    return-object v0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

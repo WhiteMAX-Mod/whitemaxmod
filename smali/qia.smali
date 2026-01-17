@@ -1,129 +1,143 @@
-.class public abstract Lqia;
+.class public final Lqia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static a:Z
+# instance fields
+.field public final a:Landroid/content/Context;
 
-.field public static final b:Lpf5;
+.field public volatile b:I
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    new-instance v0, Lpf5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "CRASH_FREE"
+    iput-object p1, p0, Lqia;->a:Landroid/content/Context;
 
-    const/4 v2, 0x1
+    const/4 p1, 0x1
 
-    invoke-direct {v0, v1, v2}, Lpf5;-><init>(Ljava/lang/String;I)V
+    iput p1, p0, Lqia;->b:I
 
-    sput-object v0, Lqia;->b:Lpf5;
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqia;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static a()Lp2g;
-    .locals 2
 
-    new-instance v0, Lp2g;
+# virtual methods
+.method public final a(Lpia;)Z
+    .locals 6
 
-    const/4 v1, 0x0
+    iget v0, p0, Lqia;->b:I
 
-    invoke-direct {v0, v1}, Ljy7;-><init>(Liy7;)V
+    const/4 v1, 0x2
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method public static declared-synchronized b()V
-    .locals 2
+    const/4 v3, 0x1
 
-    const-class v0, Lqia;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-boolean v1, Lqia;->a:Z
-
-    if-nez v1, :cond_0
-
-    const-string v1, "native-imagetranscoder"
-
-    invoke-static {v1}, Luia;->c(Ljava/lang/String;)Z
-
-    const/4 v1, 0x1
-
-    sput-boolean v1, Lqia;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
+    if-eq v0, v3, :cond_0
 
     goto :goto_1
 
     :cond_0
+    iget-object v0, p0, Lqia;->c:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget v4, p0, Lqia;->b:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    if-eq v4, v3, :cond_1
+
     :goto_0
     monitor-exit v0
 
-    return-void
+    goto :goto_1
 
-    :goto_1
+    :cond_1
     :try_start_1
-    monitor-exit v0
+    iget-object v4, p0, Lqia;->a:Landroid/content/Context;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v1
-.end method
+    :try_start_2
+    invoke-static {v4, v2}, Lcom/facebook/soloader/SoLoader;->g(Landroid/content/Context;I)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-.method public static final c(Ljava/io/File;)[B
-    .locals 3
+    :try_start_3
+    iput v1, p0, Lqia;->b:I
 
-    new-instance v0, Ljava/io/ByteArrayOutputStream;
+    goto :goto_0
 
-    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    :catch_0
+    move-exception v4
 
-    new-instance v1, Ljava/util/zip/GZIPOutputStream;
+    new-instance v5, Ljava/lang/RuntimeException;
 
-    invoke-direct {v1, v0}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v5, v4}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    new-instance v2, Ljava/io/FileInputStream;
-
-    invoke-direct {v2, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    :try_start_0
-    invoke-static {v2, v1}, Ly9j;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
-
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-
-    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
-
-    move-result-object p0
-
-    return-object p0
+    throw v5
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :catchall_0
-    move-exception p0
+    const/4 v4, 0x3
 
-    :try_start_1
-    throw p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    :try_start_4
+    iput v4, p0, Lqia;->b:I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    goto :goto_0
+
+    :goto_1
+    iget v0, p0, Lqia;->b:I
+
+    if-eq v0, v1, :cond_2
+
+    return v2
+
+    :cond_2
+    :try_start_5
+    iget-object p1, p1, Lpia;->a:Ljava/lang/String;
+
+    sget-boolean v0, Lcom/facebook/soloader/SoLoader;->k:Z
+
+    if-eqz v0, :cond_3
+
+    invoke-static {v2, p1}, Lcom/facebook/soloader/SoLoader;->m(ILjava/lang/String;)Z
+
+    goto :goto_2
+
+    :cond_3
+    invoke-static {p1}, Lsia;->d(Ljava/lang/String;)Z
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :goto_2
+    move v2, v3
 
     :catchall_1
-    move-exception v0
+    return v2
 
-    invoke-static {v2, p0}, Lbij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    :catchall_2
+    move-exception p1
 
-    throw v0
+    monitor-exit v0
+
+    throw p1
 .end method

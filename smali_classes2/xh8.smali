@@ -1,53 +1,158 @@
 .class public final Lxh8;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Lai8;
+.field public final b:Lahd;
 
-.field public Z:I
+.field public volatile c:Z
 
-.field public d:Lai8;
-
-.field public o:I
+.field public volatile d:Z
 
 
 # direct methods
-.method public constructor <init>(Lai8;Ll84;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lahd;)V
+    .locals 2
 
-    iput-object p1, p0, Lxh8;->Y:Lai8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxh8;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lxh8;->b:Lahd;
+
+    const-string p2, "android.permission.RECORD_AUDIO"
+
+    invoke-static {p1, p2}, Lu7;->b(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-nez p2, :cond_0
+
+    move p2, v1
+
+    goto :goto_0
+
+    :cond_0
+    move p2, v0
+
+    :goto_0
+    iput-boolean p2, p0, Lxh8;->c:Z
+
+    const-string p2, "android.permission.CAMERA"
+
+    invoke-static {p1, p2}, Lu7;->b(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    move v0, v1
+
+    :cond_1
+    iput-boolean v0, p0, Lxh8;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a()Z
+    .locals 10
 
-    iput-object p1, p0, Lxh8;->X:Ljava/lang/Object;
+    const-string v0, "android.permission.RECORD_AUDIO"
 
-    iget p1, p0, Lxh8;->Z:I
+    iget-object v1, p0, Lxh8;->a:Landroid/content/Context;
 
-    const/high16 v0, -0x80000000
+    invoke-static {v1, v0}, Lu7;->b(Landroid/content/Context;Ljava/lang/String;)I
 
-    or-int/2addr p1, v0
+    move-result v0
 
-    iput p1, p0, Lxh8;->Z:I
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lxh8;->Y:Lai8;
+    const/4 v2, 0x0
 
-    const-wide/16 v0, 0x0
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1, v0, v1, p0}, Lai8;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move v0, v1
 
-    move-result-object p1
+    goto :goto_0
 
-    return-object p1
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    const-string v3, "android.permission.CAMERA"
+
+    iget-object v4, p0, Lxh8;->a:Landroid/content/Context;
+
+    invoke-static {v4, v3}, Lu7;->b(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    move v3, v1
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v2
+
+    :goto_1
+    iget-object v4, p0, Lxh8;->b:Lahd;
+
+    iget-boolean v5, p0, Lxh8;->c:Z
+
+    iget-boolean v6, p0, Lxh8;->d:Z
+
+    const-string v7, ", video: "
+
+    const-string v8, "call permissions state updated, audio: "
+
+    const-string v9, "->"
+
+    invoke-static {v8, v5, v9, v0, v7}, Lj27;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "LocalMediaPermissionProvider"
+
+    invoke-interface {v4, v6, v5}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v4, p0, Lxh8;->c:Z
+
+    if-eq v4, v0, :cond_2
+
+    iput-boolean v0, p0, Lxh8;->c:Z
+
+    move v2, v1
+
+    :cond_2
+    iget-boolean v0, p0, Lxh8;->d:Z
+
+    if-eq v0, v3, :cond_3
+
+    iput-boolean v3, p0, Lxh8;->d:Z
+
+    return v1
+
+    :cond_3
+    return v2
 .end method

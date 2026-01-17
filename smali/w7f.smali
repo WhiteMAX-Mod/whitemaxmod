@@ -1,74 +1,77 @@
-.class public final Lw7f;
-.super Ljava/lang/Object;
+.class public final enum Lw7f;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lq38;
 
 
 # static fields
-.field public static final a:Lw7f;
+.field public static final enum a:Lw7f;
 
-.field public static final b:Lzgc;
+.field public static final synthetic b:[Lw7f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
     new-instance v0, Lw7f;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "START"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lw7f;->a:Lw7f;
 
-    new-instance v0, Lzgc;
+    new-instance v1, Lw7f;
 
-    const-string v1, "kotlin.Short"
+    const-string v2, "STOP"
 
-    sget-object v2, Lxgc;->i:Lxgc;
+    const/4 v3, 0x1
 
-    invoke-direct {v0, v1, v2}, Lzgc;-><init>(Ljava/lang/String;Lygc;)V
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lw7f;->b:Lzgc;
+    new-instance v2, Lw7f;
 
-    return-void
-.end method
+    const-string v3, "STOP_AND_RESET_REPLAY_CACHE"
 
+    const/4 v4, 0x2
 
-# virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 0
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Ljava/lang/Number;
+    filled-new-array {v0, v1, v2}, [Lw7f;
 
-    invoke-virtual {p2}, Ljava/lang/Number;->shortValue()S
+    move-result-object v0
 
-    move-result p2
-
-    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->q(S)V
+    sput-object v0, Lw7f;->b:[Lw7f;
 
     return-void
 .end method
 
-.method public final b(Lll4;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-interface {p1}, Lll4;->A()S
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final d()Lvoe;
+.method public static valueOf(Ljava/lang/String;)Lw7f;
     .locals 1
 
-    sget-object v0, Lw7f;->b:Lzgc;
+    const-class v0, Lw7f;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lw7f;
+
+    return-object p0
+.end method
+
+.method public static values()[Lw7f;
+    .locals 1
+
+    sget-object v0, Lw7f;->b:[Lw7f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lw7f;
 
     return-object v0
 .end method

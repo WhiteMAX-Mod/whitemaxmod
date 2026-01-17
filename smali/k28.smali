@@ -1,36 +1,41 @@
-.class public abstract Lk28;
-.super Lj18;
+.class public interface abstract Lk28;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lj28;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lj28;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lk28;->Companion:Lj28;
-
-    return-void
-.end method
+# interfaces
+.implements Lj28;
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
+.method public varargs abstract call([Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 1
+.method public abstract callBy(Ljava/util/Map;)Ljava/lang/Object;
+.end method
 
-    invoke-virtual {p0}, Lk28;->a()Ljava/lang/String;
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    move-result-object v0
+.method public abstract getParameters()Ljava/util/List;
+.end method
 
-    return-object v0
+.method public abstract getReturnType()Lc38;
+.end method
+
+.method public abstract getTypeParameters()Ljava/util/List;
+.end method
+
+.method public abstract getVisibility()Ld38;
+.end method
+
+.method public abstract isAbstract()Z
+.end method
+
+.method public abstract isFinal()Z
+.end method
+
+.method public abstract isOpen()Z
+.end method
+
+.method public abstract isSuspend()Z
 .end method

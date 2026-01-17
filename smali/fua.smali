@@ -1,64 +1,53 @@
 .class public final Lfua;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lp0;
+.field public final synthetic Y:Lone/me/android/notifications/NotificationsImagesProvider;
+
+.field public Z:I
+
+.field public d:Lzb4;
+
+.field public o:Lb01;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp0;I)V
+.method public constructor <init>(Lone/me/android/notifications/NotificationsImagesProvider;Lo84;)V
     .locals 0
 
-    iput p2, p0, Lfua;->a:I
+    iput-object p1, p0, Lfua;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    iput-object p1, p0, Lfua;->b:Lp0;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lfua;->a:I
+    iput-object p1, p0, Lfua;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lfua;->Z:I
 
-    check-cast p1, Ljava/lang/Throwable;
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Lfua;->b:Lp0;
+    or-int/2addr p1, v0
 
-    invoke-interface {p1}, Lpi4;->close()Z
+    iput p1, p0, Lfua;->Z:I
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    iget-object p1, p0, Lfua;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    return-object p1
+    const/4 v0, 0x0
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-static {p1, v0, v0, p0}, Lone/me/android/notifications/NotificationsImagesProvider;->a(Lone/me/android/notifications/NotificationsImagesProvider;Lzb4;Lddf;Lo84;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lfua;->b:Lp0;
-
-    invoke-interface {p1}, Lpi4;->close()Z
-
-    sget-object p1, Lv2h;->a:Lv2h;
+    move-result-object p1
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

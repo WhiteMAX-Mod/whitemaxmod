@@ -1,155 +1,80 @@
-.class public abstract Lmcj;
+.class public final Lmcj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lmcj;
+
 
 # direct methods
-.method public static a(IILdr7;I)Lfx0;
+.method static constructor <clinit>()V
     .locals 3
 
-    and-int/lit8 v0, p3, 0x1
+    new-instance v0, Lmcj;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    sput-object v0, Lmcj;->a:Lmcj;
 
-    move p0, v1
+    new-instance v0, Lvzi;
 
-    :cond_0
-    and-int/lit8 v0, p3, 0x2
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
 
-    if-eqz v0, :cond_1
+    const-class v1, Ln0j;
 
-    move p1, v2
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    :cond_1
-    and-int/lit8 p3, p3, 0x4
+    move-result-object v0
 
-    if-eqz p3, :cond_2
+    const/4 v2, 0x2
 
-    const/4 p2, 0x0
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    :cond_2
-    const/4 p3, -0x2
+    move-result-object v0
 
-    if-eq p0, p3, :cond_9
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    const/4 p3, -0x1
+    move-result-object v0
 
-    if-eq p0, p3, :cond_7
+    const/4 v2, 0x3
 
-    if-eqz p0, :cond_5
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    const p3, 0x7fffffff
+    move-result-object v0
 
-    if-eq p0, p3, :cond_4
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    if-ne p1, v2, :cond_3
+    move-result-object v0
 
-    new-instance p1, Lfx0;
+    const/4 v2, 0x4
 
-    invoke-direct {p1, p0, p2}, Lfx0;-><init>(ILoq6;)V
+    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
 
-    return-object p1
+    move-result-object v0
 
-    :cond_3
-    new-instance p3, Lhu3;
+    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
 
-    invoke-direct {p3, p0, p1, p2}, Lhu3;-><init>(IILoq6;)V
+    move-result-object v0
 
-    return-object p3
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
-    :cond_4
-    new-instance p0, Lfx0;
-
-    invoke-direct {p0, p3, p2}, Lfx0;-><init>(ILoq6;)V
-
-    return-object p0
-
-    :cond_5
-    if-ne p1, v2, :cond_6
-
-    new-instance p0, Lfx0;
-
-    invoke-direct {p0, v1, p2}, Lfx0;-><init>(ILoq6;)V
-
-    return-object p0
-
-    :cond_6
-    new-instance p0, Lhu3;
-
-    invoke-direct {p0, v2, p1, p2}, Lhu3;-><init>(IILoq6;)V
-
-    return-object p0
-
-    :cond_7
-    if-ne p1, v2, :cond_8
-
-    new-instance p0, Lhu3;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, v2, p1, p2}, Lhu3;-><init>(IILoq6;)V
-
-    return-object p0
-
-    :cond_8
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "CONFLATED capacity cannot be used with non-default onBufferOverflow"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_9
-    if-ne p1, v2, :cond_a
-
-    new-instance p0, Lfx0;
-
-    sget-object p1, Ltb2;->m:Lsb2;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget p1, Lsb2;->b:I
-
-    invoke-direct {p0, p1, p2}, Lfx0;-><init>(ILoq6;)V
-
-    return-object p0
-
-    :cond_a
-    new-instance p0, Lhu3;
-
-    invoke-direct {p0, v2, p1, p2}, Lhu3;-><init>(IILoq6;)V
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    if-eq p0, p1, :cond_1
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-eqz p0, :cond_0
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    throw p1
 .end method

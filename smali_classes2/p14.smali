@@ -1,52 +1,61 @@
 .class public final Lp14;
-.super Ljava/lang/Object;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lr14;
 
 
 # instance fields
-.field public final b:Lhof;
+.field public final b:I
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(IJLjava/util/List;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lkk0;-><init>(J)V
 
-    const/4 v0, 0x0
+    iput p1, p0, Lp14;->b:I
 
-    const/4 v1, 0x7
-
-    sget-object v2, Le14;->d:Le14;
-
-    invoke-static {v2, v0, v1}, Le14;->a(Le14;Ljava/util/ArrayList;I)Le14;
-
-    move-result-object v0
-
-    invoke-static {v0}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lp14;->b:Lhof;
+    iput-object p4, p0, Lp14;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    return-void
-.end method
+    const-string v0, "BLOCKED"
 
-.method public final b()Laof;
-    .locals 1
+    const-string v1, ", from="
 
-    iget-object v0, p0, Lp14;->b:Lhof;
+    const-string v2, "ContactListEvent{status="
+
+    invoke-static {v2, v0, v1}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lp14;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", count=40, contactIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp14;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

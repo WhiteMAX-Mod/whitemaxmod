@@ -1,111 +1,303 @@
-.class public final enum Lmeg;
-.super Ljava/lang/Enum;
+.class public final Lmeg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:Lwk5;
-
-.field public static final enum b:Lmeg;
-
-.field public static final enum c:Lmeg;
-
-.field public static final enum d:Lmeg;
-
-.field public static final synthetic o:[Lmeg;
-
-
 # instance fields
-.field public final a:I
+.field public final a:J
+
+.field public final b:Lc0c;
+
+.field public final c:Lveg;
+
+.field public final d:I
+
+.field public final e:J
+
+.field public final f:I
+
+.field public final g:[B
+
+.field public final h:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(JLc0c;Lveg;IJI[BJ)V
+    .locals 0
 
-    new-instance v0, Lmeg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "WAITING"
+    iput-wide p1, p0, Lmeg;->a:J
+
+    iput-object p3, p0, Lmeg;->b:Lc0c;
+
+    iput-object p4, p0, Lmeg;->c:Lveg;
+
+    iput p5, p0, Lmeg;->d:I
+
+    iput-wide p6, p0, Lmeg;->e:J
+
+    iput p8, p0, Lmeg;->f:I
+
+    iput-object p9, p0, Lmeg;->g:[B
+
+    iput-wide p10, p0, Lmeg;->h:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lmeg;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v2}, Lmeg;-><init>(Ljava/lang/String;II)V
+    if-nez v1, :cond_1
 
-    sput-object v0, Lmeg;->b:Lmeg;
+    return v2
 
-    new-instance v1, Lmeg;
+    :cond_1
+    check-cast p1, Lmeg;
 
-    const/4 v2, 0x1
+    iget-wide v3, p0, Lmeg;->a:J
 
-    const/16 v3, 0xa
+    iget-wide v5, p1, Lmeg;->a:J
 
-    const-string v4, "PROCESSING"
+    cmp-long v1, v3, v5
 
-    invoke-direct {v1, v4, v2, v3}, Lmeg;-><init>(Ljava/lang/String;II)V
+    if-eqz v1, :cond_2
 
-    sput-object v1, Lmeg;->c:Lmeg;
+    return v2
 
-    new-instance v2, Lmeg;
+    :cond_2
+    iget-object v1, p0, Lmeg;->b:Lc0c;
 
-    const/4 v3, 0x2
+    iget-object v3, p1, Lmeg;->b:Lc0c;
 
-    const/16 v4, 0x14
+    if-eq v1, v3, :cond_3
 
-    const-string v5, "FAILED"
+    return v2
 
-    invoke-direct {v2, v5, v3, v4}, Lmeg;-><init>(Ljava/lang/String;II)V
+    :cond_3
+    iget-object v1, p0, Lmeg;->c:Lveg;
 
-    sput-object v2, Lmeg;->d:Lmeg;
+    iget-object v3, p1, Lmeg;->c:Lveg;
 
-    filled-new-array {v0, v1, v2}, [Lmeg;
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lmeg;->d:I
+
+    iget v3, p1, Lmeg;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-wide v3, p0, Lmeg;->e:J
+
+    iget-wide v5, p1, Lmeg;->e:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget v1, p0, Lmeg;->f:I
+
+    iget v3, p1, Lmeg;->f:I
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lmeg;->g:[B
+
+    iget-object v3, p1, Lmeg;->g:[B
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-wide v3, p0, Lmeg;->h:J
+
+    iget-wide v5, p1, Lmeg;->h:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_9
+
+    return v2
+
+    :cond_9
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lmeg;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmeg;->b:Lc0c;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lmeg;->c:Lveg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmeg;->d:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lmeg;->e:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget v2, p0, Lmeg;->f:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Lmeg;->g:[B
+
+    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-wide v0, p0, Lmeg;->h:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-object v0, p0, Lmeg;->g:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lmeg;->o:[Lmeg;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v1, Lwk5;
+    const-string v2, "TaskEntity(id="
 
-    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sput-object v1, Lmeg;->X:Lwk5;
+    iget-wide v2, p0, Lmeg;->a:J
 
-    return-void
-.end method
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+    const-string v2, ", type="
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput p3, p0, Lmeg;->a:I
+    iget-object v2, p0, Lmeg;->b:Lc0c;
 
-    return-void
-.end method
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public static valueOf(Ljava/lang/String;)Lmeg;
-    .locals 1
+    const-string v2, ", status="
 
-    const-class v0, Lmeg;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v2, p0, Lmeg;->c:Lveg;
 
-    move-result-object p0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast p0, Lmeg;
+    const-string v2, ", failsCount="
 
-    return-object p0
-.end method
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public static values()[Lmeg;
-    .locals 1
+    iget v2, p0, Lmeg;->d:I
 
-    sget-object v0, Lmeg;->o:[Lmeg;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-string v2, ", dependsRequestId="
+
+    const-string v3, ", dependencyType="
+
+    iget-wide v4, p0, Lmeg;->e:J
+
+    invoke-static {v4, v5, v2, v3, v1}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget v2, p0, Lmeg;->f:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", data="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", createdTime="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    iget-wide v2, p0, Lmeg;->h:J
+
+    invoke-static {v1, v2, v3, v0}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lmeg;
 
     return-object v0
 .end method

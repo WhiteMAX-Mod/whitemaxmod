@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf28;
+.implements Lq18;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lf28;"
+        "Lq18;"
     }
 .end annotation
 
@@ -21,23 +21,23 @@
 # instance fields
 .field private final fieldName:Ljava/lang/String;
 
-.field private final valueParser:Lf28;
+.field private final valueParser:Lq18;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lf28;"
+            "Lq18;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lf28;)V
+.method public constructor <init>(Ljava/lang/String;Lq18;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lf28;",
+            "Lq18;",
             ")V"
         }
     .end annotation
@@ -46,19 +46,19 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;->fieldName:Ljava/lang/String;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;->valueParser:Lf28;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;->valueParser:Lq18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public parse(Lo28;)Ljava/lang/Object;
+.method public parse(Lz18;)Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lo28;",
+            "Lz18;",
             ")TT;"
         }
     .end annotation
@@ -70,13 +70,13 @@
         }
     .end annotation
 
-    invoke-interface {p1}, Lo28;->p()V
+    invoke-interface {p1}, Lz18;->q()V
 
     const/4 v0, 0x0
 
     :cond_0
     :goto_0
-    invoke-interface {p1}, Lo28;->hasNext()Z
+    invoke-interface {p1}, Lz18;->hasNext()Z
 
     move-result v1
 
@@ -84,7 +84,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;->fieldName:Ljava/lang/String;
 
-    invoke-interface {p1}, Lo28;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lz18;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -94,16 +94,16 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;->valueParser:Lf28;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;->valueParser:Lq18;
 
-    invoke-interface {v0, p1}, Lf28;->parse(Lo28;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lq18;->parse(Lz18;)Ljava/lang/Object;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {p1}, Lo28;->n()V
+    invoke-interface {p1}, Lz18;->n()V
 
     if-eqz v0, :cond_2
 
@@ -122,7 +122,7 @@
 
     const-string v2, "\" not found"
 
-    invoke-static {v0, v1, v2}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lqi4;Lyi4;)V
+.method public constructor <init>(Lqi4;Lzi4;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lsi4;Lzi4;)V
+.method public constructor <init>(Lsi4;Laj4;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -153,9 +153,9 @@
 
     iget-object v1, p0, Lvi4;->X:Ljava/lang/Object;
 
-    check-cast v1, Lzi4;
+    check-cast v1, Laj4;
 
-    invoke-interface {v0, v1}, Lsi4;->G(Lzi4;)J
+    invoke-interface {v0, v1}, Lsi4;->G(Laj4;)J
 
     const/4 v0, 0x1
 
@@ -175,9 +175,9 @@
 
     iget-object v1, p0, Lvi4;->X:Ljava/lang/Object;
 
-    check-cast v1, Lyi4;
+    check-cast v1, Lzi4;
 
-    invoke-interface {v0, v1}, Lqi4;->R(Lyi4;)J
+    invoke-interface {v0, v1}, Lqi4;->R(Lzi4;)J
 
     const/4 v0, 0x1
 
@@ -312,7 +312,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-static {v0}, Lp5j;->g(Z)V
+    invoke-static {v0}, Lh6j;->g(Z)V
 
     .line 8
     invoke-virtual {p0}, Lvi4;->l()V
@@ -341,7 +341,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-static {v0}, Ln5j;->d(Z)V
+    invoke-static {v0}, Ly5j;->d(Z)V
 
     .line 11
     invoke-virtual {p0}, Lvi4;->l()V

@@ -1,43 +1,36 @@
 .class public final Lrfe;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljig;
+.implements Lon0;
+
+
+# static fields
+.field public static final a:Lrfe;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lrfe;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lrfe;->a:Lrfe;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lplb;)V
-    .locals 2
+.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, [B
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    check-cast p2, Ljava/lang/Integer;
 
-    move-result-object v0
-
-    instance-of v1, v0, Landroid/widget/ProgressBar;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Lplb;->getIcon()Lsf7;
-
-    move-result-object p1
-
-    iget p1, p1, Lsf7;->i:I
-
-    invoke-static {v0, p1}, Lnsi;->j(Landroid/widget/ProgressBar;I)V
-
-    :cond_1
-    return-void
+    return-object p1
 .end method

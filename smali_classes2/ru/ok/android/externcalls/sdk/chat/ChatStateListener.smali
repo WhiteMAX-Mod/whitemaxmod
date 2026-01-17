@@ -19,7 +19,7 @@
         "",
         "",
         "chatId",
-        "Lv2h;",
+        "Lb3h;",
         "onChatCreated",
         "(J)V",
         "onChatUpdated",

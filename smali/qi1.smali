@@ -1,200 +1,222 @@
 .class public final Lqi1;
-.super Lb5g;
+.super Ld3;
 .source "SourceFile"
 
-# interfaces
-.implements Lcr6;
 
-
-# instance fields
-.field public final synthetic X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final c:Lqi1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;)V
-    .locals 0
-
-    iput-object p2, p0, Lqi1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqi1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqi1;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lqi1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Lqi1;
 
-    iget-object v1, p0, Lqi1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
+    const/16 v1, 0xc
 
-    invoke-direct {v0, p2, v1}, Lqi1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;)V
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-    iput-object p1, v0, Lqi1;->o:Ljava/lang/Object;
+    sput-object v0, Lqi1;->c:Lqi1;
 
-    return-object v0
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+.method public static L0(Lqi1;I)V
+    .locals 4
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    and-int/lit8 v0, p1, 0x1
 
-    iget-object p1, p0, Lqi1;->o:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast p1, Ljava/lang/Number;
+    const/4 v2, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    if-eqz v0, :cond_0
 
-    move-result p1
-
-    sget-object v0, Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;->C0:[Lp38;
-
-    iget-object v0, p0, Lqi1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
-
-    iget-object v0, v0, Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;->A0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo61;
-
-    iput p1, v0, Lo61;->b:I
-
-    iget-object v0, v0, Lo61;->a:Lmfa;
-
-    iget-object v1, v0, Lmfa;->b:[Ljava/lang/Object;
-
-    iget-object v0, v0, Lmfa;->a:[J
-
-    array-length v2, v0
-
-    add-int/lit8 v2, v2, -0x2
-
-    if-ltz v2, :cond_4
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_0
-    aget-wide v5, v0, v4
-
-    not-long v7, v5
-
-    const/4 v9, 0x7
-
-    shl-long/2addr v7, v9
-
-    and-long/2addr v7, v5
-
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v7, v9
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_3
-
-    sub-int v7, v4, v2
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    const/16 v8, 0x8
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v7, :cond_2
-
-    const-wide/16 v10, 0xff
-
-    and-long/2addr v10, v5
-
-    const-wide/16 v12, 0x80
-
-    cmp-long v10, v10, v12
-
-    if-gez v10, :cond_1
-
-    shl-int/lit8 v10, v4, 0x3
-
-    add-int/2addr v10, v9
-
-    aget-object v10, v1, v10
-
-    check-cast v10, Ln61;
-
-    check-cast v10, Lli1;
-
-    if-lez p1, :cond_0
-
-    invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v11, Ltye;
-
-    invoke-direct {v11, p1}, Ltye;-><init>(I)V
-
-    goto :goto_2
-
-    :cond_0
-    const/4 v11, 0x0
-
-    :goto_2
-    iget-object v10, v10, Lwrd;->a:Landroid/view/View;
-
-    check-cast v10, Lpze;
-
-    invoke-virtual {v10, v11}, Lpze;->setCounter(Luye;)V
-
-    :cond_1
-    shr-long/2addr v5, v8
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    if-ne v7, v8, :cond_4
-
-    :cond_3
-    if-eq v4, v2, :cond_4
-
-    add-int/lit8 v4, v4, 0x1
+    move v0, v1
 
     goto :goto_0
 
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    and-int/lit8 p1, p1, 0x2
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    invoke-virtual {p0}, Ld3;->p0()Ljm4;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    if-eqz v0, :cond_6
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_5
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_4
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_3
+
+    const/4 v2, 0x4
+
+    if-ne v0, v2, :cond_2
+
+    const-string v0, "GLOBAL_PIP"
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_3
+    const-string v0, "OTHER"
+
+    goto :goto_2
+
     :cond_4
-    sget-object p1, Lv2h;->a:Lv2h;
+    const-string v0, "FIRST"
+
+    goto :goto_2
+
+    :cond_5
+    const-string v0, "PIP"
+
+    goto :goto_2
+
+    :cond_6
+    move-object v0, p1
+
+    :goto_2
+    if-nez v0, :cond_7
+
+    const-string v0, ""
+
+    :cond_7
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, ":call-active?place="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "&replace_top="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, p1}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
+.end method
+
+.method public static M0(Lqi1;J)Lfm4;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string v0, ":profile?id="
+
+    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, "&type="
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "local_chat"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lfm4;
+
+    invoke-direct {p1, p0}, Lfm4;-><init>(Ljava/lang/String;)V
 
     return-object p1
+.end method
+
+
+# virtual methods
+.method public final N0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const-string v1, "android.intent.action.SEND"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "android.intent.extra.TEXT"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string p1, "text/plain"
+
+    invoke-virtual {v0, p1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {p0}, Ld3;->p0()Ljm4;
+
+    move-result-object p1
+
+    new-instance v1, Lktb;
+
+    const-string v2, "oneme:share:data"
+
+    invoke-direct {v1, v2, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v0, Lktb;
+
+    const-string v2, "oneme:share:title"
+
+    invoke-direct {v0, v2, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance p2, Lktb;
+
+    const-string v2, "tag"
+
+    invoke-direct {p2, v2, p3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, v0, p2}, [Lktb;
+
+    move-result-object p2
+
+    invoke-static {p2}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+
+    move-result-object p2
+
+    const-string p3, ":chats/share"
+
+    invoke-virtual {p1, p3, p2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
 .end method

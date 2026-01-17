@@ -1,126 +1,131 @@
 .class public final Lik3;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lkk3;
+.field public final a:[I
 
-.field public final synthetic Y:Lkn7;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lkk3;Lkn7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I[I)V
     .locals 0
 
-    iput-object p1, p0, Lik3;->X:Lkk3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lik3;->Y:Lkn7;
+    iput-object p2, p0, Lik3;->a:[I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lik3;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lac4;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lik3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lik3;
 
-    move-result-object p1
-
-    check-cast p1, Lik3;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lik3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lik3;
-
-    iget-object v1, p0, Lik3;->X:Lkk3;
-
-    iget-object v2, p0, Lik3;->Y:Lkn7;
-
-    invoke-direct {v0, v1, v2, p2}, Lik3;-><init>(Lkk3;Lkn7;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lik3;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lik3;->o:Ljava/lang/Object;
-
-    check-cast p1, Lac4;
-
-    iget-object p1, p0, Lik3;->X:Lkk3;
-
-    iget-object v0, p0, Lik3;->Y:Lkn7;
-
-    :try_start_0
-    iget-object p1, p1, Lkk3;->d:Ld68;
-
-    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lci8;
-
-    iget-wide v0, v0, Lkn7;->c:J
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v1, v2}, Lci8;->a(JZ)Lql9;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_1
+    check-cast p1, Lik3;
 
-    new-instance v0, Lyyd;
+    iget-object v0, p0, Lik3;->a:[I
 
-    invoke-direct {v0, p1}, Lyyd;-><init>(Ljava/lang/Throwable;)V
+    iget-object v1, p1, Lik3;->a:[I
 
-    move-object p1, v0
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lik3;->b:I
+
+    iget p1, p1, Lik3;->b:I
+
+    if-eq v0, p1, :cond_3
 
     :goto_0
-    nop
-
-    instance-of v0, p1, Lyyd;
-
-    if-eqz v0, :cond_0
-
     const/4 p1, 0x0
 
-    :cond_0
-    return-object p1
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lik3;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lik3;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lik3;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "CommonBackgroundSkeletonStickerSecondaryBaseGradientColors(gradient="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", staticBackground="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lik3;->b:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

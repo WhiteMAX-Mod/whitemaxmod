@@ -1,21 +1,24 @@
 .class public final Lyn;
-.super Lzth;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lko;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lko;I)V
     .locals 0
 
-    iput p1, p0, Lyn;->a:I
+    iput p2, p0, Lyn;->a:I
 
-    iput-object p2, p0, Lyn;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lyn;->b:Lko;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,180 +27,119 @@
 
 
 # virtual methods
-.method public b()V
-    .locals 3
+.method public final run()V
+    .locals 5
 
     iget v0, p0, Lyn;->a:I
 
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lyn;->b:Ljava/lang/Object;
-
     packed-switch v0, :pswitch_data_0
 
-    return-void
+    iget-object v0, p0, Lyn;->b:Lko;
 
-    :pswitch_0
-    check-cast v2, Ljo;
+    iget-object v1, v0, Lko;->H0:Landroid/widget/PopupWindow;
 
-    iget-object v0, v2, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object v2, v0, Lko;->G0:Landroidx/appcompat/widget/ActionBarContextView;
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
+    const/16 v3, 0x37
 
-    iget-object v0, v2, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    const/4 v4, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v1, v2, v3, v4, v4}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
 
-    move-result-object v0
-
-    instance-of v0, v0, Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v2, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    sget-object v1, Lash;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {v0}, Lmrh;->c(Landroid/view/View;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_1
-    check-cast v2, Lxn;
-
-    iget-object v0, v2, Lxn;->b:Ljo;
-
-    iget-object v0, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c()V
-    .locals 4
-
-    iget v0, p0, Lyn;->a:I
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    iget-object v2, p0, Lyn;->b:Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v2, Lmt8;
-
-    iget-object v0, v2, Lmt8;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljo;
-
-    iget-object v1, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
-
-    iget-object v1, v0, Ljo;->G0:Landroid/widget/PopupWindow;
+    iget-object v1, v0, Lko;->J0:Ltuh;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Landroid/widget/PopupWindow;->dismiss()V
-
-    goto :goto_0
+    invoke-virtual {v1}, Ltuh;->b()V
 
     :cond_0
-    iget-object v1, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-boolean v1, v0, Lko;->L0:Z
 
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    instance-of v1, v1, Landroid/view/View;
+    const/high16 v2, 0x3f800000    # 1.0f
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object v1, v0, Lko;->M0:Landroid/view/ViewGroup;
 
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lko;->G0:Landroidx/appcompat/widget/ActionBarContextView;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v1, v0, Lko;->G0:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-static {v1}, Lxsh;->a(Landroid/view/View;)Ltuh;
 
     move-result-object v1
 
-    check-cast v1, Landroid/view/View;
+    invoke-virtual {v1, v2}, Ltuh;->a(F)V
 
-    sget-object v2, Lash;->a:Ljava/util/WeakHashMap;
+    iput-object v1, v0, Lko;->J0:Ltuh;
 
-    invoke-static {v1}, Lmrh;->c(Landroid/view/View;)V
+    new-instance v0, Lzn;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, p0}, Lzn;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v0}, Ltuh;->d(Luuh;)V
+
+    goto :goto_0
 
     :cond_1
+    iget-object v1, v0, Lko;->G0:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v0, v0, Lko;->G0:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {v0, v4}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
+
     :goto_0
-    iget-object v1, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v1}, Landroidx/appcompat/widget/ActionBarContextView;->e()V
-
-    iget-object v1, v0, Ljo;->I0:Lxth;
-
-    invoke-virtual {v1, v3}, Lxth;->d(Lyth;)V
-
-    iput-object v3, v0, Ljo;->I0:Lxth;
-
-    iget-object v0, v0, Ljo;->K0:Landroid/view/ViewGroup;
-
-    sget-object v1, Lash;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {v0}, Lmrh;->c(Landroid/view/View;)V
-
     return-void
 
     :pswitch_0
-    check-cast v2, Ljo;
+    iget-object v0, p0, Lyn;->b:Lko;
 
-    iget-object v0, v2, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    iget v1, v0, Lko;->l1:I
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+    and-int/lit8 v1, v1, 0x1
 
-    iget-object v0, v2, Ljo;->I0:Lxth;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v3}, Lxth;->d(Lyth;)V
+    if-eqz v1, :cond_2
 
-    iput-object v3, v2, Ljo;->I0:Lxth;
+    invoke-virtual {v0, v2}, Lko;->v(I)V
 
-    return-void
+    :cond_2
+    iget v1, v0, Lko;->l1:I
 
-    :pswitch_1
-    check-cast v2, Lxn;
+    and-int/lit16 v1, v1, 0x1000
 
-    iget-object v0, v2, Lxn;->b:Ljo;
+    if-eqz v1, :cond_3
 
-    iget-object v2, v0, Ljo;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    const/16 v1, 0x6c
 
-    invoke-virtual {v2, v1}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v0, v1}, Lko;->v(I)V
 
-    iget-object v1, v0, Ljo;->I0:Lxth;
+    :cond_3
+    iput-boolean v2, v0, Lko;->k1:Z
 
-    invoke-virtual {v1, v3}, Lxth;->d(Lyth;)V
-
-    iput-object v3, v0, Ljo;->I0:Lxth;
+    iput v2, v0, Lko;->l1:I
 
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

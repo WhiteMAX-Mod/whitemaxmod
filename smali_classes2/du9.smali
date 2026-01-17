@@ -1,99 +1,181 @@
 .class public final Ldu9;
-.super Lb5g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lgu9;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final a:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Loih;
+
+.field public final c:F
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(JLoih;F)V
     .locals 0
 
-    iput-object p2, p0, Ldu9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Ldu9;->a:J
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Ldu9;->b:Loih;
+
+    iput p4, p0, Ldu9;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()Loih;
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldu9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldu9;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Ldu9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ldu9;
-
-    iget-object v1, p0, Ldu9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, v1}, Ldu9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, Ldu9;->o:Ljava/lang/Object;
+    iget-object v0, p0, Ldu9;->b:Loih;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Ldu9;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Ljava/lang/Boolean;
+    return v0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    :cond_0
+    instance-of v1, p1, Ldu9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ldu9;
+
+    iget-wide v3, p0, Ldu9;->a:J
+
+    iget-wide v5, p1, Ldu9;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ldu9;->b:Loih;
+
+    iget-object v3, p1, Ldu9;->b:Loih;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Ldu9;->c:F
+
+    iget p1, p1, Ldu9;->c:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
 
     move-result p1
 
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
+    if-eqz p1, :cond_4
 
-    iget-object v0, p0, Ldu9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    return v2
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0()Luo9;
+    :cond_4
+    return v0
+.end method
 
-    move-result-object v1
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {v1, p1}, Luo9;->setKeyboardVisible(Z)V
+    iget-wide v0, p0, Ldu9;->a:J
 
-    iget-object p1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:Ldog;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    if-eqz p1, :cond_0
+    move-result v0
 
-    invoke-virtual {p1}, Ldog;->dismiss()V
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-object v1, p0, Ldu9;->b:Loih;
 
-    iput-object p1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:Ldog;
+    invoke-virtual {v1}, Loih;->hashCode()I
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    move-result v1
 
-    return-object p1
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v0, p0, Ldu9;->c:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Ldu9;->a:J
+
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OnSeek(messageId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ldu9;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", model="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldu9;->b:Loih;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", progress="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldu9;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

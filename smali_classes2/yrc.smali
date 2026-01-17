@@ -1,193 +1,108 @@
 .class public final Lyrc;
-.super Lb5g;
+.super Ldsc;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lzrc;
+.field public final a:I
 
-.field public final synthetic Y:Ljava/util/HashMap;
-
-.field public o:I
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lzrc;Ljava/util/HashMap;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lyrc;->X:Lzrc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lyrc;->Y:Ljava/util/HashMap;
+    iput p1, p0, Lyrc;->a:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lyrc;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lac4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lyrc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyrc;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lyrc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lyrc;
-
-    iget-object v0, p0, Lyrc;->X:Lzrc;
-
-    iget-object v1, p0, Lyrc;->Y:Ljava/util/HashMap;
-
-    invoke-direct {p1, v0, v1, p2}, Lyrc;-><init>(Lzrc;Ljava/util/HashMap;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    iget v0, p0, Lyrc;->o:I
-
-    const/4 v1, 0x1
-
-    sget-object v2, Lv2h;->a:Lv2h;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    return-object v2
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lyrc;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast p1, Lyrc;
 
-    iget-object p1, p0, Lyrc;->X:Lzrc;
+    iget v1, p0, Lyrc;->a:I
 
-    iget-object v0, p1, Lzrc;->Y:Ld68;
+    iget p1, p1, Lyrc;->a:I
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    if-ne v1, p1, :cond_2
 
-    move-result-object v0
+    return v0
 
-    check-cast v0, Lfv3;
+    :cond_2
+    return v2
+.end method
 
-    invoke-interface {v0}, Lfv3;->f()Z
+.method public final getItemId()J
+    .locals 2
+
+    const/high16 v0, 0x80000
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lyrc;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    if-nez v0, :cond_2
+    return v0
+.end method
 
-    iget-object p1, p1, Lzrc;->Z:Lh6f;
+.method public final m()I
+    .locals 1
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iget v0, p0, Lyrc;->b:I
 
-    iput v1, p0, Lyrc;->o:I
+    return v0
+.end method
 
-    invoke-virtual {p1, v0, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object p1
+    iget v0, p0, Lyrc;->a:I
 
-    sget-object v0, Lbc4;->a:Lbc4;
+    invoke-static {v0}, Lukj;->c(I)Ljava/lang/String;
 
-    if-ne p1, v0, :cond_3
+    move-result-object v0
+
+    const-string v1, "OfficialOrgLabel(itemViewType="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :cond_2
-    iget-object v0, p1, Lzrc;->c:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lca3;
-
-    iget-wide v3, p1, Lzrc;->b:J
-
-    invoke-virtual {v0, v3, v4}, Lca3;->k(J)Lpkd;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lpkd;->a:Laof;
-
-    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lud2;
-
-    if-nez v0, :cond_4
-
-    :cond_3
-    return-object v2
-
-    :cond_4
-    iget-object v1, p1, Lzrc;->o:Ld68;
-
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v3, v1
-
-    check-cast v3, Lo2b;
-
-    iget-wide v4, v0, Lud2;->a:J
-
-    iget-object v0, v0, Lud2;->b:Lzh2;
-
-    iget-wide v6, v0, Lzh2;->a:J
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    iget-object v11, p0, Lyrc;->Y:Ljava/util/HashMap;
-
-    invoke-virtual/range {v3 .. v11}, Lo2b;->f(JJILjava/lang/String;ZLjava/util/HashMap;)J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Lzrc;->w0:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
-
-    return-object v2
 .end method

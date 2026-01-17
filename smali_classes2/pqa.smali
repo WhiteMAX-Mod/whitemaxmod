@@ -1,18 +1,18 @@
 .class public final Lpqa;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
 .field public c:J
 
-.field public d:Lsfc;
+.field public d:Lngc;
 
 .field public o:J
 
 
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
+.method public final d(Lpq9;Ljava/lang/String;)V
     .locals 2
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -76,12 +76,12 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {p1}, Lgr9;->y()V
+    invoke-virtual {p1}, Lpq9;->B()V
 
     return-void
 
     :pswitch_0
-    invoke-virtual {p1}, Lgr9;->K0()J
+    invoke-virtual {p1}, Lpq9;->L0()J
 
     move-result-wide p1
 
@@ -90,7 +90,7 @@
     return-void
 
     :pswitch_1
-    invoke-virtual {p1}, Lgr9;->K0()J
+    invoke-virtual {p1}, Lpq9;->L0()J
 
     move-result-wide p1
 
@@ -99,11 +99,11 @@
     return-void
 
     :pswitch_2
-    invoke-static {p1}, Lsfc;->a(Lgr9;)Lsfc;
+    invoke-static {p1}, Lkkj;->c(Lpq9;)Lngc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lpqa;->d:Lsfc;
+    iput-object p1, p0, Lpqa;->d:Lngc;
 
     return-void
 
@@ -127,7 +127,7 @@
 
     iget-wide v0, p0, Lpqa;->c:J
 
-    iget-object v2, p0, Lpqa;->d:Lsfc;
+    iget-object v2, p0, Lpqa;->d:Lngc;
 
     iget-wide v3, p0, Lpqa;->o:J
 
@@ -149,7 +149,7 @@
 
     const-string v1, "}"
 
-    invoke-static {v3, v4, v0, v1, v5}, Lzy4;->i(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v3, v4, v0, v1, v5}, Lxi4;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v0
 

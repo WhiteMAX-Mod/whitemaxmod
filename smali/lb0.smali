@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmki;
+.implements Llli;
 
 
 # instance fields
@@ -33,24 +33,24 @@
     return-void
 .end method
 
-.method public static e(Lmki;)Llb0;
+.method public static e(Llli;)Llb0;
     .locals 4
 
     new-instance v0, Llb0;
 
-    invoke-interface {p0}, Lmki;->c()F
+    invoke-interface {p0}, Llli;->c()F
 
     move-result v1
 
-    invoke-interface {p0}, Lmki;->a()F
+    invoke-interface {p0}, Llli;->a()F
 
     move-result v2
 
-    invoke-interface {p0}, Lmki;->b()F
+    invoke-interface {p0}, Llli;->b()F
 
     move-result v3
 
-    invoke-interface {p0}, Lmki;->d()F
+    invoke-interface {p0}, Llli;->d()F
 
     move-result p0
 

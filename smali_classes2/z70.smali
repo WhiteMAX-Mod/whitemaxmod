@@ -1,23 +1,23 @@
 .class public final Lz70;
-.super Lxbg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
-.field public final d:Ljava/lang/String;
+.field public final b:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Long;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz70;->c:Ljava/lang/String;
+    iput-object p1, p0, Lz70;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lz70;->d:Ljava/lang/String;
+    iput-object p2, p0, Lz70;->b:Ljava/lang/Long;
 
     return-void
 .end method
@@ -45,11 +45,11 @@
     :cond_1
     check-cast p1, Lz70;
 
-    iget-object v1, p0, Lz70;->c:Ljava/lang/String;
+    iget-object v1, p0, Lz70;->a:Ljava/lang/String;
 
-    iget-object v3, p1, Lz70;->c:Ljava/lang/String;
+    iget-object v3, p1, Lz70;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -58,11 +58,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lz70;->d:Ljava/lang/String;
+    iget-object v1, p0, Lz70;->b:Ljava/lang/Long;
 
-    iget-object p1, p1, Lz70;->d:Ljava/lang/String;
+    iget-object p1, p1, Lz70;->b:Ljava/lang/Long;
 
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -77,7 +77,7 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lz70;->c:Ljava/lang/String;
+    iget-object v0, p0, Lz70;->a:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -85,35 +85,51 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lz70;->d:Ljava/lang/String;
+    iget-object v1, p0, Lz70;->b:Ljava/lang/Long;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :goto_0
+    add-int/2addr v0, v1
 
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
-    iget-object v0, p0, Lz70;->d:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ltri;->i(Ljava/lang/CharSequence;)Ljava/lang/String;
+    const-string v1, "TokenAttributes(token="
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "\',email=\'"
+    iget-object v1, p0, Lz70;->a:Ljava/lang/String;
 
-    const-string v2, "\')"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "Response(trackId=\'"
+    const-string v1, ", tokenTtl="
 
-    iget-object v4, p0, Lz70;->c:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v4, v1, v0, v2}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lz70;->b:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

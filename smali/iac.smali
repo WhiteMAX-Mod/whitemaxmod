@@ -1,54 +1,202 @@
 .class public final Liac;
-.super Ljava/lang/Object;
+.super Landroid/view/Surface;
 .source "SourceFile"
 
-# interfaces
-.implements Ljph;
+
+# static fields
+.field public static d:I
+
+.field public static o:Z
 
 
 # instance fields
-.field public final synthetic a:Loac;
+.field public final a:Z
+
+.field public final b:Lpa5;
+
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Loac;)V
+.method public constructor <init>(Lpa5;Landroid/graphics/SurfaceTexture;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    iput-object p1, p0, Liac;->a:Loac;
+    iput-object p1, p0, Liac;->b:Lpa5;
+
+    iput-boolean p3, p0, Liac;->a:Z
 
     return-void
+.end method
+
+.method public static declared-synchronized a()Z
+    .locals 7
+
+    const-class v0, Liac;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-boolean v1, Liac;->o:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-nez v1, :cond_2
+
+    :try_start_1
+    const-string v1, "EGL_EXT_protected_content"
+
+    invoke-static {v1}, La9f;->v(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "EGL_KHR_surfaceless_context"
+
+    invoke-static {v1}, La9f;->v(Ljava/lang/String;)Z
+
+    move-result v1
+    :try_end_1
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v1, :cond_0
+
+    move v1, v3
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v1, 0x2
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v1, v2
+
+    goto :goto_2
+
+    :goto_1
+    :try_start_2
+    const-string v4, "PlaceholderSurface"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Failed to determine secure mode due to GL error: "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Li1h;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :goto_2
+    sput v1, Liac;->d:I
+
+    sput-boolean v3, Liac;->o:Z
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_4
+
+    :cond_2
+    :goto_3
+    sget v1, Liac;->d:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-eqz v1, :cond_3
+
+    move v2, v3
+
+    :cond_3
+    monitor-exit v0
+
+    return v2
+
+    :goto_4
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final F()V
+.method public final release()V
     .locals 3
 
-    iget-object v0, p0, Liac;->a:Loac;
+    invoke-super {p0}, Landroid/view/Surface;->release()V
 
-    iget-object v0, v0, Loac;->n:Llhh;
+    iget-object v0, p0, Liac;->b:Lpa5;
 
-    invoke-static {v0}, Lp5j;->h(Ljava/lang/Object;)V
+    monitor-enter v0
 
-    const-wide/16 v1, -0x2
+    :try_start_0
+    iget-boolean v1, p0, Liac;->c:Z
 
-    invoke-interface {v0, v1, v2}, Llhh;->k(J)V
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Liac;->b:Lpa5;
+
+    iget-object v2, v1, Lpa5;->b:Landroid/os/Handler;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v1, Lpa5;->b:Landroid/os/Handler;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Liac;->c:Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
     return-void
-.end method
 
-.method public final a(J)V
-    .locals 1
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Liac;->a:Loac;
-
-    iget-object v0, v0, Loac;->n:Llhh;
-
-    invoke-static {v0}, Lp5j;->h(Ljava/lang/Object;)V
-
-    invoke-interface {v0, p1, p2}, Llhh;->k(J)V
-
-    return-void
+    throw v1
 .end method

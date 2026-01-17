@@ -3,55 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhdg;
+.implements Ledg;
 
 
 # instance fields
-.field public final a:Lhdg;
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final b:Ljava/util/HashMap;
+.field public final synthetic b:Lg62;
 
 
 # direct methods
-.method public constructor <init>(Lhdg;)V
-    .locals 0
+.method public constructor <init>(Lg62;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgdg;->a:Lhdg;
+    iput-object p1, p0, Lgdg;->b:Lg62;
 
-    new-instance p1, Ljava/util/HashMap;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lgdg;->b:Ljava/util/HashMap;
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p1, p0, Lgdg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
-    .locals 2
+.method public final g(Licg;)V
+    .locals 4
 
-    iget-object v0, p0, Lgdg;->b:Ljava/util/HashMap;
+    iget-object v0, p0, Lgdg;->b:Lg62;
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lg62;->r()Z
 
-    move-result-object v1
+    move-result v1
 
-    check-cast v1, Ljava/util/concurrent/ThreadFactory;
+    if-eqz v1, :cond_0
 
-    if-nez v1, :cond_0
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lgdg;->a:Lhdg;
+    const/4 v2, 0x1
 
-    invoke-interface {v1, p1}, Lhdg;->a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
+    iget-object v3, p0, Lgdg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object v1
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, p1}, Lg62;->resumeWith(Ljava/lang/Object;)V
 
     :cond_0
-    return-object v1
+    return-void
+.end method
+
+.method public final k(Lnbg;)V
+    .locals 4
+
+    iget-object v0, p0, Lgdg;->b:Lg62;
+
+    invoke-virtual {v0}, Lg62;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lgdg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
+
+    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lnbg;)V
+
+    new-instance p1, Lszd;
+
+    invoke-direct {p1, v1}, Lszd;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, p1}, Lg62;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
 .end method

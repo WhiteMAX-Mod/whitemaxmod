@@ -1,70 +1,83 @@
 .class public final Lngj;
-.super Ljava/lang/Object;
+.super Lg4;
 .source "SourceFile"
-
-# interfaces
-.implements Lwwa;
 
 
 # static fields
-.field public static final a:Lngj;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lngj;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public a:I
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lngj;
+    new-instance v0, Lfph;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x16
 
-    sput-object v0, Lngj;->a:Lngj;
+    invoke-direct {v0, v1}, Lfph;-><init>(I)V
 
-    new-instance v0, Lyyi;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
-
-    const-class v1, Lqzi;
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+    sput-object v0, Lngj;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/16 p2, 0x4f45
 
-    move-result-object p1
+    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
 
-    throw p1
+    move-result p2
+
+    iget v0, p0, Lngj;->a:I
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x4
+
+    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x3
+
+    iget-object v1, p0, Lngj;->b:Ljava/lang/String;
+
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    iget-object v0, p0, Lngj;->c:Ljava/lang/String;
+
+    invoke-static {p1, v2, v0}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v0, 0x5
+
+    iget-object v1, p0, Lngj;->d:Ljava/lang/String;
+
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

@@ -1,508 +1,167 @@
-.class public final synthetic Llod;
-.super Ljava/lang/Object;
+.class public final Llod;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lmod;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lmod;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Llod;->a:I
+    iput-object p1, p0, Llod;->Y:Lmod;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;)V
-    .locals 0
-
-    .line 2
-    const/16 p1, 0xb
-
-    iput p1, p0, Llod;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Llod;->a:I
+    check-cast p1, Lzb4;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x1
+    invoke-virtual {p0, p1, p2}, Llod;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    new-instance v0, Landroid/graphics/Matrix;
+    check-cast p1, Llod;
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-object v0
+    invoke-virtual {p1, p2}, Llod;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    new-instance v0, Lcye;
+    sget-object p1, Lac4;->a:Lac4;
 
-    invoke-direct {v0}, Lcye;-><init>()V
+    return-object p1
+.end method
 
-    return-object v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    :pswitch_1
-    sget v0, Lone/me/settings/devices/SettingsDevicesScreen;->X:I
+    new-instance v0, Llod;
 
-    sget-object v0, Lmbe;->I1:Lmbe;
+    iget-object v1, p0, Llod;->Y:Lmod;
 
-    return-object v0
+    invoke-direct {v0, v1, p2}, Llod;-><init>(Lmod;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_2
-    new-instance v0, Lzcf;
-
-    invoke-direct {v0, v2}, Lzcf;-><init>(Z)V
+    iput-object p1, v0, Llod;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_3
-    new-instance v0, Lzcf;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-    invoke-direct {v0, v1}, Lzcf;-><init>(Z)V
+    iget-object v0, p0, Llod;->X:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v0, Lzb4;
 
-    :pswitch_4
-    sget-object v0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:[Lp38;
+    iget v1, p0, Llod;->o:I
 
-    new-instance v0, Lqxe;
+    const-wide/16 v2, 0x32
 
-    new-instance v1, Lmr0;
+    const/4 v4, 0x2
 
-    sget-object v2, Lb1f;->a:Lb1f;
+    const/4 v5, 0x1
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lu5;
+    sget-object v6, Lac4;->a:Lac4;
 
-    move-result-object v3
+    if-eqz v1, :cond_2
 
-    const/16 v4, 0x36
+    if-eq v1, v5, :cond_1
 
-    invoke-virtual {v3, v4}, Lu5;->d(I)Lz7g;
+    if-ne v1, v4, :cond_0
 
-    move-result-object v3
+    goto :goto_0
 
-    invoke-virtual {v2}, Lb1f;->a()Ld68;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v2
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {v1, v3, v2}, Lmr0;-><init>(Ld68;Ld68;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lqxe;-><init>(Lmr0;)V
+    throw p1
 
-    return-object v0
+    :cond_1
+    :goto_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    :pswitch_5
-    new-instance v0, Ltwe;
+    goto :goto_1
 
-    sget v1, Lk5e;->a:I
+    :cond_2
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Llod;->X:Ljava/lang/Object;
 
-    return-object v0
+    iput v5, p0, Llod;->o:I
 
-    :pswitch_6
-    sget-object v0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Z:[Lp38;
+    invoke-static {v2, v3, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    new-instance v0, Ljta;
+    move-result-object p1
 
-    sget-object v1, Lh2f;->a:Lh2f;
+    if-ne p1, v6, :cond_3
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lu5;
+    goto :goto_2
 
-    move-result-object v1
+    :cond_3
+    :goto_1
+    invoke-interface {v0}, Lzb4;->getCoroutineContext()Lqb4;
 
-    const/16 v2, 0x57
+    move-result-object p1
 
-    invoke-virtual {v1, v2}, Lu5;->d(I)Lz7g;
+    invoke-static {p1}, Lk2j;->f(Lqb4;)V
 
-    move-result-object v1
+    iget-object p1, p0, Llod;->Y:Lmod;
 
-    invoke-direct {v0, v1}, Ljta;-><init>(Ld68;)V
+    iget-object v1, p1, Lmod;->d:Lspf;
 
-    return-object v0
+    iget-wide v7, p1, Lmod;->b:J
 
-    :pswitch_7
-    sget-object v0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Z:[Lp38;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    sget-object v0, Lmbe;->H1:Lmbe;
+    move-result-wide v9
 
-    return-object v0
+    iget-wide v11, p1, Lmod;->c:J
 
-    :pswitch_8
-    sget-object v0, Lone/me/settings/media/ui/SettingMediaScreen;->X:[Lp38;
+    sub-long/2addr v9, v11
 
-    new-instance v0, Lyve;
+    add-long/2addr v9, v7
 
-    sget-object v1, Lk0f;->a:Lk0f;
+    new-instance p1, Ljava/lang/Long;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lu5;
+    invoke-direct {p1, v9, v10}, Ljava/lang/Long;-><init>(J)V
 
-    move-result-object v2
+    const/4 v5, 0x0
 
-    const/16 v3, 0xb
+    invoke-virtual {v1, v5, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Lu5;->d(I)Lz7g;
+    iput-object v0, p0, Llod;->X:Ljava/lang/Object;
 
-    move-result-object v2
+    iput v4, p0, Llod;->o:I
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lu5;
+    invoke-static {v2, v3, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object p1
 
-    const/16 v4, 0x56
+    if-ne p1, v6, :cond_3
 
-    invoke-virtual {v3, v4}, Lu5;->d(I)Lz7g;
-
-    move-result-object v3
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v4
-
-    const/16 v5, 0x11c
-
-    invoke-virtual {v4, v5}, Lu5;->d(I)Lz7g;
-
-    move-result-object v4
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v1
-
-    const/16 v5, 0x34
-
-    invoke-virtual {v1, v5}, Lu5;->d(I)Lz7g;
-
-    move-result-object v1
-
-    invoke-direct {v0, v2, v3, v4, v1}, Lyve;-><init>(Ld68;Ld68;Ld68;Ld68;)V
-
-    return-object v0
-
-    :pswitch_9
-    sget-object v0, Lone/me/settings/media/ui/SettingMediaScreen;->X:[Lp38;
-
-    sget-object v0, Lmbe;->q1:Lmbe;
-
-    return-object v0
-
-    :pswitch_a
-    sget-object v0, Lone/me/devmenu/tools/server/ServerPortBottomSheet;->F0:[Lp38;
-
-    new-instance v0, Ljec;
-
-    invoke-direct {v0}, Ljec;-><init>()V
-
-    return-object v0
-
-    :pswitch_b
-    sget-object v0, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->K0:[Lp38;
-
-    new-instance v0, Lcc7;
-
-    invoke-direct {v0}, Lcc7;-><init>()V
-
-    return-object v0
-
-    :pswitch_c
-    new-instance v0, Llqc;
-
-    sget v1, Lkfb;->K:I
-
-    invoke-direct {v0, v1}, Llqc;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_d
-    sget-object v0, Llde;->w0:Landroid/view/animation/AccelerateDecelerateInterpolator;
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
-
-    :pswitch_e
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_f
-    sget-object v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->p:[Lp38;
-
-    invoke-static {v1}, Luaj;->c(I)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_10
-    sget-object v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->p:[Lp38;
-
-    invoke-static {v1}, Luaj;->b(I)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_11
-    new-instance v0, Ldae;
-
-    invoke-direct {v0}, Ldae;-><init>()V
-
-    return-object v0
-
-    :pswitch_12
-    sget-object v0, Lone/me/settings/privacy/ui/onboarding/SafeModeOnboardingScreen;->X:[Lp38;
-
-    new-instance v0, Ld7e;
-
-    sget-object v1, Lb1f;->a:Lb1f;
-
-    invoke-virtual {v1}, Lb1f;->a()Ld68;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v1
-
-    const/16 v3, 0x18c
-
-    invoke-virtual {v1, v3}, Lu5;->d(I)Lz7g;
-
-    move-result-object v1
-
-    invoke-direct {v0, v2, v1}, Ld7e;-><init>(Ld68;Ld68;)V
-
-    return-object v0
-
-    :pswitch_13
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    return-object v0
-
-    :pswitch_14
-    const/high16 v0, 0x41c00000    # 24.0f
-
-    invoke-static {}, Lr05;->c()F
-
-    move-result v3
-
-    mul-float/2addr v3, v0
-
-    const/16 v0, 0x8
-
-    new-array v0, v0, [F
-
-    aput v3, v0, v1
-
-    aput v3, v0, v2
-
-    const/4 v1, 0x2
-
-    aput v3, v0, v1
-
-    const/4 v1, 0x3
-
-    aput v3, v0, v1
-
-    const/4 v1, 0x4
-
-    aput v3, v0, v1
-
-    const/4 v1, 0x5
-
-    aput v3, v0, v1
-
-    const/4 v1, 0x6
-
-    aput v3, v0, v1
-
-    const/4 v1, 0x7
-
-    aput v3, v0, v1
-
-    return-object v0
-
-    :pswitch_15
-    invoke-static {}, Lvud;->e()Landroid/graphics/RenderNode;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_16
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v1
-
-    const v2, 0x29ff444f
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    return-object v0
-
-    :pswitch_17
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
-
-    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
-
-    return-object v0
-
-    :pswitch_18
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
-
-    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
-
-    return-object v0
-
-    :pswitch_19
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
-
-    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
-
-    return-object v0
-
-    :pswitch_1a
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
-
-    sget-object v0, Lkji;->a:Lkji;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v0
-
-    const/16 v1, 0x13
-
-    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lyx1;
-
-    check-cast v0, Lly1;
-
-    invoke-virtual {v0}, Lly1;->u()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1b
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
-
-    new-instance v0, Landroid/view/animation/PathInterpolator;
-
-    const v1, 0x3dcccccd    # 0.1f
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const/high16 v3, 0x3e800000    # 0.25f
-
-    invoke-direct {v0, v3, v1, v3, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
-
-    return-object v0
-
-    :pswitch_1c
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
-
-    new-instance v0, Luu5;
-
-    invoke-direct {v0}, Luu5;-><init>()V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :goto_2
+    return-object v6
 .end method

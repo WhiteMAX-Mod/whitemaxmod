@@ -4,44 +4,20 @@
 
 
 # virtual methods
-.method public abstract A()S
+.method public abstract b()Ljava/lang/Object;
 .end method
 
-.method public abstract B()F
+.method public abstract c()Ljava/lang/Object;
 .end method
 
-.method public abstract C()D
+.method public abstract d(J)V
 .end method
 
-.method public abstract b()Z
+.method public abstract e(Ln1g;)V
 .end method
 
-.method public abstract c()C
+.method public abstract flush()V
 .end method
 
-.method public abstract d(Lq38;)Ljava/lang/Object;
-.end method
-
-.method public abstract k()I
-.end method
-
-.method public abstract o(Lvoe;)Lll4;
-.end method
-
-.method public abstract q()Ljava/lang/String;
-.end method
-
-.method public abstract r(Lvoe;)Lip3;
-.end method
-
-.method public abstract s(Lvoe;)I
-.end method
-
-.method public abstract t()J
-.end method
-
-.method public abstract v()Z
-.end method
-
-.method public abstract z()B
+.method public abstract release()V
 .end method

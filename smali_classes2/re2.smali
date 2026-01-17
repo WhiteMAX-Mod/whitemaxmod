@@ -1,138 +1,109 @@
-.class public final Lre2;
-.super Lxbg;
+.class public final enum Lre2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Ljava/util/List;
+# static fields
+.field public static final synthetic X:[Lre2;
 
-.field public d:Ljava/util/HashMap;
+.field public static final enum a:Lre2;
+
+.field public static final enum b:Lre2;
+
+.field public static final enum c:Lre2;
+
+.field public static final enum d:Lre2;
+
+.field public static final enum o:Lre2;
 
 
 # direct methods
-.method public constructor <init>(Lgr9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
+    new-instance v0, Lre2;
 
-    iget-object p1, p0, Lre2;->c:Ljava/util/List;
+    const-string v1, "NONE"
 
-    if-nez p1, :cond_0
+    const/4 v2, 0x0
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lre2;->c:Ljava/util/List;
+    sput-object v0, Lre2;->a:Lre2;
 
-    :cond_0
-    return-void
-.end method
+    new-instance v1, Lre2;
 
+    const-string v2, "IN_PROGRESS"
 
-# virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
-    .locals 5
+    const/4 v3, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v0, "commands"
+    sput-object v1, Lre2;->b:Lre2;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v2, Lre2;
 
-    move-result v0
+    const-string v3, "SENT"
 
-    const/4 v1, 0x0
+    const/4 v4, 0x2
 
-    if-nez v0, :cond_2
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v0, "contacts"
+    sput-object v2, Lre2;->c:Lre2;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v3, Lre2;
 
-    move-result p2
+    const-string v4, "READ"
 
-    if-nez p2, :cond_0
+    const/4 v5, 0x3
 
-    invoke-virtual {p1}, Lgr9;->y()V
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
+    sput-object v3, Lre2;->d:Lre2;
 
-    :cond_0
-    new-instance p2, Ljava/util/HashMap;
+    new-instance v4, Lre2;
 
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+    const-string v5, "ERROR"
 
-    iput-object p2, p0, Lre2;->d:Ljava/util/HashMap;
+    const/4 v6, 0x4
 
-    invoke-static {p1}, Lisi;->n(Lgr9;)I
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result p2
+    sput-object v4, Lre2;->o:Lre2;
 
-    :goto_0
-    if-ge v1, p2, :cond_1
-
-    invoke-virtual {p1}, Lgr9;->K0()J
-
-    move-result-wide v2
-
-    invoke-static {p1}, Lx04;->g(Lgr9;)Lx04;
+    filled-new-array {v0, v1, v2, v3, v4}, [Lre2;
 
     move-result-object v0
 
-    iget-object v4, p0, Lre2;->d:Ljava/util/HashMap;
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :cond_2
-    new-instance p2, Lqf3;
-
-    const/16 v0, 0xf
-
-    invoke-direct {p2, v0, v1}, Lqf3;-><init>(IB)V
-
-    invoke-static {p1, p2}, Lisi;->s(Lgr9;Lhba;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lre2;->c:Ljava/util/List;
+    sput-object v0, Lre2;->X:[Lre2;
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public static valueOf(Ljava/lang/String;)Lre2;
+    .locals 1
 
-    iget-object v0, p0, Lre2;->c:Ljava/util/List;
+    const-class v0, Lre2;
 
-    invoke-static {v0}, Lvki;->a(Ljava/util/Collection;)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    iget-object v1, p0, Lre2;->d:Ljava/util/HashMap;
+    check-cast p0, Lre2;
 
-    invoke-static {v1}, Lvki;->b(Ljava/util/Map;)I
+    return-object p0
+.end method
 
-    move-result v1
+.method public static values()[Lre2;
+    .locals 1
 
-    const-string v2, ", contacts="
+    sget-object v0, Lre2;->X:[Lre2;
 
-    const-string v3, "}"
-
-    const-string v4, "{commands="
-
-    invoke-static {v4, v0, v2, v1, v3}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lre2;
 
     return-object v0
 .end method

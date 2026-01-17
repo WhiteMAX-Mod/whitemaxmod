@@ -1,160 +1,139 @@
-.class public final enum Ltlh;
-.super Ljava/lang/Enum;
+.class public final Ltlh;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lulh;
-
-
-# static fields
-.field public static final enum X:Ltlh;
-
-.field public static final enum Y:Ltlh;
-
-.field public static final synthetic Z:[Ltlh;
-
-.field public static final enum b:Ltlh;
-
-.field public static final enum c:Ltlh;
-
-.field public static final enum d:Ltlh;
-
-.field public static final enum o:Ltlh;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic o:Lfmh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    new-instance v0, Ltlh;
-
-    const/4 v1, 0x0
-
-    const-string v2, "out_of_memory"
-
-    const-string v3, "OUT_OF_MEMORY"
-
-    invoke-direct {v0, v3, v1, v2}, Ltlh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Ltlh;->b:Ltlh;
-
-    new-instance v1, Ltlh;
-
-    const/4 v2, 0x1
-
-    const-string v3, "camera_permission"
-
-    const-string v4, "CAMERA_PERMISSION"
-
-    invoke-direct {v1, v4, v2, v3}, Ltlh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Ltlh;->c:Ltlh;
-
-    new-instance v2, Ltlh;
-
-    const/4 v3, 0x2
-
-    const-string v4, "mic_permission"
-
-    const-string v5, "MIC_PERMISSION"
-
-    invoke-direct {v2, v5, v3, v4}, Ltlh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Ltlh;->d:Ltlh;
-
-    new-instance v3, Ltlh;
-
-    const/4 v4, 0x3
-
-    const-string v5, "camera_not_found"
-
-    const-string v6, "CAMERA_NOT_FOUND"
-
-    invoke-direct {v3, v6, v4, v5}, Ltlh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Ltlh;->o:Ltlh;
-
-    new-instance v4, Ltlh;
-
-    const/4 v5, 0x4
-
-    const-string v6, "camera_error_on_record"
-
-    const-string v7, "CAMERA_ERROR_ON_RECORD"
-
-    invoke-direct {v4, v7, v5, v6}, Ltlh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Ltlh;->X:Ltlh;
-
-    new-instance v5, Ltlh;
-
-    const/4 v6, 0x5
-
-    const-string v7, "upload_error"
-
-    const-string v8, "UPLOAD_ERROR"
-
-    invoke-direct {v5, v8, v6, v7}, Ltlh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Ltlh;->Y:Ltlh;
-
-    filled-new-array/range {v0 .. v5}, [Ltlh;
-
-    move-result-object v0
-
-    sput-object v0, Ltlh;->Z:[Ltlh;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lfmh;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Ltlh;->o:Lfmh;
 
-    iput-object p3, p0, Ltlh;->a:Ljava/lang/String;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ltlh;
-    .locals 1
-
-    const-class v0, Ltlh;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ltlh;
-
-    return-object p0
-.end method
-
-.method public static values()[Ltlh;
-    .locals 1
-
-    sget-object v0, Ltlh;->Z:[Ltlh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ltlh;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final getTitle()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ltlh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ltlh;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Ltlh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Ltlh;->a:Ljava/lang/String;
+    new-instance p1, Ltlh;
 
-    return-object v0
+    iget-object v0, p0, Ltlh;->o:Lfmh;
+
+    invoke-direct {p1, v0, p2}, Ltlh;-><init>(Lfmh;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ltlh;->o:Lfmh;
+
+    iget-object v0, p1, Lfmh;->k:Ligc;
+
+    iget-object v1, p1, Lfmh;->b:Lo58;
+
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lb26;
+
+    check-cast v1, Lm36;
+
+    invoke-virtual {v1}, Lm36;->k()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/io/File;
+
+    const-string v2, "placeholder_videomsg.jpeg"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxti;->k(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    iget-object p1, p1, Lfmh;->q:Lspf;
+
+    :cond_1
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v3, v1
+
+    check-cast v3, Lulh;
+
+    const/4 v4, 0x3
+
+    invoke-static {v3, v2, v2, v0, v4}, Lulh;->a(Lulh;Landroid/util/Size;Ljava/lang/String;Ljava/lang/String;I)Lulh;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v1, v3}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

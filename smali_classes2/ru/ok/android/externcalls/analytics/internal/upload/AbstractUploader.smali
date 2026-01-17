@@ -35,18 +35,18 @@
         "logTag",
         "<init>",
         "(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZLjava/lang/String;)V",
-        "Lnl;",
+        "Lol;",
         "client",
         "file",
         "Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;",
         "uploadFileWithContent",
-        "(Lnl;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;",
+        "(Lol;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;",
         "apiClient",
-        "Lxu0;",
+        "Lqu0;",
         "items",
-        "Lv2h;",
+        "Lb3h;",
         "executeApiMethod",
-        "(Lnl;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lxu0;)V",
+        "(Lol;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lqu0;)V",
         "Lru/ok/android/externcalls/analytics/internal/upload/UploadException;",
         "ex",
         "reportApiInvocationError",
@@ -66,7 +66,7 @@
         "Lkotlin/Function0;",
         "block",
         "withLock",
-        "(Lmq6;)Ljava/lang/Object;",
+        "(Llq6;)Ljava/lang/Object;",
         "Ljavax/inject/Provider;",
         "getStorage",
         "()Ljavax/inject/Provider;",
@@ -109,7 +109,7 @@
     .end annotation
 .end field
 
-.field public static final SDK_VERSION_STRING:Ljava/lang/String; = "138.1.0.0.4"
+.field public static final SDK_VERSION_STRING:Ljava/lang/String; = "0.1.1"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
@@ -158,7 +158,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->Companion:Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$Companion;
 
@@ -238,17 +238,17 @@
     return-void
 .end method
 
-.method public static final synthetic access$uploadFileWithContent(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;Lnl;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
+.method public static final synthetic access$uploadFileWithContent(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;Lol;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->uploadFileWithContent(Lnl;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->uploadFileWithContent(Lol;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final executeApiMethod(Lnl;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lxu0;)V
+.method private final executeApiMethod(Lol;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lqu0;)V
     .locals 11
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -289,7 +289,7 @@
 
     move-object v6, p3
 
-    invoke-direct/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallExternalAnalyticsApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
+    invoke-direct/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallExternalAnalyticsApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
 
     goto :goto_0
 
@@ -322,17 +322,17 @@
 
     const-string v6, "ANDROID"
 
-    const-string v7, "138.1.0.0.4"
+    const-string v7, "0.1.1"
 
     const/4 v8, 0x1
 
-    invoke-direct/range {v2 .. v10}, Lru/ok/android/externcalls/analytics/internal/api/CallNativeAnalyticsApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILxu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
+    invoke-direct/range {v2 .. v10}, Lru/ok/android/externcalls/analytics/internal/api/CallNativeAnalyticsApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
 
     move-object v1, v2
 
     :goto_0
     :try_start_0
-    invoke-interface {p1, v1}, Lnl;->a(Lzl;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lol;->a(Lam;)Ljava/lang/Object;
 
     const/4 p1, 0x0
 
@@ -427,7 +427,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->lastReportedError:Ljava/lang/String;
 
-    invoke-static {v2, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -461,7 +461,7 @@
     return-void
 .end method
 
-.method private final uploadFileWithContent(Lnl;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
+.method private final uploadFileWithContent(Lol;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -489,7 +489,7 @@
 
     if-eqz v7, :cond_0
 
-    invoke-static {p2}, Lo36;->d(Ljava/io/File;)Z
+    invoke-static {p2}, Ll36;->d(Ljava/io/File;)Z
 
     move-result v7
 
@@ -516,7 +516,7 @@
     :goto_0
     invoke-direct {v6, p2, v7}, Lru/ok/android/externcalls/analytics/internal/api/StreamingItemsApiValue;-><init>(Ljava/io/File;Z)V
 
-    invoke-direct {p0, p1, v5, v6}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->executeApiMethod(Lnl;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lxu0;)V
+    invoke-direct {p0, p1, v5, v6}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->executeApiMethod(Lol;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lqu0;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -702,7 +702,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$drop$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lmq6;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -731,7 +731,7 @@
     if-eq v1, p1, :cond_0
 
     :try_start_0
-    invoke-static {v0}, Lo36;->b(Ljava/io/File;)V
+    invoke-static {v0}, Ll36;->b(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -837,7 +837,7 @@
 
     invoke-direct {v0, p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$uploadFile$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;Ljava/io/File;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lmq6;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -846,14 +846,14 @@
     return-object p1
 .end method
 
-.method public final withLock(Lmq6;)Ljava/lang/Object;
+.method public final withLock(Llq6;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lmq6;",
+            "Llq6;",
             ")TT;"
         }
     .end annotation
@@ -863,7 +863,7 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0

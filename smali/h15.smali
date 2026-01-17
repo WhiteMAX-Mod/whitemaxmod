@@ -3,84 +3,82 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq2g;
+.implements Lrrg;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final a:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lh15;->a:I
-
-    iput-object p2, p0, Lh15;->b:Ljava/lang/Object;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0x1000
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lh15;->a:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
+.method public final a(JIIILprg;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final b(Lwtb;II)V
+    .locals 0
+
+    invoke-virtual {p1, p2}, Lwtb;->K(I)V
+
+    return-void
+.end method
+
+.method public final c(Lki4;IZ)I
     .locals 2
 
-    iget v0, p0, Lh15;->a:I
+    iget-object v0, p0, Lh15;->a:[B
 
-    packed-switch v0, :pswitch_data_0
+    array-length v1, v0
 
-    iget-object v0, p0, Lh15;->b:Ljava/lang/Object;
+    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
 
-    return-object v0
+    move-result p2
 
-    :pswitch_0
-    iget-object v0, p0, Lh15;->b:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast v0, Ld68;
+    invoke-interface {p1, v0, v1, p2}, Lki4;->read([BII)I
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v0
+    const/4 p2, -0x1
 
-    check-cast v0, Lp36;
+    if-ne p1, p2, :cond_1
 
-    invoke-virtual {v0}, Lp36;->k()Ljava/io/File;
+    if-eqz p3, :cond_0
 
-    move-result-object v0
+    return p2
 
-    return-object v0
+    :cond_0
+    new-instance p1, Ljava/io/EOFException;
 
-    :pswitch_1
-    iget-object v0, p0, Lh15;->b:Ljava/lang/Object;
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
 
-    check-cast v0, Lj15;
+    throw p1
 
-    iget-object v1, v0, Lj15;->j:Landroid/content/Context;
+    :cond_1
+    return p1
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final d(Lpj6;)V
+    .locals 0
 
-    iget-object v0, v0, Lj15;->j:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

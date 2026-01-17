@@ -20,20 +20,20 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;",
         "Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;",
-        "Lcgd;",
+        "Lahd;",
         "log",
         "Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;",
         "config",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "collection",
         "<init>",
-        "(Lcgd;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V",
+        "(Lahd;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "stat",
-        "Lv2h;",
+        "Lb3h;",
         "onNetworkStat",
         "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
-        "Lcgd;",
+        "Lahd;",
         "Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "",
@@ -70,7 +70,7 @@
 
 .field private highRttCount:I
 
-.field private final log:Lcgd;
+.field private final log:Lahd;
 
 .field private wasReported:Z
 
@@ -83,19 +83,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->Companion:Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcgd;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
+.method public constructor <init>(Lahd;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lcgd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lahd;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
@@ -142,7 +142,7 @@
     goto :goto_2
 
     :cond_1
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lcgd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lahd;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -158,7 +158,7 @@
 
     const-string v3, "RateManager"
 
-    invoke-interface {v1, v3, v2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v3, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     int-to-long v1, p1
 

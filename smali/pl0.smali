@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Luwd;
+.implements Lqxd;
 
 
 # virtual methods
-.method public a(Lvj7;Ljava/lang/String;Z)V
+.method public a(Lcj7;Ljava/lang/String;Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public b(Lvj7;Ljava/lang/Object;Ljava/lang/String;Z)V
+.method public b(Lcj7;Ljava/lang/Object;Ljava/lang/String;Z)V
     .locals 0
 
     return-void

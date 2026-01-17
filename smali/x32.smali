@@ -3,87 +3,198 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxx3;
+.implements Ljava/util/concurrent/Executor;
+
+
+# static fields
+.field public static final c:Lu30;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/Executor;
+.field public final a:Ljava/lang/Object;
 
-.field public final synthetic b:Lv52;
-
-.field public final synthetic c:Ly32;
+.field public b:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
-.method public constructor <init>(Lf88;Ljava/util/concurrent/Executor;Lv52;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lu30;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lu30;-><init>(I)V
+
+    sput-object v0, Lx32;->c:Lu30;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx32;->c:Ly32;
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p2, p0, Lx32;->a:Ljava/util/concurrent/Executor;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lx32;->b:Lv52;
+    iput-object v0, p0, Lx32;->a:Ljava/lang/Object;
+
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+
+    sget-object v8, Lx32;->c:Lu30;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x1
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    new-instance v0, Lw32;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2}, Lw32;-><init>(I)V
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
+
+    iput-object v1, p0, Lx32;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public final a(Ljx;)V
+    .locals 10
 
-    check-cast p1, Luoh;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    instance-of v0, p1, Lpoh;
+    iget-object v1, p0, Lx32;->a:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    monitor-enter v1
 
-    invoke-static {}, Ltsi;->d()Z
+    :try_start_0
+    iget-object v0, p0, Lx32;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    new-instance v0, Ly02;
+    new-instance v2, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const/4 v1, 0x4
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {v0, v1, p0}, Ly02;-><init>(ILjava/lang/Object;)V
+    new-instance v8, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    iget-object v1, p0, Lx32;->a:Ljava/util/concurrent/Executor;
+    invoke-direct {v8}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    sget-object v9, Lx32;->c:Lu30;
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x1
+
+    const-wide/16 v5, 0x0
+
+    invoke-direct/range {v2 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    new-instance v0, Lw32;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3}, Lw32;-><init>(I)V
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
+
+    iput-object v2, p0, Lx32;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_1
+
     :cond_0
-    iget-object v0, p0, Lx32;->c:Ly32;
-
-    iget-object v1, v0, Ly32;->k:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lmqd;
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, v0, Ly32;->j:Lmqd;
-
-    if-ne v2, v1, :cond_1
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Ly32;->j:Lmqd;
-
-    :cond_1
     :goto_0
-    iget-object v0, p0, Lx32;->b:Lv52;
+    iget-object v0, p0, Lx32;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    invoke-virtual {v0, p1}, Lv52;->accept(Ljava/lang/Object;)V
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v1, Ljava/util/LinkedHashSet;
+
+    iget-object p1, p1, Ljx;->Z:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+
+    invoke-interface {v1}, Ljava/util/Set;->size()I
+
+    move-result p1
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setMaximumPoolSize(I)V
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setCorePoolSize(I)V
 
     return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lx32;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lx32;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

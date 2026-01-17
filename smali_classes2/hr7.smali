@@ -1,158 +1,180 @@
-.class public final Lhr7;
-.super Lb5g;
+.class public final synthetic Lhr7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/inputname/InputNameScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/login/inputphone/InputPhoneScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
+.method public synthetic constructor <init>(Lone/me/login/inputphone/InputPhoneScreen;I)V
     .locals 0
 
-    iput-object p2, p0, Lhr7;->X:Lone/me/login/inputname/InputNameScreen;
+    iput p2, p0, Lhr7;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lhr7;->b:Lone/me/login/inputphone/InputPhoneScreen;
 
-    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 10
 
-    check-cast p1, Lar7;
+    iget v0, p0, Lhr7;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lhr7;->b:Lone/me/login/inputphone/InputPhoneScreen;
 
-    invoke-virtual {p0, p1, p2}, Lhr7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    sget-object v0, Lone/me/login/inputphone/InputPhoneScreen;->D0:[Lz28;
 
-    check-cast p1, Lhr7;
+    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->C0:[Lz28;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object v0, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;->D0:Lkme;
 
-    invoke-virtual {p1, p2}, Lhr7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/login/inputphone/InputPhoneScreen;->E0()Lyr7;
 
-    return-object p2
-.end method
+    move-result-object v2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v2, v2, Lyr7;->y0:Lpld;
 
-    new-instance v0, Lhr7;
+    iget-object v2, v2, Lpld;->a:Llpf;
 
-    iget-object v1, p0, Lhr7;->X:Lone/me/login/inputname/InputNameScreen;
+    invoke-interface {v2}, Llpf;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, v1}, Lhr7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
+    move-result-object v2
 
-    iput-object p1, v0, Lhr7;->o:Ljava/lang/Object;
+    check-cast v2, Ljava/util/List;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    new-instance v4, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lhr7;->o:Ljava/lang/Object;
+    new-array v3, v0, [Lr9b;
 
-    check-cast p1, Lar7;
+    invoke-interface {v2, v3}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    if-eqz p1, :cond_1
+    move-result-object v2
 
-    iget-object v0, p0, Lhr7;->X:Lone/me/login/inputname/InputNameScreen;
+    new-instance v3, Lktb;
 
-    invoke-static {v0}, Lo2j;->d(Lx84;)V
+    const-string v5, "countries"
 
-    sget-object v1, Lone/me/login/inputname/InputNameScreen;->A0:[Lp38;
+    invoke-direct {v3, v5, v2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object v1, v0, Lone/me/login/inputname/InputNameScreen;->Z:Ljava/lang/Object;
+    filled-new-array {v3}, [Lktb;
 
-    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+    move-result-object v2
+
+    invoke-static {v2}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+
+    move-result-object v2
+
+    invoke-direct {v4, v2}, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;-><init>(Landroid/os/Bundle;)V
+
+    const-class v2, Lkme;
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v1}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
+
+    :goto_0
+    invoke-virtual {v1}, La94;->getParentController()La94;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v1}, La94;->getParentController()La94;
 
     move-result-object v1
 
-    check-cast v1, Lcu7;
-
-    iget-object p1, p1, Lar7;->b:Lxsd;
-
-    invoke-virtual {v0}, Lx84;->getArgs()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const-string v2, "screen:input_name:avatars"
-
-    const-class v3, Ldgc;
-
-    invoke-static {v0, v2, v3}, Le9j;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Landroid/os/Parcelable;
-
-    check-cast v0, Ldgc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-direct {v2, p1, v0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(Lxsd;Ldgc;)V
-
-    const/4 p1, 0x0
-
-    invoke-static {v2, p1, p1}, Ldmj;->a(Lx84;Lkh;Lkh;)Lz3e;
-
-    move-result-object p1
-
-    const-string v0, "InputNameScreen"
-
-    invoke-virtual {v1, p1, v0}, Lcu7;->b(Lz3e;Ljava/lang/String;)V
-
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    instance-of v3, v1, Lc5e;
 
-    move-result-object p1
+    const/4 v5, 0x0
 
-    const-string v0, "No value passed for key screen:input_name:avatars of type "
+    if-eqz v3, :cond_1
 
-    const-string v1, " in bundle"
+    check-cast v1, Lc5e;
 
-    invoke-static {v0, p1, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    goto :goto_1
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    move-object v1, v5
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :goto_1
+    if-eqz v1, :cond_2
 
-    throw p1
+    check-cast v1, Lone/me/android/root/RootController;
+
+    invoke-virtual {v1}, Lone/me/android/root/RootController;->F0()Lw4e;
+
+    move-result-object v5
+
+    :cond_2
+    move-object v1, v5
+
+    if-eqz v1, :cond_3
+
+    new-instance v3, Lz4e;
+
+    const/4 v8, 0x0
+
+    const/4 v9, -0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v3 .. v9}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+
+    const/4 v4, 0x1
+
+    invoke-static {v0, v3, v4, v2}, Lt02;->s(ZLz4e;ZLjava/lang/String;)V
+
+    invoke-virtual {v1, v3}, Lw4e;->H(Lz4e;)V
+
+    :cond_3
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/login/inputphone/InputPhoneScreen;->D0:[Lz28;
+
+    new-instance v0, Lkt7;
+
+    invoke-virtual {v1}, La94;->getRouter()Lw4e;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lkt7;-><init>(Lw4e;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

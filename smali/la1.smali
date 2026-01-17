@@ -1,170 +1,1746 @@
-.class public final Lla1;
-.super Lrsh;
+.class public final synthetic Lla1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final b:Ldz1;
+.field public final synthetic X:Lo58;
 
-.field public final c:Ld68;
+.field public final synthetic Y:Lo58;
 
-.field public final d:Lhof;
+.field public final synthetic Z:Lo58;
 
-.field public final o:Lf76;
+.field public final synthetic a:Lpa1;
+
+.field public final synthetic b:Lo58;
+
+.field public final synthetic c:Lo58;
+
+.field public final synthetic d:Lo58;
+
+.field public final synthetic o:Lo58;
+
+.field public final synthetic t0:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Lvx1;Ld68;Lbbg;Ldz1;)V
-    .locals 7
+.method public synthetic constructor <init>(Lpa1;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;)V
+    .locals 0
 
-    invoke-direct {p0}, Lrsh;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lla1;->b:Ldz1;
+    iput-object p1, p0, Lla1;->a:Lpa1;
 
-    iput-object p2, p0, Lla1;->c:Ld68;
+    iput-object p2, p0, Lla1;->b:Lo58;
 
-    check-cast p3, Lb9b;
+    iput-object p3, p0, Lla1;->c:Lo58;
 
-    invoke-virtual {p3}, Lb9b;->a()Ltb4;
+    iput-object p4, p0, Lla1;->d:Lo58;
 
-    move-result-object p2
+    iput-object p5, p0, Lla1;->o:Lo58;
 
-    invoke-virtual {p1}, Lvx1;->e()Laof;
+    iput-object p6, p0, Lla1;->X:Lo58;
 
-    move-result-object p3
+    iput-object p7, p0, Lla1;->Y:Lo58;
 
-    new-instance p4, Luj0;
+    iput-object p8, p0, Lla1;->Z:Lo58;
 
-    const/4 v0, 0x4
+    iput-object p9, p0, Lla1;->t0:Lo58;
 
-    invoke-direct {p4, v0}, Luj0;-><init>(I)V
+    return-void
+.end method
 
-    invoke-static {p3, p4}, Lqx0;->l(Lf76;Lcr6;)Lu25;
 
-    move-result-object p3
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 80
 
-    new-instance p4, Lji0;
+    move-object/from16 v1, p0
 
-    const/16 v1, 0x8
+    iget-object v0, v1, Lla1;->a:Lpa1;
 
-    invoke-direct {p4, p3, v1}, Lji0;-><init>(Lf76;I)V
+    iget-object v2, v0, Lpa1;->b:Lo58;
 
-    invoke-static {p4, p2}, Lqx0;->u(Lf76;Lrb4;)Lf76;
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object v3
 
-    invoke-virtual {p1}, Lvx1;->b()Lhof;
+    check-cast v3, Lwx5;
 
-    move-result-object p4
+    check-cast v3, Lpy5;
 
-    new-instance v2, Lji0;
+    iget-object v4, v3, Lpy5;->q:Lzx5;
 
-    const/16 v3, 0xa
+    sget-object v5, Lpy5;->N0:[Lz28;
 
-    invoke-direct {v2, p4, v3}, Lji0;-><init>(Lf76;I)V
+    const/4 v6, 0x7
 
-    invoke-static {v2, p2}, Lqx0;->u(Lf76;Lrb4;)Lf76;
+    aget-object v5, v5, v6
 
-    move-result-object p4
+    invoke-virtual {v4, v3, v5}, Lzx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-    new-instance v2, Lea1;
+    move-result-object v3
 
-    const/4 v3, 0x0
+    check-cast v3, Ljava/lang/Boolean;
 
-    invoke-direct {v2, p1, p0, v3}, Lea1;-><init>(Lvx1;Lla1;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {v2}, Lqx0;->c(Lcr6;)Lxw1;
+    move-result v3
 
-    move-result-object v2
+    if-eqz v3, :cond_0
 
-    invoke-static {v2, p2}, Lqx0;->u(Lf76;Lrb4;)Lf76;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/ConversationFactory;->disableObsoleteStatistics()V
 
-    move-result-object v2
+    :cond_0
+    new-instance v3, Lru/ok/android/externcalls/sdk/ConversationFactory;
 
-    invoke-virtual {p1}, Lvx1;->e()Laof;
+    iget-object v0, v0, Lpa1;->a:Lv0b;
 
-    move-result-object v4
+    iget-object v4, v1, Lla1;->b:Lo58;
 
-    new-instance v5, Lji0;
+    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
 
-    const/16 v6, 0x9
+    move-result-object v5
 
-    invoke-direct {v5, v4, v6}, Lji0;-><init>(Lf76;I)V
+    check-cast v5, Landroid/content/Context;
 
-    invoke-static {v5}, Lqx0;->m(Lf76;)Lf76;
+    const-string v6, "ONE_ME"
 
-    move-result-object v4
+    invoke-direct {v3, v0, v5, v6}, Lru/ok/android/externcalls/sdk/ConversationFactory;-><init>(Lv0b;Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-static {v4, p2}, Lqx0;->u(Lf76;Lrb4;)Lf76;
+    iget-object v5, v1, Lla1;->c:Lo58;
 
-    move-result-object p2
+    invoke-interface {v5}, Lo58;->getValue()Ljava/lang/Object;
 
-    sget-object v4, Ldh5;->a:Ldh5;
+    move-result-object v0
 
-    invoke-static {v4}, Liof;->a(Ljava/lang/Object;)Lhof;
+    check-cast v0, Lt5b;
 
-    move-result-object v4
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v4, p0, Lla1;->d:Lhof;
+    iget-object v6, v1, Lla1;->d:Lo58;
 
-    new-instance v5, Lu3;
+    invoke-interface {v6}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v5, v4, p0, v1}, Lu3;-><init>(Lf76;Ljava/lang/Object;I)V
+    move-result-object v0
 
-    invoke-static {v5}, Lqx0;->m(Lf76;)Lf76;
+    check-cast v0, Lgre;
 
-    move-result-object v1
+    check-cast v0, Lidc;
 
-    iput-object v1, p0, Lla1;->o:Lf76;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lvx1;->b()Lhof;
+    sget-object v7, Lru/ok/tamtam/android/prefs/PmsKey;->debug-mode:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    move-result-object p1
+    const/4 v8, 0x0
 
-    invoke-virtual {p1}, Lhof;->getValue()Ljava/lang/Object;
+    int-to-long v9, v8
 
-    move-result-object p1
+    invoke-virtual {v0, v7, v9, v10}, Lidc;->m(Ljava/lang/Enum;J)J
 
-    check-cast p1, Lbf4;
+    move-result-wide v9
 
-    iget-boolean p1, p1, Lbf4;->i:Z
+    long-to-int v0, v9
 
-    if-nez p1, :cond_0
+    const/4 v7, 0x3
 
-    new-array p1, v0, [Lf76;
+    if-ne v0, v7, :cond_1
+
+    new-instance v0, Loa1;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    :goto_0
+    move-object v9, v0
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, Lzgd;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    goto :goto_0
+
+    :goto_1
+    new-instance v10, Limf;
+
+    const/4 v0, 0x5
+
+    iget-object v11, v1, Lla1;->Z:Lo58;
+
+    invoke-direct {v10, v0, v11}, Limf;-><init>(ILjava/lang/Object;)V
+
+    iget-object v11, v1, Lla1;->o:Lo58;
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwx5;
+
+    check-cast v0, Lpy5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v12, Lru/ok/tamtam/android/prefs/PmsKey;->bad-networ-indicator-config:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v13, "{ \n    \"rtt\":{ \n        \"step\":0.055, \n        \"baseline\":0.4, \n        \"stepWeight\":0.12, \n        \"weightUp\": 0.3, \n        \"weightDown\":0.8 \n    },\n     \"loss\":{ \n        \"step\":1.5, \n        \"baseline\":0.0, \n        \"stepWeight\":0.17, \n        \"weightUp\": 0.3, \n        \"weightDown\":0.6 \n    }\n}"
+
+    invoke-virtual {v0, v12, v13}, Lege;->l(Lru/ok/tamtam/android/prefs/PmsKey;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v13, 0x1
+
+    sget-object v14, Ljh0;->e:Ljh0;
+
+    if-eqz v0, :cond_27
+
+    :try_start_0
+    new-instance v15, Lorg/json/JSONObject;
+
+    invoke-direct {v15, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v0, "calcNetworkStatusConfig"
+
+    invoke-virtual {v15, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v14, "enabled"
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0, v14, v13}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v16
+
+    goto :goto_2
+
+    :cond_2
+    move/from16 v16, v13
+
+    :goto_2
+    if-eqz v16, :cond_1d
+
+    new-instance v17, Ls01;
+
+    move/from16 v68, v7
+
+    const-wide v7, 0x3fd3333333333333L    # 0.3
+
+    if-eqz v0, :cond_3
+
+    const-string v12, "redline"
+
+    invoke-virtual {v0, v12, v7, v8}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v7
+
+    :cond_3
+    move-wide/from16 v18, v7
+
+    const-wide v7, 0x3fb999999999999aL    # 0.1
+
+    if-eqz v0, :cond_4
+
+    const-string v12, "redlineMargin"
+
+    invoke-virtual {v0, v12, v7, v8}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v7
+
+    :cond_4
+    move-wide/from16 v20, v7
+
+    const-wide/high16 v7, 0x3ff0000000000000L    # 1.0
+
+    if-eqz v0, :cond_5
+
+    const-string v12, "ratingWeightUp"
+
+    invoke-virtual {v0, v12, v7, v8}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v22
+
+    goto :goto_3
+
+    :cond_5
+    move-wide/from16 v22, v7
+
+    :goto_3
+    if-eqz v0, :cond_6
+
+    const-string v12, "ratingWeightDown"
+
+    invoke-virtual {v0, v12, v7, v8}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v24
+
+    goto :goto_4
+
+    :cond_6
+    move-wide/from16 v24, v7
+
+    :goto_4
+    const-wide v7, 0x3fd999999999999aL    # 0.4
+
+    if-eqz v0, :cond_7
+
+    const-string v12, "goodRtt"
+
+    invoke-virtual {v0, v12, v7, v8}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v7
+
+    :cond_7
+    move-object/from16 v69, v14
+
+    const-wide/high16 v13, 0x3fd0000000000000L    # 0.25
+
+    if-eqz v0, :cond_8
+
+    const-string v12, "rttWeightUp"
+
+    invoke-virtual {v0, v12, v13, v14}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v29
+
+    goto :goto_5
+
+    :cond_8
+    move-wide/from16 v29, v13
+
+    :goto_5
+    if-eqz v0, :cond_9
+
+    const-string v12, "rttWeightDown"
+
+    invoke-virtual {v0, v12, v13, v14}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v31
+
+    goto :goto_6
+
+    :cond_9
+    move-wide/from16 v31, v13
+
+    :goto_6
+    const-wide v13, 0x3fac28f5c28f5c29L    # 0.055
+
+    if-eqz v0, :cond_a
+
+    const-string v12, "rttStep"
+
+    invoke-virtual {v0, v12, v13, v14}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v13
+
+    :cond_a
+    move-object/from16 v70, v6
+
+    move-wide/from16 v35, v7
+
+    const-wide v6, 0x3fbeb851eb851eb8L    # 0.12
+
+    if-eqz v0, :cond_b
+
+    const-string v8, "rttStepWeight"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v6
+
+    :cond_b
+    move-wide/from16 v37, v6
+
+    const-wide v6, 0x3fe3333333333333L    # 0.6
+
+    if-eqz v0, :cond_c
+
+    const-string v8, "fastLossWeight"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v6
+
+    :cond_c
+    if-eqz v0, :cond_d
+
+    const-string v8, "slowLossWeight"
+
+    move-wide/from16 v39, v6
+
+    const-wide/high16 v6, 0x3fd0000000000000L    # 0.25
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v6
+
+    :goto_7
+    move-wide/from16 v33, v6
+
+    goto :goto_8
+
+    :cond_d
+    move-wide/from16 v39, v6
+
+    const-wide/high16 v6, 0x3fd0000000000000L    # 0.25
+
+    goto :goto_7
+
+    :goto_8
+    const-wide/high16 v6, 0x402a000000000000L    # 13.0
+
+    if-eqz v0, :cond_e
+
+    const-string v8, "fastLossValue"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v6
+
+    :cond_e
+    move-wide/from16 v41, v6
+
+    const-wide/high16 v6, 0x401c000000000000L    # 7.0
+
+    if-eqz v0, :cond_f
+
+    const-string v8, "slowLossValue"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v6
+
+    :cond_f
+    move-wide/from16 v43, v6
+
+    const-wide/high16 v6, -0x4010000000000000L    # -1.0
+
+    if-eqz v0, :cond_10
+
+    const-string v8, "criticalRtt"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v45
+
+    goto :goto_9
+
+    :cond_10
+    move-wide/from16 v45, v6
+
+    :goto_9
+    if-eqz v0, :cond_11
+
+    const-string v8, "criticalFastLoss"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v47
+
+    goto :goto_a
+
+    :cond_11
+    move-wide/from16 v47, v6
+
+    :goto_a
+    if-eqz v0, :cond_12
+
+    const-string v8, "criticalSlowLoss"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v6
+
+    :cond_12
+    if-eqz v0, :cond_13
+
+    const-string v8, "newNetworkRatingModelEnabled"
+
+    const/4 v12, 0x1
+
+    invoke-virtual {v0, v8, v12}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    move/from16 v50, v8
+
+    :goto_b
+    move-wide/from16 v51, v13
+
+    goto :goto_c
+
+    :cond_13
+    const/16 v50, 0x1
+
+    goto :goto_b
+
+    :goto_c
+    const-wide/16 v12, 0x0
+
+    if-eqz v0, :cond_14
+
+    const-string v8, "goodLoss"
+
+    invoke-virtual {v0, v8, v12, v13}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v12
+
+    :cond_14
+    move-wide/from16 v53, v6
+
+    move-wide v13, v12
+
+    const-wide v6, 0x3f8eb851eb851eb8L    # 0.015
+
+    if-eqz v0, :cond_15
+
+    const-string v8, "lossStep"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v6
+
+    :cond_15
+    move-wide/from16 v55, v6
+
+    const-wide v6, 0x3fc5c28f5c28f5c3L    # 0.17
+
+    if-eqz v0, :cond_16
+
+    const-string v8, "lossStepWeight"
+
+    invoke-virtual {v0, v8, v6, v7}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v6
+
+    :cond_16
+    if-eqz v0, :cond_17
+
+    const-string v8, "bitrateRatingEnabled"
+
+    const/4 v12, 0x1
+
+    invoke-virtual {v0, v8, v12}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    move/from16 v57, v8
+
+    goto :goto_d
+
+    :cond_17
+    const/16 v57, 0x1
+
+    :goto_d
+    if-eqz v0, :cond_18
+
+    const-string v8, "bitrateRatingInfluenceFactor"
+
+    move-wide/from16 v58, v13
+
+    const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
+
+    invoke-virtual {v0, v8, v12, v13}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v12
+
+    :goto_e
+    move-object v8, v15
+
+    goto :goto_f
+
+    :cond_18
+    move-wide/from16 v58, v13
+
+    const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
+
+    goto :goto_e
+
+    :goto_f
+    const-wide/high16 v14, 0x3fe8000000000000L    # 0.75
+
+    move-object/from16 v71, v2
+
+    if-eqz v0, :cond_19
+
+    const-string v2, "estimatedBitrateWeightUp"
+
+    invoke-virtual {v0, v2, v14, v15}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v26
+
+    move-wide/from16 v60, v26
+
+    goto :goto_10
+
+    :cond_19
+    move-wide/from16 v60, v14
+
+    :goto_10
+    if-eqz v0, :cond_1a
+
+    const-string v2, "estimatedBitrateWeightDown"
+
+    invoke-virtual {v0, v2, v14, v15}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v26
+
+    move-wide/from16 v62, v26
+
+    goto :goto_11
+
+    :cond_1a
+    move-wide/from16 v62, v14
+
+    :goto_11
+    if-eqz v0, :cond_1b
+
+    const-string v2, "reportedBitrateWeightUp"
+
+    invoke-virtual {v0, v2, v14, v15}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v26
+
+    move-wide/from16 v64, v26
+
+    goto :goto_12
+
+    :cond_1b
+    move-wide/from16 v64, v14
+
+    :goto_12
+    if-eqz v0, :cond_1c
+
+    const-string v2, "reportedBitrateWeightDown"
+
+    invoke-virtual {v0, v2, v14, v15}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v14
+
+    :cond_1c
+    move-wide/from16 v66, v14
+
+    move-wide/from16 v28, v29
+
+    move-wide/from16 v30, v31
+
+    move-wide/from16 v26, v35
+
+    move-wide/from16 v72, v55
+
+    move-wide/from16 v55, v6
+
+    move-wide/from16 v74, v58
+
+    move-wide/from16 v58, v12
+
+    move-wide/from16 v76, v37
+
+    move-wide/from16 v78, v39
+
+    move-wide/from16 v38, v33
+
+    move-wide/from16 v34, v76
+
+    move-wide/from16 v36, v78
+
+    move-wide/from16 v40, v41
+
+    move-wide/from16 v42, v43
+
+    move-wide/from16 v44, v45
+
+    move-wide/from16 v46, v47
+
+    move-wide/from16 v32, v51
+
+    move-wide/from16 v48, v53
+
+    move-wide/from16 v53, v72
+
+    move-wide/from16 v51, v74
+
+    invoke-direct/range {v17 .. v67}, Ls01;-><init>(DDDDDDDDDDDDDDDDZDDDZDDDDD)V
+
+    move-object/from16 v0, v17
+
+    goto :goto_13
+
+    :cond_1d
+    move-object/from16 v71, v2
+
+    move-object/from16 v70, v6
+
+    move/from16 v68, v7
+
+    move-object/from16 v69, v14
+
+    move-object v8, v15
 
     const/4 v0, 0x0
 
-    aput-object p4, p1, v0
+    :goto_13
+    const-string v2, "reportNetworkStatusConfig"
 
-    const/4 p4, 0x1
+    invoke-virtual {v8, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    aput-object p3, p1, p4
+    move-result-object v2
 
-    const/4 p3, 0x2
+    if-eqz v2, :cond_1e
 
-    aput-object v2, p1, p3
+    move-object/from16 v6, v69
 
-    const/4 p3, 0x3
+    const/4 v12, 0x1
 
-    aput-object p2, p1, p3
+    invoke-virtual {v2, v6, v12}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
-    invoke-static {p1}, Lqx0;->y([Lf76;)Lac2;
+    move-result v6
 
-    move-result-object p1
+    goto :goto_14
 
-    new-instance p2, Lfa1;
+    :cond_1e
+    const/4 v6, 0x1
 
-    invoke-direct {p2, p0, v3}, Lfa1;-><init>(Lla1;Lkotlin/coroutines/Continuation;)V
+    :goto_14
+    if-eqz v6, :cond_22
 
-    new-instance p3, Lo96;
+    new-instance v6, Laxd;
 
-    invoke-direct {p3, p1, p2, p4}, Lo96;-><init>(Lf76;Lcr6;I)V
+    const-wide v13, 0x3fc3333333333333L    # 0.15
 
-    iget-object p1, p0, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
+    if-eqz v2, :cond_1f
 
-    invoke-static {p3, p1}, Lqx0;->w(Lf76;Lac4;)Lglf;
+    const-string v7, "networkStatusReportThreshold"
 
-    :cond_0
-    return-void
+    invoke-virtual {v2, v7, v13, v14}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v13
+
+    :cond_1f
+    const/16 v7, 0x1388
+
+    if-eqz v2, :cond_20
+
+    const-string v15, "networkStatusReportIntervalMs"
+
+    invoke-virtual {v2, v15, v7}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v7
+
+    :cond_20
+    const/16 v15, 0x2710
+
+    if-eqz v2, :cond_21
+
+    const-string v12, "networkStatusReportForceIntervalMs"
+
+    invoke-virtual {v2, v12, v15}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v15
+
+    :cond_21
+    invoke-direct {v6, v7, v15, v13, v14}, Laxd;-><init>(IID)V
+
+    goto :goto_15
+
+    :cond_22
+    const/4 v6, 0x0
+
+    :goto_15
+    const-string v2, "signalingConfig"
+
+    invoke-virtual {v8, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    new-instance v7, Lih0;
+
+    if-eqz v2, :cond_23
+
+    const-string v12, "dcReportNetworkStatEnabled"
+
+    const/4 v14, 0x1
+
+    invoke-virtual {v2, v12, v14}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v13
+
+    goto :goto_16
+
+    :cond_23
+    const/4 v13, 0x1
+
+    :goto_16
+    if-eqz v2, :cond_24
+
+    const-string v14, "producerCommandV3"
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v2, v14, v15}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v16
+
+    move/from16 v2, v16
+
+    goto :goto_17
+
+    :cond_24
+    const/4 v15, 0x0
+
+    move v2, v15
+
+    :goto_17
+    invoke-direct {v7, v13, v2}, Lih0;-><init>(ZZ)V
+
+    const-string v2, "debugLoggingConfig"
+
+    invoke-virtual {v8, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    new-instance v8, Lhh0;
+
+    if-eqz v2, :cond_25
+
+    const-string v13, "debugLogging"
+
+    invoke-virtual {v2, v13, v15}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v16
+
+    move/from16 v13, v16
+
+    goto :goto_18
+
+    :cond_25
+    move v13, v15
+
+    :goto_18
+    if-eqz v2, :cond_26
+
+    const-string v14, "debugVerboseLogging"
+
+    invoke-virtual {v2, v14, v15}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    goto :goto_19
+
+    :cond_26
+    const/4 v2, 0x0
+
+    :goto_19
+    invoke-direct {v8, v13, v2}, Lhh0;-><init>(ZZ)V
+
+    new-instance v14, Ljh0;
+
+    invoke-direct {v14, v0, v6, v7, v8}, Ljh0;-><init>(Ls01;Laxd;Lih0;Lhh0;)V
+
+    goto :goto_1a
+
+    :catch_0
+    move-exception v0
+
+    move-object/from16 v71, v2
+
+    move-object/from16 v70, v6
+
+    move/from16 v68, v7
+
+    const-string v2, "BadNetworkIndicatorConfig"
+
+    const-string v6, "Can\'t parse BadNetworkIndicatorConfig"
+
+    invoke-interface {v9, v2, v6, v0}, Lahd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1a
+
+    :cond_27
+    move-object/from16 v71, v2
+
+    move-object/from16 v70, v6
+
+    move/from16 v68, v7
+
+    :goto_1a
+    invoke-virtual {v3, v14}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setBadNetworkIndicatorConfig(Ljh0;)V
+
+    const/4 v12, 0x1
+
+    invoke-virtual {v3, v12}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setEnableLossRttBadConnectionHandling(Z)V
+
+    invoke-virtual {v3, v10}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setScreenCapturePermissionProvider(Lnce;)V
+
+    invoke-virtual {v3, v12}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setDeviceAudioShareEnabled(Z)V
+
+    sget-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->Companion:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Companion;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Companion;->default()Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
+
+    move-result-object v0
+
+    sget-object v2, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->SESSION_STATE_UPDATES:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+
+    invoke-interface/range {v71 .. v71}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lwx5;
+
+    check-cast v6, Lpy5;
+
+    iget-object v7, v6, Lpy5;->m:Lby5;
+
+    sget-object v8, Lpy5;->N0:[Lz28;
+
+    aget-object v10, v8, v68
+
+    invoke-virtual {v7, v6, v10}, Lby5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Boolean;
+
+    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v6
+
+    invoke-virtual {v0, v2, v6}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->set(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;Z)Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
+
+    move-result-object v0
+
+    sget-object v2, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->WAIT_FOR_ADMIN:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+
+    invoke-interface/range {v71 .. v71}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lwx5;
+
+    check-cast v6, Lpy5;
+
+    iget-object v7, v6, Lpy5;->s:Lay5;
+
+    const/16 v10, 0x9
+
+    aget-object v10, v8, v10
+
+    invoke-virtual {v7, v6, v10}, Lay5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Boolean;
+
+    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v6
+
+    invoke-virtual {v0, v2, v6}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->set(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;Z)Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setClientCapabilities(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;)V
+
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationFactory;->getExperiments()Lir5;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lir5;->a:Lpk1;
+
+    const/4 v12, 0x1
+
+    iput-boolean v12, v0, Lpk1;->m:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->j:Lyx5;
+
+    const/16 v16, 0x0
+
+    aget-object v7, v8, v16
+
+    invoke-virtual {v6, v2, v7}, Lyx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->D:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->k:Ldy5;
+
+    const/4 v12, 0x1
+
+    aget-object v7, v8, v12
+
+    invoke-virtual {v6, v2, v7}, Ldy5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->h:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->l:Lcy5;
+
+    const/4 v7, 0x2
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lcy5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->C:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->o:Lzx5;
+
+    const/4 v7, 0x5
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lzx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_28
+
+    sget-object v2, Lorg/webrtc/PeerConnection$IceTransportsType;->NOHOST:Lorg/webrtc/PeerConnection$IceTransportsType;
+
+    iput-object v2, v0, Lpk1;->u:Lorg/webrtc/PeerConnection$IceTransportsType;
+
+    :cond_28
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->r:Lay5;
+
+    const/16 v7, 0x8
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lay5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->O:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->u:Lcy5;
+
+    const/16 v7, 0xb
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lcy5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->I:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->v:Ldy5;
+
+    const/16 v7, 0xc
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Ldy5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->J:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->w:Lyx5;
+
+    const/16 v7, 0xd
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lyx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->K:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->x:Lzx5;
+
+    const/16 v7, 0xe
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lzx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->N:Z
+
+    iget-object v2, v1, Lla1;->t0:Lo58;
+
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lef3;
+
+    check-cast v6, Lqi8;
+
+    iget-object v7, v6, Lqi8;->N0:Lnre;
+
+    sget-object v10, Lqi8;->Q0:[Lz28;
+
+    const/16 v13, 0x22
+
+    aget-object v13, v10, v13
+
+    invoke-virtual {v7, v6, v13}, Lnre;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Boolean;
+
+    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v6
+
+    iput-boolean v6, v0, Lpk1;->L:Z
+
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lef3;
+
+    check-cast v2, Lqi8;
+
+    iget-object v6, v2, Lqi8;->O0:Lnre;
+
+    const/16 v7, 0x23
+
+    aget-object v7, v10, v7
+
+    invoke-virtual {v6, v2, v7}, Lnre;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->M:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->y:Lay5;
+
+    const/16 v7, 0xf
+
+    aget-object v10, v8, v7
+
+    invoke-virtual {v6, v2, v10}, Lay5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->Q:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->y:Lay5;
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lay5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->P:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->z:Lby5;
+
+    const/16 v7, 0x10
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lby5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->G:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->A:Lcy5;
+
+    const/16 v7, 0x11
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lcy5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->S:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->C:Lzx5;
+
+    const/16 v7, 0x13
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lzx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iput-boolean v2, v0, Lpk1;->U:Z
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->B:Ldy5;
+
+    const/16 v7, 0x12
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Ldy5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    const-string v6, "True"
+
+    invoke-static {v2, v6}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_29
+
+    const-string v2, ""
+
+    goto :goto_1b
+
+    :cond_29
+    const-string v6, "False"
+
+    invoke-static {v2, v6}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2a
+
+    const/4 v2, 0x0
+
+    :cond_2a
+    :goto_1b
+    iput-object v2, v0, Lpk1;->R:Ljava/lang/String;
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwx5;
+
+    check-cast v0, Lpy5;
+
+    iget-object v2, v0, Lpy5;->p:Lyx5;
+
+    const/4 v6, 0x6
+
+    aget-object v6, v8, v6
+
+    invoke-virtual {v2, v0, v6}, Lyx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2b
+
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationFactory;->getExperiments()Lir5;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lir5;->a:Lpk1;
+
+    const/4 v12, 0x1
+
+    iput-boolean v12, v0, Lpk1;->o:Z
+
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationFactory;->getAnalyticsSender()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;->getConfiguration()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfiguration;
+
+    move-result-object v0
+
+    new-instance v2, Lc01;
+
+    const/16 v6, 0x15
+
+    invoke-direct {v2, v6}, Lc01;-><init>(I)V
+
+    invoke-interface {v0, v2}, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfiguration;->setUploadConfigProvider(Lru/ok/android/externcalls/sdk/analytics/UploadConfigProvider;)V
+
+    :cond_2b
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwx5;
+
+    check-cast v0, Lpy5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->cfs:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v0, v2, v15}, Lege;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2c
+
+    iget-object v0, v1, Lla1;->X:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;
+
+    goto :goto_1c
+
+    :cond_2c
+    const/4 v0, 0x0
+
+    :goto_1c
+    invoke-virtual {v3, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setP2pStartConversationDelegate(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;)V
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwx5;
+
+    check-cast v0, Lpy5;
+
+    iget-object v2, v0, Lpy5;->t:Lby5;
+
+    const/16 v6, 0xa
+
+    aget-object v6, v8, v6
+
+    invoke-virtual {v2, v0, v6}, Lby5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v6
+
+    const-wide/16 v13, 0x0
+
+    cmp-long v0, v6, v13
+
+    if-lez v0, :cond_2d
+
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationFactory;->getExperiments()Lir5;
+
+    move-result-object v0
+
+    long-to-int v2, v6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    iget-object v0, v0, Lir5;->a:Lpk1;
+
+    iput-object v2, v0, Lpk1;->E:Ljava/lang/Integer;
+
+    :cond_2d
+    iget-object v0, v1, Lla1;->Y:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/events/AnalyticsEventListener;
+
+    invoke-virtual {v3, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setAnalyticsEventListener(Lru/ok/android/externcalls/sdk/events/AnalyticsEventListener;)V
+
+    new-instance v0, Lqia;
+
+    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Lqia;-><init>(Landroid/content/Context;)V
+
+    new-instance v2, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    invoke-direct {v2}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;-><init>()V
+
+    const/4 v12, 0x1
+
+    invoke-virtual {v2, v12}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->setSharedSocketDisabledForICE(Z)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    move-result-object v2
+
+    new-instance v6, Lwq;
+
+    const/4 v7, 0x5
+
+    invoke-direct {v6, v9, v7, v0}, Lwq;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v2, v6}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->setNativeLibraryLoader(Lorg/webrtc/NativeLibraryLoader;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    move-result-object v0
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v6, v2, Lpy5;->n:Lay5;
+
+    const/4 v7, 0x4
+
+    aget-object v7, v8, v7
+
+    invoke-virtual {v6, v2, v7}, Lay5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2e
+
+    invoke-virtual {v0, v9}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->setLogger(Lahd;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    :cond_2e
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->build()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v9}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setLogger(Lahd;)V
+
+    new-instance v2, Lna1;
+
+    invoke-direct {v2, v5}, Lna1;-><init>(Lo58;)V
+
+    invoke-virtual {v3, v2}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setLogConfiguration(Lbhd;)V
+
+    invoke-interface/range {v70 .. v70}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgre;
+
+    check-cast v2, Lidc;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-disable-init-tflite:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v12, 0x1
+
+    invoke-virtual {v2, v5, v12}, Lidc;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2f
+
+    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwx5;
+
+    check-cast v2, Lpy5;
+
+    iget-object v5, v2, Lpy5;->j:Lyx5;
+
+    const/16 v16, 0x0
+
+    aget-object v6, v8, v16
+
+    invoke-virtual {v5, v2, v6}, Lyx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_30
+
+    :cond_2f
+    new-instance v2, Le1b;
+
+    const/16 v5, 0xe
+
+    invoke-direct {v2, v9, v5}, Le1b;-><init>(Lahd;I)V
+
+    invoke-virtual {v3, v2}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setAnimojiDataSupplier(Lii;)V
+
+    :cond_30
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationFactory;->getAnalyticsSender()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;->getConfiguration()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfiguration;
+
+    move-result-object v2
+
+    new-instance v5, Lc01;
+
+    const/16 v6, 0x16
+
+    invoke-direct {v5, v6}, Lc01;-><init>(I)V
+
+    invoke-interface {v2, v5}, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfiguration;->setApplicationNameProvider(Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;)V
+
+    new-instance v2, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;
+
+    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/content/Context;
+
+    invoke-direct {v2, v4}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v2, v0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;->setPeerConnection(Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;->build()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->init(Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;)V
+
+    return-object v3
 .end method

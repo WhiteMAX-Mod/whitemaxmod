@@ -3,34 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lmbg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JJJI)V
+.method public synthetic constructor <init>(Lmbg;I)V
     .locals 0
 
-    iput p8, p0, Lq93;->a:I
+    iput p2, p0, Lq93;->a:I
 
-    iput-object p1, p0, Lq93;->o:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lq93;->b:J
-
-    iput-wide p4, p0, Lq93;->c:J
-
-    iput-wide p6, p0, Lq93;->d:J
+    iput-object p1, p0, Lq93;->b:Lmbg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,50 +28,45 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 10
+    .locals 2
 
     iget v0, p0, Lq93;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lq93;->o:Ljava/lang/Object;
+    new-instance v0, Lyz6;
 
-    move-object v2, v0
+    iget-object v1, p0, Lq93;->b:Lmbg;
 
-    check-cast v2, Lo2b;
+    check-cast v1, Lj9b;
 
-    new-instance v1, Ll36;
-
-    iget-wide v3, p0, Lq93;->b:J
-
-    iget-wide v5, p0, Lq93;->c:J
-
-    iget-wide v7, p0, Lq93;->d:J
-
-    invoke-direct/range {v1 .. v8}, Ll36;-><init>(Lo2b;JJJ)V
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lq93;->o:Ljava/lang/Object;
-
-    check-cast v0, Lca3;
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v0}, Lca3;->j()Lch2;
+    invoke-virtual {v1}, Lj9b;->a()Lsb4;
 
     move-result-object v1
 
-    iget-wide v2, p0, Lq93;->b:J
+    invoke-static {v1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-wide v4, p0, Lq93;->c:J
+    move-result-object v1
 
-    iget-wide v6, p0, Lq93;->d:J
+    invoke-direct {v0, v1}, Lyz6;-><init>(Lkotlinx/coroutines/internal/ContextScope;)V
 
-    const/4 v8, -0x1
+    return-object v0
 
-    invoke-virtual/range {v1 .. v9}, Lch2;->u0(JJJIZ)Lud2;
+    :pswitch_0
+    iget-object v0, p0, Lq93;->b:Lmbg;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lq93;->b:Lmbg;
+
+    check-cast v0, Lj9b;
+
+    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
 
     move-result-object v0
 
@@ -93,6 +76,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

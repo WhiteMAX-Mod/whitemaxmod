@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lu8d;->retained_adapter_state:I
+    sget v0, Ln9d;->dynamic_font_sizes:I
 
     sput v0, Lxgb;->a:I
 

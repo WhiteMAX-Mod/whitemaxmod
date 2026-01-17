@@ -1,262 +1,149 @@
 .class public final Lgke;
-.super Lcke;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final j:Lhoj;
+.field public final a:Lmke;
 
-.field public final k:Lhoj;
-
-.field public final l:J
+.field public final b:Lmke;
 
 
 # direct methods
-.method public constructor <init>(Lugd;JJJJJLjava/util/List;JLhoj;Lhoj;JJ)V
-    .locals 17
+.method public constructor <init>(Lmke;Lmke;)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v1, p1
+    iput-object p1, p0, Lgke;->a:Lmke;
 
-    move-wide/from16 v2, p2
-
-    move-wide/from16 v4, p4
-
-    move-wide/from16 v6, p6
-
-    move-wide/from16 v8, p10
-
-    move-object/from16 v10, p12
-
-    move-wide/from16 v11, p13
-
-    move-wide/from16 v13, p17
-
-    move-wide/from16 v15, p19
-
-    invoke-direct/range {v0 .. v16}, Lcke;-><init>(Lugd;JJJJLjava/util/List;JJJ)V
-
-    move-object/from16 v1, p15
-
-    iput-object v1, v0, Lgke;->j:Lhoj;
-
-    move-object/from16 v1, p16
-
-    iput-object v1, v0, Lgke;->k:Lhoj;
-
-    move-wide/from16 v1, p8
-
-    iput-wide v1, v0, Lgke;->l:J
+    iput-object p2, p0, Lgke;->b:Lmke;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Llwd;)Lugd;
-    .locals 13
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lgke;->j:Lhoj;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p1, Llwd;->a:Lqj6;
-
-    iget-object v6, p1, Lqj6;->a:Ljava/lang/String;
-
-    iget v1, p1, Lqj6;->Z:I
-
-    const-wide/16 v4, 0x0
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual/range {v0 .. v6}, Lhoj;->b(IJJLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    new-instance v7, Lugd;
-
-    const-wide/16 v9, 0x0
-
-    const-wide/16 v11, -0x1
-
-    invoke-direct/range {v7 .. v12}, Lugd;-><init>(Ljava/lang/String;JJ)V
-
-    return-object v7
+    return v0
 
     :cond_0
-    iget-object p1, p0, Lmke;->c:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast p1, Lugd;
+    if-eqz p1, :cond_2
 
-    return-object p1
-.end method
+    const-class v2, Lgke;
 
-.method public final e(J)J
-    .locals 5
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lcke;->f:Ljava/util/List;
+    move-result-object v3
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    int-to-long p1, p1
-
-    return-wide p1
-
-    :cond_0
-    iget-wide v0, p0, Lgke;->l:J
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_1
-
-    iget-wide p1, p0, Lcke;->d:J
-
-    sub-long/2addr v0, p1
-
-    const-wide/16 p1, 0x1
-
-    add-long/2addr v0, p1
-
-    return-wide v0
-
-    :cond_1
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, p1, v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p1, p2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Lmke;->a:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Lcke;->e:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    const-wide/32 v0, 0xf4240
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
-
-    sget v1, Leo0;->a:I
-
-    new-instance v1, Ljava/math/BigDecimal;
-
-    invoke-direct {v1, p1}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
-
-    new-instance p1, Ljava/math/BigDecimal;
-
-    invoke-direct {p1, p2}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v1, p1, p2, v0}, Ljava/math/BigDecimal;->divide(Ljava/math/BigDecimal;ILjava/math/RoundingMode;)Ljava/math/BigDecimal;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toBigIntegerExact()Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_2
-    return-wide v2
-.end method
-
-.method public final i(Lhwd;J)Lugd;
-    .locals 16
-
-    move-object/from16 v0, p0
-
-    iget-wide v1, v0, Lcke;->d:J
-
-    iget-object v3, v0, Lcke;->f:Ljava/util/List;
-
-    if-eqz v3, :cond_0
-
-    sub-long v1, p2, v1
-
-    long-to-int v1, v1
-
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Like;
-
-    iget-wide v1, v1, Like;->a:J
-
-    :goto_0
-    move-wide v7, v1
-
-    move-object/from16 v1, p1
-
-    goto :goto_1
-
-    :cond_0
-    sub-long v1, p2, v1
-
-    iget-wide v3, v0, Lcke;->e:J
-
-    mul-long/2addr v1, v3
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :goto_1
-    iget-object v1, v1, Llwd;->a:Lqj6;
+    :cond_1
+    check-cast p1, Lgke;
 
-    iget-object v9, v1, Lqj6;->a:Ljava/lang/String;
+    iget-object v2, p0, Lgke;->a:Lmke;
 
-    iget v4, v1, Lqj6;->Z:I
+    iget-object v3, p1, Lgke;->a:Lmke;
 
-    iget-object v3, v0, Lgke;->k:Lhoj;
+    invoke-virtual {v2, v3}, Lmke;->equals(Ljava/lang/Object;)Z
 
-    move-wide/from16 v5, p2
+    move-result v2
 
-    invoke-virtual/range {v3 .. v9}, Lhoj;->b(IJJLjava/lang/String;)Ljava/lang/String;
+    if-eqz v2, :cond_2
 
-    move-result-object v11
+    iget-object v2, p0, Lgke;->b:Lmke;
 
-    new-instance v10, Lugd;
+    iget-object p1, p1, Lgke;->b:Lmke;
 
-    const-wide/16 v12, 0x0
+    invoke-virtual {v2, p1}, Lmke;->equals(Ljava/lang/Object;)Z
 
-    const-wide/16 v14, -0x1
+    move-result p1
 
-    invoke-direct/range {v10 .. v15}, Lugd;-><init>(Ljava/lang/String;JJ)V
+    if-eqz p1, :cond_2
 
-    return-object v10
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lgke;->a:Lmke;
+
+    invoke-virtual {v0}, Lmke;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lgke;->b:Lmke;
+
+    invoke-virtual {v1}, Lmke;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lgke;->a:Lmke;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lgke;->b:Lmke;
+
+    invoke-virtual {v1, v2}, Lmke;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, ""
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, ", "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    const-string v2, "]"
+
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

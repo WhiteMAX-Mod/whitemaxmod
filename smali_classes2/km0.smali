@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lseh;
+.implements Lpfh;
 
 
 # instance fields
@@ -15,7 +15,7 @@
 
 .field public final d:J
 
-.field public final e:Lgz;
+.field public final e:Ldz;
 
 .field public final f:Z
 
@@ -25,7 +25,7 @@
 
 
 # direct methods
-.method public constructor <init>(JJZJLgz;ZII)V
+.method public constructor <init>(JJZJLdz;ZII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 
     iput-wide p6, p0, Lkm0;->d:J
 
-    iput-object p8, p0, Lkm0;->e:Lgz;
+    iput-object p8, p0, Lkm0;->e:Ldz;
 
     iput-boolean p9, p0, Lkm0;->f:Z
 
@@ -92,7 +92,7 @@
     :cond_1
     check-cast p1, Lkm0;
 
-    iget-object v0, p1, Lkm0;->e:Lgz;
+    iget-object v0, p1, Lkm0;->e:Ldz;
 
     iget-wide v1, p0, Lkm0;->a:J
 
@@ -163,7 +163,7 @@
     goto :goto_1
 
     :cond_8
-    iget-object p1, p0, Lkm0;->e:Lgz;
+    iget-object p1, p0, Lkm0;->e:Ldz;
 
     if-eqz p1, :cond_9
 
@@ -233,7 +233,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lkm0;->e:Lgz;
+    iget-object v1, p0, Lkm0;->e:Ldz;
 
     if-eqz v1, :cond_0
 

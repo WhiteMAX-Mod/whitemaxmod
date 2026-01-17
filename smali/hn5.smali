@@ -1,145 +1,108 @@
 .class public final Lhn5;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-.implements Ll25;
+
+# static fields
+.field public static final c:Lwna;
+
+.field public static final d:Ljava/util/LinkedHashMap;
 
 
 # instance fields
-.field public final a:Lr62;
+.field public final a:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public final b:Lr62;
+.field public final b:Lzii;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    new-instance v0, Lwna;
 
-    new-instance p1, Lr62;
+    const/16 v1, 0x14
 
-    const/4 v0, 0x3
+    invoke-direct {v0, v1}, Lwna;-><init>(I)V
 
-    invoke-direct {p1, v0}, Lr62;-><init>(I)V
+    sput-object v0, Lhn5;->c:Lwna;
 
-    iput-object p1, p0, Lhn5;->a:Lr62;
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    new-instance p1, Lr62;
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    invoke-direct {p1, v0}, Lr62;-><init>(I)V
-
-    iput-object p1, p0, Lhn5;->b:Lr62;
+    sput-object v0, Lhn5;->d:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Z)V
+    .locals 3
 
-# virtual methods
-.method public final dispose()V
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    sget-object v0, Lhn5;->c:Lwna;
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lhn5;->a:Lr62;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lp25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Lhn5;->b:Lr62;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lp25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final run()V
-    .locals 5
-
-    iget-object v0, p0, Lhn5;->b:Lr62;
-
-    iget-object v1, p0, Lhn5;->a:Lr62;
-
-    sget-object v2, Lp25;->a:Lp25;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Runnable;
-
-    if-eqz v3, :cond_0
-
-    const/4 v4, 0x0
+    monitor-enter v0
 
     :try_start_0
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    sget-object v1, Lhn5;->d:Ljava/util/LinkedHashMap;
 
-    :try_start_1
-    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    move-result-object v2
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    if-nez v2, :cond_0
 
-    return-void
+    new-instance v2, Ljava/util/concurrent/locks/ReentrantLock;
 
-    :catchall_0
-    move-exception v0
+    invoke-direct {v2}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v3
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    throw v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_0
-    invoke-static {v0}, Lomj;->d(Ljava/lang/Throwable;)V
-
-    throw v0
+    goto :goto_2
 
     :cond_0
+    :goto_0
+    check-cast v2, Ljava/util/concurrent/locks/ReentrantLock;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    iput-object v2, p0, Lhn5;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    if-eqz p2, :cond_1
+
+    new-instance p2, Lzii;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, ".lck"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p2, Lzii;->a:Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p2, 0x0
+
+    :goto_1
+    iput-object p2, p0, Lhn5;->b:Lzii;
+
     return-void
+
+    :goto_2
+    monitor-exit v0
+
+    throw p1
 .end method

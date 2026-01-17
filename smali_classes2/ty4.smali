@@ -1,61 +1,82 @@
 .class public final Lty4;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lf76;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Lf76;
+.field public final synthetic X:Lone/me/devmenu/DevMenuGeneralPageScreen;
 
-.field public final synthetic b:Lone/me/devmenu/DevMenuGeneralPageScreen;
-
-.field public final synthetic c:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Laof;Lone/me/devmenu/DevMenuGeneralPageScreen;I)V
+.method public constructor <init>(Lone/me/devmenu/DevMenuGeneralPageScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lty4;->X:Lone/me/devmenu/DevMenuGeneralPageScreen;
 
-    iput-object p1, p0, Lty4;->a:Lf76;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lty4;->b:Lone/me/devmenu/DevMenuGeneralPageScreen;
-
-    iput p3, p0, Lty4;->c:I
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lrf2;
+    check-cast p1, Ljava/util/List;
 
-    iget-object v1, p0, Lty4;->b:Lone/me/devmenu/DevMenuGeneralPageScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget v2, p0, Lty4;->c:I
-
-    invoke-direct {v0, p1, v1, v2}, Lrf2;-><init>(Lh76;Lone/me/devmenu/DevMenuGeneralPageScreen;I)V
-
-    iget-object p1, p0, Lty4;->a:Lf76;
-
-    invoke-interface {p1, v0, p2}, Lf76;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lty4;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object p2, Lbc4;->a:Lbc4;
+    check-cast p1, Lty4;
 
-    if-ne p1, p2, :cond_0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-object p1
+    invoke-virtual {p1, p2}, Lty4;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lty4;
+
+    iget-object v1, p0, Lty4;->X:Lone/me/devmenu/DevMenuGeneralPageScreen;
+
+    invoke-direct {v0, v1, p2}, Lty4;-><init>(Lone/me/devmenu/DevMenuGeneralPageScreen;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lty4;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lty4;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lty4;->X:Lone/me/devmenu/DevMenuGeneralPageScreen;
+
+    iget-object p1, p1, Lone/me/devmenu/DevMenuGeneralPageScreen;->d:Ll0f;
+
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

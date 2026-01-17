@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;",
         "listener",
-        "Lv2h;",
+        "Lb3h;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;)V",
         "removeListener",
@@ -25,7 +25,7 @@
         "",
         "onError",
         "sendMessage",
-        "(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Lmq6;Loq6;)V",
+        "(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Llq6;Lnq6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method public static synthetic sendMessage$default(Lru/ok/android/externcalls/sdk/chat/ChatManager;Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Lmq6;Loq6;ILjava/lang/Object;)V
+.method public static synthetic sendMessage$default(Lru/ok/android/externcalls/sdk/chat/ChatManager;Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Llq6;Lnq6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_2
@@ -60,7 +60,7 @@
     move-object p3, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/chat/ChatManager;->sendMessage(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Lmq6;Loq6;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/chat/ChatManager;->sendMessage(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Llq6;Lnq6;)V
 
     return-void
 
@@ -82,13 +82,13 @@
 .method public abstract removeListener(Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;)V
 .end method
 
-.method public abstract sendMessage(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Lmq6;Loq6;)V
+.method public abstract sendMessage(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;",
-            "Lmq6;",
-            "Loq6;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation

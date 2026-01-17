@@ -4,325 +4,397 @@
 
 
 # direct methods
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+.method public static final a(Ljava/lang/Number;Ljava/lang/String;)Lkotlinx/serialization/json/internal/JsonEncodingException;
+    .locals 3
 
-    invoke-static {p0}, Ltri;->e(Ljava/lang/CharSequence;)Z
+    new-instance v0, Lkotlinx/serialization/json/internal/JsonEncodingException;
 
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const-string v2, "q2j"
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_0
-
-    new-array p0, v1, [Ljava/lang/Object;
-
-    invoke-static {p0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string v0, "getPhotoToken: response is empty or null"
-
-    invoke-static {v2, v3, v0, p0}, Lm4j;->x(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v3
-
-    :cond_0
-    :try_start_0
-    invoke-static {p0}, Lq2j;->b(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_0
-
-    :cond_1
-    return-object v3
-
-    :goto_0
-    const-string v0, "getPhotoToken: exception while getting photo token from response"
-
-    invoke-static {v2, v0, p0}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v3
-.end method
-
-.method public static b(Ljava/lang/String;)Ljava/util/ArrayList;
-    .locals 5
-
-    const-string v0, "q2j"
-
-    const-string v1, "error_msg"
-
-    :try_start_0
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {v3, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "getPhotoToken: got json error: %s"
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v0, v1, p0}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v2
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    const-string p0, "photos"
-
-    invoke-virtual {v3, p0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {p0, v3}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v3
-
-    const-string v4, "token"
-
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :cond_1
-    return-object v2
-
-    :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "exception while parsing photo upload response: "
+    const-string v2, "Unexpected special floating-point value "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    const-string p0, ". By default, non-finite floating point values are prohibited because they do not conform JSON specification. It is possible to deserialize them using \'JsonBuilder.allowSpecialFloatingPointValues = true\'\nCurrent output: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 p0, -0x1
+
+    invoke-static {p0, p1}, Lq2j;->f(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-static {v0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static final b(Ljava/lang/String;Ljava/lang/CharSequence;I)Lkotlinx/serialization/json/internal/JsonDecodingException;
+    .locals 2
+
+    const-string v0, "\nJSON input: "
+
+    invoke-static {p0, v0}, Lj27;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-static {p2, p1}, Lq2j;->f(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lkotlinx/serialization/json/internal/JsonDecodingException;
+
+    if-ltz p2, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Unexpected JSON token at offset "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, ": "
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public static final c(JJJ)V
+    .locals 4
+
+    or-long v0, p2, p4
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-ltz v0, :cond_0
+
+    cmp-long v0, p2, p0
+
+    if-gtz v0, :cond_0
+
+    sub-long v0, p0, p2
+
+    cmp-long v0, v0, p4
+
+    if-ltz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+
+    const-string v1, "size="
+
+    const-string v2, " offset="
+
+    invoke-static {p0, p1, v1, v2}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, " byteCount="
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final d(Lfsg;Ljava/lang/String;)V
+    .locals 2
+
+    const-string v0, "Trailing comma before the end of JSON "
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget v0, p0, Lfsg;->b:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    const-string v1, "Trailing commas are non-complaint JSON and not allowed by default. Use \'allowTrailingCommas = true\' in \'Json {}\' builder to support them."
+
+    invoke-virtual {p0, v0, p1, v1}, Lfsg;->E(ILjava/lang/String;Ljava/lang/String;)V
+
+    const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static c(Ljava/lang/String;)Ljava/lang/String;
+.method public static synthetic e(Lfsg;)V
+    .locals 1
+
+    const-string v0, "object"
+
+    invoke-static {p0, v0}, Lq2j;->d(Lfsg;Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public static final f(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 5
 
-    const-string v0, "token"
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    invoke-static {p0}, Ltri;->e(Ljava/lang/CharSequence;)Z
+    move-result v0
 
-    move-result v1
+    const/16 v1, 0xc8
 
-    const/4 v2, 0x0
+    if-ge v0, v1, :cond_0
 
-    const-string v3, "q2j"
-
-    const/4 v4, 0x0
-
-    if-eqz v1, :cond_0
-
-    new-array p0, v2, [Ljava/lang/Object;
-
-    invoke-static {p0, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string v0, "getStickerToken: response is empty or null"
-
-    invoke-static {v3, v4, v0, p0}, Lm4j;->x(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v4
+    goto :goto_0
 
     :cond_0
-    :try_start_0
-    new-instance v1, Lorg/json/JSONArray;
+    const/4 v0, -0x1
 
-    invoke-direct {v1, p0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
+    const-string v1, "....."
 
-    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+    if-ne p0, v0, :cond_2
 
-    move-result-object p0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+    move-result p0
+
+    add-int/lit8 p0, p0, -0x3c
+
+    if-gtz p0, :cond_1
+
+    :goto_0
+    return-object p1
+
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, p0, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p0
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 
-    :catch_0
-    move-exception p0
+    :cond_2
+    add-int/lit8 v0, p0, -0x1e
 
-    goto :goto_0
+    add-int/lit8 p0, p0, 0x1e
 
-    :cond_1
-    return-object v4
+    const-string v2, ""
 
-    :goto_0
-    const-string v0, "getStickerToken: error"
+    if-gtz v0, :cond_3
 
-    invoke-static {v3, v0, p0}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-object v3, v2
 
-    return-object v4
-.end method
+    goto :goto_1
 
-.method public static final d(Landroid/app/Activity;)V
-    .locals 2
+    :cond_3
+    move-object v3, v1
 
-    if-nez p0, :cond_0
+    :goto_1
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    goto :goto_0
+    move-result v4
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    if-lt p0, v4, :cond_4
 
-    move-result-object v0
+    move-object v1, v2
 
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+    :cond_4
+    invoke-static {v3}, Lhc0;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    if-eqz v0, :cond_1
+    if-gez v0, :cond_5
 
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
+    const/4 v0, 0x0
 
-    :try_start_0
-    const-string v1, "input_method"
+    :cond_5
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    move-result v3
 
-    move-result-object p0
+    if-le p0, v3, :cond_6
 
-    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
+    move p0, v3
 
-    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public static final e(Landroid/view/View;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/view/View;->clearFocus()V
-
-    :try_start_0
-    const-string v1, "input_method"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+    :cond_6
+    invoke-interface {p1, v0, p0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p0
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p0
 
-    :catchall_0
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static g(Llwg;[Ljava/lang/String;Ljava/util/Map;)Llwg;
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-nez p0, :cond_3
+
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    array-length v2, p1
+
+    if-ne v2, v1, :cond_1
+
+    aget-object p0, p1, v0
+
+    invoke-interface {p2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Llwg;
+
+    return-object p0
+
+    :cond_1
+    array-length v2, p1
+
+    if-le v2, v1, :cond_5
+
+    new-instance p0, Llwg;
+
+    invoke-direct {p0}, Llwg;-><init>()V
+
+    array-length v1, p1
+
     :goto_0
-    return-void
+    if-ge v0, v1, :cond_2
+
+    aget-object v2, p1, v0
+
+    invoke-interface {p2, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Llwg;
+
+    invoke-virtual {p0, v2}, Llwg;->a(Llwg;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-object p0
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    array-length v2, p1
+
+    if-ne v2, v1, :cond_4
+
+    aget-object p1, p1, v0
+
+    invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llwg;
+
+    invoke-virtual {p0, p1}, Llwg;->a(Llwg;)V
+
+    return-object p0
+
+    :cond_4
+    if-eqz p1, :cond_5
+
+    array-length v2, p1
+
+    if-le v2, v1, :cond_5
+
+    array-length v1, p1
+
+    :goto_1
+    if-ge v0, v1, :cond_5
+
+    aget-object v2, p1, v0
+
+    invoke-interface {p2, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Llwg;
+
+    invoke-virtual {p0, v2}, Llwg;->a(Llwg;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_5
+    return-object p0
 .end method

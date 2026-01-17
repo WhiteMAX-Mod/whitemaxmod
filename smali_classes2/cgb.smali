@@ -1,68 +1,61 @@
 .class public final Lcgb;
-.super Lro;
+.super Lfgb;
 .source "SourceFile"
 
-# interfaces
-.implements Ljig;
+
+# static fields
+.field public static final a:Lcgb;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcgb;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcgb;->a:Lcgb;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(ZLplb;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x1
 
-    invoke-interface {p2}, Lplb;->getIcon()Lsf7;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    iget p1, p1, Lsf7;->k:I
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-interface {p2}, Lplb;->i()Ltyf;
+    instance-of p1, p1, Lcgb;
 
-    move-result-object p1
+    if-nez p1, :cond_1
 
-    iget-object p1, p1, Ltyf;->b:Lzyf;
+    const/4 p1, 0x0
 
-    iget p1, p1, Lzyf;->b:I
+    return p1
 
-    :goto_0
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
-
-    return-void
+    :cond_1
+    return v0
 .end method
 
-.method public final onThemeChanged(Lplb;)V
+.method public final hashCode()I
     .locals 1
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
+    const v0, 0x4b0cc9f9    # 9226745.0f
 
-    move-result v0
-
-    invoke-virtual {p0, v0, p1}, Lcgb;->b(ZLplb;)V
-
-    return-void
+    return v0
 .end method
 
-.method public setChecked(Z)V
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
+    const-string v0, "Medium"
 
-    sget-object v0, Ldc3;->s0:Lole;
-
-    invoke-virtual {v0, p0}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Lcgb;->b(ZLplb;)V
-
-    return-void
+    return-object v0
 .end method

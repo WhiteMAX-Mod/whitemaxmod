@@ -4,58 +4,49 @@
 
 
 # instance fields
-.field public a:Z
-
-.field public b:Lbac;
-
-.field public c:I
-
-.field public d:Z
-
-.field public e:I
-
-.field public f:Z
-
-.field public g:I
+.field public final synthetic a:Lrq5;
 
 
 # direct methods
-.method public constructor <init>(Lbac;)V
+.method public constructor <init>(Lrq5;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhq5;->b:Lbac;
+    iput-object p1, p0, Lhq5;->a:Lrq5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
+.method public final a()V
     .locals 2
 
-    iget-boolean v0, p0, Lhq5;->a:Z
+    iget-object v0, p0, Lhq5;->a:Lrq5;
 
-    if-lez p1, :cond_0
+    iget-boolean v1, v0, Lrq5;->O0:Z
 
-    const/4 v1, 0x1
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lrq5;->N0:Lcfe;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    iget-boolean v1, v0, Lrq5;->d1:Z
+
+    if-eqz v1, :cond_1
 
     :goto_0
-    or-int/2addr v0, v1
+    iget-object v0, v0, Lrq5;->Z:Lb9g;
 
-    iput-boolean v0, p0, Lhq5;->a:Z
+    const/4 v1, 0x2
 
-    iget v0, p0, Lhq5;->c:I
+    invoke-virtual {v0, v1}, Lb9g;->f(I)Z
 
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lhq5;->c:I
-
+    :cond_1
     return-void
 .end method

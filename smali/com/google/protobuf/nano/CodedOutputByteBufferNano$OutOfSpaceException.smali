@@ -13,7 +13,7 @@
 
     const-string v2, "CodedOutputStream was writing to a flat byte array and ran out of space (pos "
 
-    invoke-static {v2, p1, v0, p2, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v0, p2, v1}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

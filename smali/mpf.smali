@@ -1,155 +1,110 @@
 .class public final Lmpf;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsi4;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lsi4;
+.field public final synthetic X:J
 
-.field public b:J
-
-.field public c:Landroid/net/Uri;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lsi4;)V
+.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lmpf;->X:J
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Lmpf;->a:Lsi4;
-
-    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    iput-object p1, p0, Lmpf;->c:Landroid/net/Uri;
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(Lzi4;)J
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lmpf;->a:Lsi4;
+    check-cast p1, Lzb4;
 
-    iget-object v1, p1, Lzi4;->a:Landroid/net/Uri;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-object v1, p0, Lmpf;->c:Landroid/net/Uri;
-
-    sget-object v1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    :try_start_0
-    invoke-interface {v0, p1}, Lsi4;->G(Lzi4;)J
-
-    move-result-wide v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {v0}, Lsi4;->getUri()Landroid/net/Uri;
+    invoke-virtual {p0, p1, p2}, Lmpf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    check-cast p1, Lmpf;
 
-    iput-object p1, p0, Lmpf;->c:Landroid/net/Uri;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :cond_0
-    invoke-interface {v0}, Lsi4;->w()Ljava/util/Map;
+    invoke-virtual {p1, p2}, Lmpf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-wide v1
+    move-result-object p1
 
-    :catchall_0
-    move-exception p1
-
-    invoke-interface {v0}, Lsi4;->getUri()Landroid/net/Uri;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iput-object v1, p0, Lmpf;->c:Landroid/net/Uri;
-
-    :cond_1
-    invoke-interface {v0}, Lsi4;->w()Ljava/util/Map;
-
-    throw p1
+    return-object p1
 .end method
 
-.method public final H(Lqsg;)V
-    .locals 1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lmpf;->a:Lsi4;
-
-    invoke-interface {v0, p1}, Lsi4;->H(Lqsg;)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lmpf;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->close()V
-
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lmpf;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->getUri()Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final read([BII)I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lmpf;->a:Lsi4;
+    new-instance p1, Lmpf;
 
-    invoke-interface {v0, p1, p2, p3}, Lki4;->read([BII)I
+    iget-wide v0, p0, Lmpf;->X:J
 
-    move-result p1
+    invoke-direct {p1, v0, v1, p2}, Lmpf;-><init>(JLkotlin/coroutines/Continuation;)V
 
-    const/4 p2, -0x1
-
-    if-eq p1, p2, :cond_0
-
-    iget-wide p2, p0, Lmpf;->b:J
-
-    int-to-long v0, p1
-
-    add-long/2addr p2, v0
-
-    iput-wide p2, p0, Lmpf;->b:J
-
-    :cond_0
-    return p1
+    return-object p1
 .end method
 
-.method public final w()Ljava/util/Map;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lmpf;->a:Lsi4;
+    iget v0, p0, Lmpf;->o:I
 
-    invoke-interface {v0}, Lsi4;->w()Ljava/util/Map;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lmpf;->o:I
+
+    iget-wide v0, p0, Lmpf;->X:J
+
+    invoke-static {v0, v1, p0}, Lumj;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

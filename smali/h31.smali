@@ -1,69 +1,65 @@
 .class public final Lh31;
-.super Ll84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Le94;
 
 
 # instance fields
-.field public X:Lofa;
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Lta;
-
-.field public d:Lj31;
-
-.field public o:Lat;
-
-.field public s0:Ljava/lang/Object;
-
-.field public t0:Ljava/lang/Object;
-
-.field public u0:Ljava/util/Iterator;
-
-.field public v0:Lxs;
-
-.field public w0:J
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public final synthetic y0:Lj31;
-
-.field public z0:I
+.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lj31;Ll84;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lh31;->y0:Lj31;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lh31;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(La94;La94;Z)V
+    .locals 0
 
-    iput-object p1, p0, Lh31;->x0:Ljava/lang/Object;
+    return-void
+.end method
 
-    iget p1, p0, Lh31;->z0:I
+.method public final b(La94;La94;Z)V
+    .locals 0
 
-    const/high16 v0, -0x80000000
+    if-eqz p3, :cond_0
 
-    or-int/2addr p1, v0
+    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->t0:[Lz28;
 
-    iput p1, p0, Lh31;->z0:I
+    iget-object p1, p0, Lh31;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
-    iget-object p1, p0, Lh31;->y0:Lj31;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lj31;->a(Lj31;Lat;Ll84;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->z0()Lq31;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p1}, Lq31;->s()Lh21;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p2, Ld31;
+
+    iget-object p2, p2, Ld31;->G0:Lspf;
+
+    invoke-virtual {p2}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lca;
+
+    invoke-virtual {p1, p2}, Lq31;->t(Lca;)V
+
+    :cond_0
+    return-void
 .end method

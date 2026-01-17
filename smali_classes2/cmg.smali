@@ -1,51 +1,100 @@
-.class public final Lcmg;
-.super Ll84;
+.class public final synthetic Lcmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lmmg;
+.field public final synthetic b:Lxmg;
 
-.field public Z:I
-
-.field public d:Lmmg;
-
-.field public o:Lsfa;
+.field public final synthetic c:Lp0b;
 
 
 # direct methods
-.method public constructor <init>(Lmmg;Ll84;)V
+.method public synthetic constructor <init>(Lxmg;Lp0b;I)V
     .locals 0
 
-    iput-object p1, p0, Lcmg;->Y:Lmmg;
+    iput p3, p0, Lcmg;->a:I
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lcmg;->b:Lxmg;
+
+    iput-object p2, p0, Lcmg;->c:Lp0b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    iput-object p1, p0, Lcmg;->X:Ljava/lang/Object;
+    iget v0, p0, Lcmg;->a:I
 
-    iget p1, p0, Lcmg;->Z:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lcmg;->b:Lxmg;
 
-    or-int/2addr p1, v0
+    iget-object v1, v0, Lxmg;->a:Ljavax/net/ssl/SSLEngine;
 
-    iput p1, p0, Lcmg;->Z:I
+    iget-object v2, p0, Lcmg;->c:Lp0b;
 
-    iget-object p1, p0, Lcmg;->Y:Lmmg;
+    iget-object v3, v2, Lp0b;->d:Ljava/lang/Object;
 
-    invoke-virtual {p1, p0}, Lmmg;->f(Ll84;)Ljava/lang/Object;
+    check-cast v3, [Ljava/nio/ByteBuffer;
 
-    move-result-object p1
+    iget v2, v2, Lp0b;->b:I
 
-    return-object p1
+    iget-object v0, v0, Lxmg;->j:Lfw0;
+
+    invoke-virtual {v0}, Lfw0;->e()Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v3, v4, v2, v0}, Ljavax/net/ssl/SSLEngine;->wrap([Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;)Ljavax/net/ssl/SSLEngineResult;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lcmg;->b:Lxmg;
+
+    iget-object v1, v0, Lxmg;->a:Ljavax/net/ssl/SSLEngine;
+
+    iget-object v0, v0, Lxmg;->i:Lfw0;
+
+    invoke-virtual {v0}, Lfw0;->e()Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcmg;->c:Lp0b;
+
+    iget-object v3, v2, Lp0b;->d:Ljava/lang/Object;
+
+    check-cast v3, [Ljava/nio/ByteBuffer;
+
+    const/4 v4, 0x0
+
+    iget v2, v2, Lp0b;->b:I
+
+    invoke-virtual {v1, v0, v3, v4, v2}, Ljavax/net/ssl/SSLEngine;->unwrap(Ljava/nio/ByteBuffer;[Ljava/nio/ByteBuffer;II)Ljavax/net/ssl/SSLEngineResult;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

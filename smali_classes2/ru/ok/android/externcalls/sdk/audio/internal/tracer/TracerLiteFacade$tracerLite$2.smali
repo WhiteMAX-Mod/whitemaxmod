@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;
-.super Ln58;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Llq6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ln58;",
-        "Lmq6;"
+        "Ly48;",
+        "Llq6;"
     }
 .end annotation
 
@@ -28,9 +28,9 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lfqg;",
+        "Lqqg;",
         "invoke",
-        "()Lfqg;",
+        "()Lqqg;",
         "<anonymous>"
     }
     k = 0x3
@@ -54,18 +54,29 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Ln58;-><init>(I)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Lfqg;
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lqqg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final invoke()Lqqg;
     .locals 4
 
     .line 2
-    new-instance v0, Lfqg;
+    new-instance v0, Lqqg;
 
     .line 3
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->$context:Landroid/content/Context;
@@ -78,39 +89,26 @@
     sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;
 
     .line 5
-    new-instance v3, Ldqg;
+    new-instance v3, Loqg;
 
-    invoke-direct {v3}, Ldqg;-><init>()V
+    invoke-direct {v3}, Loqg;-><init>()V
 
-    invoke-interface {v2, v3}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 6
-    new-instance v2, La6e;
+    new-instance v2, Lvnb;
 
-    invoke-direct {v2, v3}, La6e;-><init>(Ldqg;)V
+    invoke-direct {v2, v3}, Lvnb;-><init>(Loqg;)V
 
     .line 7
-    const-string v3, "ru.ok.android.externcalls.sdk.audio"
+    const-string v3, "one.video.calls.externcalls.sdk.audio"
 
-    invoke-direct {v0, v1, v3, v2}, Lfqg;-><init>(Landroid/content/Context;Ljava/lang/String;La6e;)V
+    invoke-direct {v0, v1, v3, v2}, Lqqg;-><init>(Landroid/content/Context;Ljava/lang/String;Lvnb;)V
 
     .line 8
     const-string v1, "calls-audiomanager-version"
 
-    const-string v2, "3.1.19"
-
-    invoke-virtual {v0, v1, v2}, Lfqg;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lfqg;
-
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lqqg;->b(Ljava/lang/String;)V
 
     return-object v0
 .end method

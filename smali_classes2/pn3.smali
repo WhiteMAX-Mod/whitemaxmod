@@ -1,53 +1,54 @@
-.class public final Lpn3;
-.super Ll84;
+.class public final synthetic Lpn3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnm4;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Ljava/lang/Long;
 
-.field public final synthetic Y:Lrn3;
+.field public final synthetic b:[J
 
-.field public Z:I
+.field public final synthetic c:Ljava/lang/String;
 
-.field public d:Lrn3;
-
-.field public o:I
+.field public final synthetic d:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lrn3;Ll84;)V
+.method public synthetic constructor <init>(Ljava/lang/Long;[JLjava/lang/String;Ljava/lang/Integer;)V
     .locals 0
 
-    iput-object p1, p0, Lpn3;->Y:Lrn3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpn3;->a:Ljava/lang/Long;
+
+    iput-object p2, p0, Lpn3;->b:[J
+
+    iput-object p3, p0, Lpn3;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lpn3;->d:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 5
 
-    iput-object p1, p0, Lpn3;->X:Ljava/lang/Object;
+    new-instance v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
-    iget p1, p0, Lpn3;->Z:I
+    iget-object v1, p0, Lpn3;->a:Ljava/lang/Long;
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Lpn3;->b:[J
 
-    or-int/2addr p1, v0
+    iget-object v3, p0, Lpn3;->c:Ljava/lang/String;
 
-    iput p1, p0, Lpn3;->Z:I
+    iget-object v4, p0, Lpn3;->d:Ljava/lang/Integer;
 
-    iget-object p1, p0, Lpn3;->Y:Lrn3;
+    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/complaintbottomsheet/ComplaintBottomSheet;-><init>(Ljava/lang/Long;[JLjava/lang/String;Ljava/lang/Integer;)V
 
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lrn3;->t(Lrn3;ILl84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

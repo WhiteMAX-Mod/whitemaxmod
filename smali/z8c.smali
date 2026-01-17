@@ -3,148 +3,84 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Landroid/graphics/PointF;
 
-.field public final synthetic b:Lone/me/calls/ui/ui/pip/PipScreen;
+.field public final synthetic b:F
+
+.field public final synthetic c:F
+
+.field public final synthetic d:La9c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/pip/PipScreen;I)V
+.method public synthetic constructor <init>(Landroid/graphics/PointF;FFLa9c;)V
     .locals 0
 
-    iput p2, p0, Lz8c;->a:I
-
-    iput-object p1, p0, Lz8c;->b:Lone/me/calls/ui/ui/pip/PipScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz8c;->a:Landroid/graphics/PointF;
+
+    iput p2, p0, Lz8c;->b:F
+
+    iput p3, p0, Lz8c;->c:F
+
+    iput-object p4, p0, Lz8c;->d:La9c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    iget v0, p0, Lz8c;->a:I
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Lz8c;->b:Lone/me/calls/ui/ui/pip/PipScreen;
+    move-result-object p1
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Ljava/lang/Float;
 
-    sget-object v0, Lone/me/calls/ui/ui/pip/PipScreen;->o:[Lp38;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    iget-object v0, v1, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
+    move-result p1
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lz8c;->a:Landroid/graphics/PointF;
 
-    move-result-object v0
+    iget v1, v0, Landroid/graphics/PointF;->x:F
 
-    check-cast v0, Ls8c;
+    iget v2, p0, Lz8c;->b:F
 
-    iget-object v0, v0, Ls8c;->X:Ljava/lang/Object;
+    invoke-static {v2, v1, p1, v1}, Lpqb;->g(FFFF)F
 
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    iget v0, v0, Landroid/graphics/PointF;->y:F
 
-    check-cast v0, Lphh;
+    iget v2, p0, Lz8c;->c:F
 
-    return-object v0
+    invoke-static {v2, v0, p1, v0}, Lpqb;->g(FFFF)F
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/pip/PipScreen;->o:[Lp38;
+    move-result p1
 
-    sget-object v0, Lf71;->a:Lf71;
+    iget-object v0, p0, Lz8c;->d:La9c;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    iget-object v2, v0, La9c;->b:Limf;
 
-    move-result-object v2
+    invoke-virtual {v2, v1, p1}, Limf;->H(FF)V
 
-    const/16 v3, 0x14
+    iget-object v0, v0, La9c;->c:Lie1;
 
-    invoke-virtual {v2, v3}, Lu5;->c(I)Ljava/lang/Object;
+    check-cast v0, Lje1;
 
-    move-result-object v2
+    iget-object v0, v0, Lje1;->b:Landroid/graphics/PointF;
 
-    move-object v4, v2
+    iput v1, v0, Landroid/graphics/PointF;->x:F
 
-    check-cast v4, Lbub;
+    iput p1, v0, Landroid/graphics/PointF;->y:F
 
-    invoke-virtual {v0}, Lf71;->a()Ldz1;
-
-    move-result-object v6
-
-    invoke-virtual {v0}, Lf71;->b()Lyx1;
-
-    move-result-object v5
-
-    new-instance v7, Ldjj;
-
-    invoke-direct {v7, v1}, Ldjj;-><init>(Ljava/lang/Object;)V
-
-    invoke-static {}, Lko1;->b()Ld68;
-
-    move-result-object v8
-
-    new-instance v3, Ls8c;
-
-    invoke-direct/range {v3 .. v8}, Ls8c;-><init>(Lbub;Lyx1;Ldz1;Lq8c;Ld68;)V
-
-    return-object v3
-
-    :pswitch_1
-    sget-object v0, Lone/me/calls/ui/ui/pip/PipScreen;->o:[Lp38;
-
-    new-instance v0, Lvl1;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Lvl1;-><init>(Landroid/content/Context;)V
-
-    sget-object v2, Ldc3;->s0:Lole;
-
-    invoke-virtual {v2, v0}, Lole;->q(Landroid/view/View;)Lrbb;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lrbb;->c:Lplb;
-
-    invoke-virtual {v0, v2}, Lvl1;->setPipTheme(Lplb;)V
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v2, Lz8c;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, v1, v3}, Lz8c;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;I)V
-
-    invoke-virtual {v0, v2}, Lvl1;->setVideoLayoutUpdatesControllerProvider(Lmq6;)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lvl1;->setBackgroundCorners(F)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

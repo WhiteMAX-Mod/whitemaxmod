@@ -3,89 +3,114 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lixd;
+.implements Le5e;
 
 
 # instance fields
-.field public a:Lmq6;
-
-.field public b:Ljava/lang/Object;
+.field public final a:Z
 
 
-# virtual methods
-.method public final e()Z
-    .locals 2
+# direct methods
+.method public constructor <init>(Z)V
+    .locals 0
 
-    iget-object v0, p0, Lkxd;->b:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Luna;->B0:Luna;
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Lkxd;->b:Ljava/lang/Object;
-
-    sget-object v1, Luna;->B0:Luna;
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lkxd;->a:Lmq6;
-
-    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lkxd;->b:Ljava/lang/Object;
-
-    :cond_0
-    iget-object v0, p0, Lkxd;->b:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final reset()V
-    .locals 1
-
-    sget-object v0, Luna;->B0:Luna;
-
-    iput-object v0, p0, Lkxd;->b:Ljava/lang/Object;
+    iput-boolean p1, p0, Lkxd;->a:Z
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+
+# virtual methods
+.method public final a()Z
     .locals 1
 
-    invoke-virtual {p0}, Lkxd;->e()Z
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lkxd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lkxd;
+
+    iget-boolean v2, p0, Lkxd;->a:Z
+
+    iget-boolean p1, p1, Lkxd;->a:Z
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lkxd;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    invoke-virtual {p0}, Lkxd;->getValue()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RequestAsr{isEnabled="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lkxd;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "Lazy value not initialized yet."
 
     return-object v0
 .end method

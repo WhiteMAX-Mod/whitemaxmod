@@ -1,46 +1,103 @@
-.class public final synthetic Lbe9;
+.class public final Lbe9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpd9;
-
 
 # instance fields
-.field public final synthetic a:Ljd7;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lkz4;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ln8g;
+
+.field public final e:Ln8g;
+
+.field public final f:Ln8g;
+
+.field public final g:Ln8g;
+
+.field public final h:Ln8g;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljd7;)V
+.method public constructor <init>(Ljava/lang/String;Lkz4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbe9;->a:Ljd7;
+    iput-object p1, p0, Lbe9;->a:Ljava/lang/String;
 
-    return-void
-.end method
+    iput-object p2, p0, Lbe9;->b:Lkz4;
 
+    const-class p1, Lbe9;
 
-# virtual methods
-.method public final a(Lxk0;Lglg;)V
-    .locals 0
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget-object p1, p0, Lbe9;->a:Ljd7;
+    move-result-object p1
 
-    iget-object p1, p1, Ljd7;->i:Ljava/lang/Object;
+    iput-object p1, p0, Lbe9;->c:Ljava/lang/String;
 
-    check-cast p1, Lnq5;
+    new-instance p1, Lzd9;
 
-    iget-object p1, p1, Lnq5;->Z:Lo8g;
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lzd9;-><init>(Lbe9;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lbe9;->d:Ln8g;
+
+    new-instance p1, Lzd9;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Lzd9;-><init>(Lbe9;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lbe9;->e:Ln8g;
+
+    new-instance p1, Lzd9;
 
     const/4 p2, 0x2
 
-    invoke-virtual {p1, p2}, Lo8g;->e(I)V
+    invoke-direct {p1, p0, p2}, Lzd9;-><init>(Lbe9;I)V
 
-    const/16 p2, 0x16
+    new-instance p2, Ln8g;
 
-    invoke-virtual {p1, p2}, Lo8g;->f(I)Z
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lbe9;->f:Ln8g;
+
+    new-instance p1, Lzd9;
+
+    const/4 p2, 0x3
+
+    invoke-direct {p1, p0, p2}, Lzd9;-><init>(Lbe9;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lbe9;->g:Ln8g;
+
+    new-instance p1, Lzd9;
+
+    const/4 p2, 0x4
+
+    invoke-direct {p1, p0, p2}, Lzd9;-><init>(Lbe9;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lbe9;->h:Ln8g;
 
     return-void
 .end method

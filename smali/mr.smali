@@ -1,26 +1,32 @@
 .class public final Lmr;
-.super Lb5g;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lyv2;
+.field public X:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:Lwv2;
+
+.field public final synthetic Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+.field public o:Lwv2;
 
 
 # direct methods
-.method public constructor <init>(Lyv2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lwv2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lmr;->X:Lyv2;
+    iput-object p1, p0, Lmr;->Y:Lwv2;
+
+    iput-object p2, p0, Lmr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +36,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lxv2;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,41 +46,89 @@
 
     check-cast p1, Lmr;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lmr;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Lmr;
+    new-instance p1, Lmr;
 
-    iget-object v1, p0, Lmr;->X:Lyv2;
+    iget-object v0, p0, Lmr;->Y:Lwv2;
 
-    invoke-direct {v0, v1, p2}, Lmr;-><init>(Lyv2;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lmr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    iput-object p1, v0, Lmr;->o:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Lmr;-><init>(Lwv2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget v0, p0, Lmr;->X:I
 
-    iget-object p1, p0, Lmr;->o:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Lxv2;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lmr;->X:Lyv2;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0, p1}, Lyv2;->a(Lxv2;)V
+    iget-object v0, p0, Lmr;->o:Lwv2;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lz28;
+
+    iget-object p1, p0, Lmr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Lbs;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lmr;->Y:Lwv2;
+
+    iput-object v0, p0, Lmr;->o:Lwv2;
+
+    iput v1, p0, Lmr;->X:I
+
+    invoke-virtual {p1, p0}, Lbs;->w(Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    if-ne p1, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    check-cast p1, Lvv2;
+
+    invoke-virtual {v0, p1}, Lwv2;->a(Lvv2;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

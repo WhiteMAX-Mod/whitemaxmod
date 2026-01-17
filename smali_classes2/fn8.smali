@@ -1,136 +1,71 @@
-.class public final Lfn8;
-.super Lb5g;
+.class public final synthetic Lfn8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lgn8;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final synthetic b:Lun8;
+
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lgn8;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lun8;Ljava/util/List;I)V
     .locals 0
 
-    iput-object p1, p0, Lfn8;->X:Lgn8;
+    iput p3, p0, Lfn8;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lfn8;->b:Lun8;
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lfn8;->c:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lac4;
+    iget v0, p0, Lfn8;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lfn8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lfn8;->c:Ljava/util/List;
 
-    move-result-object p1
+    iget-object v1, p0, Lfn8;->b:Lun8;
 
-    check-cast p1, Lfn8;
+    iget-object v1, v1, Lun8;->Y:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/LinkedBlockingQueue;->put(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p2}, Lfn8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    move-result-object p1
+    return-object v0
 
-    return-object p1
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lfn8;->c:Ljava/util/List;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v1, p0, Lfn8;->b:Lun8;
 
-    new-instance p1, Lfn8;
+    iget-object v1, v1, Lun8;->o:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    iget-object v0, p0, Lfn8;->X:Lgn8;
-
-    invoke-direct {p1, v0, p2}, Lfn8;-><init>(Lgn8;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lfn8;->o:I
-
-    iget-object v1, p0, Lfn8;->X:Lgn8;
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    sget-object v4, Lbc4;->a:Lbc4;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/LinkedBlockingQueue;->put(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    nop
 
-    iget-object p1, v1, Lgn8;->b:Len8;
-
-    iput v3, p0, Lfn8;->o:I
-
-    invoke-virtual {p1, p0}, Len8;->a(Lb5g;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    iget-object p1, v1, Lgn8;->c:Lb5g;
-
-    iput v2, p0, Lfn8;->o:I
-
-    invoke-interface {p1, p0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_4
-
-    :goto_1
-    return-object v4
-
-    :cond_4
-    :goto_2
-    sget-object p1, Lv2h;->a:Lv2h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

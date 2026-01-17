@@ -8,7 +8,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lfj5;Z)V
+.method public constructor <init>(Lij5;Z)V
     .locals 3
 
     if-eqz p2, :cond_0

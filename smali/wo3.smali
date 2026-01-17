@@ -1,9 +1,9 @@
-.class public final Lwo3;
-.super Ln58;
+.class public final synthetic Lwo3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lc88;
 
 
 # instance fields
@@ -20,150 +20,102 @@
 
     iput-object p1, p0, Lwo3;->b:Landroidx/fragment/app/b;
 
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Ln58;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final d(Lj88;Ln78;)V
+    .locals 1
 
-    iget v0, p0, Lwo3;->a:I
+    iget p1, p0, Lwo3;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    new-instance v0, Lr1b;
+    iget-object p1, p0, Lwo3;->b:Landroidx/fragment/app/b;
 
-    new-instance v1, Lno3;
+    sget-object v0, Ln78;->ON_DESTROY:Ln78;
 
-    const/4 v2, 0x1
+    if-ne p2, v0, :cond_1
 
-    iget-object v3, p0, Lwo3;->b:Landroidx/fragment/app/b;
+    iget-object p2, p1, Lfp3;->b:Ltl;
 
-    invoke-direct {v1, v3, v2}, Lno3;-><init>(Landroidx/fragment/app/b;I)V
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Lr1b;-><init>(Ljava/lang/Runnable;)V
+    iput-object v0, p2, Ltl;->c:Ljava/lang/Object;
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {p1}, Landroid/app/Activity;->isChangingConfigurations()Z
 
-    const/16 v2, 0x21
+    move-result p2
 
-    if-lt v1, v2, :cond_1
+    if-nez p2, :cond_0
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    invoke-virtual {p1}, Lfp3;->h()Luth;
 
-    move-result-object v1
+    move-result-object p2
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    new-instance v2, Lp02;
-
-    const/16 v4, 0xc
-
-    invoke-direct {v2, v3, v4, v0}, Lp02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_0
+    invoke-virtual {p2}, Luth;->a()V
 
     :cond_0
-    iget-object v1, v3, Lxo3;->a:Lc98;
+    iget-object p1, p1, Lfp3;->X:Lcp3;
 
-    new-instance v2, Lro3;
+    iget-object p2, p1, Lcp3;->d:Landroidx/fragment/app/b;
 
-    const/4 v4, 0x0
+    invoke-virtual {p2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    invoke-direct {v2, v0, v4, v3}, Lro3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Lc98;->a(Lw88;)V
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    invoke-virtual {p2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroid/view/ViewTreeObserver;->removeOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
 
     :cond_1
-    :goto_0
-    return-object v0
+    return-void
 
     :pswitch_0
-    new-instance v0, Llq6;
+    iget-object p1, p0, Lwo3;->b:Landroidx/fragment/app/b;
 
-    iget-object v1, p0, Lwo3;->b:Landroidx/fragment/app/b;
+    sget-object v0, Ln78;->ON_STOP:Ln78;
 
-    iget-object v2, v1, Lxo3;->X:Luo3;
+    if-ne p2, v0, :cond_2
 
-    new-instance v3, Lwo3;
+    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    const/4 v4, 0x1
+    move-result-object p1
 
-    invoke-direct {v3, v1, v4}, Lwo3;-><init>(Landroidx/fragment/app/b;I)V
+    if-eqz p1, :cond_2
 
-    invoke-direct {v0, v2, v3}, Llq6;-><init>(Ljava/util/concurrent/Executor;Lwo3;)V
+    invoke-virtual {p1}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_1
-    iget-object v0, p0, Lwo3;->b:Landroidx/fragment/app/b;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0}, Lxo3;->reportFullyDrawn()V
-
-    sget-object v0, Lv2h;->a:Lv2h;
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Ls8e;
-
-    iget-object v1, p0, Lwo3;->b:Landroidx/fragment/app/b;
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v3
-
-    goto :goto_1
+    invoke-virtual {p1}, Landroid/view/View;->cancelPendingInputEvents()V
 
     :cond_2
-    const/4 v3, 0x0
-
-    :goto_1
-    invoke-direct {v0, v2, v1, v3}, Ls8e;-><init>(Landroid/app/Application;Lr8e;Landroid/os/Bundle;)V
-
-    return-object v0
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

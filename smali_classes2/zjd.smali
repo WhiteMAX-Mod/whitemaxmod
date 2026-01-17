@@ -1,163 +1,304 @@
 .class public final Lzjd;
-.super Lb5g;
+.super Lj2;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Leld;
 
 
 # instance fields
-.field public final synthetic X:Ldkd;
+.field public X:Lcjd;
 
-.field public o:I
+.field public Y:I
+
+.field public Z:Z
+
+.field public d:Z
+
+.field public o:Lnq6;
 
 
 # direct methods
-.method public constructor <init>(Ldkd;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lzjd;->X:Ldkd;
+    new-instance v0, Lxob;
 
-    const/4 p1, 0x2
+    const/16 v1, 0x14
 
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lxob;-><init>(I)V
+
+    invoke-direct {p0, v0}, Lj2;-><init>(Lnq6;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lzjd;->d:Z
+
+    sget v0, Lyjd;->a:I
+
+    iput v0, p0, Lzjd;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final g(Ltp9;Z)V
+    .locals 2
 
-    check-cast p1, Lac4;
+    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lzjd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v0, Lhjd;
 
-    move-result-object p1
+    iget-object v1, p0, Lzjd;->o:Lnq6;
 
-    check-cast p1, Lzjd;
+    invoke-virtual {v0, v1}, Lhjd;->setOnChipClickListener(Lnq6;)V
 
-    sget-object p2, Lv2h;->a:Lv2h;
+    iget-object v0, p0, Lzjd;->X:Lcjd;
 
-    invoke-virtual {p1, p2}, Lzjd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
 
-    return-object p1
+    move-result-object v1
+
+    check-cast v1, Lhjd;
+
+    invoke-virtual {v1, v0}, Lhjd;->setChipObserver(Lcjd;)V
+
+    :cond_0
+    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lhjd;
+
+    iget-boolean v1, p0, Lzjd;->Z:Z
+
+    invoke-virtual {v0, v1}, Lhjd;->setStackFromEnd(Z)V
+
+    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lhjd;
+
+    iget-boolean v1, p0, Lzjd;->d:Z
+
+    invoke-virtual {v0, v1}, Lhjd;->setIncoming(Z)V
+
+    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lhjd;
+
+    iget v1, p0, Lzjd;->Y:I
+
+    invoke-virtual {v0, p1, v1, p2}, Lhjd;->f(Ltp9;IZ)V
+
+    invoke-virtual {p0}, Lj2;->B()V
+
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final l(Lfv0;Z)V
+    .locals 6
 
-    new-instance p1, Lzjd;
+    iget-object v0, p0, Lj2;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lzjd;->X:Ldkd;
+    invoke-interface {v0}, Lo58;->e()Z
 
-    invoke-direct {p1, v0, p2}, Lzjd;-><init>(Ldkd;Lkotlin/coroutines/Continuation;)V
+    move-result v1
 
-    return-object p1
-.end method
+    if-eqz v1, :cond_2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    iget v0, p0, Lzjd;->o:I
+    move-result-object v0
 
-    sget-object v1, Lv2h;->a:Lv2h;
+    check-cast v0, Lhjd;
 
-    const/4 v2, 0x1
+    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    if-ne v0, v2, :cond_0
+    check-cast v0, Lhjd;
 
-    :try_start_0
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object v1
+    const/4 v1, 0x0
 
-    :catchall_0
-    move-exception p1
+    :goto_0
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_2
+
+    add-int/lit8 v2, v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    check-cast v1, Lfjd;
+
+    iget-object v3, p1, Lfv0;->d:Liv0;
+
+    iget-object v3, v3, Liv0;->a:Ljv0;
+
+    iget-object v4, p1, Lfv0;->a:Lyu0;
+
+    iget-object v4, v4, Lyu0;->c:Ldv0;
+
+    if-eqz p2, :cond_0
+
+    iget v5, v4, Ldv0;->a:I
+
+    iput v5, v1, Lfjd;->o:I
+
+    iget v4, v4, Ldv0;->b:I
+
+    iput v4, v1, Lfjd;->t0:I
+
+    iget v4, v3, Ljv0;->a:I
+
+    iput v4, v1, Lfjd;->u0:I
+
+    iget v3, v3, Ljv0;->b:I
+
+    iput v3, v1, Lfjd;->v0:I
 
     goto :goto_1
 
-    :catch_0
-    move-exception p1
-
-    goto :goto_2
-
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget v5, v4, Ldv0;->c:I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iput v5, v1, Lfjd;->o:I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget v4, v4, Ldv0;->d:I
 
-    throw p1
+    iput v4, v1, Lfjd;->t0:I
 
-    :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    iget v4, v3, Ljv0;->c:I
 
-    iget-object p1, p0, Lzjd;->X:Ldkd;
+    iput v4, v1, Lfjd;->u0:I
 
-    :try_start_1
-    iget-object p1, p1, Ldkd;->C0:Lz7g;
+    iget v3, v3, Ljv0;->d:I
 
-    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+    iput v3, v1, Lfjd;->v0:I
 
-    move-result-object p1
+    :goto_1
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 
-    check-cast p1, Lf13;
-
-    iput v2, p0, Lzjd;->o:I
-
-    iget-object v0, p1, Lf13;->l:Lrb4;
-
-    new-instance v2, Ld13;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Ld13;-><init>(Lf13;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v2, p0}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
+    move v1, v2
 
     goto :goto_0
 
-    :cond_2
-    move-object p1, v1
+    :cond_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    :goto_0
-    if-ne p1, v0, :cond_3
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    return-object v0
-
-    :cond_3
-    return-object v1
-
-    :goto_1
-    const-string v0, "sdk:ReactionsViewModel"
-
-    const-string v2, "runChatSubscribeNotifObserving: fail to run()"
-
-    invoke-static {v0, v2, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
-
-    :goto_2
     throw p1
+
+    :cond_2
+    return-void
+.end method
+
+.method public final r(Z)V
+    .locals 3
+
+    iget-object v0, p0, Lj2;->c:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lo58;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhjd;
+
+    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lhjd;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2, p1}, Lhjd;->f(Ltp9;IZ)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setChipObserver(Lcjd;)V
+    .locals 1
+
+    iget-object v0, p0, Lj2;->c:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lo58;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lhjd;
+
+    invoke-virtual {v0, p1}, Lhjd;->setChipObserver(Lcjd;)V
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Lzjd;->X:Lcjd;
+
+    return-void
+.end method
+
+.method public final setIsIncoming(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lzjd;->d:Z
+
+    return-void
+.end method
+
+.method public final setMaxReactionsCount(I)V
+    .locals 0
+
+    iput p1, p0, Lzjd;->Y:I
+
+    return-void
+.end method
+
+.method public final setOnClickListener(Lnq6;)V
+    .locals 0
+
+    iput-object p1, p0, Lzjd;->o:Lnq6;
+
+    return-void
+.end method
+
+.method public final setStackFromEnd(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lzjd;->Z:Z
+
+    return-void
 .end method

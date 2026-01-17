@@ -1,109 +1,110 @@
 .class public final Ld3e;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lf1e;
 
-.field public final b:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(Lf1e;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld3e;->X:Lf1e;
 
-    iput p1, p0, Ld3e;->a:I
+    const/4 p1, 0x2
 
-    iput p2, p0, Ld3e;->b:I
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lzb4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ld3e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ld3e;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ld3e;
 
-    iget v1, p0, Ld3e;->a:I
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget v3, p1, Ld3e;->a:I
+    invoke-virtual {p1, p2}, Ld3e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
+    move-result-object p1
 
-    return v2
-
-    :cond_2
-    iget v1, p0, Ld3e;->b:I
-
-    iget p1, p1, Ld3e;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Ld3e;
+
+    iget-object v0, p0, Ld3e;->X:Lf1e;
+
+    invoke-direct {p1, v0, p2}, Ld3e;-><init>(Lf1e;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Ld3e;->a:I
+    iget v0, p0, Ld3e;->o:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    const/4 v1, 0x1
 
-    move-result v0
+    if-eqz v0, :cond_1
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-ne v0, v1, :cond_0
 
-    iget v1, p0, Ld3e;->b:I
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    goto :goto_0
 
-    move-result v1
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    add-int/2addr v1, v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return v1
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    throw p1
 
-    const-string v0, ", height="
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iput v1, p0, Ld3e;->o:I
 
-    const-string v2, "IconSize(width="
+    iget-object p1, p0, Ld3e;->X:Lf1e;
 
-    iget v3, p0, Ld3e;->a:I
+    invoke-static {p1, p0}, Lf1e;->l(Lf1e;Lo84;)Ljava/lang/Object;
 
-    iget v4, p0, Ld3e;->b:I
+    move-result-object p1
 
-    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    sget-object v0, Lac4;->a:Lac4;
 
-    move-result-object v0
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

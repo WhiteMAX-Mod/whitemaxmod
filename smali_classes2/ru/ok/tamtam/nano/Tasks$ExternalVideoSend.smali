@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
-.super Lsp9;
+.super Lbp9;
 .source "SourceFile"
 
 
@@ -36,7 +36,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lsp9;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->clear()Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
 
@@ -50,7 +50,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ldu7;->b:Ljava/lang/Object;
+    sget-object v0, Llt7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -92,7 +92,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Llg3;)Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+.method public static parseFrom(Lvg3;)Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -105,7 +105,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
 
     move-result-object p0
 
@@ -125,7 +125,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
 
-    invoke-static {v0, p0}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
+    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
 
     move-result-object p0
 
@@ -157,7 +157,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lsp9;->cachedSize:I
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-object p0
 .end method
@@ -175,7 +175,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v4, v0, v1}, Lmg3;->h(IJ)I
+    invoke-static {v4, v0, v1}, Lwg3;->h(IJ)I
 
     move-result v0
 
@@ -199,7 +199,7 @@
 
     iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
 
-    invoke-static {v1, v5}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v5}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -218,7 +218,7 @@
 
     iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
 
-    invoke-static {v1, v5}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v5}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -233,7 +233,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v1, v5, v6}, Lmg3;->h(IJ)I
+    invoke-static {v1, v5, v6}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -248,7 +248,7 @@
 
     const/4 v1, 0x5
 
-    invoke-static {v1, v5, v6}, Lmg3;->h(IJ)I
+    invoke-static {v1, v5, v6}, Lwg3;->h(IJ)I
 
     move-result v1
 
@@ -267,7 +267,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lmg3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v2}, Lwg3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -279,7 +279,23 @@
     return v0
 .end method
 
-.method public mergeFrom(Llg3;)Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+.method public bridge synthetic mergeFrom(Lvg3;)Lbp9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public mergeFrom(Lvg3;)Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -290,7 +306,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Llg3;->s()I
+    invoke-virtual {p1}, Lvg3;->s()I
 
     move-result v0
 
@@ -321,7 +337,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Llg3;->u(I)Z
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
 
     move-result v0
 
@@ -331,7 +347,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -341,7 +357,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -352,7 +368,7 @@
 
     .line 7
     :cond_3
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -363,7 +379,7 @@
 
     .line 9
     :cond_4
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -373,7 +389,7 @@
 
     .line 10
     :cond_5
-    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lvg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -383,7 +399,7 @@
 
     .line 11
     :cond_6
-    invoke-virtual {p1}, Llg3;->q()J
+    invoke-virtual {p1}, Lvg3;->q()J
 
     move-result-wide v0
 
@@ -397,23 +413,7 @@
     return-object p0
 .end method
 
-.method public bridge synthetic mergeFrom(Llg3;)Lsp9;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->mergeFrom(Llg3;)Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public writeTo(Lmg3;)V
+.method public writeTo(Lwg3;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -431,7 +431,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1, v4, v0, v1}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lwg3;->x(IJ)V
 
     :cond_0
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
@@ -448,7 +448,7 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v4}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_1
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
@@ -463,7 +463,7 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v4}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_2
     iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->messageId:J
@@ -474,7 +474,7 @@
 
     const/4 v0, 0x4
 
-    invoke-virtual {p1, v0, v4, v5}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v0, v4, v5}, Lwg3;->x(IJ)V
 
     :cond_3
     iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->chatId:J
@@ -485,7 +485,7 @@
 
     const/4 v0, 0x5
 
-    invoke-virtual {p1, v0, v4, v5}, Lmg3;->x(IJ)V
+    invoke-virtual {p1, v0, v4, v5}, Lwg3;->x(IJ)V
 
     :cond_4
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
@@ -500,7 +500,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lmg3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lwg3;->E(ILjava/lang/String;)V
 
     :cond_5
     return-void

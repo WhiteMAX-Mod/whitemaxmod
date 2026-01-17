@@ -19,7 +19,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/log/LogItem;",
         "item",
-        "Lv2h;",
+        "Lb3h;",
         "log",
         "(Lru/ok/android/externcalls/sdk/log/LogItem;)V",
         "Companion",
@@ -52,12 +52,12 @@
     return-void
 .end method
 
-.method public static create(Landroid/content/Context;ZZLcgd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
+.method public static create(Landroid/content/Context;ZZLahd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
     .locals 1
 
     sget-object v0, Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;->Companion:Lru/ok/android/externcalls/sdk/log/ItemToLogConverter$Companion;
 
-    invoke-virtual {v0, p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/log/ItemToLogConverter$Companion;->create(Landroid/content/Context;ZZLcgd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
+    invoke-virtual {v0, p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/log/ItemToLogConverter$Companion;->create(Landroid/content/Context;ZZLahd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
 
     move-result-object p0
 

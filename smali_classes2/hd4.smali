@@ -1,5 +1,5 @@
 .class public final Lhd4;
-.super Lm14;
+.super Lid4;
 .source "SourceFile"
 
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x18df6f9d
+    const v0, 0x3c4329d
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "CreateChatButtonClicked"
+    const-string v0, "ServiceUnavailable"
 
     return-object v0
 .end method

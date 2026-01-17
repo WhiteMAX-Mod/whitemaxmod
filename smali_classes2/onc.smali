@@ -1,86 +1,48 @@
-.class public final Lonc;
-.super Lie0;
+.class public final synthetic Lonc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnm4;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:J
+
+.field public final synthetic b:Lsnc;
+
+.field public final synthetic c:Lrnc;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public synthetic constructor <init>(JLsnc;Lrnc;)V
+    .locals 0
 
-    const/16 v0, 0xe
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    iput-wide p1, p0, Lonc;->a:J
 
-    iput-wide p1, p0, Lonc;->b:J
+    iput-object p3, p0, Lonc;->b:Lsnc;
+
+    iput-object p4, p0, Lonc;->c:Lrnc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    if-ne p0, p1, :cond_0
+    iget-wide v1, p0, Lonc;->a:J
 
-    return v0
+    iget-object v3, p0, Lonc;->b:Lsnc;
 
-    :cond_0
-    instance-of v1, p1, Lonc;
+    iget-object v4, p0, Lonc;->c:Lrnc;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lonc;
-
-    iget-wide v3, p0, Lonc;->b:J
-
-    iget-wide v5, p1, Lonc;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lonc;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenChat(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lonc;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;-><init>(JLsnc;Lrnc;)V
 
     return-object v0
 .end method

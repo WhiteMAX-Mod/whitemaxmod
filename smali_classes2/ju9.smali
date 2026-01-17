@@ -1,44 +1,111 @@
 .class public final Lju9;
-.super Ljava/lang/Object;
+.super Lscout/Component;
 .source "SourceFile"
 
-# interfaces
-.implements Lru9;
 
-
-# instance fields
-.field public final a:J
-
-.field public final b:Lc10;
+# static fields
+.field public static final a:Lju9;
 
 
 # direct methods
-.method public constructor <init>(JLc10;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lju9;
 
-    iput-wide p1, p0, Lju9;->a:J
+    sget-object v1, Liw9;->a:Lgce;
 
-    iput-object p3, p0, Lju9;->b:Lc10;
+    invoke-direct {v0, v1}, Lscout/Component;-><init>(Lgce;)V
+
+    sput-object v0, Lju9;->a:Lju9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final a()Lfl7;
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    return v0
+    move-result-object v0
+
+    invoke-virtual {v0}, Lr5;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfl7;
+
+    return-object v0
 .end method
 
-.method public final j()J
+.method public final b()Lw8e;
+    .locals 5
+
+    new-instance v0, Lw8e;
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const/16 v2, 0x1c9
+
+    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljce;
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const/16 v3, 0xc
+
+    invoke-virtual {v2, v3}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lmbg;
+
+    check-cast v2, Lj9b;
+
+    invoke-virtual {v2}, Lj9b;->b()Lsb4;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v3
+
+    const/16 v4, 0x1ca
+
+    invoke-virtual {v3, v4}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ldwb;
+
+    invoke-direct {v0, v1, v2, v3}, Lw8e;-><init>(Ljce;Lsb4;Ldwb;)V
+
+    return-object v0
+.end method
+
+.method public final getDispatchers()Lmbg;
     .locals 2
 
-    iget-wide v0, p0, Lju9;->a:J
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    return-wide v0
+    move-result-object v0
+
+    const/16 v1, 0xc
+
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmbg;
+
+    return-object v0
 .end method

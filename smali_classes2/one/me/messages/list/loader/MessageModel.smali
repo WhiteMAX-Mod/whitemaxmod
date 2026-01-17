@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lw77;
-.implements Lie8;
+.implements Lg77;
+.implements Lud8;
 
 
 # annotations
@@ -20,17 +20,17 @@
     }
     d2 = {
         "Lone/me/messages/list/loader/MessageModel;",
-        "Lw77;",
-        "Lie8;",
-        "rp9",
-        "qp9",
+        "Lg77;",
+        "Lud8;",
+        "ap9",
+        "zo9",
         "Companion",
         "message-list_release"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -38,35 +38,39 @@
 
 
 # static fields
-.field public static final L0:Lone/me/messages/list/loader/MessageModel$Companion;
+.field public static final N0:Lone/me/messages/list/loader/MessageModel$Companion;
 
 
 # instance fields
-.field public final A0:I
+.field public final A0:Lp52;
 
-.field public final B0:Ljava/lang/CharSequence;
+.field public final B0:I
 
-.field public final C0:Z
+.field public final C0:Lmw4;
 
-.field public final D0:Lkq9;
+.field public final D0:Ljava/lang/CharSequence;
 
-.field public final E0:J
+.field public final E0:Z
 
-.field public final F0:Z
+.field public final F0:Ltp9;
 
-.field public final G0:Lin9;
+.field public final G0:J
 
-.field public H0:Landroid/text/Layout;
+.field public final H0:Z
 
-.field public I0:Landroid/text/Layout;
+.field public final I0:Lom9;
 
-.field public J0:Lqp9;
+.field public J0:Landroid/text/Layout;
 
-.field public K0:I
+.field public K0:Landroid/text/Layout;
+
+.field public L0:Lzo9;
+
+.field public M0:I
 
 .field public final X:Ljava/lang/CharSequence;
 
-.field public final Y:Lauh;
+.field public final Y:Lwuh;
 
 .field public final Z:Z
 
@@ -80,21 +84,19 @@
 
 .field public final o:Ljava/lang/CharSequence;
 
-.field public final s0:Z
+.field public final t0:Z
 
-.field public final t0:La00;
-
-.field public final u0:Z
+.field public final u0:Lxz;
 
 .field public final v0:Z
 
-.field public final w0:Lcr9;
+.field public final w0:Z
 
-.field public final x0:Lfp9;
+.field public final x0:Lkq9;
 
-.field public final y0:Lrp9;
+.field public final y0:Lpo9;
 
-.field public final z0:Ly52;
+.field public final z0:Lap9;
 
 
 # direct methods
@@ -105,15 +107,15 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/messages/list/loader/MessageModel;->L0:Lone/me/messages/list/loader/MessageModel$Companion;
+    sput-object v0, Lone/me/messages/list/loader/MessageModel;->N0:Lone/me/messages/list/loader/MessageModel$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(JJJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;Lauh;ZZLa00;ZZLcr9;Lfp9;Lrp9;Ly52;ILjava/lang/String;ZLkq9;JZLin9;Lqp9;II)V
-    .locals 12
+.method public constructor <init>(JJJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;Lwuh;ZZLxz;ZZLkq9;Lpo9;Lap9;Lp52;ILmw4;Ljava/lang/String;ZLtp9;JZLom9;Lzo9;II)V
+    .locals 14
 
-    move/from16 v0, p30
+    move/from16 v0, p31
 
     and-int/lit16 v1, v0, 0x400
 
@@ -199,7 +201,7 @@
 
     if-eqz v9, :cond_6
 
-    move-object v9, v5
+    sget-object v9, Lmw4;->o:Lmw4;
 
     goto :goto_6
 
@@ -213,123 +215,141 @@
 
     if-eqz v10, :cond_7
 
+    move-object v10, v5
+
     goto :goto_7
 
     :cond_7
-    move/from16 v2, p22
+    move-object/from16 v10, p22
 
     :goto_7
-    const/high16 v10, 0x2000000
+    const/high16 v11, 0x80000
 
-    and-int/2addr v10, v0
+    and-int/2addr v11, v0
 
-    if-eqz v10, :cond_8
-
-    move-object v10, v5
+    if-eqz v11, :cond_8
 
     goto :goto_8
 
     :cond_8
-    move-object/from16 v10, p28
+    move/from16 v2, p23
 
     :goto_8
     const/high16 v11, 0x4000000
 
-    and-int/2addr v0, v11
+    and-int/2addr v11, v0
 
-    if-eqz v0, :cond_9
+    if-eqz v11, :cond_9
 
-    const/4 v0, -0x1
+    move-object v11, v5
 
     goto :goto_9
 
     :cond_9
-    move/from16 v0, p29
+    move-object/from16 v11, p29
 
     :goto_9
+    const/high16 v12, 0x8000000
+
+    and-int/2addr v0, v12
+
+    if-eqz v0, :cond_a
+
+    const/4 v0, -0x1
+
+    goto :goto_a
+
+    :cond_a
+    move/from16 v0, p30
+
+    :goto_a
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lone/me/messages/list/loader/MessageModel;->a:J
+    move-wide v12, p1
 
-    move-wide p1, p3
+    iput-wide v12, p0, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    iput-wide p1, p0, Lone/me/messages/list/loader/MessageModel;->b:J
+    move-wide/from16 v12, p3
 
-    move-wide/from16 p1, p5
+    iput-wide v12, p0, Lone/me/messages/list/loader/MessageModel;->b:J
 
-    iput-wide p1, p0, Lone/me/messages/list/loader/MessageModel;->c:J
+    move-wide/from16 v12, p5
 
-    move-object/from16 p1, p7
+    iput-wide v12, p0, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    iput-object p1, p0, Lone/me/messages/list/loader/MessageModel;->d:Ljava/lang/CharSequence;
+    move-object/from16 v12, p7
 
-    move-object/from16 p1, p8
+    iput-object v12, p0, Lone/me/messages/list/loader/MessageModel;->d:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lone/me/messages/list/loader/MessageModel;->o:Ljava/lang/CharSequence;
+    move-object/from16 v12, p8
 
-    move-object/from16 p1, p9
+    iput-object v12, p0, Lone/me/messages/list/loader/MessageModel;->o:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lone/me/messages/list/loader/MessageModel;->X:Ljava/lang/CharSequence;
+    move-object/from16 v12, p9
 
-    move-object/from16 p1, p10
+    iput-object v12, p0, Lone/me/messages/list/loader/MessageModel;->X:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lone/me/messages/list/loader/MessageModel;->Y:Lauh;
+    move-object/from16 v12, p10
 
-    move/from16 p1, p11
+    iput-object v12, p0, Lone/me/messages/list/loader/MessageModel;->Y:Lwuh;
 
-    iput-boolean p1, p0, Lone/me/messages/list/loader/MessageModel;->Z:Z
+    move/from16 v12, p11
 
-    move/from16 p1, p12
+    iput-boolean v12, p0, Lone/me/messages/list/loader/MessageModel;->Z:Z
 
-    iput-boolean p1, p0, Lone/me/messages/list/loader/MessageModel;->s0:Z
+    move/from16 v12, p12
 
-    move-object/from16 p1, p13
+    iput-boolean v12, p0, Lone/me/messages/list/loader/MessageModel;->t0:Z
 
-    iput-object p1, p0, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    move-object/from16 v12, p13
 
-    iput-boolean v1, p0, Lone/me/messages/list/loader/MessageModel;->u0:Z
+    iput-object v12, p0, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
-    iput-boolean v3, p0, Lone/me/messages/list/loader/MessageModel;->v0:Z
+    iput-boolean v1, p0, Lone/me/messages/list/loader/MessageModel;->v0:Z
 
-    iput-object v4, p0, Lone/me/messages/list/loader/MessageModel;->w0:Lcr9;
+    iput-boolean v3, p0, Lone/me/messages/list/loader/MessageModel;->w0:Z
 
-    iput-object v6, p0, Lone/me/messages/list/loader/MessageModel;->x0:Lfp9;
+    iput-object v4, p0, Lone/me/messages/list/loader/MessageModel;->x0:Lkq9;
 
-    iput-object v7, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lrp9;
+    iput-object v6, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lpo9;
 
-    iput-object v8, p0, Lone/me/messages/list/loader/MessageModel;->z0:Ly52;
+    iput-object v7, p0, Lone/me/messages/list/loader/MessageModel;->z0:Lap9;
 
-    move/from16 p1, p20
+    iput-object v8, p0, Lone/me/messages/list/loader/MessageModel;->A0:Lp52;
 
-    iput p1, p0, Lone/me/messages/list/loader/MessageModel;->A0:I
+    move/from16 v1, p20
 
-    iput-object v9, p0, Lone/me/messages/list/loader/MessageModel;->B0:Ljava/lang/CharSequence;
+    iput v1, p0, Lone/me/messages/list/loader/MessageModel;->B0:I
 
-    iput-boolean v2, p0, Lone/me/messages/list/loader/MessageModel;->C0:Z
+    iput-object v9, p0, Lone/me/messages/list/loader/MessageModel;->C0:Lmw4;
 
-    move-object/from16 p1, p23
+    iput-object v10, p0, Lone/me/messages/list/loader/MessageModel;->D0:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lone/me/messages/list/loader/MessageModel;->D0:Lkq9;
+    iput-boolean v2, p0, Lone/me/messages/list/loader/MessageModel;->E0:Z
 
-    move-wide/from16 p1, p24
+    move-object/from16 v1, p24
 
-    iput-wide p1, p0, Lone/me/messages/list/loader/MessageModel;->E0:J
+    iput-object v1, p0, Lone/me/messages/list/loader/MessageModel;->F0:Ltp9;
 
-    move/from16 p1, p26
+    move-wide/from16 v1, p25
 
-    iput-boolean p1, p0, Lone/me/messages/list/loader/MessageModel;->F0:Z
+    iput-wide v1, p0, Lone/me/messages/list/loader/MessageModel;->G0:J
 
-    move-object/from16 p1, p27
+    move/from16 v1, p27
 
-    iput-object p1, p0, Lone/me/messages/list/loader/MessageModel;->G0:Lin9;
+    iput-boolean v1, p0, Lone/me/messages/list/loader/MessageModel;->H0:Z
 
-    iput-object v5, p0, Lone/me/messages/list/loader/MessageModel;->H0:Landroid/text/Layout;
+    move-object/from16 v1, p28
 
-    iput-object v5, p0, Lone/me/messages/list/loader/MessageModel;->I0:Landroid/text/Layout;
+    iput-object v1, p0, Lone/me/messages/list/loader/MessageModel;->I0:Lom9;
 
-    iput-object v10, p0, Lone/me/messages/list/loader/MessageModel;->J0:Lqp9;
+    iput-object v5, p0, Lone/me/messages/list/loader/MessageModel;->J0:Landroid/text/Layout;
 
-    iput v0, p0, Lone/me/messages/list/loader/MessageModel;->K0:I
+    iput-object v5, p0, Lone/me/messages/list/loader/MessageModel;->K0:Landroid/text/Layout;
+
+    iput-object v11, p0, Lone/me/messages/list/loader/MessageModel;->L0:Lzo9;
+
+    iput v0, p0, Lone/me/messages/list/loader/MessageModel;->M0:I
 
     return-void
 .end method
@@ -339,7 +359,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    sget-object v0, Lone/me/messages/list/loader/MessageModel;->L0:Lone/me/messages/list/loader/MessageModel$Companion;
+    sget-object v0, Lone/me/messages/list/loader/MessageModel;->N0:Lone/me/messages/list/loader/MessageModel$Companion;
 
     invoke-virtual {v0, p0, p1, p2}, Lone/me/messages/list/loader/MessageModel$Companion;->control(Ljava/lang/CharSequence;J)Lone/me/messages/list/loader/MessageModel;
 
@@ -404,7 +424,7 @@
 
     iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->d:Ljava/lang/CharSequence;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -417,7 +437,7 @@
 
     iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->o:Ljava/lang/CharSequence;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -430,7 +450,7 @@
 
     iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->X:Ljava/lang/CharSequence;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -439,9 +459,9 @@
     goto/16 :goto_1
 
     :cond_7
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->Y:Lauh;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->Y:Lwuh;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->Y:Lauh;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->Y:Lwuh;
 
     if-eq v0, v1, :cond_8
 
@@ -457,20 +477,20 @@
     goto/16 :goto_1
 
     :cond_9
-    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->s0:Z
+    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->t0:Z
 
-    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->s0:Z
+    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->t0:Z
 
     if-eq v0, v1, :cond_a
 
     goto/16 :goto_1
 
     :cond_a
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -479,29 +499,29 @@
     goto/16 :goto_1
 
     :cond_b
-    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->u0:Z
+    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->v0:Z
 
-    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->u0:Z
+    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->v0:Z
 
     if-eq v0, v1, :cond_c
 
     goto/16 :goto_1
 
     :cond_c
-    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->v0:Z
+    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->w0:Z
 
-    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->v0:Z
+    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->w0:Z
 
     if-eq v0, v1, :cond_d
 
     goto/16 :goto_1
 
     :cond_d
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->w0:Lcr9;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->x0:Lkq9;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->w0:Lcr9;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->x0:Lkq9;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -510,11 +530,11 @@
     goto/16 :goto_1
 
     :cond_e
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->x0:Lfp9;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lpo9;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->x0:Lfp9;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->y0:Lpo9;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -523,11 +543,11 @@
     goto/16 :goto_1
 
     :cond_f
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lrp9;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->z0:Lap9;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->y0:Lrp9;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->z0:Lap9;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -536,11 +556,11 @@
     goto/16 :goto_1
 
     :cond_10
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->z0:Ly52;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->A0:Lp52;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->z0:Ly52;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->A0:Lp52;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -549,97 +569,93 @@
     goto/16 :goto_1
 
     :cond_11
-    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->A0:I
+    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->B0:I
 
-    iget v1, p1, Lone/me/messages/list/loader/MessageModel;->A0:I
+    iget v1, p1, Lone/me/messages/list/loader/MessageModel;->B0:I
 
     if-eq v0, v1, :cond_12
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_12
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->B0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->C0:Lmw4;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->B0:Ljava/lang/CharSequence;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->C0:Lmw4;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_13
+    if-eq v0, v1, :cond_13
 
     goto :goto_1
 
     :cond_13
-    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->C0:Z
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->D0:Ljava/lang/CharSequence;
 
-    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->C0:Z
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->D0:Ljava/lang/CharSequence;
 
-    if-eq v0, v1, :cond_14
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_14
 
     goto :goto_1
 
     :cond_14
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->D0:Lkq9;
+    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->E0:Z
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->D0:Lkq9;
+    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->E0:Z
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_15
+    if-eq v0, v1, :cond_15
 
     goto :goto_1
 
     :cond_15
-    iget-wide v0, p0, Lone/me/messages/list/loader/MessageModel;->E0:J
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->F0:Ltp9;
 
-    iget-wide v2, p1, Lone/me/messages/list/loader/MessageModel;->E0:J
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->F0:Ltp9;
 
-    cmp-long v0, v0, v2
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_16
+    move-result v0
+
+    if-nez v0, :cond_16
 
     goto :goto_1
 
     :cond_16
-    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->F0:Z
+    iget-wide v0, p0, Lone/me/messages/list/loader/MessageModel;->G0:J
 
-    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->F0:Z
+    iget-wide v2, p1, Lone/me/messages/list/loader/MessageModel;->G0:J
 
-    if-eq v0, v1, :cond_17
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_17
 
     goto :goto_1
 
     :cond_17
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->G0:Lin9;
+    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->H0:Z
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->G0:Lin9;
+    iget-boolean v1, p1, Lone/me/messages/list/loader/MessageModel;->H0:Z
 
     if-eq v0, v1, :cond_18
 
     goto :goto_1
 
     :cond_18
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->H0:Landroid/text/Layout;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->I0:Lom9;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->H0:Landroid/text/Layout;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->I0:Lom9;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_19
+    if-eq v0, v1, :cond_19
 
     goto :goto_1
 
     :cond_19
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->I0:Landroid/text/Layout;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->J0:Landroid/text/Layout;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->I0:Landroid/text/Layout;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->J0:Landroid/text/Layout;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -648,11 +664,11 @@
     goto :goto_1
 
     :cond_1a
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->J0:Lqp9;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->K0:Landroid/text/Layout;
 
-    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->J0:Lqp9;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->K0:Landroid/text/Layout;
 
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -661,18 +677,31 @@
     goto :goto_1
 
     :cond_1b
-    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->K0:I
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->L0:Lzo9;
 
-    iget p1, p1, Lone/me/messages/list/loader/MessageModel;->K0:I
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->L0:Lzo9;
 
-    if-ne v0, p1, :cond_1c
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1c
+
+    goto :goto_1
+
+    :cond_1c
+    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->M0:I
+
+    iget p1, p1, Lone/me/messages/list/loader/MessageModel;->M0:I
+
+    if-ne v0, p1, :cond_1d
 
     :goto_0
     const/4 p1, 0x1
 
     return p1
 
-    :cond_1c
+    :cond_1d
     :goto_1
     const/4 p1, 0x0
 
@@ -703,12 +732,12 @@
     return-wide v0
 .end method
 
-.method public final h(Lie8;)Z
+.method public final h(Lud8;)Z
     .locals 4
 
     iget-wide v0, p0, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    invoke-interface {p1}, Lie8;->getItemId()J
+    invoke-interface {p1}, Lud8;->getItemId()J
 
     move-result-wide v2
 
@@ -741,35 +770,35 @@
 
     iget-wide v2, p0, Lone/me/messages/list/loader/MessageModel;->b:J
 
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
     move-result v0
 
     iget-wide v2, p0, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
     move-result v0
 
     iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->d:Ljava/lang/CharSequence;
 
-    invoke-static {v2, v0, v1}, Lzy4;->g(Ljava/lang/CharSequence;II)I
+    invoke-static {v2, v0, v1}, Lj27;->d(Ljava/lang/CharSequence;II)I
 
     move-result v0
 
     iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->o:Ljava/lang/CharSequence;
 
-    invoke-static {v2, v0, v1}, Lzy4;->g(Ljava/lang/CharSequence;II)I
+    invoke-static {v2, v0, v1}, Lj27;->d(Ljava/lang/CharSequence;II)I
 
     move-result v0
 
     iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->X:Ljava/lang/CharSequence;
 
-    invoke-static {v2, v0, v1}, Lzy4;->g(Ljava/lang/CharSequence;II)I
+    invoke-static {v2, v0, v1}, Lj27;->d(Ljava/lang/CharSequence;II)I
 
     move-result v0
 
-    iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->Y:Lauh;
+    iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->Y:Lwuh;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -781,19 +810,19 @@
 
     iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->Z:Z
 
-    invoke-static {v2, v1, v0}, Lxfh;->b(IIZ)I
+    invoke-static {v2, v1, v0}, Lcbh;->j(IIZ)I
 
     move-result v0
 
-    iget-boolean v2, p0, Lone/me/messages/list/loader/MessageModel;->s0:Z
+    iget-boolean v2, p0, Lone/me/messages/list/loader/MessageModel;->t0:Z
 
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
     move-result v0
 
-    iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
-    invoke-virtual {v2}, La00;->hashCode()I
+    invoke-virtual {v2}, Lxz;->hashCode()I
 
     move-result v2
 
@@ -801,21 +830,21 @@
 
     mul-int/2addr v2, v1
 
-    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->u0:Z
+    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->v0:Z
 
-    invoke-static {v2, v1, v0}, Lxfh;->b(IIZ)I
+    invoke-static {v2, v1, v0}, Lcbh;->j(IIZ)I
 
     move-result v0
 
-    iget-boolean v2, p0, Lone/me/messages/list/loader/MessageModel;->v0:Z
+    iget-boolean v2, p0, Lone/me/messages/list/loader/MessageModel;->w0:Z
 
-    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
     move-result v0
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->w0:Lcr9;
+    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->x0:Lkq9;
 
     if-nez v3, :cond_0
 
@@ -824,7 +853,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Lcr9;->hashCode()I
+    invoke-virtual {v3}, Lkq9;->hashCode()I
 
     move-result v3
 
@@ -833,7 +862,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->x0:Lfp9;
+    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lpo9;
 
     if-nez v3, :cond_1
 
@@ -842,7 +871,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v3}, Lfp9;->hashCode()I
+    invoke-virtual {v3}, Lpo9;->hashCode()I
 
     move-result v3
 
@@ -851,7 +880,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lrp9;
+    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->z0:Lap9;
 
     if-nez v3, :cond_2
 
@@ -860,7 +889,7 @@
     goto :goto_2
 
     :cond_2
-    iget-wide v3, v3, Lrp9;->a:J
+    iget-wide v3, v3, Lap9;->a:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->hashCode(J)I
 
@@ -871,7 +900,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->z0:Ly52;
+    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->A0:Lp52;
 
     if-nez v3, :cond_3
 
@@ -889,67 +918,13 @@
 
     mul-int/2addr v0, v1
 
-    iget v3, p0, Lone/me/messages/list/loader/MessageModel;->A0:I
+    iget v3, p0, Lone/me/messages/list/loader/MessageModel;->B0:I
 
-    invoke-static {v3, v0, v1}, Ln0c;->j(III)I
-
-    move-result v0
-
-    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->B0:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_4
-
-    move v3, v2
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_4
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v3, p0, Lone/me/messages/list/loader/MessageModel;->C0:Z
-
-    invoke-static {v0, v1, v3}, Lxfh;->b(IIZ)I
+    invoke-static {v3, v0, v1}, Lpqb;->i(III)I
 
     move-result v0
 
-    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->D0:Lkq9;
-
-    if-nez v3, :cond_5
-
-    move v3, v2
-
-    goto :goto_5
-
-    :cond_5
-    invoke-virtual {v3}, Lkq9;->hashCode()I
-
-    move-result v3
-
-    :goto_5
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-wide v3, p0, Lone/me/messages/list/loader/MessageModel;->E0:J
-
-    invoke-static {v0, v1, v3, v4}, Lxfh;->a(IIJ)I
-
-    move-result v0
-
-    iget-boolean v3, p0, Lone/me/messages/list/loader/MessageModel;->F0:Z
-
-    invoke-static {v0, v1, v3}, Lxfh;->b(IIZ)I
-
-    move-result v0
-
-    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->G0:Lin9;
+    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->C0:Lmw4;
 
     invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
@@ -959,7 +934,71 @@
 
     mul-int/2addr v3, v1
 
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->H0:Landroid/text/Layout;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->D0:Ljava/lang/CharSequence;
+
+    if-nez v0, :cond_4
+
+    move v0, v2
+
+    goto :goto_4
+
+    :cond_4
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_4
+    add-int/2addr v3, v0
+
+    mul-int/2addr v3, v1
+
+    iget-boolean v0, p0, Lone/me/messages/list/loader/MessageModel;->E0:Z
+
+    invoke-static {v3, v1, v0}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->F0:Ltp9;
+
+    if-nez v3, :cond_5
+
+    move v3, v2
+
+    goto :goto_5
+
+    :cond_5
+    invoke-virtual {v3}, Ltp9;->hashCode()I
+
+    move-result v3
+
+    :goto_5
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Lone/me/messages/list/loader/MessageModel;->G0:J
+
+    invoke-static {v0, v1, v3, v4}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-boolean v3, p0, Lone/me/messages/list/loader/MessageModel;->H0:Z
+
+    invoke-static {v0, v1, v3}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lone/me/messages/list/loader/MessageModel;->I0:Lom9;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    mul-int/2addr v3, v1
+
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->J0:Landroid/text/Layout;
 
     if-nez v0, :cond_6
 
@@ -977,7 +1016,7 @@
 
     mul-int/2addr v3, v1
 
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->I0:Landroid/text/Layout;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->K0:Landroid/text/Layout;
 
     if-nez v0, :cond_7
 
@@ -995,14 +1034,14 @@
 
     mul-int/2addr v3, v1
 
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->J0:Lqp9;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->L0:Lzo9;
 
     if-nez v0, :cond_8
 
     goto :goto_8
 
     :cond_8
-    invoke-virtual {v0}, Lqp9;->hashCode()I
+    invoke-virtual {v0}, Lzo9;->hashCode()I
 
     move-result v2
 
@@ -1011,7 +1050,7 @@
 
     mul-int/2addr v3, v1
 
-    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->K0:I
+    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->M0:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -1022,7 +1061,7 @@
     return v0
 .end method
 
-.method public final k(Lie8;)Ljava/lang/Object;
+.method public final k(Lud8;)Ljava/lang/Object;
     .locals 17
 
     move-object/from16 v0, p0
@@ -1038,9 +1077,9 @@
     return-object v1
 
     :cond_0
-    iget-object v2, v0, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    iget-object v2, v0, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
-    iget-object v3, v2, La00;->c:Ljq7;
+    iget-object v3, v2, Lxz;->c:Lrp7;
 
     const/4 v4, 0x0
 
@@ -1052,9 +1091,9 @@
 
     check-cast v6, Lone/me/messages/list/loader/MessageModel;
 
-    iget-object v6, v6, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    iget-object v6, v6, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
-    iget-object v6, v6, La00;->c:Ljq7;
+    iget-object v6, v6, Lxz;->c:Lrp7;
 
     if-nez v6, :cond_3
 
@@ -1065,11 +1104,11 @@
 
     check-cast v6, Lone/me/messages/list/loader/MessageModel;
 
-    iget-object v6, v6, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    iget-object v6, v6, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
-    iget-object v6, v6, La00;->c:Ljq7;
+    iget-object v6, v6, Lxz;->c:Lrp7;
 
-    invoke-virtual {v3, v6}, Ljq7;->a(Lb48;)Z
+    invoke-virtual {v3, v6}, Lrp7;->a(Ll38;)Z
 
     move-result v3
 
@@ -1090,31 +1129,31 @@
     move v15, v4
 
     :goto_1
-    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->H0:Landroid/text/Layout;
+    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->J0:Landroid/text/Layout;
 
     check-cast v1, Lone/me/messages/list/loader/MessageModel;
 
-    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->H0:Landroid/text/Layout;
+    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->J0:Landroid/text/Layout;
 
-    invoke-static {v3, v6}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v6}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     xor-int/lit8 v7, v3, 0x1
 
-    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->I0:Landroid/text/Layout;
+    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->K0:Landroid/text/Layout;
 
-    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->I0:Landroid/text/Layout;
+    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->K0:Landroid/text/Layout;
 
-    invoke-static {v3, v6}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v6}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     xor-int/lit8 v8, v3, 0x1
 
-    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->Y:Lauh;
+    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->Y:Lwuh;
 
-    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->Y:Lauh;
+    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->Y:Lwuh;
 
     if-eq v3, v6, :cond_5
 
@@ -1130,35 +1169,35 @@
 
     iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->o:Ljava/lang/CharSequence;
 
-    invoke-static {v3, v6}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v6}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     xor-int/lit8 v9, v3, 0x1
 
-    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->w0:Lcr9;
+    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->x0:Lkq9;
 
-    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->w0:Lcr9;
+    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->x0:Lkq9;
 
-    invoke-static {v3, v6}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v6}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     xor-int/lit8 v11, v3, 0x1
 
-    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->D0:Lkq9;
+    iget-object v3, v0, Lone/me/messages/list/loader/MessageModel;->F0:Ltp9;
 
-    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->D0:Lkq9;
+    iget-object v6, v1, Lone/me/messages/list/loader/MessageModel;->F0:Ltp9;
 
-    invoke-static {v3, v6}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v6}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     xor-int/lit8 v12, v3, 0x1
 
-    iget-boolean v3, v0, Lone/me/messages/list/loader/MessageModel;->u0:Z
+    iget-boolean v3, v0, Lone/me/messages/list/loader/MessageModel;->v0:Z
 
-    iget-boolean v6, v1, Lone/me/messages/list/loader/MessageModel;->u0:Z
+    iget-boolean v6, v1, Lone/me/messages/list/loader/MessageModel;->v0:Z
 
     if-eq v3, v6, :cond_6
 
@@ -1170,27 +1209,27 @@
     move v13, v4
 
     :goto_3
-    iget-object v3, v1, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    iget-object v3, v1, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
-    invoke-virtual {v2, v3}, La00;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lxz;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     xor-int/lit8 v14, v2, 0x1
 
-    iget-object v2, v0, Lone/me/messages/list/loader/MessageModel;->B0:Ljava/lang/CharSequence;
+    iget-object v2, v0, Lone/me/messages/list/loader/MessageModel;->D0:Ljava/lang/CharSequence;
 
-    iget-object v1, v1, Lone/me/messages/list/loader/MessageModel;->B0:Ljava/lang/CharSequence;
+    iget-object v1, v1, Lone/me/messages/list/loader/MessageModel;->D0:Ljava/lang/CharSequence;
 
-    invoke-static {v2, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     xor-int/lit8 v16, v1, 0x1
 
-    new-instance v6, Laq9;
+    new-instance v6, Ljp9;
 
-    invoke-direct/range {v6 .. v16}, Laq9;-><init>(ZZZZZZZZZZ)V
+    invoke-direct/range {v6 .. v16}, Ljp9;-><init>(ZZZZZZZZZZ)V
 
     return-object v6
 .end method
@@ -1198,7 +1237,7 @@
 .method public final l()Z
     .locals 1
 
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lrp9;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->z0:Lap9;
 
     if-eqz v0, :cond_0
 
@@ -1215,7 +1254,7 @@
 .method public final m()I
     .locals 1
 
-    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->K0:I
+    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->M0:I
 
     return v0
 .end method
@@ -1223,9 +1262,9 @@
 .method public final n()Ljava/lang/String;
     .locals 6
 
-    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->K0:I
+    iget v0, p0, Lone/me/messages/list/loader/MessageModel;->M0:I
 
-    invoke-static {v0}, Lsr9;->g(I)Ljava/lang/String;
+    invoke-static {v0}, Lar9;->g(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1235,7 +1274,7 @@
 
     iget-wide v3, p0, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    invoke-static {v3, v4, v1, v2}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v4, v1, v2}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1249,7 +1288,7 @@
 
     iget-wide v4, p0, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    invoke-static {v4, v5, v2, v3, v1}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v4, v5, v2, v3, v1}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1261,14 +1300,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ljyf;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lszf;->f(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final q(Lie8;)Z
+.method public final q(Lud8;)Z
     .locals 0
 
     invoke-virtual {p0, p1}, Lone/me/messages/list/loader/MessageModel;->equals(Ljava/lang/Object;)Z
@@ -1281,15 +1320,15 @@
 .method public final toString()Ljava/lang/String;
     .locals 9
 
-    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->H0:Landroid/text/Layout;
+    iget-object v0, p0, Lone/me/messages/list/loader/MessageModel;->J0:Landroid/text/Layout;
 
-    iget-object v1, p0, Lone/me/messages/list/loader/MessageModel;->I0:Landroid/text/Layout;
+    iget-object v1, p0, Lone/me/messages/list/loader/MessageModel;->K0:Landroid/text/Layout;
 
-    iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->J0:Lqp9;
+    iget-object v2, p0, Lone/me/messages/list/loader/MessageModel;->L0:Lzo9;
 
-    iget v3, p0, Lone/me/messages/list/loader/MessageModel;->K0:I
+    iget v3, p0, Lone/me/messages/list/loader/MessageModel;->M0:I
 
-    invoke-static {v3}, Lsr9;->g(I)Ljava/lang/String;
+    invoke-static {v3}, Lar9;->g(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1299,7 +1338,7 @@
 
     iget-wide v6, p0, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    invoke-static {v6, v7, v4, v5}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v6, v7, v4, v5}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -1313,7 +1352,7 @@
 
     iget-wide v7, p0, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    invoke-static {v7, v8, v5, v6, v4}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v7, v8, v5, v6, v4}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->d:Ljava/lang/CharSequence;
 
@@ -1339,7 +1378,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->Y:Lauh;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->Y:Lwuh;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1353,11 +1392,11 @@
 
     iget-boolean v7, p0, Lone/me/messages/list/loader/MessageModel;->Z:Z
 
-    iget-boolean v8, p0, Lone/me/messages/list/loader/MessageModel;->s0:Z
+    iget-boolean v8, p0, Lone/me/messages/list/loader/MessageModel;->t0:Z
 
-    invoke-static {v5, v6, v4, v7, v8}, Lc12;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    invoke-static {v5, v6, v4, v7, v8}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->t0:La00;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->u0:Lxz;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1365,7 +1404,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v5, p0, Lone/me/messages/list/loader/MessageModel;->u0:Z
+    iget-boolean v5, p0, Lone/me/messages/list/loader/MessageModel;->v0:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1373,7 +1412,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v5, p0, Lone/me/messages/list/loader/MessageModel;->v0:Z
+    iget-boolean v5, p0, Lone/me/messages/list/loader/MessageModel;->w0:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1381,7 +1420,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->w0:Lcr9;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->x0:Lkq9;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1389,7 +1428,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->x0:Lfp9;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lpo9;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1397,7 +1436,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->y0:Lrp9;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->z0:Lap9;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1405,7 +1444,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->z0:Ly52;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->A0:Lp52;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1415,7 +1454,7 @@
 
     const/4 v5, 0x1
 
-    iget v6, p0, Lone/me/messages/list/loader/MessageModel;->A0:I
+    iget v6, p0, Lone/me/messages/list/loader/MessageModel;->B0:I
 
     if-eq v6, v5, :cond_2
 
@@ -1447,11 +1486,19 @@
     :goto_0
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    const-string v5, ", itemType="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->C0:Lmw4;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     const-string v5, ", channelCountViewText="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->B0:Ljava/lang/CharSequence;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->D0:Ljava/lang/CharSequence;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1459,7 +1506,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v5, p0, Lone/me/messages/list/loader/MessageModel;->C0:Z
+    iget-boolean v5, p0, Lone/me/messages/list/loader/MessageModel;->E0:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1467,7 +1514,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->D0:Lkq9;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->F0:Ltp9;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1475,7 +1522,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v5, p0, Lone/me/messages/list/loader/MessageModel;->E0:J
+    iget-wide v5, p0, Lone/me/messages/list/loader/MessageModel;->G0:J
 
     invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1483,7 +1530,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v5, p0, Lone/me/messages/list/loader/MessageModel;->F0:Z
+    iget-boolean v5, p0, Lone/me/messages/list/loader/MessageModel;->H0:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1491,7 +1538,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->G0:Lin9;
+    iget-object v5, p0, Lone/me/messages/list/loader/MessageModel;->I0:Lom9;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1515,15 +1562,9 @@
 
     const-string v0, ", messageViewType="
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ")"
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v4, v0, v3, v1}, Lmrf;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

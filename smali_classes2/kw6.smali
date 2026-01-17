@@ -3,38 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnw6;
+.implements Llw6;
 
 
-# static fields
-.field public static final a:Lkw6;
+# instance fields
+.field public final a:J
 
-.field public static final b:Lkw6;
+.field public final b:J
 
-.field public static final c:Lkw6;
+.field public final c:J
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJJ)V
+    .locals 0
 
-    new-instance v0, Lkw6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lkw6;->a:J
 
-    sput-object v0, Lkw6;->a:Lkw6;
+    iput-wide p3, p0, Lkw6;->b:J
 
-    new-instance v0, Lkw6;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkw6;->b:Lkw6;
-
-    new-instance v0, Lkw6;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkw6;->c:Lkw6;
+    iput-wide p5, p0, Lkw6;->c:J
 
     return-void
 .end method

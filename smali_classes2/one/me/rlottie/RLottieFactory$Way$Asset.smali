@@ -49,7 +49,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -70,22 +70,22 @@
 
     const/4 v0, 0x0
 
-    .line 5
-    invoke-direct {p0, p4, p5, p6, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLro4;)V
+    .line 1
+    invoke-direct {p0, p4, p5, p6, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLso4;)V
 
-    .line 6
+    .line 2
     iput-object p1, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->context:Landroid/content/Context;
 
-    .line 7
+    .line 3
     iput-object p2, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->assetsRes:Ljava/lang/String;
 
-    .line 8
+    .line 4
     iput-object p3, p0, Lone/me/rlottie/RLottieFactory$Way$Asset;->cacheName:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IIZILro4;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IIZILso4;)V
     .locals 0
 
     and-int/lit8 p8, p7, 0x4
@@ -99,7 +99,7 @@
 
     if-eqz p8, :cond_1
 
-    .line 1
+    .line 5
     sget-object p4, Lone/me/rlottie/RLottieFactory$Config;->Companion:Lone/me/rlottie/RLottieFactory$Config$Companion;
 
     invoke-virtual {p4}, Lone/me/rlottie/RLottieFactory$Config$Companion;->getDefaultSize()I
@@ -111,7 +111,7 @@
 
     if-eqz p8, :cond_2
 
-    .line 2
+    .line 6
     sget-object p5, Lone/me/rlottie/RLottieFactory$Config;->Companion:Lone/me/rlottie/RLottieFactory$Config$Companion;
 
     invoke-virtual {p5}, Lone/me/rlottie/RLottieFactory$Config$Companion;->getDefaultSize()I
@@ -123,7 +123,7 @@
 
     if-eqz p7, :cond_3
 
-    .line 3
+    .line 7
     sget-object p6, Lone/me/rlottie/RLottieFactory$Config;->Companion:Lone/me/rlottie/RLottieFactory$Config$Companion;
 
     invoke-virtual {p6}, Lone/me/rlottie/RLottieFactory$Config$Companion;->getDefaultShouldLimitFps()Z
@@ -145,7 +145,7 @@
 
     move-object p1, p0
 
-    .line 4
+    .line 8
     invoke-direct/range {p1 .. p7}, Lone/me/rlottie/RLottieFactory$Way$Asset;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IIZ)V
 
     return-void

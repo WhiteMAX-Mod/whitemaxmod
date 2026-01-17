@@ -3,196 +3,481 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llyc;
+.implements Ld40;
 
 
 # instance fields
-.field public final synthetic a:Ln50;
+.field public X:Z
+
+.field public final Y:Lj50;
+
+.field public final a:Ltda;
+
+.field public final b:Lpzc;
+
+.field public final c:Ln8g;
+
+.field public final d:Le40;
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Ln50;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ltda;Lpzc;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll50;->a:Ln50;
+    iput-object p2, p0, Ll50;->a:Ltda;
+
+    iput-object p3, p0, Ll50;->b:Lpzc;
+
+    sget-object p3, Lm50;->a:Lm50;
+
+    invoke-virtual {p3}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object p3
+
+    const/16 v0, 0x14
+
+    invoke-virtual {p3, v0}, Lr5;->d(I)Ln8g;
+
+    move-result-object p3
+
+    new-instance v0, Le50;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p1, v1}, Le50;-><init>(Landroid/content/Context;I)V
+
+    new-instance v1, Ln8g;
+
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v1, p0, Ll50;->c:Ln8g;
+
+    new-instance v0, Le40;
+
+    invoke-direct {v0, p1, p0}, Le40;-><init>(Landroid/content/Context;Ld40;)V
+
+    iput-object v0, p0, Ll50;->d:Le40;
+
+    new-instance p1, Lski;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0, p0}, Lski;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lj50;
+
+    invoke-direct {v0, p0}, Lj50;-><init>(Ll50;)V
+
+    iput-object v0, p0, Ll50;->Y:Lj50;
+
+    new-instance v0, Lh2;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1, p0}, Lh2;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Ln8g;
+
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+
+    check-cast p2, Ljea;
+
+    invoke-virtual {p2, p1}, Ljea;->b(Lrda;)V
+
+    invoke-virtual {p3}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqx1;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lk50;
+
+    check-cast p1, Ldy1;
+
+    invoke-virtual {p1, p2}, Ldy1;->e(Lfs1;)V
+
+    return-void
+.end method
+
+.method public static final c(Ll50;)Z
+    .locals 5
+
+    iget-object p0, p0, Ll50;->c:Ln8g;
+
+    invoke-virtual {p0}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/media/AudioManager;
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Landroid/media/AudioManager;->getDevices(I)[Landroid/media/AudioDeviceInfo;
+
+    move-result-object p0
+
+    array-length v0, p0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    aget-object v3, p0, v2
+
+    invoke-virtual {v3}, Landroid/media/AudioDeviceInfo;->getType()I
+
+    move-result v3
+
+    const/4 v4, 0x3
+
+    if-eq v3, v4, :cond_0
+
+    const/4 v4, 0x4
+
+    if-eq v3, v4, :cond_0
+
+    const/16 v4, 0x8
+
+    if-eq v3, v4, :cond_0
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    return v1
+.end method
+
+.method public static final e(Ll50;)V
+    .locals 3
+
+    iget-object v0, p0, Ll50;->d:Le40;
+
+    iget-object v1, p0, Ll50;->a:Ltda;
+
+    check-cast v1, Ljea;
+
+    iget-boolean v1, v1, Ljea;->J0:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v0, v1, v2}, Le40;->n(II)V
+
+    invoke-virtual {p0}, Ll50;->g()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Le40;->m()V
+
+    iget-object v0, p0, Ll50;->b:Lpzc;
+
+    iget-boolean v1, p0, Ll50;->o:Z
+
+    if-nez v1, :cond_1
+
+    return-void
+
+    :cond_1
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Ll50;->o:Z
+
+    invoke-virtual {v0}, Lpzc;->b()V
+
+    iget-object p0, p0, Ll50;->Y:Lj50;
+
+    iget-object v0, v0, Lpzc;->h:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 9
+.method public final a()F
+    .locals 1
 
-    iget-object v1, p0, Ll50;->a:Ln50;
+    iget-object v0, p0, Ll50;->a:Ltda;
 
-    invoke-static {v1}, Ln50;->c(Ln50;)Z
+    check-cast v0, Ljea;
 
-    move-result v0
+    iget v0, v0, Ljea;->L0:F
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    return-void
-
-    :cond_0
-    iget-object v0, v1, Ln50;->a:Luda;
-
-    check-cast v0, Lkea;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, La30;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x2
-
-    const/4 v6, 0x1
-
-    move v7, v4
-
-    move v8, v4
-
-    invoke-direct/range {v2 .. v8}, La30;-><init>(IIIIIZ)V
-
-    iget-object v0, v0, Lkea;->x0:Le29;
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v2, v3}, Le29;->A(La30;Z)V
-
-    :cond_1
-    iget-object v0, v1, Ln50;->b:Lmyc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    iget-object v0, v0, Lmyc;->f:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const-string v4, "ProximityHelperTag"
-
-    invoke-static {v4, v0, v2, v3}, Lm4j;->j(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_2
-    :goto_0
-    iget-object v0, v1, Ln50;->a:Luda;
-
-    check-cast v0, Lkea;
-
-    iget-object v0, v0, Lkea;->E0:Lpkd;
-
-    iget-object v0, v0, Lpkd;->a:Laof;
-
-    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x3e8
-
-    sub-long/2addr v2, v4
-
-    iget-object v0, v1, Ln50;->a:Luda;
-
-    check-cast v0, Lkea;
-
-    iget-object v1, v0, Lkea;->Z:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v4, Lgea;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v2, v3, v0, v5}, Lgea;-><init>(JLkea;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    invoke-static {v1, v5, v5, v4, v0}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+.method public final b(F)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final b()V
-    .locals 10
+.method public final d()Z
+    .locals 1
 
-    iget-object v0, p0, Ll50;->a:Ln50;
+    iget-object v0, p0, Ll50;->a:Ltda;
 
-    iget-object v1, v0, Ln50;->a:Luda;
+    check-cast v0, Ljea;
 
-    invoke-static {v0}, Ln50;->c(Ln50;)Z
+    iget-boolean v0, v0, Ljea;->J0:Z
 
-    move-result v2
+    return v0
+.end method
 
-    if-eqz v2, :cond_0
+.method public final f(JJLmw4;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 13
+
+    iget-object v0, p0, Ll50;->a:Ltda;
+
+    check-cast v0, Ljea;
+
+    invoke-virtual {v0}, Ljea;->l()Lsda;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lsda;->c:Ljava/lang/Object;
+
+    const-string v3, "MediaMetadata.Extra.MESSAGE_ID"
+
+    invoke-interface {v1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v2
+
+    :goto_0
+    instance-of v3, v1, Ljava/lang/Long;
+
+    if-eqz v3, :cond_1
+
+    check-cast v1, Ljava/lang/Long;
+
+    goto :goto_1
+
+    :cond_1
+    move-object v1, v2
+
+    :goto_1
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    goto :goto_2
+
+    :cond_2
+    const-wide/16 v3, 0x0
+
+    :goto_2
+    cmp-long v1, v3, p3
+
+    if-nez v1, :cond_3
+
+    iget-boolean v3, v0, Ljea;->K0:Z
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v0}, Ljea;->s()V
+
+    return-void
+
+    :cond_3
+    if-nez v1, :cond_4
+
+    iget-boolean v3, v0, Ljea;->J0:Z
+
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v0}, Ljea;->o()V
+
+    return-void
+
+    :cond_4
+    if-nez v1, :cond_5
+
+    iget-boolean v1, v0, Ljea;->I0:Z
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v0}, Ljea;->p()V
+
+    return-void
+
+    :cond_5
+    new-instance v3, Lpda;
+
+    move-wide v4, p1
+
+    move-wide/from16 v6, p3
+
+    move-object/from16 v8, p5
+
+    move-object/from16 v9, p6
+
+    move-object/from16 v10, p7
+
+    move-object/from16 v11, p8
+
+    move-object/from16 v12, p9
+
+    invoke-direct/range {v3 .. v12}, Lpda;-><init>(JJLmw4;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, v0, Ljea;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object p2, v0, Ljea;->b:Lmbg;
+
+    check-cast p2, Lj9b;
+
+    invoke-virtual {p2}, Lj9b;->b()Lsb4;
+
+    move-result-object p2
+
+    new-instance v1, Ldea;
+
+    invoke-direct {v1, v3, v0, v2}, Ldea;-><init>(Lwbj;Ljea;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x2
+
+    invoke-static {p1, p2, v2, v1, v0}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 2
+
+    iget-boolean v0, p0, Ll50;->X:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Ll50;->o:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ll50;->a:Ltda;
+
+    check-cast v0, Ljea;
+
+    iget-boolean v0, v0, Ljea;->J0:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ll50;->o:Z
+
+    iget-object v0, p0, Ll50;->b:Lpzc;
+
+    invoke-virtual {v0}, Lpzc;->a()V
+
+    iget-object v1, p0, Ll50;->Y:Lj50;
+
+    iget-object v0, v0, Lpzc;->h:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final onAudioFocusChange(I)V
+    .locals 1
+
+    iget-object v0, p0, Ll50;->d:Le40;
+
+    invoke-virtual {v0, p1}, Le40;->k(I)V
+
+    return-void
+.end method
+
+.method public final pause()V
+    .locals 2
+
+    iget-object v0, p0, Ll50;->a:Ltda;
+
+    move-object v1, v0
+
+    check-cast v1, Ljea;
+
+    invoke-virtual {v1}, Ljea;->n()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     return-void
 
     :cond_0
-    move-object v2, v1
+    check-cast v0, Ljea;
 
-    check-cast v2, Lkea;
+    invoke-virtual {v0}, Ljea;->o()V
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
+.end method
 
-    new-instance v3, La30;
+.method public final play()V
+    .locals 4
 
-    const/4 v4, 0x1
+    iget-object v0, p0, Ll50;->a:Ltda;
 
-    const/4 v5, 0x0
+    move-object v1, v0
 
-    const/4 v6, 0x1
+    check-cast v1, Ljea;
 
-    const/4 v7, 0x1
+    invoke-virtual {v1}, Ljea;->n()Z
 
-    move v8, v5
+    move-result v1
 
-    move v9, v5
+    if-eqz v1, :cond_0
 
-    invoke-direct/range {v3 .. v9}, La30;-><init>(IIIIIZ)V
+    return-void
 
-    iget-object v2, v2, Lkea;->x0:Le29;
+    :cond_0
+    const/4 v1, 0x1
 
-    if-eqz v2, :cond_1
+    const/4 v2, 0x4
 
-    const/4 v4, 0x0
+    iget-object v3, p0, Ll50;->d:Le40;
 
-    invoke-virtual {v2, v3, v4}, Le29;->A(La30;Z)V
+    invoke-virtual {v3, v1, v2}, Le40;->n(II)V
 
-    :cond_1
-    iget-object v0, v0, Ln50;->b:Lmyc;
+    check-cast v0, Ljea;
 
-    invoke-virtual {v0}, Lmyc;->c()V
-
-    check-cast v1, Lkea;
-
-    invoke-virtual {v1}, Lkea;->o()V
+    invoke-virtual {v0}, Ljea;->p()V
 
     return-void
 .end method

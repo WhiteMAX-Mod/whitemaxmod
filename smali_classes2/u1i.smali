@@ -1,65 +1,75 @@
 .class public final Lu1i;
-.super Lx1i;
+.super Lb9j;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lu1i;
+# instance fields
+.field public final synthetic a:Lv1i;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lv1i;)V
+    .locals 0
 
-    new-instance v0, Lu1i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "cancelled"
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Lx1i;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lu1i;->c:Lu1i;
+    iput-object p1, p0, Lu1i;->a:Lv1i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final e()V
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lu1i;->a:Lv1i;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, v0, Lv1i;->c:Ljava/lang/Object;
 
-    return v0
+    check-cast v0, Lqr6;
 
-    :cond_0
-    instance-of p1, p1, Lu1i;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final f()V
+    .locals 2
 
-    const v0, 0x28d53415
+    iget-object v0, p0, Lu1i;->a:Lv1i;
 
-    return v0
+    iget-object v0, v0, Lv1i;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    const-string v1, "onAuthenticationFailed"
+
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final g(Lfp0;)V
+    .locals 3
 
-    const-string v0, "Cancelled"
+    iget-object v0, p0, Lu1i;->a:Lv1i;
 
-    return-object v0
+    iget-object v1, v0, Lv1i;->d:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    const-string v2, "onAuthenticationSuccess"
+
+    invoke-static {v1, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v0, Lv1i;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnq6;
+
+    iget-object p1, p1, Lfp0;->a:Lgp0;
+
+    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

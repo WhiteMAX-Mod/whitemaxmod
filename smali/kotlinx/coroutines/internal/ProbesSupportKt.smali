@@ -14,7 +14,7 @@
         "completion",
         "probeCoroutineCreated",
         "(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;",
-        "Lv2h;",
+        "Lb3h;",
         "probeCoroutineResumed",
         "(Lkotlin/coroutines/Continuation;)V",
         "kotlinx-coroutines-core"
@@ -22,7 +22,7 @@
     k = 0x2
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -58,8 +58,6 @@
             "-TT;>;)V"
         }
     .end annotation
-
-    invoke-static {p0}, Lplj;->a(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method

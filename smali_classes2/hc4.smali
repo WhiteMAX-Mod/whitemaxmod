@@ -1,160 +1,100 @@
 .class public final Lhc4;
-.super Landroidx/appcompat/widget/AppCompatTextView;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljig;
+
+# static fields
+.field public static final b:Lhc4;
 
 
 # instance fields
-.field public u0:J
-
-.field public final v0:Landroid/animation/ValueAnimator;
-
-.field public final w0:Lbd3;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lhc4;
 
-    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 v1, 0x0
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1}, Lhc4;-><init>(I)V
 
-    new-array p1, p1, [F
-
-    fill-array-data p1, :array_0
-
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhc4;->v0:Landroid/animation/ValueAnimator;
-
-    new-instance p1, Lbd3;
-
-    invoke-direct {p1}, Lbd3;-><init>()V
-
-    sget-object v0, Ldc3;->s0:Lole;
-
-    invoke-virtual {v0, p0}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lplb;->i()Ltyf;
-
-    move-result-object v1
-
-    iget v1, v1, Ltyf;->c:I
-
-    iget-object v2, p1, Lbd3;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iput-object p1, p0, Lhc4;->w0:Lbd3;
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Lj1h;->k:Lhhg;
-
-    invoke-static {p1, p0}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTextAlignment(I)V
-
-    invoke-virtual {v0, p0}, Lole;->n(Landroid/view/View;)Lplb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lplb;->getText()Lifg;
-
-    const/4 p1, -0x1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const/16 p1, 0x11
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setGravity(I)V
+    sput-object v0, Lhc4;->b:Lhc4;
 
     return-void
+.end method
 
-    nop
+.method public constructor <init>(I)V
+    .locals 0
 
-    :array_0
-    .array-data 4
-        0x43b40000    # 360.0f
-        0x0
-    .end array-data
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lhc4;->a:I
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final onAttachedToWindow()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+    const/4 v0, 0x1
 
-    iget-wide v0, p0, Lhc4;->u0:J
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lhc4;->v0:Landroid/animation/ValueAnimator;
+    return v0
 
-    invoke-virtual {v2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    :cond_0
+    instance-of v1, p1, Lhc4;
 
-    new-instance v0, Lg10;
+    const/4 v2, 0x0
 
-    const/16 v1, 0x9
+    if-nez v1, :cond_1
 
-    invoke-direct {v0, v1, p0}, Lg10;-><init>(ILjava/lang/Object;)V
+    return v2
 
-    invoke-virtual {v2, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    :cond_1
+    check-cast p1, Lhc4;
 
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
+    iget v1, p0, Lhc4;->a:I
 
-    return-void
+    iget p1, p1, Lhc4;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final onDetachedFromWindow()V
+.method public final hashCode()I
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatTextView;->onDetachedFromWindow()V
+    iget v0, p0, Lhc4;->a:I
 
-    iget-object v0, p0, Lhc4;->v0:Landroid/animation/ValueAnimator;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
+    move-result v0
 
-    return-void
+    return v0
 .end method
 
-.method public final onThemeChanged(Lplb;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-interface {p1}, Lplb;->i()Ltyf;
+    const-string v0, "Counter(count="
 
-    move-result-object p1
+    const-string v1, ")"
 
-    iget p1, p1, Ltyf;->c:I
+    iget v2, p0, Lhc4;->a:I
 
-    iget-object v0, p0, Lhc4;->w0:Lbd3;
+    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v0, v0, Lbd3;->a:Landroid/graphics/Paint;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    const/4 p1, -0x1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-.end method
-
-.method public final setMaxValue(J)V
-    .locals 0
-
-    iput-wide p1, p0, Lhc4;->u0:J
-
-    return-void
+    return-object v0
 .end method

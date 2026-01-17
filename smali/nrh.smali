@@ -1,103 +1,82 @@
 .class public final Lnrh;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnApplyWindowInsetsListener;
+.implements Lbr6;
 
 
 # instance fields
-.field public a:Lahi;
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Lh1b;
+.field public final synthetic o:Lqrh;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lh1b;)V
+.method public constructor <init>(Lqrh;Lkotlin/coroutines/Continuation;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    iput-object p1, p0, Lnrh;->b:Landroid/view/View;
+    iput-object p1, p0, Lnrh;->o:Lqrh;
 
-    iput-object p2, p0, Lnrh;->c:Lh1b;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lnrh;->a:Lahi;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {p1, p2}, Lahi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lahi;
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lnrh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lnrh;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lnrh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lnrh;
+
+    iget-object v0, p0, Lnrh;->o:Lqrh;
+
+    invoke-direct {p1, v0, p2}, Lnrh;-><init>(Lqrh;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lnrh;->o:Lqrh;
+
+    iget-object v0, p1, Lqrh;->t0:Lspf;
+
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    check-cast v0, Ljava/lang/String;
 
-    iget-object v2, p0, Lnrh;->c:Lh1b;
+    const/4 v1, 0x1
 
-    const/16 v3, 0x1e
+    invoke-virtual {p1, v0, v1}, Lqrh;->u(Ljava/lang/String;Z)V
 
-    if-ge v1, v3, :cond_0
-
-    iget-object v4, p0, Lnrh;->b:Landroid/view/View;
-
-    invoke-static {p2, v4}, Lorh;->a(Landroid/view/WindowInsets;Landroid/view/View;)V
-
-    iget-object p2, p0, Lnrh;->a:Lahi;
-
-    invoke-virtual {v0, p2}, Lahi;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {v2, p1, v0}, Lh1b;->E(Landroid/view/View;Lahi;)Lahi;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lahi;->g()Landroid/view/WindowInsets;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    iput-object v0, p0, Lnrh;->a:Lahi;
-
-    invoke-interface {v2, p1, v0}, Lh1b;->E(Landroid/view/View;Lahi;)Lahi;
-
-    move-result-object p2
-
-    if-lt v1, v3, :cond_1
-
-    invoke-virtual {p2}, Lahi;->g()Landroid/view/WindowInsets;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    sget-object v0, Lash;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {p1}, Lmrh;->c(Landroid/view/View;)V
-
-    invoke-virtual {p2}, Lahi;->g()Landroid/view/WindowInsets;
-
-    move-result-object p1
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

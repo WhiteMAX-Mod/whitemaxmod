@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x6e18bca3
+    const v0, -0x62c3c567
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "UpdateReactions"
+    const-string v0, "LocalRestoreMembers"
 
     return-object v0
 .end method

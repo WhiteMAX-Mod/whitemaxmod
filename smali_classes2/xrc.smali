@@ -1,132 +1,119 @@
 .class public final Lxrc;
-.super Lb5g;
+.super Ldsc;
 .source "SourceFile"
-
-# interfaces
-.implements Lcr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lp4c;
-
-.field public final synthetic Z:Lzrc;
-
-.field public o:I
+.field public final a:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lp4c;Lkotlin/coroutines/Continuation;Lzrc;)V
+.method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
-    iput-object p1, p0, Lxrc;->Y:Lp4c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lxrc;->Z:Lzrc;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxrc;->a:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lh76;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lxrc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lxrc;
-
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lxrc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance v0, Lxrc;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lxrc;->Y:Lp4c;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lxrc;->Z:Lzrc;
-
-    invoke-direct {v0, v1, p2, v2}, Lxrc;-><init>(Lp4c;Lkotlin/coroutines/Continuation;Lzrc;)V
-
-    iput-object p1, v0, Lxrc;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lxrc;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lxrc;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    check-cast p1, Lxrc;
 
-    iget-object p1, p0, Lxrc;->X:Ljava/lang/Object;
+    iget-object v1, p0, Lxrc;->a:Ljava/lang/CharSequence;
 
-    check-cast p1, Lh76;
+    iget-object p1, p1, Lxrc;->a:Ljava/lang/CharSequence;
 
-    new-instance v0, Lrf2;
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Lxrc;->Z:Lzrc;
+    move-result p1
 
-    const/16 v3, 0x9
+    if-nez p1, :cond_2
 
-    invoke-direct {v0, p1, v2, v3}, Lrf2;-><init>(Lh76;Ljava/lang/Object;I)V
-
-    iput v1, p0, Lxrc;->o:I
-
-    iget-object p1, p0, Lxrc;->Y:Lp4c;
-
-    invoke-virtual {p1, v0, p0}, Lp4c;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lbc4;->a:Lbc4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    sget-object p1, Lv2h;->a:Lv2h;
+    return v0
+.end method
 
-    return-object p1
+.method public final getItemId()J
+    .locals 2
+
+    const v0, 0x8000
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lxrc;->a:Ljava/lang/CharSequence;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const v0, 0x8000
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "LinkWithQrCodeItem(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lxrc;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

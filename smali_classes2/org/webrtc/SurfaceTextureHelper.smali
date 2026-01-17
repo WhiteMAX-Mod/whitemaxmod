@@ -153,11 +153,11 @@
     iput-object p3, p0, Lorg/webrtc/SurfaceTextureHelper;->surfaceTexture:Landroid/graphics/SurfaceTexture;
 
     .line 16
-    new-instance p1, Lls6;
+    new-instance p1, Ljs6;
 
     const/4 p4, 0x2
 
-    invoke-direct {p1, p4, p0}, Lls6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p4, p0}, Ljs6;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p3, p1, p2}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;Landroid/os/Handler;)V
 
@@ -713,11 +713,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lk4g;
+    new-instance v1, Lz5g;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2}, Lk4g;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    invoke-direct {v1, p0, v2}, Lz5g;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -941,11 +941,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lk4g;
+    new-instance v1, Lz5g;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Lk4g;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    invoke-direct {v1, p0, v2}, Lz5g;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
 
     invoke-static {v0, v1}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
@@ -957,11 +957,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lk4g;
+    new-instance v1, Lz5g;
 
     const/4 v2, 0x3
 
-    invoke-direct {v1, p0, v2}, Lk4g;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    invoke-direct {v1, p0, v2}, Lz5g;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -997,11 +997,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lb40;
+    new-instance v1, Ly30;
 
     const/16 v2, 0x12
 
-    invoke-direct {v1, p0, p1, v2}, Lb40;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v1, p0, p1, v2}, Ly30;-><init>(Ljava/lang/Object;II)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1021,11 +1021,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Ljw0;
+    new-instance v1, Lcw0;
 
-    const/4 v2, 0x6
+    const/4 v2, 0x7
 
-    invoke-direct {v1, p0, p1, p2, v2}, Ljw0;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v1, p0, p1, p2, v2}, Lcw0;-><init>(Ljava/lang/Object;III)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1036,7 +1036,7 @@
 
     const-string v0, "Texture height must be positive, but was "
 
-    invoke-static {p2, v0}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1049,7 +1049,7 @@
 
     const-string v0, "Texture width must be positive, but was "
 
-    invoke-static {p1, v0}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1106,11 +1106,11 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lk4g;
+    new-instance v1, Lz5g;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lk4g;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    invoke-direct {v1, p0, v2}, Lz5g;-><init>(Lorg/webrtc/SurfaceTextureHelper;I)V
 
     invoke-static {v0, v1}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/lang/Runnable;)V
 

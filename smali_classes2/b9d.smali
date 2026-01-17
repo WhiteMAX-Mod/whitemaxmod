@@ -3,20 +3,32 @@
 
 
 # static fields
-.field public static settings_devices_allow_camera_permission_btn:I = 0x7f0a0bb6
+.field public static oneme_messages_settings_container:I = 0x7f0a0707
 
-.field public static settings_devices_auth_hint_accept_button:I = 0x7f0a0bb7
+.field public static oneme_messages_settings_content_recycler:I = 0x7f0a0708
 
-.field public static settings_devices_auth_hint_deny_button:I = 0x7f0a0bb8
+.field public static oneme_messages_settings_effects:I = 0x7f0a0709
 
-.field public static settings_devices_deny_camera_permission_btn:I = 0x7f0a0bb9
+.field public static oneme_messages_settings_fast_reaction_choose:I = 0x7f0a070a
 
-.field public static settings_devices_recycler_header_viewtype:I = 0x7f0a0bba
+.field public static oneme_messages_settings_fast_reaction_enable:I = 0x7f0a070b
 
-.field public static settings_devices_recycler_session_item_viewtype:I = 0x7f0a0bbb
+.field public static oneme_messages_settings_header_item:I = 0x7f0a070c
 
-.field public static settings_devices_recycler_view:I = 0x7f0a0bbc
+.field public static oneme_messages_settings_highlight:I = 0x7f0a070d
 
-.field public static settings_devices_scan_qr_btn:I = 0x7f0a0bbd
+.field public static oneme_messages_settings_linear:I = 0x7f0a070e
 
-.field public static settings_devices_toolbar:I = 0x7f0a0bbe
+.field public static oneme_messages_settings_need_divider_above_vh:I = 0x7f0a070f
+
+.field public static oneme_messages_settings_reaction_image:I = 0x7f0a0710
+
+.field public static oneme_messages_settings_reaction_title:I = 0x7f0a0711
+
+.field public static oneme_messages_settings_send_by_enter:I = 0x7f0a0712
+
+.field public static oneme_messages_settings_setting_item:I = 0x7f0a0713
+
+.field public static oneme_messages_settings_stickers:I = 0x7f0a0714
+
+.field public static oneme_messages_settings_toolbar:I = 0x7f0a0715

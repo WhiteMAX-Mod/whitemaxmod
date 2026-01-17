@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxf3;
+.implements Lhg3;
 
 
 # static fields
@@ -114,7 +114,7 @@
     return-object v0
 .end method
 
-.method public final getImageInfo()Lti7;
+.method public final getImageInfo()Lai7;
     .locals 7
 
     iget-object v0, p0, Lyj0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
@@ -123,25 +123,25 @@
 
     new-instance v1, Lcom/facebook/imagepipeline/image/ImageInfoImpl;
 
-    invoke-interface {p0}, Lxf3;->getWidth()I
+    invoke-interface {p0}, Lhg3;->getWidth()I
 
     move-result v2
 
-    invoke-interface {p0}, Lxf3;->getHeight()I
+    invoke-interface {p0}, Lhg3;->getHeight()I
 
     move-result v3
 
-    invoke-interface {p0}, Lxf3;->getSizeInBytes()I
+    invoke-interface {p0}, Lhg3;->getSizeInBytes()I
 
     move-result v4
 
-    invoke-virtual {p0}, Lyj0;->getQualityInfo()Lk1d;
+    invoke-virtual {p0}, Lyj0;->getQualityInfo()Ll2d;
 
     move-result-object v5
 
     iget-object v6, p0, Lyj0;->a:Ljava/util/HashMap;
 
-    invoke-direct/range {v1 .. v6}, Lcom/facebook/imagepipeline/image/ImageInfoImpl;-><init>(IIILk1d;Ljava/util/Map;)V
+    invoke-direct/range {v1 .. v6}, Lcom/facebook/imagepipeline/image/ImageInfoImpl;-><init>(IIILl2d;Ljava/util/Map;)V
 
     iput-object v1, p0, Lyj0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
 
@@ -151,10 +151,10 @@
     return-object v0
 .end method
 
-.method public getQualityInfo()Lk1d;
+.method public getQualityInfo()Ll2d;
     .locals 1
 
-    sget-object v0, Ljl7;->d:Ljl7;
+    sget-object v0, Lqk7;->d:Lqk7;
 
     return-object v0
 .end method

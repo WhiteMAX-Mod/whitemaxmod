@@ -78,7 +78,7 @@
 
     const-string v1, "AviStreamHeaderChunk"
 
-    invoke-static {v1, v0}, Lnfi;->l(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Li1h;->t(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 

@@ -1,51 +1,89 @@
-.class public abstract Lsf6;
+.class public final Lsf6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltf6;
 
-# static fields
-.field public static final a:Lmt7;
 
-.field public static final b:Lmt7;
-
-.field public static final c:Lmt7;
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lmt7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    const/16 v2, 0x13f
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lkt7;-><init>(III)V
-
-    sput-object v0, Lsf6;->a:Lmt7;
-
-    new-instance v0, Lmt7;
-
-    const/16 v1, 0x140
-
-    const/16 v2, 0x21b
-
-    invoke-direct {v0, v1, v2, v3}, Lkt7;-><init>(III)V
-
-    sput-object v0, Lsf6;->b:Lmt7;
-
-    new-instance v0, Lmt7;
-
-    const/16 v1, 0x21c
-
-    const v2, 0x7fffffff
-
-    invoke-direct {v0, v1, v2, v3}, Lkt7;-><init>(III)V
-
-    sput-object v0, Lsf6;->c:Lmt7;
+    iput-object p1, p0, Lsf6;->a:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lsf6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lsf6;
+
+    iget-object v1, p0, Lsf6;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lsf6;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lsf6;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "OpenUrl(url="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lsf6;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

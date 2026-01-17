@@ -1,217 +1,238 @@
 .class public final Lxg6;
-.super Lrsh;
+.super Ljf4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final B0:Lq57;
+
+
 # instance fields
-.field public final X:Lmf6;
+.field public A0:Ljava/util/List;
 
-.field public final Y:Lgd6;
+.field public final w0:La94;
 
-.field public final Z:Ld68;
+.field public final x0:Landroidx/recyclerview/widget/b;
 
-.field public final b:Lke4;
+.field public final y0:Lz84;
 
-.field public final c:Lbbg;
-
-.field public final d:Ld68;
-
-.field public final o:Ldd6;
-
-.field public final s0:Lhof;
-
-.field public final t0:Lpkd;
-
-.field public final u0:Lyl5;
-
-.field public v0:Ljava/lang/String;
-
-.field public w0:Lu9h;
+.field public final z0:Lwg6;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 13
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, Lfg6;->a:Lfg6;
+    new-instance v0, Lq57;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+    const/16 v1, 0x15
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Lq57;-><init>(I)V
 
-    const/16 v2, 0xf4
-
-    invoke-virtual {v1, v2}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lke4;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v3
-
-    const/16 v4, 0xb
-
-    invoke-virtual {v3, v4}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lbbg;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v5
-
-    const/16 v6, 0x1b4
-
-    invoke-virtual {v5, v6}, Lu5;->d(I)Lz7g;
-
-    move-result-object v5
-
-    invoke-virtual {v0}, Lfg6;->a()Ldd6;
-
-    move-result-object v6
-
-    new-instance v7, Lmf6;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v2}, Lu5;->d(I)Lz7g;
-
-    move-result-object v8
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v2
-
-    const/16 v9, 0x4b
-
-    invoke-virtual {v2, v9}, Lu5;->d(I)Lz7g;
-
-    move-result-object v9
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v4}, Lu5;->c(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v10, v2
-
-    check-cast v10, Lbbg;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v2
-
-    const/16 v4, 0xc
-
-    invoke-virtual {v2, v4}, Lu5;->d(I)Lz7g;
-
-    move-result-object v11
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v2
-
-    const/16 v4, 0x262
-
-    invoke-virtual {v2, v4}, Lu5;->d(I)Lz7g;
-
-    move-result-object v12
-
-    invoke-direct/range {v7 .. v12}, Lmf6;-><init>(Ld68;Ld68;Lbbg;Ld68;Ld68;)V
-
-    invoke-virtual {v0}, Lfg6;->b()Lgd6;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
-
-    move-result-object v0
-
-    const/16 v4, 0x1d7
-
-    invoke-virtual {v0, v4}, Lu5;->d(I)Lz7g;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lrsh;-><init>()V
-
-    iput-object v1, p0, Lxg6;->b:Lke4;
-
-    iput-object v3, p0, Lxg6;->c:Lbbg;
-
-    iput-object v5, p0, Lxg6;->d:Ld68;
-
-    iput-object v6, p0, Lxg6;->o:Ldd6;
-
-    iput-object v7, p0, Lxg6;->X:Lmf6;
-
-    iput-object v2, p0, Lxg6;->Y:Lgd6;
-
-    iput-object v0, p0, Lxg6;->Z:Ld68;
-
-    sget-object v0, Lch5;->a:Lch5;
-
-    invoke-static {v0}, Liof;->a(Ljava/lang/Object;)Lhof;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lxg6;->s0:Lhof;
-
-    new-instance v2, Lpkd;
-
-    invoke-direct {v2, v0}, Lpkd;-><init>(Lofa;)V
-
-    iput-object v2, p0, Lxg6;->t0:Lpkd;
-
-    new-instance v0, Lyl5;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2}, Lyl5;-><init>(I)V
-
-    iput-object v0, p0, Lxg6;->u0:Lyl5;
-
-    iget-object v0, v1, Lke4;->v0:Lpkd;
-
-    new-instance v1, Lrg6;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Lrg6;-><init>(Lxg6;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v2, Lo96;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, v0, v1, v4}, Lo96;-><init>(Lf76;Lcr6;I)V
-
-    check-cast v3, Lb9b;
-
-    invoke-virtual {v3}, Lb9b;->a()Ltb4;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lqx0;->u(Lf76;Lrb4;)Lf76;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v0, v1}, Lqx0;->w(Lf76;Lac4;)Lglf;
+    sput-object v0, Lxg6;->B0:Lq57;
 
     return-void
+.end method
+
+.method public constructor <init>(La94;Landroidx/recyclerview/widget/b;Lgha;I)V
+    .locals 1
+
+    and-int/lit8 v0, p4, 0x4
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lz84;->a:Lz84;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lz84;->b:Lz84;
+
+    :goto_0
+    and-int/lit8 p4, p4, 0x8
+
+    if-eqz p4, :cond_1
+
+    sget-object p3, Lxg6;->B0:Lq57;
+
+    :cond_1
+    invoke-direct {p0, p1}, Ljf4;-><init>(La94;)V
+
+    iput-object p1, p0, Lxg6;->w0:La94;
+
+    iput-object p2, p0, Lxg6;->x0:Landroidx/recyclerview/widget/b;
+
+    iput-object v0, p0, Lxg6;->y0:Lz84;
+
+    iput-object p3, p0, Lxg6;->z0:Lwg6;
+
+    sget-object p1, Ldh5;->a:Ldh5;
+
+    iput-object p1, p0, Lxg6;->A0:Ljava/util/List;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final F(Lw4e;I)V
+    .locals 9
+
+    invoke-virtual {p1}, Lw4e;->n()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lxg6;->A0:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lye6;
+
+    iget-object p2, p2, Lye6;->a:Ljava/lang/String;
+
+    iget-object v0, p0, Lxg6;->z0:Lwg6;
+
+    iget-object v1, p0, Lxg6;->x0:Landroidx/recyclerview/widget/b;
+
+    invoke-interface {v0, p2, v1}, Lwg6;->d(Ljava/lang/String;Landroidx/recyclerview/widget/b;)Lone/me/sdk/arch/Widget;
+
+    move-result-object v3
+
+    iget-object p2, p0, Lxg6;->w0:La94;
+
+    invoke-virtual {v3, p2}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
+
+    iget-object p2, p0, Lxg6;->y0:Lz84;
+
+    invoke-virtual {v3, p2}, La94;->setRetainViewMode(Lz84;)V
+
+    new-instance v2, Lz4e;
+
+    const/4 v7, 0x0
+
+    const/4 v8, -0x1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-direct/range {v2 .. v8}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+
+    invoke-virtual {p1, v2}, Lw4e;->S(Lz4e;)V
+
+    return-void
+.end method
+
+.method public final N(Ljava/util/List;)V
+    .locals 3
+
+    iget-object v0, p0, Lxg6;->A0:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iput-object p1, p0, Lxg6;->A0:Ljava/util/List;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    invoke-virtual {p0, v0, p1}, Lwrd;->p(II)V
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lbc1;
+
+    iget-object v1, p0, Lxg6;->A0:Ljava/util/List;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2, v1, p1}, Lbc1;-><init>(ILjava/util/List;Ljava/util/List;)V
+
+    invoke-static {v0}, Ldu7;->b(Linj;)Lk05;
+
+    move-result-object v0
+
+    iput-object p1, p0, Lxg6;->A0:Ljava/util/List;
+
+    new-instance p1, Lrz6;
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, v1, p0}, Lrz6;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lk05;->a(Lee8;)V
+
+    return-void
+.end method
+
+.method public final j()I
+    .locals 1
+
+    iget-object v0, p0, Lxg6;->A0:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k(I)J
+    .locals 2
+
+    iget-object v0, p0, Lxg6;->A0:Ljava/util/List;
+
+    invoke-static {p1, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lye6;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Lye6;->a:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    int-to-long v0, p1
+
+    return-wide v0
 .end method

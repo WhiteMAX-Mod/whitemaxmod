@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzja;
+.implements Lxja;
 
 
 # static fields
-.field public static final synthetic F0:I
+.field public static final synthetic G0:I

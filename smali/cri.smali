@@ -1,107 +1,143 @@
 .class public final Lcri;
-.super Ljqi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lgri;
 
 
 # static fields
-.field public static final o:Lcri;
+.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field public final transient c:[Ljava/lang/Object;
+.field public volatile a:Lgri;
 
-.field public final transient d:I
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcri;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static a(Lgri;)Lgri;
+    .locals 2
+
+    instance-of v0, p0, Lcri;
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
     new-instance v0, Lcri;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-array v2, v1, [Ljava/lang/Object;
+    sget-object v1, Lcri;->c:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Lcri;-><init>(I[Ljava/lang/Object;)V
+    iput-object v1, v0, Lcri;->b:Ljava/lang/Object;
 
-    sput-object v0, Lcri;->o:Lcri;
-
-    return-void
-.end method
-
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
-
-    iput-object p2, p0, Lcri;->c:[Ljava/lang/Object;
-
-    iput p1, p0, Lcri;->d:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a([Ljava/lang/Object;)I
-    .locals 3
-
-    iget-object v0, p0, Lcri;->c:[Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iget v2, p0, Lcri;->d:I
-
-    invoke-static {v0, v1, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return v2
-.end method
-
-.method public final b()I
-    .locals 1
-
-    iget v0, p0, Lcri;->d:I
-
-    return v0
-.end method
-
-.method public final c()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final d()[Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lcri;->c:[Ljava/lang/Object;
+    iput-object p0, v0, Lcri;->a:Lgri;
 
     return-object v0
 .end method
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
 
-    iget v0, p0, Lcri;->d:I
+# virtual methods
+.method public final b()Ljava/lang/Object;
+    .locals 5
 
-    invoke-static {p1, v0}, Leaj;->c(II)V
+    const-string v0, "Scoped provider was invoked recursively returning different results: "
 
-    iget-object v0, p0, Lcri;->c:[Ljava/lang/Object;
+    iget-object v1, p0, Lcri;->b:Ljava/lang/Object;
 
-    aget-object p1, v0, p1
+    sget-object v2, Lcri;->c:Ljava/lang/Object;
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne v1, v2, :cond_3
 
-    return-object p1
-.end method
+    monitor-enter p0
 
-.method public final size()I
-    .locals 1
+    :try_start_0
+    iget-object v1, p0, Lcri;->b:Ljava/lang/Object;
 
-    iget v0, p0, Lcri;->d:I
+    if-ne v1, v2, :cond_2
 
-    return v0
+    iget-object v1, p0, Lcri;->a:Lgri;
+
+    invoke-interface {v1}, Lgri;->b()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcri;->b:Ljava/lang/Object;
+
+    if-eq v3, v2, :cond_1
+
+    if-ne v3, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " & "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". This is likely due to a circular dependency."
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iput-object v1, p0, Lcri;->b:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcri;->a:Lgri;
+
+    :cond_2
+    monitor-exit p0
+
+    return-object v1
+
+    :goto_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_3
+    return-object v1
 .end method

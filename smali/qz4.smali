@@ -1,65 +1,53 @@
 .class public final Lqz4;
-.super Lsdf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic c:Lrz4;
+.field public final b:Ljava/lang/String;
+
+.field public final c:J
+
+.field public d:J
+
+.field public e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public h:[I
+
+.field public final i:Ljava/util/TreeMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrz4;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JIII[ILjava/util/TreeMap;)V
     .locals 0
 
-    iput p2, p0, Lqz4;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqz4;->c:Lrz4;
+    iput-object p1, p0, Lqz4;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lsdf;-><init>()V
+    iput-object p2, p0, Lqz4;->b:Ljava/lang/String;
+
+    iput-wide p3, p0, Lqz4;->c:J
+
+    const-wide/16 p1, 0x0
+
+    iput-wide p1, p0, Lqz4;->d:J
+
+    iput p5, p0, Lqz4;->e:I
+
+    iput p6, p0, Lqz4;->f:I
+
+    iput p7, p0, Lqz4;->g:I
+
+    iput-object p8, p0, Lqz4;->h:[I
+
+    iput-object p9, p0, Lqz4;->i:Ljava/util/TreeMap;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final b(Lu5;)Ljava/lang/Object;
-    .locals 0
-
-    iget p1, p0, Lqz4;->b:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lqz4;->c:Lrz4;
-
-    iget-object p1, p1, Lrz4;->d:Ljava/lang/Object;
-
-    check-cast p1, Lvcb;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object p1, p0, Lqz4;->c:Lrz4;
-
-    iget-object p1, p1, Lrz4;->c:Ljava/lang/Object;
-
-    check-cast p1, Lh3b;
-
-    return-object p1
-
-    :pswitch_1
-    iget-object p1, p0, Lqz4;->c:Lrz4;
-
-    iget-object p1, p1, Lrz4;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/android/OneMeApplication;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

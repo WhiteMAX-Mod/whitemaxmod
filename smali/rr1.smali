@@ -1,92 +1,143 @@
-.class public final synthetic Lrr1;
+.class public final Lrr1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Llhg;
 
-.field public final synthetic b:Ltr1;
+.field public final b:Lqhg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltr1;I)V
+.method public constructor <init>(Llhg;Lqhg;)V
     .locals 0
 
-    iput p2, p0, Lrr1;->a:I
-
-    iput-object p1, p0, Lrr1;->b:Ltr1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrr1;->a:Llhg;
+
+    iput-object p2, p0, Lrr1;->b:Lqhg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget p1, p0, Lrr1;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lrr1;->b:Ltr1;
-
-    iget-object p1, p1, Ltr1;->F0:Lsr1;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Lsr1;->n()V
+    goto :goto_1
 
     :cond_0
-    return-void
+    instance-of v0, p1, Lrr1;
 
-    :pswitch_0
-    iget-object p1, p0, Lrr1;->b:Ltr1;
+    if-nez v0, :cond_1
 
-    iget-object p1, p1, Ltr1;->F0:Lsr1;
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lsr1;->e()V
+    goto :goto_0
 
     :cond_1
-    return-void
+    check-cast p1, Lrr1;
 
-    :pswitch_1
-    iget-object p1, p0, Lrr1;->b:Ltr1;
+    iget-object v0, p0, Lrr1;->a:Llhg;
 
-    iget-object p1, p1, Ltr1;->F0:Lsr1;
+    iget-object v1, p1, Lrr1;->a:Llhg;
 
-    if-eqz p1, :cond_2
+    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {p1}, Lsr1;->i()V
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    return-void
+    iget-object v0, p0, Lrr1;->b:Lqhg;
 
-    :pswitch_2
-    iget-object p1, p0, Lrr1;->b:Ltr1;
+    iget-object p1, p1, Lrr1;->b:Lqhg;
 
-    iget-object p1, p1, Ltr1;->F0:Lsr1;
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_3
+    move-result p1
 
-    invoke-interface {p1}, Lsr1;->j()V
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_3
-    return-void
+    :goto_1
+    const/4 p1, 0x1
 
-    nop
+    return p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lrr1;->a:Llhg;
+
+    iget v0, v0, Llhg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lrr1;->b:Lqhg;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit16 v0, v0, 0x745f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "QuoteData(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrr1;->a:Llhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", body="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrr1;->b:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", image=null, count=null, placeholder=null)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

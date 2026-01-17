@@ -1,43 +1,75 @@
 .class public final Lyu;
-.super Ljava/lang/Object;
+.super Lkk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lgqf;
-
-.field public final b:Lpfc;
-
-.field public final c:Lo2b;
-
-.field public final d:Lrv5;
-
-.field public final e:Lpw5;
-
-.field public final f:Luee;
-
-.field public final g:Lvj;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lgqf;Lpfc;Lch2;Lo2b;Lrv5;Lpw5;Luee;Lvj;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    iput p1, p0, Lyu;->b:I
 
-    iput-object p1, p0, Lyu;->a:Lgqf;
-
-    iput-object p2, p0, Lyu;->b:Lpfc;
-
-    iput-object p4, p0, Lyu;->c:Lo2b;
-
-    iput-object p5, p0, Lyu;->d:Lrv5;
-
-    iput-object p6, p0, Lyu;->e:Lpw5;
-
-    iput-object p7, p0, Lyu;->f:Luee;
-
-    iput-object p8, p0, Lyu;->g:Lvj;
+    invoke-direct {p0}, Lkk0;-><init>()V
 
     return-void
+.end method
+
+.method public synthetic constructor <init>(JI)V
+    .locals 0
+
+    .line 2
+    iput p3, p0, Lyu;->b:I
+
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lyu;->b:I
+
+    sparse-switch v0, :sswitch_data_0
+
+    invoke-super {p0}, Lkk0;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :sswitch_0
+    const-string v0, "PhonesSortEvent"
+
+    return-object v0
+
+    :sswitch_1
+    const-string v0, "ContactSortEvent"
+
+    return-object v0
+
+    :sswitch_2
+    const-string v0, "AudioRecordLimitEvent{}"
+
+    return-object v0
+
+    :sswitch_3
+    const-string v0, "AssetsUpdateEvent{chatId=0}"
+
+    return-object v0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_3
+        0x1 -> :sswitch_2
+        0x3 -> :sswitch_1
+        0x9 -> :sswitch_0
+    .end sparse-switch
 .end method

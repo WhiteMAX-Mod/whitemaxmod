@@ -4,11 +4,11 @@
 
 
 # annotations
-.annotation build La35;
-.end annotation
-
 .annotation build Landroid/annotation/TargetApi;
     value = 0x15
+.end annotation
+
+.annotation build Ld35;
 .end annotation
 
 
@@ -23,7 +23,7 @@
 
 .method public static fallocateIfSupported(Ljava/io/FileDescriptor;J)V
     .locals 2
-    .annotation build La35;
+    .annotation build Ld35;
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
@@ -80,7 +80,7 @@
 
 .method public static getSupportedAbis()[Ljava/lang/String;
     .locals 7
-    .annotation build La35;
+    .annotation build Ld35;
     .end annotation
 
     sget-object v0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
@@ -200,7 +200,7 @@
 
 .method public static is64Bit()Z
     .locals 2
-    .annotation build La35;
+    .annotation build Ld35;
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;

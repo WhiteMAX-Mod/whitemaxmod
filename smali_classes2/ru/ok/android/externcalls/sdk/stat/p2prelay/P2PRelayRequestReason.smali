@@ -193,7 +193,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestReason;->trigger:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -264,7 +264,7 @@
 
     iget-wide v2, p0, Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestReason;->threshold:J
 
-    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
     move-result v0
 
@@ -292,7 +292,7 @@
 
     const-string v5, ", threshold="
 
-    invoke-static {v4, v1, v2, v0, v5}, Lq3g;->q(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v1, v2, v0, v5}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

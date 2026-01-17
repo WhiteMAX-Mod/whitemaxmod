@@ -1,93 +1,80 @@
-.class public final enum Lp34;
-.super Ljava/lang/Enum;
+.class public final synthetic Lp34;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final enum a:Lp34;
 
-.field public static final enum b:Lp34;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Lp34;
+.field public final synthetic b:Lr34;
 
-.field public static final synthetic d:[Lp34;
+.field public final synthetic c:Lmy3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lr34;Lmy3;I)V
+    .locals 0
 
-    new-instance v0, Lp34;
+    iput p3, p0, Lp34;->a:I
 
-    const-string v1, "CUSTOM"
+    iput-object p1, p0, Lp34;->b:Lr34;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lp34;->c:Lmy3;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lp34;->a:Lp34;
-
-    new-instance v1, Lp34;
-
-    const-string v2, "DEVICE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lp34;
-
-    const-string v3, "ONEME"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lp34;->b:Lp34;
-
-    new-instance v3, Lp34;
-
-    const-string v4, "UNKNOWN"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lp34;->c:Lp34;
-
-    filled-new-array {v0, v1, v2, v3}, [Lp34;
-
-    move-result-object v0
-
-    sput-object v0, Lp34;->d:[Lp34;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lp34;
-    .locals 1
 
-    const-class v0, Lp34;
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lp34;->a:I
 
-    move-result-object p0
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p0, Lp34;
+    iget-object p1, p0, Lp34;->b:Lr34;
 
-    return-object p0
-.end method
+    iget-object p1, p1, Lr34;->d:Lnq6;
 
-.method public static values()[Lp34;
-    .locals 1
+    new-instance v0, Lwt9;
 
-    sget-object v0, Lp34;->d:[Lp34;
+    iget-object v1, p0, Lp34;->c:Lmy3;
 
-    invoke-virtual {v0}, [Lp34;->clone()Ljava/lang/Object;
+    iget-wide v2, v1, Lmy3;->j:J
 
-    move-result-object v0
+    invoke-direct {v0, v2, v3, v1}, Lwt9;-><init>(JLy00;)V
 
-    check-cast v0, [Lp34;
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lp34;->b:Lr34;
+
+    iget-object p1, p1, Lr34;->d:Lnq6;
+
+    new-instance v0, Lvt9;
+
+    iget-object v1, p0, Lp34;->c:Lmy3;
+
+    iget-wide v2, v1, Lmy3;->j:J
+
+    invoke-direct {v0, v2, v3, v1}, Lvt9;-><init>(JLy00;)V
+
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

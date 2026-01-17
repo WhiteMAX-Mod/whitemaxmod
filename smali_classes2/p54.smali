@@ -1,94 +1,74 @@
-.class public final Lp54;
-.super Ladf;
+.class public final synthetic Lp54;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lv7;
 
 
 # virtual methods
-.method public final F(Lo54;)V
-    .locals 3
+.method public final a(Lw4e;)V
+    .locals 8
 
-    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+    new-instance v0, Landroid/content/Intent;
 
-    check-cast v0, Lhab;
+    const-string v1, "android.intent.action.INSERT"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    sget v1, Lx4e;->J0:I
+    const-string v1, "vnd.android.cursor.dir/raw_contact"
 
-    invoke-virtual {v0, v1}, Lhab;->setIcon(I)V
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    sget v1, Lf8b;->t:I
+    const-string v1, "finishActivityOnSaveCompleted"
 
-    new-instance v2, Lbhg;
+    const/4 v2, 0x1
 
-    invoke-direct {v2, v1}, Lbhg;-><init>(I)V
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-virtual {v0, v2}, Lhab;->setTitle(Lghg;)V
-
-    iget p1, p1, Lo54;->a:I
-
-    new-instance v1, Lbhg;
-
-    invoke-direct {v1, p1}, Lbhg;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lhab;->setSubtitle(Lghg;)V
-
-    return-void
-.end method
-
-.method public final G(Ljava/lang/Integer;Lmq6;)V
-    .locals 2
-
-    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
-
-    if-eqz p1, :cond_0
-
-    check-cast v0, Lhab;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    :try_start_0
+    invoke-virtual {p1}, Lw4e;->d()Landroid/app/Activity;
 
     move-result-object p1
 
-    new-instance v1, Lh6;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v1, p2}, Lh6;-><init>(Lmq6;)V
+    const/16 v1, 0x66
 
-    invoke-virtual {v0, p1, v1}, Lhab;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
 
     :cond_0
-    check-cast v0, Lhab;
+    const-string p1, "Required value was null."
 
-    iget-object p1, v0, Lhab;->u0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/4 p2, 0x0
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+    throw v0
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    :catch_0
+    sget-object v1, Lc5j;->a:Ledb;
 
-    const/16 p2, 0x8
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+    sget-object v2, Lkk8;->Y:Lkk8;
 
-    return-void
-.end method
+    const/4 v6, 0x0
 
-.method public final bridge synthetic z(Lie8;)V
-    .locals 0
+    const/16 v7, 0x8
 
-    check-cast p1, Lo54;
+    const-string v3, "ContactsDeepLinkFactory"
 
-    invoke-virtual {p0, p1}, Lp54;->F(Lo54;)V
+    const-string v4, "createContact: failed, no activity found"
 
+    const/4 v5, 0x0
+
+    invoke-static/range {v1 .. v7}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+
+    :cond_1
     return-void
 .end method

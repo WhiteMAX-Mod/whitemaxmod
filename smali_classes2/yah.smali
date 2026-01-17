@@ -3,85 +3,48 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls4a;
+.implements Lzb4;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lsb4;Ltb4;)V
+    .locals 1
+
+    invoke-static {}, Llpb;->a()Lh4g;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lqb4;->plus(Lqb4;)Lqb4;
+
+    move-result-object p1
+
+    invoke-interface {p1, p2}, Lqb4;->plus(Lqb4;)Lqb4;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyah;->a:Ljava/lang/String;
+    iput-object p1, p0, Lyah;->a:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lyah;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyah;
-
-    iget-object v1, p0, Lyah;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lyah;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final getCoroutineContext()Lqb4;
     .locals 1
 
-    iget-object v0, p0, Lyah;->a:Ljava/lang/String;
+    iget-object v0, p0, Lyah;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "VKServerQuality(value="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lyah;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Lzb4;->getCoroutineContext()Lqb4;
 
     move-result-object v0
 

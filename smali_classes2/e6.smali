@@ -1,225 +1,92 @@
-.class public final synthetic Le6;
-.super Ljava/lang/Object;
+.class public final Le6;
+.super Landroid/app/SharedElementCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Lwx3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Landroid/graphics/Rect;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Landroid/graphics/Rect;)V
     .locals 0
 
-    iput p1, p0, Le6;->a:I
+    iput-object p1, p0, Le6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iput-object p2, p0, Le6;->b:Ljava/lang/Object;
+    iput-object p2, p0, Le6;->a:Landroid/graphics/Rect;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/app/SharedElementCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
+    .locals 1
 
-    iget v0, p0, Le6;->a:I
+    if-eqz p2, :cond_0
 
-    iget-object v1, p0, Le6;->b:Ljava/lang/Object;
+    iget-object p1, p0, Le6;->a:Landroid/graphics/Rect;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p1, :cond_0
 
-    check-cast v1, Ljava/util/ArrayList;
+    invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
-    check-cast p1, Ljava/util/List;
+    move-result-object p2
 
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    return-void
+    move-result-object p2
 
-    :pswitch_0
-    check-cast v1, Landroid/view/View;
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    check-cast p1, Landroid/graphics/Rect;
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v1, Lv03;
-
-    check-cast p1, Lhh2;
-
-    iget-object v0, p1, Lhh2;->o:Lph2;
+    move-result v0
 
     if-eqz v0, :cond_0
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-static {p1, v0}, Lu1j;->b(Landroid/graphics/Rect;Landroid/view/View;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lph2;->h:Lph2;
-
-    :goto_0
-    invoke-static {v1, v0}, Let8;->h(Lv03;Lph2;)Lph2;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lhh2;->o:Lph2;
-
     return-void
+.end method
 
-    :pswitch_2
-    check-cast v1, Lnh2;
+.method public final onRejectSharedElements(Ljava/util/List;)V
+    .locals 3
 
-    check-cast p1, Lhh2;
+    if-eqz p1, :cond_0
 
-    iput-object v1, p1, Lhh2;->p:Lnh2;
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Le6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
+
+    new-instance v0, Lj3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1, p0}, Lj3;-><init>(ILjava/lang/Object;)V
+
+    const-wide/16 v1, 0x64
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_0
     return-void
-
-    :pswitch_3
-    check-cast v1, Ljava/lang/String;
-
-    check-cast p1, Lhh2;
-
-    iput-object v1, p1, Lhh2;->h:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_4
-    check-cast v1, [Lwx3;
-
-    check-cast p1, Lhh2;
-
-    array-length v0, v1
-
-    const/4 v2, 0x0
-
-    :goto_1
-    if-ge v2, v0, :cond_2
-
-    aget-object v3, v1, v2
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v3, p1}, Lwx3;->accept(Ljava/lang/Object;)V
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-
-    :pswitch_5
-    check-cast v1, Lex;
-
-    check-cast p1, Ljava/util/Collection;
-
-    iget-object v0, v1, Lex;->f:Ljava/lang/String;
-
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "ValidateMessagesTimeUseCase find some items for delete, count = "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v1, Lex;->l:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldah;
-
-    new-instance v2, Ldx;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v1, p1, v3}, Ldx;-><init>(Lex;Ljava/util/Collection;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, v3, v3, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
-
-    return-void
-
-    :pswitch_6
-    check-cast v1, Lru/ok/messages/photoeditor/ActPhotoEditor;
-
-    check-cast p1, Laae;
-
-    sget v0, Lru/ok/messages/photoeditor/ActPhotoEditor;->W0:I
-
-    new-instance v0, Lmw4;
-
-    iget-object v2, p1, Laae;->a:Llj4;
-
-    invoke-virtual {v2}, Llj4;->b()J
-
-    move-result-wide v2
-
-    iget-boolean p1, p1, Laae;->b:Z
-
-    invoke-direct {v0, v2, v3, p1}, Lmw4;-><init>(JZ)V
-
-    invoke-virtual {v1, v0}, Lru/ok/messages/photoeditor/ActPhotoEditor;->P(Lmw4;)V
-
-    return-void
-
-    :pswitch_7
-    check-cast v1, Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    check-cast p1, Laae;
-
-    sget v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:I
-
-    new-instance v0, Lmw4;
-
-    iget-object v2, p1, Laae;->a:Llj4;
-
-    invoke-virtual {v2}, Llj4;->b()J
-
-    move-result-wide v2
-
-    iget-boolean p1, p1, Laae;->b:Z
-
-    invoke-direct {v0, v2, v3, p1}, Lmw4;-><init>(JZ)V
-
-    invoke-virtual {v1, v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->U(Lmw4;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

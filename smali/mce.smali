@@ -3,270 +3,256 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lmce;
-
-
 # instance fields
-.field public final a:Lnce;
+.field public final a:Lo58;
 
-.field public final b:Lace;
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/CharSequence;
+.field public final b:Lspf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lmce;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    sget-object v3, Lnce;->d:Lnce;
-
-    invoke-direct {v0, v3, v1, v2, v1}, Lmce;-><init>(Lnce;Lace;ZLjava/lang/CharSequence;)V
-
-    sput-object v0, Lmce;->e:Lmce;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lnce;Lace;ZLjava/lang/CharSequence;)V
+.method public constructor <init>(Lo58;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmce;->a:Lnce;
+    iput-object p1, p0, Lmce;->a:Lo58;
 
-    iput-object p2, p0, Lmce;->b:Lace;
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iput-boolean p3, p0, Lmce;->c:Z
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    iput-object p4, p0, Lmce;->d:Ljava/lang/CharSequence;
+    move-result-object p1
+
+    iput-object p1, p0, Lmce;->b:Lspf;
 
     return-void
 .end method
 
-.method public static a(Lmce;Lnce;Lace;Ljava/lang/String;I)Lmce;
-    .locals 1
-
-    and-int/lit8 v0, p4, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p0, Lmce;->a:Lnce;
-
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
-
-    if-eqz v0, :cond_1
-
-    iget-object p2, p0, Lmce;->b:Lace;
-
-    :cond_1
-    and-int/lit8 v0, p4, 0x4
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, p0, Lmce;->c:Z
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v0, 0x1
-
-    :goto_0
-    and-int/lit8 p4, p4, 0x8
-
-    if-eqz p4, :cond_3
-
-    iget-object p3, p0, Lmce;->d:Ljava/lang/CharSequence;
-
-    :cond_3
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lmce;
-
-    invoke-direct {p0, p1, p2, v0, p3}, Lmce;-><init>(Lnce;Lace;ZLjava/lang/CharSequence;)V
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Z)V
+    .locals 5
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    iget-object v0, p0, Lmce;->b:Lspf;
 
     :cond_0
-    instance-of v1, p1, Lmce;
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    if-nez v1, :cond_1
+    move-object v2, v1
 
-    return v2
+    check-cast v2, Ljava/lang/Boolean;
 
-    :cond_1
-    check-cast p1, Lmce;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Lmce;->a:Lnce;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object v3, p1, Lmce;->a:Lnce;
+    move-result-object v2
 
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lmce;->b:Lace;
-
-    iget-object v3, p1, Lmce;->b:Lace;
-
-    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1, v2}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-eqz v1, :cond_0
 
-    return v2
+    sget-object v0, Lc5j;->a:Ledb;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Lkk8;->d:Lkk8;
+
+    invoke-virtual {v0, v2}, Ledb;->b(Lkk8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "ScreenCaptureController screen sharing audio changed="
+
+    invoke-static {v3, p1}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "ScreenCaptureController"
+
+    invoke-virtual {v0, v2, v4, v3, v1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Lmce;->a:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lla4;
+
+    invoke-virtual {v0}, Lla4;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getScreenCaptureManager()Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;
+
+    move-result-object v1
 
     :cond_3
-    iget-boolean v1, p0, Lmce;->c:Z
+    if-eqz v1, :cond_4
 
-    iget-boolean v3, p1, Lmce;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;->setAudioCaptureEnabled(Z)V
 
     :cond_4
-    iget-object v1, p0, Lmce;->d:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lmce;->d:Ljava/lang/CharSequence;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final b(Z)V
+    .locals 5
 
-    iget-object v0, p0, Lmce;->a:Lnce;
+    sget-object v0, Lc5j;->a:Ledb;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/4 v1, 0x0
 
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lmce;->b:Lace;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Lace;->hashCode()I
+    sget-object v2, Lkk8;->d:Lkk8;
+
+    invoke-virtual {v0, v2}, Ledb;->b(Lkk8;)Z
 
     move-result v3
 
-    :goto_0
-    add-int/2addr v0, v3
+    if-eqz v3, :cond_1
 
-    mul-int/2addr v0, v1
+    const-string v3, "ScreenCaptureController screen sharing changed="
 
-    iget-boolean v3, p0, Lmce;->c:Z
+    invoke-static {v3, p1}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
 
-    invoke-static {v0, v1, v3}, Lxfh;->b(IIZ)I
+    move-result-object v3
 
-    move-result v0
+    const-string v4, "ScreenCaptureController"
 
-    iget-object v1, p0, Lmce;->d:Ljava/lang/CharSequence;
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
+    invoke-virtual {v0, v2, v4, v3, v1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    :goto_0
+    iget-object v0, p0, Lmce;->a:Lo58;
 
-    move-result v2
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ScreenRecordData(state="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lmce;->a:Lnce;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", data="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmce;->b:Lace;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isApproved="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lmce;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recordUserName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmce;->d:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lla4;
+
+    invoke-virtual {v0}, Lla4;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getScreenCaptureManager()Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;
+
+    move-result-object v1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1, p1, v0}, Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;->setScreenCaptureEnabled(ZZ)V
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lmce;->b:Lspf;
+
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lmce;->a(Z)V
+
+    return-void
+
+    :cond_4
+    invoke-virtual {p0, v0}, Lmce;->a(Z)V
+
+    return-void
+.end method
+
+.method public final c()Z
+    .locals 3
+
+    iget-object v0, p0, Lmce;->a:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lla4;
+
+    invoke-virtual {v1}, Lla4;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/Conversation;->isPrepared()Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_1
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lla4;
+
+    invoke-virtual {v0}, Lla4;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getScreenCaptureManager()Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;->isScreenCaptureEnabled()Z
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    return v2
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
 .end method

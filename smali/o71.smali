@@ -1,287 +1,159 @@
-.class public final synthetic Lo71;
+.class public final Lo71;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loq6;
+.implements Lr71;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Ljava/io/Serializable;
+.field public final b:Z
 
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Lo71;->a:I
+.method public constructor <init>(JZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lo71;->b:J
+    iput-wide p1, p0, Lo71;->a:J
 
-    iput-object p3, p0, Lo71;->c:Ljava/lang/Object;
+    iput-boolean p3, p0, Lo71;->b:Z
 
-    iput-object p4, p0, Lo71;->d:Ljava/lang/Object;
-
-    iput-object p5, p0, Lo71;->o:Ljava/lang/Object;
-
-    iput-object p6, p0, Lo71;->X:Ljava/lang/Object;
-
-    iput-object p7, p0, Lo71;->Y:Ljava/io/Serializable;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lorg/json/JSONObject;JLwlf;Lr71;Lzx1;Lzy0;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lo71;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lo71;->c:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lo71;->b:J
-
-    iput-object p4, p0, Lo71;->d:Ljava/lang/Object;
-
-    iput-object p5, p0, Lo71;->o:Ljava/lang/Object;
-
-    iput-object p6, p0, Lo71;->X:Ljava/lang/Object;
-
-    iput-object p7, p0, Lo71;->Y:Ljava/io/Serializable;
+    iput-boolean p4, p0, Lo71;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final a()Z
+    .locals 1
 
-    iget v0, p0, Lo71;->a:I
+    iget-boolean v0, p0, Lo71;->b:Z
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-wide v0, p0, Lo71;->b:J
+.method public final b()Z
+    .locals 1
 
-    iget-object v2, p0, Lo71;->c:Ljava/lang/Object;
+    iget-boolean v0, p0, Lo71;->c:Z
 
-    check-cast v2, Ljava/lang/String;
+    return v0
+.end method
 
-    iget-object v3, p0, Lo71;->d:Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast v3, Ljava/lang/String;
+    const/4 v0, 0x1
 
-    iget-object v4, p0, Lo71;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast v4, Ljava/lang/String;
-
-    iget-object v5, p0, Lo71;->X:Ljava/lang/Object;
-
-    check-cast v5, Ljava/lang/String;
-
-    iget-object v6, p0, Lo71;->Y:Ljava/io/Serializable;
-
-    check-cast v6, Ljava/lang/String;
-
-    check-cast p1, Lj6e;
-
-    const-string v7, "INSERT OR REPLACE INTO contact_title (docid, link, allNormalizedTitles, allOriginalTitles, allNormalizedTitlesWithoutEmoji, allOriginalTitlesWithoutEmoji) VALUES(?, ?, ?, ?, ?, ?)"
-
-    invoke-interface {p1, v7}, Lj6e;->w0(Ljava/lang/String;)Lo6e;
-
-    move-result-object p1
-
-    const/4 v7, 0x1
-
-    :try_start_0
-    invoke-interface {p1, v7, v0, v1}, Lo6e;->b(IJ)V
-
-    const/4 v0, 0x2
-
-    if-nez v2, :cond_0
-
-    invoke-interface {p1, v0}, Lo6e;->e(I)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_5
+    return v0
 
     :cond_0
-    invoke-interface {p1, v0, v2}, Lo6e;->D(ILjava/lang/String;)V
+    instance-of v1, p1, Lo71;
 
-    :goto_0
-    const/4 v0, 0x3
+    const/4 v2, 0x0
 
-    if-nez v3, :cond_1
+    if-nez v1, :cond_1
 
-    invoke-interface {p1, v0}, Lo6e;->e(I)V
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    invoke-interface {p1, v0, v3}, Lo6e;->D(ILjava/lang/String;)V
+    check-cast p1, Lo71;
 
-    :goto_1
-    const/4 v0, 0x4
+    iget-wide v3, p0, Lo71;->a:J
 
-    if-nez v4, :cond_2
+    iget-wide v5, p1, Lo71;->a:J
 
-    invoke-interface {p1, v0}, Lo6e;->e(I)V
+    cmp-long v1, v3, v5
 
-    goto :goto_2
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-interface {p1, v0, v4}, Lo6e;->D(ILjava/lang/String;)V
+    iget-boolean v1, p0, Lo71;->b:Z
 
-    :goto_2
-    const/4 v0, 0x5
+    iget-boolean v3, p1, Lo71;->b:Z
 
-    if-nez v5, :cond_3
+    if-eq v1, v3, :cond_3
 
-    invoke-interface {p1, v0}, Lo6e;->e(I)V
-
-    goto :goto_3
+    return v2
 
     :cond_3
-    invoke-interface {p1, v0, v5}, Lo6e;->D(ILjava/lang/String;)V
+    iget-boolean v1, p0, Lo71;->c:Z
 
-    :goto_3
-    const/4 v0, 0x6
+    iget-boolean p1, p1, Lo71;->c:Z
 
-    if-nez v6, :cond_4
+    if-eq v1, p1, :cond_4
 
-    invoke-interface {p1, v0}, Lo6e;->e(I)V
-
-    goto :goto_4
+    return v2
 
     :cond_4
-    invoke-interface {p1, v0, v6}, Lo6e;->D(ILjava/lang/String;)V
+    return v0
+.end method
 
-    :goto_4
-    invoke-interface {p1}, Lo6e;->r0()Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public final hashCode()I
+    .locals 3
 
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    iget-wide v0, p0, Lo71;->a:J
 
-    const/4 p1, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    return-object p1
+    move-result v0
 
-    :goto_5
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    const/16 v1, 0x1f
 
-    throw v0
+    mul-int/2addr v0, v1
 
-    :pswitch_0
-    iget-object v0, p0, Lo71;->c:Ljava/lang/Object;
+    iget-boolean v2, p0, Lo71;->b:Z
 
-    check-cast v0, Lorg/json/JSONObject;
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    iget-object v1, p0, Lo71;->d:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v1, Lwlf;
+    iget-boolean v1, p0, Lo71;->c:Z
 
-    iget-object v2, p0, Lo71;->o:Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    check-cast v2, Lr71;
+    move-result v1
 
-    iget-object v3, p0, Lo71;->X:Ljava/lang/Object;
+    add-int/2addr v1, v0
 
-    check-cast v3, Lzx1;
+    return v1
+.end method
 
-    iget-object v4, p0, Lo71;->Y:Ljava/io/Serializable;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    check-cast v4, Lzy0;
+    const-string v0, "Chat(chatId="
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    const-string v1, ", isVideoEnabled="
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    iget-wide v2, p0, Lo71;->a:J
 
-    move-result-object v0
+    iget-boolean v4, p0, Lo71;->b:Z
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    move-result-object p1
-
-    iget-wide v5, p0, Lo71;->b:J
-
-    invoke-static {v5, v6}, Lztb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {v2, v3, v0, v1, v4}, Lhc0;->k(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    const-string v1, ", isAudioEnabled="
 
-    move-result-object p1
+    const-string v2, ")"
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    iget-boolean v3, p0, Lo71;->c:Z
 
-    iget-boolean v0, v1, Lwlf;->b:Z
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    iget-object v0, v2, Lr71;->b:Ld68;
-
-    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v1, v3, v2}, Lva9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ldz1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    invoke-virtual {p1, v3}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Loq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    invoke-virtual {p1, v4}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Loq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

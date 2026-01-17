@@ -25,7 +25,7 @@
 
     add-int/lit8 v2, v2, 0xd
 
-    invoke-static {v2, v1}, Lzy4;->f(ILjava/lang/String;)I
+    invoke-static {v2, v1}, Lxi4;->f(ILjava/lang/String;)I
 
     move-result v2
 

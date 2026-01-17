@@ -134,7 +134,7 @@
 
     iget v4, p0, Lbc0;->b:I
 
-    invoke-static {v4, v0}, Lc12;->d(II)Z
+    invoke-static {v4, v0}, Lt02;->d(II)Z
 
     move-result v0
 
@@ -241,7 +241,7 @@
 
     iget v3, p0, Lbc0;->b:I
 
-    invoke-static {v3}, Lc12;->w(I)I
+    invoke-static {v3}, Lt02;->t(I)I
 
     move-result v3
 
@@ -437,7 +437,7 @@
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,76 +1,120 @@
 .class public final Lkae;
-.super Lb5g;
+.super Lyn5;
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Ljava/util/concurrent/ScheduledExecutorService;
 
 
 # instance fields
-.field public final synthetic o:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+.field public final w0:Ljava/util/concurrent/ScheduledExecutorService;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;Lxab;Lvn5;Lsn7;)V
     .locals 0
 
-    iput-object p1, p0, Lkae;->o:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+    invoke-direct {p0, p1, p2, p3, p4}, Lyn5;-><init>(Ljava/util/concurrent/ExecutorService;Lxab;Lvn5;Lnq6;)V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lkae;->w0:Ljava/util/concurrent/ScheduledExecutorService;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 2
 
-    check-cast p1, Lac4;
+    .line 1
+    invoke-virtual {p0}, Lyn5;->b()Lqxh;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lkae;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .line 2
+    iget-object v1, p0, Lkae;->w0:Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-virtual {p0, p1, v0}, Lyn5;->h(Ljava/lang/Runnable;Lqxh;)Lxn5;
 
     move-result-object p1
 
-    check-cast p1, Lkae;
+    invoke-interface {v1, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    sget-object p2, Lv2h;->a:Lv2h;
-
-    invoke-virtual {p1, p2}, Lkae;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lkae;
-
-    iget-object v0, p0, Lkae;->o:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
-
-    invoke-direct {p1, v0, p2}, Lkae;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 2
 
-    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkae;->o:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
-
-    invoke-static {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lv9e;
+    .line 3
+    invoke-virtual {p0}, Lyn5;->b()Lqxh;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->g(Lv9e;)V
+    .line 4
+    iget-object v1, p0, Lkae;->w0:Ljava/util/concurrent/ScheduledExecutorService;
 
-    sget-object p1, Lv2h;->a:Lv2h;
+    invoke-virtual {p0, p1, v0}, Lyn5;->g(Ljava/util/concurrent/Callable;Lqxh;)Lwn5;
+
+    move-result-object p1
+
+    invoke-interface {v1, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 8
+
+    invoke-virtual {p0}, Lyn5;->b()Lqxh;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lkae;->w0:Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-virtual {p0, p1, v0}, Lyn5;->h(Ljava/lang/Runnable;Lqxh;)Lxn5;
+
+    move-result-object v2
+
+    move-wide v3, p2
+
+    move-wide v5, p4
+
+    move-object v7, p6
+
+    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 8
+
+    invoke-virtual {p0}, Lyn5;->b()Lqxh;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lkae;->w0:Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-virtual {p0, p1, v0}, Lyn5;->h(Ljava/lang/Runnable;Lqxh;)Lxn5;
+
+    move-result-object v2
+
+    move-wide v3, p2
+
+    move-wide v5, p4
+
+    move-object v7, p6
+
+    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
 
     return-object p1
 .end method

@@ -1,170 +1,357 @@
-.class public final synthetic Lzs5;
-.super Ljava/lang/Object;
+.class public final Lzs5;
+.super Lore;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq6;
+.implements Lb0c;
+
+
+# static fields
+.field public static final synthetic Z:I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:J
 
-.field public final synthetic b:I
+.field public final Y:Ljava/lang/String;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;II)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Lzs5;->a:I
-
-    iput-object p1, p0, Lzs5;->c:Ljava/lang/Object;
-
-    iput p2, p0, Lzs5;->b:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lzs5;->b:J
+
+    iput-object p3, p0, Lzs5;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lzs5;->d:Ljava/lang/String;
+
+    iput-wide p5, p0, Lzs5;->o:J
+
+    iput-wide p7, p0, Lzs5;->X:J
+
+    iput-object p9, p0, Lzs5;->Y:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 10
+.method public final c()I
+    .locals 4
 
-    iget v0, p0, Lzs5;->a:I
+    const-wide/16 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    iget-wide v2, p0, Lzs5;->o:J
 
-    iget-object v0, p0, Lzs5;->c:Ljava/lang/Object;
+    cmp-long v0, v2, v0
 
-    check-cast v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    iget v1, p0, Lzs5;->b:I
-
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->s(I)Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v3, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->E:Ljava/lang/String;
-
-    sget-object v4, Lm4j;->a:Lvcb;
-
-    if-nez v4, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    sget-object v5, Lxk8;->d:Lxk8;
-
-    invoke-virtual {v4, v5}, Lvcb;->b(Lxk8;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    iget-object v6, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->G:Landroidx/recyclerview/widget/RecyclerView;
-
-    const/4 v7, 0x0
-
-    if-eqz v6, :cond_1
-
-    invoke-virtual {v6}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lzqd;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_1
-
-    invoke-virtual {v6}, Lzqd;->j()I
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
+    if-gtz v0, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    invoke-virtual {p0}, Lore;->l()Lhm9;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Lhm9;->m(J)Ljm9;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget v0, v0, Ljm9;->S0:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    goto :goto_1
+
     :cond_1
-    move-object v6, v7
-
     :goto_0
-    new-instance v8, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v9, "LM scroll to inflated view after redraw by pos:"
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v9, ", curSize:"
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v5, v3, v6, v7}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v0
 
     :cond_2
     :goto_1
-    invoke-virtual {v0, v2, v1}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->y1(Landroid/view/View;I)V
+    const/4 v0, 0x3
 
-    :cond_3
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    return v0
+.end method
 
-    return-object v0
+.method public final d()V
+    .locals 8
 
-    :pswitch_0
-    iget-object v0, p0, Lzs5;->c:Ljava/lang/Object;
+    invoke-virtual {p0}, Lore;->o()Lteg;
 
-    check-cast v0, Lvg8;
+    move-result-object v0
 
-    iget v1, p0, Lzs5;->b:I
+    iget-wide v1, p0, Lzs5;->b:J
 
-    iget-object v2, v0, Lvg8;->a:Landroid/content/Context;
+    invoke-virtual {v0, v1, v2}, Lteg;->d(J)V
 
-    invoke-virtual {v2, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lore;->b()Lxg2;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lzs5;->X:J
+
+    invoke-virtual {v0, v1, v2}, Lxg2;->N(J)Lnd2;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lzs5;->o:J
+
+    if-eqz v0, :cond_1
+
+    iget-object v3, p0, Lore;->a:Lpre;
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x0
+
+    :goto_0
+    iget-object v3, v3, Lpre;->p:Lo58;
+
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lgrb;
+
+    iget-object v0, v0, Lnd2;->b:Luh2;
+
+    iget-wide v4, v0, Luh2;->a:J
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v4, v5, v1, v2}, Lgrb;->b(JJ)V
+
+    :cond_1
+    invoke-virtual {p0}, Lore;->l()Lhm9;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v2}, Lhm9;->m(J)Ljm9;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget v1, v0, Ljm9;->S0:I
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_2
+
+    invoke-virtual {p0}, Lore;->l()Lhm9;
 
     move-result-object v1
 
-    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
+    sget-object v2, Lom9;->Y:Lom9;
 
-    iget v0, v0, Lvg8;->b:I
+    invoke-virtual {v1, v0, v2}, Lhm9;->s(Ljm9;Lom9;)V
 
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    invoke-virtual {p0}, Lore;->q()Lcy0;
 
-    invoke-direct {v2, v0, v3}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+    move-result-object v1
 
-    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    new-instance v2, Le6h;
 
-    return-object v1
+    iget-wide v3, v0, Ljm9;->Z:J
 
-    :pswitch_1
-    iget-object v0, p0, Lzs5;->c:Ljava/lang/Object;
+    iget-wide v5, v0, Lhk0;->a:J
 
-    check-cast v0, Lbt5;
+    const/4 v7, 0x0
 
-    iget v1, p0, Lzs5;->b:I
+    invoke-direct/range {v2 .. v7}, Le6h;-><init>(JJZ)V
 
-    iget-object v0, v0, Lbt5;->a:Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcy0;->c(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0}, Lore;->r()Ltji;
+
+    move-result-object v0
+
+    invoke-static {v0}, Late;->u(Ltji;)V
+
+    return-void
+
+    :cond_2
+    const-string v0, "zs5"
+
+    const-string v1, "onMaxFailCount: Message was deleted"
+
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final e()[B
+    .locals 3
+
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
+
+    iget-wide v1, p0, Lzs5;->b:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->requestId:J
+
+    iget-object v1, p0, Lzs5;->c:Ljava/lang/String;
+
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
+
+    iget-object v1, p0, Lzs5;->d:Ljava/lang/String;
+
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
+
+    iget-wide v1, p0, Lzs5;->o:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->messageId:J
+
+    iget-wide v1, p0, Lzs5;->X:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->chatId:J
+
+    iget-object v1, p0, Lzs5;->Y:Ljava/lang/String;
+
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
+
+    invoke-static {v0}, Lbp9;->toByteArray(Lbp9;)[B
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final f()I
+    .locals 1
+
+    const/4 v0, 0x5
+
+    return v0
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lzs5;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Lc0c;
+    .locals 1
+
+    sget-object v0, Lc0c;->O0:Lc0c;
+
+    return-object v0
+.end method
+
+.method public final t()V
+    .locals 13
+
+    iget-object v0, p0, Lore;->a:Lpre;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v0, v0, Lpre;->b:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lvz5;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Luz5;
+
+    const/4 v12, 0x0
+
+    iget-wide v3, p0, Lzs5;->b:J
+
+    iget-object v5, p0, Lzs5;->c:Ljava/lang/String;
+
+    iget-object v6, p0, Lzs5;->d:Ljava/lang/String;
+
+    iget-wide v7, p0, Lzs5;->o:J
+
+    iget-wide v9, p0, Lzs5;->X:J
+
+    iget-object v11, p0, Lzs5;->Y:Ljava/lang/String;
+
+    invoke-direct/range {v1 .. v12}, Luz5;-><init>(Lvz5;JLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v0, Lxg5;->a:Lxg5;
+
+    invoke-static {v0, v1}, Ls9j;->h(Lqb4;Lbr6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsz5;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x4
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x5
+
+    if-ne v0, v1, :cond_1
+
+    invoke-virtual {p0}, Lzs5;->d()V
+
+    return-void
+
+    :cond_1
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_2
+    return-void
 .end method

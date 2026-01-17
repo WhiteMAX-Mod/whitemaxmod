@@ -1,415 +1,263 @@
 .class public final Lscc;
-.super Li4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lscc;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final X:Z
+.field public final a:Lqcc;
 
-.field public final Y:Z
+.field public final b:Lqq5;
 
-.field public final Z:Lb72;
+.field public final c:Ls8g;
 
-.field public final a:Ljava/util/List;
+.field public d:I
 
-.field public b:F
+.field public e:Ljava/lang/Object;
 
-.field public c:I
+.field public final f:Landroid/os/Looper;
 
-.field public final d:F
+.field public g:Z
 
-.field public final o:Z
+.field public h:Z
 
-.field public final s0:Lb72;
-
-.field public t0:I
-
-.field public final u0:Ljava/util/List;
-
-.field public final v0:Ljava/util/List;
+.field public i:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lqq5;Lqcc;Lqlg;ILs8g;Landroid/os/Looper;)V
+    .locals 0
 
-    new-instance v0, Lwgj;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lwgj;-><init>(I)V
-
-    sput-object v0, Lscc;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, 0x41200000    # 10.0f
+    iput-object p1, p0, Lscc;->b:Lqq5;
 
-    .line 2
-    iput v0, p0, Lscc;->b:F
+    iput-object p2, p0, Lscc;->a:Lqcc;
 
-    const/high16 v0, -0x1000000
+    iput-object p6, p0, Lscc;->f:Landroid/os/Looper;
 
-    iput v0, p0, Lscc;->c:I
+    iput-object p5, p0, Lscc;->c:Ls8g;
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lscc;->d:F
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lscc;->o:Z
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lscc;->X:Z
-
-    iput-boolean v0, p0, Lscc;->Y:Z
-
-    .line 3
-    new-instance v1, Lky0;
-
-    invoke-direct {v1}, Lky0;-><init>()V
-
-    iput-object v1, p0, Lscc;->Z:Lb72;
-
-    new-instance v1, Lky0;
-
-    .line 4
-    invoke-direct {v1}, Lky0;-><init>()V
-
-    iput-object v1, p0, Lscc;->s0:Lb72;
-
-    iput v0, p0, Lscc;->t0:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lscc;->u0:Ljava/util/List;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    .line 5
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lscc;->v0:Ljava/util/List;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    .line 6
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lscc;->a:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/ArrayList;FIFZZZLb72;Lb72;ILjava/util/ArrayList;Ljava/util/ArrayList;)V
-    .locals 2
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/high16 v0, 0x41200000    # 10.0f
-
-    .line 8
-    iput v0, p0, Lscc;->b:F
-
-    const/high16 v0, -0x1000000
-
-    iput v0, p0, Lscc;->c:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lscc;->d:F
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lscc;->o:Z
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lscc;->X:Z
-
-    iput-boolean v0, p0, Lscc;->Y:Z
-
-    .line 9
-    new-instance v1, Lky0;
-
-    invoke-direct {v1}, Lky0;-><init>()V
-
-    iput-object v1, p0, Lscc;->Z:Lb72;
-
-    new-instance v1, Lky0;
-
-    .line 10
-    invoke-direct {v1}, Lky0;-><init>()V
-
-    iput-object v1, p0, Lscc;->s0:Lb72;
-
-    iput v0, p0, Lscc;->t0:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lscc;->u0:Ljava/util/List;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    .line 11
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lscc;->v0:Ljava/util/List;
-
-    iput-object p1, p0, Lscc;->a:Ljava/util/List;
-
-    iput p2, p0, Lscc;->b:F
-
-    iput p3, p0, Lscc;->c:I
-
-    iput p4, p0, Lscc;->d:F
-
-    iput-boolean p5, p0, Lscc;->o:Z
-
-    iput-boolean p6, p0, Lscc;->X:Z
-
-    iput-boolean p7, p0, Lscc;->Y:Z
-
-    if-eqz p8, :cond_0
-
-    iput-object p8, p0, Lscc;->Z:Lb72;
-
-    :cond_0
-    if-eqz p9, :cond_1
-
-    iput-object p9, p0, Lscc;->s0:Lb72;
-
-    :cond_1
-    iput p10, p0, Lscc;->t0:I
-
-    iput-object p11, p0, Lscc;->u0:Ljava/util/List;
-
-    if-eqz p12, :cond_2
-
-    iput-object p12, p0, Lscc;->v0:Ljava/util/List;
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 17
+.method public final declared-synchronized a(J)V
+    .locals 5
 
-    move-object/from16 v0, p0
+    monitor-enter p0
 
-    move-object/from16 v1, p1
+    :try_start_0
+    iget-boolean v0, p0, Lscc;->g:Z
 
-    move/from16 v2, p2
+    invoke-static {v0}, Ly5j;->d(Z)V
 
-    const/16 v3, 0x4f45
+    iget-object v0, p0, Lscc;->f:Landroid/os/Looper;
 
-    invoke-static {v1, v3}, Lwmj;->k(Landroid/os/Parcel;I)I
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    move-result v3
+    move-result-object v0
 
-    const/4 v4, 0x2
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    iget-object v5, v0, Lscc;->a:Ljava/util/List;
+    move-result-object v1
 
-    invoke-static {v1, v5, v4}, Lwmj;->j(Landroid/os/Parcel;Ljava/util/List;I)V
+    if-eq v0, v1, :cond_0
 
-    iget v4, v0, Lscc;->b:F
-
-    const/4 v5, 0x3
-
-    const/4 v6, 0x4
-
-    invoke-static {v1, v5, v6}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget v4, v0, Lscc;->c:I
-
-    invoke-static {v1, v6, v6}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v4, 0x5
-
-    invoke-static {v1, v4, v6}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    iget v4, v0, Lscc;->d:F
-
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeFloat(F)V
-
-    const/4 v4, 0x6
-
-    invoke-static {v1, v4, v6}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v4, v0, Lscc;->o:Z
-
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v4, 0x7
-
-    invoke-static {v1, v4, v6}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v4, v0, Lscc;->X:Z
-
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 v4, 0x8
-
-    invoke-static {v1, v4, v6}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v4, v0, Lscc;->Y:Z
-
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object v4, v0, Lscc;->Z:Lb72;
-
-    invoke-virtual {v4}, Lb72;->b()Lb72;
-
-    move-result-object v4
-
-    const/16 v5, 0x9
-
-    invoke-static {v1, v5, v4, v2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    iget-object v4, v0, Lscc;->s0:Lb72;
-
-    invoke-virtual {v4}, Lb72;->b()Lb72;
-
-    move-result-object v4
-
-    const/16 v5, 0xa
-
-    invoke-static {v1, v5, v4, v2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    iget v2, v0, Lscc;->t0:I
-
-    const/16 v4, 0xb
-
-    invoke-static {v1, v4, v6}, Lwmj;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 v2, 0xc
-
-    iget-object v4, v0, Lscc;->u0:Ljava/util/List;
-
-    invoke-static {v1, v4, v2}, Lwmj;->j(Landroid/os/Parcel;Ljava/util/List;I)V
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    iget-object v4, v0, Lscc;->v0:Ljava/util/List;
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v5
-
-    invoke-direct {v2, v5}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ldzf;
-
-    new-instance v6, Ldzf;
-
-    iget-object v7, v5, Ldzf;->a:Lazf;
-
-    iget v8, v7, Lazf;->a:F
-
-    iget v8, v7, Lazf;->c:I
-
-    iget v9, v7, Lazf;->b:I
-
-    new-instance v10, Landroid/util/Pair;
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    invoke-direct {v10, v9, v8}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-object v8, v10, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v8, Ljava/lang/Integer;
-
-    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
-
-    move-result v13
-
-    iget-object v8, v10, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v8, Ljava/lang/Integer;
-
-    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
-
-    move-result v14
-
-    iget-object v7, v7, Lazf;->o:Lelf;
-
-    iget v12, v0, Lscc;->b:F
-
-    new-instance v11, Lazf;
-
-    iget-boolean v15, v0, Lscc;->o:Z
-
-    move-object/from16 v16, v7
-
-    invoke-direct/range {v11 .. v16}, Lazf;-><init>(FIIZLelf;)V
-
-    iget-wide v7, v5, Ldzf;->b:D
-
-    invoke-direct {v6, v11, v7, v8}, Ldzf;-><init>(Lazf;D)V
-
-    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/16 v4, 0xd
+    const/4 v0, 0x0
 
-    invoke-static {v1, v2, v4}, Lwmj;->j(Landroid/os/Parcel;Ljava/util/List;I)V
+    :goto_0
+    invoke-static {v0}, Ly5j;->d(Z)V
 
-    invoke-static {v1, v3}, Lwmj;->l(Landroid/os/Parcel;I)V
+    iget-object v0, p0, Lscc;->c:Ls8g;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, p1
+
+    :goto_1
+    iget-boolean v2, p0, Lscc;->i:Z
+
+    if-nez v2, :cond_1
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v3, p1, v3
+
+    if-lez v3, :cond_1
+
+    iget-object v2, p0, Lscc;->c:Ls8g;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0, p1, p2}, Ljava/lang/Object;->wait(J)V
+
+    iget-object p1, p0, Lscc;->c:Ls8g;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    sub-long p1, v0, p1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    if-eqz v2, :cond_2
+
+    monitor-exit p0
 
     return-void
+
+    :cond_2
+    :try_start_1
+    new-instance p1, Ljava/util/concurrent/TimeoutException;
+
+    const-string p2, "Message delivery timed out."
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :goto_2
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized b(Z)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lscc;->h:Z
+
+    or-int/2addr p1, v0
+
+    iput-boolean p1, p0, Lscc;->h:Z
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lscc;->i:Z
+
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final c()V
+    .locals 3
+
+    iget-boolean v0, p0, Lscc;->g:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Ly5j;->d(Z)V
+
+    iput-boolean v1, p0, Lscc;->g:Z
+
+    iget-object v0, p0, Lscc;->b:Lqq5;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, v0, Lqq5;->I0:Z
+
+    if-nez v1, :cond_1
+
+    iget-object v1, v0, Lqq5;->t0:Landroid/os/HandlerThread;
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->isAlive()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v0, Lqq5;->Z:La9g;
+
+    const/16 v2, 0xe
+
+    invoke-virtual {v1, v2, p0}, La9g;->a(ILjava/lang/Object;)Ly8g;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ly8g;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    :try_start_1
+    const-string v1, "ExoPlayerImplInternal"
+
+    const-string v2, "Ignoring messages sent after release."
+
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lscc;->b(Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
 .end method

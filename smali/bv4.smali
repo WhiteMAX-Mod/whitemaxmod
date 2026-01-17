@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsgh;
+.implements Lnhh;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lfv4;
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfv4;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
     .locals 0
 
-    iput p2, p0, Lbv4;->a:I
+    iput p4, p0, Lbv4;->a:I
 
-    iput-object p1, p0, Lbv4;->b:Lfv4;
+    iput-object p1, p0, Lbv4;->c:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lbv4;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,117 +32,275 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 9
 
     iget v0, p0, Lbv4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lbv4;->b:Lfv4;
+    iget-object v0, p0, Lbv4;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lv36;
 
-    invoke-static {}, Ldpf;->o()Landroid/opengl/EGLDisplay;
+    iget-wide v1, p0, Lbv4;->b:J
 
-    move-result-object v1
+    iget-object v3, v0, Lv36;->m:Ldz;
 
-    iput-object v1, v0, Lfv4;->m:Landroid/opengl/EGLDisplay;
+    iget-object v4, v0, Lv36;->l:Ldu0;
 
-    iget-object v2, v0, Lfv4;->c:Lyy6;
+    iget-object v5, v0, Lv36;->o:Lcz6;
 
-    const/4 v3, 0x2
+    const/4 v6, 0x1
 
-    sget-object v4, Ldpf;->b:[I
+    if-eqz v5, :cond_0
 
-    invoke-interface {v2, v1, v3, v4}, Lyy6;->e(Landroid/opengl/EGLDisplay;I[I)Landroid/opengl/EGLContext;
-
-    move-result-object v1
-
-    iget-object v3, v0, Lfv4;->m:Landroid/opengl/EGLDisplay;
-
-    invoke-interface {v2, v1, v3}, Lyy6;->p(Landroid/opengl/EGLContext;Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLSurface;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lfv4;->n:Landroid/opengl/EGLSurface;
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lbv4;->b:Lfv4;
-
-    invoke-virtual {v0}, Lfv4;->c()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lbv4;->b:Lfv4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    iget-object v1, v0, Lfv4;->d:Lwzi;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :try_start_1
-    iget-object v1, v1, Lwzi;->d:Ljava/lang/Object;
-
-    check-cast v1, Lsy;
-
-    if-eqz v1, :cond_0
-
-    iget v1, v1, Lsy;->b:I
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
-
-    invoke-static {}, Ldpf;->d()V
-    :try_end_1
-    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_1 .. :try_end_1} :catch_0
+    move v5, v6
 
     goto :goto_0
 
-    :catch_0
-    move-exception v1
-
-    :try_start_2
-    const-string v2, "CompositorGlProgram"
-
-    const-string v3, "Error releasing GL Program"
-
-    invoke-static {v2, v3, v1}, Lnfi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     :cond_0
+    const/4 v5, 0x0
+
     :goto_0
-    iget-object v1, v0, Lfv4;->h:Lfu0;
+    invoke-static {v5}, Lh6j;->g(Z)V
 
-    invoke-virtual {v1}, Lfu0;->h()V
+    :goto_1
+    invoke-virtual {v4}, Ldu0;->j()I
 
-    iget-object v1, v0, Lfv4;->m:Landroid/opengl/EGLDisplay;
+    move-result v5
 
-    iget-object v0, v0, Lfv4;->n:Landroid/opengl/EGLSurface;
+    iget v7, v4, Ldu0;->b:I
 
-    invoke-static {v1, v0}, Ldpf;->l(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)V
-    :try_end_2
-    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_2 .. :try_end_2} :catch_1
+    if-ge v5, v7, :cond_1
+
+    invoke-virtual {v3}, Ldz;->f()J
+
+    move-result-wide v7
+
+    cmp-long v5, v7, v1
+
+    if-gtz v5, :cond_1
+
+    iget-object v5, v4, Ldu0;->e:Ljava/lang/Object;
+
+    check-cast v5, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v5}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v7
+
+    xor-int/2addr v7, v6
+
+    invoke-static {v7}, Lh6j;->g(Z)V
+
+    invoke-virtual {v5}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lbz6;
+
+    iget-object v7, v4, Ldu0;->d:Ljava/lang/Object;
+
+    check-cast v7, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v7, v5}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v3}, Ldz;->h()J
+
+    iget-object v5, v0, Lv36;->n:Ldz;
+
+    invoke-virtual {v5}, Ldz;->h()J
+
+    move-result-wide v7
+
+    invoke-static {v7, v8}, Landroid/opengl/GLES30;->glDeleteSync(J)V
+
+    invoke-static {}, La9f;->d()V
+
+    iget-object v5, v0, Lv36;->u:Lyy6;
+
+    invoke-interface {v5}, Lyy6;->o()V
 
     goto :goto_1
 
-    :catch_1
-    move-exception v0
-
-    const-string v1, "DefaultVideoCompositor"
-
-    const-string v2, "Error releasing GL resources"
-
-    invoke-static {v1, v2, v0}, Lnfi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
+    :cond_1
     return-void
 
-    nop
+    :pswitch_0
+    iget-object v0, p0, Lbv4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lpv4;
+
+    iget-wide v6, p0, Lbv4;->b:J
+
+    iget-object v1, v0, Lpv4;->k:Lv36;
+
+    iget-object v2, v0, Lpv4;->c:Luy6;
+
+    iget-object v0, v1, Lv36;->k:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    iget-object v3, v1, Lv36;->h:Lc02;
+
+    invoke-virtual {v3}, Lc02;->i()V
+
+    iget-object v3, v1, Lv36;->o:Lcz6;
+
+    if-eqz v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    iget-boolean v3, v1, Lv36;->p:Z
+
+    xor-int/lit8 v3, v3, 0x1
+
+    invoke-static {v3}, Lh6j;->g(Z)V
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lhlg;
+
+    move-object v4, v3
+
+    iget-object v3, v4, Lhlg;->a:Lbz6;
+
+    iget-wide v4, v4, Lhlg;->b:J
+
+    invoke-virtual/range {v1 .. v7}, Lv36;->i(Luy6;Lbz6;JJ)V
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-boolean v0, v1, Lv36;->t:Z
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, v1, Lv36;->w:Lbd6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lbd6;->g()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, v1, Lv36;->t:Z
+
+    :cond_4
+    :goto_2
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lbv4;->c:Ljava/lang/Object;
+
+    move-object v1, v0
+
+    check-cast v1, Lgv4;
+
+    iget-wide v2, p0, Lbv4;->b:J
+
+    monitor-enter v1
+
+    :goto_3
+    :try_start_0
+    iget-object v0, v1, Lgv4;->h:Ldu0;
+
+    invoke-virtual {v0}, Ldu0;->j()I
+
+    move-result v0
+
+    iget-object v4, v1, Lgv4;->h:Ldu0;
+
+    iget v4, v4, Ldu0;->b:I
+
+    if-ge v0, v4, :cond_5
+
+    iget-object v0, v1, Lgv4;->i:Ldz;
+
+    invoke-virtual {v0}, Ldz;->f()J
+
+    move-result-wide v4
+
+    cmp-long v0, v4, v2
+
+    if-gtz v0, :cond_5
+
+    iget-object v0, v1, Lgv4;->h:Ldu0;
+
+    iget-object v4, v0, Ldu0;->e:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v4}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v5
+
+    xor-int/lit8 v5, v5, 0x1
+
+    invoke-static {v5}, Lh6j;->g(Z)V
+
+    invoke-virtual {v4}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lbz6;
+
+    iget-object v0, v0, Ldu0;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0, v4}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, v1, Lgv4;->i:Ldz;
+
+    invoke-virtual {v0}, Ldz;->h()J
+
+    iget-object v0, v1, Lgv4;->j:Ldz;
+
+    invoke-virtual {v0}, Ldz;->h()J
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Landroid/opengl/GLES30;->glDeleteSync(J)V
+
+    invoke-static {}, La9f;->d()V
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_5
+    invoke-virtual {v1}, Lgv4;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    return-void
+
+    :goto_4
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 
     :pswitch_data_0
     .packed-switch 0x0

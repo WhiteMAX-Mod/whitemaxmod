@@ -1,4 +1,4 @@
-.class public final Loc5;
+.class public Loc5;
 .super Lnc5;
 .source "SourceFile"
 
@@ -11,7 +11,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ly4;->C(Landroid/view/WindowManager$LayoutParams;)V
+    invoke-static {p1}, Lw4;->v(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
 .end method

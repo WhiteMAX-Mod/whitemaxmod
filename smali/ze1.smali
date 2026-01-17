@@ -1,21 +1,24 @@
 .class public final Lze1;
-.super Lie0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldf1;
 
-# instance fields
-.field public final b:Ljava/lang/String;
+
+# static fields
+.field public static final a:Lze1;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x2
+    new-instance v0, Lze1;
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lze1;->b:Ljava/lang/String;
+    sput-object v0, Lze1;->a:Lze1;
 
     return-void
 .end method
@@ -23,7 +26,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -32,57 +35,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lze1;
+    instance-of p1, p1, Lze1;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Lze1;
-
-    iget-object v1, p0, Lze1;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lze1;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lze1;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    const v0, -0x2fe4f2f9
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    const-string v0, "StartNewCall(link="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lze1;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "OpenCallIncoming"
 
     return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class public final Lrba;
-.super Lxbg;
+.super Licg;
 .source "SourceFile"
 
 
@@ -13,27 +13,8 @@
 .field public o:I
 
 
-# direct methods
-.method public constructor <init>(Lgr9;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
-
-    iget-object p1, p0, Lrba;->c:Ljava/util/List;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lrba;->c:Ljava/util/List;
-
-    :cond_0
-    return-void
-.end method
-
-
 # virtual methods
-.method public final d(Lgr9;Ljava/lang/String;)V
+.method public final d(Lpq9;Ljava/lang/String;)V
     .locals 3
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -115,10 +96,12 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    goto :goto_1
+    invoke-virtual {p1}, Lpq9;->B()V
+
+    return-void
 
     :pswitch_0
-    invoke-static {p1, v1}, Lisi;->l(Lgr9;I)I
+    invoke-static {p1, v1}, Lcti;->m(Lpq9;I)I
 
     move-result p1
 
@@ -127,19 +110,16 @@
     return-void
 
     :pswitch_1
-    invoke-static {p1}, Lisi;->p(Lgr9;)Ljava/lang/String;
+    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p1
 
-    iput-object p2, p0, Lrba;->X:Ljava/lang/String;
-
-    :goto_1
-    invoke-virtual {p1}, Lgr9;->y()V
+    iput-object p1, p0, Lrba;->X:Ljava/lang/String;
 
     return-void
 
     :pswitch_2
-    invoke-static {p1}, Lh00;->f(Lgr9;)Lh00;
+    invoke-static {p1}, Le00;->f(Lpq9;)Le00;
 
     move-result-object p1
 
@@ -150,7 +130,7 @@
     :pswitch_3
     const-wide/16 v0, 0x0
 
-    invoke-static {p1, v0, v1}, Lisi;->m(Lgr9;J)J
+    invoke-static {p1, v0, v1}, Lcti;->n(Lpq9;J)J
 
     move-result-wide p1
 
@@ -182,7 +162,7 @@
 
     iget-object v0, p0, Lrba;->c:Ljava/util/List;
 
-    invoke-static {v0}, Lvki;->a(Ljava/util/Collection;)I
+    invoke-static {v0}, Lcth;->d(Ljava/util/Collection;)I
 
     move-result v0
 
@@ -196,7 +176,7 @@
 
     const-string v6, ", marker="
 
-    invoke-static {v0, v1, v2, v5, v6}, Lzy4;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v2, v5, v6}, Lxi4;->l(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

@@ -1,114 +1,119 @@
 .class public final Lgeb;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ld68;
+.field public final synthetic X:Lkeb;
+
+.field public final synthetic Y:Lnd2;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld68;)V
+.method public constructor <init>(Lkeb;Lnd2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lgeb;->a:Ld68;
+    iput-object p1, p0, Lgeb;->X:Lkeb;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lgeb;->Y:Lnd2;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/graphics/Bitmap;Ljava/io/File;Ll84;)Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    instance-of v0, p3, Lekh;
+    check-cast p1, Lzb4;
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-object v0, p3
-
-    check-cast v0, Lekh;
-
-    iget v1, v0, Lekh;->X:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lekh;->X:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lekh;
-
-    invoke-direct {v0, p0, p3}, Lekh;-><init>(Lgeb;Ll84;)V
-
-    :goto_0
-    iget-object p3, v0, Lekh;->d:Ljava/lang/Object;
-
-    iget v1, v0, Lekh;->X:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    invoke-static {p3}, Lulj;->k(Ljava/lang/Object;)V
-
-    return-object p3
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    invoke-static {p3}, Lulj;->k(Ljava/lang/Object;)V
-
-    iget-object p3, p0, Lgeb;->a:Ld68;
-
-    invoke-interface {p3}, Ld68;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lbbg;
-
-    check-cast p3, Lb9b;
-
-    invoke-virtual {p3}, Lb9b;->a()Ltb4;
-
-    move-result-object p3
-
-    new-instance v1, Lgkh;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p1, p0, p2, v3}, Lgkh;-><init>(Landroid/graphics/Bitmap;Lgeb;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
-
-    iput v2, v0, Lekh;->X:I
-
-    invoke-static {p3, v1, v0}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lgeb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object p2, Lbc4;->a:Lbc4;
+    check-cast p1, Lgeb;
 
-    if-ne p1, p2, :cond_3
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-object p2
+    invoke-virtual {p1, p2}, Lgeb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_3
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lgeb;
+
+    iget-object v0, p0, Lgeb;->X:Lkeb;
+
+    iget-object v1, p0, Lgeb;->Y:Lnd2;
+
+    invoke-direct {p1, v0, v1, p2}, Lgeb;-><init>(Lkeb;Lnd2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lgeb;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgeb;->X:Lkeb;
+
+    invoke-virtual {p1}, Lkeb;->a()Lzqa;
+
+    move-result-object p1
+
+    iput v1, p0, Lgeb;->o:I
+
+    iget-object v0, p0, Lgeb;->Y:Lnd2;
+
+    invoke-virtual {p1, v0, p0}, Lzqa;->f(Lnd2;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
     return-object p1
 .end method

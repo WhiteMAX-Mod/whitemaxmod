@@ -207,11 +207,11 @@
     .line 18
     iget-object v1, p0, Lcom/my/tracker/core/o/k;->a:Lcom/my/tracker/core/EngineCore;
 
-    new-instance v9, Lwfh;
+    new-instance v9, Lslh;
 
-    const/4 v0, 0x4
+    const/4 v0, 0x3
 
-    invoke-direct {v9, p0, p1, p2, v0}, Lwfh;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v9, p0, p1, p2, v0}, Lslh;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     const/4 v5, 0x1
 

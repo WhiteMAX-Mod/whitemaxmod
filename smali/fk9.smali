@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract c(Lhk9;Landroid/view/MenuItem;)Z
+.method public abstract c(Lrj9;)V
 .end method
 
-.method public abstract p(Lhk9;)V
+.method public abstract getItemData()Lrj9;
 .end method

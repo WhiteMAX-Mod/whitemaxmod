@@ -1,60 +1,80 @@
 .class public final Lct4;
-.super Ljava/lang/Object;
+.super Lsbe;
 .source "SourceFile"
-
-# interfaces
-.implements Lpae;
 
 
 # static fields
-.field public static final f:Ljava/util/logging/Logger;
-
-
-# instance fields
-.field public final a:Lky7;
-
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Lv4a;
-
-.field public final d:Lnm5;
-
-.field public final e:Lu7g;
+.field public static final b:Lct4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 7
 
-    const-class v0, Leug;
+    new-instance v0, Lct4;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget v5, Lzeg;->c:I
 
-    move-result-object v0
+    sget v6, Lzeg;->d:I
 
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+    sget-wide v2, Lzeg;->e:J
 
-    move-result-object v0
+    sget-object v4, Lzeg;->a:Ljava/lang/String;
 
-    sput-object v0, Lct4;->f:Ljava/util/logging/Logger;
+    invoke-direct {v0}, Lsb4;-><init>()V
+
+    new-instance v1, Lyb4;
+
+    invoke-direct/range {v1 .. v6}, Lyb4;-><init>(JLjava/lang/String;II)V
+
+    iput-object v1, v0, Lsbe;->a:Lyb4;
+
+    sput-object v0, Lct4;->b:Lct4;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lv4a;Lky7;Lnm5;Lu7g;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final close()V
+    .locals 2
 
-    iput-object p1, p0, Lct4;->b:Ljava/util/concurrent/Executor;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    iput-object p2, p0, Lct4;->c:Lv4a;
+    const-string v1, "Dispatchers.Default cannot be closed"
 
-    iput-object p3, p0, Lct4;->a:Lky7;
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    iput-object p4, p0, Lct4;->d:Lnm5;
+    throw v0
+.end method
 
-    iput-object p5, p0, Lct4;->e:Lu7g;
+.method public final limitedParallelism(ILjava/lang/String;)Lsb4;
+    .locals 1
 
-    return-void
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+
+    sget v0, Lzeg;->c:I
+
+    if-lt p1, v0, :cond_0
+
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lsb4;Ljava/lang/String;)Lsb4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lsb4;->limitedParallelism(ILjava/lang/String;)Lsb4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Dispatchers.Default"
+
+    return-object v0
 .end method

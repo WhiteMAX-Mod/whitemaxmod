@@ -54,7 +54,7 @@
         "count",
         "setCount",
         "uid",
-        "Lv2h;",
+        "Lb3h;",
         "setUid",
         "(Ljava/lang/String;)V",
         "Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;",
@@ -151,7 +151,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder$Companion;-><init>(Lro4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder;->Companion:Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder$Companion;
 
@@ -179,13 +179,13 @@
 
     iput-wide v1, p0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder;->timestamp:J
 
-    sget-object v1, Ldh5;->a:Ldh5;
+    sget-object v1, Leh5;->a:Leh5;
 
     iput-object v1, p0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder;->custom:Ljava/util/Map;
 
     iput v0, p0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder;->count:I
 
-    sget-object v0, Lch5;->a:Lch5;
+    sget-object v0, Ldh5;->a:Ldh5;
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder;->groups:Ljava/util/List;
 
@@ -249,7 +249,7 @@
     const/4 v14, 0x0
 
     .line 14
-    invoke-direct/range {v0 .. v14}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;-><init>(Ljava/lang/String;ILjava/lang/String;JJLjava/util/Map;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lro4;)V
+    invoke-direct/range {v0 .. v14}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;-><init>(Ljava/lang/String;ILjava/lang/String;JJLjava/util/Map;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lso4;)V
 
     return-object v0
 .end method

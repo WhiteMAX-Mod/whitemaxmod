@@ -1,186 +1,124 @@
-.class public final Lna9;
+.class public Lna9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lna9;
+.field public static final b:Ljava/lang/Object;
+
+.field public static final c:Ljava/util/HashMap;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
-
-.field public b:Ljava/util/List;
+.field public final a:Lgb9;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lna9;
+    new-instance v0, Ljava/lang/Object;
 
-    new-instance v1, Landroid/os/Bundle;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+    sput-object v0, Lna9;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0, v1, v2}, Lna9;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lna9;->c:Lna9;
+    sput-object v0, Lna9;->c:Ljava/util/HashMap;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
-    .locals 0
+.method public constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Ldq5;Lhk7;Lhk7;Lhk7;Lodb;Landroid/os/Bundle;Landroid/os/Bundle;Lzii;)V
+    .locals 11
+
+    const-string v0, ""
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lna9;->a:Landroid/os/Bundle;
+    sget-object v2, Lna9;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Lna9;->b:Ljava/util/List;
+    monitor-enter v2
+
+    :try_start_0
+    sget-object v3, Lna9;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-virtual {v3, v0, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v0, Lgb9;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-object/from16 v8, p7
+
+    move-object/from16 v9, p8
+
+    move-object/from16 v10, p9
+
+    invoke-direct/range {v0 .. v10}, Lgb9;-><init>(Lna9;Lone/me/android/media/service/OneMeMediaSessionService;Ldq5;Lhk7;Lhk7;Lhk7;Lodb;Landroid/os/Bundle;Landroid/os/Bundle;Lzii;)V
+
+    iput-object v0, p0, Lna9;->a:Lgb9;
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v3, "Session ID must be unique. ID="
+
+    invoke-direct {v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :goto_0
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    iget-object v0, p0, Lna9;->b:Ljava/util/List;
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lna9;->a:Landroid/os/Bundle;
-
-    const-string v1, "controlCategories"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lna9;->b:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object v0, p0, Lna9;->b:Ljava/util/List;
-
-    :cond_1
-    return-void
-.end method
-
-.method public final b()Ljava/util/ArrayList;
-    .locals 2
-
-    invoke-virtual {p0}, Lna9;->a()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lna9;->b:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object v0
-.end method
-
-.method public final c()Z
+.method public final a()Lrbc;
     .locals 1
 
-    invoke-virtual {p0}, Lna9;->a()V
+    iget-object v0, p0, Lna9;->a:Lgb9;
 
-    iget-object v0, p0, Lna9;->b:Ljava/util/List;
+    iget-object v0, v0, Lgb9;->t:Lxcc;
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lna9;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lna9;
-
-    invoke-virtual {p0}, Lna9;->a()V
-
-    invoke-virtual {p1}, Lna9;->a()V
-
-    iget-object v0, p0, Lna9;->b:Ljava/util/List;
-
-    iget-object p1, p1, Lna9;->b:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-virtual {p0}, Lna9;->a()V
-
-    iget-object v0, p0, Lna9;->b:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MediaRouteSelector{ controlCategories="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lna9;->b()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " }"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v0, Lxcc;->a:Ldq5;
 
     return-object v0
 .end method

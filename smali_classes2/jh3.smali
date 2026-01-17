@@ -3,78 +3,145 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lbj4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lqh3;
 
-.field public final synthetic b:Llh3;
+.field public final synthetic b:Lzg7;
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic d:Ljava/lang/Runnable;
-
-.field public final synthetic o:J
+.field public final synthetic c:Lbh3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
+.method public constructor <init>(Lqh3;Lzg7;Lbh3;)V
     .locals 0
 
-    iput p6, p0, Ljh3;->a:I
-
-    iput-object p1, p0, Ljh3;->b:Llh3;
-
-    iput-object p2, p0, Ljh3;->c:Landroid/graphics/drawable/Drawable;
-
-    iput-object p3, p0, Ljh3;->d:Ljava/lang/Runnable;
-
-    iput-wide p4, p0, Ljh3;->o:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljh3;->a:Lqh3;
+
+    iput-object p2, p0, Ljh3;->b:Lzg7;
+
+    iput-object p3, p0, Ljh3;->c:Lbh3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a(Lpi4;)V
+    .locals 7
 
-    iget v0, p0, Ljh3;->a:I
+    check-cast p1, Lo0;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Lo0;->e()F
 
-    iget-object v0, p0, Ljh3;->d:Ljava/lang/Runnable;
+    move-result v0
 
-    iget-wide v1, p0, Ljh3;->o:J
+    invoke-virtual {p1}, Lo0;->g()Z
 
-    iget-object v3, p0, Ljh3;->b:Llh3;
+    move-result v1
 
-    iget-object v4, p0, Ljh3;->c:Landroid/graphics/drawable/Drawable;
+    if-nez v1, :cond_0
 
-    invoke-static {v3, v4, v0, v1, v2}, Llh3;->z(Llh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    invoke-virtual {p1}, Lo0;->f()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    const v1, 0x3f7d70a4    # 0.99f
+
+    cmpg-float v1, v0, v1
+
+    if-gez v1, :cond_3
+
+    if-eqz p1, :cond_3
+
+    const/16 p1, 0x2710
+
+    int-to-float p1, p1
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v5
+
+    iget-object v2, p0, Ljh3;->a:Lqh3;
+
+    iget-object p1, v2, Lqh3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
+
+    iget-object v4, p0, Ljh3;->c:Lbh3;
+
+    iget-object v3, p0, Ljh3;->b:Lzg7;
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v2, v3, v4, v5}, Lqh3;->a(Lqh3;Lzg7;Lbh3;I)V
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Ljh3;->d:Ljava/lang/Runnable;
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
 
-    iget-wide v1, p0, Ljh3;->o:J
+    move-result-object v0
 
-    iget-object v3, p0, Ljh3;->b:Llh3;
+    new-instance v1, Lkh3;
 
-    iget-object v4, p0, Ljh3;->c:Landroid/graphics/drawable/Drawable;
+    if-eqz v0, :cond_2
 
-    invoke-static {v3, v4, v0, v1, v2}, Llh3;->z(Llh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    const/4 v6, 0x0
+
+    invoke-direct/range {v1 .. v6}, Lkh3;-><init>(Lqh3;Lzg7;Lbh3;II)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
     return-void
 
-    nop
+    :cond_2
+    const/4 v6, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct/range {v1 .. v6}, Lkh3;-><init>(Lqh3;Lzg7;Lbh3;II)V
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_3
+    return-void
+.end method
+
+.method public final b(Lpi4;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(Lpi4;)V
+    .locals 0
+
+    return-void
 .end method

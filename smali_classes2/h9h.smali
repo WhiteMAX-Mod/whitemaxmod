@@ -1,127 +1,107 @@
-.class public final Lh9h;
-.super Ljava/lang/Object;
+.class public final enum Lh9h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final synthetic X:[Lh9h;
 
-.field public final b:Z
+.field public static final enum b:Lh9h;
+
+.field public static final enum c:Lh9h;
+
+.field public static final enum d:Lh9h;
+
+.field public static final o:[Lh9h;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lh9h;
 
-    iput-object p1, p0, Lh9h;->a:Ljava/lang/String;
+    const-string v1, "UNKNOWN"
 
-    iput-boolean p2, p0, Lh9h;->b:Z
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lh9h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lh9h;->b:Lh9h;
+
+    new-instance v1, Lh9h;
+
+    const-string v2, "UPLOADING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lh9h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lh9h;->c:Lh9h;
+
+    new-instance v2, Lh9h;
+
+    const-string v3, "UPLOADED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Lh9h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lh9h;->d:Lh9h;
+
+    filled-new-array {v0, v1, v2}, [Lh9h;
+
+    move-result-object v0
+
+    sput-object v0, Lh9h;->X:[Lh9h;
+
+    invoke-static {}, Lh9h;->values()[Lh9h;
+
+    move-result-object v0
+
+    sput-object v0, Lh9h;->o:[Lh9h;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, p1, :cond_0
+    iput p3, p0, Lh9h;->a:I
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lh9h;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lh9h;
-
-    iget-object v0, p0, Lh9h;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lh9h;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lh9h;->b:Z
-
-    iget-boolean p1, p1, Lh9h;->b:Z
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lh9h;
+    .locals 1
 
-    iget-object v0, p0, Lh9h;->a:Ljava/lang/String;
+    const-class v0, Lh9h;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast p0, Lh9h;
 
-    iget-boolean v1, p0, Lh9h;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static values()[Lh9h;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lh9h;->X:[Lh9h;
 
-    const-string v1, "UrlState(url="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lh9h;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isRestored="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lh9h;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, [Lh9h;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lh9h;
 
     return-object v0
 .end method

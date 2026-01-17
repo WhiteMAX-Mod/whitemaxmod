@@ -1,52 +1,204 @@
 .class public final Lfmc;
-.super Ll84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Lvr7;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lvr7;
+.field public final synthetic b:Landroid/widget/LinearLayout;
 
-.field public Z:Lh76;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic c:Landroid/widget/ScrollView;
 
 
 # direct methods
-.method public constructor <init>(Lvr7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/widget/LinearLayout;Landroid/widget/ScrollView;I)V
     .locals 0
 
-    iput-object p1, p0, Lfmc;->Y:Lvr7;
+    iput p3, p0, Lfmc;->a:I
 
-    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfmc;->b:Landroid/widget/LinearLayout;
+
+    iput-object p2, p0, Lfmc;->c:Landroid/widget/ScrollView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    iput-object p1, p0, Lfmc;->d:Ljava/lang/Object;
+    iget v0, p0, Lfmc;->a:I
 
-    iget p1, p0, Lfmc;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lfmc;->b:Landroid/widget/LinearLayout;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    iput p1, p0, Lfmc;->o:I
+    move-result-object v1
 
-    iget-object p1, p0, Lfmc;->Y:Lvr7;
+    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    const/4 v0, 0x0
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Lvr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    move-result-object p1
+    goto :goto_0
 
-    return-object p1
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    iget-object v1, p0, Lfmc;->c:Landroid/widget/ScrollView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v3
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v4
+
+    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lfmc;->b:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v2, :cond_2
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_2
+    if-eqz v1, :cond_3
+
+    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_3
+
+    :cond_3
+    const/4 v1, 0x0
+
+    :goto_3
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    iget-object v1, p0, Lfmc;->c:Landroid/widget/ScrollView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v3
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v4
+
+    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lfmc;->b:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v2, :cond_4
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_4
+
+    :cond_4
+    const/4 v1, 0x0
+
+    :goto_4
+    if-eqz v1, :cond_5
+
+    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_5
+
+    :cond_5
+    const/4 v1, 0x0
+
+    :goto_5
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    iget-object v1, p0, Lfmc;->c:Landroid/widget/ScrollView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v3
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v4
+
+    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

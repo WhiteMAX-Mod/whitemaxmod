@@ -1,76 +1,201 @@
-.class public interface abstract Lyo3;
+.class public final synthetic Lyo3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly1b;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroidx/fragment/app/b;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
+    .locals 0
+
+    iput p2, p0, Lyo3;->a:I
+
+    iput-object p1, p0, Lyo3;->b:Landroidx/fragment/app/b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 11
 
-    invoke-static {p1}, Lf1d;->a(Ljava/lang/Class;)Lf1d;
+    iget v0, p0, Lyo3;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0, p1}, Lyo3;->f(Lf1d;)Ljava/lang/Object;
+    iget-object v0, p0, Lyo3;->b:Landroidx/fragment/app/b;
 
-    move-result-object p1
+    iget-object v0, v0, Landroidx/fragment/app/b;->E0:Lrz6;
 
-    return-object p1
-.end method
+    iget-object v0, v0, Lrz6;->b:Ljava/lang/Object;
 
-.method public b(Lf1d;)Ljava/util/Set;
-    .locals 0
+    check-cast v0, Lnm6;
 
-    invoke-interface {p0, p1}, Lyo3;->d(Lf1d;)Lhyc;
+    iget-object v1, v0, Lnm6;->o:Lcn6;
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    invoke-interface {p1}, Lhyc;->get()Ljava/lang/Object;
+    invoke-virtual {v1, v0, v0, v2}, Landroidx/fragment/app/c;->b(Lnm6;Ldu7;Landroidx/fragment/app/a;)V
 
-    move-result-object p1
+    return-void
 
-    check-cast p1, Ljava/util/Set;
+    :pswitch_0
+    iget-object v0, p0, Lyo3;->b:Landroidx/fragment/app/b;
 
-    return-object p1
-.end method
+    iget-object v1, v0, Lfp3;->d:Lvd;
 
-.method public c(Ljava/lang/Class;)Lhyc;
-    .locals 0
+    iget-object v1, v1, Lvd;->d:Ljava/lang/Object;
 
-    invoke-static {p1}, Lf1d;->a(Ljava/lang/Class;)Lf1d;
+    check-cast v1, Lsn;
 
-    move-result-object p1
+    const-string v2, "android:support:activity-result"
 
-    invoke-interface {p0, p1}, Lyo3;->e(Lf1d;)Lhyc;
+    invoke-virtual {v1, v2}, Lsn;->c(Ljava/lang/String;)Landroid/os/Bundle;
 
-    move-result-object p1
+    move-result-object v1
 
-    return-object p1
-.end method
+    if-eqz v1, :cond_4
 
-.method public abstract d(Lf1d;)Lhyc;
-.end method
+    iget-object v0, v0, Lfp3;->Z:Ldp3;
 
-.method public abstract e(Lf1d;)Lhyc;
-.end method
+    iget-object v2, v0, Ldp3;->b:Ljava/util/LinkedHashMap;
 
-.method public f(Lf1d;)Ljava/lang/Object;
-    .locals 0
+    iget-object v3, v0, Ldp3;->a:Ljava/util/LinkedHashMap;
 
-    invoke-interface {p0, p1}, Lyo3;->e(Lf1d;)Lhyc;
+    iget-object v4, v0, Ldp3;->g:Landroid/os/Bundle;
 
-    move-result-object p1
+    const-string v5, "KEY_COMPONENT_ACTIVITY_REGISTERED_RCS"
 
-    if-nez p1, :cond_0
+    invoke-virtual {v1, v5}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    const/4 p1, 0x0
+    move-result-object v5
 
-    return-object p1
+    const-string v6, "KEY_COMPONENT_ACTIVITY_REGISTERED_KEYS"
+
+    invoke-virtual {v1, v6}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_4
+
+    if-nez v5, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    invoke-interface {p1}, Lhyc;->get()Ljava/lang/Object;
+    const-string v7, "KEY_COMPONENT_ACTIVITY_LAUNCHED_KEYS"
 
-    move-result-object p1
+    invoke-virtual {v1, v7}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    return-object p1
+    move-result-object v7
+
+    if-eqz v7, :cond_1
+
+    iget-object v8, v0, Ldp3;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v8, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    :cond_1
+    const-string v7, "KEY_COMPONENT_ACTIVITY_PENDING_RESULT"
+
+    invoke-virtual {v1, v7}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v4, v1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+
+    :cond_2
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v7, 0x0
+
+    :goto_0
+    if-ge v7, v1, :cond_4
+
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/String;
+
+    invoke-interface {v2, v8}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_3
+
+    invoke-interface {v2, v8}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Ljava/lang/Integer;
+
+    invoke-virtual {v4, v8}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_3
+
+    invoke-static {v3}, Li1h;->d(Ljava/util/Map;)Ljava/util/Map;
+
+    invoke-interface {v3, v9}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
+    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/Number;
+
+    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
+
+    move-result v8
+
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Ljava/lang/String;
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    invoke-interface {v3, v10, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    iget-object v10, v0, Ldp3;->b:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v10, v9, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,24 +3,25 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Loc9;
+.implements Lpc9;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lccc;
+.field public final synthetic b:Lrc9;
 
 .field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lccc;II)V
+.method public synthetic constructor <init>(Lrc9;II)V
     .locals 0
 
     iput p3, p0, Lec9;->a:I
 
-    iput-object p1, p0, Lec9;->b:Lccc;
+    iput-object p1, p0, Lec9;->b:Lrc9;
 
     iput p2, p0, Lec9;->c:I
 
@@ -31,192 +32,135 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public b(Lxcc;Lla9;Ljava/util/List;)V
+    .locals 4
 
     iget v0, p0, Lec9;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    const/16 v0, 0x1a
+    iget-object v0, p0, Lec9;->b:Lrc9;
 
-    iget-object v1, p0, Lec9;->b:Lccc;
+    iget v1, p0, Lec9;->c:I
 
-    invoke-virtual {v1, v0}, Lccc;->S(I)Z
+    invoke-virtual {v0, p2, p1, v1}, Lrc9;->W(Lla9;Lxcc;I)I
 
-    move-result v0
+    move-result p2
 
-    const/16 v2, 0x22
+    invoke-virtual {p1, p2, p3}, Lxcc;->b(ILjava/util/List;)V
 
-    if-nez v0, :cond_0
+    return-void
 
-    invoke-virtual {v1, v2}, Lccc;->S(I)Z
+    :pswitch_0
+    iget-object v0, p0, Lec9;->b:Lrc9;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v0, :cond_0
+    invoke-interface {p3}, Ljava/util/List;->size()I
 
-    goto/16 :goto_0
+    move-result v1
+
+    iget v2, p0, Lec9;->c:I
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_0
+
+    invoke-virtual {v0, p2, p1, v2}, Lrc9;->W(Lla9;Lxcc;I)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Ld49;
+
+    invoke-virtual {p1}, Lxcc;->m0()V
+
+    iget-object p1, p1, Lxcc;->a:Ldq5;
+
+    add-int/lit8 v0, p2, 0x1
+
+    invoke-static {p3}, Lhk7;->m(Ljava/lang/Object;)Lhud;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3, p2, v0}, Ldq5;->l1(Ljava/util/List;II)V
+
+    goto :goto_0
 
     :cond_0
-    const/16 v0, -0x64
+    invoke-virtual {v0, p2, p1, v2}, Lrc9;->W(Lla9;Lxcc;I)I
 
-    iget v3, p0, Lec9;->c:I
+    move-result v1
 
-    const/4 v4, 0x1
+    add-int/2addr v2, v3
 
-    if-eq v3, v0, :cond_9
+    invoke-virtual {v0, p2, p1, v2}, Lrc9;->W(Lla9;Lxcc;I)I
 
-    const/4 v0, -0x1
+    move-result p2
 
-    if-eq v3, v0, :cond_7
-
-    if-eq v3, v4, :cond_5
-
-    const/16 v0, 0x64
-
-    if-eq v3, v0, :cond_3
-
-    const/16 v0, 0x65
-
-    if-eq v3, v0, :cond_1
-
-    const-string v0, "VolumeProviderCompat"
-
-    const-string v1, "onAdjustVolume: Ignoring unknown direction: "
-
-    invoke-static {v3, v1, v0}, Lx02;->p(ILjava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1, v2}, Lccc;->S(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v1}, Lccc;->P()Z
-
-    invoke-virtual {v1, v4, v4}, Lccc;->e0(IZ)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1}, Lccc;->P()Z
-
-    invoke-virtual {v1, v4}, Lccc;->f0(Z)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v1, v2}, Lccc;->S(I)Z
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v1, v4, v2}, Lccc;->e0(IZ)V
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1, v2}, Lccc;->f0(Z)V
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {v1, v2}, Lccc;->S(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v1, v4}, Lccc;->N(I)V
-
-    goto :goto_0
-
-    :cond_6
-    invoke-virtual {v1}, Lccc;->M()V
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {v1, v2}, Lccc;->S(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    invoke-virtual {v1, v4}, Lccc;->r(I)V
-
-    goto :goto_0
-
-    :cond_8
-    invoke-virtual {v1}, Lccc;->n()V
-
-    goto :goto_0
-
-    :cond_9
-    invoke-virtual {v1, v2}, Lccc;->S(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    invoke-virtual {v1, v4, v4}, Lccc;->e0(IZ)V
-
-    goto :goto_0
-
-    :cond_a
-    invoke-virtual {v1, v4}, Lccc;->f0(Z)V
+    invoke-virtual {p1, p3, v1, p2}, Lxcc;->V(Ljava/util/List;II)V
 
     :goto_0
     return-void
 
-    :pswitch_0
-    const/16 v0, 0x19
+    :pswitch_1
+    iget-object v0, p0, Lec9;->b:Lrc9;
 
-    iget-object v1, p0, Lec9;->b:Lccc;
+    iget v1, p0, Lec9;->c:I
 
-    invoke-virtual {v1, v0}, Lccc;->S(I)Z
+    invoke-virtual {v0, p2, p1, v1}, Lrc9;->W(Lla9;Lxcc;I)I
 
-    move-result v0
+    move-result p2
 
-    const/16 v2, 0x21
+    invoke-virtual {p1, p2, p3}, Lxcc;->b(ILjava/util/List;)V
 
-    if-nez v0, :cond_b
-
-    invoke-virtual {v1, v2}, Lccc;->S(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    goto :goto_1
-
-    :cond_b
-    invoke-virtual {v1, v2}, Lccc;->S(I)Z
-
-    move-result v0
-
-    iget v2, p0, Lec9;->c:I
-
-    if-eqz v0, :cond_c
-
-    const/4 v0, 0x1
-
-    invoke-virtual {v1, v2, v0}, Lccc;->h0(II)V
-
-    goto :goto_1
-
-    :cond_c
-    invoke-virtual {v1, v2}, Lccc;->g0(I)V
-
-    :goto_1
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public g(Lxcc;Lla9;)V
+    .locals 2
+
+    iget v0, p0, Lec9;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lec9;->b:Lrc9;
+
+    iget v1, p0, Lec9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lrc9;->W(Lla9;Lxcc;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lxcc;->U(I)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lec9;->b:Lrc9;
+
+    iget v1, p0, Lec9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lrc9;->W(Lla9;Lxcc;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lxcc;->Z(I)V
+
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

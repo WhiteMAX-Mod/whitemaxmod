@@ -88,13 +88,13 @@
 
     move-result-object p1
 
-    new-instance v3, Lm3e;
+    new-instance v3, Ll4e;
 
-    invoke-direct {v3, v1, p1}, Lm3e;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {v3, v1, p1}, Ll4e;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     const/4 p1, 0x1
 
-    iget-object v1, v3, Lm3e;->d:Landroid/graphics/Paint;
+    iget-object v1, v3, Ll4e;->d:Landroid/graphics/Paint;
 
     invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 

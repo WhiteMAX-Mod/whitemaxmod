@@ -1,312 +1,296 @@
-.class public final Lee;
+.class public Lee;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Liki;
+.implements Lsif;
+
+
+# static fields
+.field public static final f:Lfca;
 
 
 # instance fields
-.field public final X:Z
+.field public final a:Ljava/lang/reflect/Method;
 
-.field public final a:Lk32;
+.field public final b:Ljava/lang/reflect/Method;
 
-.field public final b:Landroid/util/Range;
+.field public final c:Ljava/lang/reflect/Method;
 
-.field public c:F
+.field public final d:Ljava/lang/reflect/Method;
 
-.field public d:Lyw1;
-
-.field public o:F
+.field public final e:Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>(Lk32;)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lfca;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lfca;-><init>(I)V
+
+    sput-object v0, Lee;->f:Lfca;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Class;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    iput-object p1, p0, Lee;->e:Ljava/lang/Class;
 
-    iput v0, p0, Lee;->c:F
+    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    iput v0, p0, Lee;->o:F
+    filled-new-array {v0}, [Ljava/lang/Class;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    iput-boolean v0, p0, Lee;->X:Z
+    const-string v1, "setUseSessionTickets"
 
-    iput-object p1, p0, Lee;->a:Lk32;
+    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    invoke-static {}, Lc5;->f()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    move-result-object v0
 
-    move-result-object v1
+    iput-object v0, p0, Lee;->a:Ljava/lang/reflect/Method;
 
-    invoke-virtual {p1, v1}, Lk32;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    const-class v0, Ljava/lang/String;
 
-    move-result-object v1
+    filled-new-array {v0}, [Ljava/lang/Class;
 
-    check-cast v1, Landroid/util/Range;
+    move-result-object v0
 
-    iput-object v1, p0, Lee;->b:Landroid/util/Range;
+    const-string v1, "setHostname"
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    const/16 v2, 0x22
+    move-result-object v0
 
-    if-lt v1, v2, :cond_1
+    iput-object v0, p0, Lee;->b:Ljava/lang/reflect/Method;
 
-    iget-object p1, p1, Lk32;->b:Lks6;
+    const-string v0, "getAlpnSelectedProtocol"
 
-    invoke-static {}, Lqq0;->g()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    invoke-virtual {p1, v0, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    iget-object p1, p1, Lks6;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p1, Landroid/hardware/camera2/CameraCharacteristics;
+    iput-object v0, p0, Lee;->c:Ljava/lang/reflect/Method;
 
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    const-class v0, [B
+
+    filled-new-array {v0}, [Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v1, "setAlpnProtocols"
+
+    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
 
-    check-cast p1, [I
-
-    if-eqz p1, :cond_1
-
-    array-length v1, p1
-
-    move v2, v0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget v3, p1, v2
-
-    const/4 v4, 0x1
-
-    if-ne v3, v4, :cond_0
-
-    move v0, v4
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    iput-boolean v0, p0, Lee;->X:Z
+    iput-object p1, p0, Lee;->d:Ljava/lang/reflect/Method;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B()V
-    .locals 3
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 1
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    iget-object v0, p0, Lee;->e:Ljava/lang/Class;
 
-    iput v0, p0, Lee;->c:F
-
-    iget-object v0, p0, Lee;->d:Lyw1;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Landroidx/camera/core/CameraControl$OperationCanceledException;
-
-    const-string v2, "Camera is not active."
-
-    invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lyw1;->d(Ljava/lang/Throwable;)Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lee;->d:Lyw1;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)V
-    .locals 2
-
-    iget-object v0, p0, Lee;->d:Lyw1;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Landroid/hardware/camera2/CaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_0
-
-    move-object p1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lc5;->g()Landroid/hardware/camera2/CaptureRequest$Key;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget v1, p0, Lee;->o:F
+    return p1
+.end method
 
-    cmpl-float p1, v1, p1
+.method public final b()Z
+    .locals 1
 
-    if-nez p1, :cond_2
+    sget-boolean v0, Lzd;->e:Z
 
-    iget-object p1, p0, Lee;->d:Lyw1;
+    sget-boolean v0, Lzd;->e:Z
 
-    invoke-virtual {p1, v0}, Lyw1;->b(Ljava/lang/Object;)Z
+    return v0
+.end method
 
-    iput-object v0, p0, Lee;->d:Lyw1;
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lee;->e:Ljava/lang/Class;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lee;->c:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [B
+
+    if-eqz p1, :cond_1
+
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, p1, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v2
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_2
+
+    :goto_0
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :goto_1
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :goto_2
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "ssl == null"
+
+    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_1
+    :goto_3
+    return-object v1
 
     :cond_2
+    throw p1
+.end method
+
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 2
+
+    iget-object v0, p0, Lee;->e:Ljava/lang/Class;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :try_start_0
+    iget-object v0, p0, Lee;->a:Ljava/lang/reflect/Method;
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    if-eqz p2, :cond_0
+
+    iget-object v0, p0, Lee;->b:Ljava/lang/reflect/Method;
+
+    filled-new-array {p2}, [Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :goto_0
+    iget-object p2, p0, Lee;->d:Ljava/lang/reflect/Method;
+
+    sget-object v0, Lmac;->a:Lmac;
+
+    invoke-static {p3}, Ltna;->c(Ljava/util/List;)[B
+
+    move-result-object p3
+
+    filled-new-array {p3}, [Ljava/lang/Object;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p1, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
     :goto_1
-    return-void
-.end method
+    new-instance p2, Ljava/lang/AssertionError;
 
-.method public final f()F
-    .locals 1
+    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lee;->b:Landroid/util/Range;
+    throw p2
 
-    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+    :goto_2
+    new-instance p2, Ljava/lang/AssertionError;
 
-    move-result-object v0
+    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    check-cast v0, Ljava/lang/Float;
+    throw p2
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final k()F
-    .locals 1
-
-    iget-object v0, p0, Lee;->b:Landroid/util/Range;
-
-    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Float;
-
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m(Lhg5;)V
-    .locals 2
-
-    invoke-static {}, Lc5;->g()Landroid/hardware/camera2/CaptureRequest$Key;
-
-    move-result-object v0
-
-    iget v1, p0, Lee;->c:F
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lhg5;->J(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
-
-    iget-boolean v0, p0, Lee;->X:Z
-
-    if-eqz v0, :cond_0
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x22
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {}, Lqq0;->h()Landroid/hardware/camera2/CaptureRequest$Key;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lhg5;->J(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final v()Landroid/graphics/Rect;
-    .locals 2
-
-    iget-object v0, p0, Lee;->a:Lk32;
-
-    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-virtual {v0, v1}, Lk32;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/Rect;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object v0
-.end method
-
-.method public final z(FLyw1;)V
-    .locals 2
-
-    iput p1, p0, Lee;->c:F
-
-    iget-object p1, p0, Lee;->d:Lyw1;
-
-    if-eqz p1, :cond_0
-
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
-
-    const-string v1, "There is a new zoomRatio being set"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lyw1;->d(Ljava/lang/Throwable;)Z
-
-    :cond_0
-    iget p1, p0, Lee;->c:F
-
-    iput p1, p0, Lee;->o:F
-
-    iput-object p2, p0, Lee;->d:Lyw1;
-
+    :cond_1
     return-void
 .end method

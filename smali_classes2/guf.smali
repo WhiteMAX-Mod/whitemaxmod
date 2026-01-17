@@ -1,59 +1,113 @@
-.class public final Lguf;
-.super Lf3;
+.class public final enum Lguf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lguf;
+.field public static final synthetic X:Lal5;
+
+.field public static final enum b:Lguf;
+
+.field public static final enum c:Lguf;
+
+.field public static final enum d:Lguf;
+
+.field public static final synthetic o:[Lguf;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 6
 
     new-instance v0, Lguf;
 
-    const/16 v1, 0xa
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lf3;-><init>(I)V
+    const-string v2, "recent"
 
-    sput-object v0, Lguf;->c:Lguf;
+    const-string v3, "RECENT"
+
+    invoke-direct {v0, v3, v1, v2}, Lguf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lguf;->b:Lguf;
+
+    new-instance v1, Lguf;
+
+    const/4 v2, 0x1
+
+    const-string v3, "favorite"
+
+    const-string v4, "FAVORITE"
+
+    invoke-direct {v1, v4, v2, v3}, Lguf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lguf;->c:Lguf;
+
+    new-instance v2, Lguf;
+
+    const/4 v3, 0x2
+
+    const-string v4, "set"
+
+    const-string v5, "SET"
+
+    invoke-direct {v2, v5, v3, v4}, Lguf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lguf;->d:Lguf;
+
+    filled-new-array {v0, v1, v2}, [Lguf;
+
+    move-result-object v0
+
+    sput-object v0, Lguf;->o:[Lguf;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lguf;->X:Lal5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final L0(Landroid/content/Intent;Ljava/lang/String;)V
-    .locals 3
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0}, Lf3;->p0()Lim4;
+    iput-object p3, p0, Lguf;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lguf;
+    .locals 1
+
+    const-class v0, Lguf;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lguf;
+
+    return-object p0
+.end method
+
+.method public static values()[Lguf;
+    .locals 1
+
+    sget-object v0, Lguf;->o:[Lguf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Lysb;
+    check-cast v0, [Lguf;
 
-    const-string v2, "oneme:share:data"
-
-    invoke-direct {v1, v2, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance p1, Lysb;
-
-    const-string v2, "tag"
-
-    invoke-direct {p1, v2, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, p1}, [Lysb;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    const-string p2, ":chats/share"
-
-    invoke-virtual {v0, p2, p1}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
+    return-object v0
 .end method

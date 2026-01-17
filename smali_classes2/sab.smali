@@ -1,76 +1,75 @@
-.class public final synthetic Lsab;
-.super Ljava/lang/Object;
+.class public final Lsab;
+.super Ljava/util/concurrent/LinkedTransferQueue;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/FileFilter;
-
-
-# instance fields
-.field public final synthetic a:I
-
-
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lsab;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final accept(Ljava/io/File;)Z
+.method public final bridge contains(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lsab;->a:I
+    if-nez p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x1
 
-    invoke-static {p1}, Lq36;->c(Ljava/io/File;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
 
-    const-string v0, "log"
+    :goto_0
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->contains(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
+.end method
 
-    :pswitch_0
-    invoke-static {p1}, Lq36;->c(Ljava/io/File;)Ljava/lang/String;
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 0
 
-    move-result-object p1
+    check-cast p1, Ljava/lang/Runnable;
 
-    const-string v0, "zip"
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_1
-    invoke-static {p1}, Lq36;->c(Ljava/io/File;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "zip"
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->tryTransfer(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final bridge remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

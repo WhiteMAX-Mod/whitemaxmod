@@ -96,7 +96,7 @@
 
     const-string v5, "STREAM_RING stream volume: "
 
-    invoke-static {v5, v0, v3, v1, v2}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v0, v3, v1, v2}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -119,7 +119,7 @@
 
     const-string v5, "VOICE_CALL stream volume: "
 
-    invoke-static {v5, v0, v3, v1, v2}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v0, v3, v1, v2}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

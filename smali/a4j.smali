@@ -1,128 +1,68 @@
-.class public final La4j;
-.super Ljava/lang/Object;
+.class public final enum La4j;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lwwa;
+.implements Ljava/util/concurrent/Executor;
 
 
 # static fields
-.field public static final a:La4j;
+.field public static final enum a:La4j;
 
-.field public static final b:Lez5;
-
-.field public static final c:Lez5;
-
-.field public static final d:Lez5;
+.field public static final synthetic b:[La4j;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     new-instance v0, La4j;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "INSTANCE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, La4j;->a:La4j;
 
-    new-instance v0, Lyyi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
-
-    const-class v1, Lqzi;
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+    filled-new-array {v0}, [La4j;
 
     move-result-object v0
 
-    new-instance v2, Lez5;
-
-    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "logEventKey"
-
-    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, La4j;->b:Lez5;
-
-    new-instance v0, Lyyi;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lez5;
-
-    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "eventCount"
-
-    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, La4j;->c:Lez5;
-
-    new-instance v0, Lyyi;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
-
-    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lez5;
-
-    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "inferenceDurationStats"
-
-    invoke-direct {v1, v2, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, La4j;->d:Lez5;
+    sput-object v0, La4j;->b:[La4j;
 
     return-void
 .end method
 
+.method public static values()[La4j;
+    .locals 1
+
+    sget-object v0, La4j;->b:[La4j;
+
+    invoke-virtual {v0}, [La4j;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [La4j;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    check-cast p1, Lq0j;
+    invoke-static {}, Lkp8;->j()Lkp8;
 
-    check-cast p2, Lxwa;
+    move-result-object v0
 
-    sget-object v0, La4j;->b:Lez5;
+    iget-object v0, v0, Lkp8;->a:Ljava/lang/Object;
 
-    iget-object v1, p1, Lq0j;->a:Ln0j;
+    check-cast v0, Lz7a;
 
-    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
-
-    sget-object v0, La4j;->c:Lez5;
-
-    iget-object v1, p1, Lq0j;->b:Ljava/lang/Integer;
-
-    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
-
-    sget-object v0, La4j;->d:Lez5;
-
-    iget-object p1, p1, Lq0j;->c:Lfjj;
-
-    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

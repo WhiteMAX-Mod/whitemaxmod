@@ -4,175 +4,141 @@
 
 
 # direct methods
-.method public static final a(Lzge;Lo33;)Z
-    .locals 4
+.method public static final a(Lf7e;Ljava/lang/String;)V
+    .locals 1
 
-    instance-of v0, p1, Ln33;
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
-    instance-of v0, p1, Lm33;
-
-    if-eqz v0, :cond_3
-
-    iget v0, p0, Lzge;->a:I
-
-    if-ne v0, v1, :cond_2
-
-    check-cast p1, Lm33;
-
-    iget-object p1, p1, Lm33;->a:Ljava/util/Set;
-
-    iget-object p0, p0, Lzge;->d:Lud2;
-
-    if-eqz p0, :cond_1
-
-    iget-wide v2, p0, Lud2;->a:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-interface {p0, p1}, Lf7e;->x0(Ljava/lang/String;)Lk7e;
 
     move-result-object p0
 
-    goto :goto_0
+    :try_start_0
+    invoke-interface {p0}, Lk7e;->t0()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    :goto_0
-    invoke-static {p1, p0}, Lei3;->x(Ljava/lang/Iterable;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lo7j;->b(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {p0, p1}, Lo7j;->b(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public static b(D)J
+    .locals 3
+
+    invoke-static {p0, p1}, Lonj;->c(D)Z
+
+    move-result v0
+
+    const-string v1, "not a normal value"
+
+    invoke-static {v1, v0}, Lekj;->c(Ljava/lang/String;Z)V
+
+    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
+
+    move-result v0
+
+    invoke-static {p0, p1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
+
+    move-result-wide p0
+
+    const-wide v1, 0xfffffffffffffL
+
+    and-long/2addr p0, v1
+
+    const/16 v1, -0x3ff
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    shl-long/2addr p0, v0
+
+    return-wide p0
+
+    :cond_0
+    const-wide/high16 v0, 0x10000000000000L
+
+    or-long/2addr p0, v0
+
+    return-wide p0
+.end method
+
+.method public static c(D)Z
+    .locals 0
+
+    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
 
     move-result p0
 
-    if-eqz p0, :cond_2
+    const/16 p1, 0x3ff
 
-    return v1
+    if-gt p0, p1, :cond_0
 
-    :cond_2
-    const/4 p0, 0x0
+    const/4 p0, 0x1
 
     return p0
 
-    :cond_3
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    :cond_0
+    const/4 p0, 0x0
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    return p0
 .end method
 
-.method public static b()I
-    .locals 11
+.method public static final d(ILjava/lang/String;)V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Landroid/opengl/EGL14;->eglGetDisplay(I)Landroid/opengl/EGLDisplay;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v9, 0x2
+    const-string v2, "Error code: "
 
-    new-array v2, v9, [I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v10, 0x1
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2, v0, v2, v10}, Landroid/opengl/EGL14;->eglInitialize(Landroid/opengl/EGLDisplay;[II[II)Z
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/16 v2, 0x9
+    move-result-object p0
 
-    new-array v2, v2, [I
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    fill-array-data v2, :array_0
+    if-eqz p1, :cond_0
 
-    new-array v4, v10, [Landroid/opengl/EGLConfig;
+    const-string p0, ", message: "
 
-    new-array v7, v10, [I
+    invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v6, 0x1
+    move-result-object p0
 
-    const/4 v8, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-static/range {v1 .. v8}, Landroid/opengl/EGL14;->eglChooseConfig(Landroid/opengl/EGLDisplay;[II[Landroid/opengl/EGLConfig;II[II)Z
-
-    aget v2, v7, v0
-
-    if-nez v2, :cond_0
-
-    return v0
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
-    aget-object v2, v4, v0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/16 v3, 0x3057
+    move-result-object p0
 
-    const/16 v4, 0x3056
+    new-instance p1, Landroid/database/SQLException;
 
-    const/16 v5, 0x40
+    invoke-direct {p1, p0}, Landroid/database/SQLException;-><init>(Ljava/lang/String;)V
 
-    const/16 v6, 0x3038
-
-    filled-new-array {v3, v5, v4, v5, v6}, [I
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v3, v0}, Landroid/opengl/EGL14;->eglCreatePbufferSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;[II)Landroid/opengl/EGLSurface;
-
-    move-result-object v3
-
-    const/16 v4, 0x3098
-
-    filled-new-array {v4, v9, v6}, [I
-
-    move-result-object v4
-
-    sget-object v5, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
-
-    invoke-static {v1, v2, v5, v4, v0}, Landroid/opengl/EGL14;->eglCreateContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Landroid/opengl/EGLContext;[II)Landroid/opengl/EGLContext;
-
-    move-result-object v2
-
-    invoke-static {v1, v3, v3, v2}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
-
-    new-array v4, v10, [I
-
-    const/16 v5, 0xd33
-
-    invoke-static {v5, v4, v0}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
-
-    sget-object v5, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
-
-    sget-object v6, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
-
-    invoke-static {v1, v5, v5, v6}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
-
-    invoke-static {v1, v3}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
-
-    invoke-static {v1, v2}, Landroid/opengl/EGL14;->eglDestroyContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)Z
-
-    invoke-static {v1}, Landroid/opengl/EGL14;->eglTerminate(Landroid/opengl/EGLDisplay;)Z
-
-    aget v0, v4, v0
-
-    return v0
-
-    :array_0
-    .array-data 4
-        0x303f
-        0x308e
-        0x3029
-        0x0
-        0x3040
-        0x4
-        0x3033
-        0x1
-        0x3038
-    .end array-data
+    throw p1
 .end method

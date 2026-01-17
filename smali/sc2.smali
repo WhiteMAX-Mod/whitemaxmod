@@ -1,126 +1,61 @@
 .class public final Lsc2;
-.super Ljava/lang/Object;
+.super Lshc;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lrc2;
-
-
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public a:[C
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lrc2;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lsc2;->b:Lrc2;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsc2;->a:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public b:I
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    instance-of v0, p1, Lsc2;
+    iget-object v0, p0, Lsc2;->a:[C
 
-    if-nez v0, :cond_0
+    iget v1, p0, Lsc2;->b:I
 
-    goto :goto_0
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([CI)[C
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b(I)V
+    .locals 2
+
+    iget-object v0, p0, Lsc2;->a:[C
+
+    array-length v1, v0
+
+    if-ge v1, p1, :cond_1
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    if-ge p1, v1, :cond_0
+
+    move p1, v1
 
     :cond_0
-    check-cast p1, Lsc2;
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([CI)[C
 
-    iget-object p1, p1, Lsc2;->a:Ljava/lang/Object;
+    move-result-object p1
 
-    iget-object v0, p0, Lsc2;->a:Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    iput-object p1, p0, Lsc2;->a:[C
 
     :cond_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final d()I
     .locals 1
 
-    iget-object v0, p0, Lsc2;->a:Ljava/lang/Object;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
+    iget v0, p0, Lsc2;->b:I
 
     return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lsc2;->a:Ljava/lang/Object;
-
-    instance-of v1, v0, Lqc2;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lqc2;
-
-    invoke-virtual {v0}, Lqc2;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Value("
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v0, 0x29
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -1,15 +1,23 @@
-.class public abstract Lcm8;
-.super Lzk5;
+.class public final Lcm8;
+.super Ld3;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lcm8;
+
+
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, Lv2h;->a:Lv2h;
+    new-instance v0, Lcm8;
 
-    invoke-direct {p0, v0, p1}, Lzk5;-><init>(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lcm8;->c:Lcm8;
 
     return-void
 .end method

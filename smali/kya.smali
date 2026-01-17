@@ -1,47 +1,46 @@
 .class public final Lkya;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Lwm0;
 .source "SourceFile"
 
 # interfaces
-.implements Ll25;
-.implements Lc0b;
+.implements Le0b;
 
 
 # instance fields
 .field public volatile X:Z
 
-.field public final a:Lbo3;
+.field public final a:Le0b;
 
-.field public final b:Llz;
+.field public final b:Liz;
 
-.field public final c:Ldr6;
+.field public final c:Lcr6;
 
-.field public final d:Ljp3;
+.field public final d:Lrp3;
 
-.field public o:Ll25;
+.field public o:Lo25;
 
 
 # direct methods
-.method public constructor <init>(Lbo3;Ldr6;)V
+.method public constructor <init>(Le0b;Lcr6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    iput-object p1, p0, Lkya;->a:Lbo3;
+    iput-object p1, p0, Lkya;->a:Le0b;
 
-    iput-object p2, p0, Lkya;->c:Ldr6;
+    iput-object p2, p0, Lkya;->c:Lcr6;
 
-    new-instance p1, Llz;
+    new-instance p1, Liz;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object p1, p0, Lkya;->b:Llz;
+    iput-object p1, p0, Lkya;->b:Liz;
 
-    new-instance p1, Ljp3;
+    new-instance p1, Lrp3;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkya;->d:Ljp3;
+    iput-object p1, p0, Lkya;->d:Lrp3;
 
     const/4 p1, 0x1
 
@@ -61,88 +60,39 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lkya;->b:Llz;
+    iget-object v0, p0, Lkya;->b:Liz;
 
-    iget-object v1, p0, Lkya;->a:Lbo3;
+    iget-object v1, p0, Lkya;->a:Le0b;
 
-    invoke-virtual {v0, v1}, Llz;->d(Lbo3;)V
+    invoke-virtual {v0, v1}, Liz;->e(Le0b;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final c(Ll25;)V
+.method public final c(Lo25;)V
     .locals 1
 
-    iget-object v0, p0, Lkya;->o:Ll25;
+    iget-object v0, p0, Lkya;->o:Lo25;
 
-    invoke-static {v0, p1}, Lp25;->j(Ll25;Ll25;)Z
+    invoke-static {v0, p1}, Ls25;->h(Lo25;Lo25;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lkya;->o:Ll25;
+    iput-object p1, p0, Lkya;->o:Lo25;
 
-    iget-object p1, p0, Lkya;->a:Lbo3;
+    iget-object p1, p0, Lkya;->a:Le0b;
 
-    invoke-interface {p1, p0}, Lbo3;->c(Ll25;)V
+    invoke-interface {p1, p0}, Le0b;->c(Lo25;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 2
-
-    :try_start_0
-    iget-object v0, p0, Lkya;->c:Ldr6;
-
-    invoke-interface {v0, p1}, Ldr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "The mapper returned a null CompletableSource"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    check-cast p1, Lsn3;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    new-instance v0, Lun3;
-
-    invoke-direct {v0, p0}, Lun3;-><init>(Lkya;)V
-
-    iget-boolean v1, p0, Lkya;->X:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lkya;->d:Ljp3;
-
-    invoke-virtual {v1, v0}, Ljp3;->a(Ll25;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1, v0}, Lsn3;->e(Lbo3;)V
-
-    :cond_0
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Ldoj;->a(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lkya;->o:Ll25;
-
-    invoke-interface {v0}, Ll25;->dispose()V
-
-    invoke-virtual {p0, p1}, Lkya;->onError(Ljava/lang/Throwable;)V
+.method public final clear()V
+    .locals 0
 
     return-void
 .end method
@@ -154,29 +104,45 @@
 
     iput-boolean v0, p0, Lkya;->X:Z
 
-    iget-object v0, p0, Lkya;->o:Ll25;
+    iget-object v0, p0, Lkya;->o:Lo25;
 
-    invoke-interface {v0}, Ll25;->dispose()V
+    invoke-interface {v0}, Lo25;->dispose()V
 
-    iget-object v0, p0, Lkya;->d:Ljp3;
+    iget-object v0, p0, Lkya;->d:Lrp3;
 
-    invoke-virtual {v0}, Ljp3;->dispose()V
+    invoke-virtual {v0}, Lrp3;->dispose()V
 
-    iget-object v0, p0, Lkya;->b:Llz;
+    iget-object v0, p0, Lkya;->b:Liz;
 
-    invoke-virtual {v0}, Llz;->c()V
+    invoke-virtual {v0}, Liz;->c()V
 
     return-void
 .end method
 
-.method public final f()Z
+.method public final e()Z
     .locals 1
 
-    iget-object v0, p0, Lkya;->o:Ll25;
+    iget-object v0, p0, Lkya;->o:Lo25;
 
-    invoke-interface {v0}, Ll25;->f()Z
+    invoke-interface {v0}, Lo25;->e()Z
 
     move-result v0
+
+    return v0
+.end method
+
+.method public final g(I)I
+    .locals 0
+
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
 
     return v0
 .end method
@@ -184,9 +150,9 @@
 .method public final onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    iget-object v0, p0, Lkya;->b:Llz;
+    iget-object v0, p0, Lkya;->b:Liz;
 
-    invoke-virtual {v0, p1}, Llz;->b(Ljava/lang/Throwable;)Z
+    invoke-virtual {v0, p1}, Liz;->b(Ljava/lang/Throwable;)Z
 
     move-result p1
 
@@ -196,20 +162,83 @@
 
     iput-boolean p1, p0, Lkya;->X:Z
 
-    iget-object p1, p0, Lkya;->o:Ll25;
+    iget-object p1, p0, Lkya;->o:Lo25;
 
-    invoke-interface {p1}, Ll25;->dispose()V
+    invoke-interface {p1}, Lo25;->dispose()V
 
-    iget-object p1, p0, Lkya;->d:Ljp3;
+    iget-object p1, p0, Lkya;->d:Lrp3;
 
-    invoke-virtual {p1}, Ljp3;->dispose()V
+    invoke-virtual {p1}, Lrp3;->dispose()V
 
-    iget-object p1, p0, Lkya;->b:Llz;
+    iget-object p1, p0, Lkya;->b:Liz;
 
-    iget-object v0, p0, Lkya;->a:Lbo3;
+    iget-object v0, p0, Lkya;->a:Le0b;
 
-    invoke-virtual {p1, v0}, Llz;->d(Lbo3;)V
+    invoke-virtual {p1, v0}, Liz;->e(Le0b;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lkya;->c:Lcr6;
+
+    invoke-interface {v0, p1}, Lcr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The mapper returned a null CompletableSource"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Lbo3;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    new-instance v0, Loef;
+
+    invoke-direct {v0, p0}, Loef;-><init>(Lkya;)V
+
+    iget-boolean v1, p0, Lkya;->X:Z
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lkya;->d:Lrp3;
+
+    invoke-virtual {v1, v0}, Lrp3;->a(Lo25;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1, v0}, Lbo3;->f(Lko3;)V
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lkya;->o:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    invoke-virtual {p0, p1}, Lkya;->onError(Ljava/lang/Throwable;)V
+
     return-void
 .end method

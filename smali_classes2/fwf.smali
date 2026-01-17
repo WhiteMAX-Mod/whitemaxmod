@@ -1,30 +1,110 @@
 .class public final Lfwf;
-.super Lh08;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Liwf;
+.implements Lem4;
 
 
-# instance fields
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static final a:Lfwf;
 
-.field public final d:Ljava/lang/String;
-
-.field public final e:Z
+.field public static final b:Lgwf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Lh08;-><init>()V
+    new-instance v0, Lfwf;
 
-    iput-object p1, p0, Lfwf;->c:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lfwf;->d:Ljava/lang/String;
+    sput-object v0, Lfwf;->a:Lfwf;
 
-    iput-boolean p3, p0, Lfwf;->e:Z
+    sget-object v0, Lgwf;->b:Lgwf;
+
+    sput-object v0, Lfwf;->b:Lgwf;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Llm4;
+    .locals 1
+
+    sget-object v0, Lfwf;->b:Lgwf;
+
+    return-object v0
+.end method
+
+.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
+    .locals 9
+
+    sget-object v0, Lfwf;->b:Lgwf;
+
+    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    sget-object v0, Lgwf;->b:Lgwf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lgwf;->c:Lhm4;
+
+    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lom4;
+
+    new-instance v7, Ljr1;
+
+    const/16 v0, 0xe
+
+    invoke-direct {v7, p3, v0}, Ljr1;-><init>(Landroid/os/Bundle;I)V
+
+    const/16 v8, 0x10
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v8}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
+
+    return-object v1
+
+    :cond_1
+    move-object v3, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v3}, Lt02;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
